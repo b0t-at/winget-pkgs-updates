@@ -216,6 +216,9 @@ jobs:
           - id: Curiosity.Curiosity
             repo: curiosity-ai/curiosity-app-win
             url: https://github.com/curiosity-ai/curiosity-app-win/releases/download/v{VERSION}/Curiosity-Setup-{VERSION}.exe
+          - id: CrowdSecurity.CrowdSec
+            repo: crowdsecurity/crowdsec
+            url: https://github.com/crowdsecurity/crowdsec/releases/download/v{VERSION}/crowdsec_{VERSION}.msi
           - id: DataPLANT.ArcCommander
             repo: nfdi4plants/arcCommander
             url: https://github.com/nfdi4plants/arcCommander/releases/download/v{VERSION}/arc.exe
