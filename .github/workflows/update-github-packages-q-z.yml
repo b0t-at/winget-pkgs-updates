@@ -164,7 +164,7 @@ jobs:
             url: https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v{VERSION}/Stirling-PDF-win-installer.exe
           - id: Storj.Uplink
             repo: storj/storj
-            url: https://github.com/storj/storj/releases/download/v{VERSION}/storagenode_windows_amd64.zip
+            url: https://github.com/storj/storj/releases/download/v{VERSION}/uplink_windows_amd64.zip
           - id: Streetwriters.Notesnook
             repo: streetwriters/notesnook
             url: https://github.com/streetwriters/notesnook/releases/download/v{VERSION}/notesnook_win_x64.exe https://github.com/streetwriters/notesnook/releases/download/v{VERSION}/notesnook_win_x64_portable.exe https://github.com/streetwriters/notesnook/releases/download/v{VERSION}/notesnook_win_arm64.exe https://github.com/streetwriters/notesnook/releases/download/v{VERSION}/notesnook_win_arm64_portable.exe
