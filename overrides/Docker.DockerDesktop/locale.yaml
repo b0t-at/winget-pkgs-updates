@@ -1,0 +1,54 @@
+# Example package-specific override demonstrating all features
+Override:
+  # Update manifest metadata
+  ManifestVersion: 1.6.0
+  
+  # Override tags with package-specific ones
+  Tags:
+    - infrastructure
+    - containers
+    - docker
+    - deployment
+    
+  # Update description with better formatting
+  Description: |
+    Docker Desktop is an easy-to-install application for your Mac, Linux, or Windows environment 
+    that enables you to build and share containerized applications and microservices.
+
+Add:
+  # Add comprehensive release notes using placeholders
+  ReleaseNotes: |
+    🎉 Docker Desktop {VERSION} Release
+    
+    📅 Released: {CURRENT_DATE}
+    📦 Package: {PACKAGE_ID}
+    
+    This release includes the latest Docker Engine with performance improvements,
+    security updates, and bug fixes.
+    
+    For detailed release notes, visit:
+    https://docs.docker.com/desktop/release-notes/
+    
+    📋 Installation Notes:
+    - Requires Windows 10/11 with Hyper-V support
+    - WSL 2 backend recommended for optimal performance
+    - Administrator privileges required for installation
+    
+    🔧 What's New:
+    - Performance improvements for container startup
+    - Enhanced resource management
+    - Updated Docker Compose integration
+    - Bug fixes and stability improvements
+  
+  # Add additional metadata
+  ReleaseNotesUrl: https://docs.docker.com/desktop/release-notes/
+  Documentations:
+    - DocumentLabel: User Manual
+      DocumentUrl: https://docs.docker.com/desktop/
+    - DocumentLabel: Getting Started
+      DocumentUrl: https://docs.docker.com/get-started/
+
+Drop:
+  # Remove fields that are often problematic or unnecessary
+  - ReleaseDate
+  - InstallationNotes
