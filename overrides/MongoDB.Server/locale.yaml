@@ -1,0 +1,19 @@
+# MongoDB Server specific overrides
+Override:
+  Tags:
+    - database
+    - nosql
+    - mongodb
+    - server
+  Description: MongoDB is a document database with the scalability and flexibility that you want with the querying and indexing that you need
+  
+Add:
+  ReleaseNotes: |
+    MongoDB Server version {VERSION} release.
+    Please visit https://docs.mongodb.com/manual/release-notes/ for detailed release notes.
+    
+    This release includes performance improvements and bug fixes.
+    For upgrade instructions, please refer to the MongoDB documentation.
+
+Drop:
+  - ReleaseDate

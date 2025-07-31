@@ -1,0 +1,13 @@
+# Global locale override - applies to all locale.yaml files
+Override:
+  ManifestType: locale
+  ManifestVersion: 1.6.0
+
+Add:
+  # Add common tags that apply to most packages
+  Tags:
+    - utility
+
+Drop:
+  # Remove fields that are commonly problematic
+  - ReleaseDate
