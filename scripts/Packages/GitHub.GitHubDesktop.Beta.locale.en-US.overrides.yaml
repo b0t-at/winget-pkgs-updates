@@ -1,0 +1,11 @@
+# Override for GitHub Desktop Beta locale files
+Override:
+  Tags:
+    - git
+    - github
+    - developer-tools
+    - version-control
+  ReleaseNotes: "{{RELEASE_NOTES}}"
+  
+Add:
+  ReleaseNotesUrl: "https://github.com/desktop/desktop/releases"

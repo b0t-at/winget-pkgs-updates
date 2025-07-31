@@ -1,0 +1,11 @@
+# Example override for locale.en-US.yaml files
+Override:
+  Tags:
+    - infrastructure
+    - containers
+  ReleaseNotes: "{{RELEASE_NOTES}}"
+  ReleaseNotesUrl: "https://github.com/example/repo/releases/tag/{{VERSION}}"
+
+Add:
+  Publisher: "{{PACKAGE_NAME}} Team"
+  Copyright: "Copyright (c) {{CURRENT_YEAR}} {{PACKAGE_NAME}} Team"

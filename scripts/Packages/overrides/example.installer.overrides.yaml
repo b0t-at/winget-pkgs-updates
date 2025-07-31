@@ -1,0 +1,16 @@
+# Example override for installer.yaml files
+Override:
+  NestedInstallerFiles:
+    - RelativeFilePath: importantexecutable.exe
+  InstallerType: exe
+  Scope: machine
+
+Drop:
+  - ReleaseDate
+  - Platform
+
+Add:
+  InstallModes:
+    - interactive
+    - silent
+    - silentWithProgress

@@ -87,22 +87,15 @@ function Update-WingetPackage {
                 }
             }
 
-            # If release notes are provided, add them to the manifest and submit via wingetcreate if -Submit is set to true
-            if ($Latest.releaseNotes) {
-                write-Host "Try adding release notes to the manifest in $ManifestOutPath"
-                $localFiles = Get-ChildItem -Recurse -Path $ManifestOutPath -Filter "*.locale.*.yaml"
-                foreach ($file in $localFiles) {
-                    Add-Content -Path $file.FullName -Value "$($Latest.ReleaseNotes)"
-                    $newFile = get-content -path $file.FullName
-                    # Output new File to see if release notes are added
-                    $newFile
-                }
-                # Submit PR with wingetcreate if -Submit is set to true
-                if ($Submit -eq $true) {
-                    Install-WingetCreate
-                    Write-Host "Submitting PR for $wingetPackage Version $($Latest.Version)"
-                    .\wingetcreate.exe submit --prtitle $prMessage -t $gitToken "$($ManifestOutPath)manifests/$($wingetPackage.Substring(0, 1).ToLower())/$($wingetPackage.replace(".","/"))/$($Latest.Version)"
-                }
+            # Apply package manifest overrides if available
+            $placeholderValues = Get-PackageSpecificPlaceholders -PackageName $wingetPackage -Version $($Latest.Version) -ReleaseNotes $($Latest.ReleaseNotes)
+            Apply-PackageManifestOverrides -ManifestPath $ManifestOutPath -PackageName $wingetPackage -PlaceholderValues $placeholderValues
+            
+            # Submit PR with wingetcreate if -Submit is set to true
+            if ($Submit -eq $true) {
+                Install-WingetCreate
+                Write-Host "Submitting PR for $wingetPackage Version $($Latest.Version)"
+                .\wingetcreate.exe submit --prtitle $prMessage -t $gitToken "$($ManifestOutPath)manifests/$($wingetPackage.Substring(0, 1).ToLower())/$($wingetPackage.replace(".","/"))/$($Latest.Version)"
             }            
         }
     }
