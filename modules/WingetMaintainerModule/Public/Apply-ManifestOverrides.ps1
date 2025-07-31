@@ -222,17 +222,25 @@ function Convert-HashtableToYaml {
     
     $result = ""
     
-    foreach ($key in $Hashtable.Keys) {
+    foreach ($key in $Hashtable.Keys | Sort-Object) {
         $value = $Hashtable[$key]
         
         if ($value -is [hashtable]) {
             $result += "$key`:`n"
-            foreach ($subKey in $value.Keys) {
+            foreach ($subKey in $value.Keys | Sort-Object) {
                 $subValue = $value[$subKey]
                 if ($subValue -is [array]) {
                     $result += "  $subKey`:`n"
                     foreach ($item in $subValue) {
-                        $result += "    - $item`n"
+                        if ($item -is [hashtable]) {
+                            $result += "    -`n"
+                            foreach ($itemKey in $item.Keys | Sort-Object) {
+                                $formattedValue = if ($item[$itemKey] -is [string] -and ($item[$itemKey].Contains(' ') -or $item[$itemKey].Contains(':'))) { "`"$($item[$itemKey])`"" } else { $item[$itemKey] }
+                                $result += "      $itemKey`: $formattedValue`n"
+                            }
+                        } else {
+                            $result += "    - $item`n"
+                        }
                     }
                 } else {
                     $formattedValue = if ($subValue -is [string] -and ($subValue.Contains(' ') -or $subValue.Contains(':'))) { "`"$subValue`"" } else { $subValue }
@@ -242,7 +250,15 @@ function Convert-HashtableToYaml {
         } elseif ($value -is [array]) {
             $result += "$key`:`n"
             foreach ($item in $value) {
-                $result += "  - $item`n"
+                if ($item -is [hashtable]) {
+                    $result += "  -`n"
+                    foreach ($itemKey in $item.Keys | Sort-Object) {
+                        $formattedValue = if ($item[$itemKey] -is [string] -and ($item[$itemKey].Contains(' ') -or $item[$itemKey].Contains(':'))) { "`"$($item[$itemKey])`"" } else { $item[$itemKey] }
+                        $result += "    $itemKey`: $formattedValue`n"
+                    }
+                } else {
+                    $result += "  - $item`n"
+                }
             }
         } else {
             $formattedValue = if ($value -is [string] -and ($value.Contains(' ') -or $value.Contains(':'))) { "`"$value`"" } else { $value }

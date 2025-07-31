@@ -1,0 +1,14 @@
+# Override for GitHub Desktop Beta installer files
+Override:
+  NestedInstallerFiles:
+    - RelativeFilePath: GitHubDesktop.exe
+      PortableCommandAlias: gh-desktop
+  Scope: user
+
+Add:
+  InstallModes:
+    - interactive
+    - silent
+    
+Drop:
+  - MinimumOSVersion
