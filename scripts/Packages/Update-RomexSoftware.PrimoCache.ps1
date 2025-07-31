@@ -23,7 +23,7 @@ if ($downloadLinks) {
             
             [PSCustomObject]@{
                 Version = $version
-                URL = $url
+                URL     = $url
             }
         }
     } | Where-Object { $_ }
@@ -52,8 +52,33 @@ if ($versionUrlPairs.Count -eq 0) {
         return [PSCustomObject]@{ SilentFail = $true }
     }
     
-    Write-Warning "Could not find download links, but found versions. Unable to determine download URLs without constructing them."
-    return [PSCustomObject]@{ SilentFail = $true }
+    # Get latest version
+    $latestVersion = $null
+    if ($allVersions.Count -gt 0) {
+        $uniqueVersions = $allVersions | Sort-Object -Unique
+        try {
+            $latestVersion = ($uniqueVersions | ForEach-Object { [System.Version]$_ } | Sort-Object -Descending | Select-Object -First 1).ToString()
+        }
+        catch {
+            $latestVersion = $uniqueVersions | Sort-Object -Descending | Select-Object -First 1
+        }
+    }
+    
+    # Validate version and construct URL
+    if (-not $latestVersion) {
+        Write-Warning "Could not extract version from website"
+        return [PSCustomObject]@{ SilentFail = $true }
+    }
+
+    # Fallback static construction
+    $latestVersionUrl = "https://static.romexsoftware.com/download/primo-cache/PrimoCache_Setup_$latestVersion.exe"
+
+    $versionUrlPairs = [PSCustomObject]@{
+        Version = $latestVersion
+        URL     = $latestVersionUrl
+    }
+        
+    return $versionUrlPairs
 }
 
 # Get latest version from the found download links
@@ -66,7 +91,8 @@ if ($versionUrlPairs.Count -gt 0) {
         $latestPair = $versionUrlPairs | Sort-Object { [System.Version]$_.Version } -Descending | Select-Object -First 1
         $latestVersion = $latestPair.Version
         $latestVersionUrl = $latestPair.URL
-    } catch {
+    }
+    catch {
         # Fallback to string sorting
         $latestPair = $versionUrlPairs | Sort-Object Version -Descending | Select-Object -First 1
         $latestVersion = $latestPair.Version
@@ -86,12 +112,13 @@ try {
         Write-Warning "Download URL does not exist: $latestVersionUrl"
         return [PSCustomObject]@{ SilentFail = $true }
     }
-} catch {
+}
+catch {
     Write-Warning "Could not verify download URL: $latestVersionUrl - $($_.Exception.Message)"
     return [PSCustomObject]@{ SilentFail = $true }
 }
 
 return [PSCustomObject]@{
     Version = $latestVersion
-    URLs = $latestVersionUrl
+    URLs    = $latestVersionUrl
 }
