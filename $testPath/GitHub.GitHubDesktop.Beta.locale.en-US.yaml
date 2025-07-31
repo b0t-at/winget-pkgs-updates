@@ -1,0 +1,17 @@
+License: MIT
+ManifestType: defaultLocale
+ManifestVersion: 1.1.0
+PackageIdentifier: GitHub.GitHubDesktop.Beta
+PackageLocale: en-US
+PackageName: "GitHub Desktop Beta"
+PackageVersion: 3.0.0
+Publisher: "GitHub, Inc."
+ReleaseNotes: "New features and bug fixes"
+ReleaseNotesUrl: "https://github.com/desktop/desktop/releases"
+ShortDescription: "GitHub Desktop beta version"
+Tags:
+  - git
+  - github
+  - developer-tools
+  - version-control
+
