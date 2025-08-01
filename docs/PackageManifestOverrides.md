@@ -109,7 +109,7 @@ The following placeholders can be used in override values and will be substitute
 
 ## How It Works
 
-1. When `Update-WingetPackage` is called, it generates manifests using Komac
+1. When `Update-WingetPackage` is called, it generates manifests using Komac or WinGetCreate (without submitting)
 2. After generation, the system looks for applicable override files
 3. Overrides are merged in precedence order
 4. Placeholder substitution is performed
@@ -117,6 +117,7 @@ The following placeholders can be used in override values and will be substitute
    - **Drop**: Specified fields are removed
    - **Override**: Existing fields are replaced with new values
    - **Add**: New fields are added (only if not already overridden)
+6. If the `-Submit` parameter is true, the modified manifests are submitted using the appropriate tool's submit command
 
 ## Integration with Update-WingetPackage
 
@@ -127,6 +128,16 @@ The system:
 - Automatically detects manifest types from filenames
 - Applies overrides to all generated .yaml files
 - Preserves the original Komac/WinGetCreate workflow
+
+### Correct Workflow Sequence
+
+The manifest generation and submission process follows this corrected sequence:
+
+1. **Generate**: Manifests are generated using Komac or WinGetCreate in dry-run mode (no immediate submission)
+2. **Override**: The override system processes the generated manifests
+3. **Submit**: If the `-Submit` parameter is true, the modified manifests are submitted using the appropriate tool's submit command
+
+This ensures that all overrides are properly applied before submission, maintaining the integrity of the customization system.
 
 ## Testing
 

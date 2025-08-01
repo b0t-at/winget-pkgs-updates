@@ -71,16 +71,16 @@ function Update-WingetPackage {
             Switch ($With) {
                 "Komac" {
                     Install-Komac
-                    #.\komac update $wingetPackage --version $Latest.Version --urls ($Latest.URLs).split(" ") --dry-run ($resolves -match '^\d+$' ? "--resolves" : $null ) ($resolves -match '^\d+$' ? $resolves : $null ) -t $gitToken --output "$ManifestOutPath"
-                    komac update $wingetPackage --version $Latest.Version --urls ($Latest.URLs).split(" ").replace('|x64','').replace('|x86','').replace('|arm64','') ($Submit -eq $true -and !$Latest.ReleaseNotes ? '-s' : '--dry-run') ($resolves -match '^\d+$' ? "--resolves" : $null ) ($resolves -match '^\d+$' ? $resolves : $null ) -t $gitToken --output "$ManifestOutPath"
+                    # Always generate manifests without submitting first - overrides will be applied afterwards
+                    komac update $wingetPackage --version $Latest.Version --urls ($Latest.URLs).split(" ").replace('|x64','').replace('|x86','').replace('|arm64','') --dry-run ($resolves -match '^\d+$' ? "--resolves" : $null ) ($resolves -match '^\d+$' ? $resolves : $null ) -t $gitToken --output "$ManifestOutPath"
                 }
                 "WinGetCreate" {
                     if ($GHRepo -and $versionTag -and !$Latest.ReleaseNotes) {
                         $Latest.ReleaseNotes = Get-GHReleaseNotes -Repo $GHRepo -Version $versionTag
                     }
                     Install-WingetCreate
-                    #.\wingetcreate.exe update $wingetPackage -v $Latest.Version -u ($Latest.URLs).split(" ") --prtitle $prMessage -t $gitToken -o $ManifestOutPath
-                    .\wingetcreate.exe update $wingetPackage ($Submit -eq $true -and !$Latest.ReleaseNotes ? "-s" : $null ) -v $Latest.Version -u ($Latest.URLs).split(" ") --prtitle $prMessage -t $gitToken -o $ManifestOutPath
+                    # Always generate manifests without submitting first - overrides will be applied afterwards
+                    .\wingetcreate.exe update $wingetPackage -v $Latest.Version -u ($Latest.URLs).split(" ") --prtitle $prMessage -t $gitToken -o $ManifestOutPath
                 }
                 default { 
                     Write-Error "Invalid value \"$With\" for -With parameter. Valid values are 'Komac' and 'WinGetCreate'"
@@ -132,11 +132,19 @@ function Update-WingetPackage {
                 }
             }
             
-            # Submit PR with wingetcreate if -Submit is set to true
+            # Submit PR after overrides are applied if -Submit is set to true
             if ($Submit -eq $true) {
-                Install-WingetCreate
                 Write-Host "Submitting PR for $wingetPackage Version $($Latest.Version)"
-                .\wingetcreate.exe submit --prtitle $prMessage -t $gitToken "$($ManifestOutPath)manifests/$($wingetPackage.Substring(0, 1).ToLower())/$($wingetPackage.replace(".","/"))/$($Latest.Version)"
+                Switch ($With) {
+                    "Komac" {
+                        # Use Komac submit command for the generated and modified manifests
+                        komac submit --manifests-path "$($ManifestOutPath)manifests/$($wingetPackage.Substring(0, 1).ToLower())/$($wingetPackage.replace(".","/"))/$($Latest.Version)" ($resolves -match '^\d+$' ? "--resolves" : $null ) ($resolves -match '^\d+$' ? $resolves : $null ) -t $gitToken
+                    }
+                    "WinGetCreate" {
+                        Install-WingetCreate
+                        .\wingetcreate.exe submit --prtitle $prMessage -t $gitToken "$($ManifestOutPath)manifests/$($wingetPackage.Substring(0, 1).ToLower())/$($wingetPackage.replace(".","/"))/$($Latest.Version)"
+                    }
+                }
             }            
         }
     }
