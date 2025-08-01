@@ -1,0 +1,8 @@
+# Global installer override - applies to all installer.yaml files
+Override:
+  ManifestType: installer
+  ManifestVersion: 1.6.0
+
+Drop:
+  # Remove problematic fields
+  - ReleaseDate
