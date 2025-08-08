@@ -32,6 +32,9 @@ Param(
     # WinGetOptions
     [Parameter(HelpMessage = 'Additional options for WinGet')]
     [string] $WinGetOptions,
+    # (optional) Name of the LogFile Folder - defaults to <PackageId>_<CurrentDateAndTime>
+    [Parameter(HelpMessage = 'Optional Name of the LogFile Folder')]
+    [string] $LogFolderName,
     # Switches
     [switch] $SkipManifestValidation,
     [switch] $Prerelease,
@@ -57,6 +60,81 @@ $script:ReleasesApiUrl = 'https://api.github.com/repos/microsoft/winget-cli/rele
 $script:DependencySource = [DependencySources]::InRelease
 $script:UsePowerShellModuleForInstall = $false
 $script:CachedTokenExpiration = 30 # Days
+$script:LogFolderName = $LogFolderName
+
+####
+# Description: Ensures that a folder is present. Creates it if it does not exist
+# Inputs: Path to folder
+# Outputs: Boolean. True if path exists or was created; False if otherwise
+####
+function Initialize-Folder {
+    param (
+        [Parameter(Mandatory = $true)]
+        [String] $FolderPath
+    )
+    $FolderPath = [System.Io.Path]::GetFullPath($FolderPath) # Normalize the path just in case the separation characters weren't quite right, or dot notation was used
+    if (Test-Path -Path $FolderPath -PathType Container) { return $true } # The path exists and is a folder
+    if (Test-Path -Path $FolderPath) { return $false } # The path exists but was not a folder
+    Write-Debug "Initializing folder at $FolderPath"
+    $directorySeparator = [System.IO.Path]::DirectorySeparatorChar
+
+    # Build the path up one part at a time. This is safer than using the `-Force` parameter on New-Item to create the directory
+    foreach ($pathPart in $FolderPath.Split($directorySeparator)) {
+        $builtPath += $pathPart + $directorySeparator
+        if (!(Test-Path -Path $builtPath)) { New-Item -Path $builtPath -ItemType Directory | Out-Null }
+    }
+
+    # Make sure that the path was actually created
+    return Test-Path -Path $FolderPath
+}
+
+
+# Prepare (host) target folder for later WinGet log collection (based on RunId or Manifest/Package and timestamp)
+try {
+    $timestamp = Get-Date -Format 'yyyyMMdd_HHmm'
+    # Derive a manifest/package name (works whether a file or directory was passed)
+    if (-not [string]::IsNullOrWhiteSpace($Manifest)) {
+        if (Test-Path -LiteralPath $Manifest -PathType Container) {
+            # find package name in installer yaml
+            $installerFile = Get-ChildItem -Path $Manifest -Filter '*.installer.yaml' -Recurse -File | Select-Object -First 1
+            $manifestName = Get-Content -Path $installerFile.FullName | Select-String -Pattern 'PackageIdentifier: (.+)$' | ForEach-Object { $_.Matches.Groups[1].Value }
+        }
+        elseif (Test-Path -LiteralPath $Manifest -PathType Leaf) {
+            $manifestName = Split-Path -Path (Split-Path -Path $Manifest -Parent) -Leaf
+        }
+        else {
+            $manifestName = 'UnknownManifest'
+        }
+    }
+    else {
+        $manifestName = 'NoManifest'
+    }
+
+    $nameParts = @()
+    if (-not [string]::IsNullOrWhiteSpace($LogFolderName)) {
+        $nameParts += "$LogFolderName"
+    }
+    else {
+        $nameParts += $manifestName
+        $nameParts += $timestamp
+    }
+    #$nameParts += $timestamp
+    $destFolderName = ($nameParts -join '_')
+
+    # Root for collected logs (under the mapped folder so they can be retrieved easily)
+    $script:WinGetLogHostRoot = (Resolve-Path -Path $MapFolder).Path
+    if (!(Initialize-Folder -FolderPath $script:WinGetLogHostRoot)) {
+        Write-Warning "Could not ensure log root folder: $script:WinGetLogHostRoot"
+    }
+
+    $script:WinGetLogHostFolder = Join-Path -Path $script:WinGetLogHostRoot -ChildPath $destFolderName
+    Initialize-Folder -FolderPath $script:WinGetLogHostFolder | Out-Null
+
+    Write-Verbose "Prepared WinGet log destination: $script:WinGetLogHostFolder"
+}
+catch {
+    Write-Warning "Failed to prepare WinGet log folder: $($_.Exception.Message)"
+}
 
 # File Names
 $script:AppInstallerMsixFileName = "$script:AppInstallerPFN.msixbundle" # This should exactly match the name of the file in the CLI GitHub Release
@@ -79,12 +157,14 @@ $script:AppInstallerDataFolder = Join-Path -Path $env:LOCALAPPDATA -ChildPath 'P
 $script:TokenValidationCache = Join-Path -Path $script:AppInstallerDataFolder -ChildPath 'TokenValidationCache'
 $script:DependenciesCacheFolder = Join-Path -Path $script:AppInstallerDataFolder -ChildPath "$script:ScriptName.Dependencies"
 $script:TestDataFolder = Join-Path -Path $script:AppInstallerDataFolder -ChildPath $script:ScriptName
-$script:PrimaryMappedFolder = (Resolve-Path -Path $MapFolder).Path
+#$script:PrimaryMappedFolder = (Resolve-Path -Path $MapFolder).Path
+$script:PrimaryMappedFolder = $script:WinGetLogHostFolder
 $script:ConfigurationFile = Join-Path -Path $script:TestDataFolder -ChildPath "$script:ScriptName.wsb"
 
 # Sandbox Settings
 $script:SandboxDesktopFolder = 'C:\Users\WDAGUtilityAccount\Desktop'
-$script:SandboxWorkingDirectory = Join-Path -Path $script:SandboxDesktopFolder -ChildPath $($script:PrimaryMappedFolder | Split-Path -Leaf)
+#$script:SandboxWorkingDirectory = Join-Path -Path $script:SandboxDesktopFolder -ChildPath $($script:PrimaryMappedFolder | Split-Path -Leaf)
+$script:SandboxWorkingDirectory = "C:\Users\WDAGUtilityAccount\AppData\Local\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\DiagOutputDir"
 $script:SandboxTestDataFolder = Join-Path -Path $script:SandboxDesktopFolder -ChildPath $($script:TestDataFolder | Split-Path -Leaf)
 $script:SandboxBootstrapFile = Join-Path -Path $script:SandboxTestDataFolder -ChildPath "$script:ScriptName.ps1"
 $script:HostGeoID = (Get-WinHomeLocation).GeoID
@@ -478,18 +558,18 @@ if (!$SkipManifestValidation -and ![String]::IsNullOrWhiteSpace($Manifest)) {
     }
     Write-Information "--> Validating Manifest"
     $validateCommandOutput =
-        & {
-            # Store current output encoding setting
-            $prevOutEnc = [Console]::OutputEncoding
-            # Set [Console]::OutputEncoding to UTF-8 since winget uses UTF-8 for output
-            [Console]::OutputEncoding = $OutputEncoding = [System.Text.Utf8Encoding]::new()
+    & {
+        # Store current output encoding setting
+        $prevOutEnc = [Console]::OutputEncoding
+        # Set [Console]::OutputEncoding to UTF-8 since winget uses UTF-8 for output
+        [Console]::OutputEncoding = $OutputEncoding = [System.Text.Utf8Encoding]::new()
 
-            winget.exe validate $Manifest
+        winget.exe validate $Manifest
 
-            # Reset the encoding to the previous values
-            [Console]::OutputEncoding = $prevOutEnc
-        }
-        switch ($LASTEXITCODE) {
+        # Reset the encoding to the previous values
+        [Console]::OutputEncoding = $prevOutEnc
+    }
+    switch ($LASTEXITCODE) {
         '-1978335191' {
             ($validateCommandOutput | Select-Object -Skip 1 -SkipLast 1) | Write-Information # Skip the first line and the empty last line
             Write-Error -Category ParserError 'Manifest validation failed' -ErrorAction Continue
@@ -804,20 +884,21 @@ Write-Verbose 'Creating WSB file for launching the sandbox'
     </MappedFolder>
     <MappedFolder>
       <HostFolder>$($script:PrimaryMappedFolder)</HostFolder>
+      <SandboxFolder>$($script:SandboxWorkingDirectory)</SandboxFolder>
     </MappedFolder>
   </MappedFolders>
   <LogonCommand>
-  <Command>PowerShell Start-Process PowerShell -WindowStyle Maximized -WorkingDirectory '$($script:SandboxWorkingDirectory)' -ArgumentList '-ExecutionPolicy Bypass -NoExit -NoLogo -File $($script:SandboxBootstrapFile)'</Command>
+  <Command>PowerShell Start-Process PowerShell -WindowStyle Maximized -WorkingDirectory '$($script:SandboxTestDataFolder)' -ArgumentList '-ExecutionPolicy Bypass -NoExit -NoLogo -File $($script:SandboxBootstrapFile)'</Command>
   </LogonCommand>
 </Configuration>
 "@ | Out-File -FilePath $script:ConfigurationFile
 
-if ($script:PrimaryMappedFolder -notmatch 'winget-pkgs') {
-    Write-Warning @"
-The mapped folder does not appear to be within the winget-pkgs repository path.
-This will give read-and-write access to $($script:PrimaryMappedFolder) within the sandbox
-"@ -WarningAction $script:OnMappedFolderWarning
-}
+# if ($script:PrimaryMappedFolder -notmatch 'winget-pkgs') {
+#     Write-Warning @"
+# The mapped folder does not appear to be within the winget-pkgs repository path.
+# This will give read-and-write access to $($script:PrimaryMappedFolder) within the sandbox
+# "@ -WarningAction $script:OnMappedFolderWarning
+# }
 
 Write-Information @"
 --> Starting Windows Sandbox, and:
