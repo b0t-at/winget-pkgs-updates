@@ -11,6 +11,33 @@
 | Script based     | ![Script based Packages](https://img.shields.io/badge/ScriptPackages-26-green) |
 | GitHub Release based     | ![GitHub based Packages](https://img.shields.io/badge/GithubPackages-371-blue) |
 
+## New Feature: Package Manifest Overrides
+
+🎉 **NEW**: Customize Komac-generated manifests with override files! 
+
+The override system allows you to:
+- **Drop** unwanted fields (e.g., ReleaseDate)
+- **Override** existing values (e.g., Tags, Description)
+- **Add** new fields with placeholders (e.g., ReleaseNotes with {VERSION})
+- **Apply different rules** for different manifest types
+
+[📖 **See Documentation**](docs/PackageManifestOverrides.md) for complete usage guide.
+
+### Quick Example
+
+Create `overrides/{PackageId}/locale.yaml`:
+```yaml
+Override:
+  Tags:
+    - database
+    - server
+Add:
+  ReleaseNotes: |
+    Release {VERSION} of {PACKAGE_ID}
+    Released: {CURRENT_DATE}
+Drop:
+  - ReleaseDate
+```
 
 ## Tools:
 **[Orca](https://learn.microsoft.com/de-de/windows/win32/msi/orca-exe)**: database table editor for creating and editing Windows Installer packages
