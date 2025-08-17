@@ -132,9 +132,6 @@ jobs:
           - id: Betaflight.Betaflight-Configurator
             repo: betaflight/betaflight-configurator
             url: https://github.com/betaflight/betaflight-configurator/releases/download/{VERSION}/betaflight-configurator_{VERSION}_win64-installer.exe
-          - id: BlueMystical.EDHM
-            repo: BlueMystical/EDHM_UI
-            url: https://github.com/BlueMystical/EDHM_UI/releases/download/v{VERSION}/EDHM_UI_Setup.msi
           - id: bootandy.dust
             repo: bootandy/dust
             url: https://github.com/bootandy/dust/releases/download/v{VERSION}/dust-v{VERSION}-i686-pc-windows-gnu.zip https://github.com/bootandy/dust/releases/download/v{VERSION}/dust-v{VERSION}-x86_64-pc-windows-gnu.zip
