@@ -1,4 +1,4 @@
-name: GH Packages 1-P
+name: GH Packages 1-Q
 
 on:
   workflow_dispatch:
@@ -216,9 +216,6 @@ jobs:
           - id: CrowdSecurity.CrowdSec
             repo: crowdsecurity/crowdsec
             url: https://github.com/crowdsecurity/crowdsec/releases/download/v{VERSION}/crowdsec_{VERSION}.msi
-          - id: DataPLANT.ArcCommander
-            repo: nfdi4plants/arcCommander
-            url: https://github.com/nfdi4plants/arcCommander/releases/download/v{VERSION}/arc.exe
           - id: dbrgn.tealdeer
             repo: dbrgn/tealdeer
             url: https://github.com/dbrgn/tealdeer/releases/download/v{VERSION}/tealdeer-windows-x86_64-msvc.exe
@@ -762,6 +759,15 @@ jobs:
           - id: Pulsar-Edit.Pulsar
             repo: pulsar-edit/pulsar
             url: https://github.com/pulsar-edit/pulsar/releases/download/v{VERSION}/Windows.Pulsar.Setup.{VERSION}.exe
+          - id: qarmin.czkawka.cli
+            repo: qarmin/czkawka
+            url: https://github.com/qarmin/czkawka/releases/download/{VERSION}/windows_czkawka_cli.exe
+          - id: QGIS.QField
+            repo: opengisch/QField
+            url: https://github.com/opengisch/QField/releases/download/v{VERSION}/qfield-v{VERSION}-windows-x64.exe
+          - id: quotient-im.Quaternion
+            repo: quotient-im/Quaternion
+            url: https://github.com/quotient-im/Quaternion/releases/download/{VERSION}/quaternion-{VERSION}.zip
 
 # steps:
 # - name: Update Packages
@@ -777,7 +783,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
       - name: Update package
         id: update_version
         env:

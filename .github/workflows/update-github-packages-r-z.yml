@@ -1,4 +1,4 @@
-name: GH Packages Q-Z
+name: GH Packages R-Z
 
 on:
   workflow_dispatch:
@@ -21,15 +21,6 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - id: qarmin.czkawka.cli
-            repo: qarmin/czkawka
-            url: https://github.com/qarmin/czkawka/releases/download/{VERSION}/windows_czkawka_cli.exe
-          - id: QGIS.QField
-            repo: opengisch/QField
-            url: https://github.com/opengisch/QField/releases/download/v{VERSION}/qfield-v{VERSION}-windows-x64.exe
-          - id: quotient-im.Quaternion
-            repo: quotient-im/Quaternion
-            url: https://github.com/quotient-im/Quaternion/releases/download/{VERSION}/quaternion-{VERSION}.zip
           - id: Radius.Radius
             repo: radius-project/radius
             url: https://github.com/radius-project/radius/releases/download/v{VERSION}/rad_windows_amd64.exe
@@ -402,7 +393,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
       - name: Update package
         id: update_version
         env:
