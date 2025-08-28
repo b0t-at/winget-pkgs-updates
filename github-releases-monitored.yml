@@ -194,9 +194,9 @@
           - id: "Curiosity.Curiosity"
             repo: "curiosity-ai/curiosity-app-win"
             url: "https://github.com/curiosity-ai/curiosity-app-win/releases/download/v{VERSION}/Curiosity-Setup-{VERSION}.exe"
-          - id: "DataPLANT.ArcCommander"
-            repo: "nfdi4plants/arcCommander"
-            url: "https://github.com/nfdi4plants/arcCommander/releases/download/v{VERSION}/arc.exe"
+#          - id: "DataPLANT.ArcCommander"
+#            repo: "nfdi4plants/arcCommander"
+#            url: "https://github.com/nfdi4plants/arcCommander/releases/download/v{VERSION}/arc.exe"
           - id: "dbrgn.tealdeer"
             repo: "dbrgn/tealdeer"
             url: "https://github.com/dbrgn/tealdeer/releases/download/v{VERSION}/tealdeer-windows-x86_64-msvc.exe"
@@ -1353,4 +1353,5 @@
 #          - id: "Jellyfin.Server"
 #            repo: "jellyfin/jellyfin-server-windows"
 #            url: "https://github.com/jellyfin/jellyfin-server-windows/releases/download/{VERSION}/jellyfin_{VERSION}_windows-x64.exe"  
+
 
