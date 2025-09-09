@@ -2,7 +2,7 @@ $WebsiteURL = "https://support.loupedeck.com/loupedeck-software-download"
 
 $websiteData = Invoke-WebRequest -Method Get -Uri $WebsiteURL
 
-$installerLink = ($websiteData.Links | Where-Object { $_.href -like "*.exe" } | Select-Object -ExpandProperty href).ToString()
+$installerLink = ($websiteData.Links | Where-Object { $_.href -like "*.exe*" } | Select-Object -ExpandProperty href).ToString()
 
 if($installerLink.Count -eq 0 -or $installerLink.Count -gt 1) {
     Write-Host "No installer links or too much installer links found"
@@ -10,9 +10,9 @@ if($installerLink.Count -eq 0 -or $installerLink.Count -gt 1) {
 }
 
 # get substring position "SoftwareDownloads and replace everything until there with prefix url"
-$installerLink = $installerLink.Substring($installerLink.IndexOf("LD%20Software%20Downloads"))
-$fullDownloadURL = "https://support.loupedeck.com/hubfs/Knowledge%20Base/$installerLink"
-
+#$installerLink = $installerLink.Substring($installerLink.IndexOf("LD%20Software%20Downloads"))
+#$fullDownloadURL = "https://support.loupedeck.com/hubfs/Knowledge%20Base/$installerLink"
+$fullDownloadURL = $installerLink.Split('?')[0]
 # check if full download URL is valid
 Write-Host "Full download URL: $fullDownloadURL"
 
