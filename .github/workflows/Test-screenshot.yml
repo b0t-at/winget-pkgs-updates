@@ -5,7 +5,7 @@ on:
 
 jobs:
   screenshot:
-    runs-on: windows-latest  # Using a GitHub-hosted Windows runner
+    runs-on: windows-2025  # Using a GitHub-hosted Windows runner
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v5

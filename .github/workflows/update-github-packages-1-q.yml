@@ -14,7 +14,7 @@ jobs:
   update-releasebased:
     name: ${{ matrix.id }}
     #runs-on: ubuntu-latest
-    runs-on: windows-latest
+    runs-on: windows-2025
     environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Test' }}
 
     strategy:

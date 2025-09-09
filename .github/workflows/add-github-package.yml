@@ -26,7 +26,7 @@ on:
 jobs:
   script:
     name: ${{ inputs.packageId }}
-    runs-on: windows-latest
+    runs-on: windows-2025
     env:
       GH_TOKEN: ${{ github.token }}
       GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}

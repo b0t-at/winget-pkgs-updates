@@ -36,7 +36,7 @@ on:
 jobs:
   hash-update:
     name: Hash update ${{ inputs.identifier }} ${{ inputs.version }} -s ${{ inputs.submit }} 
-    runs-on: windows-latest
+    runs-on: windows-2025
 
     steps:
       - name: Checkout

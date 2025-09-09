@@ -17,7 +17,7 @@ on:
 jobs:
   update:
     name: Rebuild manifests
-    runs-on: windows-latest
+    runs-on: windows-2025
     env:
       WINGET_PKGS_FORK_REPO: ${{vars.WINGET_PKGS_FORK_REPO}}
       GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
