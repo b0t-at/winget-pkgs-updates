@@ -26,7 +26,7 @@ jobs:
             url: https://github.com/radius-project/radius/releases/download/v{VERSION}/rad_windows_amd64.exe
           - id: RadolynLabs.AyuGramDesktop
             repo: AyuGram/AyuGramDesktop
-            url: https://github.com/AyuGram/AyuGramDesktop/releases/download/v{VERSION}/AyuGram.exe
+            url: https://github.com/AyuGram/AyuGramDesktop/releases/download/v{VERSION}/AyuGram.zip
           - id: ransome1.sleek
             repo: ransome1/sleek
             url: https://github.com/ransome1/sleek/releases/download/v{VERSION}/sleek-{VERSION}-win-Setup.exe https://github.com/ransome1/sleek/releases/download/v{VERSION}/sleek-{VERSION}-win.exe
@@ -68,7 +68,7 @@ jobs:
             url: https://github.com/schollz/croc/releases/download/v{VERSION}/croc_v{VERSION}_Windows-32bit.zip https://github.com/schollz/croc/releases/download/v{VERSION}/croc_v{VERSION}_Windows-64bit.zip https://github.com/schollz/croc/releases/download/v{VERSION}/croc_v{VERSION}_Windows-ARM.zip https://github.com/schollz/croc/releases/download/v{VERSION}/croc_v{VERSION}_Windows-ARM64.zip
           - id: sebescudie.GammaLauncher
             repo: sebescudie/GammaLauncher
-            url: https://github.com/sebescudie/GammaLauncher/releases/download/{VERSION}/gammalauncher_{VERSION}_installer.exe
+            url: https://github.com/sebescudie/GammaLauncher/releases/download/{VERSION}/gammalauncher_{VERSION}_win-x64_installer.exe https://github.com/sebescudie/GammaLauncher/releases/download/{VERSION}/gammalauncher_{VERSION}_win-arm64_installer.exe
           - id: seerge.g-helper
             repo: seerge/g-helper
             url: https://github.com/seerge/g-helper/releases/download/v{VERSION}/GHelper.exe
@@ -78,9 +78,6 @@ jobs:
           - id: Shemnei.punktf
             repo: Shemnei/punktf
             url: https://github.com/Shemnei/punktf/releases/download/v{VERSION}/punktf-x86_64-pc-windows-msvc-static.zip
-          - id: ShiftCryptoAG.BitBoxApp
-            repo: BitBoxSwiss/bitbox-wallet-app
-            url: https://github.com/BitBoxSwiss/bitbox-wallet-app/releases/download/v{VERSION}/BitBox-{VERSION}-win64-installer.exe
           - id: sidneys.pb-for-desktop
             repo: sidneys/pb-for-desktop
             url: https://github.com/sidneys/pb-for-desktop/releases/download/v{VERSION}/pb-for-desktop-{VERSION}-setup.msi
@@ -189,9 +186,6 @@ jobs:
           - id: tagspaces.tagspaces
             repo: tagspaces/tagspaces
             url: https://github.com/tagspaces/tagspaces/releases/download/v{VERSION}/tagspaces-win-x64-{VERSION}.exe https://github.com/tagspaces/tagspaces/releases/download/v{VERSION}/tagspaces-win-x64-{VERSION}.exe
-          - id: Taisei.Taisei
-            repo: taisei-project/taisei
-            url: https://github.com/taisei-project/taisei/releases/download/v{VERSION}/Taisei-{VERSION}-setup-x86.exe https://github.com/taisei-project/taisei/releases/download/v{VERSION}/Taisei-{VERSION}-setup-x86.exe https://github.com/taisei-project/taisei/releases/download/v{VERSION}/Taisei-{VERSION}-setup-x86_64.exe https://github.com/taisei-project/taisei/releases/download/v{VERSION}/Taisei-{VERSION}-setup-x86_64.exe
           - id: tanshuai.alphabiz
             repo: tanshuai/alphabiz
             url: https://github.com/tanshuai/alphabiz/releases/download/{VERSION}/alphabiz-{VERSION}.msi
@@ -225,15 +219,12 @@ jobs:
           - id: ThaddeusMcCleary.Seatsmart
             repo: thaddeusm/seatsmart-FHSU
             url: https://github.com/thaddeusm/seatsmart-FHSU/releases/download/v{VERSION}/Seatsmart-Setup-{VERSION}.exe
-          - id: ThaUnknown.Miru
-            repo: ThaUnknown/miru
-            url: https://github.com/ThaUnknown/miru/releases/download/v{VERSION}/win-Miru-{VERSION}-installer.exe
           - id: ThePyzoteam.pyzo
             repo: pyzo/pyzo
             url: https://github.com/pyzo/pyzo/releases/download/v{VERSION}/pyzo-{VERSION}-win64.exe
           - id: TheQucsTeam.Qucs-S
             repo: ra3xdh/qucs_s
-            url: https://github.com/ra3xdh/qucs_s/releases/download/{VERSION}/Qucs-S-{VERSION}-setup.exe
+            url: https://github.com/ra3xdh/qucs_s/releases/download/{VERSION}/Qucs-S-{VERSION}-win64-setup.exe
           - id: TheWaWaR.simple-http-server
             repo: TheWaWaR/simple-http-server
             url: https://github.com/TheWaWaR/simple-http-server/releases/download/v{VERSION}/x86_64-pc-windows-msvc-simple-http-server.exe
@@ -390,7 +381,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
       - name: Update package
         id: update_version
         env:

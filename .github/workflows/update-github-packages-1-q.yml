@@ -41,7 +41,7 @@ jobs:
             url: https://github.com/alire-project/alire/releases/download/v{VERSION}/alr-{VERSION}-bin-x86_64-windows.zip
           - id: Adamant.Messenger
             repo: Adamant-im/adamant-im
-            url: https://github.com/Adamant-im/adamant-im/releases/download/v{VERSION}/ADAMANT-Messenger-Setup-{VERSION}.exe
+            url: https://github.com/Adamant-im/adamant-im/releases/download/v{VERSION}/ADAMANT.Messenger.Setup.{VERSION}.exe
           - id: AdGuard.AdGuardHome
             repo: AdguardTeam/AdGuardHome
             url: https://github.com/AdguardTeam/AdGuardHome/releases/download/v{VERSION}/AdGuardHome_windows_386.zip https://github.com/AdguardTeam/AdGuardHome/releases/download/v{VERSION}/AdGuardHome_windows_amd64.zip https://github.com/AdguardTeam/AdGuardHome/releases/download/v{VERSION}/AdGuardHome_windows_arm64.zip
@@ -56,7 +56,7 @@ jobs:
             url: https://github.com/theflames-presence/flame-launcher/releases/download/v{VERSION}/Flame-Launcher.-v{VERSION}.-setup-x64.exe
           - id: AlbrechtL.WelloIO
             repo: AlbrechtL/welle.io
-            url: https://github.com/AlbrechtL/welle.io/releases/download/v{VERSION}/welle.io-{VERSION}-Windows-setup_x86_64.exe
+            url: https://github.com/AlbrechtL/welle.io/releases/download/v{VERSION}/welle.io-{VERSION}-Windows_setup-x86_x64.exe
           - id: AllanBoll.FilesRemote
             repo: allanrbo/filesremote
             url: https://github.com/allanrbo/filesremote/releases/download/v{VERSION}/filesremote-{VERSION}-Windows-x86_64-static.zip
@@ -77,7 +77,7 @@ jobs:
             url: https://github.com/cantino/mcfly/releases/download/v{VERSION}/mcfly-v{VERSION}-x86_64-pc-windows-msvc.zip
           - id: Anki.Anki
             repo: ankitects/anki
-            url: https://github.com/ankitects/anki/releases/download/{VERSION}/anki-{VERSION}-windows-qt6.exe
+            url: https://github.com/ankitects/anki/releases/download/{VERSION}/anki-launcher-{VERSION}-windows.exe
           - id: ANTOrg-Inc.ASCIIEngine
             repo: hdfsyu/ASCIIEngine
             url: https://github.com/hdfsyu/ASCIIEngine/releases/download/v{VERSION}/ASCIIEngine.msi
@@ -381,9 +381,6 @@ jobs:
           - id: Google.Protobuf
             repo: protocolbuffers/protobuf
             url: https://github.com/protocolbuffers/protobuf/releases/download/v{VERSION}/protoc-{VERSION}-win32.zip https://github.com/protocolbuffers/protobuf/releases/download/v{VERSION}/protoc-{VERSION}-win64.zip
-          - id: goplus.gop
-            repo: goplus/gop
-            url: https://github.com/goplus/gop/releases/download/v{VERSION}/gop{VERSION}.windows-arm64.zip https://github.com/goplus/gop/releases/download/v{VERSION}/gop{VERSION}.windows-386.zip https://github.com/goplus/gop/releases/download/v{VERSION}/gop{VERSION}.windows-amd64.zip
           - id: Governikus.AusweisApp
             repo: Governikus/AusweisApp
             url: https://github.com/Governikus/AusweisApp/releases/download/{VERSION}/AusweisApp-{VERSION}.msi
@@ -458,7 +455,7 @@ jobs:
             url: https://github.com/iswix-llc/iswix/releases/download/v{VERSION}/IsWiX-{VERSION}.0-ARM64.msi https://github.com/iswix-llc/iswix/releases/download/v{VERSION}/IsWiX-{VERSION}.0-x64.msi
           - id: Jacalz.Rymdport
             repo: Jacalz/rymdport
-            url: https://github.com/Jacalz/rymdport/releases/download/v{VERSION}/rymdport-v{VERSION}-windows-amd64.zip
+            url: https://github.com/Jacalz/rymdport/releases/download/v{VERSION}/rymdport-v{VERSION}-windows-x86_64.zip
           - id: JackenWu.MSearcher
             repo: Jacken-Wu/MSearcher
             url: https://github.com/Jacken-Wu/MSearcher/releases/download/v{VERSION}/MSearcher_setup_{VERSION}_x64.exe
@@ -473,7 +470,7 @@ jobs:
             url: https://github.com/jaegertracing/jaeger/releases/download/v{VERSION}/jaeger-{VERSION}-windows-amd64.zip
           - id: JakobHellermann.Atlas
             repo: jakobhellermann/Atlas
-            url: https://github.com/jakobhellermann/Atlas/releases/download/{VERSION}/Atlas.msi
+            url: https://github.com/jakobhellermann/Atlas/releases/download/v{VERSION}/Atlas.msi
           - id: JannisX11.Blockbench
             repo: JannisX11/blockbench
             url: https://github.com/JannisX11/blockbench/releases/download/v{VERSION}/Blockbench_{VERSION}.exe
@@ -582,7 +579,7 @@ jobs:
           - id: Metanorma.Metanorma
             repo: metanorma/packed-mn
             url: https://github.com/metanorma/packed-mn/releases/download/v{VERSION}/metanorma-windows-x86_64.zip
-          - id: MichaelDiCarlo.PostyBirb
+          - id: MichaelDiCarlo.PostyBirb+
             repo: mvdicarlo/postybirb-plus
             url: https://github.com/mvdicarlo/postybirb-plus/releases/download/v{VERSION}/postybirb-plus-setup-{VERSION}.exe
           - id: Micronaut.Launch
@@ -713,7 +710,7 @@ jobs:
             url: https://github.com/WinSSHTerm/WinSSHTerm/releases/download/{VERSION}/WinSSHTerm-{VERSION}-x64.msi https://github.com/WinSSHTerm/WinSSHTerm/releases/download/{VERSION}/WinSSHTerm-{VERSION}-x64.msi https://github.com/WinSSHTerm/WinSSHTerm/releases/download/{VERSION}/WinSSHTerm-{VERSION}-arm64.msi https://github.com/WinSSHTerm/WinSSHTerm/releases/download/{VERSION}/WinSSHTerm-{VERSION}-arm64.msi
           - id: PasteIntoFile.PasteIntoFile
             repo: eltos/PasteIntoFile
-            url: https://github.com/eltos/PasteIntoFile/releases/download/v{VERSION}/PasteIntoFile_v{VERSION}_installer.msi
+            url: https://github.com/eltos/PasteIntoFile/releases/download/v{VERSION}/PasteIntoFile_v{VERSION}_installer_signed.msi
           - id: PBH-BTN.PeerBanHelper
             repo: PBH-BTN/PeerBanHelper
             url: https://github.com/PBH-BTN/PeerBanHelper/releases/download/v{VERSION}/PeerBanHelper_windows-x64_{VERSION}.exe https://github.com/PBH-BTN/PeerBanHelper/releases/download/v{VERSION}/PeerBanHelper_windows-x64_{VERSION}.exe https://github.com/PBH-BTN/PeerBanHelper/releases/download/v{VERSION}/PeerBanHelper_windows-arm64_{VERSION}.exe https://github.com/PBH-BTN/PeerBanHelper/releases/download/v{VERSION}/PeerBanHelper_windows-arm64_{VERSION}.exe
@@ -783,7 +780,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
       - name: Update package
         id: update_version
         env:
