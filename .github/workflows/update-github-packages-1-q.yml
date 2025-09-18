@@ -597,9 +597,6 @@ jobs:
           - id: Microsoft.PerfView
             repo: microsoft/perfview
             url: https://github.com/microsoft/perfview/releases/download/v{VERSION}/PerfView.exe
-          - id: Microsoft.PowerToys
-            repo: microsoft/PowerToys
-            url: https://github.com/microsoft/PowerToys/releases/download/v{VERSION}/PowerToysUserSetup-{VERSION}-x64.exe https://github.com/microsoft/PowerToys/releases/download/v{VERSION}/PowerToysSetup-{VERSION}-x64.exe https://github.com/microsoft/PowerToys/releases/download/v{VERSION}/PowerToysUserSetup-{VERSION}-arm64.exe https://github.com/microsoft/PowerToys/releases/download/v{VERSION}/PowerToysSetup-{VERSION}-arm64.exe
           - id: Microsoft.Sqlcmd
             repo: microsoft/go-sqlcmd
             url: https://github.com/microsoft/go-sqlcmd/releases/download/v{VERSION}/sqlcmd-amd64.msi https://github.com/microsoft/go-sqlcmd/releases/download/v{VERSION}/sqlcmd-arm.msi https://github.com/microsoft/go-sqlcmd/releases/download/v{VERSION}/sqlcmd-arm64.msi
