@@ -38,9 +38,9 @@ jobs:
             WebsiteURL: "https://www.mongodb.com/try/download/tools"
           - PackageName: "MongoDB.Compass.Readonly"
             WebsiteURL: "https://www.mongodb.com/try/download/tools"
-          - PackageName: "Logitech.OptionsPlus"
-            WebsiteURL: "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.exe"     
-            With: WinGetCreate     
+#          - PackageName: "Logitech.OptionsPlus"
+#            WebsiteURL: "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.exe"     
+#            With: WinGetCreate     
           - PackageName: "Glarysoft.GlaryUtilities"
             WebsiteURL: "https://download.glarysoft.com/gusetup.exe"
             With: WinGetCreate
