@@ -564,9 +564,6 @@ jobs:
           - id: LowLevelDesign.ProcessGovernor
             repo: lowleveldesign/process-governor
             url: https://github.com/lowleveldesign/process-governor/releases/download/{VERSION}/procgov.zip
-          - id: lubomirkurcak.tend
-            repo: lubomirkurcak/tend
-            url: https://github.com/lubomirkurcak/tend/releases/download/{VERSION}/tend-{VERSION}-x86_64-pc-windows-msvc.zip
           - id: MarceloLvCabral.BrightScriptEmulator
             repo: lvcabral/brs-desktop
             url: https://github.com/lvcabral/brs-desktop/releases/download/v{VERSION}/brs-desktop-{VERSION}-windows.exe
@@ -777,7 +774,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
       - name: Update package
         id: update_version
         env:
