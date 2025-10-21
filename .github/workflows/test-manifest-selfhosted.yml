@@ -38,16 +38,6 @@ jobs:
             $manifestUrl = Get-ManifestUrlByWingetPkgsPrNumber -PrNumber "${{ inputs.PRNumber }}"
           }
 
-          # The regex explanation:
-          # .*\/manifests\/        matches everything up to '/manifests/'
-          # [^/]+\/                matches the dynamic folder immediately after manifests
-          # ([^/]+)\/              captures the username into group 1
-          # ([^/]+)\/              captures the package name into group 2
-          # ([^/]+)\/?             captures the version into group 3 (with an optional trailing slash)
-          $pattern = ".*/manifests/[^/]+/([^/]+)/([^/]+)/([^/]+)/?$"
-          $result = [regex]::Replace($manifestUrl, $pattern, '$1.$2_$3')
-
-          echo "manifestname=$result" >> $env:GITHUB_ENV
           echo "manifesturl=$manifestUrl" >> $env:GITHUB_ENV
 
       - name: Test installation

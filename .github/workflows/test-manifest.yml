@@ -42,16 +42,6 @@ jobs:
             $manifestUrl = Get-ManifestUrlByWingetPkgsPrNumber -PrNumber "${{ inputs.PRNumber }}"
           }
 
-          # The regex explanation:
-          # .*\/manifests\/        matches everything up to '/manifests/'
-          # [^/]+\/                matches the dynamic folder immediately after manifests
-          # ([^/]+)\/              captures the username into group 1
-          # ([^/]+)\/              captures the package name into group 2
-          # ([^/]+)\/?             captures the version into group 3 (with an optional trailing slash)
-          $pattern = ".*/manifests/[^/]+/([^/]+)/([^/]+)/([^/]+)/?$"
-          $result = [regex]::Replace($manifestUrl, $pattern, '$1.$2_$3')
-
-          echo "manifestname=$result" >> $env:GITHUB_ENV
           echo "manifesturl=$manifestUrl" >> $env:GITHUB_ENV
 
       #- name: Install winget
@@ -103,7 +93,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          #name: screenshot-${{ env.date }}-${{ env.manifestname }}
+          #name: screenshot-${{ env.date }}
           name: screenshot-${{ env.date }}
           path: screenshot.png 
           retention-days: 30  # Artifacts will be kept for 30 days
