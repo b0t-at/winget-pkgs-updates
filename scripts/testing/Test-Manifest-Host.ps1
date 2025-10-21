@@ -118,7 +118,7 @@ if (-Not [String]::IsNullOrWhiteSpace($Manifest)) {
     Write-Host "Manifest: $Manifest"
 
     # Start the Test Script as a background job.
-    $job = Start-Job -ScriptBlock { & winget install -m "C:\Users\runneradmin\AppData\Local\Temp\SandboxTest\ManifestDownload" --accept-package-agreements --verbose-logs --ignore-local-archive-malware-scan --dependency-source winget }
+    $job = Start-Job -ScriptBlock { & winget install -m "$Manifest" --accept-package-agreements --verbose-logs --ignore-local-archive-malware-scan --dependency-source winget }
           
     # Wait for the job to complete or timeout.
     if (Wait-Job -Job $job -Timeout ([int]$env:TIMEOUT)) {
