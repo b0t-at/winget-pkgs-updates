@@ -473,7 +473,7 @@
             url: "https://github.com/jdx/mise/releases/download/v{VERSION}/mise-v{VERSION}-windows-x64.zip https://github.com/jdx/mise/releases/download/v{VERSION}/mise-v{VERSION}-windows-arm64.zip"
           - id: "Jellyfin.FFmpeg"
             repo: "jellyfin/jellyfin-ffmpeg"
-            url: "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v{VERSION}/jellyfin-ffmpeg_{VERSION}-portable_win64.zip"
+            url: "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v{VERSION}/jellyfin-ffmpeg_{VERSION}_portable_win64-clang-gpl.zip"
           - id: "jendrikseipp.RedNotebook"
             repo: "jendrikseipp/rednotebook"
             url: "https://github.com/jendrikseipp/rednotebook/releases/download/v{VERSION}/rednotebook-{VERSION}.exe"
