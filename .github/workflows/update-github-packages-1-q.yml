@@ -405,9 +405,6 @@ jobs:
           - id: h3poteto.whalebird-desktop
             repo: h3poteto/whalebird-desktop
             url: https://github.com/h3poteto/whalebird-desktop/releases/download/v{VERSION}/Whalebird-{VERSION}-win-x64.exe https://github.com/h3poteto/whalebird-desktop/releases/download/v{VERSION}/Whalebird-{VERSION}-win-x64.exe
-          - id: Hashicorp.Vault
-            repo: hashicorp/vault
-            url: https://releases.hashicorp.com/vault/{VERSION}/vault_{VERSION}_windows_amd64.zip https://releases.hashicorp.com/vault/{VERSION}/vault_{VERSION}_windows_386.zip
           - id: hickford.git-credential-azure
             repo: hickford/git-credential-azure
             url: https://github.com/hickford/git-credential-azure/releases/download/v{VERSION}/git-credential-azure_{VERSION}_windows_amd64.zip https://github.com/hickford/git-credential-azure/releases/download/v{VERSION}/git-credential-azure_{VERSION}_windows_arm64.zip
@@ -774,7 +771,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
       - name: Update package
         id: update_version
         env:
