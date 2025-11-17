@@ -900,9 +900,9 @@
           - id: "Storj.Uplink"
             repo: "storj/storj"
             url: "https://github.com/storj/storj/releases/download/v{VERSION}/uplink_windows_amd64.zip"
-          - id: "Streetwriters.Notesnook"
-            repo: "streetwriters/notesnook"
-            url: "https://github.com/streetwriters/notesnook/releases/download/v{VERSION}/notesnook_win_x64.exe https://github.com/streetwriters/notesnook/releases/download/v{VERSION}/notesnook_win_x64_portable.exe https://github.com/streetwriters/notesnook/releases/download/v{VERSION}/notesnook_win_arm64.exe https://github.com/streetwriters/notesnook/releases/download/v{VERSION}/notesnook_win_arm64_portable.exe"
+#          - id: "Streetwriters.Notesnook"
+#            repo: "streetwriters/notesnook"
+#            url: "https://github.com/streetwriters/notesnook/releases/download/v{VERSION}/notesnook_win_x64.exe https://github.com/streetwriters/notesnook/releases/download/v{VERSION}/notesnook_win_x64_portable.exe https://github.com/streetwriters/notesnook/releases/download/v{VERSION}/notesnook_win_arm64.exe https://github.com/streetwriters/notesnook/releases/download/v{VERSION}/notesnook_win_arm64_portable.exe"
           - id: "Stripe.StripeCli"
             repo: "stripe/stripe-cli"
             url: "https://github.com/stripe/stripe-cli/releases/download/v{VERSION}/stripe_{VERSION}_windows_x86_64.zip"
@@ -1353,6 +1353,7 @@
 #          - id: "Jellyfin.Server"
 #            repo: "jellyfin/jellyfin-server-windows"
 #            url: "https://github.com/jellyfin/jellyfin-server-windows/releases/download/{VERSION}/jellyfin_{VERSION}_windows-x64.exe"  
+
 
 
 
