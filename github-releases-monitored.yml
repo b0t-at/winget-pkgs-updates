@@ -342,9 +342,9 @@
           - id: "git-cola.git-cola"
             repo: "git-cola/git-cola"
             url: "https://github.com/git-cola/git-cola/releases/download/v{VERSION}/git-cola-{VERSION}.windows.zip"
-          - id: "GitKraken.cli"
-            repo: "gitkraken/gk-cli"
-            url: "https://github.com/gitkraken/gk-cli/releases/download/v{VERSION}/gk_{VERSION}_windows_arm64.zip https://github.com/gitkraken/gk-cli/releases/download/v{VERSION}/gk_{VERSION}_windows_amd64.zip https://github.com/gitkraken/gk-cli/releases/download/v{VERSION}/gk_{VERSION}_windows_386.zip"
+#          - id: "GitKraken.cli"
+#            repo: "gitkraken/gk-cli"
+#            url: "https://github.com/gitkraken/gk-cli/releases/download/v{VERSION}/gk_{VERSION}_windows_arm64.zip https://github.com/gitkraken/gk-cli/releases/download/v{VERSION}/gk_{VERSION}_windows_amd64.zip https://github.com/gitkraken/gk-cli/releases/download/v{VERSION}/gk_{VERSION}_windows_386.zip"
           - id: "GiulioSorrentino.wheelofnumfortune.avalonia"
             repo: "GiulianoSpaghetti/WheelOfNumFortune.Material"
             url: "https://github.com/GiulianoSpaghetti/WheelOfNumFortune.Material/releases/download/0.4/wheelofnumfortune.avalonia-{VERSION}-material-amd64.msi https://github.com/GiulianoSpaghetti/WheelOfNumFortune.Material/releases/download/0.4/wheelofnumfortune.avalonia-{VERSION}-material-arm64.msi"
@@ -942,9 +942,9 @@
           - id: "TeamLidarr.Lidarr"
             repo: "Lidarr/Lidarr"
             url: "https://github.com/Lidarr/Lidarr/releases/download/v{VERSION}/Lidarr.master.{VERSION}.windows-core-x86-installer.exe https://github.com/Lidarr/Lidarr/releases/download/v{VERSION}/Lidarr.master.{VERSION}.windows-core-x64-installer.exe"
-          - id: "TeamSonarr.Sonarr"
-            repo: "Sonarr/Sonarr"
-            url: "https://github.com/Sonarr/Sonarr/releases/download/v{VERSION}/Sonarr.main.{VERSION}.win-x86-installer.exe https://github.com/Sonarr/Sonarr/releases/download/v{VERSION}/Sonarr.main.{VERSION}.win-x64-installer.exe"
+#          - id: "TeamSonarr.Sonarr"
+#            repo: "Sonarr/Sonarr"
+#            url: "https://github.com/Sonarr/Sonarr/releases/download/v{VERSION}/Sonarr.main.{VERSION}.win-x86-installer.exe https://github.com/Sonarr/Sonarr/releases/download/v{VERSION}/Sonarr.main.{VERSION}.win-x64-installer.exe"
           - id: "TEdit.TEdit"
             repo: "TEdit/Terraria-Map-Editor"
             url: "https://github.com/TEdit/Terraria-Map-Editor/releases/download/{VERSION}/TEditAvalonia-{VERSION}-win-x64.zip"
@@ -1353,6 +1353,7 @@
 #          - id: "Jellyfin.Server"
 #            repo: "jellyfin/jellyfin-server-windows"
 #            url: "https://github.com/jellyfin/jellyfin-server-windows/releases/download/{VERSION}/jellyfin_{VERSION}_windows-x64.exe"  
+
 
 
 
