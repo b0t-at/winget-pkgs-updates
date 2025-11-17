@@ -192,9 +192,6 @@ jobs:
           - id: TeamLidarr.Lidarr
             repo: Lidarr/Lidarr
             url: https://github.com/Lidarr/Lidarr/releases/download/v{VERSION}/Lidarr.master.{VERSION}.windows-core-x86-installer.exe https://github.com/Lidarr/Lidarr/releases/download/v{VERSION}/Lidarr.master.{VERSION}.windows-core-x64-installer.exe
-          - id: TeamSonarr.Sonarr
-            repo: Sonarr/Sonarr
-            url: https://github.com/Sonarr/Sonarr/releases/download/v{VERSION}/Sonarr.main.{VERSION}.win-x86-installer.exe https://github.com/Sonarr/Sonarr/releases/download/v{VERSION}/Sonarr.main.{VERSION}.win-x64-installer.exe
           - id: TEdit.TEdit
             repo: TEdit/Terraria-Map-Editor
             url: https://github.com/TEdit/Terraria-Map-Editor/releases/download/{VERSION}/TEditAvalonia-{VERSION}-win-x64.zip

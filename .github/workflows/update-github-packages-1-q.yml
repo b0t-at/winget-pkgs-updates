@@ -357,9 +357,6 @@ jobs:
           - id: git-cola.git-cola
             repo: git-cola/git-cola
             url: https://github.com/git-cola/git-cola/releases/download/v{VERSION}/git-cola-{VERSION}.windows.zip
-          - id: GitKraken.cli
-            repo: gitkraken/gk-cli
-            url: https://github.com/gitkraken/gk-cli/releases/download/v{VERSION}/gk_{VERSION}_windows_arm64.zip https://github.com/gitkraken/gk-cli/releases/download/v{VERSION}/gk_{VERSION}_windows_amd64.zip https://github.com/gitkraken/gk-cli/releases/download/v{VERSION}/gk_{VERSION}_windows_386.zip
           - id: GiulioSorrentino.wheelofnumfortune.avalonia
             repo: GiulianoSpaghetti/WheelOfNumFortune.Material
             url: https://github.com/GiulianoSpaghetti/WheelOfNumFortune.Material/releases/download/0.4/wheelofnumfortune.avalonia-{VERSION}-material-amd64.msi https://github.com/GiulianoSpaghetti/WheelOfNumFortune.Material/releases/download/0.4/wheelofnumfortune.avalonia-{VERSION}-material-arm64.msi
