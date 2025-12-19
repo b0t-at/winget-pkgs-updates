@@ -47,7 +47,7 @@ jobs:
           Import-Module .\modules\WingetMaintainerModule
           .\scripts\Add-GitHubPackage.ps1 -PackageId ${{ inputs.packageId }} -forceAdd $${{ inputs.forceAdd }} -resolves ${{ inputs.resolves }} -With ${{ inputs.With }}
       - name: Commit and push
-        uses: stefanzweifel/git-auto-commit-action@28e16e81777b558cc906c8750092100bbb34c5e3 # v7.0.0
+        uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v7.1.0
         with:
           commit_message: "Add GitHub Package: ${{ inputs.packageId }}"
           file_pattern: ./github-releases-monitored.yml

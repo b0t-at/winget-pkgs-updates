@@ -35,7 +35,7 @@ jobs:
                 sed -i "s/ScriptPackages-[0-9]*-green/ScriptPackages-$countscript-green/g" README.md
                 sed -i "s/GithubPackages-[0-9]*-blue/GithubPackages-$countgithub-blue/g" README.md
             - name: Commit and push
-              uses: stefanzweifel/git-auto-commit-action@28e16e81777b558cc906c8750092100bbb34c5e3 # v7.0.0
+              uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v7.1.0
               with:
                 commit_message: Update package count badge
                 file_pattern: README.md
