@@ -7,20 +7,21 @@ jobs:
   get-prs:
     name: "Get Open PRs"
     runs-on: [self-hosted, Windows, X64]
+    env:
+      WINGET_PKGS_FORK_REPO: ${{vars.WINGET_PKGS_FORK_REPO}}
+      GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
+      GH_TOKEN: ${{ secrets.WINGET_PAT }}
     timeout-minutes: 5
     outputs:
       pr-numbers: ${{ steps.list-prs.outputs.prs }}
       pr-count: ${{ steps.list-prs.outputs.count }}
-    
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
       
       - name: List Open PRs
         id: list-prs
-        shell: pwsh
-        env:
-          GH_TOKEN: ${{ github.token }}
+        shell: pwsh          
         run: |
           $ErrorActionPreference = "Stop"
           
