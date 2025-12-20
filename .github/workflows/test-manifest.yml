@@ -60,7 +60,7 @@ jobs:
         shell: powershell
         env:
           TIMEOUT: ${{ inputs.Timeout }}
-        run: .\scripts\testing\Test-Manifest-Host.ps1 -ManifestURL ${{ env.manifesturl }}
+        run: .\scripts\validation\Test-Manifest-Host.ps1 -ManifestURL ${{ env.manifesturl }}
         #continue-on-error: true
 
       - name: Take screenshot using FFmpeg

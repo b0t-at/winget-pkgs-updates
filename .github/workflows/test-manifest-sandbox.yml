@@ -1,0 +1,244 @@
+name: Test PR in Sandbox
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *'  # Run every 6 hours
+
+jobs:
+  get-prs:
+    name: "Get Open PRs"
+    runs-on: [self-hosted, Windows, X64]
+    timeout-minutes: 5
+    outputs:
+      pr-numbers: ${{ steps.list-prs.outputs.prs }}
+      pr-count: ${{ steps.list-prs.outputs.count }}
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      
+      - name: List Open PRs
+        id: list-prs
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $ErrorActionPreference = "Stop"
+          
+          $repo = "microsoft/winget-pkgs"
+          $user = "damn-good-b0t"
+          
+          Write-Host "Fetching open PRs from $user in $repo..." -ForegroundColor Cyan
+          
+          $openPRs = gh pr list --repo $repo --author $user --state open --json number --jq '.[].number'
+          
+          if ($LASTEXITCODE -ne 0) {
+            Write-Error "Failed to fetch open PRs"
+            exit 1
+          }
+          
+          $prNumbers = @($openPRs | ForEach-Object { [int]$_ })
+          
+          if ($prNumbers.Count -eq 0) {
+            Write-Host "No open PRs found for user: $user" -ForegroundColor Yellow
+            "prs=[]" >> $env:GITHUB_OUTPUT
+            "count=0" >> $env:GITHUB_OUTPUT
+            exit 0
+          }
+          
+          Write-Host "Found $($prNumbers.Count) open PR(s):" -ForegroundColor Green
+          $prNumbers | ForEach-Object { Write-Host "  - PR #$_" -ForegroundColor Gray }
+          
+          $prsJson = $prNumbers | ConvertTo-Json -Compress
+          "prs=$prsJson" >> $env:GITHUB_OUTPUT
+          "count=$($prNumbers.Count)" >> $env:GITHUB_OUTPUT
+  
+  test-pr-sandbox:
+    name: "Test PR #${{ matrix.pr-number }} in Sandbox"
+    runs-on: [self-hosted, Windows, X64]
+    timeout-minutes: 30
+    needs: get-prs
+    if: needs.get-prs.outputs.pr-count > 0
+    strategy:
+      max-parallel: 1
+      fail-fast: false
+      matrix:
+        pr-number: ${{ fromJson(needs.get-prs.outputs.pr-numbers) }}
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      
+      - name: Get PR Manifest URL
+        id: get-manifest
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $ErrorActionPreference = "Stop"
+          
+          $prNumber = "${{ matrix.pr-number }}"
+          $repo = "microsoft/winget-pkgs"
+          
+          Write-Host "Fetching PR #$prNumber details from $repo" -ForegroundColor Cyan
+          
+          # Get PR head repository owner and commit SHA
+          Write-Host "Getting PR head repository info..." -ForegroundColor Yellow
+          $prInfo = gh pr view $prNumber --repo $repo --json headRefOid,headRepositoryOwner --jq '{sha: .headRefOid, owner: .headRepositoryOwner.login}' | ConvertFrom-Json
+          
+          $commitSHA = $prInfo.sha
+          $user = $prInfo.owner
+          
+          Write-Host "Fork owner: $user" -ForegroundColor Green
+          Write-Host "Commit SHA: $commitSHA" -ForegroundColor Green
+          
+          if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($commitSHA) -or [string]::IsNullOrWhiteSpace($user)) {
+            Write-Error "Failed to fetch PR information for PR #$prNumber"
+            exit 1
+          }
+          
+          # Get PR files
+          Write-Host "Getting changed files..." -ForegroundColor Yellow
+          $prFiles = gh pr view $prNumber --repo $repo --json files --jq '.files[].path'
+          
+          if ($LASTEXITCODE -ne 0) {
+            Write-Error "Failed to fetch PR files for PR #$prNumber"
+            exit 1
+          }
+          
+          # Filter for manifest files
+          $manifestPaths = $prFiles | Where-Object { 
+            $_ -match '^manifests/' -and ($_ -match '\.yaml$' -or $_ -match '\.yml$')
+          }
+          
+          if ($null -eq $manifestPaths -or $manifestPaths.Count -eq 0) {
+            Write-Error "No manifest files found in PR #$prNumber"
+            exit 1
+          }
+          
+          # Get manifest directory (remove the filename to get the directory)
+          $manifestDir = ($manifestPaths | Select-Object -First 1) -replace '/[^/]+\.ya?ml$', ''
+          
+          Write-Host "Manifest directory: $manifestDir" -ForegroundColor Green
+          
+          # Construct raw GitHub URL
+          $manifestURL = "https://raw.githubusercontent.com/$user/winget-pkgs/$commitSHA/$manifestDir"
+          
+          Write-Host "Manifest URL: $manifestURL" -ForegroundColor Cyan
+          
+          # Set output
+          "manifesturl=$manifestURL" >> $env:GITHUB_OUTPUT
+          "commitsha=$commitSHA" >> $env:GITHUB_OUTPUT
+          "manifestdir=$manifestDir" >> $env:GITHUB_OUTPUT
+      
+      - name: Create Logs Directory
+        shell: pwsh
+        run: |
+          $logsDir = "$env:LOCALAPPDATA\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\SandboxTest\Logs"
+          if (-not (Test-Path $logsDir)) {
+            New-Item -ItemType Directory -Path $logsDir -Force | Out-Null
+            Write-Host "Created logs directory: $logsDir" -ForegroundColor Green
+          } else {
+            # Clean existing logs
+            Get-ChildItem -Path $logsDir -File | Remove-Item -Force
+            Write-Host "Cleaned existing logs in: $logsDir" -ForegroundColor Yellow
+          }
+      
+      - name: Test Manifest in Sandbox
+        id: test-sandbox
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Continue"
+          
+          Write-Host "`n========================================" -ForegroundColor Magenta
+          Write-Host "Testing PR #${{ matrix.pr-number }}" -ForegroundColor Magenta
+          Write-Host "Manifest URL: ${{ steps.get-manifest.outputs.manifesturl }}" -ForegroundColor Magenta
+          Write-Host "========================================`n" -ForegroundColor Magenta
+          
+          # Run the sandbox test
+          & .\Scripts\validation\Test-Manifest-Sandbox.ps1 -ManifestURL "${{ steps.get-manifest.outputs.manifesturl }}"
+          
+          $exitCode = $LASTEXITCODE
+          
+          Write-Host "`n========================================" -ForegroundColor Cyan
+          if ($exitCode -eq 0) {
+            Write-Host "✓ Test completed successfully" -ForegroundColor Green
+          } else {
+            Write-Host "✗ Test failed with exit code: $exitCode" -ForegroundColor Red
+          }
+          Write-Host "========================================`n" -ForegroundColor Cyan
+          
+          # Store exit code for later
+          "exitcode=$exitCode" >> $env:GITHUB_OUTPUT
+          
+          # Don't fail the step yet - we want to upload logs first
+          exit 0
+      
+      - name: Upload Sandbox Logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sandbox-logs-pr-${{ matrix.pr-number }}
+          path: |
+            %LOCALAPPDATA%\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\SandboxTest\Logs\**\*
+            %LOCALAPPDATA%\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\DiagOutputDir\**\*
+          retention-days: 30
+          if-no-files-found: warn
+      
+      - name: Display Log Summary
+        if: always()
+        shell: pwsh
+        run: |
+          $logsDir = "$env:LOCALAPPDATA\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\SandboxTest\Logs"
+          
+          Write-Host "`n========================================" -ForegroundColor Cyan
+          Write-Host "LOG SUMMARY" -ForegroundColor Cyan
+          Write-Host "========================================" -ForegroundColor Cyan
+          
+          if (Test-Path $logsDir) {
+            $logFiles = Get-ChildItem -Path $logsDir -Recurse -File
+            
+            if ($logFiles.Count -gt 0) {
+              Write-Host "Found $($logFiles.Count) log file(s):" -ForegroundColor Green
+              $logFiles | ForEach-Object {
+                Write-Host "  - $($_.FullName)" -ForegroundColor Gray
+                Write-Host "    Size: $([math]::Round($_.Length / 1KB, 2)) KB" -ForegroundColor Gray
+              }
+              
+              # Display content of key log files
+              $logFiles | Where-Object { $_.Extension -in @('.log', '.txt') } | ForEach-Object {
+                Write-Host "`nContents of $($_.Name):" -ForegroundColor Yellow
+                Write-Host "----------------------------------------" -ForegroundColor Gray
+                Get-Content $_.FullName -ErrorAction SilentlyContinue | Select-Object -Last 50 | ForEach-Object {
+                  Write-Host $_
+                }
+                Write-Host "----------------------------------------`n" -ForegroundColor Gray
+              }
+            } else {
+              Write-Host "No log files found in $logsDir" -ForegroundColor Yellow
+            }
+          } else {
+            Write-Host "Logs directory not found: $logsDir" -ForegroundColor Yellow
+          }
+          
+          Write-Host "========================================`n" -ForegroundColor Cyan
+      
+      - name: Check Test Result
+        if: always()
+        shell: pwsh
+        run: |
+          $exitCode = "${{ steps.test-sandbox.outputs.exitcode }}"
+          
+          Write-Host "`n========================================" -ForegroundColor Magenta
+          Write-Host "FINAL RESULT FOR PR #${{ matrix.pr-number }}" -ForegroundColor Magenta
+          Write-Host "========================================" -ForegroundColor Magenta
+          
+          if ($exitCode -eq "0") {
+            Write-Host "✓ PASSED - Manifest test successful!" -ForegroundColor Green
+            exit 0
+          } else {
+            Write-Host "✗ FAILED - Manifest test failed with exit code: $exitCode" -ForegroundColor Red
+            Write-Host "`nPlease check the uploaded logs for details." -ForegroundColor Yellow
+            exit 1
+          }

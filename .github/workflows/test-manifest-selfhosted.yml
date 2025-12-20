@@ -45,5 +45,46 @@ jobs:
         shell: powershell
         env:
           TIMEOUT: ${{ inputs.Timeout }}
-        run: .\scripts\testing\Test-Manifest-Host.ps1 -ManifestURL ${{ env.manifesturl }}
+        run: .\scripts\validation\Test-Manifest-Host.ps1 -ManifestURL ${{ env.manifesturl }}
         #continue-on-error: true
+
+      - name: Take screenshot using FFmpeg
+        if: always()
+        shell: powershell
+        run: |
+          #start ms-settings:appsfeatures
+
+          # Wait for the settings app to open
+          Start-Sleep -Seconds 5
+
+          $ffmpegExe = where.exe ffmpeg
+          if (-not $ffmpegExe) {
+            $ffmpegExe = where.exe ffmpeg.exe
+          }
+          
+          # Use FFmpeg to capture screen
+          Write-Host "Capturing screenshot with FFmpeg..."
+          & $ffmpegExe -f gdigrab -framerate 1 -i desktop -frames:v 1 screenshot.png
+
+          # Verify screenshot was created
+          if (Test-Path "screenshot.png") {
+            Write-Host "Screenshot captured successfully"
+          } else {
+            Write-Error "Screenshot capture failed"
+            exit 1
+          }
+
+      - name: Upload Screenshot Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          #name: screenshot-${{ env.date }}-${{ env.manifestname }}
+          name: screenshot-${{ env.date }}
+          path: screenshot.png 
+          retention-days: 30  # Artifacts will be kept for 30 days
+
+      - name: Check if Test Script Failed
+        if: steps.test.conclusion == 'failure' #failure()  # This runs only if the previous step failed
+        run: |
+          echo "Test Script failed. Marking workflow as failed."
+          exit 1

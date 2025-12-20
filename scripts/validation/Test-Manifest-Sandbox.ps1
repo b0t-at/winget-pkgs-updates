@@ -1,4 +1,4 @@
-﻿### Exit Codes:
+### Exit Codes:
 # -1 = Sandbox is not enabled
 #  0 = Success
 #  1 = Error fetching GitHub release
@@ -9,13 +9,8 @@
 
 [CmdletBinding()]
 Param(
-    # Manifest
     [Parameter(Position = 0, HelpMessage = 'The Manifest to install in the Sandbox.')]
-    [ValidateScript({
-            if (-Not (Test-Path -Path $_)) { throw "$_ does not exist" }
-            return $true
-        })]
-    [String] $Manifest,
+    [String] $ManifestURL,
     # Script
     [Parameter(Position = 1, HelpMessage = 'The script to run in the Sandbox.')]
     [ScriptBlock] $Script,
@@ -39,6 +34,38 @@ Param(
     [switch] $Clean
 )
 
+Write-Host "Running Test-Manifest-Sandbox with ManifestURL: $ManifestURL"
+
+if (![String]::IsNullOrWhiteSpace($ManifestURL)) {
+    $ManifestURL = $ManifestURL.TrimEnd('/')
+    $SplittedURL = $ManifestURL -split '/'
+
+    # Define the regular expression to find values between a single lowercase char and the version number
+    $regex = '/([a-z])/(.*?)/([0-9.]*$)'
+
+    # Find all values between a single letter and the version number
+    if ($ManifestURL -match $regex) {
+        # Split the matched string by '/'
+        $package = ($Matches[2]).replace("/", ".")
+    }
+    else {
+        $package = "$($SplittedURL[-2]).$($SplittedURL[-3])"
+    }
+
+    if (Test-Path -Path (Join-Path -Path ([System.IO.Path]::GetTempPath()) -ChildPath 'ManifestDownload')) {
+        Remove-Item -Path (Join-Path -Path ([System.IO.Path]::GetTempPath()) -ChildPath 'ManifestDownload') -Force -Recurse
+    }
+    $Manifest = New-Item -ItemType Directory -Path (Join-Path -Path ([System.IO.Path]::GetTempPath()) -ChildPath 'ManifestDownload')
+    Invoke-WebRequest -Uri "$ManifestURL\$package.yaml" -OutFile "$Manifest\$package.yaml"
+    Invoke-WebRequest -Uri "$ManifestURL\$package.installer.yaml" -OutFile "$Manifest\$package.installer.yaml"
+    Invoke-WebRequest -Uri "$ManifestURL\$package.locale.en-US.yaml" -OutFile "$Manifest\$package.locale.en-US.yaml"
+    Write-Host "Manifest Path: $Manifest"
+}
+else {
+    Write-Host "No ManifestURL provided. Only WinGet will be installed."
+    $Manifest = $null
+}
+
 enum DependencySources {
     InRelease
     Legacy
@@ -48,7 +75,11 @@ enum DependencySources {
 $ProgressPreference = 'SilentlyContinue'
 $ErrorActionPreference = 'Stop' # This gets overridden most places, but is set explicitly here to help catch errors
 if ($PSBoundParameters.Keys -notcontains 'InformationAction') { $InformationPreference = 'Continue' } # If the user didn't explicitly set an InformationAction, Override their preference
-$script:OnMappedFolderWarning = ($PSBoundParameters.Keys -contains 'WarningAction') ? $PSBoundParameters.WarningAction : 'Inquire'
+if ($PSBoundParameters.Keys -contains 'WarningAction') {
+    $script:OnMappedFolderWarning = $PSBoundParameters.WarningAction
+} else {
+    $script:OnMappedFolderWarning = 'Continue'
+}
 $script:UseNuGetForMicrosoftUIXaml = $false
 $script:ScriptName = 'SandboxTest'
 $script:AppInstallerPFN = 'Microsoft.DesktopAppInstaller_8wekyb3d8bbwe'
@@ -75,7 +106,7 @@ $script:UiLibsHash_v2_8 = '249D2AFB41CC009494841372BD6DD2DF46F87386D535DDF8D9F32
 $script:UiLibsHash_NuGet = '6B62BD3C277F55518C3738121B77585AC5E171C154936EC58D87268BBAE91736'
 
 # File Paths
-$script:AppInstallerDataFolder = Join-Path -Path $env:LOCALAPPDATA -ChildPath 'Packages' -AdditionalChildPath $script:AppInstallerPFN
+$script:AppInstallerDataFolder = Join-Path -Path (Join-Path -Path $env:LOCALAPPDATA -ChildPath 'Packages') -ChildPath $script:AppInstallerPFN
 $script:TokenValidationCache = Join-Path -Path $script:AppInstallerDataFolder -ChildPath 'TokenValidationCache'
 $script:DependenciesCacheFolder = Join-Path -Path $script:AppInstallerDataFolder -ChildPath "$script:ScriptName.Dependencies"
 $script:TestDataFolder = Join-Path -Path $script:AppInstallerDataFolder -ChildPath $script:ScriptName
@@ -91,6 +122,9 @@ $script:HostGeoID = (Get-WinHomeLocation).GeoID
 
 # Misc
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
+# Ensure the System.Net.Http assembly is loaded
+Add-Type -AssemblyName System.Net.Http
 $script:HttpClient = New-Object System.Net.Http.HttpClient
 $script:CleanupPaths = @()
 
@@ -212,14 +246,27 @@ function Get-RemoteContent {
     )
     Write-Debug "Attempting to fetch content from $URL"
     # Check if the URL is valid before trying to download
-    $response = [String]::IsNullOrWhiteSpace($URL) ? @{StatusCode = 400 } : $(Invoke-WebRequest -Uri $URL -Method Head -ErrorAction SilentlyContinue) # If the URL is null, return a status code of 400
+    # If the URL is null, return a status code of 400
+    if ([String]::IsNullOrWhiteSpace($URL)) {
+        $response = @{ StatusCode = 400 }
+    } else {
+        $response = Invoke-WebRequest -Uri $URL -Method Head -ErrorAction SilentlyContinue
+    }
     if ($response.StatusCode -ne 200) {
         Write-Debug "Fetching remote content from $URL returned status code $($response.StatusCode)"
         return $null
     }
-    $localFile = $OutputPath ? [System.IO.FileInfo]::new($OutputPath) : $(New-TemporaryFile) # If a path was specified, store it at that path; Otherwise use the temp folder
+    # If a path was specified, store it at that path; Otherwise use the temp folder
+    if ($OutputPath) {
+        $localFile = [System.IO.FileInfo]::new($OutputPath)
+    } else {
+        $localFile = New-TemporaryFile
+    }
     Write-Debug "Remote content will be stored at $($localFile.FullName)"
-    $script:CleanupPaths += $Raw ? @($localFile.FullName) : @() # Mark the file for cleanup when the script ends if the raw data was requested
+    # Mark the file for cleanup when the script ends if the raw data was requested
+    if ($Raw) {
+        $script:CleanupPaths += @($localFile.FullName)
+    }
     try {
         $downloadTask = $script:HttpClient.GetByteArrayAsync($URL)
         [System.IO.File]::WriteAllBytes($localfile.FullName, $downloadTask.Result)
@@ -228,7 +275,12 @@ function Get-RemoteContent {
         # If the download fails, write a zero-byte file anyways
         $null | Out-File $localFile.FullName
     }
-    return $Raw ? $(Get-Content -Path $localFile.FullName) : $localFile # If the raw content was requested, return the content, otherwise, return the FileInfo object
+    # If the raw content was requested, return the content, otherwise, return the FileInfo object
+    if ($Raw) {
+        return Get-Content -Path $localFile.FullName
+    } else {
+        return $localFile
+    }
 }
 
 ####
@@ -491,17 +543,24 @@ if (!$SkipManifestValidation -and ![String]::IsNullOrWhiteSpace($Manifest)) {
         }
         switch ($LASTEXITCODE) {
         '-1978335191' {
-            ($validateCommandOutput | Select-Object -Skip 1 -SkipLast 1) | Write-Information # Skip the first line and the empty last line
+            # Skip the first line and the empty last line
+            $validateCommandOutput | Select-Object -Skip 1 -SkipLast 1 | ForEach-Object {
+                Write-Information $_
+            }
+
             Write-Error -Category ParserError 'Manifest validation failed' -ErrorAction Continue
             Invoke-CleanExit -ExitCode 4
         }
         '-1978335192' {
-            ($validateCommandOutput | Select-Object -Skip 1 -SkipLast 1) | Write-Information # Skip the first line and the empty last line
+            # Skip the first line and the empty last line
+            $validateCommandOutput | Select-Object -Skip 1 -SkipLast 1 | ForEach-Object {
+                Write-Information $_
+            }
             Write-Warning 'Manifest validation succeeded with warnings'
             Start-Sleep -Seconds 5 # Allow the user 5 seconds to read the warnings before moving on
         }
         Default {
-            $validateCommandOutput.Trim() | Write-Information # On the success, print an empty line after the command output
+            Write-Information $validateCommandOutput.Trim() # On the success, print an empty line after the command output
         }
     }
 }
@@ -548,7 +607,7 @@ Write-Debug @"
 "@
 
 # Set the folder for the files that change with each release version
-$script:AppInstallerReleaseAssetsFolder = Join-Path $script:AppInstallerDataFolder -ChildPath 'bin' -AdditionalChildPath $script:AppInstallerReleaseTag
+$script:AppInstallerReleaseAssetsFolder = Join-Path -Path (Join-Path -Path $script:AppInstallerDataFolder -ChildPath 'bin') -ChildPath $script:AppInstallerReleaseTag
 
 # Build the dependency information
 Write-Verbose 'Building Dependency List'
@@ -761,7 +820,18 @@ if (`$manifestFolder) {
 --> Installing the Manifest `$(`$manifestFolder | Split-Path -Leaf)
 
 `"@
+    
+    # Create logs folder
+    `$LogsFolder = Join-Path `$pwd 'Logs'
+    if (-not (Test-Path `$LogsFolder)) {
+        New-Item -ItemType Directory -Path `$LogsFolder -Force | Out-Null
+    }
+    
+    # Capture ARP entries before installation
     `$originalARP = Get-ARPTable
+    `$originalARP | Export-Csv -Path (Join-Path `$LogsFolder 'ARP_Before.csv') -NoTypeInformation
+    `$originalARP | ConvertTo-Json | Out-File -FilePath (Join-Path `$LogsFolder 'ARP_Before.json') -Encoding utf8
+    
     winget install -m `$manifestFolder --accept-package-agreements --verbose-logs --ignore-local-archive-malware-scan --dependency-source winget $WinGetOptions
 
     Write-Host @'
@@ -774,7 +844,35 @@ if (`$manifestFolder) {
 
 --> Comparing ARP Entries
 '@
-    (Compare-Object (Get-ARPTable) `$originalARP -Property DisplayName,DisplayVersion,Publisher,ProductCode,Scope)| Select-Object -Property * -ExcludeProperty SideIndicator | Format-Table
+    `$newARP = Get-ARPTable
+    `$newARP | Export-Csv -Path (Join-Path `$LogsFolder 'ARP_After.csv') -NoTypeInformation
+    `$newARP | ConvertTo-Json | Out-File -FilePath (Join-Path `$LogsFolder 'ARP_After.json') -Encoding utf8
+    
+    `$arpDifference = Compare-Object `$newARP `$originalARP -Property DisplayName,DisplayVersion,Publisher,ProductCode,Scope | Select-Object -Property * -ExcludeProperty SideIndicator
+    `$arpDifference | Format-Table
+    `$arpDifference | Export-Csv -Path (Join-Path `$LogsFolder 'ARP_Differences.csv') -NoTypeInformation
+    `$arpDifference | ConvertTo-Json | Out-File -FilePath (Join-Path `$LogsFolder 'ARP_Differences.json') -Encoding utf8
+    
+    Write-Host @'
+
+--> Copying WinGet logs
+'@
+    `$WingetLogDir = Join-Path `$env:LOCALAPPDATA 'Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\DiagOutputDir'
+    if (Test-Path `$WingetLogDir) {
+        `$WingetLogsDestination = Join-Path `$LogsFolder 'WinGetLogs'
+        Copy-Item -Path `$WingetLogDir -Destination `$WingetLogsDestination -Recurse -Force
+        Write-Host "Copied WinGet logs to: `$WingetLogsDestination"
+    } else {
+        Write-Host "WinGet log directory not found at: `$WingetLogDir"
+    }
+    
+    Write-Host @'
+
+--> Creating completion marker
+'@
+    # Create a FINISHED file to signal completion
+    'COMPLETED' | Out-File -FilePath (Join-Path `$LogsFolder 'FINISHED') -Encoding utf8
+    Write-Host "Installation and logging complete. You can now close the sandbox."
 }
 
 `$BoundParameterScript = Get-ChildItem -Filter 'BoundParameterScript.ps1'
@@ -846,4 +944,64 @@ $Script
 
 Write-Verbose "Invoking the sandbox using $script:ConfigurationFile"
 WindowsSandbox $script:ConfigurationFile
+
+# Wait for sandbox to complete with timeout
+Write-Information "--> Waiting for sandbox installation to complete..."
+$LogsFolder = Join-Path $script:TestDataFolder 'Logs'
+$FinishedFile = Join-Path $LogsFolder 'FINISHED'
+$TimeoutSeconds = 300 # 5 minutes
+$ElapsedSeconds = 0
+$CheckIntervalSeconds = 2
+
+$sandboxCompleted = $false
+while ($ElapsedSeconds -lt $TimeoutSeconds) {
+    if ((Test-Path $LogsFolder) -and (Test-Path $FinishedFile)) {
+        Write-Information "--> Sandbox installation completed successfully"
+        $sandboxCompleted = $true
+        
+        # Kill the sandbox processes now that installation is complete
+        Write-Information "--> Closing Windows Sandbox"
+        Stop-NamedProcess -ProcessName 'WindowsSandboxClient'
+        Stop-NamedProcess -ProcessName 'WindowsSandboxRemoteSession'
+        Start-Sleep -Seconds 2
+        
+        break
+    }
+    
+    Start-Sleep -Seconds $CheckIntervalSeconds
+    $ElapsedSeconds += $CheckIntervalSeconds
+    
+    # Show progress every 10 seconds
+    if ($ElapsedSeconds % 10 -eq 0) {
+        Write-Verbose "Waiting for completion... ($ElapsedSeconds/$TimeoutSeconds seconds elapsed)"
+    }
+}
+
+if (-not $sandboxCompleted) {
+    Write-Warning @"
+Timeout waiting for sandbox to complete after $TimeoutSeconds seconds.
+
+This could mean:
+  1. The installation is taking longer than expected
+  2. The sandbox was closed before the installation completed
+  3. An error occurred during the installation process
+
+Logs folder: $(if (Test-Path $LogsFolder) { 'EXISTS' } else { 'NOT FOUND' })
+Finished marker: $(if (Test-Path $FinishedFile) { 'EXISTS' } else { 'NOT FOUND' })
+"@
+}
+
+# Call Test-Sandbox-Installation to analyze the results
+if ($sandboxCompleted -or (Test-Path $LogsFolder)) {
+    Write-Information "--> Analyzing sandbox installation results"
+    $TestInstallationScript = Join-Path (Split-Path -Parent $PSCommandPath) 'Invoke-SandboxLogValidation.ps1'
+    if (Test-Path $TestInstallationScript) {
+        & $TestInstallationScript -LogFolder $LogsFolder
+    } else {
+        Write-Warning "Invoke-SandboxLogValidation.ps1 not found at: $TestInstallationScript"
+    }
+} else {
+    Write-Warning "Cannot analyze results - logs folder not found at: $LogsFolder"
+}
+
 Invoke-CleanExit -ExitCode 0
