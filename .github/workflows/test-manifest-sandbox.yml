@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-      
+
       - name: List Open PRs
         id: list-prs
         shell: pwsh          
@@ -69,6 +69,16 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+
+      - name: Resolve Sandbox Log Paths
+        id: resolve_logs
+        shell: pwsh
+        run: |
+          $logsRoot = Join-Path $env:LOCALAPPDATA "Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\SandboxTest\Logs"
+          $diagRoot = Join-Path $env:LOCALAPPDATA "Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\DiagOutputDir"
+
+          "sandbox_logs=$logsRoot" >> $env:GITHUB_OUTPUT
+          "sandbox_diag=$diagRoot" >> $env:GITHUB_OUTPUT
       
       - name: Get PR Manifest URL
         id: get-manifest
@@ -134,8 +144,10 @@ jobs:
       
       - name: Create Logs Directory
         shell: pwsh
+        env:
+          SANDBOX_LOGS: ${{ steps.resolve_logs.outputs.sandbox_logs }}
         run: |
-          $logsDir = "$env:LOCALAPPDATA\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\SandboxTest\Logs"
+          $logsDir = $env:SANDBOX_LOGS
           if (-not (Test-Path $logsDir)) {
             New-Item -ItemType Directory -Path $logsDir -Force | Out-Null
             Write-Host "Created logs directory: $logsDir" -ForegroundColor Green
@@ -178,19 +190,25 @@ jobs:
       - name: Upload Sandbox Logs
         if: always()
         uses: actions/upload-artifact@v4
+        env:
+          SANDBOX_LOGS: ${{ steps.resolve_logs.outputs.sandbox_logs }}
+          SANDBOX_DIAG: ${{ steps.resolve_logs.outputs.sandbox_diag }}
         with:
           name: sandbox-logs-pr-${{ matrix.pr-number }}
           path: |
-            %LOCALAPPDATA%\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\SandboxTest\Logs\**\*
-            %LOCALAPPDATA%\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\DiagOutputDir\**\*
+            ${{ env.SANDBOX_LOGS }}
+            ${{ env.SANDBOX_LOGS }}\**\*
+            ${{ env.SANDBOX_DIAG }}\**\*
           retention-days: 30
           if-no-files-found: warn
       
       - name: Display Log Summary
         if: always()
         shell: pwsh
+        env:
+          SANDBOX_LOGS: ${{ steps.resolve_logs.outputs.sandbox_logs }}
         run: |
-          $logsDir = "$env:LOCALAPPDATA\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\SandboxTest\Logs"
+          $logsDir = $env:SANDBOX_LOGS
           
           Write-Host "`n========================================" -ForegroundColor Cyan
           Write-Host "LOG SUMMARY" -ForegroundColor Cyan
