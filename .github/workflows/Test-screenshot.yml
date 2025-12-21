@@ -5,17 +5,19 @@ on:
 
 jobs:
   screenshot:
-    runs-on: windows-2025  # Using a GitHub-hosted Windows runner
+    #runs-on: windows-2025  # Using a GitHub-hosted Windows runner
+    runs-on: [self-hosted, Windows, X64]
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v6
       - name: Get current date
         id: date
+        shell: powershell
         run: |
-          echo "date=$(date +'%Y-%m-%dT%H_%M_%S')" >> $env:GITHUB_ENV
-      - name: Setup FFmpeg
-        uses: AnimMouse/setup-ffmpeg@v1
-
+          $date = Get-Date -Format "yyyy-MM-ddTHH_mm_ss"
+          echo "date=$date" >> $env:GITHUB_ENV
+      # - name: Setup FFmpeg
+      #   uses: AnimMouse/setup-ffmpeg@v1
       - name: Take screenshot using FFmpeg
         shell: powershell
         run: |
@@ -24,6 +26,9 @@ jobs:
           if (-not $ffmpegExe) {
             $ffmpegExe = where.exe ffmpeg.exe
           }
+
+          # Execute Test Command with output to capture
+          WindowsSandbox
           
           # Use FFmpeg to capture screen
           Write-Host "Capturing screenshot with FFmpeg..."

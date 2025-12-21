@@ -153,6 +153,7 @@ function Invoke-CleanExit {
         [Parameter(Mandatory = $true)]
         [int] $ExitCode
     )
+    Write-Host "`n--> Cleaning up resources for clean exit ..."
     Invoke-FileCleanup -FilePaths $script:CleanupPaths
     $script:HttpClient.Dispose()
     Write-Debug "Exiting ($ExitCode)"
@@ -205,7 +206,7 @@ function Get-Release {
         Uri = $script:ReleasesApiUrl
     }
 
-    if (Test-GithubToken -Token $GitHubToken) {
+    if (![string]::IsNullOrWhiteSpace($GitHubToken)) {
         # The validation function will return True only if the provided token is valid
         Write-Verbose 'Adding Bearer Token Authentication to Releases API Request'
         $requestParameters.Add('Authentication', 'Bearer')
@@ -361,151 +362,6 @@ function Test-FileChecksum {
     return ($currentHash -and $currentHash.Hash -eq $ExpectedChecksum)
 }
 
-####
-# Description: Checks that a provided GitHub token is valid
-# Inputs: Token
-# Outputs: Boolean
-# Notes:
-#   This function hashes the provided GitHub token. If the provided token is valid, a file is added to the token cache with
-#   the name of the hashed token and the token expiration date. To avoid making unnecessary calls to the GitHub APIs, this
-#   function checks the token cache for the existence of the file. If the file is older than 30 days, it is removed and the
-#   token is re-checked. If the file has content, the date is checked to see if the token is expired. This can't catch every
-#   edge case, but it should catch a majority of the use cases.
-####
-function Test-GithubToken {
-    [Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSAvoidUsingConvertToSecureStringWithPlainText', '',
-        Justification='The standard workflow that users use with other applications requires the use of plaintext GitHub Access Tokens')]
-
-    param (
-        [Parameter(Mandatory = $true)]
-        [AllowEmptyString()]
-        [String] $Token
-    )
-
-    # If the token is empty, there is no way that it can be valid
-    if ([string]::IsNullOrWhiteSpace($Token)) { return $false }
-
-    Write-Verbose 'Hashing GitHub Token'
-    $_memoryStream = [System.IO.MemoryStream]::new()
-    $_streamWriter = [System.IO.StreamWriter]::new($_memoryStream)
-    $_streamWriter.Write($Token)
-    $_streamWriter.Flush()
-    $_memoryStream.Position = 0
-
-    $tokenHash = Get-FileHash -InputStream $_memoryStream | Select-Object -ExpandProperty Hash
-
-    # Dispose of the reader and writer for hashing the token to ensure they cannot be accessed outside of the intended scope
-    Write-Debug 'Disposing of hashing components'
-    $_streamWriter.DisposeAsync() 1> $null
-    $_memoryStream.DisposeAsync() 1> $null
-
-    # Check for the cached token file
-    Initialize-Folder -FolderPath $script:TokenValidationCache | Out-Null
-    $cachedToken = Get-ChildItem -Path $script:TokenValidationCache -Filter $tokenHash -ErrorAction SilentlyContinue
-
-    if ($cachedToken) {
-        Write-Verbose 'Token was found in the cache'
-        # Check the age of the cached file
-        $cachedTokenAge = (Get-Date) - $cachedToken.LastWriteTime | Select-Object -ExpandProperty TotalDays
-        $cachedTokenAge = [Math]::Round($cachedTokenAge, 2) # We don't need all the precision the system provides
-        Write-Debug "Token has been in the cache for $cachedTokenAge days"
-        $cacheIsExpired = $cachedTokenAge -ge $script:CachedTokenExpiration
-        $cachedTokenContent = (Get-Content $cachedToken -Raw).Trim() # Ensure any trailing whitespace is ignored
-        $cachedTokenIsEmpty = [string]::IsNullOrWhiteSpace($cachedTokenContent)
-
-        # It is possible for a token to be both empty and expired. Since these are debug and verbose messages, showing both doesn't hurt
-        if ($cachedTokenIsEmpty) { Write-Verbose 'Cached token had no content. It will be re-validated' }
-        if ($cacheIsExpired) { Write-Verbose "Cached token is older than $script:CachedTokenExpiration days. It will be re-validated" }
-
-        if (!$cacheIsExpired -and !$cachedTokenIsEmpty) {
-            # Check the content of the cached file in case the actual token expiration is known
-            Write-Verbose 'Attempting to fetch token expiration from cache'
-            # Since Github adds ` UTC` at the end, it needs to be stripped off. Trim is safe here since the last character should always be a digit or AM/PM
-            $cachedExpirationForParsing = $cachedTokenContent.TrimEnd(' UTC')
-            $cachedExpirationDate = [System.DateTime]::MinValue
-            # Pipe to Out-Null so that it doesn't get captured in the return output
-            [System.DateTime]::TryParse($cachedExpirationForParsing, [ref]$cachedExpirationDate) | Out-Null
-
-            $tokenExpirationDays = $cachedExpirationDate - (Get-Date) | Select-Object -ExpandProperty TotalDays
-            $tokenExpirationDays = [Math]::Round($tokenExpirationDays, 2) # We don't need all the precision the system provides
-
-            if ($cachedExpirationForParsing -eq [System.DateTime]::MaxValue.ToLongDateString().Trim()) {
-                Write-Verbose "The cached token contained content. It is set to never expire"
-                return $true
-            }
-
-            if ($tokenExpirationDays -gt 0) {
-                Write-Verbose "The cached token contained content. It should expire in $tokenExpirationDays days"
-                return $true
-            }
-            # If the parsing failed, the expiration should still be at the minimum value
-            elseif ($cachedExpirationDate -eq [System.DateTime]::MinValue) {
-                Write-Verbose 'The cached token contained content, but it could not be parsed as a date. It will be re-validated'
-                Invoke-FileCleanup -FilePaths $cachedToken.FullName
-                # Do not return anything, since the token will need to be re-validated
-            }
-            else {
-                Write-Verbose "The cached token contained content, but the token expired $([Math]::Abs($tokenExpirationDays)) days ago"
-                # Leave the cached token so that it doesn't throw script exceptions in the future
-                # Invoke-FileCleanup -FilePaths $cachedToken.FullName
-                return $false
-            }
-        }
-        else {
-            # Either the token was empty, or the cached token is expired. Remove the cached token so that re-validation
-            # of the token will update the date the token was cached if it is still valid
-            Invoke-FileCleanup -FilePaths $cachedToken.FullName
-        }
-    }
-    else {
-        Write-Verbose 'Token was not found in the cache'
-    }
-
-    # To get here either the token was not in the cache or it needs to be re-validated
-
-    $requestParameters = @{
-        Uri            = 'https://api.github.com/rate_limit'
-        Authentication = 'Bearer'
-        Token          = $(ConvertTo-SecureString "$Token" -AsPlainText)
-    }
-
-    Write-Verbose "Checking Token against $($requestParameters.Uri)"
-    $apiResponse = Invoke-WebRequest @requestParameters # This will return an exception if the token is not valid; It is intentionally not caught
-    # The headers can sometimes be a single string, or an array of strings. Cast them into an array anyways just for safety
-    $rateLimit = @($apiResponse.Headers['X-RateLimit-Limit'])
-    $tokenExpiration = @($apiResponse.Headers['github-authentication-token-expiration']) # This could be null if the token is set to never expire.
-    Write-Debug "API responded with Rate Limit ($rateLimit) and Expiration ($tokenExpiration)"
-
-    if (!$rateLimit) { return $false } # Something went horribly wrong, and the rate limit isn't known. Assume the token is not valid
-    if ([int]$rateLimit[0] -le 60) {
-        # Authenticated users typically have a limit that is much higher than 60
-        return $false
-    }
-
-    Write-Verbose 'Token validated successfully. Adding to cache'
-    # Trim off any non-digit characters from the end
-    # Strip off the array wrapper since it is no longer needed
-    $tokenExpiration = $tokenExpiration[0] -replace '[^0-9]+$',''
-    # If the token doesn't expire, write a special value to the file
-    if (!$tokenExpiration -or [string]::IsNullOrWhiteSpace($tokenExpiration)) {
-        Write-Debug "Token expiration was empty, setting it to maximum"
-        $tokenExpiration = [System.DateTime]::MaxValue
-    }
-    # Try parsing the value to a datetime before storing it
-    if ([DateTime]::TryParse($tokenExpiration,[ref]$tokenExpiration)) {
-        Write-Debug "Token expiration successfully parsed as DateTime ($tokenExpiration)"
-    } else {
-        # TryParse Failed
-        Write-Warning "Could not parse expiration date as a DateTime object. It will be set to the minimum value"
-        $tokenExpiration = [System.DateTime]::MinValue
-    }
-    # Explicitly convert to a string here to avoid implicit casting
-    $tokenExpiration = $tokenExpiration.ToString()
-    # Write the value to the cache
-    New-Item -ItemType File -Path $script:TokenValidationCache -Name $tokenHash -Value $tokenExpiration | Out-Null
-    Write-Debug "Token <$tokenHash> added to cache with content <$tokenExpiration>"
-    return $true
-}
 
 #### Start of main script ####
 
@@ -713,11 +569,26 @@ foreach ($dependency in $script:AppInstallerDependencies) {
 # Kill the active running sandbox, if it exists, otherwise the test data folder can't be removed
 Stop-NamedProcess -ProcessName 'WindowsSandboxClient'
 Stop-NamedProcess -ProcessName 'WindowsSandboxRemoteSession'
-Start-Sleep -Milliseconds 5000 # Wait for the lock on the file to be released
+Write-Host '--> Ensuring previous sandbox instances are closed. Waiting...'
+Start-Sleep -Seconds 5 # Wait for the lock on the file to be released
 
 # Remove the test data folder if it exists. We will rebuild it with new test data
 Write-Verbose 'Cleaning up previous test data'
-Invoke-FileCleanup -FilePaths $script:TestDataFolder
+try {
+    Invoke-FileCleanup -FilePaths $script:TestDataFolder
+} catch {
+    # If we can't remove the folder itself (e.g., due to locks), try to remove just the contents
+    Write-Warning "Could not remove test data folder, attempting to clear contents instead"
+    try {
+        if (Test-Path $script:TestDataFolder) {
+            Get-ChildItem -Path $script:TestDataFolder -Recurse -Force | Remove-Item -Force -Recurse -ErrorAction Stop
+            Write-Verbose 'Test data folder contents cleared successfully'
+        }
+    } catch {
+        Write-Error -Category ResourceUnavailable "Could not clean test data folder at $script:TestDataFolder" -ErrorAction Continue
+        Invoke-CleanExit -ExitCode 5
+    }
+}
 
 # Create the paths if they don't exist
 if (!(Initialize-Folder $script:TestDataFolder)) { throw 'Could not create folder for mapping files into the sandbox' }
@@ -949,7 +820,7 @@ WindowsSandbox $script:ConfigurationFile
 Write-Information "--> Waiting for sandbox installation to complete..."
 $LogsFolder = Join-Path $script:TestDataFolder 'Logs'
 $FinishedFile = Join-Path $LogsFolder 'FINISHED'
-$TimeoutSeconds = 300 # 5 minutes
+$TimeoutSeconds = 420 # 7 minutes
 $ElapsedSeconds = 0
 $CheckIntervalSeconds = 2
 
@@ -963,7 +834,7 @@ while ($ElapsedSeconds -lt $TimeoutSeconds) {
         Write-Information "--> Closing Windows Sandbox"
         Stop-NamedProcess -ProcessName 'WindowsSandboxClient'
         Stop-NamedProcess -ProcessName 'WindowsSandboxRemoteSession'
-        Start-Sleep -Seconds 2
+        Start-Sleep -Seconds 20 # Allow time for the sandbox to close gracefully
         
         break
     }

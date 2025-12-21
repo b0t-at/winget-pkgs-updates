@@ -30,14 +30,15 @@ jobs:
           
           Write-Host "Fetching open PRs from $user in $repo..." -ForegroundColor Cyan
           
-          $openPRs = gh pr list --repo $repo --author $user --state open --json number --jq '.[].number'
+          $openPRs = gh pr list --repo $repo --author $user --state open --json number,title
           
           if ($LASTEXITCODE -ne 0) {
             Write-Error "Failed to fetch open PRs"
             exit 1
           }
           
-          $prNumbers = @($openPRs | ForEach-Object { [int]$_ })
+          $prData = $openPRs | ConvertFrom-Json
+          $prNumbers = @($prData | Where-Object { $_.title -notlike "*remove*" } | ForEach-Object { [int]$_.number })
           
           if ($prNumbers.Count -eq 0) {
             Write-Host "No open PRs found for user: $user" -ForegroundColor Yellow
