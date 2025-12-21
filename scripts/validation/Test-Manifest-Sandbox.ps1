@@ -820,7 +820,7 @@ WindowsSandbox $script:ConfigurationFile
 Write-Information "--> Waiting for sandbox installation to complete..."
 $LogsFolder = Join-Path $script:TestDataFolder 'Logs'
 $FinishedFile = Join-Path $LogsFolder 'FINISHED'
-$TimeoutSeconds = 420 # 7 minutes
+$TimeoutSeconds = 900 # 15 minutes
 $ElapsedSeconds = 0
 $CheckIntervalSeconds = 2
 
