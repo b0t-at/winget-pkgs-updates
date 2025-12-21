@@ -61,7 +61,7 @@ jobs:
     needs: get-prs
     if: needs.get-prs.outputs.pr-count > 0
     strategy:
-      max-parallel: 1
+      max-parallel: 2
       fail-fast: false
       matrix:
         pr-number: ${{ fromJson(needs.get-prs.outputs.pr-numbers) }}
