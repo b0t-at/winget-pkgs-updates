@@ -76,7 +76,7 @@ jobs:
 
       - name: Upload Screenshot Artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           #name: screenshot-${{ env.date }}-${{ env.manifestname }}
           name: screenshot-${{ env.date }}
