@@ -1,0 +1,8 @@
+# MongoDB Server installer overrides
+Override:
+  NestedInstallerFiles:
+    - RelativeFilePath: bin\mongod.exe
+    - RelativeFilePath: bin\mongo.exe
+
+Drop:
+  - ReleaseDate
