@@ -482,7 +482,7 @@
             url: "https://github.com/jgraph/drawio-desktop/releases/download/v{VERSION}/draw.io-ia32-{VERSION}-windows-32bit-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v{VERSION}/draw.io-{VERSION}-windows-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v{VERSION}/draw.io-arm64-{VERSION}-windows-arm64-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v{VERSION}/draw.io-ia32-{VERSION}-windows-32bit-no-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v{VERSION}/draw.io-{VERSION}-windows-no-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v{VERSION}/draw.io-arm64-{VERSION}-windows-arm64-no-installer.exe"
           - id: "jj-vcs.jj"
             repo: "jj-vcs/jj"
-            url: "https://github.com/jj-vcs/jj/releases/download/v{VERSION}/jj-v{VERSION}-x86_64-pc-windows-msvc.zip"
+            url: "https://github.com/jj-vcs/jj/releases/download/v{VERSION}/jj-v{VERSION}-x86_64-pc-windows-msvc.zip https://github.com/jj-vcs/jj/releases/download/v{VERSION}/jj-v{VERSION}-aarch64-pc-windows-msvc.zip"
           - id: "JohannesMillan.superProductivity"
             repo: "johannesjo/super-productivity"
             url: "https://github.com/johannesjo/super-productivity/releases/download/v{VERSION}/Super-Productivity-Setup.exe https://github.com/johannesjo/super-productivity/releases/download/v{VERSION}/Super-Productivity-Setup-x64.exe https://github.com/johannesjo/super-productivity/releases/download/v{VERSION}/Super-Productivity-Setup-arm64.exe"
@@ -1353,6 +1353,7 @@
 #          - id: "Jellyfin.Server"
 #            repo: "jellyfin/jellyfin-server-windows"
 #            url: "https://github.com/jellyfin/jellyfin-server-windows/releases/download/{VERSION}/jellyfin_{VERSION}_windows-x64.exe"  
+
 
 
 
