@@ -471,9 +471,6 @@ jobs:
           - id: JanProchazka.dbgate
             repo: dbgate/dbgate
             url: https://github.com/dbgate/dbgate/releases/download/v{VERSION}/dbgate-{VERSION}-win_arm64.exe https://github.com/dbgate/dbgate/releases/download/v{VERSION}/dbgate-{VERSION}-win_x64.exe https://github.com/dbgate/dbgate/releases/download/v{VERSION}/dbgate-{VERSION}-win.exe
-          - id: jazzdelightsme.WingetPathUpdater
-            repo: jazzdelightsme/PowershellStub
-            url: https://github.com/jazzdelightsme/PowershellStub/releases/download/v{VERSION}/PowershellStub.exe
           - id: jdx.mise
             repo: jdx/mise
             url: https://github.com/jdx/mise/releases/download/v{VERSION}/mise-v{VERSION}-windows-x64.zip https://github.com/jdx/mise/releases/download/v{VERSION}/mise-v{VERSION}-windows-arm64.zip
