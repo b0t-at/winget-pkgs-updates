@@ -194,7 +194,7 @@ jobs:
             url: https://github.com/TEdit/Terraria-Map-Editor/releases/download/{VERSION}/TEditAvalonia-{VERSION}-win-x64.zip
           - id: TeraTermProject.teraterm
             repo: TeraTermProject/teraterm
-            url: https://github.com/TeraTermProject/teraterm/releases/download/v{VERSION}/teraterm-{VERSION}.exe
+            url: https://github.com/TeraTermProject/teraterm/releases/download/v{VERSION}/teraterm-{VERSION}-x86.exe https://github.com/TeraTermProject/teraterm/releases/download/v{VERSION}/teraterm-{VERSION}-x64.exe https://github.com/TeraTermProject/teraterm/releases/download/v{VERSION}/teraterm-{VERSION}-arm64.exe
           - id: TermoraDev.Termora
             repo: TermoraDev/termora
             url: https://github.com/TermoraDev/termora/releases/download/{VERSION}/termora-{VERSION}-windows-x86-64.exe
@@ -260,7 +260,7 @@ jobs:
             url: https://github.com/unlimited-clipboard/unlimited-clipboard/releases/download/v{VERSION}/unlimited-clipboard.exe
           - id: vcmi.vcmi
             repo: vcmi/vcmi
-            url: https://github.com/vcmi/vcmi/releases/download/{VERSION}/VCMI-Windows.exe
+            url: https://github.com/vcmi/vcmi/releases/download/{VERSION}/VCMI-Windows-x64.exe
           - id: Vendicated.Vencord.Canary
             repo: Vencord/Installer
             url: https://github.com/Vencord/Installer/releases/download/v{VERSION}/VencordInstallerCli.exe
@@ -320,7 +320,7 @@ jobs:
             url: https://github.com/wixtoolset/wix/releases/download/v{VERSION}/wix-cli-x64.msi
           - id: wkjarosz.hdrview
             repo: wkjarosz/hdrview
-            url: https://github.com/wkjarosz/hdrview/releases/download/v{VERSION}/HDRView-windows.zip
+            url: https://github.com/wkjarosz/hdrview/releases/download/v{VERSION}/HDRView-{VERSION}-windows.zip
           - id: woaitsAryan.regit
             repo: woaitsAryan/regit
             url: https://github.com/woaitsAryan/regit/releases/download/v{VERSION}/regit_Windows_arm64.zip https://github.com/woaitsAryan/regit/releases/download/v{VERSION}/regit_Windows_x86_64.zip

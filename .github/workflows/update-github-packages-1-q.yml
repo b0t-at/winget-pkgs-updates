@@ -54,9 +54,6 @@ jobs:
           - id: aislx.FlameLauncher
             repo: theflames-presence/flame-launcher
             url: https://github.com/theflames-presence/flame-launcher/releases/download/v{VERSION}/Flame-Launcher.-v{VERSION}.-setup-x64.exe
-          - id: AlbrechtL.WelloIO
-            repo: AlbrechtL/welle.io
-            url: https://github.com/AlbrechtL/welle.io/releases/download/v{VERSION}/welle.io-{VERSION}-Windows_setup-x86_x64.exe
           - id: AllanBoll.FilesRemote
             repo: allanrbo/filesremote
             url: https://github.com/allanrbo/filesremote/releases/download/v{VERSION}/filesremote-{VERSION}-Windows-x86_64-static.zip
@@ -129,9 +126,6 @@ jobs:
           - id: BenjaminLSR.HandheldCompanion
             repo: Valkirie/HandheldCompanion
             url: https://github.com/Valkirie/HandheldCompanion/releases/download/{VERSION}/HandheldCompanion-{VERSION}.exe
-          - id: Betaflight.Betaflight-Configurator
-            repo: betaflight/betaflight-configurator
-            url: https://github.com/betaflight/betaflight-configurator/releases/download/{VERSION}/betaflight-configurator_{VERSION}_win64-installer.exe
           - id: bootandy.dust
             repo: bootandy/dust
             url: https://github.com/bootandy/dust/releases/download/v{VERSION}/dust-v{VERSION}-i686-pc-windows-gnu.zip https://github.com/bootandy/dust/releases/download/v{VERSION}/dust-v{VERSION}-x86_64-pc-windows-gnu.zip
@@ -281,7 +275,7 @@ jobs:
             url: https://github.com/EQAditu/AdvancedCombatTracker/releases/download/{VERSION}/ACTv3-Setup.exe
           - id: Equicord.Equibop
             repo: Equicord/Equibop
-            url: https://github.com/Equicord/Equibop/releases/download/{TAG}/Equibop-win-x64.exe https://github.com/Equicord/Equibop/releases/download/{TAG}/Equibop-win-arm64.exe
+            url: https://github.com/Equicord/Equibop/releases/download/v{VERSION}/Equibop-Setup-{VERSION}.exe
           - id: erdemkosk.envolve
             repo: erdemkosk/envolve
             url: https://github.com/erdemkosk/envolve/releases/download/v{VERSION}/envolve_Windows_i386.zip https://github.com/erdemkosk/envolve/releases/download/v{VERSION}/envolve_Windows_arm64.zip https://github.com/erdemkosk/envolve/releases/download/v{VERSION}/envolve_Windows_x86_64.zip
@@ -450,9 +444,6 @@ jobs:
           - id: Istio.Istio
             repo: istio/istio
             url: https://github.com/istio/istio/releases/download/{VERSION}/istio-{VERSION}-win.zip
-          - id: IsWiX.IsWiX
-            repo: iswix-llc/iswix
-            url: https://github.com/iswix-llc/iswix/releases/download/v{VERSION}/IsWiX-{VERSION}.0-ARM64.msi https://github.com/iswix-llc/iswix/releases/download/v{VERSION}/IsWiX-{VERSION}.0-x64.msi
           - id: Jacalz.Rymdport
             repo: Jacalz/rymdport
             url: https://github.com/Jacalz/rymdport/releases/download/v{VERSION}/rymdport-v{VERSION}-windows-x86_64.zip
@@ -542,7 +533,7 @@ jobs:
             url: https://github.com/liberodark/ODrive/releases/download/{VERSION}/OpenDrive.Setup.{VERSION}.exe
           - id: LibreCAD.LibreCAD
             repo: LibreCAD/LibreCAD
-            url: https://github.com/LibreCAD/LibreCAD/releases/download/v{VERSION}/LibreCAD-Installer-v{VERSION}.exe
+            url: https://github.com/LibreCAD/LibreCAD/releases/download/v{VERSION}/LibreCAD-v{VERSION}.exe https://github.com/LibreCAD/LibreCAD/releases/download/v{VERSION}/LibreCAD-v{VERSION}-win64.exe
           - id: LibreHardwareMonitor.LibreHardwareMonitor
             repo: LibreHardwareMonitor/LibreHardwareMonitor
             url: https://github.com/LibreHardwareMonitor/LibreHardwareMonitor/releases/download/v{VERSION}/LibreHardwareMonitor-net472.zip
@@ -713,7 +704,7 @@ jobs:
             url: https://github.com/persepolisdm/persepolis/releases/download/{VERSION}/persepolis_{VERSION}.0_windows_64bit.exe
           - id: pinokiocomputer.pinokio
             repo: pinokiocomputer/pinokio
-            url: https://github.com/pinokiocomputer/pinokio/releases/download/{VERSION}/Pinokio-{VERSION}-win32.zip
+            url: https://github.com/pinokiocomputer/pinokio/releases/download/v{VERSION}/Pinokio.exe
           - id: pluveto.Upgit
             repo: pluveto/upgit
             url: https://github.com/pluveto/upgit/releases/download/v{VERSION}/upgit_win_386.exe https://github.com/pluveto/upgit/releases/download/v{VERSION}/upgit_win_amd64.exe https://github.com/pluveto/upgit/releases/download/v{VERSION}/upgit_win_arm.exe https://github.com/pluveto/upgit/releases/download/v{VERSION}/upgit_win_arm64.exe
