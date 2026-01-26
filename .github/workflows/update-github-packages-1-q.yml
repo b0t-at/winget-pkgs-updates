@@ -345,6 +345,12 @@ jobs:
           - id: fselect.fselect
             repo: jhspetersson/fselect
             url: https://github.com/jhspetersson/fselect/releases/download/{VERSION}/fselect-x86_64-win.zip
+          - id: Gardener.gardenctl
+            repo: gardener/gardenctl-v2
+            url: https://github.com/gardener/gardenctl-v2/releases/download/v{VERSION}/gardenctl_v2_windows_amd64.exe
+          - id: Gardener.gardenlogin
+            repo: gardener/gardenlogin
+            url: https://github.com/gardener/gardenlogin/releases/download/v{VERSION}/gardenlogin_windows_amd64.exe
           - id: Gather.Gather
             repo: gathertown/gather-town-desktop-releases
             url: https://github.com/gathertown/gather-town-desktop-releases/releases/download/v{VERSION}/Gather-{VERSION}-Setup.exe
