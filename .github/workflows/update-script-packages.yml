@@ -153,8 +153,8 @@ jobs:
           }
           
           if ($packages.Count -gt 0) {
-            $matrix = @{ include = $packages } | ConvertTo-Json -Compress -Depth 3
-            Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "matrix=$matrix"
+            $matrix = $packages | ConvertTo-Json -Compress -Depth 3
+            "matrix=$matrix" >> $env:GITHUB_OUTPUT
             Write-Host "Matrix: $matrix"
           } else {
             Write-Host "No manifests found"
