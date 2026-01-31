@@ -152,14 +152,11 @@ jobs:
             }
           }
           
-          if ($packages.Count -gt 0) {
-            $matrix = $packages | ConvertTo-Json -Compress -Depth 3
-            "matrix=$matrix" >> $env:GITHUB_OUTPUT
-            Write-Host "Matrix: $matrix"
-          } else {
-            Write-Host "No manifests found"
-            "matrix={`"include`":[]}" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
-          }
+          # Always output matrix - empty include array will auto-skip downstream jobs
+          # @($packages) forces array even with single item
+          $matrix = @{ include = @($packages) } | ConvertTo-Json -Compress -Depth 3
+          Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "matrix=$matrix"
+          Write-Host "Matrix: $matrix"
 
   # Job 3: Validate and test manifests in sandbox (self-hosted runner with Windows Sandbox)
   # Uses dynamic matrix - only runs for packages that generated manifests
