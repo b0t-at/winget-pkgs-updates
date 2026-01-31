@@ -12,10 +12,15 @@ on:
       - Scripts/Packages/*
 
 jobs:
-  update-scriptbased:
-    name: ${{ matrix.PackageName }}
+  # Job 1: Generate manifests for all packages
+  generate-manifest:
+    name: Generate ${{ matrix.PackageName }}
     runs-on: windows-2025
     environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Test' }}
+    
+    outputs:
+      # Matrix outputs are available as JSON
+      results: ${{ toJSON(steps.*.outputs) }}
     
     strategy:
       fail-fast: false
@@ -38,57 +43,28 @@ jobs:
             WebsiteURL: "https://www.mongodb.com/try/download/tools"
           - PackageName: "MongoDB.Compass.Readonly"
             WebsiteURL: "https://www.mongodb.com/try/download/tools"
-#          - PackageName: "Logitech.OptionsPlus"
-#            WebsiteURL: "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.exe"     
-#            With: WinGetCreate     
           - PackageName: "Glarysoft.GlaryUtilities"
             WebsiteURL: "https://download.glarysoft.com/gusetup.exe"
             With: WinGetCreate
           - PackageName: "GitButler.GitButler"
             WebsiteURL: "https://app.gitbutler.com/downloads/release/windows/x86_64/msi"   
-#            With: WinGetCreate       
           - PackageName: "FlipperDevicesInc.qFlipper"
             WebsiteURL: "https://update.flipperzero.one/qFlipper/directory.json"
             With: WinGetCreate
           - PackageName: "Loupedeck.Loupedeck"
           - PackageName: "StrawberryPerl.StrawberryPerl"
             WebsiteURL: "https://github.com/StrawberryPerl/Perl-Dist-Strawberry"
-          #- PackageName: "Crucial.StorageExecutive"
-          #  WebsiteURL: "https://www.crucial.com/content/dam/crucial/support/storage-executive-win-64.zip"
-          #  With: WinGetCreate
-          # - PackageName: "SmartProjects.IsoBuster"
-          #   WebsiteURL: "https://www.isobuster.com/downloads/isobuster/isobuster_install_64bit.exe https://www.isobuster.com/downloads/isobuster/isobuster_install.exe"
           - PackageName: "Fork.Fork"
             WebsiteURL: "https://fork.dev"
-          # - PackageName: "OpenMedia.4KYoutubetoMP3"
-          #   WebsiteURL: "https://www.4kdownload.com/downloads/34"
-          # - PackageName: "OpenMedia.4KVideoDownloader"
-          #   WebsiteURL: "https://www.4kdownload.com/downloads/34"
-          # - PackageName: "OpenMedia.4KVideoDownloaderPlus"
-          #   WebsiteURL: "https://www.4kdownload.com/downloads/34"
-          #- PackageName: "OpenMedia.4KTokkit"
-          #- PackageName: "OpenMedia.4KStogram"
           - PackageName: "Egnyte.EgnyteWebEdit"
             WebsiteURL: "https://egnyte-cdn.egnyte.com/webedit/win/en-us/latest/EgnyteWebEdit.msi"
           - PackageName: "cURL.cURL"
             WebsiteURL: "https://curl.se/windows/"
-#          - PackageName: "Oracle.MySQL"
-#            WebsiteURL: "https://dev.mysql.com/downloads/windows/installer/"
-          # - PackageName: "Insecure.Npcap"
-          #   WebsiteURL: "https://npcap.com/dist/"
-#          - PackageName: "OliverBetz.ExifTool"
-#            WebsiteURL: "https://oliverbetz.de/cms/files/Artikel/ExifTool-for-Windows"
           - PackageName: "Bitwarden.CLI"
             WebsiteURL: "https://github.com/bitwarden/clients"
-#          - PackageName: "GitHub.GitHubDesktop.Beta"
-#            WebsiteURL: "https://central.github.com/deployments/desktop/desktop/latest/win32?format=msi&env=beta"
-#          - PackageName: "Microsoft.AzureMonitorAgent"
-#            WebsiteURL: "https://go.microsoft.com/fwlink/?linkid=2192409"
           - PackageName: "SublimeHQ.SublimeMerge"
             WebsiteURL: "https://www.sublimemerge.com/download"
           - PackageName: "Bandisoft.Bandizip"
-#          - PackageName: "Betterbird.Betterbird"
-#            WebsiteURL: "https://www.betterbird.eu/downloads/"
           - PackageName: "wire.wire"
           - PackageName: "glueckkanja.KONNEKT"
           - PackageName: "Ghisler.TotalCommander"
@@ -98,16 +74,373 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-      - name: Update package
-        id: update_version
+      
+      - name: Generate manifest
+        id: generate
         env:
           GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
           WINGET_PKGS_FORK_REPO: ${{ vars.WINGET_PKGS_FORK_REPO }}
           WebsiteURL: ${{ matrix.WebsiteURL }}
           PackageName: ${{ matrix.PackageName }}
           With: ${{ matrix.With }}
-          Submit: ${{ vars.SUBMIT_PR }}
+          Submit: "false"
           IsTemplateUpdate: "true"
-        run: .\scripts\Update-Package.ps1
+        run: |
+          # Import the module
+          Import-Module .\modules\WingetMaintainerModule\WingetMaintainerModule.psd1 -Force
+          
+          # Load HtmlAgilityPack if needed
+          $htmlAgilityPath = ".\libraries\HtmlAgilityPack\HtmlAgilityPack.dll"
+          if (Test-Path $htmlAgilityPath) {
+            Add-Type -Path $htmlAgilityPath
+          }
+          
+          # Call the update script - now returns result instead of submitting
+          .\scripts\Update-Package.ps1
+      
+      - name: Export manifest to job summary
+        if: steps.generate.outputs.generated == 'true'
+        shell: pwsh
+        run: |
+          Import-Module .\modules\WingetMaintainerModule\WingetMaintainerModule.psd1 -Force
+          
+          Export-ManifestToJobSummary `
+            -ManifestPath "${{ steps.generate.outputs.manifest-path }}" `
+            -PackageId "${{ matrix.PackageName }}" `
+            -Version "${{ steps.generate.outputs.version }}"
+      
+      - name: Upload manifest artifact
+        if: steps.generate.outputs.generated == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: manifest-${{ matrix.PackageName }}-${{ steps.generate.outputs.version }}
+          path: ${{ steps.generate.outputs.manifest-path }}
+          retention-days: 7
+          if-no-files-found: error
+
+  # Job 2: Validate and test manifests in sandbox (self-hosted runner with Windows Sandbox)
+  validate-and-test:
+    name: Validate ${{ matrix.PackageName }}
+    needs: generate-manifest
+    runs-on: [self-hosted, Windows, X64]
+    if: needs.generate-manifest.result == 'success'
+    
+    strategy:
+      fail-fast: false
+      max-parallel: 1  # Run one at a time since sandbox requires exclusive access
+      matrix:
+        include:
+          - PackageName: "MongoDB.Server"
+          - PackageName: "MongoDB.MongoDBCLI"
+          - PackageName: "MongoDB.Shell"
+          - PackageName: "MongoDB.MongoDBAtlasCLI"
+          - PackageName: "MongoDB.DatabaseTools"
+          - PackageName: "MongoDB.Compass.Full"
+          - PackageName: "MongoDB.Compass.Isolated"
+          - PackageName: "MongoDB.Compass.Readonly"
+          - PackageName: "Glarysoft.GlaryUtilities"
+          - PackageName: "GitButler.GitButler"
+          - PackageName: "FlipperDevicesInc.qFlipper"
+          - PackageName: "Loupedeck.Loupedeck"
+          - PackageName: "StrawberryPerl.StrawberryPerl"
+          - PackageName: "Fork.Fork"
+          - PackageName: "Egnyte.EgnyteWebEdit"
+          - PackageName: "cURL.cURL"
+          - PackageName: "Bitwarden.CLI"
+          - PackageName: "SublimeHQ.SublimeMerge"
+          - PackageName: "Bandisoft.Bandizip"
+          - PackageName: "wire.wire"
+          - PackageName: "glueckkanja.KONNEKT"
+          - PackageName: "Ghisler.TotalCommander"
+          - PackageName: "Jellyfin.Server"
+          - PackageName: "Amazon.Kindle"
+
+    outputs:
+      validation-passed: ${{ steps.validation.outputs.passed }}
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      
+      - name: Find manifest artifact
+        id: find-artifact
+        shell: pwsh
+        run: |
+          # List available artifacts for this package
+          $artifactPattern = "manifest-${{ matrix.PackageName }}-*"
+          Write-Host "Looking for artifacts matching: $artifactPattern"
+          
+          # For now, we'll try to download - if it doesn't exist, the step will be skipped
+          "artifact-exists=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+      
+      - name: Download manifest artifact
+        id: download
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: manifest-${{ matrix.PackageName }}-*
+          path: ./downloaded-manifests
+          merge-multiple: true
+      
+      - name: Check if manifest was downloaded
+        id: check-download
+        shell: pwsh
+        run: |
+          $manifestDir = "./downloaded-manifests"
+          
+          if (-not (Test-Path $manifestDir)) {
+            Write-Host "No manifest artifact found for ${{ matrix.PackageName }} - skipping validation"
+            "has-manifest=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            exit 0
+          }
+          
+          $yamlFiles = Get-ChildItem -Path $manifestDir -Filter "*.yaml" -Recurse
+          
+          if ($yamlFiles.Count -eq 0) {
+            Write-Host "No YAML files found in downloaded artifact - skipping validation"
+            "has-manifest=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            exit 0
+          }
+          
+          # Find the manifest folder (the one containing .yaml files)
+          $manifestPath = ($yamlFiles | Select-Object -First 1).DirectoryName
+          Write-Host "Manifest path: $manifestPath"
+          
+          "has-manifest=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          "manifest-path=$manifestPath" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+      
+      - name: Export manifest to job summary
+        if: steps.check-download.outputs.has-manifest == 'true'
+        shell: pwsh
+        run: |
+          Import-Module .\modules\WingetMaintainerModule\WingetMaintainerModule.psd1 -Force
+          
+          # Extract version from manifest path
+          $manifestPath = "${{ steps.check-download.outputs.manifest-path }}"
+          $version = Split-Path $manifestPath -Leaf
+          
+          Export-ManifestToJobSummary `
+            -ManifestPath $manifestPath `
+            -PackageId "${{ matrix.PackageName }}" `
+            -Version $version
+      
+      - name: Run content validation
+        id: content-validation
+        if: steps.check-download.outputs.has-manifest == 'true'
+        shell: pwsh
+        run: |
+          $manifestPath = "${{ steps.check-download.outputs.manifest-path }}"
+          
+          Write-Host "Running content validation for: $manifestPath"
+          
+          & .\Scripts\validation\Test-ManifestContent.ps1 -ManifestPath $manifestPath
+          $exitCode = $LASTEXITCODE
+          
+          if ($exitCode -eq 0) {
+            "passed=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          } else {
+            "passed=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            exit $exitCode
+          }
+      
+      - name: Run sandbox validation
+        id: sandbox-validation
+        if: steps.check-download.outputs.has-manifest == 'true' && steps.content-validation.outputs.passed == 'true'
+        timeout-minutes: 30
+        shell: pwsh
+        env:
+          WINGET_PKGS_GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
+        run: |
+          $manifestPath = "${{ steps.check-download.outputs.manifest-path }}"
+          
+          Write-Host "Running sandbox validation for: $manifestPath"
+          
+          & .\Scripts\validation\Test-Manifest-Sandbox.ps1 -ManifestPath $manifestPath
+          $exitCode = $LASTEXITCODE
+          
+          if ($exitCode -eq 0) {
+            "passed=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          } else {
+            "passed=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            exit $exitCode
+          }
+      
+      - name: Upload sandbox logs
+        if: always() && steps.check-download.outputs.has-manifest == 'true'
+        uses: actions/upload-artifact@v4
+        continue-on-error: true
+        with:
+          name: sandbox-logs-${{ matrix.PackageName }}
+          path: ${{ runner.temp }}/../../../Packages/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe/SandboxTest/Logs
+          retention-days: 7
+          if-no-files-found: ignore
+      
+      - name: Set validation result
+        id: validation
+        if: always()
+        shell: pwsh
+        run: |
+          $hasManifest = "${{ steps.check-download.outputs.has-manifest }}"
+          $contentPassed = "${{ steps.content-validation.outputs.passed }}"
+          $sandboxPassed = "${{ steps.sandbox-validation.outputs.passed }}"
+          
+          if ($hasManifest -ne "true") {
+            Write-Host "No manifest to validate - skipping"
+            "passed=skip" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          } elseif ($contentPassed -eq "true" -and $sandboxPassed -eq "true") {
+            Write-Host "All validations passed!" -ForegroundColor Green
+            "passed=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          } else {
+            Write-Host "Validation failed" -ForegroundColor Red
+            Write-Host "  Content: $contentPassed"
+            Write-Host "  Sandbox: $sandboxPassed"
+            "passed=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          }
+
+  # Job 3: Submit PRs for validated packages
+  submit-pr:
+    name: Submit ${{ matrix.PackageName }}
+    needs: [generate-manifest, validate-and-test]
+    runs-on: windows-2025
+    if: needs.validate-and-test.result == 'success' && vars.SUBMIT_PR == 'true'
+    environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Test' }}
+    
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - PackageName: "MongoDB.Server"
+          - PackageName: "MongoDB.MongoDBCLI"
+          - PackageName: "MongoDB.Shell"
+          - PackageName: "MongoDB.MongoDBAtlasCLI"
+          - PackageName: "MongoDB.DatabaseTools"
+          - PackageName: "MongoDB.Compass.Full"
+          - PackageName: "MongoDB.Compass.Isolated"
+          - PackageName: "MongoDB.Compass.Readonly"
+          - PackageName: "Glarysoft.GlaryUtilities"
+          - PackageName: "GitButler.GitButler"
+          - PackageName: "FlipperDevicesInc.qFlipper"
+          - PackageName: "Loupedeck.Loupedeck"
+          - PackageName: "StrawberryPerl.StrawberryPerl"
+          - PackageName: "Fork.Fork"
+          - PackageName: "Egnyte.EgnyteWebEdit"
+          - PackageName: "cURL.cURL"
+          - PackageName: "Bitwarden.CLI"
+          - PackageName: "SublimeHQ.SublimeMerge"
+          - PackageName: "Bandisoft.Bandizip"
+          - PackageName: "wire.wire"
+          - PackageName: "glueckkanja.KONNEKT"
+          - PackageName: "Ghisler.TotalCommander"
+          - PackageName: "Jellyfin.Server"
+          - PackageName: "Amazon.Kindle"
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      
+      - name: Download manifest artifact
+        id: download
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: manifest-${{ matrix.PackageName }}-*
+          path: ./downloaded-manifests
+          merge-multiple: true
+      
+      - name: Check if manifest was downloaded
+        id: check-download
+        shell: pwsh
+        run: |
+          $manifestDir = "./downloaded-manifests"
+          
+          if (-not (Test-Path $manifestDir)) {
+            Write-Host "No manifest artifact found for ${{ matrix.PackageName }} - skipping submission"
+            "has-manifest=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            exit 0
+          }
+          
+          $yamlFiles = Get-ChildItem -Path $manifestDir -Filter "*.yaml" -Recurse
+          
+          if ($yamlFiles.Count -eq 0) {
+            Write-Host "No YAML files found - skipping submission"
+            "has-manifest=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            exit 0
+          }
+          
+          $manifestPath = ($yamlFiles | Select-Object -First 1).DirectoryName
+          $version = Split-Path $manifestPath -Leaf
+          
+          Write-Host "Manifest path: $manifestPath"
+          Write-Host "Version: $version"
+          
+          "has-manifest=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          "manifest-path=$manifestPath" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          "version=$version" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+      
+      - name: Submit PR
+        id: submit
+        if: steps.check-download.outputs.has-manifest == 'true'
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
+        run: |
+          Import-Module .\modules\WingetMaintainerModule\WingetMaintainerModule.psd1 -Force
+          
+          $result = Submit-WingetPackage `
+            -ManifestPath "${{ steps.check-download.outputs.manifest-path }}" `
+            -PackageId "${{ matrix.PackageName }}" `
+            -Version "${{ steps.check-download.outputs.version }}"
+          
+          if ($result.Success) {
+            Write-Host "PR submitted successfully!" -ForegroundColor Green
+            if ($result.PrUrl) {
+              Write-Host "PR URL: $($result.PrUrl)"
+              
+              # Add to job summary
+              "## :rocket: PR Submitted" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+              "" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+              "**Package:** ${{ matrix.PackageName }}" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+              "**Version:** ${{ steps.check-download.outputs.version }}" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+              "**PR:** $($result.PrUrl)" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+            }
+          } else {
+            Write-Host "Failed to submit PR: $($result.Error)" -ForegroundColor Red
+            exit 1
+          }
+
+  # Job 4: Notify on failure
+  notify-failure:
+    name: Notify Failure
+    needs: [generate-manifest, validate-and-test, submit-pr]
+    runs-on: ubuntu-latest
+    if: failure() && vars.NTFY_URL != ''
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      
+      - name: Send failure notification
+        shell: pwsh
+        run: |
+          $runUrl = "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          
+          $body = @{
+            topic    = "${{ vars.NTFY_TOPIC }}"
+            title    = "Winget Package Update Failed"
+            message  = "Workflow: ${{ github.workflow }}`nRun: $runUrl`n`nOne or more packages failed validation or submission."
+            priority = 4
+            tags     = @("x", "package", "warning")
+            click    = $runUrl
+          } | ConvertTo-Json
+          
+          try {
+            Invoke-RestMethod -Uri "${{ vars.NTFY_URL }}/${{ vars.NTFY_TOPIC }}" `
+              -Method Post `
+              -ContentType 'application/json' `
+              -Body $body
+            Write-Host "Notification sent successfully"
+          } catch {
+            Write-Warning "Failed to send notification: $_"
+          }
 
 

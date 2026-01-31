@@ -9,8 +9,17 @@
 
 [CmdletBinding()]
 Param(
-    [Parameter(Position = 0, HelpMessage = 'The Manifest to install in the Sandbox.')]
+    [Parameter(Position = 0, HelpMessage = 'The Manifest URL to download and install in the Sandbox.')]
     [String] $ManifestURL,
+    # ManifestPath - Alternative to ManifestURL for local testing
+    [Parameter(HelpMessage = 'The local path to the manifest folder to install in the Sandbox.')]
+    [ValidateScript({
+            if ($_ -and -not (Test-Path -Path $_ -PathType Container)) { 
+                throw "ManifestPath '$_' does not exist or is not a directory." 
+            }
+            return $true
+        })]
+    [String] $ManifestPath,
     # Script
     [Parameter(Position = 1, HelpMessage = 'The script to run in the Sandbox.')]
     [ScriptBlock] $Script,
@@ -34,9 +43,39 @@ Param(
     [switch] $Clean
 )
 
-Write-Host "Running Test-Manifest-Sandbox with ManifestURL: $ManifestURL"
+Write-Host "Running Test-Manifest-Sandbox"
 
-if (![String]::IsNullOrWhiteSpace($ManifestURL)) {
+# Validate that exactly one of ManifestURL or ManifestPath is provided (or neither for WinGet-only install)
+if (![String]::IsNullOrWhiteSpace($ManifestURL) -and ![String]::IsNullOrWhiteSpace($ManifestPath)) {
+    Write-Error "Cannot specify both -ManifestURL and -ManifestPath. Please provide only one." -ErrorAction Stop
+    exit 1
+}
+
+# Handle manifest source
+if (![String]::IsNullOrWhiteSpace($ManifestPath)) {
+    # Use local manifest path directly
+    Write-Host "Using local manifest from: $ManifestPath"
+    $Manifest = (Resolve-Path -Path $ManifestPath).Path
+    
+    # Derive package name from the manifest files
+    $yamlFiles = Get-ChildItem -Path $Manifest -Filter "*.yaml" -File
+    if ($yamlFiles.Count -eq 0) {
+        Write-Error "No YAML files found in manifest folder: $ManifestPath" -ErrorAction Stop
+        exit 4
+    }
+    
+    # Extract package identifier from filename (e.g., "Fork.Fork.yaml" -> "Fork.Fork")
+    $versionFile = $yamlFiles | Where-Object { $_.Name -notmatch '\.(installer|locale)\.' } | Select-Object -First 1
+    if ($versionFile) {
+        $package = $versionFile.BaseName
+    } else {
+        # Fallback: use the first yaml file's base name
+        $package = ($yamlFiles[0].BaseName -split '\.')[0..1] -join '.'
+    }
+    Write-Host "Package identifier: $package"
+}
+elseif (![String]::IsNullOrWhiteSpace($ManifestURL)) {
+    Write-Host "Downloading manifest from URL: $ManifestURL"
     $ManifestURL = $ManifestURL.TrimEnd('/')
     $SplittedURL = $ManifestURL -split '/'
 
@@ -62,7 +101,7 @@ if (![String]::IsNullOrWhiteSpace($ManifestURL)) {
     Write-Host "Manifest Path: $Manifest"
 }
 else {
-    Write-Host "No ManifestURL provided. Only WinGet will be installed."
+    Write-Host "No ManifestURL or ManifestPath provided. Only WinGet will be installed."
     $Manifest = $null
 }
 

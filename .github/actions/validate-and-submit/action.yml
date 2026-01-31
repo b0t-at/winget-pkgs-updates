@@ -1,0 +1,239 @@
+name: 'Validate and Submit Winget Package'
+description: 'Validates a winget manifest through content checks and sandbox testing, then submits as a PR if validation passes'
+
+inputs:
+  manifest-path:
+    description: 'Path to the manifest folder containing YAML files'
+    required: true
+  package-id:
+    description: 'The package identifier (e.g., Microsoft.VSCode)'
+    required: true
+  version:
+    description: 'The package version'
+    required: true
+  github-token:
+    description: 'GitHub PAT with repo scope for PR submission'
+    required: true
+  ntfy-url:
+    description: 'Self-hosted ntfy server URL for failure notifications'
+    required: false
+    default: ''
+  ntfy-topic:
+    description: 'ntfy topic for failure notifications'
+    required: false
+    default: 'winget-updates'
+  submit:
+    description: 'Whether to submit the PR after validation (true/false)'
+    required: false
+    default: 'true'
+  pr-title:
+    description: 'Custom PR title (optional)'
+    required: false
+    default: ''
+  resolves:
+    description: 'GitHub issue number that this PR resolves'
+    required: false
+    default: ''
+  skip-sandbox:
+    description: 'Skip sandbox testing (useful for CI testing)'
+    required: false
+    default: 'false'
+
+outputs:
+  validation-passed:
+    description: 'Whether all validation checks passed'
+    value: ${{ steps.final-status.outputs.passed }}
+  content-validation-passed:
+    description: 'Whether content validation passed'
+    value: ${{ steps.content-validation.outputs.passed }}
+  sandbox-validation-passed:
+    description: 'Whether sandbox validation passed'
+    value: ${{ steps.sandbox-validation.outputs.passed }}
+  pr-url:
+    description: 'URL of the created PR (if submitted)'
+    value: ${{ steps.submit-pr.outputs.pr-url }}
+
+runs:
+  using: 'composite'
+  steps:
+    # Step 1: Validate manifest content
+    - name: Validate manifest content
+      id: content-validation
+      shell: pwsh
+      run: |
+        Write-Host "=== Content Validation ===" -ForegroundColor Cyan
+        
+        $manifestPath = "${{ inputs.manifest-path }}"
+        
+        if (-not (Test-Path -Path $manifestPath)) {
+          Write-Host "ERROR: Manifest path does not exist: $manifestPath" -ForegroundColor Red
+          "passed=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          exit 1
+        }
+        
+        # Run content validation script
+        $validationScript = Join-Path $env:GITHUB_WORKSPACE "Scripts/validation/Test-ManifestContent.ps1"
+        
+        if (Test-Path $validationScript) {
+          & $validationScript -ManifestPath $manifestPath
+          $exitCode = $LASTEXITCODE
+          
+          if ($exitCode -eq 0) {
+            Write-Host "Content validation PASSED" -ForegroundColor Green
+            "passed=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          } else {
+            Write-Host "Content validation FAILED with exit code: $exitCode" -ForegroundColor Red
+            "passed=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            exit $exitCode
+          }
+        } else {
+          Write-Host "WARNING: Validation script not found at: $validationScript" -ForegroundColor Yellow
+          Write-Host "Skipping content validation" -ForegroundColor Yellow
+          "passed=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+        }
+
+    # Step 2: Run sandbox validation (if not skipped)
+    - name: Run sandbox validation
+      id: sandbox-validation
+      if: inputs.skip-sandbox != 'true'
+      shell: pwsh
+      run: |
+        Write-Host "=== Sandbox Validation ===" -ForegroundColor Cyan
+        
+        $manifestPath = "${{ inputs.manifest-path }}"
+        
+        # Check if Windows Sandbox is available
+        if (-not (Get-Command 'WindowsSandbox' -ErrorAction SilentlyContinue)) {
+          Write-Host "WARNING: Windows Sandbox not available on this runner" -ForegroundColor Yellow
+          Write-Host "Sandbox validation will be skipped" -ForegroundColor Yellow
+          "passed=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          "skipped=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          exit 0
+        }
+        
+        # Run sandbox test script with local manifest path
+        $sandboxScript = Join-Path $env:GITHUB_WORKSPACE "Scripts/validation/Test-Manifest-Sandbox.ps1"
+        
+        if (Test-Path $sandboxScript) {
+          & $sandboxScript -ManifestPath $manifestPath
+          $exitCode = $LASTEXITCODE
+          
+          if ($exitCode -eq 0) {
+            Write-Host "Sandbox validation PASSED" -ForegroundColor Green
+            "passed=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          } else {
+            Write-Host "Sandbox validation FAILED with exit code: $exitCode" -ForegroundColor Red
+            "passed=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            exit $exitCode
+          }
+        } else {
+          Write-Host "ERROR: Sandbox script not found at: $sandboxScript" -ForegroundColor Red
+          "passed=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          exit 1
+        }
+
+    # Step 3: Mark sandbox as passed if skipped
+    - name: Mark sandbox passed (skipped)
+      id: sandbox-skipped
+      if: inputs.skip-sandbox == 'true'
+      shell: pwsh
+      run: |
+        Write-Host "Sandbox validation skipped as requested" -ForegroundColor Yellow
+        "passed=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+        "skipped=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+
+    # Step 4: Submit PR if validation passed
+    - name: Submit PR
+      id: submit-pr
+      if: |
+        inputs.submit == 'true' && 
+        steps.content-validation.outputs.passed == 'true' && 
+        (steps.sandbox-validation.outputs.passed == 'true' || steps.sandbox-skipped.outputs.passed == 'true')
+      shell: pwsh
+      env:
+        GITHUB_TOKEN: ${{ inputs.github-token }}
+      run: |
+        Write-Host "=== Submitting PR ===" -ForegroundColor Cyan
+        
+        # Import the module
+        Import-Module (Join-Path $env:GITHUB_WORKSPACE "modules/WingetMaintainerModule/WingetMaintainerModule.psd1") -Force
+        
+        $submitParams = @{
+          ManifestPath = "${{ inputs.manifest-path }}"
+          PackageId    = "${{ inputs.package-id }}"
+          Version      = "${{ inputs.version }}"
+        }
+        
+        if ("${{ inputs.pr-title }}" -ne "") {
+          $submitParams.PrTitle = "${{ inputs.pr-title }}"
+        }
+        
+        if ("${{ inputs.resolves }}" -ne "") {
+          $submitParams.Resolves = "${{ inputs.resolves }}"
+        }
+        
+        $result = Submit-WingetPackage @submitParams
+        
+        if ($result.Success) {
+          Write-Host "PR submitted successfully!" -ForegroundColor Green
+          if ($result.PrUrl) {
+            Write-Host "PR URL: $($result.PrUrl)" -ForegroundColor Cyan
+            "pr-url=$($result.PrUrl)" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          }
+        } else {
+          Write-Host "ERROR: Failed to submit PR: $($result.Error)" -ForegroundColor Red
+          exit 1
+        }
+
+    # Step 5: Determine final validation status
+    - name: Determine final status
+      id: final-status
+      if: always()
+      shell: pwsh
+      run: |
+        $contentPassed = "${{ steps.content-validation.outputs.passed }}"
+        $sandboxPassed = "${{ steps.sandbox-validation.outputs.passed }}"
+        $sandboxSkipped = "${{ steps.sandbox-skipped.outputs.passed }}"
+        
+        # Sandbox is considered passed if either it passed or was skipped
+        $sandboxOk = ($sandboxPassed -eq "true") -or ($sandboxSkipped -eq "true")
+        
+        if ($contentPassed -eq "true" -and $sandboxOk) {
+          Write-Host "All validations PASSED" -ForegroundColor Green
+          "passed=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+        } else {
+          Write-Host "Validation FAILED" -ForegroundColor Red
+          Write-Host "  Content validation: $contentPassed" -ForegroundColor Gray
+          Write-Host "  Sandbox validation: $sandboxPassed (skipped: $sandboxSkipped)" -ForegroundColor Gray
+          "passed=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+        }
+
+    # Step 6: Send failure notification
+    - name: Send failure notification
+      if: failure() && inputs.ntfy-url != ''
+      shell: pwsh
+      run: |
+        Write-Host "=== Sending Failure Notification ===" -ForegroundColor Yellow
+        
+        # Import the module
+        Import-Module (Join-Path $env:GITHUB_WORKSPACE "modules/WingetMaintainerModule/WingetMaintainerModule.psd1") -Force
+        
+        $runUrl = "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+        
+        $notifyParams = @{
+          NtfyUrl  = "${{ inputs.ntfy-url }}"
+          Topic    = "${{ inputs.ntfy-topic }}"
+          Title    = "Winget Package Validation Failed"
+          Message  = "Package: ${{ inputs.package-id }}`nVersion: ${{ inputs.version }}`nWorkflow: ${{ github.workflow }}`nRun: $runUrl"
+          Priority = 4
+          Tags     = @("x", "package")
+          Click    = $runUrl
+        }
+        
+        $result = Send-NtfyNotification @notifyParams
+        
+        if ($result.Success) {
+          Write-Host "Notification sent successfully" -ForegroundColor Green
+        } else {
+          Write-Host "WARNING: Failed to send notification: $($result.Error)" -ForegroundColor Yellow
+        }
