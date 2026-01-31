@@ -111,7 +111,8 @@ jobs:
           
           if ($packages.Count -gt 0) {
             $matrix = @{ include = $packages } | ConvertTo-Json -Compress -Depth 3
-            "matrix=$matrix" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            # Always write a valid JSON matrix to job outputs to avoid empty-matrix skips.
+            Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "matrix=$matrix"
             Write-Host "Matrix: $matrix"
           } else {
             Write-Host "No manifests found"
