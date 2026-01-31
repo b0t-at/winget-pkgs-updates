@@ -127,7 +127,6 @@ jobs:
     
     strategy:
       fail-fast: false
-      max-parallel: 1  # Run one at a time since sandbox requires exclusive access
       matrix:
         include:
           - PackageName: "MongoDB.Server"
