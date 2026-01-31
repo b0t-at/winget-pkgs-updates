@@ -109,15 +109,11 @@ jobs:
             }
           }
           
-          if ($packages.Count -gt 0) {
-            $matrix = @{ include = $packages } | ConvertTo-Json -Compress -Depth 3
-            # Always write a valid JSON matrix to job outputs to avoid empty-matrix skips.
-            Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "matrix=$matrix"
-            Write-Host "Matrix: $matrix"
-          } else {
-            Write-Host "No manifests found"
-            "matrix={`"include`":[]}" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
-          }
+          # Always output matrix - empty include array will auto-skip downstream jobs
+          # @($packages) forces array even with single item
+          $matrix = @{ include = @($packages) } | ConvertTo-Json -Compress -Depth 3
+          Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "matrix=$matrix"
+          Write-Host "Matrix: $matrix"
 
   # Job 3: Validate manifests in sandbox (self-hosted runner)
   # Uses dynamic matrix from collect-generated job - only runs for packages that generated manifests
@@ -125,6 +121,7 @@ jobs:
     name: Validate ${{ matrix.id }}
     needs: collect-generated
     runs-on: [self-hosted, Windows, X64]
+    if: always() && needs.collect-generated.result == 'success'
     
     strategy:
       fail-fast: false
@@ -233,7 +230,7 @@ jobs:
     name: Submit ${{ matrix.id }}
     needs: [collect-generated, validate-and-test]
     runs-on: windows-2025
-    if: needs.validate-and-test.result == 'success' && vars.SUBMIT_PR == 'true'
+    if: always() && needs.validate-and-test.result == 'success' && vars.SUBMIT_PR == 'true'
     environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Test' }}
     
     strategy:
@@ -293,7 +290,7 @@ jobs:
     name: Notify Failure
     needs: [generate-manifest, collect-generated, validate-and-test, submit-pr]
     runs-on: ubuntu-latest
-    if: failure() && vars.NTFY_URL != ''
+    if: always() && failure() && vars.NTFY_URL != ''
     
     steps:
       - name: Checkout
