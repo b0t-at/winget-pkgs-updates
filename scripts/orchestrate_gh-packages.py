@@ -52,30 +52,10 @@ def create_workflow_file(chunk, workflows_dir, workflow_prefix, workflow_suffix,
         f"            url: {item['url']}" for item in chunk
     )
     
-    # Prepare the ID-only include section for validation and submit jobs
-    # These jobs only need the package ID to download the artifact
-    id_only_include_section = "\n".join(
-        f"          - id: {item['id']}" for item in chunk
-    )
-    
-    # Replace the placeholder with the include sections
-    # Main placeholder for generate-manifest job (needs full info)
+    # Replace the placeholder with the include section for generate-manifest job
     updated_content = template_content.replace(
         "# Orchestrator will insert Packages here",
-        full_include_section,
-        1  # Only replace the first occurrence
-    )
-    
-    # Placeholder for validate-and-test job (only needs ID)
-    updated_content = updated_content.replace(
-        "# Orchestrator will insert Packages here (validation)",
-        id_only_include_section
-    )
-    
-    # Placeholder for submit-pr job (only needs ID)
-    updated_content = updated_content.replace(
-        "# Orchestrator will insert Packages here (submit)",
-        id_only_include_section
+        full_include_section
     )
     
     # Update filename

@@ -66,85 +66,108 @@ jobs:
         if: steps.generate.outputs.generated == 'true'
         uses: actions/upload-artifact@v4
         with:
-          name: manifest-${{ matrix.id }}-${{ steps.generate.outputs.version }}
+          name: manifest__${{ matrix.id }}__${{ steps.generate.outputs.version }}
           path: ${{ steps.generate.outputs.manifest-path }}
           retention-days: 7
           if-no-files-found: error
 
-  # Job 2: Validate manifests in sandbox (self-hosted runner)
-  # Note: This job uses a dynamic matrix from the generate-manifest job outputs
+  # Job 2: Collect successful manifest generations into a dynamic matrix
+  collect-generated:
+    name: Collect Generated Manifests
+    needs: generate-manifest
+    runs-on: ubuntu-latest
+    if: always() && needs.generate-manifest.result != 'cancelled'
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+      has-manifests: ${{ steps.set-matrix.outputs.has-manifests }}
+    
+    steps:
+      - name: Download all manifest artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: manifest__*
+          path: ./manifests
+      
+      - name: Build dynamic matrix from artifacts
+        id: set-matrix
+        shell: pwsh
+        run: |
+          $manifestsDir = "./manifests"
+          $packages = @()
+          
+          if (Test-Path $manifestsDir) {
+            # Each artifact folder is named manifest__{id}__{version}
+            $artifactFolders = Get-ChildItem -Path $manifestsDir -Directory
+            
+            foreach ($folder in $artifactFolders) {
+              # Parse folder name: manifest__{id}__{version}
+              if ($folder.Name -match '^manifest__(.+)__(.+)$') {
+                $packageId = $Matches[1]
+                $version = $Matches[2]
+                $packages += @{ id = $packageId; version = $version }
+                Write-Host "Found: $packageId @ $version"
+              }
+            }
+          }
+          
+          if ($packages.Count -gt 0) {
+            $matrix = @{ include = $packages } | ConvertTo-Json -Compress -Depth 3
+            "matrix=$matrix" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            "has-manifests=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            Write-Host "Matrix: $matrix"
+          } else {
+            Write-Host "No manifests found"
+            "matrix={""include"":[]}" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            "has-manifests=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          }
+
+  # Job 3: Validate manifests in sandbox (self-hosted runner)
+  # Uses dynamic matrix from collect-generated job - only runs for packages that generated manifests
   validate-and-test:
     name: Validate ${{ matrix.id }}
-    needs: generate-manifest
+    needs: collect-generated
     runs-on: [self-hosted, Windows, X64]
-    if: needs.generate-manifest.result == 'success'
+    if: needs.collect-generated.outputs.has-manifests == 'true'
     
     strategy:
       fail-fast: false
       max-parallel: 1  # Run one at a time since sandbox requires exclusive access
-      matrix:
-        include:
-# Orchestrator will insert Packages here (validation)
+      matrix: ${{ fromJson(needs.collect-generated.outputs.matrix) }}
     
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       
       - name: Download manifest artifact
-        id: download
         uses: actions/download-artifact@v4
-        continue-on-error: true
         with:
-          pattern: manifest-${{ matrix.id }}-*
+          name: manifest__${{ matrix.id }}__${{ matrix.version }}
           path: ./downloaded-manifests
-          merge-multiple: true
       
-      - name: Check if manifest was downloaded
-        id: check-download
+      - name: Set manifest path
+        id: manifest
         shell: pwsh
         run: |
-          $manifestDir = "./downloaded-manifests"
-          
-          if (-not (Test-Path $manifestDir)) {
-            Write-Host "No manifest artifact found for ${{ matrix.id }} - skipping validation"
-            "has-manifest=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
-            exit 0
-          }
-          
-          $yamlFiles = Get-ChildItem -Path $manifestDir -Filter "*.yaml" -Recurse
-          
-          if ($yamlFiles.Count -eq 0) {
-            Write-Host "No YAML files found in downloaded artifact - skipping validation"
-            "has-manifest=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
-            exit 0
-          }
-          
+          $yamlFiles = Get-ChildItem -Path "./downloaded-manifests" -Filter "*.yaml" -Recurse
           $manifestPath = ($yamlFiles | Select-Object -First 1).DirectoryName
           Write-Host "Manifest path: $manifestPath"
-          
-          "has-manifest=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
-          "manifest-path=$manifestPath" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          "path=$manifestPath" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
       
       - name: Export manifest to job summary
-        if: steps.check-download.outputs.has-manifest == 'true'
         shell: pwsh
         run: |
           Import-Module .\modules\WingetMaintainerModule\WingetMaintainerModule.psd1 -Force
           
-          $manifestPath = "${{ steps.check-download.outputs.manifest-path }}"
-          $version = Split-Path $manifestPath -Leaf
-          
           Export-ManifestToJobSummary `
-            -ManifestPath $manifestPath `
+            -ManifestPath "${{ steps.manifest.outputs.path }}" `
             -PackageId "${{ matrix.id }}" `
-            -Version $version
+            -Version "${{ matrix.version }}"
       
       - name: Run content validation
         id: content-validation
-        if: steps.check-download.outputs.has-manifest == 'true'
         shell: pwsh
         run: |
-          $manifestPath = "${{ steps.check-download.outputs.manifest-path }}"
+          $manifestPath = "${{ steps.manifest.outputs.path }}"
           
           Write-Host "Running content validation for: $manifestPath"
           
@@ -160,13 +183,13 @@ jobs:
       
       - name: Run sandbox validation
         id: sandbox-validation
-        if: steps.check-download.outputs.has-manifest == 'true' && steps.content-validation.outputs.passed == 'true'
+        if: steps.content-validation.outputs.passed == 'true'
         timeout-minutes: 30
         shell: pwsh
         env:
           WINGET_PKGS_GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
         run: |
-          $manifestPath = "${{ steps.check-download.outputs.manifest-path }}"
+          $manifestPath = "${{ steps.manifest.outputs.path }}"
           
           Write-Host "Running sandbox validation for: $manifestPath"
           
@@ -181,7 +204,7 @@ jobs:
           }
       
       - name: Upload sandbox logs
-        if: always() && steps.check-download.outputs.has-manifest == 'true'
+        if: always()
         uses: actions/upload-artifact@v4
         continue-on-error: true
         with:
@@ -195,14 +218,10 @@ jobs:
         if: always()
         shell: pwsh
         run: |
-          $hasManifest = "${{ steps.check-download.outputs.has-manifest }}"
           $contentPassed = "${{ steps.content-validation.outputs.passed }}"
           $sandboxPassed = "${{ steps.sandbox-validation.outputs.passed }}"
           
-          if ($hasManifest -ne "true") {
-            Write-Host "No manifest to validate - skipping"
-            "passed=skip" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
-          } elseif ($contentPassed -eq "true" -and $sandboxPassed -eq "true") {
+          if ($contentPassed -eq "true" -and $sandboxPassed -eq "true") {
             Write-Host "All validations passed!" -ForegroundColor Green
             "passed=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
           } else {
@@ -212,66 +231,39 @@ jobs:
             "passed=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
           }
 
-  # Job 3: Submit PRs for validated packages
+  # Job 4: Submit PRs for validated packages
+  # Uses dynamic matrix from collect-generated - only runs for packages that generated manifests
   submit-pr:
     name: Submit ${{ matrix.id }}
-    needs: [generate-manifest, validate-and-test]
+    needs: [collect-generated, validate-and-test]
     runs-on: windows-2025
     if: needs.validate-and-test.result == 'success' && vars.SUBMIT_PR == 'true'
     environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Test' }}
     
     strategy:
       fail-fast: false
-      matrix:
-        include:
-# Orchestrator will insert Packages here (submit)
+      matrix: ${{ fromJson(needs.collect-generated.outputs.matrix) }}
     
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       
       - name: Download manifest artifact
-        id: download
         uses: actions/download-artifact@v4
-        continue-on-error: true
         with:
-          pattern: manifest-${{ matrix.id }}-*
+          name: manifest__${{ matrix.id }}__${{ matrix.version }}
           path: ./downloaded-manifests
-          merge-multiple: true
       
-      - name: Check if manifest was downloaded
-        id: check-download
+      - name: Set manifest path
+        id: manifest
         shell: pwsh
         run: |
-          $manifestDir = "./downloaded-manifests"
-          
-          if (-not (Test-Path $manifestDir)) {
-            Write-Host "No manifest artifact found for ${{ matrix.id }} - skipping submission"
-            "has-manifest=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
-            exit 0
-          }
-          
-          $yamlFiles = Get-ChildItem -Path $manifestDir -Filter "*.yaml" -Recurse
-          
-          if ($yamlFiles.Count -eq 0) {
-            Write-Host "No YAML files found - skipping submission"
-            "has-manifest=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
-            exit 0
-          }
-          
+          $yamlFiles = Get-ChildItem -Path "./downloaded-manifests" -Filter "*.yaml" -Recurse
           $manifestPath = ($yamlFiles | Select-Object -First 1).DirectoryName
-          $version = Split-Path $manifestPath -Leaf
-          
           Write-Host "Manifest path: $manifestPath"
-          Write-Host "Version: $version"
-          
-          "has-manifest=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
-          "manifest-path=$manifestPath" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
-          "version=$version" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          "path=$manifestPath" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
       
       - name: Submit PR
-        id: submit
-        if: steps.check-download.outputs.has-manifest == 'true'
         shell: pwsh
         env:
           GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
@@ -279,9 +271,9 @@ jobs:
           Import-Module .\modules\WingetMaintainerModule\WingetMaintainerModule.psd1 -Force
           
           $result = Submit-WingetPackage `
-            -ManifestPath "${{ steps.check-download.outputs.manifest-path }}" `
+            -ManifestPath "${{ steps.manifest.outputs.path }}" `
             -PackageId "${{ matrix.id }}" `
-            -Version "${{ steps.check-download.outputs.version }}"
+            -Version "${{ matrix.version }}"
           
           if ($result.Success) {
             Write-Host "PR submitted successfully!" -ForegroundColor Green
@@ -292,7 +284,7 @@ jobs:
               "## :rocket: PR Submitted" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
               "" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
               "**Package:** ${{ matrix.id }}" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
-              "**Version:** ${{ steps.check-download.outputs.version }}" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+              "**Version:** ${{ matrix.version }}" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
               "**PR:** $($result.PrUrl)" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
             }
           } else {
@@ -300,10 +292,10 @@ jobs:
             exit 1
           }
 
-  # Job 4: Notify on failure
+  # Job 5: Notify on failure
   notify-failure:
     name: Notify Failure
-    needs: [generate-manifest, validate-and-test, submit-pr]
+    needs: [generate-manifest, collect-generated, validate-and-test, submit-pr]
     runs-on: ubuntu-latest
     if: failure() && vars.NTFY_URL != ''
     
