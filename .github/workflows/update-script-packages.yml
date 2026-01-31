@@ -164,6 +164,7 @@ jobs:
     name: Validate ${{ matrix.PackageName }}
     needs: collect-generated
     runs-on: [self-hosted, Windows, X64]
+    if: always() && needs.collect-generated.result == 'success'
     
     strategy:
       fail-fast: false
@@ -272,7 +273,7 @@ jobs:
     name: Submit ${{ matrix.PackageName }}
     needs: [collect-generated, validate-and-test]
     runs-on: windows-2025
-    if: needs.validate-and-test.result == 'success' && vars.SUBMIT_PR == 'true'
+    if: always() && needs.validate-and-test.result == 'success' && vars.SUBMIT_PR == 'true'
     environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Test' }}
     
     strategy:
@@ -332,7 +333,7 @@ jobs:
     name: Notify Failure
     needs: [generate-manifest, collect-generated, validate-and-test, submit-pr]
     runs-on: ubuntu-latest
-    if: failure() && vars.NTFY_URL != ''
+    if: always() && failure() && vars.NTFY_URL != ''
     
     steps:
       - name: Checkout
