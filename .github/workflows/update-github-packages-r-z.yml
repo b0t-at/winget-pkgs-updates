@@ -417,7 +417,6 @@ jobs:
     if: always() && needs.generate-manifest.result != 'cancelled'
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
-      has-manifests: ${{ steps.set-matrix.outputs.has-manifests }}
     
     steps:
       - name: Download all manifest artifacts
@@ -451,12 +450,10 @@ jobs:
           if ($packages.Count -gt 0) {
             $matrix = @{ include = $packages } | ConvertTo-Json -Compress -Depth 3
             "matrix=$matrix" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
-            "has-manifests=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
             Write-Host "Matrix: $matrix"
           } else {
             Write-Host "No manifests found"
-            "matrix={""include"":[]}" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
-            "has-manifests=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            "matrix={`"include`":[]}" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
           }
 
   # Job 3: Validate manifests in sandbox (self-hosted runner)
@@ -465,7 +462,6 @@ jobs:
     name: Validate ${{ matrix.id }}
     needs: collect-generated
     runs-on: [self-hosted, Windows, X64]
-    if: needs.collect-generated.outputs.has-manifests == 'true'
     
     strategy:
       fail-fast: false
