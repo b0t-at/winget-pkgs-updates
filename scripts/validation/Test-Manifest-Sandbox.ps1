@@ -853,7 +853,10 @@ $Script
 }
 
 Write-Verbose "Invoking the sandbox using $script:ConfigurationFile"
-WindowsSandbox $script:ConfigurationFile
+#WindowsSandbox $script:ConfigurationFile
+Start-Process -FilePath "WindowsSandbox.exe" -ArgumentList "`"$script:ConfigurationFile`"" -WindowStyle Normal
+# Wait for the sandbox to start
+Start-Sleep -Seconds 5
 
 # Wait for sandbox to complete with timeout
 Write-Information "--> Waiting for sandbox installation to complete..."
