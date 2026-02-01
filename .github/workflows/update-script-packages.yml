@@ -288,7 +288,7 @@ jobs:
     name: Collect Validated Packages
     needs: [collect-generated, validate-and-test]
     runs-on: ubuntu-latest
-    if: always() && needs.validate-and-test.result != 'cancelled' && vars.SUBMIT_PR == 'true'
+    if: always() && needs.validate-and-test.result != 'cancelled'
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
       has_packages: ${{ steps.set-matrix.outputs.has_packages }}
@@ -333,7 +333,7 @@ jobs:
     name: Submit ${{ matrix.PackageName }}
     needs: [collect-validated]
     runs-on: windows-2025
-    if: always() && needs.collect-validated.result == 'success' && needs.collect-validated.outputs.has_packages == 'true'
+    if: always() && needs.collect-validated.result == 'success' && needs.collect-validated.outputs.has_packages == 'true' && vars.SUBMIT_PR == 'true'
     environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Test' }}
     
     strategy:
