@@ -273,19 +273,72 @@ jobs:
             Write-Host "  Sandbox: $sandboxPassed"
             "passed=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
           }
+      
+      - name: Upload validation result marker
+        if: always() && steps.validation.outputs.passed == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: validated__${{ matrix.PackageName }}__${{ matrix.version }}
+          path: ${{ steps.manifest.outputs.path }}
+          retention-days: 1
+          if-no-files-found: error
 
-  # Job 4: Submit PRs for validated packages
-  # Uses dynamic matrix from collect-generated - only runs for packages that generated manifests
+  # Job 4: Collect validated packages into matrix for PR submission
+  collect-validated:
+    name: Collect Validated Packages
+    needs: [collect-generated, validate-and-test]
+    runs-on: ubuntu-latest
+    if: always() && needs.validate-and-test.result != 'cancelled' && vars.SUBMIT_PR == 'true'
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+      has_packages: ${{ steps.set-matrix.outputs.has_packages }}
+    
+    steps:
+      - name: Download validated artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: validated__*
+          path: ./validated
+      
+      - name: Build matrix from validated packages
+        id: set-matrix
+        shell: pwsh
+        run: |
+          $validatedDir = "./validated"
+          $packages = @()
+          
+          if (Test-Path $validatedDir) {
+            $artifactFolders = Get-ChildItem -Path $validatedDir -Directory
+            
+            foreach ($folder in $artifactFolders) {
+              if ($folder.Name -match '^validated__(.+)__(.+)$') {
+                $packageName = $Matches[1]
+                $version = $Matches[2]
+                $packages += @{ PackageName = $packageName; version = $version }
+                Write-Host "Validated: $packageName @ $version"
+              }
+            }
+          }
+          
+          $hasPackages = $packages.Count -gt 0
+          $matrix = @{ include = @($packages) } | ConvertTo-Json -Compress -Depth 3
+          Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "matrix=$matrix"
+          Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "has_packages=$hasPackages"
+          Write-Host "Matrix: $matrix"
+          Write-Host "Has packages: $hasPackages"
+
+  # Job 5: Submit PRs for validated packages
+  # Uses dynamic matrix from collect-validated - only runs for packages that passed validation
   submit-pr:
     name: Submit ${{ matrix.PackageName }}
-    needs: [collect-generated, validate-and-test]
+    needs: [collect-validated]
     runs-on: windows-2025
-    if: always() && needs.validate-and-test.result == 'success' && vars.SUBMIT_PR == 'true'
+    if: always() && needs.collect-validated.result == 'success' && needs.collect-validated.outputs.has_packages == 'true'
     environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Test' }}
     
     strategy:
       fail-fast: false
-      matrix: ${{ fromJson(needs.collect-generated.outputs.matrix) }}
+      matrix: ${{ fromJson(needs.collect-validated.outputs.matrix) }}
     
     steps:
       - name: Checkout
@@ -294,7 +347,7 @@ jobs:
       - name: Download manifest artifact
         uses: actions/download-artifact@v4
         with:
-          name: manifest__${{ matrix.PackageName }}__${{ matrix.version }}
+          name: validated__${{ matrix.PackageName }}__${{ matrix.version }}
           path: ./downloaded-manifests
       
       - name: Set manifest path
@@ -335,10 +388,10 @@ jobs:
             exit 1
           }
 
-  # Job 5: Notify on failure
+  # Job 6: Notify on failure
   notify-failure:
     name: Notify Failure
-    needs: [generate-manifest, collect-generated, validate-and-test, submit-pr]
+    needs: [generate-manifest, collect-generated, validate-and-test, collect-validated, submit-pr]
     runs-on: ubuntu-latest
     if: always() && failure() && vars.NTFY_URL != ''
     
