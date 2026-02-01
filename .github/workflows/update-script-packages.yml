@@ -333,7 +333,7 @@ jobs:
     name: Submit ${{ matrix.PackageName }}
     needs: [collect-validated]
     runs-on: windows-2025
-    if: always() && needs.collect-validated.result == 'success' && needs.collect-validated.outputs.has_packages == 'true' && vars.SUBMIT_PR == 'true'
+    if: always() && needs.collect-validated.result == 'success' && needs.collect-validated.outputs.has_packages == 'true'
     environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Test' }}
     
     strategy:
@@ -341,16 +341,31 @@ jobs:
       matrix: ${{ fromJson(needs.collect-validated.outputs.matrix) }}
     
     steps:
+      - name: Check SUBMIT_PR variable
+        id: check-submit
+        shell: pwsh
+        run: |
+          if ("${{ vars.SUBMIT_PR }}" -ne "true") {
+            Write-Host "::warning::SUBMIT_PR is not set to 'true', skipping PR submission"
+            "skip=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          } else {
+            Write-Host "SUBMIT_PR is enabled, proceeding with PR submission"
+            "skip=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          }
+      
       - name: Checkout
+        if: steps.check-submit.outputs.skip != 'true'
         uses: actions/checkout@v6
       
       - name: Download manifest artifact
+        if: steps.check-submit.outputs.skip != 'true'
         uses: actions/download-artifact@v4
         with:
           name: validated__${{ matrix.PackageName }}__${{ matrix.version }}
           path: ./downloaded-manifests
       
       - name: Set manifest path
+        if: steps.check-submit.outputs.skip != 'true'
         id: manifest
         shell: pwsh
         run: |
@@ -360,6 +375,7 @@ jobs:
           "path=$manifestPath" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
       
       - name: Submit PR
+        if: steps.check-submit.outputs.skip != 'true'
         shell: pwsh
         env:
           GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
