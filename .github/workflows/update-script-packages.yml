@@ -30,8 +30,8 @@ jobs:
           - PackageName: "MongoDB.MongoDBAtlasCLI"
             WebsiteURL: "https://www.mongodb.com/try/download/tools"
             With: wingetcreate
-          - PackageName: "MongoDB.DatabaseTools"
-            WebsiteURL: "https://www.mongodb.com/try/download/tools" 
+#          - PackageName: "MongoDB.DatabaseTools"
+#            WebsiteURL: "https://www.mongodb.com/try/download/tools" 
           - PackageName: "MongoDB.Compass.Full"
             WebsiteURL: "https://www.mongodb.com/try/download/tools"
           - PackageName: "MongoDB.Compass.Isolated"
