@@ -693,6 +693,9 @@
           - id: "openpubkey.opkssh"
             repo: "openpubkey/opkssh"
             url: "https://github.com/openpubkey/opkssh/releases/download/v{VERSION}/opkssh-windows-amd64.exe"
+          - id: "OpenTelemetry.Weaver"
+            repo: "open-telemetry/weaver"
+            url: "https://github.com/open-telemetry/weaver/releases/download/v{VERSION}/weaver-x86_64-pc-windows-msvc.zip"
           - id: "OpenTofu.Tofu"
             repo: "opentofu/opentofu"
             url: "https://github.com/opentofu/opentofu/releases/download/v{VERSION}/tofu_{VERSION}_windows_386.zip https://github.com/opentofu/opentofu/releases/download/v{VERSION}/tofu_{VERSION}_windows_amd64.zip"
@@ -1359,6 +1362,7 @@
 #          - id: "Jellyfin.Server"
 #            repo: "jellyfin/jellyfin-server-windows"
 #            url: "https://github.com/jellyfin/jellyfin-server-windows/releases/download/{VERSION}/jellyfin_{VERSION}_windows-x64.exe"  
+
 
 
 
