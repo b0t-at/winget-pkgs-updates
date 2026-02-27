@@ -29,7 +29,7 @@ jobs:
           $fullPathFork = "$(Get-Location)"
           $resolves = ${{ github.event.inputs.resolves }}
           scripts/Update-AllPackageManifests.ps1 -PackageIdentifier ${{ github.event.inputs.PackageIdentifier }} -OutputDir $fullPathFork -Token ${{env.GITHUB_TOKEN}} -Submit ${{ github.event.inputs.submit }} ( ![string]::IsNullOrWhitespace($resolves) ? "-Resolves  $resolves" : $null ) 
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v7
         with:
           name: manifests
           path: manifests
