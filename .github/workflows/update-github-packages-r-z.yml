@@ -192,7 +192,7 @@ jobs:
           - id: TEdit.TEdit
             repo: TEdit/Terraria-Map-Editor
             url: https://github.com/TEdit/Terraria-Map-Editor/releases/download/{VERSION}/TEditAvalonia-{VERSION}-win-x64.zip
-          - id: TeraTermProject.teraterm
+          - id: TeraTermProject.teraterm5
             repo: TeraTermProject/teraterm
             url: https://github.com/TeraTermProject/teraterm/releases/download/v{VERSION}/teraterm-{VERSION}-x86.exe https://github.com/TeraTermProject/teraterm/releases/download/v{VERSION}/teraterm-{VERSION}-x64.exe https://github.com/TeraTermProject/teraterm/releases/download/v{VERSION}/teraterm-{VERSION}-arm64.exe
           - id: TermoraDev.Termora
