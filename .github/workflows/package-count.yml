@@ -17,6 +17,8 @@ jobs:
         steps:
             - name: Check out code
               uses: actions/checkout@v6
+              with:
+                persist-credentials: true
             - name: Set up Python
               uses: actions/setup-python@v6
               with:
@@ -30,10 +32,13 @@ jobs:
                 echo "countscript=$(python3 scripts/package_count_matrix.py .github/workflows/update-script-packages.yml)" >> $GITHUB_OUTPUT
             - name: Update README
               run: |
-                countgithub=${{ steps.count.outputs.countgithub }}
-                countscript=${{ steps.count.outputs.countscript }}
+                countgithub=${STEPS_COUNT_OUTPUTS_COUNTGITHUB}
+                countscript=${STEPS_COUNT_OUTPUTS_COUNTSCRIPT}
                 sed -i "s/ScriptPackages-[0-9]*-green/ScriptPackages-$countscript-green/g" README.md
                 sed -i "s/GithubPackages-[0-9]*-blue/GithubPackages-$countgithub-blue/g" README.md
+              env:
+                STEPS_COUNT_OUTPUTS_COUNTGITHUB: ${{ steps.count.outputs.countgithub }}
+                STEPS_COUNT_OUTPUTS_COUNTSCRIPT: ${{ steps.count.outputs.countscript }}
             - name: Commit and push
               uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v7.1.0
               with:
