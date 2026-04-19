@@ -491,7 +491,7 @@
             url: "https://github.com/jj-vcs/jj/releases/download/v{VERSION}/jj-v{VERSION}-x86_64-pc-windows-msvc.zip https://github.com/jj-vcs/jj/releases/download/v{VERSION}/jj-v{VERSION}-aarch64-pc-windows-msvc.zip"
           - id: "JohannesMillan.superProductivity"
             repo: "johannesjo/super-productivity"
-            url: "https://github.com/johannesjo/super-productivity/releases/download/v{VERSION}/Super-Productivity-Setup.exe https://github.com/johannesjo/super-productivity/releases/download/v{VERSION}/Super-Productivity-Setup-x64.exe https://github.com/johannesjo/super-productivity/releases/download/v{VERSION}/Super-Productivity-Setup-arm64.exe"
+            url: "https://github.com/johannesjo/super-productivity/releases/download/v{VERSION}/Super-Productivity-Setup.exe|x86 https://github.com/johannesjo/super-productivity/releases/download/v{VERSION}/Super-Productivity-Setup-x64.exe|x64 https://github.com/johannesjo/super-productivity/releases/download/v{VERSION}/Super-Productivity-Setup-arm64.exe|arm64"
           - id: "JosephFinney.Text-Grab"
             repo: "TheJoeFin/Text-Grab"
             url: "https://github.com/TheJoeFin/Text-Grab/releases/download/v{VERSION}/Text-Grab.exe"
