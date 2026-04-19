@@ -14,6 +14,10 @@ on:
         description: 'resolves this issues'
         required: false
         default: ''
+
+permissions:
+  contents: read
+
 jobs:
   update:
     name: Rebuild manifests
@@ -23,13 +27,19 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
       - name: Trigger Mass Package Update
         run: |
           $fullPathFork = "$(Get-Location)"
-          $resolves = ${{ github.event.inputs.resolves }}
-          scripts/Update-AllPackageManifests.ps1 -PackageIdentifier ${{ github.event.inputs.PackageIdentifier }} -OutputDir $fullPathFork -Token ${{env.GITHUB_TOKEN}} -Submit ${{ github.event.inputs.submit }} ( ![string]::IsNullOrWhitespace($resolves) ? "-Resolves  $resolves" : $null ) 
-      - uses: actions/upload-artifact@v6
+          $resolves = $env:GITHUB_EVENT_INPUTS_RESOLVES
+          scripts/Update-AllPackageManifests.ps1 -PackageIdentifier $env:GITHUB_EVENT_INPUTS_PACKAGEIDENTIFIER -OutputDir $fullPathFork -Token $env:GITHUB_TOKEN -Submit $env:GITHUB_EVENT_INPUTS_SUBMIT ( ![string]::IsNullOrWhitespace($resolves) ? "-Resolves  $resolves" : $null )
+        env:
+          GITHUB_EVENT_INPUTS_RESOLVES: ${{ github.event.inputs.resolves }}
+          GITHUB_EVENT_INPUTS_PACKAGEIDENTIFIER: ${{ github.event.inputs.PackageIdentifier }}
+          GITHUB_EVENT_INPUTS_SUBMIT: ${{ github.event.inputs.submit }} 
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: manifests
           path: manifests

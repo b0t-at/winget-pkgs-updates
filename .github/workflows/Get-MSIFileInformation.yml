@@ -7,17 +7,24 @@ on:
         description: 'MSI Installer URL'
         required: true
 
+permissions:
+  contents: read
+
 jobs:
   run-msi-info:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
 
       - name: Run Get-MSIFileInformation
         run: |
-          $WebsiteURL = '${{ github.event.inputs.websiteURL }}'
+          $WebsiteURL = '$env:GITHUB_EVENT_INPUTS_WEBSITEURL'
           Import-Module .\modules\WingetMaintainerModule\Public\Get-MSIFileInformation.ps1
           Get-MSIFileInformation -WebsiteURL $WebsiteURL
         shell: pwsh
+        env:
+          GITHUB_EVENT_INPUTS_WEBSITEURL: ${{ github.event.inputs.websiteURL }}
