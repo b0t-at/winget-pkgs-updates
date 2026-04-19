@@ -27,9 +27,6 @@ jobs:
           - id: RadolynLabs.AyuGramDesktop
             repo: AyuGram/AyuGramDesktop
             url: https://github.com/AyuGram/AyuGramDesktop/releases/download/v{VERSION}/AyuGram.zip
-          - id: ransome1.sleek
-            repo: ransome1/sleek
-            url: https://github.com/ransome1/sleek/releases/download/v{VERSION}/sleek-{VERSION}-win-Setup.exe https://github.com/ransome1/sleek/releases/download/v{VERSION}/sleek-{VERSION}-win.exe
           - id: raphamorim.rio
             repo: raphamorim/rio
             url: https://github.com/raphamorim/rio/releases/download/v{VERSION}/Rio-installer-x86_64.msi https://github.com/raphamorim/rio/releases/download/v{VERSION}/Rio-installer-aarch64.msi
