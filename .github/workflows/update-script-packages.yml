@@ -11,6 +11,9 @@ on:
       - .github/workflows/update-script-packages.yml
       - Scripts/Packages/*
 
+permissions:
+  contents: read
+
 jobs:
   update-scriptbased:
     name: ${{ matrix.PackageName }}

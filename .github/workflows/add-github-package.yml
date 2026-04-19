@@ -23,6 +23,9 @@ on:
         - komac
         - WinGetCreate
 
+permissions:
+  contents: read
+
 jobs:
   script:
     name: ${{ inputs.packageId }}

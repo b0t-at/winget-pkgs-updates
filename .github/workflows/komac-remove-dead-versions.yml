@@ -8,6 +8,8 @@ on:
   schedule:
     - cron:  '0 17 * * *'
 
+permissions: {}
+
 jobs:
   komac-remove-dead-matrix:
     name: remove dead versions (matrix)

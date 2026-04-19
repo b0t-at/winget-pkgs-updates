@@ -3,6 +3,9 @@ name: Test PR in Sandbox
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   get-prs:
     name: "Get Open PRs"

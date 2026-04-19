@@ -10,6 +10,9 @@ on:
     paths:
       - .github/workflows/github-releases.yml
 
+permissions:
+  contents: read
+  
 jobs:
   update-releasebased:
     name: ${{ matrix.id }}
