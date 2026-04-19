@@ -615,7 +615,7 @@
           - id: "MilkyTracker.MilkyTracker"
             repo: "milkytracker/MilkyTracker"
             url: "https://github.com/milkytracker/MilkyTracker/releases/download/v{VERSION}/milkytracker-{VERSION}-win32.zip https://github.com/milkytracker/MilkyTracker/releases/download/v{VERSION}/milkytracker-{VERSION}-win64.zip"
-          - id: "Min.Min"
+          - id: "MinBrowser.Min"
             repo: "minbrowser/min"
             url: "https://github.com/minbrowser/min/releases/download/v{VERSION}/min-{VERSION}-ia32-setup.exe"
           - id: "mitmproxy.mitmproxy"
