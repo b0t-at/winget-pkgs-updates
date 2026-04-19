@@ -23,6 +23,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v6
+        with:
+          persist-credentials: false
       - name: Get current date
         id: date
         run: |
@@ -31,15 +33,17 @@ jobs:
         id: manifest
         env:
           GH_TOKEN: ${{ github.token }}
+          INPUTS_MANIFESTURL: ${{ inputs.ManifestURL }}
+          INPUTS_PRNUMBER: ${{ inputs.PRNumber }}
         run: |
-          $manifestUrl = "${{ inputs.ManifestURL }}"
-          if( $manifestUrl -eq "" -and "${{ inputs.PRNumber }}" -eq "" ) {
+          $manifestUrl = "$env:INPUTS_MANIFESTURL"
+          if( $manifestUrl -eq "" -and "$env:INPUTS_PRNUMBER" -eq "" ) {
             echo "ManifestURL and PR-Number is empty. Exiting."
             exit 1
           }
           if( $manifestUrl -eq "" ) {
             Import-Module .\modules\WingetMaintainerModule
-            $manifestUrl = Get-ManifestUrlByWingetPkgsPrNumber -PrNumber "${{ inputs.PRNumber }}"
+            $manifestUrl = Get-ManifestUrlByWingetPkgsPrNumber -PrNumber "$env:INPUTS_PRNUMBER"
           }
 
           echo "manifesturl=$manifestUrl" >> $env:GITHUB_ENV
@@ -60,7 +64,7 @@ jobs:
         shell: powershell
         env:
           TIMEOUT: ${{ inputs.Timeout }}
-        run: .\scripts\validation\Test-Manifest-Host.ps1 -ManifestURL ${{ env.manifesturl }}
+        run: .\scripts\validation\Test-Manifest-Host.ps1 -ManifestURL $env:manifesturl
         #continue-on-error: true
 
       - name: Take screenshot using FFmpeg

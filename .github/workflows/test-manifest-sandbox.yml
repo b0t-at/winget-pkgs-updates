@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v6
+        with:
+          persist-credentials: false
 
       - name: List Open PRs
         id: list-prs
@@ -69,6 +71,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v6
+        with:
+          persist-credentials: false
 
       - name: Resolve Sandbox Log Paths
         id: resolve_logs
@@ -85,10 +89,11 @@ jobs:
         shell: pwsh
         env:
           GH_TOKEN: ${{ github.token }}
+          MATRIX_PR_NUMBER: ${{ matrix.pr-number }}
         run: |
           $ErrorActionPreference = "Stop"
           
-          $prNumber = "${{ matrix.pr-number }}"
+          $prNumber = "$env:MATRIX_PR_NUMBER"
           $repo = "microsoft/winget-pkgs"
           
           Write-Host "Fetching PR #$prNumber details from $repo" -ForegroundColor Cyan
@@ -164,12 +169,12 @@ jobs:
           $ErrorActionPreference = "Continue"
           
           Write-Host "`n========================================" -ForegroundColor Magenta
-          Write-Host "Testing PR #${{ matrix.pr-number }}" -ForegroundColor Magenta
-          Write-Host "Manifest URL: ${{ steps.get-manifest.outputs.manifesturl }}" -ForegroundColor Magenta
+          Write-Host "Testing PR #$env:MATRIX_PR_NUMBER" -ForegroundColor Magenta
+          Write-Host "Manifest URL: $env:STEPS_GET_MANIFEST_OUTPUTS_MANIFESTURL" -ForegroundColor Magenta
           Write-Host "========================================`n" -ForegroundColor Magenta
           
           # Run the sandbox test
-          & .\Scripts\validation\Test-Manifest-Sandbox.ps1 -ManifestURL "${{ steps.get-manifest.outputs.manifesturl }}"
+          & .\Scripts\validation\Test-Manifest-Sandbox.ps1 -ManifestURL "$env:STEPS_GET_MANIFEST_OUTPUTS_MANIFESTURL"
           
           $exitCode = $LASTEXITCODE
           
@@ -186,6 +191,9 @@ jobs:
           
           # Don't fail the step yet - we want to upload logs first
           exit 0
+        env:
+          MATRIX_PR_NUMBER: ${{ matrix.pr-number }}
+          STEPS_GET_MANIFEST_OUTPUTS_MANIFESTURL: ${{ steps.get-manifest.outputs.manifesturl }}
       
       - name: Upload Sandbox Logs
         if: always()
@@ -246,10 +254,10 @@ jobs:
         if: always()
         shell: pwsh
         run: |
-          $exitCode = "${{ steps.test-sandbox.outputs.exitcode }}"
+          $exitCode = "$env:STEPS_TEST_SANDBOX_OUTPUTS_EXITCODE"
           
           Write-Host "`n========================================" -ForegroundColor Magenta
-          Write-Host "FINAL RESULT FOR PR #${{ matrix.pr-number }}" -ForegroundColor Magenta
+          Write-Host "FINAL RESULT FOR PR #$env:MATRIX_PR_NUMBER" -ForegroundColor Magenta
           Write-Host "========================================" -ForegroundColor Magenta
           
           if ($exitCode -eq "0") {
@@ -260,3 +268,6 @@ jobs:
             Write-Host "`nPlease check the uploaded logs for details." -ForegroundColor Yellow
             exit 1
           }
+        env:
+          STEPS_TEST_SANDBOX_OUTPUTS_EXITCODE: ${{ steps.test-sandbox.outputs.exitcode }}
+          MATRIX_PR_NUMBER: ${{ matrix.pr-number }}

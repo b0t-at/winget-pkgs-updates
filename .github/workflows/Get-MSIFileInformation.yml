@@ -14,10 +14,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
+        with:
+          persist-credentials: false
 
       - name: Run Get-MSIFileInformation
         run: |
-          $WebsiteURL = '${{ github.event.inputs.websiteURL }}'
+          $WebsiteURL = '$env:GITHUB_EVENT_INPUTS_WEBSITEURL'
           Import-Module .\modules\WingetMaintainerModule\Public\Get-MSIFileInformation.ps1
           Get-MSIFileInformation -WebsiteURL $WebsiteURL
         shell: pwsh
+        env:
+          GITHUB_EVENT_INPUTS_WEBSITEURL: ${{ github.event.inputs.websiteURL }}

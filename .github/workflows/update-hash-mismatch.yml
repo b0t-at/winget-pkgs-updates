@@ -41,15 +41,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          persist-credentials: false
       - name: Update package
         id: update_version
         env:
           GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
           WINGET_PKGS_FORK_REPO: ${{ vars.WINGET_PKGS_FORK_REPO }}
+          INPUTS_IDENTIFIER: ${{ inputs.identifier }}
+          INPUTS_VERSION: ${{ inputs.version }}
           #PackageName: ${{ inputs.identifier }}
           #With: ${{ inputs.With }}
           #Submit: ${{ inputs.submit }}
           #resolves: ${{ inputs.resolves }}
-        run: .\scripts\Update-HashMismatch.ps1 -Submit $${{ inputs.submit }} -PackageId ${{ inputs.identifier }} -Version ${{ inputs.version }}
+        run: .\scripts\Update-HashMismatch.ps1 -Submit $${{ inputs.submit }} -PackageId $env:INPUTS_IDENTIFIER -Version $env:INPUTS_VERSION
 
 

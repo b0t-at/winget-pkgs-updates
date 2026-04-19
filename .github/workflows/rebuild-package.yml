@@ -24,11 +24,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          persist-credentials: false
       - name: Trigger Mass Package Update
         run: |
           $fullPathFork = "$(Get-Location)"
-          $resolves = ${{ github.event.inputs.resolves }}
-          scripts/Update-AllPackageManifests.ps1 -PackageIdentifier ${{ github.event.inputs.PackageIdentifier }} -OutputDir $fullPathFork -Token ${{env.GITHUB_TOKEN}} -Submit ${{ github.event.inputs.submit }} ( ![string]::IsNullOrWhitespace($resolves) ? "-Resolves  $resolves" : $null ) 
+          $resolves = $env:GITHUB_EVENT_INPUTS_RESOLVES
+          scripts/Update-AllPackageManifests.ps1 -PackageIdentifier $env:GITHUB_EVENT_INPUTS_PACKAGEIDENTIFIER -OutputDir $fullPathFork -Token $env:GITHUB_TOKEN -Submit $env:GITHUB_EVENT_INPUTS_SUBMIT ( ![string]::IsNullOrWhitespace($resolves) ? "-Resolves  $resolves" : $null )
+        env:
+          GITHUB_EVENT_INPUTS_RESOLVES: ${{ github.event.inputs.resolves }}
+          GITHUB_EVENT_INPUTS_PACKAGEIDENTIFIER: ${{ github.event.inputs.PackageIdentifier }}
+          GITHUB_EVENT_INPUTS_SUBMIT: ${{ github.event.inputs.submit }} 
       - uses: actions/upload-artifact@v6
         with:
           name: manifests
