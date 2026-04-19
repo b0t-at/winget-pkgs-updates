@@ -23,7 +23,7 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           persist-credentials: false
       - name: Trigger Mass Package Update
@@ -35,7 +35,7 @@ jobs:
           GITHUB_EVENT_INPUTS_RESOLVES: ${{ github.event.inputs.resolves }}
           GITHUB_EVENT_INPUTS_PACKAGEIDENTIFIER: ${{ github.event.inputs.PackageIdentifier }}
           GITHUB_EVENT_INPUTS_SUBMIT: ${{ github.event.inputs.submit }} 
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: manifests
           path: manifests

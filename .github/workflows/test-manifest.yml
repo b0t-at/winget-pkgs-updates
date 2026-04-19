@@ -22,7 +22,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           persist-credentials: false
       - name: Get current date
@@ -53,7 +53,7 @@ jobs:
       #  with:
       #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Setup FFmpeg
-        uses: AnimMouse/setup-ffmpeg@v1
+        uses: AnimMouse/setup-ffmpeg@ae28d57dabbb148eff63170b6bf7f2b60062cbae # v1
       - name: Open windows settings
         shell: powershell
         run: |
@@ -95,7 +95,7 @@ jobs:
 
       - name: Upload Screenshot Artifact
         if: always()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           #name: screenshot-${{ env.date }}
           name: screenshot-${{ env.date }}

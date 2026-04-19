@@ -23,7 +23,7 @@ jobs:
 
     steps:
       - name: Run Komac
-        uses: michidk/run-komac@v2
+        uses: michidk/run-komac@9b27eadc6e9235c252444a437d246c139da2f57f # v2.1.0
         with:
           args: 'remove-dead-versions --auto --token=${{ secrets.WINGET_PAT }} ${{ matrix.id }}'
           custom-fork-owner: damn-good-b0t
@@ -34,7 +34,7 @@ jobs:
     if: github.event.inputs.PackageIdentifier
     steps:
       - name: Run Komac
-        uses: michidk/run-komac@v2
+        uses: michidk/run-komac@9b27eadc6e9235c252444a437d246c139da2f57f # v2.1.0
         with:
           args: 'remove-dead-versions --auto --token=${{ secrets.WINGET_PAT }} ${{ github.event.inputs.PackageIdentifier }}'
           custom-fork-owner: damn-good-b0t
