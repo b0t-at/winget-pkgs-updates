@@ -118,6 +118,7 @@ jobs:
           path: ${{ steps.generate.outputs.manifest-path }}
           retention-days: 7
           if-no-files-found: error
+          archive: false
 
   # Job 2: Collect successful manifest generations into a dynamic matrix
   collect-generated:
@@ -144,6 +145,9 @@ jobs:
           $packages = @()
           
           if (Test-Path $manifestsDir) {
+            Write-Host "Contents of ${manifestsDir}:"
+            Get-ChildItem -Path $manifestsDir -Recurse | ForEach-Object { Write-Host "  $($_.FullName)" }
+            
             # Each artifact folder is named manifest__{PackageName}__{version}
             $artifactFolders = Get-ChildItem -Path $manifestsDir -Directory
             
