@@ -168,7 +168,7 @@ jobs:
     name: Validate ${{ matrix.PackageName }}
     needs: collect-generated
     runs-on: [self-hosted, Windows, X64]
-    if: always() && needs.collect-generated.result == 'success' && needs.collect-generated.outputs.has_packages == 'True'
+    if: always() && needs.collect-generated.result == 'success' && needs.collect-generated.outputs.has_packages == 'True' && vars.SKIP_VALIDATION != 'true'
     
     strategy:
       fail-fast: false
@@ -288,34 +288,42 @@ jobs:
           if-no-files-found: error
 
   # Job 4: Collect validated packages into matrix for PR submission
+  # When SKIP_VALIDATION is 'true', uses manifest__ artifacts directly instead of validated__
   collect-validated:
     name: Collect Validated Packages
     needs: [collect-generated, validate-and-test]
     runs-on: ubuntu-latest
-    if: always() && needs.validate-and-test.result != 'cancelled'
+    if: always() && (needs.validate-and-test.result != 'cancelled' || vars.SKIP_VALIDATION == 'true')
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
       has_packages: ${{ steps.set-matrix.outputs.has_packages }}
+      skip_validation: ${{ steps.set-matrix.outputs.skip_validation }}
     
     steps:
-      # See note in collect-generated: download-artifact does not create per-artifact
-      # subdirectories when only a single artifact matches the pattern. Use the API.
       - name: Build matrix from validated packages
         id: set-matrix
         shell: pwsh
         env:
           GH_TOKEN: ${{ github.token }}
+          SKIP_VALIDATION: ${{ vars.SKIP_VALIDATION }}
         run: |
+          $skipValidation = $env:SKIP_VALIDATION -eq 'true'
+          $artifactPrefix = if ($skipValidation) { 'manifest__' } else { 'validated__' }
+          
+          if ($skipValidation) {
+            Write-Host "::warning::SKIP_VALIDATION is enabled - using generated manifests directly without validation"
+          }
+          
           $packages = @()
           $page = 1
           do {
             $response = gh api "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts?per_page=100&page=$page" | ConvertFrom-Json
             foreach ($artifact in $response.artifacts) {
-              if ($artifact.name -match '^validated__(.+)__(.+)$') {
+              if ($artifact.name -match "^${artifactPrefix}(.+)__(.+)$") {
                 $packageName = $Matches[1]
                 $version = $Matches[2]
                 $packages += @{ PackageName = $packageName; version = $version }
-                Write-Host "Validated: $packageName @ $version"
+                Write-Host "Found: $packageName @ $version"
               }
             }
             $page++
@@ -325,6 +333,7 @@ jobs:
           $matrix = @{ include = @($packages) } | ConvertTo-Json -Compress -Depth 3
           Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "matrix=$matrix"
           Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "has_packages=$hasPackages"
+          Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "skip_validation=$skipValidation"
           Write-Host "Matrix: $matrix"
           Write-Host "Has packages: $hasPackages"
 
@@ -358,11 +367,21 @@ jobs:
         if: steps.check-submit.outputs.skip != 'true'
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       
+      - name: Determine artifact name
+        if: steps.check-submit.outputs.skip != 'true'
+        id: artifact
+        shell: pwsh
+        run: |
+          $prefix = if ("${{ needs.collect-validated.outputs.skip_validation }}" -eq "True") { "manifest" } else { "validated" }
+          $name = "${prefix}__${{ matrix.PackageName }}__${{ matrix.version }}"
+          Write-Host "Artifact name: $name"
+          "name=$name" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+      
       - name: Download manifest artifact
         if: steps.check-submit.outputs.skip != 'true'
         uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
-          name: validated__${{ matrix.PackageName }}__${{ matrix.version }}
+          name: ${{ steps.artifact.outputs.name }}
           path: ./downloaded-manifests
       
       - name: Set manifest path
