@@ -121,6 +121,7 @@ function Submit-WingetPackage {
                 $komacArgs = @(
                     "submit"
                     $fullManifestPath
+                    "--yes"
                     "--token", $Token
                 )
 
