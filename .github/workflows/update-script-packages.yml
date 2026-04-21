@@ -11,6 +11,9 @@ on:
       - .github/workflows/update-script-packages.yml
       - Scripts/Packages/*
 
+permissions:
+  contents: read
+
 jobs:
   # Job 1: Generate manifests for all packages
   generate-manifest:
@@ -31,8 +34,8 @@ jobs:
           - PackageName: "MongoDB.MongoDBAtlasCLI"
             WebsiteURL: "https://www.mongodb.com/try/download/tools"
             With: wingetcreate
-          - PackageName: "MongoDB.DatabaseTools"
-            WebsiteURL: "https://www.mongodb.com/try/download/tools" 
+#          - PackageName: "MongoDB.DatabaseTools"
+#            WebsiteURL: "https://www.mongodb.com/try/download/tools" 
           - PackageName: "MongoDB.Compass.Full"
             WebsiteURL: "https://www.mongodb.com/try/download/tools"
           - PackageName: "MongoDB.Compass.Isolated"
@@ -69,7 +72,9 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
       
       - name: Generate manifest
         id: generate

@@ -23,6 +23,9 @@ on:
         - komac
         - WinGetCreate
 
+permissions:
+  contents: read
+
 jobs:
   script:
     name: ${{ inputs.packageId }}
@@ -32,20 +35,24 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
     steps:
       - name: create App token
-        uses: actions/create-github-app-token@v2
+        uses: actions/create-github-app-token@1b10c78c7865c340bc4f6099eb2f838309f1e8c3 # v3.1.1
         id: app-token
         with:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.PRIVATE_KEY }}
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           token: ${{ steps.app-token.outputs.token }}
+          persist-credentials: true
       - name: Update package
         shell: pwsh
         run: |
           Import-Module .\modules\WingetMaintainerModule
-          .\scripts\Add-GitHubPackage.ps1 -PackageId ${{ inputs.packageId }} -forceAdd $${{ inputs.forceAdd }} -resolves ${{ inputs.resolves }} -With ${{ inputs.With }}
+          .\scripts\Add-GitHubPackage.ps1 -PackageId $env:INPUTS_PACKAGEID -forceAdd $${{ inputs.forceAdd }} -resolves $env:INPUTS_RESOLVES -With ${{ inputs.With }}
+        env:
+          INPUTS_PACKAGEID: ${{ inputs.packageId }}
+          INPUTS_RESOLVES: ${{ inputs.resolves }}
       - name: Commit and push
         uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v7.1.0
         with:

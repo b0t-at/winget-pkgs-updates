@@ -15,6 +15,9 @@ on:
         type: number
         default: 300
 
+permissions:
+  contents: read
+
 jobs:
   test:
     name: "Test manifest - PR #${{ inputs.PRNumber }}"
@@ -22,20 +25,24 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
       - name: Get Manifest Package Name
         id: manifest
         env:
           GH_TOKEN: ${{ github.token }}
+          INPUTS_MANIFESTURL: ${{ inputs.ManifestURL }}
+          INPUTS_PRNUMBER: ${{ inputs.PRNumber }}
         run: |
-          $manifestUrl = "${{ inputs.ManifestURL }}"
-          if( $manifestUrl -eq "" -and "${{ inputs.PRNumber }}" -eq "" ) {
+          $manifestUrl = "$env:INPUTS_MANIFESTURL"
+          if( $manifestUrl -eq "" -and "$env:INPUTS_PRNUMBER" -eq "" ) {
             echo "ManifestURL and PR-Number is empty. Exiting."
             exit 1
           }
           if( $manifestUrl -eq "" ) {
             Import-Module .\modules\WingetMaintainerModule
-            $manifestUrl = Get-ManifestUrlByWingetPkgsPrNumber -PrNumber "${{ inputs.PRNumber }}"
+            $manifestUrl = Get-ManifestUrlByWingetPkgsPrNumber -PrNumber "$env:INPUTS_PRNUMBER"
           }
 
           echo "manifesturl=$manifestUrl" >> $env:GITHUB_ENV
@@ -45,7 +52,7 @@ jobs:
         shell: powershell
         env:
           TIMEOUT: ${{ inputs.Timeout }}
-        run: .\scripts\validation\Test-Manifest-Host.ps1 -ManifestURL ${{ env.manifesturl }}
+        run: .\scripts\validation\Test-Manifest-Host.ps1 -ManifestURL $env:manifesturl
         #continue-on-error: true
 
       - name: Take screenshot using FFmpeg
@@ -76,7 +83,7 @@ jobs:
 
       - name: Upload Screenshot Artifact
         if: always()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           #name: screenshot-${{ env.date }}-${{ env.manifestname }}
           name: screenshot-${{ env.date }}
