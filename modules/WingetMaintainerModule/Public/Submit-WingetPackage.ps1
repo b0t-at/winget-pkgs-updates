@@ -41,7 +41,6 @@
 .OUTPUTS
     PSCustomObject with properties:
     - Success: Boolean indicating if PR was created
-    - PrUrl: URL to the created PR (if successful)
     - Error: Error message (if failed)
 #>
 
@@ -91,7 +90,6 @@ function Submit-WingetPackage {
     if ([string]::IsNullOrWhiteSpace($Token)) {
         return @{
             Success = $false
-            PrUrl   = $null
             Error   = "No GitHub token provided. Set GITHUB_TOKEN or WINGET_PAT environment variable."
         }
     }
@@ -141,15 +139,8 @@ function Submit-WingetPackage {
                 if ($exitCode -ne 0) {
                     return @{
                         Success = $false
-                        PrUrl   = $null
                         Error   = "Komac submit failed with exit code $exitCode. Output: $output"
                     }
-                }
-
-                # Try to extract PR URL from output
-                $prUrl = $null
-                if ($output -match 'https://github\.com/microsoft/winget-pkgs/pull/\d+') {
-                    $prUrl = $Matches[0]
                 }
             }
 
@@ -167,33 +158,17 @@ function Submit-WingetPackage {
                 if ($exitCode -ne 0) {
                     return @{
                         Success = $false
-                        PrUrl   = $null
                         Error   = "WinGetCreate submit failed with exit code $exitCode. Output: $output"
                     }
-                }
-
-                # Try to extract PR URL from output
-                $prUrl = $null
-                if ($output -match 'https://github\.com/microsoft/winget-pkgs/pull/\d+') {
-                    $prUrl = $Matches[0]
                 }
             }
         }
 
         Write-Host ""
         Write-Host "PR submitted successfully!" -ForegroundColor Green
-        if ($prUrl) {
-            Write-Host "PR URL: $prUrl" -ForegroundColor Cyan
-        }
-
-        # Output PR URL for GitHub Actions
-        if ($env:GITHUB_OUTPUT) {
-            "pr-url=$prUrl" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
-        }
 
         return @{
             Success = $true
-            PrUrl   = $prUrl
             Error   = $null
         }
     }
@@ -203,7 +178,6 @@ function Submit-WingetPackage {
 
         return @{
             Success = $false
-            PrUrl   = $null
             Error   = $errorMessage
         }
     }

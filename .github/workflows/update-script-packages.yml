@@ -390,16 +390,11 @@ jobs:
           
           if ($result.Success) {
             Write-Host "PR submitted successfully!" -ForegroundColor Green
-            if ($result.PrUrl) {
-              Write-Host "PR URL: $($result.PrUrl)"
-              
-              # Add to job summary
-              "## :rocket: PR Submitted" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
-              "" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
-              "**Package:** ${{ matrix.PackageName }}" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
-              "**Version:** ${{ matrix.version }}" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
-              "**PR:** $($result.PrUrl)" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
-            }
+            # Add to job summary
+            "## :rocket: PR Submitted" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+            "" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+            "**Package:** ${{ matrix.PackageName }}" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+            "**Version:** ${{ matrix.version }}" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
           } else {
             Write-Host "Failed to submit PR: $($result.Error)" -ForegroundColor Red
             exit 1
