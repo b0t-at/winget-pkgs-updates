@@ -69,7 +69,7 @@ jobs:
       
       - name: Upload manifest artifact
         if: steps.generate.outputs.generated == 'true'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: manifest__${{ matrix.id }}__${{ steps.generate.outputs.version }}
           path: ${{ steps.generate.outputs.manifest-path }}
@@ -84,49 +84,48 @@ jobs:
     if: always() && needs.generate-manifest.result != 'cancelled'
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
+      has_packages: ${{ steps.set-matrix.outputs.has_packages }}
     
     steps:
-      - name: Download all manifest artifacts
-        uses: actions/download-artifact@v4
-        with:
-          pattern: manifest__*
-          path: ./manifests
-      
+      # Note: actions/download-artifact@v8 has a quirk where a single matched artifact
+      # is extracted directly into `path` (no per-artifact subdirectory), making the
+      # filesystem-based scan unreliable. Use the GitHub API to list artifact names
+      # for this run instead — the actual files are downloaded later in validate-and-test.
       - name: Build dynamic matrix from artifacts
         id: set-matrix
         shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          $manifestsDir = "./manifests"
           $packages = @()
-          
-          if (Test-Path $manifestsDir) {
-            # Each artifact folder is named manifest__{id}__{version}
-            $artifactFolders = Get-ChildItem -Path $manifestsDir -Directory
-            
-            foreach ($folder in $artifactFolders) {
-              # Parse folder name: manifest__{id}__{version}
-              if ($folder.Name -match '^manifest__(.+)__(.+)$') {
-                $packageId = $Matches[1]
+          $page = 1
+          do {
+            $response = gh api "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts?per_page=100&page=$page" | ConvertFrom-Json
+            foreach ($artifact in $response.artifacts) {
+              if ($artifact.name -match '^manifest__(.+)__(.+)$') {
+                $packageName = $Matches[1]
                 $version = $Matches[2]
-                $packages += @{ id = $packageId; version = $version }
-                Write-Host "Found: $packageId @ $version"
+                $packages += @{ PackageName = $packageName; version = $version }
+                Write-Host "Found: $packageName @ $version"
               }
             }
-          }
+            $page++
+          } while ($response.artifacts.Count -eq 100)
           
-          # Always output matrix - empty include array will auto-skip downstream jobs
-          # @($packages) forces array even with single item
+          $hasPackages = $packages.Count -gt 0
           $matrix = @{ include = @($packages) } | ConvertTo-Json -Compress -Depth 3
           Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "matrix=$matrix"
+          Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "has_packages=$hasPackages"
           Write-Host "Matrix: $matrix"
+          Write-Host "Has packages: $hasPackages"
 
-  # Job 3: Validate manifests in sandbox (self-hosted runner)
-  # Uses dynamic matrix from collect-generated job - only runs for packages that generated manifests
+  # Job 3: Validate and test manifests in sandbox (self-hosted runner with Windows Sandbox)
+  # Uses dynamic matrix - only runs for packages that generated manifests
   validate-and-test:
-    name: Validate ${{ matrix.id }}
+    name: Validate ${{ matrix.PackageName }}
     needs: collect-generated
     runs-on: [self-hosted, Windows, X64]
-    if: always() && needs.collect-generated.result == 'success'
+    if: always() && needs.collect-generated.result == 'success' && needs.collect-generated.outputs.has_packages == 'True' && vars.SKIP_VALIDATION != 'true'
     
     strategy:
       fail-fast: false
@@ -134,7 +133,7 @@ jobs:
     
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       
       - name: Resolve Sandbox Log Paths
         id: resolve_logs
@@ -144,9 +143,9 @@ jobs:
           "sandbox_logs=$logsRoot" >> $env:GITHUB_OUTPUT
       
       - name: Download manifest artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
-          name: manifest__${{ matrix.id }}__${{ matrix.version }}
+          name: manifest__${{ matrix.PackageName }}__${{ matrix.version }}
           path: ./downloaded-manifests
       
       - name: Set manifest path
@@ -165,7 +164,7 @@ jobs:
           
           Export-ManifestToJobSummary `
             -ManifestPath "${{ steps.manifest.outputs.path }}" `
-            -PackageId "${{ matrix.id }}" `
+            -PackageId "${{ matrix.PackageName }}" `
             -Version "${{ matrix.version }}"
       
       - name: Run content validation
@@ -210,10 +209,10 @@ jobs:
       
       - name: Upload sandbox logs
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         continue-on-error: true
         with:
-          name: sandbox-logs-${{ matrix.id }}
+          name: sandbox-logs-${{ matrix.PackageName }}
           path: ${{ steps.resolve_logs.outputs.sandbox_logs }}
           retention-days: 7
           if-no-files-found: ignore
@@ -235,31 +234,115 @@ jobs:
             Write-Host "  Sandbox: $sandboxPassed"
             "passed=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
           }
+      
+      - name: Upload validation result marker
+        if: always() && steps.validation.outputs.passed == 'true'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: validated__${{ matrix.PackageName }}__${{ matrix.version }}
+          path: ${{ steps.manifest.outputs.path }}
+          retention-days: 1
+          if-no-files-found: error
 
-  # Job 4: Submit PRs for validated packages
-  # Uses dynamic matrix from collect-generated - only runs for packages that generated manifests
-  submit-pr:
-    name: Submit ${{ matrix.id }}
+  # Job 4: Collect validated packages into matrix for PR submission
+  # When SKIP_VALIDATION is 'true', uses manifest__ artifacts directly instead of validated__
+  collect-validated:
+    name: Collect Validated Packages
     needs: [collect-generated, validate-and-test]
+    runs-on: ubuntu-latest
+    if: always() && (needs.validate-and-test.result != 'cancelled' || vars.SKIP_VALIDATION == 'true')
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+      has_packages: ${{ steps.set-matrix.outputs.has_packages }}
+      skip_validation: ${{ steps.set-matrix.outputs.skip_validation }}
+    
+    steps:
+      - name: Build matrix from validated packages
+        id: set-matrix
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SKIP_VALIDATION: ${{ vars.SKIP_VALIDATION }}
+        run: |
+          $skipValidation = $env:SKIP_VALIDATION -eq 'true'
+          $artifactPrefix = if ($skipValidation) { 'manifest__' } else { 'validated__' }
+          
+          if ($skipValidation) {
+            Write-Host "::warning::SKIP_VALIDATION is enabled - using generated manifests directly without validation"
+          }
+          
+          $packages = @()
+          $page = 1
+          do {
+            $response = gh api "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts?per_page=100&page=$page" | ConvertFrom-Json
+            foreach ($artifact in $response.artifacts) {
+              if ($artifact.name -match "^${artifactPrefix}(.+)__(.+)$") {
+                $packageName = $Matches[1]
+                $version = $Matches[2]
+                $packages += @{ PackageName = $packageName; version = $version }
+                Write-Host "Found: $packageName @ $version"
+              }
+            }
+            $page++
+          } while ($response.artifacts.Count -eq 100)
+          
+          $hasPackages = $packages.Count -gt 0
+          $matrix = @{ include = @($packages) } | ConvertTo-Json -Compress -Depth 3
+          Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "matrix=$matrix"
+          Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "has_packages=$hasPackages"
+          Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "skip_validation=$skipValidation"
+          Write-Host "Matrix: $matrix"
+          Write-Host "Has packages: $hasPackages"
+
+  # Job 5: Submit PRs for validated packages
+  # Uses dynamic matrix from collect-validated - only runs for packages that passed validation
+  submit-pr:
+    name: Submit ${{ matrix.PackageName }}
+    needs: [collect-validated]
     runs-on: windows-2025
-    if: always() && needs.validate-and-test.result == 'success' && vars.SUBMIT_PR == 'true'
+    if: always() && needs.collect-validated.result == 'success' && needs.collect-validated.outputs.has_packages == 'true'
     environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Test' }}
     
     strategy:
       fail-fast: false
-      matrix: ${{ fromJson(needs.collect-generated.outputs.matrix) }}
+      matrix: ${{ fromJson(needs.collect-validated.outputs.matrix) }}
     
     steps:
+      - name: Check SUBMIT_PR variable
+        id: check-submit
+        shell: pwsh
+        run: |
+          if ("${{ vars.SUBMIT_PR }}" -ne "true") {
+            Write-Host "::warning::SUBMIT_PR is not set to 'true', skipping PR submission"
+            "skip=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          } else {
+            Write-Host "SUBMIT_PR is enabled, proceeding with PR submission"
+            "skip=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          }
+      
       - name: Checkout
-        uses: actions/checkout@v4
+        if: steps.check-submit.outputs.skip != 'true'
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      
+      - name: Determine artifact name
+        if: steps.check-submit.outputs.skip != 'true'
+        id: artifact
+        shell: pwsh
+        run: |
+          $prefix = if ("${{ needs.collect-validated.outputs.skip_validation }}" -eq "True") { "manifest" } else { "validated" }
+          $name = "${prefix}__${{ matrix.PackageName }}__${{ matrix.version }}"
+          Write-Host "Artifact name: $name"
+          "name=$name" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
       
       - name: Download manifest artifact
-        uses: actions/download-artifact@v4
+        if: steps.check-submit.outputs.skip != 'true'
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
-          name: manifest__${{ matrix.id }}__${{ matrix.version }}
+          name: ${{ steps.artifact.outputs.name }}
           path: ./downloaded-manifests
       
       - name: Set manifest path
+        if: steps.check-submit.outputs.skip != 'true'
         id: manifest
         shell: pwsh
         run: |
@@ -269,6 +352,7 @@ jobs:
           "path=$manifestPath" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
       
       - name: Submit PR
+        if: steps.check-submit.outputs.skip != 'true'
         shell: pwsh
         env:
           GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
@@ -277,36 +361,31 @@ jobs:
           
           $result = Submit-WingetPackage `
             -ManifestPath "${{ steps.manifest.outputs.path }}" `
-            -PackageId "${{ matrix.id }}" `
+            -PackageId "${{ matrix.PackageName }}" `
             -Version "${{ matrix.version }}"
           
           if ($result.Success) {
             Write-Host "PR submitted successfully!" -ForegroundColor Green
-            if ($result.PrUrl) {
-              Write-Host "PR URL: $($result.PrUrl)"
-              
-              # Add to job summary
-              "## :rocket: PR Submitted" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
-              "" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
-              "**Package:** ${{ matrix.id }}" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
-              "**Version:** ${{ matrix.version }}" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
-              "**PR:** $($result.PrUrl)" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
-            }
+            # Add to job summary
+            "## :rocket: PR Submitted" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+            "" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+            "**Package:** ${{ matrix.PackageName }}" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+            "**Version:** ${{ matrix.version }}" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
           } else {
             Write-Host "Failed to submit PR: $($result.Error)" -ForegroundColor Red
             exit 1
           }
 
-  # Job 5: Notify on failure
+  # Job 6: Notify on failure
   notify-failure:
     name: Notify Failure
-    needs: [generate-manifest, collect-generated, validate-and-test, submit-pr]
+    needs: [generate-manifest, collect-generated, validate-and-test, collect-validated, submit-pr]
     runs-on: ubuntu-latest
     if: always() && failure() && vars.NTFY_URL != ''
     
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       
       - name: Send failure notification
         shell: pwsh
