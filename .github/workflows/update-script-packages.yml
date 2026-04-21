@@ -118,7 +118,6 @@ jobs:
           path: ${{ steps.generate.outputs.manifest-path }}
           retention-days: 7
           if-no-files-found: error
-          archive: false
 
   # Job 2: Collect successful manifest generations into a dynamic matrix
   collect-generated:
@@ -131,40 +130,31 @@ jobs:
       has_packages: ${{ steps.set-matrix.outputs.has_packages }}
     
     steps:
-      - name: Download all manifest artifacts
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
-        with:
-          pattern: manifest__*
-          path: ./manifests
-      
+      # Note: actions/download-artifact@v8 has a quirk where a single matched artifact
+      # is extracted directly into `path` (no per-artifact subdirectory), making the
+      # filesystem-based scan unreliable. Use the GitHub API to list artifact names
+      # for this run instead — the actual files are downloaded later in validate-and-test.
       - name: Build dynamic matrix from artifacts
         id: set-matrix
         shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          $manifestsDir = "./manifests"
           $packages = @()
-          
-          if (Test-Path $manifestsDir) {
-            Write-Host "Contents of ${manifestsDir}:"
-            Get-ChildItem -Path $manifestsDir -Recurse | ForEach-Object { Write-Host "  $($_.FullName)" }
-            
-            # Each artifact folder is named manifest__{PackageName}__{version}
-            $artifactFolders = Get-ChildItem -Path $manifestsDir -Directory
-            
-            foreach ($folder in $artifactFolders) {
-              # Parse folder name: manifest__{PackageName}__{version}
-              if ($folder.Name -match '^manifest__(.+)__(.+)$') {
+          $page = 1
+          do {
+            $response = gh api "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts?per_page=100&page=$page" | ConvertFrom-Json
+            foreach ($artifact in $response.artifacts) {
+              if ($artifact.name -match '^manifest__(.+)__(.+)$') {
                 $packageName = $Matches[1]
                 $version = $Matches[2]
                 $packages += @{ PackageName = $packageName; version = $version }
                 Write-Host "Found: $packageName @ $version"
               }
             }
-          }
+            $page++
+          } while ($response.artifacts.Count -eq 100)
           
-          # GitHub Actions errors out on empty matrix vectors, so emit a has_packages
-          # flag and gate the downstream job with `if:` instead of relying on auto-skip.
-          # @($packages) forces array even with single item
           $hasPackages = $packages.Count -gt 0
           $matrix = @{ include = @($packages) } | ConvertTo-Json -Compress -Depth 3
           Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "matrix=$matrix"
@@ -308,31 +298,28 @@ jobs:
       has_packages: ${{ steps.set-matrix.outputs.has_packages }}
     
     steps:
-      - name: Download validated artifacts
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
-        with:
-          pattern: validated__*
-          path: ./validated
-      
+      # See note in collect-generated: download-artifact does not create per-artifact
+      # subdirectories when only a single artifact matches the pattern. Use the API.
       - name: Build matrix from validated packages
         id: set-matrix
         shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          $validatedDir = "./validated"
           $packages = @()
-          
-          if (Test-Path $validatedDir) {
-            $artifactFolders = Get-ChildItem -Path $validatedDir -Directory
-            
-            foreach ($folder in $artifactFolders) {
-              if ($folder.Name -match '^validated__(.+)__(.+)$') {
+          $page = 1
+          do {
+            $response = gh api "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts?per_page=100&page=$page" | ConvertFrom-Json
+            foreach ($artifact in $response.artifacts) {
+              if ($artifact.name -match '^validated__(.+)__(.+)$') {
                 $packageName = $Matches[1]
                 $version = $Matches[2]
                 $packages += @{ PackageName = $packageName; version = $version }
                 Write-Host "Validated: $packageName @ $version"
               }
             }
-          }
+            $page++
+          } while ($response.artifacts.Count -eq 100)
           
           $hasPackages = $packages.Count -gt 0
           $matrix = @{ include = @($packages) } | ConvertTo-Json -Compress -Depth 3
