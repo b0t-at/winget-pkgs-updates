@@ -106,9 +106,12 @@ jobs:
           Import-Module .\modules\WingetMaintainerModule\WingetMaintainerModule.psd1 -Force
           
           Export-ManifestToJobSummary `
-            -ManifestPath "${{ steps.generate.outputs.manifest-path }}" `
+            -ManifestPath "$env:STEPS_GENERATE_OUTPUTS_MANIFEST_PATH" `
             -PackageId "${{ matrix.PackageName }}" `
-            -Version "${{ steps.generate.outputs.version }}"
+            -Version "$env:STEPS_GENERATE_OUTPUTS_VERSION"
+        env:
+          STEPS_GENERATE_OUTPUTS_MANIFEST_PATH: ${{ steps.generate.outputs.manifest-path }}
+          STEPS_GENERATE_OUTPUTS_VERSION: ${{ steps.generate.outputs.version }}
       
       - name: Upload manifest artifact
         if: steps.generate.outputs.generated == 'true'
@@ -177,6 +180,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
       
       - name: Resolve Sandbox Log Paths
         id: resolve_logs
@@ -206,15 +211,19 @@ jobs:
           Import-Module .\modules\WingetMaintainerModule\WingetMaintainerModule.psd1 -Force
           
           Export-ManifestToJobSummary `
-            -ManifestPath "${{ steps.manifest.outputs.path }}" `
-            -PackageId "${{ matrix.PackageName }}" `
-            -Version "${{ matrix.version }}"
+            -ManifestPath "$env:STEPS_MANIFEST_OUTPUTS_PATH" `
+            -PackageId "$env:MATRIX_PACKAGENAME" `
+            -Version "$env:MATRIX_VERSION"
+        env:
+          STEPS_MANIFEST_OUTPUTS_PATH: ${{ steps.manifest.outputs.path }}
+          MATRIX_PACKAGENAME: ${{ matrix.PackageName }}
+          MATRIX_VERSION: ${{ matrix.version }}
       
       - name: Run content validation
         id: content-validation
         shell: pwsh
         run: |
-          $manifestPath = "${{ steps.manifest.outputs.path }}"
+          $manifestPath = "$env:STEPS_MANIFEST_OUTPUTS_PATH"
           
           Write-Host "Running content validation for: $manifestPath"
           
@@ -227,6 +236,8 @@ jobs:
             "passed=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
             exit $exitCode
           }
+        env:
+          STEPS_MANIFEST_OUTPUTS_PATH: ${{ steps.manifest.outputs.path }}
       
       - name: Run sandbox validation
         id: sandbox-validation
@@ -235,8 +246,9 @@ jobs:
         shell: pwsh
         env:
           WINGET_PKGS_GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
+          STEPS_MANIFEST_OUTPUTS_PATH: ${{ steps.manifest.outputs.path }}
         run: |
-          $manifestPath = "${{ steps.manifest.outputs.path }}"
+          $manifestPath = "$env:STEPS_MANIFEST_OUTPUTS_PATH"
           
           Write-Host "Running sandbox validation for: $manifestPath"
           
@@ -265,8 +277,8 @@ jobs:
         if: always()
         shell: pwsh
         run: |
-          $contentPassed = "${{ steps.content-validation.outputs.passed }}"
-          $sandboxPassed = "${{ steps.sandbox-validation.outputs.passed }}"
+          $contentPassed = "$env:STEPS_CONTENT_VALIDATION_OUTPUTS_PASSED"
+          $sandboxPassed = "$env:STEPS_SANDBOX_VALIDATION_OUTPUTS_PASSED"
           
           if ($contentPassed -eq "true" -and $sandboxPassed -eq "true") {
             Write-Host "All validations passed!" -ForegroundColor Green
@@ -277,6 +289,9 @@ jobs:
             Write-Host "  Sandbox: $sandboxPassed"
             "passed=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
           }
+        env:
+          STEPS_CONTENT_VALIDATION_OUTPUTS_PASSED: ${{ steps.content-validation.outputs.passed }}
+          STEPS_SANDBOX_VALIDATION_OUTPUTS_PASSED: ${{ steps.sandbox-validation.outputs.passed }}
       
       - name: Upload validation result marker
         if: always() && steps.validation.outputs.passed == 'true'
@@ -355,27 +370,35 @@ jobs:
         id: check-submit
         shell: pwsh
         run: |
-          if ("${{ vars.SUBMIT_PR }}" -ne "true") {
+          if ("$env:VARS_SUBMIT_PR" -ne "true") {
             Write-Host "::warning::SUBMIT_PR is not set to 'true', skipping PR submission"
             "skip=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
           } else {
             Write-Host "SUBMIT_PR is enabled, proceeding with PR submission"
             "skip=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
           }
+        env:
+          VARS_SUBMIT_PR: ${{ vars.SUBMIT_PR }}
       
       - name: Checkout
         if: steps.check-submit.outputs.skip != 'true'
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
       
       - name: Determine artifact name
         if: steps.check-submit.outputs.skip != 'true'
         id: artifact
         shell: pwsh
         run: |
-          $prefix = if ("${{ needs.collect-validated.outputs.skip_validation }}" -eq "True") { "manifest" } else { "validated" }
-          $name = "${prefix}__${{ matrix.PackageName }}__${{ matrix.version }}"
+          $prefix = if ("$env:NEEDS_COLLECT_VALIDATED_OUTPUTS_SKIP_VALIDATION" -eq "True") { "manifest" } else { "validated" }
+          $name = "${prefix}__$env:MATRIX_PACKAGENAME__$env:MATRIX_VERSION"
           Write-Host "Artifact name: $name"
           "name=$name" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+        env:
+          NEEDS_COLLECT_VALIDATED_OUTPUTS_SKIP_VALIDATION: ${{ needs.collect-validated.outputs.skip_validation }}
+          MATRIX_PACKAGENAME: ${{ matrix.PackageName }}
+          MATRIX_VERSION: ${{ matrix.version }}
       
       - name: Download manifest artifact
         if: steps.check-submit.outputs.skip != 'true'
@@ -399,21 +422,24 @@ jobs:
         shell: pwsh
         env:
           GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
+          STEPS_MANIFEST_OUTPUTS_PATH: ${{ steps.manifest.outputs.path }}
+          MATRIX_PACKAGENAME: ${{ matrix.PackageName }}
+          MATRIX_VERSION: ${{ matrix.version }}
         run: |
           Import-Module .\modules\WingetMaintainerModule\WingetMaintainerModule.psd1 -Force
           
           $result = Submit-WingetPackage `
-            -ManifestPath "${{ steps.manifest.outputs.path }}" `
-            -PackageId "${{ matrix.PackageName }}" `
-            -Version "${{ matrix.version }}"
+            -ManifestPath "$env:STEPS_MANIFEST_OUTPUTS_PATH" `
+            -PackageId "$env:MATRIX_PACKAGENAME" `
+            -Version "$env:MATRIX_VERSION"
           
           if ($result.Success) {
             Write-Host "PR submitted successfully!" -ForegroundColor Green
             # Add to job summary
             "## :rocket: PR Submitted" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
             "" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
-            "**Package:** ${{ matrix.PackageName }}" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
-            "**Version:** ${{ matrix.version }}" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+            "**Package:** $env:MATRIX_PACKAGENAME" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+            "**Version:** $env:MATRIX_VERSION" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
           } else {
             Write-Host "Failed to submit PR: $($result.Error)" -ForegroundColor Red
             exit 1
@@ -429,6 +455,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
       
       - name: Send failure notification
         shell: pwsh
@@ -436,16 +464,16 @@ jobs:
           $runUrl = "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           
           $body = @{
-            topic    = "${{ vars.NTFY_TOPIC }}"
+            topic    = "$env:VARS_NTFY_TOPIC"
             title    = "Winget Package Update Failed"
-            message  = "Workflow: ${{ github.workflow }}`nRun: $runUrl`n`nOne or more packages failed validation or submission."
+            message  = "Workflow: $env:GITHUB_WORKFLOW`nRun: $runUrl`n`nOne or more packages failed validation or submission."
             priority = 4
             tags     = @("x", "package", "warning")
             click    = $runUrl
           } | ConvertTo-Json
           
           try {
-            Invoke-RestMethod -Uri "${{ vars.NTFY_URL }}/${{ vars.NTFY_TOPIC }}" `
+            Invoke-RestMethod -Uri "$env:VARS_NTFY_URL/$env:VARS_NTFY_TOPIC" `
               -Method Post `
               -ContentType 'application/json' `
               -Body $body
@@ -453,5 +481,8 @@ jobs:
           } catch {
             Write-Warning "Failed to send notification: $_"
           }
+        env:
+          VARS_NTFY_TOPIC: ${{ vars.NTFY_TOPIC }}
+          VARS_NTFY_URL: ${{ vars.NTFY_URL }}
 
 

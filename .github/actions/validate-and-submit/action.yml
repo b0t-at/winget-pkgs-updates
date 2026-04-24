@@ -63,7 +63,7 @@ runs:
       run: |
         Write-Host "=== Content Validation ===" -ForegroundColor Cyan
         
-        $manifestPath = "${{ inputs.manifest-path }}"
+        $manifestPath = "$env:INPUTS_MANIFEST_PATH"
         
         if (-not (Test-Path -Path $manifestPath)) {
           Write-Host "ERROR: Manifest path does not exist: $manifestPath" -ForegroundColor Red
@@ -91,6 +91,8 @@ runs:
           Write-Host "Skipping content validation" -ForegroundColor Yellow
           "passed=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
         }
+      env:
+        INPUTS_MANIFEST_PATH: ${{ inputs.manifest-path }}
 
     # Step 2: Run sandbox validation (if not skipped)
     - name: Run sandbox validation
@@ -100,7 +102,7 @@ runs:
       run: |
         Write-Host "=== Sandbox Validation ===" -ForegroundColor Cyan
         
-        $manifestPath = "${{ inputs.manifest-path }}"
+        $manifestPath = "$env:INPUTS_MANIFEST_PATH"
         
         # Check if Windows Sandbox is available
         if (-not (Get-Command 'WindowsSandbox' -ErrorAction SilentlyContinue)) {
@@ -131,6 +133,8 @@ runs:
           "passed=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
           exit 1
         }
+      env:
+        INPUTS_MANIFEST_PATH: ${{ inputs.manifest-path }}
 
     # Step 3: Mark sandbox as passed if skipped
     - name: Mark sandbox passed (skipped)
@@ -152,6 +156,11 @@ runs:
       shell: pwsh
       env:
         GITHUB_TOKEN: ${{ inputs.github-token }}
+        INPUTS_MANIFEST_PATH: ${{ inputs.manifest-path }}
+        INPUTS_PACKAGE_ID: ${{ inputs.package-id }}
+        INPUTS_VERSION: ${{ inputs.version }}
+        INPUTS_PR_TITLE: ${{ inputs.pr-title }}
+        INPUTS_RESOLVES: ${{ inputs.resolves }}
       run: |
         Write-Host "=== Submitting PR ===" -ForegroundColor Cyan
         
@@ -159,17 +168,17 @@ runs:
         Import-Module (Join-Path $env:GITHUB_WORKSPACE "modules/WingetMaintainerModule/WingetMaintainerModule.psd1") -Force
         
         $submitParams = @{
-          ManifestPath = "${{ inputs.manifest-path }}"
-          PackageId    = "${{ inputs.package-id }}"
-          Version      = "${{ inputs.version }}"
+          ManifestPath = "$env:INPUTS_MANIFEST_PATH"
+          PackageId    = "$env:INPUTS_PACKAGE_ID"
+          Version      = "$env:INPUTS_VERSION"
         }
         
-        if ("${{ inputs.pr-title }}" -ne "") {
-          $submitParams.PrTitle = "${{ inputs.pr-title }}"
+        if ("$env:INPUTS_PR_TITLE" -ne "") {
+          $submitParams.PrTitle = "$env:INPUTS_PR_TITLE"
         }
         
-        if ("${{ inputs.resolves }}" -ne "") {
-          $submitParams.Resolves = "${{ inputs.resolves }}"
+        if ("$env:INPUTS_RESOLVES" -ne "") {
+          $submitParams.Resolves = "$env:INPUTS_RESOLVES"
         }
         
         $result = Submit-WingetPackage @submitParams
@@ -191,9 +200,9 @@ runs:
       if: always()
       shell: pwsh
       run: |
-        $contentPassed = "${{ steps.content-validation.outputs.passed }}"
-        $sandboxPassed = "${{ steps.sandbox-validation.outputs.passed }}"
-        $sandboxSkipped = "${{ steps.sandbox-skipped.outputs.passed }}"
+        $contentPassed = "$env:STEPS_CONTENT_VALIDATION_OUTPUTS_PASSED"
+        $sandboxPassed = "$env:STEPS_SANDBOX_VALIDATION_OUTPUTS_PASSED"
+        $sandboxSkipped = "$env:STEPS_SANDBOX_SKIPPED_OUTPUTS_PASSED"
         
         # Sandbox is considered passed if either it passed or was skipped
         $sandboxOk = ($sandboxPassed -eq "true") -or ($sandboxSkipped -eq "true")
@@ -207,6 +216,10 @@ runs:
           Write-Host "  Sandbox validation: $sandboxPassed (skipped: $sandboxSkipped)" -ForegroundColor Gray
           "passed=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
         }
+      env:
+        STEPS_CONTENT_VALIDATION_OUTPUTS_PASSED: ${{ steps.content-validation.outputs.passed }}
+        STEPS_SANDBOX_VALIDATION_OUTPUTS_PASSED: ${{ steps.sandbox-validation.outputs.passed }}
+        STEPS_SANDBOX_SKIPPED_OUTPUTS_PASSED: ${{ steps.sandbox-skipped.outputs.passed }}
 
     # Step 6: Send failure notification
     - name: Send failure notification
@@ -221,10 +234,10 @@ runs:
         $runUrl = "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
         
         $notifyParams = @{
-          NtfyUrl  = "${{ inputs.ntfy-url }}"
-          Topic    = "${{ inputs.ntfy-topic }}"
+          NtfyUrl  = "$env:INPUTS_NTFY_URL"
+          Topic    = "$env:INPUTS_NTFY_TOPIC"
           Title    = "Winget Package Validation Failed"
-          Message  = "Package: ${{ inputs.package-id }}`nVersion: ${{ inputs.version }}`nWorkflow: ${{ github.workflow }}`nRun: $runUrl"
+          Message  = "Package: $env:INPUTS_PACKAGE_ID`nVersion: $env:INPUTS_VERSION`nWorkflow: $env:GITHUB_WORKFLOW`nRun: $runUrl"
           Priority = 4
           Tags     = @("x", "package")
           Click    = $runUrl
@@ -237,3 +250,8 @@ runs:
         } else {
           Write-Host "WARNING: Failed to send notification: $($result.Error)" -ForegroundColor Yellow
         }
+      env:
+        INPUTS_NTFY_URL: ${{ inputs.ntfy-url }}
+        INPUTS_NTFY_TOPIC: ${{ inputs.ntfy-topic }}
+        INPUTS_PACKAGE_ID: ${{ inputs.package-id }}
+        INPUTS_VERSION: ${{ inputs.version }}
