@@ -35,6 +35,26 @@ for workflow in existing_workflows:
 with open(template_file, "r") as file:
     template_content = file.read()
 
+
+def transform_matrix_item(item):
+    transformed_item = {}
+    for key, value in item.items():
+        output_key = "With" if key == "with" else key
+        transformed_item[output_key] = value
+    return transformed_item
+
+
+def render_include_section(chunk):
+    transformed_chunk = [transform_matrix_item(item) for item in chunk]
+    chunk_yaml = yaml.safe_dump(
+        transformed_chunk,
+        sort_keys=False,
+        default_flow_style=False,
+        allow_unicode=True,
+        width=100000,
+    ).rstrip()
+    return "\n".join(f"          {line}" for line in chunk_yaml.splitlines())
+
 def create_workflow_file(chunk, workflows_dir, workflow_prefix, workflow_suffix, template_content):
     start_char = chunk[0]['id'][0].lower()
     end_char = chunk[-1]['id'][0].lower()
@@ -46,11 +66,7 @@ def create_workflow_file(chunk, workflows_dir, workflow_prefix, workflow_suffix,
     )
     
     # Prepare the include section as a YAML string
-    include_section = "\n".join(
-        f"          - id: {item['id']}\n"
-        f"            repo: {item['repo']}\n"
-        f"            url: {item['url']}" for item in chunk
-    )
+    include_section = render_include_section(chunk)
     
     # Replace the placeholder with the include section
     updated_content = template_content.replace(

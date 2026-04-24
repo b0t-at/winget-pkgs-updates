@@ -2,7 +2,7 @@ Function Test-LatestMembers {
     param(
         [Parameter(Mandatory = $true)] $latestObject,
         [string]$versionPattern = '^\d+(?:\.\d+)*(-(?:alpha|beta)\.?\d+)?$',
-        [string]$urlPattern = '^http[s]?:\/\/[^\s]+(\.msi|\.exe|\.appx|\.zip)(\|(x64|x86|x32))?$',
+        [string]$urlPattern = '(?i)^http[s]?:\/\/[^\s]+(\.msi|\.exe|\.appx|\.zip|\.msix|\.msixbundle|\.appxbundle)(\|(x64|x86|x32|arm64|neutral))?$',
         [string]$releaseNotesPattern = 'ReleaseNotes:'
     )
     
