@@ -70,7 +70,7 @@ def create_workflow_file(chunk, workflows_dir, workflow_prefix, workflow_suffix,
     
     # Replace the placeholder with the include section
     updated_content = template_content.replace(
-        "# Orchestrator will insert Packages here",
+        "    # Orchestrator will insert Packages here",
         include_section
     )
     # Update filename

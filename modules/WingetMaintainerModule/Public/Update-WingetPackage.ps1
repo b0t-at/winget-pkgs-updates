@@ -114,7 +114,18 @@ function Update-WingetPackage {
 
     $ManifestOutPath = "./"
 
-    if ($PackageAndVersionInWinget) {
+    if (-not $PackageAndVersionInWinget.PackageExists) {
+        Write-Host "Package $wingetPackage not yet in winget-pkgs. Skipping manifest generation."
+        $result.Reason = "PackageMissing"
+
+        if ($env:GITHUB_OUTPUT) {
+            "generated=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            "reason=PackageMissing" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+        }
+        return $result
+    }
+
+    if ($PackageAndVersionInWinget.ShouldGenerate) {
 
         $PRExists = Test-ExistingPRs -PackageIdentifier $wingetPackage -Version $($Latest.Version)
         
@@ -156,12 +167,6 @@ function Update-WingetPackage {
                     Write-Error "Invalid value \"$EffectiveWith\" for -With parameter. Valid values are 'Komac' and 'WinGetCreate'"
                 }
             }
-
-            if ($LASTEXITCODE -ne 0) {
-                throw "$EffectiveWith update failed for $wingetPackage $($Latest.Version) with exit code $LASTEXITCODE"
-            }
-
-            Test-GeneratedInstallerArchitecture -PackageIdentifier $wingetPackage -CurrentVersion $Latest.Version -ManifestOutPath $ManifestOutPath -RequestedInstallerValues $RequestedInstallerValues
 
             if ($LASTEXITCODE -ne 0) {
                 throw "$EffectiveWith update failed for $wingetPackage $($Latest.Version) with exit code $LASTEXITCODE"

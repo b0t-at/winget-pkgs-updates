@@ -19,6 +19,7 @@ jobs:
   generate-manifest:
     name: Generate ${{ matrix.PackageName }}
     runs-on: windows-2025
+    environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Test' }}
     
     strategy:
       fail-fast: false
@@ -157,7 +158,7 @@ jobs:
             $page++
           } while ($response.artifacts.Count -eq 100)
           
-          $hasPackages = $packages.Count -gt 0
+          $hasPackages = ($packages.Count -gt 0).ToString().ToLower()
           $matrix = @{ include = @($packages) } | ConvertTo-Json -Compress -Depth 3
           Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "matrix=$matrix"
           Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "has_packages=$hasPackages"
@@ -171,7 +172,7 @@ jobs:
     needs: collect-generated
     runs-on: [self-hosted, Windows, X64]
     environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Test' }}
-    if: always() && needs.collect-generated.result == 'success' && needs.collect-generated.outputs.has_packages == 'True' && vars.SKIP_VALIDATION != 'true'
+    if: always() && needs.collect-generated.result == 'success' && needs.collect-generated.outputs.has_packages == 'true' && vars.SKIP_VALIDATION != 'true'
     
     strategy:
       fail-fast: false
@@ -345,11 +346,12 @@ jobs:
             $page++
           } while ($response.artifacts.Count -eq 100)
           
-          $hasPackages = $packages.Count -gt 0
+          $hasPackages = ($packages.Count -gt 0).ToString().ToLower()
+          $skipValidationOut = $skipValidation.ToString().ToLower()
           $matrix = @{ include = @($packages) } | ConvertTo-Json -Compress -Depth 3
           Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "matrix=$matrix"
           Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "has_packages=$hasPackages"
-          Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "skip_validation=$skipValidation"
+          Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "skip_validation=$skipValidationOut"
           Write-Host "Matrix: $matrix"
           Write-Host "Has packages: $hasPackages"
 
@@ -392,7 +394,7 @@ jobs:
         id: artifact
         shell: pwsh
         run: |
-          $prefix = if ("$env:NEEDS_COLLECT_VALIDATED_OUTPUTS_SKIP_VALIDATION" -eq "True") { "manifest" } else { "validated" }
+          $prefix = if ("$env:NEEDS_COLLECT_VALIDATED_OUTPUTS_SKIP_VALIDATION" -eq "true") { "manifest" } else { "validated" }
           $name = "${prefix}__$env:MATRIX_PACKAGENAME__$env:MATRIX_VERSION"
           Write-Host "Artifact name: $name"
           "name=$name" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
