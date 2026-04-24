@@ -19,7 +19,6 @@ jobs:
   generate-manifest:
     name: Generate ${{ matrix.PackageName }}
     runs-on: windows-2025
-    environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Test' }}
     
     strategy:
       fail-fast: false
@@ -171,6 +170,7 @@ jobs:
     name: Validate ${{ matrix.PackageName }}
     needs: collect-generated
     runs-on: [self-hosted, Windows, X64]
+    environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Test' }}
     if: always() && needs.collect-generated.result == 'success' && needs.collect-generated.outputs.has_packages == 'True' && vars.SKIP_VALIDATION != 'true'
     
     strategy:
@@ -308,6 +308,7 @@ jobs:
     name: Collect Validated Packages
     needs: [collect-generated, validate-and-test]
     runs-on: ubuntu-latest
+    environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Test' }}
     if: always() && (needs.validate-and-test.result != 'cancelled' || vars.SKIP_VALIDATION == 'true')
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
