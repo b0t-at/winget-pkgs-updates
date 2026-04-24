@@ -38,7 +38,7 @@ jobs:
         uses: actions/create-github-app-token@1b10c78c7865c340bc4f6099eb2f838309f1e8c3 # v3.1.1
         id: app-token
         with:
-          app-id: ${{ secrets.APP_ID }}
+          client-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.PRIVATE_KEY }}
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
@@ -49,10 +49,20 @@ jobs:
         shell: pwsh
         run: |
           Import-Module .\modules\WingetMaintainerModule
-          .\scripts\Add-GitHubPackage.ps1 -PackageId $env:INPUTS_PACKAGEID -forceAdd $${{ inputs.forceAdd }} -resolves $env:INPUTS_RESOLVES -With ${{ inputs.With }}
+          $params = @{
+            PackageId = $env:INPUTS_PACKAGEID
+            forceAdd  = [System.Convert]::ToBoolean($env:INPUTS_FORCEADD)
+            With      = $env:INPUTS_WITH
+          }
+          if (-not [string]::IsNullOrWhiteSpace($env:INPUTS_RESOLVES)) {
+            $params.resolves = $env:INPUTS_RESOLVES
+          }
+          .\scripts\Add-GitHubPackage.ps1 @params
         env:
           INPUTS_PACKAGEID: ${{ inputs.packageId }}
           INPUTS_RESOLVES: ${{ inputs.resolves }}
+          INPUTS_FORCEADD: ${{ inputs.forceAdd }}
+          INPUTS_WITH: ${{ inputs.With }}
       - name: Commit and push
         uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v7.1.0
         with:

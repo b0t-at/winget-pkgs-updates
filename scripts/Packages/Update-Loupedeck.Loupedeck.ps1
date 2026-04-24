@@ -1,8 +1,8 @@
-$WebsiteURL = "https://support.loupedeck.com/loupedeck-software-download"
+$WebsiteURL = "https://loupedeck.com/get-started/"
 
-$websiteData = Invoke-WebRequest -Method Get -Uri $WebsiteURL
+$websiteData = Invoke-WebRequest -Method Get -Uri $WebsiteURL -UserAgent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 
-$installerLink = ($websiteData.Links | Where-Object { $_.href -like "*.exe*" } | Select-Object -ExpandProperty href).ToString()
+$installerLink = ($websiteData.Links | Where-Object { $_.href -like "*support.loupedeck.com/hubfs/*LD%20Software%20Downloads/*.exe*" } | Select-Object -ExpandProperty href -Unique).ToString()
 
 if($installerLink.Count -eq 0 -or $installerLink.Count -gt 1) {
     Write-Host "No installer links or too much installer links found"
