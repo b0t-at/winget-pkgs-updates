@@ -69,7 +69,8 @@ function Get-InstallerManifestEntries {
             continue
         }
 
-        if ($line -match '^\S') {
+        # Stop at the next top-level YAML key (but not list items starting with -)
+        if ($line -match '^\S' -and $line -notmatch '^\s*-') {
             break
         }
 
