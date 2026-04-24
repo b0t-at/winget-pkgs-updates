@@ -88,6 +88,24 @@ function Update-WingetPackage {
     Write-Host $($Latest.URLs)
     Write-Host $($Latest.releaseNotes)
 
+    $RequestedInstallerEntries = @(Get-InstallerUrlEntries -InstallerValues @($Latest.URLs))
+    $RequestedInstallerUrls = @($RequestedInstallerEntries | Select-Object -ExpandProperty InstallerUrl)
+    $RequestedInstallerValues = @($RequestedInstallerEntries | ForEach-Object {
+        if ($_.ArchitectureHint) {
+            "$($_.InstallerUrl)|$($_.ArchitectureHint)"
+        }
+        else {
+            $_.InstallerUrl
+        }
+    })
+    $ContainsArchitectureHints = @($RequestedInstallerEntries | Where-Object { $_.ArchitectureHint }).Count -gt 0
+    $EffectiveWith = $With
+
+    if ($ContainsArchitectureHints -and $With -eq 'Komac') {
+        Write-Warning 'Architecture suffixes detected in installer URLs. Switching from Komac to WinGetCreate so the hints are preserved.'
+        $EffectiveWith = 'WinGetCreate'
+    }
+
     $result.Version = $Latest.Version
     $prMessage = "Update version: $wingetPackage version $($Latest.Version)"
     $result.PrTitle = $prMessage
@@ -101,8 +119,8 @@ function Update-WingetPackage {
         $PRExists = Test-ExistingPRs -PackageIdentifier $wingetPackage -Version $($Latest.Version)
         
         if (!$PRExists) {
-            Write-Host "Generating manifest with $With for $wingetPackage Version $($Latest.Version)"
-            Switch ($With) {
+            Write-Host "Downloading $EffectiveWith and generate manifest for $wingetPackage Version $($Latest.Version)"
+            Switch ($EffectiveWith) {
                 "Komac" {
                     Install-Komac
                     # Always use --dry-run to generate manifest locally (never submit directly)
@@ -112,7 +130,7 @@ function Update-WingetPackage {
                         "--version", $Latest.Version
                         "--urls"
                     )
-                    $komacArgs += ($Latest.URLs).split(" ").replace('|x64','').replace('|x86','').replace('|arm64','')
+                    $komacArgs += $RequestedInstallerUrls
                     $komacArgs += "--dry-run"
                     if ($resolves -match '^\d+$') {
                         $komacArgs += "--resolves"
@@ -132,14 +150,24 @@ function Update-WingetPackage {
                     }
                     Install-WingetCreate
                     # Always generate locally (no -s flag)
-                    .\wingetcreate.exe update $wingetPackage -v $Latest.Version -u ($Latest.URLs).split(" ") --prtitle $prMessage -t $gitToken -o $ManifestOutPath
+                    .\wingetcreate.exe update $wingetPackage -v $Latest.Version -u $RequestedInstallerValues --prtitle $prMessage -t $gitToken -o $ManifestOutPath
                 }
                 default { 
-                    Write-Error "Invalid value \"$With\" for -With parameter. Valid values are 'Komac' and 'WinGetCreate'"
-                    $result.Reason = "InvalidTool"
-                    return $result
+                    Write-Error "Invalid value \"$EffectiveWith\" for -With parameter. Valid values are 'Komac' and 'WinGetCreate'"
                 }
             }
+
+            if ($LASTEXITCODE -ne 0) {
+                throw "$EffectiveWith update failed for $wingetPackage $($Latest.Version) with exit code $LASTEXITCODE"
+            }
+
+            Test-GeneratedInstallerArchitecture -PackageIdentifier $wingetPackage -CurrentVersion $Latest.Version -ManifestOutPath $ManifestOutPath -RequestedInstallerValues $RequestedInstallerValues
+
+            if ($LASTEXITCODE -ne 0) {
+                throw "$EffectiveWith update failed for $wingetPackage $($Latest.Version) with exit code $LASTEXITCODE"
+            }
+
+            Test-GeneratedInstallerArchitecture -PackageIdentifier $wingetPackage -CurrentVersion $Latest.Version -ManifestOutPath $ManifestOutPath -RequestedInstallerValues $RequestedInstallerValues
 
             # If release notes are provided, add them to the manifest
             if ($Latest.releaseNotes) {

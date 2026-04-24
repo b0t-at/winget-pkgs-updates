@@ -39,6 +39,7 @@ jobs:
           - id: AdaLang.Alire
             repo: alire-project/alire
             url: https://github.com/alire-project/alire/releases/download/v{VERSION}/alr-{VERSION}-installer-x86_64-windows.exe
+            With: wingetcreate
           - id: AdaLang.Alire.Portable
             repo: alire-project/alire
             url: https://github.com/alire-project/alire/releases/download/v{VERSION}/alr-{VERSION}-bin-x86_64-windows.zip
@@ -272,7 +273,8 @@ jobs:
             url: https://github.com/electron/fiddle/releases/download/v{VERSION}/electron-fiddle-{VERSION}-win32-ia32-setup.exe https://github.com/electron/fiddle/releases/download/v{VERSION}/electron-fiddle-{VERSION}-win32-x64-setup.exe
           - id: ente-io.photos-desktop
             repo: ente-io/photos-desktop
-            url: https://github.com/ente-io/photos-desktop/releases/download/v{VERSION}/ente-{VERSION}.exe https://github.com/ente-io/photos-desktop/releases/download/v{VERSION}/ente-{VERSION}-x64.exe https://github.com/ente-io/photos-desktop/releases/download/v{VERSION}/ente-{VERSION}-arm64.exe
+            url: https://github.com/ente-io/photos-desktop/releases/download/v{VERSION}/ente-{VERSION}.exe|x86 https://github.com/ente-io/photos-desktop/releases/download/v{VERSION}/ente-{VERSION}-x64.exe|x64 https://github.com/ente-io/photos-desktop/releases/download/v{VERSION}/ente-{VERSION}-arm64.exe|arm64
+            With: wingetcreate
           - id: Envoy49.go-spotify-cli
             repo: Envoy49/go-spotify-cli
             url: https://github.com/Envoy49/go-spotify-cli/releases/download/v{VERSION}/go-spotify-cli_windows_amd64.zip https://github.com/Envoy49/go-spotify-cli/releases/download/v{VERSION}/go-spotify-cli_windows_arm64.zip
@@ -291,6 +293,7 @@ jobs:
           - id: etcd-io.etcd
             repo: etcd-io/etcd
             url: https://github.com/etcd-io/etcd/releases/download/v{VERSION}/etcd-v{VERSION}-windows-amd64.zip
+            With: wingetcreate
           - id: EtternaProject.EtternaGame
             repo: etternagame/etterna
             url: https://github.com/etternagame/etterna/releases/download/v{VERSION}/Etterna-{VERSION}-win32.exe https://github.com/etternagame/etterna/releases/download/v{VERSION}/Etterna-{VERSION}-win64.exe
@@ -341,7 +344,8 @@ jobs:
             url: https://github.com/mhogomchungu/media-downloader/releases/download/{VERSION}/MediaDownloaderQt5-{VERSION}.setup.exe
           - id: FrankBijnen.ExifToolGUI
             repo: FrankBijnen/ExifToolGui
-            url: https://github.com/FrankBijnen/ExifToolGui/releases/download/V{VERSION}/ExifToolGUI.exe https://github.com/FrankBijnen/ExifToolGui/releases/download/V{VERSION}/ExifToolGUI_X64.exe
+            url: https://github.com/FrankBijnen/ExifToolGui/releases/download/V{VERSION}/ExifToolGUI.exe|x86 https://github.com/FrankBijnen/ExifToolGui/releases/download/V{VERSION}/ExifToolGUI_X64.exe|x64
+            With: wingetcreate
           - id: fselect.fselect
             repo: jhspetersson/fselect
             url: https://github.com/jhspetersson/fselect/releases/download/{VERSION}/fselect-x86_64-win.zip
@@ -473,7 +477,8 @@ jobs:
             url: https://github.com/JannisX11/blockbench/releases/download/v{VERSION}/Blockbench_{VERSION}.exe
           - id: JanProchazka.dbgate
             repo: dbgate/dbgate
-            url: https://github.com/dbgate/dbgate/releases/download/v{VERSION}/dbgate-{VERSION}-win_arm64.exe https://github.com/dbgate/dbgate/releases/download/v{VERSION}/dbgate-{VERSION}-win_x64.exe https://github.com/dbgate/dbgate/releases/download/v{VERSION}/dbgate-{VERSION}-win.exe
+            url: https://github.com/dbgate/dbgate/releases/download/v{VERSION}/dbgate-{VERSION}-win_arm64.exe|arm64 https://github.com/dbgate/dbgate/releases/download/v{VERSION}/dbgate-{VERSION}-win_x64.exe|x64 https://github.com/dbgate/dbgate/releases/download/v{VERSION}/dbgate-{VERSION}-win.exe|x86
+            With: wingetcreate
           - id: jdx.mise
             repo: jdx/mise
             url: https://github.com/jdx/mise/releases/download/v{VERSION}/mise-v{VERSION}-windows-x64.zip https://github.com/jdx/mise/releases/download/v{VERSION}/mise-v{VERSION}-windows-arm64.zip
@@ -485,13 +490,15 @@ jobs:
             url: https://github.com/jendrikseipp/rednotebook/releases/download/v{VERSION}/rednotebook-{VERSION}.exe
           - id: JGraph.Draw
             repo: jgraph/drawio-desktop
-            url: https://github.com/jgraph/drawio-desktop/releases/download/v{VERSION}/draw.io-ia32-{VERSION}-windows-32bit-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v{VERSION}/draw.io-{VERSION}-windows-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v{VERSION}/draw.io-arm64-{VERSION}-windows-arm64-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v{VERSION}/draw.io-ia32-{VERSION}-windows-32bit-no-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v{VERSION}/draw.io-{VERSION}-windows-no-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v{VERSION}/draw.io-arm64-{VERSION}-windows-arm64-no-installer.exe
+            url: https://github.com/jgraph/drawio-desktop/releases/download/v{VERSION}/draw.io-ia32-{VERSION}-windows-32bit-installer.exe|x86 https://github.com/jgraph/drawio-desktop/releases/download/v{VERSION}/draw.io-{VERSION}-windows-installer.exe|x64 https://github.com/jgraph/drawio-desktop/releases/download/v{VERSION}/draw.io-arm64-{VERSION}-windows-arm64-installer.exe|arm64 https://github.com/jgraph/drawio-desktop/releases/download/v{VERSION}/draw.io-ia32-{VERSION}-windows-32bit-no-installer.exe|x86 https://github.com/jgraph/drawio-desktop/releases/download/v{VERSION}/draw.io-{VERSION}-windows-no-installer.exe|x64 https://github.com/jgraph/drawio-desktop/releases/download/v{VERSION}/draw.io-arm64-{VERSION}-windows-arm64-no-installer.exe|arm64
+            With: wingetcreate
           - id: jj-vcs.jj
             repo: jj-vcs/jj
             url: https://github.com/jj-vcs/jj/releases/download/v{VERSION}/jj-v{VERSION}-x86_64-pc-windows-msvc.zip https://github.com/jj-vcs/jj/releases/download/v{VERSION}/jj-v{VERSION}-aarch64-pc-windows-msvc.zip
           - id: JohannesMillan.superProductivity
             repo: johannesjo/super-productivity
             url: https://github.com/johannesjo/super-productivity/releases/download/v{VERSION}/Super-Productivity-Setup.exe|x86 https://github.com/johannesjo/super-productivity/releases/download/v{VERSION}/Super-Productivity-Setup-x64.exe|x64 https://github.com/johannesjo/super-productivity/releases/download/v{VERSION}/Super-Productivity-Setup-arm64.exe|arm64
+            With: wingetcreate
           - id: JosephFinney.Text-Grab
             repo: TheJoeFin/Text-Grab
             url: https://github.com/TheJoeFin/Text-Grab/releases/download/v{VERSION}/Text-Grab.exe
@@ -539,7 +546,8 @@ jobs:
             url: https://github.com/liberodark/ODrive/releases/download/{VERSION}/OpenDrive.Setup.{VERSION}.exe
           - id: LibreCAD.LibreCAD
             repo: LibreCAD/LibreCAD
-            url: https://github.com/LibreCAD/LibreCAD/releases/download/v{VERSION}/LibreCAD-v{VERSION}.exe https://github.com/LibreCAD/LibreCAD/releases/download/v{VERSION}/LibreCAD-v{VERSION}-win64.exe
+            url: https://github.com/LibreCAD/LibreCAD/releases/download/v{VERSION}/LibreCAD-v{VERSION}.exe|x86 https://github.com/LibreCAD/LibreCAD/releases/download/v{VERSION}/LibreCAD-v{VERSION}-win64.exe|x64
+            With: wingetcreate
           - id: LibreHardwareMonitor.LibreHardwareMonitor
             repo: LibreHardwareMonitor/LibreHardwareMonitor
             url: https://github.com/LibreHardwareMonitor/LibreHardwareMonitor/releases/download/v{VERSION}/LibreHardwareMonitor-net472.zip
@@ -584,7 +592,8 @@ jobs:
             url: https://github.com/dotnet/cli-lab/releases/download/{VERSION}/dotnet-core-uninstall.msi
           - id: Microsoft.Ntttcp
             repo: microsoft/ntttcp
-            url: https://github.com/microsoft/ntttcp/releases/download/v{VERSION}/ntttcp.exe https://github.com/microsoft/ntttcp/releases/download/v{VERSION}/ntttcp_arm64.exe
+            url: https://github.com/microsoft/ntttcp/releases/download/v{VERSION}/ntttcp.exe|x64 https://github.com/microsoft/ntttcp/releases/download/v{VERSION}/ntttcp_arm64.exe|arm64
+            With: wingetcreate
           - id: Microsoft.PerfView
             repo: microsoft/perfview
             url: https://github.com/microsoft/perfview/releases/download/v{VERSION}/PerfView.exe
