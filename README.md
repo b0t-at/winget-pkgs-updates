@@ -8,7 +8,7 @@
 
 | Package Version Handling| Count|
 |----------------------------|---------------------------------------------------------------|
-| Script based     | ![Script based Packages](https://img.shields.io/badge/ScriptPackages-23-green) |
+| Script based     | ![Script based Packages](https://img.shields.io/badge/ScriptPackages--green) |
 | GitHub Release based     | ![GitHub based Packages](https://img.shields.io/badge/GithubPackages-356-blue) |
 
 
