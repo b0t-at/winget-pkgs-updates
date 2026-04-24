@@ -9,6 +9,8 @@ def read_packages(file_path):
         for job in jobs.values():
             strategy = job.get('strategy', {})
             matrix = strategy.get('matrix', {})
+            if not isinstance(matrix, dict):
+                continue
             include = matrix.get('include', [])
             for item in include:
                 packages.append(item.get('id') or item.get('PackageName'))
