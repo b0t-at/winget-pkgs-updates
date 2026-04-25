@@ -395,7 +395,13 @@ jobs:
         shell: pwsh
         run: |
           $prefix = if ("$env:NEEDS_COLLECT_VALIDATED_OUTPUTS_SKIP_VALIDATION" -eq "true") { "manifest" } else { "validated" }
-          $name = "${prefix}__$env:MATRIX_PACKAGENAME__$env:MATRIX_VERSION"
+            if ([string]::IsNullOrWhiteSpace($env:MATRIX_PACKAGENAME)) {
+              throw "Matrix package name is empty; cannot determine artifact name."
+            }
+            if ([string]::IsNullOrWhiteSpace($env:MATRIX_VERSION)) {
+              throw "Matrix version is empty; cannot determine artifact name."
+            }
+            $name = '{0}__{1}__{2}' -f $prefix, $env:MATRIX_PACKAGENAME, $env:MATRIX_VERSION
           Write-Host "Artifact name: $name"
           "name=$name" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
         env:
