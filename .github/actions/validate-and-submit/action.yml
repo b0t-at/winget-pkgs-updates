@@ -93,6 +93,7 @@ runs:
         }
       env:
         INPUTS_MANIFEST_PATH: ${{ inputs.manifest-path }}
+        GITHUB_TOKEN: ${{ github.token }}
 
     # Step 2: Run sandbox validation (if not skipped)
     - name: Run sandbox validation

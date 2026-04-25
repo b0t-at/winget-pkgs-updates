@@ -935,6 +935,7 @@ jobs:
           }
         env:
           STEPS_MANIFEST_OUTPUTS_PATH: ${{ steps.manifest.outputs.path }}
+          GITHUB_TOKEN: ${{ github.token }}
 
       - name: Run sandbox validation
         id: sandbox-validation
