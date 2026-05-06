@@ -393,10 +393,10 @@ function Get-PublishedVersionSources {
 
     return @($response | Where-Object { $_.type -eq 'dir' } | ForEach-Object {
             [PSCustomObject]@{
-                Name   = $_.name
+                Name   = [string]$_.name
                 Kind   = 'GitHub'
-                Path   = $_.path
-                ApiUrl = $_.url
+                Path   = [string]$_.path
+                ApiUrl = [string]$_.url
             }
         })
 }
@@ -423,10 +423,18 @@ function Read-PublishedManifestSet {
         }
     }
     else {
-        $files = @(Invoke-GitHubApiJson -Uri $VersionSource.ApiUrl)
+        $apiUrl = [string]$VersionSource.ApiUrl
+        if ([string]::IsNullOrWhiteSpace($apiUrl)) {
+            throw "ApiUrl is null or empty for published version source '$($VersionSource.Name)'."
+        }
+        $files = @(Invoke-GitHubApiJson -Uri $apiUrl)
         $yamlFiles = @($files | Where-Object { $_.type -eq 'file' -and $_.name -like '*.yaml' } | Sort-Object name)
         foreach ($yamlFile in $yamlFiles) {
-            $content = Invoke-RemoteTextDownload -Uri $yamlFile.download_url
+            $downloadUrl = [string]$yamlFile.download_url
+            if ([string]::IsNullOrWhiteSpace($downloadUrl)) {
+                throw "download_url is null or empty for file '$($yamlFile.name)' in version '$($VersionSource.Name)'."
+            }
+            $content = Invoke-RemoteTextDownload -Uri $downloadUrl
             $parseResult = Test-YamlParseable -Content $content -SourceName $yamlFile.path
             if (-not $parseResult.Success) {
                 throw "Failed to parse published manifest '$($yamlFile.path)': $($parseResult.Error)"
