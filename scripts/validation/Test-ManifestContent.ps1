@@ -427,7 +427,7 @@ function Read-PublishedManifestSet {
         if ([string]::IsNullOrWhiteSpace($apiUrl)) {
             throw "ApiUrl is null or empty for published version source '$($VersionSource.Name)'."
         }
-        $files = @(Invoke-GitHubApiJson -Uri $apiUrl)
+        $files = Invoke-GitHubApiJson -Uri $apiUrl
         $yamlFiles = @($files | Where-Object { $_.type -eq 'file' -and $_.name -like '*.yaml' } | Sort-Object name)
         foreach ($yamlFile in $yamlFiles) {
             $downloadUrl = [string]$yamlFile.download_url
