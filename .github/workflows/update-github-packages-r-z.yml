@@ -114,7 +114,7 @@ jobs:
             url: https://github.com/sonnylazuardi/chat-ai-desktop/releases/download/v{VERSION}/chatgpt.msi
           - id: SparkLabs.openvpn-configuration-generator
             repo: thesparklabs/openvpn-configuration-generator
-            url: https://github.com/thesparklabs/openvpn-configuration-generator/releases/download/{VERSION}/OpenVPNConfigurationGeneratorx64_Win10_{VERSION}.msi
+            url: https://github.com/thesparklabs/openvpn-configuration-generator/releases/download/{VERSION}/ovpngen-{VERSION}-windows.exe
           - id: sparrowwallet.sparrow
             repo: sparrowwallet/sparrow
             url: https://github.com/sparrowwallet/sparrow/releases/download/{VERSION}/Sparrow-{VERSION}.msi
@@ -133,9 +133,6 @@ jobs:
           - id: stackrox.kube-linter
             repo: stackrox/kube-linter
             url: https://github.com/stackrox/kube-linter/releases/download/v{VERSION}/kube-linter.exe
-          - id: stacks.stacks
-            repo: stacks-task-manager/stacks
-            url: https://github.com/stacks-task-manager/stacks/releases/download/v{VERSION}/Stacks-Setup-{VERSION}.exe
           - id: Starpine.Screenbox
             repo: huynhsontung/Screenbox
             url: https://github.com/huynhsontung/Screenbox/releases/download/v{VERSION}/Screenbox_{VERSION}.0_neutral.msixbundle https://github.com/huynhsontung/Screenbox/releases/download/v{VERSION}/Screenbox_{VERSION}.0_neutral.msixbundle https://github.com/huynhsontung/Screenbox/releases/download/v{VERSION}/Screenbox_{VERSION}.0_neutral.msixbundle
@@ -166,13 +163,13 @@ jobs:
             url: https://github.com/studiorack/studiorack-app/releases/download/v{VERSION}/studiorack-win.exe
           - id: stuncloud.uwscr
             repo: stuncloud/UWSCR
-            url: https://github.com/stuncloud/UWSCR/releases/download/{VERSION}/UWSCRx64.zip https://github.com/stuncloud/UWSCR/releases/download/{VERSION}/UWSCRx64.zip
+            url: https://github.com/stuncloud/UWSCR/releases/download/{VERSION}/UWSCRx64.zip
           - id: STYInc.STY1001.UnowhyTools
             repo: STY1001/Unowhy-Tools
             url: https://github.com/STY1001/Unowhy-Tools/releases/download/v{VERSION}/Unowhy.Tools.{VERSION}.Installer.exe
           - id: sunfish-shogi.shogihome
             repo: sunfish-shogi/shogihome
-            url: https://github.com/sunfish-shogi/shogihome/releases/download/v{VERSION}/release-v{VERSION}-win.zip
+            url: https://github.com/sunfish-shogi/shogihome/releases/download/v{VERSION}/release-v{VERSION}-win.zip|x86
           - id: SUSE.RancherDesktop
             repo: rancher-sandbox/rancher-desktop
             url: https://github.com/rancher-sandbox/rancher-desktop/releases/download/v{VERSION}/Rancher.Desktop.Setup.{VERSION}.msi
@@ -196,7 +193,7 @@ jobs:
             url: https://github.com/Lidarr/Lidarr/releases/download/v{VERSION}/Lidarr.master.{VERSION}.windows-core-x86-installer.exe https://github.com/Lidarr/Lidarr/releases/download/v{VERSION}/Lidarr.master.{VERSION}.windows-core-x64-installer.exe
           - id: TEdit.TEdit
             repo: TEdit/Terraria-Map-Editor
-            url: https://github.com/TEdit/Terraria-Map-Editor/releases/download/{VERSION}/TEditAvalonia-{VERSION}-win-x64.zip
+            url: https://github.com/TEdit/Terraria-Map-Editor/releases/download/{VERSION}/TEdit-stable-Setup.exe
           - id: TeraTermProject.teraterm5
             repo: TeraTermProject/teraterm
             url: https://github.com/TeraTermProject/teraterm/releases/download/v{VERSION}/teraterm-{VERSION}-x86.exe https://github.com/TeraTermProject/teraterm/releases/download/v{VERSION}/teraterm-{VERSION}-x64.exe https://github.com/TeraTermProject/teraterm/releases/download/v{VERSION}/teraterm-{VERSION}-arm64.exe
@@ -211,7 +208,7 @@ jobs:
             url: https://github.com/terreng/simple-web-server/releases/download/v{VERSION}/Simple-Web-Server-Installer-{VERSION}-x64.exe https://github.com/terreng/simple-web-server/releases/download/v{VERSION}/Simple-Web-Server-Installer-{VERSION}-ia32.exe https://github.com/terreng/simple-web-server/releases/download/v{VERSION}/Simple-Web-Server-Installer-{VERSION}-arm64.exe
           - id: Tetrate.wazero
             repo: tetratelabs/wazero
-            url: https://github.com/tetratelabs/wazero/releases/download/v{VERSION}/wazero_{VERSION}_windows_amd64.msi
+            url: https://github.com/tetratelabs/wazero/releases/download/v{VERSION}/wazero_{VERSION}_windows_amd64.zip
           - id: TeXstudio.TeXstudio
             repo: texstudio-org/texstudio
             url: ' https://github.com/texstudio-org/texstudio/releases/download/{VERSION}/texstudio-{VERSION}-win-qt6-signed.exe'
@@ -253,7 +250,7 @@ jobs:
             url: https://github.com/Tyrrrz/DiscordChatExporter/releases/download/{VERSION}/DiscordChatExporter.win-x86.zip https://github.com/Tyrrrz/DiscordChatExporter/releases/download/{VERSION}/DiscordChatExporter.win-x64.zip https://github.com/Tyrrrz/DiscordChatExporter/releases/download/{VERSION}/DiscordChatExporter.win-arm64.zip
           - id: UltimateGadgetLaboratories.UHKAgent
             repo: UltimateHackingKeyboard/agent
-            url: https://github.com/UltimateHackingKeyboard/agent/releases/download/v{VERSION}/UHK.Agent-{VERSION}-win-ia32.exe|x86 https://github.com/UltimateHackingKeyboard/agent/releases/download/v{VERSION}/UHK.Agent-{VERSION}-win-x64.exe|x64 https://github.com/UltimateHackingKeyboard/agent/releases/download/v{VERSION}/UHK.Agent-{VERSION}-win.exe|neutral
+            url: https://github.com/UltimateHackingKeyboard/agent/releases/download/v{VERSION}/UHK.Agent-{VERSION}-win-ia32.exe|x86 https://github.com/UltimateHackingKeyboard/agent/releases/download/v{VERSION}/UHK.Agent-{VERSION}-win-x64.exe|x64
             With: wingetcreate
           - id: Universal-Debloater-Alliance.uad-ng
             repo: Universal-Debloater-Alliance/universal-android-debloater-next-generation
@@ -290,7 +287,7 @@ jobs:
             url: https://github.com/vivainio/RoughGrep/releases/download/v{VERSION}/RoughGrep-{VERSION}.zip
           - id: VividDesigns.WifiMouseServer
             repo: michaelnpsp/WifiMouseServer
-            url: https://github.com/michaelnpsp/WifiMouseServer/releases/download/{VERSION}/WifiMouseServerInstall.exe
+            url: https://github.com/michaelnpsp/WifiMouseServer/releases/download/{VERSION}/WifiMouseServerInstall.exe|x64
           - id: Vup.Vup
             repo: vup-app/vup
             url: https://github.com/vup-app/vup/releases/download/v{VERSION}/Vup-{VERSION}-BETA-Windows-Installer.exe
@@ -381,6 +378,7 @@ jobs:
           WINGET_PKGS_FORK_REPO: ${{ vars.WINGET_PKGS_FORK_REPO }}
           GHURLs: ${{ matrix.url }}
           GHRepo: ${{ matrix.repo }}
+          GHTagPattern: ${{ matrix.tagPattern }}
           PackageName: ${{ matrix.id }}
           With: ${{ matrix.With }}
           Submit: "false"

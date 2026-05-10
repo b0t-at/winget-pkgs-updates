@@ -127,7 +127,7 @@ jobs:
             url: https://github.com/bcssov/IronyModManager/releases/download/v{VERSION}/win-x64-setup.zip https://github.com/bcssov/IronyModManager/releases/download/v{VERSION}/win-x64-setup.zip
           - id: benaclejames.VRCFaceTracking
             repo: benaclejames/VRCFaceTracking
-            url: https://github.com/benaclejames/VRCFaceTracking/releases/download/{VERSION}/VRCFaceTracking_{VERSION}_x64.msix
+            url: https://github.com/benaclejames/VRCFaceTracking/releases/download/{VERSION}/VRCFaceTracking_{VERSION}_x64.zip
           - id: Benbuck.Finestray
             repo: benbuck/finestray
             url: https://github.com/benbuck/finestray/releases/download/v{VERSION}/Finestray-{VERSION}-win64.exe
@@ -312,7 +312,7 @@ jobs:
             url: https://github.com/antares-sql/antares/releases/download/v{VERSION}/Antares-{VERSION}-win_x64.exe
           - id: fairdataihub.SODA-for-SPARC
             repo: fairdataihub/SODA-for-SPARC
-            url: https://github.com/fairdataihub/SODA-for-SPARC/releases/download/v{VERSION}/soda-for-sparc-{VERSION}-setup.exe
+            url: https://github.com/fairdataihub/SODA-for-SPARC/releases/download/v{VERSION}/soda-for-sparc-{VERSION}-setup.exe|x86
           - id: Falcosoft.VSTMidiDriver
             repo: Falcosoft/vstdriver
             url: https://github.com/Falcosoft/vstdriver/releases/download/v{VERSION}/vstmididrv.exe
@@ -321,7 +321,7 @@ jobs:
             url: https://github.com/FilenCloudDienste/filen-cli/releases/download/v{VERSION}/filen-cli-v{VERSION}-win-x64.exe
           - id: Firstversionist.Polypane
             repo: firstversionist/polypane
-            url: https://github.com/firstversionist/polypane/releases/download/v{VERSION}/Polypane-Setup-{VERSION}.exe
+            url: https://github.com/firstversionist/polypane/releases/download/v{VERSION}/Polypane-Setup-{VERSION}.exe|x86
           - id: flawiddsouza.Restfox
             repo: flawiddsouza/Restfox
             url: https://github.com/flawiddsouza/Restfox/releases/download/v{VERSION}/Restfox-{VERSION}.Setup.exe
@@ -333,7 +333,7 @@ jobs:
             url: https://github.com/superfly/flyctl/releases/download/v{VERSION}/flyctl_{VERSION}_Windows_x86_64.zip https://github.com/superfly/flyctl/releases/download/v{VERSION}/flyctl_{VERSION}_Windows_arm64.zip
           - id: FlyByWireSimulations.FlyByWireSimulationsInstaller
             repo: flybywiresim/installer
-            url: https://github.com/flybywiresim/installer/releases/download/v{VERSION}/FlyByWire_Installer_Setup.exe
+            url: https://github.com/flybywiresim/installer/releases/download/v{VERSION}/FlyByWire-Installer-{VERSION}-x64.exe
           - id: flyingpie.windows-terminal-quake.prerelease
             repo: flyingpie/windows-terminal-quake
             url: https://github.com/flyingpie/windows-terminal-quake/releases/download/v{VERSION}/win-x64_self-contained.zip
@@ -406,7 +406,7 @@ jobs:
             url: https://github.com/gruntwork-io/terragrunt/releases/download/v{VERSION}/terragrunt_windows_386.exe https://github.com/gruntwork-io/terragrunt/releases/download/v{VERSION}/terragrunt_windows_amd64.exe
           - id: gurnec.HashCheckShellExtension
             repo: gurnec/HashCheck
-            url: https://github.com/gurnec/HashCheck/releases/download/v{VERSION}/HashCheckSetup-v{VERSION}.exe
+            url: https://github.com/gurnec/HashCheck/releases/download/v{VERSION}/HashCheckSetup-v{VERSION}.exe|x64
           - id: Gyan.FFmpeg.Essentials
             repo: GyanD/codexffmpeg
             url: https://github.com/GyanD/codexffmpeg/releases/download/{VERSION}/ffmpeg-{VERSION}-essentials_build.zip
@@ -557,10 +557,10 @@ jobs:
             url: https://github.com/LibreHardwareMonitor/LibreHardwareMonitor/releases/download/v{VERSION}/LibreHardwareMonitor-net472.zip
           - id: LittleTijn.SpookyView
             repo: littletijn/spooky-view
-            url: https://github.com/littletijn/spooky-view/releases/download/v{VERSION}/SpookyView_{VERSION}_x64_Signed_Installer.msi https://github.com/littletijn/spooky-view/releases/download/v{VERSION}/SpookyView_{VERSION}_x86_Signed_Installer.msi https://github.com/littletijn/spooky-view/releases/download/v{VERSION}/SpookyView_{VERSION}_ARM64_Signed_Installer.msi https://github.com/littletijn/spooky-view/releases/download/v{VERSION}/SpookyView_{VERSION}_x64_Signed_Portable.exe https://github.com/littletijn/spooky-view/releases/download/v{VERSION}/SpookyView_1.07_x86_Signed_Portable.exe https://github.com/littletijn/spooky-view/releases/download/v{VERSION}/SpookyView_{VERSION}_ARM64_Signed_Portable.exe
+            url: https://github.com/littletijn/spooky-view/releases/download/v{VERSION}/SpookyView_{VERSION}_x64_Installer.msi https://github.com/littletijn/spooky-view/releases/download/v{VERSION}/SpookyView_{VERSION}_x86_Installer.msi https://github.com/littletijn/spooky-view/releases/download/v{VERSION}/SpookyView_{VERSION}_ARM64_Installer.msi https://github.com/littletijn/spooky-view/releases/download/v{VERSION}/SpookyView_{VERSION}_x64_Portable.exe https://github.com/littletijn/spooky-view/releases/download/v{VERSION}/SpookyView_{VERSION}_x86_Portable.exe https://github.com/littletijn/spooky-view/releases/download/v{VERSION}/SpookyView_{VERSION}_ARM64_Portable.exe
           - id: LiveKit.LiveKitCLI
             repo: livekit/livekit-cli
-            url: https://github.com/livekit/livekit-cli/releases/download/v{VERSION}/lk_{VERSION}_windows_arm64.zip https://github.com/livekit/livekit-cli/releases/download/v{VERSION}/lk_{VERSION}_windows_amd64.zip https://github.com/livekit/livekit-cli/releases/download/v{VERSION}/lk_{VERSION}_windows_arm.zip
+            url: https://github.com/livekit/livekit-cli/releases/download/v{VERSION}/lk_{VERSION}_windows_arm64.zip https://github.com/livekit/livekit-cli/releases/download/v{VERSION}/lk_{VERSION}_windows_amd64.zip
           - id: LocalStack.localstack-cli
             repo: localstack/localstack-cli
             url: https://github.com/localstack/localstack-cli/releases/download/v{VERSION}/localstack-cli-{VERSION}-windows-amd64-onefile.zip
@@ -590,7 +590,7 @@ jobs:
             url: https://github.com/micronaut-projects/micronaut-starter/releases/download/v{VERSION}/mn-win-amd64-v{VERSION}.zip
           - id: Microsoft.bitsmanager
             repo: microsoft/BITS-Manager
-            url: https://github.com/microsoft/BITS-Manager/releases/download/v{VERSION}/BITSManager.msi
+            url: https://github.com/microsoft/BITS-Manager/releases/download/v{VERSION}/BITSManager.msi|x64
           - id: Microsoft.DotNet.UninstallTool
             repo: dotnet/cli-lab
             url: https://github.com/dotnet/cli-lab/releases/download/{VERSION}/dotnet-core-uninstall.msi
@@ -603,7 +603,7 @@ jobs:
             url: https://github.com/microsoft/perfview/releases/download/v{VERSION}/PerfView.exe
           - id: Microsoft.Sqlcmd
             repo: microsoft/go-sqlcmd
-            url: https://github.com/microsoft/go-sqlcmd/releases/download/v{VERSION}/sqlcmd-amd64.msi https://github.com/microsoft/go-sqlcmd/releases/download/v{VERSION}/sqlcmd-arm.msi https://github.com/microsoft/go-sqlcmd/releases/download/v{VERSION}/sqlcmd-arm64.msi
+            url: https://github.com/microsoft/go-sqlcmd/releases/download/v{VERSION}/sqlcmd-amd64.msi https://github.com/microsoft/go-sqlcmd/releases/download/v{VERSION}/sqlcmd-arm64.msi
           - id: MilkShift.GoofCord
             repo: Milkshiift/GoofCord
             url: https://github.com/Milkshiift/GoofCord/releases/download/v{VERSION}/GoofCord-Setup-ia32.exe https://github.com/Milkshiift/GoofCord/releases/download/v{VERSION}/GoofCord-Setup-x64.exe https://github.com/Milkshiift/GoofCord/releases/download/v{VERSION}/GoofCord-Setup-arm64.exe
@@ -618,7 +618,7 @@ jobs:
             url: https://downloads.mitmproxy.org/{VERSION}/mitmproxy-{VERSION}-windows-x86_64-installer.exe
           - id: mmanela.markdownoutlook
             repo: mmanela/MarkdownOutlook
-            url: https://github.com/mmanela/MarkdownOutlook/releases/download/v{VERSION}/MarkdownOutlookSetup.msi
+            url: https://github.com/mmanela/MarkdownOutlook/releases/download/v{VERSION}/MarkdownOutlookSetup.msi|x64
           - id: Morpheus.Bazarr
             repo: bazarr/bazarr.github.io
             url: https://github.com/bazarr/bazarr.github.io/releases/download/v{VERSION}/bazarr.zip
@@ -634,9 +634,7 @@ jobs:
           - id: MullvadVPN.MullvadVPN
             repo: mullvad/mullvadvpn-app
             url: https://github.com/mullvad/mullvadvpn-app/releases/download/{VERSION}/MullvadVPN-{VERSION}_x64.exe https://github.com/mullvad/mullvadvpn-app/releases/download/{VERSION}/MullvadVPN-{VERSION}_arm64.exe
-          - id: namazso.OpenHashTab
-            repo: namazso/OpenHashTab
-            url: https://github.com/namazso/OpenHashTab/releases/download/v{VERSION}/OpenHashTab_setup.exe https://github.com/namazso/OpenHashTab/releases/download/v{VERSION}/OpenHashTab_setup.exe https://github.com/namazso/OpenHashTab/releases/download/v{VERSION}/OpenHashTab_setup.exe https://github.com/namazso/OpenHashTab/releases/download/v{VERSION}/OpenHashTab_setup.exe
+            tagPattern: ^[0-9]
           - id: nao1215.gup
             repo: nao1215/gup
             url: https://github.com/nao1215/gup/releases/download/v{VERSION}/gup_{VERSION}_windows_386.zip https://github.com/nao1215/gup/releases/download/v{VERSION}/gup_{VERSION}_windows_amd64.zip https://github.com/nao1215/gup/releases/download/v{VERSION}/gup_{VERSION}_windows_arm64.zip
@@ -732,7 +730,7 @@ jobs:
             url: https://github.com/pluveto/upgit/releases/download/v{VERSION}/upgit_win_386.exe https://github.com/pluveto/upgit/releases/download/v{VERSION}/upgit_win_amd64.exe https://github.com/pluveto/upgit/releases/download/v{VERSION}/upgit_win_arm.exe https://github.com/pluveto/upgit/releases/download/v{VERSION}/upgit_win_arm64.exe
           - id: pnpm.pnpm
             repo: pnpm/pnpm
-            url: https://github.com/pnpm/pnpm/releases/download/v{VERSION}/pnpm-win-x64.exe https://github.com/pnpm/pnpm/releases/download/v{VERSION}/pnpm-win-arm64.exe
+            url: https://github.com/pnpm/pnpm/releases/download/v{VERSION}/pnpm-win32-x64.zip https://github.com/pnpm/pnpm/releases/download/v{VERSION}/pnpm-win32-arm64.zip
           - id: PocketSync.PocketSync
             repo: neil-morrison44/pocket-sync
             url: https://github.com/neil-morrison44/pocket-sync/releases/download/v{VERSION}/Pocket.Sync_{VERSION}_x64-setup.exe
@@ -783,6 +781,7 @@ jobs:
           WINGET_PKGS_FORK_REPO: ${{ vars.WINGET_PKGS_FORK_REPO }}
           GHURLs: ${{ matrix.url }}
           GHRepo: ${{ matrix.repo }}
+          GHTagPattern: ${{ matrix.tagPattern }}
           PackageName: ${{ matrix.id }}
           With: ${{ matrix.With }}
           Submit: "false"
