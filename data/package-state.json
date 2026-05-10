@@ -1,0 +1,117 @@
+{
+  "stuncloud.uwscr": {
+    "description": "",
+    "manifestHash": "D9EFCD10ECC15897A090299E8D8957D07CE196B73756004AE764C31D582EF59A",
+    "state": "VALIDATION_FAILED",
+    "installerHashes": [
+      "439561A7AD0C52B332FD2F1DDFA9B1B3A2E653DD4F98AE627AC6A6BFC0C54798"
+    ],
+    "version": "1.1.9",
+    "lastUpdated": "2026-05-10T20:33:03.5660513Z",
+    "validationCount": 1
+  },
+  "TomEnglert.RegionToShare": {
+    "description": "",
+    "manifestHash": "E78D19A292E73ADA082BE14B9D33814FC2E63DC0348D73942E212F71547FA698",
+    "state": "VALIDATION_FAILED",
+    "installerHashes": [
+      "47F08F0D27A50D656E6BA08320A6001C038FFE85FF1FDACC1AB28108FB3929E7"
+    ],
+    "version": "1.11.0",
+    "lastUpdated": "2026-05-10T20:33:03.5913995Z",
+    "validationCount": 1
+  },
+  "SVGExplorerExtension.SVGExplorerExtension": {
+    "description": "",
+    "manifestHash": "E0DE959E9D1438BE3911265DCA3455FCDBD42DEB58691CED435CDC0A7884572C",
+    "state": "VALIDATION_FAILED",
+    "installerHashes": [
+      "64962D289A30B4F1F1A782E1DD44BC16EB3A181760AC01A456580FDED2CD0FA9",
+      "69F9721C6605B487BC78CD90439EC7B0819AD8BF77616F3CBF3B5E18B9FCA6DB"
+    ],
+    "version": "1.1.0",
+    "lastUpdated": "2026-05-10T20:33:03.5992962Z",
+    "validationCount": 1
+  },
+  "Vipre.IPVTest": {
+    "description": "",
+    "manifestHash": "8D355A8ECA4EA4D4865EF2FE2E06D24268AE13BB1C6B0D73635D6D2D021773D8",
+    "state": "VALIDATION_FAILED",
+    "installerHashes": [
+      "88A8E89AF63BDBD00DB6D31E59C332EC37F67FA3DDEABBEDD21AE23035AE3124"
+    ],
+    "version": "1.0.0.1",
+    "lastUpdated": "2026-05-10T20:33:03.6066211Z",
+    "validationCount": 1
+  },
+  "Skiff.Skiff": {
+    "description": "",
+    "manifestHash": "5434FDADA08F2C87F07C4D9C905F8AB53780C6365E144E586E268350E7B9C005",
+    "state": "VALIDATION_FAILED",
+    "installerHashes": [
+      "5C1214405EB4815ADF7B369832E94F2BDBFBCFFE3F9416B00949ECB8BD3EEADD"
+    ],
+    "version": "1.0.0.9",
+    "lastUpdated": "2026-05-10T20:33:03.6138933Z",
+    "validationCount": 1
+  },
+  "RoslynPad.RoslynPad": {
+    "description": "",
+    "manifestHash": "570E329A62A3BAB8E8A7425638D48791B46B07A03A59B2992BD2ED3F2C040E4F",
+    "state": "VALIDATION_FAILED",
+    "installerHashes": [
+      "5BECDC423BCCFACF18E620F734C86B656477031D4C2B77CB6742DB289B2D74B6",
+      "EC64C4C4C73E0DAF400D2EA2FEE0B8BE12A91E3DF6716886CEE116B3F693C662"
+    ],
+    "version": "20",
+    "lastUpdated": "2026-05-10T20:33:03.6211065Z",
+    "validationCount": 1
+  },
+  "srevinsaju.guiscrcpy.PyQt5": {
+    "description": "",
+    "manifestHash": "EA56D1FF849500514A79B64854A7EB19A044A8BE5F6D9AC623FD8FEA6779384A",
+    "state": "VALIDATION_FAILED",
+    "installerHashes": [
+      "95AFFF17A6EA99D0C2F023E874D35BFEBB04A6C503950EE0987E8377345EFC71",
+      "BB73CA6C70538629A8D06748DB1402ED4EBB9F56F542E7039508EF6FAC95DE1C"
+    ],
+    "version": "2023.1.1",
+    "lastUpdated": "2026-05-10T20:33:03.6281529Z",
+    "validationCount": 1
+  },
+  "srevinsaju.guiscrcpy.PySide2": {
+    "description": "",
+    "manifestHash": "064091A61D169096844EA27943A988CC0D694DD99ACD37768F8B04E19E8539F8",
+    "state": "VALIDATION_FAILED",
+    "installerHashes": [
+      "C4E86976D1140DE98CDDD82DC0570478B8EB81DB7414C380894FD5A447E63F24",
+      "12B9E7CD946896ABC59AA6A2CDC5410D45B3E18ED6188F6C0A106E90A89D293C"
+    ],
+    "version": "2023.1.1",
+    "lastUpdated": "2026-05-10T20:33:03.6508771Z",
+    "validationCount": 1
+  },
+  "rejetto.hfs": {
+    "description": "",
+    "manifestHash": "51E43736347A4EE55FC1C0C6A8B3C3A4DC0DFED979CD4DB16BAD3410DBAEF29B",
+    "state": "VALIDATION_FAILED",
+    "installerHashes": [
+      "315B4BBBB49096EAC6F48154BECF63965BA8A88EAFF7B0675A448ED7C1122EB0"
+    ],
+    "version": "3.1.4",
+    "lastUpdated": "2026-05-10T20:33:03.6581912Z",
+    "validationCount": 1
+  },
+  "Sayuri.FFFTP": {
+    "description": "",
+    "manifestHash": "38747CAD83F9BED7C59D7CC3791D9F2001F589A853DED2E672C63CDAB88F4103",
+    "state": "VALIDATION_FAILED",
+    "installerHashes": [
+      "4D19C3A7058856B6C7C3F82A26838C16E0249FCF9A7754DF3E75E1D3ABBE6C0C",
+      "F41CFD4D084ABF7C0FD6F6EF0BB460F9CADFC69EBD09664C674C5634AF6B6B71"
+    ],
+    "version": "5.8",
+    "lastUpdated": "2026-05-10T20:33:03.6650770Z",
+    "validationCount": 1
+  }
+}
