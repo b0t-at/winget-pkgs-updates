@@ -29,7 +29,8 @@ function Update-WingetPackage {
         [Parameter(Mandatory = $false)] [bool] $IsTemplateUpdate = $false,
         [Parameter(Mandatory = $false)] [string] $releaseNotes,
         [Parameter(Mandatory = $false)] [string] $GHRepo,
-        [Parameter(Mandatory = $false)] [string] $GHURLs
+        [Parameter(Mandatory = $false)] [string] $GHURLs,
+        [Parameter(Mandatory = $false)] [string] $GHTagPattern
     )
 
     # Initialize result object
@@ -65,7 +66,7 @@ function Update-WingetPackage {
     }
     elseif ($GHRepo -and $GHURLs) {
 
-        $versionTag = Get-LatestGHVersionTag -Repo $GHRepo
+        $versionTag = Get-LatestGHVersionTag -Repo $GHRepo -TagPattern $GHTagPattern
         $latestVersion = Get-LatestARPVersion -Repo $GHRepo -Tag $versionTag -GHURLs $GHURLs
         
         $Latest = @{
@@ -178,11 +179,16 @@ function Update-WingetPackage {
             if ($Latest.releaseNotes) {
                 Write-Host "Adding release notes to the manifest in $ManifestOutPath"
                 $localFiles = Get-ChildItem -Recurse -Path $ManifestOutPath -Filter "*.locale.*.yaml"
+                # Format release notes as a YAML literal block to keep the file valid.
+                $rnLines = ($Latest.ReleaseNotes -split "(`r`n|`r|`n)") | Where-Object { $_ -notmatch '^(\r?\n|\r)$' }
+                $indented = ($rnLines | ForEach-Object { "  $_" }) -join "`n"
+                $releaseNotesBlock = "ReleaseNotes: |-`n$indented"
                 foreach ($file in $localFiles) {
-                    Add-Content -Path $file.FullName -Value "$($Latest.ReleaseNotes)"
-                    $newFile = Get-Content -Path $file.FullName
-                    # Output new File to see if release notes are added
-                    $newFile
+                    $existing = Get-Content -Path $file.FullName -Raw
+                    # Strip any existing ReleaseNotes section (in case komac/wingetcreate already added one)
+                    $cleaned = [regex]::Replace($existing, '(?ms)^ReleaseNotes:.*?(?=^\S|\Z)', '')
+                    if (-not $cleaned.EndsWith("`n")) { $cleaned += "`n" }
+                    Set-Content -Path $file.FullName -Value ($cleaned + $releaseNotesBlock + "`n") -NoNewline
                 }
             }
 

@@ -48,5 +48,8 @@ if ($Env:GHURLs) {
 if ($Env:GHRepo) {
     $params.Add("GHRepo", $Env:GHRepo)
 }
+if ($Env:GHTagPattern) {
+    $params.Add("GHTagPattern", $Env:GHTagPattern)
+}
 
 Update-WingetPackage @params

@@ -43,6 +43,7 @@ jobs:
           WINGET_PKGS_FORK_REPO: ${{ vars.WINGET_PKGS_FORK_REPO }}
           GHURLs: ${{ matrix.url }}
           GHRepo: ${{ matrix.repo }}
+          GHTagPattern: ${{ matrix.tagPattern }}
           PackageName: ${{ matrix.id }}
           With: ${{ matrix.With }}
           Submit: "false"

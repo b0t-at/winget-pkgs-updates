@@ -74,7 +74,10 @@ function Get-InstallerManifestEntries {
             break
         }
 
-        if ($line -match '^\s*-\s+') {
+        # Only treat "- Architecture:" as the start of a new installer entry; other
+        # list items (e.g. "- RelativeFilePath:" inside NestedInstallerFiles) must
+        # not reset state.
+        if ($line -match '^\s*-\s+Architecture:\s*(?<Architecture>[^#\r\n]+?)\s*$') {
             if ($currentArchitecture -and $currentInstallerUrl) {
                 [void]$entries.Add([PSCustomObject]@{
                     Architecture = $currentArchitecture
@@ -82,11 +85,12 @@ function Get-InstallerManifestEntries {
                 })
             }
 
-            $currentArchitecture = $null
+            $currentArchitecture = $Matches['Architecture'].Trim()
             $currentInstallerUrl = $null
+            continue
         }
 
-        if ($line -match '^\s*-?\s*Architecture:\s*(?<Architecture>[^#\r\n]+?)\s*$') {
+        if ($line -match '^\s*Architecture:\s*(?<Architecture>[^#\r\n]+?)\s*$') {
             $currentArchitecture = $Matches['Architecture'].Trim()
             continue
         }
