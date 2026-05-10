@@ -12,7 +12,7 @@ on:
       - Scripts/Packages/*
 
 concurrency:
-  group: update-script-packages
+  group: update-packages
   cancel-in-progress: false
 
 permissions:
@@ -364,6 +364,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: true
 
       - name: Build matrix from validated packages
         id: set-matrix
@@ -434,9 +436,9 @@ jobs:
           Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "skip_validation=$skipValidationOut"
           
           # Save package lists for state update step
-          $generatedPackages | ConvertTo-Json -Depth 3 | Set-Content -Path "./generated-packages.json" -Encoding utf8
-          $failedPackages | ConvertTo-Json -Depth 3 | Set-Content -Path "./failed-packages.json" -Encoding utf8
-          $packages | ConvertTo-Json -Depth 3 | Set-Content -Path "./validated-packages.json" -Encoding utf8
+          ConvertTo-Json -InputObject @($generatedPackages) -Depth 3 | Set-Content -Path "./generated-packages.json" -Encoding utf8
+          ConvertTo-Json -InputObject @($failedPackages) -Depth 3 | Set-Content -Path "./failed-packages.json" -Encoding utf8
+          ConvertTo-Json -InputObject @($packages) -Depth 3 | Set-Content -Path "./validated-packages.json" -Encoding utf8
           
           Write-Host "Matrix: $matrix"
           Write-Host "Has packages: $hasPackages"
@@ -477,6 +479,17 @@ jobs:
               }
               
               $hashResult = Get-ManifestHash -ManifestPath $yamlDir
+              
+              # Skip state update if package is already at the skip threshold
+              $shouldSkip = Test-PackageStateSkip `
+                -StateFilePath $stateFile `
+                -PackageIdentifier $pkg.PackageName `
+                -Version $pkg.version `
+                -ManifestHash $hashResult.ManifestHash
+              if ($shouldSkip) {
+                Write-Host "Skipping state update for $($pkg.PackageName) @ $($pkg.version) — already at skip threshold"
+                continue
+              }
               
               Set-PackageState `
                 -StateFilePath $stateFile `
