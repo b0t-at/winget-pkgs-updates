@@ -7,8 +7,8 @@
       "439561A7AD0C52B332FD2F1DDFA9B1B3A2E653DD4F98AE627AC6A6BFC0C54798"
     ],
     "version": "1.1.9",
-    "lastUpdated": "2026-05-10T20:33:03.5660513Z",
-    "validationCount": 1
+    "lastUpdated": "2026-05-11T11:54:02.74023Z",
+    "validationCount": 2
   },
   "TomEnglert.RegionToShare": {
     "description": "",
@@ -18,8 +18,8 @@
       "47F08F0D27A50D656E6BA08320A6001C038FFE85FF1FDACC1AB28108FB3929E7"
     ],
     "version": "1.11.0",
-    "lastUpdated": "2026-05-10T20:33:03.5913995Z",
-    "validationCount": 1
+    "lastUpdated": "2026-05-11T11:54:02.7623011Z",
+    "validationCount": 2
   },
   "SVGExplorerExtension.SVGExplorerExtension": {
     "description": "",
@@ -30,8 +30,8 @@
       "69F9721C6605B487BC78CD90439EC7B0819AD8BF77616F3CBF3B5E18B9FCA6DB"
     ],
     "version": "1.1.0",
-    "lastUpdated": "2026-05-10T20:33:03.5992962Z",
-    "validationCount": 1
+    "lastUpdated": "2026-05-11T11:54:02.7281758Z",
+    "validationCount": 2
   },
   "Vipre.IPVTest": {
     "description": "",
@@ -41,8 +41,8 @@
       "88A8E89AF63BDBD00DB6D31E59C332EC37F67FA3DDEABBEDD21AE23035AE3124"
     ],
     "version": "1.0.0.1",
-    "lastUpdated": "2026-05-10T20:33:03.6066211Z",
-    "validationCount": 1
+    "lastUpdated": "2026-05-11T11:54:02.7749373Z",
+    "validationCount": 2
   },
   "Skiff.Skiff": {
     "description": "",
@@ -52,8 +52,8 @@
       "5C1214405EB4815ADF7B369832E94F2BDBFBCFFE3F9416B00949ECB8BD3EEADD"
     ],
     "version": "1.0.0.9",
-    "lastUpdated": "2026-05-10T20:33:03.6138933Z",
-    "validationCount": 1
+    "lastUpdated": "2026-05-11T11:54:02.7973728Z",
+    "validationCount": 2
   },
   "RoslynPad.RoslynPad": {
     "description": "",
@@ -99,8 +99,8 @@
       "315B4BBBB49096EAC6F48154BECF63965BA8A88EAFF7B0675A448ED7C1122EB0"
     ],
     "version": "3.1.4",
-    "lastUpdated": "2026-05-10T20:33:03.6581912Z",
-    "validationCount": 1
+    "lastUpdated": "2026-05-11T11:54:02.7505824Z",
+    "validationCount": 2
   },
   "Sayuri.FFFTP": {
     "description": "",
@@ -352,5 +352,61 @@
       "4A8B0B026F8E85BBC687C633D4D221662FA89D866A7DAE34FC06D38512DC5D5C"
     ],
     "description": ""
+  },
+  "SparkLabs.openvpn-configuration-generator": {
+    "validationCount": 1,
+    "manifestHash": "41832559C1748E77459CC4BD990706A59A59216DAD2E75B4BB38F9A3117E8816",
+    "lastUpdated": "2026-05-11T11:54:02.6940782Z",
+    "description": "",
+    "version": "2.0",
+    "installerHashes": [
+      "B1883FF62BCD441B8308D06F5AB91E84B40AFCF3DC8A425C42B215352BA0001B"
+    ],
+    "state": "VALIDATION_FAILED"
+  },
+  "S3Drive.S3Drive": {
+    "validationCount": 1,
+    "manifestHash": "93F5056AFEA4938EBF894769EDB3A615106859EB5FCDE84CFD33756803CC9519",
+    "lastUpdated": "2026-05-11T11:54:02.80607Z",
+    "description": "",
+    "version": "1.17.8",
+    "installerHashes": [
+      "2D91F8C7501C7F18C557ABC42C88D86604B63A6C38BEED7E0665B238ADB58F76"
+    ],
+    "state": "VALIDATION_PASSED"
+  },
+  "UltimateGadgetLaboratories.UHKAgent": {
+    "validationCount": 1,
+    "manifestHash": "A623627338614DE702E1A3DB352ED6B609ED57EE00FECAEABD296CF6EF95F2E8",
+    "lastUpdated": "2026-05-11T11:54:02.8138848Z",
+    "description": "",
+    "version": "10.0.0",
+    "installerHashes": [
+      "A056F8A987255F7EEA806862E20F5DA1878C5BA5BCACCCE3FEF648EB406DD36A",
+      "FD74D20A47F9D88657BD5A8BA55EEDB55DD3EDAB63EBC838D78EB3CB6AA4459B"
+    ],
+    "state": "VALIDATION_PASSED"
+  },
+  "Tetrate.wazero": {
+    "validationCount": 1,
+    "manifestHash": "91EA2F2825E6FE7A55813E5E2F51BB31BF46E87D2668D173685E57C2265E1432",
+    "lastUpdated": "2026-05-11T11:54:02.8215543Z",
+    "description": "",
+    "version": "1.11.0",
+    "installerHashes": [
+      "AEFCF54798AC15EF138E7DB3A595CC590314AEA547F5A65DFB8F86853655D40E"
+    ],
+    "state": "VALIDATION_PASSED"
+  },
+  "TEdit.TEdit": {
+    "validationCount": 1,
+    "manifestHash": "F56A00C2CC9E931559F50560CFB7AE38506ED41191E77197CE58878038845A66",
+    "lastUpdated": "2026-05-11T11:54:02.8291735Z",
+    "description": "",
+    "version": "5.1.34",
+    "installerHashes": [
+      "634BE2908AB9E8E83809928ACE24B9889391AD36A14074E538FC32A911D02C53"
+    ],
+    "state": "VALIDATION_PASSED"
   }
 }
