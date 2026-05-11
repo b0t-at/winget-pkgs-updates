@@ -21,28 +21,47 @@ function Test-PackageAndVersionInGithub {
         [Parameter(Mandatory = $false)] [string] $wingetPackage = ${Env:PackageName}
     )
     Write-Host "Checking if $wingetPackage is already in winget (via GH) and version $latestVersion is already present"
-    $ghVersionURL = "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/$($wingetPackage.Substring(0, 1).ToLower())/$($wingetPackage.replace(".","/"))/$latestVersion/$wingetPackage.yaml"
-    $ghCheckURL = "https://github.com/microsoft/winget-pkgs/blob/master/manifests/$($wingetPackage.Substring(0, 1).ToLower())/$($wingetPackage.replace(".","/"))/"
-
-    $ghCheck = Invoke-WebRequest -Uri $ghCheckURL -Method Head -SkipHttpErrorCheck
-    $ghVersionCheck = Invoke-WebRequest -Uri $ghVersionURL -Method Head -SkipHttpErrorCheck
+    $publishedVersionInfo = Get-WingetPublishedVersionsFromGitHub -PackageIdentifier $wingetPackage
+    $publishedVersions = @($publishedVersionInfo.Versions)
 
     $result = [PSCustomObject]@{
-        PackageExists  = $true
-        VersionExists  = $false
-        ShouldGenerate = $false
+        PackageExists    = $true
+        VersionExists    = $false
+        ShouldGenerate   = $false
+        RequestedVersion = $latestVersion
+        PublishedVersion = $null
+        VersionMatchType = $null
+        CanonicalVersion = $latestVersion
     }
 
-    if ($ghCheck.StatusCode -eq 404) {
+    if (-not $publishedVersionInfo.PackageExists) {
         Write-Host "Package not yet in winget. Please add new package manually"
         $result.PackageExists = $false
         return $result
     }
 
-    if ($ghVersionCheck.StatusCode -eq 200) {
-        Write-Host "Latest version of $wingetPackage $latestVersion is already present in winget."
+    $versionMatch = Find-WingetPublishedVersionMatch -Version $latestVersion -PublishedVersions $publishedVersions
+    if ($versionMatch) {
         $result.VersionExists = $true
+        $result.PublishedVersion = $versionMatch.Version
+        $result.VersionMatchType = $versionMatch.MatchType
+        $result.CanonicalVersion = $versionMatch.Version
+
+        if ($versionMatch.MatchType -eq 'Exact') {
+            Write-Host "Latest version of $wingetPackage $latestVersion is already present in winget."
+        }
+        else {
+            Write-Host "Latest version of $wingetPackage $latestVersion is already present in winget as $($versionMatch.Version) ($($versionMatch.MatchType))."
+        }
+
         return $result
+    }
+
+    $canonicalVersion = ConvertTo-WingetVersionStyle -Version $latestVersion -PublishedVersions $publishedVersions
+    $result.CanonicalVersion = $canonicalVersion
+
+    if ($canonicalVersion -ne $latestVersion) {
+        Write-Host "Aligning PackageVersion notation with published winget versions: $latestVersion -> $canonicalVersion"
     }
 
     Write-Host "Package $wingetPackage is in winget, but version $latestVersion is not present."

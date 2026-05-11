@@ -18,22 +18,46 @@ function Test-PackageAndVersionInWinget {
     Install-Winget
     $foundMessage, $textVersion, $separator, $wingetVersions = winget search --id $wingetPackage --source winget --versions
 
+    $publishedVersions = @($wingetVersions | ForEach-Object { ([string]$_).Trim() } | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
+
     $result = [PSCustomObject]@{
-        PackageExists  = $true
-        VersionExists  = $false
-        ShouldGenerate = $false
+        PackageExists    = $true
+        VersionExists    = $false
+        ShouldGenerate   = $false
+        RequestedVersion = $latestVersion
+        PublishedVersion = $null
+        VersionMatchType = $null
+        CanonicalVersion = $latestVersion
     }
 
-    if (!$wingetVersions) {
+    if (!$publishedVersions) {
         Write-Host "Package not yet in winget. Please add new package manually"
         $result.PackageExists = $false
         return $result
     }
 
-    if ($wingetVersions.contains($latestVersion)) {
-        Write-Host "Latest version of $wingetPackage $latestVersion is already present in winget."
+    $versionMatch = Find-WingetPublishedVersionMatch -Version $latestVersion -PublishedVersions $publishedVersions
+    if ($versionMatch) {
         $result.VersionExists = $true
+        $result.PublishedVersion = $versionMatch.Version
+        $result.VersionMatchType = $versionMatch.MatchType
+        $result.CanonicalVersion = $versionMatch.Version
+
+        if ($versionMatch.MatchType -eq 'Exact') {
+            Write-Host "Latest version of $wingetPackage $latestVersion is already present in winget."
+        }
+        else {
+            Write-Host "Latest version of $wingetPackage $latestVersion is already present in winget as $($versionMatch.Version) ($($versionMatch.MatchType))."
+        }
+
         return $result
+    }
+
+    $canonicalVersion = ConvertTo-WingetVersionStyle -Version $latestVersion -PublishedVersions $publishedVersions
+    $result.CanonicalVersion = $canonicalVersion
+
+    if ($canonicalVersion -ne $latestVersion) {
+        Write-Host "Aligning PackageVersion notation with published winget versions: $latestVersion -> $canonicalVersion"
     }
 
     $result.ShouldGenerate = $true

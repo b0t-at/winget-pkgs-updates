@@ -68,7 +68,7 @@ function Update-WingetPackage {
 
         $versionTag = Get-LatestGHVersionTag -Repo $GHRepo -TagPattern $GHTagPattern
         $latestVersion = Get-LatestARPVersion -Repo $GHRepo -Tag $versionTag -GHURLs $GHURLs
-        
+
         $Latest = @{
             Version = $latestVersion
             URLs    = $GHURLs.split(",").trim().split(" ").replace('{ARPVERSION}', $latestVersion).replace('{TAG}', $versionTag).replace('{VERSION}', $latestVersion)
@@ -112,6 +112,22 @@ function Update-WingetPackage {
     $result.PrTitle = $prMessage
 
     $PackageAndVersionInWinget = Test-PackageAndVersionInGithub -wingetPackage $wingetPackage -latestVersion $($Latest.Version)
+    $canonicalVersionProperty = $PackageAndVersionInWinget.PSObject.Properties['CanonicalVersion']
+    $canonicalVersion = if ($canonicalVersionProperty) { [string]$canonicalVersionProperty.Value } else { $Latest.Version }
+    $publishedVersionProperty = $PackageAndVersionInWinget.PSObject.Properties['PublishedVersion']
+    $publishedVersion = if ($publishedVersionProperty) { [string]$publishedVersionProperty.Value } else { $null }
+
+    if ($PackageAndVersionInWinget.VersionExists -and -not [string]::IsNullOrWhiteSpace($publishedVersion)) {
+        $result.Version = $publishedVersion
+    }
+    elseif (-not [string]::IsNullOrWhiteSpace($canonicalVersion) -and $canonicalVersion -ne $Latest.Version) {
+        $detectedVersion = $Latest.Version
+        $Latest.Version = $canonicalVersion
+        $result.Version = $Latest.Version
+        $prMessage = "Update version: $wingetPackage version $($Latest.Version)"
+        $result.PrTitle = $prMessage
+        Write-Host "Using PackageVersion $($Latest.Version) to match winget-pkgs version notation (detected $detectedVersion)."
+    }
 
     $ManifestOutPath = "./"
 
@@ -129,7 +145,7 @@ function Update-WingetPackage {
     if ($PackageAndVersionInWinget.ShouldGenerate) {
 
         $PRExists = Test-ExistingPRs -PackageIdentifier $wingetPackage -Version $($Latest.Version)
-        
+
         if (!$PRExists) {
             Write-Host "Downloading $EffectiveWith and generate manifest for $wingetPackage Version $($Latest.Version)"
             Switch ($EffectiveWith) {
@@ -152,7 +168,7 @@ function Update-WingetPackage {
                     $komacArgs += $gitToken
                     $komacArgs += "--output"
                     $komacArgs += "$ManifestOutPath"
-                    
+
                     Write-Host "Running: komac $($komacArgs -replace $gitToken, '***' -join ' ')"
                     & komac @komacArgs
                 }
@@ -164,7 +180,7 @@ function Update-WingetPackage {
                     # Always generate locally (no -s flag)
                     .\wingetcreate.exe update $wingetPackage -v $Latest.Version -u $RequestedInstallerValues --prtitle $prMessage -t $gitToken -o $ManifestOutPath
                 }
-                default { 
+                default {
                     Write-Error "Invalid value \"$EffectiveWith\" for -With parameter. Valid values are 'Komac' and 'WinGetCreate'"
                 }
             }
@@ -194,7 +210,7 @@ function Update-WingetPackage {
 
             # Calculate full manifest path
             $fullManifestPath = Join-Path -Path $ManifestOutPath -ChildPath "manifests/$($wingetPackage.Substring(0, 1).ToLower())/$($wingetPackage.replace(".","/"))/$($Latest.Version)"
-            
+
             if (Test-Path -Path $fullManifestPath) {
                 $result.Generated = $true
                 $result.ManifestPath = (Resolve-Path -Path $fullManifestPath).Path
@@ -217,7 +233,7 @@ function Update-WingetPackage {
         else {
             Write-Host "PR already exists for $wingetPackage version $($Latest.Version)"
             $result.Reason = "PRExists"
-            
+
             if ($env:GITHUB_OUTPUT) {
                 "generated=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
                 "reason=PRExists" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
@@ -225,9 +241,14 @@ function Update-WingetPackage {
         }
     }
     else {
-        Write-Host "Version $($Latest.Version) already exists in winget for $wingetPackage"
+        if (-not [string]::IsNullOrWhiteSpace($publishedVersion) -and $publishedVersion -ne $Latest.Version) {
+            Write-Host "Version $($Latest.Version) already exists in winget for $wingetPackage as $publishedVersion"
+        }
+        else {
+            Write-Host "Version $($Latest.Version) already exists in winget for $wingetPackage"
+        }
         $result.Reason = "VersionExists"
-        
+
         if ($env:GITHUB_OUTPUT) {
             "generated=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
             "reason=VersionExists" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
