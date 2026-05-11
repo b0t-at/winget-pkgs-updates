@@ -115,55 +115,55 @@
     "validationCount": 1
   },
   "pnpm.pnpm": {
-    "validationCount": 1,
+    "lastUpdated": "2026-05-11T11:58:04.8927277Z",
+    "manifestHash": "F9A34AB2ABFA2BD5926A9D283FE0415A180A7B7C974971AD989ED13644E57E5E",
     "version": "11.0.9",
-    "state": "VALIDATION_FAILED",
-    "manifestHash": "E1B9CACC5C2B8F62188B6A00C3393553C549FCC6F0C11561CBA2BB7A23CCF235",
-    "lastUpdated": "2026-05-11T08:36:25.6062116Z",
+    "validationCount": 1,
     "installerHashes": [
-      "608C56DC746444F133CA901A5A0A32BE779D28DCBCF4E7D7BF48372B005B907A"
+      "C7C823246345541EA512A417028C4F682DEB05954D19D945E290A4A174D2BD3C"
     ],
+    "state": "VALIDATION_FAILED",
     "description": ""
   },
   "mmanela.markdownoutlook": {
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "1.2.0",
     "state": "VALIDATION_FAILED",
     "manifestHash": "9E14A95A52B199544A28E0C1483038441CFA6EC3DAB1354825AB119F52A49ADD",
-    "lastUpdated": "2026-05-11T08:36:25.6353012Z",
+    "lastUpdated": "2026-05-11T11:58:04.8652673Z",
     "installerHashes": [
       "9FAB92B0AFB4D0AFF0E7FAB403F0DF384628F1AEDE37FF5CFCD21D97D468490F"
     ],
     "description": ""
   },
   "Microsoft.bitsmanager": {
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "1.12",
     "state": "VALIDATION_FAILED",
     "manifestHash": "AB8FDE5003C3A08BEED66A0B31A4D339BB6B1B148DEDCA196CBEDFD0F800AAD7",
-    "lastUpdated": "2026-05-11T08:36:25.6451926Z",
+    "lastUpdated": "2026-05-11T11:58:04.9030426Z",
     "installerHashes": [
       "AC3E204D782D54375080B22CF9F3517F8B107362173C84AB5B3DD58A10C50469"
     ],
     "description": ""
   },
   "gurnec.HashCheckShellExtension": {
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "2.4.0",
     "state": "VALIDATION_FAILED",
     "manifestHash": "48BC00677F935E4961C91BD10870F978527FEB2CDA0C08B84F94F71C697428CA",
-    "lastUpdated": "2026-05-11T08:36:25.6549226Z",
+    "lastUpdated": "2026-05-11T11:58:04.9233463Z",
     "installerHashes": [
       "2D6067F00BBB93526D146D2228A46DC4851F0FA866E69250279C6B2F00B8F1B7"
     ],
     "description": ""
   },
   "benaclejames.VRCFaceTracking": {
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "5.2.3.0",
     "state": "VALIDATION_FAILED",
     "manifestHash": "24CB85B0336C9E0469E1CE8D4DB7DBF6E50F6AE6CF7AD5C53AE47DE6DB6867C4",
-    "lastUpdated": "2026-05-11T08:36:25.6666534Z",
+    "lastUpdated": "2026-05-11T11:58:04.9120807Z",
     "installerHashes": [
       "CD711A1E1AA20A8EBFB7A1CD13B0C671BF237AD678EE175DF230F753B315541F"
     ],
@@ -219,11 +219,11 @@
     "description": ""
   },
   "LittleTijn.SpookyView": {
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "1.1.0",
     "state": "VALIDATION_PASSED",
     "manifestHash": "53DD87109355251E24EA4E9BB0FD9421E7AF993DD5561E534AC633405BF5C779",
-    "lastUpdated": "2026-05-11T08:36:25.7438996Z",
+    "lastUpdated": "2026-05-11T11:58:04.9662889Z",
     "installerHashes": [
       "F61114A04E1714A9ABFC81C1A4065AA078EAD3954130F2732FB73C6C3AF01B48",
       "CC2071976E58A4721836CED23019A00B39C8733236AA839634CA4ECD00E68EF4",
@@ -246,11 +246,11 @@
     "description": ""
   },
   "Microsoft.Sqlcmd": {
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "1.10.0",
     "state": "VALIDATION_PASSED",
     "manifestHash": "6C2BA253DE65AF0CE51B38F37E6B03676A3918AF8DC5CFA2A44601160CA616EF",
-    "lastUpdated": "2026-05-11T08:36:25.7613077Z",
+    "lastUpdated": "2026-05-11T11:58:04.957006Z",
     "installerHashes": [
       "50C441F39C7087679BC23A957FD1AE1C67A0B47DFE7B93EF611921F41FD5697C",
       "7C82DECB3914A960494DE072FB0D9C6A16BE9A4269B7503451595D4FE45D0F4E"
@@ -270,11 +270,11 @@
     "description": ""
   },
   "NATSAuthors.CLI": {
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "0.4.0",
     "state": "VALIDATION_PASSED",
     "manifestHash": "273413ABF21095B226519AE6F3562E42AC65A4BE999A2C3BCF7036A970029316",
-    "lastUpdated": "2026-05-11T08:36:25.7787435Z",
+    "lastUpdated": "2026-05-11T11:58:04.9351445Z",
     "installerHashes": [
       "D3B89CCCE0F12FD61123A8B24DA703A86310C9541B18FE746041D04605705E09",
       "72F87F901B6026F2B749DBF77B9B2D82590643E7C35F101809FCD5A01486C407",
@@ -294,11 +294,11 @@
     "description": ""
   },
   "Firstversionist.Polypane": {
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "29.0.0",
     "state": "VALIDATION_PASSED",
     "manifestHash": "9C616049D0FC02C805C49D922CC29592A9B3ECBE73CC831A35E2797E29189665",
-    "lastUpdated": "2026-05-11T08:36:25.7975821Z",
+    "lastUpdated": "2026-05-11T11:58:04.9818992Z",
     "installerHashes": [
       "9EB72D24BF2AD7B7E6A694983B8018AFC039C181D9F0A7836F74A5E969C07DB6"
     ],
@@ -343,11 +343,11 @@
     "description": ""
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "3.7.1",
     "state": "VALIDATION_PASSED",
     "manifestHash": "457F64F87EAEDA04962B74F3CA926EAA7BA1A69C5F0E4F841D07CBD62807C905",
-    "lastUpdated": "2026-05-11T08:36:25.8350514Z",
+    "lastUpdated": "2026-05-11T11:58:04.9741697Z",
     "installerHashes": [
       "4A8B0B026F8E85BBC687C633D4D221662FA89D866A7DAE34FC06D38512DC5D5C"
     ],
