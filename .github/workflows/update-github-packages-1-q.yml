@@ -10,10 +10,6 @@ on:
     paths:
       - .github/workflows-templates/github-releases.yml
 
-concurrency:
-  group: update-packages
-  cancel-in-progress: false
-
 permissions:
   contents: read
 
@@ -1047,6 +1043,9 @@ jobs:
     name: Collect Validated Packages
     needs: [collect-generated, validate-and-test]
     runs-on: ubuntu-latest
+    concurrency:
+      group: package-state-write
+      cancel-in-progress: false
     permissions:
       contents: write
     environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Test' }}
