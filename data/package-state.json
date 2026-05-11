@@ -354,9 +354,9 @@
     "description": ""
   },
   "SparkLabs.openvpn-configuration-generator": {
-    "validationCount": 2,
+    "validationCount": 3,
     "manifestHash": "41832559C1748E77459CC4BD990706A59A59216DAD2E75B4BB38F9A3117E8816",
-    "lastUpdated": "2026-05-11T15:42:46.9671114Z",
+    "lastUpdated": "2026-05-11T18:08:32.7244038Z",
     "description": "",
     "version": "2.0",
     "installerHashes": [
