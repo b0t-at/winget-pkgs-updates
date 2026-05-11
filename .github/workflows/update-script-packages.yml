@@ -11,10 +11,6 @@ on:
       - .github/workflows/update-script-packages.yml
       - Scripts/Packages/*
 
-concurrency:
-  group: update-packages
-  cancel-in-progress: false
-
 permissions:
   contents: read
 
@@ -352,6 +348,9 @@ jobs:
     name: Collect Validated Packages
     needs: [collect-generated, validate-and-test]
     runs-on: ubuntu-latest
+    concurrency:
+      group: package-state-write
+      cancel-in-progress: false
     permissions:
       contents: write
     environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Test' }}

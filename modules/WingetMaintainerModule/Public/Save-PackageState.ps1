@@ -42,6 +42,17 @@ function Save-PackageState {
 
         git commit -m "Update package validation state [skip ci]"
 
+        # Rebase our commit on top of any commits pushed since checkout (e.g. by
+        # orchestrate-gh-packages or a concurrent unrelated push) so that a clean
+        # fast-forward push is always possible.  If a genuine conflict occurs on
+        # package-state.json itself, the rebase will fail loudly here rather than
+        # silently losing data on push.
+        $rebaseResult = git pull --rebase 2>&1
+        if ($LASTEXITCODE -ne 0) {
+            Write-Warning "git pull --rebase failed: $rebaseResult"
+            throw "Failed to rebase package state update: $rebaseResult"
+        }
+
         $pushResult = git push 2>&1
         if ($LASTEXITCODE -ne 0) {
             Write-Warning "git push failed: $pushResult"
