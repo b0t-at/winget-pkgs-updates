@@ -122,9 +122,9 @@
       "056AE0AC11412EFE0EE848B6FB09CB6BE3968B179030EE3314D67B5E1F753D0E"
     ],
     "description": "",
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-05-12T18:31:20.6264037Z"
+    "lastUpdated": "2026-05-12T21:56:10.1303164Z"
   },
   "mmanela.markdownoutlook": {
     "validationCount": 3,
@@ -457,16 +457,16 @@
     "version": "1.7.8"
   },
   "Fly-io.flyctl": {
-    "validationCount": 2,
-    "installerHashes": [
-      "B9B85761720B88E2BA188701A0E551D78BB50ED7FC5F6CD93A33C3C97137F52A",
-      "A0FFBB88A6EEA22EEE489F2A7C20E14DF60803555C24536568EE1DF9DB4FB4B2"
-    ],
-    "description": "",
-    "lastUpdated": "2026-05-12T04:23:38.7804408Z",
     "state": "VALIDATION_PASSED",
-    "version": "0.4.50",
-    "manifestHash": "A5DC6745ADB4415B05ACCF71CD0681D373BCF4DE110856ABD5572DF3C181DB95"
+    "version": "0.4.51",
+    "lastUpdated": "2026-05-12T21:56:10.1945027Z",
+    "description": "",
+    "manifestHash": "B2A5678CA5212E19C77338E95C565CAC97DB02A71BDC3B3904B702E6C3A1A68F",
+    "validationCount": 1,
+    "installerHashes": [
+      "5F89FFE42E468FB4E734BA2F61D2816F912D65EEE8844BE6869A49ABCB4E7A0D",
+      "6746D45DE833CC88AAFEC87A701B727BC54DCBB7AEF3230B280B1DC8D3C7C463"
+    ]
   },
   "aimotrens.impulsar": {
     "validationCount": 2,
@@ -534,5 +534,27 @@
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-05-12T18:31:20.6867887Z"
+  },
+  "Concourse.Fly": {
+    "state": "VALIDATION_PASSED",
+    "version": "8.2.1",
+    "lastUpdated": "2026-05-12T21:56:10.2055682Z",
+    "description": "",
+    "manifestHash": "C72113B2DCA0A3EE55F44D0EB37AC91B9D8DFA6AEF6D347668E8E5E2AE9D9DA6",
+    "validationCount": 1,
+    "installerHashes": [
+      "EB2CE680B30471B95C75045BE442DF755B238BE89C6044243EE35192CCC0CB29"
+    ]
+  },
+  "argoproj.argocd": {
+    "state": "VALIDATION_PASSED",
+    "version": "3.4.2",
+    "lastUpdated": "2026-05-12T21:56:10.2281679Z",
+    "description": "",
+    "manifestHash": "C9C2474C296FD59BA4D4DBB7AD1564D68FCF283F7B0E65076257C31E8287D500",
+    "validationCount": 1,
+    "installerHashes": [
+      "430FBB627C71465E0D076653B6B9B8785C1BBBB1E49AAFB36DF174327E5DB918"
+    ]
   }
 }
