@@ -116,13 +116,13 @@
   },
   "pnpm.pnpm": {
     "manifestHash": "791B82CAF4D09E2336870CDD0B89161CA93416B43C3D7EDD07243E9F4740F448",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "0E21B395E7A8CF064BE1058D29714A6756BBB464E51264ABA0CBDC23C8419FEC",
       "03450E3111C4181D6C8DDB733E9E21E2973EE9DE9BE4EF18430754EACB9083A7"
     ],
     "version": "11.1.0",
-    "lastUpdated": "2026-05-12T04:23:38.7333802Z",
+    "lastUpdated": "2026-05-12T07:07:03.3256746Z",
     "description": "",
     "state": "VALIDATION_FAILED"
   },
@@ -490,5 +490,16 @@
     "lastUpdated": "2026-05-12T04:23:38.8158834Z",
     "description": "",
     "state": "VALIDATION_PASSED"
+  },
+  "AppFlowy.AppFlowy": {
+    "installerHashes": [
+      "26E0977E5151D8E183F8DC2C60C71B8D2C9FFF99BE774C40094AC9581A384281"
+    ],
+    "description": "",
+    "manifestHash": "5C3B308E9392CA3BCB134577322999874BEB969ABFF528278AFD7DFF850B23B4",
+    "lastUpdated": "2026-05-12T07:07:03.3801463Z",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "version": "0.11.9"
   }
 }
