@@ -115,16 +115,16 @@
     "validationCount": 1
   },
   "pnpm.pnpm": {
+    "manifestHash": "791B82CAF4D09E2336870CDD0B89161CA93416B43C3D7EDD07243E9F4740F448",
     "validationCount": 1,
     "installerHashes": [
       "0E21B395E7A8CF064BE1058D29714A6756BBB464E51264ABA0CBDC23C8419FEC",
       "03450E3111C4181D6C8DDB733E9E21E2973EE9DE9BE4EF18430754EACB9083A7"
     ],
-    "description": "",
-    "lastUpdated": "2026-05-11T21:48:53.6440693Z",
-    "state": "VALIDATION_FAILED",
     "version": "11.1.0",
-    "manifestHash": "EDD6E80B422D4FC32F75E2BC9D983B1FBA6ABA8756386BEB68E50E54D41866B1"
+    "lastUpdated": "2026-05-12T04:23:38.7333802Z",
+    "description": "",
+    "state": "VALIDATION_FAILED"
   },
   "mmanela.markdownoutlook": {
     "validationCount": 3,
@@ -422,9 +422,9 @@
     ]
   },
   "OpenTofu.Tofu": {
-    "validationCount": 2,
+    "validationCount": 3,
     "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-05-11T21:48:53.7031007Z",
+    "lastUpdated": "2026-05-12T04:23:38.703083Z",
     "description": "",
     "manifestHash": "43E94853ACA8D0070C38559708B476EBBDB23496B49AAD9010FBDC403BDF2224",
     "installerHashes": [
@@ -457,27 +457,38 @@
     "version": "1.7.8"
   },
   "Fly-io.flyctl": {
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "B9B85761720B88E2BA188701A0E551D78BB50ED7FC5F6CD93A33C3C97137F52A",
       "A0FFBB88A6EEA22EEE489F2A7C20E14DF60803555C24536568EE1DF9DB4FB4B2"
     ],
     "description": "",
-    "lastUpdated": "2026-05-11T21:48:53.724992Z",
+    "lastUpdated": "2026-05-12T04:23:38.7804408Z",
     "state": "VALIDATION_PASSED",
     "version": "0.4.50",
     "manifestHash": "A5DC6745ADB4415B05ACCF71CD0681D373BCF4DE110856ABD5572DF3C181DB95"
   },
   "aimotrens.impulsar": {
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "F1508AB60ADC09840B7A2A7C4B2B4782F380120F7EDD157E0F15195C7D9DDA64",
       "490144111FD7E562D275164CA79FE85A39DA4F62F92ECFE9E563479D8E2D5718"
     ],
     "description": "",
-    "lastUpdated": "2026-05-11T21:48:53.7487811Z",
+    "lastUpdated": "2026-05-12T04:23:38.8040978Z",
     "state": "VALIDATION_PASSED",
     "version": "0.19.5",
     "manifestHash": "F0E315E013FBE215D1636A3BC78DF0F9B9B97C9398E8C29903C27A0661DF29B9"
+  },
+  "bcssov.IronyModManager": {
+    "manifestHash": "1E4CA6913F8FA38C6EF0DD225AB59402F8F825DD5FFF8F09DF742158514A74FF",
+    "validationCount": 1,
+    "installerHashes": [
+      "036DA24B8529BCA5CC14F4BF289A1D8F89976BD0381F384243A828F63ABF1222"
+    ],
+    "version": "1.27.175",
+    "lastUpdated": "2026-05-12T04:23:38.8158834Z",
+    "description": "",
+    "state": "VALIDATION_PASSED"
   }
 }
