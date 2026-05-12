@@ -115,16 +115,16 @@
     "validationCount": 1
   },
   "pnpm.pnpm": {
-    "lastUpdated": "2026-05-12T15:05:19.3648892Z",
+    "version": "11.1.1",
+    "manifestHash": "6B1EF9EE721FA02984CE2215A632B2C6BAF7D9D1283D3B53734015F955AA6F57",
     "installerHashes": [
       "486A8D063B3143C80BE9E1ED21A0D53EB3FA19FE7B1D8F1973A91112D321E709",
       "056AE0AC11412EFE0EE848B6FB09CB6BE3968B179030EE3314D67B5E1F753D0E"
     ],
-    "manifestHash": "C50F6F780682F1B82A96940150805F2F41DBE1650CECDAF88C9516686705C05E",
-    "version": "11.1.1",
-    "state": "VALIDATION_FAILED",
+    "description": "",
     "validationCount": 1,
-    "description": ""
+    "state": "VALIDATION_FAILED",
+    "lastUpdated": "2026-05-12T18:31:20.6264037Z"
   },
   "mmanela.markdownoutlook": {
     "validationCount": 3,
@@ -512,5 +512,27 @@
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
     "description": ""
+  },
+  "Micronaut.Launch": {
+    "version": "4.10.14",
+    "manifestHash": "BDBF8623A4CBE28CB91F737760CDACFE98CC4A4B21A841F22A3451821FF8E908",
+    "installerHashes": [
+      "72D4D669F86E88465FAB57D97DEB56C84EB6B9AAB4F38B154D7D3D265549FF0A"
+    ],
+    "description": "",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-05-12T18:31:20.6760819Z"
+  },
+  "Levminer.Authme": {
+    "version": "7.1.0",
+    "manifestHash": "B1D4C6BA2F59B19CC68023D2DE2E8312466AA425342624FC3990B51AB87043AF",
+    "installerHashes": [
+      "C4C9C0A99E00AB2893AD3C4C0C5B3BF34A559AC54855DD6FB114FD7846344546"
+    ],
+    "description": "",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-05-12T18:31:20.6867887Z"
   }
 }
