@@ -115,16 +115,16 @@
     "validationCount": 1
   },
   "pnpm.pnpm": {
-    "manifestHash": "791B82CAF4D09E2336870CDD0B89161CA93416B43C3D7EDD07243E9F4740F448",
-    "validationCount": 3,
+    "lastUpdated": "2026-05-12T15:05:19.3648892Z",
     "installerHashes": [
-      "0E21B395E7A8CF064BE1058D29714A6756BBB464E51264ABA0CBDC23C8419FEC",
-      "03450E3111C4181D6C8DDB733E9E21E2973EE9DE9BE4EF18430754EACB9083A7"
+      "486A8D063B3143C80BE9E1ED21A0D53EB3FA19FE7B1D8F1973A91112D321E709",
+      "056AE0AC11412EFE0EE848B6FB09CB6BE3968B179030EE3314D67B5E1F753D0E"
     ],
-    "version": "11.1.0",
-    "lastUpdated": "2026-05-12T11:01:14.1217662Z",
-    "description": "",
-    "state": "VALIDATION_FAILED"
+    "manifestHash": "C50F6F780682F1B82A96940150805F2F41DBE1650CECDAF88C9516686705C05E",
+    "version": "11.1.1",
+    "state": "VALIDATION_FAILED",
+    "validationCount": 1,
+    "description": ""
   },
   "mmanela.markdownoutlook": {
     "validationCount": 3,
@@ -501,5 +501,16 @@
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
     "version": "0.11.9"
+  },
+  "mitmproxy.mitmproxy": {
+    "lastUpdated": "2026-05-12T15:05:19.4011587Z",
+    "installerHashes": [
+      "844D0D40C4B9D7E68A8FCDB66354255C4480EA43C4CEB783D7E41C7A98FA8CE9"
+    ],
+    "manifestHash": "CEB4F2071231DB502B129EED0BB8A7BBF638705813A035B740A8664479DAF5F2",
+    "version": "12.2.3",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "description": ""
   }
 }
