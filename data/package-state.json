@@ -556,5 +556,16 @@
     "installerHashes": [
       "430FBB627C71465E0D076653B6B9B8785C1BBBB1E49AAFB36DF174327E5DB918"
     ]
+  },
+  "Radius.Radius": {
+    "installerHashes": [
+      "AB510524BCD00758B5B34B2EE1C7FCAE58E836A8AC745713ED7607F7CB6DDA7F"
+    ],
+    "version": "0.57.1",
+    "validationCount": 1,
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "1010575BC3D43C0213A99A71D5D4DBEC957BFC647B3EE8E43183E0786ABCCB1D",
+    "lastUpdated": "2026-05-13T04:22:04.9238471Z"
   }
 }
