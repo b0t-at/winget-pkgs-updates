@@ -589,5 +589,27 @@
     "installerHashes": [
       "44FEF279EB33274DE1FC621E86B92220D869C89F70BC666224877CC495E07A2B"
     ]
+  },
+  "jaegertracing.jaeger": {
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-05-13T18:29:56.1152201Z",
+    "description": "",
+    "version": "2.18.0",
+    "validationCount": 1,
+    "installerHashes": [
+      "A851ECB8731635C57035EE7D2E276E4BEB8338E9F4093A25DD885F419589E9A9"
+    ],
+    "manifestHash": "DC8EDD99F73BDE0BEF920CD1EBBF3ABF47247425FEC18B8591EF8C29C12320FA"
+  },
+  "Kubernetes.clusterctl": {
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-05-13T18:29:56.1404595Z",
+    "description": "",
+    "version": "1.13.2",
+    "validationCount": 1,
+    "installerHashes": [
+      "9114E085B39B297F415E1318349DBCEA4AB2FED65FF6845B833625E5F843ABB6"
+    ],
+    "manifestHash": "5B1DB443C3D0E7A9ABA1D715CB10549FB09F1A255D587296E54A5496CE269A34"
   }
 }
