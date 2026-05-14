@@ -92,15 +92,15 @@
     "validationCount": 1
   },
   "rejetto.hfs": {
-    "description": "",
-    "manifestHash": "51E43736347A4EE55FC1C0C6A8B3C3A4DC0DFED979CD4DB16BAD3410DBAEF29B",
-    "state": "VALIDATION_FAILED",
+    "lastUpdated": "2026-05-14T10:42:17.0175505Z",
     "installerHashes": [
-      "315B4BBBB49096EAC6F48154BECF63965BA8A88EAFF7B0675A448ED7C1122EB0"
+      "05AF3ED1B78757AB5B061F5E1188685500B51F1C67DC96342809B1E7EC59D407"
     ],
-    "version": "3.1.4",
-    "lastUpdated": "2026-05-11T15:42:46.9930101Z",
-    "validationCount": 3
+    "version": "3.1.5",
+    "validationCount": 1,
+    "manifestHash": "0E6DFDA3ADABF48AC2B2E8C4B99AF389CD9F8E9F7E7A05C9A37773E595EE8C12",
+    "state": "VALIDATION_FAILED",
+    "description": ""
   },
   "Sayuri.FFFTP": {
     "description": "",
@@ -357,13 +357,13 @@
   "SparkLabs.openvpn-configuration-generator": {
     "version": "2.0.1",
     "manifestHash": "C32D11A426B624FA13043D54967CB3D3DD6247C4A801BCFC9A900ACFE079E8D7",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "67DB53BB3C528F9C971072AED7EA44546A43FC6D5E7E6FBA744BF6C4F487A196"
     ],
     "description": "",
     "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-05-14T04:32:10.4185138Z"
+    "lastUpdated": "2026-05-14T10:42:16.9610693Z"
   },
   "S3Drive.S3Drive": {
     "validationCount": 1,
@@ -637,14 +637,14 @@
   "TerraformLinters.tflint": {
     "version": "0.62.1",
     "manifestHash": "19C716ECBEF9157FC52AFBF549E533309C6675E8F3962002BFC495387F451E1E",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "47A0ADA2060A6BCDA9C2F40419BD82795A2BD4E2855832298F14AD2B7A0FE536",
       "BEF472FD62DCBDB616BBDF67800F1BCF8DB64598529C09610154686555180EDD"
     ],
     "description": "",
-    "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-05-14T04:32:10.4531647Z"
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-05-14T10:42:17.0627428Z"
   },
   "SUSE.RancherDesktop": {
     "version": "1.22.3",
@@ -655,6 +655,6 @@
     ],
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-05-14T04:32:10.4981040Z"
+    "lastUpdated": "2026-05-14T04:32:10.498104Z"
   }
 }
