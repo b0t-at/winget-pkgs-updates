@@ -92,12 +92,12 @@
     "validationCount": 1
   },
   "rejetto.hfs": {
-    "lastUpdated": "2026-05-14T10:42:17.0175505Z",
+    "lastUpdated": "2026-05-14T14:41:16.6127304Z",
     "installerHashes": [
       "05AF3ED1B78757AB5B061F5E1188685500B51F1C67DC96342809B1E7EC59D407"
     ],
     "version": "3.1.5",
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "0E6DFDA3ADABF48AC2B2E8C4B99AF389CD9F8E9F7E7A05C9A37773E595EE8C12",
     "state": "VALIDATION_FAILED",
     "description": ""
@@ -357,13 +357,13 @@
   "SparkLabs.openvpn-configuration-generator": {
     "version": "2.0.1",
     "manifestHash": "C32D11A426B624FA13043D54967CB3D3DD6247C4A801BCFC9A900ACFE079E8D7",
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "67DB53BB3C528F9C971072AED7EA44546A43FC6D5E7E6FBA744BF6C4F487A196"
     ],
     "description": "",
     "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-05-14T10:42:16.9610693Z"
+    "lastUpdated": "2026-05-14T14:41:16.6418798Z"
   },
   "S3Drive.S3Drive": {
     "validationCount": 1,
