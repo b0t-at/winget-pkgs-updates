@@ -92,7 +92,7 @@
     "validationCount": 1
   },
   "rejetto.hfs": {
-    "lastUpdated": "2026-05-14T18:13:11.7586980Z",
+    "lastUpdated": "2026-05-14T18:13:11.758698Z",
     "installerHashes": [
       "05AF3ED1B78757AB5B061F5E1188685500B51F1C67DC96342809B1E7EC59D407"
     ],
@@ -120,9 +120,9 @@
       "441509BA8A5E860B7C9F41E3371AAB6D2DDA76A071AA95ABBBEDDA8AB5C84798",
       "6E84576EE53A948D4AE6F804D5F7FD3A82953EBE7077FC0FDFE004A874BCB438"
     ],
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "11.1.2",
-    "lastUpdated": "2026-05-14T18:24:23.9950035Z",
+    "lastUpdated": "2026-05-14T21:52:15.8599379Z",
     "description": "",
     "state": "VALIDATION_FAILED"
   },
@@ -427,9 +427,9 @@
       "30BE3A5F017BEE124183BF9C493C1F0509F181CD73AAE1518CF7B5FB3B6EAB50",
       "7253ABF6CE9C0E88E0CC188C5C883E02353B6C5FFCF2125E6C307348CA223DF0"
     ],
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "1.12.0",
-    "lastUpdated": "2026-05-14T18:24:23.9652996Z",
+    "lastUpdated": "2026-05-14T21:52:15.8886768Z",
     "description": "",
     "state": "VALIDATION_FAILED"
   },
@@ -458,15 +458,15 @@
   },
   "Fly-io.flyctl": {
     "state": "VALIDATION_PASSED",
-    "version": "0.4.51",
-    "lastUpdated": "2026-05-12T21:56:10.1945027Z",
-    "description": "",
-    "manifestHash": "B2A5678CA5212E19C77338E95C565CAC97DB02A71BDC3B3904B702E6C3A1A68F",
+    "version": "0.4.52",
     "validationCount": 1,
     "installerHashes": [
-      "5F89FFE42E468FB4E734BA2F61D2816F912D65EEE8844BE6869A49ABCB4E7A0D",
-      "6746D45DE833CC88AAFEC87A701B727BC54DCBB7AEF3230B280B1DC8D3C7C463"
-    ]
+      "BDB1F48E4B0D4C040723DB7C6C7F98944920C03D0345C019FD676A2CEB88B911",
+      "7D9F8EDE586DDF9532B0CE19FC3126C312F0C2B498BB03272D5212F0CA9FE8A4"
+    ],
+    "lastUpdated": "2026-05-14T21:52:15.9258294Z",
+    "description": "",
+    "manifestHash": "A485F40DAEC1ADF6E3E588766271A614AE5B8C6E51A6B6998AE943140A9B6DA8"
   },
   "aimotrens.impulsar": {
     "validationCount": 2,
@@ -704,5 +704,27 @@
     "lastUpdated": "2026-05-14T15:01:41.8559294Z",
     "description": "",
     "state": "VALIDATION_PASSED"
+  },
+  "KeeperSecurity.Commander": {
+    "state": "VALIDATION_PASSED",
+    "version": "18.0.1",
+    "validationCount": 1,
+    "installerHashes": [
+      "F1581F27B8C294CC211BA6EE65267B738D0D82327C030205594393AD8DEC8F2D"
+    ],
+    "lastUpdated": "2026-05-14T21:52:15.9370312Z",
+    "description": "",
+    "manifestHash": "B0DB2A09F6E1B11335979AB4ECB7C19E032761B7BC9CB55FFC3230E4E14AB3E3"
+  },
+  "bornova.numara": {
+    "state": "VALIDATION_PASSED",
+    "version": "6.10.3",
+    "validationCount": 1,
+    "installerHashes": [
+      "217B3CC55446C997C80E8A3DE5C1A667714FEA9B3172F4D553CEA47BD2E7034F"
+    ],
+    "lastUpdated": "2026-05-14T21:52:15.9589779Z",
+    "description": "",
+    "manifestHash": "CDEDAA95CED9DB3C6A765EE91CA4FD90F8596ACE5905FD2D1D34D154E730DCDE"
   }
 }
