@@ -355,15 +355,15 @@
     "description": ""
   },
   "SparkLabs.openvpn-configuration-generator": {
-    "validationCount": 3,
-    "manifestHash": "41832559C1748E77459CC4BD990706A59A59216DAD2E75B4BB38F9A3117E8816",
-    "lastUpdated": "2026-05-11T18:08:32.7244038Z",
-    "description": "",
-    "version": "2.0",
+    "version": "2.0.1",
+    "manifestHash": "C32D11A426B624FA13043D54967CB3D3DD6247C4A801BCFC9A900ACFE079E8D7",
+    "validationCount": 1,
     "installerHashes": [
-      "B1883FF62BCD441B8308D06F5AB91E84B40AFCF3DC8A425C42B215352BA0001B"
+      "67DB53BB3C528F9C971072AED7EA44546A43FC6D5E7E6FBA744BF6C4F487A196"
     ],
-    "state": "VALIDATION_FAILED"
+    "description": "",
+    "state": "VALIDATION_FAILED",
+    "lastUpdated": "2026-05-14T04:32:10.4185138Z"
   },
   "S3Drive.S3Drive": {
     "validationCount": 1,
@@ -633,5 +633,28 @@
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
     "lastUpdated": "2026-05-13T22:13:17.1916996Z"
+  },
+  "TerraformLinters.tflint": {
+    "version": "0.62.1",
+    "manifestHash": "19C716ECBEF9157FC52AFBF549E533309C6675E8F3962002BFC495387F451E1E",
+    "validationCount": 1,
+    "installerHashes": [
+      "47A0ADA2060A6BCDA9C2F40419BD82795A2BD4E2855832298F14AD2B7A0FE536",
+      "BEF472FD62DCBDB616BBDF67800F1BCF8DB64598529C09610154686555180EDD"
+    ],
+    "description": "",
+    "state": "VALIDATION_FAILED",
+    "lastUpdated": "2026-05-14T04:32:10.4531647Z"
+  },
+  "SUSE.RancherDesktop": {
+    "version": "1.22.3",
+    "manifestHash": "58DE0FF39CB8DB5E481FA23DFC3D75AF33AD295206ABCF72DFC052B76542BCD6",
+    "validationCount": 1,
+    "installerHashes": [
+      "D0918C3E99D2918D84D739E47DF12964B2D75CCDF3F9DA769B6D4B47EDE187CF"
+    ],
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-05-14T04:32:10.4981040Z"
   }
 }
