@@ -735,8 +735,8 @@
       "B1D3D5042359FFE13DB59FF38DAC0DF085A637FF2138693E502945283BDB16F3"
     ],
     "description": "",
-    "lastUpdated": "2026-05-15T10:45:47.9726982Z",
-    "validationCount": 1
+    "lastUpdated": "2026-05-15T14:41:07.5119214Z",
+    "validationCount": 2
   },
   "SimpleX.SimpleX-Chat": {
     "state": "VALIDATION_PASSED",
@@ -746,7 +746,7 @@
       "FD2ACA4D682836FCB80377B9EB81A7D0DA8204103702EED4BF2245A25537E6B8"
     ],
     "description": "",
-    "lastUpdated": "2026-05-15T10:45:48.0151990Z",
+    "lastUpdated": "2026-05-15T10:45:48.015199Z",
     "validationCount": 1
   }
 }
