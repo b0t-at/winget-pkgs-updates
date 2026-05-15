@@ -116,11 +116,11 @@
   },
   "pnpm.pnpm": {
     "description": "",
-    "lastUpdated": "2026-05-15T18:09:37.8445711Z",
+    "lastUpdated": "2026-05-15T21:33:45.2908435Z",
     "state": "VALIDATION_FAILED",
     "manifestHash": "1DC9419F3D456F846FDADCEB0D333F1B283A9329652A33216714034E33DBF7FF",
     "version": "11.1.2",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "441509BA8A5E860B7C9F41E3371AAB6D2DDA76A071AA95ABBBEDDA8AB5C84798",
       "6E84576EE53A948D4AE6F804D5F7FD3A82953EBE7077FC0FDFE004A874BCB438"
@@ -759,5 +759,16 @@
     "installerHashes": [
       "4629AE2A6EBF0B382FA8CC039A71A6E7B2041D6E8BC9BDCC17B3B7862DB71A9A"
     ]
+  },
+  "errata-ai.Vale": {
+    "installerHashes": [
+      "2469B1635264CBE3EF2E5111270F03EC7583679ED76421155F4DD390FCC18874"
+    ],
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-05-15T21:33:45.3672672Z",
+    "version": "3.14.2",
+    "description": "",
+    "manifestHash": "ADFA15D822E0EE5BB280C0682F7ADB575BF582FF0985184B93D3FD6327CBCFF8",
+    "validationCount": 1
   }
 }
