@@ -726,5 +726,27 @@
     "lastUpdated": "2026-05-14T21:52:15.9589779Z",
     "description": "",
     "manifestHash": "CDEDAA95CED9DB3C6A765EE91CA4FD90F8596ACE5905FD2D1D34D154E730DCDE"
+  },
+  "seerge.g-helper": {
+    "state": "VALIDATION_FAILED",
+    "manifestHash": "634C8CD7945F99316E8E59DB94BDD7D2E7ED01251DF0E8576FEE5E944A08D12B",
+    "version": "0.250",
+    "installerHashes": [
+      "B1D3D5042359FFE13DB59FF38DAC0DF085A637FF2138693E502945283BDB16F3"
+    ],
+    "description": "",
+    "lastUpdated": "2026-05-15T10:45:47.9726982Z",
+    "validationCount": 1
+  },
+  "SimpleX.SimpleX-Chat": {
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "C6A156CE5659D11C8ED1EB75CC9DBC2D86311C9E23FE6EFC0FEE932566D86810",
+    "version": "6.5.1",
+    "installerHashes": [
+      "FD2ACA4D682836FCB80377B9EB81A7D0DA8204103702EED4BF2245A25537E6B8"
+    ],
+    "description": "",
+    "lastUpdated": "2026-05-15T10:45:48.0151990Z",
+    "validationCount": 1
   }
 }
