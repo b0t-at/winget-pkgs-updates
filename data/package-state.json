@@ -115,16 +115,16 @@
     "validationCount": 1
   },
   "pnpm.pnpm": {
-    "manifestHash": "9300DF5F820D30E2BFE9FE1F9898F7865988CF2918F4F1715248F37187208C92",
+    "description": "",
+    "lastUpdated": "2026-05-15T18:09:37.8445711Z",
+    "state": "VALIDATION_FAILED",
+    "manifestHash": "1DC9419F3D456F846FDADCEB0D333F1B283A9329652A33216714034E33DBF7FF",
+    "version": "11.1.2",
+    "validationCount": 1,
     "installerHashes": [
       "441509BA8A5E860B7C9F41E3371AAB6D2DDA76A071AA95ABBBEDDA8AB5C84798",
       "6E84576EE53A948D4AE6F804D5F7FD3A82953EBE7077FC0FDFE004A874BCB438"
-    ],
-    "validationCount": 3,
-    "version": "11.1.2",
-    "lastUpdated": "2026-05-14T21:52:15.8599379Z",
-    "description": "",
-    "state": "VALIDATION_FAILED"
+    ]
   },
   "mmanela.markdownoutlook": {
     "validationCount": 3,
@@ -748,5 +748,16 @@
     "description": "",
     "lastUpdated": "2026-05-15T10:45:48.015199Z",
     "validationCount": 1
+  },
+  "cinnyapp.cinny-desktop": {
+    "description": "",
+    "lastUpdated": "2026-05-15T18:09:37.8984241Z",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "9D6106EFE3FE61D84029E9B450A3E40E17447EF6E3DFAF1018EAE3817E46661C",
+    "version": "4.12.1",
+    "validationCount": 1,
+    "installerHashes": [
+      "4629AE2A6EBF0B382FA8CC039A71A6E7B2041D6E8BC9BDCC17B3B7862DB71A9A"
+    ]
   }
 }
