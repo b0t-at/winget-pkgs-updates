@@ -116,11 +116,11 @@
   },
   "pnpm.pnpm": {
     "description": "",
-    "lastUpdated": "2026-05-15T21:33:45.2908435Z",
+    "lastUpdated": "2026-05-16T04:10:47.5964786Z",
     "state": "VALIDATION_FAILED",
     "manifestHash": "1DC9419F3D456F846FDADCEB0D333F1B283A9329652A33216714034E33DBF7FF",
     "version": "11.1.2",
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "441509BA8A5E860B7C9F41E3371AAB6D2DDA76A071AA95ABBBEDDA8AB5C84798",
       "6E84576EE53A948D4AE6F804D5F7FD3A82953EBE7077FC0FDFE004A874BCB438"
