@@ -22,16 +22,16 @@
     "validationCount": 3
   },
   "SVGExplorerExtension.SVGExplorerExtension": {
-    "description": "",
-    "manifestHash": "E0DE959E9D1438BE3911265DCA3455FCDBD42DEB58691CED435CDC0A7884572C",
+    "lastUpdated": "2026-05-17T10:02:03.8107170Z",
+    "version": "1.1.0",
     "state": "VALIDATION_FAILED",
+    "validationCount": 1,
+    "manifestHash": "059304D64C635D087A25D3A1134654456C33F2F99196C67BB8FE5639EA6F5778",
     "installerHashes": [
       "64962D289A30B4F1F1A782E1DD44BC16EB3A181760AC01A456580FDED2CD0FA9",
       "69F9721C6605B487BC78CD90439EC7B0819AD8BF77616F3CBF3B5E18B9FCA6DB"
     ],
-    "version": "1.1.0",
-    "lastUpdated": "2026-05-11T15:42:46.9214459Z",
-    "validationCount": 3
+    "description": ""
   },
   "Vipre.IPVTest": {
     "description": "",
