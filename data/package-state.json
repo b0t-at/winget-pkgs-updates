@@ -22,10 +22,10 @@
     "validationCount": 3
   },
   "SVGExplorerExtension.SVGExplorerExtension": {
-    "lastUpdated": "2026-05-17T10:02:03.8107170Z",
+    "lastUpdated": "2026-05-17T13:56:29.9882542Z",
     "version": "1.1.0",
     "state": "VALIDATION_FAILED",
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "059304D64C635D087A25D3A1134654456C33F2F99196C67BB8FE5639EA6F5778",
     "installerHashes": [
       "64962D289A30B4F1F1A782E1DD44BC16EB3A181760AC01A456580FDED2CD0FA9",
