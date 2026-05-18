@@ -784,5 +784,27 @@
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "9EE8F6B59960EE6F620A8779F428FFF40A9623A118E5744DF596E0F8A15454D2"
+  },
+  "NitrokeyGmbH.Nitropy": {
+    "description": "",
+    "version": "0.12.2",
+    "validationCount": 1,
+    "lastUpdated": "2026-05-18T12:15:03.4806983Z",
+    "manifestHash": "2238CA39A3859659AF5E106CB1D12C31727A765F85A057F763E73DE33E254F0B",
+    "installerHashes": [
+      "063A002DDE0A5C36C6627CD647EE31A80BBA5CB45341961669E2B80759AD0E5A"
+    ],
+    "state": "VALIDATION_PASSED"
+  },
+  "FrancisBanyikwa.MediaDownloader": {
+    "description": "",
+    "version": "5.6.1",
+    "validationCount": 1,
+    "lastUpdated": "2026-05-18T12:15:03.5164040Z",
+    "manifestHash": "FCF9003EF1AD1DABD2B178F87BD6823B358F10DCC103107F9F2E6020D183C5A8",
+    "installerHashes": [
+      "294F583D14DA92B4B103FCE6DB049C464A3C5A62F0DA0DAC3B8B406DC47637AB"
+    ],
+    "state": "VALIDATION_PASSED"
   }
 }
