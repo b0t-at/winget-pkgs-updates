@@ -115,16 +115,16 @@
     "validationCount": 1
   },
   "pnpm.pnpm": {
-    "description": "",
-    "lastUpdated": "2026-05-16T04:10:47.5964786Z",
-    "state": "VALIDATION_FAILED",
-    "manifestHash": "1DC9419F3D456F846FDADCEB0D333F1B283A9329652A33216714034E33DBF7FF",
-    "version": "11.1.2",
-    "validationCount": 3,
+    "manifestHash": "A7E6B0BA7253F51D97AC6D606A548135FF15B56212A4592DE6F8E56D353981AA",
+    "version": "11.1.3",
     "installerHashes": [
-      "441509BA8A5E860B7C9F41E3371AAB6D2DDA76A071AA95ABBBEDDA8AB5C84798",
-      "6E84576EE53A948D4AE6F804D5F7FD3A82953EBE7077FC0FDFE004A874BCB438"
-    ]
+      "46D42BA9D141605DFC65819A498B27971C4589C7EF139AD80C5E9DA7A5C34B06",
+      "C4FFA99853BA8724D0526D5B52637AA6EC30F3D2AD958626EB08D10A31322BF1"
+    ],
+    "state": "VALIDATION_FAILED",
+    "lastUpdated": "2026-05-18T16:07:47.4660003Z",
+    "validationCount": 1,
+    "description": ""
   },
   "mmanela.markdownoutlook": {
     "validationCount": 3,
@@ -788,23 +788,34 @@
   "NitrokeyGmbH.Nitropy": {
     "description": "",
     "version": "0.12.2",
-    "validationCount": 1,
-    "lastUpdated": "2026-05-18T12:15:03.4806983Z",
+    "validationCount": 2,
+    "lastUpdated": "2026-05-18T16:07:47.4404792Z",
     "manifestHash": "2238CA39A3859659AF5E106CB1D12C31727A765F85A057F763E73DE33E254F0B",
     "installerHashes": [
       "063A002DDE0A5C36C6627CD647EE31A80BBA5CB45341961669E2B80759AD0E5A"
     ],
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_FAILED"
   },
   "FrancisBanyikwa.MediaDownloader": {
     "description": "",
     "version": "5.6.1",
-    "validationCount": 1,
-    "lastUpdated": "2026-05-18T12:15:03.5164040Z",
+    "validationCount": 2,
+    "lastUpdated": "2026-05-18T16:07:47.4989618Z",
     "manifestHash": "FCF9003EF1AD1DABD2B178F87BD6823B358F10DCC103107F9F2E6020D183C5A8",
     "installerHashes": [
       "294F583D14DA92B4B103FCE6DB049C464A3C5A62F0DA0DAC3B8B406DC47637AB"
     ],
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_FAILED"
+  },
+  "OneKey.OneKey": {
+    "manifestHash": "10B9F68550C52E77EE542B1E35E5DFB203411BBFB405DA0FA0F79E9E904D66ED",
+    "version": "6.3.0",
+    "installerHashes": [
+      "994C4AF48F6F9C0C7F406AC2246CB8298A1DDE4D9765A2D01A155398699B94F2"
+    ],
+    "state": "VALIDATION_FAILED",
+    "lastUpdated": "2026-05-18T16:07:47.4061612Z",
+    "validationCount": 1,
+    "description": ""
   }
 }
