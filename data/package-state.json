@@ -829,5 +829,16 @@
     ],
     "version": "1.0.5",
     "manifestHash": "3ACB1C56699A7FAFBEFA9AAE9CD04C9AD958488CD779AE0E96E1AACC6EBED434"
+  },
+  "ZeroInstall.ZeroInstall": {
+    "lastUpdated": "2026-05-18T21:38:39.9333568Z",
+    "installerHashes": [
+      "0F66626EB19B59494D99D807934453841CB2F96940775490648F4DAB117B10EA"
+    ],
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "manifestHash": "A15973D9F9AD2511B978D3584A5D2C181944DD2B9ADC7CBFBECAE65E7A6A03A0",
+    "version": "2.29.0"
   }
 }
