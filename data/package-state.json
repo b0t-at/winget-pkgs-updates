@@ -122,8 +122,8 @@
       "C4FFA99853BA8724D0526D5B52637AA6EC30F3D2AD958626EB08D10A31322BF1"
     ],
     "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-05-18T18:33:54.2694871Z",
-    "validationCount": 2,
+    "lastUpdated": "2026-05-18T21:46:43.4779053Z",
+    "validationCount": 3,
     "description": ""
   },
   "mmanela.markdownoutlook": {
@@ -457,16 +457,16 @@
     "version": "1.7.8"
   },
   "Fly-io.flyctl": {
-    "state": "VALIDATION_PASSED",
-    "version": "0.4.52",
-    "validationCount": 1,
     "installerHashes": [
-      "BDB1F48E4B0D4C040723DB7C6C7F98944920C03D0345C019FD676A2CEB88B911",
-      "7D9F8EDE586DDF9532B0CE19FC3126C312F0C2B498BB03272D5212F0CA9FE8A4"
+      "674AEBA6B3BFA7A30B206753EC65B840A7944E988CF4CC1584527D6B2D181B3E",
+      "3635FC0F1EA9FE2F060ADB4F34610A9C9F6B291C807E95C0F97FBD6AF5858FE5"
     ],
-    "lastUpdated": "2026-05-14T21:52:15.9258294Z",
+    "lastUpdated": "2026-05-18T21:46:43.5511606Z",
+    "validationCount": 1,
     "description": "",
-    "manifestHash": "A485F40DAEC1ADF6E3E588766271A614AE5B8C6E51A6B6998AE943140A9B6DA8"
+    "state": "VALIDATION_PASSED",
+    "version": "0.4.53",
+    "manifestHash": "55BE9E0908A4292A8BFDEF3EE1C0730360AE7CB2BACEEFC4610CDADF5942E0C1"
   },
   "aimotrens.impulsar": {
     "validationCount": 2,
