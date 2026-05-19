@@ -863,5 +863,27 @@
     "installerHashes": [
       "8977CD7F21AE85C8588B33C3196B3E59A3086432656CB5F4D87E5C0002002AC5"
     ]
+  },
+  "VirusTotal.vt-cli": {
+    "installerHashes": [
+      "0B355668ACBD181B2B8D9A04BCF70853616FB7A96F41491243B8DAAA077DA947"
+    ],
+    "lastUpdated": "2026-05-19T15:56:49.1292974Z",
+    "version": "1.3.1",
+    "validationCount": 1,
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "34578A81C664A5A7F6CE8892ABB8AF558356A16F0C044C900604413CA201D8C0"
+  },
+  "Storj.Uplink": {
+    "installerHashes": [
+      "82FCCE975324DF36D81D739FA5B444118E4E1F418F879807F3209C30F6BE31F3"
+    ],
+    "lastUpdated": "2026-05-19T15:56:49.1529161Z",
+    "version": "1.154.4",
+    "validationCount": 1,
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "E304C16B8C4D729BFBF3BBB7CF8567BC4883D74BA07C6616D66380CA8457692D"
   }
 }
