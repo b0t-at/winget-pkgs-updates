@@ -887,7 +887,7 @@
     "manifestHash": "E304C16B8C4D729BFBF3BBB7CF8567BC4883D74BA07C6616D66380CA8457692D"
   },
   "AdGuard.AdGuardHome": {
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "3F9365DC612C066C74BFFFEE908927129285F05E881D668D058BE58F980E7415",
     "installerHashes": [
       "79ABBA3EB903675B86BD2D8AC2EB01C65BDC116CACA27F7217EDF6B4DCF9C690",
@@ -897,7 +897,7 @@
     "version": "0.107.75",
     "description": "",
     "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-05-19T18:28:40.6520999Z"
+    "lastUpdated": "2026-05-19T21:56:34.8518901Z"
   },
   "Microsoft.PerfView": {
     "validationCount": 1,
@@ -908,6 +908,17 @@
     "version": "3.2.3",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-05-19T18:28:40.6863960Z"
+    "lastUpdated": "2026-05-19T18:28:40.686396Z"
+  },
+  "Gardener.gardenctl": {
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "2.14.0",
+    "installerHashes": [
+      "395A4B4ECF933EE8D4776FBAE04CEA16A053B6F8D0D714DB897523CBCF46E953"
+    ],
+    "lastUpdated": "2026-05-19T21:56:34.8933353Z",
+    "description": "",
+    "manifestHash": "A661BD6FDF80434E2BA33DEBB1A14762E8FF70274E62AF41929EBE7F826E0EC6"
   }
 }
