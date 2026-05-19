@@ -840,5 +840,28 @@
     "validationCount": 1,
     "manifestHash": "A15973D9F9AD2511B978D3584A5D2C181944DD2B9ADC7CBFBECAE65E7A6A03A0",
     "version": "2.29.0"
+  },
+  "Open-Component-Model.ocm-cli": {
+    "lastUpdated": "2026-05-19T11:46:35.269188Z",
+    "state": "VALIDATION_PASSED",
+    "version": "0.42.0",
+    "validationCount": 1,
+    "manifestHash": "5FD80D6DEFB6218FC5977B57F474E35C35EE8A9552F136F6552B4ACAE2B0901A",
+    "description": "",
+    "installerHashes": [
+      "85CDA9D96CD4B77B9B2D2D67404D98A26780391E7300C6F4E18B67564FEC885E",
+      "5638A1385B2046C29EA102A96566853F01A4C735ADE3BDD1206C3AEEB9E94799"
+    ]
+  },
+  "Gardener.gardenlogin": {
+    "lastUpdated": "2026-05-19T11:46:35.3075526Z",
+    "state": "VALIDATION_PASSED",
+    "version": "0.10.0",
+    "validationCount": 1,
+    "manifestHash": "8133760C62EAB08CA52A89BC236B5C1279B73EBA70A8084BF546326FB1088726",
+    "description": "",
+    "installerHashes": [
+      "8977CD7F21AE85C8588B33C3196B3E59A3086432656CB5F4D87E5C0002002AC5"
+    ]
   }
 }
