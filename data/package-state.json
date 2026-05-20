@@ -580,14 +580,14 @@
     "manifestHash": "F5293F39961664A16658CAC29D6D50CD5556C8E82BAA351C1F62CE128F254B5E"
   },
   "Snyk.Snyk": {
-    "description": "",
-    "validationCount": 1,
-    "lastUpdated": "2026-05-13T15:13:11.9455513Z",
-    "manifestHash": "0E2CCECEE78EC123F7121E8E4B1E68DC0C73D7A2CC10FB7A3676E5A25AB3D81F",
-    "version": "1.1304.3",
     "state": "VALIDATION_PASSED",
+    "description": "",
+    "lastUpdated": "2026-05-20T16:07:00.7605511Z",
+    "version": "1.1305.0",
+    "manifestHash": "D1CAD2E498496CB9B20576E9AB0AACBC99189F604930D9F09AB92CF04507D6BC",
+    "validationCount": 1,
     "installerHashes": [
-      "44FEF279EB33274DE1FC621E86B92220D869C89F70BC666224877CC495E07A2B"
+      "7493439E5F23BC483E443E190AF85140E62CB8DD01C99CF988224A18074B3595"
     ]
   },
   "jaegertracing.jaeger": {
@@ -967,5 +967,38 @@
     "lastUpdated": "2026-05-20T11:41:23.841605Z",
     "version": "2026.5.0",
     "state": "VALIDATION_PASSED"
+  },
+  "vcmi.vcmi": {
+    "state": "VALIDATION_FAILED",
+    "description": "",
+    "lastUpdated": "2026-05-20T16:07:00.7111648Z",
+    "version": "1.7.4",
+    "manifestHash": "6633C59A870B332CE88511C3477E263506B4D0A388D8C3875095CCAE613A7719",
+    "validationCount": 1,
+    "installerHashes": [
+      "F2068C1F0BE6D2E77C2D37D3F270DA55AC4E049E58DDBE9D4120266897FBA819"
+    ]
+  },
+  "tagspaces.tagspaces": {
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "lastUpdated": "2026-05-20T16:07:00.743579Z",
+    "version": "6.12.1",
+    "manifestHash": "B660134058D489D68701C19CBC0EDD324516195242BB6FD7C98281330123C658",
+    "validationCount": 1,
+    "installerHashes": [
+      "794C9D81968A85E3F2DD7243E9A4C3DB73B1ACDDCB2E534A013502BAD86A62B1"
+    ]
+  },
+  "Yaak.app": {
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "lastUpdated": "2026-05-20T16:07:00.7521434Z",
+    "version": "2026.4.0",
+    "manifestHash": "33820A5667B243C77A4EA134145D05FEF8BE8F26E8F6B4F129E82BC446B4D227",
+    "validationCount": 1,
+    "installerHashes": [
+      "026DC0753F4880313B93BBFF848A9CD09A114F87111AAAEF5E4E698C52C8B561"
+    ]
   }
 }
