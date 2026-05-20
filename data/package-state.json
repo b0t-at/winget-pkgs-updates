@@ -481,15 +481,15 @@
     "manifestHash": "F0E315E013FBE215D1636A3BC78DF0F9B9B97C9398E8C29903C27A0661DF29B9"
   },
   "bcssov.IronyModManager": {
-    "manifestHash": "1E4CA6913F8FA38C6EF0DD225AB59402F8F825DD5FFF8F09DF742158514A74FF",
+    "description": "",
+    "version": "1.27.180",
+    "state": "VALIDATION_FAILED",
     "validationCount": 1,
     "installerHashes": [
-      "036DA24B8529BCA5CC14F4BF289A1D8F89976BD0381F384243A828F63ABF1222"
+      "EA9F8E83B3627380603E8592179F2AC3CF39FA2E8DAC92393FE006228B39BCF3"
     ],
-    "version": "1.27.175",
-    "lastUpdated": "2026-05-12T04:23:38.8158834Z",
-    "description": "",
-    "state": "VALIDATION_PASSED"
+    "manifestHash": "41410FB81D0FC29F0C80523E276349FF5244B84C2FD9A22497445805459B0C03",
+    "lastUpdated": "2026-05-20T04:39:57.6182271Z"
   },
   "AppFlowy.AppFlowy": {
     "installerHashes": [
@@ -717,15 +717,15 @@
     "manifestHash": "B0DB2A09F6E1B11335979AB4ECB7C19E032761B7BC9CB55FFC3230E4E14AB3E3"
   },
   "bornova.numara": {
+    "description": "",
+    "version": "6.10.4",
     "state": "VALIDATION_PASSED",
-    "version": "6.10.3",
     "validationCount": 1,
     "installerHashes": [
-      "217B3CC55446C997C80E8A3DE5C1A667714FEA9B3172F4D553CEA47BD2E7034F"
+      "5C36B84BA43ECCCACA862D1B29D5A0438206599B8E1EED75F123394E32B2502B"
     ],
-    "lastUpdated": "2026-05-14T21:52:15.9589779Z",
-    "description": "",
-    "manifestHash": "CDEDAA95CED9DB3C6A765EE91CA4FD90F8596ACE5905FD2D1D34D154E730DCDE"
+    "manifestHash": "D85360E12E436F30B102433DB1C555C1F85FD2657E2463607E51979640EEF33F",
+    "lastUpdated": "2026-05-20T04:39:57.6746585Z"
   },
   "seerge.g-helper": {
     "state": "VALIDATION_FAILED",
@@ -887,7 +887,7 @@
     "manifestHash": "E304C16B8C4D729BFBF3BBB7CF8567BC4883D74BA07C6616D66380CA8457692D"
   },
   "AdGuard.AdGuardHome": {
-    "validationCount": 2,
+    "validationCount": 3,
     "manifestHash": "3F9365DC612C066C74BFFFEE908927129285F05E881D668D058BE58F980E7415",
     "installerHashes": [
       "79ABBA3EB903675B86BD2D8AC2EB01C65BDC116CACA27F7217EDF6B4DCF9C690",
@@ -897,7 +897,7 @@
     "version": "0.107.75",
     "description": "",
     "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-05-19T21:56:34.8518901Z"
+    "lastUpdated": "2026-05-20T04:39:57.6555168Z"
   },
   "Microsoft.PerfView": {
     "validationCount": 1,
@@ -920,5 +920,17 @@
     "lastUpdated": "2026-05-19T21:56:34.8933353Z",
     "description": "",
     "manifestHash": "A661BD6FDF80434E2BA33DEBB1A14762E8FF70274E62AF41929EBE7F826E0EC6"
+  },
+  "Google.Protobuf": {
+    "description": "",
+    "version": "35.0",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "installerHashes": [
+      "99FF33772CA055CD096782D05395BBCC4B6187CCE284D2A914FC3745D3ECB6B6",
+      "D1CEDE9E308CC3EB072392AF1C02CCAE4BDD3D2F374EC2970DBD8CDFDAA91363"
+    ],
+    "manifestHash": "D6339F03C18BB411ADE1182621171DACC6EF07B205D9285E8137E405BB1FDF98",
+    "lastUpdated": "2026-05-20T04:39:57.6836507Z"
   }
 }
