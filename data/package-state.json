@@ -121,10 +121,10 @@
     ],
     "description": "",
     "manifestHash": "32BB62A2ABA4891D6E2F3795CB819558A2932885A84ECFD04B91A613CB061E42",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "11.2.1",
     "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-05-20T18:53:26.4176423Z"
+    "lastUpdated": "2026-05-21T05:11:40.6814326Z"
   },
   "mmanela.markdownoutlook": {
     "validationCount": 3,
@@ -458,15 +458,15 @@
   },
   "Fly-io.flyctl": {
     "installerHashes": [
-      "674AEBA6B3BFA7A30B206753EC65B840A7944E988CF4CC1584527D6B2D181B3E",
-      "3635FC0F1EA9FE2F060ADB4F34610A9C9F6B291C807E95C0F97FBD6AF5858FE5"
+      "CACF1CF2A96D842A0916243321425DD0A7FE233E18E9F74652E324AF9CA6322E",
+      "AF271EB9761E53216879B23DCD8C31E0F6176D3A3B7EAF0685F506D7D7BB197E"
     ],
-    "lastUpdated": "2026-05-18T21:46:43.5511606Z",
-    "validationCount": 1,
     "description": "",
     "state": "VALIDATION_PASSED",
-    "version": "0.4.53",
-    "manifestHash": "55BE9E0908A4292A8BFDEF3EE1C0730360AE7CB2BACEEFC4610CDADF5942E0C1"
+    "manifestHash": "27E0F1E9BC73D0024CB532CEC59BB91DC86D6CD3F78006233A0D07BAF1085192",
+    "version": "0.4.54",
+    "lastUpdated": "2026-05-21T05:11:40.7433469Z",
+    "validationCount": 1
   },
   "aimotrens.impulsar": {
     "validationCount": 2,
@@ -481,15 +481,15 @@
     "manifestHash": "F0E315E013FBE215D1636A3BC78DF0F9B9B97C9398E8C29903C27A0661DF29B9"
   },
   "bcssov.IronyModManager": {
-    "manifestHash": "405B0FC73C9CEC123C98640F0A3708071A31798C4A802724B93AC5C432FF06E1",
-    "description": "",
     "installerHashes": [
-      "278010E9DBD86772F1A73CDFA8886E1FCB222CE64EB8BB3217EFA7CB80EC7331"
+      "62142D1D30187DBCAF5B1F1AD1C3F9645D7CD02F5FED822026110D5D341A1D1F"
     ],
-    "validationCount": 1,
-    "lastUpdated": "2026-05-20T11:41:23.8499664Z",
-    "version": "1.27.181",
-    "state": "VALIDATION_PASSED"
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "0E96410B30627818F1E20231D84DFCFB60E33541E19B8F685088D28F672FEB5A",
+    "version": "1.27.182",
+    "lastUpdated": "2026-05-21T05:11:40.7827284Z",
+    "validationCount": 1
   },
   "AppFlowy.AppFlowy": {
     "installerHashes": [
@@ -613,15 +613,15 @@
     "manifestHash": "5B1DB443C3D0E7A9ABA1D715CB10549FB09F1A255D587296E54A5496CE269A34"
   },
   "FOSSA.FOSSA-cli": {
+    "installerHashes": [
+      "1C85AD0EFC538DE25E36AD96E751D04C7FAA72C8B11A9ACE77B73EFC27EEED15"
+    ],
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-05-18T18:33:54.3379377Z",
-    "validationCount": 1,
-    "installerHashes": [
-      "CC58B5FB9CEDBFCE95326BD38580B7876A07C544B8F9A0776173DC673D7A0735"
-    ],
-    "version": "3.17.7",
-    "manifestHash": "DAAAFF3F571D3F61EAB0CDE9DA42B60206D74CC8D36284C2FC4CADF90005DCAD"
+    "manifestHash": "11F7F3310132D3B97DBDF709D3D3D0D26692DEAC77EE300527C1007108DA4F70",
+    "version": "3.17.8",
+    "lastUpdated": "2026-05-21T05:11:40.7543369Z",
+    "validationCount": 1
   },
   "Google.FirebaseCLI": {
     "version": "15.18.0",
@@ -706,15 +706,15 @@
     "state": "VALIDATION_PASSED"
   },
   "KeeperSecurity.Commander": {
-    "state": "VALIDATION_PASSED",
-    "version": "18.0.1",
-    "validationCount": 1,
     "installerHashes": [
-      "F1581F27B8C294CC211BA6EE65267B738D0D82327C030205594393AD8DEC8F2D"
+      "13137C70CE567EE22A047CC1BDF9CBFFA280903CBC665BBD4307910F21AE2FE9"
     ],
-    "lastUpdated": "2026-05-14T21:52:15.9370312Z",
     "description": "",
-    "manifestHash": "B0DB2A09F6E1B11335979AB4ECB7C19E032761B7BC9CB55FFC3230E4E14AB3E3"
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "BD9AA716D89DC05987C6881FD9BD1E3BFE208BAD0E4F2C0C2FDE7CB732FD1DFC",
+    "version": "18.0.2",
+    "lastUpdated": "2026-05-21T05:11:40.7634263Z",
+    "validationCount": 1
   },
   "bornova.numara": {
     "description": "",
@@ -1038,5 +1038,16 @@
     ],
     "validationCount": 1,
     "lastUpdated": "2026-05-20T22:15:05.5255716Z"
+  },
+  "Pulsar-Edit.Pulsar": {
+    "installerHashes": [
+      "0086DD54CAA0A325162CE915CBB3BF5ECCA0BD11F9DF81E97665EF48E64EEFB9"
+    ],
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "3389DA47520FA2390E609715ED7348FA4481BF22E8337A77FA9664D31D28B9EB",
+    "version": "1.132.1",
+    "lastUpdated": "2026-05-21T05:11:40.7723427Z",
+    "validationCount": 1
   }
 }
