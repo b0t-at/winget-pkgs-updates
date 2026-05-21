@@ -115,16 +115,16 @@
     "validationCount": 1
   },
   "pnpm.pnpm": {
-    "installerHashes": [
-      "A7B6B7E51FE6585E2BE9B61028FB3B81A5A43E6C420BC30B5AE47F00CF61087A",
-      "6FFBEF63ACFB6C14DD6446F312E4E1BD21F0B4245D7BB43792B39D00EDF08D2A"
-    ],
-    "description": "",
-    "manifestHash": "32BB62A2ABA4891D6E2F3795CB819558A2932885A84ECFD04B91A613CB061E42",
-    "validationCount": 2,
-    "version": "11.2.1",
+    "validationCount": 1,
     "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-05-21T05:11:40.6814326Z"
+    "manifestHash": "CBA8CBDE63458FC898EF89A4479D81D9D5DBC64C004ABFA5F359E31ED2E5C8C9",
+    "version": "11.2.2",
+    "lastUpdated": "2026-05-21T16:14:12.0787155Z",
+    "installerHashes": [
+      "C904BFF9595CD681BB8C396B454677A5294217E1726B7AFCA1839BBBB31A91D2",
+      "75B660565660B2A34A404CB1228FF5523B53B06F83043D87E0A173B6E8AD572F"
+    ],
+    "description": ""
   },
   "mmanela.markdownoutlook": {
     "validationCount": 3,
@@ -344,13 +344,13 @@
     "description": ""
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
-    "validationCount": 2,
-    "version": "3.7.1",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "manifestHash": "457F64F87EAEDA04962B74F3CA926EAA7BA1A69C5F0E4F841D07CBD62807C905",
-    "lastUpdated": "2026-05-11T11:58:04.9741697Z",
+    "manifestHash": "6D5C121F293F8FF2B1572849E615A4218F568D57D8DEBDDBBF2FCA0370633614",
+    "version": "3.7.2",
+    "lastUpdated": "2026-05-21T16:14:12.1604607Z",
     "installerHashes": [
-      "4A8B0B026F8E85BBC687C633D4D221662FA89D866A7DAE34FC06D38512DC5D5C"
+      "46BAB637983BB80417A58AEA8240AFA16A3A8A3897DE4EAB8A62D4DBFB926CA1"
     ],
     "description": ""
   },
@@ -717,15 +717,15 @@
     "validationCount": 1
   },
   "bornova.numara": {
-    "description": "",
-    "version": "6.10.4",
-    "state": "VALIDATION_PASSED",
     "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "5199D13B31D4182F3288E216C5F805A7B531DB41D5F7B853609A1A0CFD83CCD2",
+    "version": "6.10.5",
+    "lastUpdated": "2026-05-21T16:14:12.1423544Z",
     "installerHashes": [
-      "5C36B84BA43ECCCACA862D1B29D5A0438206599B8E1EED75F123394E32B2502B"
+      "D72E5093C5C1CBF02C7BCAB05E02B0C65DB708978BC2352BD96C3AD1769864BB"
     ],
-    "manifestHash": "D85360E12E436F30B102433DB1C555C1F85FD2657E2463607E51979640EEF33F",
-    "lastUpdated": "2026-05-20T04:39:57.6746585Z"
+    "description": ""
   },
   "seerge.g-helper": {
     "state": "VALIDATION_FAILED",
@@ -1060,5 +1060,16 @@
     "manifestHash": "57F9CCFE53F382475CCBC13B901236DECA7A49A72F2EEE1C4D926ACE48F50ABF",
     "description": "",
     "validationCount": 1
+  },
+  "ASGARDEXMaintainers.ASGARDEX": {
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "F026327CBE3F978CE370F861830480BAE52D764BB3E11682CEECD639204F2BFD",
+    "version": "1.43.3",
+    "lastUpdated": "2026-05-21T16:14:12.1510136Z",
+    "installerHashes": [
+      "170E4512015E1C3C5143CFBD0E0F7C4C00C49CC6E1FA87C5B92813986784F62A"
+    ],
+    "description": ""
   }
 }
