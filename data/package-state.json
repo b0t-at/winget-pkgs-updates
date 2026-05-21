@@ -1049,5 +1049,16 @@
     "version": "1.132.1",
     "lastUpdated": "2026-05-21T05:11:40.7723427Z",
     "validationCount": 1
+  },
+  "sparrowwallet.sparrow": {
+    "state": "VALIDATION_PASSED",
+    "version": "2.5.0",
+    "lastUpdated": "2026-05-21T11:45:24.7633932Z",
+    "installerHashes": [
+      "FFAB6FD3F09BD9FB381F3D56C778BA50D13F6A92FE6806383AA2514BBFB87F25"
+    ],
+    "manifestHash": "57F9CCFE53F382475CCBC13B901236DECA7A49A72F2EEE1C4D926ACE48F50ABF",
+    "description": "",
+    "validationCount": 1
   }
 }
