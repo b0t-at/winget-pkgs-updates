@@ -706,15 +706,15 @@
     "state": "VALIDATION_PASSED"
   },
   "KeeperSecurity.Commander": {
+    "manifestHash": "6A182A916A6F4664DBC9C6C9BE67087FFD43CC00F04251DDD245372276AE2C27",
     "installerHashes": [
-      "13137C70CE567EE22A047CC1BDF9CBFFA280903CBC665BBD4307910F21AE2FE9"
+      "D31090F9E349EB4A066FB79389A97A05D9486BA6A28AC952B9270CCAA2254F3D"
     ],
+    "lastUpdated": "2026-05-22T21:37:55.4965054Z",
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "BD9AA716D89DC05987C6881FD9BD1E3BFE208BAD0E4F2C0C2FDE7CB732FD1DFC",
-    "version": "18.0.2",
-    "lastUpdated": "2026-05-21T05:11:40.7634263Z",
-    "validationCount": 1
+    "version": "18.0.3",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
   },
   "bornova.numara": {
     "validationCount": 1,
