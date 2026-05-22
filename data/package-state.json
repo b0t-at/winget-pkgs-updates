@@ -888,8 +888,8 @@
   },
   "AdGuard.AdGuardHome": {
     "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-05-22T04:41:56.7783548Z",
-    "validationCount": 2,
+    "lastUpdated": "2026-05-22T11:26:50.2054338Z",
+    "validationCount": 3,
     "description": "",
     "installerHashes": [
       "C3AD01D1EEF8E1E28168C6E0059E8C94253BB4CE8FBD4601C11918B8B8F3F93C",
