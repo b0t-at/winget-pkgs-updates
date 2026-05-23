@@ -1134,8 +1134,8 @@
     "validationCount": 1
   },
   "xpipe-io.xpipe.portable": {
-    "validationCount": 1,
-    "lastUpdated": "2026-05-23T10:11:01.3983074Z",
+    "validationCount": 2,
+    "lastUpdated": "2026-05-23T14:03:05.1441435Z",
     "state": "VALIDATION_FAILED",
     "manifestHash": "F1244A50FAB56A216B64DF90946937DB52A8777B8BB390C9C6BFA6CCCB48E526",
     "version": "23.0.1",
