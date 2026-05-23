@@ -739,15 +739,15 @@
     "validationCount": 3
   },
   "SimpleX.SimpleX-Chat": {
+    "version": "6.5.2",
+    "validationCount": 1,
+    "lastUpdated": "2026-05-23T17:25:20.4568944Z",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "C6A156CE5659D11C8ED1EB75CC9DBC2D86311C9E23FE6EFC0FEE932566D86810",
-    "version": "6.5.1",
     "installerHashes": [
-      "FD2ACA4D682836FCB80377B9EB81A7D0DA8204103702EED4BF2245A25537E6B8"
+      "708DE9A9F3739CEF80E02AEDE407C4191E935F83B52A28399B2A8677AFD93FB3"
     ],
-    "description": "",
-    "lastUpdated": "2026-05-15T10:45:48.015199Z",
-    "validationCount": 1
+    "manifestHash": "0EF2012A4B1D34FD6DE9CF198A8818DBAA30B18A3D6EE2F75F0E1837A9C28597",
+    "description": ""
   },
   "cinnyapp.cinny-desktop": {
     "manifestHash": "692D9E4B4D7299C37BBD48137FE9101F344266D5F2468AB13D6F375F84324D14",
@@ -1134,8 +1134,8 @@
     "validationCount": 1
   },
   "xpipe-io.xpipe.portable": {
-    "validationCount": 2,
-    "lastUpdated": "2026-05-23T14:03:05.1441435Z",
+    "validationCount": 3,
+    "lastUpdated": "2026-05-23T17:25:20.3920942Z",
     "state": "VALIDATION_FAILED",
     "manifestHash": "F1244A50FAB56A216B64DF90946937DB52A8777B8BB390C9C6BFA6CCCB48E526",
     "version": "23.0.1",
