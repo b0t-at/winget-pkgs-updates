@@ -115,13 +115,13 @@
     "validationCount": 1
   },
   "pnpm.pnpm": {
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "1264CAA0DCAD06849CFD04B939F19A64C5349D5DD49F14DADBC06703C6E42653",
       "92A7F5617D53574BD408D09A6D49123CC3B707E490A8EF869698C7FF45446D2A"
     ],
     "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-05-24T14:10:09.0831288Z",
+    "lastUpdated": "2026-05-24T17:31:35.453451Z",
     "version": "11.3.0",
     "description": "",
     "manifestHash": "4D47047662AECC9AC3039C176349F2A7A6171E894730975E025FA18C05CD8056"
@@ -536,15 +536,15 @@
     "lastUpdated": "2026-05-12T18:31:20.6867887Z"
   },
   "Concourse.Fly": {
-    "state": "VALIDATION_PASSED",
-    "version": "8.2.1",
-    "lastUpdated": "2026-05-12T21:56:10.2055682Z",
-    "description": "",
-    "manifestHash": "C72113B2DCA0A3EE55F44D0EB37AC91B9D8DFA6AEF6D347668E8E5E2AE9D9DA6",
-    "validationCount": 1,
+    "manifestHash": "3025AC560303CCFABB3FE7027042A46A4908239BC9D33E11436D6ECA4A0B1361",
     "installerHashes": [
-      "EB2CE680B30471B95C75045BE442DF755B238BE89C6044243EE35192CCC0CB29"
-    ]
+      "0B18933695E5BD4138341A58AFC6138A135A842C9E654A2846909EF99396E0C7"
+    ],
+    "validationCount": 1,
+    "version": "8.2.2",
+    "lastUpdated": "2026-05-24T17:31:35.5369094Z",
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "argoproj.argocd": {
     "state": "VALIDATION_PASSED",
@@ -1153,6 +1153,17 @@
     "installerHashes": [
       "6CF71BA45C2D4AAAF76E8DDD8D401980998A97FB2EC3B3763E0656DA3656C40E"
     ],
+    "description": ""
+  },
+  "altair-graphql.altair": {
+    "manifestHash": "9FF2D11F35507838E38F9BCB4821CF4C0C8C0F583D6B77E75E4EC6B084B84791",
+    "installerHashes": [
+      "2BED89CAB131B703BC59EC50F86EAAB7B4440FD3DB881FEF1D934A320C767DF5"
+    ],
+    "validationCount": 1,
+    "version": "8.5.3",
+    "lastUpdated": "2026-05-24T17:31:35.527346Z",
+    "state": "VALIDATION_PASSED",
     "description": ""
   }
 }
