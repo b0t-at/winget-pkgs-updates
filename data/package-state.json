@@ -115,13 +115,13 @@
     "validationCount": 1
   },
   "pnpm.pnpm": {
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "1264CAA0DCAD06849CFD04B939F19A64C5349D5DD49F14DADBC06703C6E42653",
       "92A7F5617D53574BD408D09A6D49123CC3B707E490A8EF869698C7FF45446D2A"
     ],
     "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-05-24T10:20:35.1359629Z",
+    "lastUpdated": "2026-05-24T14:10:09.0831288Z",
     "version": "11.3.0",
     "description": "",
     "manifestHash": "4D47047662AECC9AC3039C176349F2A7A6171E894730975E025FA18C05CD8056"
