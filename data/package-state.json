@@ -457,16 +457,16 @@
     "version": "1.7.8"
   },
   "Fly-io.flyctl": {
-    "installerHashes": [
-      "CACF1CF2A96D842A0916243321425DD0A7FE233E18E9F74652E324AF9CA6322E",
-      "AF271EB9761E53216879B23DCD8C31E0F6176D3A3B7EAF0685F506D7D7BB197E"
-    ],
-    "description": "",
+    "manifestHash": "FECF64C0B16C85BE4A38EF1AD468C27FC6942BF0073E48849DDB4E7BB985A94F",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "manifestHash": "27E0F1E9BC73D0024CB532CEC59BB91DC86D6CD3F78006233A0D07BAF1085192",
-    "version": "0.4.54",
-    "lastUpdated": "2026-05-21T05:11:40.7433469Z",
-    "validationCount": 1
+    "description": "",
+    "lastUpdated": "2026-05-25T21:41:21.4455196Z",
+    "version": "0.4.55",
+    "installerHashes": [
+      "D01C08FDAF6FC3F17FBA8C720AC67A7CC5A7C6DC7B1053427102C96D3A018E5C",
+      "6FD9C33397A237D00B570EE1AF38282343C8DE3C29D7EAF4D4B7AD124B33F6D2"
+    ]
   },
   "aimotrens.impulsar": {
     "validationCount": 2,
@@ -1165,5 +1165,28 @@
     "lastUpdated": "2026-05-24T17:31:35.527346Z",
     "state": "VALIDATION_PASSED",
     "description": ""
+  },
+  "bufbuild.buf": {
+    "manifestHash": "818A6AD5E2389CA94E4A6D72D19D871385A210678FF180A712A4FBE9C8044BB1",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "lastUpdated": "2026-05-25T21:41:21.4729735Z",
+    "version": "1.70.0",
+    "installerHashes": [
+      "96422E4313EFE2741946F31F57AB4000C440B48D14936992AB98E94C16322F6F",
+      "1E5367F6CA2B781FAC85BFCDF43640E146B0261C782D8352E13D5C2734DC7FE0"
+    ]
+  },
+  "PasteIntoFile.PasteIntoFile": {
+    "manifestHash": "2A58645323CF7B59F73C09EDBC577DDC24AD3BAF20371F90F10BDDE91C874B7C",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "lastUpdated": "2026-05-25T21:41:21.4830997Z",
+    "version": "5.6.1",
+    "installerHashes": [
+      "EC03659D9D52851D0ADE06EB32A02FA25ADAB88AFB6E0060DFC23A60A402927E"
+    ]
   }
 }
