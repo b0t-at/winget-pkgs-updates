@@ -492,15 +492,15 @@
     "lastUpdated": "2026-05-23T14:15:42.0890734Z"
   },
   "AppFlowy.AppFlowy": {
+    "version": "0.12.0",
+    "manifestHash": "11200445ED91E69A19D729914DCF50C8D69856D4FB6CADE15AF28A61D18BE872",
     "installerHashes": [
-      "26E0977E5151D8E183F8DC2C60C71B8D2C9FFF99BE774C40094AC9581A384281"
+      "2245C1285740ECBCEC9AC3D60098A2020836C28F4EC68F63264DA4FDC76A15A7"
     ],
-    "description": "",
-    "manifestHash": "5C3B308E9392CA3BCB134577322999874BEB969ABFF528278AFD7DFF850B23B4",
-    "lastUpdated": "2026-05-12T07:07:03.3801463Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-05-25T15:50:44.654985Z",
     "state": "VALIDATION_PASSED",
-    "version": "0.11.9"
+    "validationCount": 1,
+    "description": ""
   },
   "mitmproxy.mitmproxy": {
     "lastUpdated": "2026-05-12T15:05:19.4011587Z",
@@ -819,16 +819,16 @@
     "description": ""
   },
   "Gruntwork.Terragrunt": {
-    "description": "",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-05-18T18:33:54.3480189Z",
-    "validationCount": 1,
+    "version": "1.0.6",
+    "manifestHash": "63CEA244B1C1A38A0A7293B046EB883606FBF2281213094D57026BEEB5038A5D",
     "installerHashes": [
-      "970FAAE95A9795E9227DA5D5776525120837DA2382DAB0B28C5B9C85B3DBB319",
-      "F6D8AE6BFC13C56A9784DB8FC85DB8BAF98D225D0E509F3F14E7CF3B670039E7"
+      "064D5BCB6E88E85E9D68C3E132F11D312BB75A4530E1369CAB1B936BFDB1A5CD",
+      "EB6E15A785144530153658B4B4AA8CBD1F4A91634F8133C0917DAF9AB61FBDE5"
     ],
-    "version": "1.0.5",
-    "manifestHash": "3ACB1C56699A7FAFBEFA9AAE9CD04C9AD958488CD779AE0E96E1AACC6EBED434"
+    "lastUpdated": "2026-05-25T15:50:44.6806306Z",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "description": ""
   },
   "ZeroInstall.ZeroInstall": {
     "lastUpdated": "2026-05-18T21:38:39.9333568Z",
