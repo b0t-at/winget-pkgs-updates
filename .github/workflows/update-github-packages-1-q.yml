@@ -639,7 +639,7 @@ jobs:
             url: https://github.com/nats-io/natscli/releases/download/v{VERSION}/nats-{VERSION}-windows-386.zip https://github.com/nats-io/natscli/releases/download/v{VERSION}/nats-{VERSION}-windows-amd64.zip https://github.com/nats-io/natscli/releases/download/v{VERSION}/nats-{VERSION}-windows-arm64.zip
           - id: Neovim.Neovim
             repo: neovim/neovim
-            url: https://github.com/neovim/neovim/releases/download/v{VERSION}/nvim-win64.msi
+            url: https://github.com/neovim/neovim/releases/download/v{VERSION}/nvim-win64.msi https://github.com/neovim/neovim/releases/download/v{VERSION}/nvim-win-arm64.msi
           - id: Netmaker.Netmaker
             repo: gravitl/netmaker
             url: https://github.com/gravitl/netmaker/releases/download/v{VERSION}/nmctl-windows-amd64.exe
