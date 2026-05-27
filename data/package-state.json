@@ -1212,5 +1212,16 @@
     "state": "VALIDATION_PASSED",
     "description": "",
     "version": "1.7.24"
+  },
+  "TravisLane.SteamArtManager": {
+    "lastUpdated": "2026-05-27T22:17:39.3331038Z",
+    "version": "3.13.0",
+    "installerHashes": [
+      "8210DDA45D2CC7C33D36286E64E6175C20EBC4FE63E74704937CC7FEDAE65FE3"
+    ],
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "D1085F49F156CF0DA4F0A5C6D9C19C6BECAC73CFD13DD632ECCB284849C8A0E1",
+    "description": "",
+    "validationCount": 1
   }
 }
