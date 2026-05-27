@@ -492,15 +492,15 @@
     "lastUpdated": "2026-05-23T14:15:42.0890734Z"
   },
   "AppFlowy.AppFlowy": {
-    "version": "0.12.0",
-    "manifestHash": "11200445ED91E69A19D729914DCF50C8D69856D4FB6CADE15AF28A61D18BE872",
     "installerHashes": [
-      "2245C1285740ECBCEC9AC3D60098A2020836C28F4EC68F63264DA4FDC76A15A7"
+      "775248B44EA03C3780A05A8ABBB230F7DAB2E66BE16CB6412DEBC8B9C9361E27"
     ],
-    "lastUpdated": "2026-05-25T15:50:44.654985Z",
-    "state": "VALIDATION_PASSED",
+    "manifestHash": "EC1E42222116470D7C50299E6BAECB2501255D3D84F57C625E5597D3899DA49E",
+    "version": "0.12.1",
     "validationCount": 1,
-    "description": ""
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "lastUpdated": "2026-05-27T05:05:41.6574777Z"
   },
   "mitmproxy.mitmproxy": {
     "lastUpdated": "2026-05-12T15:05:19.4011587Z",
@@ -706,15 +706,15 @@
     "state": "VALIDATION_PASSED"
   },
   "KeeperSecurity.Commander": {
-    "manifestHash": "6A182A916A6F4664DBC9C6C9BE67087FFD43CC00F04251DDD245372276AE2C27",
     "installerHashes": [
-      "D31090F9E349EB4A066FB79389A97A05D9486BA6A28AC952B9270CCAA2254F3D"
+      "D50F364AA3F9CF4EC2020C9EAE7A25E4BC283830196A7F657FD09F7432B5A845"
     ],
-    "lastUpdated": "2026-05-22T21:37:55.4965054Z",
-    "description": "",
-    "version": "18.0.3",
+    "manifestHash": "F1378C37CDC881DBC5890EB546945930C35EB1EEB13FECD3F3AE8D74A794ED3B",
+    "version": "18.0.4",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "lastUpdated": "2026-05-27T05:05:41.6839683Z"
   },
   "bornova.numara": {
     "validationCount": 1,
@@ -1188,5 +1188,16 @@
     "installerHashes": [
       "EC03659D9D52851D0ADE06EB32A02FA25ADAB88AFB6E0060DFC23A60A402927E"
     ]
+  },
+  "ciromattia.KCC": {
+    "installerHashes": [
+      "2ACB62FBC158D55D6E8E6DC957029D5E87CC955C6F24C150F109E1E2ED2E8560"
+    ],
+    "manifestHash": "64570A58B1BE441D9092DA4D1DE67678371A4C4D19C070D818E4074BED704668",
+    "version": "10.2.0",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "lastUpdated": "2026-05-27T05:05:41.6929733Z"
   }
 }
