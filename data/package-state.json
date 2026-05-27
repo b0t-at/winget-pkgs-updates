@@ -115,16 +115,16 @@
     "validationCount": 1
   },
   "pnpm.pnpm": {
-    "validationCount": 3,
-    "installerHashes": [
-      "1264CAA0DCAD06849CFD04B939F19A64C5349D5DD49F14DADBC06703C6E42653",
-      "92A7F5617D53574BD408D09A6D49123CC3B707E490A8EF869698C7FF45446D2A"
-    ],
+    "lastUpdated": "2026-05-27T16:26:36.1280659Z",
+    "validationCount": 1,
     "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-05-24T17:31:35.453451Z",
-    "version": "11.3.0",
     "description": "",
-    "manifestHash": "4D47047662AECC9AC3039C176349F2A7A6171E894730975E025FA18C05CD8056"
+    "version": "11.4.0",
+    "installerHashes": [
+      "84CE90E38BC0B1164173EB853A0FBFFC7EDCB050CB0D5C8CE4CA609F5C808E0A",
+      "0E806A97FF47396FC86769F27C4ED1BDEA4777AD40F0D7170A6247E859EB515A"
+    ],
+    "manifestHash": "BF2ABE4A6D12A5297BA82D7A567ABFE482DFAA933F0B24BEBDFF3388373528A5"
   },
   "mmanela.markdownoutlook": {
     "validationCount": 3,
@@ -536,15 +536,15 @@
     "lastUpdated": "2026-05-12T18:31:20.6867887Z"
   },
   "Concourse.Fly": {
-    "manifestHash": "3025AC560303CCFABB3FE7027042A46A4908239BC9D33E11436D6ECA4A0B1361",
-    "installerHashes": [
-      "0B18933695E5BD4138341A58AFC6138A135A842C9E654A2846909EF99396E0C7"
-    ],
+    "lastUpdated": "2026-05-27T16:26:36.2178927Z",
     "validationCount": 1,
-    "version": "8.2.2",
-    "lastUpdated": "2026-05-24T17:31:35.5369094Z",
     "state": "VALIDATION_PASSED",
-    "description": ""
+    "description": "",
+    "version": "8.2.3",
+    "installerHashes": [
+      "84DE59456501F92E8E76872D3772353C83AB91326E077F3771F731C4953AA738"
+    ],
+    "manifestHash": "17FC8EAEA7CAC4E5B670A9420E820AA5E088E4B5296FCE8D80E964FED4344F9A"
   },
   "argoproj.argocd": {
     "state": "VALIDATION_PASSED",
@@ -934,15 +934,15 @@
     "lastUpdated": "2026-05-20T04:39:57.6836507Z"
   },
   "Forkgram.Forkgram": {
-    "manifestHash": "13C3C203C345E1CC9AD450D42E2E52457DA6877F505E4E2D0EA475BEFBA017BF",
-    "description": "",
-    "installerHashes": [
-      "7EBCCA70A145B7B369D1319AADAB7C7659DF2467EBCAFFBA8ABD389F4A75FC24"
-    ],
+    "lastUpdated": "2026-05-27T16:26:36.2062841Z",
     "validationCount": 1,
-    "lastUpdated": "2026-05-20T11:41:23.8236685Z",
-    "version": "6.8.3",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "version": "6.8.4",
+    "installerHashes": [
+      "BECE623AE1B53032E30DFD2B66B0D84BD8D9ACC3B228F4C8A2DEFADCAD5ABD46"
+    ],
+    "manifestHash": "F93E2597ACB56D0C044CB00E52F16FF21D76E04178020793B5E73A120FE723AE"
   },
   "JanProchazka.dbgate": {
     "manifestHash": "FDB3E86558FECFB77E5C8427467969CFC07BB6255E15C1F73D07A82D2404108A",
