@@ -92,14 +92,14 @@
     "validationCount": 1
   },
   "rejetto.hfs": {
-    "lastUpdated": "2026-05-14T18:13:11.758698Z",
-    "installerHashes": [
-      "05AF3ED1B78757AB5B061F5E1188685500B51F1C67DC96342809B1E7EC59D407"
-    ],
-    "version": "3.1.5",
-    "validationCount": 3,
-    "manifestHash": "0E6DFDA3ADABF48AC2B2E8C4B99AF389CD9F8E9F7E7A05C9A37773E595EE8C12",
+    "version": "3.1.7",
+    "validationCount": 1,
     "state": "VALIDATION_FAILED",
+    "installerHashes": [
+      "0997DD148646BAB27FF60B326437E5F358DFCE2DC3C3560DA761DE0940927479"
+    ],
+    "manifestHash": "D7BCF6C8CD80B7F6E739E0390764E00DC8FAF56441D14CAD7CB7C6297F649344",
+    "lastUpdated": "2026-05-28T22:12:36.3203407Z",
     "description": ""
   },
   "Sayuri.FFFTP": {
