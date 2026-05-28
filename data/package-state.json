@@ -115,8 +115,8 @@
     "validationCount": 1
   },
   "pnpm.pnpm": {
-    "lastUpdated": "2026-05-27T16:26:36.1280659Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-05-28T04:49:35.6965891Z",
+    "validationCount": 2,
     "state": "VALIDATION_FAILED",
     "description": "",
     "version": "11.4.0",
@@ -457,16 +457,16 @@
     "version": "1.7.8"
   },
   "Fly-io.flyctl": {
-    "description": "",
-    "version": "0.4.56",
+    "version": "0.4.57",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "description": "",
     "installerHashes": [
-      "398A09B38A56AD03C64AE405F7D996DC1D40EAAC957CD184D772B1BC13F2462F",
-      "07A488014F8BE7E3D9209840CB0FA75E9DD90C6A66F1D7FAE4373407A8F04C95"
+      "9754C6C7DE32D145C3799F4AC518E1B01E3483164BEF64B9FB0C1195017983C7",
+      "33521F85FCD773311F6913B0F0872458079C84E80E8E7A991B9A33CD31F8534D"
     ],
-    "lastUpdated": "2026-05-26T22:19:43.6778661Z",
-    "manifestHash": "B2EE03B74A6A78FC8F21891B0192861B73C48D20B03395C6615E72E348813BE4"
+    "validationCount": 1,
+    "lastUpdated": "2026-05-28T04:49:35.7828786Z",
+    "manifestHash": "0FA0C0864251565EB4B201709AFAB1FAA92683DCAD25AFD3674C2330A790B359"
   },
   "aimotrens.impulsar": {
     "validationCount": 2,
@@ -481,15 +481,15 @@
     "manifestHash": "F0E315E013FBE215D1636A3BC78DF0F9B9B97C9398E8C29903C27A0661DF29B9"
   },
   "bcssov.IronyModManager": {
-    "manifestHash": "E1B63146041C0D780E81FD5ADC6EA8553C46810A1B9B928C550F73DC1E9C837A",
+    "version": "1.27.185",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "version": "1.27.183",
-    "installerHashes": [
-      "BD9F35209172624D0CEA7FC9A5CA9BCC324F470639A3C5990969EB89FCCADF10"
-    ],
     "description": "",
-    "lastUpdated": "2026-05-23T14:15:42.0890734Z"
+    "installerHashes": [
+      "95A391C2E83307FC50505D3FA3CC584832F4B18801731CB39DDFDC10FF724EC7"
+    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-05-28T04:49:35.8097972Z",
+    "manifestHash": "A9D507C56760AA90AAE0590252B3FDF63B0A5BE651E0519594AE2E22E2A872AF"
   },
   "AppFlowy.AppFlowy": {
     "installerHashes": [
@@ -624,15 +624,15 @@
     "validationCount": 1
   },
   "Google.FirebaseCLI": {
-    "version": "15.18.0",
+    "version": "15.19.0",
+    "state": "VALIDATION_PASSED",
     "description": "",
     "installerHashes": [
-      "423C18774488AD5476CEFEF2A36B91014672AB81E4BEAD8D7D623F519FFACA61"
+      "FF880B6F1D5F38053DE34BFD73991932529B936B8B1B7541368DDA371B16F55A"
     ],
-    "manifestHash": "D095B34FD7EBBFB2A4B254D3601C02E30F107098192301E33164B2CD85FCA4AC",
-    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "lastUpdated": "2026-05-13T22:13:17.1916996Z"
+    "lastUpdated": "2026-05-28T04:49:35.8010391Z",
+    "manifestHash": "9784AEAC7656433315D042F9C516DC435F43926AA342A69C898815044B840804"
   },
   "TerraformLinters.tflint": {
     "version": "0.62.1",
@@ -887,17 +887,17 @@
     "manifestHash": "E304C16B8C4D729BFBF3BBB7CF8567BC4883D74BA07C6616D66380CA8457692D"
   },
   "AdGuard.AdGuardHome": {
+    "version": "0.107.76",
     "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-05-22T11:26:50.2054338Z",
-    "validationCount": 3,
     "description": "",
     "installerHashes": [
       "C3AD01D1EEF8E1E28168C6E0059E8C94253BB4CE8FBD4601C11918B8B8F3F93C",
       "80748442082F07DFDF9C1CDAEEB88E522E99AFCDF1AEDCA3848338CE42C23EE6",
       "FED6BF153C2F5162717DB8BCD7B40A70553794873AE15A8D054C3A7F7ABF27EB"
     ],
-    "manifestHash": "94B7AD3FBAC93128B5C065F330DAF5A44EBB463E88528121DB5CE516754D4660",
-    "version": "0.107.76"
+    "validationCount": 1,
+    "lastUpdated": "2026-05-28T04:49:35.7562565Z",
+    "manifestHash": "19579FCB4DA92FA092D75B43F897A8F9C96A2DE84471787F09AB627F877F484E"
   },
   "Microsoft.PerfView": {
     "validationCount": 1,
@@ -1223,5 +1223,29 @@
     "manifestHash": "D1085F49F156CF0DA4F0A5C6D9C19C6BECAC73CFD13DD632ECCB284849C8A0E1",
     "description": "",
     "validationCount": 1
+  },
+  "Jellyfin.FFmpeg": {
+    "version": "7.1.4-1",
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "installerHashes": [
+      "DF1D10219E010F5D19AD9408BF70D25C4E10ECFA28F07C97228BFB15F12E7CAE",
+      "DE1F46C0AE06AA23E3BD4135EEBA91BFC9F18566DD4A907CA09DD7A50765FFBA"
+    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-05-28T04:49:35.7914285Z",
+    "manifestHash": "95937ED484C39EAA0A35863A7FC88FDDFE7D33C5F4361332F34A07E6829C2EBE"
+  },
+  "eksctl.eksctl": {
+    "version": "0.227.0",
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "installerHashes": [
+      "C4BBA8A0547C09E82DD1CE97D42D53CF940FE4D0DADA796229F5D3243723A594",
+      "487121E1BE31FBDCAD3FFFD45636BA9D6C7CBD58F86F6DCEB857E9B4204C5BA0"
+    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-05-28T04:49:35.8184996Z",
+    "manifestHash": "803005ED040CBD1A9DB6077EA54BFCFFDC3D31FEF87DF37E648ED5633458A01C"
   }
 }
