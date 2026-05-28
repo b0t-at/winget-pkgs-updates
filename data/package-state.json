@@ -547,15 +547,15 @@
     "manifestHash": "17FC8EAEA7CAC4E5B670A9420E820AA5E088E4B5296FCE8D80E964FED4344F9A"
   },
   "argoproj.argocd": {
-    "state": "VALIDATION_PASSED",
-    "version": "3.4.2",
-    "lastUpdated": "2026-05-12T21:56:10.2281679Z",
+    "lastUpdated": "2026-05-28T16:52:56.8594783Z",
     "description": "",
-    "manifestHash": "C9C2474C296FD59BA4D4DBB7AD1564D68FCF283F7B0E65076257C31E8287D500",
-    "validationCount": 1,
+    "state": "VALIDATION_FAILED",
     "installerHashes": [
-      "430FBB627C71465E0D076653B6B9B8785C1BBBB1E49AAFB36DF174327E5DB918"
-    ]
+      "5DB27D1F3644192072297BCD8C372EB61251555A53C699F37AA30B791174F9D6"
+    ],
+    "manifestHash": "04ADCFF9C51DC16ECCCA47520C50419E80F0918A397FA9F56B0CEF9848ECB170",
+    "validationCount": 1,
+    "version": "3.4.3"
   },
   "Radius.Radius": {
     "version": "0.58.0",
@@ -695,15 +695,15 @@
     "state": "VALIDATION_PASSED"
   },
   "hoppscotch.Hoppscotch": {
-    "manifestHash": "00AAB06AE43BF28B41DCEC54AD23C27A8E8728A2DF2B5C36D3B2642714C07098",
-    "installerHashes": [
-      "91D846CC90A8E94336781BFD1EFEDB9F9D1106F6CD668AB3B74D37B6EB2DC83B"
-    ],
-    "validationCount": 1,
-    "version": "26.4.1-0",
-    "lastUpdated": "2026-05-14T15:01:41.8559294Z",
+    "lastUpdated": "2026-05-28T16:52:56.8713166Z",
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "DABAAF01F4737DDAE1E2659E92143DAA4D52772EA04BCB8D5E5C355F4C2CD92C"
+    ],
+    "manifestHash": "8BBC2D17E2B5AF22096B91044E619609CDF322D60A3E2DF08229B962C5457818",
+    "validationCount": 1,
+    "version": "26.5.0-0"
   },
   "KeeperSecurity.Commander": {
     "installerHashes": [
@@ -895,8 +895,8 @@
       "80748442082F07DFDF9C1CDAEEB88E522E99AFCDF1AEDCA3848338CE42C23EE6",
       "FED6BF153C2F5162717DB8BCD7B40A70553794873AE15A8D054C3A7F7ABF27EB"
     ],
-    "validationCount": 2,
-    "lastUpdated": "2026-05-28T12:04:27.9062789Z",
+    "validationCount": 3,
+    "lastUpdated": "2026-05-28T16:52:56.8213038Z",
     "manifestHash": "19579FCB4DA92FA092D75B43F897A8F9C96A2DE84471787F09AB627F877F484E"
   },
   "Microsoft.PerfView": {
