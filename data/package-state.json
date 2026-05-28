@@ -547,14 +547,14 @@
     "manifestHash": "17FC8EAEA7CAC4E5B670A9420E820AA5E088E4B5296FCE8D80E964FED4344F9A"
   },
   "argoproj.argocd": {
-    "lastUpdated": "2026-05-28T16:52:56.8594783Z",
+    "lastUpdated": "2026-05-28T22:26:03.3858598Z",
     "description": "",
-    "state": "VALIDATION_FAILED",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
       "5DB27D1F3644192072297BCD8C372EB61251555A53C699F37AA30B791174F9D6"
     ],
     "manifestHash": "04ADCFF9C51DC16ECCCA47520C50419E80F0918A397FA9F56B0CEF9848ECB170",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "3.4.3"
   },
   "Radius.Radius": {
@@ -1258,5 +1258,16 @@
     "manifestHash": "020D2D2DBA4776495677BFACBEBB3AB76928AF0E3025AB3F9D3467074146684B",
     "validationCount": 1,
     "description": ""
+  },
+  "loft-sh.vcluster": {
+    "description": "",
+    "version": "0.34.1",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-05-28T22:26:03.4166616Z",
+    "installerHashes": [
+      "64C1BD1D35A7E4008D6375D8FF86766AAD154A73CBB158FF87867FFEBA643633"
+    ],
+    "manifestHash": "56E56894923202C771EC338EF57471090552220723B43718C2BC10A96F4E0B0B",
+    "validationCount": 1
   }
 }
