@@ -1247,5 +1247,16 @@
     "validationCount": 1,
     "lastUpdated": "2026-05-28T04:49:35.8184996Z",
     "manifestHash": "803005ED040CBD1A9DB6077EA54BFCFFDC3D31FEF87DF37E648ED5633458A01C"
+  },
+  "VirusTotal.YARA-X": {
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-05-28T11:57:14.0444826Z",
+    "installerHashes": [
+      "E62C0A242A39B09D4885E87CDB6BCEBC77F3B73A06B32367EB49D9E25448B9E7"
+    ],
+    "version": "1.17.0",
+    "manifestHash": "020D2D2DBA4776495677BFACBEBB3AB76928AF0E3025AB3F9D3467074146684B",
+    "validationCount": 1,
+    "description": ""
   }
 }
