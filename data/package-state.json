@@ -1269,5 +1269,16 @@
     ],
     "manifestHash": "56E56894923202C771EC338EF57471090552220723B43718C2BC10A96F4E0B0B",
     "validationCount": 1
+  },
+  "AdaLang.Alire.Portable": {
+    "manifestHash": "9AF0A473771E6C6F30C85974415BE98484C1164911A86ED12FF3A234B2CA7645",
+    "lastUpdated": "2026-05-29T11:56:28.9109777Z",
+    "validationCount": 1,
+    "version": "2.1.1",
+    "description": "",
+    "installerHashes": [
+      "863013B1F94DA6F3B7D0D5A74022AC3370424EEEA9A470EBDB33D188D61B9125"
+    ],
+    "state": "VALIDATION_PASSED"
   }
 }
