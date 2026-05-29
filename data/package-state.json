@@ -115,12 +115,12 @@
     "validationCount": 1
   },
   "pnpm.pnpm": {
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "E5E4006F61719D6AE73EE9F8074F5C32AC583A63FC59609826D3A617791281FC",
     "description": "",
     "version": "11.5.0",
     "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-05-29T16:26:35.7389261Z",
+    "lastUpdated": "2026-05-29T22:17:44.458996Z",
     "installerHashes": [
       "F85F5C399CAA41E2FBCE8A2127B69EA4D2AB9B45296756A557B26110D01DCEFD",
       "9C3475645CC150B3FFDADB5EF8E995D4F2E95F89875A4D3DC005122A9FF2572F"
@@ -613,15 +613,15 @@
     "manifestHash": "5B1DB443C3D0E7A9ABA1D715CB10549FB09F1A255D587296E54A5496CE269A34"
   },
   "FOSSA.FOSSA-cli": {
-    "installerHashes": [
-      "1C85AD0EFC538DE25E36AD96E751D04C7FAA72C8B11A9ACE77B73EFC27EEED15"
-    ],
-    "description": "",
+    "manifestHash": "6C4FAA24E52E8026CB408B9129919843C82228CCC7324724956C2A0536F8685F",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "11F7F3310132D3B97DBDF709D3D3D0D26692DEAC77EE300527C1007108DA4F70",
-    "version": "3.17.8",
-    "lastUpdated": "2026-05-21T05:11:40.7543369Z",
-    "validationCount": 1
+    "validationCount": 1,
+    "version": "3.17.10",
+    "description": "",
+    "lastUpdated": "2026-05-29T22:17:44.5470862Z",
+    "installerHashes": [
+      "D009F6AEDE72D1BCD3FC6D069E7DCD35CFDB2A2A469F01607CABA3845E4959E3"
+    ]
   },
   "Google.FirebaseCLI": {
     "version": "15.19.0",
