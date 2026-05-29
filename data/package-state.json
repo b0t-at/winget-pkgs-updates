@@ -93,13 +93,13 @@
   },
   "rejetto.hfs": {
     "version": "3.1.7",
-    "validationCount": 2,
+    "validationCount": 3,
     "state": "VALIDATION_FAILED",
     "installerHashes": [
       "0997DD148646BAB27FF60B326437E5F358DFCE2DC3C3560DA761DE0940927479"
     ],
     "manifestHash": "D7BCF6C8CD80B7F6E739E0390764E00DC8FAF56441D14CAD7CB7C6297F649344",
-    "lastUpdated": "2026-05-29T04:37:53.0493995Z",
+    "lastUpdated": "2026-05-29T11:48:45.0533482Z",
     "description": ""
   },
   "Sayuri.FFFTP": {
@@ -389,15 +389,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Tetrate.wazero": {
-    "validationCount": 1,
-    "manifestHash": "91EA2F2825E6FE7A55813E5E2F51BB31BF46E87D2668D173685E57C2265E1432",
-    "lastUpdated": "2026-05-11T11:54:02.8215543Z",
-    "description": "",
-    "version": "1.11.0",
     "installerHashes": [
-      "AEFCF54798AC15EF138E7DB3A595CC590314AEA547F5A65DFB8F86853655D40E"
+      "32342E7E6FFC6D1016AE35E9E15479EF718076F27AFDAD1E89BB1BB6796EFEEE"
     ],
-    "state": "VALIDATION_PASSED"
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "manifestHash": "0CB4BEAA0890CAC6563B2E6FA6B0DC605BE6AC4561D978E8505ACA98EBE002E5",
+    "lastUpdated": "2026-05-29T11:48:45.0920473Z",
+    "version": "1.12.0"
   },
   "TEdit.TEdit": {
     "validationCount": 1,
@@ -1215,7 +1215,7 @@
   },
   "TravisLane.SteamArtManager": {
     "validationCount": 1,
-    "lastUpdated": "2026-05-29T04:37:53.0869730Z",
+    "lastUpdated": "2026-05-29T04:37:53.086973Z",
     "state": "VALIDATION_PASSED",
     "description": "",
     "manifestHash": "FD0DB22E424D7F6995C38267F00275271F901502630557EF06C4FCBBB2782CAF",
