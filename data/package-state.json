@@ -93,13 +93,13 @@
   },
   "rejetto.hfs": {
     "version": "3.1.7",
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_FAILED",
     "installerHashes": [
       "0997DD148646BAB27FF60B326437E5F358DFCE2DC3C3560DA761DE0940927479"
     ],
     "manifestHash": "D7BCF6C8CD80B7F6E739E0390764E00DC8FAF56441D14CAD7CB7C6297F649344",
-    "lastUpdated": "2026-05-28T22:12:36.3203407Z",
+    "lastUpdated": "2026-05-29T04:37:53.0493995Z",
     "description": ""
   },
   "Sayuri.FFFTP": {
@@ -1214,15 +1214,15 @@
     "version": "1.7.24"
   },
   "TravisLane.SteamArtManager": {
-    "lastUpdated": "2026-05-27T22:17:39.3331038Z",
-    "version": "3.13.0",
-    "installerHashes": [
-      "8210DDA45D2CC7C33D36286E64E6175C20EBC4FE63E74704937CC7FEDAE65FE3"
-    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-05-29T04:37:53.0869730Z",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "D1085F49F156CF0DA4F0A5C6D9C19C6BECAC73CFD13DD632ECCB284849C8A0E1",
     "description": "",
-    "validationCount": 1
+    "manifestHash": "FD0DB22E424D7F6995C38267F00275271F901502630557EF06C4FCBBB2782CAF",
+    "installerHashes": [
+      "2908F10BEF2C88F7CACFE4AFFC75A6DC6781122767FF6D734EDD3C6705E25193"
+    ],
+    "version": "3.14.0"
   },
   "Jellyfin.FFmpeg": {
     "version": "7.1.4-1",
