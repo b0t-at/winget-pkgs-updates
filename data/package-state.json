@@ -1291,5 +1291,27 @@
     ],
     "validationCount": 1,
     "manifestHash": "01798DB025A1BB2F91650933CEB328660D7DA48B4D87A86C3C63C790A792DCF9"
+  },
+  "hluk.CopyQ": {
+    "validationCount": 1,
+    "description": "",
+    "manifestHash": "996FE15EEB31E6FAD2CEB218E49903B570A4F698C60BA65F9E97DCCE1C7D4A72",
+    "lastUpdated": "2026-05-30T10:25:31.6789085Z",
+    "version": "16.0.0",
+    "installerHashes": [
+      "F271A1467589CA55CD56D1FAF727A4BC34E686B4965AC742854A93BE4B186F82"
+    ],
+    "state": "VALIDATION_PASSED"
+  },
+  "fselect.fselect": {
+    "validationCount": 1,
+    "description": "",
+    "manifestHash": "53F0F4FFD65FA0FC1FF6B78DA6453357F90E7B6962F8FD6DEDD6E811A7F1A424",
+    "lastUpdated": "2026-05-30T10:25:31.7067565Z",
+    "version": "0.10.1",
+    "installerHashes": [
+      "F4CF6746E2B4D0A101717803EBA591BD7A9AC7C263DF78AFC96C47F710213D12"
+    ],
+    "state": "VALIDATION_PASSED"
   }
 }
