@@ -1051,15 +1051,15 @@
     "validationCount": 1
   },
   "sparrowwallet.sparrow": {
-    "version": "2.5.1",
-    "installerHashes": [
-      "AEB7F4FA08BD6D819F5BBC1A01E8BEA97839C691AE9BA3A949332C3A1961223A"
-    ],
     "validationCount": 1,
-    "manifestHash": "0E39F70714323A397B40D74EEF4BA338CEB5C2D792FE7512CA59460298120934",
+    "version": "2.5.2",
     "description": "",
-    "lastUpdated": "2026-05-22T18:11:50.6465679Z",
-    "state": "VALIDATION_PASSED"
+    "installerHashes": [
+      "DD523E2627368EB8B4C27304D1425E0B5BC81079B645FECE40178DC763E58534"
+    ],
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-05-31T14:18:05.2705477Z",
+    "manifestHash": "1DDFD578AD1680ADFFA99AB0C482DA9D7BF56D7683E6AD37560B65057F84C4E1"
   },
   "ASGARDEXMaintainers.ASGARDEX": {
     "validationCount": 1,
