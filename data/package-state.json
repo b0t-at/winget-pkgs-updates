@@ -1336,5 +1336,17 @@
     "description": "",
     "lastUpdated": "2026-05-30T17:40:54.9931638Z",
     "state": "VALIDATION_PASSED"
+  },
+  "ameshkov.dnslookup": {
+    "description": "",
+    "version": "1.12.0",
+    "manifestHash": "4F1564D00721D3C72DCE8936020D48B489B29252724F87D33FC0F0152994BD91",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-06-01T14:05:04.1462445Z",
+    "installerHashes": [
+      "731BB87B1E97535565945821500E7E1B7E53765FE764F2557CDD745837E4951D",
+      "EED786E7DD4E7B9B89913ED1C4EB8B62304D895FE8E0FFA6B9EB5F7AA4972593"
+    ]
   }
 }
