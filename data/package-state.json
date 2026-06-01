@@ -514,15 +514,15 @@
     "description": ""
   },
   "Micronaut.Launch": {
-    "installerHashes": [
-      "859DBC4D539F0229DC6B6A7615F00F20536FA15B1A95146D2080CC310F63EEF9"
-    ],
-    "description": "",
-    "manifestHash": "BF3B88FA6AEC9AD9BFD87CA2E61ABDF8A462C9741B80B4B042ED87CB65BE43C5",
     "validationCount": 1,
-    "version": "5.0.0",
+    "version": "5.0.1",
+    "description": "",
+    "lastUpdated": "2026-06-01T21:04:38.5432362Z",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-05-20T18:53:26.4729363Z"
+    "manifestHash": "1431BAFF2EEE52194B00E0E511456F16159F0511AB933BF70B1C2437F145C2E3",
+    "installerHashes": [
+      "CAA46F437B3D093F269A82832CB95DEEEDDAFD88E70C6F9DF621FFCE202B8F9A"
+    ]
   },
   "Levminer.Authme": {
     "version": "7.1.0",
@@ -684,15 +684,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Dystroy.broot": {
-    "manifestHash": "8FB89B40D95F33F717F86A5DC64EA95B4AA9296C962EAB345ADF2F441656377B",
-    "installerHashes": [
-      "0F3FF53D1DF10B236BDB81C6CFA881992768E813C41736F2B51109CBC0BC51CA"
-    ],
     "validationCount": 1,
-    "version": "1.56.4",
-    "lastUpdated": "2026-05-14T15:01:41.8481141Z",
+    "version": "1.57.0",
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-06-01T21:04:38.5181983Z",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "C4E210F280A15B4D4EFC18F249EEE7197872F93BCE4A4ED559A0D4E34E3786A7",
+    "installerHashes": [
+      "B9905D20596A5DAF60B30A38FFD3DE2EE5D65F113DC16CD0A20047B31F927DC5"
+    ]
   },
   "hoppscotch.Hoppscotch": {
     "lastUpdated": "2026-05-28T16:52:56.8713166Z",
@@ -819,16 +819,16 @@
     "description": ""
   },
   "Gruntwork.Terragrunt": {
-    "version": "1.0.6",
-    "manifestHash": "63CEA244B1C1A38A0A7293B046EB883606FBF2281213094D57026BEEB5038A5D",
-    "installerHashes": [
-      "064D5BCB6E88E85E9D68C3E132F11D312BB75A4530E1369CAB1B936BFDB1A5CD",
-      "EB6E15A785144530153658B4B4AA8CBD1F4A91634F8133C0917DAF9AB61FBDE5"
-    ],
-    "lastUpdated": "2026-05-25T15:50:44.6806306Z",
-    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "description": ""
+    "version": "1.0.7",
+    "description": "",
+    "lastUpdated": "2026-06-01T21:04:38.5582753Z",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "5662F209756DB6600798E7A793998D4431A0B5D90182F64981A60D59F656135D",
+    "installerHashes": [
+      "14719CDBA254818CF5A36B123739251B97BB8A98AC42AE789620B5E25D49E32A",
+      "444C9AB7B6B94EBFE692734F7649C6648330D007B12A1EF878570BEB49B18361"
+    ]
   },
   "ZeroInstall.ZeroInstall": {
     "lastUpdated": "2026-05-18T21:38:39.9333568Z",
@@ -1347,6 +1347,39 @@
     "installerHashes": [
       "731BB87B1E97535565945821500E7E1B7E53765FE764F2557CDD745837E4951D",
       "EED786E7DD4E7B9B89913ED1C4EB8B62304D895FE8E0FFA6B9EB5F7AA4972593"
+    ]
+  },
+  "h3poteto.fedistar": {
+    "validationCount": 1,
+    "version": "1.13.1",
+    "description": "",
+    "lastUpdated": "2026-06-01T21:04:38.4778443Z",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "9A73E5DD5598D566ADCDBACE514D82BC8BCDE909B2EB580380CA0062ACE36198",
+    "installerHashes": [
+      "73EA434379EB46D8174065EB6A85170D89318FA67469D30A6C15902EEB1FB7B5"
+    ]
+  },
+  "JustArchiNET.ArchiSteamFarm": {
+    "validationCount": 1,
+    "version": "6.3.6.1",
+    "description": "",
+    "lastUpdated": "2026-06-01T21:04:38.5072899Z",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "57B8DE8CF3B42B4E660DE735E52FDEAE54C8279F5CBC29D95627E178E41324FD",
+    "installerHashes": [
+      "0958208BE9CD7D363A0AF6149ECF2C95297EF8B5CCB3F30079B41843A1FA61F9"
+    ]
+  },
+  "AquaSecurity.Trivy": {
+    "validationCount": 1,
+    "version": "0.71.0",
+    "description": "",
+    "lastUpdated": "2026-06-01T21:04:38.5306347Z",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "BB56C694B390523B5D0CD99FDC9F0E65FBE23CBDE424F775685A6A6B66665902",
+    "installerHashes": [
+      "382250158FB9431FF9B87904205027B066A544234B8952B2DD764BD712D55387"
     ]
   }
 }
