@@ -289,7 +289,7 @@
     ],
     "manifestHash": "6110CF447ED26E30C3D4A266DF96D235E8F6E3119D3C726D02293E97D8DA4093",
     "version": "3.6.12",
-    "lastUpdated": "2026-06-02T05:14:04.8444480Z",
+    "lastUpdated": "2026-06-02T05:14:04.844448Z",
     "validationCount": 1,
     "description": "",
     "state": "VALIDATION_PASSED"
@@ -581,14 +581,14 @@
   },
   "Snyk.Snyk": {
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "lastUpdated": "2026-05-20T16:07:00.7605511Z",
-    "version": "1.1305.0",
-    "manifestHash": "D1CAD2E498496CB9B20576E9AB0AACBC99189F604930D9F09AB92CF04507D6BC",
+    "manifestHash": "8D82195B4D911C66E661438FE582C8236AB518F723F3FB68F25358358A252220",
     "validationCount": 1,
+    "version": "1.1305.1",
+    "lastUpdated": "2026-06-02T12:32:12.0369840Z",
     "installerHashes": [
-      "7493439E5F23BC483E443E190AF85140E62CB8DD01C99CF988224A18074B3595"
-    ]
+      "4EE3B7F5B8C62F4CCECA2A50143D6ACF8F83F9518CE20A8AE0C45E707729825E"
+    ],
+    "description": ""
   },
   "jaegertracing.jaeger": {
     "state": "VALIDATION_PASSED",
@@ -1381,5 +1381,16 @@
     "installerHashes": [
       "382250158FB9431FF9B87904205027B066A544234B8952B2DD764BD712D55387"
     ]
+  },
+  "T-Troll.AlienFXTools": {
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "9980392E1F49F1132D0F123D4ED4E1A8A824C2A00397D136019662684F2A9739",
+    "validationCount": 1,
+    "version": "9.6.0",
+    "lastUpdated": "2026-06-02T12:32:12.0088283Z",
+    "installerHashes": [
+      "94CF2C4B3FC8D2B099B6E3B3E2B60B450E6BABF4C55F822089E7E768FEED52EC"
+    ],
+    "description": ""
   }
 }
