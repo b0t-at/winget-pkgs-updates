@@ -284,15 +284,15 @@
     "description": ""
   },
   "etcd-io.etcd": {
-    "validationCount": 1,
-    "version": "3.6.11",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "9E74AC1095A52744DA87F248EF9CC07D71E8EB3D789F0704234A2482352A39E9",
-    "lastUpdated": "2026-05-11T08:36:25.7873903Z",
     "installerHashes": [
-      "248EC85A4F659C50ADB0F489AAB0A57B7CB8236B7F9222CFB01A5FFC58AC87BF"
+      "B201370EEC589053CB84BC63EBFFF2461E8657A3CDA5BC6CE93C10FABB62846E"
     ],
-    "description": ""
+    "manifestHash": "6110CF447ED26E30C3D4A266DF96D235E8F6E3119D3C726D02293E97D8DA4093",
+    "version": "3.6.12",
+    "lastUpdated": "2026-06-02T05:14:04.8444480Z",
+    "validationCount": 1,
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "Firstversionist.Polypane": {
     "validationCount": 2,
