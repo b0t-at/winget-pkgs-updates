@@ -729,12 +729,12 @@
   },
   "seerge.g-helper": {
     "description": "",
-    "lastUpdated": "2026-06-03T20:13:54.4546986Z",
+    "lastUpdated": "2026-06-03T22:41:20.0117220Z",
     "manifestHash": "969CA0CD72526F2FF1129EC159DD67A0D68D17A3A23957AA437F6A025FF06BD7",
     "installerHashes": [
       "49F5C29F762C9CFDA784C1623AFF8FA4F3A6F8DE4A99614623F20B2CDDEA5110"
     ],
-    "validationCount": 2,
+    "validationCount": 3,
     "state": "VALIDATION_FAILED",
     "version": "0.254"
   },
