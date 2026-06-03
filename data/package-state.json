@@ -115,10 +115,10 @@
     "validationCount": 1
   },
   "pnpm.pnpm": {
-    "validationCount": 2,
+    "validationCount": 3,
     "state": "VALIDATION_FAILED",
     "version": "11.5.1",
-    "lastUpdated": "2026-06-03T05:22:17.6932354Z",
+    "lastUpdated": "2026-06-03T13:21:50.5145731Z",
     "installerHashes": [
       "776EFB770783A262D3DE71EE0001460845E8B0CCB9C1A6CEBA005FA47DC2D90B",
       "4DBE9CB6F87744E41621042E6A656AD457626B31A0DC3517C8B9B128B25E61A5"
@@ -887,10 +887,10 @@
     "manifestHash": "595675F3F276823C8E76BBB0CD83C94C468EF80553E7A2398011034D5ED09D26"
   },
   "AdGuard.AdGuardHome": {
-    "validationCount": 2,
+    "validationCount": 3,
     "state": "VALIDATION_FAILED",
     "version": "0.107.77",
-    "lastUpdated": "2026-06-03T05:22:17.7691005Z",
+    "lastUpdated": "2026-06-03T13:21:50.5863665Z",
     "installerHashes": [
       "C085D5429D3064226A34A20BADB931E934645BDFA1C29C20BD7C0822B24F15F1",
       "D0FE5A41E13558E7DCE22B7810D354745D870B31EEB2D4EB63207F918C0E66B8",
@@ -1425,5 +1425,16 @@
     ],
     "manifestHash": "89C59AAD71EFB160676CB5EEC78CA487E2612D715C410EECBB779F7074C03AD6",
     "description": ""
+  },
+  "f4exb.sdrangel": {
+    "installerHashes": [
+      "7F1CAE3F11D2A1DB6EDBEE344FAEA91ACEC142A15E5BC7EBD73B1FDA6212BA02"
+    ],
+    "manifestHash": "C8BADFA90D94929691024B2919364BCB323D680B711694EB7237906AF7FBF0C0",
+    "validationCount": 1,
+    "version": "7.26.1",
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "lastUpdated": "2026-06-03T13:21:50.5974033Z"
   }
 }
