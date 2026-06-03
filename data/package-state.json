@@ -515,14 +515,14 @@
   },
   "Micronaut.Launch": {
     "validationCount": 1,
-    "version": "5.0.1",
-    "description": "",
-    "lastUpdated": "2026-06-01T21:04:38.5432362Z",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "1431BAFF2EEE52194B00E0E511456F16159F0511AB933BF70B1C2437F145C2E3",
     "installerHashes": [
-      "CAA46F437B3D093F269A82832CB95DEEEDDAFD88E70C6F9DF621FFCE202B8F9A"
-    ]
+      "B3637F016A686E0E77697CAF9704D724CAC10855C7710DD88E95DFEF11BAA520"
+    ],
+    "version": "5.0.2",
+    "description": "",
+    "manifestHash": "50E4C7D5B7419317D5EBA3DC7DABE845A8FA58FF188058F05C09F024DE5084E9",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-06-03T20:31:07.8845005Z"
   },
   "Levminer.Authme": {
     "version": "7.1.0",
@@ -591,15 +591,15 @@
     "description": ""
   },
   "jaegertracing.jaeger": {
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-05-13T18:29:56.1152201Z",
-    "description": "",
-    "version": "2.18.0",
     "validationCount": 1,
     "installerHashes": [
-      "A851ECB8731635C57035EE7D2E276E4BEB8338E9F4093A25DD885F419589E9A9"
+      "15060ADA01A3ED481997D715C8C5F1224DF01675D1E740EC6AD8DACA198B46DC"
     ],
-    "manifestHash": "DC8EDD99F73BDE0BEF920CD1EBBF3ABF47247425FEC18B8591EF8C29C12320FA"
+    "version": "2.19.0",
+    "description": "",
+    "manifestHash": "C9530A205C56AC6315214FE64B6DB81F982E02E1B39B4FDE0734A1FE7E4C39C4",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-06-03T20:31:07.8456131Z"
   },
   "Kubernetes.clusterctl": {
     "state": "VALIDATION_PASSED",
@@ -1436,5 +1436,16 @@
     "state": "VALIDATION_PASSED",
     "description": "",
     "lastUpdated": "2026-06-03T13:21:50.5974033Z"
+  },
+  "CircleCI.CLI": {
+    "validationCount": 1,
+    "installerHashes": [
+      "9D45FA98B9BC37B0EE97641C9CBAE5CF3646D4AFFD4AABF147325D8E33C56B56"
+    ],
+    "version": "0.1.38646",
+    "description": "",
+    "manifestHash": "CCFB10DAC9E5112CDF2BCC7DFF679D1D2DC86AA192DA06AE80B6735404C9042D",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-06-03T20:31:07.8729648Z"
   }
 }
