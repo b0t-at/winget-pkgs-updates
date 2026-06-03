@@ -728,15 +728,15 @@
     "description": ""
   },
   "seerge.g-helper": {
-    "state": "VALIDATION_FAILED",
-    "manifestHash": "634C8CD7945F99316E8E59DB94BDD7D2E7ED01251DF0E8576FEE5E944A08D12B",
-    "version": "0.250",
-    "installerHashes": [
-      "B1D3D5042359FFE13DB59FF38DAC0DF085A637FF2138693E502945283BDB16F3"
-    ],
     "description": "",
-    "lastUpdated": "2026-05-15T17:57:41.5786319Z",
-    "validationCount": 3
+    "lastUpdated": "2026-06-03T13:04:42.9038993Z",
+    "manifestHash": "969CA0CD72526F2FF1129EC159DD67A0D68D17A3A23957AA437F6A025FF06BD7",
+    "installerHashes": [
+      "49F5C29F762C9CFDA784C1623AFF8FA4F3A6F8DE4A99614623F20B2CDDEA5110"
+    ],
+    "validationCount": 1,
+    "state": "VALIDATION_FAILED",
+    "version": "0.254"
   },
   "SimpleX.SimpleX-Chat": {
     "version": "6.5.2",
@@ -980,15 +980,15 @@
     "state": "VALIDATION_FAILED"
   },
   "tagspaces.tagspaces": {
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "lastUpdated": "2026-05-20T16:07:00.743579Z",
-    "version": "6.12.1",
-    "manifestHash": "B660134058D489D68701C19CBC0EDD324516195242BB6FD7C98281330123C658",
-    "validationCount": 1,
+    "lastUpdated": "2026-06-03T13:04:42.9497591Z",
+    "manifestHash": "6A13DCB32F7EB28DF11A54A824D0CE27EED0B2ECD5E4F4360E0620525B8275C9",
     "installerHashes": [
-      "794C9D81968A85E3F2DD7243E9A4C3DB73B1ACDDCB2E534A013502BAD86A62B1"
-    ]
+      "08590C269D8B07BD91403783E5CDB7441756144147F837165DFEF2E3976E5141"
+    ],
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "version": "6.12.2"
   },
   "Yaak.app": {
     "state": "VALIDATION_PASSED",
