@@ -115,10 +115,10 @@
     "validationCount": 1
   },
   "pnpm.pnpm": {
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_FAILED",
     "version": "11.5.1",
-    "lastUpdated": "2026-06-02T23:08:37.1530535Z",
+    "lastUpdated": "2026-06-03T05:22:17.6932354Z",
     "installerHashes": [
       "776EFB770783A262D3DE71EE0001460845E8B0CCB9C1A6CEBA005FA47DC2D90B",
       "4DBE9CB6F87744E41621042E6A656AD457626B31A0DC3517C8B9B128B25E61A5"
@@ -887,10 +887,10 @@
     "manifestHash": "595675F3F276823C8E76BBB0CD83C94C468EF80553E7A2398011034D5ED09D26"
   },
   "AdGuard.AdGuardHome": {
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_FAILED",
     "version": "0.107.77",
-    "lastUpdated": "2026-06-02T23:08:37.219295Z",
+    "lastUpdated": "2026-06-03T05:22:17.7691005Z",
     "installerHashes": [
       "C085D5429D3064226A34A20BADB931E934645BDFA1C29C20BD7C0822B24F15F1",
       "D0FE5A41E13558E7DCE22B7810D354745D870B31EEB2D4EB63207F918C0E66B8",
