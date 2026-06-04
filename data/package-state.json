@@ -631,7 +631,7 @@
     ],
     "state": "VALIDATION_PASSED",
     "manifestHash": "E195C6BC4397D9B0F147AD930B220CCF749CDB367606CF16322D2BEE5EC814B5",
-    "lastUpdated": "2026-06-03T22:51:02.7519150Z",
+    "lastUpdated": "2026-06-03T22:51:02.751915Z",
     "validationCount": 1
   },
   "TerraformLinters.tflint": {
@@ -729,7 +729,7 @@
   },
   "seerge.g-helper": {
     "description": "",
-    "lastUpdated": "2026-06-03T22:41:20.0117220Z",
+    "lastUpdated": "2026-06-03T22:41:20.011722Z",
     "manifestHash": "969CA0CD72526F2FF1129EC159DD67A0D68D17A3A23957AA437F6A025FF06BD7",
     "installerHashes": [
       "49F5C29F762C9CFDA784C1623AFF8FA4F3A6F8DE4A99614623F20B2CDDEA5110"
@@ -1134,15 +1134,15 @@
     "validationCount": 1
   },
   "xpipe-io.xpipe.portable": {
-    "manifestHash": "B058BD7EFB92C49EE63FA9F991E606817041A04CA740825C1F1B0A2D026CCFA1",
-    "lastUpdated": "2026-05-28T16:34:27.8705582Z",
-    "state": "VALIDATION_PASSED",
-    "description": "",
+    "manifestHash": "9EDDD6A91F9DCD88259BC8D1C3B4E889FB2F03F093CF00C1E29EE41082987F49",
     "installerHashes": [
-      "690E225E0CBC9C152438421FD78DA7E0F692927D57C720A92AC22C32C1374B77"
+      "DCDC68F131524B2DB23F48FBF4295BD2D138FA1410DC01566869825E9267426D"
     ],
-    "version": "23.3",
-    "validationCount": 1
+    "validationCount": 1,
+    "lastUpdated": "2026-06-04T11:42:54.8969899Z",
+    "version": "23.4",
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "OliverSchwendener.ueli": {
     "state": "VALIDATION_PASSED",
@@ -1447,5 +1447,18 @@
     "manifestHash": "CCFB10DAC9E5112CDF2BCC7DFF679D1D2DC86AA192DA06AE80B6735404C9042D",
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-06-03T20:31:07.8729648Z"
+  },
+  "Tyrrrz.DiscordChatExporter.GUI": {
+    "manifestHash": "4AC3F970A9C9658460564AF6718B404B99241E0C3FB0A3D2787AF8325F504E33",
+    "installerHashes": [
+      "6A29D9289E7A17626C0C4CE40C17C64ECC89DA1D4E0EB41945DACF493CB5D668",
+      "5E353674F0A5AC7A7B6CDB820B6094B869C92132875547546D71E40D71087344",
+      "1AA1C7BACE14F741994C35259A411724BF48C60A46F20E02FBEBF74B4DB498C6"
+    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-06-04T11:42:54.9249854Z",
+    "version": "2.47.2",
+    "state": "VALIDATION_PASSED",
+    "description": ""
   }
 }
