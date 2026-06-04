@@ -1315,16 +1315,16 @@
     "state": "VALIDATION_PASSED"
   },
   "P-StSoftware.WinSSHTerm": {
-    "validationCount": 1,
-    "installerHashes": [
-      "4CA9A3D605A55FD61F9E32448C233A316832DFFBA89DA6ECC1D63685AD7D194D",
-      "08F76E1CFC3B44F2417BD62ECEDFD5D00781C7312F0411789CFB4696D40455E8"
-    ],
-    "manifestHash": "456168594CD792CD7CAA21596A1481D5FDE8E0CE9481167A9D8F95928FFFBB0F",
-    "version": "2.41.9",
+    "manifestHash": "288F0C21B4DB511E86DA244C985493B00F462F43003BCF367DC7BB347D2F161E",
     "description": "",
-    "lastUpdated": "2026-05-30T17:40:54.9642363Z",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "46AF5A4D9261C12D00B3FC512F38F3B70DB74D9FF87E81C70DD4982682216D50",
+      "2EDE5D0AE3DD58FBAB6AAEB91B973FEDE612A82DBAD32B9FAC2DCE5F71C2CCE3"
+    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-06-04T16:08:01.6237180Z",
+    "version": "2.41.10"
   },
   "igoogolx.itun2socks": {
     "validationCount": 1,
@@ -1460,5 +1460,28 @@
     "version": "2.47.2",
     "state": "VALIDATION_PASSED",
     "description": ""
+  },
+  "jj-vcs.jj": {
+    "manifestHash": "C07B1C2A0B80FB1C8D6E9624DCF6BCB1C24FABBA720B55BC7169CB615F84A9C0",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "866461102D87FB49FC67E6E76682635683963EB9FDD05264EDDA5F1C894D85A6",
+      "0C6D6676A763F3A0514F83F45806F1DF5B5AF66E8E92CE38CDD8E6C136D99FC6"
+    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-06-04T16:08:01.5832768Z",
+    "version": "0.42.0"
+  },
+  "LowLevelDesign.ProcessGovernor": {
+    "manifestHash": "24E3ED8B83D26D114EC85466CBD0635AF4595690A4590FC71F52B137078DF49E",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "9D2CE110DA0C2ADEABA87395893EBB0875A3FDB5C6C5FF36F01DB0438EC4D9FB"
+    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-06-04T16:08:01.6124042Z",
+    "version": "4.0.26155"
   }
 }
