@@ -876,15 +876,15 @@
     "manifestHash": "34578A81C664A5A7F6CE8892ABB8AF558356A16F0C044C900604413CA201D8C0"
   },
   "Storj.Uplink": {
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-06-01T14:11:40.5758797Z",
-    "validationCount": 1,
-    "description": "",
-    "version": "1.155.4",
+    "lastUpdated": "2026-06-05T15:43:13.3348656Z",
+    "version": "1.155.5",
     "installerHashes": [
-      "65E27ABA8E6D9D64F7B19BF985388B2786C5928DEB18ED8AC57E97C4AFF7C02F"
+      "F8D90BE732BCA5237F870222721C6FCDD28655AF0F76C5D79BF07E177BDAFB7D"
     ],
-    "manifestHash": "595675F3F276823C8E76BBB0CD83C94C468EF80553E7A2398011034D5ED09D26"
+    "validationCount": 1,
+    "manifestHash": "E4ED80B7677AE4CD9C230A1DF17D5CDFE6E905DA3F1E9C5ECC5B4B6FDF77C1F5",
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "AdGuard.AdGuardHome": {
     "validationCount": 3,
@@ -1214,14 +1214,14 @@
     "version": "1.7.24"
   },
   "TravisLane.SteamArtManager": {
-    "state": "VALIDATION_PASSED",
-    "version": "3.14.1",
+    "lastUpdated": "2026-06-05T15:43:13.3667861Z",
+    "version": "3.15.0",
     "installerHashes": [
-      "356F9569C9D7784752D8FADDE41EB7E40DC88DEED1FB15F3E511A4CBAC437714"
+      "020834AE03ED5D8A489F7B173839E3801E043265FDF3CFF2EBECC52E77CD443C"
     ],
-    "lastUpdated": "2026-05-29T16:15:50.6186782Z",
-    "manifestHash": "C1DACC2AB69E3ECB30A326C0EF8F9721752BC008217C754FCFF0CD6F34D307DE",
     "validationCount": 1,
+    "manifestHash": "6B9EE6BA18E3978D4A2689E58586715D8DCE810372CC0DD70C14E0E37305D2B4",
+    "state": "VALIDATION_PASSED",
     "description": ""
   },
   "Jellyfin.FFmpeg": {
