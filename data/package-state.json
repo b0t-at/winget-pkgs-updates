@@ -1156,15 +1156,15 @@
     "description": ""
   },
   "altair-graphql.altair": {
-    "manifestHash": "9FF2D11F35507838E38F9BCB4821CF4C0C8C0F583D6B77E75E4EC6B084B84791",
+    "manifestHash": "474BD04A431D548D03555D1F05DC34B87DFBB72CF8CE5A2ED30893F23D03D90E",
+    "description": "",
     "installerHashes": [
-      "2BED89CAB131B703BC59EC50F86EAAB7B4440FD3DB881FEF1D934A320C767DF5"
+      "9B380A6937AC778AB4D232A8F4D312D7681F9BEE5C8AF5F3B9CE4FAEC800150A"
     ],
-    "validationCount": 1,
-    "version": "8.5.3",
-    "lastUpdated": "2026-05-24T17:31:35.527346Z",
     "state": "VALIDATION_PASSED",
-    "description": ""
+    "lastUpdated": "2026-06-05T05:04:26.8308067Z",
+    "validationCount": 1,
+    "version": "8.5.4"
   },
   "bufbuild.buf": {
     "manifestHash": "818A6AD5E2389CA94E4A6D72D19D871385A210678FF180A712A4FBE9C8044BB1",
@@ -1494,5 +1494,16 @@
     "description": "",
     "lastUpdated": "2026-06-04T22:15:30.5734589Z",
     "manifestHash": "06EA63CBA95A079A2638DFF25282D03EB7E6B1FD2E589F9F80A37CDBF09C37BB"
+  },
+  "PocketSync.PocketSync": {
+    "manifestHash": "FECE0DAD51DED70B9B64A5D86053284533C9755EDFE2ED58914F02CD255C47CA",
+    "description": "",
+    "installerHashes": [
+      "8CF5ED0A80F139B725F8269A0F7D2AA8648AF209D2FC2F84F6B3EB26247D5CF9"
+    ],
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-06-05T05:04:26.8015092Z",
+    "validationCount": 1,
+    "version": "6.0.0"
   }
 }
