@@ -1214,15 +1214,15 @@
     "version": "1.7.24"
   },
   "TravisLane.SteamArtManager": {
-    "lastUpdated": "2026-06-05T15:43:13.3667861Z",
-    "version": "3.15.0",
-    "installerHashes": [
-      "020834AE03ED5D8A489F7B173839E3801E043265FDF3CFF2EBECC52E77CD443C"
-    ],
+    "version": "3.16.0",
+    "description": "",
     "validationCount": 1,
-    "manifestHash": "6B9EE6BA18E3978D4A2689E58586715D8DCE810372CC0DD70C14E0E37305D2B4",
-    "state": "VALIDATION_PASSED",
-    "description": ""
+    "installerHashes": [
+      "DEFB10759A4A9F910B36F61D1BDB7F19D5CA8D32D299BDA81B41DE363383BBE5"
+    ],
+    "manifestHash": "1FA0988D5DA296500E3C84F739F8D12D803BA2AF622162F4A756E7270543870E",
+    "lastUpdated": "2026-06-05T22:00:06.3896851Z",
+    "state": "VALIDATION_PASSED"
   },
   "Jellyfin.FFmpeg": {
     "version": "7.1.4-2",
