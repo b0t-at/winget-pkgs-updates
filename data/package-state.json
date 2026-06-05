@@ -118,13 +118,13 @@
     "manifestHash": "8BD886060881B200B1E74BCB579451C8CFD95D6CA023373DA33C15E883D6E73C",
     "version": "11.5.2",
     "description": "",
-    "lastUpdated": "2026-06-05T16:13:08.4019468Z",
+    "lastUpdated": "2026-06-05T18:36:40.3635503Z",
     "installerHashes": [
       "B3DDFF2C2BF87D3996FADF074BAC58CD2259F718A17912A04AE930E3775B30E9",
       "DA12F2373235433B1688C15D9DD17A6FB52CA20944BC46C262A75D95B9520ED3"
     ],
     "state": "VALIDATION_FAILED",
-    "validationCount": 2
+    "validationCount": 3
   },
   "mmanela.markdownoutlook": {
     "validationCount": 3,
@@ -1073,15 +1073,15 @@
     "description": ""
   },
   "BytecodeAlliance.Wasmtime.Portable": {
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-05-21T22:08:09.8618119Z",
-    "validationCount": 1,
-    "description": "",
+    "version": "45.0.1",
+    "lastUpdated": "2026-06-05T18:36:40.4858514Z",
     "installerHashes": [
-      "EDB9572C6E8AE7C51053AF826A8BC85BF205A759C9E83DDB08A941B26E297706"
+      "D2732F264D8D414AB1ED1F508465711723E4A8FD211FEC611428ACFBC6CCFA6E"
     ],
-    "manifestHash": "E2C53CC5C21FEE52993DA94C7DDCF120209065CA5D8F1ACA8C3166C1C79EA1AA",
-    "version": "45.0.0"
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "manifestHash": "6FA4C21449C5410E8FFE94CD85BD5A92ED3EA923798DACEEF2A65E995B38052F"
   },
   "Kitware.CMake": {
     "state": "VALIDATION_PASSED",
@@ -1225,16 +1225,16 @@
     "description": ""
   },
   "Jellyfin.FFmpeg": {
-    "version": "7.1.4-1",
-    "state": "VALIDATION_PASSED",
-    "description": "",
+    "version": "7.1.4-2",
+    "lastUpdated": "2026-06-05T18:36:40.4720335Z",
     "installerHashes": [
-      "DF1D10219E010F5D19AD9408BF70D25C4E10ECFA28F07C97228BFB15F12E7CAE",
-      "DE1F46C0AE06AA23E3BD4135EEBA91BFC9F18566DD4A907CA09DD7A50765FFBA"
+      "F677B88E56641677759EACFBA737C221B10D6E3E118CF14627FC208C10CADCF5",
+      "D6A97DCDB01A79914CEDCD86CF88F17342360E729885C9DAB86E8DF72646D779"
     ],
+    "description": "",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "lastUpdated": "2026-05-28T04:49:35.7914285Z",
-    "manifestHash": "95937ED484C39EAA0A35863A7FC88FDDFE7D33C5F4361332F34A07E6829C2EBE"
+    "manifestHash": "568EE43966E3CD031AE02F927BFE5128BC4D893E0590422D1DC91C0160C3066A"
   },
   "eksctl.eksctl": {
     "version": "0.227.0",
@@ -1510,12 +1510,12 @@
     "manifestHash": "48B938BDAA7E2ADCDF3C6E7B71A7214AF24FFD5388F587258C452A189DDE760D",
     "version": "5.1.2",
     "description": "",
-    "lastUpdated": "2026-06-05T16:13:08.4294885Z",
+    "lastUpdated": "2026-06-05T18:36:40.4411383Z",
     "installerHashes": [
       "E5641F3841EC724FCB5E00A22D980F410EE507FDD00669B86DB0C29F9B741162"
     ],
     "state": "VALIDATION_FAILED",
-    "validationCount": 2
+    "validationCount": 3
   },
   "QGIS.QField": {
     "manifestHash": "D975C9E0F1092580123DA5D5E2B4AA996437C5CD2A3F86740AFEE0BA1A96710C",
