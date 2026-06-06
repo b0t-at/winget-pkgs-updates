@@ -1156,15 +1156,15 @@
     "description": ""
   },
   "altair-graphql.altair": {
-    "manifestHash": "474BD04A431D548D03555D1F05DC34B87DFBB72CF8CE5A2ED30893F23D03D90E",
-    "description": "",
-    "installerHashes": [
-      "9B380A6937AC778AB4D232A8F4D312D7681F9BEE5C8AF5F3B9CE4FAEC800150A"
-    ],
+    "lastUpdated": "2026-06-06T10:35:52.1255600Z",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-06-05T05:04:26.8308067Z",
+    "installerHashes": [
+      "E6DFD3121132B776077D77F4EA740037161B8ACFE17AB0D8B91750747F9CA3FC"
+    ],
+    "manifestHash": "97DA06EF3A629EA55C3205D58037BBD249AD1CB7B03F7CB88FAD5143EE34E1BD",
     "validationCount": 1,
-    "version": "8.5.4"
+    "version": "8.5.7",
+    "description": ""
   },
   "bufbuild.buf": {
     "manifestHash": "818A6AD5E2389CA94E4A6D72D19D871385A210678FF180A712A4FBE9C8044BB1",
