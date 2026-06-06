@@ -197,16 +197,16 @@
   },
   "JohannesMillan.superProductivity": {
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-05-30T04:35:29.649517Z",
-    "version": "18.8.0",
+    "version": "18.9.1",
     "description": "",
-    "installerHashes": [
-      "DE50C55BC29D6D9B0A09E643EDFAB920A461A1E5B1C49BEF0BBCC10B284A68AE",
-      "A120E8D337844EE7CC169D71B6234245EABACC8B78A4EF56E34199696BAFF829",
-      "CEF09E3412F82DAB0B369A520BC0191F9AD10D4E8454B46D1F6041DCEC493E7D"
-    ],
+    "manifestHash": "BB3120B67B86818257A1A466103ED9605556B17BCC274D52F567429510F34376",
     "validationCount": 1,
-    "manifestHash": "B80FFC9C6E14ED7E7479F3C2F567B0BB733D0DF6593BE26EAC3417A43F9F0847"
+    "lastUpdated": "2026-06-06T04:47:45.2022120Z",
+    "installerHashes": [
+      "84071873BDFD1EA1C67B92FBC875C0B039C8C5BFE881994B0B34D7FCEB6EE0F6",
+      "D8370D259CB757F01A9E3E4AA8C37867AD02C58C047C74050443930367F4AE13",
+      "09B6E4FD1CE938F01A8BE6300C8F1F52D7E83E5D3F32812D9461EB53B2EBAFCA"
+    ]
   },
   "fairdataihub.SODA-for-SPARC": {
     "validationCount": 1,
@@ -707,14 +707,14 @@
   },
   "KeeperSecurity.Commander": {
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-06-05T16:13:08.4912817Z",
-    "version": "18.0.5",
-    "manifestHash": "1936E24A118CA46B53ACAE21F09D196E255347D24133C19A500DEC4C2F6B33DD",
-    "installerHashes": [
-      "7DDC897E7A25BE61CE48BD36DDC9F9F1847E6EE7F2C34A506654F7CFC36C0064"
-    ],
+    "version": "18.0.6",
     "description": "",
-    "validationCount": 1
+    "manifestHash": "07DC8DB21DFD2212A7BD87D9CF85D16026C00EB210AA2C1D15ADB14D01E23303",
+    "validationCount": 1,
+    "lastUpdated": "2026-06-06T04:47:45.1892591Z",
+    "installerHashes": [
+      "BE1889DE455B4ACEA2E55E8549BACB1BED34D44F07BBCEF49958EAFC0975F927"
+    ]
   },
   "bornova.numara": {
     "validationCount": 1,
@@ -1540,5 +1540,16 @@
     ],
     "description": "",
     "validationCount": 1
+  },
+  "JosephFinney.Text-Grab": {
+    "state": "VALIDATION_PASSED",
+    "version": "4.14.1",
+    "description": "",
+    "manifestHash": "B716CF15564BB84F81A2B33AD9023F407069B967C97B710016E114BB9A4EF199",
+    "validationCount": 1,
+    "lastUpdated": "2026-06-06T04:47:45.1597224Z",
+    "installerHashes": [
+      "1847AA279C0A1E2F885196D744CDD26D37DD8E952A8F219C9B3CAB6E06AB1CCB"
+    ]
   }
 }
