@@ -1156,7 +1156,7 @@
     "description": ""
   },
   "altair-graphql.altair": {
-    "lastUpdated": "2026-06-06T10:35:52.1255600Z",
+    "lastUpdated": "2026-06-06T10:35:52.12556Z",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "E6DFD3121132B776077D77F4EA740037161B8ACFE17AB0D8B91750747F9CA3FC"
@@ -1562,5 +1562,17 @@
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
     "description": ""
+  },
+  "PBH-BTN.PeerBanHelper": {
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-06-06T14:22:13.7084219Z",
+    "version": "9.3.14",
+    "description": "",
+    "validationCount": 1,
+    "installerHashes": [
+      "C9C52FF3B591D64E94B100C5FF96308D05D4523B2394FEA0333197F1FB2693F1",
+      "496D6DE7FE35E46265C4598071B1C8A5975CDD449E87DC9C887922F8242B96EE"
+    ],
+    "manifestHash": "8BD3C26C9796D2A5A0510A140DFFEF6F545EDD07D814B22175C7EED6C4A07C79"
   }
 }
