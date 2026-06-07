@@ -367,14 +367,14 @@
   },
   "S3Drive.S3Drive": {
     "validationCount": 1,
-    "manifestHash": "93F5056AFEA4938EBF894769EDB3A615106859EB5FCDE84CFD33756803CC9519",
-    "lastUpdated": "2026-05-11T11:54:02.80607Z",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-06-07T21:37:58.3968861Z",
     "description": "",
-    "version": "1.17.8",
     "installerHashes": [
-      "2D91F8C7501C7F18C557ABC42C88D86604B63A6C38BEED7E0665B238ADB58F76"
+      "6B7CFDA454AB34107C85A533BD3F87302CBDE978DA3F463AC0C289DA26CD9F5A"
     ],
-    "state": "VALIDATION_PASSED"
+    "version": "1.17.9",
+    "manifestHash": "F46548F6618D05E9401D2E33DE8808D3F0F1CAEAF274524428ACFA1358B031C4"
   },
   "UltimateGadgetLaboratories.UHKAgent": {
     "validationCount": 1,
