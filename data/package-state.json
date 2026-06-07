@@ -707,14 +707,14 @@
   },
   "KeeperSecurity.Commander": {
     "state": "VALIDATION_PASSED",
-    "version": "18.0.6",
-    "description": "",
-    "manifestHash": "07DC8DB21DFD2212A7BD87D9CF85D16026C00EB210AA2C1D15ADB14D01E23303",
-    "validationCount": 1,
-    "lastUpdated": "2026-06-06T04:47:45.1892591Z",
     "installerHashes": [
-      "BE1889DE455B4ACEA2E55E8549BACB1BED34D44F07BBCEF49958EAFC0975F927"
-    ]
+      "9ADDE677EEB07E2599FA35E3CC8BC7DADC06572150C5E711C6D40D7974528EE0"
+    ],
+    "manifestHash": "D6E21F6BA099215F004EA7429AD14BC9B2A6B0977108B9C3E900899896FB2BC4",
+    "version": "18.0.7",
+    "lastUpdated": "2026-06-07T05:15:49.8704508Z",
+    "description": "",
+    "validationCount": 1
   },
   "bornova.numara": {
     "validationCount": 1,
