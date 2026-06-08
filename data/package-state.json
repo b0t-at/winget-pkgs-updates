@@ -1261,14 +1261,14 @@
   },
   "loft-sh.vcluster": {
     "description": "",
-    "version": "0.34.1",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-05-28T22:26:03.4166616Z",
+    "manifestHash": "9150E7B9326199557B6A9488BAB132DA24260914FA2443427665A7801FBD7878",
+    "lastUpdated": "2026-06-08T18:53:05.4767575Z",
+    "validationCount": 1,
+    "version": "0.34.2",
     "installerHashes": [
-      "64C1BD1D35A7E4008D6375D8FF86766AAD154A73CBB158FF87867FFEBA643633"
-    ],
-    "manifestHash": "56E56894923202C771EC338EF57471090552220723B43718C2BC10A96F4E0B0B",
-    "validationCount": 1
+      "A9E415D791CA677171A2F69EBA7B6096B3D3B8A0EEDD1DD58216B89AF02C618D"
+    ]
   },
   "AdaLang.Alire.Portable": {
     "manifestHash": "9AF0A473771E6C6F30C85974415BE98484C1164911A86ED12FF3A234B2CA7645",
@@ -1588,7 +1588,7 @@
   },
   "Fork.Fork": {
     "description": "",
-    "lastUpdated": "2026-06-08T12:52:25.3865170Z",
+    "lastUpdated": "2026-06-08T12:52:25.386517Z",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
     "installerHashes": [
