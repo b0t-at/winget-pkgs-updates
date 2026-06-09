@@ -1600,12 +1600,12 @@
   "WillyJL.F95Checker": {
     "description": "",
     "manifestHash": "E2A79B799ECDAC6212759B0E4DC6CAF6D2E222937D174BA5ADCC19209CA42167",
-    "lastUpdated": "2026-06-09T11:48:55.4657697Z",
+    "lastUpdated": "2026-06-09T15:52:24.9097329Z",
     "version": "11.1",
     "installerHashes": [
       "B9C7866B0AF58AD0C3A0B646F93BFF81DAA575D4FBB5EC91819CC2E744B668B7"
     ],
-    "state": "VALIDATION_FAILED",
-    "validationCount": 1
+    "state": "VALIDATION_PASSED",
+    "validationCount": 2
   }
 }
