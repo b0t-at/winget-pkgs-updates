@@ -1607,5 +1607,28 @@
     ],
     "state": "VALIDATION_PASSED",
     "validationCount": 2
+  },
+  "Sigstore.Cosign": {
+    "lastUpdated": "2026-06-09T18:54:05.5726396Z",
+    "state": "VALIDATION_PASSED",
+    "version": "3.1.1",
+    "installerHashes": [
+      "9D2C026E667BFD979FA7BA1CAB8C4B24D2E73F336EC2D57F7FC72C7E73E5B4B6"
+    ],
+    "description": "",
+    "manifestHash": "68286B360088C4D0D2547756B663BBAF6F78258BF2A5D908178EF5DED6B4CBA6",
+    "validationCount": 1
+  },
+  "restic.restic": {
+    "lastUpdated": "2026-06-09T18:54:05.6014971Z",
+    "state": "VALIDATION_PASSED",
+    "version": "0.19.0",
+    "installerHashes": [
+      "5AB17C545FED2002E328BFB2816EFD01E64F9AD69FFAE38ADE014FC52AC6579D",
+      "6FA4219A70B1B5D1C429BB106A7F97F3D2A5AAB74494DB2E490B625EDC486D8F"
+    ],
+    "description": "",
+    "manifestHash": "ED855771C70405BBA285F8922C77D4C705958887930FA9C61809C36CFF7D7A52",
+    "validationCount": 1
   }
 }
