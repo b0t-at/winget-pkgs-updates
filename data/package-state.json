@@ -117,13 +117,13 @@
   "pnpm.pnpm": {
     "description": "",
     "version": "11.6.0",
-    "lastUpdated": "2026-06-12T07:23:47.558752Z",
+    "lastUpdated": "2026-06-12T12:32:11.5105406Z",
     "manifestHash": "B1D8B4AD017BD58C8EC99338FEB95006481D9DD15EBE35514597C9318B8AF865",
     "installerHashes": [
       "91C753435542B04859C689304FAE0DD64EBA6B40937CFA426A48485B712E4E9C",
       "4F3E8197348E44CDD2C6FD624F377E5BB40D00239AAF097A874DFAC86CFF9513"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_FAILED"
   },
   "mmanela.markdownoutlook": {
@@ -1632,8 +1632,8 @@
     "validationCount": 1
   },
   "Neovim.Neovim": {
-    "lastUpdated": "2026-06-12T07:23:47.5229097Z",
-    "validationCount": 2,
+    "lastUpdated": "2026-06-12T12:32:11.5483904Z",
+    "validationCount": 3,
     "state": "VALIDATION_FAILED",
     "manifestHash": "510BE027B8986AC0564CCC5705CD1AC870B81301D8670F51C229B9E04B556672",
     "installerHashes": [
@@ -1653,5 +1653,16 @@
     ],
     "version": "0.51.0",
     "description": ""
+  },
+  "Netmaker.Netmaker": {
+    "installerHashes": [
+      "B9A5E2B30D81A4C8247786D792E251E2278B7036D2A7902CFB4C1905DDCFCDD9"
+    ],
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "1.6.0",
+    "description": "",
+    "lastUpdated": "2026-06-12T12:32:11.6305511Z",
+    "manifestHash": "FAEFE9425460BAAC48B68C28234D28324B6DD9D19CB996714DC8033F3EA1251B"
   }
 }
