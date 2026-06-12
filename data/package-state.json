@@ -876,13 +876,13 @@
     "manifestHash": "34578A81C664A5A7F6CE8892ABB8AF558356A16F0C044C900604413CA201D8C0"
   },
   "Storj.Uplink": {
-    "manifestHash": "88EA3925CABF314D1B9D8C7C22C86226C96B2656F0CE4E1F5B1FD9FECE2E8109",
-    "version": "1.155.7",
-    "state": "VALIDATION_PASSED",
+    "version": "1.155.8",
     "installerHashes": [
-      "297E260E257AA090C37EC50CE6E11154A6847FD0CD086C8378A1E32854686ACF"
+      "5BEBBF427ACA0C45FBDEA0656AA5D4A3BEF91925FE9B7F4C9ED13C1C96659BD1"
     ],
-    "lastUpdated": "2026-06-11T23:54:21.0664556Z",
+    "lastUpdated": "2026-06-12T06:54:14.9346933Z",
+    "manifestHash": "D95BFB3AA4995507009D2A1B6C0F4DB12D421840EAD33C597488EE1F5E898A0B",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
     "description": ""
   },
@@ -1394,15 +1394,15 @@
     ]
   },
   "tuna-f1sh.cyme": {
-    "description": "",
-    "version": "3.0.0",
-    "manifestHash": "556C1F140BAA6382B644F7AA7D8C4D7E9986685356AA85F1332F8AA13BD13AFA",
+    "version": "3.0.1",
     "installerHashes": [
-      "4A75012BDA64DE517B9661753569755CBD62DAB45F100CC0CAA871B4E9716636"
+      "71E581CA8A2763965FD0FBA7E21E50719928FD254494984359EDF7DABE8AB1FD"
     ],
-    "lastUpdated": "2026-06-02T20:08:21.1017335Z",
+    "lastUpdated": "2026-06-12T06:54:14.9023418Z",
+    "manifestHash": "3A9E7DFBD86AA3405453E552987B54CF5F981D149535C4FBD45953DC7D4C5E26",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "description": ""
   },
   "Gleam.Gleam": {
     "validationCount": 1,
@@ -1598,15 +1598,15 @@
     "version": "2.20.1"
   },
   "WillyJL.F95Checker": {
-    "description": "",
-    "manifestHash": "E2A79B799ECDAC6212759B0E4DC6CAF6D2E222937D174BA5ADCC19209CA42167",
-    "lastUpdated": "2026-06-09T15:52:24.9097329Z",
-    "version": "11.1",
+    "version": "11.1.2",
     "installerHashes": [
-      "B9C7866B0AF58AD0C3A0B646F93BFF81DAA575D4FBB5EC91819CC2E744B668B7"
+      "DF41DBD98E08BC673496466A30B69BF9339E628711F73D3F5E06FD0426F79EF6"
     ],
+    "lastUpdated": "2026-06-12T06:54:14.9451733Z",
+    "manifestHash": "08EFB32835B07F78C6B2D0A387D6F7A63680C2F3127BD1EB0E8E32B7BF5A6280",
     "state": "VALIDATION_PASSED",
-    "validationCount": 2
+    "validationCount": 1,
+    "description": ""
   },
   "Sigstore.Cosign": {
     "lastUpdated": "2026-06-09T18:54:05.5726396Z",
