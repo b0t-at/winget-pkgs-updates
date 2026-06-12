@@ -115,16 +115,16 @@
     "validationCount": 1
   },
   "pnpm.pnpm": {
-    "manifestHash": "8BD886060881B200B1E74BCB579451C8CFD95D6CA023373DA33C15E883D6E73C",
-    "version": "11.5.2",
-    "description": "",
-    "lastUpdated": "2026-06-05T18:36:40.3635503Z",
-    "installerHashes": [
-      "B3DDFF2C2BF87D3996FADF074BAC58CD2259F718A17912A04AE930E3775B30E9",
-      "DA12F2373235433B1688C15D9DD17A6FB52CA20944BC46C262A75D95B9520ED3"
-    ],
+    "lastUpdated": "2026-06-12T00:13:00.5445743Z",
+    "validationCount": 1,
     "state": "VALIDATION_FAILED",
-    "validationCount": 3
+    "manifestHash": "A064283EEA817843D1D5E2D9B64B8319B014D0EEA60D1361272C1AF457E2CEE7",
+    "installerHashes": [
+      "AB3DACAB436D0B0E4975859E3E0480C4D36FDD0BBDCA3C47F3BDE09372467674",
+      "8735B7FA8525C2D4C709C1EC59D9888752FA080F96D3F7B26298C1C668FEB89D"
+    ],
+    "version": "11.5.3",
+    "description": ""
   },
   "mmanela.markdownoutlook": {
     "validationCount": 3,
@@ -457,16 +457,16 @@
     "version": "1.7.8"
   },
   "Fly-io.flyctl": {
-    "version": "0.4.58",
-    "installerHashes": [
-      "6631F16011947B0DF46349367B143497366DCBE823AA90F6DBAC71423A83A8A7",
-      "0D15A6B6B4CDAB6A9D822DADAEA67CC4F6461E9CBBEE203D0F715CF08C153536"
-    ],
-    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-06-12T00:13:00.695036Z",
     "validationCount": 1,
-    "description": "",
-    "lastUpdated": "2026-06-04T22:15:30.6018615Z",
-    "manifestHash": "198A57BD5192D1186953DDB4002A598995448BD0E80653E1564961C419F0B535"
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "F2E8351D83D28C9AD2DAE96CC24D292523B8469F9618F648D357D66100FF6057",
+    "installerHashes": [
+      "C3D727D1EFC883AD14FFB35AC5AF0BEFE87F4FF573EF81A7EE66C979F128B1AF",
+      "D8FE8096CC3DCBE0A12E9B067257C0CD38D9994157FE5A288DACC0A438684867"
+    ],
+    "version": "0.4.59",
+    "description": ""
   },
   "aimotrens.impulsar": {
     "validationCount": 2,
@@ -819,16 +819,16 @@
     "description": ""
   },
   "Gruntwork.Terragrunt": {
+    "lastUpdated": "2026-06-12T00:13:00.7153432Z",
     "validationCount": 1,
-    "version": "1.0.7",
-    "description": "",
-    "lastUpdated": "2026-06-01T21:04:38.5582753Z",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "5662F209756DB6600798E7A793998D4431A0B5D90182F64981A60D59F656135D",
+    "manifestHash": "F3F67E9B0F48BD9D4E34DD270AC8638775DA027EC41962D19DBE0D4B217BAEB6",
     "installerHashes": [
-      "14719CDBA254818CF5A36B123739251B97BB8A98AC42AE789620B5E25D49E32A",
-      "444C9AB7B6B94EBFE692734F7649C6648330D007B12A1EF878570BEB49B18361"
-    ]
+      "3EDB173865B90F22609F46483AB91658D2ECE030CF19DFA30D20C8FBE36C75C0",
+      "3B4418BFB497609DC80274CC8CF95630AA7B54EB7F8C598047EE5F6CAD3919D1"
+    ],
+    "version": "1.0.8",
+    "description": ""
   },
   "ZeroInstall.ZeroInstall": {
     "lastUpdated": "2026-05-18T21:38:39.9333568Z",
@@ -934,15 +934,15 @@
     "lastUpdated": "2026-05-20T04:39:57.6836507Z"
   },
   "Forkgram.Forkgram": {
-    "manifestHash": "7F22EA166719DCA735865AD83C211B05F27D6FB073C4BF07AC0F73113A69A9A2",
-    "version": "6.8.5",
-    "description": "",
-    "lastUpdated": "2026-06-05T12:07:46.5283229Z",
-    "installerHashes": [
-      "D6AC6E071A7DACB6FBC947886CD60CBFC712BE421BCA7D190AE6315DE80D3D71"
-    ],
+    "lastUpdated": "2026-06-12T00:13:00.6738424Z",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "validationCount": 1
+    "manifestHash": "3A931D0822DC6267FCE595A8F4756CF99011FDD33FAFE928A4030765B06E9897",
+    "installerHashes": [
+      "347AC06FA3DE69081A95AE5E16567B00E59482183E832D0ED60AAAF080B6B4EB"
+    ],
+    "version": "6.9.1",
+    "description": ""
   },
   "JanProchazka.dbgate": {
     "installerHashes": [
@@ -1315,16 +1315,16 @@
     "state": "VALIDATION_PASSED"
   },
   "P-StSoftware.WinSSHTerm": {
-    "manifestHash": "288F0C21B4DB511E86DA244C985493B00F462F43003BCF367DC7BB347D2F161E",
-    "description": "",
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "46AF5A4D9261C12D00B3FC512F38F3B70DB74D9FF87E81C70DD4982682216D50",
-      "2EDE5D0AE3DD58FBAB6AAEB91B973FEDE612A82DBAD32B9FAC2DCE5F71C2CCE3"
-    ],
+    "lastUpdated": "2026-06-12T00:13:00.6639168Z",
     "validationCount": 1,
-    "lastUpdated": "2026-06-04T16:08:01.623718Z",
-    "version": "2.41.10"
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "04C10F8A2450EBF459EA2BCF8198FFBFDD365ED9C148153F6DEEAFE2A03E1609",
+    "installerHashes": [
+      "4EB979F75611EAD31A476EB281E84A02565BD38FB2B49DBBE9CA15AFE61CAD1C",
+      "3A6BD1F41D6C551FD72A156F516BC4D8A661F566CA5EDCB75DC357CEFA7C6B89"
+    ],
+    "version": "2.42.0",
+    "description": ""
   },
   "igoogolx.itun2socks": {
     "validationCount": 1,
@@ -1630,5 +1630,28 @@
     "description": "",
     "manifestHash": "ED855771C70405BBA285F8922C77D4C705958887930FA9C61809C36CFF7D7A52",
     "validationCount": 1
+  },
+  "Neovim.Neovim": {
+    "lastUpdated": "2026-06-12T00:13:00.582252Z",
+    "validationCount": 1,
+    "state": "VALIDATION_FAILED",
+    "manifestHash": "510BE027B8986AC0564CCC5705CD1AC870B81301D8670F51C229B9E04B556672",
+    "installerHashes": [
+      "CEC5FFCA1EF03C39D6DCFFFD59C2A3500A1CF967C6E6D7311F0005FCFD7B20B4"
+    ],
+    "version": "0.12.3",
+    "description": ""
+  },
+  "Gruntwork.cloud-nuke": {
+    "lastUpdated": "2026-06-12T00:13:00.7052515Z",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "AEA92396A51184151D52F5F2A67C687826C8BF3A869F2B71DB9E90FE2383F0E3",
+    "installerHashes": [
+      "A9E8C40D26640FCBB2117BFED56A549944965D4D50040831EF666D7941F37049",
+      "2DD7AF0D4DC972A4B1200F9D75C6BFA89A1292C591E3681F5928462C9733CF29"
+    ],
+    "version": "0.51.0",
+    "description": ""
   }
 }
