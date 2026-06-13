@@ -1664,5 +1664,16 @@
     "description": "",
     "lastUpdated": "2026-06-12T12:32:11.6305511Z",
     "manifestHash": "FAEFE9425460BAAC48B68C28234D28324B6DD9D19CB996714DC8033F3EA1251B"
+  },
+  "commercialhaskell.stack": {
+    "manifestHash": "EB91C0B5357E5AE1BDCE9CE4511B96F0FEB2A039DB90D29F4F802E0721E37E9E",
+    "description": "",
+    "validationCount": 1,
+    "version": "3.11.1",
+    "installerHashes": [
+      "CBAFD92B9FB1AC87B5F06C6BBA08D47D54503BCD48EC78BC6E9923B44FF3805C"
+    ],
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-06-13T21:57:50.2974106Z"
   }
 }
