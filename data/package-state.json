@@ -706,15 +706,15 @@
     "version": "26.5.0-0"
   },
   "KeeperSecurity.Commander": {
-    "state": "VALIDATION_PASSED",
+    "version": "18.0.8",
     "installerHashes": [
-      "9ADDE677EEB07E2599FA35E3CC8BC7DADC06572150C5E711C6D40D7974528EE0"
+      "E3B4518FE80F1910097EAD16E3ACFD6AC4408E84B6B30A66D67F1845B5C82684"
     ],
-    "manifestHash": "D6E21F6BA099215F004EA7429AD14BC9B2A6B0977108B9C3E900899896FB2BC4",
-    "version": "18.0.7",
-    "lastUpdated": "2026-06-07T05:15:49.8704508Z",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-06-13T05:26:19.3945094Z",
     "description": "",
-    "validationCount": 1
+    "manifestHash": "0BD109A0B469BF93F168F8C1BFC29EB49DCA359A5B126C509AFF15A1B5FE588C"
   },
   "bornova.numara": {
     "validationCount": 1,
@@ -808,15 +808,15 @@
     "state": "VALIDATION_PASSED"
   },
   "OneKey.OneKey": {
-    "manifestHash": "10B9F68550C52E77EE542B1E35E5DFB203411BBFB405DA0FA0F79E9E904D66ED",
-    "version": "6.3.0",
+    "version": "6.4.0",
     "installerHashes": [
-      "994C4AF48F6F9C0C7F406AC2246CB8298A1DDE4D9765A2D01A155398699B94F2"
+      "B068930CC9272F47837C1D8822C4378FE582B6A3A013DB875B463F96734C460E"
     ],
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-05-18T18:33:54.3294915Z",
-    "validationCount": 2,
-    "description": ""
+    "lastUpdated": "2026-06-13T05:26:19.3632802Z",
+    "description": "",
+    "manifestHash": "C0082CF145637812C3FE68489795B507C03092642DDBEB101167B4F7D74B2C50"
   },
   "Gruntwork.Terragrunt": {
     "lastUpdated": "2026-06-12T00:13:00.7153432Z",
