@@ -934,15 +934,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Forkgram.Forkgram": {
-    "lastUpdated": "2026-06-12T00:13:00.6738424Z",
+    "lastUpdated": "2026-06-14T22:08:47.8908205Z",
+    "version": "6.9.3",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "3A931D0822DC6267FCE595A8F4756CF99011FDD33FAFE928A4030765B06E9897",
+    "description": "",
     "installerHashes": [
-      "347AC06FA3DE69081A95AE5E16567B00E59482183E832D0ED60AAAF080B6B4EB"
+      "B19AB5323D27B96490D1B8BABEDB69F940E27E1401EC0262EE43F52DD4EEF84E"
     ],
-    "version": "6.9.1",
-    "description": ""
+    "manifestHash": "14DB610BC58C92A08861A966F92354287B54574AE56564CABC332DB10875F9FD",
+    "state": "VALIDATION_PASSED"
   },
   "JanProchazka.dbgate": {
     "installerHashes": [
