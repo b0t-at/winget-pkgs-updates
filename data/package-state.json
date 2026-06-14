@@ -1134,15 +1134,15 @@
     "validationCount": 1
   },
   "xpipe-io.xpipe.portable": {
-    "manifestHash": "9EDDD6A91F9DCD88259BC8D1C3B4E889FB2F03F093CF00C1E29EE41082987F49",
+    "version": "23.5",
+    "lastUpdated": "2026-06-14T14:52:11.1129493Z",
+    "description": "",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "DCDC68F131524B2DB23F48FBF4295BD2D138FA1410DC01566869825E9267426D"
+      "8287294E5BBA6B136DD7A5F600B3A52B5C61CCD71D154BF9375412F5C046037A"
     ],
     "validationCount": 1,
-    "lastUpdated": "2026-06-04T11:42:54.8969899Z",
-    "version": "23.4",
-    "state": "VALIDATION_PASSED",
-    "description": ""
+    "manifestHash": "59A1F0BE8AB8749B37EBDFF03C4FFB27DEE813C192A12EEDF8D028F39396641B"
   },
   "OliverSchwendener.ueli": {
     "state": "VALIDATION_PASSED",
