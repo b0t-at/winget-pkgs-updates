@@ -1518,15 +1518,15 @@
     "validationCount": 3
   },
   "QGIS.QField": {
-    "description": "",
     "validationCount": 1,
-    "installerHashes": [
-      "BECCF8237E50B3296DDDF21876AC1ABA9CE4126E70671ADA8D4B8FB9F0184589"
-    ],
-    "manifestHash": "7E392DDB37358030515307FDFCC88B308463ABA280FD31DA8E3ECAC263159B00",
-    "lastUpdated": "2026-06-09T11:59:03.3923148Z",
     "state": "VALIDATION_PASSED",
-    "version": "4.2.2"
+    "description": "",
+    "installerHashes": [
+      "77206D6C085B85792EDB9B518452B9052CE5CCDE1DC0E6A9F8A92CB5BD3E706D"
+    ],
+    "manifestHash": "6E0DB612B8A738E5321B18F76B22805BE743216D4B96D28AB7EAAD5EC0F4A850",
+    "version": "4.2.3",
+    "lastUpdated": "2026-06-14T15:22:50.5115857Z"
   },
   "nao1215.gup": {
     "state": "VALIDATION_PASSED",
