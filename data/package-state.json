@@ -121,8 +121,8 @@
     ],
     "description": "",
     "state": "VALIDATION_FAILED",
-    "validationCount": 1,
-    "lastUpdated": "2026-06-15T15:30:46.1786058Z",
+    "validationCount": 2,
+    "lastUpdated": "2026-06-15T21:03:28.4712729Z",
     "manifestHash": "F6E7849CA6C76AC1F38A7D923F41F4530ACDD952415ABAAFEE90925859173D0C",
     "version": "11.7.0"
   },
@@ -1073,15 +1073,15 @@
     "description": ""
   },
   "BytecodeAlliance.Wasmtime.Portable": {
-    "version": "45.0.1",
-    "lastUpdated": "2026-06-05T18:36:40.4858514Z",
-    "installerHashes": [
-      "D2732F264D8D414AB1ED1F508465711723E4A8FD211FEC611428ACFBC6CCFA6E"
-    ],
-    "description": "",
+    "version": "45.0.2",
     "state": "VALIDATION_PASSED",
+    "manifestHash": "F16ED79C5F9623DC8717F5A52FCD9F399AB7F2C7BEDD4D19588542D0412BA6B9",
+    "installerHashes": [
+      "DAC1587EC5705D6D26967D5F7EEB5EFB1F91804F49593B30A14A989C0ED9AC7A"
+    ],
+    "lastUpdated": "2026-06-15T21:03:28.5763648Z",
     "validationCount": 1,
-    "manifestHash": "6FA4C21449C5410E8FFE94CD85BD5A92ED3EA923798DACEEF2A65E995B38052F"
+    "description": ""
   },
   "Kitware.CMake": {
     "state": "VALIDATION_PASSED",
@@ -1315,15 +1315,15 @@
     "state": "VALIDATION_PASSED"
   },
   "P-StSoftware.WinSSHTerm": {
-    "lastUpdated": "2026-06-12T00:13:00.6639168Z",
-    "validationCount": 1,
+    "version": "2.42.1",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "04C10F8A2450EBF459EA2BCF8198FFBFDD365ED9C148153F6DEEAFE2A03E1609",
+    "manifestHash": "1546B2923A5B6BEC34734639F26B44E31D3EB51DA3766CD1E03B33515FFD1982",
     "installerHashes": [
-      "4EB979F75611EAD31A476EB281E84A02565BD38FB2B49DBBE9CA15AFE61CAD1C",
-      "3A6BD1F41D6C551FD72A156F516BC4D8A661F566CA5EDCB75DC357CEFA7C6B89"
+      "6163BA73F2E9E12B1F5CD094CB500F9EA8E92856ABD6DD7E39FC5598163A9968",
+      "41B6C23B9FCB1F9343EF42271A8CCED3D60BE8E9A5C7019B4B3CFA19C1A09C57"
     ],
-    "version": "2.42.0",
+    "lastUpdated": "2026-06-15T21:03:28.6017577Z",
+    "validationCount": 1,
     "description": ""
   },
   "igoogolx.itun2socks": {
@@ -1683,8 +1683,8 @@
     ],
     "description": "",
     "state": "VALIDATION_FAILED",
-    "validationCount": 1,
-    "lastUpdated": "2026-06-15T15:30:46.2103531Z",
+    "validationCount": 2,
+    "lastUpdated": "2026-06-15T21:03:28.5165119Z",
     "manifestHash": "E7604595AD792C91D756B589D489D972674CAD64B5E211E2F2B6B99513C3CD51",
     "version": "2026.3"
   }
