@@ -209,15 +209,15 @@
     ]
   },
   "fairdataihub.SODA-for-SPARC": {
-    "validationCount": 1,
-    "version": "18.0.1",
+    "manifestHash": "92C69A471562FCAADA05E692A252C5F554FFFE1182AF7FF7B4253727E210924F",
+    "version": "18.1.0",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "C78E1489B92CF65F54F66DB4E169AB5B74C6B998D62F643659049E80DD94AABE",
-    "lastUpdated": "2026-05-11T08:36:25.7345892Z",
     "installerHashes": [
-      "828D1CA6D864FDA1CE2B5AB1A879EFA95B3BEE98032D8537175014F3A3599EAF"
+      "68129FA076B23B83F5593A61CA0BB6D714F4829259E09356AD312D11F28B0AA4"
     ],
-    "description": ""
+    "lastUpdated": "2026-06-16T23:02:42.3978529Z",
+    "description": "",
+    "validationCount": 1
   },
   "LittleTijn.SpookyView": {
     "validationCount": 2,
