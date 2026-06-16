@@ -536,15 +536,15 @@
     "lastUpdated": "2026-05-12T18:31:20.6867887Z"
   },
   "Concourse.Fly": {
-    "lastUpdated": "2026-05-27T16:26:36.2178927Z",
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "version": "8.2.3",
     "installerHashes": [
-      "84DE59456501F92E8E76872D3772353C83AB91326E077F3771F731C4953AA738"
+      "4E7A42286131BF7795873AFAD1B497FBF96FFEBDB453FF026764B327C55381C2"
     ],
-    "manifestHash": "17FC8EAEA7CAC4E5B670A9420E820AA5E088E4B5296FCE8D80E964FED4344F9A"
+    "validationCount": 1,
+    "version": "8.2.4",
+    "lastUpdated": "2026-06-16T20:39:45.248167Z",
+    "manifestHash": "B6ECA841B56BBCD92EF93CA4BA814DC0F6AFFFD56CB75C69E67D6D12FA8A9D7A",
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "argoproj.argocd": {
     "lastUpdated": "2026-05-28T22:26:03.3858598Z",
@@ -851,7 +851,7 @@
     "validationCount": 1,
     "description": "",
     "version": "0.44.0",
-    "lastUpdated": "2026-06-16T14:00:39.4664050Z"
+    "lastUpdated": "2026-06-16T14:00:39.466405Z"
   },
   "Gardener.gardenlogin": {
     "lastUpdated": "2026-05-19T11:46:35.3075526Z",
@@ -900,15 +900,15 @@
     "description": ""
   },
   "Microsoft.PerfView": {
-    "validationCount": 1,
-    "manifestHash": "419CBA4D85E1E9214C93E2239233C79D81E1398E79AD12D21A22A8EFA7F4AB3B",
     "installerHashes": [
-      "EDF8B7EDA654F9E818781C06D9A02C953B1DB568CF0E42C625400523C4F46735"
+      "C0A6471E2276ED4232BE62285EADA73A03346E3813F3B926DAD4710B123719E4"
     ],
-    "version": "3.2.3",
+    "validationCount": 1,
+    "version": "3.2.4",
+    "lastUpdated": "2026-06-16T20:39:45.2693086Z",
+    "manifestHash": "14EE1A0C42094C5257C40F6657C85D86E67429A0DCA8F44530C2107B906ADBB7",
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-05-19T18:28:40.686396Z"
+    "state": "VALIDATION_PASSED"
   },
   "Gardener.gardenctl": {
     "state": "VALIDATION_PASSED",
@@ -1167,16 +1167,16 @@
     "description": ""
   },
   "bufbuild.buf": {
-    "manifestHash": "818A6AD5E2389CA94E4A6D72D19D871385A210678FF180A712A4FBE9C8044BB1",
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "lastUpdated": "2026-05-25T21:41:21.4729735Z",
-    "version": "1.70.0",
     "installerHashes": [
-      "96422E4313EFE2741946F31F57AB4000C440B48D14936992AB98E94C16322F6F",
-      "1E5367F6CA2B781FAC85BFCDF43640E146B0261C782D8352E13D5C2734DC7FE0"
-    ]
+      "F51DD473B9F5CE549877AC4CA13FF8A3B4678D13DB5AE69AB0AE2B11B55D2FBA",
+      "BAB0CED380C04800C1649B1F1DB20EFFD77F582EE032B50D9F94DF7CA2981278"
+    ],
+    "validationCount": 1,
+    "version": "1.71.0",
+    "lastUpdated": "2026-06-16T20:39:45.2114862Z",
+    "manifestHash": "52FD21480186BB30203615129DA16B5981C1583AA3612805AD7E680212E478FF",
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "PasteIntoFile.PasteIntoFile": {
     "manifestHash": "2A58645323CF7B59F73C09EDBC577DDC24AD3BAF20371F90F10BDDE91C874B7C",
@@ -1260,15 +1260,15 @@
     "state": "VALIDATION_PASSED"
   },
   "loft-sh.vcluster": {
-    "description": "",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "9150E7B9326199557B6A9488BAB132DA24260914FA2443427665A7801FBD7878",
-    "lastUpdated": "2026-06-08T18:53:05.4767575Z",
-    "validationCount": 1,
-    "version": "0.34.2",
     "installerHashes": [
-      "A9E415D791CA677171A2F69EBA7B6096B3D3B8A0EEDD1DD58216B89AF02C618D"
-    ]
+      "E0E487464FA64C3D121EEC2BEF08DB0071563DB872B98AA2EC4010E73EC12A7E"
+    ],
+    "validationCount": 1,
+    "version": "0.35.0",
+    "lastUpdated": "2026-06-16T20:39:45.2795689Z",
+    "manifestHash": "587CFACD6783B3138EBC95B28DE094E9C5472FF7E161A998EC95250546558D8B",
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "AdaLang.Alire.Portable": {
     "manifestHash": "9AF0A473771E6C6F30C85974415BE98484C1164911A86ED12FF3A234B2CA7645",
