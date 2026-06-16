@@ -1687,5 +1687,16 @@
     "lastUpdated": "2026-06-15T22:57:21.3918238Z",
     "manifestHash": "E7604595AD792C91D756B589D489D972674CAD64B5E211E2F2B6B99513C3CD51",
     "version": "2026.3"
+  },
+  "Yubico.Authenticator": {
+    "description": "",
+    "manifestHash": "87F54FBDBAE8A2FDEFB92091E3165D0111937B408D632AB55AE47FA411426814",
+    "installerHashes": [
+      "616BEC7354EB8830CED8338A50C405F4D0277D626967C45CB1BF5CA3E9D8E3B1"
+    ],
+    "version": "7.4.0",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-06-16T13:33:46.1192449Z"
   }
 }
