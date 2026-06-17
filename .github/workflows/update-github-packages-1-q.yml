@@ -718,6 +718,9 @@ jobs:
           - id: PersepolisDownloadManager.Persepolis
             repo: persepolisdm/persepolis
             url: https://github.com/persepolisdm/persepolis/releases/download/{VERSION}/persepolis_{VERSION}.0_windows_64bit.exe
+          - id: Picocrypt-NG.Picocrypt-NG
+            repo: Picocrypt-NG/Picocrypt-NG
+            url: https://github.com/Picocrypt-NG/Picocrypt-NG/releases/download/{VERSION}/Picocrypt-NG-Setup.exe
           - id: pinokiocomputer.pinokio
             repo: pinokiocomputer/pinokio
             url: https://github.com/pinokiocomputer/pinokio/releases/download/v{VERSION}/Pinokio.exe
