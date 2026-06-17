@@ -624,15 +624,15 @@
     "description": ""
   },
   "Google.FirebaseCLI": {
-    "description": "",
-    "version": "15.20.0",
-    "lastUpdated": "2026-06-12T07:23:47.649721Z",
-    "manifestHash": "A959D3CF61813BCB8848758F21280D36A742595CAC5A49111C2AA54E982F2AD8",
+    "manifestHash": "8D91C2257F5F5337FE03F57BFD6F5B9C2042CFA0DB549E055E161C83D3A49570",
     "installerHashes": [
-      "7E26C5A43064366FB89141CF289ACC272008C51ACA6740713D038F5BF388B3ED"
+      "8D4FC82833B5452F7662783FBDD1180E06435467887C76BD66D6A31B6A6AA5C2"
     ],
     "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "version": "15.21.0",
+    "lastUpdated": "2026-06-17T22:43:12.5026261Z"
   },
   "TerraformLinters.tflint": {
     "lastUpdated": "2026-06-03T20:13:54.4980133Z",
