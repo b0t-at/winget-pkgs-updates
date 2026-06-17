@@ -613,15 +613,15 @@
     "manifestHash": "5B1DB443C3D0E7A9ABA1D715CB10549FB09F1A255D587296E54A5496CE269A34"
   },
   "FOSSA.FOSSA-cli": {
-    "manifestHash": "6C4FAA24E52E8026CB408B9129919843C82228CCC7324724956C2A0536F8685F",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "version": "3.17.10",
-    "description": "",
-    "lastUpdated": "2026-05-29T22:17:44.5470862Z",
+    "version": "3.17.11",
     "installerHashes": [
-      "D009F6AEDE72D1BCD3FC6D069E7DCD35CFDB2A2A469F01607CABA3845E4959E3"
-    ]
+      "1B7F3F11479F14A64B1C1DCF85B942B0ACF906311294893E6E83091DAC40DC2A"
+    ],
+    "lastUpdated": "2026-06-17T05:31:22.0240302Z",
+    "validationCount": 1,
+    "manifestHash": "73F2E20659B2A7FF99538771921FCA41910C2EFFD0F41C7084A81444544D0305",
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "Google.FirebaseCLI": {
     "description": "",
