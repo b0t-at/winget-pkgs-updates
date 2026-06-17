@@ -1698,5 +1698,16 @@
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-06-16T13:33:46.1192449Z"
+  },
+  "Picocrypt-NG.Picocrypt-NG": {
+    "validationCount": 1,
+    "lastUpdated": "2026-06-17T09:20:35.1623229Z",
+    "manifestHash": "D276774A6136D85A1E63C8C4EBAD32100157AC0ED0E4CBC13FEA8A86E3182D97",
+    "description": "",
+    "version": "2.15",
+    "installerHashes": [
+      "76C2C4851D4C0BC1CDAFA47C6DB97D00E1E1459C876820E35FC406E9DEB5D0BC"
+    ],
+    "state": "VALIDATION_PASSED"
   }
 }
