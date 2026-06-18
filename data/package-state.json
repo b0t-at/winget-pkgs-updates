@@ -558,15 +558,15 @@
     "validationCount": 1
   },
   "Radius.Radius": {
-    "version": "0.58.0",
-    "installerHashes": [
-      "FEAB835DB3B648CC9B4A07F2AE8566D5856280E8D0C2A20E84ECCF58BDD7EB8B"
-    ],
-    "manifestHash": "93731C1AE80B3F3539189452EDB666C793C2E77C4C4ED6C5472503A6F30C0D66",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
+    "lastUpdated": "2026-06-18T23:02:45.7018739Z",
     "description": "",
-    "lastUpdated": "2026-05-26T22:04:40.6920342Z"
+    "manifestHash": "1F3858B92E19097EF365D4AD612736CBCA73504449FC08DC5EBF00852B6E8D71",
+    "version": "0.59.0",
+    "installerHashes": [
+      "DD18E3C0F1A6069358375E78984DF9F499E78354EFFAAAE97D716AAFDE54E470"
+    ]
   },
   "EdgeTX.Companion": {
     "validationCount": 1,
