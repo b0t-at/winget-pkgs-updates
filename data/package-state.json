@@ -116,15 +116,15 @@
   },
   "pnpm.pnpm": {
     "installerHashes": [
-      "08ACC088646C1DBF3030984918266058D23C5ACF4C518DC7502BD539FC99C280",
-      "64CE7A6C2755FAD47824D53BAB2BDB9B8BF5B75027AC990A9A802EF68FA6266D"
+      "8CF6951ADE777EEB7E4665FDCAEFE77942724B217690EB3FA2F0B27C67B4310C",
+      "7B7D6D018511208F277424967DE3F1B0E9EABD4B8ECEF936CA8C9519870FAECF"
     ],
+    "manifestHash": "02D65B9FD6145A0F803A0C3CF0A1ABC76B5779575977A73D9BB0D9E44293CD84",
     "description": "",
     "state": "VALIDATION_FAILED",
-    "validationCount": 3,
-    "lastUpdated": "2026-06-15T22:57:21.3294362Z",
-    "manifestHash": "F6E7849CA6C76AC1F38A7D923F41F4530ACDD952415ABAAFEE90925859173D0C",
-    "version": "11.7.0"
+    "version": "11.8.0",
+    "lastUpdated": "2026-06-18T12:41:29.1360205Z",
+    "validationCount": 1
   },
   "mmanela.markdownoutlook": {
     "validationCount": 3,
@@ -547,15 +547,15 @@
     "state": "VALIDATION_PASSED"
   },
   "argoproj.argocd": {
-    "lastUpdated": "2026-05-28T22:26:03.3858598Z",
+    "installerHashes": [
+      "C25D18552DED8BD05DF14334E542F03381BA84BAB63B1528BF9125A62B5D40E7"
+    ],
+    "manifestHash": "CA7DEE13B173B832EB8B4B61E15BAFE7DAF91A78B69E25090A522E05A0013533",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "5DB27D1F3644192072297BCD8C372EB61251555A53C699F37AA30B791174F9D6"
-    ],
-    "manifestHash": "04ADCFF9C51DC16ECCCA47520C50419E80F0918A397FA9F56B0CEF9848ECB170",
-    "validationCount": 2,
-    "version": "3.4.3"
+    "version": "3.4.4",
+    "lastUpdated": "2026-06-18T12:41:29.2138402Z",
+    "validationCount": 1
   },
   "Radius.Radius": {
     "version": "0.58.0",
