@@ -123,8 +123,8 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "version": "11.8.0",
-    "lastUpdated": "2026-06-18T12:41:29.1360205Z",
-    "validationCount": 1
+    "lastUpdated": "2026-06-18T16:38:39.3317517Z",
+    "validationCount": 2
   },
   "mmanela.markdownoutlook": {
     "validationCount": 3,
@@ -786,15 +786,15 @@
     "manifestHash": "9EE8F6B59960EE6F620A8779F428FFF40A9623A118E5744DF596E0F8A15454D2"
   },
   "NitrokeyGmbH.Nitropy": {
-    "description": "",
-    "version": "0.12.2",
-    "validationCount": 3,
-    "lastUpdated": "2026-05-18T18:33:54.3137548Z",
-    "manifestHash": "2238CA39A3859659AF5E106CB1D12C31727A765F85A057F763E73DE33E254F0B",
     "installerHashes": [
-      "063A002DDE0A5C36C6627CD647EE31A80BBA5CB45341961669E2B80759AD0E5A"
+      "5E0B456C7A01DBE8D32BDCDA5322A11F2AAE7B17B35643CCF02C03B0C72D25F8"
     ],
-    "state": "VALIDATION_PASSED"
+    "manifestHash": "789129BE6752103D4B160F6691FF6AC52AD877ABD33385225DED7218E99F3C19",
+    "description": "",
+    "lastUpdated": "2026-06-18T16:38:39.4540171Z",
+    "version": "0.12.3",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1
   },
   "FrancisBanyikwa.MediaDownloader": {
     "description": "",
@@ -1709,5 +1709,17 @@
       "76C2C4851D4C0BC1CDAFA47C6DB97D00E1E1459C876820E35FC406E9DEB5D0BC"
     ],
     "state": "VALIDATION_PASSED"
+  },
+  "Google.OSVScanner": {
+    "installerHashes": [
+      "0CDD113610126D5DFD5E12AD0E0B4F3E879291FF19BB43B0C52ED2F2C2DF1A37",
+      "1CE89D7D8EF083634648EF0F193FE1254F36F46F4BDC93D61178ADACC2E60DA0"
+    ],
+    "manifestHash": "4A5D5CF92431D384F7E514153E2B8104B2B4B27F86809D22FF66A6F772C368BB",
+    "description": "",
+    "lastUpdated": "2026-06-18T16:38:39.4303283Z",
+    "version": "2.4.0",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1
   }
 }
