@@ -123,8 +123,8 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "version": "11.8.0",
-    "lastUpdated": "2026-06-18T16:38:39.3317517Z",
-    "validationCount": 2
+    "lastUpdated": "2026-06-18T19:34:41.5109369Z",
+    "validationCount": 3
   },
   "mmanela.markdownoutlook": {
     "validationCount": 3,
@@ -778,9 +778,9 @@
       "4E1BF7210B5CE3F33A17A48796DA3C2BF9B91EF770FDD7848043273E57A0C965",
       "1847D84768E20EB256A7494C8AFFCA98F5D9AB27758B33785654FE0FD382561E"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "0.2.25",
-    "lastUpdated": "2026-05-17T10:12:29.3953101Z",
+    "lastUpdated": "2026-06-18T19:34:41.5899719Z",
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "9EE8F6B59960EE6F620A8779F428FFF40A9623A118E5744DF596E0F8A15454D2"
