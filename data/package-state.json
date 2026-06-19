@@ -624,15 +624,15 @@
     "description": ""
   },
   "Google.FirebaseCLI": {
-    "manifestHash": "8D91C2257F5F5337FE03F57BFD6F5B9C2042CFA0DB549E055E161C83D3A49570",
-    "installerHashes": [
-      "8D4FC82833B5452F7662783FBDD1180E06435467887C76BD66D6A31B6A6AA5C2"
-    ],
-    "validationCount": 1,
     "state": "VALIDATION_PASSED",
     "description": "",
-    "version": "15.21.0",
-    "lastUpdated": "2026-06-17T22:43:12.5026261Z"
+    "lastUpdated": "2026-06-19T05:56:54.414373Z",
+    "version": "15.22.0",
+    "manifestHash": "FD48D7441764A7D398815FD04C87578656EB63F5E2F3B0C62901D640AC5C9ECC",
+    "validationCount": 1,
+    "installerHashes": [
+      "006973E6EE2ADF43B418F3F07E8D54D329B07C786FF193B3EB8DE9E516685778"
+    ]
   },
   "TerraformLinters.tflint": {
     "lastUpdated": "2026-06-03T20:13:54.4980133Z",
@@ -1703,10 +1703,10 @@
     "installerHashes": [
       "28F9CD389D9CD62A8E16ECB428C19EAA1148EAAE19AD79E03E112EC0CF58572F"
     ],
-    "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-06-18T23:13:56.2419026Z",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-06-19T05:56:54.4471195Z",
     "description": "",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "2.16",
     "manifestHash": "181DE6D27D747AB3E4C541AEB511A4586076F106CCFFCF77DA147C73B2B60D03"
   },
