@@ -739,15 +739,15 @@
     "version": "0.254"
   },
   "SimpleX.SimpleX-Chat": {
-    "version": "6.5.4",
-    "installerHashes": [
-      "06DF2BFA9122B641E54C3BA26608178120D35E051ECDB178AC0322C2769A06DB"
-    ],
-    "manifestHash": "01A40EC4BA951A66B3C84BEECDC1F8FA7AFB4BFF7318246B58730FB02E3A9C14",
-    "description": "",
     "validationCount": 1,
+    "description": "",
+    "version": "6.5.5",
+    "manifestHash": "75269E5FA5A764433E0FA1A7D7D027549528355944174E85BA0EE0E13DEC8D70",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-06-06T21:25:40.9069577Z"
+    "installerHashes": [
+      "C27D255C7A768117B8B7503E87C86185514C8E58E39564517A1CDE8FFE5797AD"
+    ],
+    "lastUpdated": "2026-06-19T12:37:57.2878304Z"
   },
   "cinnyapp.cinny-desktop": {
     "manifestHash": "692D9E4B4D7299C37BBD48137FE9101F344266D5F2468AB13D6F375F84324D14",
