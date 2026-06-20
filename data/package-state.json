@@ -980,15 +980,15 @@
     "state": "VALIDATION_FAILED"
   },
   "tagspaces.tagspaces": {
-    "description": "",
-    "lastUpdated": "2026-06-03T13:04:42.9497591Z",
-    "manifestHash": "6A13DCB32F7EB28DF11A54A824D0CE27EED0B2ECD5E4F4360E0620525B8275C9",
-    "installerHashes": [
-      "08590C269D8B07BD91403783E5CDB7441756144147F837165DFEF2E3976E5141"
-    ],
     "validationCount": 1,
+    "manifestHash": "D1D1D23013657ADB674C0AD1ED009CF408EFCDEC7EC6AE0D4F757B9C370921FB",
     "state": "VALIDATION_PASSED",
-    "version": "6.12.2"
+    "description": "",
+    "version": "6.13.3",
+    "lastUpdated": "2026-06-20T11:09:41.6576513Z",
+    "installerHashes": [
+      "423C2BE507555756F63C2D4865D7A809490ACBC6CBF29CC51FAF56CA6736102A"
+    ]
   },
   "Yaak.app": {
     "state": "VALIDATION_PASSED",
