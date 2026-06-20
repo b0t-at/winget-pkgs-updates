@@ -486,21 +486,21 @@
       "97B6B6F1F57883535A914916130DC2CCD6CBB7DA4DCBCEEDF7C3134EE9B2CE57"
     ],
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-06-19T21:47:34.1708600Z",
+    "lastUpdated": "2026-06-19T21:47:34.17086Z",
     "description": "",
     "manifestHash": "6199C278021C7DD218BD99D4301E0D7E29E60270918FC0153D6C674A81D2C2B6",
     "version": "1.27.189"
   },
   "AppFlowy.AppFlowy": {
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-06-05T16:13:08.480693Z",
-    "version": "0.12.2",
-    "manifestHash": "28B7B9A9E52EDBDA38C06E3FC55056AED92DDE19663DDACF87D0E38A622A9F3D",
+    "version": "0.12.4",
+    "validationCount": 1,
     "installerHashes": [
-      "8ABF6604F6FA260D975012C20A4EF41285CFC330005596A27850D49BFF8B7916"
+      "3DFE416F87C3E05D2442BD06477B9E892A59EBF0502F84AE8D896959C1763179"
     ],
-    "description": "",
-    "validationCount": 1
+    "manifestHash": "1FD98F1D354D7046F5DA73692DF9213EA18CCF477653948132314061341854D7",
+    "lastUpdated": "2026-06-20T05:12:44.0143306Z",
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "mitmproxy.mitmproxy": {
     "lastUpdated": "2026-05-12T15:05:19.4011587Z",
@@ -1721,5 +1721,16 @@
     "version": "2.4.0",
     "state": "VALIDATION_PASSED",
     "validationCount": 1
+  },
+  "OpenTelemetry.Weaver": {
+    "version": "0.24.0",
+    "validationCount": 1,
+    "installerHashes": [
+      "AC0017031A964C01CD527B1E9CAFD6C69068CBF8E00474EE5C84B2FCC18DF231"
+    ],
+    "manifestHash": "18DBF78F6322061BF4A178E3C50A797E768FEF8D33917DE831AD100210D33A33",
+    "lastUpdated": "2026-06-20T05:12:43.9083069Z",
+    "state": "VALIDATION_FAILED",
+    "description": ""
   }
 }
