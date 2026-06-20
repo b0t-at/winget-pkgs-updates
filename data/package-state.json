@@ -1543,14 +1543,14 @@
   },
   "JosephFinney.Text-Grab": {
     "state": "VALIDATION_PASSED",
-    "version": "4.14.1",
-    "description": "",
-    "manifestHash": "B716CF15564BB84F81A2B33AD9023F407069B967C97B710016E114BB9A4EF199",
-    "validationCount": 2,
-    "lastUpdated": "2026-06-18T23:13:56.3181796Z",
+    "version": "4.14.2",
+    "manifestHash": "5B7E04524EC9BDDE2B65F6D0475587BF81563A2C409B6D70BBBD1B4B363D5D06",
     "installerHashes": [
-      "1847AA279C0A1E2F885196D744CDD26D37DD8E952A8F219C9B3CAB6E06AB1CCB"
-    ]
+      "F8FA3F0BBB4C192A5116B8E7BA6762D06560582D5C0247992C850E8A191B4BC1"
+    ],
+    "description": "",
+    "validationCount": 1,
+    "lastUpdated": "2026-06-20T22:11:44.0636694Z"
   },
   "TeXstudio.TeXstudio": {
     "version": "4.9.5",
@@ -1700,15 +1700,15 @@
     "lastUpdated": "2026-06-16T13:33:46.1192449Z"
   },
   "Picocrypt-NG.Picocrypt-NG": {
-    "installerHashes": [
-      "28F9CD389D9CD62A8E16ECB428C19EAA1148EAAE19AD79E03E112EC0CF58572F"
-    ],
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-06-19T05:56:54.4471195Z",
+    "version": "2.17",
+    "manifestHash": "4D39008DABE855CF62B9C296C832CB21B2228824E0E57B2EAF3E130066E2B659",
+    "installerHashes": [
+      "C49727FEC82A836C95BB5C5E234948945AC7AC4EE100ADE1D45F86620086BFBE"
+    ],
     "description": "",
-    "validationCount": 2,
-    "version": "2.16",
-    "manifestHash": "181DE6D27D747AB3E4C541AEB511A4586076F106CCFFCF77DA147C73B2B60D03"
+    "validationCount": 1,
+    "lastUpdated": "2026-06-20T22:11:44.1200379Z"
   },
   "Google.OSVScanner": {
     "installerHashes": [
