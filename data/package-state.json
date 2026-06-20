@@ -1724,12 +1724,12 @@
   },
   "OpenTelemetry.Weaver": {
     "version": "0.24.0",
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "AC0017031A964C01CD527B1E9CAFD6C69068CBF8E00474EE5C84B2FCC18DF231"
     ],
     "manifestHash": "18DBF78F6322061BF4A178E3C50A797E768FEF8D33917DE831AD100210D33A33",
-    "lastUpdated": "2026-06-20T11:22:56.1330374Z",
+    "lastUpdated": "2026-06-20T15:03:01.1575512Z",
     "state": "VALIDATION_FAILED",
     "description": ""
   }
