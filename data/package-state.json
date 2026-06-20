@@ -1383,15 +1383,15 @@
     "state": "VALIDATION_PASSED"
   },
   "T-Troll.AlienFXTools": {
-    "lastUpdated": "2026-06-05T11:49:15.0382032Z",
+    "version": "9.6.1",
     "validationCount": 1,
-    "manifestHash": "8A270BF59C1C677326D2E62001DF4C051A72DD5A7A6ED1138F1CD9339E074A52",
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "version": "9.6.0.1",
+    "lastUpdated": "2026-06-20T14:49:45.4906189Z",
+    "manifestHash": "15D67A0283E74853D7B32EA93B05D3D20B872613DB14CFD044824CB309B14313",
     "installerHashes": [
-      "05C3FF088F4C0A16A92B802DA99D4BEFCA5F7412F02C599C4A74AED154452567"
-    ]
+      "28427A915F870C115F424B7D3438C4BB29682BF9B8F81106B684F1571583C517"
+    ],
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "tuna-f1sh.cyme": {
     "version": "3.0.1",
