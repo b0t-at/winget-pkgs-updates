@@ -1602,10 +1602,10 @@
     "installerHashes": [
       "DF41DBD98E08BC673496466A30B69BF9339E628711F73D3F5E06FD0426F79EF6"
     ],
-    "lastUpdated": "2026-06-12T06:54:14.9451733Z",
+    "lastUpdated": "2026-06-21T11:48:18.7825756Z",
     "manifestHash": "08EFB32835B07F78C6B2D0A387D6F7A63680C2F3127BD1EB0E8E32B7BF5A6280",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "description": ""
   },
   "Sigstore.Cosign": {
