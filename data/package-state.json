@@ -1723,15 +1723,15 @@
     "validationCount": 1
   },
   "OpenTelemetry.Weaver": {
-    "version": "0.24.0",
-    "validationCount": 3,
     "installerHashes": [
-      "AC0017031A964C01CD527B1E9CAFD6C69068CBF8E00474EE5C84B2FCC18DF231"
+      "5D331029D5564F68BE8B47A49894FED0B0DEE4A3C6DA3768C35628EAE6A55513"
     ],
-    "manifestHash": "18DBF78F6322061BF4A178E3C50A797E768FEF8D33917DE831AD100210D33A33",
-    "lastUpdated": "2026-06-20T15:03:01.1575512Z",
+    "manifestHash": "D6AE15D7E06CA7D1E7DD88C55192CBF8A1CC684AEA47603B00912270D6960722",
+    "validationCount": 1,
     "state": "VALIDATION_FAILED",
-    "description": ""
+    "lastUpdated": "2026-06-21T21:53:22.6547995Z",
+    "description": "",
+    "version": "0.24.1"
   },
   "achannarasappa.ticker": {
     "lastUpdated": "2026-06-21T18:31:48.864373Z",
