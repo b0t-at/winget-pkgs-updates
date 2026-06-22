@@ -457,16 +457,16 @@
     "version": "1.7.8"
   },
   "Fly-io.flyctl": {
-    "lastUpdated": "2026-06-12T00:13:00.695036Z",
+    "version": "0.4.60",
+    "description": "",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "F2E8351D83D28C9AD2DAE96CC24D292523B8469F9618F648D357D66100FF6057",
     "installerHashes": [
-      "C3D727D1EFC883AD14FFB35AC5AF0BEFE87F4FF573EF81A7EE66C979F128B1AF",
-      "D8FE8096CC3DCBE0A12E9B067257C0CD38D9994157FE5A288DACC0A438684867"
+      "FC0A81D1233FB129635250E6CDAD4E89621638DB11E80AC8DD5995A568C5745B",
+      "72DC9C05E984ADA1AE47DBF1507DCCD9AD6BC3927C0BB13B1173DA782E08EE7D"
     ],
-    "version": "0.4.59",
-    "description": ""
+    "lastUpdated": "2026-06-22T23:37:47.9795466Z",
+    "manifestHash": "D391AE771A7ABAE27642FD78C4C2E95CA4586E90B163E6D35E617D2CD42D833E",
+    "state": "VALIDATION_PASSED"
   },
   "aimotrens.impulsar": {
     "validationCount": 2,
@@ -624,15 +624,15 @@
     "description": ""
   },
   "Google.FirebaseCLI": {
-    "state": "VALIDATION_PASSED",
+    "version": "15.22.1",
     "description": "",
-    "lastUpdated": "2026-06-19T05:56:54.414373Z",
-    "version": "15.22.0",
-    "manifestHash": "FD48D7441764A7D398815FD04C87578656EB63F5E2F3B0C62901D640AC5C9ECC",
     "validationCount": 1,
     "installerHashes": [
-      "006973E6EE2ADF43B418F3F07E8D54D329B07C786FF193B3EB8DE9E516685778"
-    ]
+      "81463BC258D579557951C9BE4B3AE7E48C488695D39BD1C833C5AAA686A7A359"
+    ],
+    "lastUpdated": "2026-06-22T23:37:47.937811Z",
+    "manifestHash": "38722D6CF0F586D3BA97914AA7EFDAFEABC50BA0AC1312AD540EFA13E8D1B18F",
+    "state": "VALIDATION_PASSED"
   },
   "TerraformLinters.tflint": {
     "lastUpdated": "2026-06-03T20:13:54.4980133Z",
@@ -717,15 +717,15 @@
     "manifestHash": "0BD109A0B469BF93F168F8C1BFC29EB49DCA359A5B126C509AFF15A1B5FE588C"
   },
   "bornova.numara": {
+    "version": "7.0.0",
+    "description": "",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "5199D13B31D4182F3288E216C5F805A7B531DB41D5F7B853609A1A0CFD83CCD2",
-    "version": "6.10.5",
-    "lastUpdated": "2026-05-21T16:14:12.1423544Z",
     "installerHashes": [
-      "D72E5093C5C1CBF02C7BCAB05E02B0C65DB708978BC2352BD96C3AD1769864BB"
+      "BE0B5F50B23C1CF83F5FD9E32C6A7A6EECA52AB7BEA5FACB91FF92754DAADB86"
     ],
-    "description": ""
+    "lastUpdated": "2026-06-22T23:37:47.9890979Z",
+    "manifestHash": "F038BFFEE6F8A8C4DEF88368CA455E49D0489FC4CE53E60B84176D5A827C2086",
+    "state": "VALIDATION_PASSED"
   },
   "seerge.g-helper": {
     "description": "",
@@ -1754,5 +1754,16 @@
     "description": "",
     "version": "2.5.3",
     "manifestHash": "8BC6D9AF5BB482486DAAB79A0C06AA3889A9B11BC56648C90E61B3C9EF7F2C02"
+  },
+  "MichaelDiCarlo.PostyBirb+": {
+    "version": "3.1.71",
+    "description": "",
+    "validationCount": 1,
+    "installerHashes": [
+      "709AA87AD658570D197901B435498A86B68E4CD8F98EB871906872B1B3C50F4D"
+    ],
+    "lastUpdated": "2026-06-22T23:37:47.9983891Z",
+    "manifestHash": "0358D8F09CDC9EAE6931613449A31CC83E965593738E376714BDCCAD26A6F4C4",
+    "state": "VALIDATION_PASSED"
   }
 }
