@@ -1727,9 +1727,9 @@
       "5D331029D5564F68BE8B47A49894FED0B0DEE4A3C6DA3768C35628EAE6A55513"
     ],
     "manifestHash": "D6AE15D7E06CA7D1E7DD88C55192CBF8A1CC684AEA47603B00912270D6960722",
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-06-21T21:53:22.6547995Z",
+    "lastUpdated": "2026-06-22T06:47:51.6181776Z",
     "description": "",
     "version": "0.24.1"
   },
