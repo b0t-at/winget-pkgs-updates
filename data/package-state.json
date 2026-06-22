@@ -750,15 +750,15 @@
     "lastUpdated": "2026-06-19T12:37:57.2878304Z"
   },
   "cinnyapp.cinny-desktop": {
-    "manifestHash": "692D9E4B4D7299C37BBD48137FE9101F344266D5F2468AB13D6F375F84324D14",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "version": "4.12.2",
-    "installerHashes": [
-      "87B025B585F6BC3DF445DCE05F533467DDA358EA352536BA1CD418DF7F73F104"
-    ],
     "description": "",
-    "lastUpdated": "2026-05-23T14:15:42.0798274Z"
+    "state": "VALIDATION_PASSED",
+    "version": "4.12.4",
+    "manifestHash": "12E1112AD453FAC572C671828E87276B7B7C0C7F00CADB870CD162ACB4FB68AE",
+    "validationCount": 1,
+    "lastUpdated": "2026-06-22T20:32:49.3584018Z",
+    "installerHashes": [
+      "BF2A65D8EB03F92713D2581DE0FE086AF039EBBA4E452D40970A92588E0B0975"
+    ]
   },
   "errata-ai.Vale": {
     "installerHashes": [
@@ -1073,15 +1073,15 @@
     "description": ""
   },
   "BytecodeAlliance.Wasmtime.Portable": {
-    "version": "45.0.2",
+    "description": "",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "F16ED79C5F9623DC8717F5A52FCD9F399AB7F2C7BEDD4D19588542D0412BA6B9",
-    "installerHashes": [
-      "DAC1587EC5705D6D26967D5F7EEB5EFB1F91804F49593B30A14A989C0ED9AC7A"
-    ],
-    "lastUpdated": "2026-06-15T21:03:28.5763648Z",
+    "version": "46.0.0",
+    "manifestHash": "2D6EA1128847FDD79ED391F11F2BF6F02587EEA0EFD25017A5CEE5C8559E652F",
     "validationCount": 1,
-    "description": ""
+    "lastUpdated": "2026-06-22T20:32:49.3163747Z",
+    "installerHashes": [
+      "D2E4C33C2FEA450F4E270DBEB861F7B1C28F5E7B725543CB7FFA73F74D454B26"
+    ]
   },
   "Kitware.CMake": {
     "state": "VALIDATION_PASSED",
