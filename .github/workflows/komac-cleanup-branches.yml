@@ -12,7 +12,7 @@ jobs:
        runs-on: ubuntu-latest
        steps:
        - name: Run Komac
-         uses: michidk/run-komac@9b27eadc6e9235c252444a437d246c139da2f57f # v2.1.0
+         uses: b0t-at/run-komac@e5e74ed265cc67a27ce04c428255c40e549ade59
          with:
             args: 'cleanup --token=${{ secrets.WINGET_PAT }}'
             custom-fork-owner: damn-good-b0t
