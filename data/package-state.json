@@ -647,15 +647,15 @@
     "version": "0.63.1"
   },
   "SUSE.RancherDesktop": {
-    "version": "1.22.3",
-    "manifestHash": "58DE0FF39CB8DB5E481FA23DFC3D75AF33AD295206ABCF72DFC052B76542BCD6",
     "validationCount": 1,
-    "installerHashes": [
-      "D0918C3E99D2918D84D739E47DF12964B2D75CCDF3F9DA769B6D4B47EDE187CF"
-    ],
+    "manifestHash": "800633177D5ABF538E64E92D57082D7343E15E20F380E855B78FCB032B5BC0B4",
+    "version": "1.23.0",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-05-14T04:32:10.498104Z"
+    "lastUpdated": "2026-06-29T17:36:02.7140053Z",
+    "installerHashes": [
+      "750D2E12666336E4ABD875A2C9CB80D7471B907B139616400DE2A5CFDF6CFF35"
+    ]
   },
   "Martchus.syncthingctl": {
     "state": "VALIDATION_PASSED",
@@ -1812,15 +1812,15 @@
     "validationCount": 1
   },
   "zkSNACKs.WasabiWallet": {
-    "validationCount": 1,
-    "lastUpdated": "2026-06-29T14:16:32.0364298Z",
+    "validationCount": 2,
+    "lastUpdated": "2026-06-29T17:36:02.6817067Z",
     "version": "2.8.0",
     "description": "",
     "installerHashes": [
       "270399EB2E1E09A759F5FCDEFAFD1C649D56ADF0C376C9B52C0E55ABE3395420"
     ],
     "manifestHash": "D0D602B22CD51CDA17F829F6350FAEF6E86849EC88F15BE01BF6BA2E3B55A37E",
-    "state": "VALIDATION_FAILED"
+    "state": "VALIDATION_PASSED"
   },
   "simulot.immich-go": {
     "validationCount": 1,
