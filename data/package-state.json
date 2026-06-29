@@ -1765,5 +1765,50 @@
     "lastUpdated": "2026-06-22T23:37:47.9983891Z",
     "manifestHash": "0358D8F09CDC9EAE6931613449A31CC83E965593738E376714BDCCAD26A6F4C4",
     "state": "VALIDATION_PASSED"
+  },
+  "cURL.cURL": {
+    "manifestHash": "B2353FBA6AE51F66EB2D72CC422AD7065FB6249DF200965459C9FCB8999FAB7C",
+    "installerHashes": [
+      "157068447D5B0B178DCC650F29D4746049FA4C7CC12DB5F2BC050C0B84E48E7A",
+      "10D612F44392546EA65449587CA382BA0760CD043C4CB478EE91096092921336"
+    ],
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-06-29T11:12:51.375662Z",
+    "version": "8.21.0.1",
+    "description": "",
+    "validationCount": 1
+  },
+  "MongoDB.Shell": {
+    "manifestHash": "8EFA0392E8582A43775BE0051BE6732A0D6E8C781770BC7A7FAD230E3A55ED61",
+    "installerHashes": [
+      "50994D624D17BDFC73F4E616E66646A03735C0F8E10D064EB55E643EE1F4240B"
+    ],
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-06-29T11:12:51.4110679Z",
+    "version": "2.9.0",
+    "description": "",
+    "validationCount": 1
+  },
+  "Bitwarden.CLI": {
+    "manifestHash": "22D0BDDDCA59240F5DE7D8AB2CC4F50AC17F5F7798AE927300F99474296A9347",
+    "installerHashes": [
+      "A7D0FEE49EBF11101F59E2E366D85E94569AE5CD700A60423C495144CA9F0400"
+    ],
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-06-29T11:12:51.4226525Z",
+    "version": "2026.6.0",
+    "description": "",
+    "validationCount": 1
+  },
+  "GitButler.GitButler": {
+    "manifestHash": "5FAE42D97699C23BDB21CC2459C8B47A932EF8EFAF0271F68E40122BBF3E248D",
+    "installerHashes": [
+      "1AE9E01EBBF08456F2B69661ABBF615D5F07D2341D7B0D5E34C160CD254D430F"
+    ],
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-06-29T11:12:51.4523117Z",
+    "version": "0.20.4",
+    "description": "",
+    "validationCount": 1
   }
 }
