@@ -119,9 +119,9 @@
       "82C130717A59F237C49E8EAA8A7ED75C1D8D351A5B6DEDEEE3196B8E1B597C6E",
       "C24680576A4AED714E7433430359946A844A5FDEF724CBD1808E7B93FE3DACE3"
     ],
-    "lastUpdated": "2026-06-29T18:10:57.6905568Z",
+    "lastUpdated": "2026-06-29T21:33:10.6211792Z",
     "manifestHash": "5BC91FDF73F4C30D693C496763453BF9045BCF8139405550001F0E45EFCFCE02",
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_FAILED",
     "version": "11.9.0",
     "description": ""
@@ -457,16 +457,16 @@
     "version": "1.7.8"
   },
   "Fly-io.flyctl": {
-    "version": "0.4.60",
+    "lastUpdated": "2026-06-29T21:33:10.6895723Z",
+    "state": "VALIDATION_FAILED",
+    "version": "0.4.62",
+    "manifestHash": "E51F92E3E3C8CC81D759281E5975125EA0A69C164C5BFACB3ADF8C1D2F7E83E2",
     "description": "",
     "validationCount": 1,
     "installerHashes": [
-      "FC0A81D1233FB129635250E6CDAD4E89621638DB11E80AC8DD5995A568C5745B",
-      "72DC9C05E984ADA1AE47DBF1507DCCD9AD6BC3927C0BB13B1173DA782E08EE7D"
-    ],
-    "lastUpdated": "2026-06-22T23:37:47.9795466Z",
-    "manifestHash": "D391AE771A7ABAE27642FD78C4C2E95CA4586E90B163E6D35E617D2CD42D833E",
-    "state": "VALIDATION_PASSED"
+      "019FE61F8E68B9E2617A55361B8ECD45206CC3AC6CA66937F421E5BC69FCC4D8",
+      "DB4E4A61C14D4868ABAC47B6832A9DD5D0BCE99B66242250F4977D925383C306"
+    ]
   },
   "aimotrens.impulsar": {
     "validationCount": 2,
@@ -495,10 +495,10 @@
     "installerHashes": [
       "039D6F1F96763EE4E64748BF18312CD13DB83C7BDC5A41CDD6740F239DF7D9C5"
     ],
-    "lastUpdated": "2026-06-29T18:10:57.818008Z",
+    "lastUpdated": "2026-06-29T21:33:10.7989782Z",
     "manifestHash": "1EA0BFD715DFE22FE99FAA5FA37B365072F98D2752DF4CD22DDD16CF51081186",
-    "validationCount": 1,
-    "state": "VALIDATION_FAILED",
+    "validationCount": 2,
+    "state": "VALIDATION_PASSED",
     "version": "0.12.5",
     "description": ""
   },
@@ -605,9 +605,9 @@
     "installerHashes": [
       "0B1A461730A50A24658D297CE8BBFFF3F2228AF33B07B9A38210DD8F1840F5ED"
     ],
-    "lastUpdated": "2026-06-29T18:10:57.7220641Z",
+    "lastUpdated": "2026-06-29T21:33:10.6552462Z",
     "manifestHash": "0C2F3AB5ADE4DCEFFF0502881CF7EB76B32493AF91F671EC90FAE1A7555D65B4",
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_FAILED",
     "version": "1.13.3",
     "description": ""
@@ -720,10 +720,10 @@
     "installerHashes": [
       "FAB23DB5E83E3400B3BB5823CEDF78899762D284F2510396E2929A4806ADBA11"
     ],
-    "lastUpdated": "2026-06-29T18:10:57.8313953Z",
+    "lastUpdated": "2026-06-29T21:33:10.8087911Z",
     "manifestHash": "9E7886C4FB0D8F2D0E22A0891FA89C57760FCCD1788E19AFD70786B0FEEBCA40",
-    "validationCount": 1,
-    "state": "VALIDATION_FAILED",
+    "validationCount": 2,
+    "state": "VALIDATION_PASSED",
     "version": "7.1.7",
     "description": ""
   },
@@ -1067,19 +1067,19 @@
     ],
     "manifestHash": "A5B655FC557ADA06E1D8C9231C8339C207A44CD0F47A438DB5198D2A24CDE662",
     "description": "",
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "1.44.0",
-    "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-06-29T18:10:57.7998969Z"
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-06-29T21:33:10.8285441Z"
   },
   "BytecodeAlliance.Wasmtime.Portable": {
     "installerHashes": [
       "99F038066B16CB3AAF63C1D282A9D7BA7BEFAFBADF7AA8827CC4C712D96BC31A"
     ],
-    "lastUpdated": "2026-06-29T18:10:57.8440254Z",
+    "lastUpdated": "2026-06-29T21:33:10.7883104Z",
     "manifestHash": "D354F80EC73E1F946133BBDCB6C035D5CC78487948ED3090452CE3615C05E4F3",
-    "validationCount": 1,
-    "state": "VALIDATION_FAILED",
+    "validationCount": 2,
+    "state": "VALIDATION_PASSED",
     "version": "46.0.1",
     "description": ""
   },
@@ -1193,9 +1193,9 @@
     "installerHashes": [
       "02052E99C0AD07F5963178602A7249ED9FE9F892913C89F00D27BF59FCB45F1E"
     ],
-    "lastUpdated": "2026-06-29T18:10:57.8784359Z",
+    "lastUpdated": "2026-06-29T21:33:10.7546301Z",
     "manifestHash": "1F2BA68BEA291D8496B48D2727E351C8CB520378E04AB20ECC609246F8B44394",
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_FAILED",
     "version": "10.3.0",
     "description": ""
@@ -1241,9 +1241,9 @@
       "B2CC10F71EC6B6042349A0BA87495BCF49EE90CB365F856657B259875D6C2DEF",
       "B93BF5E41FC7B87CD8D5CB1B926713B0777D5C4B8321023C1F4662B44A653054"
     ],
-    "lastUpdated": "2026-06-29T18:10:57.7655759Z",
+    "lastUpdated": "2026-06-29T21:33:10.7173674Z",
     "manifestHash": "130AC76820466F21B7C4B7E56F34A41A12352285CE65D61F7A6086DBE1587C54",
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_FAILED",
     "version": "0.228.0",
     "description": ""
@@ -1499,9 +1499,9 @@
     "installerHashes": [
       "ABAD587B87BC51E2EB1D534C51BDCBAD8DCC3870F0A31AB3BB71AAA35BEFDC37"
     ],
-    "lastUpdated": "2026-06-29T18:10:57.6761234Z",
+    "lastUpdated": "2026-06-29T21:33:10.5505922Z",
     "manifestHash": "9BBB02CFD103DEF5F5236E69BD51519EBCD49129E90133CC4652FDD5A026799B",
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_FAILED",
     "version": "6.2.1",
     "description": ""
@@ -1703,10 +1703,10 @@
     "installerHashes": [
       "58DD4B50FF09D3093E89DBE54C665525297E01529554649A767584DE2D1ADC1D"
     ],
-    "lastUpdated": "2026-06-29T18:10:57.6402161Z",
+    "lastUpdated": "2026-06-29T21:33:10.8186495Z",
     "manifestHash": "05AE5B29AC510891825FFB9CA2E73D4BDDCB900BB08AA9CA901B5A7C9C756001",
-    "validationCount": 1,
-    "state": "VALIDATION_FAILED",
+    "validationCount": 2,
+    "state": "VALIDATION_PASSED",
     "version": "2.18",
     "description": ""
   },
@@ -1726,9 +1726,9 @@
     "installerHashes": [
       "FAD5ACCEAC9BF6581299EE4D9F9FAE111EA8D71D86CC246F01E6F8EE070E57BE"
     ],
-    "lastUpdated": "2026-06-29T18:10:57.5994935Z",
+    "lastUpdated": "2026-06-29T21:33:10.6060001Z",
     "manifestHash": "F2B57E245AC64724D04C9567B186ABFEFDC36F4C5AD7BCAD0F48A349014ABA03",
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_FAILED",
     "version": "0.24.2",
     "description": ""
@@ -1838,10 +1838,10 @@
     "installerHashes": [
       "FBDC5CED0FEFD6F3222CF4920EDE2C2C9F6286433A6A96B9C1E8E525C788597E"
     ],
-    "lastUpdated": "2026-06-29T18:10:57.6567592Z",
+    "lastUpdated": "2026-06-29T21:33:10.8383822Z",
     "manifestHash": "C701AC08193D980ADF5A741DF848557D0CF149C2C1C28745B4E8E1A4B396377C",
-    "validationCount": 1,
-    "state": "VALIDATION_FAILED",
+    "validationCount": 2,
+    "state": "VALIDATION_PASSED",
     "version": "12.0.0",
     "description": ""
   },
@@ -1849,10 +1849,10 @@
     "installerHashes": [
       "4C746DF6DDA8291771AAB9284B932C792E3BCC8E7C5E9C0BEE5C6E648ABF19CA"
     ],
-    "lastUpdated": "2026-06-29T18:10:57.734498Z",
+    "lastUpdated": "2026-06-29T21:33:10.8482044Z",
     "manifestHash": "457CB689044D19B8C99C2E3A249959E253FFC84F464A58B3E2766E46C36CB687",
-    "validationCount": 1,
-    "state": "VALIDATION_FAILED",
+    "validationCount": 2,
+    "state": "VALIDATION_PASSED",
     "version": "1.25.0",
     "description": ""
   },
@@ -1860,9 +1860,9 @@
     "installerHashes": [
       "DB580001CAA24AC104C8CB856CD113A87B0A443F7BDF47D8C12B1D740584A2EC"
     ],
-    "lastUpdated": "2026-06-29T18:10:57.7796694Z",
+    "lastUpdated": "2026-06-29T21:33:10.7344534Z",
     "manifestHash": "B5442554C07DE0F7456B570F7F8B585E32275B2327EF2284DBD3E33F4A7D3C4F",
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_FAILED",
     "version": "8.1.2",
     "description": ""
@@ -1872,10 +1872,10 @@
       "5EE7C2A1AD13B8ED7521B164532E48C8BC1618B500AC3C5808CBBD47D4C9CCB8",
       "CEFCFC8AAD2CD6374512F45975FB8CD0DC69DCB6E3C2CA2022E2E1761F5FB858"
     ],
-    "lastUpdated": "2026-06-29T18:10:57.8645993Z",
+    "lastUpdated": "2026-06-29T21:33:10.7736863Z",
     "manifestHash": "E39FDF4FC75C0492EAAC446DC0DACE9ACE747154933EDE6B3E4634A3B2C91ED2",
-    "validationCount": 1,
-    "state": "VALIDATION_FAILED",
+    "validationCount": 2,
+    "state": "VALIDATION_PASSED",
     "version": "0.17.0",
     "description": ""
   },
@@ -1911,5 +1911,16 @@
     "state": "VALIDATION_PASSED",
     "version": "0.55.1",
     "description": ""
+  },
+  "Google.IAPDesktop": {
+    "lastUpdated": "2026-06-29T21:33:10.7046004Z",
+    "state": "VALIDATION_FAILED",
+    "version": "2.50.1825",
+    "manifestHash": "473599A260DBC78F8F0C76F021B92C4BFB9CE8677C691FCBDDB6346970638A6D",
+    "description": "",
+    "validationCount": 1,
+    "installerHashes": [
+      "186699A670FE33C226324DC3925DC3BF10926D259BD9CD8F6836A7D37FE55C41"
+    ]
   }
 }
