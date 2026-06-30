@@ -576,8 +576,8 @@
       "7466F63F2C9E7A0CD280D1CE61A1BE4EACD776AB2CCC148BE13ABA7B31289224"
     ],
     "manifestHash": "AA0B3A7B7B6C18ED6CE8B36583ED837E6EA7C933F118A96CDD8031A920812D1D",
-    "validationCount": 1,
-    "lastUpdated": "2026-06-21T12:20:32.7245026Z"
+    "validationCount": 2,
+    "lastUpdated": "2026-06-30T06:01:23.7315361Z"
   },
   "Snyk.Snyk": {
     "version": "1.1305.2",
@@ -717,15 +717,15 @@
     "description": ""
   },
   "bornova.numara": {
+    "lastUpdated": "2026-06-30T06:01:23.77402Z",
+    "validationCount": 1,
     "installerHashes": [
-      "FAB23DB5E83E3400B3BB5823CEDF78899762D284F2510396E2929A4806ADBA11"
+      "D0909E148640B20AE031AEA6B08A7BF0E4E4F9ED680E7F8FB4E406FEA7C4B448"
     ],
-    "lastUpdated": "2026-06-29T21:33:10.8087911Z",
-    "manifestHash": "9E7886C4FB0D8F2D0E22A0891FA89C57760FCCD1788E19AFD70786B0FEEBCA40",
-    "validationCount": 2,
     "state": "VALIDATION_PASSED",
-    "version": "7.1.7",
-    "description": ""
+    "description": "",
+    "version": "7.1.8",
+    "manifestHash": "FA32D26EEE024334846AAF43BCBDF129EF945BF5F87AC1B7B8DC6409D70DAE70"
   },
   "seerge.g-helper": {
     "description": "",
@@ -778,9 +778,9 @@
       "4E1BF7210B5CE3F33A17A48796DA3C2BF9B91EF770FDD7848043273E57A0C965",
       "1847D84768E20EB256A7494C8AFFCA98F5D9AB27758B33785654FE0FD382561E"
     ],
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "0.2.25",
-    "lastUpdated": "2026-06-18T19:34:41.5899719Z",
+    "lastUpdated": "2026-06-30T06:01:23.7859675Z",
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "9EE8F6B59960EE6F620A8779F428FFF40A9623A118E5744DF596E0F8A15454D2"
