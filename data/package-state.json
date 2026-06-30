@@ -514,15 +514,15 @@
     "description": ""
   },
   "Micronaut.Launch": {
+    "manifestHash": "F1F97F391FA8D8F36EA6E5B7AF3F68A9C41B5FE9A59BB9F76252DBB06166E887",
     "validationCount": 1,
     "installerHashes": [
-      "B3637F016A686E0E77697CAF9704D724CAC10855C7710DD88E95DFEF11BAA520"
+      "B2AF8D26331B500A83325CC2336DB81944C54CB14870AA408FE72959B3BC7E74"
     ],
-    "version": "5.0.2",
     "description": "",
-    "manifestHash": "50E4C7D5B7419317D5EBA3DC7DABE845A8FA58FF188058F05C09F024DE5084E9",
+    "lastUpdated": "2026-06-30T17:55:56.1134951Z",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-06-03T20:31:07.8845005Z"
+    "version": "5.0.3"
   },
   "Levminer.Authme": {
     "version": "7.1.0",
@@ -695,15 +695,15 @@
     ]
   },
   "hoppscotch.Hoppscotch": {
-    "lastUpdated": "2026-05-28T16:52:56.8713166Z",
-    "description": "",
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "DABAAF01F4737DDAE1E2659E92143DAA4D52772EA04BCB8D5E5C355F4C2CD92C"
-    ],
-    "manifestHash": "8BBC2D17E2B5AF22096B91044E619609CDF322D60A3E2DF08229B962C5457818",
+    "manifestHash": "0EF7421B012EAF7FE2849302C1647A3E941BD849EB56C327CF7838C47E3EB7D0",
     "validationCount": 1,
-    "version": "26.5.0-0"
+    "installerHashes": [
+      "E209453ADAC1A12BEBF06E480FD6C83C6445CD681C0534348F14B26854A44AE7"
+    ],
+    "description": "",
+    "lastUpdated": "2026-06-30T17:55:56.1578163Z",
+    "state": "VALIDATION_PASSED",
+    "version": "26.6.0-0"
   },
   "KeeperSecurity.Commander": {
     "installerHashes": [
