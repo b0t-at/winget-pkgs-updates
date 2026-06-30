@@ -481,15 +481,15 @@
     "manifestHash": "F0E315E013FBE215D1636A3BC78DF0F9B9B97C9398E8C29903C27A0661DF29B9"
   },
   "bcssov.IronyModManager": {
+    "manifestHash": "AA6A5B617826BE6790A33BE778186E3F786C8FE1F9FA44FD263E6D1543981803",
     "validationCount": 1,
+    "version": "1.27.191",
+    "description": "",
     "installerHashes": [
-      "97B6B6F1F57883535A914916130DC2CCD6CBB7DA4DCBCEEDF7C3134EE9B2CE57"
+      "2086FAFF7AC872CC1B164ECA2C3B82B481B416D53EA3200F2A1D6541413B48F2"
     ],
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-06-19T21:47:34.17086Z",
-    "description": "",
-    "manifestHash": "6199C278021C7DD218BD99D4301E0D7E29E60270918FC0153D6C674A81D2C2B6",
-    "version": "1.27.189"
+    "lastUpdated": "2026-06-30T13:14:43.6087467Z"
   },
   "AppFlowy.AppFlowy": {
     "installerHashes": [
@@ -1372,15 +1372,15 @@
     ]
   },
   "AquaSecurity.Trivy": {
-    "manifestHash": "4F5480308D4A823F9BBEC5E5E5A3550FC31AE2C2EDEE3698B25DB26F94F57E78",
-    "version": "0.71.2",
-    "description": "",
-    "lastUpdated": "2026-06-19T13:29:59.1522679Z",
-    "installerHashes": [
-      "EA31C2A927382410CFA2B4EB5970AED62308CF28902E1D167EA36BBFA0515095"
-    ],
+    "manifestHash": "71F4BB796E32F1CCFA1F99BE8A544A0BB663B61C2C0B146546A0F6BD488A3EFF",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "version": "0.72.0",
+    "description": "",
+    "installerHashes": [
+      "ED3CF122060F61818FE1F735FD97557954E16E10BC8B058AF9852271CF2E91B3"
+    ],
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-06-30T13:14:43.5680451Z"
   },
   "T-Troll.AlienFXTools": {
     "validationCount": 1,
