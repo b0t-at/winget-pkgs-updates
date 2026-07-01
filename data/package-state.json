@@ -284,15 +284,15 @@
     "description": ""
   },
   "etcd-io.etcd": {
-    "installerHashes": [
-      "B201370EEC589053CB84BC63EBFFF2461E8657A3CDA5BC6CE93C10FABB62846E"
-    ],
-    "manifestHash": "6110CF447ED26E30C3D4A266DF96D235E8F6E3119D3C726D02293E97D8DA4093",
-    "version": "3.6.12",
-    "lastUpdated": "2026-06-02T05:14:04.844448Z",
-    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-07-01T21:01:29.5533492Z",
+    "installerHashes": [
+      "50F59494270B5492B2298EBD00EB0A89E45693C1C98C091E6C8E9C613937C9AA"
+    ],
+    "manifestHash": "B6558CCA192DC7D9081BD15C48F124227F0C2E34DD3B6FE2656520F30FC9592F",
+    "validationCount": 1,
+    "version": "3.6.13"
   },
   "Firstversionist.Polypane": {
     "validationCount": 2,
@@ -457,16 +457,16 @@
     "version": "1.7.8"
   },
   "Fly-io.flyctl": {
+    "state": "VALIDATION_FAILED",
     "description": "",
-    "manifestHash": "76F708B55850EA828A85F15BBB08ECD679A378610287C94472BEADD8BCA1E63E",
-    "version": "0.4.63",
+    "lastUpdated": "2026-07-01T21:01:29.4704838Z",
     "installerHashes": [
-      "51B238DCC435193C85449EE02BE2C1018C8235EEF42B0F268F2AB0BD2E89509D",
-      "0B79CC2F7CD88E215189673915F0AD88B0434BF20A419705893F3858D7450468"
+      "26E82A995153E772FC4D9E1C7D8A877D728FF2C0200E822041E83D41AF064461",
+      "C0F1ED02C11B2EAA9EDB038B6C2F7EDBE0BDC84DD2E5D16EE4507703AAD04709"
     ],
+    "manifestHash": "DF84D3B5329CE822F42767A470C946F8D30AC2EC94BB084FF830EAF83DC24DF2",
     "validationCount": 1,
-    "lastUpdated": "2026-06-30T21:12:21.9616662Z",
-    "state": "VALIDATION_PASSED"
+    "version": "0.4.64"
   },
   "aimotrens.impulsar": {
     "validationCount": 2,
