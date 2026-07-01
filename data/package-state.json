@@ -980,12 +980,12 @@
     "state": "VALIDATION_FAILED"
   },
   "tagspaces.tagspaces": {
-    "lastUpdated": "2026-06-30T20:53:57.1816950Z",
+    "lastUpdated": "2026-07-01T01:25:53.6242067Z",
     "installerHashes": [
       "B78EAF729ED76D67013E0079CC0192551B1D5B4A1404615F20FB28AFB18B7A28"
     ],
     "version": "6.13.9",
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "9EE755C7B36E052644ED82AAD2B9E4463F7D38BD2E747D9D2EA4DE64D4E0CBB9",
     "description": "",
     "state": "VALIDATION_FAILED"
