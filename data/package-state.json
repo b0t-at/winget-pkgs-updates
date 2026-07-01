@@ -624,15 +624,15 @@
     "description": ""
   },
   "Google.FirebaseCLI": {
-    "installerHashes": [
-      "6424401717C42B8D0D187B785053E330B0D0EE90B09A447AA3DE5CE945BA2538"
-    ],
-    "lastUpdated": "2026-06-29T18:10:57.9664632Z",
-    "manifestHash": "D4B885AAB7145523073901EFFC2A5FBAA605C9D5E86CE832A976807AF3BA11BD",
-    "validationCount": 1,
+    "manifestHash": "1CF07181B4ACDE332AFC28CD016DADD41B522472C0D0B86525A12C1CA7E84A06",
     "state": "VALIDATION_PASSED",
-    "version": "15.22.3",
-    "description": ""
+    "description": "",
+    "lastUpdated": "2026-07-01T06:07:36.1177914Z",
+    "version": "15.22.4",
+    "validationCount": 1,
+    "installerHashes": [
+      "50E01C681A895EAE10F2C08E57AABEA6A27FD17976785925E602BD6B7C916929"
+    ]
   },
   "TerraformLinters.tflint": {
     "lastUpdated": "2026-06-03T20:13:54.4980133Z",
@@ -717,15 +717,15 @@
     "description": ""
   },
   "bornova.numara": {
-    "lastUpdated": "2026-06-30T06:01:23.77402Z",
-    "validationCount": 1,
-    "installerHashes": [
-      "D0909E148640B20AE031AEA6B08A7BF0E4E4F9ED680E7F8FB4E406FEA7C4B448"
-    ],
+    "manifestHash": "C79E315BF64637FCA0ED9082E945A56EBA6F8D0F9E17986E3737CCA9F9B44AE0",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "version": "7.1.8",
-    "manifestHash": "FA32D26EEE024334846AAF43BCBDF129EF945BF5F87AC1B7B8DC6409D70DAE70"
+    "lastUpdated": "2026-07-01T06:07:36.0747251Z",
+    "version": "7.1.9",
+    "validationCount": 1,
+    "installerHashes": [
+      "943FD5B504109706F4BB2708F402A02E391EB86CCDB406D9C183B5038F40C3D3"
+    ]
   },
   "seerge.g-helper": {
     "description": "",
