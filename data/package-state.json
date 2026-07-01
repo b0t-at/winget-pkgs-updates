@@ -1361,15 +1361,15 @@
     ]
   },
   "JustArchiNET.ArchiSteamFarm": {
-    "validationCount": 1,
-    "version": "6.3.6.1",
-    "description": "",
-    "lastUpdated": "2026-06-01T21:04:38.5072899Z",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "57B8DE8CF3B42B4E660DE735E52FDEAE54C8279F5CBC29D95627E178E41324FD",
+    "manifestHash": "65B31530ECF49234D8F30CFF06F45F2120FB762D5A206B5167D00BCB83F27B13",
+    "version": "6.3.7.0",
+    "state": "VALIDATION_FAILED",
     "installerHashes": [
-      "0958208BE9CD7D363A0AF6149ECF2C95297EF8B5CCB3F30079B41843A1FA61F9"
-    ]
+      "8535F6034C9E98C10D89388BE0AC43F8C8488BFD93C6A64C8EFD56FB9D9E3BCF"
+    ],
+    "lastUpdated": "2026-07-01T13:40:03.1852184Z",
+    "description": "",
+    "validationCount": 1
   },
   "AquaSecurity.Trivy": {
     "manifestHash": "71F4BB796E32F1CCFA1F99BE8A544A0BB663B61C2C0B146546A0F6BD488A3EFF",
