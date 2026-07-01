@@ -613,15 +613,15 @@
     "description": ""
   },
   "FOSSA.FOSSA-cli": {
-    "version": "3.17.11",
+    "lastUpdated": "2026-07-01T17:29:36.7599619Z",
     "installerHashes": [
-      "1B7F3F11479F14A64B1C1DCF85B942B0ACF906311294893E6E83091DAC40DC2A"
+      "58502B9E1EC1A63A3A0223FE85F643D7B3875560A378FB3A772EC19CE9F91C4B"
     ],
-    "lastUpdated": "2026-06-17T05:31:22.0240302Z",
+    "description": "",
+    "manifestHash": "FCB76D5F92ACFC72C65A14335D44ECCBAAD513ECF03667ECE28EFF942D4A8A3C",
     "validationCount": 1,
-    "manifestHash": "73F2E20659B2A7FF99538771921FCA41910C2EFFD0F41C7084A81444544D0305",
-    "state": "VALIDATION_PASSED",
-    "description": ""
+    "version": "3.17.12",
+    "state": "VALIDATION_PASSED"
   },
   "Google.FirebaseCLI": {
     "manifestHash": "1CF07181B4ACDE332AFC28CD016DADD41B522472C0D0B86525A12C1CA7E84A06",
@@ -1363,13 +1363,13 @@
   "JustArchiNET.ArchiSteamFarm": {
     "manifestHash": "65B31530ECF49234D8F30CFF06F45F2120FB762D5A206B5167D00BCB83F27B13",
     "version": "6.3.7.0",
-    "state": "VALIDATION_FAILED",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
       "8535F6034C9E98C10D89388BE0AC43F8C8488BFD93C6A64C8EFD56FB9D9E3BCF"
     ],
-    "lastUpdated": "2026-07-01T13:40:03.1852184Z",
+    "lastUpdated": "2026-07-01T17:29:36.8011309Z",
     "description": "",
-    "validationCount": 1
+    "validationCount": 2
   },
   "AquaSecurity.Trivy": {
     "manifestHash": "71F4BB796E32F1CCFA1F99BE8A544A0BB663B61C2C0B146546A0F6BD488A3EFF",
