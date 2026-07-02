@@ -236,15 +236,15 @@
     "description": ""
   },
   "BenjaminLSR.HandheldCompanion": {
-    "validationCount": 1,
-    "version": "0.29.3.1",
+    "description": "",
+    "version": "0.31.3.1",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "AAC51BEFA98DD488FB0EEE2B39EECA95238F73390EB7C32ABB79E6DA574F36B7",
-    "lastUpdated": "2026-05-11T08:36:25.7526603Z",
+    "validationCount": 1,
     "installerHashes": [
-      "B9961893724FBA4DCF91A3489F6686225C29D0F79A9F7A7B463E65494FA955D7"
+      "13592D5F77AF91619CE5D5DFBB73E39FF8DD524BFFA04FBD86A1F3047EAF1205"
     ],
-    "description": ""
+    "lastUpdated": "2026-07-02T09:44:50.6150119Z",
+    "manifestHash": "861252B2015F9A59A23DF97A40688536A7B191817D603156C92D623C6CDA0A3B"
   },
   "Microsoft.Sqlcmd": {
     "validationCount": 2,
