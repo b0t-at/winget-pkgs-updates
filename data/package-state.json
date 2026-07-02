@@ -457,15 +457,15 @@
     "version": "1.7.8"
   },
   "Fly-io.flyctl": {
-    "state": "VALIDATION_FAILED",
+    "state": "VALIDATION_PASSED",
     "description": "",
-    "lastUpdated": "2026-07-01T21:01:29.4704838Z",
+    "lastUpdated": "2026-07-02T01:50:08.278829Z",
     "installerHashes": [
       "26E82A995153E772FC4D9E1C7D8A877D728FF2C0200E822041E83D41AF064461",
       "C0F1ED02C11B2EAA9EDB038B6C2F7EDBE0BDC84DD2E5D16EE4507703AAD04709"
     ],
     "manifestHash": "DF84D3B5329CE822F42767A470C946F8D30AC2EC94BB084FF830EAF83DC24DF2",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "0.4.64"
   },
   "aimotrens.impulsar": {
@@ -1237,16 +1237,16 @@
     "lastUpdated": "2026-06-06T17:48:44.5235411Z"
   },
   "eksctl.eksctl": {
+    "manifestHash": "F5DF51169D128FCEDF3DAB8F8B97FDC2506D0FD87522B3B06F730DBECC2194AA",
+    "validationCount": 1,
+    "version": "0.229.0",
+    "description": "",
+    "lastUpdated": "2026-07-02T01:50:08.3242888Z",
     "installerHashes": [
-      "B2CC10F71EC6B6042349A0BA87495BCF49EE90CB365F856657B259875D6C2DEF",
-      "B93BF5E41FC7B87CD8D5CB1B926713B0777D5C4B8321023C1F4662B44A653054"
+      "7E5387D8AE8346F51448ADA616950AF3047714A83BEE6611070181E3C47F6DC0",
+      "D8F28428106AF1D6851226A5A05D122595EA5A4AB9C2CE33126607C0C49DC016"
     ],
-    "lastUpdated": "2026-06-30T01:55:05.0809525Z",
-    "manifestHash": "130AC76820466F21B7C4B7E56F34A41A12352285CE65D61F7A6086DBE1587C54",
-    "validationCount": 3,
-    "state": "VALIDATION_PASSED",
-    "version": "0.228.0",
-    "description": ""
+    "state": "VALIDATION_PASSED"
   },
   "VirusTotal.YARA-X": {
     "validationCount": 1,
