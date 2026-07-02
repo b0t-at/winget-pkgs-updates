@@ -1933,5 +1933,16 @@
     "version": "5.9.2",
     "lastUpdated": "2026-06-30T17:06:53.3270149Z",
     "manifestHash": "09B393FE05C1899D6E6FA28E20FA9C8EBE1D54C32039B0C27EF5361773E27FA3"
+  },
+  "Stripe.StripeCli": {
+    "version": "1.43.5",
+    "installerHashes": [
+      "E141D074522F3BE11841CBCCBE297693909F48EDC12B76D8768B3496E0D1673C"
+    ],
+    "lastUpdated": "2026-07-02T01:21:45.9887902Z",
+    "state": "VALIDATION_FAILED",
+    "description": "",
+    "validationCount": 1,
+    "manifestHash": "2FC17D10387329E5E73DBDDCBE45541A670D1711C99B916B986BBD747577DEC7"
   }
 }
