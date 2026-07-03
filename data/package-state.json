@@ -717,15 +717,15 @@
     ]
   },
   "bornova.numara": {
-    "manifestHash": "C79E315BF64637FCA0ED9082E945A56EBA6F8D0F9E17986E3737CCA9F9B44AE0",
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "lastUpdated": "2026-07-01T06:07:36.0747251Z",
-    "version": "7.1.9",
-    "validationCount": 1,
     "installerHashes": [
-      "943FD5B504109706F4BB2708F402A02E391EB86CCDB406D9C183B5038F40C3D3"
-    ]
+      "CEB7A3754320F456063974B460DE70B4C02ED311A735D0ED5B8B7F9FCC4026B7"
+    ],
+    "manifestHash": "29D31F7B734CC0BE4EA3A2170E5FAA2F4512B6114566173891DEA89A628A7C61",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "7.1.10",
+    "lastUpdated": "2026-07-03T21:01:25.3660987Z"
   },
   "seerge.g-helper": {
     "description": "",
