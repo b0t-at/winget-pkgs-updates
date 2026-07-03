@@ -457,9 +457,9 @@
     "version": "1.7.8"
   },
   "Fly-io.flyctl": {
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "0.4.65",
-    "lastUpdated": "2026-07-02T21:05:02.9379432Z",
+    "lastUpdated": "2026-07-03T01:28:00.1341467Z",
     "description": "",
     "manifestHash": "23994D4F9B0C930C7113A061931576D1164EBC4A2F6B7B262D980A4A32AE89F9",
     "installerHashes": [
@@ -706,15 +706,15 @@
     "version": "26.6.0-0"
   },
   "KeeperSecurity.Commander": {
-    "installerHashes": [
-      "E09FC58A9AF8E5A00DA15D82F9267A9323D195161B25B7619E4F7D9332997EBC"
-    ],
-    "lastUpdated": "2026-06-29T18:10:58.0223996Z",
-    "manifestHash": "6604E6D84755652903AE782215A0AABB5DCACEBE79E094D6C3B8AB1EC3D89EF0",
+    "lastUpdated": "2026-07-03T01:28:00.1658743Z",
     "validationCount": 1,
+    "manifestHash": "FE052CE420BBFAB95BE2A472FA9FF23B6EF946C259A9538493E77B338C26C756",
+    "version": "18.0.10",
+    "description": "",
     "state": "VALIDATION_PASSED",
-    "version": "18.0.9",
-    "description": ""
+    "installerHashes": [
+      "D44C727B8A90C827D2CF4789E44420337B655334983A347EA6DAD39C472C5CFD"
+    ]
   },
   "bornova.numara": {
     "manifestHash": "C79E315BF64637FCA0ED9082E945A56EBA6F8D0F9E17986E3737CCA9F9B44AE0",
