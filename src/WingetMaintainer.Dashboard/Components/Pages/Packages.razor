@@ -1,0 +1,77 @@
+@page "/packages"
+@using WingetMaintainer.Dashboard.Models
+@using WingetMaintainer.Dashboard.Services
+@inject WorkerClient Worker
+@rendermode InteractiveServer
+
+<PageTitle>Packages</PageTitle>
+
+<h1>Package Detail</h1>
+
+<div class="wm-lookup">
+    <input @bind="packageId" placeholder="Publisher.Product" />
+    <button @onclick="LookupAsync" disabled="@isLoading">Look up</button>
+</div>
+
+@if (isLoading)
+{
+    <p>Loading…</p>
+}
+else if (loadError is not null)
+{
+    <p class="wm-error">@loadError</p>
+}
+else if (notFound)
+{
+    <p>No state recorded for <code>@lastQueried</code>.</p>
+}
+else if (state is not null)
+{
+    <table class="wm-table">
+        <tbody>
+            <tr><th>Package</th><td>@state.PackageIdentifier</td></tr>
+            <tr><th>Version</th><td>@state.Version</td></tr>
+            <tr><th>State</th><td>@state.State</td></tr>
+            <tr><th>Validation count</th><td>@state.ValidationCount</td></tr>
+            <tr><th>Manifest hash</th><td><code>@state.ManifestHash</code></td></tr>
+            <tr><th>Last updated</th><td>@state.LastUpdated.ToString("u")</td></tr>
+        </tbody>
+    </table>
+}
+
+@code {
+    private string packageId = string.Empty;
+    private string? lastQueried;
+    private PackageStateDto? state;
+    private bool isLoading;
+    private bool notFound;
+    private string? loadError;
+
+    private async Task LookupAsync()
+    {
+        if (string.IsNullOrWhiteSpace(packageId))
+        {
+            return;
+        }
+
+        isLoading = true;
+        loadError = null;
+        notFound = false;
+        state = null;
+        lastQueried = packageId;
+
+        try
+        {
+            state = await Worker.GetStateAsync(packageId, CancellationToken.None);
+            notFound = state is null;
+        }
+        catch (Exception exception)
+        {
+            loadError = exception.Message;
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+}

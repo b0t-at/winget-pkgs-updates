@@ -1,10 +1,28 @@
+using WingetMaintainer.Dashboard;
 using WingetMaintainer.Dashboard.Components;
+using WingetMaintainer.Dashboard.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services
+    .AddOptions<DashboardOptions>()
+    .Bind(builder.Configuration.GetSection(DashboardOptions.SectionName));
+
+DashboardOptions dashboardOptions =
+    builder.Configuration.GetSection(DashboardOptions.SectionName).Get<DashboardOptions>() ?? new DashboardOptions();
+
+builder.Services.AddHttpClient<WorkerClient>(client =>
+{
+    client.BaseAddress = new Uri(dashboardOptions.WorkerBaseUrl);
+    if (!string.IsNullOrWhiteSpace(dashboardOptions.ApiKey))
+    {
+        client.DefaultRequestHeaders.Add("X-Api-Key", dashboardOptions.ApiKey);
+    }
+});
 
 var app = builder.Build();
 

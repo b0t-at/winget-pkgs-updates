@@ -1,0 +1,17 @@
+@page "/grafana"
+@using Microsoft.Extensions.Options
+@inject IOptions<DashboardOptions> Options
+
+<PageTitle>Grafana</PageTitle>
+
+<h1>Grafana Dashboards</h1>
+
+@if (string.IsNullOrWhiteSpace(Options.Value.GrafanaBaseUrl))
+{
+    <p>Set <code>Dashboard:GrafanaBaseUrl</code> to embed the Grafana dashboards here.</p>
+}
+else
+{
+    <iframe class="wm-grafana" src="@($"{Options.Value.GrafanaBaseUrl!.TrimEnd('/')}/d/wm-pipeline-overview")"
+            title="Grafana Pipeline Overview"></iframe>
+}

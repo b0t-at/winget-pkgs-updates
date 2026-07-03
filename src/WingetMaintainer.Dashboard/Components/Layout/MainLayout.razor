@@ -1,6 +1,15 @@
 ﻿@inherits LayoutComponentBase
 
-@Body
+<nav class="wm-nav">
+    <span class="wm-brand">winget-maintainer</span>
+    <a href="/">Overview</a>
+    <a href="/packages">Packages</a>
+    <a href="/grafana">Grafana</a>
+</nav>
+
+<main class="wm-main">
+    @Body
+</main>
 
 <div id="blazor-error-ui">
     An unhandled error has occurred.
