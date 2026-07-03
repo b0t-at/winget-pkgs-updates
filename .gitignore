@@ -1,5 +1,4 @@
 manifests/
-Tests
 scripts/package-cleanup/broken_packages.csv
 scripts/package-cleanup/cleaned_packages.csv
 *.msi
@@ -8,3 +7,13 @@ scripts/package-cleanup/cleaned_packages.csv
 *.appx
 *.msix
 *.msixbundle
+
+# .NET build output / IDE
+bin/
+obj/
+.vs/
+*.user
+artifacts/
+publish/
+TestResults/
+*.trx

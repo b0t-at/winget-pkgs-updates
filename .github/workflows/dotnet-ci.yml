@@ -1,0 +1,79 @@
+name: dotnet-ci
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**/*.cs"
+      - "**/*.csproj"
+      - "**/*.sln"
+      - "Directory.Build.props"
+      - "Directory.Packages.props"
+      - "global.json"
+      - "NuGet.config"
+      - ".github/workflows/dotnet-ci.yml"
+  pull_request:
+    paths:
+      - "**/*.cs"
+      - "**/*.csproj"
+      - "**/*.sln"
+      - "Directory.Build.props"
+      - "Directory.Packages.props"
+      - "global.json"
+      - "NuGet.config"
+      - ".github/workflows/dotnet-ci.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-test:
+    name: Build, test & publish
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+
+      - name: Restore
+        run: dotnet restore WingetMaintainer.sln
+
+      - name: Build
+        run: dotnet build WingetMaintainer.sln -c Release --no-restore
+
+      - name: Test
+        run: dotnet test WingetMaintainer.sln -c Release --no-build --verbosity normal
+
+      - name: Format check (error severity)
+        run: dotnet format WingetMaintainer.sln --verify-no-changes --severity error --no-restore
+
+      - name: Publish CLI (self-contained, single file)
+        run: >-
+          dotnet publish src/WingetMaintainer.Cli -c Release -r win-x64
+          --self-contained true -p:PublishSingleFile=true -o publish/cli
+
+      - name: Publish Worker
+        run: dotnet publish src/WingetMaintainer.Worker -c Release -o publish/worker
+
+      - name: Publish SandboxRunner
+        run: >-
+          dotnet publish src/WingetMaintainer.SandboxRunner -c Release -r win-x64
+          --self-contained false -o publish/sandboxrunner
+
+      - name: Publish Dashboard
+        run: dotnet publish src/WingetMaintainer.Dashboard -c Release -o publish/dashboard
+
+      - name: Upload published artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: wingetmaintainer-apps
+          path: publish/
+          retention-days: 7
+          if-no-files-found: error
