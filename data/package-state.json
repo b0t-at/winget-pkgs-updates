@@ -355,15 +355,15 @@
     "description": ""
   },
   "SparkLabs.openvpn-configuration-generator": {
-    "version": "2.0.1",
-    "manifestHash": "C32D11A426B624FA13043D54967CB3D3DD6247C4A801BCFC9A900ACFE079E8D7",
-    "validationCount": 3,
-    "installerHashes": [
-      "67DB53BB3C528F9C971072AED7EA44546A43FC6D5E7E6FBA744BF6C4F487A196"
-    ],
     "description": "",
+    "validationCount": 1,
     "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-05-14T14:41:16.6418798Z"
+    "version": "2.0.2",
+    "manifestHash": "8BA24056BFE4690EB9A794FE281B4C284AC3168C09D33EF3127FFEFB4F8FAF55",
+    "lastUpdated": "2026-07-03T09:33:47.9837061Z",
+    "installerHashes": [
+      "E416F0153DA04A3C3534F9326C0AE1B9FFDA7997E2D7FC084B04268123329850"
+    ]
   },
   "S3Drive.S3Drive": {
     "validationCount": 1,
