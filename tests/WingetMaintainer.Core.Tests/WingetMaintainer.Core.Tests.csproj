@@ -19,6 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Fixtures\**\*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\src\WingetMaintainer.Core\WingetMaintainer.Core.csproj" />
     <ProjectReference Include="..\..\src\WingetMaintainer.Data\WingetMaintainer.Data.csproj" />
   </ItemGroup>

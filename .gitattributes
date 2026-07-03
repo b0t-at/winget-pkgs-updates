@@ -1,1 +1,4 @@
 github-releases-monitored.yml text eol=lf
+
+# Keep test manifest fixtures byte-stable across platforms so the golden hash test is deterministic.
+tests/**/Fixtures/** -text
