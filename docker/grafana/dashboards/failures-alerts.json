@@ -1,0 +1,49 @@
+{
+  "uid": "wm-failures-alerts",
+  "title": "Failures & Alerts",
+  "tags": ["winget-maintainer"],
+  "timezone": "browser",
+  "schemaVersion": 39,
+  "refresh": "1m",
+  "time": { "from": "now-24h", "to": "now" },
+  "panels": [
+    {
+      "id": 1,
+      "type": "table",
+      "title": "Packages at skip threshold (validationCount >= 3, VALIDATION_FAILED)",
+      "datasource": { "type": "loki", "uid": "loki" },
+      "gridPos": { "h": 10, "w": 24, "x": 0, "y": 0 },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "{app=\"winget-maintainer\"} | json | event=\"package_result\" | state=\"VALIDATION_FAILED\" | validationCount >= 3"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "timeseries",
+      "title": "Failure rate by phase",
+      "datasource": { "type": "loki", "uid": "loki" },
+      "gridPos": { "h": 9, "w": 12, "x": 0, "y": 10 },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "sum by (phase) (count_over_time({app=\"winget-maintainer\"} | json | outcome=\"failed\" [$__interval]))",
+          "legendFormat": "{{phase}}"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "logs",
+      "title": "Error & warning logs",
+      "datasource": { "type": "loki", "uid": "loki" },
+      "gridPos": { "h": 9, "w": 12, "x": 12, "y": 10 },
+      "options": { "showTime": true, "wrapLogMessage": true, "sortOrder": "Descending" },
+      "targets": [
+        { "refId": "A", "expr": "{app=\"winget-maintainer\", level=~\"Warning|Error|Fatal\"} | json" }
+      ]
+    }
+  ]
+}

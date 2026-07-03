@@ -1,0 +1,91 @@
+apiVersion: 1
+
+# Alert rules over LogQL (decision D10). These reference the Loki datasource (uid: loki).
+# NOTE: Alert rule provisioning is verbose and environment-specific — validate/tune in Grafana
+# after first deploy. Thresholds below are conservative starting points.
+groups:
+  - orgId: 1
+    name: winget-maintainer
+    folder: winget-maintainer
+    interval: 5m
+    rules:
+      - uid: wm_errors_present
+        title: Errors in winget-maintainer logs
+        condition: C
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: Error-level logs detected in the last 5 minutes.
+        data:
+          - refId: A
+            relativeTimeRange:
+              from: 300
+              to: 0
+            datasourceUid: loki
+            model:
+              expr: sum(count_over_time({app="winget-maintainer", level=~"Error|Fatal"}[5m]))
+              queryType: instant
+              refId: A
+          - refId: B
+            relativeTimeRange:
+              from: 300
+              to: 0
+            datasourceUid: __expr__
+            model:
+              type: reduce
+              reducer: last
+              expression: A
+              refId: B
+          - refId: C
+            relativeTimeRange:
+              from: 300
+              to: 0
+            datasourceUid: __expr__
+            model:
+              type: threshold
+              expression: B
+              refId: C
+              conditions:
+                - evaluator:
+                    type: gt
+                    params: [0]
+
+      - uid: wm_skip_threshold
+        title: Packages reached the validation skip threshold
+        condition: C
+        for: 0m
+        labels:
+          severity: critical
+        annotations:
+          summary: One or more packages have validationCount >= 3 and remain VALIDATION_FAILED.
+        data:
+          - refId: A
+            relativeTimeRange:
+              from: 3600
+              to: 0
+            datasourceUid: loki
+            model:
+              expr: >-
+                sum(count_over_time(
+                  {app="winget-maintainer"} | json
+                  | event="package_result" | state="VALIDATION_FAILED" | validationCount >= 3 [1h]))
+              queryType: instant
+              refId: A
+          - refId: B
+            datasourceUid: __expr__
+            model:
+              type: reduce
+              reducer: last
+              expression: A
+              refId: B
+          - refId: C
+            datasourceUid: __expr__
+            model:
+              type: threshold
+              expression: B
+              refId: C
+              conditions:
+                - evaluator:
+                    type: gt
+                    params: [0]

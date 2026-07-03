@@ -22,3 +22,7 @@ TestResults/
 *.db
 *.db-shm
 *.db-wal
+
+# Observability stack local secrets/logs
+docker/.env
+docker/sandbox-logs/

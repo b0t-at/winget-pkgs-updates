@@ -1,0 +1,57 @@
+{
+  "uid": "wm-sandbox-validation",
+  "title": "Sandbox Validation",
+  "tags": ["winget-maintainer"],
+  "timezone": "browser",
+  "schemaVersion": 39,
+  "refresh": "1m",
+  "time": { "from": "now-24h", "to": "now" },
+  "panels": [
+    {
+      "id": 1,
+      "type": "stat",
+      "title": "Validations (24h)",
+      "datasource": { "type": "loki", "uid": "loki" },
+      "gridPos": { "h": 5, "w": 8, "x": 0, "y": 0 },
+      "targets": [
+        { "refId": "A", "expr": "sum(count_over_time({app=\"winget-maintainer\", phase=\"validate\"} | json | event=\"validation_result\" [24h]))" }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "stat",
+      "title": "Timeouts (24h)",
+      "datasource": { "type": "loki", "uid": "loki" },
+      "gridPos": { "h": 5, "w": 8, "x": 8, "y": 0 },
+      "fieldConfig": { "defaults": { "thresholds": { "steps": [ { "color": "green", "value": null }, { "color": "red", "value": 1 } ] } } },
+      "targets": [
+        { "refId": "A", "expr": "sum(count_over_time({app=\"winget-maintainer\", phase=\"validate\"} | json | status=\"timed_out\" [24h]))" }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "timeseries",
+      "title": "Pass / fail by host",
+      "datasource": { "type": "loki", "uid": "loki" },
+      "gridPos": { "h": 9, "w": 24, "x": 0, "y": 5 },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "sum by (host, status) (count_over_time({app=\"winget-maintainer\", phase=\"validate\"} | json | event=\"validation_result\" [$__interval]))",
+          "legendFormat": "{{host}} / {{status}}"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "logs",
+      "title": "Sandbox logs",
+      "datasource": { "type": "loki", "uid": "loki" },
+      "gridPos": { "h": 10, "w": 24, "x": 0, "y": 14 },
+      "options": { "showTime": true, "wrapLogMessage": true, "sortOrder": "Descending" },
+      "targets": [
+        { "refId": "A", "expr": "{app=\"winget-maintainer\", phase=\"validate\"}" }
+      ]
+    }
+  ]
+}

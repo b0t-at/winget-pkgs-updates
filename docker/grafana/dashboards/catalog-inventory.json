@@ -1,0 +1,49 @@
+{
+  "uid": "wm-catalog-inventory",
+  "title": "Catalog / Inventory",
+  "tags": ["winget-maintainer"],
+  "timezone": "browser",
+  "schemaVersion": 39,
+  "refresh": "5m",
+  "time": { "from": "now-30d", "to": "now" },
+  "panels": [
+    {
+      "id": 1,
+      "type": "stat",
+      "title": "Total monitored packages",
+      "datasource": { "type": "loki", "uid": "loki" },
+      "gridPos": { "h": 5, "w": 8, "x": 0, "y": 0 },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "last_over_time({app=\"winget-maintainer\", environment=\"Production\"} | json | event=\"inventory\" | unwrap total [30d])"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "timeseries",
+      "title": "Catalog size over time",
+      "datasource": { "type": "loki", "uid": "loki" },
+      "gridPos": { "h": 9, "w": 24, "x": 0, "y": 5 },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "avg_over_time({app=\"winget-maintainer\"} | json | event=\"inventory\" | unwrap total [$__interval])",
+          "legendFormat": "total"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "logs",
+      "title": "Inventory snapshots",
+      "datasource": { "type": "loki", "uid": "loki" },
+      "gridPos": { "h": 9, "w": 24, "x": 0, "y": 14 },
+      "options": { "showTime": true, "wrapLogMessage": true, "sortOrder": "Descending" },
+      "targets": [
+        { "refId": "A", "expr": "{app=\"winget-maintainer\"} | json | event=\"inventory\"" }
+      ]
+    }
+  ]
+}

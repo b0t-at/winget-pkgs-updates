@@ -1,0 +1,77 @@
+# Observability stack for winget-maintainer (decisions D8–D10, D15).
+#
+# NOTE: This stack has NOT been verified live in this environment (no Docker/secrets available).
+# Bring it up on the observability host and validate before relying on it in production.
+#
+# Usage:
+#   cp .env.example .env   # then edit secrets
+#   docker compose up -d
+services:
+  loki:
+    image: grafana/loki:3.2.1
+    container_name: winget-loki
+    restart: unless-stopped
+    command: -config.file=/etc/loki/loki-config.yml
+    ports:
+      - "3100:3100"
+    volumes:
+      - ./loki/loki-config.yml:/etc/loki/loki-config.yml:ro
+      - loki-data:/loki
+    networks:
+      - observability
+
+  grafana:
+    image: grafana/grafana:11.3.0
+    container_name: winget-grafana
+    restart: unless-stopped
+    depends_on:
+      - loki
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_ADMIN_USER:-admin}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:?set in .env}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_SERVER_ROOT_URL: ${GRAFANA_ROOT_URL:-http://localhost:3000}
+      NTFY_URL: ${NTFY_URL:-}
+      NTFY_TOPIC: ${NTFY_TOPIC:-}
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./grafana/dashboards:/var/lib/grafana/dashboards:ro
+      - grafana-data:/var/lib/grafana
+    networks:
+      - observability
+
+  alloy:
+    image: grafana/alloy:v1.5.0
+    container_name: winget-alloy
+    restart: unless-stopped
+    depends_on:
+      - loki
+    command:
+      - run
+      - /etc/alloy/config.alloy
+      - --storage.path=/var/lib/alloy/data
+    environment:
+      LOKI_PUSH_URL: ${LOKI_PUSH_URL:-http://loki:3100/loki/api/v1/push}
+      LOKI_USERNAME: ${LOKI_USERNAME:-}
+      LOKI_PASSWORD: ${LOKI_PASSWORD:-}
+      WINGET_ENVIRONMENT: ${WINGET_ENVIRONMENT:-Production}
+      # Glob of the sandbox validation logs to tail (see D8/T3.3).
+      SANDBOX_LOG_GLOB: ${SANDBOX_LOG_GLOB:-/sandbox-logs/*.log}
+    volumes:
+      - ./alloy/config.alloy:/etc/alloy/config.alloy:ro
+      - alloy-data:/var/lib/alloy/data
+      # Mount the host's SandboxTest\Logs directory here (read-only).
+      - ${SANDBOX_LOG_DIR:-./sandbox-logs}:/sandbox-logs:ro
+    networks:
+      - observability
+
+networks:
+  observability:
+    driver: bridge
+
+volumes:
+  loki-data:
+  grafana-data:
+  alloy-data:

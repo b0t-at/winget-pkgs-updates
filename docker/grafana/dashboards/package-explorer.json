@@ -1,0 +1,50 @@
+{
+  "uid": "wm-package-explorer",
+  "title": "Package Explorer",
+  "tags": ["winget-maintainer"],
+  "timezone": "browser",
+  "schemaVersion": 39,
+  "refresh": "1m",
+  "time": { "from": "now-7d", "to": "now" },
+  "templating": {
+    "list": [
+      {
+        "name": "pkg",
+        "type": "textbox",
+        "label": "Package Id",
+        "query": "",
+        "current": { "text": "", "value": "" }
+      }
+    ]
+  },
+  "panels": [
+    {
+      "id": 1,
+      "type": "logs",
+      "title": "Logs for $pkg",
+      "datasource": { "type": "loki", "uid": "loki" },
+      "gridPos": { "h": 12, "w": 24, "x": 0, "y": 0 },
+      "options": { "showTime": true, "wrapLogMessage": true, "sortOrder": "Descending" },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "{app=\"winget-maintainer\"} | json | package_id=`$pkg`"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "table",
+      "title": "Results for $pkg",
+      "datasource": { "type": "loki", "uid": "loki" },
+      "gridPos": { "h": 10, "w": 24, "x": 0, "y": 12 },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "{app=\"winget-maintainer\"} | json | package_id=`$pkg` | event=\"package_result\"",
+          "queryType": "range"
+        }
+      ]
+    }
+  ]
+}

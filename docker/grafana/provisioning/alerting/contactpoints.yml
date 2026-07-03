@@ -1,0 +1,24 @@
+apiVersion: 1
+
+# Contact points and notification policy (decision D10: keep ntfy as a contact point).
+# The ntfy webhook URL is built from NTFY_URL/NTFY_TOPIC env vars injected into Grafana.
+contactPoints:
+  - orgId: 1
+    name: ntfy
+    receivers:
+      - uid: ntfy_webhook
+        type: webhook
+        settings:
+          url: ${NTFY_URL}/${NTFY_TOPIC}
+          httpMethod: POST
+        disableResolveMessage: false
+
+policies:
+  - orgId: 1
+    receiver: ntfy
+    group_by:
+      - grafana_folder
+      - alertname
+    group_wait: 30s
+    group_interval: 5m
+    repeat_interval: 4h

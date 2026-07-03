@@ -1,0 +1,31 @@
+// Grafana Alloy configuration: tails Windows Sandbox validation logs and ships them to Loki.
+// Labels are LOW-cardinality only (decision D9): app, environment, host, phase.
+// High-cardinality values (package id, version, error) belong in the JSON log body.
+//
+// NOTE: Not verified live in this environment. Validate on the sandbox host.
+
+local.file_match "sandbox_logs" {
+  path_targets = [{
+    __path__    = sys.env("SANDBOX_LOG_GLOB"),
+    app         = "winget-maintainer",
+    environment = sys.env("WINGET_ENVIRONMENT"),
+    host        = constants.hostname,
+    phase       = "validate",
+  }]
+}
+
+loki.source.file "sandbox" {
+  targets    = local.file_match.sandbox_logs.targets
+  forward_to = [loki.write.default.receiver]
+}
+
+loki.write "default" {
+  endpoint {
+    url = sys.env("LOKI_PUSH_URL")
+
+    basic_auth {
+      username = sys.env("LOKI_USERNAME")
+      password = sys.env("LOKI_PASSWORD")
+    }
+  }
+}
