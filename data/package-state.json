@@ -1214,13 +1214,13 @@
     "manifestHash": "39023407C47B91CA73949B89659C19B996FC483BF75815844F3E4DF76964BF1C"
   },
   "TravisLane.SteamArtManager": {
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "54CA2B72BA985D146992156D62FAA8D5936897C711EE5DBF6C184F87712DC569"
     ],
     "description": "",
-    "lastUpdated": "2026-07-03T20:55:34.883932Z",
-    "state": "VALIDATION_FAILED",
+    "lastUpdated": "2026-07-04T05:46:19.6949219Z",
+    "state": "VALIDATION_PASSED",
     "version": "3.17.0",
     "manifestHash": "11DAAF2989C26BFB67826BDF503B3BA0553FF91CE696E74C1C6F27DC4AF7BC08"
   },
