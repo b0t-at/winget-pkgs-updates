@@ -1428,14 +1428,14 @@
   },
   "f4exb.sdrangel": {
     "installerHashes": [
-      "7F1CAE3F11D2A1DB6EDBEE344FAEA91ACEC142A15E5BC7EBD73B1FDA6212BA02"
+      "90A284F25A1E1F22F5A7B4266E5A093B414ED743E46B1A9232994C616288CD69"
     ],
-    "manifestHash": "C8BADFA90D94929691024B2919364BCB323D680B711694EB7237906AF7FBF0C0",
-    "validationCount": 1,
-    "version": "7.26.1",
+    "version": "7.27.0",
+    "manifestHash": "A17FFA58A0664502AA0E4E1746AC40A4918B1AE471332F79BE463265683E2067",
     "state": "VALIDATION_PASSED",
+    "validationCount": 1,
     "description": "",
-    "lastUpdated": "2026-06-03T13:21:50.5974033Z"
+    "lastUpdated": "2026-07-04T13:02:38.9815932Z"
   },
   "CircleCI.CLI": {
     "validationCount": 1,
