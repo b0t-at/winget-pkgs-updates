@@ -96,10 +96,10 @@
     "installerHashes": [
       "D1945A7ADBF2C534F5A0A990D90B2A4584962486F57854DA312D5290EAD1E75C"
     ],
-    "lastUpdated": "2026-07-05T12:47:51.3940115Z",
+    "lastUpdated": "2026-07-05T20:37:55.1448629Z",
     "description": "",
     "version": "3.2.0",
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_FAILED"
   },
   "Sayuri.FFFTP": {
