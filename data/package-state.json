@@ -115,8 +115,8 @@
     "validationCount": 1
   },
   "pnpm.pnpm": {
-    "validationCount": 2,
-    "lastUpdated": "2026-07-05T01:19:46.8798630Z",
+    "validationCount": 3,
+    "lastUpdated": "2026-07-05T05:43:35.2900432Z",
     "version": "11.10.0",
     "state": "VALIDATION_FAILED",
     "installerHashes": [
