@@ -1637,10 +1637,10 @@
       "88533CE3175F84B5FBF55230175F587716AAD66E83128D8198422DBB0A7C0BBA"
     ],
     "description": "",
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_FAILED",
     "version": "0.12.4",
-    "lastUpdated": "2026-07-05T20:44:21.0252538Z",
+    "lastUpdated": "2026-07-06T01:15:10.2197702Z",
     "manifestHash": "DDD49EF781B045A7179949D01E9BE4414843793263660E2421FAF7088060AC3C"
   },
   "Gruntwork.cloud-nuke": {
