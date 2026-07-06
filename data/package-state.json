@@ -310,13 +310,13 @@
     "state": "VALIDATION_FAILED",
     "version": "0.83.0",
     "manifestHash": "8713CEA89C9608FEB678ED83040404D2ABCA34E913344B969B189FE2F6064A8B",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "4AE2FA1978B572166C05960B4E9F393ACE040B7780DB65DF3AF829D1F106B8D6",
       "7C3892D72EE0D9CA528228F8F296F3A3055ED09A515A8433A5AE73E47DB26C61",
       "99EE64516A4A86E7FCEE40C89E439EFE2CB1ABDB8C34C7AC92CCBB36F92D4BCE"
     ],
-    "lastUpdated": "2026-07-06T13:45:42.6733127Z"
+    "lastUpdated": "2026-07-06T21:01:14.5234440Z"
   },
   "GolangCI.golangci-lint": {
     "validationCount": 1,
@@ -457,16 +457,16 @@
     "version": "1.7.8"
   },
   "Fly-io.flyctl": {
+    "manifestHash": "CBF3BD15915C985D390BFE40CC25B309649018472C2E493041C59E40BC084F49",
+    "lastUpdated": "2026-07-06T21:01:14.4713699Z",
+    "state": "VALIDATION_FAILED",
     "installerHashes": [
-      "E3D931EE8E8972FDB8602BCF058CFD0BC3CBE549CAD9EA9E965D7205A4BD4A4D",
-      "6671EEC327F5F99348977DBA9DCA84EAF976346C5FC50BAC8ACCA7A7E3045CA8"
+      "A8DA0B0732FD7F0B71F96A90024CAB8B4049C0AA713975424E2B34004DF02CC7",
+      "88CD4DB7603C81EE066F9EE7F99C2844D0298BB7CDA04005C6EFFF48CC66FCCD"
     ],
+    "version": "0.4.67",
     "description": "",
-    "version": "0.4.66",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-07-03T05:56:27.7313833Z",
-    "validationCount": 1,
-    "manifestHash": "3B54F490B329F7D0DA920ED54BA2B87040FB1ABF13CF6E6BA7C935A7E2859478"
+    "validationCount": 1
   },
   "aimotrens.impulsar": {
     "validationCount": 2,
@@ -1967,5 +1967,27 @@
     "validationCount": 2,
     "version": "3.42.5375",
     "state": "VALIDATION_FAILED"
+  },
+  "MinBrowser.Min": {
+    "manifestHash": "52F885FF20E3B4F619B0004F007C17CADDD51910FCEE06FE1806F2B9D057A6C1",
+    "lastUpdated": "2026-07-06T21:01:14.4244641Z",
+    "state": "VALIDATION_FAILED",
+    "installerHashes": [
+      "6C7A09E1B5556A55DAEFF23120EC5D7466CF70D0FC4C3DB45D1C1F4C34B4A4C3"
+    ],
+    "version": "1.35.6",
+    "description": "",
+    "validationCount": 1
+  },
+  "ChiaNetwork.GUIforChiaBlockchain": {
+    "manifestHash": "D2F5FC7DCB4A7A7B768D1CBBF822A636A0CB1330E790A03D9998082E9613C0C2",
+    "lastUpdated": "2026-07-06T21:01:14.4880912Z",
+    "state": "VALIDATION_FAILED",
+    "installerHashes": [
+      "A48D7FE86A9DFF8086281C2021AF377404AFA0F9F5CFC1157BDD1112DD65DA2F"
+    ],
+    "version": "2.7.1",
+    "description": "",
+    "validationCount": 1
   }
 }
