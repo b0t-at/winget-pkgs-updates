@@ -10,14 +10,14 @@ not launch from Session 0 (the session used by normal Windows Services).
 
 ## Configuration (`Runner` section / env)
 
-| Setting | Env var | Default |
-| --- | --- | --- |
-| Worker base URL | `Runner__WorkerBaseUrl` | `http://localhost:5099/` |
-| API key | `Runner__ApiKey` | (required for a secured Worker) |
-| Host label | `Runner__Host` | machine name |
-| Script path | `Runner__ScriptPath` | `scripts/validation/Test-Manifest-Sandbox.ps1` |
-| Poll interval (s) | `Runner__PollIntervalSeconds` | `15` |
-| Timeout (min) | `Runner__TimeoutMinutes` | `30` |
+| Setting           | Env var                       | Default                                        |
+| ----------------- | ----------------------------- | ---------------------------------------------- |
+| Worker base URL   | `Runner__WorkerBaseUrl`       | `http://localhost:5099/`                       |
+| API key           | `Runner__ApiKey`              | (required for a secured Worker)                |
+| Host label        | `Runner__Host`                | machine name                                   |
+| Script path       | `Runner__ScriptPath`          | `scripts/validation/Test-Manifest-Sandbox.ps1` |
+| Poll interval (s) | `Runner__PollIntervalSeconds` | `15`                                           |
+| Timeout (min)     | `Runner__TimeoutMinutes`      | `30`                                           |
 
 Concurrency is **1 by construction** (a single sequential loop); each job is bounded by
 `TimeoutMinutes` and reported as `timed_out` if it exceeds it.
@@ -54,4 +54,4 @@ start there. Run the SandboxRunner in an **auto-logged-on interactive session** 
 
 The runner logs JSON to the console and (optionally) to Loki. Point Grafana **Alloy** at the sandbox
 script's log directory (`docker/alloy/config.alloy`, `SANDBOX_LOG_GLOB`) so per-run logs and
-screenshots surface on the *Sandbox Validation* dashboard (label `phase=validate`).
+screenshots surface on the _Sandbox Validation_ dashboard (label `phase=validate`).

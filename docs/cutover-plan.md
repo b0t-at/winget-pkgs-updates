@@ -6,14 +6,14 @@ validated end-to-end.
 
 ## Current vs target
 
-| Concern | Legacy | Target |
-| --- | --- | --- |
-| Scheduling | GitHub Actions cron | Worker (Cronos) |
-| Matrix/generation | Python + PowerShell | CLI/Worker (C#) |
-| IPC between stages | artifact-name regex | DB rows (PackageRun/ValidationJob) |
-| State | `data/package-state.json` in git | SQLite (Worker-owned) |
-| Sandbox validation | self-hosted Actions runner | SandboxRunner (interactive session) |
-| Observability | Actions logs / RDP | Loki + Grafana |
+| Concern            | Legacy                           | Target                              |
+| ------------------ | -------------------------------- | ----------------------------------- |
+| Scheduling         | GitHub Actions cron              | Worker (Cronos)                     |
+| Matrix/generation  | Python + PowerShell              | CLI/Worker (C#)                     |
+| IPC between stages | artifact-name regex              | DB rows (PackageRun/ValidationJob)  |
+| State              | `data/package-state.json` in git | SQLite (Worker-owned)               |
+| Sandbox validation | self-hosted Actions runner       | SandboxRunner (interactive session) |
+| Observability      | Actions logs / RDP               | Loki + Grafana                      |
 
 ## Phase A — Shadow mode (no behaviour change)
 
