@@ -42,8 +42,8 @@ public sealed class WorkerApiClient : IWorkerApiClient
         }
 
         response.EnsureSuccessStatusCode();
-        return await response.Content
-            .ReadFromJsonAsync<QueuedJob>(cancellationToken)
+        return await response
+            .Content.ReadFromJsonAsync<QueuedJob>(cancellationToken)
             .ConfigureAwait(false);
     }
 

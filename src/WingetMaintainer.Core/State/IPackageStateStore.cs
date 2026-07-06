@@ -26,5 +26,6 @@ public interface IPackageStateStore
         string version,
         string manifestHash,
         int maxFailures,
-        CancellationToken cancellationToken);
+        CancellationToken cancellationToken
+    );
 }

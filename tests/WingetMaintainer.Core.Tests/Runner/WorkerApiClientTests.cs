@@ -18,7 +18,8 @@ public sealed class WorkerApiClientTests
 
         protected override async Task<HttpResponseMessage> SendAsync(
             HttpRequestMessage request,
-            CancellationToken cancellationToken)
+            CancellationToken cancellationToken
+        )
         {
             LastRequest = request;
             LastRequestBody = request.Content is null
@@ -72,7 +73,13 @@ public sealed class WorkerApiClientTests
     {
         StubHandler handler = new(HttpStatusCode.OK, null);
         WorkerApiClient client = new(Client(handler));
-        JobResult result = new() { JobId = 42, Status = ValidationStatus.Passed, Host = "runner-1", ExitCode = 0 };
+        JobResult result = new()
+        {
+            JobId = 42,
+            Status = ValidationStatus.Passed,
+            Host = "runner-1",
+            ExitCode = 0,
+        };
 
         await client.ReportResultAsync(result, CancellationToken.None);
 

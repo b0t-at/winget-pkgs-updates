@@ -27,11 +27,15 @@ public sealed class PowerShellShimResolver : IReleaseResolver
 
     public bool CanResolve(MonitoredPackage package) => File.Exists(GetScriptPath(package));
 
-    public Task<ResolvedRelease?> ResolveAsync(MonitoredPackage package, CancellationToken cancellationToken)
+    public Task<ResolvedRelease?> ResolveAsync(
+        MonitoredPackage package,
+        CancellationToken cancellationToken
+    )
     {
         ArgumentNullException.ThrowIfNull(package);
         throw new NotSupportedException(
-            "Live execution of the PowerShell scraper shim is implemented in a later phase " +
-            "(it depends on the manifest-generation services). Use CanResolve to detect script-based packages.");
+            "Live execution of the PowerShell scraper shim is implemented in a later phase "
+                + "(it depends on the manifest-generation services). Use CanResolve to detect script-based packages."
+        );
     }
 }

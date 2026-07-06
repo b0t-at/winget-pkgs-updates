@@ -33,7 +33,9 @@ public sealed class SandboxValidationService
         this.processRunner = processRunner;
     }
 
-    public static (string FileName, IReadOnlyList<string> Arguments) BuildCommand(SandboxValidationOptions options)
+    public static (string FileName, IReadOnlyList<string> Arguments) BuildCommand(
+        SandboxValidationOptions options
+    )
     {
         ArgumentNullException.ThrowIfNull(options);
         ArgumentException.ThrowIfNullOrWhiteSpace(options.ScriptPath);
@@ -44,7 +46,8 @@ public sealed class SandboxValidationService
         if (hasPath == hasUrl)
         {
             throw new InvalidOperationException(
-                "Exactly one of ManifestPath or ManifestUrl must be provided.");
+                "Exactly one of ManifestPath or ManifestUrl must be provided."
+            );
         }
 
         List<string> arguments =
@@ -72,7 +75,8 @@ public sealed class SandboxValidationService
 
     public async Task<ProcessResult> ValidateAsync(
         SandboxValidationOptions options,
-        CancellationToken cancellationToken)
+        CancellationToken cancellationToken
+    )
     {
         (string fileName, IReadOnlyList<string> arguments) = BuildCommand(options);
         return await processRunner

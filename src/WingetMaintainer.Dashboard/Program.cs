@@ -5,15 +5,15 @@ using WingetMaintainer.Dashboard.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
+builder.Services.AddRazorComponents().AddInteractiveServerComponents();
 
-builder.Services
-    .AddOptions<DashboardOptions>()
+builder
+    .Services.AddOptions<DashboardOptions>()
     .Bind(builder.Configuration.GetSection(DashboardOptions.SectionName));
 
 DashboardOptions dashboardOptions =
-    builder.Configuration.GetSection(DashboardOptions.SectionName).Get<DashboardOptions>() ?? new DashboardOptions();
+    builder.Configuration.GetSection(DashboardOptions.SectionName).Get<DashboardOptions>()
+    ?? new DashboardOptions();
 
 builder.Services.AddHttpClient<WorkerClient>(client =>
 {
@@ -39,7 +39,6 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseAntiforgery();
 
-app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
+app.MapRazorComponents<App>().AddInteractiveServerRenderMode();
 
 app.Run();

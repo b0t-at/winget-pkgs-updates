@@ -11,17 +11,15 @@ namespace WingetMaintainer.Cli.Commands;
 /// </summary>
 internal static class InventoryCommand
 {
-    private static readonly JsonSerializerOptions JsonOptions = new()
-    {
-        WriteIndented = true,
-    };
+    private static readonly JsonSerializerOptions JsonOptions = new() { WriteIndented = true };
 
     public static Command Create()
     {
         Option<FileInfo> configOption = new(
             "--config",
             () => new FileInfo("github-releases-monitored.yml"),
-            "Path to the monitored packages YAML file.");
+            "Path to the monitored packages YAML file."
+        );
         configOption.AddAlias("-c");
 
         Option<bool> countOption = new("--count", "Print only the total number of packages.");
@@ -39,7 +37,10 @@ internal static class InventoryCommand
     private static async Task RunAsync(FileInfo config, bool count)
     {
         MonitoredPackagesLoader loader = new();
-        IReadOnlyList<MonitoredPackage> packages = await loader.LoadAsync(config.FullName, CancellationToken.None);
+        IReadOnlyList<MonitoredPackage> packages = await loader.LoadAsync(
+            config.FullName,
+            CancellationToken.None
+        );
 
         if (count)
         {
@@ -48,14 +49,18 @@ internal static class InventoryCommand
         }
 
         Dictionary<string, int> byTool = packages
-            .GroupBy(package => string.IsNullOrWhiteSpace(package.With)
-                ? "default"
-                : package.With.ToLowerInvariant())
+            .GroupBy(package =>
+                string.IsNullOrWhiteSpace(package.With)
+                    ? "default"
+                    : package.With.ToLowerInvariant()
+            )
             .OrderBy(group => group.Key, StringComparer.Ordinal)
             .ToDictionary(group => group.Key, group => group.Count());
 
         Dictionary<string, int> byFirstLetter = packages
-            .GroupBy(package => (package.Id.Length > 0 ? char.ToLowerInvariant(package.Id[0]) : '?').ToString())
+            .GroupBy(package =>
+                (package.Id.Length > 0 ? char.ToLowerInvariant(package.Id[0]) : '?').ToString()
+            )
             .OrderBy(group => group.Key, StringComparer.Ordinal)
             .ToDictionary(group => group.Key, group => group.Count());
 

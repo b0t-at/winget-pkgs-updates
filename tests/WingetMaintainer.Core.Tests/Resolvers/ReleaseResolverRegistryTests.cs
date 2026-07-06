@@ -13,8 +13,10 @@ public sealed class ReleaseResolverRegistryTests
 
         public bool CanResolve(MonitoredPackage package) => canResolve;
 
-        public Task<ResolvedRelease?> ResolveAsync(MonitoredPackage package, CancellationToken cancellationToken) =>
-            Task.FromResult<ResolvedRelease?>(null);
+        public Task<ResolvedRelease?> ResolveAsync(
+            MonitoredPackage package,
+            CancellationToken cancellationToken
+        ) => Task.FromResult<ResolvedRelease?>(null);
     }
 
     [Fact]
@@ -25,7 +27,14 @@ public sealed class ReleaseResolverRegistryTests
         StubResolver third = new(canResolve: true, name: "third");
         ReleaseResolverRegistry registry = new([first, second, third]);
 
-        IReleaseResolver? found = registry.Find(new MonitoredPackage { Id = "x", Repo = "o/r", Url = "u" });
+        IReleaseResolver? found = registry.Find(
+            new MonitoredPackage
+            {
+                Id = "x",
+                Repo = "o/r",
+                Url = "u",
+            }
+        );
 
         found.Should().BeSameAs(second);
     }
@@ -35,6 +44,16 @@ public sealed class ReleaseResolverRegistryTests
     {
         ReleaseResolverRegistry registry = new([new StubResolver(canResolve: false, name: "none")]);
 
-        registry.Find(new MonitoredPackage { Id = "x", Repo = "o/r", Url = "u" }).Should().BeNull();
+        registry
+            .Find(
+                new MonitoredPackage
+                {
+                    Id = "x",
+                    Repo = "o/r",
+                    Url = "u",
+                }
+            )
+            .Should()
+            .BeNull();
     }
 }

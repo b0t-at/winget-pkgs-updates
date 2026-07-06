@@ -14,12 +14,28 @@ public static class LokiLabelSchema
     public const string Level = "level";
 
     /// <summary>The only label keys allowed on Loki streams.</summary>
-    public static readonly IReadOnlySet<string> AllowedLabels =
-        new HashSet<string>(StringComparer.Ordinal) { App, Environment, Phase, Host, Level };
+    public static readonly IReadOnlySet<string> AllowedLabels = new HashSet<string>(
+        StringComparer.Ordinal
+    )
+    {
+        App,
+        Environment,
+        Phase,
+        Host,
+        Level,
+    };
 
     /// <summary>Well-known high-cardinality fields that must never be used as labels.</summary>
-    public static readonly IReadOnlySet<string> ForbiddenLabels =
-        new HashSet<string>(StringComparer.Ordinal) { "package_id", "version", "run_id", "manifest_hash", "error" };
+    public static readonly IReadOnlySet<string> ForbiddenLabels = new HashSet<string>(
+        StringComparer.Ordinal
+    )
+    {
+        "package_id",
+        "version",
+        "run_id",
+        "manifest_hash",
+        "error",
+    };
 
     /// <summary>Throws if any of the supplied label keys is not in <see cref="AllowedLabels"/>.</summary>
     public static void EnsureLowCardinality(IEnumerable<string> labelKeys)
@@ -31,8 +47,9 @@ public static class LokiLabelSchema
             if (!AllowedLabels.Contains(key))
             {
                 throw new InvalidOperationException(
-                    $"Loki label '{key}' is not permitted. Allowed labels: {string.Join(", ", AllowedLabels)}. " +
-                    "High-cardinality values must go in the JSON log body, not labels (see decision D9).");
+                    $"Loki label '{key}' is not permitted. Allowed labels: {string.Join(", ", AllowedLabels)}. "
+                        + "High-cardinality values must go in the JSON log body, not labels (see decision D9)."
+                );
             }
         }
     }

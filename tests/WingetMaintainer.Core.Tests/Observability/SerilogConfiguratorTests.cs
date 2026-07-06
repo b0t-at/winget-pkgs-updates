@@ -10,12 +10,24 @@ public sealed class SerilogConfiguratorTests
     [Fact]
     public void BuildLabels_IncludesAppEnvironmentHost()
     {
-        LoggingOptions options = new() { App = "winget-maintainer", Environment = "Test", Host = "runner-1" };
+        LoggingOptions options = new()
+        {
+            App = "winget-maintainer",
+            Environment = "Test",
+            Host = "runner-1",
+        };
 
-        IReadOnlyList<Serilog.Sinks.Grafana.Loki.LokiLabel> labels = SerilogConfigurator.BuildLabels(options);
+        IReadOnlyList<Serilog.Sinks.Grafana.Loki.LokiLabel> labels =
+            SerilogConfigurator.BuildLabels(options);
 
-        labels.Select(label => label.Key).Should().BeEquivalentTo(
-            [LokiLabelSchema.App, LokiLabelSchema.Environment, LokiLabelSchema.Host]);
+        labels
+            .Select(label => label.Key)
+            .Should()
+            .BeEquivalentTo([
+                LokiLabelSchema.App,
+                LokiLabelSchema.Environment,
+                LokiLabelSchema.Host,
+            ]);
         labels.Single(label => label.Key == LokiLabelSchema.Environment).Value.Should().Be("Test");
     }
 
@@ -24,7 +36,8 @@ public sealed class SerilogConfiguratorTests
     {
         LoggingOptions options = new() { Phase = "validate" };
 
-        IReadOnlyList<Serilog.Sinks.Grafana.Loki.LokiLabel> labels = SerilogConfigurator.BuildLabels(options);
+        IReadOnlyList<Serilog.Sinks.Grafana.Loki.LokiLabel> labels =
+            SerilogConfigurator.BuildLabels(options);
 
         labels.Select(label => label.Key).Should().Contain(LokiLabelSchema.Phase);
     }
@@ -34,9 +47,13 @@ public sealed class SerilogConfiguratorTests
     {
         LoggingOptions options = new() { Phase = "generate" };
 
-        IReadOnlyList<Serilog.Sinks.Grafana.Loki.LokiLabel> labels = SerilogConfigurator.BuildLabels(options);
+        IReadOnlyList<Serilog.Sinks.Grafana.Loki.LokiLabel> labels =
+            SerilogConfigurator.BuildLabels(options);
 
-        labels.Select(label => label.Key).Should().OnlyContain(key => LokiLabelSchema.AllowedLabels.Contains(key));
+        labels
+            .Select(label => label.Key)
+            .Should()
+            .OnlyContain(key => LokiLabelSchema.AllowedLabels.Contains(key));
     }
 
     [Fact]

@@ -12,9 +12,7 @@ public sealed class WingetMaintainerDbContext : DbContext
     private static readonly JsonSerializerOptions JsonOptions = new();
 
     public WingetMaintainerDbContext(DbContextOptions<WingetMaintainerDbContext> options)
-        : base(options)
-    {
-    }
+        : base(options) { }
 
     public DbSet<Package> Packages => Set<Package>();
 
@@ -30,12 +28,21 @@ public sealed class WingetMaintainerDbContext : DbContext
 
         ValueConverter<List<string>, string> hashesConverter = new(
             hashes => JsonSerializer.Serialize(hashes, JsonOptions),
-            json => JsonSerializer.Deserialize<List<string>>(json, JsonOptions) ?? new List<string>());
+            json =>
+                JsonSerializer.Deserialize<List<string>>(json, JsonOptions) ?? new List<string>()
+        );
 
         ValueComparer<List<string>> hashesComparer = new(
-            (left, right) => (left ?? new List<string>()).SequenceEqual(right ?? new List<string>()),
-            hashes => hashes.Aggregate(0, (accumulated, value) => HashCode.Combine(accumulated, value.GetHashCode(StringComparison.Ordinal))),
-            hashes => hashes.ToList());
+            (left, right) =>
+                (left ?? new List<string>()).SequenceEqual(right ?? new List<string>()),
+            hashes =>
+                hashes.Aggregate(
+                    0,
+                    (accumulated, value) =>
+                        HashCode.Combine(accumulated, value.GetHashCode(StringComparison.Ordinal))
+                ),
+            hashes => hashes.ToList()
+        );
 
         modelBuilder.Entity<Package>(entity =>
         {
@@ -47,7 +54,8 @@ public sealed class WingetMaintainerDbContext : DbContext
         {
             entity.HasKey(state => state.PackageIdentifier);
             entity.Property(state => state.PackageIdentifier).HasMaxLength(256);
-            entity.Property(state => state.InstallerHashes)
+            entity
+                .Property(state => state.InstallerHashes)
                 .HasConversion(hashesConverter, hashesComparer);
         });
 
@@ -55,7 +63,8 @@ public sealed class WingetMaintainerDbContext : DbContext
         {
             entity.HasKey(run => run.Id);
             entity.HasIndex(run => run.PackageIdentifier);
-            entity.HasMany(run => run.ValidationJobs)
+            entity
+                .HasMany(run => run.ValidationJobs)
                 .WithOne(job => job.PackageRun!)
                 .HasForeignKey(job => job.PackageRunId)
                 .OnDelete(DeleteBehavior.Cascade);

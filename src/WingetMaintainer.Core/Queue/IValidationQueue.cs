@@ -22,7 +22,12 @@ public sealed record JobResult
 public interface IValidationQueue
 {
     /// <summary>Enqueues a new pending validation job and returns its id.</summary>
-    Task<int> EnqueueAsync(int packageRunId, string packageId, string manifestPath, CancellationToken cancellationToken);
+    Task<int> EnqueueAsync(
+        int packageRunId,
+        string packageId,
+        string manifestPath,
+        CancellationToken cancellationToken
+    );
 
     /// <summary>Atomically claims the oldest pending job (marks it in-progress) or returns null.</summary>
     Task<QueuedJob?> DequeueNextAsync(string host, CancellationToken cancellationToken);

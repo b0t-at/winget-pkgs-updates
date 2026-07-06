@@ -21,7 +21,8 @@ public sealed class ValidationQueue : IValidationQueue
         int packageRunId,
         string packageId,
         string manifestPath,
-        CancellationToken cancellationToken)
+        CancellationToken cancellationToken
+    )
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(packageId);
         ArgumentException.ThrowIfNullOrWhiteSpace(manifestPath);
@@ -42,8 +43,8 @@ public sealed class ValidationQueue : IValidationQueue
 
     public async Task<QueuedJob?> DequeueNextAsync(string host, CancellationToken cancellationToken)
     {
-        ValidationJob? job = await dbContext.ValidationJobs
-            .Where(candidate => candidate.Status == ValidationJobStatuses.Pending)
+        ValidationJob? job = await dbContext
+            .ValidationJobs.Where(candidate => candidate.Status == ValidationJobStatuses.Pending)
             .OrderBy(candidate => candidate.Id)
             .FirstOrDefaultAsync(cancellationToken)
             .ConfigureAwait(false);
@@ -73,9 +74,10 @@ public sealed class ValidationQueue : IValidationQueue
     {
         ArgumentNullException.ThrowIfNull(result);
 
-        ValidationJob? job = await dbContext.ValidationJobs
-            .FindAsync([result.JobId], cancellationToken)
-            .ConfigureAwait(false)
+        ValidationJob? job =
+            await dbContext
+                .ValidationJobs.FindAsync([result.JobId], cancellationToken)
+                .ConfigureAwait(false)
             ?? throw new InvalidOperationException($"Validation job {result.JobId} not found.");
 
         job.Status = result.Status;

@@ -28,15 +28,17 @@ public sealed class StateJsonImporter
     public async Task<int> ImportAsync(string jsonPath, CancellationToken cancellationToken)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(jsonPath);
-        string json = await File.ReadAllTextAsync(jsonPath, cancellationToken).ConfigureAwait(false);
+        string json = await File.ReadAllTextAsync(jsonPath, cancellationToken)
+            .ConfigureAwait(false);
         return await ImportJsonAsync(json, cancellationToken).ConfigureAwait(false);
     }
 
     /// <summary>Imports from a JSON string. Returns the number of entries imported.</summary>
     public async Task<int> ImportJsonAsync(string json, CancellationToken cancellationToken)
     {
-        Dictionary<string, StateJsonEntry>? entries =
-            JsonSerializer.Deserialize<Dictionary<string, StateJsonEntry>>(json, JsonOptions);
+        Dictionary<string, StateJsonEntry>? entries = JsonSerializer.Deserialize<
+            Dictionary<string, StateJsonEntry>
+        >(json, JsonOptions);
 
         if (entries is null || entries.Count == 0)
         {
@@ -45,8 +47,8 @@ public sealed class StateJsonImporter
 
         foreach ((string packageIdentifier, StateJsonEntry source) in entries)
         {
-            StateEntry? entry = await dbContext.StateEntries
-                .FindAsync([packageIdentifier], cancellationToken)
+            StateEntry? entry = await dbContext
+                .StateEntries.FindAsync([packageIdentifier], cancellationToken)
                 .ConfigureAwait(false);
 
             if (entry is null)

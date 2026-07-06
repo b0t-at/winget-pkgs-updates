@@ -11,8 +11,7 @@ public sealed class StateJsonImporterTests : IDisposable
 
     public void Dispose() => database.Dispose();
 
-    private const string SampleJson =
-        """
+    private const string SampleJson = """
         {
           "stuncloud.uwscr": {
             "description": "",
@@ -38,8 +37,10 @@ public sealed class StateJsonImporterTests : IDisposable
     [Fact]
     public async Task ImportJsonAsync_ImportsAllEntriesWithFields()
     {
-        int imported = await new StateJsonImporter(database.CreateContext())
-            .ImportJsonAsync(SampleJson, CancellationToken.None);
+        int imported = await new StateJsonImporter(database.CreateContext()).ImportJsonAsync(
+            SampleJson,
+            CancellationToken.None
+        );
 
         imported.Should().Be(2);
 
@@ -47,7 +48,8 @@ public sealed class StateJsonImporterTests : IDisposable
         context.StateEntries.Should().HaveCount(2);
 
         StateEntry svg = context.StateEntries.Single(entry =>
-            entry.PackageIdentifier == "SVGExplorerExtension.SVGExplorerExtension");
+            entry.PackageIdentifier == "SVGExplorerExtension.SVGExplorerExtension"
+        );
         svg.Version.Should().Be("1.1.0");
         svg.ManifestHash.Should().Be("BBB");
         svg.ValidationCount.Should().Be(2);
@@ -58,8 +60,14 @@ public sealed class StateJsonImporterTests : IDisposable
     [Fact]
     public async Task ImportJsonAsync_RerunUpdatesExistingEntries()
     {
-        await new StateJsonImporter(database.CreateContext()).ImportJsonAsync(SampleJson, CancellationToken.None);
-        await new StateJsonImporter(database.CreateContext()).ImportJsonAsync(SampleJson, CancellationToken.None);
+        await new StateJsonImporter(database.CreateContext()).ImportJsonAsync(
+            SampleJson,
+            CancellationToken.None
+        );
+        await new StateJsonImporter(database.CreateContext()).ImportJsonAsync(
+            SampleJson,
+            CancellationToken.None
+        );
 
         using WingetMaintainerDbContext context = database.CreateContext();
         context.StateEntries.Should().HaveCount(2);
@@ -68,8 +76,10 @@ public sealed class StateJsonImporterTests : IDisposable
     [Fact]
     public async Task ImportJsonAsync_EmptyDocument_ImportsNothing()
     {
-        int imported = await new StateJsonImporter(database.CreateContext())
-            .ImportJsonAsync("{}", CancellationToken.None);
+        int imported = await new StateJsonImporter(database.CreateContext()).ImportJsonAsync(
+            "{}",
+            CancellationToken.None
+        );
 
         imported.Should().Be(0);
     }

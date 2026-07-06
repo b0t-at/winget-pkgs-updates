@@ -6,7 +6,8 @@ public sealed record GitHubRelease(
     bool Draft,
     bool Prerelease,
     DateTimeOffset? PublishedAt,
-    IReadOnlyList<string> AssetUrls);
+    IReadOnlyList<string> AssetUrls
+);
 
 /// <summary>
 /// Abstraction over the GitHub releases API. Kept separate from Octokit so the resolver
@@ -17,5 +18,6 @@ public interface IGitHubReleaseClient
     Task<IReadOnlyList<GitHubRelease>> GetReleasesAsync(
         string owner,
         string repository,
-        CancellationToken cancellationToken);
+        CancellationToken cancellationToken
+    );
 }

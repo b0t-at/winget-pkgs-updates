@@ -10,32 +10,42 @@ public sealed class EfPackageStateStore : IPackageStateStore
     private readonly WingetMaintainerDbContext dbContext;
     private readonly TimeProvider timeProvider;
 
-    public EfPackageStateStore(WingetMaintainerDbContext dbContext, TimeProvider? timeProvider = null)
+    public EfPackageStateStore(
+        WingetMaintainerDbContext dbContext,
+        TimeProvider? timeProvider = null
+    )
     {
         ArgumentNullException.ThrowIfNull(dbContext);
         this.dbContext = dbContext;
         this.timeProvider = timeProvider ?? TimeProvider.System;
     }
 
-    public async Task<PackageState?> GetAsync(string packageIdentifier, CancellationToken cancellationToken)
+    public async Task<PackageState?> GetAsync(
+        string packageIdentifier,
+        CancellationToken cancellationToken
+    )
     {
-        StateEntry? entry = await dbContext.StateEntries
-            .FindAsync([packageIdentifier], cancellationToken)
+        StateEntry? entry = await dbContext
+            .StateEntries.FindAsync([packageIdentifier], cancellationToken)
             .ConfigureAwait(false);
 
         return entry is null ? null : ToModel(entry);
     }
 
-    public async Task<PackageState> SetAsync(PackageStateUpdate update, CancellationToken cancellationToken)
+    public async Task<PackageState> SetAsync(
+        PackageStateUpdate update,
+        CancellationToken cancellationToken
+    )
     {
         ArgumentNullException.ThrowIfNull(update);
 
-        StateEntry? entry = await dbContext.StateEntries
-            .FindAsync([update.PackageIdentifier], cancellationToken)
+        StateEntry? entry = await dbContext
+            .StateEntries.FindAsync([update.PackageIdentifier], cancellationToken)
             .ConfigureAwait(false);
 
         DateTimeOffset now = timeProvider.GetUtcNow();
-        bool sameManifest = entry is not null
+        bool sameManifest =
+            entry is not null
             && entry.Version == update.Version
             && entry.ManifestHash == update.ManifestHash;
 
@@ -70,10 +80,11 @@ public sealed class EfPackageStateStore : IPackageStateStore
         string version,
         string manifestHash,
         int maxFailures,
-        CancellationToken cancellationToken)
+        CancellationToken cancellationToken
+    )
     {
-        StateEntry? entry = await dbContext.StateEntries
-            .FindAsync([packageIdentifier], cancellationToken)
+        StateEntry? entry = await dbContext
+            .StateEntries.FindAsync([packageIdentifier], cancellationToken)
             .ConfigureAwait(false);
 
         if (entry is null || entry.Version != version || entry.ManifestHash != manifestHash)
@@ -89,15 +100,16 @@ public sealed class EfPackageStateStore : IPackageStateStore
         return entry.ValidationCount >= maxFailures;
     }
 
-    private static PackageState ToModel(StateEntry entry) => new()
-    {
-        PackageIdentifier = entry.PackageIdentifier,
-        Version = entry.Version,
-        ManifestHash = entry.ManifestHash,
-        State = entry.State,
-        ValidationCount = entry.ValidationCount,
-        InstallerHashes = entry.InstallerHashes.ToList(),
-        Description = entry.Description,
-        LastUpdated = entry.LastUpdated,
-    };
+    private static PackageState ToModel(StateEntry entry) =>
+        new()
+        {
+            PackageIdentifier = entry.PackageIdentifier,
+            Version = entry.Version,
+            ManifestHash = entry.ManifestHash,
+            State = entry.State,
+            ValidationCount = entry.ValidationCount,
+            InstallerHashes = entry.InstallerHashes.ToList(),
+            Description = entry.Description,
+            LastUpdated = entry.LastUpdated,
+        };
 }

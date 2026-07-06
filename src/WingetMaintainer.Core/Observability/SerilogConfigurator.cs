@@ -32,7 +32,10 @@ public static class SerilogConfigurator
     }
 
     /// <summary>Applies Console (+ optional Loki) sinks to the supplied configuration.</summary>
-    public static LoggerConfiguration Configure(LoggerConfiguration configuration, LoggingOptions options)
+    public static LoggerConfiguration Configure(
+        LoggerConfiguration configuration,
+        LoggingOptions options
+    )
     {
         ArgumentNullException.ThrowIfNull(configuration);
         ArgumentNullException.ThrowIfNull(options);
@@ -46,12 +49,17 @@ public static class SerilogConfigurator
         {
             LokiCredentials? credentials = string.IsNullOrWhiteSpace(options.LokiUser)
                 ? null
-                : new LokiCredentials { Login = options.LokiUser, Password = options.LokiPassword ?? string.Empty };
+                : new LokiCredentials
+                {
+                    Login = options.LokiUser,
+                    Password = options.LokiPassword ?? string.Empty,
+                };
 
             configuration.WriteTo.GrafanaLoki(
                 options.LokiUri.ToString(),
                 labels: BuildLabels(options),
-                credentials: credentials);
+                credentials: credentials
+            );
         }
 
         return configuration;

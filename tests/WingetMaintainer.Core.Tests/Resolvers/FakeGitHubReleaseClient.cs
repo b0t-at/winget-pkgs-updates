@@ -12,5 +12,6 @@ internal sealed class FakeGitHubReleaseClient : IGitHubReleaseClient
     public Task<IReadOnlyList<GitHubRelease>> GetReleasesAsync(
         string owner,
         string repository,
-        CancellationToken cancellationToken) => Task.FromResult(releases);
+        CancellationToken cancellationToken
+    ) => Task.FromResult(releases);
 }

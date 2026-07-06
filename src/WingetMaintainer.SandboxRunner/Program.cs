@@ -10,12 +10,13 @@ using WingetMaintainer.SandboxRunner;
 
 HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
 
-builder.Services
-    .AddOptions<RunnerOptions>()
+builder
+    .Services.AddOptions<RunnerOptions>()
     .Bind(builder.Configuration.GetSection(RunnerOptions.SectionName));
 
 RunnerOptions options =
-    builder.Configuration.GetSection(RunnerOptions.SectionName).Get<RunnerOptions>() ?? new RunnerOptions();
+    builder.Configuration.GetSection(RunnerOptions.SectionName).Get<RunnerOptions>()
+    ?? new RunnerOptions();
 
 LoggingOptions loggingOptions = new()
 {
@@ -27,7 +28,9 @@ LoggingOptions loggingOptions = new()
     LokiPassword = options.LokiPassword,
 };
 
-Log.Logger = SerilogConfigurator.Configure(new LoggerConfiguration(), loggingOptions).CreateLogger();
+Log.Logger = SerilogConfigurator
+    .Configure(new LoggerConfiguration(), loggingOptions)
+    .CreateLogger();
 builder.Services.AddSerilog();
 
 builder.Services.AddHttpClient<IWorkerApiClient, WorkerApiClient>(client =>

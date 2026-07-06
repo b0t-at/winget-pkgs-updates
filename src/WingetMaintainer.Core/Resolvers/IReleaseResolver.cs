@@ -12,5 +12,8 @@ public interface IReleaseResolver
     bool CanResolve(MonitoredPackage package);
 
     /// <summary>Resolves the latest release, or <see langword="null"/> if none is available.</summary>
-    Task<ResolvedRelease?> ResolveAsync(MonitoredPackage package, CancellationToken cancellationToken);
+    Task<ResolvedRelease?> ResolveAsync(
+        MonitoredPackage package,
+        CancellationToken cancellationToken
+    );
 }

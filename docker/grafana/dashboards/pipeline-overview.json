@@ -36,7 +36,16 @@
       "title": "Failures (24h)",
       "datasource": { "type": "loki", "uid": "loki" },
       "gridPos": { "h": 5, "w": 6, "x": 6, "y": 0 },
-      "fieldConfig": { "defaults": { "thresholds": { "steps": [ { "color": "green", "value": null }, { "color": "red", "value": 1 } ] } } },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "steps": [
+              { "color": "green", "value": null },
+              { "color": "red", "value": 1 }
+            ]
+          }
+        }
+      },
       "targets": [
         {
           "refId": "A",
@@ -77,9 +86,16 @@
       "title": "Recent activity",
       "datasource": { "type": "loki", "uid": "loki" },
       "gridPos": { "h": 10, "w": 24, "x": 0, "y": 14 },
-      "options": { "showTime": true, "wrapLogMessage": true, "sortOrder": "Descending" },
+      "options": {
+        "showTime": true,
+        "wrapLogMessage": true,
+        "sortOrder": "Descending"
+      },
       "targets": [
-        { "refId": "A", "expr": "{app=\"winget-maintainer\", environment=\"$environment\"} | json" }
+        {
+          "refId": "A",
+          "expr": "{app=\"winget-maintainer\", environment=\"$environment\"} | json"
+        }
       ]
     }
   ]

@@ -7,8 +7,7 @@ namespace WingetMaintainer.Core.Tests.Configuration;
 public sealed class MonitoredPackagesLoaderTests
 {
     // Mirrors the real file's indented, quoted style.
-    private const string SampleYaml =
-        """
+    private const string SampleYaml = """
           - id: "1zilc.FishingFunds"
             repo: "1zilc/fishing-funds"
             url: "https://host/v{VERSION}/a.exe https://host/v{VERSION}/b.exe"
@@ -30,8 +29,10 @@ public sealed class MonitoredPackagesLoaderTests
         IReadOnlyList<MonitoredPackage> packages = loader.Parse(SampleYaml);
 
         packages.Should().HaveCount(3);
-        packages.Select(package => package.Id).Should().Equal(
-            "1zilc.FishingFunds", "AdaLang.Alire", "MullvadVPN.MullvadVPN");
+        packages
+            .Select(package => package.Id)
+            .Should()
+            .Equal("1zilc.FishingFunds", "AdaLang.Alire", "MullvadVPN.MullvadVPN");
 
         packages[0].With.Should().BeNull();
         packages[0].Repo.Should().Be("1zilc/fishing-funds");

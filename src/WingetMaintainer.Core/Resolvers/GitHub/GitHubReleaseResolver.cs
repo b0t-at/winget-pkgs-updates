@@ -26,12 +26,19 @@ public sealed class GitHubReleaseResolver : IReleaseResolver
         return package.Repo.Contains('/', StringComparison.Ordinal);
     }
 
-    public async Task<ResolvedRelease?> ResolveAsync(MonitoredPackage package, CancellationToken cancellationToken)
+    public async Task<ResolvedRelease?> ResolveAsync(
+        MonitoredPackage package,
+        CancellationToken cancellationToken
+    )
     {
         ArgumentNullException.ThrowIfNull(package);
 
         (string owner, string repository) = SplitRepo(package.Repo);
-        IReadOnlyList<GitHubRelease> releases = await client.GetReleasesAsync(owner, repository, cancellationToken);
+        IReadOnlyList<GitHubRelease> releases = await client.GetReleasesAsync(
+            owner,
+            repository,
+            cancellationToken
+        );
 
         IEnumerable<GitHubRelease> candidates = releases.Where(release => !release.Draft);
         if (!string.IsNullOrWhiteSpace(package.TagPattern))
@@ -61,7 +68,10 @@ public sealed class GitHubReleaseResolver : IReleaseResolver
         string[] parts = repo.Split('/', 2, StringSplitOptions.TrimEntries);
         if (parts.Length != 2 || parts[0].Length == 0 || parts[1].Length == 0)
         {
-            throw new ArgumentException($"Invalid GitHub repo '{repo}'; expected 'owner/name'.", nameof(repo));
+            throw new ArgumentException(
+                $"Invalid GitHub repo '{repo}'; expected 'owner/name'.",
+                nameof(repo)
+            );
         }
 
         return (parts[0], parts[1]);

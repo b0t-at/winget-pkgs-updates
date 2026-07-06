@@ -19,6 +19,7 @@ public static class ApiKeyValidator
 
         return CryptographicOperations.FixedTimeEquals(
             Encoding.UTF8.GetBytes(providedKey),
-            Encoding.UTF8.GetBytes(expectedKey));
+            Encoding.UTF8.GetBytes(expectedKey)
+        );
     }
 }

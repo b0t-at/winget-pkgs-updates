@@ -1,5 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
@@ -17,5 +16,4 @@
     <ProjectReference Include="..\WingetMaintainer.Core\WingetMaintainer.Core.csproj" />
     <ProjectReference Include="..\WingetMaintainer.Data\WingetMaintainer.Data.csproj" />
   </ItemGroup>
-
 </Project>

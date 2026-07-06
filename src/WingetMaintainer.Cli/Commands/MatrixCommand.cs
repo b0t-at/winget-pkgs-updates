@@ -23,14 +23,16 @@ internal static class MatrixCommand
         Option<FileInfo> configOption = new(
             "--config",
             () => new FileInfo("github-releases-monitored.yml"),
-            "Path to the monitored packages YAML file.");
+            "Path to the monitored packages YAML file."
+        );
         configOption.AddAlias("-c");
 
         Option<bool> countOption = new("--count", "Print only the number of packages.");
 
         Command command = new(
             "matrix",
-            "Emit a GitHub Actions matrix (JSON) from the monitored packages config.")
+            "Emit a GitHub Actions matrix (JSON) from the monitored packages config."
+        )
         {
             configOption,
             countOption,
@@ -43,7 +45,10 @@ internal static class MatrixCommand
     private static async Task RunAsync(FileInfo config, bool count)
     {
         MonitoredPackagesLoader loader = new();
-        IReadOnlyList<MonitoredPackage> packages = await loader.LoadAsync(config.FullName, CancellationToken.None);
+        IReadOnlyList<MonitoredPackage> packages = await loader.LoadAsync(
+            config.FullName,
+            CancellationToken.None
+        );
 
         if (count)
         {
@@ -59,7 +64,9 @@ internal static class MatrixCommand
                     Id = package.Id,
                     Repo = package.Repo,
                     Url = package.Url,
-                    TagPattern = string.IsNullOrWhiteSpace(package.TagPattern) ? null : package.TagPattern,
+                    TagPattern = string.IsNullOrWhiteSpace(package.TagPattern)
+                        ? null
+                        : package.TagPattern,
                     With = string.IsNullOrWhiteSpace(package.With) ? null : package.With,
                 })
                 .ToList(),

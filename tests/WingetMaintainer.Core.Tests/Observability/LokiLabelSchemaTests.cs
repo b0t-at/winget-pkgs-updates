@@ -9,8 +9,14 @@ public sealed class LokiLabelSchemaTests
     [Fact]
     public void EnsureLowCardinality_AllowsStandardLabels()
     {
-        Action act = () => LokiLabelSchema.EnsureLowCardinality(
-            [LokiLabelSchema.App, LokiLabelSchema.Environment, LokiLabelSchema.Host, LokiLabelSchema.Phase, LokiLabelSchema.Level]);
+        Action act = () =>
+            LokiLabelSchema.EnsureLowCardinality([
+                LokiLabelSchema.App,
+                LokiLabelSchema.Environment,
+                LokiLabelSchema.Host,
+                LokiLabelSchema.Phase,
+                LokiLabelSchema.Level,
+            ]);
 
         act.Should().NotThrow();
     }

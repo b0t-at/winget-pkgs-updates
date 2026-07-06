@@ -1,5 +1,4 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
-
   <ItemGroup>
     <ProjectReference Include="..\WingetMaintainer.Core\WingetMaintainer.Core.csproj" />
     <ProjectReference Include="..\WingetMaintainer.Data\WingetMaintainer.Data.csproj" />
@@ -8,5 +7,4 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
-
 </Project>

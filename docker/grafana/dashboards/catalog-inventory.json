@@ -40,9 +40,16 @@
       "title": "Inventory snapshots",
       "datasource": { "type": "loki", "uid": "loki" },
       "gridPos": { "h": 9, "w": 24, "x": 0, "y": 14 },
-      "options": { "showTime": true, "wrapLogMessage": true, "sortOrder": "Descending" },
+      "options": {
+        "showTime": true,
+        "wrapLogMessage": true,
+        "sortOrder": "Descending"
+      },
       "targets": [
-        { "refId": "A", "expr": "{app=\"winget-maintainer\"} | json | event=\"inventory\"" }
+        {
+          "refId": "A",
+          "expr": "{app=\"winget-maintainer\"} | json | event=\"inventory\""
+        }
       ]
     }
   ]

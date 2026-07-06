@@ -44,7 +44,9 @@ public sealed class SubmitService
     }
 
     /// <summary>Builds the CLI executable + argument list for the selected tool.</summary>
-    public static (string FileName, IReadOnlyList<string> Arguments) BuildCommand(SubmitOptions options)
+    public static (string FileName, IReadOnlyList<string> Arguments) BuildCommand(
+        SubmitOptions options
+    )
     {
         ArgumentNullException.ThrowIfNull(options);
         ArgumentException.ThrowIfNullOrWhiteSpace(options.ManifestPath);
@@ -58,11 +60,18 @@ public sealed class SubmitService
         {
             SubmissionTool.Komac => BuildKomac(options),
             SubmissionTool.WinGetCreate => BuildWinGetCreate(options, prTitle),
-            _ => throw new ArgumentOutOfRangeException(nameof(options), options.Tool, "Unknown submission tool."),
+            _ => throw new ArgumentOutOfRangeException(
+                nameof(options),
+                options.Tool,
+                "Unknown submission tool."
+            ),
         };
     }
 
-    public async Task<ProcessResult> SubmitAsync(SubmitOptions options, CancellationToken cancellationToken)
+    public async Task<ProcessResult> SubmitAsync(
+        SubmitOptions options,
+        CancellationToken cancellationToken
+    )
     {
         (string fileName, IReadOnlyList<string> arguments) = BuildCommand(options);
         return await processRunner
@@ -90,7 +99,10 @@ public sealed class SubmitService
         return ("komac", arguments);
     }
 
-    private static (string, IReadOnlyList<string>) BuildWinGetCreate(SubmitOptions options, string prTitle)
+    private static (string, IReadOnlyList<string>) BuildWinGetCreate(
+        SubmitOptions options,
+        string prTitle
+    )
     {
         List<string> arguments =
         [

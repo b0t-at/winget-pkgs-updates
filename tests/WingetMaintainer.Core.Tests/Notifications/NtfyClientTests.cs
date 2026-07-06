@@ -16,7 +16,8 @@ public sealed class NtfyClientTests
 
         protected override async Task<HttpResponseMessage> SendAsync(
             HttpRequestMessage request,
-            CancellationToken cancellationToken)
+            CancellationToken cancellationToken
+        )
         {
             RequestUri = request.RequestUri;
             RequestBody = request.Content is null
@@ -26,14 +27,15 @@ public sealed class NtfyClientTests
         }
     }
 
-    private static NtfyNotification Notification() => new()
-    {
-        Topic = "winget",
-        Title = "Build failed",
-        Message = "Contoso.App failed validation",
-        Priority = 4,
-        Tags = ["warning"],
-    };
+    private static NtfyNotification Notification() =>
+        new()
+        {
+            Topic = "winget",
+            Title = "Build failed",
+            Message = "Contoso.App failed validation",
+            Priority = 4,
+            Tags = ["warning"],
+        };
 
     [Fact]
     public async Task SendAsync_PostsToTopicEndpointWithExpectedBody()
@@ -41,7 +43,11 @@ public sealed class NtfyClientTests
         CapturingHandler handler = new(HttpStatusCode.OK);
         NtfyClient client = new(new HttpClient(handler));
 
-        NtfyResult result = await client.SendAsync("https://ntfy.sh/", Notification(), CancellationToken.None);
+        NtfyResult result = await client.SendAsync(
+            "https://ntfy.sh/",
+            Notification(),
+            CancellationToken.None
+        );
 
         result.Success.Should().BeTrue();
         handler.RequestUri.Should().Be(new Uri("https://ntfy.sh/winget"));
@@ -51,7 +57,11 @@ public sealed class NtfyClientTests
         root.GetProperty("topic").GetString().Should().Be("winget");
         root.GetProperty("title").GetString().Should().Be("Build failed");
         root.GetProperty("priority").GetInt32().Should().Be(4);
-        root.GetProperty("tags").EnumerateArray().Select(tag => tag.GetString()).Should().Equal("warning");
+        root.GetProperty("tags")
+            .EnumerateArray()
+            .Select(tag => tag.GetString())
+            .Should()
+            .Equal("warning");
     }
 
     [Fact]
@@ -59,7 +69,12 @@ public sealed class NtfyClientTests
     {
         CapturingHandler handler = new(HttpStatusCode.OK);
         NtfyClient client = new(new HttpClient(handler));
-        NtfyNotification notification = new() { Topic = "t", Title = "x", Message = "y" };
+        NtfyNotification notification = new()
+        {
+            Topic = "t",
+            Title = "x",
+            Message = "y",
+        };
 
         await client.SendAsync("https://ntfy.sh", notification, CancellationToken.None);
 
@@ -74,7 +89,11 @@ public sealed class NtfyClientTests
         CapturingHandler handler = new(HttpStatusCode.InternalServerError);
         NtfyClient client = new(new HttpClient(handler));
 
-        NtfyResult result = await client.SendAsync("https://ntfy.sh", Notification(), CancellationToken.None);
+        NtfyResult result = await client.SendAsync(
+            "https://ntfy.sh",
+            Notification(),
+            CancellationToken.None
+        );
 
         result.Success.Should().BeFalse();
         result.Error.Should().Contain("500");
@@ -84,9 +103,16 @@ public sealed class NtfyClientTests
     public async Task SendAsync_InvalidPriority_Throws()
     {
         NtfyClient client = new(new HttpClient(new CapturingHandler(HttpStatusCode.OK)));
-        NtfyNotification notification = new() { Topic = "t", Title = "x", Message = "y", Priority = 9 };
+        NtfyNotification notification = new()
+        {
+            Topic = "t",
+            Title = "x",
+            Message = "y",
+            Priority = 9,
+        };
 
-        Func<Task> act = () => client.SendAsync("https://ntfy.sh", notification, CancellationToken.None);
+        Func<Task> act = () =>
+            client.SendAsync("https://ntfy.sh", notification, CancellationToken.None);
 
         await act.Should().ThrowAsync<ArgumentOutOfRangeException>();
     }

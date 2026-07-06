@@ -11,4 +11,5 @@ public sealed record ResolvedRelease(
     string Version,
     IReadOnlyList<InstallerUrl> Urls,
     string? Tag = null,
-    string? ReleaseNotes = null);
+    string? ReleaseNotes = null
+);

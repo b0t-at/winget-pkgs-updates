@@ -37,7 +37,8 @@ public sealed class NtfyClient
     public async Task<NtfyResult> SendAsync(
         string ntfyUrl,
         NtfyNotification notification,
-        CancellationToken cancellationToken)
+        CancellationToken cancellationToken
+    )
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(ntfyUrl);
         ArgumentNullException.ThrowIfNull(notification);
@@ -45,7 +46,10 @@ public sealed class NtfyClient
         if (notification.Priority is < 1 or > 5)
         {
             throw new ArgumentOutOfRangeException(
-                nameof(notification), notification.Priority, "Priority must be between 1 and 5.");
+                nameof(notification),
+                notification.Priority,
+                "Priority must be between 1 and 5."
+            );
         }
 
         string endpoint = $"{ntfyUrl.TrimEnd('/')}/{notification.Topic}";

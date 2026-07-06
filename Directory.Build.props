@@ -1,5 +1,4 @@
 <Project>
-
   <!-- Common build settings for all WingetMaintainer projects. -->
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
@@ -13,5 +12,4 @@
     <RootNamespace>$(MSBuildProjectName)</RootNamespace>
     <AssemblyName>$(MSBuildProjectName)</AssemblyName>
   </PropertyGroup>
-
 </Project>

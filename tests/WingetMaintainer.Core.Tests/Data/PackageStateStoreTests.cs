@@ -17,7 +17,9 @@ public sealed class PackageStateStoreTests : IDisposable
     private static PackageStateUpdate Update(
         string state = PackageStates.ValidationFailed,
         string version = "1.0.0",
-        string hash = "HASH-A") => new()
+        string hash = "HASH-A"
+    ) =>
+        new()
         {
             PackageIdentifier = "Publisher.Product",
             Version = version,
@@ -35,7 +37,8 @@ public sealed class PackageStateStoreTests : IDisposable
         result.ValidationCount.Should().Be(1);
         result.InstallerHashes.Should().Equal("INSTALLER-1");
 
-        PackageState? persisted = await CreateStore().GetAsync("Publisher.Product", CancellationToken.None);
+        PackageState? persisted = await CreateStore()
+            .GetAsync("Publisher.Product", CancellationToken.None);
         persisted.Should().NotBeNull();
         persisted!.Version.Should().Be("1.0.0");
     }
@@ -56,7 +59,8 @@ public sealed class PackageStateStoreTests : IDisposable
         await CreateStore().SetAsync(Update(version: "1.0.0"), CancellationToken.None);
         await CreateStore().SetAsync(Update(version: "1.0.0"), CancellationToken.None);
 
-        PackageState result = await CreateStore().SetAsync(Update(version: "2.0.0"), CancellationToken.None);
+        PackageState result = await CreateStore()
+            .SetAsync(Update(version: "2.0.0"), CancellationToken.None);
 
         result.ValidationCount.Should().Be(1);
         result.Version.Should().Be("2.0.0");
@@ -68,7 +72,8 @@ public sealed class PackageStateStoreTests : IDisposable
         await CreateStore().SetAsync(Update(hash: "HASH-A"), CancellationToken.None);
         await CreateStore().SetAsync(Update(hash: "HASH-A"), CancellationToken.None);
 
-        PackageState result = await CreateStore().SetAsync(Update(hash: "HASH-B"), CancellationToken.None);
+        PackageState result = await CreateStore()
+            .SetAsync(Update(hash: "HASH-B"), CancellationToken.None);
 
         result.ValidationCount.Should().Be(1);
     }
@@ -92,23 +97,32 @@ public sealed class PackageStateStoreTests : IDisposable
         string queryVersion,
         string queryHash,
         int maxFailures,
-        bool expected)
+        bool expected
+    )
     {
         using (WingetMaintainerDbContext seed = database.CreateContext())
         {
-            seed.StateEntries.Add(new StateEntry
-            {
-                PackageIdentifier = "Publisher.Product",
-                Version = storedVersion,
-                ManifestHash = storedHash,
-                State = storedState,
-                ValidationCount = storedCount,
-            });
+            seed.StateEntries.Add(
+                new StateEntry
+                {
+                    PackageIdentifier = "Publisher.Product",
+                    Version = storedVersion,
+                    ManifestHash = storedHash,
+                    State = storedState,
+                    ValidationCount = storedCount,
+                }
+            );
             await seed.SaveChangesAsync(CancellationToken.None);
         }
 
-        bool skip = await CreateStore().ShouldSkipAsync(
-            "Publisher.Product", queryVersion, queryHash, maxFailures, CancellationToken.None);
+        bool skip = await CreateStore()
+            .ShouldSkipAsync(
+                "Publisher.Product",
+                queryVersion,
+                queryHash,
+                maxFailures,
+                CancellationToken.None
+            );
 
         skip.Should().Be(expected);
     }
@@ -116,8 +130,14 @@ public sealed class PackageStateStoreTests : IDisposable
     [Fact]
     public async Task ShouldSkipAsync_UnknownPackage_ReturnsFalse()
     {
-        bool skip = await CreateStore().ShouldSkipAsync(
-            "Missing.Package", "1.0.0", "HASH", PackageStates.DefaultMaxFailures, CancellationToken.None);
+        bool skip = await CreateStore()
+            .ShouldSkipAsync(
+                "Missing.Package",
+                "1.0.0",
+                "HASH",
+                PackageStates.DefaultMaxFailures,
+                CancellationToken.None
+            );
 
         skip.Should().BeFalse();
     }

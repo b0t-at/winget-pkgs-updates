@@ -1,5 +1,4 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <IsPackable>false</IsPackable>
@@ -26,5 +25,4 @@
     <ProjectReference Include="..\..\src\WingetMaintainer.Core\WingetMaintainer.Core.csproj" />
     <ProjectReference Include="..\..\src\WingetMaintainer.Data\WingetMaintainer.Data.csproj" />
   </ItemGroup>
-
 </Project>

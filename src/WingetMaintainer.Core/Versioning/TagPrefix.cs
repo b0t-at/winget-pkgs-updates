@@ -31,9 +31,11 @@ public static class TagPrefix
         }
 
         // Leading "v"/"V" immediately followed by a digit (v1.2.3 -> 1.2.3).
-        if (trimmed.Length >= 2
+        if (
+            trimmed.Length >= 2
             && (trimmed[0] == 'v' || trimmed[0] == 'V')
-            && char.IsDigit(trimmed[1]))
+            && char.IsDigit(trimmed[1])
+        )
         {
             trimmed = trimmed[1..];
         }

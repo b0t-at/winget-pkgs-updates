@@ -23,7 +23,10 @@ public sealed class MonitoredPackagesLoader
     }
 
     /// <summary>Loads and parses monitored packages from a YAML file.</summary>
-    public async Task<IReadOnlyList<MonitoredPackage>> LoadAsync(string path, CancellationToken cancellationToken)
+    public async Task<IReadOnlyList<MonitoredPackage>> LoadAsync(
+        string path,
+        CancellationToken cancellationToken
+    )
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(path);
         if (!File.Exists(path))

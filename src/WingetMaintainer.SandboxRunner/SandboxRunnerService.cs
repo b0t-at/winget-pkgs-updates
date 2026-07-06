@@ -25,7 +25,8 @@ public sealed class SandboxRunnerService : BackgroundService
         ILogger<SandboxRunnerService> logger,
         IWorkerApiClient apiClient,
         SandboxValidationService validationService,
-        IOptions<RunnerOptions> options)
+        IOptions<RunnerOptions> options
+    )
     {
         ArgumentNullException.ThrowIfNull(logger);
         ArgumentNullException.ThrowIfNull(apiClient);
@@ -39,7 +40,11 @@ public sealed class SandboxRunnerService : BackgroundService
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        logger.LogInformation("SandboxRunner started (host={Host}, timeout={Timeout}m).", options.Host, options.TimeoutMinutes);
+        logger.LogInformation(
+            "SandboxRunner started (host={Host}, timeout={Timeout}m).",
+            options.Host,
+            options.TimeoutMinutes
+        );
         TimeSpan pollInterval = TimeSpan.FromSeconds(options.PollIntervalSeconds);
 
         while (!stoppingToken.IsCancellationRequested)
@@ -47,7 +52,9 @@ public sealed class SandboxRunnerService : BackgroundService
             QueuedJob? job;
             try
             {
-                job = await apiClient.GetNextJobAsync(options.Host, stoppingToken).ConfigureAwait(false);
+                job = await apiClient
+                    .GetNextJobAsync(options.Host, stoppingToken)
+                    .ConfigureAwait(false);
             }
             catch (Exception exception) when (exception is not OperationCanceledException)
             {
@@ -69,13 +76,18 @@ public sealed class SandboxRunnerService : BackgroundService
     private async Task ProcessJobAsync(QueuedJob job, CancellationToken stoppingToken)
     {
         logger.LogInformation(
-            "Validating job {JobId} for {PackageId} (attempt {Attempt}).", job.Id, job.PackageId, job.Attempts);
+            "Validating job {JobId} for {PackageId} (attempt {Attempt}).",
+            job.Id,
+            job.PackageId,
+            job.Attempts
+        );
 
         bool timedOut = false;
         int exitCode = -1;
         string? logRef = null;
 
-        using CancellationTokenSource timeoutSource = CancellationTokenSource.CreateLinkedTokenSource(stoppingToken);
+        using CancellationTokenSource timeoutSource =
+            CancellationTokenSource.CreateLinkedTokenSource(stoppingToken);
         timeoutSource.CancelAfter(TimeSpan.FromMinutes(options.TimeoutMinutes));
 
         try
@@ -92,10 +104,15 @@ public sealed class SandboxRunnerService : BackgroundService
 
             exitCode = result.ExitCode;
         }
-        catch (OperationCanceledException) when (timeoutSource.IsCancellationRequested && !stoppingToken.IsCancellationRequested)
+        catch (OperationCanceledException)
+            when (timeoutSource.IsCancellationRequested && !stoppingToken.IsCancellationRequested)
         {
             timedOut = true;
-            logger.LogWarning("Job {JobId} timed out after {Timeout} minutes.", job.Id, options.TimeoutMinutes);
+            logger.LogWarning(
+                "Job {JobId} timed out after {Timeout} minutes.",
+                job.Id,
+                options.TimeoutMinutes
+            );
         }
         catch (OperationCanceledException)
         {

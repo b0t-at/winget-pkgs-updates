@@ -16,7 +16,8 @@ public sealed class OctokitGitHubReleaseClient : IGitHubReleaseClient
     public async Task<IReadOnlyList<GitHubRelease>> GetReleasesAsync(
         string owner,
         string repository,
-        CancellationToken cancellationToken)
+        CancellationToken cancellationToken
+    )
     {
         cancellationToken.ThrowIfCancellationRequested();
         IReadOnlyList<Release> releases = await client.Repository.Release.GetAll(owner, repository);
@@ -27,7 +28,8 @@ public sealed class OctokitGitHubReleaseClient : IGitHubReleaseClient
                 release.Draft,
                 release.Prerelease,
                 release.PublishedAt,
-                release.Assets.Select(asset => asset.BrowserDownloadUrl).ToList()))
+                release.Assets.Select(asset => asset.BrowserDownloadUrl).ToList()
+            ))
             .ToList();
     }
 }

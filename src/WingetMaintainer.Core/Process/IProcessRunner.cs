@@ -13,5 +13,6 @@ public interface IProcessRunner
         string fileName,
         IReadOnlyList<string> arguments,
         string? workingDirectory,
-        CancellationToken cancellationToken);
+        CancellationToken cancellationToken
+    );
 }

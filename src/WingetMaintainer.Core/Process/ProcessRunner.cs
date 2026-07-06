@@ -10,7 +10,8 @@ public sealed class ProcessRunner : IProcessRunner
         string fileName,
         IReadOnlyList<string> arguments,
         string? workingDirectory,
-        CancellationToken cancellationToken)
+        CancellationToken cancellationToken
+    )
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(fileName);
         ArgumentNullException.ThrowIfNull(arguments);
@@ -55,6 +56,10 @@ public sealed class ProcessRunner : IProcessRunner
 
         await process.WaitForExitAsync(cancellationToken).ConfigureAwait(false);
 
-        return new ProcessResult(process.ExitCode, standardOutput.ToString(), standardError.ToString());
+        return new ProcessResult(
+            process.ExitCode,
+            standardOutput.ToString(),
+            standardError.ToString()
+        );
     }
 }

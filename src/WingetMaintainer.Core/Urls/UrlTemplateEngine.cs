@@ -20,7 +20,8 @@ public static class UrlTemplateEngine
 
         string[] tokens = template.Split(
             ' ',
-            StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+            StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries
+        );
 
         List<InstallerUrl> results = new(tokens.Length);
         foreach (string token in tokens)
@@ -36,7 +37,12 @@ public static class UrlTemplateEngine
             }
 
             string expanded = Substitute(urlPart, values);
-            results.Add(new InstallerUrl(expanded, string.IsNullOrWhiteSpace(architecture) ? null : architecture));
+            results.Add(
+                new InstallerUrl(
+                    expanded,
+                    string.IsNullOrWhiteSpace(architecture) ? null : architecture
+                )
+            );
         }
 
         return results;
@@ -60,7 +66,8 @@ public static class UrlTemplateEngine
         if (value is null)
         {
             throw new InvalidOperationException(
-                $"URL template uses {token} but no value was supplied.");
+                $"URL template uses {token} but no value was supplied."
+            );
         }
 
         return input.Replace(token, value, StringComparison.Ordinal);

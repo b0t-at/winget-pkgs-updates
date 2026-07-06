@@ -15,7 +15,9 @@ public sealed class SandboxValidationServiceTests
             ManifestPath = @"C:\manifests\app",
         };
 
-        (string fileName, IReadOnlyList<string> arguments) = SandboxValidationService.BuildCommand(options);
+        (string fileName, IReadOnlyList<string> arguments) = SandboxValidationService.BuildCommand(
+            options
+        );
 
         fileName.Should().Be("pwsh");
         arguments.Should().ContainInOrder("-File", @"C:\scripts\Test-Manifest-Sandbox.ps1");

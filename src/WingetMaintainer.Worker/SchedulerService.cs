@@ -30,7 +30,11 @@ public sealed class SchedulerService : BackgroundService
         }
         catch (CronFormatException exception)
         {
-            logger.LogError(exception, "Invalid schedule cron expression '{Cron}'.", options.ScheduleCron);
+            logger.LogError(
+                exception,
+                "Invalid schedule cron expression '{Cron}'.",
+                options.ScheduleCron
+            );
             return;
         }
 
@@ -41,7 +45,10 @@ public sealed class SchedulerService : BackgroundService
             DateTime? next = cron.GetNextOccurrence(DateTime.UtcNow);
             if (next is null)
             {
-                logger.LogWarning("Cron '{Cron}' has no future occurrences; scheduler stopping.", options.ScheduleCron);
+                logger.LogWarning(
+                    "Cron '{Cron}' has no future occurrences; scheduler stopping.",
+                    options.ScheduleCron
+                );
                 return;
             }
 
@@ -60,7 +67,10 @@ public sealed class SchedulerService : BackgroundService
 
             try
             {
-                logger.LogInformation("Scheduled catalog check triggered ({Event}).", "scheduled_check");
+                logger.LogInformation(
+                    "Scheduled catalog check triggered ({Event}).",
+                    "scheduled_check"
+                );
             }
             catch (Exception exception) when (exception is not OperationCanceledException)
             {

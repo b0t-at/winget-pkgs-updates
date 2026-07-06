@@ -8,21 +8,41 @@ namespace WingetMaintainer.Core.Tests.Resolvers;
 
 public sealed class GitHubReleaseResolverTests
 {
-    private static MonitoredPackage Package(string? tagPattern = null) => new()
-    {
-        Id = "Sample.Package",
-        Repo = "owner/name",
-        Url = "https://host/{TAG}/tool-{VERSION}.zip",
-        TagPattern = tagPattern,
-    };
+    private static MonitoredPackage Package(string? tagPattern = null) =>
+        new()
+        {
+            Id = "Sample.Package",
+            Repo = "owner/name",
+            Url = "https://host/{TAG}/tool-{VERSION}.zip",
+            TagPattern = tagPattern,
+        };
 
     [Fact]
     public async Task ResolveAsync_PicksLatestNonDraftAndStripsPrefix()
     {
         FakeGitHubReleaseClient client = new(
-            new GitHubRelease("v1.0.0", Draft: false, Prerelease: false, DateTimeOffset.Parse("2024-01-01T00:00:00Z"), []),
-            new GitHubRelease("v2.0.0", Draft: false, Prerelease: false, DateTimeOffset.Parse("2024-06-01T00:00:00Z"), []),
-            new GitHubRelease("v3.0.0", Draft: true, Prerelease: false, DateTimeOffset.Parse("2024-09-01T00:00:00Z"), []));
+            new GitHubRelease(
+                "v1.0.0",
+                Draft: false,
+                Prerelease: false,
+                DateTimeOffset.Parse("2024-01-01T00:00:00Z"),
+                []
+            ),
+            new GitHubRelease(
+                "v2.0.0",
+                Draft: false,
+                Prerelease: false,
+                DateTimeOffset.Parse("2024-06-01T00:00:00Z"),
+                []
+            ),
+            new GitHubRelease(
+                "v3.0.0",
+                Draft: true,
+                Prerelease: false,
+                DateTimeOffset.Parse("2024-09-01T00:00:00Z"),
+                []
+            )
+        );
         GitHubReleaseResolver resolver = new(client);
 
         ResolvedRelease? result = await resolver.ResolveAsync(Package(), CancellationToken.None);
@@ -38,11 +58,27 @@ public sealed class GitHubReleaseResolverTests
     public async Task ResolveAsync_AppliesTagPattern()
     {
         FakeGitHubReleaseClient client = new(
-            new GitHubRelease("nightly", Draft: false, Prerelease: true, DateTimeOffset.Parse("2024-09-01T00:00:00Z"), []),
-            new GitHubRelease("1.5.0", Draft: false, Prerelease: false, DateTimeOffset.Parse("2024-06-01T00:00:00Z"), []));
+            new GitHubRelease(
+                "nightly",
+                Draft: false,
+                Prerelease: true,
+                DateTimeOffset.Parse("2024-09-01T00:00:00Z"),
+                []
+            ),
+            new GitHubRelease(
+                "1.5.0",
+                Draft: false,
+                Prerelease: false,
+                DateTimeOffset.Parse("2024-06-01T00:00:00Z"),
+                []
+            )
+        );
         GitHubReleaseResolver resolver = new(client);
 
-        ResolvedRelease? result = await resolver.ResolveAsync(Package(tagPattern: "^[0-9]"), CancellationToken.None);
+        ResolvedRelease? result = await resolver.ResolveAsync(
+            Package(tagPattern: "^[0-9]"),
+            CancellationToken.None
+        );
 
         result.Should().NotBeNull();
         result!.Version.Should().Be("1.5.0");
@@ -52,7 +88,14 @@ public sealed class GitHubReleaseResolverTests
     public async Task ResolveAsync_NoCandidates_ReturnsNull()
     {
         FakeGitHubReleaseClient client = new(
-            new GitHubRelease("draft-only", Draft: true, Prerelease: false, DateTimeOffset.UtcNow, []));
+            new GitHubRelease(
+                "draft-only",
+                Draft: true,
+                Prerelease: false,
+                DateTimeOffset.UtcNow,
+                []
+            )
+        );
         GitHubReleaseResolver resolver = new(client);
 
         ResolvedRelease? result = await resolver.ResolveAsync(Package(), CancellationToken.None);
@@ -65,7 +108,27 @@ public sealed class GitHubReleaseResolverTests
     {
         GitHubReleaseResolver resolver = new(new FakeGitHubReleaseClient());
 
-        resolver.CanResolve(new MonitoredPackage { Id = "a", Repo = "owner/name", Url = "u" }).Should().BeTrue();
-        resolver.CanResolve(new MonitoredPackage { Id = "a", Repo = "no-slash", Url = "u" }).Should().BeFalse();
+        resolver
+            .CanResolve(
+                new MonitoredPackage
+                {
+                    Id = "a",
+                    Repo = "owner/name",
+                    Url = "u",
+                }
+            )
+            .Should()
+            .BeTrue();
+        resolver
+            .CanResolve(
+                new MonitoredPackage
+                {
+                    Id = "a",
+                    Repo = "no-slash",
+                    Url = "u",
+                }
+            )
+            .Should()
+            .BeFalse();
     }
 }

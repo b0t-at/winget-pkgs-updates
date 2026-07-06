@@ -23,7 +23,10 @@ public sealed class WorkerClient
         return runs ?? [];
     }
 
-    public async Task<PackageStateDto?> GetStateAsync(string packageId, CancellationToken cancellationToken)
+    public async Task<PackageStateDto?> GetStateAsync(
+        string packageId,
+        CancellationToken cancellationToken
+    )
     {
         using HttpResponseMessage response = await httpClient
             .GetAsync($"api/state/{Uri.EscapeDataString(packageId)}", cancellationToken)
@@ -35,8 +38,8 @@ public sealed class WorkerClient
         }
 
         response.EnsureSuccessStatusCode();
-        return await response.Content
-            .ReadFromJsonAsync<PackageStateDto>(cancellationToken)
+        return await response
+            .Content.ReadFromJsonAsync<PackageStateDto>(cancellationToken)
             .ConfigureAwait(false);
     }
 }

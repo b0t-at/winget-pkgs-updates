@@ -1,5 +1,4 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
-
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <UserSecretsId>dotnet-WingetMaintainer.Worker-113ae1f9-bb2b-45f7-ad2d-e4a045ffc123</UserSecretsId>
