@@ -1803,12 +1803,12 @@
   },
   "GitButler.GitButler": {
     "manifestHash": "3B13A6A5CE35E3CCF07B2E08A7F4613CC4E8A0598D619E09188FB2B9EDD99DDD",
-    "lastUpdated": "2026-07-06T17:18:30.5821309Z",
+    "lastUpdated": "2026-07-06T20:54:52.8851913Z",
     "description": "",
     "installerHashes": [
       "33E5C8AADC96C1E8F626966F2A4522C49B6E56B71045D64DAFA37C048DB9E800"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "0.21.0",
     "state": "VALIDATION_FAILED"
   },
@@ -1959,12 +1959,12 @@
   },
   "wire.wire": {
     "manifestHash": "7997A5B54A04C498635471F711A608409B2D0843333E8EA2240A5B8861583178",
-    "lastUpdated": "2026-07-06T17:18:30.5451606Z",
+    "lastUpdated": "2026-07-06T20:54:52.8470789Z",
     "description": "",
     "installerHashes": [
       "BA94510EF6B63B57A5CE3733AA9CE28E521DC5C4F1E9ACFCD4380C6EAD40ED30"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "3.42.5375",
     "state": "VALIDATION_FAILED"
   }
