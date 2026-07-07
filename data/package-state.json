@@ -458,7 +458,7 @@
   },
   "Fly-io.flyctl": {
     "manifestHash": "CBF3BD15915C985D390BFE40CC25B309649018472C2E493041C59E40BC084F49",
-    "lastUpdated": "2026-07-07T01:21:22.5870866Z",
+    "lastUpdated": "2026-07-07T10:05:49.190203Z",
     "state": "VALIDATION_FAILED",
     "installerHashes": [
       "A8DA0B0732FD7F0B71F96A90024CAB8B4049C0AA713975424E2B34004DF02CC7",
@@ -466,7 +466,7 @@
     ],
     "version": "0.4.67",
     "description": "",
-    "validationCount": 2
+    "validationCount": 3
   },
   "aimotrens.impulsar": {
     "validationCount": 2,
@@ -717,15 +717,15 @@
     ]
   },
   "bornova.numara": {
-    "description": "",
-    "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-07-07T01:21:22.6453693Z",
+    "lastUpdated": "2026-07-07T10:05:49.2867284Z",
+    "version": "7.2.1",
     "validationCount": 1,
-    "manifestHash": "F65E9A608B179792FE7BBBB054D07725BDBA1A12CB060B7AAC5029F2030894C9",
     "installerHashes": [
-      "8C89103F19CCAAFE23DAD5F15D28F4D80BE103B01EBE0AE825FB15651B9EB651"
+      "375A4327C8F9F66CC6330DBF25086E52B0909125724E4CAD2AAEFC45BD05E940"
     ],
-    "version": "7.2.0"
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "411CC6EE8657FDD50EEFCB68AAE82EFF33E59666575D4041DB1517F60CB195F7"
   },
   "seerge.g-helper": {
     "description": "",
@@ -1970,14 +1970,14 @@
   },
   "MinBrowser.Min": {
     "manifestHash": "52F885FF20E3B4F619B0004F007C17CADDD51910FCEE06FE1806F2B9D057A6C1",
-    "lastUpdated": "2026-07-07T01:21:22.5439326Z",
-    "state": "VALIDATION_FAILED",
+    "lastUpdated": "2026-07-07T10:05:49.2752995Z",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
       "6C7A09E1B5556A55DAEFF23120EC5D7466CF70D0FC4C3DB45D1C1F4C34B4A4C3"
     ],
     "version": "1.35.6",
     "description": "",
-    "validationCount": 2
+    "validationCount": 3
   },
   "ChiaNetwork.GUIforChiaBlockchain": {
     "manifestHash": "D2F5FC7DCB4A7A7B768D1CBBF822A636A0CB1330E790A03D9998082E9613C0C2",
