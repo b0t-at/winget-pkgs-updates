@@ -525,13 +525,13 @@
     "version": "5.0.4"
   },
   "Levminer.Authme": {
-    "lastUpdated": "2026-07-07T13:44:03.6081873Z",
+    "lastUpdated": "2026-07-07T21:52:02.4861044Z",
     "installerHashes": [
       "701EF4A2108E1CA77CDF9288224F6C2BB6A1BAAC789218E7BA04E3D57A47102C"
     ],
     "description": "",
-    "validationCount": 1,
-    "state": "VALIDATION_FAILED",
+    "validationCount": 2,
+    "state": "VALIDATION_PASSED",
     "manifestHash": "B01A7F6D42D4772231F4AB586C5A0F18B1B98703F7DBF47E550ADD12FE3DB42D",
     "version": "7.1.1"
   },
@@ -717,15 +717,15 @@
     ]
   },
   "bornova.numara": {
-    "lastUpdated": "2026-07-07T10:05:49.2867284Z",
-    "version": "7.2.1",
+    "manifestHash": "05C24BE13A737D355E02CDF51B7AA8018086C55BB6DB00F8FA3C096C4CB1AD48",
     "validationCount": 1,
-    "installerHashes": [
-      "375A4327C8F9F66CC6330DBF25086E52B0909125724E4CAD2AAEFC45BD05E940"
-    ],
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "411CC6EE8657FDD50EEFCB68AAE82EFF33E59666575D4041DB1517F60CB195F7"
+    "version": "7.2.2",
+    "installerHashes": [
+      "0D7396F7021DD3FB680B0AE4AFA3550EEA4E598012F669B6274A2BE16C38A0C5"
+    ],
+    "lastUpdated": "2026-07-07T21:52:02.5000247Z",
+    "state": "VALIDATION_PASSED"
   },
   "seerge.g-helper": {
     "description": "",
@@ -1496,15 +1496,15 @@
     "manifestHash": "06EA63CBA95A079A2638DFF25282D03EB7E6B1FD2E589F9F80A37CDBF09C37BB"
   },
   "PocketSync.PocketSync": {
+    "manifestHash": "016F8AC71ADD635EB8A9D439CF5952389025EA4CBEB566DD6FE6FABC8C4BEA46",
+    "validationCount": 1,
+    "description": "",
+    "version": "6.2.2",
     "installerHashes": [
-      "ABAD587B87BC51E2EB1D534C51BDCBAD8DCC3870F0A31AB3BB71AAA35BEFDC37"
+      "AF5E11A548A349C0B0FDDB01B8717FBB93376849224808C0BDCD79185697D590"
     ],
-    "lastUpdated": "2026-06-30T01:55:04.9042279Z",
-    "manifestHash": "9BBB02CFD103DEF5F5236E69BD51519EBCD49129E90133CC4652FDD5A026799B",
-    "validationCount": 3,
-    "state": "VALIDATION_FAILED",
-    "version": "6.2.1",
-    "description": ""
+    "lastUpdated": "2026-07-07T21:52:02.3473882Z",
+    "state": "VALIDATION_FAILED"
   },
   "KRTirtho.Spotube": {
     "manifestHash": "48B938BDAA7E2ADCDF3C6E7B71A7214AF24FFD5388F587258C452A189DDE760D",
