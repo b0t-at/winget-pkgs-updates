@@ -741,13 +741,13 @@
   "SimpleX.SimpleX-Chat": {
     "manifestHash": "0647B4A2B9C54A668D9793985273D2DD82477CFA6817EF7F942E5766E2F10D84",
     "version": "6.5.6",
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_PASSED",
     "description": "",
     "installerHashes": [
       "E78E0EC58D53F43BEA3C343F06F32F4A1A43F224D8E76A4E9416C6CBD11E8BAE"
     ],
-    "lastUpdated": "2026-07-07T17:22:15.9340023Z"
+    "lastUpdated": "2026-07-08T01:08:26.5980270Z"
   },
   "cinnyapp.cinny-desktop": {
     "installerHashes": [
