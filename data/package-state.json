@@ -717,15 +717,15 @@
     ]
   },
   "bornova.numara": {
-    "manifestHash": "05C24BE13A737D355E02CDF51B7AA8018086C55BB6DB00F8FA3C096C4CB1AD48",
-    "validationCount": 1,
-    "description": "",
-    "version": "7.2.2",
+    "manifestHash": "844E44BD903B8B694D0AB640C870C64E2FFA70A8E89D4302772CA72DEBBD45A6",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "0D7396F7021DD3FB680B0AE4AFA3550EEA4E598012F669B6274A2BE16C38A0C5"
+      "72D103BEF1D349316C1D7E5B718BACBB1036241BE2BB881E4684C392765F8A1C"
     ],
-    "lastUpdated": "2026-07-07T21:52:02.5000247Z",
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-07-08T01:41:05.9950449Z",
+    "version": "7.3.0",
+    "validationCount": 1,
+    "description": ""
   },
   "seerge.g-helper": {
     "description": "",
@@ -1497,14 +1497,14 @@
   },
   "PocketSync.PocketSync": {
     "manifestHash": "016F8AC71ADD635EB8A9D439CF5952389025EA4CBEB566DD6FE6FABC8C4BEA46",
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
     "version": "6.2.2",
     "installerHashes": [
       "AF5E11A548A349C0B0FDDB01B8717FBB93376849224808C0BDCD79185697D590"
     ],
-    "lastUpdated": "2026-07-07T21:52:02.3473882Z",
-    "state": "VALIDATION_FAILED"
+    "lastUpdated": "2026-07-08T01:41:05.9662134Z",
+    "state": "VALIDATION_PASSED"
   },
   "KRTirtho.Spotube": {
     "manifestHash": "48B938BDAA7E2ADCDF3C6E7B71A7214AF24FFD5388F587258C452A189DDE760D",
