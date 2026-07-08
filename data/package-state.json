@@ -284,15 +284,15 @@
     "description": ""
   },
   "etcd-io.etcd": {
+    "manifestHash": "661384BF072ABF7A5717E8EE46CFB95F268FEDF2D83BEF76931EBC1F670B5FA0",
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "lastUpdated": "2026-07-01T21:01:29.5533492Z",
     "installerHashes": [
-      "50F59494270B5492B2298EBD00EB0A89E45693C1C98C091E6C8E9C613937C9AA"
+      "0F3720F02A0401DDF9FD79CA41E8D04F54B05FDA6CBE49A4E0F35C83D0F2BCA2"
     ],
-    "manifestHash": "B6558CCA192DC7D9081BD15C48F124227F0C2E34DD3B6FE2656520F30FC9592F",
     "validationCount": 1,
-    "version": "3.6.13"
+    "description": "",
+    "version": "3.7.0",
+    "lastUpdated": "2026-07-08T21:15:00.8289703Z"
   },
   "Firstversionist.Polypane": {
     "validationCount": 2,
@@ -457,16 +457,16 @@
     "version": "1.7.8"
   },
   "Fly-io.flyctl": {
-    "manifestHash": "CBF3BD15915C985D390BFE40CC25B309649018472C2E493041C59E40BC084F49",
-    "lastUpdated": "2026-07-07T10:05:49.190203Z",
-    "state": "VALIDATION_FAILED",
+    "manifestHash": "B2D0062C4AC08BD4F7FED9F6A125BEC70CA80809B85FE1BBC167295683613100",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "A8DA0B0732FD7F0B71F96A90024CAB8B4049C0AA713975424E2B34004DF02CC7",
-      "88CD4DB7603C81EE066F9EE7F99C2844D0298BB7CDA04005C6EFFF48CC66FCCD"
+      "4543E3BA409C5DA1C914125884CBD86268988793E44B34141F97C5ADD36FABE3",
+      "026A35EA782E0657FB09FE8F40B3FE96CD81CF37133134113B971A5C850F5C0F"
     ],
-    "version": "0.4.67",
+    "validationCount": 1,
     "description": "",
-    "validationCount": 3
+    "version": "0.4.68",
+    "lastUpdated": "2026-07-08T21:15:00.8137515Z"
   },
   "aimotrens.impulsar": {
     "validationCount": 2,
@@ -1518,15 +1518,15 @@
     "validationCount": 3
   },
   "QGIS.QField": {
-    "validationCount": 1,
-    "lastUpdated": "2026-07-02T17:16:09.3980918Z",
-    "manifestHash": "D52ABDB6F42E53EF583E7AC519CE99B963AE2059A043FC566AD3A549302E3FF3",
-    "description": "",
-    "version": "4.2.6",
+    "manifestHash": "4AFFAC1C158C77E83F1B10A21496AFD8D8F50490B0648CEB73FFAE31062AB7A1",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "59E5E0314B08F10E808410F7B8284AAF152F54B6CC126BCF2F0EF9B62B8F75F6"
-    ]
+      "0B0B1C7CF9B8E8C94C057623C141B874E82BC84AED9E5A44A04BAD51918112A3"
+    ],
+    "validationCount": 1,
+    "description": "",
+    "version": "4.2.7",
+    "lastUpdated": "2026-07-08T21:15:00.8218792Z"
   },
   "nao1215.gup": {
     "installerHashes": [
@@ -2001,5 +2001,16 @@
       "9C3F2E67E78588D9264AFE2E072E8457BCAA668C20653ABB1C75AA6735C6EED3"
     ],
     "version": "1.25.3"
+  },
+  "pinokiocomputer.pinokio": {
+    "manifestHash": "81061C4D2007DFCDB193260801DE69C13278C77D299C499E0598C08C2CBA07E1",
+    "state": "VALIDATION_FAILED",
+    "installerHashes": [
+      "1ACFBB539BB2234F6CCA7C83A4B4C40168C905B2671F0BE5F2602682763CB80E"
+    ],
+    "validationCount": 1,
+    "description": "",
+    "version": "8.0.0",
+    "lastUpdated": "2026-07-08T21:15:00.7222278Z"
   }
 }
