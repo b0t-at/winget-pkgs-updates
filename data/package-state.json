@@ -986,7 +986,7 @@
     "description": "",
     "manifestHash": "5EB60DBA2361CDB919E12489404860CB7DB35EDC0ECFF18F409C778FCC4287EC",
     "version": "6.13.11",
-    "lastUpdated": "2026-07-08T09:27:49.7558480Z",
+    "lastUpdated": "2026-07-08T09:27:49.755848Z",
     "state": "VALIDATION_PASSED",
     "validationCount": 1
   },
@@ -1690,15 +1690,15 @@
     "version": "2026.3"
   },
   "Yubico.Authenticator": {
-    "description": "",
-    "manifestHash": "87F54FBDBAE8A2FDEFB92091E3165D0111937B408D632AB55AE47FA411426814",
     "installerHashes": [
-      "616BEC7354EB8830CED8338A50C405F4D0277D626967C45CB1BF5CA3E9D8E3B1"
+      "FD3A4BEEE31B07CE6ACB67F8B9F46B75DAF15B669BD034B7582171743E0436AD"
     ],
-    "version": "7.4.0",
-    "validationCount": 1,
+    "lastUpdated": "2026-07-08T17:02:02.9566428Z",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-06-16T13:33:46.1192449Z"
+    "version": "7.4.1",
+    "validationCount": 1,
+    "manifestHash": "DEBAD0DFB0CCD61676AF255FBB36D20AF23A84A71BB31F3D29606A054AFA838D",
+    "description": ""
   },
   "Picocrypt-NG.Picocrypt-NG": {
     "installerHashes": [
