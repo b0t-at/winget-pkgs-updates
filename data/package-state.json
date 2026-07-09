@@ -580,15 +580,15 @@
     "lastUpdated": "2026-06-30T06:01:23.7315361Z"
   },
   "Snyk.Snyk": {
-    "version": "1.1305.2",
-    "lastUpdated": "2026-06-23T12:01:23.0178351Z",
-    "manifestHash": "C19E7AD45363B9AD5EE5BC6039B21E2F105214EEBBB17F002B39B9A7DE987B01",
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "validationCount": 1,
+    "version": "1.1306.0",
     "installerHashes": [
-      "DC107F5CCE9E65C57CA512531DDA938B6A212BCA169B1971DDBC84E97C74346F"
-    ]
+      "735CFF3A8908D9D25E9B4A8BA523EEE1AC65DD9DBA3E3FEA77B7EC6C0EAAF779"
+    ],
+    "manifestHash": "9D87FFD45D043482BBD947904E0B2F716B3F37CCBC6B564BD29175717B50AF3B",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "description": "",
+    "lastUpdated": "2026-07-09T17:14:17.4332640Z"
   },
   "jaegertracing.jaeger": {
     "validationCount": 1,
@@ -876,15 +876,15 @@
     "manifestHash": "34578A81C664A5A7F6CE8892ABB8AF558356A16F0C044C900604413CA201D8C0"
   },
   "Storj.Uplink": {
-    "version": "1.158.3",
+    "version": "1.158.4",
     "installerHashes": [
-      "6DDC10D1AD6F4B0A8D55121B9B9D138E829F35F9C2F6F57AD83D7A64397E6FBA"
+      "52486C8C4A58826A49B025DE9F23853250D724DEB6568985F73BFD6AB05E8E36"
     ],
-    "manifestHash": "683103D4A2B37A9770EDF72DB31FDAFF320B256F40A089D6E054056E5581704B",
-    "lastUpdated": "2026-07-07T13:18:57.7533852Z",
-    "description": "",
+    "manifestHash": "70609E5A1C496FF0D0ADF0B0F339F1318463718C196616E9F01A32C81F7677AC",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1
+    "validationCount": 1,
+    "description": "",
+    "lastUpdated": "2026-07-09T17:14:17.3974457Z"
   },
   "AdGuard.AdGuardHome": {
     "validationCount": 3,
