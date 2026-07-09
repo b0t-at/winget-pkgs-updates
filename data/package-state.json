@@ -332,16 +332,16 @@
     "description": ""
   },
   "LiveKit.LiveKitCLI": {
+    "manifestHash": "29807C3C3D81379CF608F85A6CB958339E00B8C7A989FDDED7D115DB3F92095F",
+    "description": "",
     "installerHashes": [
-      "256F0CFE3666EC7620AAF612C65A9876F33D13522193804FE9BD4439B01F4E30",
-      "73B094F0ADBD854FFC7E4693E3828D982527EB7DCC9F60074954197B2DB30E04"
+      "234D19E1353B869D3617EC4429B70663DC8CEF43E8D93BF92AD86567186909B7",
+      "00E96634F4354B8B7F0C828D010B15C82BBA88C9CD8CCE36D7924DC1553AFCC3"
     ],
-    "lastUpdated": "2026-06-29T18:10:57.919015Z",
-    "manifestHash": "C189A66473BF1508D1726654D06A8F4DA5AB182F42A8DFE6695DA9708E2590A5",
-    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "version": "2.16.7",
-    "description": ""
+    "validationCount": 1,
+    "lastUpdated": "2026-07-09T01:33:32.5518746Z",
+    "version": "2.17.0"
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
     "validationCount": 1,
@@ -1474,15 +1474,15 @@
     "version": "0.43.0"
   },
   "LowLevelDesign.ProcessGovernor": {
-    "manifestHash": "24E3ED8B83D26D114EC85466CBD0635AF4595690A4590FC71F52B137078DF49E",
+    "manifestHash": "09E69D0C7C3FCD8235F3E38BE39881FEE7DC968A99C30941A28BED33654E0AA0",
     "description": "",
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "9D2CE110DA0C2ADEABA87395893EBB0875A3FDB5C6C5FF36F01DB0438EC4D9FB"
+      "1BD7384DFBC9B562A587C3A6EBB8B393DDCC281B1A62CC18D87E99CEA0F7EC01"
     ],
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "lastUpdated": "2026-06-04T16:08:01.6124042Z",
-    "version": "4.0.26155"
+    "lastUpdated": "2026-07-09T01:33:32.5635007Z",
+    "version": "4.1.26190"
   },
   "Istio.Istio": {
     "version": "1.30.1",
@@ -1496,15 +1496,15 @@
     "manifestHash": "06EA63CBA95A079A2638DFF25282D03EB7E6B1FD2E589F9F80A37CDBF09C37BB"
   },
   "PocketSync.PocketSync": {
-    "manifestHash": "016F8AC71ADD635EB8A9D439CF5952389025EA4CBEB566DD6FE6FABC8C4BEA46",
-    "validationCount": 2,
+    "manifestHash": "4221C798AC9FDC640A5DE61C1F6DE0A806885C4CE2EA236CF5963ED445134D4B",
     "description": "",
-    "version": "6.2.2",
     "installerHashes": [
-      "AF5E11A548A349C0B0FDDB01B8717FBB93376849224808C0BDCD79185697D590"
+      "11C4A504CC46AE7E72568D5D30B43EED19AF7F5423B54E14CF109EF81DD973B9"
     ],
-    "lastUpdated": "2026-07-08T01:41:05.9662134Z",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_FAILED",
+    "validationCount": 1,
+    "lastUpdated": "2026-07-09T01:33:32.4096199Z",
+    "version": "6.2.3"
   },
   "KRTirtho.Spotube": {
     "manifestHash": "48B938BDAA7E2ADCDF3C6E7B71A7214AF24FFD5388F587258C452A189DDE760D",
@@ -2004,13 +2004,24 @@
   },
   "pinokiocomputer.pinokio": {
     "manifestHash": "81061C4D2007DFCDB193260801DE69C13278C77D299C499E0598C08C2CBA07E1",
-    "state": "VALIDATION_FAILED",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
       "1ACFBB539BB2234F6CCA7C83A4B4C40168C905B2671F0BE5F2602682763CB80E"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
     "version": "8.0.0",
-    "lastUpdated": "2026-07-08T21:15:00.7222278Z"
+    "lastUpdated": "2026-07-09T01:33:32.5076695Z"
+  },
+  "obsidianforensics.HindsightGUI": {
+    "manifestHash": "F4D11F99D9E5362A97FEF33DE05E764E29E57E24EB032F2FFFEC3B32D39B575E",
+    "description": "",
+    "installerHashes": [
+      "EC78E8098B9FD898C0B426ADA440138D471604A05760E12F90DB83F15F44D49A"
+    ],
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-07-09T01:33:32.5391045Z",
+    "version": "2026.06"
   }
 }
