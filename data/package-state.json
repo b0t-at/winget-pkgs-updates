@@ -115,16 +115,16 @@
     "validationCount": 1
   },
   "pnpm.pnpm": {
-    "validationCount": 3,
-    "lastUpdated": "2026-07-05T05:43:35.2900432Z",
-    "version": "11.10.0",
-    "state": "VALIDATION_FAILED",
+    "validationCount": 1,
     "installerHashes": [
-      "BB25E88285354CD2510A481859E5695B68F5DEF16F22E4FFB7AA76A87AF4F700",
-      "96E8A4B44E1D0AA3E41042E9E4606FCD453832144087CE52B0309BE4DEC12D85"
+      "13AD8A9B139C4C829FEA33462CF04D061D72F0926B2B76A92AC03C9A36E405F9",
+      "CF9C79249F59CC4CA9C1FE57C45C1AF91336F75D992CAB63CD8E57BDAB5BB723"
     ],
-    "manifestHash": "5C97EDCEA193D6FC52D280D43AC43A6BDD3AA93EE9D2854FCA4C5F300776FB19",
-    "description": ""
+    "description": "",
+    "state": "VALIDATION_FAILED",
+    "version": "11.11.0",
+    "lastUpdated": "2026-07-09T21:07:15.4220461Z",
+    "manifestHash": "D9F24F1269FE289249849FC5A099A551757C8CA0E438C2EBD812648CBA637DBB"
   },
   "mmanela.markdownoutlook": {
     "validationCount": 3,
@@ -457,16 +457,16 @@
     "version": "1.7.8"
   },
   "Fly-io.flyctl": {
-    "manifestHash": "B2D0062C4AC08BD4F7FED9F6A125BEC70CA80809B85FE1BBC167295683613100",
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "4543E3BA409C5DA1C914125884CBD86268988793E44B34141F97C5ADD36FABE3",
-      "026A35EA782E0657FB09FE8F40B3FE96CD81CF37133134113B971A5C850F5C0F"
-    ],
     "validationCount": 1,
+    "installerHashes": [
+      "09FBF68411BD6C737A3BE9525EA2D60C7B41A42F3E594FC077A91AC0C90EBB9A",
+      "F50E8132164C53F78969A4920C9DED95C22525794928C7ABAE1FA879B26E048C"
+    ],
     "description": "",
-    "version": "0.4.68",
-    "lastUpdated": "2026-07-08T21:15:00.8137515Z"
+    "state": "VALIDATION_FAILED",
+    "version": "0.4.69",
+    "lastUpdated": "2026-07-09T21:07:15.4790207Z",
+    "manifestHash": "9C2A36DA30668B2566CDB1AAD4ABCFDDFE959959100669A3446907AFB6DADEA8"
   },
   "aimotrens.impulsar": {
     "validationCount": 2,
@@ -588,7 +588,7 @@
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
     "description": "",
-    "lastUpdated": "2026-07-09T17:14:17.4332640Z"
+    "lastUpdated": "2026-07-09T17:14:17.433264Z"
   },
   "jaegertracing.jaeger": {
     "validationCount": 1,
