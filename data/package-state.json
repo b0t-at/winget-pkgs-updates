@@ -481,11 +481,11 @@
     "manifestHash": "F0E315E013FBE215D1636A3BC78DF0F9B9B97C9398E8C29903C27A0661DF29B9"
   },
   "bcssov.IronyModManager": {
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "ADD78DCE89904C7F73778AD6543502C5558D0DE51FB8D9F094E95F75EF057D13",
     "version": "1.27.194",
     "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-07-09T09:49:36.1110272Z",
+    "lastUpdated": "2026-07-09T17:52:24.7512669Z",
     "description": "",
     "installerHashes": [
       "C6F63B15437990F41684642B842FDF87C17CCF3192280AAA7A9F493335E543E8"
@@ -514,15 +514,15 @@
     "description": ""
   },
   "Micronaut.Launch": {
-    "lastUpdated": "2026-07-07T13:44:03.716014Z",
+    "version": "4.10.17",
+    "manifestHash": "9E6B5F02322DDBB90CEE402BD1D9DF88E17586D8F7FB1BF47B71F31AF14E9D8E",
     "installerHashes": [
-      "F3F414A02272C9C24ABAEF75A0D052DBFBD5C76B93735E978E68EC5A87CD163C"
+      "29110A74D980A727B35E70422573C43E75799F627A3EBC69884C923F4C741DD7"
     ],
-    "description": "",
-    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "manifestHash": "49F0A81E4E0777A3E753006623E19DE3450CEA3E6A25649ED1A33E00141BC3DF",
-    "version": "5.0.4"
+    "lastUpdated": "2026-07-09T17:52:24.7921689Z",
+    "description": "",
+    "validationCount": 1
   },
   "Levminer.Authme": {
     "lastUpdated": "2026-07-07T21:52:02.4861044Z",
@@ -717,15 +717,15 @@
     "state": "VALIDATION_PASSED"
   },
   "bornova.numara": {
-    "manifestHash": "844E44BD903B8B694D0AB640C870C64E2FFA70A8E89D4302772CA72DEBBD45A6",
-    "state": "VALIDATION_PASSED",
+    "version": "7.3.1",
+    "manifestHash": "3E2FB5A8F6AAF08DD491E228CB24084F090D8C1C3177C877796FAA28272C26FB",
     "installerHashes": [
-      "72D103BEF1D349316C1D7E5B718BACBB1036241BE2BB881E4684C392765F8A1C"
+      "3C89B17CB796C172244469CC3021447D87A0D0C5B90EF47D42D5CF53BD479123"
     ],
-    "lastUpdated": "2026-07-08T01:41:05.9950449Z",
-    "version": "7.3.0",
-    "validationCount": 1,
-    "description": ""
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-07-09T17:52:24.8075178Z",
+    "description": "",
+    "validationCount": 1
   },
   "seerge.g-helper": {
     "description": "",
@@ -1502,8 +1502,8 @@
       "11C4A504CC46AE7E72568D5D30B43EED19AF7F5423B54E14CF109EF81DD973B9"
     ],
     "state": "VALIDATION_FAILED",
-    "validationCount": 2,
-    "lastUpdated": "2026-07-09T09:49:35.9846537Z",
+    "validationCount": 3,
+    "lastUpdated": "2026-07-09T17:52:24.6143847Z",
     "version": "6.2.3"
   },
   "KRTirtho.Spotube": {
@@ -1518,15 +1518,15 @@
     "validationCount": 3
   },
   "QGIS.QField": {
-    "manifestHash": "4AFFAC1C158C77E83F1B10A21496AFD8D8F50490B0648CEB73FFAE31062AB7A1",
-    "state": "VALIDATION_PASSED",
+    "version": "4.2.8",
+    "manifestHash": "69B0A28FC329C691D7C3403BD5ADF9709CCBADC2D53A62631DB857BD8D013CF6",
     "installerHashes": [
-      "0B0B1C7CF9B8E8C94C057623C141B874E82BC84AED9E5A44A04BAD51918112A3"
+      "CBC9D413CCBB1BDA8F0A3B88E5CAC21162CC816F8F389A734214838C671FD6D8"
     ],
-    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-07-09T17:52:24.7808173Z",
     "description": "",
-    "version": "4.2.7",
-    "lastUpdated": "2026-07-08T21:15:00.8218792Z"
+    "validationCount": 1
   },
   "nao1215.gup": {
     "installerHashes": [
@@ -1564,16 +1564,16 @@
     "description": ""
   },
   "PBH-BTN.PeerBanHelper": {
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-06-06T14:22:13.7084219Z",
-    "version": "9.3.14",
-    "description": "",
-    "validationCount": 1,
+    "version": "9.4.0",
+    "manifestHash": "D71081365942D07E5615CDD6D54928CE02B4FCC7117C380C385F02F4F0D2D3FE",
     "installerHashes": [
-      "C9C52FF3B591D64E94B100C5FF96308D05D4523B2394FEA0333197F1FB2693F1",
-      "496D6DE7FE35E46265C4598071B1C8A5975CDD449E87DC9C887922F8242B96EE"
+      "8824455419AB52EF5A486D47515444CA4C22B6C06F889C1EEBEAE1DD722721A6",
+      "EB11DB82466B5A56F227B8A05517FA9AFCD4A9C31762504C1EC19021B6661282"
     ],
-    "manifestHash": "8BD3C26C9796D2A5A0510A140DFFEF6F545EDD07D814B22175C7EED6C4A07C79"
+    "state": "VALIDATION_FAILED",
+    "lastUpdated": "2026-07-09T17:52:24.6713678Z",
+    "description": "",
+    "validationCount": 1
   },
   "Glarysoft.GlaryUtilities": {
     "validationCount": 1,
