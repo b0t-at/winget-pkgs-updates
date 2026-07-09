@@ -481,15 +481,15 @@
     "manifestHash": "F0E315E013FBE215D1636A3BC78DF0F9B9B97C9398E8C29903C27A0661DF29B9"
   },
   "bcssov.IronyModManager": {
-    "installerHashes": [
-      "F92380A7948E6FC498AA9214EA788F96A5B85B0129A5CE6D78C6FE2283FF529B"
-    ],
     "validationCount": 1,
-    "lastUpdated": "2026-07-04T01:19:20.9787504Z",
-    "version": "1.27.192",
-    "manifestHash": "396ADDC5E8D4C0BAE670B7415B302AB87DF112D75B0D2B95C36627146AD5004B",
-    "state": "VALIDATION_PASSED",
-    "description": ""
+    "manifestHash": "ADD78DCE89904C7F73778AD6543502C5558D0DE51FB8D9F094E95F75EF057D13",
+    "version": "1.27.194",
+    "state": "VALIDATION_FAILED",
+    "lastUpdated": "2026-07-09T09:49:36.1110272Z",
+    "description": "",
+    "installerHashes": [
+      "C6F63B15437990F41684642B842FDF87C17CCF3192280AAA7A9F493335E543E8"
+    ]
   },
   "AppFlowy.AppFlowy": {
     "installerHashes": [
@@ -1502,8 +1502,8 @@
       "11C4A504CC46AE7E72568D5D30B43EED19AF7F5423B54E14CF109EF81DD973B9"
     ],
     "state": "VALIDATION_FAILED",
-    "validationCount": 1,
-    "lastUpdated": "2026-07-09T01:33:32.4096199Z",
+    "validationCount": 2,
+    "lastUpdated": "2026-07-09T09:49:35.9846537Z",
     "version": "6.2.3"
   },
   "KRTirtho.Spotube": {
