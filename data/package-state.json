@@ -624,15 +624,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Google.FirebaseCLI": {
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "3B4CE9D24A5B765FFC0F98DD6946E872D47851C4BC0ED68FA02AEAC46FB9779E"
     ],
     "manifestHash": "8B3641CB4172A6A553F6CD1E24B3092646A7842A9374B645B01D74888740FA97",
     "version": "15.23.0",
     "description": "",
-    "lastUpdated": "2026-07-10T17:25:32.3164199Z",
-    "state": "VALIDATION_FAILED"
+    "lastUpdated": "2026-07-10T21:10:02.4953665Z",
+    "state": "VALIDATION_PASSED"
   },
   "TerraformLinters.tflint": {
     "lastUpdated": "2026-06-03T20:13:54.4980133Z",
@@ -684,15 +684,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Dystroy.broot": {
-    "validationCount": 1,
-    "version": "1.57.0",
-    "description": "",
-    "lastUpdated": "2026-06-01T21:04:38.5181983Z",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "C4E210F280A15B4D4EFC18F249EEE7197872F93BCE4A4ED559A0D4E34E3786A7",
     "installerHashes": [
-      "B9905D20596A5DAF60B30A38FFD3DE2EE5D65F113DC16CD0A20047B31F927DC5"
-    ]
+      "590068B6C3DBA327B91BF6509D55FDF1BC67ECCEF6961EF2F47977C5E4BE5507"
+    ],
+    "manifestHash": "A3410068D63651A3547AD169595D8A7DDB12AB5AF64F2C1B98F042233BA678FC",
+    "description": "",
+    "validationCount": 1,
+    "lastUpdated": "2026-07-10T21:10:02.5099141Z",
+    "version": "1.58.0"
   },
   "hoppscotch.Hoppscotch": {
     "manifestHash": "0EF7421B012EAF7FE2849302C1647A3E941BD849EB56C327CF7838C47E3EB7D0",
@@ -2025,16 +2025,16 @@
     "version": "2026.06"
   },
   "MilkShift.GoofCord": {
-    "lastUpdated": "2026-07-10T17:25:32.2515899Z",
+    "lastUpdated": "2026-07-10T21:10:02.4613616Z",
     "manifestHash": "92E648858602D81EBA0CB35B3CC653EEB0C37E569C164009D86C227E8D841D7A",
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "DD023A42CCB4F74FBF19C474522636BAAD0AF8C069104255FAFE2C17C522D797",
       "E9B537212D883E2856111178A30EEE5AB6910D5224522B9EEFC101B4BE1A1313",
       "C5928A3F1E21E8C36E31BB16BE9CF31B92F8236DAF103BD27D62E9CFB983416A"
     ],
     "description": "",
-    "state": "VALIDATION_FAILED",
+    "state": "VALIDATION_PASSED",
     "version": "2.2.2"
   }
 }
