@@ -115,7 +115,7 @@
     "validationCount": 1
   },
   "pnpm.pnpm": {
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "13AD8A9B139C4C829FEA33462CF04D061D72F0926B2B76A92AC03C9A36E405F9",
       "CF9C79249F59CC4CA9C1FE57C45C1AF91336F75D992CAB63CD8E57BDAB5BB723"
@@ -123,7 +123,7 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "version": "11.11.0",
-    "lastUpdated": "2026-07-10T01:42:18.3489798Z",
+    "lastUpdated": "2026-07-10T10:02:13.2869193Z",
     "manifestHash": "D9F24F1269FE289249849FC5A099A551757C8CA0E438C2EBD812648CBA637DBB"
   },
   "mmanela.markdownoutlook": {
@@ -1496,13 +1496,13 @@
     "manifestHash": "06EA63CBA95A079A2638DFF25282D03EB7E6B1FD2E589F9F80A37CDBF09C37BB"
   },
   "PocketSync.PocketSync": {
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "AA1F597B90428F5F410EBE3B04FF61C9FB2033F2B0758C9339271100B55CCF7F"
     ],
-    "lastUpdated": "2026-07-10T05:49:37.3888518Z",
+    "lastUpdated": "2026-07-10T10:02:13.4156154Z",
     "description": "",
-    "state": "VALIDATION_FAILED",
+    "state": "VALIDATION_PASSED",
     "manifestHash": "82CAA5F7C3234453ACA4AADB4D0AA655DB331C31156B1817D37DEC45B74F9EA5",
     "version": "6.2.4"
   },
