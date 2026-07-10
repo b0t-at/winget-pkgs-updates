@@ -876,15 +876,15 @@
     "manifestHash": "34578A81C664A5A7F6CE8892ABB8AF558356A16F0C044C900604413CA201D8C0"
   },
   "Storj.Uplink": {
-    "version": "1.158.4",
-    "installerHashes": [
-      "52486C8C4A58826A49B025DE9F23853250D724DEB6568985F73BFD6AB05E8E36"
-    ],
-    "manifestHash": "70609E5A1C496FF0D0ADF0B0F339F1318463718C196616E9F01A32C81F7677AC",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "manifestHash": "91C59BC557B828A3297BC0CB90954F066B0F27E7FA4E1204FAA16E38825F3EB3",
+    "state": "VALIDATION_FAILED",
     "description": "",
-    "lastUpdated": "2026-07-09T17:14:17.3974457Z"
+    "version": "1.158.5",
+    "installerHashes": [
+      "8684A27EA002D626597CB3D6176E03BBDF8DCE53A7285C3A3563B028C0A4FB22"
+    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-07-10T09:33:30.4395831Z"
   },
   "AdGuard.AdGuardHome": {
     "validationCount": 3,
@@ -1134,15 +1134,15 @@
     "validationCount": 1
   },
   "xpipe-io.xpipe.portable": {
-    "validationCount": 1,
-    "lastUpdated": "2026-06-29T14:16:32.1575479Z",
-    "version": "23.6",
+    "manifestHash": "DA6A67D23EE3D0C7F34B8D33C14A6D8B676E09DD533EC6BFCBD938E86D9E60F0",
+    "state": "VALIDATION_PASSED",
     "description": "",
+    "version": "23.7",
     "installerHashes": [
-      "0F21C89902388C29E6DE30BA8CA77A49ABE0E24948E7CCFED4F8DC048017C727"
+      "964155D5830E46CEE4D3BB9C3D11D3C4BC6ECBB8E05A54F491F81831387408D2"
     ],
-    "manifestHash": "CD251F2B22100A16B5EBDC9EB10463E8682B9D301CE265A7FA2348AD2FB456EE",
-    "state": "VALIDATION_PASSED"
+    "validationCount": 1,
+    "lastUpdated": "2026-07-10T09:33:30.5155401Z"
   },
   "OliverSchwendener.ueli": {
     "validationCount": 1,
