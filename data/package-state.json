@@ -115,7 +115,7 @@
     "validationCount": 1
   },
   "pnpm.pnpm": {
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "13AD8A9B139C4C829FEA33462CF04D061D72F0926B2B76A92AC03C9A36E405F9",
       "CF9C79249F59CC4CA9C1FE57C45C1AF91336F75D992CAB63CD8E57BDAB5BB723"
@@ -123,7 +123,7 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "version": "11.11.0",
-    "lastUpdated": "2026-07-09T21:07:15.4220461Z",
+    "lastUpdated": "2026-07-10T01:42:18.3489798Z",
     "manifestHash": "D9F24F1269FE289249849FC5A099A551757C8CA0E438C2EBD812648CBA637DBB"
   },
   "mmanela.markdownoutlook": {
@@ -457,15 +457,15 @@
     "version": "1.7.8"
   },
   "Fly-io.flyctl": {
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "09FBF68411BD6C737A3BE9525EA2D60C7B41A42F3E594FC077A91AC0C90EBB9A",
       "F50E8132164C53F78969A4920C9DED95C22525794928C7ABAE1FA879B26E048C"
     ],
     "description": "",
-    "state": "VALIDATION_FAILED",
+    "state": "VALIDATION_PASSED",
     "version": "0.4.69",
-    "lastUpdated": "2026-07-09T21:07:15.4790207Z",
+    "lastUpdated": "2026-07-10T01:42:18.4591306Z",
     "manifestHash": "9C2A36DA30668B2566CDB1AAD4ABCFDDFE959959100669A3446907AFB6DADEA8"
   },
   "aimotrens.impulsar": {
@@ -481,15 +481,15 @@
     "manifestHash": "F0E315E013FBE215D1636A3BC78DF0F9B9B97C9398E8C29903C27A0661DF29B9"
   },
   "bcssov.IronyModManager": {
-    "validationCount": 2,
-    "manifestHash": "ADD78DCE89904C7F73778AD6543502C5558D0DE51FB8D9F094E95F75EF057D13",
-    "version": "1.27.194",
-    "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-07-09T17:52:24.7512669Z",
+    "state": "VALIDATION_PASSED",
+    "version": "1.27.196",
+    "manifestHash": "1400ED248DAC66DC3E9B460C42E5343CFD7F6A3079D7F52703E0752C5A449AAA",
+    "validationCount": 1,
     "description": "",
     "installerHashes": [
-      "C6F63B15437990F41684642B842FDF87C17CCF3192280AAA7A9F493335E543E8"
-    ]
+      "D04FC9AF646DFD7DD08A4AC989A2830B48BB1F431C12C8657457FB9D1927FE67"
+    ],
+    "lastUpdated": "2026-07-10T01:42:18.4698138Z"
   },
   "AppFlowy.AppFlowy": {
     "installerHashes": [
@@ -547,15 +547,15 @@
     "state": "VALIDATION_PASSED"
   },
   "argoproj.argocd": {
-    "installerHashes": [
-      "C25D18552DED8BD05DF14334E542F03381BA84BAB63B1528BF9125A62B5D40E7"
-    ],
-    "manifestHash": "CA7DEE13B173B832EB8B4B61E15BAFE7DAF91A78B69E25090A522E05A0013533",
-    "description": "",
     "state": "VALIDATION_PASSED",
-    "version": "3.4.4",
-    "lastUpdated": "2026-06-18T12:41:29.2138402Z",
-    "validationCount": 1
+    "version": "3.4.5",
+    "manifestHash": "40BC6B0C146D5577E4F1FF458EFF40E76C37D11ADC05592B155FBD279DCD8B52",
+    "validationCount": 1,
+    "description": "",
+    "installerHashes": [
+      "BB6A2E76E014A1969C4534F343F0204D101CB4FAEED2BCADAB56D869161AEB6F"
+    ],
+    "lastUpdated": "2026-07-10T01:42:18.4929771Z"
   },
   "Radius.Radius": {
     "state": "VALIDATION_PASSED",
@@ -659,15 +659,15 @@
   },
   "Martchus.syncthingctl": {
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-06-05T16:13:08.5015877Z",
-    "version": "2.1.2",
-    "manifestHash": "E27313FA6AD8B5AE3EF932AEA1C109638F1C74F7257F8E9BC29462A526589F5E",
-    "installerHashes": [
-      "CCE3EC2627917DF928C435DB6251D1E9E277B48A7517C921195D4C24AD15D1BE",
-      "F830BC456516189E4B106AF06D2E35372E1E3BB3DC9B11F16E63A4EF936EDA17"
-    ],
+    "version": "2.1.3",
+    "manifestHash": "C88C72769659864361481AD8D9611F0C5C2F200B407A3BBE76692466B1F93A2E",
+    "validationCount": 1,
     "description": "",
-    "validationCount": 1
+    "installerHashes": [
+      "4C629B0C6A066BA902F73FA23EA036E611723DAF5D00AFF8071E56CD120F7C2D",
+      "1C4CD06440DC1599505A11956B9F1D7715CCBFFDFEC697961D1AE50F9AE8E72B"
+    ],
+    "lastUpdated": "2026-07-10T01:42:18.4828111Z"
   },
   "Prometheus.WindowsExporter": {
     "manifestHash": "540C882D39CDEA71B5C19736BDF07C4F8BA28DAC30863B6BE16AB0226EF525EF",
