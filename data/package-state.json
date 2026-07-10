@@ -624,15 +624,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Google.FirebaseCLI": {
-    "manifestHash": "1CF07181B4ACDE332AFC28CD016DADD41B522472C0D0B86525A12C1CA7E84A06",
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "lastUpdated": "2026-07-01T06:07:36.1177914Z",
-    "version": "15.22.4",
     "validationCount": 1,
     "installerHashes": [
-      "50E01C681A895EAE10F2C08E57AABEA6A27FD17976785925E602BD6B7C916929"
-    ]
+      "3B4CE9D24A5B765FFC0F98DD6946E872D47851C4BC0ED68FA02AEAC46FB9779E"
+    ],
+    "manifestHash": "8B3641CB4172A6A553F6CD1E24B3092646A7842A9374B645B01D74888740FA97",
+    "version": "15.23.0",
+    "description": "",
+    "lastUpdated": "2026-07-10T17:25:32.3164199Z",
+    "state": "VALIDATION_FAILED"
   },
   "TerraformLinters.tflint": {
     "lastUpdated": "2026-06-03T20:13:54.4980133Z",
@@ -719,13 +719,13 @@
   "bornova.numara": {
     "validationCount": 1,
     "installerHashes": [
-      "C27EEB4C9179CFD36C77629C792DB3F8C61836B75B6CFC6DECBC97B61330B3F2"
+      "879F2691FD81002D5798D4C116DF793F71493D4F2016AF9F16BC5802B14D6FB4"
     ],
-    "lastUpdated": "2026-07-10T05:49:37.5098925Z",
+    "manifestHash": "B3D2CB21643C82EB3C526D012C6B3A9C67A8C3995D510758FFF794D138732F5D",
+    "version": "7.4.1",
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "4864DA6EAE7BC1FD41295BFD4847881FA5C3C06B3143B21E5DF12EF6AB37B96E",
-    "version": "7.4.0"
+    "lastUpdated": "2026-07-10T17:25:32.3561743Z",
+    "state": "VALIDATION_PASSED"
   },
   "seerge.g-helper": {
     "description": "",
@@ -911,15 +911,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Gardener.gardenctl": {
-    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "2.14.0",
     "installerHashes": [
-      "395A4B4ECF933EE8D4776FBAE04CEA16A053B6F8D0D714DB897523CBCF46E953"
+      "3CB640F9FA72118F53726E33DA78AEDBD3E7D72214BFD08F0832E92AB27621FA"
     ],
-    "lastUpdated": "2026-05-19T21:56:34.8933353Z",
+    "manifestHash": "14B1D0DB81E6AB369C0490C2D28F59CA579B854AFE2DD7AB028C754FBCFB0856",
+    "version": "2.15.0",
     "description": "",
-    "manifestHash": "A661BD6FDF80434E2BA33DEBB1A14762E8FF70274E62AF41929EBE7F826E0EC6"
+    "lastUpdated": "2026-07-10T17:25:32.3663321Z",
+    "state": "VALIDATION_PASSED"
   },
   "Google.Protobuf": {
     "description": "",
@@ -2025,9 +2025,9 @@
     "version": "2026.06"
   },
   "MilkShift.GoofCord": {
-    "lastUpdated": "2026-07-10T13:26:56.6188536Z",
+    "lastUpdated": "2026-07-10T17:25:32.2515899Z",
     "manifestHash": "92E648858602D81EBA0CB35B3CC653EEB0C37E569C164009D86C227E8D841D7A",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "DD023A42CCB4F74FBF19C474522636BAAD0AF8C069104255FAFE2C17C522D797",
       "E9B537212D883E2856111178A30EEE5AB6910D5224522B9EEFC101B4BE1A1313",
