@@ -2003,15 +2003,15 @@
     "version": "1.25.3"
   },
   "pinokiocomputer.pinokio": {
-    "manifestHash": "81061C4D2007DFCDB193260801DE69C13278C77D299C499E0598C08C2CBA07E1",
-    "state": "VALIDATION_PASSED",
+    "manifestHash": "B6C969C340287D8AFBFCD9EFE39FEB26F493F7D4C89D3724FAEFB9E92C0099D2",
     "installerHashes": [
-      "1ACFBB539BB2234F6CCA7C83A4B4C40168C905B2671F0BE5F2602682763CB80E"
+      "A0C3A8426221A36D03C0D4B8A47650B625A3C7DBBE1EC2C5786A672240A6F297"
     ],
-    "validationCount": 2,
-    "description": "",
-    "version": "8.0.0",
-    "lastUpdated": "2026-07-09T01:33:32.5076695Z"
+    "lastUpdated": "2026-07-11T05:38:21.5811567Z",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "version": "8.0.8",
+    "description": ""
   },
   "obsidianforensics.HindsightGUI": {
     "manifestHash": "F4D11F99D9E5362A97FEF33DE05E764E29E57E24EB032F2FFFEC3B32D39B575E",
