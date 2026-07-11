@@ -481,15 +481,15 @@
     "manifestHash": "F0E315E013FBE215D1636A3BC78DF0F9B9B97C9398E8C29903C27A0661DF29B9"
   },
   "bcssov.IronyModManager": {
-    "lastUpdated": "2026-07-10T13:26:56.6959968Z",
-    "manifestHash": "B90095BF91BA847C38B3D7352D5FBD7E571990866907F16C926D1C9F1F532FCF",
-    "validationCount": 1,
-    "installerHashes": [
-      "F0302F7D1C1F6A728B88D20A1B3FCF885A96B8925F6D355A1B8EC6AA4254CBE9"
-    ],
     "description": "",
     "state": "VALIDATION_PASSED",
-    "version": "1.27.197"
+    "installerHashes": [
+      "1337DE6666270AF04658ACFCBB532EA893EBC47A1083553C44C39121E21B9AC2"
+    ],
+    "validationCount": 1,
+    "version": "1.27.199",
+    "lastUpdated": "2026-07-11T01:09:40.3688731Z",
+    "manifestHash": "8F83F55317E0C735973DAC774AAC580D2EF72563F56570090717905E136BEC4C"
   },
   "AppFlowy.AppFlowy": {
     "installerHashes": [
