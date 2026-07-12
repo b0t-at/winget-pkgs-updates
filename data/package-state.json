@@ -119,11 +119,11 @@
       "7AC25BA81B8A9F213A307AE89198BA7E636E6C74FA0D775D554BA46E0187358B",
       "A2B7E3A3855DBE6C1EA99E90D0C54AA86AA33B407096FB670E4FC9F13F146CDA"
     ],
-    "validationCount": 2,
+    "validationCount": 3,
     "description": "",
     "state": "VALIDATION_FAILED",
     "manifestHash": "523159F3ADFA588EC283778F83CBEF50907CBE658A27ADAD4FDD33FB4EFD1A7D",
-    "lastUpdated": "2026-07-12T05:36:20.1444422Z",
+    "lastUpdated": "2026-07-12T09:25:00.4061367Z",
     "version": "11.12.0"
   },
   "mmanela.markdownoutlook": {
@@ -2054,11 +2054,22 @@
     "installerHashes": [
       "9913D6688CC1E2524EBEB916EC979F674EFC3FA3FC83AA56189EC8B5CEE244BF"
     ],
-    "validationCount": 2,
+    "validationCount": 3,
     "description": "",
-    "state": "VALIDATION_FAILED",
+    "state": "VALIDATION_PASSED",
     "manifestHash": "26B9A0790C4F1C992A0A09D5DE73071D5D3CA1E50CCAE924FA1E5DFDC31DB918",
-    "lastUpdated": "2026-07-12T05:36:20.2383126Z",
+    "lastUpdated": "2026-07-12T09:25:00.5331525Z",
     "version": "3.8.0"
+  },
+  "git-cola.git-cola": {
+    "validationCount": 1,
+    "installerHashes": [
+      "B7F1E91ED246A4E00959A4146FDA8822EE467A35E89E6447C81B1AFFA45D7D95"
+    ],
+    "manifestHash": "DEFB922DACF649D8BC43FB75821E6CD4CB3D977FA4110FE4B06BBCF1BC73851C",
+    "lastUpdated": "2026-07-12T09:25:00.5195791Z",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "version": "4.19.0"
   }
 }
