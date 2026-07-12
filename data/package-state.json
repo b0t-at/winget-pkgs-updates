@@ -119,11 +119,11 @@
       "7AC25BA81B8A9F213A307AE89198BA7E636E6C74FA0D775D554BA46E0187358B",
       "A2B7E3A3855DBE6C1EA99E90D0C54AA86AA33B407096FB670E4FC9F13F146CDA"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
     "state": "VALIDATION_FAILED",
     "manifestHash": "523159F3ADFA588EC283778F83CBEF50907CBE658A27ADAD4FDD33FB4EFD1A7D",
-    "lastUpdated": "2026-07-12T01:11:29.6373929Z",
+    "lastUpdated": "2026-07-12T05:36:20.1444422Z",
     "version": "11.12.0"
   },
   "mmanela.markdownoutlook": {
@@ -2054,11 +2054,11 @@
     "installerHashes": [
       "9913D6688CC1E2524EBEB916EC979F674EFC3FA3FC83AA56189EC8B5CEE244BF"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
     "state": "VALIDATION_FAILED",
     "manifestHash": "26B9A0790C4F1C992A0A09D5DE73071D5D3CA1E50CCAE924FA1E5DFDC31DB918",
-    "lastUpdated": "2026-07-12T01:11:29.7427876Z",
+    "lastUpdated": "2026-07-12T05:36:20.2383126Z",
     "version": "3.8.0"
   }
 }
