@@ -808,15 +808,15 @@
     "state": "VALIDATION_PASSED"
   },
   "OneKey.OneKey": {
-    "version": "6.4.0",
-    "installerHashes": [
-      "B068930CC9272F47837C1D8822C4378FE582B6A3A013DB875B463F96734C460E"
-    ],
+    "version": "6.5.0",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-06-13T05:26:19.3632802Z",
+    "lastUpdated": "2026-07-13T13:39:31.9397075Z",
+    "manifestHash": "72B278214678E0E04D150B01E051E4FCCBEDFDE13DA5EF3EF4F1A5D9A2215A47",
+    "installerHashes": [
+      "432D6CFC4B657CB944CDC1AAD8CDF3F2D662AFD2D9C960D03845507CC6A3BB84"
+    ],
     "description": "",
-    "manifestHash": "C0082CF145637812C3FE68489795B507C03092642DDBEB101167B4F7D74B2C50"
+    "state": "VALIDATION_PASSED"
   },
   "Gruntwork.Terragrunt": {
     "validationCount": 1,
