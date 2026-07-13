@@ -876,15 +876,15 @@
     "manifestHash": "34578A81C664A5A7F6CE8892ABB8AF558356A16F0C044C900604413CA201D8C0"
   },
   "Storj.Uplink": {
-    "installerHashes": [
-      "4E7B7EE5E572AB55938FDCDF81E172F5707ED0D2F93C70B6849823A82D5C00F8"
-    ],
-    "version": "1.158.7",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "manifestHash": "8E587EA540DEC152B2D2DFFFB8216B3269102E03D6D046F4B52091A95800EC14",
     "description": "",
-    "lastUpdated": "2026-07-10T13:11:35.6214036Z",
-    "manifestHash": "FC00039B3F5603B522D81AB96DF39D18C5780EB43888145C72F492063A933BE0"
+    "lastUpdated": "2026-07-13T13:09:54.4045473Z",
+    "state": "VALIDATION_FAILED",
+    "validationCount": 1,
+    "version": "1.158.8",
+    "installerHashes": [
+      "2829315A8C353F39168C5A30B6B162C7CD0B8B6B591B2327DC094EA0BD5A36F3"
+    ]
   },
   "AdGuard.AdGuardHome": {
     "validationCount": 3,
