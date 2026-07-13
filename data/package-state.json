@@ -99,8 +99,8 @@
     ],
     "version": "3.2.1",
     "state": "VALIDATION_FAILED",
-    "validationCount": 1,
-    "lastUpdated": "2026-07-13T17:04:23.2140050Z"
+    "validationCount": 2,
+    "lastUpdated": "2026-07-13T20:47:21.0275992Z"
   },
   "Sayuri.FFFTP": {
     "description": "",
@@ -878,9 +878,9 @@
   "Storj.Uplink": {
     "manifestHash": "8E587EA540DEC152B2D2DFFFB8216B3269102E03D6D046F4B52091A95800EC14",
     "description": "",
-    "lastUpdated": "2026-07-13T17:04:23.166204Z",
-    "state": "VALIDATION_FAILED",
-    "validationCount": 2,
+    "lastUpdated": "2026-07-13T20:47:21.0920505Z",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 3,
     "version": "1.158.8",
     "installerHashes": [
       "2829315A8C353F39168C5A30B6B162C7CD0B8B6B591B2327DC094EA0BD5A36F3"
