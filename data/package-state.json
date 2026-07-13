@@ -92,15 +92,15 @@
     "validationCount": 1
   },
   "rejetto.hfs": {
-    "manifestHash": "7E68E14F869EF745933738218078571E9E6BD68A7EEC899CB761CA7057E3995B",
-    "installerHashes": [
-      "D1945A7ADBF2C534F5A0A990D90B2A4584962486F57854DA312D5290EAD1E75C"
-    ],
-    "lastUpdated": "2026-07-06T09:42:55.0814653Z",
     "description": "",
-    "version": "3.2.0",
-    "validationCount": 3,
-    "state": "VALIDATION_FAILED"
+    "manifestHash": "8A32D4DB11D4DFDB64BBCF6CB6DD6C7C291A659D7D739838468B13B5A5BC9389",
+    "installerHashes": [
+      "00556018AFDD618FBCC0D3D0669F97DB73CF75EC43716AFBB43E4F5AAAC087C9"
+    ],
+    "version": "3.2.1",
+    "state": "VALIDATION_FAILED",
+    "validationCount": 1,
+    "lastUpdated": "2026-07-13T17:04:23.2140050Z"
   },
   "Sayuri.FFFTP": {
     "description": "",
@@ -878,9 +878,9 @@
   "Storj.Uplink": {
     "manifestHash": "8E587EA540DEC152B2D2DFFFB8216B3269102E03D6D046F4B52091A95800EC14",
     "description": "",
-    "lastUpdated": "2026-07-13T13:09:54.4045473Z",
+    "lastUpdated": "2026-07-13T17:04:23.166204Z",
     "state": "VALIDATION_FAILED",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "1.158.8",
     "installerHashes": [
       "2829315A8C353F39168C5A30B6B162C7CD0B8B6B591B2327DC094EA0BD5A36F3"
