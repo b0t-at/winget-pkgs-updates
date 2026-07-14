@@ -115,10 +115,10 @@
     "validationCount": 1
   },
   "pnpm.pnpm": {
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "11.13.0",
     "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-07-14T01:17:30.836524Z",
+    "lastUpdated": "2026-07-14T05:24:51.7929143Z",
     "description": "",
     "manifestHash": "7DD7323DC927287B415BEF9ED771F2EF312DB080C14A6BE4889A6535D8E6C9CC",
     "installerHashes": [
@@ -894,10 +894,10 @@
     ],
     "description": "",
     "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-07-14T01:17:30.9976527Z",
+    "lastUpdated": "2026-07-14T05:24:51.8962413Z",
     "manifestHash": "8BD3BA7C09F510FFDB375583FFCE9BDFD82CAE35CD37EB51B12E400B8C879940",
     "version": "0.107.78",
-    "validationCount": 2
+    "validationCount": 3
   },
   "Microsoft.PerfView": {
     "installerHashes": [
@@ -2084,10 +2084,10 @@
     ]
   },
   "jadquir.MRA": {
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "0.2",
     "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-07-14T01:17:30.9420686Z",
+    "lastUpdated": "2026-07-14T05:24:51.8466764Z",
     "description": "",
     "manifestHash": "80C1EC5F7479C6B093C9F4C2EAAEFF30E0977208739F9B056AD09166C3EC48C1",
     "installerHashes": [
