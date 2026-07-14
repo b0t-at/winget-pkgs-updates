@@ -115,16 +115,16 @@
     "validationCount": 1
   },
   "pnpm.pnpm": {
-    "installerHashes": [
-      "7AC25BA81B8A9F213A307AE89198BA7E636E6C74FA0D775D554BA46E0187358B",
-      "A2B7E3A3855DBE6C1EA99E90D0C54AA86AA33B407096FB670E4FC9F13F146CDA"
-    ],
-    "validationCount": 3,
-    "description": "",
+    "validationCount": 1,
+    "version": "11.13.0",
     "state": "VALIDATION_FAILED",
-    "manifestHash": "523159F3ADFA588EC283778F83CBEF50907CBE658A27ADAD4FDD33FB4EFD1A7D",
-    "lastUpdated": "2026-07-12T09:25:00.4061367Z",
-    "version": "11.12.0"
+    "lastUpdated": "2026-07-14T01:17:30.836524Z",
+    "description": "",
+    "manifestHash": "7DD7323DC927287B415BEF9ED771F2EF312DB080C14A6BE4889A6535D8E6C9CC",
+    "installerHashes": [
+      "9CC0E38046BC2867B7E92DDC2345FC7A5347531B402FABBACF84D541AC094234",
+      "6296B40CE7A3734003F905E9319B04DF48AA66DF998882A5C2EFF91D3C9BB818"
+    ]
   },
   "mmanela.markdownoutlook": {
     "validationCount": 3,
@@ -457,16 +457,16 @@
     "version": "1.7.8"
   },
   "Fly-io.flyctl": {
-    "validationCount": 2,
-    "installerHashes": [
-      "09FBF68411BD6C737A3BE9525EA2D60C7B41A42F3E594FC077A91AC0C90EBB9A",
-      "F50E8132164C53F78969A4920C9DED95C22525794928C7ABAE1FA879B26E048C"
-    ],
-    "description": "",
+    "validationCount": 1,
+    "version": "0.4.70",
     "state": "VALIDATION_PASSED",
-    "version": "0.4.69",
-    "lastUpdated": "2026-07-10T01:42:18.4591306Z",
-    "manifestHash": "9C2A36DA30668B2566CDB1AAD4ABCFDDFE959959100669A3446907AFB6DADEA8"
+    "lastUpdated": "2026-07-14T01:17:31.0131606Z",
+    "description": "",
+    "manifestHash": "D1114AB6C04456F32F00FF0E29E70B87C344FE334CF0F05777C82FA49B3C74E0",
+    "installerHashes": [
+      "DBD4684782BB5792EDE4901D7D70094233459FF8EDC3851B32C846A6D4E3EFF5",
+      "1AD4143D81279DFE85A22B95B1D6C602B2753DB7CA67DB734C7AD0380075AC61"
+    ]
   },
   "aimotrens.impulsar": {
     "validationCount": 2,
@@ -894,10 +894,10 @@
     ],
     "description": "",
     "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-07-13T17:09:47.2823692Z",
+    "lastUpdated": "2026-07-14T01:17:30.9976527Z",
     "manifestHash": "8BD3BA7C09F510FFDB375583FFCE9BDFD82CAE35CD37EB51B12E400B8C879940",
     "version": "0.107.78",
-    "validationCount": 1
+    "validationCount": 2
   },
   "Microsoft.PerfView": {
     "installerHashes": [
@@ -1190,15 +1190,15 @@
     ]
   },
   "ciromattia.KCC": {
-    "installerHashes": [
-      "02052E99C0AD07F5963178602A7249ED9FE9F892913C89F00D27BF59FCB45F1E"
-    ],
-    "lastUpdated": "2026-06-30T01:55:05.1102526Z",
-    "manifestHash": "1F2BA68BEA291D8496B48D2727E351C8CB520378E04AB20ECC609246F8B44394",
-    "validationCount": 3,
+    "validationCount": 1,
+    "version": "10.4.0",
     "state": "VALIDATION_PASSED",
-    "version": "10.3.0",
-    "description": ""
+    "lastUpdated": "2026-07-14T01:17:31.0250267Z",
+    "description": "",
+    "manifestHash": "FEE8BE6F1173EBAC6F849ACCA791C2E0D958EBC11D20846F8A6788DA9B01A9A8",
+    "installerHashes": [
+      "9BD33DAC2AC1F4ED70D318E45EA1D31D760914FCF75233394F2BB5E71B7A910A"
+    ]
   },
   "ente-io.photos-desktop": {
     "lastUpdated": "2026-07-08T05:44:24.163119Z",
@@ -2071,5 +2071,27 @@
     "description": "",
     "state": "VALIDATION_PASSED",
     "version": "4.19.0"
+  },
+  "Ollama.Ollama": {
+    "validationCount": 1,
+    "version": "0.32.0",
+    "state": "VALIDATION_FAILED",
+    "lastUpdated": "2026-07-14T01:17:30.8733842Z",
+    "description": "",
+    "manifestHash": "B298343FE0CD88776237C4A9992DDC16D3E1BB2D927BC606D21943A6E6758B4C",
+    "installerHashes": [
+      "07846C9074875E4D47518D41636880A9D9A40A7E1483659AC00BE7AEC082DE06"
+    ]
+  },
+  "jadquir.MRA": {
+    "validationCount": 1,
+    "version": "0.2",
+    "state": "VALIDATION_FAILED",
+    "lastUpdated": "2026-07-14T01:17:30.9420686Z",
+    "description": "",
+    "manifestHash": "80C1EC5F7479C6B093C9F4C2EAAEFF30E0977208739F9B056AD09166C3EC48C1",
+    "installerHashes": [
+      "706CCDCC4961A1DAEA5B59D2CF1E62BE2D2D9AA96CBBA69499D63BB4E4454605"
+    ]
   }
 }
