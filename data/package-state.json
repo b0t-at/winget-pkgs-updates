@@ -115,10 +115,10 @@
     "validationCount": 1
   },
   "pnpm.pnpm": {
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "11.13.0",
     "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-07-14T05:24:51.7929143Z",
+    "lastUpdated": "2026-07-14T09:10:16.7724581Z",
     "description": "",
     "manifestHash": "7DD7323DC927287B415BEF9ED771F2EF312DB080C14A6BE4889A6535D8E6C9CC",
     "installerHashes": [
@@ -2084,10 +2084,10 @@
     ]
   },
   "jadquir.MRA": {
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "0.2",
     "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-07-14T05:24:51.8466764Z",
+    "lastUpdated": "2026-07-14T09:10:16.8473047Z",
     "description": "",
     "manifestHash": "80C1EC5F7479C6B093C9F4C2EAAEFF30E0977208739F9B056AD09166C3EC48C1",
     "installerHashes": [
