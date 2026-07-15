@@ -729,8 +729,8 @@
   },
   "seerge.g-helper": {
     "description": "",
-    "lastUpdated": "2026-07-15T12:46:50.7836081Z",
-    "validationCount": 2,
+    "lastUpdated": "2026-07-15T18:35:40.1209915Z",
+    "validationCount": 3,
     "installerHashes": [
       "D66052610F3CDAD4C10DFD969EF76F3A22329ECC5FA33B6F85852CECF802333C"
     ],
@@ -2104,5 +2104,18 @@
     "version": "3.15.128",
     "manifestHash": "AC719A317D8BC60474B682E5945BDC001F81C6BEC83B6458C755D893FDEDD119",
     "description": ""
+  },
+  "TeraTermProject.teraterm5": {
+    "validationCount": 1,
+    "lastUpdated": "2026-07-15T18:35:40.1723800Z",
+    "version": "5.6.2",
+    "description": "",
+    "installerHashes": [
+      "82D4FB0F5879DF0C632806A4AF9CD75A0F6111CD55A26CB73647F922052D669F",
+      "CE18CE457AC45F2FFB57BF1854C3458CB4DC766A60DDE3793915DABCD181B901",
+      "4FB3812CAB0944BFC6ACC7BB8A7DF4EE5B520DBF9BB92E21329B12487FA4182D"
+    ],
+    "manifestHash": "4B796A972C2DBB5AE75EB8F4F8B332F0CBE77928187E84989680F6AB184F42AA",
+    "state": "VALIDATION_PASSED"
   }
 }
