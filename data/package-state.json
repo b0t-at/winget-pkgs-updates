@@ -602,15 +602,15 @@
     "lastUpdated": "2026-06-03T20:31:07.8456131Z"
   },
   "Kubernetes.clusterctl": {
+    "lastUpdated": "2026-07-15T17:16:21.5569978Z",
+    "version": "1.13.4",
+    "validationCount": 1,
+    "manifestHash": "A1B13C86D6E81BF6128F6841EA134D5C35CDC4BD7CC7B907BC2AAB136C204370",
+    "description": "",
     "installerHashes": [
-      "0B1A461730A50A24658D297CE8BBFFF3F2228AF33B07B9A38210DD8F1840F5ED"
+      "C6F86BEF3D60BC9630079EFBB12B2B89107231250245195775742238C971952A"
     ],
-    "lastUpdated": "2026-06-30T01:55:05.0935377Z",
-    "manifestHash": "0C2F3AB5ADE4DCEFFF0502881CF7EB76B32493AF91F671EC90FAE1A7555D65B4",
-    "validationCount": 3,
-    "state": "VALIDATION_PASSED",
-    "version": "1.13.3",
-    "description": ""
+    "state": "VALIDATION_PASSED"
   },
   "FOSSA.FOSSA-cli": {
     "lastUpdated": "2026-07-01T17:29:36.7599619Z",
@@ -1746,15 +1746,15 @@
     "version": "5.3.0"
   },
   "Governikus.AusweisApp": {
-    "lastUpdated": "2026-07-15T13:14:03.9900023Z",
+    "lastUpdated": "2026-07-15T17:16:21.5157286Z",
     "description": "",
     "installerHashes": [
       "AFE6B5CA58ADCF3E6D95ABBC962C17BA108994D033D15988F0DFB218E40AFFF4"
     ],
     "version": "2.5.4",
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "F36C3A64C00EE8DD2EE9E587E48F6E57C35A4D03EF011EC755263D2998CE3AFE",
-    "state": "VALIDATION_FAILED"
+    "state": "VALIDATION_PASSED"
   },
   "MichaelDiCarlo.PostyBirb+": {
     "version": "3.1.71",
@@ -2003,15 +2003,15 @@
     "version": "1.25.3"
   },
   "pinokiocomputer.pinokio": {
-    "manifestHash": "B6C969C340287D8AFBFCD9EFE39FEB26F493F7D4C89D3724FAEFB9E92C0099D2",
-    "installerHashes": [
-      "A0C3A8426221A36D03C0D4B8A47650B625A3C7DBBE1EC2C5786A672240A6F297"
-    ],
-    "lastUpdated": "2026-07-11T05:38:21.5811567Z",
+    "lastUpdated": "2026-07-15T17:16:21.5449261Z",
+    "version": "8.0.30",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "version": "8.0.8",
-    "description": ""
+    "manifestHash": "C0308DFAD1E7F276715BFD68CA6CBA7C621B57BA99DA99DFFD400817506D2EF6",
+    "description": "",
+    "installerHashes": [
+      "E077A22AAF1A5E009A58C03A52AFD999E81BF2141F20C9273B6AEBC633664F2E"
+    ],
+    "state": "VALIDATION_PASSED"
   },
   "obsidianforensics.HindsightGUI": {
     "manifestHash": "F4D11F99D9E5362A97FEF33DE05E764E29E57E24EB032F2FFFEC3B32D39B575E",
