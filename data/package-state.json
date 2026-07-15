@@ -1746,15 +1746,15 @@
     "version": "5.3.0"
   },
   "Governikus.AusweisApp": {
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-06-22T14:55:55.3958547Z",
-    "installerHashes": [
-      "8E56042EBDB66B9E81FAC250B1F215BFA3D8CFD0B12590281A40F757DC3FC3AA"
-    ],
+    "lastUpdated": "2026-07-15T13:14:03.9900023Z",
     "description": "",
-    "version": "2.5.3",
-    "manifestHash": "8BC6D9AF5BB482486DAAB79A0C06AA3889A9B11BC56648C90E61B3C9EF7F2C02"
+    "installerHashes": [
+      "AFE6B5CA58ADCF3E6D95ABBC962C17BA108994D033D15988F0DFB218E40AFFF4"
+    ],
+    "version": "2.5.4",
+    "validationCount": 1,
+    "manifestHash": "F36C3A64C00EE8DD2EE9E587E48F6E57C35A4D03EF011EC755263D2998CE3AFE",
+    "state": "VALIDATION_FAILED"
   },
   "MichaelDiCarlo.PostyBirb+": {
     "version": "3.1.71",
