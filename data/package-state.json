@@ -115,16 +115,16 @@
     "validationCount": 1
   },
   "pnpm.pnpm": {
-    "validationCount": 3,
-    "version": "11.13.0",
+    "version": "11.13.1",
     "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-07-14T09:10:16.7724581Z",
     "description": "",
-    "manifestHash": "7DD7323DC927287B415BEF9ED771F2EF312DB080C14A6BE4889A6535D8E6C9CC",
     "installerHashes": [
-      "9CC0E38046BC2867B7E92DDC2345FC7A5347531B402FABBACF84D541AC094234",
-      "6296B40CE7A3734003F905E9319B04DF48AA66DF998882A5C2EFF91D3C9BB818"
-    ]
+      "D8BEBBC71DF2702961C1D34A5E61196BC0AA3BBDE33C33253F6AFA3DD4546A6D",
+      "8E9987E5AB5AE490D75B276951D2E08DFC9BCC52D23DF5676DCA39E3F26D2C17"
+    ],
+    "lastUpdated": "2026-07-16T01:31:45.7117811Z",
+    "validationCount": 1,
+    "manifestHash": "B456A516A3DE104A16E6042918F58CE7C825488761F5B5AA67AB20705FC01626"
   },
   "mmanela.markdownoutlook": {
     "validationCount": 3,
@@ -624,15 +624,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Google.FirebaseCLI": {
-    "validationCount": 2,
-    "installerHashes": [
-      "3B4CE9D24A5B765FFC0F98DD6946E872D47851C4BC0ED68FA02AEAC46FB9779E"
-    ],
-    "manifestHash": "8B3641CB4172A6A553F6CD1E24B3092646A7842A9374B645B01D74888740FA97",
-    "version": "15.23.0",
+    "version": "15.24.0",
+    "state": "VALIDATION_FAILED",
     "description": "",
-    "lastUpdated": "2026-07-10T21:10:02.4953665Z",
-    "state": "VALIDATION_PASSED"
+    "installerHashes": [
+      "92516D6594684DCF6344D4A343929DFB5B90A95689DDB50AA1A6D4004B146BE3"
+    ],
+    "lastUpdated": "2026-07-16T01:31:45.837904Z",
+    "validationCount": 1,
+    "manifestHash": "34352EAC5BCDF94925341E49AA51F23ACE72C246AEB73BB9B3AA8802A3FF2307"
   },
   "TerraformLinters.tflint": {
     "lastUpdated": "2026-06-03T20:13:54.4980133Z",
@@ -2003,15 +2003,15 @@
     "version": "1.25.3"
   },
   "pinokiocomputer.pinokio": {
-    "lastUpdated": "2026-07-15T17:16:21.5449261Z",
-    "version": "8.0.30",
-    "validationCount": 1,
-    "manifestHash": "C0308DFAD1E7F276715BFD68CA6CBA7C621B57BA99DA99DFFD400817506D2EF6",
+    "version": "8.0.31",
+    "state": "VALIDATION_PASSED",
     "description": "",
     "installerHashes": [
-      "E077A22AAF1A5E009A58C03A52AFD999E81BF2141F20C9273B6AEBC633664F2E"
+      "6985D0837C076FEB1C4B8AE4DBA6E31079F055287165530118F7ED6EF6A0D630"
     ],
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-07-16T01:31:45.9303775Z",
+    "validationCount": 1,
+    "manifestHash": "06CBCB6907830D0FC0E31B334A3DC8999735BD3B613A8FDCF615A921686BAD69"
   },
   "obsidianforensics.HindsightGUI": {
     "manifestHash": "F4D11F99D9E5362A97FEF33DE05E764E29E57E24EB032F2FFFEC3B32D39B575E",
@@ -2119,12 +2119,12 @@
     "state": "VALIDATION_PASSED"
   },
   "hoppscotch.agent": {
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "B297ABE95EF1B258E0EAED6EBE79494FCF58293A6B32E255757D28EB3AA1729D"
     ],
-    "lastUpdated": "2026-07-15T21:01:38.9890289Z",
+    "lastUpdated": "2026-07-16T01:31:45.9128346Z",
     "description": "",
     "manifestHash": "F46A2EBD9E9831FC5B72BE058B4C879E28C63931638213BE22985D80F627AA7A",
     "version": "0.1.18"
