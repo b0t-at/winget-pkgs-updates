@@ -122,8 +122,8 @@
       "D8BEBBC71DF2702961C1D34A5E61196BC0AA3BBDE33C33253F6AFA3DD4546A6D",
       "8E9987E5AB5AE490D75B276951D2E08DFC9BCC52D23DF5676DCA39E3F26D2C17"
     ],
-    "lastUpdated": "2026-07-16T01:31:45.7117811Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-07-16T05:38:37.7010564Z",
+    "validationCount": 2,
     "manifestHash": "B456A516A3DE104A16E6042918F58CE7C825488761F5B5AA67AB20705FC01626"
   },
   "mmanela.markdownoutlook": {
@@ -625,13 +625,13 @@
   },
   "Google.FirebaseCLI": {
     "version": "15.24.0",
-    "state": "VALIDATION_FAILED",
+    "state": "VALIDATION_PASSED",
     "description": "",
     "installerHashes": [
       "92516D6594684DCF6344D4A343929DFB5B90A95689DDB50AA1A6D4004B146BE3"
     ],
-    "lastUpdated": "2026-07-16T01:31:45.837904Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-07-16T05:38:37.8623050Z",
+    "validationCount": 2,
     "manifestHash": "34352EAC5BCDF94925341E49AA51F23ACE72C246AEB73BB9B3AA8802A3FF2307"
   },
   "TerraformLinters.tflint": {
@@ -2119,12 +2119,12 @@
     "state": "VALIDATION_PASSED"
   },
   "hoppscotch.agent": {
-    "validationCount": 2,
+    "validationCount": 3,
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "B297ABE95EF1B258E0EAED6EBE79494FCF58293A6B32E255757D28EB3AA1729D"
     ],
-    "lastUpdated": "2026-07-16T01:31:45.9128346Z",
+    "lastUpdated": "2026-07-16T05:38:37.846901Z",
     "description": "",
     "manifestHash": "F46A2EBD9E9831FC5B72BE058B4C879E28C63931638213BE22985D80F627AA7A",
     "version": "0.1.18"
