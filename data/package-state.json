@@ -580,15 +580,15 @@
     "lastUpdated": "2026-06-30T06:01:23.7315361Z"
   },
   "Snyk.Snyk": {
-    "version": "1.1306.0",
     "installerHashes": [
-      "735CFF3A8908D9D25E9B4A8BA523EEE1AC65DD9DBA3E3FEA77B7EC6C0EAAF779"
+      "E9F8166A866C7F04B944ACF88EADB80FDB6F2386895944B5E5F58477A8C35AEA"
     ],
-    "manifestHash": "9D87FFD45D043482BBD947904E0B2F716B3F37CCBC6B564BD29175717B50AF3B",
-    "state": "VALIDATION_PASSED",
+    "manifestHash": "FAC90699C242EEEEA07103F5F7F3A393BEA09D5661787C7478CDD67BA1B7D0FA",
+    "lastUpdated": "2026-07-16T16:50:06.4665300Z",
     "validationCount": 1,
-    "description": "",
-    "lastUpdated": "2026-07-09T17:14:17.433264Z"
+    "state": "VALIDATION_PASSED",
+    "version": "1.1306.1",
+    "description": ""
   },
   "jaegertracing.jaeger": {
     "validationCount": 1,
