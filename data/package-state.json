@@ -1062,15 +1062,15 @@
     "manifestHash": "1DDFD578AD1680ADFFA99AB0C482DA9D7BF56D7683E6AD37560B65057F84C4E1"
   },
   "ASGARDEXMaintainers.ASGARDEX": {
-    "installerHashes": [
-      "520620691EF48F8CAC16C029EBDF6C69C889CD6FF68364ED3AE21D1698773980"
-    ],
-    "manifestHash": "A5B655FC557ADA06E1D8C9231C8339C207A44CD0F47A438DB5198D2A24CDE662",
     "description": "",
-    "validationCount": 3,
-    "version": "1.44.0",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-06-29T21:33:10.8285441Z"
+    "validationCount": 1,
+    "lastUpdated": "2026-07-17T13:11:59.1044269Z",
+    "installerHashes": [
+      "AF50676AD32155FCB1D667E3969FB47953A3BBA7841545630079A6A196904CD0"
+    ],
+    "manifestHash": "6BB1683E5D391BCB157C6AA276FF8FF9574338485DFCA935D9A5D0103A62C4AD",
+    "version": "1.45.0"
   },
   "BytecodeAlliance.Wasmtime.Portable": {
     "installerHashes": [
