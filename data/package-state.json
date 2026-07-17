@@ -706,15 +706,15 @@
     "version": "26.6.0-0"
   },
   "KeeperSecurity.Commander": {
-    "lastUpdated": "2026-07-08T05:44:24.1310282Z",
-    "validationCount": 1,
-    "version": "18.0.11",
     "description": "",
-    "manifestHash": "C502D3A2CA944D262A45D1BE900F07D346568EC23534B092D64491D5DC4D3DD0",
+    "validationCount": 1,
+    "manifestHash": "CB5BC085B2D4CF7E506E46AFD51F6E5A68A0F8B4081E48069F61CFFE495BA5E6",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-07-17T01:23:56.6370493Z",
+    "version": "18.0.12",
     "installerHashes": [
-      "3E688D925CF0FDE2BF50397AA5A77826C929FC717F8E23E9E469F0794635B4B7"
-    ],
-    "state": "VALIDATION_PASSED"
+      "ED7640C361BC41B7142190D7DCA4D01D762076DB76CBBF65E58EE6B9E3B3E24A"
+    ]
   },
   "bornova.numara": {
     "validationCount": 1,
@@ -1097,16 +1097,16 @@
     "version": "4.3.3"
   },
   "CryptoPro.Chromium-Gost": {
-    "installerHashes": [
-      "7E670C19B9D21485A268959B9FD24C4949FAB50B3B2A88179AF56AA49EADB8DE",
-      "B3408F991C2883E6B06F2949D16463264B2E7B750E169904F8434DD5120142A1"
-    ],
-    "lastUpdated": "2026-06-29T18:10:57.9090251Z",
-    "manifestHash": "CDC28FAA64CFF67E82A4A2D644AB6492ED8E50D04EE4F5F11ACBD5253BD2E7CD",
+    "description": "",
     "validationCount": 1,
+    "manifestHash": "B50E9426D9D8EE6E6C1DFD37F057F1C64E0D5BC71E23F07587B6FC65910DAD6B",
     "state": "VALIDATION_PASSED",
-    "version": "148.0.7778.280",
-    "description": ""
+    "lastUpdated": "2026-07-17T01:23:56.6069636Z",
+    "version": "150.0.7871.124",
+    "installerHashes": [
+      "0B5C7A2A72167FC99DD2FED5B981D93F8021511A02CD4D9B9CB9424FF37EA06E",
+      "6AC49CA31E321617DE54CD6C56CE261D48226A181EE7FCA99D4D97A5B380FEE4"
+    ]
   },
   "CESNET.UltraGrid": {
     "installerHashes": [
