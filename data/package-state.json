@@ -115,7 +115,7 @@
     "validationCount": 1
   },
   "pnpm.pnpm": {
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "3BAD9A8CF971B4A223C31C2063081C4D35CE8CE503F9CA2D3ECE241E966EAFB9",
       "CF93211BB21AD4093CD53ADD2958A128CEFAB90613A4A879A31F90E8F299420D"
@@ -123,7 +123,7 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "manifestHash": "36964F259C5C27E92A3A823B56CDA2D614E111CA0B6D2BF8F2E6FFF876DF81A2",
-    "lastUpdated": "2026-07-18T01:32:30.4941709Z",
+    "lastUpdated": "2026-07-18T05:31:50.2170411Z",
     "version": "11.14.0"
   },
   "mmanela.markdownoutlook": {
@@ -205,7 +205,7 @@
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "285A46871AD9F996BA66F846FEE9D856E5839148C8DF06F50DD0921DBBCCD3A9",
-    "lastUpdated": "2026-07-18T01:32:30.6508030Z",
+    "lastUpdated": "2026-07-18T01:32:30.650803Z",
     "version": "18.15.1"
   },
   "fairdataihub.SODA-for-SPARC": {
@@ -1496,15 +1496,15 @@
     "manifestHash": "06EA63CBA95A079A2638DFF25282D03EB7E6B1FD2E589F9F80A37CDBF09C37BB"
   },
   "PocketSync.PocketSync": {
-    "validationCount": 2,
-    "installerHashes": [
-      "AA1F597B90428F5F410EBE3B04FF61C9FB2033F2B0758C9339271100B55CCF7F"
-    ],
-    "lastUpdated": "2026-07-10T10:02:13.4156154Z",
-    "description": "",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "manifestHash": "82CAA5F7C3234453ACA4AADB4D0AA655DB331C31156B1817D37DEC45B74F9EA5",
-    "version": "6.2.4"
+    "version": "6.3.0",
+    "lastUpdated": "2026-07-18T05:31:50.3464975Z",
+    "description": "",
+    "installerHashes": [
+      "DA9BE4A452164D51BEF7431572916708D360BEBCF24FDEA622A0ED41B1778B8D"
+    ],
+    "manifestHash": "359B92D4606533FA1441866EBB48B2BCEBE565506BD3B1AD7B29BB920188C559"
   },
   "KRTirtho.Spotube": {
     "manifestHash": "48B938BDAA7E2ADCDF3C6E7B71A7214AF24FFD5388F587258C452A189DDE760D",
