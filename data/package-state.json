@@ -1134,15 +1134,15 @@
     "validationCount": 1
   },
   "xpipe-io.xpipe.portable": {
-    "manifestHash": "DA6A67D23EE3D0C7F34B8D33C14A6D8B676E09DD533EC6BFCBD938E86D9E60F0",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "version": "23.7",
-    "installerHashes": [
-      "964155D5830E46CEE4D3BB9C3D11D3C4BC6ECBB8E05A54F491F81831387408D2"
-    ],
+    "version": "23.8",
     "validationCount": 1,
-    "lastUpdated": "2026-07-10T09:33:30.5155401Z"
+    "lastUpdated": "2026-07-19T16:49:11.8353667Z",
+    "manifestHash": "A94655CF4C1EF7B3787BBCEA888F5A4179D79B73A3924B08113448C4ABCBDC71",
+    "installerHashes": [
+      "E63E33484CEE30E78EC22AE840FDA8323FCCDBEAFA1FDA8FBB7BD8F025360F7B"
+    ]
   },
   "OliverSchwendener.ueli": {
     "validationCount": 1,
@@ -2130,7 +2130,7 @@
     "version": "0.1.18"
   },
   "KoalaBear84.OpenDirectoryDownloader": {
-    "lastUpdated": "2026-07-19T09:22:45.4209960Z",
+    "lastUpdated": "2026-07-19T09:22:45.420996Z",
     "installerHashes": [
       "1C2C41B77FC47E2381965CE694238AEFBD25E67729EBEDD79D58F06E695881C1"
     ],
