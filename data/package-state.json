@@ -797,14 +797,14 @@
     "validationCount": 1
   },
   "FrancisBanyikwa.MediaDownloader": {
-    "lastUpdated": "2026-07-19T05:58:01.1439814Z",
+    "lastUpdated": "2026-07-19T09:22:45.3865482Z",
     "installerHashes": [
       "6B41F866C89866F9A4EE352E5E82BA365B474FCC1CEF97ABA9C7D6188056AA49"
     ],
     "manifestHash": "263A94D16E0D2C70480C469B94C8A0E224D0AA361A023AAA7687AC8FFB236309",
     "version": "5.6.3",
-    "state": "VALIDATION_FAILED",
-    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "validationCount": 2,
     "description": ""
   },
   "OneKey.OneKey": {
@@ -2130,14 +2130,14 @@
     "version": "0.1.18"
   },
   "KoalaBear84.OpenDirectoryDownloader": {
-    "lastUpdated": "2026-07-19T05:58:01.085123Z",
+    "lastUpdated": "2026-07-19T09:22:45.4209960Z",
     "installerHashes": [
       "1C2C41B77FC47E2381965CE694238AEFBD25E67729EBEDD79D58F06E695881C1"
     ],
     "manifestHash": "233809CA15926EBDEBE6C7A8E6D97A71A296DB381A0046B5F45FBB6CB69BC54D",
     "version": "3.6.0.1",
-    "state": "VALIDATION_FAILED",
-    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "validationCount": 2,
     "description": ""
   },
   "WFCD.WFInfo": {
