@@ -2142,11 +2142,11 @@
   },
   "WFCD.WFInfo": {
     "version": "9.8.2",
-    "state": "VALIDATION_FAILED",
+    "state": "VALIDATION_PASSED",
     "description": "",
     "manifestHash": "8228FCCC0677F447D9A59C495EA35194DEF1F53C4C336E57BCC45CA8C91D4EF3",
-    "validationCount": 1,
-    "lastUpdated": "2026-07-19T01:17:40.5664779Z",
+    "validationCount": 2,
+    "lastUpdated": "2026-07-19T05:34:35.5635845Z",
     "installerHashes": [
       "EA99F94CA3945ECF1966675C22B5CC1E7E103306313BCD410DF73792C269495D"
     ]
