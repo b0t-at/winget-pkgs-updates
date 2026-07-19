@@ -120,8 +120,8 @@
       "DA333AD91F95EE97CAF9BB66A5A100F328D42B72A39007D4F3F2639A2B4166E7",
       "FB570E214F8FA46CB61A988ACDF478FD424351308189BBB2D84767C0E77DE19C"
     ],
-    "validationCount": 1,
-    "lastUpdated": "2026-07-18T16:56:28.7956709Z",
+    "validationCount": 2,
+    "lastUpdated": "2026-07-19T05:58:01.053374Z",
     "manifestHash": "36F4E8BE1600AF7806EE9FD85890D47B741AD94706B04339EF71F2AEE4AF781C",
     "version": "11.15.0",
     "description": ""
@@ -797,15 +797,15 @@
     "validationCount": 1
   },
   "FrancisBanyikwa.MediaDownloader": {
-    "validationCount": 1,
+    "lastUpdated": "2026-07-19T05:58:01.1439814Z",
     "installerHashes": [
-      "CE3D43F07A47602F0F6F5D0DC8679876ADBAB9D1884E9D30EEA0061026D357F2"
+      "6B41F866C89866F9A4EE352E5E82BA365B474FCC1CEF97ABA9C7D6188056AA49"
     ],
-    "version": "5.6.2",
-    "manifestHash": "C0D8A72AAEBF989099D423E1754F7DE49853B6BB38742B1E81A82387D44F72ED",
-    "description": "",
-    "lastUpdated": "2026-07-01T09:42:42.19075Z",
-    "state": "VALIDATION_PASSED"
+    "manifestHash": "263A94D16E0D2C70480C469B94C8A0E224D0AA361A023AAA7687AC8FFB236309",
+    "version": "5.6.3",
+    "state": "VALIDATION_FAILED",
+    "validationCount": 1,
+    "description": ""
   },
   "OneKey.OneKey": {
     "version": "6.5.0",
@@ -1097,16 +1097,16 @@
     "version": "4.3.3"
   },
   "CryptoPro.Chromium-Gost": {
-    "description": "",
-    "validationCount": 1,
-    "manifestHash": "B50E9426D9D8EE6E6C1DFD37F057F1C64E0D5BC71E23F07587B6FC65910DAD6B",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-07-17T01:23:56.6069636Z",
-    "version": "150.0.7871.124",
+    "lastUpdated": "2026-07-19T05:58:01.1898789Z",
     "installerHashes": [
-      "0B5C7A2A72167FC99DD2FED5B981D93F8021511A02CD4D9B9CB9424FF37EA06E",
-      "6AC49CA31E321617DE54CD6C56CE261D48226A181EE7FCA99D4D97A5B380FEE4"
-    ]
+      "971EF462B4F504055408E4FE0C77D99E49D0B717623851729EFBBAB27BAD8E69",
+      "9B5E23E511C39E583EF25DBAE1C0F9370390DD31D46A7C6CBBBFD3380C4777DF"
+    ],
+    "manifestHash": "E5801839ECE30674A16887CDB5AF5A4A07240B08A2D30C0E40308F0B4112B8C1",
+    "version": "150.0.7871.128",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "description": ""
   },
   "CESNET.UltraGrid": {
     "installerHashes": [
@@ -2130,14 +2130,14 @@
     "version": "0.1.18"
   },
   "KoalaBear84.OpenDirectoryDownloader": {
-    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-07-19T05:58:01.085123Z",
     "installerHashes": [
-      "C296242302886960A3F53CDAD8D7C24B10F76BE7164D19CE0EC61C789473D500"
+      "1C2C41B77FC47E2381965CE694238AEFBD25E67729EBEDD79D58F06E695881C1"
     ],
+    "manifestHash": "233809CA15926EBDEBE6C7A8E6D97A71A296DB381A0046B5F45FBB6CB69BC54D",
+    "version": "3.6.0.1",
+    "state": "VALIDATION_FAILED",
     "validationCount": 1,
-    "lastUpdated": "2026-07-18T16:56:28.8817444Z",
-    "manifestHash": "55697DB457656C6531F816DBFA79008E725547355A29EED8F980E8FCBA04B5ED",
-    "version": "3.6.0.0",
     "description": ""
   },
   "WFCD.WFInfo": {
@@ -2150,5 +2150,16 @@
     "installerHashes": [
       "EA99F94CA3945ECF1966675C22B5CC1E7E103306313BCD410DF73792C269495D"
     ]
+  },
+  "JannisX11.Blockbench": {
+    "lastUpdated": "2026-07-19T05:58:01.2001342Z",
+    "installerHashes": [
+      "59ECDF5CAFF44B36854F601FE3384FF9C8314594B0C38B254DAFB8751E0253F3"
+    ],
+    "manifestHash": "5F09ECA840CD9D1E79A6DD9851F4668D5AFFF5ABEF1DF43D184CB347725BCC0E",
+    "version": "5.1.5",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "description": ""
   }
 }
