@@ -1,0 +1,155 @@
+name: build-release-bundles
+
+# Produces ready-to-run, self-contained (win-x64) bundles for each v2 component and
+# uploads them as SEPARATE downloadable artifacts:
+#   - winget-maintainer-cli        (single-file CLI)
+#   - winget-maintainer-worker     (queue API + scheduler, SQLite)
+#   - winget-maintainer-sandboxrunner (interactive sandbox validator + PS scripts + module)
+#   - winget-maintainer-dashboard  (Blazor dashboard)
+#
+# Bundles are self-contained: the target host does NOT need the .NET runtime installed.
+# On a pushed tag (v*) the same zips are also attached to a GitHub Release.
+
+on:
+  workflow_dispatch:
+    inputs:
+      configuration:
+        description: "Build configuration"
+        type: choice
+        default: Release
+        options: [Release, Debug]
+      run_tests:
+        description: "Run unit tests before packaging"
+        type: boolean
+        default: true
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write # needed to attach bundles to a Release on tag pushes
+
+env:
+  RID: win-x64
+  CONFIGURATION: ${{ github.event.inputs.configuration || 'Release' }}
+
+jobs:
+  bundle:
+    name: Build & bundle (win-x64)
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+
+      - name: Compute version
+        id: version
+        shell: pwsh
+        run: |
+          $ref = "${{ github.ref_name }}"
+          if ($ref -match '^v\d') { $version = $ref.TrimStart('v') }
+          else { $version = "0.0.0-ci.${{ github.run_number }}" }
+          "version=$version" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          Write-Host "Bundle version: $version"
+
+      - name: Restore
+        run: dotnet restore WingetMaintainer.sln
+
+      - name: Build
+        run: dotnet build WingetMaintainer.sln -c $env:CONFIGURATION --no-restore
+
+      - name: Test
+        if: ${{ github.event_name != 'workflow_dispatch' || github.event.inputs.run_tests == 'true' }}
+        run: dotnet test WingetMaintainer.sln -c $env:CONFIGURATION --no-build --verbosity normal
+
+      # ---- Publish each component self-contained (single file where practical) ----
+      - name: Publish CLI
+        run: >-
+          dotnet publish src/WingetMaintainer.Cli -c $env:CONFIGURATION -r $env:RID
+          --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true
+          -o staging/cli
+
+      - name: Publish Worker
+        run: >-
+          dotnet publish src/WingetMaintainer.Worker -c $env:CONFIGURATION -r $env:RID
+          --self-contained true -o staging/worker
+
+      - name: Publish SandboxRunner
+        run: >-
+          dotnet publish src/WingetMaintainer.SandboxRunner -c $env:CONFIGURATION -r $env:RID
+          --self-contained true -o staging/sandboxrunner
+
+      - name: Publish Dashboard
+        run: >-
+          dotnet publish src/WingetMaintainer.Dashboard -c $env:CONFIGURATION -r $env:RID
+          --self-contained true -o staging/dashboard
+
+      # ---- Stage extra runtime assets into each bundle so they are ready to test ----
+      - name: Stage support files
+        shell: pwsh
+        run: |
+          # Worker needs the monitored-packages config alongside the exe.
+          Copy-Item github-releases-monitored.yml staging/worker/ -Force
+
+          # SandboxRunner needs the PowerShell validation scripts + module + a launch helper.
+          New-Item -ItemType Directory -Force -Path staging/sandboxrunner/scripts/validation | Out-Null
+          Copy-Item scripts/validation/*.ps1 staging/sandboxrunner/scripts/validation/ -Force
+          Copy-Item scripts/Run-SandboxRunner.ps1 staging/sandboxrunner/ -Force
+          Copy-Item modules/WingetMaintainerModule staging/sandboxrunner/modules/WingetMaintainerModule -Recurse -Force
+
+      - name: Upload CLI bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: winget-maintainer-cli-${{ steps.version.outputs.version }}
+          path: staging/cli
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Upload Worker bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: winget-maintainer-worker-${{ steps.version.outputs.version }}
+          path: staging/worker
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Upload SandboxRunner bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: winget-maintainer-sandboxrunner-${{ steps.version.outputs.version }}
+          path: staging/sandboxrunner
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Upload Dashboard bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: winget-maintainer-dashboard-${{ steps.version.outputs.version }}
+          path: staging/dashboard
+          if-no-files-found: error
+          retention-days: 14
+
+      # ---- On tag pushes, also attach zipped bundles to a GitHub Release ----
+      - name: Zip bundles for release
+        if: startsWith(github.ref, 'refs/tags/v')
+        shell: pwsh
+        run: |
+          $v = "${{ steps.version.outputs.version }}"
+          New-Item -ItemType Directory -Force -Path release | Out-Null
+          foreach ($c in 'cli','worker','sandboxrunner','dashboard') {
+            Compress-Archive -Path "staging/$c/*" -DestinationPath "release/winget-maintainer-$c-$v.zip" -Force
+          }
+
+      - name: Publish GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: release/*.zip
+          fail_on_unmatched_files: true
+          generate_release_notes: true
