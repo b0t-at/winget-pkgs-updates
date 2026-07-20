@@ -1,0 +1,26 @@
+# Keep the Docker build context small and deterministic.
+# Only src/ + the root build/config files are needed to publish the Worker.
+
+**/bin/
+**/obj/
+**/.vs/
+**/.vscode/
+.git/
+.github/
+.devcontainer/
+
+# Docs, tooling and legacy pipeline not needed to build the Worker.
+docs/
+docker/
+libraries/
+modules/
+scripts/
+tests/
+data/
+
+# Local databases and secrets must never enter an image layer.
+**/*.db
+**/*.db-shm
+**/*.db-wal
+**/.env
+**/appsettings.*.local.json

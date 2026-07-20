@@ -7,6 +7,38 @@
 #   cp .env.example .env   # then edit secrets
 #   docker compose up -d
 services:
+  # v2 orchestrator: Cronos scheduler + internal API (SQLite owned by the Worker).
+  # Linux container; the SandboxRunner stays out (it needs an interactive Windows session).
+  worker:
+    build:
+      context: ..
+      dockerfile: src/WingetMaintainer.Worker/Dockerfile
+    image: winget-maintainer-worker:local
+    container_name: winget-worker
+    restart: unless-stopped
+    depends_on:
+      - loki
+    environment:
+      Worker__ApiKey: ${WORKER_API_KEY:?set in .env}
+      Worker__DatabasePath: /data/winget-maintainer.db
+      Worker__ConfigPath: /app/github-releases-monitored.yml
+      Worker__ScheduleCron: ${WORKER_SCHEDULE_CRON:-0 * * * *}
+      Worker__SubmitEnabled: ${WORKER_SUBMIT_ENABLED:-false}
+      Worker__MaxFailures: ${WORKER_MAX_FAILURES:-3}
+      Worker__Environment: ${WINGET_ENVIRONMENT:-Production}
+      Worker__LokiUri: ${LOKI_PUSH_URL:-http://loki:3100/loki/api/v1/push}
+      Worker__LokiUser: ${LOKI_USERNAME:-}
+      Worker__LokiPassword: ${LOKI_PASSWORD:-}
+      ASPNETCORE_HTTP_PORTS: "5099"
+    ports:
+      - "5099:5099"
+    volumes:
+      - worker-data:/data
+      # Monitored packages config (read-only). Path matches Worker__ConfigPath above.
+      - ../github-releases-monitored.yml:/app/github-releases-monitored.yml:ro
+    networks:
+      - observability
+
   loki:
     image: grafana/loki:3.2.1
     container_name: winget-loki
@@ -72,6 +104,7 @@ networks:
     driver: bridge
 
 volumes:
+  worker-data:
   loki-data:
   grafana-data:
   alloy-data:
