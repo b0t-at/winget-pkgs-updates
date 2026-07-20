@@ -39,12 +39,12 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
           persist-credentials: false
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
         with:
           global-json-file: global.json
 
@@ -104,7 +104,7 @@ jobs:
           Copy-Item modules/WingetMaintainerModule staging/sandboxrunner/modules/WingetMaintainerModule -Recurse -Force
 
       - name: Upload CLI bundle
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: winget-maintainer-cli-${{ steps.version.outputs.version }}
           path: staging/cli
@@ -112,7 +112,7 @@ jobs:
           retention-days: 14
 
       - name: Upload Worker bundle
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: winget-maintainer-worker-${{ steps.version.outputs.version }}
           path: staging/worker
@@ -120,7 +120,7 @@ jobs:
           retention-days: 14
 
       - name: Upload SandboxRunner bundle
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: winget-maintainer-sandboxrunner-${{ steps.version.outputs.version }}
           path: staging/sandboxrunner
@@ -128,7 +128,7 @@ jobs:
           retention-days: 14
 
       - name: Upload Dashboard bundle
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: winget-maintainer-dashboard-${{ steps.version.outputs.version }}
           path: staging/dashboard
@@ -148,7 +148,7 @@ jobs:
 
       - name: Publish GitHub Release
         if: startsWith(github.ref, 'refs/tags/v')
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@3d0d9888cb7fd7b750713d6e236d1fcb99157228 # v3.0.2
         with:
           files: release/*.zip
           fail_on_unmatched_files: true
