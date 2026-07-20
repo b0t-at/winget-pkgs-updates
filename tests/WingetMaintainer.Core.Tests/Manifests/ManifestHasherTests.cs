@@ -7,8 +7,10 @@ namespace WingetMaintainer.Core.Tests.Manifests;
 public sealed class ManifestHasherTests
 {
     // Golden value produced by the legacy Get-ManifestHash.ps1 on the committed fixtures.
+    // Fixtures are pinned to CRLF via `.gitattributes` (tests/**/Fixtures/** -text) so this is
+    // byte-stable across platforms/checkouts.
     private const string GoldenHash =
-        "6D6213A5C1D122CFBCA69B15C99641AB6ED129895AAA6FDAA7C6042361CD3210";
+        "36579E5C6E4F7F3529B5C3E421408FEA7E30EADC0CCE021D2FDE2443CDDF2F2C";
 
     private static string FixtureDirectory =>
         Path.Combine(AppContext.BaseDirectory, "Fixtures", "Manifests", "Contoso.App", "1.0.0");
