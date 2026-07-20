@@ -981,14 +981,14 @@
   },
   "tagspaces.tagspaces": {
     "installerHashes": [
-      "C2A480494DA1EF0CC12D2B596921EAA967CD732A34BF269F37CDE2D2236AF3C5"
+      "4D15CE668C705065CB5CD9E95541A4B5035118DFB8BE5CF791DB917BC62799B1"
     ],
-    "description": "",
-    "manifestHash": "5EB60DBA2361CDB919E12489404860CB7DB35EDC0ECFF18F409C778FCC4287EC",
-    "version": "6.13.11",
-    "lastUpdated": "2026-07-08T09:27:49.755848Z",
+    "manifestHash": "64AF918D0EEA49A343D473753368838972E710F7FF3A428F630FCE52B658D464",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1
+    "validationCount": 1,
+    "version": "6.13.12",
+    "lastUpdated": "2026-07-20T13:22:02.6287143Z",
+    "description": ""
   },
   "Yaak.app": {
     "state": "VALIDATION_PASSED",
