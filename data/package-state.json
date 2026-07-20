@@ -945,17 +945,17 @@
     "lastUpdated": "2026-07-18T13:00:06.4818777Z"
   },
   "JanProchazka.dbgate": {
-    "manifestHash": "94DFF77993DB71409FF5488B35FE7216767471FF2C3C4A64BC48399D8B6343F3",
-    "version": "7.2.1",
-    "description": "",
-    "lastUpdated": "2026-06-19T13:29:59.1136879Z",
+    "state": "VALIDATION_PASSED",
+    "version": "7.2.3",
     "installerHashes": [
-      "80D4B180601D793E9C760B60ED9FE12DF21D54FED2294DB22614F75788250202",
-      "72A43CE3FC5D7FF37E70F12B97366D88540F2584EADDA8FA4B33C4431CC9CA99",
-      "549B13E7CABDAF95482D4CDDD28917EAB70AAB058F78FD8FC4D7195764AA0B6C"
+      "3C2966A53EA5BEF7798BD0D2A09B52ED0CB6E9C49157E924B02B2230FA4A0EDC",
+      "C6FC5AC0B054CA836569BBB5D43D634920D7955F4257714A047F2CC0896A1E24",
+      "3E4F0179B83888506ACE32F09CBBFAEAE9BCA9EBB901FF579288906235C941F8"
     ],
     "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "manifestHash": "58BC33B7A41DBA68FBE7CD50BD2708D8B69F4F746361519B5D4E52899C298B79",
+    "lastUpdated": "2026-07-20T17:19:19.9797979Z",
+    "description": ""
   },
   "LocalStack.localstack-cli": {
     "installerHashes": [
@@ -1073,14 +1073,14 @@
     "version": "1.45.0"
   },
   "BytecodeAlliance.Wasmtime.Portable": {
-    "installerHashes": [
-      "99F038066B16CB3AAF63C1D282A9D7BA7BEFAFBADF7AA8827CC4C712D96BC31A"
-    ],
-    "lastUpdated": "2026-06-29T21:33:10.7883104Z",
-    "manifestHash": "D354F80EC73E1F946133BBDCB6C035D5CC78487948ED3090452CE3615C05E4F3",
-    "validationCount": 2,
     "state": "VALIDATION_PASSED",
-    "version": "46.0.1",
+    "version": "47.0.0",
+    "installerHashes": [
+      "768D349827101FF66BB30C2AD72D96DF7E453DD44EDF7BCB6A088FF0EFA83BD5"
+    ],
+    "validationCount": 1,
+    "manifestHash": "9827BB123FE57CE2112B98155DE576032FEC20330AF9A8E9B86547B1B7F80920",
+    "lastUpdated": "2026-07-20T17:19:20.0099469Z",
     "description": ""
   },
   "Kitware.CMake": {
@@ -1416,15 +1416,15 @@
     "description": ""
   },
   "divVerent.AAAAXY": {
-    "lastUpdated": "2026-07-07T13:44:03.7282188Z",
-    "installerHashes": [
-      "464E02061D483E9BD469CE09DF6335DEA9C098D7DF32643DCCAE39FB405ED670"
-    ],
-    "description": "",
-    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "manifestHash": "283D36388A887EDF43859FD9D97FDF506570CAC54AD6B64C2E3BF3AAD96F6A50",
-    "version": "1.7.119"
+    "version": "1.7.218",
+    "installerHashes": [
+      "EACD8A49CD3E315ACFC14E9558425076A0F14DC99A5C689FFB36B3FC12E981B5"
+    ],
+    "validationCount": 1,
+    "manifestHash": "EB0B9F845B2DD8AD05A035DB353B89A4FC9A6E6CB480295062BE66CCE020F601",
+    "lastUpdated": "2026-07-20T17:19:20.0244586Z",
+    "description": ""
   },
   "f4exb.sdrangel": {
     "validationCount": 1,
