@@ -119,12 +119,12 @@
       "E9179D727211D5556E969FCCFA36F828392892C54728A711C9DA1CC3093F7900",
       "F552FB1A974D1E58C5825DF60812FA9C1F78326EEE1D152179225864236E2834"
     ],
-    "lastUpdated": "2026-07-20T02:40:38.6025619Z",
+    "lastUpdated": "2026-07-20T05:48:14.9647319Z",
     "manifestHash": "C272EACA5A8C867F1D76879DDE729C12F5AF75D5DF676CB3E98E86EF8AB3FD88",
     "state": "VALIDATION_FAILED",
     "description": "",
     "version": "11.15.1",
-    "validationCount": 1
+    "validationCount": 2
   },
   "mmanela.markdownoutlook": {
     "validationCount": 3,
@@ -591,15 +591,15 @@
     "description": ""
   },
   "jaegertracing.jaeger": {
-    "validationCount": 1,
-    "installerHashes": [
-      "15060ADA01A3ED481997D715C8C5F1224DF01675D1E740EC6AD8DACA198B46DC"
-    ],
-    "version": "2.19.0",
-    "description": "",
-    "manifestHash": "C9530A205C56AC6315214FE64B6DB81F982E02E1B39B4FDE0734A1FE7E4C39C4",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-06-03T20:31:07.8456131Z"
+    "validationCount": 1,
+    "version": "2.20.0",
+    "lastUpdated": "2026-07-20T05:48:15.0839395Z",
+    "description": "",
+    "installerHashes": [
+      "B36B2CC2A4ED654679048FA6DEE511B2A59D310805FF247EABEF6FC499B29505"
+    ],
+    "manifestHash": "FB784A67B80076E60928D7AAB4077C6E94D2E06CA1426B21DCD2E45E34310FB6"
   },
   "Kubernetes.clusterctl": {
     "lastUpdated": "2026-07-15T17:16:21.5569978Z",
