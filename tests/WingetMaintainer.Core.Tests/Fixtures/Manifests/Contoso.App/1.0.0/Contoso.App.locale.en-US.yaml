@@ -1,0 +1,9 @@
+PackageIdentifier: Contoso.App
+PackageVersion: 1.0.0
+PackageLocale: en-US
+Publisher: Contoso
+PackageName: App
+License: Proprietary
+ShortDescription: A sample app for tests.
+ManifestType: defaultLocale
+ManifestVersion: 1.6.0

@@ -1,4 +1,7 @@
-manifests/
+# Generated winget package manifests at the repo root only.
+# Anchored with a leading slash so it does NOT match source folders such as
+# src/WingetMaintainer.Core/Manifests/ (git is case-insensitive on Windows/macOS).
+/manifests/
 scripts/package-cleanup/broken_packages.csv
 scripts/package-cleanup/cleaned_packages.csv
 *.msi

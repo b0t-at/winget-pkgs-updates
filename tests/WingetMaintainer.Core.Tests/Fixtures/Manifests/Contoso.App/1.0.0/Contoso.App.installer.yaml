@@ -1,0 +1,13 @@
+PackageIdentifier: Contoso.App
+PackageVersion: 1.0.0
+Installers:
+  - Architecture: x64
+    InstallerType: exe
+    InstallerUrl: https://example.com/app-1.0.0-x64.exe
+    InstallerSha256: 1111111111111111111111111111111111111111111111111111111111111111
+  - Architecture: arm64
+    InstallerType: exe
+    InstallerUrl: https://example.com/app-1.0.0-arm64.exe
+    InstallerSha256: 2222222222222222222222222222222222222222222222222222222222222222
+ManifestType: installer
+ManifestVersion: 1.6.0
