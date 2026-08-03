@@ -116,6 +116,8 @@ function Update-WingetPackage {
     $canonicalVersion = if ($canonicalVersionProperty) { [string]$canonicalVersionProperty.Value } else { $Latest.Version }
     $publishedVersionProperty = $PackageAndVersionInWinget.PSObject.Properties['PublishedVersion']
     $publishedVersion = if ($publishedVersionProperty) { [string]$publishedVersionProperty.Value } else { $null }
+    $latestPublishedVersionProperty = $PackageAndVersionInWinget.PSObject.Properties['LatestPublishedVersion']
+    $latestPublishedVersion = if ($latestPublishedVersionProperty) { [string]$latestPublishedVersionProperty.Value } else { $null }
 
     if ($PackageAndVersionInWinget.VersionExists -and -not [string]::IsNullOrWhiteSpace($publishedVersion)) {
         $result.Version = $publishedVersion
@@ -220,7 +222,7 @@ function Update-WingetPackage {
                 throw "$EffectiveWith update failed for $wingetPackage $($Latest.Version) with exit code $LASTEXITCODE"
             }
 
-            Test-GeneratedInstallerArchitecture -PackageIdentifier $wingetPackage -CurrentVersion $Latest.Version -ManifestOutPath $ManifestOutPath -RequestedInstallerValues $RequestedInstallerValues -PreviousVersion $PackageAndVersionInWinget.LatestPublishedVersion
+            Test-GeneratedInstallerArchitecture -PackageIdentifier $wingetPackage -CurrentVersion $Latest.Version -ManifestOutPath $ManifestOutPath -RequestedInstallerValues $RequestedInstallerValues -PreviousVersion $latestPublishedVersion
 
             # If release notes are provided, add them to the manifest
             if ($Latest.releaseNotes) {
