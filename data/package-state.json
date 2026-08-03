@@ -1791,26 +1791,26 @@
     "validationCount": 1
   },
   "Bitwarden.CLI": {
-    "manifestHash": "22D0BDDDCA59240F5DE7D8AB2CC4F50AC17F5F7798AE927300F99474296A9347",
+    "manifestHash": "C2DE2355F913F6DB6F549DB1C0EF49B4B2E7BDC5DF373F788C33AD6507B140D1",
+    "validationCount": 1,
+    "version": "2026.7.0",
     "installerHashes": [
-      "A7D0FEE49EBF11101F59E2E366D85E94569AE5CD700A60423C495144CA9F0400"
+      "B0C22438607B789C6452DBD37FFD6BE0E8A61E7A5C4E9AC57804D7AE5ED01B5B"
     ],
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-06-29T11:12:51.4226525Z",
-    "version": "2026.6.0",
     "description": "",
-    "validationCount": 1
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-03T22:25:20.5421038Z"
   },
   "GitButler.GitButler": {
-    "manifestHash": "3B13A6A5CE35E3CCF07B2E08A7F4613CC4E8A0598D619E09188FB2B9EDD99DDD",
-    "lastUpdated": "2026-07-06T20:54:52.8851913Z",
-    "description": "",
+    "manifestHash": "9051A75F0CA8E3F510BC9F556C54411C083935AE326D1379C27E6944C6AB5DED",
+    "validationCount": 1,
+    "version": "0.22.0",
     "installerHashes": [
-      "33E5C8AADC96C1E8F626966F2A4522C49B6E56B71045D64DAFA37C048DB9E800"
+      "CB73D9C66F6785AECCCF22B2603A98C493027E9B7EC3D10A8F5EA1F7185CDD62"
     ],
-    "validationCount": 2,
-    "version": "0.21.0",
-    "state": "VALIDATION_FAILED"
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-03T22:25:20.4841933Z"
   },
   "zkSNACKs.WasabiWallet": {
     "validationCount": 2,
@@ -2161,5 +2161,27 @@
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
     "description": ""
+  },
+  "MongoDB.Server": {
+    "manifestHash": "A9B88045AE828CCBE40230212E28D9D78AF3C6FF57948307E87309CE30F7F670",
+    "validationCount": 1,
+    "version": "8.3.7",
+    "installerHashes": [
+      "3E91C0A69F9CF20BFCEAA7C8BC714D63FFBB8F0834A6E7043A734EFACC97A8DB"
+    ],
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-03T22:25:20.5178769Z"
+  },
+  "MongoDB.MongoDBAtlasCLI": {
+    "manifestHash": "3A6D93254BF823C9EA0E26BD1D2CD46D62C122523770FB305369EFEFA02450F0",
+    "validationCount": 1,
+    "version": "1.57.0",
+    "installerHashes": [
+      "E270852ABACE16C5DA11361A5773327E7C5E94D34D9E8ECDDE4977506868A361"
+    ],
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-03T22:25:20.5285542Z"
   }
 }
