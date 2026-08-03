@@ -448,6 +448,10 @@ function Read-PublishedManifestSet {
         }
     }
 
+    if ($documents.Count -eq 0) {
+        return $null
+    }
+
     return ConvertTo-ManifestSet -Documents $documents -Source $VersionSource.Name
 }
 
@@ -731,7 +735,10 @@ if ($errors.Count -eq 0) {
 
                 $publishedManifestSets = @()
                 foreach ($publishedVersionSource in $publishedVersionSources) {
-                    $publishedManifestSets += Read-PublishedManifestSet -VersionSource $publishedVersionSource
+                    $publishedManifestSet = Read-PublishedManifestSet -VersionSource $publishedVersionSource
+                    if ($null -ne $publishedManifestSet) {
+                        $publishedManifestSets += $publishedManifestSet
+                    }
                 }
 
                 $exactVersionMatch = $publishedManifestSets | Where-Object { $_.PackageVersion -eq $localManifestSet.PackageVersion } | Select-Object -First 1

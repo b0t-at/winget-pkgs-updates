@@ -51,5 +51,8 @@ if ($Env:GHRepo) {
 if ($Env:GHTagPattern) {
     $params.Add("GHTagPattern", $Env:GHTagPattern)
 }
+if ($Env:WinMatschOverridePack) {
+    $params.Add("WinMatschOverridePack", $Env:WinMatschOverridePack)
+}
 
 Update-WingetPackage @params

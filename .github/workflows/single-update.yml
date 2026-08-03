@@ -31,6 +31,9 @@ on:
         - winmatsch
         - komac
         - WinGetCreate
+      overridePack:
+        description: 'Repository-relative WinMatsch override-pack YAML path'
+        required: false
 #  schedule:
 #    - cron:  '3 12 * * *' # every 4 hours
 
@@ -61,4 +64,5 @@ jobs:
           latestVersionUrl: ${{ inputs.urls }}
           resolves: ${{ inputs.resolves }}
           WebsiteURL: ${{ inputs.WebsiteURL }}
+          WinMatschOverridePack: ${{ inputs.overridePack }}
         run: .\scripts\Update-Package.ps1
