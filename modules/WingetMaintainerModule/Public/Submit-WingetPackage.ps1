@@ -24,7 +24,7 @@
     Optional GitHub issue number that this PR resolves.
 
 .PARAMETER With
-    The tool to use for submission: "Komac" (default) or "WinGetCreate".
+    The tool to use for submission: "WinMatsch" (default), "Komac" or "WinGetCreate".
 
 .PARAMETER Token
     GitHub Personal Access Token with repo scope. If not provided, uses
@@ -72,8 +72,8 @@ function Submit-WingetPackage {
         [string] $Resolves,
 
         [Parameter(Mandatory = $false)]
-        [ValidateSet("Komac", "WinGetCreate")]
-        [string] $With = "Komac",
+        [ValidateSet("WinMatsch", "Komac", "WinGetCreate")]
+        [string] $With = "WinMatsch",
 
         [Parameter(Mandatory = $false)]
         [string] $Token
@@ -111,6 +111,42 @@ function Submit-WingetPackage {
 
     try {
         switch ($With) {
+            "WinMatsch" {
+                # Ensure WinMatsch is installed
+                Install-WinMatsch
+
+                # Build winmatsch submit command arguments
+                # --submit pushes the PR through the GitHub lifecycle; --yes approves non-interactively
+                $winmatschArgs = @(
+                    "submit"
+                    $fullManifestPath
+                    "--submit"
+                    "--yes"
+                    "--prtitle", $PrTitle
+                    "--token", $Token
+                )
+
+                # Add resolves if provided
+                if (-not [string]::IsNullOrWhiteSpace($Resolves)) {
+                    $winmatschArgs += "--resolves"
+                    $winmatschArgs += $Resolves
+                }
+
+                Write-Host "--> Running: winmatsch $($winmatschArgs -replace $Token, '***' -join ' ')" -ForegroundColor White
+
+                $output = & winmatsch @winmatschArgs 2>&1
+                $exitCode = $LASTEXITCODE
+
+                Write-Host $output
+
+                if ($exitCode -ne 0) {
+                    return @{
+                        Success = $false
+                        Error   = "WinMatsch submit failed with exit code $exitCode. Output: $output"
+                    }
+                }
+            }
+
             "Komac" {
                 # Ensure Komac is installed
                 Install-Komac

@@ -2,7 +2,7 @@ param(
     [Parameter(Mandatory = $true)][string]$PackageId,
     [Parameter(Mandatory = $false)][bool]$forceAdd = $false,
     [Parameter(Mandatory = $false)][string]$resolves,
-    [Parameter(Mandatory = $false)][string]$with = "Komac"
+    [Parameter(Mandatory = $false)][string]$with = "WinMatsch"
 )
 
 function get-yamlSorted {
@@ -147,7 +147,8 @@ if ([string]::IsNullOrWhiteSpace($PackageId) -or [string]::IsNullOrWhiteSpace($g
     exit 1
 }
 
-if ($with -eq "WinGetCreate") {
+# WinMatsch is the default tool, so only persist an explicit "with" override for other tools
+if (-not [string]::IsNullOrWhiteSpace($with) -and $with -ne "WinMatsch") {
     $releaseBlock = @"
           - id: "$PackageId"
             repo: "$githubRepository"

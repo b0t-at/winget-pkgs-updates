@@ -21,7 +21,7 @@ function Update-WingetPackage {
     param(
         [Parameter(Mandatory = $false)] [string] $WebsiteURL,
         [Parameter(Mandatory = $false)] [string] $WingetPackage = ${Env:PackageName},
-        [Parameter(Mandatory = $false)][ValidateSet("Komac", "WinGetCreate")] [string] $With = "Komac",
+        [Parameter(Mandatory = $false)][ValidateSet("WinMatsch", "Komac", "WinGetCreate")] [string] $With = "WinMatsch",
         [Parameter(Mandatory = $false)] [string] $resolves = (${Env:resolves} -match '^\d+$' ? ${Env:resolves} : ""),
         [Parameter(Mandatory = $false)] [bool] $Submit = $false,
         [Parameter(Mandatory = $false)] [string] $latestVersion,
@@ -149,6 +149,37 @@ function Update-WingetPackage {
         if (!$PRExists) {
             Write-Host "Downloading $EffectiveWith and generate manifest for $wingetPackage Version $($Latest.Version)"
             Switch ($EffectiveWith) {
+                "WinMatsch" {
+                    Install-WinMatsch
+                    # Without --submit, winmatsch stops after writing validated manifests locally (no --dry-run needed)
+                    $winmatschArgs = @(
+                        "update"
+                        $wingetPackage
+                        "--version", $Latest.Version
+                    )
+                    foreach ($RequestedUrl in $RequestedInstallerUrls) {
+                        $winmatschArgs += "--urls"
+                        $winmatschArgs += $RequestedUrl
+                    }
+                    # Architecture hints are supported natively via --url overrides (url|arch)
+                    foreach ($RequestedEntry in $RequestedInstallerEntries) {
+                        if ($RequestedEntry.ArchitectureHint) {
+                            $winmatschArgs += "--url"
+                            $winmatschArgs += "$($RequestedEntry.InstallerUrl)|$($RequestedEntry.ArchitectureHint)"
+                        }
+                    }
+                    if ($resolves -match '^\d+$') {
+                        $winmatschArgs += "--resolves"
+                        $winmatschArgs += $resolves
+                    }
+                    $winmatschArgs += "--token"
+                    $winmatschArgs += $gitToken
+                    $winmatschArgs += "--output"
+                    $winmatschArgs += "$ManifestOutPath"
+
+                    Write-Host "Running: winmatsch $($winmatschArgs -replace $gitToken, '***' -join ' ')"
+                    & winmatsch @winmatschArgs
+                }
                 "Komac" {
                     Install-Komac
                     # Always use --dry-run to generate manifest locally (never submit directly)
@@ -181,7 +212,7 @@ function Update-WingetPackage {
                     .\wingetcreate.exe update $wingetPackage -v $Latest.Version -u $RequestedInstallerValues --prtitle $prMessage -t $gitToken -o $ManifestOutPath
                 }
                 default {
-                    Write-Error "Invalid value \"$EffectiveWith\" for -With parameter. Valid values are 'Komac' and 'WinGetCreate'"
+                    Write-Error "Invalid value \"$EffectiveWith\" for -With parameter. Valid values are 'WinMatsch', 'Komac' and 'WinGetCreate'"
                 }
             }
 

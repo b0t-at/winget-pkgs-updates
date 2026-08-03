@@ -17,9 +17,10 @@ on:
       With:
         required: true
         type: choice
-        description: 'WinGetCreate or komac'
-        default: 'komac'
+        description: 'winmatsch, komac or WinGetCreate'
+        default: 'winmatsch'
         options:
+        - winmatsch
         - komac
         - WinGetCreate
 
