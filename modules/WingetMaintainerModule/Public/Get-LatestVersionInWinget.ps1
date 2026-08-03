@@ -6,6 +6,11 @@ function Get-LatestVersionInWinget {
     Write-Host "Checking if $PackageId is already in winget (via GH) and find latest Version"
 
     $publishedVersionInfo = Get-WingetPublishedVersionsFromGitHub -PackageIdentifier $PackageId
+    if (-not $publishedVersionInfo.PackageExists) {
+        Write-Host "Package $PackageId was not found in winget"
+        return $null
+    }
+
     $latestVersion = $publishedVersionInfo.Versions |
         Sort-Object { Get-WingetSortableVersionKey -Version $_ } -Descending |
         Select-Object -First 1
