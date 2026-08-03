@@ -113,10 +113,28 @@ function Update-WingetPackage {
         if ($EffectiveWith -ne 'WinMatsch') {
             throw 'WinMatschOverridePack can only be used with the WinMatsch generator.'
         }
-        if (-not (Test-Path -LiteralPath $WinMatschOverridePack -PathType Leaf)) {
+        if ([IO.Path]::IsPathRooted($WinMatschOverridePack)) {
+            throw 'WinMatschOverridePack must be a repository-relative path.'
+        }
+
+        $workspaceRoot = if ([string]::IsNullOrWhiteSpace($env:GITHUB_WORKSPACE)) {
+            (Get-Location).Path
+        }
+        else {
+            $env:GITHUB_WORKSPACE
+        }
+        $workspaceRoot = [IO.Path]::GetFullPath($workspaceRoot)
+        $candidatePath = [IO.Path]::GetFullPath((Join-Path $workspaceRoot $WinMatschOverridePack))
+        $relativePath = [IO.Path]::GetRelativePath($workspaceRoot, $candidatePath)
+        if ([IO.Path]::IsPathRooted($relativePath) -or
+            $relativePath -eq '..' -or
+            $relativePath.StartsWith("..$([IO.Path]::DirectorySeparatorChar)", [StringComparison]::Ordinal)) {
+            throw 'WinMatschOverridePack must stay within the repository workspace.'
+        }
+        if (-not (Test-Path -LiteralPath $candidatePath -PathType Leaf)) {
             throw "WinMatsch override pack not found: $WinMatschOverridePack"
         }
-        $ResolvedWinMatschOverridePack = (Resolve-Path -LiteralPath $WinMatschOverridePack).Path
+        $ResolvedWinMatschOverridePack = (Resolve-Path -LiteralPath $candidatePath).Path
     }
 
     $result.Version = $Latest.Version

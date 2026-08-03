@@ -23,9 +23,9 @@ its matrix entry's `overridePack` field to that repository-relative path:
 
 ```yaml
 - id: Publisher.App
-	repo: publisher/app
-	url: https://github.com/publisher/app/releases/download/v{VERSION}/setup.exe
-	overridePack: overrides/Publisher.App.yaml
+  repo: publisher/app
+  url: https://github.com/publisher/app/releases/download/v{VERSION}/setup.exe
+  overridePack: overrides/Publisher.App.yaml
 ```
 
 The single-package workflow exposes the same path as `overridePack`. The wrapper
