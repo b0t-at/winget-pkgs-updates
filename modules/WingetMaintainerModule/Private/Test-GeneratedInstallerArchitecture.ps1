@@ -143,7 +143,10 @@ function Test-GeneratedInstallerArchitecture {
         [string]$ManifestOutPath,
 
         [Parameter(Mandatory = $true)]
-        [string[]]$RequestedInstallerValues
+        [string[]]$RequestedInstallerValues,
+
+        [Parameter(Mandatory = $false)]
+        [string]$PreviousVersion
     )
 
     $requestedEntries = @(Get-InstallerUrlEntries -InstallerValues $RequestedInstallerValues)
@@ -183,14 +186,13 @@ function Test-GeneratedInstallerArchitecture {
     }
 
     try {
-        $previousVersion = Get-LatestVersionInWinget -PackageId $PackageIdentifier
-        if ($previousVersion -and $previousVersion -ne $CurrentVersion) {
-            $previousManifestUrl = "https://raw.githubusercontent.com/microsoft/winget-pkgs/refs/heads/master/manifests/$firstChar/$packagePath/$previousVersion/$PackageIdentifier.installer.yaml"
+        if ($PreviousVersion -and $PreviousVersion -ne $CurrentVersion) {
+            $previousManifestUrl = "https://raw.githubusercontent.com/microsoft/winget-pkgs/refs/heads/master/manifests/$firstChar/$packagePath/$PreviousVersion/$PackageIdentifier.installer.yaml"
             $previousInstallerManifestContent = (Invoke-WebRequest -Uri $previousManifestUrl -UseBasicParsing).Content
             $previousEntries = @(Get-InstallerManifestEntries -Content $previousInstallerManifestContent)
 
             if ($previousEntries) {
-                $knownVersions = @($CurrentVersion, $previousVersion) | Sort-Object -Unique
+                $knownVersions = @($CurrentVersion, $PreviousVersion) | Sort-Object -Unique
                 $previousEntriesByNormalizedUrl = @{}
 
                 foreach ($previousEntry in $previousEntries) {

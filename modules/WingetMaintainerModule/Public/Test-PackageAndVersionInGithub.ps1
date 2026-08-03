@@ -23,15 +23,19 @@ function Test-PackageAndVersionInGithub {
     Write-Host "Checking if $wingetPackage is already in winget (via GH) and version $latestVersion is already present"
     $publishedVersionInfo = Get-WingetPublishedVersionsFromGitHub -PackageIdentifier $wingetPackage
     $publishedVersions = @($publishedVersionInfo.Versions)
+    $latestPublishedVersion = $publishedVersions |
+        Sort-Object { Get-WingetSortableVersionKey -Version $_ } -Descending |
+        Select-Object -First 1
 
     $result = [PSCustomObject]@{
-        PackageExists    = $true
-        VersionExists    = $false
-        ShouldGenerate   = $false
-        RequestedVersion = $latestVersion
-        PublishedVersion = $null
-        VersionMatchType = $null
-        CanonicalVersion = $latestVersion
+        PackageExists          = $true
+        VersionExists          = $false
+        ShouldGenerate         = $false
+        RequestedVersion       = $latestVersion
+        PublishedVersion       = $null
+        LatestPublishedVersion = $latestPublishedVersion
+        VersionMatchType       = $null
+        CanonicalVersion       = $latestVersion
     }
 
     if (-not $publishedVersionInfo.PackageExists) {

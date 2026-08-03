@@ -220,7 +220,7 @@ function Update-WingetPackage {
                 throw "$EffectiveWith update failed for $wingetPackage $($Latest.Version) with exit code $LASTEXITCODE"
             }
 
-            Test-GeneratedInstallerArchitecture -PackageIdentifier $wingetPackage -CurrentVersion $Latest.Version -ManifestOutPath $ManifestOutPath -RequestedInstallerValues $RequestedInstallerValues
+            Test-GeneratedInstallerArchitecture -PackageIdentifier $wingetPackage -CurrentVersion $Latest.Version -ManifestOutPath $ManifestOutPath -RequestedInstallerValues $RequestedInstallerValues -PreviousVersion $PackageAndVersionInWinget.LatestPublishedVersion
 
             # If release notes are provided, add them to the manifest
             if ($Latest.releaseNotes) {
