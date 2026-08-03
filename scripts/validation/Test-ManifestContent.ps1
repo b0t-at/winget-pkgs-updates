@@ -563,6 +563,21 @@ $script:InstallerEntryStickyProperties = @(
     'DisplayInstallWarnings'
 )
 
+function Get-EffectiveInstallerProperty {
+    param(
+        [Parameter(Mandatory = $true)] [object] $Installer,
+        [Parameter(Mandatory = $true)] [object] $InstallerDocument,
+        [Parameter(Mandatory = $true)] [string] $Name
+    )
+
+    $entryValue = Get-PropertyValue -Object $Installer -Name $Name
+    if (Test-HasValue $entryValue) {
+        return $entryValue
+    }
+
+    return Get-PropertyValue -Object $InstallerDocument -Name $Name
+}
+
 function Test-InstallerMetadataConsistency {
     param(
         [Parameter(Mandatory = $true)] [pscustomobject] $CurrentManifestSet,
@@ -577,16 +592,30 @@ function Test-InstallerMetadataConsistency {
         return @()
     }
 
+    $currentInstallers = @($CurrentManifestSet.InstallerEntries)
     foreach ($propertyName in $script:InstallerManifestStickyProperties) {
         $previousValue = Get-PropertyValue -Object $previousInstallerDocument -Name $propertyName
         $currentValue = Get-PropertyValue -Object $currentInstallerDocument -Name $propertyName
 
-        if ((Test-HasValue $previousValue) -and -not (Test-HasValue $currentValue)) {
+        $allCurrentEntriesHaveValue = $currentInstallers.Count -gt 0
+        foreach ($currentInstaller in $currentInstallers) {
+            $effectiveValue = Get-EffectiveInstallerProperty `
+                -Installer $currentInstaller `
+                -InstallerDocument $currentInstallerDocument `
+                -Name $propertyName
+            if (-not (Test-HasValue $effectiveValue)) {
+                $allCurrentEntriesHaveValue = $false
+                break
+            }
+        }
+
+        if ((Test-HasValue $previousValue) `
+            -and -not (Test-HasValue $currentValue) `
+            -and -not $allCurrentEntriesHaveValue) {
             $consistencyErrors.Add("Missing property $propertyName compared to published version $($PreviousManifestSet.PackageVersion)")
         }
     }
 
-    $currentInstallers = @($CurrentManifestSet.InstallerEntries)
     foreach ($previousInstaller in @($PreviousManifestSet.InstallerEntries)) {
         $matchingInstaller = Get-MatchingInstallerEntry -CurrentEntries $currentInstallers -ReferenceEntry $previousInstaller
         if ($null -eq $matchingInstaller) {
@@ -597,8 +626,14 @@ function Test-InstallerMetadataConsistency {
         $architectureSuffix = if (Test-HasValue $architecture) { " for architecture '$architecture'" } else { '' }
 
         foreach ($propertyName in $script:InstallerEntryStickyProperties) {
-            $previousValue = Get-PropertyValue -Object $previousInstaller -Name $propertyName
-            $currentValue = Get-PropertyValue -Object $matchingInstaller -Name $propertyName
+            $previousValue = Get-EffectiveInstallerProperty `
+                -Installer $previousInstaller `
+                -InstallerDocument $previousInstallerDocument `
+                -Name $propertyName
+            $currentValue = Get-EffectiveInstallerProperty `
+                -Installer $matchingInstaller `
+                -InstallerDocument $currentInstallerDocument `
+                -Name $propertyName
 
             if ((Test-HasValue $previousValue) -and -not (Test-HasValue $currentValue)) {
                 $consistencyErrors.Add("Missing installer property $propertyName$architectureSuffix compared to published version $($PreviousManifestSet.PackageVersion)")
