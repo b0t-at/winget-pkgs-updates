@@ -78,7 +78,7 @@ jobs:
             url: https://github.com/cantino/mcfly/releases/download/v{VERSION}/mcfly-v{VERSION}-x86_64-pc-windows-msvc.zip
           - id: Anki.Anki
             repo: ankitects/anki
-            url: https://github.com/ankitects/anki/releases/download/{VERSION}/anki-launcher-{VERSION}-windows.exe
+            url: https://github.com/ankitects/anki/releases/download/{VERSION}/anki-{VERSION}-win-x64.msi https://github.com/ankitects/anki/releases/download/{VERSION}/anki-{VERSION}-win-arm64.msi
           - id: ANTOrg-Inc.ASCIIEngine
             repo: hdfsyu/ASCIIEngine
             url: https://github.com/hdfsyu/ASCIIEngine/releases/download/v{VERSION}/ASCIIEngine.msi
@@ -135,7 +135,7 @@ jobs:
             url: https://github.com/bootandy/dust/releases/download/v{VERSION}/dust-v{VERSION}-i686-pc-windows-gnu.zip https://github.com/bootandy/dust/releases/download/v{VERSION}/dust-v{VERSION}-x86_64-pc-windows-gnu.zip
           - id: bornova.numara
             repo: bornova/numara-calculator
-            url: https://github.com/bornova/numara-calculator/releases/download/v{VERSION}/Numara-{VERSION}.exe https://github.com/bornova/numara-calculator/releases/download/v{VERSION}/Numara-{VERSION}.exe
+            url: https://github.com/bornova/numara-calculator/releases/download/v{VERSION}/Numara-{VERSION}-x64.exe
           - id: bufbuild.buf
             repo: bufbuild/buf
             url: https://github.com/bufbuild/buf/releases/download/v{VERSION}/buf-Windows-x86_64.zip https://github.com/bufbuild/buf/releases/download/v{VERSION}/buf-Windows-arm64.zip
@@ -144,7 +144,7 @@ jobs:
             url: https://github.com/bytecodealliance/wasmtime/releases/download/v{VERSION}/wasmtime-v{VERSION}-x86_64-windows.zip
           - id: CameronSutter.Plottr
             repo: cameronsutter/plottr_electron
-            url: https://github.com/cameronsutter/plottr_electron/releases/download/v{VERSION}/Plottr-win-installer-latest.exe
+            url: https://github.com/cameronsutter/plottr_electron/releases/download/v{VERSION}/Plottr-win-installer-latest.exe|x64
           - id: CargoLambda.CargoLambda
             repo: cargo-lambda/cargo-lambda
             url: https://github.com/cargo-lambda/cargo-lambda/releases/download/v{VERSION}/cargo-lambda-v{VERSION}.windows-x64.zip
@@ -159,7 +159,7 @@ jobs:
             url: https://github.com/TranslucentTB/TranslucentTB/releases/download/{VERSION}/bundle.msixbundle https://github.com/TranslucentTB/TranslucentTB/releases/download/{VERSION}/bundle.msixbundle
           - id: ChiaNetwork.GUIforChiaBlockchain
             repo: Chia-Network/chia-blockchain
-            url: https://github.com/Chia-Network/chia-blockchain/releases/download/{VERSION}/ChiaSetup-{VERSION}.exe
+            url: https://github.com/Chia-Network/chia-blockchain/releases/download/{VERSION}/ChiaSetup-{VERSION}.exe|x64
           - id: chylex.DiscordHistoryTracker
             repo: chylex/Discord-History-Tracker
             url: https://github.com/chylex/Discord-History-Tracker/releases/download/v{VERSION}/win-x64.zip
@@ -516,7 +516,7 @@ jobs:
             url: https://github.com/Keeper-Security/Commander/releases/download/v{VERSION}/keeper-commander-windows-v{VERSION}.exe
           - id: Kitware.CMake
             repo: Kitware/CMake
-            url: https://github.com/Kitware/CMake/releases/download/v{VERSION}/cmake-{VERSION}-windows-i386.msi https://github.com/Kitware/CMake/releases/download/v{VERSION}/cmake-{VERSION}-windows-x86_64.msi https://github.com/Kitware/CMake/releases/download/v{VERSION}/cmake-{VERSION}-windows-arm64.msi
+            url: https://github.com/Kitware/CMake/releases/download/v{VERSION}/cmake-{VERSION}-windows-i386.msi https://github.com/Kitware/CMake/releases/download/v{VERSION}/cmake-{VERSION}-windows-x86_64.msi https://github.com/Kitware/CMake/releases/download/v{VERSION}/cmake-{VERSION}-windows-arm64.msi https://github.com/Kitware/CMake/releases/download/v{VERSION}/cmake-{VERSION}-windows-i386.zip https://github.com/Kitware/CMake/releases/download/v{VERSION}/cmake-{VERSION}-windows-x86_64.zip https://github.com/Kitware/CMake/releases/download/v{VERSION}/cmake-{VERSION}-windows-arm64.zip
           - id: KoalaBear84.OpenDirectoryDownloader
             repo: KoalaBear84/OpenDirectoryDownloader
             url: https://github.com/KoalaBear84/OpenDirectoryDownloader/releases/download/v{VERSION}/OpenDirectoryDownloader-{VERSION}-win-x64.zip
@@ -741,7 +741,7 @@ jobs:
             url: https://github.com/PolarGoose/ShowWhatProcessLocksFile/releases/download/v{VERSION}/ShowWhatProcessLocksFile.msi.zip
           - id: PolyMC.PolyMC
             repo: PolyMC/PolyMC
-            url: https://github.com/PolyMC/PolyMC/releases/download/{VERSION}/PolyMC-Windows-Setup-{VERSION}.exe
+            url: https://github.com/PolyMC/PolyMC/releases/download/{VERSION}/PolyMC-Windows-Setup-amd64-{VERSION}.exe
           - id: Primecount.Primecount
             repo: kimwalisch/primecount-winget
             url: https://github.com/kimwalisch/primecount-winget/releases/download/v{VERSION}/Primecount-{VERSION}-win-x64.exe https://github.com/kimwalisch/primecount-winget/releases/download/v{VERSION}/Primecount-{VERSION}-win-arm64.exe
@@ -781,6 +781,7 @@ jobs:
           GHURLs: ${{ matrix.url }}
           GHRepo: ${{ matrix.repo }}
           GHTagPattern: ${{ matrix.tagPattern }}
+          WinMatschOverridePack: ${{ matrix.overridePack }}
           PackageName: ${{ matrix.id }}
           With: ${{ matrix.With }}
           Submit: "false"

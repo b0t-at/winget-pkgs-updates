@@ -30,7 +30,8 @@ function Update-WingetPackage {
         [Parameter(Mandatory = $false)] [string] $releaseNotes,
         [Parameter(Mandatory = $false)] [string] $GHRepo,
         [Parameter(Mandatory = $false)] [string] $GHURLs,
-        [Parameter(Mandatory = $false)] [string] $GHTagPattern
+        [Parameter(Mandatory = $false)] [string] $GHTagPattern,
+        [Parameter(Mandatory = $false)] [string] $WinMatschOverridePack
     )
 
     # Initialize result object
@@ -107,6 +108,17 @@ function Update-WingetPackage {
         $EffectiveWith = 'WinGetCreate'
     }
 
+    $ResolvedWinMatschOverridePack = $null
+    if (-not [string]::IsNullOrWhiteSpace($WinMatschOverridePack)) {
+        if ($EffectiveWith -ne 'WinMatsch') {
+            throw 'WinMatschOverridePack can only be used with the WinMatsch generator.'
+        }
+        if (-not (Test-Path -LiteralPath $WinMatschOverridePack -PathType Leaf)) {
+            throw "WinMatsch override pack not found: $WinMatschOverridePack"
+        }
+        $ResolvedWinMatschOverridePack = (Resolve-Path -LiteralPath $WinMatschOverridePack).Path
+    }
+
     $result.Version = $Latest.Version
     $prMessage = "Update version: $wingetPackage version $($Latest.Version)"
     $result.PrTitle = $prMessage
@@ -174,12 +186,17 @@ function Update-WingetPackage {
                         $winmatschArgs += "--resolves"
                         $winmatschArgs += $resolves
                     }
+                    if ($ResolvedWinMatschOverridePack) {
+                        $winmatschArgs += "--override-pack"
+                        $winmatschArgs += $ResolvedWinMatschOverridePack
+                    }
                     $winmatschArgs += "--token"
                     $winmatschArgs += $gitToken
                     $winmatschArgs += "--output"
                     $winmatschArgs += "$ManifestOutPath"
 
-                    Write-Host "Running: winmatsch $($winmatschArgs -replace $gitToken, '***' -join ' ')"
+                    $displayArgs = $winmatschArgs | ForEach-Object { if ($_ -eq $gitToken) { '***' } else { $_ } }
+                    Write-Host "Running: winmatsch $($displayArgs -join ' ')"
                     & winmatsch @winmatschArgs
                 }
                 "Komac" {
@@ -202,7 +219,8 @@ function Update-WingetPackage {
                     $komacArgs += "--output"
                     $komacArgs += "$ManifestOutPath"
 
-                    Write-Host "Running: komac $($komacArgs -replace $gitToken, '***' -join ' ')"
+                    $displayArgs = $komacArgs | ForEach-Object { if ($_ -eq $gitToken) { '***' } else { $_ } }
+                    Write-Host "Running: komac $($displayArgs -join ' ')"
                     & komac @komacArgs
                 }
                 "WinGetCreate" {

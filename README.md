@@ -14,3 +14,20 @@
 
 ## Tools:
 **[Orca](https://learn.microsoft.com/de-de/windows/win32/msi/orca-exe)**: database table editor for creating and editing Windows Installer packages
+
+## Package-specific WinMatsch overrides
+
+Keep safety questions enabled by default. When a package has reviewed, stable
+exceptions, add a WinMatsch override-pack YAML file to the repository and set
+its matrix entry's `overridePack` field to that repository-relative path:
+
+```yaml
+- id: Publisher.App
+	repo: publisher/app
+	url: https://github.com/publisher/app/releases/download/v{VERSION}/setup.exe
+	overridePack: overrides/Publisher.App.yaml
+```
+
+The single-package workflow exposes the same path as `overridePack`. The wrapper
+rejects missing files and rejects override packs with Komac or WinGetCreate, so
+an override cannot be silently ignored.
