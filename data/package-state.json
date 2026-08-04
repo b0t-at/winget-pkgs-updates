@@ -188,14 +188,14 @@
   },
   "Bitwarden.CLI": {
     "manifestHash": "C2DE2355F913F6DB6F549DB1C0EF49B4B2E7BDC5DF373F788C33AD6507B140D1",
-    "validationCount": 6,
+    "validationCount": 7,
     "version": "2026.7.0",
     "installerHashes": [
       "B0C22438607B789C6452DBD37FFD6BE0E8A61E7A5C4E9AC57804D7AE5ED01B5B"
     ],
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-04T18:52:04.0621233Z"
+    "lastUpdated": "2026-08-04T21:07:38.5426964Z"
   },
   "bornova.numara": {
     "validationCount": 1,
@@ -375,8 +375,8 @@
       "D7F0466177308BBC9AA6DBAEE1081099FB05770D1824036D8F5C8BFD76BA36EF"
     ],
     "description": "",
-    "lastUpdated": "2026-08-04T18:52:03.9997192Z",
-    "validationCount": 5
+    "lastUpdated": "2026-08-04T21:07:38.584526Z",
+    "validationCount": 6
   },
   "DDEVFoundation.DDEV": {
     "description": "",
@@ -695,14 +695,14 @@
   },
   "GitButler.GitButler": {
     "manifestHash": "9051A75F0CA8E3F510BC9F556C54411C083935AE326D1379C27E6944C6AB5DED",
-    "validationCount": 6,
+    "validationCount": 7,
     "version": "0.22.0",
     "installerHashes": [
       "CB73D9C66F6785AECCCF22B2603A98C493027E9B7EC3D10A8F5EA1F7185CDD62"
     ],
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-04T18:52:04.0293949Z"
+    "lastUpdated": "2026-08-04T21:07:38.4962623Z"
   },
   "Glarysoft.GlaryUtilities": {
     "validationCount": 1,
@@ -1269,25 +1269,25 @@
   },
   "MongoDB.MongoDBAtlasCLI": {
     "manifestHash": "3A6D93254BF823C9EA0E26BD1D2CD46D62C122523770FB305369EFEFA02450F0",
-    "validationCount": 6,
+    "validationCount": 7,
     "version": "1.57.0",
     "installerHashes": [
       "E270852ABACE16C5DA11361A5773327E7C5E94D34D9E8ECDDE4977506868A361"
     ],
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-04T18:52:04.0129769Z"
+    "lastUpdated": "2026-08-04T21:07:38.576333Z"
   },
   "MongoDB.Server": {
     "manifestHash": "A9B88045AE828CCBE40230212E28D9D78AF3C6FF57948307E87309CE30F7F670",
-    "validationCount": 6,
+    "validationCount": 7,
     "version": "8.3.7",
     "installerHashes": [
       "3E91C0A69F9CF20BFCEAA7C8BC714D63FFBB8F0834A6E7043A734EFACC97A8DB"
     ],
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-04T18:52:03.9551156Z"
+    "lastUpdated": "2026-08-04T21:07:38.5327806Z"
   },
   "MongoDB.Shell": {
     "manifestHash": "8EFA0392E8582A43775BE0051BE6732A0D6E8C781770BC7A7FAD230E3A55ED61",
