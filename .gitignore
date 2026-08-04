@@ -1,5 +1,7 @@
 manifests/
 Tests
+!tests/
+!tests/Save-PackageState.Tests.ps1
 scripts/package-cleanup/broken_packages.csv
 scripts/package-cleanup/cleaned_packages.csv
 *.msi
