@@ -1768,16 +1768,16 @@
     "validationCount": 1
   },
   "cURL.cURL": {
-    "validationCount": 1,
-    "description": "",
-    "version": "8.21.0.2",
-    "lastUpdated": "2026-06-29T12:16:38.7422226Z",
+    "version": "8.21.0.6",
+    "manifestHash": "19D7EC5917021FDA4CCED435910C2F289922ADC603D5267974E381D4C81BFEBA",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "2A3E951F522BE7D9A3A964BE57E74EE15D19DD970BCC7B7843445089901A3ED4",
-      "CAA1AA6FED0607020A3EDE5C753B8A3824B572080585B7C069CFBAA8A7B19D0C"
+      "0C119D394BAB91ECD97B64791F24BDDC247D08840431E0045BCB92BBA3275665",
+      "D7F0466177308BBC9AA6DBAEE1081099FB05770D1824036D8F5C8BFD76BA36EF"
     ],
-    "state": "VALIDATION_FAILED",
-    "manifestHash": "D9964BAFF58D53A6519BCF8D2DA4230A8DD477327F1D58000705D07507368C02"
+    "description": "",
+    "lastUpdated": "2026-08-04T06:44:13.0709108Z",
+    "validationCount": 1
   },
   "MongoDB.Shell": {
     "manifestHash": "8EFA0392E8582A43775BE0051BE6732A0D6E8C781770BC7A7FAD230E3A55ED61",
@@ -1792,25 +1792,25 @@
   },
   "Bitwarden.CLI": {
     "manifestHash": "C2DE2355F913F6DB6F549DB1C0EF49B4B2E7BDC5DF373F788C33AD6507B140D1",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "2026.7.0",
     "installerHashes": [
       "B0C22438607B789C6452DBD37FFD6BE0E8A61E7A5C4E9AC57804D7AE5ED01B5B"
     ],
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-03T22:25:20.5421038Z"
+    "lastUpdated": "2026-08-04T06:44:13.1359159Z"
   },
   "GitButler.GitButler": {
     "manifestHash": "9051A75F0CA8E3F510BC9F556C54411C083935AE326D1379C27E6944C6AB5DED",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "0.22.0",
     "installerHashes": [
       "CB73D9C66F6785AECCCF22B2603A98C493027E9B7EC3D10A8F5EA1F7185CDD62"
     ],
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-03T22:25:20.4841933Z"
+    "lastUpdated": "2026-08-04T06:44:13.1053306Z"
   },
   "zkSNACKs.WasabiWallet": {
     "state": "VALIDATION_PASSED",
@@ -2164,25 +2164,25 @@
   },
   "MongoDB.Server": {
     "manifestHash": "A9B88045AE828CCBE40230212E28D9D78AF3C6FF57948307E87309CE30F7F670",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "8.3.7",
     "installerHashes": [
       "3E91C0A69F9CF20BFCEAA7C8BC714D63FFBB8F0834A6E7043A734EFACC97A8DB"
     ],
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-03T22:25:20.5178769Z"
+    "lastUpdated": "2026-08-04T06:44:13.1639940Z"
   },
   "MongoDB.MongoDBAtlasCLI": {
     "manifestHash": "3A6D93254BF823C9EA0E26BD1D2CD46D62C122523770FB305369EFEFA02450F0",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "1.57.0",
     "installerHashes": [
       "E270852ABACE16C5DA11361A5773327E7C5E94D34D9E8ECDDE4977506868A361"
     ],
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-03T22:25:20.5285542Z"
+    "lastUpdated": "2026-08-04T06:44:13.1218227Z"
   },
   "ThePyzoteam.pyzo": {
     "state": "VALIDATION_PASSED",
