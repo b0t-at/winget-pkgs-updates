@@ -3,8 +3,20 @@ function Get-LatestARPVersion {
     param(
         [Parameter(Mandatory = $true)][string]$Repo,
         [Parameter(Mandatory = $true)][string]$Tag,
-        [Parameter(Mandatory = $true)][string]$GHURLs
+        [Parameter(Mandatory = $true)][string]$GHURLs,
+        [Parameter(Mandatory = $false)]
+        [ValidateSet('Tag', 'ReleaseName')]
+        [string]$VersionSource = 'Tag'
     )
+    if ($VersionSource -eq 'ReleaseName') {
+        $release = gh release view --repo $Repo $Tag --json name | ConvertFrom-Json
+        if ([string]::IsNullOrWhiteSpace($release.name)) {
+            throw "No release name found for tag $Tag in repo $Repo"
+        }
+
+        return $release.name.Trim()
+    }
+
     $splittedGHURLs = $GHURLs.split(" ")
     # If the GHURLs contain {ARPVERSION}, find the ARP version from the asset links via regex
     if ( $splittedGHURLs -match "{ARPVERSION}") {

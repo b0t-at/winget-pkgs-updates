@@ -781,6 +781,7 @@ jobs:
           GHURLs: ${{ matrix.url }}
           GHRepo: ${{ matrix.repo }}
           GHTagPattern: ${{ matrix.tagPattern }}
+          GHVersionSource: ${{ matrix.versionSource }}
           WinMatschOverridePack: ${{ matrix.overridePack }}
           PackageName: ${{ matrix.id }}
           With: ${{ matrix.With }}

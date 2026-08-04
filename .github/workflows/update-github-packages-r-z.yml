@@ -231,7 +231,8 @@ jobs:
             url: https://github.com/tobya/DocTo/releases/download/v{VERSION}/docto.exe
           - id: TomEnglert.RegionToShare
             repo: tom-englert/RegionToShare
-            url: https://github.com/tom-englert/RegionToShare/releases/download/{VERSION}/RegionToShare.zip
+            url: https://github.com/tom-englert/RegionToShare/releases/download/{TAG}/RegionToShare.zip
+            versionSource: ReleaseName
           - id: TravisLane.SteamArtManager
             repo: Tormak9970/Steam-Art-Manager
             url: https://github.com/Tormak9970/Steam-Art-Manager/releases/download/v{VERSION}/steam-art-manager.msi
@@ -266,9 +267,6 @@ jobs:
           - id: VictorIX.BlenderLauncher
             repo: Victor-IX/Blender-Launcher-V2
             url: https://github.com/Victor-IX/Blender-Launcher-V2/releases/download/v{VERSION}/Blender_Launcher_v{VERSION}_Windows_x64.zip
-          - id: Vipre.IPVTest
-            repo: vimalraj-adikesavan/IPV-PUBLIC
-            url: https://github.com/vimalraj-adikesavan/IPV-PUBLIC/releases/download/Public-Release/GitHubTest.exe
           - id: VirusTotal.vt-cli
             repo: VirusTotal/vt-cli
             url: https://github.com/VirusTotal/vt-cli/releases/download/{VERSION}/Windows64.zip
@@ -375,6 +373,7 @@ jobs:
           GHURLs: ${{ matrix.url }}
           GHRepo: ${{ matrix.repo }}
           GHTagPattern: ${{ matrix.tagPattern }}
+          GHVersionSource: ${{ matrix.versionSource }}
           WinMatschOverridePack: ${{ matrix.overridePack }}
           PackageName: ${{ matrix.id }}
           With: ${{ matrix.With }}

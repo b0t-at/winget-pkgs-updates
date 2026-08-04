@@ -31,6 +31,7 @@ function Update-WingetPackage {
         [Parameter(Mandatory = $false)] [string] $GHRepo,
         [Parameter(Mandatory = $false)] [string] $GHURLs,
         [Parameter(Mandatory = $false)] [string] $GHTagPattern,
+        [Parameter(Mandatory = $false)][ValidateSet('Tag', 'ReleaseName')] [string] $GHVersionSource = 'Tag',
         [Parameter(Mandatory = $false)] [string] $WinMatschOverridePack
     )
 
@@ -68,7 +69,11 @@ function Update-WingetPackage {
     elseif ($GHRepo -and $GHURLs) {
 
         $versionTag = Get-LatestGHVersionTag -Repo $GHRepo -TagPattern $GHTagPattern
-        $latestVersion = Get-LatestARPVersion -Repo $GHRepo -Tag $versionTag -GHURLs $GHURLs
+        $latestVersion = Get-LatestARPVersion `
+            -Repo $GHRepo `
+            -Tag $versionTag `
+            -GHURLs $GHURLs `
+            -VersionSource $GHVersionSource
 
         $Latest = @{
             Version = $latestVersion
