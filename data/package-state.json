@@ -22,16 +22,16 @@
     "validationCount": 3
   },
   "SVGExplorerExtension.SVGExplorerExtension": {
-    "lastUpdated": "2026-05-17T17:14:09.0079925Z",
-    "version": "1.1.0",
     "state": "VALIDATION_FAILED",
-    "validationCount": 3,
-    "manifestHash": "059304D64C635D087A25D3A1134654456C33F2F99196C67BB8FE5639EA6F5778",
+    "manifestHash": "37C831E3B98EC1EDFF4808A49D08AE79D6081355BC52AB9E63923EE9548EB8D9",
     "installerHashes": [
-      "64962D289A30B4F1F1A782E1DD44BC16EB3A181760AC01A456580FDED2CD0FA9",
-      "69F9721C6605B487BC78CD90439EC7B0819AD8BF77616F3CBF3B5E18B9FCA6DB"
+      "69F9721C6605B487BC78CD90439EC7B0819AD8BF77616F3CBF3B5E18B9FCA6DB",
+      "64962D289A30B4F1F1A782E1DD44BC16EB3A181760AC01A456580FDED2CD0FA9"
     ],
-    "description": ""
+    "description": "",
+    "validationCount": 1,
+    "version": "1.1.0",
+    "lastUpdated": "2026-08-04T00:42:23.0886522Z"
   },
   "Vipre.IPVTest": {
     "description": "",
@@ -92,15 +92,15 @@
     "validationCount": 1
   },
   "rejetto.hfs": {
-    "description": "",
-    "manifestHash": "8A32D4DB11D4DFDB64BBCF6CB6DD6C7C291A659D7D739838468B13B5A5BC9389",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "CE1DA7685ACAE6DF0C3C52585292527B683875F92C25D7CD4DEC8A893BC8DB7D",
     "installerHashes": [
-      "00556018AFDD618FBCC0D3D0669F97DB73CF75EC43716AFBB43E4F5AAAC087C9"
+      "8C6D4AEF24DF7A7F5BF58BF2BCDE52932AFCD1CC31B50BDC5D2FB8B02D41C514"
     ],
-    "version": "3.2.1",
-    "state": "VALIDATION_FAILED",
-    "validationCount": 3,
-    "lastUpdated": "2026-07-14T00:55:49.8762225Z"
+    "description": "",
+    "validationCount": 1,
+    "version": "3.2.2",
+    "lastUpdated": "2026-08-04T00:42:23.1797317Z"
   },
   "Sayuri.FFFTP": {
     "description": "",
@@ -580,15 +580,15 @@
     "lastUpdated": "2026-06-30T06:01:23.7315361Z"
   },
   "Snyk.Snyk": {
-    "installerHashes": [
-      "E9F8166A866C7F04B944ACF88EADB80FDB6F2386895944B5E5F58477A8C35AEA"
-    ],
-    "manifestHash": "FAC90699C242EEEEA07103F5F7F3A393BEA09D5661787C7478CDD67BA1B7D0FA",
-    "lastUpdated": "2026-07-16T16:50:06.46653Z",
-    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "version": "1.1306.1",
-    "description": ""
+    "manifestHash": "80FCC68E22A88A235C8ABF8B37F936E09AE9D4E9FFFE5D86360F233FDD0B49A3",
+    "installerHashes": [
+      "EF4464F717A596CB003E06005CE399DFD475DF19CAFC699EC7D63F60B6E6A2E7"
+    ],
+    "description": "",
+    "validationCount": 1,
+    "version": "1.1306.2",
+    "lastUpdated": "2026-08-04T00:42:23.2165400Z"
   },
   "jaegertracing.jaeger": {
     "state": "VALIDATION_PASSED",
@@ -739,15 +739,15 @@
     "manifestHash": "5C9C2B5C8944C616B955A76C17C4544046FB50FED06CE2831032B7D798380292"
   },
   "SimpleX.SimpleX-Chat": {
-    "manifestHash": "0647B4A2B9C54A668D9793985273D2DD82477CFA6817EF7F942E5766E2F10D84",
-    "version": "6.5.6",
-    "validationCount": 2,
     "state": "VALIDATION_PASSED",
-    "description": "",
+    "manifestHash": "7D934138AC6E3E963FC41F1875DBBEB9E78CB58443E528E2AC1C44B09418B51B",
     "installerHashes": [
-      "E78E0EC58D53F43BEA3C343F06F32F4A1A43F224D8E76A4E9416C6CBD11E8BAE"
+      "605254B3A1D2E312361E08C088FA526D0627866C7315201739C5CE6BA8DF4198"
     ],
-    "lastUpdated": "2026-07-08T01:08:26.598027Z"
+    "description": "",
+    "validationCount": 1,
+    "version": "7.0.0",
+    "lastUpdated": "2026-08-04T00:42:23.2073423Z"
   },
   "cinnyapp.cinny-desktop": {
     "installerHashes": [
@@ -877,14 +877,14 @@
   },
   "Storj.Uplink": {
     "state": "VALIDATION_PASSED",
+    "manifestHash": "65F110A955CF3B7341D6AE16725BB04B1E70E993E6BEBA1922A5CEFB99C7DAC8",
     "installerHashes": [
-      "A186BD3A5FBE4732EE748D2C875CBB02FF881D0ECA4B81F91B2E4EEE179BF6E1"
+      "A654FC2E9240D04B9D3AEA40D78ADE05C0C31678E0876561B41C3EA3317D08CF"
     ],
     "description": "",
-    "lastUpdated": "2026-07-17T12:51:33.536235Z",
-    "version": "1.160.3",
-    "manifestHash": "1683BB5DDF42F35BB7B32D3002E5B3871546129881EB3194ACB56A4CEE22DC06",
-    "validationCount": 1
+    "validationCount": 1,
+    "version": "1.161.2",
+    "lastUpdated": "2026-08-04T00:42:23.1890086Z"
   },
   "AdGuard.AdGuardHome": {
     "installerHashes": [
@@ -992,14 +992,14 @@
   },
   "Yaak.app": {
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "lastUpdated": "2026-05-20T16:07:00.7521434Z",
-    "version": "2026.4.0",
-    "manifestHash": "33820A5667B243C77A4EA134145D05FEF8BE8F26E8F6B4F129E82BC446B4D227",
-    "validationCount": 1,
+    "manifestHash": "7E9DBBF148E6430667C3D1685BFA268D90FC300F3A6A8DBC1573BB9FB1247148",
     "installerHashes": [
-      "026DC0753F4880313B93BBFF848A9CD09A114F87111AAAEF5E4E698C52C8B561"
-    ]
+      "29A9CB37473C3A0DE234F8AF4130B02F85537F17AC4B411BAFC08411F1555F9F"
+    ],
+    "description": "",
+    "validationCount": 1,
+    "version": "2026.5.0",
+    "lastUpdated": "2026-08-04T00:42:23.1980887Z"
   },
   "Docker.DockerCompose": {
     "lastUpdated": "2026-07-07T13:44:03.7402903Z",
@@ -1051,15 +1051,15 @@
     "validationCount": 1
   },
   "sparrowwallet.sparrow": {
-    "validationCount": 1,
-    "version": "2.5.2",
-    "description": "",
-    "installerHashes": [
-      "DD523E2627368EB8B4C27304D1425E0B5BC81079B645FECE40178DC763E58534"
-    ],
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-05-31T14:18:05.2705477Z",
-    "manifestHash": "1DDFD578AD1680ADFFA99AB0C482DA9D7BF56D7683E6AD37560B65057F84C4E1"
+    "manifestHash": "16E45C024DEBBDC0D954465B5ACD917182CAC4928D95913AED56CD16B5A1BE10",
+    "installerHashes": [
+      "9CC0C2E2296DA65415D9C133C95CE940EC175F62FE0007D1ED6B06753172C1CC"
+    ],
+    "description": "",
+    "validationCount": 1,
+    "version": "2.5.3",
+    "lastUpdated": "2026-08-04T00:42:23.1293817Z"
   },
   "ASGARDEXMaintainers.ASGARDEX": {
     "description": "",
@@ -1813,15 +1813,15 @@
     "lastUpdated": "2026-08-03T22:25:20.4841933Z"
   },
   "zkSNACKs.WasabiWallet": {
-    "validationCount": 2,
-    "lastUpdated": "2026-06-29T17:36:02.6817067Z",
-    "version": "2.8.0",
-    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "7E3D97505F4230E39893578DB628DC5F479394B711DF0FF000F0AF4F1D20DD34",
     "installerHashes": [
-      "270399EB2E1E09A759F5FCDEFAFD1C649D56ADF0C376C9B52C0E55ABE3395420"
+      "80C5DB8C28589F03CB74D63D6B96A7D6D598C75E29B59D82B41B8204C628F640"
     ],
-    "manifestHash": "D0D602B22CD51CDA17F829F6350FAEF6E86849EC88F15BE01BF6BA2E3B55A37E",
-    "state": "VALIDATION_PASSED"
+    "description": "",
+    "validationCount": 1,
+    "version": "2.8.1",
+    "lastUpdated": "2026-08-04T00:42:23.119374Z"
   },
   "simulot.immich-go": {
     "validationCount": 1,
@@ -2183,5 +2183,27 @@
     "description": "",
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-08-03T22:25:20.5285542Z"
+  },
+  "ThePyzoteam.pyzo": {
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "897D2C9B2A7CD457B008876F765BECA2B93DE99424F9C64DD147D5B362382F00",
+    "installerHashes": [
+      "EC0F70CD2F1AA1DEC948C3241EEBF7CF3C1109264B66A5200232E80BD8FF1CF6"
+    ],
+    "description": "",
+    "validationCount": 1,
+    "version": "4.22.0",
+    "lastUpdated": "2026-08-04T00:42:23.1477081Z"
+  },
+  "sunfish-shogi.shogihome": {
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "519E52474245367516903186882A004B4DB0EF62EA689BDDFC6E1C89C6A504DB",
+    "installerHashes": [
+      "9B7155D416A18F2D400A12AEBB641F13F6023A798B77B4954BBC663F9A81F67A"
+    ],
+    "description": "",
+    "validationCount": 1,
+    "version": "1.29.0",
+    "lastUpdated": "2026-08-04T00:42:23.1699276Z"
   }
 }
