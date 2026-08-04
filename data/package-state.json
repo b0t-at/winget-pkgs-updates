@@ -29,9 +29,9 @@
       "64962D289A30B4F1F1A782E1DD44BC16EB3A181760AC01A456580FDED2CD0FA9"
     ],
     "description": "",
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "1.1.0",
-    "lastUpdated": "2026-08-04T03:55:58.2068243Z"
+    "lastUpdated": "2026-08-04T06:34:41.3366303Z"
   },
   "Vipre.IPVTest": {
     "description": "",
@@ -98,9 +98,9 @@
       "8C6D4AEF24DF7A7F5BF58BF2BCDE52932AFCD1CC31B50BDC5D2FB8B02D41C514"
     ],
     "description": "",
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "3.2.2",
-    "lastUpdated": "2026-08-04T03:55:58.3474135Z"
+    "lastUpdated": "2026-08-04T06:34:41.3661806Z"
   },
   "Sayuri.FFFTP": {
     "description": "",
@@ -586,9 +586,9 @@
       "EF4464F717A596CB003E06005CE399DFD475DF19CAFC699EC7D63F60B6E6A2E7"
     ],
     "description": "",
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "1.1306.2",
-    "lastUpdated": "2026-08-04T03:55:58.2728844Z"
+    "lastUpdated": "2026-08-04T06:34:41.4184785Z"
   },
   "jaegertracing.jaeger": {
     "state": "VALIDATION_PASSED",
@@ -745,9 +745,9 @@
       "605254B3A1D2E312361E08C088FA526D0627866C7315201739C5CE6BA8DF4198"
     ],
     "description": "",
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "7.0.0",
-    "lastUpdated": "2026-08-04T03:55:58.3348237Z"
+    "lastUpdated": "2026-08-04T06:34:41.4780063Z"
   },
   "cinnyapp.cinny-desktop": {
     "installerHashes": [
@@ -882,9 +882,9 @@
       "A654FC2E9240D04B9D3AEA40D78ADE05C0C31678E0876561B41C3EA3317D08CF"
     ],
     "description": "",
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "1.161.2",
-    "lastUpdated": "2026-08-04T03:55:58.2399694Z"
+    "lastUpdated": "2026-08-04T06:34:41.3769254Z"
   },
   "AdGuard.AdGuardHome": {
     "installerHashes": [
@@ -997,9 +997,9 @@
       "29A9CB37473C3A0DE234F8AF4130B02F85537F17AC4B411BAFC08411F1555F9F"
     ],
     "description": "",
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "2026.5.0",
-    "lastUpdated": "2026-08-04T03:55:58.3125605Z"
+    "lastUpdated": "2026-08-04T06:34:41.4308787Z"
   },
   "Docker.DockerCompose": {
     "lastUpdated": "2026-07-07T13:44:03.7402903Z",
@@ -1057,9 +1057,9 @@
       "9CC0C2E2296DA65415D9C133C95CE940EC175F62FE0007D1ED6B06753172C1CC"
     ],
     "description": "",
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "2.5.3",
-    "lastUpdated": "2026-08-04T03:55:58.3000376Z"
+    "lastUpdated": "2026-08-04T06:34:41.3945854Z"
   },
   "ASGARDEXMaintainers.ASGARDEX": {
     "description": "",
@@ -1819,9 +1819,9 @@
       "80C5DB8C28589F03CB74D63D6B96A7D6D598C75E29B59D82B41B8204C628F640"
     ],
     "description": "",
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "2.8.1",
-    "lastUpdated": "2026-08-04T03:55:58.3609992Z"
+    "lastUpdated": "2026-08-04T06:34:41.4650548Z"
   },
   "simulot.immich-go": {
     "validationCount": 1,
@@ -2191,9 +2191,9 @@
       "EC0F70CD2F1AA1DEC948C3241EEBF7CF3C1109264B66A5200232E80BD8FF1CF6"
     ],
     "description": "",
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "4.22.0",
-    "lastUpdated": "2026-08-04T03:55:58.2510499Z"
+    "lastUpdated": "2026-08-04T06:34:41.4410873Z"
   },
   "sunfish-shogi.shogihome": {
     "state": "VALIDATION_PASSED",
@@ -2202,8 +2202,8 @@
       "9B7155D416A18F2D400A12AEBB641F13F6023A798B77B4954BBC663F9A81F67A"
     ],
     "description": "",
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "1.29.0",
-    "lastUpdated": "2026-08-04T03:55:58.3232308Z"
+    "lastUpdated": "2026-08-04T06:34:41.4525788Z"
   }
 }
