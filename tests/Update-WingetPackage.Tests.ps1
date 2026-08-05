@@ -100,28 +100,47 @@ Assert-SequenceEqual `
     -Expected @('--urls', $plainUrls[0], '--urls', $plainUrls[1]) `
     -Message 'Multiple plain URL arguments were incorrect.'
 
-Write-Host 'TEST: architecture-qualified URL is passed only through --url'
+Write-Host 'TEST: architecture-qualified URL is passed through --urls and --url'
 $architectureUrl = 'https://github.com/sunfish-shogi/shogihome/releases/download/v1.0.0/release-v1.0.0-win.zip|x86'
+$architectureInstallerUrl = $architectureUrl.Split('|')[0]
 Assert-SequenceEqual `
     -Actual (Get-TestWinMatschUrlArguments -InstallerValues $architectureUrl) `
-    -Expected @('--url', $architectureUrl) `
+    -Expected @('--urls', $architectureInstallerUrl, '--url', $architectureUrl) `
     -Message 'Architecture-qualified URL arguments were incorrect.'
 
-Write-Host 'TEST: F95Checker neutral URL is not passed a second time as a plain URL'
-$f95CheckerUrl = 'https://github.com/Willy-JL/F95Checker/releases/download/12.0.0/F95Checker-Windows.zip|neutral'
+Write-Host 'TEST: F95Checker neutral URL is passed through --urls and --url'
+$f95CheckerUrl = 'https://github.com/Willy-JL/F95Checker/releases/download/11.1.3/F95Checker-Windows.zip|neutral'
+$f95CheckerInstallerUrl = $f95CheckerUrl.Split('|')[0]
 Assert-SequenceEqual `
     -Actual (Get-TestWinMatschUrlArguments -InstallerValues $f95CheckerUrl) `
-    -Expected @('--url', $f95CheckerUrl) `
+    -Expected @('--urls', $f95CheckerInstallerUrl, '--url', $f95CheckerUrl) `
     -Message 'F95Checker URL arguments were incorrect.'
 
-Write-Host 'TEST: scoped URL is passed only through --url'
+Write-Host 'TEST: scoped URL is passed through --urls and --url'
 $scopedUrl = 'https://example.invalid/app.zip|neutral|machine'
+$scopedInstallerUrl = $scopedUrl.Split('|')[0]
 Assert-SequenceEqual `
     -Actual (Get-TestWinMatschUrlArguments -InstallerValues $scopedUrl) `
-    -Expected @('--url', $scopedUrl) `
+    -Expected @('--urls', $scopedInstallerUrl, '--url', $scopedUrl) `
     -Message 'Scoped URL arguments were incorrect.'
 
-Write-Host 'TEST: mixed URL list passes every installer exactly once'
+Write-Host 'TEST: same-URL dual-scope entries preserve both source and override representations'
+$zeroInstallUrl = 'https://github.com/0install/0install-win/releases/download/2.29.2/zero-install.exe'
+$zeroInstallUrls = @(
+    "$zeroInstallUrl|x86|user"
+    "$zeroInstallUrl|x86|machine"
+)
+Assert-SequenceEqual `
+    -Actual (Get-TestWinMatschUrlArguments -InstallerValues $zeroInstallUrls) `
+    -Expected @(
+        '--urls', $zeroInstallUrl
+        '--url', $zeroInstallUrls[0]
+        '--urls', $zeroInstallUrl
+        '--url', $zeroInstallUrls[1]
+    ) `
+    -Message 'Same-URL dual-scope arguments were incorrect.'
+
+Write-Host 'TEST: mixed URL list preserves source entries and qualified overrides'
 $mixedUrls = @(
     'https://example.invalid/plain-x64.zip'
     'https://example.invalid/qualified-x86.zip|x86'
@@ -132,13 +151,15 @@ Assert-SequenceEqual `
     -Actual (Get-TestWinMatschUrlArguments -InstallerValues $mixedUrls) `
     -Expected @(
         '--urls', $mixedUrls[0]
+        '--urls', $mixedUrls[1].Split('|')[0]
         '--url', $mixedUrls[1]
         '--urls', $mixedUrls[2]
+        '--urls', $mixedUrls[3].Split('|')[0]
         '--url', $mixedUrls[3]
     ) `
     -Message 'Mixed URL arguments were incorrect.'
 
-Write-Host 'TEST: Update-WingetPackage sends the production-shaped URL only once'
+Write-Host 'TEST: Update-WingetPackage sends both representations for a qualified URL'
 $updateArguments = Invoke-TestUpdateWingetPackage -InstallerValue $f95CheckerUrl
 $updateUrlArguments = [System.Collections.Generic.List[string]]::new()
 for ($index = 0; $index -lt $updateArguments.Count; $index++) {
@@ -150,8 +171,28 @@ for ($index = 0; $index -lt $updateArguments.Count; $index++) {
 }
 Assert-SequenceEqual `
     -Actual $updateUrlArguments `
-    -Expected @('--url', $f95CheckerUrl) `
-    -Message 'Update-WingetPackage duplicated the F95Checker URL.'
+    -Expected @('--urls', $f95CheckerInstallerUrl, '--url', $f95CheckerUrl) `
+    -Message 'Update-WingetPackage did not preserve the F95Checker source and override.'
+
+Write-Host 'TEST: Update-WingetPackage preserves same-URL dual-scope entries'
+$zeroInstallUpdateArguments = Invoke-TestUpdateWingetPackage -InstallerValue ($zeroInstallUrls -join ' ')
+$zeroInstallUpdateUrlArguments = [System.Collections.Generic.List[string]]::new()
+for ($index = 0; $index -lt $zeroInstallUpdateArguments.Count; $index++) {
+    if ($zeroInstallUpdateArguments[$index] -in @('--url', '--urls')) {
+        $zeroInstallUpdateUrlArguments.Add($zeroInstallUpdateArguments[$index])
+        $zeroInstallUpdateUrlArguments.Add($zeroInstallUpdateArguments[$index + 1])
+        $index++
+    }
+}
+Assert-SequenceEqual `
+    -Actual $zeroInstallUpdateUrlArguments `
+    -Expected @(
+        '--urls', $zeroInstallUrl
+        '--url', $zeroInstallUrls[0]
+        '--urls', $zeroInstallUrl
+        '--url', $zeroInstallUrls[1]
+    ) `
+    -Message 'Update-WingetPackage did not preserve the same-URL dual-scope entries.'
 
 Write-Host 'TEST: structural rewrite approval is opt-in'
 $defaultUpdateArguments = Invoke-TestUpdateWingetPackage -InstallerValue $plainUrl

@@ -55,13 +55,12 @@ function Get-WinMatschInstallerUrlArguments {
     )
 
     foreach ($installerEntry in $InstallerEntries) {
+        '--urls'
+        $installerEntry.InstallerUrl
+
         if ($installerEntry.ArchitectureHint) {
             '--url'
             $installerEntry.OriginalValue
-        }
-        else {
-            '--urls'
-            $installerEntry.InstallerUrl
         }
     }
 }
