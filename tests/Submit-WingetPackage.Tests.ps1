@@ -1,57 +1,60 @@
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
-Import-Module Pester -MinimumVersion 3.4
-
 $repositoryRoot = Split-Path -Parent $PSScriptRoot
 Import-Module (Join-Path $repositoryRoot 'modules/WingetMaintainerModule/WingetMaintainerModule.psd1') -Force
-$global:SubmitWingetPackageTestManifestPath = Join-Path ([IO.Path]::GetTempPath()) "winget-submit-tests-$([guid]::NewGuid().ToString('N'))"
-New-Item -ItemType Directory -Path $global:SubmitWingetPackageTestManifestPath -Force | Out-Null
 
-$global:NewTestSubmissionAttempt = {
-    param(
-        [int] $ExitCode,
-        [string] $ErrorCode,
-        [string] $ErrorMessage,
-        [string] $PrUrl
-    )
+Describe 'Submit-WingetPackage branch-moved retry' {
+    BeforeEach {
+        $global:SubmitWingetPackageTestManifestPath = Join-Path ([IO.Path]::GetTempPath()) "winget-submit-tests-$([guid]::NewGuid().ToString('N'))"
+        New-Item -ItemType Directory -Path $global:SubmitWingetPackageTestManifestPath -Force | Out-Null
+        $global:NewTestSubmissionAttempt = {
+            param(
+                [int] $ExitCode,
+                [string] $ErrorCode,
+                [string] $ErrorMessage,
+                [string] $PrUrl
+            )
 
-    $result = if ($ErrorCode) {
-        [pscustomobject]@{
-            error = [pscustomobject]@{
-                code    = $ErrorCode
-                message = $ErrorMessage
+            if ($ErrorCode) {
+                $result = [pscustomobject]@{
+                    error = [pscustomobject]@{
+                        code    = $ErrorCode
+                        message = $ErrorMessage
+                    }
+                }
+            }
+            else {
+                $result = [pscustomobject]@{
+                    pullRequest = [pscustomobject]@{
+                        url    = $PrUrl
+                        number = '12345'
+                    }
+                }
+            }
+
+            return [pscustomobject]@{
+                ExitCode  = $ExitCode
+                Output    = if ($ErrorCode) { "$ErrorCode : $ErrorMessage" } else { "Created $PrUrl" }
+                Result    = $result
+                ErrorCode = $ErrorCode
+                Error     = if ($ErrorCode) { "$ErrorCode : $ErrorMessage" } else { $null }
             }
         }
-    }
-    else {
-        [pscustomobject]@{
-            pullRequest = [pscustomobject]@{
-                url    = $PrUrl
-                number = '12345'
-            }
+
+        InModuleScope WingetMaintainerModule {
+            $script:submissionAttempts = 0
+            Mock Install-WinMatsch {}
+            Mock Test-ExistingPRs { $false }
+            Mock Get-WingetPkgsPrUrl { $null }
         }
     }
 
-    return [pscustomobject]@{
-        ExitCode  = $ExitCode
-        Output    = if ($ErrorCode) { "$ErrorCode : $ErrorMessage" } else { "Created $PrUrl" }
-        Result    = $result
-        ErrorCode = $ErrorCode
-        Error     = if ($ErrorCode) { "$ErrorCode : $ErrorMessage" } else { $null }
+    AfterEach {
+        Remove-Item -LiteralPath $global:SubmitWingetPackageTestManifestPath -Recurse -Force -ErrorAction SilentlyContinue
+        Remove-Variable -Name SubmitWingetPackageTestManifestPath -Scope Global -ErrorAction SilentlyContinue
+        Remove-Variable -Name NewTestSubmissionAttempt -Scope Global -ErrorAction SilentlyContinue
     }
-}
-
-try {
-    Describe 'Submit-WingetPackage branch-moved retry' {
-        BeforeEach {
-            InModuleScope WingetMaintainerModule {
-                $script:submissionAttempts = 0
-                Mock Install-WinMatsch {}
-                Mock Test-ExistingPRs { $false }
-                Mock Get-WingetPkgsPrUrl { $null }
-            }
-        }
 
         It 'revalidates and submits once after a safe GH2020 branch movement' {
             InModuleScope WingetMaintainerModule {
@@ -160,9 +163,3 @@ try {
             }
         }
     }
-}
-finally {
-    Remove-Item -LiteralPath $global:SubmitWingetPackageTestManifestPath -Recurse -Force -ErrorAction SilentlyContinue
-    Remove-Variable -Name SubmitWingetPackageTestManifestPath -Scope Global -ErrorAction SilentlyContinue
-    Remove-Variable -Name NewTestSubmissionAttempt -Scope Global -ErrorAction SilentlyContinue
-}
