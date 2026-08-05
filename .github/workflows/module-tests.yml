@@ -41,3 +41,4 @@ jobs:
           ./tests/Update-WingetPackage.Tests.ps1
           ./tests/GitHubApiCache.Tests.ps1
           ./tests/SubmissionWorkflowAuthorization.Tests.ps1
+          Invoke-Pester ./tests/Submit-WingetPackage.Tests.ps1 -EnableExit
