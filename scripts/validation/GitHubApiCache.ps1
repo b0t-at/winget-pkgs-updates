@@ -109,6 +109,10 @@ function Invoke-GitHubApiRequest {
         [int] $MaxTotalWaitSeconds = 120,
 
         [Parameter()]
+        [ValidateRange(1, 300)]
+        [int] $RequestTimeoutSeconds = 30,
+
+        [Parameter()]
         [scriptblock] $RequestInvoker,
 
         [Parameter()]
@@ -144,6 +148,7 @@ function Invoke-GitHubApiRequest {
         Method      = 'Get'
         Headers     = $headers
         ErrorAction = 'Stop'
+        TimeoutSec  = $RequestTimeoutSeconds
     }
 
     $totalWaitSeconds = 0
@@ -211,6 +216,26 @@ function Get-CachedGitHubApiResponse {
         [string] $CacheName,
 
         [Parameter()]
+        [ValidateRange(1, 10)]
+        [int] $MaxAttempts = 4,
+
+        [Parameter()]
+        [ValidateRange(1, 600)]
+        [int] $MaxTotalWaitSeconds = 120,
+
+        [Parameter()]
+        [ValidateRange(1, 300)]
+        [int] $RequestTimeoutSeconds = 30,
+
+        [Parameter()]
+        [ValidateRange(0, 60)]
+        [int] $LockWaitMarginSeconds = 15,
+
+        [Parameter()]
+        [ValidateRange(10, 5000)]
+        [int] $LockPollMilliseconds = 1000,
+
+        [Parameter()]
         [scriptblock] $RequestInvoker,
 
         [Parameter()]
@@ -251,8 +276,22 @@ function Get-CachedGitHubApiResponse {
         return $cachedResponse
     }
 
+    $invokeParameters = @{
+        Uri                   = $Uri
+        Token                 = $Token
+        MaxAttempts           = $MaxAttempts
+        MaxTotalWaitSeconds   = $MaxTotalWaitSeconds
+        RequestTimeoutSeconds = $RequestTimeoutSeconds
+        Sleep                 = $Sleep
+        UtcNowProvider        = $UtcNowProvider
+    }
+    if ($null -ne $RequestInvoker) {
+        $invokeParameters.RequestInvoker = $RequestInvoker
+    }
+
     $lockStream = $null
-    $lockDeadline = [DateTimeOffset]::UtcNow.AddSeconds(120)
+    $lockWaitSeconds = $MaxTotalWaitSeconds + ($RequestTimeoutSeconds * $MaxAttempts) + $LockWaitMarginSeconds
+    $lockDeadline = [DateTimeOffset]::UtcNow.AddSeconds($lockWaitSeconds)
     while ($null -eq $lockStream -and [DateTimeOffset]::UtcNow -lt $lockDeadline) {
         try {
             $lockStream = [System.IO.File]::Open(
@@ -263,11 +302,12 @@ function Get-CachedGitHubApiResponse {
             )
         }
         catch [System.IO.IOException] {
-            Start-Sleep -Seconds 1
+            Start-Sleep -Milliseconds $LockPollMilliseconds
         }
     }
     if ($null -eq $lockStream) {
-        throw "Timed out waiting for the GitHub API cache lock '$lockPath'."
+        Write-Warning "Timed out waiting $lockWaitSeconds seconds for the GitHub API cache lock '$lockPath'. Continuing with a direct uncached request."
+        return @(Invoke-GitHubApiRequest @invokeParameters)
     }
 
     try {
@@ -275,16 +315,6 @@ function Get-CachedGitHubApiResponse {
         if ($null -ne $cachedResponse) {
             Write-Verbose "Using GitHub API response cached by another process at $cachePath"
             return $cachedResponse
-        }
-
-        $invokeParameters = @{
-            Uri            = $Uri
-            Token          = $Token
-            Sleep          = $Sleep
-            UtcNowProvider = $UtcNowProvider
-        }
-        if ($null -ne $RequestInvoker) {
-            $invokeParameters.RequestInvoker = $RequestInvoker
         }
 
         $apiResponse = @(Invoke-GitHubApiRequest @invokeParameters)

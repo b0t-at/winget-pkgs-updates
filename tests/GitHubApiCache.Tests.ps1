@@ -29,10 +29,12 @@ try {
     Write-Host 'TEST: authenticated GitHub response is fetched once and reused for the UTC day'
     $requests = [System.Collections.Generic.List[int]]::new()
     $authenticatedRequests = [System.Collections.Generic.List[bool]]::new()
+    $requestTimeouts = [System.Collections.Generic.List[int]]::new()
     $requestInvoker = {
         param([hashtable]$Parameters)
 
         $requests.Add(1)
+        $requestTimeouts.Add($Parameters.TimeoutSec)
         $authorizationHeader = $Parameters.Headers[('Author' + 'ization')]
         $expectedHeader = 'Bearer' + [char]32 + 'test-token'
         $authenticatedRequests.Add($authorizationHeader -ceq $expectedHeader)
@@ -59,6 +61,7 @@ try {
 
     Assert-Equal -Actual $requests.Count -Expected 1 -Message 'The API request count was incorrect.'
     Assert-Equal -Actual $authenticatedRequests[0] -Expected $true -Message 'The API request was not authenticated.'
+    Assert-Equal -Actual $requestTimeouts[0] -Expected 30 -Message 'The API request timeout was incorrect.'
     Assert-Equal -Actual $first[0].tag_name -Expected 'v1.0.0' -Message 'The fetched release was incorrect.'
     Assert-Equal -Actual $second[0].tag_name -Expected 'v1.0.0' -Message 'The cached release was incorrect.'
 
@@ -127,6 +130,100 @@ try {
     if ($failureMessage -notmatch 'Retry the workflow after the reset or provide a token with available quota') {
         throw "The distant-reset error was not actionable. Actual message: $failureMessage"
     }
+
+    Write-Host 'TEST: waiter outlasts a slow lock holder and reads its cache'
+    $slowCacheName = 'slow-holder'
+    $slowCachePath = Join-Path $cacheDirectory "$slowCacheName-$($fixedNow.ToString('yyyy-MM-dd')).json"
+    $slowLockPath = "$slowCachePath.lock"
+    $slowHolder = Start-Job -ArgumentList $slowLockPath, $slowCachePath, $responseContent -ScriptBlock {
+        param($LockPath, $CachePath, $Content)
+
+        $stream = [System.IO.File]::Open(
+            $LockPath,
+            [System.IO.FileMode]::OpenOrCreate,
+            [System.IO.FileAccess]::ReadWrite,
+            [System.IO.FileShare]::None
+        )
+        try {
+            Start-Sleep -Milliseconds 1200
+            Set-Content -LiteralPath $CachePath -Value $Content -Encoding utf8
+        }
+        finally {
+            $stream.Dispose()
+        }
+    }
+
+    $holderStartDeadline = [DateTimeOffset]::UtcNow.AddSeconds(5)
+    while (!(Test-Path -LiteralPath $slowLockPath) -and [DateTimeOffset]::UtcNow -lt $holderStartDeadline) {
+        Start-Sleep -Milliseconds 25
+    }
+    if (!(Test-Path -LiteralPath $slowLockPath)) {
+        throw 'The slow lock holder did not start in time.'
+    }
+
+    $unexpectedRequests = [System.Collections.Generic.List[int]]::new()
+    try {
+        $slowResult = @(Get-CachedGitHubApiResponse `
+                -Uri 'https://api.github.test/slow-holder' `
+                -Token 'test-token' `
+                -CacheDirectory $cacheDirectory `
+                -CacheName $slowCacheName `
+                -MaxAttempts 1 `
+                -MaxTotalWaitSeconds 1 `
+                -RequestTimeoutSeconds 1 `
+                -LockWaitMarginSeconds 1 `
+                -LockPollMilliseconds 50 `
+                -RequestInvoker { param($Parameters) $unexpectedRequests.Add(1); throw 'Unexpected request' } `
+                -UtcNowProvider $utcNowProvider)
+    }
+    finally {
+        Wait-Job -Job $slowHolder -Timeout 5 | Out-Null
+        Receive-Job -Job $slowHolder -ErrorAction Stop | Out-Null
+        Remove-Job -Job $slowHolder -Force
+    }
+
+    Assert-Equal -Actual $unexpectedRequests.Count -Expected 0 -Message 'The waiter bypassed the slow holder.'
+    Assert-Equal -Actual $slowResult[0].tag_name -Expected 'v1.0.0' -Message 'The slow-holder cache result was incorrect.'
+
+    Write-Host 'TEST: lock timeout degrades to a direct uncached request'
+    $fallbackCacheName = 'lock-timeout'
+    $fallbackCachePath = Join-Path $cacheDirectory "$fallbackCacheName-$($fixedNow.ToString('yyyy-MM-dd')).json"
+    $fallbackLockPath = "$fallbackCachePath.lock"
+    $heldLock = [System.IO.File]::Open(
+        $fallbackLockPath,
+        [System.IO.FileMode]::OpenOrCreate,
+        [System.IO.FileAccess]::ReadWrite,
+        [System.IO.FileShare]::None
+    )
+    $fallbackRequests = [System.Collections.Generic.List[int]]::new()
+    try {
+        $fallbackResult = @(Get-CachedGitHubApiResponse `
+                -Uri 'https://api.github.test/lock-timeout' `
+                -Token 'test-token' `
+                -CacheDirectory $cacheDirectory `
+                -CacheName $fallbackCacheName `
+                -MaxAttempts 1 `
+                -MaxTotalWaitSeconds 1 `
+                -RequestTimeoutSeconds 1 `
+                -LockWaitMarginSeconds 0 `
+                -LockPollMilliseconds 50 `
+                -RequestInvoker {
+                    param($Parameters)
+                    $fallbackRequests.Add(1)
+                    [PSCustomObject]@{
+                        Headers = @{ 'X-RateLimit-Remaining' = '4997' }
+                        Content = $responseContent
+                    }
+                } `
+                -UtcNowProvider $utcNowProvider)
+    }
+    finally {
+        $heldLock.Dispose()
+    }
+
+    Assert-Equal -Actual $fallbackRequests.Count -Expected 1 -Message 'The lock timeout did not make a direct request.'
+    Assert-Equal -Actual $fallbackResult[0].tag_name -Expected 'v1.0.0' -Message 'The uncached fallback result was incorrect.'
+    Assert-Equal -Actual (Test-Path -LiteralPath $fallbackCachePath) -Expected $false -Message 'The uncached fallback wrote the cache.'
 
     Write-Host 'All GitHub API cache and retry tests passed.' -ForegroundColor Green
 }
