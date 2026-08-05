@@ -178,6 +178,7 @@ function Update-WingetPackage {
 
         if (!$PRExists) {
             Write-Host "Downloading $EffectiveWith and generate manifest for $wingetPackage Version $($Latest.Version)"
+            $generatorResult = $null
             Switch ($EffectiveWith) {
                 "WinMatsch" {
                     Install-WinMatsch
@@ -201,9 +202,22 @@ function Update-WingetPackage {
                     $winmatschArgs += "--output"
                     $winmatschArgs += "$ManifestOutPath"
 
+                    # Only newer builds understand --result-json; older ones reject the flag outright.
+                    $resultJsonPath = $null
+                    if (Test-WinMatschSupportsResultJson -Command 'update') {
+                        $resultJsonPath = New-WinMatschResultJsonPath -Label 'update'
+                        $winmatschArgs += "--result-json"
+                        $winmatschArgs += $resultJsonPath
+                    }
+
                     $displayArgs = $winmatschArgs | ForEach-Object { if ($_ -eq $gitToken) { '***' } else { $_ } }
                     Write-Host "Running: winmatsch $($displayArgs -join ' ')"
                     & winmatsch @winmatschArgs 2>&1 | Tee-Object -Variable generatorOutput | Out-Host
+
+                    $generatorResult = Read-WinMatschResult -Path $resultJsonPath
+                    if ($resultJsonPath) {
+                        Remove-Item -LiteralPath $resultJsonPath -Force -ErrorAction SilentlyContinue
+                    }
                 }
                 "Komac" {
                     Install-Komac
@@ -245,7 +259,17 @@ function Update-WingetPackage {
 
             if ($LASTEXITCODE -ne 0) {
                 $generatorExitCode = $LASTEXITCODE
-                $generatorError = Get-GeneratorFailureMessage -GeneratorOutput $generatorOutput
+
+                # Prefer the structured result; fall back to scraping the console output.
+                $generatorErrorCode = $null
+                $generatorError = Get-WinMatschResultError -Result $generatorResult
+                if ($generatorError) {
+                    $generatorErrorCode = "$($generatorResult.error.code)".Trim()
+                }
+                else {
+                    $generatorError = Get-GeneratorFailureMessage -GeneratorOutput $generatorOutput
+                }
+
                 $result.Reason = "GeneratorFailed"
 
                 # Surface the failure details so the workflow can render them in the run summary.
@@ -256,6 +280,7 @@ function Update-WingetPackage {
                     "version=$($Latest.Version)" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
                     "generator=$EffectiveWith" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
                     "generator-exit-code=$generatorExitCode" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                    "error-code=$generatorErrorCode" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
                     "error=$generatorError" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
                 }
 

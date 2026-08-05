@@ -91,6 +91,7 @@ jobs:
           STEPS_GENERATE_OUTPUTS_VERSION: ${{ steps.generate.outputs.version }}
           STEPS_GENERATE_OUTPUTS_GENERATOR: ${{ steps.generate.outputs.generator }}
           STEPS_GENERATE_OUTPUTS_EXIT_CODE: ${{ steps.generate.outputs.generator-exit-code }}
+          STEPS_GENERATE_OUTPUTS_ERROR_CODE: ${{ steps.generate.outputs.error-code }}
           STEPS_GENERATE_OUTPUTS_ERROR: ${{ steps.generate.outputs.error }}
         run: |
           New-Item -ItemType Directory -Force -Path ./generate-failure | Out-Null
@@ -106,6 +107,7 @@ jobs:
             version   = "$env:STEPS_GENERATE_OUTPUTS_VERSION"
             generator = "$env:STEPS_GENERATE_OUTPUTS_GENERATOR"
             exitCode  = "$env:STEPS_GENERATE_OUTPUTS_EXIT_CODE"
+            errorCode = "$env:STEPS_GENERATE_OUTPUTS_ERROR_CODE"
             error     = $errorText
           } | ConvertTo-Json | Out-File -FilePath ./generate-failure/failure.json -Encoding utf8
 
@@ -200,7 +202,16 @@ jobs:
           )
 
           foreach ($row in ($rows | Sort-Object -Property package)) {
-            $cells = @($row.job, $row.package, $row.version, $row.exitCode, $row.error) | ForEach-Object {
+            # Show the generator's stable error code as inline code when it reported one.
+            $errorCell = "$($row.error)"
+            if (-not [string]::IsNullOrWhiteSpace($row.errorCode) -and -not $errorCell.StartsWith("$($row.errorCode)")) {
+              $errorCell = "``$($row.errorCode)`` $errorCell"
+            }
+            elseif (-not [string]::IsNullOrWhiteSpace($row.errorCode)) {
+              $errorCell = $errorCell.Replace("$($row.errorCode)", "``$($row.errorCode)``", 1)
+            }
+
+            $cells = @($row.job, $row.package, $row.version, $row.exitCode, $errorCell) | ForEach-Object {
               # Collapse to a single line and escape pipes so the markdown table stays intact.
               $text = ("$_" -replace '\s*[\r\n]+\s*', ' ').Trim()
               if ([string]::IsNullOrWhiteSpace($text)) { '-' } else { $text.Replace('|', '\|') }
