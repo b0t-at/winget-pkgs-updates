@@ -41,3 +41,7 @@ jobs:
           ./tests/Update-WingetPackage.Tests.ps1
           ./tests/GitHubApiCache.Tests.ps1
           ./tests/SubmissionWorkflowAuthorization.Tests.ps1
+          $pesterConfig = New-PesterConfiguration
+          $pesterConfig.Run.Path = './tests/Submit-WingetPackage.Tests.ps1'
+          $pesterConfig.Run.Exit = $true
+          Invoke-Pester -Configuration $pesterConfig

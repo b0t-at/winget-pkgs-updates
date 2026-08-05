@@ -30,6 +30,10 @@
     GitHub Personal Access Token with repo scope. If not provided, uses
     GITHUB_TOKEN or WINGET_PAT environment variables.
 
+.PARAMETER MaxBranchMovedRetries
+    Maximum retries after WinMatsch reports its safe GH2020 branch-moved
+    conflict. Each retry runs a fresh WinMatsch validation/submission attempt.
+
 .EXAMPLE
     Submit-WingetPackage -ManifestPath "./manifests/f/Fork/Fork/1.85.0" `
         -PackageId "Fork.Fork" -Version "1.85.0"
@@ -78,7 +82,11 @@ function Submit-WingetPackage {
         [string] $With = "WinMatsch",
 
         [Parameter(Mandatory = $false)]
-        [string] $Token
+        [string] $Token,
+
+        [Parameter(Mandatory = $false)]
+        [ValidateRange(0, 3)]
+        [int] $MaxBranchMovedRetries = 1
     )
 
     # Get GitHub token
@@ -121,50 +129,52 @@ function Submit-WingetPackage {
                 # Ensure WinMatsch is installed
                 Install-WinMatsch
 
-                # Build winmatsch submit command arguments
-                # --submit pushes the PR through the GitHub lifecycle; --yes approves non-interactively
-                $winmatschArgs = @(
-                    "submit"
-                    $fullManifestPath
-                    "--submit"
-                    "--yes"
-                    "--prtitle", $PrTitle
-                    "--token", $Token
-                )
+                $maxAttempts = $MaxBranchMovedRetries + 1
+                for ($attempt = 1; $attempt -le $maxAttempts; $attempt++) {
+                    # This is a read-only check against microsoft/winget-pkgs.
+                    # WinMatsch remains the only component that creates the PR.
+                    if (Test-ExistingPRs -PackageIdentifier $PackageId -Version $Version) {
+                        $existingPrUrl = Get-WingetPkgsPrUrl -PackageId $PackageId -Version $Version
+                        $existingPrNumber = if ($existingPrUrl -match '/pull/(?<Number>\d+)$') {
+                            $Matches['Number']
+                        }
+                        else {
+                            $null
+                        }
 
-                # Add resolves if provided
-                if (-not [string]::IsNullOrWhiteSpace($Resolves)) {
-                    $winmatschArgs += "--resolves"
-                    $winmatschArgs += $Resolves
-                }
+                        Write-Host 'A matching winget-pkgs PR already exists; skipping submission.' -ForegroundColor Yellow
+                        return @{
+                            Success  = $true
+                            Error    = $null
+                            PrUrl    = $existingPrUrl
+                            PrNumber = $existingPrNumber
+                        }
+                    }
 
-                # Only newer builds understand --result-json; older ones reject the flag outright.
-                $resultJsonPath = $null
-                if (Test-WinMatschSupportsResultJson -Command 'submit') {
-                    $resultJsonPath = New-WinMatschResultJsonPath -Label 'submit'
-                    $winmatschArgs += "--result-json"
-                    $winmatschArgs += $resultJsonPath
-                }
+                    $attemptResult = Invoke-WinMatschSubmitAttempt `
+                        -ManifestPath $fullManifestPath `
+                        -PrTitle $PrTitle `
+                        -Token $Token `
+                        -Resolves $Resolves
+                    $output = $attemptResult.Output
+                    $exitCode = $attemptResult.ExitCode
+                    $winmatschResult = $attemptResult.Result
 
-                Write-Host "--> Running: winmatsch $($winmatschArgs -replace $Token, '***' -join ' ')" -ForegroundColor White
+                    if ($exitCode -eq 0) {
+                        break
+                    }
 
-                $output = & winmatsch @winmatschArgs 2>&1
-                $exitCode = $LASTEXITCODE
-
-                Write-Host $output
-
-                $winmatschResult = Read-WinMatschResult -Path $resultJsonPath
-                if ($resultJsonPath) {
-                    Remove-Item -LiteralPath $resultJsonPath -Force -ErrorAction SilentlyContinue
-                }
-
-                if ($exitCode -ne 0) {
-                    $reportedError = Get-WinMatschResultError -Result $winmatschResult
+                    $reportedError = $attemptResult.Error
                     if (-not $reportedError) { $reportedError = "Output: $output" }
+
+                    if ((Test-WinMatschBranchMovedRetryable -Attempt $attemptResult) -and $attempt -lt $maxAttempts) {
+                        Write-Warning "WinMatsch validated branch moved before PR creation (GH2020); retrying fresh validation ($($attempt + 1) of $maxAttempts)."
+                        continue
+                    }
 
                     return @{
                         Success  = $false
-                        Error    = "WinMatsch submit failed with exit code $exitCode. $reportedError"
+                        Error    = "WinMatsch submit failed with exit code $exitCode after $attempt attempt(s). $reportedError"
                         PrUrl    = $null
                         PrNumber = $null
                     }
