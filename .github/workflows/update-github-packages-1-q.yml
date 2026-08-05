@@ -395,10 +395,7 @@ jobs:
           - id: Gruntwork.cloud-nuke
             repo: gruntwork-io/cloud-nuke
             url: https://github.com/gruntwork-io/cloud-nuke/releases/download/v{VERSION}/cloud-nuke_windows_386.exe https://github.com/gruntwork-io/cloud-nuke/releases/download/v{VERSION}/cloud-nuke_windows_amd64.exe
-          - id: Gruntwork.Terragrunt
-            repo: gruntwork-io/terragrunt
-            url: https://github.com/gruntwork-io/terragrunt/releases/download/v{VERSION}/terragrunt_windows_386.exe https://github.com/gruntwork-io/terragrunt/releases/download/v{VERSION}/terragrunt_windows_amd64.exe
-            allowStructuralRewrite: true
+          # Gruntwork.Terragrunt is excluded: WinMatsch drops the published portable nested-installer metadata.
           # gurnec.HashCheckShellExtension is excluded: its current installer SHA256 is already published.
           # Gyan.FFmpeg.Essentials is excluded: 9.0 removed the prior release asset layout, which requires a reviewed WinMatsch mapping override.
           - id: h3poteto.fedistar
