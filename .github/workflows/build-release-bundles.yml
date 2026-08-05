@@ -39,22 +39,25 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v6
+        uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
         with:
           global-json-file: global.json
 
       - name: Compute version
         id: version
         shell: pwsh
+        env:
+          REF_NAME: ${{ github.ref_name }}
+          RUN_NUMBER: ${{ github.run_number }}
         run: |
-          $ref = "${{ github.ref_name }}"
+          $ref = $env:REF_NAME
           if ($ref -match '^v\d') { $version = $ref.TrimStart('v') }
-          else { $version = "0.0.0-ci.${{ github.run_number }}" }
+          else { $version = "0.0.0-ci.$env:RUN_NUMBER" }
           "version=$version" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
           Write-Host "Bundle version: $version"
 
@@ -104,7 +107,7 @@ jobs:
           Copy-Item modules/WingetMaintainerModule staging/sandboxrunner/modules/WingetMaintainerModule -Recurse -Force
 
       - name: Upload CLI bundle
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: winget-maintainer-cli-${{ steps.version.outputs.version }}
           path: staging/cli
@@ -112,7 +115,7 @@ jobs:
           retention-days: 14
 
       - name: Upload Worker bundle
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: winget-maintainer-worker-${{ steps.version.outputs.version }}
           path: staging/worker
@@ -120,7 +123,7 @@ jobs:
           retention-days: 14
 
       - name: Upload SandboxRunner bundle
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: winget-maintainer-sandboxrunner-${{ steps.version.outputs.version }}
           path: staging/sandboxrunner
@@ -128,7 +131,7 @@ jobs:
           retention-days: 14
 
       - name: Upload Dashboard bundle
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: winget-maintainer-dashboard-${{ steps.version.outputs.version }}
           path: staging/dashboard
@@ -139,8 +142,10 @@ jobs:
       - name: Zip bundles for release
         if: startsWith(github.ref, 'refs/tags/v')
         shell: pwsh
+        env:
+          BUNDLE_VERSION: ${{ steps.version.outputs.version }}
         run: |
-          $v = "${{ steps.version.outputs.version }}"
+          $v = $env:BUNDLE_VERSION
           New-Item -ItemType Directory -Force -Path release | Out-Null
           foreach ($c in 'cli','worker','sandboxrunner','dashboard') {
             Compress-Archive -Path "staging/$c/*" -DestinationPath "release/winget-maintainer-$c-$v.zip" -Force
@@ -148,8 +153,24 @@ jobs:
 
       - name: Publish GitHub Release
         if: startsWith(github.ref, 'refs/tags/v')
-        uses: softprops/action-gh-release@v3
-        with:
-          files: release/*.zip
-          fail_on_unmatched_files: true
-          generate_release_notes: true
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG_NAME: ${{ github.ref_name }}
+        run: |
+          $assets = @(Get-ChildItem -Path release -Filter '*.zip' | Select-Object -ExpandProperty FullName)
+          if ($assets.Count -eq 0) {
+            throw 'No release bundles were found.'
+          }
+
+          gh release view $env:TAG_NAME *> $null
+          if ($LASTEXITCODE -eq 0) {
+            gh release upload $env:TAG_NAME $assets --clobber
+          }
+          else {
+            gh release create $env:TAG_NAME $assets --generate-notes --verify-tag
+          }
+
+          if ($LASTEXITCODE -ne 0) {
+            throw "Publishing release $env:TAG_NAME failed."
+          }
