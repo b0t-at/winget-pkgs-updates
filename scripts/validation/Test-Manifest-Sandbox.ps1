@@ -758,7 +758,10 @@ if (`$manifestFolder) {
     `$newARP | Export-Csv -Path (Join-Path `$LogsFolder 'ARP_After.csv') -NoTypeInformation
     `$newARP | ConvertTo-Json | Out-File -FilePath (Join-Path `$LogsFolder 'ARP_After.json') -Encoding utf8
     
-    `$arpDifference = Compare-Object `$newARP `$originalARP -Property DisplayName,DisplayVersion,Publisher,ProductCode,Scope | Select-Object -Property * -ExcludeProperty SideIndicator
+    # @() guards against a null table (a clean sandbox can report zero ARP entries, which
+    # makes Compare-Object throw); '<=' keeps only entries the install actually added.
+    `$arpDifference = Compare-Object @(`$newARP) @(`$originalARP) -Property DisplayName,DisplayVersion,Publisher,ProductCode,Scope |
+        Where-Object { `$_.SideIndicator -eq '<=' } | Select-Object -Property * -ExcludeProperty SideIndicator
     `$arpDifference | Format-Table
     `$arpDifference | Export-Csv -Path (Join-Path `$LogsFolder 'ARP_Differences.csv') -NoTypeInformation
     `$arpDifference | ConvertTo-Json | Out-File -FilePath (Join-Path `$LogsFolder 'ARP_Differences.json') -Encoding utf8
