@@ -187,17 +187,7 @@ function Update-WingetPackage {
                         $wingetPackage
                         "--version", $Latest.Version
                     )
-                    foreach ($RequestedUrl in $RequestedInstallerUrls) {
-                        $winmatschArgs += "--urls"
-                        $winmatschArgs += $RequestedUrl
-                    }
-                    # Installer hints are supported natively via --url overrides.
-                    foreach ($RequestedEntry in $RequestedInstallerEntries) {
-                        if ($RequestedEntry.ArchitectureHint) {
-                            $winmatschArgs += "--url"
-                            $winmatschArgs += $RequestedEntry.OriginalValue
-                        }
-                    }
+                    $winmatschArgs += Get-WinMatschInstallerUrlArguments -InstallerEntries $RequestedInstallerEntries
                     if ($resolves -match '^\d+$') {
                         $winmatschArgs += "--resolves"
                         $winmatschArgs += $resolves

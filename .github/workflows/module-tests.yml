@@ -34,4 +34,6 @@ jobs:
 
       - name: Run regression tests
         shell: pwsh
-        run: ./tests/Save-PackageState.Tests.ps1
+        run: |
+          ./tests/Save-PackageState.Tests.ps1
+          ./tests/Update-WingetPackage.Tests.ps1
