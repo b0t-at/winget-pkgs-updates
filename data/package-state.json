@@ -1658,9 +1658,9 @@
       "8C6D4AEF24DF7A7F5BF58BF2BCDE52932AFCD1CC31B50BDC5D2FB8B02D41C514"
     ],
     "description": "",
-    "validationCount": 3,
+    "validationCount": 4,
     "version": "3.2.2",
-    "lastUpdated": "2026-08-04T06:34:41.3661806Z"
+    "lastUpdated": "2026-08-05T07:49:49.2211629Z"
   },
   "restic.restic": {
     "manifestHash": "93FE5612F3EC7F999E752B415F0748CA7862F92CFCC586E36C8CA9B1B3D7D45F",
@@ -1686,16 +1686,16 @@
     ]
   },
   "RoslynPad.RoslynPad": {
-    "description": "",
-    "manifestHash": "570E329A62A3BAB8E8A7425638D48791B46B07A03A59B2992BD2ED3F2C040E4F",
-    "state": "VALIDATION_FAILED",
     "installerHashes": [
-      "5BECDC423BCCFACF18E620F734C86B656477031D4C2B77CB6742DB289B2D74B6",
-      "EC64C4C4C73E0DAF400D2EA2FEE0B8BE12A91E3DF6716886CEE116B3F693C662"
+      "40ACF22DC8CA71C1C2D85A7F98F0E1BEDF26D0152C89CD8493C0A5189901AA55",
+      "8920C9A276DF2AF7FCA5F264C5F1EC70C65B50394F6915AFDC1C786FDBE0D4C5"
     ],
-    "version": "20",
-    "lastUpdated": "2026-05-10T20:33:03.6211065Z",
-    "validationCount": 1
+    "description": "",
+    "lastUpdated": "2026-08-05T07:49:49.3159377Z",
+    "manifestHash": "5D7F9173FC3117688CDEF3A7D2C4D2F308F51E8AD58FDE445650AB63D1C05212",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "version": "22.1"
   },
   "S3Drive.S3Drive": {
     "validationCount": 1,
@@ -1763,9 +1763,9 @@
       "605254B3A1D2E312361E08C088FA526D0627866C7315201739C5CE6BA8DF4198"
     ],
     "description": "",
-    "validationCount": 3,
+    "validationCount": 4,
     "version": "7.0.0",
-    "lastUpdated": "2026-08-04T06:34:41.4780063Z"
+    "lastUpdated": "2026-08-05T07:49:49.334479Z"
   },
   "simulot.immich-go": {
     "validationCount": 1,
@@ -1797,9 +1797,9 @@
       "EF4464F717A596CB003E06005CE399DFD475DF19CAFC699EC7D63F60B6E6A2E7"
     ],
     "description": "",
-    "validationCount": 3,
+    "validationCount": 4,
     "version": "1.1306.2",
-    "lastUpdated": "2026-08-04T06:34:41.4184785Z"
+    "lastUpdated": "2026-08-05T07:49:49.3436414Z"
   },
   "SparkLabs.openvpn-configuration-generator": {
     "description": "",
@@ -1819,9 +1819,9 @@
       "9CC0C2E2296DA65415D9C133C95CE940EC175F62FE0007D1ED6B06753172C1CC"
     ],
     "description": "",
-    "validationCount": 3,
+    "validationCount": 4,
     "version": "2.5.3",
-    "lastUpdated": "2026-08-04T06:34:41.3945854Z"
+    "lastUpdated": "2026-08-05T07:49:49.172883Z"
   },
   "srevinsaju.guiscrcpy.PyQt5": {
     "description": "",
@@ -1848,15 +1848,15 @@
     "validationCount": 1
   },
   "Storj.Uplink": {
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "65F110A955CF3B7341D6AE16725BB04B1E70E993E6BEBA1922A5CEFB99C7DAC8",
     "installerHashes": [
-      "A654FC2E9240D04B9D3AEA40D78ADE05C0C31678E0876561B41C3EA3317D08CF"
+      "AAC6A58C6CC80A9E5C839F87E1D87958831826AEC3DC9C01DB19321A04A9E5AB"
     ],
     "description": "",
-    "validationCount": 3,
-    "version": "1.161.2",
-    "lastUpdated": "2026-08-04T06:34:41.3769254Z"
+    "lastUpdated": "2026-08-05T07:49:49.2672187Z",
+    "manifestHash": "3E1A3E516FEB7EC67D6C46C2240DF270B40B315A71CEB9F47715FA345553FEA6",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "version": "1.161.4"
   },
   "Stripe.StripeCli": {
     "version": "1.43.5",
@@ -1887,9 +1887,9 @@
       "9B7155D416A18F2D400A12AEBB641F13F6023A798B77B4954BBC663F9A81F67A"
     ],
     "description": "",
-    "validationCount": 3,
+    "validationCount": 4,
     "version": "1.29.0",
-    "lastUpdated": "2026-08-04T06:34:41.4525788Z"
+    "lastUpdated": "2026-08-05T07:49:49.2793361Z"
   },
   "SUSE.RancherDesktop": {
     "description": "",
@@ -1913,6 +1913,17 @@
     "validationCount": 3,
     "version": "1.1.0",
     "lastUpdated": "2026-08-04T06:34:41.3366303Z"
+  },
+  "Syncplay.Syncplay": {
+    "installerHashes": [
+      "76D0614A97DD2695F2B00988847BABFD53F7EC6CE5C6914ACD7F875D7F2EB1D3"
+    ],
+    "description": "",
+    "lastUpdated": "2026-08-05T07:49:49.2048831Z",
+    "manifestHash": "1DDA223EEF19893B03B17F865CEFE6F45ECBC577BC1F8DCF92CD2506B39FFC8B",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "version": "1.7.6"
   },
   "T-Troll.AlienFXTools": {
     "manifestHash": "EEA8C838A9D3AB5FB403E40190328C596C18D6300B5539EB08A21B676DB63623",
@@ -2001,9 +2012,9 @@
       "EC0F70CD2F1AA1DEC948C3241EEBF7CF3C1109264B66A5200232E80BD8FF1CF6"
     ],
     "description": "",
-    "validationCount": 3,
+    "validationCount": 4,
     "version": "4.22.0",
-    "lastUpdated": "2026-08-04T06:34:41.4410873Z"
+    "lastUpdated": "2026-08-05T07:49:49.3068253Z"
   },
   "TomEnglert.RegionToShare": {
     "description": "",
@@ -2140,6 +2151,17 @@
     "version": "3.42.5375",
     "state": "VALIDATION_FAILED"
   },
+  "wkjarosz.hdrview": {
+    "installerHashes": [
+      "F6C7F15CD15D65A6E752612E4691E54225606EDE60446B6BBBC9BEE35E8BEBE1"
+    ],
+    "description": "",
+    "lastUpdated": "2026-08-05T07:49:49.2886397Z",
+    "manifestHash": "796DA04887EC5EA52527E9200D7172659D60D3EA2918E682AF09693079AE30C0",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "version": "2.8.1"
+  },
   "xpipe-io.xpipe.portable": {
     "state": "VALIDATION_PASSED",
     "description": "",
@@ -2158,9 +2180,9 @@
       "29A9CB37473C3A0DE234F8AF4130B02F85537F17AC4B411BAFC08411F1555F9F"
     ],
     "description": "",
-    "validationCount": 3,
+    "validationCount": 4,
     "version": "2026.5.0",
-    "lastUpdated": "2026-08-04T06:34:41.4308787Z"
+    "lastUpdated": "2026-08-05T07:49:49.3251948Z"
   },
   "Yubico.Authenticator": {
     "installerHashes": [
@@ -2202,8 +2224,8 @@
       "80C5DB8C28589F03CB74D63D6B96A7D6D598C75E29B59D82B41B8204C628F640"
     ],
     "description": "",
-    "validationCount": 3,
+    "validationCount": 4,
     "version": "2.8.1",
-    "lastUpdated": "2026-08-04T06:34:41.4650548Z"
+    "lastUpdated": "2026-08-05T07:49:49.2978205Z"
   }
 }
