@@ -46,6 +46,26 @@ function Get-InstallerUrlEntries {
     }
 }
 
+function Get-WinMatschInstallerUrlArguments {
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory = $true)]
+        [AllowEmptyCollection()]
+        [object[]]$InstallerEntries
+    )
+
+    foreach ($installerEntry in $InstallerEntries) {
+        if ($installerEntry.ArchitectureHint) {
+            '--url'
+            $installerEntry.OriginalValue
+        }
+        else {
+            '--urls'
+            $installerEntry.InstallerUrl
+        }
+    }
+}
+
 function Get-InstallerManifestEntries {
     [CmdletBinding(DefaultParameterSetName = 'Path')]
     param(
