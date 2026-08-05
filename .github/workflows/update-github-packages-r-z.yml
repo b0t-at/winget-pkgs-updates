@@ -942,6 +942,10 @@ jobs:
     runs-on: windows-2025
     if: always() && needs.collect-validated.result == 'success' && needs.collect-validated.outputs.has_packages == 'true'
     environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Test' }}
+    # Serialize submissions for the same package across scheduled runs.
+    concurrency:
+      group: winget-pkgs-submit-${{ matrix.PackageName }}
+      cancel-in-progress: false
 
     strategy:
       fail-fast: false
@@ -1020,7 +1024,8 @@ jobs:
           $result = Submit-WingetPackage `
             -ManifestPath "$env:STEPS_MANIFEST_OUTPUTS_PATH" `
             -PackageId "$env:MATRIX_PACKAGENAME" `
-            -Version "$env:MATRIX_VERSION"
+            -Version "$env:MATRIX_VERSION" `
+            -With "WinGetCreate"
 
           if ($result.Success) {
             Write-Host "PR submitted successfully!" -ForegroundColor Green
