@@ -43,6 +43,8 @@ Param(
     [switch] $Clean
 )
 
+. (Join-Path $PSScriptRoot 'GitHubApiCache.ps1')
+
 Write-Host "Running Test-Manifest-Sandbox"
 
 # Validate that exactly one of ManifestURL or ManifestPath is provided (or neither for WinGet-only install)
@@ -148,6 +150,12 @@ $script:UiLibsHash_NuGet = '6B62BD3C277F55518C3738121B77585AC5E171C154936EC58D87
 $script:AppInstallerDataFolder = Join-Path -Path (Join-Path -Path $env:LOCALAPPDATA -ChildPath 'Packages') -ChildPath $script:AppInstallerPFN
 $script:TokenValidationCache = Join-Path -Path $script:AppInstallerDataFolder -ChildPath 'TokenValidationCache'
 $script:DependenciesCacheFolder = Join-Path -Path $script:AppInstallerDataFolder -ChildPath "$script:ScriptName.Dependencies"
+$releaseCacheRoot = if (![string]::IsNullOrWhiteSpace($env:RUNNER_TOOL_CACHE)) {
+    $env:RUNNER_TOOL_CACHE
+} else {
+    $script:DependenciesCacheFolder
+}
+$script:ReleasesCacheFolder = Join-Path -Path $releaseCacheRoot -ChildPath 'winget-pkgs-updates\github-api'
 $script:TestDataFolder = Join-Path -Path $script:AppInstallerDataFolder -ChildPath $script:ScriptName
 $script:PrimaryMappedFolder = (Resolve-Path -Path $MapFolder).Path
 $script:ConfigurationFile = Join-Path -Path $script:TestDataFolder -ChildPath "$script:ScriptName.wsb"
@@ -167,9 +175,12 @@ Add-Type -AssemblyName System.Net.Http
 $script:HttpClient = New-Object System.Net.Http.HttpClient
 $script:CleanupPaths = @()
 
-# Removed the `-GitHubToken`parameter, always use environment variable
-# It is possible that the environment variable may not exist, in which case this may be null
-$script:GitHubToken = $env:WINGET_PKGS_GITHUB_TOKEN
+# Prefer the job-scoped GitHub token so concurrent workflows do not share a user's API quota.
+$script:GitHubToken = if (![string]::IsNullOrWhiteSpace($env:GITHUB_TOKEN)) {
+    $env:GITHUB_TOKEN
+} else {
+    $env:WINGET_PKGS_GITHUB_TOKEN
+}
 
 # The experimental features get updated later based on a switch that is set
 $script:SandboxWinGetSettings = @{
@@ -231,36 +242,27 @@ function Initialize-Folder {
 # Outputs: Nullable Object containing GitHub release details
 ####
 function Get-Release {
-    [Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSAvoidUsingConvertToSecureStringWithPlainText', '',
-        Justification='The standard workflow that users use with other applications requires the use of plaintext GitHub Access Tokens')]
-
     param (
         [Parameter()]
         [AllowEmptyString()]
         [String] $GitHubToken
     )
 
-    # Build up the API request parameters here so the authentication can be added if the user's token is valid
-    $requestParameters = @{
-        Uri = $script:ReleasesApiUrl
-    }
-
     if (![string]::IsNullOrWhiteSpace($GitHubToken)) {
-        # The validation function will return True only if the provided token is valid
         Write-Verbose 'Adding Bearer Token Authentication to Releases API Request'
-        $requestParameters.Add('Authentication', 'Bearer')
-        $requestParameters.Add('Token', $(ConvertTo-SecureString $GitHubToken -AsPlainText))
     }
     else {
-        # No token was provided or the token has expired
-        # If an invalid token was provided, an exception will have been thrown before this code is reached
         Write-Warning @"
 A valid GitHub token was not provided. You may encounter API rate limits.
-Please consider adding your token using the `WINGET_PKGS_GITHUB_TOKEN` environment variable.
+Please provide GITHUB_TOKEN or WINGET_PKGS_GITHUB_TOKEN.
 "@
     }
 
-    $releasesAPIResponse = Invoke-RestMethod @requestParameters
+    $releasesAPIResponse = @(Get-CachedGitHubApiResponse `
+            -Uri $script:ReleasesApiUrl `
+            -Token $GitHubToken `
+            -CacheDirectory $script:ReleasesCacheFolder `
+            -CacheName 'microsoft-winget-cli-releases')
     if (!$script:Prerelease) {
         $releasesAPIResponse = $releasesAPIResponse.Where({ !$_.prerelease })
     }
@@ -462,7 +464,13 @@ if (!$SkipManifestValidation -and ![String]::IsNullOrWhiteSpace($Manifest)) {
 
 # Get the details for the version of WinGet that was requested
 Write-Verbose "Fetching release details from $script:ReleasesApiUrl; Filters: {Prerelease=$script:Prerelease; Version~=$script:WinGetVersion}"
-$script:WinGetReleaseDetails = Get-Release -GitHubToken $script:GitHubToken
+try {
+    $script:WinGetReleaseDetails = Get-Release -GitHubToken $script:GitHubToken
+}
+catch {
+    Write-Error "Unable to obtain WinGet release metadata. $($_.Exception.Message)" -ErrorAction Continue
+    Invoke-CleanExit -ExitCode 1
+}
 if (!$script:WinGetReleaseDetails) {
     Write-Error -Category ObjectNotFound 'No WinGet releases found matching criteria' -ErrorAction Continue
     Invoke-CleanExit -ExitCode 1

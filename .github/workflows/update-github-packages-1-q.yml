@@ -1082,7 +1082,7 @@ jobs:
         timeout-minutes: 30
         shell: pwsh
         env:
-          WINGET_PKGS_GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
+          GITHUB_TOKEN: ${{ github.token }}
           STEPS_MANIFEST_OUTPUTS_PATH: ${{ steps.manifest.outputs.path }}
         run: |
           $manifestPath = "$env:STEPS_MANIFEST_OUTPUTS_PATH"
@@ -1355,6 +1355,7 @@ jobs:
 
     strategy:
       fail-fast: false
+      max-parallel: 10
       matrix: ${{ fromJson(needs.collect-validated.outputs.matrix) }}
 
     steps:
