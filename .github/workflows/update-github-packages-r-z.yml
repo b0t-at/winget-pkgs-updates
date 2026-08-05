@@ -1015,6 +1015,8 @@ jobs:
         shell: pwsh
         env:
           GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
+          WINGET_PKGS_FORK_REPO: ${{ vars.WINGET_PKGS_FORK_REPO }}
+          WINGET_PKGS_SUBMISSION_TARGET: ${{ github.ref == 'refs/heads/main' && 'Upstream' || 'Fork' }}
           STEPS_MANIFEST_OUTPUTS_PATH: ${{ steps.manifest.outputs.path }}
           MATRIX_PACKAGENAME: ${{ matrix.PackageName }}
           MATRIX_VERSION: ${{ matrix.version }}
@@ -1025,7 +1027,8 @@ jobs:
             -ManifestPath "$env:STEPS_MANIFEST_OUTPUTS_PATH" `
             -PackageId "$env:MATRIX_PACKAGENAME" `
             -Version "$env:MATRIX_VERSION" `
-            -With "WinGetCreate"
+            -With "ForkBranch" `
+            -SubmissionTarget "$env:WINGET_PKGS_SUBMISSION_TARGET"
 
           if ($result.Success) {
             Write-Host "PR submitted successfully!" -ForegroundColor Green

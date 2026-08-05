@@ -22,13 +22,16 @@ function Assert-Match {
 }
 
 $repositoryRoot = Split-Path -Parent $PSScriptRoot
-$workflowNames = @(
-    'update-github-packages-1-q.yml',
-    'update-github-packages-r-z.yml'
+$workflowPaths = @(
+    '.github/workflows/update-github-packages-1-q.yml',
+    '.github/workflows/update-github-packages-r-z.yml',
+    '.github/workflows/update-script-packages.yml',
+    '.github/workflows-templates/github-releases.yml'
 )
 
-foreach ($workflowName in $workflowNames) {
-    $workflowPath = Join-Path $repositoryRoot ".github/workflows/$workflowName"
+foreach ($workflowRelativePath in $workflowPaths) {
+    $workflowPath = Join-Path $repositoryRoot $workflowRelativePath
+    $workflowName = Split-Path -Leaf $workflowPath
     $workflow = Get-Content -LiteralPath $workflowPath -Raw
 
     $submitMatch = Assert-Match `
@@ -47,8 +50,16 @@ foreach ($workflowName in $workflowNames) {
         -Message "$workflowName may cancel an in-progress same-package submission." | Out-Null
     Assert-Match `
         -Actual $submitJob `
-        -Pattern '(?s)\$result = Submit-WingetPackage.*?-With "WinGetCreate"' `
-        -Message "$workflowName must submit validated manifests with WinGetCreate instead of synchronizing the fork through WinMatsch." | Out-Null
+        -Pattern '(?s)\$result = Submit-WingetPackage.*?-With "ForkBranch".*?-SubmissionTarget "\$env:WINGET_PKGS_SUBMISSION_TARGET"' `
+        -Message "$workflowName must use the no-sync ForkBranch submission mode." | Out-Null
+    Assert-Match `
+        -Actual $submitJob `
+        -Pattern '(?m)^          WINGET_PKGS_FORK_REPO: \$\{\{\s*vars\.WINGET_PKGS_FORK_REPO\s*\}\}\s*$' `
+        -Message "$workflowName does not provide the configured user-owned fork." | Out-Null
+    Assert-Match `
+        -Actual $submitJob `
+        -Pattern "(?m)^          WINGET_PKGS_SUBMISSION_TARGET: \$\{\{\s*github\.ref == 'refs/heads/main' && 'Upstream' \|\| 'Fork'\s*\}\}\s*$" `
+        -Message "$workflowName does not isolate non-main test submissions to the user-owned fork." | Out-Null
 }
 
 Write-Host 'All submission workflow authorization regression tests passed.' -ForegroundColor Green

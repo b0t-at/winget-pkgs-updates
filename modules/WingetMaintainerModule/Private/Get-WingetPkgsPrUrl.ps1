@@ -34,7 +34,10 @@ function Get-WingetPkgsPrUrl {
         [string] $PackageId,
 
         [Parameter(Mandatory = $false)]
-        [string] $Version
+        [string] $Version,
+
+        [Parameter(Mandatory = $false)]
+        [string] $Repository = 'microsoft/winget-pkgs'
     )
 
     # Preferred source: the submission tool printed the URL itself.
@@ -71,7 +74,7 @@ function Get-WingetPkgsPrUrl {
             --state 'open' `
             --limit 10 `
             --json 'url,createdAt' `
-            --repo 'microsoft/winget-pkgs' 2>$null
+            --repo $Repository 2>$null
 
         if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($json)) {
             return $null

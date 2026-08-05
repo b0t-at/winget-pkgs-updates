@@ -4,7 +4,8 @@
 
 .DESCRIPTION
     Takes a pre-generated and validated manifest folder and submits it as a PR
-    to the winget-pkgs repository using either Komac or WinGetCreate.
+    to the winget-pkgs repository using WinMatsch, Komac, WinGetCreate, or
+    a server-side branch in a verified user-owned fork.
     This function should only be called after manifest validation and sandbox
     testing have passed.
 
@@ -24,7 +25,13 @@
     Optional GitHub issue number that this PR resolves.
 
 .PARAMETER With
-    The tool to use for submission: "WinMatsch" (default), "Komac" or "WinGetCreate".
+    The tool to use for submission: "WinMatsch" (default), "Komac",
+    "WinGetCreate", or "ForkBranch". ForkBranch never synchronizes the
+    fork's default branch.
+
+    .PARAMETER SubmissionTarget
+    ForkBranch target: "Upstream" opens the normal PR against
+    microsoft/winget-pkgs; "Fork" opens a fork-only PR for test runs.
 
 .PARAMETER Token
     GitHub Personal Access Token with repo scope. If not provided, uses
@@ -78,7 +85,7 @@ function Submit-WingetPackage {
         [string] $Resolves,
 
         [Parameter(Mandatory = $false)]
-        [ValidateSet("WinMatsch", "Komac", "WinGetCreate")]
+        [ValidateSet("WinMatsch", "Komac", "WinGetCreate", "ForkBranch")]
         [string] $With = "WinMatsch",
 
         [Parameter(Mandatory = $false)]
@@ -86,7 +93,11 @@ function Submit-WingetPackage {
 
         [Parameter(Mandatory = $false)]
         [ValidateRange(0, 3)]
-        [int] $MaxBranchMovedRetries = 1
+        [int] $MaxBranchMovedRetries = 1,
+
+        [Parameter(Mandatory = $false)]
+        [ValidateSet('Upstream', 'Fork')]
+        [string] $SubmissionTarget = 'Upstream'
     )
 
     # Get GitHub token
@@ -234,6 +245,85 @@ function Submit-WingetPackage {
                         PrUrl    = $null
                         PrNumber = $null
                     }
+                }
+            }
+
+            "ForkBranch" {
+                $forkRepository = "$env:WINGET_PKGS_FORK_REPO".Trim()
+                if ([string]::IsNullOrWhiteSpace($forkRepository)) {
+                    return @{
+                        Success  = $false
+                        Error    = 'WINGET_PKGS_FORK_REPO is required for ForkBranch submissions.'
+                        PrUrl    = $null
+                        PrNumber = $null
+                    }
+                }
+
+                $targetRepository = if ($SubmissionTarget -eq 'Fork') {
+                    $forkRepository
+                }
+                else {
+                    'microsoft/winget-pkgs'
+                }
+
+                if (Test-ExistingPRs -PackageIdentifier $PackageId -Version $Version -Repository $targetRepository) {
+                    $existingPrUrl = Get-WingetPkgsPrUrl `
+                        -PackageId $PackageId `
+                        -Version $Version `
+                        -Repository $targetRepository
+                    $existingPrNumber = if ($existingPrUrl -match '/pull/(?<Number>\d+)$') {
+                        $Matches['Number']
+                    }
+                    else {
+                        $null
+                    }
+
+                    Write-Host 'A matching submission PR already exists; skipping submission.' -ForegroundColor Yellow
+                    return @{
+                        Success  = $true
+                        Error    = $null
+                        PrUrl    = $existingPrUrl
+                        PrNumber = $existingPrNumber
+                    }
+                }
+
+                $forkSubmission = Invoke-ForkBranchSubmission `
+                    -ManifestPath $fullManifestPath `
+                    -PackageId $PackageId `
+                    -Version $Version `
+                    -PrTitle $PrTitle `
+                    -Token $Token `
+                    -ForkRepository $forkRepository `
+                    -SubmissionTarget $SubmissionTarget `
+                    -Resolves $Resolves
+
+                if (-not $forkSubmission.Created) {
+                    $existingPrUrl = Get-WingetPkgsPrUrl `
+                        -PackageId $PackageId `
+                        -Version $Version `
+                        -Repository $targetRepository
+                    $existingPrNumber = if ($existingPrUrl -match '/pull/(?<Number>\d+)$') {
+                        $Matches['Number']
+                    }
+                    else {
+                        $null
+                    }
+
+                    return @{
+                        Success  = $true
+                        Error    = $null
+                        PrUrl    = $existingPrUrl
+                        PrNumber = $existingPrNumber
+                    }
+                }
+
+                $prUrl = "$($forkSubmission.PullRequest.html_url)".Trim()
+                $prNumber = "$($forkSubmission.PullRequest.number)".Trim()
+                return @{
+                    Success  = $true
+                    Error    = $null
+                    PrUrl    = $prUrl
+                    PrNumber = $prNumber
                 }
             }
         }

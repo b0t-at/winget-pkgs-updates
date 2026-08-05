@@ -15,6 +15,20 @@
 ## Tools:
 **[Orca](https://learn.microsoft.com/de-de/windows/win32/msi/orca-exe)**: database table editor for creating and editing Windows Installer packages
 
+## Scheduled submission topology
+
+Validated scheduled manifests use `ForkBranch` submission rather than
+`wingetcreate submit`. The module verifies `WINGET_PKGS_FORK_REPO` is a fork
+of `microsoft/winget-pkgs`, creates a disposable branch directly from the
+selected base commit, and commits only the manifest files to that branch. It
+never syncs or writes the fork default branch.
+
+Main-branch runs open the normal pull request from that user-owned fork branch
+to `microsoft/winget-pkgs`. Non-main test runs instead open the pull request
+inside the configured fork, so test submissions make no write to the Microsoft
+repository. The PAT needs repository contents and pull-request access to the
+user-owned fork; it does not need GitHub Actions workflow scope.
+
 ## Package-specific WinMatsch overrides
 
 Keep safety questions enabled by default. When a package has reviewed, stable

@@ -652,6 +652,10 @@ jobs:
     runs-on: windows-2025
     if: always() && needs.collect-validated.result == 'success' && needs.collect-validated.outputs.has_packages == 'true'
     environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Test' }}
+    # Serialize submissions for the same package across scheduled runs.
+    concurrency:
+      group: winget-pkgs-submit-${{ matrix.PackageName }}
+      cancel-in-progress: false
     
     strategy:
       fail-fast: false
@@ -720,6 +724,8 @@ jobs:
         shell: pwsh
         env:
           GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
+          WINGET_PKGS_FORK_REPO: ${{ vars.WINGET_PKGS_FORK_REPO }}
+          WINGET_PKGS_SUBMISSION_TARGET: ${{ github.ref == 'refs/heads/main' && 'Upstream' || 'Fork' }}
           STEPS_MANIFEST_OUTPUTS_PATH: ${{ steps.manifest.outputs.path }}
           MATRIX_PACKAGENAME: ${{ matrix.PackageName }}
           MATRIX_VERSION: ${{ matrix.version }}
@@ -729,7 +735,9 @@ jobs:
           $result = Submit-WingetPackage `
             -ManifestPath "$env:STEPS_MANIFEST_OUTPUTS_PATH" `
             -PackageId "$env:MATRIX_PACKAGENAME" `
-            -Version "$env:MATRIX_VERSION"
+            -Version "$env:MATRIX_VERSION" `
+            -With "ForkBranch" `
+            -SubmissionTarget "$env:WINGET_PKGS_SUBMISSION_TARGET"
           
           if ($result.Success) {
             Write-Host "PR submitted successfully!" -ForegroundColor Green
@@ -793,5 +801,4 @@ jobs:
         env:
           VARS_NTFY_TOPIC: ${{ vars.NTFY_TOPIC }}
           VARS_NTFY_URL: ${{ vars.NTFY_URL }}
-
 
