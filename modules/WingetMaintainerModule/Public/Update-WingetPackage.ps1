@@ -203,7 +203,7 @@ function Update-WingetPackage {
 
                     $displayArgs = $winmatschArgs | ForEach-Object { if ($_ -eq $gitToken) { '***' } else { $_ } }
                     Write-Host "Running: winmatsch $($displayArgs -join ' ')"
-                    & winmatsch @winmatschArgs
+                    & winmatsch @winmatschArgs 2>&1 | Tee-Object -Variable generatorOutput | Out-Host
                 }
                 "Komac" {
                     Install-Komac
@@ -227,7 +227,7 @@ function Update-WingetPackage {
 
                     $displayArgs = $komacArgs | ForEach-Object { if ($_ -eq $gitToken) { '***' } else { $_ } }
                     Write-Host "Running: komac $($displayArgs -join ' ')"
-                    & komac @komacArgs
+                    & komac @komacArgs 2>&1 | Tee-Object -Variable generatorOutput | Out-Host
                 }
                 "WinGetCreate" {
                     if ($GHRepo -and $versionTag -and !$Latest.ReleaseNotes) {
@@ -235,7 +235,8 @@ function Update-WingetPackage {
                     }
                     Install-WingetCreate
                     # Always generate locally (no -s flag)
-                    .\wingetcreate.exe update $wingetPackage -v $Latest.Version -u $RequestedInstallerValues --prtitle $prMessage -t $gitToken -o $ManifestOutPath
+                    .\wingetcreate.exe update $wingetPackage -v $Latest.Version -u $RequestedInstallerValues --prtitle $prMessage -t $gitToken -o $ManifestOutPath 2>&1 |
+                        Tee-Object -Variable generatorOutput | Out-Host
                 }
                 default {
                     Write-Error "Invalid value \"$EffectiveWith\" for -With parameter. Valid values are 'WinMatsch', 'Komac' and 'WinGetCreate'"
@@ -243,7 +244,22 @@ function Update-WingetPackage {
             }
 
             if ($LASTEXITCODE -ne 0) {
-                throw "$EffectiveWith update failed for $wingetPackage $($Latest.Version) with exit code $LASTEXITCODE"
+                $generatorExitCode = $LASTEXITCODE
+                $generatorError = Get-GeneratorFailureMessage -GeneratorOutput $generatorOutput
+                $result.Reason = "GeneratorFailed"
+
+                # Surface the failure details so the workflow can render them in the run summary.
+                if ($env:GITHUB_OUTPUT) {
+                    "generated=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                    "reason=GeneratorFailed" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                    "package-id=$wingetPackage" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                    "version=$($Latest.Version)" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                    "generator=$EffectiveWith" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                    "generator-exit-code=$generatorExitCode" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                    "error=$generatorError" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                }
+
+                throw "$EffectiveWith update failed for $wingetPackage $($Latest.Version) with exit code $generatorExitCode. $generatorError"
             }
 
             Test-GeneratedInstallerArchitecture -PackageIdentifier $wingetPackage -CurrentVersion $Latest.Version -ManifestOutPath $ManifestOutPath -RequestedInstallerValues $RequestedInstallerValues -PreviousVersion $latestPublishedVersion

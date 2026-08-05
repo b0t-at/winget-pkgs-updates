@@ -42,6 +42,8 @@
     PSCustomObject with properties:
     - Success: Boolean indicating if PR was created
     - Error: Error message (if failed)
+    - PrUrl: URL of the created pull request ($null if it could not be determined)
+    - PrNumber: Number of the created pull request ($null if it could not be determined)
 #>
 
 function Submit-WingetPackage {
@@ -89,8 +91,10 @@ function Submit-WingetPackage {
 
     if ([string]::IsNullOrWhiteSpace($Token)) {
         return @{
-            Success = $false
-            Error   = "No GitHub token provided. Set GITHUB_TOKEN or WINGET_PAT environment variable."
+            Success  = $false
+            Error    = "No GitHub token provided. Set GITHUB_TOKEN or WINGET_PAT environment variable."
+            PrUrl    = $null
+            PrNumber = $null
         }
     }
 
@@ -141,8 +145,10 @@ function Submit-WingetPackage {
 
                 if ($exitCode -ne 0) {
                     return @{
-                        Success = $false
-                        Error   = "WinMatsch submit failed with exit code $exitCode. Output: $output"
+                        Success  = $false
+                        Error    = "WinMatsch submit failed with exit code $exitCode. Output: $output"
+                        PrUrl    = $null
+                        PrNumber = $null
                     }
                 }
             }
@@ -174,8 +180,10 @@ function Submit-WingetPackage {
 
                 if ($exitCode -ne 0) {
                     return @{
-                        Success = $false
-                        Error   = "Komac submit failed with exit code $exitCode. Output: $output"
+                        Success  = $false
+                        Error    = "Komac submit failed with exit code $exitCode. Output: $output"
+                        PrUrl    = $null
+                        PrNumber = $null
                     }
                 }
             }
@@ -193,8 +201,10 @@ function Submit-WingetPackage {
 
                 if ($exitCode -ne 0) {
                     return @{
-                        Success = $false
-                        Error   = "WinGetCreate submit failed with exit code $exitCode. Output: $output"
+                        Success  = $false
+                        Error    = "WinGetCreate submit failed with exit code $exitCode. Output: $output"
+                        PrUrl    = $null
+                        PrNumber = $null
                     }
                 }
             }
@@ -203,9 +213,24 @@ function Submit-WingetPackage {
         Write-Host ""
         Write-Host "PR submitted successfully!" -ForegroundColor Green
 
+        $prUrl = Get-WingetPkgsPrUrl -SubmitOutput $output -PackageId $PackageId -Version $Version
+        $prNumber = $null
+
+        if ($prUrl) {
+            if ($prUrl -match '/pull/(?<Number>\d+)$') {
+                $prNumber = $Matches['Number']
+            }
+            Write-Host "PR URL:   $prUrl" -ForegroundColor Cyan
+        }
+        else {
+            Write-Warning "PR was created but its URL could not be determined."
+        }
+
         return @{
-            Success = $true
-            Error   = $null
+            Success  = $true
+            Error    = $null
+            PrUrl    = $prUrl
+            PrNumber = $prNumber
         }
     }
     catch {
@@ -213,8 +238,10 @@ function Submit-WingetPackage {
         Write-Host "ERROR: $errorMessage" -ForegroundColor Red
 
         return @{
-            Success = $false
-            Error   = $errorMessage
+            Success  = $false
+            Error    = $errorMessage
+            PrUrl    = $null
+            PrNumber = $null
         }
     }
 }

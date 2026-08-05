@@ -412,6 +412,45 @@ jobs:
           retention-days: 7
           if-no-files-found: error
 
+      - name: Record generation failure
+        if: failure()
+        shell: pwsh
+        env:
+          JOB_NAME: Generate ${{ matrix.id }}
+          MATRIX_PACKAGENAME: ${{ matrix.id }}
+          STEPS_GENERATE_OUTPUTS_VERSION: ${{ steps.generate.outputs.version }}
+          STEPS_GENERATE_OUTPUTS_GENERATOR: ${{ steps.generate.outputs.generator }}
+          STEPS_GENERATE_OUTPUTS_EXIT_CODE: ${{ steps.generate.outputs.generator-exit-code }}
+          STEPS_GENERATE_OUTPUTS_ERROR: ${{ steps.generate.outputs.error }}
+        run: |
+          New-Item -ItemType Directory -Force -Path ./generate-failure | Out-Null
+
+          $errorText = "$env:STEPS_GENERATE_OUTPUTS_ERROR"
+          if ([string]::IsNullOrWhiteSpace($errorText)) {
+            $errorText = "Generation failed before the manifest generator reported a result - see job log."
+          }
+
+          @{
+            job       = "$env:JOB_NAME"
+            package   = "$env:MATRIX_PACKAGENAME"
+            version   = "$env:STEPS_GENERATE_OUTPUTS_VERSION"
+            generator = "$env:STEPS_GENERATE_OUTPUTS_GENERATOR"
+            exitCode  = "$env:STEPS_GENERATE_OUTPUTS_EXIT_CODE"
+            error     = $errorText
+          } | ConvertTo-Json | Out-File -FilePath ./generate-failure/failure.json -Encoding utf8
+
+          Get-Content -Path ./generate-failure/failure.json
+
+      - name: Upload generation failure marker
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        continue-on-error: true
+        with:
+          name: generate-failure__${{ matrix.id }}
+          path: ./generate-failure
+          retention-days: 7
+          if-no-files-found: ignore
+
   # Job 2: Collect successful manifest generations into a dynamic matrix
   collect-generated:
     name: Collect Generated Manifests
@@ -454,6 +493,53 @@ jobs:
           Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "has_packages=$hasPackages"
           Write-Host "Matrix: $matrix"
           Write-Host "Has packages: $hasPackages"
+
+      - name: Download generation failure markers
+        if: always()
+        continue-on-error: true
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          pattern: generate-failure__*
+          path: ./generate-failures
+
+      - name: Summarize failed generations
+        if: always()
+        shell: pwsh
+        run: |
+          $files = @(Get-ChildItem -Path ./generate-failures -Filter *.json -Recurse -ErrorAction SilentlyContinue)
+
+          if ($files.Count -eq 0) {
+            Write-Host "No generation failures recorded."
+            return
+          }
+
+          $rows = @(foreach ($file in $files) {
+            try {
+              Get-Content -Path $file.FullName -Raw | ConvertFrom-Json
+            }
+            catch {
+              Write-Warning "Could not read $($file.FullName): $($_.Exception.Message)"
+            }
+          })
+
+          $summary = @(
+            "## :x: Failed generations ($($rows.Count))"
+            ""
+            "| Failed Job | Package | Version | Exit Code | Error |"
+            "| --- | --- | --- | --- | --- |"
+          )
+
+          foreach ($row in ($rows | Sort-Object -Property package)) {
+            $cells = @($row.job, $row.package, $row.version, $row.exitCode, $row.error) | ForEach-Object {
+              # Collapse to a single line and escape pipes so the markdown table stays intact.
+              $text = ("$_" -replace '\s*[\r\n]+\s*', ' ').Trim()
+              if ([string]::IsNullOrWhiteSpace($text)) { '-' } else { $text.Replace('|', '\|') }
+            }
+            $summary += "| $($cells -join ' | ') |"
+          }
+
+          ($summary -join "`n") | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+          Write-Host "Reported $($rows.Count) failed generation(s) in the job summary."
 
   # Job 3: Validate and test manifests in sandbox (self-hosted runner with Windows Sandbox)
   # Uses dynamic matrix - only runs for packages that generated manifests
@@ -926,10 +1012,21 @@ jobs:
           if ($result.Success) {
             Write-Host "PR submitted successfully!" -ForegroundColor Green
             # Add to job summary
-            "## :rocket: PR Submitted" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
-            "" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
-            "**Package:** $env:MATRIX_PACKAGENAME" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
-            "**Version:** $env:MATRIX_VERSION" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+            $summary = @(
+              "## :rocket: PR Submitted"
+              ""
+              "**Package:** $env:MATRIX_PACKAGENAME"
+              "**Version:** $env:MATRIX_VERSION"
+            )
+
+            if ($result.PrUrl) {
+              $prLabel = if ($result.PrNumber) { "#$($result.PrNumber)" } else { $result.PrUrl }
+              $summary += "**Pull request:** [$prLabel]($($result.PrUrl))"
+            } else {
+              $summary += "**Pull request:** _URL could not be determined - see step log._"
+            }
+
+            ($summary -join "`n") | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
           } else {
             Write-Host "Failed to submit PR: $($result.Error)" -ForegroundColor Red
             exit 1

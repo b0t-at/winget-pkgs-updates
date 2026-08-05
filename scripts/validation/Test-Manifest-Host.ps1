@@ -182,7 +182,10 @@ if (-Not [String]::IsNullOrWhiteSpace($Manifest)) {
     Write-Host "--> Refreshing environment variables"
     Update-EnvironmentVariables
     Write-Host "--> Comparing ARP Entries"
-    $arpDiff = (Compare-Object (Get-ARPTable) $originalARP -Property DisplayName, DisplayVersion, Publisher, ProductCode, Scope) | Select-Object -Property * -ExcludeProperty SideIndicator
+    # @() guards against a null table (a clean machine can report zero ARP entries, which
+    # makes Compare-Object throw); '<=' keeps only entries the install actually added.
+    $arpDiff = @(Compare-Object @(Get-ARPTable) @($originalARP) -Property DisplayName, DisplayVersion, Publisher, ProductCode, Scope |
+        Where-Object { $_.SideIndicator -eq '<=' } | Select-Object -Property * -ExcludeProperty SideIndicator)
     $arpDiff | Format-Table
 }
 
