@@ -647,10 +647,11 @@ jobs:
         shell: pwsh
         run: |
           $manifestPath = "$env:STEPS_MANIFEST_OUTPUTS_PATH"
+          $allowStructuralRewrite = "$env:MATRIX_ALLOW_STRUCTURAL_REWRITE" -eq 'true'
 
           Write-Host "Running content validation for: $manifestPath"
 
-          & .\Scripts\validation\Test-ManifestContent.ps1 -ManifestPath $manifestPath
+          & .\Scripts\validation\Test-ManifestContent.ps1 -ManifestPath $manifestPath -AllowStructuralRewrite $allowStructuralRewrite
           $exitCode = $LASTEXITCODE
 
           if ($exitCode -eq 0) {
@@ -661,6 +662,7 @@ jobs:
           }
         env:
           STEPS_MANIFEST_OUTPUTS_PATH: ${{ steps.manifest.outputs.path }}
+          MATRIX_ALLOW_STRUCTURAL_REWRITE: ${{ fromJSON(toJSON(matrix)).allowStructuralRewrite }}
           GITHUB_TOKEN: ${{ github.token }}
 
       - name: Run sandbox validation
