@@ -1848,15 +1848,15 @@
     "validationCount": 1
   },
   "Storj.Uplink": {
-    "installerHashes": [
-      "AAC6A58C6CC80A9E5C839F87E1D87958831826AEC3DC9C01DB19321A04A9E5AB"
-    ],
-    "description": "",
-    "lastUpdated": "2026-08-05T07:49:49.2672187Z",
-    "manifestHash": "3E1A3E516FEB7EC67D6C46C2240DF270B40B315A71CEB9F47715FA345553FEA6",
+    "lastUpdated": "2026-08-05T11:28:57.219219Z",
+    "manifestHash": "B69973D266D17E5E65BB40D43EE61EE3A882771E2139636A539C6B3B15D10232",
     "validationCount": 1,
+    "description": "",
     "state": "VALIDATION_PASSED",
-    "version": "1.161.4"
+    "installerHashes": [
+      "AB82E0144AA9235CBB0C11C446B3FB152615DD43BDD84AF1A6BC9AE358F374B0"
+    ],
+    "version": "1.161.5"
   },
   "Stripe.StripeCli": {
     "version": "1.43.5",
