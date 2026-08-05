@@ -26,8 +26,9 @@ never syncs or writes the fork default branch.
 Main-branch runs open the normal pull request from that user-owned fork branch
 to `microsoft/winget-pkgs`. Non-main test runs instead open the pull request
 inside the configured fork, so test submissions make no write to the Microsoft
-repository. The PAT needs repository contents and pull-request access to the
-user-owned fork; it does not need GitHub Actions workflow scope.
+repository. A fine-grained PAT needs Contents write on the configured fork and
+Pull requests write on the selected PR target; it does not need GitHub Actions
+workflow scope.
 
 ## Package-specific WinMatsch overrides
 
