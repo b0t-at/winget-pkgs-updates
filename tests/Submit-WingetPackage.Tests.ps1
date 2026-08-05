@@ -4,7 +4,7 @@ Set-StrictMode -Version Latest
 Import-Module Pester -MinimumVersion 3.4
 
 $repositoryRoot = Split-Path -Parent $PSScriptRoot
-$module = Import-Module (Join-Path $repositoryRoot 'modules/WingetMaintainerModule/WingetMaintainerModule.psd1') -Force -PassThru
+Import-Module (Join-Path $repositoryRoot 'modules/WingetMaintainerModule/WingetMaintainerModule.psd1') -Force
 $global:SubmitWingetPackageTestManifestPath = Join-Path ([IO.Path]::GetTempPath()) "winget-submit-tests-$([guid]::NewGuid().ToString('N'))"
 New-Item -ItemType Directory -Path $global:SubmitWingetPackageTestManifestPath -Force | Out-Null
 
@@ -45,7 +45,7 @@ $global:NewTestSubmissionAttempt = {
 try {
     Describe 'Submit-WingetPackage branch-moved retry' {
         BeforeEach {
-            InModuleScope $module.Name {
+            InModuleScope WingetMaintainerModule {
                 $script:submissionAttempts = 0
                 Mock Install-WinMatsch {}
                 Mock Test-ExistingPRs { $false }
@@ -54,7 +54,7 @@ try {
         }
 
         It 'revalidates and submits once after a safe GH2020 branch movement' {
-            InModuleScope $module.Name {
+            InModuleScope WingetMaintainerModule {
                 Mock Invoke-WinMatschSubmitAttempt {
                     $script:submissionAttempts++
                     if ($script:submissionAttempts -eq 1) {
@@ -83,7 +83,7 @@ try {
         }
 
         It 'fails closed when the bounded GH2020 retry is exhausted' {
-            InModuleScope $module.Name {
+            InModuleScope WingetMaintainerModule {
                 Mock Invoke-WinMatschSubmitAttempt {
                     & $global:NewTestSubmissionAttempt -ExitCode 5 -ErrorCode 'GH2020' -ErrorMessage 'The validated branch moved immediately before pull request creation.'
                 }
@@ -107,7 +107,7 @@ try {
         }
 
         It 'does not submit again when another worker created the matching PR' {
-            InModuleScope $module.Name {
+            InModuleScope WingetMaintainerModule {
                 $script:existingChecks = 0
                 Mock Test-ExistingPRs {
                     $script:existingChecks++
@@ -137,7 +137,7 @@ try {
         }
 
         It 'fails closed instead of retrying an uncertain GH2020 remote outcome' {
-            InModuleScope $module.Name {
+            InModuleScope WingetMaintainerModule {
                 Mock Invoke-WinMatschSubmitAttempt {
                     & $global:NewTestSubmissionAttempt `
                         -ExitCode 5 `
