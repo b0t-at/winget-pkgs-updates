@@ -207,7 +207,8 @@ jobs:
             url: https://github.com/Cristiano100/roforge/releases/download/v{VERSION}/Roforge.exe
           - id: CryptoPro.Chromium-Gost
             repo: deemru/Chromium-Gost
-            url: https://github.com/deemru/Chromium-Gost/releases/download/{VERSION}/chromium-gost-{VERSION}-windows-386-installer.exe https://github.com/deemru/Chromium-Gost/releases/download/{VERSION}/chromium-gost-{VERSION}-windows-386-installer.exe https://github.com/deemru/Chromium-Gost/releases/download/{VERSION}/chromium-gost-{VERSION}-windows-amd64-installer.exe https://github.com/deemru/Chromium-Gost/releases/download/{VERSION}/chromium-gost-{VERSION}-windows-amd64-installer.exe
+            url: https://github.com/deemru/Chromium-Gost/releases/download/{VERSION}/chromium-gost-{VERSION}-windows-386-installer.exe https://github.com/deemru/Chromium-Gost/releases/download/{VERSION}/chromium-gost-{VERSION}-windows-amd64-installer.exe
+            allowStructuralRewrite: true
           - id: CueLang.Cue
             repo: cue-lang/cue
             url: https://github.com/cue-lang/cue/releases/download/v{VERSION}/cue_v{VERSION}_windows_amd64.zip https://github.com/cue-lang/cue/releases/download/v{VERSION}/cue_v{VERSION}_windows_arm64.zip
@@ -400,12 +401,9 @@ jobs:
           - id: Gruntwork.Terragrunt
             repo: gruntwork-io/terragrunt
             url: https://github.com/gruntwork-io/terragrunt/releases/download/v{VERSION}/terragrunt_windows_386.exe https://github.com/gruntwork-io/terragrunt/releases/download/v{VERSION}/terragrunt_windows_amd64.exe
-          - id: gurnec.HashCheckShellExtension
-            repo: gurnec/HashCheck
-            url: https://github.com/gurnec/HashCheck/releases/download/v{VERSION}/HashCheckSetup-v{VERSION}.exe|x64
-          - id: Gyan.FFmpeg.Essentials
-            repo: GyanD/codexffmpeg
-            url: https://github.com/GyanD/codexffmpeg/releases/download/{VERSION}/ffmpeg-{VERSION}-essentials_build.zip
+            allowStructuralRewrite: true
+          # gurnec.HashCheckShellExtension is excluded: its current installer SHA256 is already published.
+          # Gyan.FFmpeg.Essentials is excluded: 9.0 removed the prior release asset layout, which requires a reviewed WinMatsch mapping override.
           - id: h3poteto.fedistar
             repo: h3poteto/fedistar
             url: https://github.com/h3poteto/fedistar/releases/download/v{VERSION}/fedistar_{VERSION}_x64_en-US.msi
@@ -448,9 +446,7 @@ jobs:
           - id: InTheLoop.LoopEmail
             repo: 4thOffice/loopinupdater
             url: https://github.com/4thOffice/loopinupdater/releases/download/v{VERSION}/Loop-Email-Setup-{VERSION}.exe https://github.com/4thOffice/loopinupdater/releases/download/v{VERSION}/Loop-Email-Setup-{VERSION}.exe
-          - id: IPEP.Scantailor-Experimental
-            repo: ImageProcessing-ElectronicPublications/scantailor-experimental
-            url: https://github.com/ImageProcessing-ElectronicPublications/scantailor-experimental/releases/download/{VERSION}/scantailor-experimental-{VERSION}-X86-64-install.exe
+          # IPEP.Scantailor-Experimental is excluded: 1.2026.07.07 removed x86/arm64 assets and its replacement x64 installer requires a reviewed mapping override.
           - id: Istio.Istio
             repo: istio/istio
             url: https://github.com/istio/istio/releases/download/{VERSION}/istio-{VERSION}-win.zip
@@ -581,9 +577,7 @@ jobs:
           - id: Micronaut.Launch
             repo: micronaut-projects/micronaut-starter
             url: https://github.com/micronaut-projects/micronaut-starter/releases/download/v{VERSION}/mn-win-amd64-v{VERSION}.zip
-          - id: Microsoft.bitsmanager
-            repo: microsoft/BITS-Manager
-            url: https://github.com/microsoft/BITS-Manager/releases/download/v{VERSION}/BITSManager.msi|x64
+          # Microsoft.bitsmanager is excluded: its current installer SHA256 is already published.
           - id: Microsoft.DotNet.UninstallTool
             repo: dotnet/cli-lab
             url: https://github.com/dotnet/cli-lab/releases/download/{VERSION}/dotnet-core-uninstall.msi
@@ -609,9 +603,7 @@ jobs:
           - id: mitmproxy.mitmproxy
             repo: mitmproxy/mitmproxy
             url: https://downloads.mitmproxy.org/{VERSION}/mitmproxy-{VERSION}-windows-x86_64-installer.exe
-          - id: mmanela.markdownoutlook
-            repo: mmanela/MarkdownOutlook
-            url: https://github.com/mmanela/MarkdownOutlook/releases/download/v{VERSION}/MarkdownOutlookSetup.msi|x64
+          # mmanela.markdownoutlook is excluded: its current installer SHA256 is already published.
           - id: Morpheus.Bazarr
             repo: bazarr/bazarr.github.io
             url: https://github.com/bazarr/bazarr.github.io/releases/download/v{VERSION}/bazarr.zip
@@ -722,6 +714,7 @@ jobs:
           - id: pinokiocomputer.pinokio
             repo: pinokiocomputer/pinokio
             url: https://github.com/pinokiocomputer/pinokio/releases/download/v{VERSION}/Pinokio.exe
+            allowStructuralRewrite: true
           - id: pluveto.Upgit
             repo: pluveto/upgit
             url: https://github.com/pluveto/upgit/releases/download/v{VERSION}/upgit_win_386.exe https://github.com/pluveto/upgit/releases/download/v{VERSION}/upgit_win_amd64.exe https://github.com/pluveto/upgit/releases/download/v{VERSION}/upgit_win_arm.exe https://github.com/pluveto/upgit/releases/download/v{VERSION}/upgit_win_arm64.exe
