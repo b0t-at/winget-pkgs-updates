@@ -41,7 +41,7 @@ jobs:
             url: https://github.com/restic/restic/releases/download/v{VERSION}/restic_{VERSION}_windows_386.zip https://github.com/restic/restic/releases/download/v{VERSION}/restic_{VERSION}_windows_amd64.zip
           - id: RivaFarabi.Deckboard
             repo: rivafarabi/deckboard
-            url: https://github.com/rivafarabi/deckboard/releases/download/v{VERSION}/Deckboard-Setup-{VERSION}.exe https://github.com/rivafarabi/deckboard/releases/download/v{VERSION}/Deckboard-Setup-{VERSION}.exe
+            url: https://github.com/rivafarabi/deckboard/releases/download/v{VERSION}/Deckboard-Setup-{VERSION}.exe|x86|user https://github.com/rivafarabi/deckboard/releases/download/v{VERSION}/Deckboard-Setup-{VERSION}.exe|x86|machine
           - id: Romanitho.Winget-AutoUpdate
             repo: Romanitho/Winget-AutoUpdate
             url: https://github.com/Romanitho/Winget-AutoUpdate/releases/download/v{VERSION}/WAU.msi
@@ -90,9 +90,6 @@ jobs:
           - id: simulot.immich-go
             repo: simulot/immich-go
             url: https://github.com/simulot/immich-go/releases/download/v{VERSION}/immich-go_Windows_arm64.zip https://github.com/simulot/immich-go/releases/download/v{VERSION}/immich-go_Windows_x86_64.zip
-          - id: Skiff.Skiff
-            repo: skiff-org/skiff-windows-app
-            url: https://github.com/skiff-org/skiff-windows-app/releases/download/{VERSION}/Skiff.Installer.msi
           - id: SnailDOS.SnailKM
             repo: SnailKM/SnailKM-Software
             url: https://github.com/SnailKM/SnailKM-Software/releases/download/v{VERSION}/SnailKM-Setup-{VERSION}.exe
@@ -312,7 +309,7 @@ jobs:
             url: https://github.com/Wilfred/difftastic/releases/download/{VERSION}/difft-x86_64-pc-windows-msvc.zip
           - id: WillyJL.F95Checker
             repo: Willy-JL/F95Checker
-            url: https://github.com/Willy-JL/F95Checker/releases/download/{VERSION}/F95Checker-Windows.zip
+            url: https://github.com/Willy-JL/F95Checker/releases/download/{VERSION}/F95Checker-Windows.zip|neutral
           - id: WiXToolset.WiXCLI
             repo: wixtoolset/wix
             url: https://github.com/wixtoolset/wix/releases/download/v{VERSION}/wix-cli-x64.msi
@@ -351,7 +348,7 @@ jobs:
             url: https://github.com/Zagrios/bs-manager/releases/download/v{VERSION}/BSManager-Setup-{VERSION}.exe
           - id: ZeroInstall.ZeroInstall
             repo: 0install/0install-win
-            url: https://github.com/0install/0install-win/releases/download/{VERSION}/zero-install.exe https://github.com/0install/0install-win/releases/download/{VERSION}/zero-install.exe
+            url: https://github.com/0install/0install-win/releases/download/{VERSION}/zero-install.exe|x86|user https://github.com/0install/0install-win/releases/download/{VERSION}/zero-install.exe|x86|machine
           - id: zkSNACKs.WasabiWallet
             repo: WalletWasabi/WalletWasabi
             url: https://github.com/WalletWasabi/WalletWasabi/releases/download/v{VERSION}/Wasabi-{VERSION}.msi
