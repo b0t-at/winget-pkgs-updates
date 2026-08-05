@@ -1745,6 +1745,17 @@
     "lastUpdated": "2026-07-05T09:27:40.0659555Z",
     "state": "VALIDATION_PASSED"
   },
+  "RivaFarabi.Deckboard": {
+    "lastUpdated": "2026-08-05T17:18:05.257089Z",
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "version": "3.2.0",
+    "validationCount": 1,
+    "installerHashes": [
+      "9CA17A8CB8F61BD6DA4F044F9A8996FCB014852D0F8FD7A5717BEF633868296A"
+    ],
+    "manifestHash": "85BF6426EF0B09B75FF0330AA7AE1CF527A18807D48021EA2DE02786EEE2B503"
+  },
   "Romanitho.Winget-AutoUpdate": {
     "version": "2.12.0",
     "description": "",
@@ -2148,7 +2159,7 @@
   "vcmi.vcmi": {
     "manifestHash": "29245B1693ED4782CAA58A7B6576CDCF8FC008ABDCABB1E1A5CDE22FA27A8DE8",
     "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-08-05T15:22:12.6390581Z",
+    "lastUpdated": "2026-08-05T17:18:05.1980256Z",
     "version": "1.7.4",
     "installerHashes": [
       "F2068C1F0BE6D2E77C2D37D3F270DA55AC4E049E58DDBE9D4120266897FBA819",
@@ -2156,7 +2167,7 @@
       "E17A748F9D2E2DD1980893DCF5929A5A382837A8B081373D93F799946E904A6C"
     ],
     "description": "",
-    "validationCount": 1
+    "validationCount": 2
   },
   "Vipre.IPVTest": {
     "description": "",
@@ -2280,15 +2291,15 @@
     "manifestHash": "09B393FE05C1899D6E6FA28E20FA9C8EBE1D54C32039B0C27EF5361773E27FA3"
   },
   "ZeroInstall.ZeroInstall": {
-    "lastUpdated": "2026-05-18T21:38:39.9333568Z",
-    "installerHashes": [
-      "0F66626EB19B59494D99D807934453841CB2F96940775490648F4DAB117B10EA"
-    ],
-    "description": "",
+    "lastUpdated": "2026-08-05T17:18:05.2387163Z",
     "state": "VALIDATION_PASSED",
+    "description": "",
+    "version": "2.29.2",
     "validationCount": 1,
-    "manifestHash": "A15973D9F9AD2511B978D3584A5D2C181944DD2B9ADC7CBFBECAE65E7A6A03A0",
-    "version": "2.29.0"
+    "installerHashes": [
+      "B8DDFA63CF7B7ED777F43FC7AC4A69690445AEBB6BEB6CA801380AAE83FFDF33"
+    ],
+    "manifestHash": "E3F991159D64F2617E66137FB168593281BCB0ABBB718A55C9E1B416CDB86797"
   },
   "zkSNACKs.WasabiWallet": {
     "state": "VALIDATION_PASSED",
