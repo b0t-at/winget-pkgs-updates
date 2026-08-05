@@ -1985,16 +1985,16 @@
     "version": "1.24.0"
   },
   "SVGExplorerExtension.SVGExplorerExtension": {
+    "validationCount": 1,
+    "description": "",
+    "version": "1.1.0",
+    "lastUpdated": "2026-08-05T20:07:42.4477277Z",
     "state": "VALIDATION_FAILED",
-    "manifestHash": "37C831E3B98EC1EDFF4808A49D08AE79D6081355BC52AB9E63923EE9548EB8D9",
     "installerHashes": [
       "69F9721C6605B487BC78CD90439EC7B0819AD8BF77616F3CBF3B5E18B9FCA6DB",
       "64962D289A30B4F1F1A782E1DD44BC16EB3A181760AC01A456580FDED2CD0FA9"
     ],
-    "description": "",
-    "validationCount": 3,
-    "version": "1.1.0",
-    "lastUpdated": "2026-08-04T06:34:41.3366303Z"
+    "manifestHash": "7FAD77E1870F482FEA66C41E65F6AF3ED6BDD80F5DB3976E7F98C8F62E9E4F48"
   },
   "Syncplay.Syncplay": {
     "installerHashes": [
@@ -2157,17 +2157,17 @@
     "state": "VALIDATION_PASSED"
   },
   "vcmi.vcmi": {
-    "manifestHash": "29245B1693ED4782CAA58A7B6576CDCF8FC008ABDCABB1E1A5CDE22FA27A8DE8",
-    "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-08-05T17:18:05.1980256Z",
+    "validationCount": 1,
+    "description": "",
     "version": "1.7.4",
+    "lastUpdated": "2026-08-05T20:07:42.5248986Z",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
       "F2068C1F0BE6D2E77C2D37D3F270DA55AC4E049E58DDBE9D4120266897FBA819",
       "461A5988AAD418D95DC9C4EFEBE10E84814953F9F32D0BE8F97CB75D23653029",
       "E17A748F9D2E2DD1980893DCF5929A5A382837A8B081373D93F799946E904A6C"
     ],
-    "description": "",
-    "validationCount": 2
+    "manifestHash": "91A66FD8DA93CD7BB4DAE32B73E37E2A9F7230DFCF742BEF8AD1C52C05869C3F"
   },
   "Vipre.IPVTest": {
     "description": "",
@@ -2214,15 +2214,15 @@
     ]
   },
   "WillyJL.F95Checker": {
-    "version": "11.1.2",
-    "installerHashes": [
-      "DF41DBD98E08BC673496466A30B69BF9339E628711F73D3F5E06FD0426F79EF6"
-    ],
-    "lastUpdated": "2026-06-21T11:48:18.7825756Z",
-    "manifestHash": "08EFB32835B07F78C6B2D0A387D6F7A63680C2F3127BD1EB0E8E32B7BF5A6280",
+    "validationCount": 1,
+    "description": "",
+    "version": "11.1.3",
+    "lastUpdated": "2026-08-05T20:07:42.4778007Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
-    "description": ""
+    "installerHashes": [
+      "639FC81249E20EC01F0362E4E765B93DBBAB56AAA1F9F8DABA5E61DC08AE71E9"
+    ],
+    "manifestHash": "90FC8D80ED92A44B5300A1EDDEF27872EDF1BED31601A73C95982209A79C06C3"
   },
   "wire.wire": {
     "manifestHash": "7997A5B54A04C498635471F711A608409B2D0843333E8EA2240A5B8861583178",
@@ -2291,11 +2291,11 @@
     "manifestHash": "09B393FE05C1899D6E6FA28E20FA9C8EBE1D54C32039B0C27EF5361773E27FA3"
   },
   "ZeroInstall.ZeroInstall": {
-    "lastUpdated": "2026-08-05T17:18:05.2387163Z",
+    "lastUpdated": "2026-08-05T20:07:42.4893304Z",
     "state": "VALIDATION_PASSED",
     "description": "",
     "version": "2.29.2",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "B8DDFA63CF7B7ED777F43FC7AC4A69690445AEBB6BEB6CA801380AAE83FFDF33"
     ],
