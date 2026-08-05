@@ -369,9 +369,10 @@ jobs:
           WINGET_PKGS_FORK_REPO: ${{ vars.WINGET_PKGS_FORK_REPO }}
           GHURLs: ${{ matrix.url }}
           GHRepo: ${{ matrix.repo }}
-          GHTagPattern: ${{ matrix.tagPattern }}
-          GHVersionSource: ${{ matrix.versionSource }}
-          WinMatschOverridePack: ${{ matrix.overridePack }}
+          GHTagPattern: ${{ fromJSON(toJSON(matrix)).tagPattern }}
+          GHVersionSource: ${{ fromJSON(toJSON(matrix)).versionSource }}
+          WinMatschOverridePack: ${{ fromJSON(toJSON(matrix)).overridePack }}
+          AllowStructuralRewrite: ${{ fromJSON(toJSON(matrix)).allowStructuralRewrite }}
           PackageName: ${{ matrix.id }}
           With: ${{ matrix.With }}
           Submit: "false"

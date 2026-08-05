@@ -40,11 +40,17 @@ function Get-TestWinMatschUrlArguments {
 function Invoke-TestUpdateWingetPackage {
     param(
         [Parameter(Mandatory = $true)]
-        [string]$InstallerValue
+        [string]$InstallerValue,
+
+        [Parameter(Mandatory = $false)]
+        [bool]$AllowStructuralRewrite = $false
     )
 
     return @(& $module {
-            param([string]$Value)
+            param(
+                [string]$Value,
+                [bool]$AllowRewrite
+            )
 
             function Test-GitHubToken { 'test-token' }
             function Test-PackageAndVersionInGithub {
@@ -70,10 +76,11 @@ function Invoke-TestUpdateWingetPackage {
                 -WingetPackage 'Test.Package' `
                 -With 'WinMatsch' `
                 -latestVersion '1.0.0' `
-                -latestVersionURL $Value | Out-Null
+                -latestVersionURL $Value `
+                -AllowStructuralRewrite $AllowRewrite | Out-Null
 
             $script:CapturedWinMatschArguments
-        } $InstallerValue)
+        } $InstallerValue $AllowStructuralRewrite)
 }
 
 Write-Host 'TEST: plain URL is passed only through --urls'
@@ -145,5 +152,15 @@ Assert-SequenceEqual `
     -Actual $updateUrlArguments `
     -Expected @('--url', $f95CheckerUrl) `
     -Message 'Update-WingetPackage duplicated the F95Checker URL.'
+
+Write-Host 'TEST: structural rewrite approval is opt-in'
+$defaultUpdateArguments = Invoke-TestUpdateWingetPackage -InstallerValue $plainUrl
+if ($defaultUpdateArguments -contains '--allow-structural-rewrite') {
+    throw 'Update-WingetPackage enabled structural rewrite approval by default.'
+}
+$rewriteUpdateArguments = Invoke-TestUpdateWingetPackage -InstallerValue $plainUrl -AllowStructuralRewrite $true
+if (@($rewriteUpdateArguments | Where-Object { $_ -eq '--allow-structural-rewrite' }).Count -ne 1) {
+    throw 'Update-WingetPackage did not pass structural rewrite approval exactly once.'
+}
 
 Write-Host 'All Update-WingetPackage regression tests passed.' -ForegroundColor Green

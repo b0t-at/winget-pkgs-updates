@@ -32,7 +32,8 @@ function Update-WingetPackage {
         [Parameter(Mandatory = $false)] [string] $GHURLs,
         [Parameter(Mandatory = $false)] [string] $GHTagPattern,
         [Parameter(Mandatory = $false)][ValidateSet('Tag', 'ReleaseName')] [string] $GHVersionSource = 'Tag',
-        [Parameter(Mandatory = $false)] [string] $WinMatschOverridePack
+        [Parameter(Mandatory = $false)] [string] $WinMatschOverridePack,
+        [Parameter(Mandatory = $false)] [bool] $AllowStructuralRewrite = $false
     )
 
     # Initialize result object
@@ -104,6 +105,9 @@ function Update-WingetPackage {
     if ($ContainsArchitectureHints -and $With -eq 'Komac') {
         Write-Warning 'Architecture suffixes detected in installer URLs. Switching from Komac to WinGetCreate so the hints are preserved.'
         $EffectiveWith = 'WinGetCreate'
+    }
+    if ($AllowStructuralRewrite -and $EffectiveWith -ne 'WinMatsch') {
+        throw 'AllowStructuralRewrite can only be used with the WinMatsch generator.'
     }
 
     $ResolvedWinMatschOverridePack = $null
@@ -189,6 +193,9 @@ function Update-WingetPackage {
                         "--version", $Latest.Version
                     )
                     $winmatschArgs += Get-WinMatschInstallerUrlArguments -InstallerEntries $RequestedInstallerEntries
+                    if ($AllowStructuralRewrite) {
+                        $winmatschArgs += "--allow-structural-rewrite"
+                    }
                     if ($resolves -match '^\d+$') {
                         $winmatschArgs += "--resolves"
                         $winmatschArgs += $resolves
