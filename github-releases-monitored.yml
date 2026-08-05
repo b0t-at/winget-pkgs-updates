@@ -930,9 +930,6 @@
           - id: "SUSE.RancherDesktop"
             repo: "rancher-sandbox/rancher-desktop"
             url: "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v{VERSION}/Rancher.Desktop.Setup.{VERSION}.msi"
-          - id: "SVGExplorerExtension.SVGExplorerExtension"
-            repo: "tibold/svg-explorer-extension"
-            url: "https://github.com/tibold/svg-explorer-extension/releases/download/v{VERSION}/svg_see_x64.exe https://github.com/tibold/svg-explorer-extension/releases/download/v{VERSION}/svg_see_x86.exe"
           - id: "Syncplay.Syncplay"
             repo: "Syncplay/syncplay"
             url: "https://github.com/Syncplay/syncplay/releases/download/v{VERSION}/Syncplay-{VERSION}-Setup.exe"
@@ -1363,7 +1360,6 @@
 #          - id: "Jellyfin.Server"
 #            repo: "jellyfin/jellyfin-server-windows"
 #            url: "https://github.com/jellyfin/jellyfin-server-windows/releases/download/{VERSION}/jellyfin_{VERSION}_windows-x64.exe"
-
 
 
 

@@ -21,17 +21,25 @@ function Assert-NotMatch {
 $repositoryRoot = Split-Path -Parent $PSScriptRoot
 $configurationPaths = @(
     'github-releases-monitored.yml',
-    '.github/workflows/update-github-packages-1-q.yml'
+    '.github/workflows/update-github-packages-1-q.yml',
+    '.github/workflows/update-github-packages-r-z.yml'
+)
+
+$excludedPackageIds = @(
+    'benaclejames.VRCFaceTracking',
+    'SVGExplorerExtension.SVGExplorerExtension'
 )
 
 foreach ($configurationRelativePath in $configurationPaths) {
     $configurationPath = Join-Path $repositoryRoot $configurationRelativePath
     $configuration = Get-Content -LiteralPath $configurationPath -Raw
 
-    Assert-NotMatch `
-        -Actual $configuration `
-        -Pattern '^\s*-\s+id:\s*"?benaclejames\.VRCFaceTracking"?\s*$' `
-        -Message "$configurationRelativePath must not monitor benaclejames.VRCFaceTracking until its release installer can be analyzed."
+    foreach ($packageId in $excludedPackageIds) {
+        Assert-NotMatch `
+            -Actual $configuration `
+            -Pattern "^\s*-\s+id:\s*`"?$([regex]::Escape($packageId))`"?\s*$" `
+            -Message "$configurationRelativePath must not monitor $packageId until its upstream release artifacts change."
+    }
 }
 
 Write-Host 'GitHub release monitoring configuration regression tests passed.' -ForegroundColor Green
