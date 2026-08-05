@@ -97,14 +97,7 @@ function Update-WingetPackage {
 
     $RequestedInstallerEntries = @(Get-InstallerUrlEntries -InstallerValues @($Latest.URLs))
     $RequestedInstallerUrls = @($RequestedInstallerEntries | Select-Object -ExpandProperty InstallerUrl)
-    $RequestedInstallerValues = @($RequestedInstallerEntries | ForEach-Object {
-        if ($_.ArchitectureHint) {
-            "$($_.InstallerUrl)|$($_.ArchitectureHint)"
-        }
-        else {
-            $_.InstallerUrl
-        }
-    })
+    $RequestedInstallerValues = @($RequestedInstallerEntries | Select-Object -ExpandProperty OriginalValue)
     $ContainsArchitectureHints = @($RequestedInstallerEntries | Where-Object { $_.ArchitectureHint }).Count -gt 0
     $EffectiveWith = $With
 
@@ -198,11 +191,11 @@ function Update-WingetPackage {
                         $winmatschArgs += "--urls"
                         $winmatschArgs += $RequestedUrl
                     }
-                    # Architecture hints are supported natively via --url overrides (url|arch)
+                    # Installer hints are supported natively via --url overrides.
                     foreach ($RequestedEntry in $RequestedInstallerEntries) {
                         if ($RequestedEntry.ArchitectureHint) {
                             $winmatschArgs += "--url"
-                            $winmatschArgs += "$($RequestedEntry.InstallerUrl)|$($RequestedEntry.ArchitectureHint)"
+                            $winmatschArgs += $RequestedEntry.OriginalValue
                         }
                     }
                     if ($resolves -match '^\d+$') {

@@ -20,24 +20,28 @@ function Get-InstallerUrlEntries {
 
         $normalizedValue = $installerValue.Trim()
 
-        if ($normalizedValue -match '^(?<InstallerUrl>https?://\S+?)(?:\|(?<ArchitectureHint>x32|x86|x64|arm64|neutral))?$') {
+        if ($normalizedValue -match '^(?<InstallerUrl>https?://[^|]+)(?:\|(?<ArchitectureHint>x32|x86|x64|arm64|neutral)(?:\|(?<ScopeHint>user|machine)(?:\|(?<DisplayVersionHint>[^|]+))?)?)?$') {
             $architectureHint = $null
             if ($Matches['ArchitectureHint']) {
                 $architectureHint = $supportedArchitectures[$Matches['ArchitectureHint'].ToLowerInvariant()]
             }
 
             [PSCustomObject]@{
-                OriginalValue    = $normalizedValue
-                InstallerUrl     = $Matches['InstallerUrl']
-                ArchitectureHint = $architectureHint
+                OriginalValue      = $normalizedValue
+                InstallerUrl       = $Matches['InstallerUrl']
+                ArchitectureHint   = $architectureHint
+                ScopeHint          = $Matches['ScopeHint']
+                DisplayVersionHint = $Matches['DisplayVersionHint']
             }
             continue
         }
 
         [PSCustomObject]@{
-            OriginalValue    = $normalizedValue
-            InstallerUrl     = $normalizedValue
-            ArchitectureHint = $null
+            OriginalValue      = $normalizedValue
+            InstallerUrl       = $normalizedValue
+            ArchitectureHint   = $null
+            ScopeHint          = $null
+            DisplayVersionHint = $null
         }
     }
 }
