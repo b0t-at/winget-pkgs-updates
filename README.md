@@ -31,3 +31,8 @@ its matrix entry's `overridePack` field to that repository-relative path:
 The single-package workflow exposes the same path as `overridePack`. The wrapper
 rejects missing files and rejects override packs with Komac or WinGetCreate, so
 an override cannot be silently ignored.
+
+For a reviewed installer architecture, type, or scope transition, set
+`allowStructuralRewrite: true` on that package's matrix entry. This approval is
+disabled by default and maps only to WinMatsch's `--allow-structural-rewrite`
+option.

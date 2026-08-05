@@ -57,5 +57,8 @@ if ($Env:GHVersionSource) {
 if ($Env:WinMatschOverridePack) {
     $params.Add("WinMatschOverridePack", $Env:WinMatschOverridePack)
 }
+if ($Env:AllowStructuralRewrite -eq $true) {
+    $params.Add("AllowStructuralRewrite", $true)
+}
 
 Update-WingetPackage @params

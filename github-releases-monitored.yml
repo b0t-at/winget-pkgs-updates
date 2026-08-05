@@ -445,7 +445,7 @@
             url: "https://github.com/4thOffice/loopinupdater/releases/download/v{VERSION}/Loop-Email-Setup-{VERSION}.exe https://github.com/4thOffice/loopinupdater/releases/download/v{VERSION}/Loop-Email-Setup-{VERSION}.exe"
           - id: "IPEP.Scantailor-Experimental"
             repo: "ImageProcessing-ElectronicPublications/scantailor-experimental"
-            url: "https://github.com/ImageProcessing-ElectronicPublications/scantailor-experimental/releases/download/{VERSION}/scantailor-experimental-{VERSION}-X86-32-install.exe https://github.com/ImageProcessing-ElectronicPublications/scantailor-experimental/releases/download/{VERSION}/scantailor-experimental-{VERSION}-X86-64-install.exe https://github.com/ImageProcessing-ElectronicPublications/scantailor-experimental/releases/download/{VERSION}/scantailor-experimental-{VERSION}-ARM64-Qt6-install.exe"
+            url: "https://github.com/ImageProcessing-ElectronicPublications/scantailor-experimental/releases/download/{VERSION}/scantailor-experimental-{VERSION}-X86-64-install.exe"
           - id: "Istio.Istio"
             repo: "istio/istio"
             url: "https://github.com/istio/istio/releases/download/{VERSION}/istio-{VERSION}-win.zip"
@@ -461,9 +461,7 @@
           - id: "JackieLiu.NotepadsApp"
             repo: "0x7c13/Notepads"
             url: "https://github.com/0x7c13/Notepads/releases/download/v{VERSION}/Notepads_{VERSION}_x86_x64_arm64.msixbundle https://github.com/0x7c13/Notepads/releases/download/v{VERSION}/Notepads_{VERSION}_x86_x64_arm64.msixbundle https://github.com/0x7c13/Notepads/releases/download/v{VERSION}/Notepads_{VERSION}_x86_x64_arm64.msixbundle"
-          - id: "jadquir.MRA"
-            repo: "Jadquir/mra-files"
-            url: "https://github.com/Jadquir/mra-files/releases/download/0.111/MRA_Setup_x64.msi"
+          # jadquir.MRA is excluded: current releases redirect to versionless external downloads while the GitHub tag and asset versions are unrelated.
           - id: "jaegertracing.jaeger"
             repo: "jaegertracing/jaeger"
             url: "https://github.com/jaegertracing/jaeger/releases/download/v{VERSION}/jaeger-{VERSION}-windows-amd64.zip"
@@ -704,6 +702,7 @@
           - id: "OpenTelemetry.Weaver"
             repo: "open-telemetry/weaver"
             url: "https://github.com/open-telemetry/weaver/releases/download/v{VERSION}/weaver-x86_64-pc-windows-msvc.zip"
+            allowStructuralRewrite: true
           - id: "OpenTofu.Tofu"
             repo: "opentofu/opentofu"
             url: "https://github.com/opentofu/opentofu/releases/download/v{VERSION}/tofu_{VERSION}_windows_386.zip https://github.com/opentofu/opentofu/releases/download/v{VERSION}/tofu_{VERSION}_windows_amd64.zip"
@@ -1374,7 +1373,6 @@
 #          - id: "Jellyfin.Server"
 #            repo: "jellyfin/jellyfin-server-windows"
 #            url: "https://github.com/jellyfin/jellyfin-server-windows/releases/download/{VERSION}/jellyfin_{VERSION}_windows-x64.exe"
-
 
 
 
