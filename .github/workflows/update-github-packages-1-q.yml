@@ -121,9 +121,6 @@ jobs:
           - id: bcssov.IronyModManager
             repo: bcssov/IronyModManager
             url: https://github.com/bcssov/IronyModManager/releases/download/v{VERSION}/win-x64-setup.zip https://github.com/bcssov/IronyModManager/releases/download/v{VERSION}/win-x64-setup.zip
-          - id: benaclejames.VRCFaceTracking
-            repo: benaclejames/VRCFaceTracking
-            url: https://github.com/benaclejames/VRCFaceTracking/releases/download/{VERSION}/VRCFaceTracking_{VERSION}_x64.zip
           - id: Benbuck.Finestray
             repo: benbuck/finestray
             url: https://github.com/benbuck/finestray/releases/download/v{VERSION}/Finestray-{VERSION}-win64.exe
