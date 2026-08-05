@@ -114,6 +114,8 @@ function Submit-WingetPackage {
     Write-Host ""
 
     try {
+        $winmatschResult = $null
+
         switch ($With) {
             "WinMatsch" {
                 # Ensure WinMatsch is installed
@@ -136,6 +138,14 @@ function Submit-WingetPackage {
                     $winmatschArgs += $Resolves
                 }
 
+                # Only newer builds understand --result-json; older ones reject the flag outright.
+                $resultJsonPath = $null
+                if (Test-WinMatschSupportsResultJson -Command 'submit') {
+                    $resultJsonPath = New-WinMatschResultJsonPath -Label 'submit'
+                    $winmatschArgs += "--result-json"
+                    $winmatschArgs += $resultJsonPath
+                }
+
                 Write-Host "--> Running: winmatsch $($winmatschArgs -replace $Token, '***' -join ' ')" -ForegroundColor White
 
                 $output = & winmatsch @winmatschArgs 2>&1
@@ -143,10 +153,18 @@ function Submit-WingetPackage {
 
                 Write-Host $output
 
+                $winmatschResult = Read-WinMatschResult -Path $resultJsonPath
+                if ($resultJsonPath) {
+                    Remove-Item -LiteralPath $resultJsonPath -Force -ErrorAction SilentlyContinue
+                }
+
                 if ($exitCode -ne 0) {
+                    $reportedError = Get-WinMatschResultError -Result $winmatschResult
+                    if (-not $reportedError) { $reportedError = "Output: $output" }
+
                     return @{
                         Success  = $false
-                        Error    = "WinMatsch submit failed with exit code $exitCode. Output: $output"
+                        Error    = "WinMatsch submit failed with exit code $exitCode. $reportedError"
                         PrUrl    = $null
                         PrNumber = $null
                     }
@@ -213,11 +231,23 @@ function Submit-WingetPackage {
         Write-Host ""
         Write-Host "PR submitted successfully!" -ForegroundColor Green
 
-        $prUrl = Get-WingetPkgsPrUrl -SubmitOutput $output -PackageId $PackageId -Version $Version
+        # Prefer the structured result; fall back to scraping the console output.
+        $prUrl = $null
         $prNumber = $null
 
+        if ($winmatschResult -and $winmatschResult.pullRequest) {
+            $prUrl = "$($winmatschResult.pullRequest.url)".Trim()
+            $prNumber = "$($winmatschResult.pullRequest.number)".Trim()
+            if ($prUrl) { Write-Verbose "PR URL taken from WinMatsch --result-json." }
+        }
+
+        if ([string]::IsNullOrWhiteSpace($prUrl)) {
+            $prUrl = Get-WingetPkgsPrUrl -SubmitOutput $output -PackageId $PackageId -Version $Version
+            $prNumber = $null
+        }
+
         if ($prUrl) {
-            if ($prUrl -match '/pull/(?<Number>\d+)$') {
+            if ([string]::IsNullOrWhiteSpace($prNumber) -and $prUrl -match '/pull/(?<Number>\d+)$') {
                 $prNumber = $Matches['Number']
             }
             Write-Host "PR URL:   $prUrl" -ForegroundColor Cyan
