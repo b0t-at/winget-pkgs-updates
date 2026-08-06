@@ -102,12 +102,7 @@ function Get-ForkBranchSubmissionFiles {
         [string] $Version
     )
 
-    if ($PackageId -notmatch '^[A-Za-z0-9][A-Za-z0-9.-]*$') {
-        throw "Package ID '$PackageId' is not safe for a winget manifest path."
-    }
-    if ($Version -match '[\\/]' -or $Version -match '^\.+$') {
-        throw "Version '$Version' is not safe for a winget manifest path."
-    }
+    Assert-WingetPkgsSubmissionIdentity -PackageId $PackageId -Version $Version
 
     $files = @(Get-ChildItem -LiteralPath $ManifestPath -File -ErrorAction Stop)
     if ($files.Count -eq 0) {
@@ -129,6 +124,57 @@ function Get-ForkBranchSubmissionFiles {
             }
         }
     )
+}
+
+function Assert-WingetPkgsSubmissionIdentity {
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory = $true)]
+        [string] $PackageId,
+
+        [Parameter(Mandatory = $true)]
+        [string] $Version
+    )
+
+    if ($PackageId -notmatch '^[A-Za-z0-9][A-Za-z0-9.-]*$') {
+        throw "Package ID '$PackageId' is not safe for a winget manifest path."
+    }
+    if ($Version -match '[\\/]' -or $Version -match '^\.+$') {
+        throw "Version '$Version' is not safe for a winget manifest path."
+    }
+}
+
+function Get-WingetPkgsSubmissionBranchName {
+    [CmdletBinding()]
+    [OutputType([string])]
+    param(
+        [Parameter(Mandatory = $true)]
+        [string] $PackageId,
+
+        [Parameter(Mandatory = $true)]
+        [string] $Version
+    )
+
+    Assert-WingetPkgsSubmissionIdentity -PackageId $PackageId -Version $Version
+
+    $normalizedPackageId = $PackageId.ToLowerInvariant()
+    $normalizedVersion = $Version.ToLowerInvariant()
+    $identity = $normalizedPackageId + [string][char]0 + $normalizedVersion
+    $hasher = [System.Security.Cryptography.SHA256]::Create()
+    try {
+        $hashBytes = $hasher.ComputeHash([System.Text.Encoding]::UTF8.GetBytes($identity))
+    }
+    finally {
+        $hasher.Dispose()
+    }
+    $identityHash = ([BitConverter]::ToString($hashBytes)).Replace('-', '').ToLowerInvariant().Substring(0, 16)
+
+    $readableSuffix = "$normalizedPackageId-$normalizedVersion" -replace '[^A-Za-z0-9._-]', '-'
+    if ($readableSuffix.Length -gt 96) {
+        $readableSuffix = $readableSuffix.Substring(0, 96)
+    }
+
+    return "winget-autosubmit/$readableSuffix-$identityHash"
 }
 
 function Assert-SafeWingetPkgsForkRepository {
@@ -216,8 +262,8 @@ function Invoke-ForkBranchSubmission {
             }
         }
 
-    # A branch is created directly from the selected base commit; the fork's
-    # default branch is read-only throughout this flow.
+    # The fork default branch remains read-only. The manifest commit is rooted
+    # at the selected upstream base commit before its ref is atomically claimed.
     $tree = Invoke-WingetPkgsGitHubApi `
         -Method Post `
         -Path "repos/$ForkRepository/git/trees" `
@@ -236,29 +282,57 @@ function Invoke-ForkBranchSubmission {
             parents = @($baseSha)
         }
 
-    $branchSuffix = "$PackageId-$Version" -replace '[^A-Za-z0-9._-]', '-'
-    $branchName = "winget-autosubmit/$branchSuffix-$([guid]::NewGuid().ToString('N'))"
-    Invoke-WingetPkgsGitHubApi `
-        -Method Post `
-        -Path "repos/$ForkRepository/git/refs" `
-        -Token $Token `
-        -Body @{
-            ref = "refs/heads/$branchName"
-            sha = "$($commit.sha)"
-        } | Out-Null
-
-    # Recheck immediately before the external write. Workflow concurrency handles
-    # scheduled workers; this closes the remaining generate-to-submit window.
-    if (Test-ExistingPRs -PackageIdentifier $PackageId -Version $Version -Repository $targetRepository) {
+    # Creating this deterministic ref is the atomic package/version claim.
+    # A collision is never retried with another name because that could open a
+    # second upstream PR while the first worker's PR is not searchable yet.
+    $branchName = Get-WingetPkgsSubmissionBranchName -PackageId $PackageId -Version $Version
+    try {
         Invoke-WingetPkgsGitHubApi `
-            -Method Delete `
-            -Path "repos/$ForkRepository/git/refs/heads/$branchName" `
-            -Token $Token | Out-Null
+            -Method Post `
+            -Path "repos/$ForkRepository/git/refs" `
+            -Token $Token `
+            -Body @{
+                ref = "refs/heads/$branchName"
+                sha = "$($commit.sha)"
+            } | Out-Null
+    }
+    catch {
+        $statusCode = Get-WingetPkgsGitHubApiFailureStatusCode -ErrorRecord $_
+        if ($statusCode -notin @(409, 422)) {
+            throw
+        }
+
+        if (Test-ExistingPRs -PackageIdentifier $PackageId -Version $Version -Repository $targetRepository) {
+            return [pscustomobject]@{
+                Created             = $false
+                DuplicateDetected   = $true
+                SubmissionClaimed   = $true
+                BranchName          = $branchName
+                PullRequest         = $null
+                Error               = $null
+            }
+        }
 
         return [pscustomobject]@{
-            Created    = $false
-            BranchName = $branchName
-            PullRequest = $null
+            Created             = $false
+            DuplicateDetected   = $false
+            SubmissionClaimed   = $true
+            BranchName          = $branchName
+            PullRequest         = $null
+            Error               = "The deterministic submission branch '$branchName' already exists, but no matching upstream PR is searchable. Refusing to create another PR; reconcile the existing branch before retrying."
+        }
+    }
+
+    # Recheck immediately before the external PR write. The branch claim closes
+    # the remaining read-to-write race when GitHub Search has not indexed a PR.
+    if (Test-ExistingPRs -PackageIdentifier $PackageId -Version $Version -Repository $targetRepository) {
+        return [pscustomobject]@{
+            Created             = $false
+            DuplicateDetected   = $true
+            SubmissionClaimed   = $true
+            BranchName          = $branchName
+            PullRequest         = $null
+            Error               = $null
         }
     }
 
@@ -276,8 +350,11 @@ function Invoke-ForkBranchSubmission {
         }
 
     return [pscustomobject]@{
-        Created     = $true
-        BranchName  = $branchName
-        PullRequest = $pullRequest
+        Created             = $true
+        DuplicateDetected   = $false
+        SubmissionClaimed   = $true
+        BranchName          = $branchName
+        PullRequest         = $pullRequest
+        Error               = $null
     }
 }
