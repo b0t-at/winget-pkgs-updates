@@ -3,7 +3,7 @@
     Checks for existing pull requests (PRs) for a specified package identifier and version in the 'microsoft/winget-pkgs' repository.
 
 .DESCRIPTION
-    The `Test-ExistingPRs` function searches for existing open and merged pull requests in the 'microsoft/winget-pkgs' repository that match the specified package identifier and version. 
+    The `Test-ExistingPRs` function searches for existing open and merged pull requests in the 'microsoft/winget-pkgs' repository that match the specified package identifier and version.
     It uses GitHub's public REST search endpoint without credentials so a
     fine-grained submission token scoped only to the source fork cannot turn a
     readable upstream lookup into a 404. It returns `true` if matching open or
@@ -44,7 +44,6 @@ function Test-ExistingPRs {
         throw 'PackageIdentifier and Version are required to search for existing pull requests.'
     }
 
-    $states = if ($OnlyOpen) { @('open') } else { @('open', 'merged') }
     $headers = @{
         Accept                 = 'application/vnd.github+json'
         'X-GitHub-Api-Version' = '2022-11-28'
@@ -52,24 +51,22 @@ function Test-ExistingPRs {
     }
     $escapedPackageIdentifier = $PackageIdentifier.Replace('"', '\"')
     $escapedVersion = $Version.Replace('"', '\"')
+    $stateQuery = if ($OnlyOpen) { 'is:open' } else { '(is:open OR is:merged)' }
+    $query = "repo:$Repository is:pr $stateQuery in:title `"$escapedPackageIdentifier $escapedVersion`""
+    $encodedQuery = [uri]::EscapeDataString($query)
+    $response = Invoke-RestMethod `
+        -Method Get `
+        -Uri "https://api.github.com/search/issues?q=$encodedQuery&per_page=100" `
+        -Headers $headers `
+        -ErrorAction Stop
+    $existingPrs = @($response.items)
 
-    foreach ($state in $states) {
-        $query = "repo:$Repository is:pr is:$state in:title `"$escapedPackageIdentifier $escapedVersion`""
-        $encodedQuery = [uri]::EscapeDataString($query)
-        $response = Invoke-RestMethod `
-            -Method Get `
-            -Uri "https://api.github.com/search/issues?q=$encodedQuery&per_page=100" `
-            -Headers $headers `
-            -ErrorAction Stop
-        $existingPrs = @($response.items)
-
-        if ($existingPrs.Count -gt 0) {
-            $existingPrs | ForEach-Object {
-                Write-Host "Found existing PR: $($_.title)"
-                Write-Host "-> $($_.html_url)"
-            }
-            return $true
+    if ($existingPrs.Count -gt 0) {
+        $existingPrs | ForEach-Object {
+            Write-Host "Found existing PR: $($_.title)"
+            Write-Host "-> $($_.html_url)"
         }
+        return $true
     }
 
     return $false

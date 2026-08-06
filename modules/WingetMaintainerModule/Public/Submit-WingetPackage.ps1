@@ -271,28 +271,6 @@ function Submit-WingetPackage {
                 }
 
                 Assert-SafeWingetPkgsForkRepository -ForkRepository $forkRepository
-                $targetRepository = 'microsoft/winget-pkgs'
-
-                if (Test-ExistingPRs -PackageIdentifier $PackageId -Version $Version -Repository $targetRepository) {
-                    $existingPrUrl = Get-WingetPkgsPrUrl `
-                        -PackageId $PackageId `
-                        -Version $Version `
-                        -Repository $targetRepository
-                    $existingPrNumber = if ($existingPrUrl -match '/pull/(?<Number>\d+)$') {
-                        $Matches['Number']
-                    }
-                    else {
-                        $null
-                    }
-
-                    Write-Host 'A matching submission PR already exists; skipping submission.' -ForegroundColor Yellow
-                    return @{
-                        Success  = $true
-                        Error    = $null
-                        PrUrl    = $existingPrUrl
-                        PrNumber = $existingPrNumber
-                    }
-                }
 
                 $forkSubmission = Invoke-ForkBranchSubmission `
                     -ManifestPath $fullManifestPath `

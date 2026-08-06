@@ -62,6 +62,11 @@ Describe 'Submit-WingetPackage ForkBranch' {
                     '/git/refs$' {
                         return [pscustomobject]@{ ref = 'refs/heads/winget-autosubmit/test' }
                     }
+                    '/git/refs/heads/winget-autosubmit/' {
+                        if ($Method -eq 'Delete') {
+                            return $null
+                        }
+                    }
                     '/pulls$' {
                         return [pscustomobject]@{
                             html_url = 'https://github.com/microsoft/winget-pkgs/pull/12345'
@@ -116,8 +121,11 @@ Describe 'Submit-WingetPackage ForkBranch' {
         if ($result.Success -ne $true) {
             throw "Expected a successful cross-repository ForkBranch submission, got: $($result.Error)"
         }
-        if ($global:ForkBranchDuplicateRepositories.Count -ne 2 -or @($global:ForkBranchDuplicateRepositories | Where-Object { $_ -cne 'microsoft/winget-pkgs' }).Count -ne 0) {
-            throw "Fork submission did not perform duplicate checks against the upstream target: $($global:ForkBranchDuplicateRepositories -join ', ')"
+        if ($global:ForkBranchDuplicateRepositories.Count -ne 1 -or $global:ForkBranchDuplicateRepositories[0] -cne 'microsoft/winget-pkgs') {
+            throw "Fork submission did not perform exactly one duplicate check against the upstream target: $($global:ForkBranchDuplicateRepositories -join ', ')"
+        }
+        InModuleScope WingetMaintainerModule {
+            Assert-MockCalled Test-ExistingPRs -Times 1 -Exactly -Scope It
         }
         $upstreamReads = @(
             $global:ForkBranchSubmissionRequests |
@@ -172,7 +180,7 @@ Describe 'Submit-WingetPackage ForkBranch' {
         }
     }
 
-    It 'does not create a fork branch when the matching target PR already exists' {
+    It 'removes the temporary fork branch when the final duplicate preflight finds a target PR' {
         InModuleScope WingetMaintainerModule {
             Mock Test-ExistingPRs {
                 param($PackageIdentifier, $Version, $Repository)
@@ -196,8 +204,18 @@ Describe 'Submit-WingetPackage ForkBranch' {
         if ($global:ForkBranchDuplicateRepositories.Count -ne 1 -or $global:ForkBranchDuplicateRepositories[0] -cne 'microsoft/winget-pkgs') {
             throw "Duplicate detection did not use the upstream target: $($global:ForkBranchDuplicateRepositories -join ', ')"
         }
-        if ($global:ForkBranchSubmissionRequests.Count -ne 0) {
-            throw 'Duplicate detection attempted a fork API request.'
+        $branchDeletes = @(
+            $global:ForkBranchSubmissionRequests |
+                Where-Object {
+                    $_.Method -eq 'Delete' -and
+                    $_.Path -match '^repos/damn-good-b0t/winget-pkgs/git/refs/heads/winget-autosubmit/'
+                }
+        )
+        if ($branchDeletes.Count -ne 1) {
+            throw "The temporary fork branch was not removed after duplicate detection: $($global:ForkBranchSubmissionRequests | ConvertTo-Json -Compress)"
+        }
+        if (@($global:ForkBranchSubmissionRequests | Where-Object { $_.Path -eq 'repos/microsoft/winget-pkgs/pulls' -and $_.Method -eq 'Post' }).Count -ne 0) {
+            throw 'Duplicate detection created an upstream pull request.'
         }
     }
 
