@@ -226,6 +226,12 @@ $preGenerationGuardResult = & $module {
     function Install-WinMatsch {
         throw 'Manifest generation started despite an existing upstream PR.'
     }
+    function winmatsch {
+        throw 'Manifest generation started despite an existing upstream PR.'
+    }
+    function Test-GeneratedInstallerArchitecture {
+        throw 'Manifest generation started despite an existing upstream PR.'
+    }
 
     $result = Update-WingetPackage `
         -WingetPackage 'Test.Package' `
