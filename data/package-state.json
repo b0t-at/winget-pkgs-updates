@@ -1723,6 +1723,18 @@
       "DD18E3C0F1A6069358375E78984DF9F499E78354EFFAAAE97D716AAFDE54E470"
     ]
   },
+  "raphamorim.rio": {
+    "manifestHash": "E1416D259738FB5DA83D5E5A9A428DDDB222D302B73D7768CCCC8F46BB7EB492",
+    "validationCount": 1,
+    "description": "",
+    "installerHashes": [
+      "1EFEE2E45F95456568A9E65991261FF43EDDAF3138CA2F9D11888AADCACD9F8B",
+      "663DACE4A0BEF1114FFEC7CD43E83D9C16B910E188F5C504C68B195F6551FA19"
+    ],
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-06T13:08:37.6487059Z",
+    "version": "0.5.15"
+  },
   "rejetto.hfs": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "CE1DA7685ACAE6DF0C3C52585292527B683875F92C25D7CD4DEC8A893BC8DB7D",
@@ -1874,15 +1886,15 @@
     "validationCount": 3
   },
   "Snyk.Snyk": {
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "80FCC68E22A88A235C8ABF8B37F936E09AE9D4E9FFFE5D86360F233FDD0B49A3",
-    "installerHashes": [
-      "EF4464F717A596CB003E06005CE399DFD475DF19CAFC699EC7D63F60B6E6A2E7"
-    ],
+    "manifestHash": "B7456751E414C54A50B093807A49DE706CB32C704D379447FFDB03F4B16567AD",
+    "validationCount": 1,
     "description": "",
-    "validationCount": 4,
-    "version": "1.1306.2",
-    "lastUpdated": "2026-08-05T07:49:49.3436414Z"
+    "installerHashes": [
+      "00D00DD69BDDE4DDA5BBD91ADD4C5A93C457D97C30673B2FE53CE633D3195DF3"
+    ],
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-06T13:08:37.6171146Z",
+    "version": "1.1306.3"
   },
   "SparkLabs.openvpn-configuration-generator": {
     "description": "",
@@ -1930,16 +1942,28 @@
     "lastUpdated": "2026-05-10T20:33:03.6508771Z",
     "validationCount": 1
   },
-  "Storj.Uplink": {
-    "installerHashes": [
-      "AAC6A58C6CC80A9E5C839F87E1D87958831826AEC3DC9C01DB19321A04A9E5AB"
-    ],
-    "description": "",
-    "lastUpdated": "2026-08-05T07:49:49.2672187Z",
-    "manifestHash": "3E1A3E516FEB7EC67D6C46C2240DF270B40B315A71CEB9F47715FA345553FEA6",
+  "StefansTools.grepWin": {
+    "manifestHash": "4CD26485122D5A3D8BE0549E7FBD0FDAC4FF10D84604DA165DA3BA9040124D4C",
     "validationCount": 1,
+    "description": "",
+    "installerHashes": [
+      "2B959DBCF1D851201A09B1DEE132E43C20AAE9027499A181DECF7460341182F5",
+      "E70CBCC64C966D333940779BF4C5A041BFD9D093A47BB48B48933033EE76FDFC"
+    ],
+    "state": "VALIDATION_FAILED",
+    "lastUpdated": "2026-08-06T13:08:37.5681344Z",
+    "version": "2.1.12"
+  },
+  "Storj.Uplink": {
+    "manifestHash": "CD83B7570AE70CD0CF7740F5FBC93A25011A72239B76E8B3A73588BD91E0CCA3",
+    "validationCount": 1,
+    "description": "",
+    "installerHashes": [
+      "A6BB2B030B469C1C39B9E77A651CE0358FC6B4C0EFE08549B8143FFED7B494C4"
+    ],
     "state": "VALIDATION_PASSED",
-    "version": "1.161.4"
+    "lastUpdated": "2026-08-06T13:08:37.6715635Z",
+    "version": "1.161.6"
   },
   "Stripe.StripeCli": {
     "version": "1.43.5",
@@ -1970,9 +1994,9 @@
       "9B7155D416A18F2D400A12AEBB641F13F6023A798B77B4954BBC663F9A81F67A"
     ],
     "description": "",
-    "validationCount": 4,
+    "validationCount": 5,
     "version": "1.29.0",
-    "lastUpdated": "2026-08-05T07:49:49.2793361Z"
+    "lastUpdated": "2026-08-06T13:08:37.6591988Z"
   },
   "SUSE.RancherDesktop": {
     "description": "",
@@ -2157,6 +2181,17 @@
     "manifestHash": "F79CB6AE5B2EA822011E5858038ACA43647AC0422147951DB9DD63138B02F65D",
     "state": "VALIDATION_PASSED"
   },
+  "unlimited-clipboard.unlimited-clipboard": {
+    "manifestHash": "34A5821FD0C29F1FFBBC101667428059A2390200B9EF580E4DB93FD15EBC4709",
+    "validationCount": 1,
+    "description": "",
+    "installerHashes": [
+      "FAC51C75E757A61DF4A860353E68F3E0FEAEC0E5B32181500944ABD521EBEFAF"
+    ],
+    "state": "VALIDATION_FAILED",
+    "lastUpdated": "2026-08-06T13:08:37.5355898Z",
+    "version": "1.0.1"
+  },
   "vcmi.vcmi": {
     "validationCount": 4,
     "description": "",
@@ -2169,6 +2204,17 @@
       "E17A748F9D2E2DD1980893DCF5929A5A382837A8B081373D93F799946E904A6C"
     ],
     "manifestHash": "91A66FD8DA93CD7BB4DAE32B73E37E2A9F7230DFCF742BEF8AD1C52C05869C3F"
+  },
+  "Vendicated.Vencord.Canary": {
+    "manifestHash": "658608EF50D6FF994C3CEC971BA317B4E2E9220B47F8382E6ECB1F51A2817CE1",
+    "validationCount": 1,
+    "description": "",
+    "installerHashes": [
+      "466D2A0BE1F380DDFFED052DF3CC132125FA34DC1AF29312E14F13F358C8D2A2"
+    ],
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-06T13:08:37.5820266Z",
+    "version": "1.4.0"
   },
   "Vipre.IPVTest": {
     "description": "",
@@ -2292,11 +2338,11 @@
     "manifestHash": "09B393FE05C1899D6E6FA28E20FA9C8EBE1D54C32039B0C27EF5361773E27FA3"
   },
   "ZeroInstall.ZeroInstall": {
-    "lastUpdated": "2026-08-06T05:14:19.7456165Z",
+    "lastUpdated": "2026-08-06T13:08:37.6323689Z",
     "state": "VALIDATION_PASSED",
     "description": "",
     "version": "2.29.2",
-    "validationCount": 5,
+    "validationCount": 6,
     "installerHashes": [
       "B8DDFA63CF7B7ED777F43FC7AC4A69690445AEBB6BEB6CA801380AAE83FFDF33"
     ],
