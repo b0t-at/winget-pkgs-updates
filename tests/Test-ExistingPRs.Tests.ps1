@@ -55,8 +55,35 @@ Describe 'Test-ExistingPRs' {
         }
 
         $query = [uri]::UnescapeDataString(([uri] $request.Uri).Query)
-        if ($query -notmatch 'repo:microsoft/winget-pkgs' -or $query -notmatch 'is:open' -or $query -notmatch 'Test.Package 1.0.0') {
+        if ($query -notmatch 'repo:microsoft/winget-pkgs' -or $query -notmatch '\(is:open OR is:merged\)' -or $query -notmatch 'Test.Package 1.0.0') {
             throw "The public upstream PR search used an unexpected query: $query"
+        }
+    }
+
+    It 'checks open and merged pull requests in one upstream request' {
+        InModuleScope WingetMaintainerModule {
+            Mock Invoke-RestMethod {
+                param($Method, $Uri, $Headers, $ErrorAction)
+
+                $global:ExistingPrSearchRequests.Add([pscustomobject]@{
+                    Method  = $Method
+                    Uri     = $Uri
+                    Headers = $Headers
+                })
+                return [pscustomobject]@{ items = @() }
+            }
+        }
+
+        $result = Test-ExistingPRs `
+            -PackageIdentifier 'Test.Package' `
+            -Version '1.0.0' `
+            -Repository 'microsoft/winget-pkgs'
+
+        if ($result -ne $false) {
+            throw 'An empty upstream PR search unexpectedly found a match.'
+        }
+        if ($global:ExistingPrSearchRequests.Count -ne 1) {
+            throw "Open and merged duplicate detection performed $($global:ExistingPrSearchRequests.Count) requests instead of one."
         }
     }
 
