@@ -15,6 +15,7 @@ Describe 'Submit-WingetPackage ForkBranch' {
 
         $global:ForkBranchSubmissionRequests = [System.Collections.Generic.List[object]]::new()
         $global:ForkBranchDuplicateRepositories = [System.Collections.Generic.List[string]]::new()
+        $global:ForkBranchPrUrlRepositories = [System.Collections.Generic.List[string]]::new()
         $global:ForkBranchUpstreamReadFailTokens = @()
         $global:OriginalForkRepository = $env:WINGET_PKGS_FORK_REPO
         $global:OriginalUpstreamReadToken = $env:WINGET_UPSTREAM_READ_TOKEN
@@ -97,6 +98,7 @@ Describe 'Submit-WingetPackage ForkBranch' {
         Remove-Variable -Name ForkBranchSubmissionManifestPath -Scope Global -ErrorAction SilentlyContinue
         Remove-Variable -Name ForkBranchSubmissionRequests -Scope Global -ErrorAction SilentlyContinue
         Remove-Variable -Name ForkBranchDuplicateRepositories -Scope Global -ErrorAction SilentlyContinue
+        Remove-Variable -Name ForkBranchPrUrlRepositories -Scope Global -ErrorAction SilentlyContinue
         Remove-Variable -Name ForkBranchUpstreamReadFailTokens -Scope Global -ErrorAction SilentlyContinue
         Remove-Variable -Name OriginalForkRepository -Scope Global -ErrorAction SilentlyContinue
         Remove-Variable -Name OriginalUpstreamReadToken -Scope Global -ErrorAction SilentlyContinue
@@ -284,7 +286,7 @@ Describe 'Submit-WingetPackage ForkBranch' {
         }
     }
 
-    It 'keeps its claimed branch and skips PR creation when the final duplicate preflight finds a target PR' {
+    It 'returns the upstream PR when the final duplicate preflight returns Created=false' {
         InModuleScope WingetMaintainerModule {
             Mock Test-ExistingPRs {
                 param($PackageIdentifier, $Version, $Repository)
@@ -292,7 +294,12 @@ Describe 'Submit-WingetPackage ForkBranch' {
                 $global:ForkBranchDuplicateRepositories.Add($Repository)
                 return $true
             }
-            Mock Get-WingetPkgsPrUrl { 'https://github.com/microsoft/winget-pkgs/pull/54321' }
+            Mock Get-WingetPkgsPrUrl {
+                param($PackageId, $Version, $Repository)
+
+                $global:ForkBranchPrUrlRepositories.Add($Repository)
+                return 'https://github.com/microsoft/winget-pkgs/pull/54321'
+            }
         }
 
         $result = Submit-WingetPackage `
@@ -307,6 +314,9 @@ Describe 'Submit-WingetPackage ForkBranch' {
         }
         if ($global:ForkBranchDuplicateRepositories.Count -ne 1 -or $global:ForkBranchDuplicateRepositories[0] -cne 'microsoft/winget-pkgs') {
             throw "Duplicate detection did not use the upstream target: $($global:ForkBranchDuplicateRepositories -join ', ')"
+        }
+        if ($global:ForkBranchPrUrlRepositories.Count -ne 1 -or $global:ForkBranchPrUrlRepositories[0] -cne 'microsoft/winget-pkgs') {
+            throw "Created=false did not resolve the existing pull request against the upstream target: $($global:ForkBranchPrUrlRepositories -join ', ')"
         }
         $branchDeletes = @(
             $global:ForkBranchSubmissionRequests |
