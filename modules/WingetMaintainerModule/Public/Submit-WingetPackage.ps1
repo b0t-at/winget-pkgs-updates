@@ -30,8 +30,9 @@
     fork's default branch.
 
     .PARAMETER SubmissionTarget
-    ForkBranch target: "Upstream" opens the normal PR against
-    microsoft/winget-pkgs; "Fork" opens a fork-only PR for test runs.
+    ForkBranch is restricted to "Fork" and opens the pull request inside the
+    verified Utesgui/winget-pkgs fork. Submissions to microsoft/winget-pkgs
+    are disabled.
 
 .PARAMETER Token
     GitHub Personal Access Token with repo scope. If not provided, uses
@@ -97,7 +98,7 @@ function Submit-WingetPackage {
 
         [Parameter(Mandatory = $false)]
         [ValidateSet('Upstream', 'Fork')]
-        [string] $SubmissionTarget = 'Upstream'
+        [string] $SubmissionTarget = 'Fork'
     )
 
     # Get GitHub token
@@ -249,6 +250,15 @@ function Submit-WingetPackage {
             }
 
             "ForkBranch" {
+                if ($SubmissionTarget -ne 'Fork') {
+                    return @{
+                        Success  = $false
+                        Error    = 'ForkBranch submissions are restricted to the Fork target; submissions to microsoft/winget-pkgs are disabled.'
+                        PrUrl    = $null
+                        PrNumber = $null
+                    }
+                }
+
                 $forkRepository = "$env:WINGET_PKGS_FORK_REPO".Trim()
                 if ([string]::IsNullOrWhiteSpace($forkRepository)) {
                     return @{
@@ -259,12 +269,8 @@ function Submit-WingetPackage {
                     }
                 }
 
-                $targetRepository = if ($SubmissionTarget -eq 'Fork') {
-                    $forkRepository
-                }
-                else {
-                    'microsoft/winget-pkgs'
-                }
+                Assert-SafeWingetPkgsForkRepository -ForkRepository $forkRepository
+                $targetRepository = $forkRepository
 
                 if (Test-ExistingPRs -PackageIdentifier $PackageId -Version $Version -Repository $targetRepository) {
                     $existingPrUrl = Get-WingetPkgsPrUrl `
@@ -294,7 +300,6 @@ function Submit-WingetPackage {
                     -PrTitle $PrTitle `
                     -Token $Token `
                     -ForkRepository $forkRepository `
-                    -SubmissionTarget $SubmissionTarget `
                     -Resolves $Resolves
 
                 if (-not $forkSubmission.Created) {

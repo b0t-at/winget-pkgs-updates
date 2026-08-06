@@ -84,6 +84,22 @@ function Get-ForkBranchSubmissionFiles {
     )
 }
 
+function Assert-SafeWingetPkgsForkRepository {
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory = $true)]
+        [string] $ForkRepository
+    )
+
+    $approvedForkRepository = 'Utesgui/winget-pkgs'
+    if ($ForkRepository -notmatch '^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$') {
+        throw "WINGET_PKGS_FORK_REPO must be an owner/repository name, not '$ForkRepository'."
+    }
+    if ($ForkRepository -ine $approvedForkRepository) {
+        throw "WINGET_PKGS_FORK_REPO must be configured as $approvedForkRepository for ForkBranch submissions; received '$ForkRepository'."
+    }
+}
+
 function Invoke-ForkBranchSubmission {
     <#
     .SYNOPSIS
@@ -110,34 +126,20 @@ function Invoke-ForkBranchSubmission {
         [string] $ForkRepository,
 
         [Parameter(Mandatory = $false)]
-        [ValidateSet('Upstream', 'Fork')]
-        [string] $SubmissionTarget = 'Upstream',
-
-        [Parameter(Mandatory = $false)]
         [string] $Resolves
     )
 
     $upstreamRepository = 'microsoft/winget-pkgs'
-    if ($ForkRepository -notmatch '^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$') {
-        throw "WINGET_PKGS_FORK_REPO must be an owner/repository name, not '$ForkRepository'."
-    }
-    if ($ForkRepository -ieq $upstreamRepository) {
-        throw 'WINGET_PKGS_FORK_REPO must name a user-owned fork, never microsoft/winget-pkgs.'
-    }
+    Assert-SafeWingetPkgsForkRepository -ForkRepository $ForkRepository
 
     $fork = Invoke-WingetPkgsGitHubApi -Method Get -Path "repos/$ForkRepository" -Token $Token
     if (-not $fork.fork -or "$($fork.parent.full_name)" -ine $upstreamRepository) {
         throw "Configured repository '$ForkRepository' is not a fork of $upstreamRepository."
     }
 
-    $targetRepository = if ($SubmissionTarget -eq 'Fork') { $ForkRepository } else { $upstreamRepository }
+    $targetRepository = $ForkRepository
     $targetDefaultBranch = "$($fork.default_branch)"
     $baseRepository = $targetRepository
-
-    if ($SubmissionTarget -eq 'Upstream') {
-        $upstream = Invoke-WingetPkgsGitHubApi -Method Get -Path "repos/$upstreamRepository" -Token $Token
-        $targetDefaultBranch = "$($upstream.default_branch)"
-    }
 
     $baseReference = Invoke-WingetPkgsGitHubApi `
         -Method Get `

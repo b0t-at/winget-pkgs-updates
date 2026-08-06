@@ -15,7 +15,7 @@ Describe 'Submit-WingetPackage ForkBranch' {
 
         $global:ForkBranchSubmissionRequests = [System.Collections.Generic.List[object]]::new()
         $global:OriginalForkRepository = $env:WINGET_PKGS_FORK_REPO
-        $env:WINGET_PKGS_FORK_REPO = 'test-owner/winget-pkgs'
+        $env:WINGET_PKGS_FORK_REPO = 'Utesgui/winget-pkgs'
 
         InModuleScope WingetMaintainerModule {
             Mock Test-ExistingPRs { $false }
@@ -30,15 +30,12 @@ Describe 'Submit-WingetPackage ForkBranch' {
                 })
 
                 switch -Regex ($Path) {
-                    '^repos/test-owner/winget-pkgs$' {
+                    '^repos/Utesgui/winget-pkgs$' {
                         return [pscustomobject]@{
                             fork           = $true
                             default_branch = 'master'
                             parent         = [pscustomobject]@{ full_name = 'microsoft/winget-pkgs' }
                         }
-                    }
-                    '^repos/microsoft/winget-pkgs$' {
-                        return [pscustomobject]@{ default_branch = 'master' }
                     }
                     '/git/ref/heads/master$' {
                         return [pscustomobject]@{ object = [pscustomobject]@{ sha = 'base-sha' } }
@@ -57,7 +54,7 @@ Describe 'Submit-WingetPackage ForkBranch' {
                     }
                     '/pulls$' {
                         return [pscustomobject]@{
-                            html_url = 'https://github.com/microsoft/winget-pkgs/pull/12345'
+                            html_url = 'https://github.com/Utesgui/winget-pkgs/pull/12345'
                             number   = 12345
                         }
                     }
@@ -77,7 +74,7 @@ Describe 'Submit-WingetPackage ForkBranch' {
         Remove-Variable -Name OriginalForkRepository -Scope Global -ErrorAction SilentlyContinue
     }
 
-    It 'creates an upstream PR from a fork branch without writing the fork default branch' {
+    It 'rejects an upstream ForkBranch target before querying GitHub' {
         $result = Submit-WingetPackage `
             -ManifestPath $global:ForkBranchSubmissionManifestPath `
             -PackageId 'Test.Package' `
@@ -86,27 +83,44 @@ Describe 'Submit-WingetPackage ForkBranch' {
             -With ForkBranch `
             -SubmissionTarget Upstream
 
+        if ($result.Success -ne $false) {
+            throw "Expected an upstream ForkBranch submission to fail, got: $($result | ConvertTo-Json -Compress)"
+        }
+        if ($result.Error -notmatch 'restricted to the Fork target') {
+            throw "The upstream rejection was not explained clearly: $($result.Error)"
+        }
+        if ($global:ForkBranchSubmissionRequests.Count -ne 0) {
+            throw 'An upstream ForkBranch target queried or wrote a GitHub repository.'
+        }
+    }
+
+    It 'keeps Fork submissions entirely within the verified Utesgui fork' {
+        $result = Submit-WingetPackage `
+            -ManifestPath $global:ForkBranchSubmissionManifestPath `
+            -PackageId 'Test.Package' `
+            -Version '1.0.0' `
+            -Token 'test-token' `
+            -With ForkBranch
+
         if ($result.Success -ne $true) {
-            throw "Expected a successful upstream ForkBranch submission, got: $($result.Error)"
+            throw "Expected a successful fork-only ForkBranch submission, got: $($result.Error)"
         }
-        if ($result.PrUrl -cne 'https://github.com/microsoft/winget-pkgs/pull/12345') {
-            throw "Unexpected upstream PR URL: $($result.PrUrl)"
-        }
-        if ($result.PrNumber -cne '12345') {
-            throw "Unexpected upstream PR number: $($result.PrNumber)"
+        if (@($global:ForkBranchSubmissionRequests | Where-Object { $_.Path -match 'microsoft/winget-pkgs' }).Count -ne 0) {
+            throw 'Fork submission called the Microsoft repository API.'
         }
 
         $forkWrites = @(
             $global:ForkBranchSubmissionRequests |
                 Where-Object {
-                    $_.Path -match '^repos/test-owner/winget-pkgs/' -and
+                    $_.Path -match '^repos/Utesgui/winget-pkgs/' -and
                     $_.Method -in @('Post', 'Patch', 'Delete')
                 }
         )
         foreach ($expectedPath in @(
-            'repos/test-owner/winget-pkgs/git/trees',
-            'repos/test-owner/winget-pkgs/git/commits',
-            'repos/test-owner/winget-pkgs/git/refs'
+            'repos/Utesgui/winget-pkgs/git/trees',
+            'repos/Utesgui/winget-pkgs/git/commits',
+            'repos/Utesgui/winget-pkgs/git/refs',
+            'repos/Utesgui/winget-pkgs/pulls'
         )) {
             if ($forkWrites.Path -notcontains $expectedPath) {
                 throw "Expected fork write was not made: $expectedPath"
@@ -115,46 +129,18 @@ Describe 'Submit-WingetPackage ForkBranch' {
         if (@($forkWrites | Where-Object { $_.Path -match 'merge-upstream|refs/heads/master' }).Count -ne 0) {
             throw 'ForkBranch wrote or synchronized the fork default branch.'
         }
-        $treeRequest = $forkWrites | Where-Object { $_.Path -eq 'repos/test-owner/winget-pkgs/git/trees' }
+        $treeRequest = $forkWrites | Where-Object { $_.Path -eq 'repos/Utesgui/winget-pkgs/git/trees' }
         if ($treeRequest.Body.base_tree -cne 'base-tree-sha') {
             throw "ForkBranch did not base the manifest tree on the resolved base tree: $($treeRequest.Body.base_tree)"
         }
 
-        $upstreamWrites = @(
-            $global:ForkBranchSubmissionRequests |
-                Where-Object {
-                    $_.Path -match '^repos/microsoft/winget-pkgs/' -and
-                    $_.Method -in @('Post', 'Patch', 'Delete')
-                }
-        )
-        if ($upstreamWrites.Count -ne 1 -or $upstreamWrites[0].Path -cne 'repos/microsoft/winget-pkgs/pulls') {
-            throw "Upstream write surface is not limited to creating the intended PR: $($upstreamWrites.Path -join ', ')"
-        }
-    }
-
-    It 'keeps Fork test submissions entirely within the verified user fork' {
-        $result = Submit-WingetPackage `
-            -ManifestPath $global:ForkBranchSubmissionManifestPath `
-            -PackageId 'Test.Package' `
-            -Version '1.0.0' `
-            -Token 'test-token' `
-            -With ForkBranch `
-            -SubmissionTarget Fork
-
-        if ($result.Success -ne $true) {
-            throw "Expected a successful fork-only ForkBranch submission, got: $($result.Error)"
-        }
-        if (@($global:ForkBranchSubmissionRequests | Where-Object { $_.Path -match 'microsoft/winget-pkgs' }).Count -ne 0) {
-            throw 'Fork test submission called the Microsoft repository API.'
-        }
-
         $pullRequest = $global:ForkBranchSubmissionRequests |
-            Where-Object { $_.Path -eq 'repos/test-owner/winget-pkgs/pulls' } |
+            Where-Object { $_.Path -eq 'repos/Utesgui/winget-pkgs/pulls' } |
             Select-Object -Last 1
         if ($pullRequest.Body.base -cne 'master') {
             throw "Fork test submission used an unexpected base branch: $($pullRequest.Body.base)"
         }
-        if ($pullRequest.Body.head -notmatch '^test-owner:winget-autosubmit/') {
+        if ($pullRequest.Body.head -notmatch '^Utesgui:winget-autosubmit/') {
             throw "Fork test submission used an unexpected PR head: $($pullRequest.Body.head)"
         }
     }
@@ -162,7 +148,7 @@ Describe 'Submit-WingetPackage ForkBranch' {
     It 'does not create a fork branch when the matching target PR already exists' {
         InModuleScope WingetMaintainerModule {
             Mock Test-ExistingPRs { $true }
-            Mock Get-WingetPkgsPrUrl { 'https://github.com/microsoft/winget-pkgs/pull/54321' }
+            Mock Get-WingetPkgsPrUrl { 'https://github.com/Utesgui/winget-pkgs/pull/54321' }
         }
 
         $result = Submit-WingetPackage `
@@ -172,19 +158,16 @@ Describe 'Submit-WingetPackage ForkBranch' {
             -Token 'test-token' `
             -With ForkBranch
 
-        if ($result.Success -ne $true -or $result.PrUrl -cne 'https://github.com/microsoft/winget-pkgs/pull/54321') {
+        if ($result.Success -ne $true -or $result.PrUrl -cne 'https://github.com/Utesgui/winget-pkgs/pull/54321') {
             throw "Existing submission PR was not returned: $($result | ConvertTo-Json -Compress)"
         }
         if ($global:ForkBranchSubmissionRequests.Count -ne 0) {
             throw 'Duplicate detection attempted a fork API request.'
         }
-        InModuleScope WingetMaintainerModule {
-            Assert-MockCalled Invoke-WingetPkgsGitHubApi -Times 0 -Exactly -Scope It
-        }
     }
 
-    It 'rejects microsoft/winget-pkgs as the configured fork before writing a branch' {
-        $env:WINGET_PKGS_FORK_REPO = 'microsoft/winget-pkgs'
+    It 'rejects an unapproved fork configuration before querying GitHub' {
+        $env:WINGET_PKGS_FORK_REPO = 'damn-good-b0t/winget-pkgs'
 
         $result = Submit-WingetPackage `
             -ManifestPath $global:ForkBranchSubmissionManifestPath `
@@ -194,13 +177,34 @@ Describe 'Submit-WingetPackage ForkBranch' {
             -With ForkBranch
 
         if ($result.Success -ne $false) {
-            throw 'A microsoft/winget-pkgs fork configuration unexpectedly succeeded.'
+            throw 'An unapproved fork configuration unexpectedly succeeded.'
         }
-        if ($result.Error -notmatch 'user-owned fork') {
+        if ($result.Error -notmatch 'must be configured as Utesgui/winget-pkgs') {
             throw "The unsafe fork configuration was not identified clearly: $($result.Error)"
         }
-        if (@($global:ForkBranchSubmissionRequests | Where-Object { $_.Method -in @('Post', 'Patch', 'Delete') }).Count -ne 0) {
-            throw 'An unsafe fork configuration attempted a GitHub write.'
+        if ($global:ForkBranchSubmissionRequests.Count -ne 0) {
+            throw 'An unapproved fork configuration queried or wrote a GitHub repository.'
+        }
+    }
+
+    It 'fails closed when the required safe fork configuration is absent' {
+        $env:WINGET_PKGS_FORK_REPO = ''
+
+        $result = Submit-WingetPackage `
+            -ManifestPath $global:ForkBranchSubmissionManifestPath `
+            -PackageId 'Test.Package' `
+            -Version '1.0.0' `
+            -Token 'test-token' `
+            -With ForkBranch
+
+        if ($result.Success -ne $false) {
+            throw 'A missing fork configuration unexpectedly succeeded.'
+        }
+        if ($result.Error -notmatch 'WINGET_PKGS_FORK_REPO is required') {
+            throw "The missing fork configuration was not identified clearly: $($result.Error)"
+        }
+        if ($global:ForkBranchSubmissionRequests.Count -ne 0) {
+            throw 'A missing fork configuration queried or wrote a GitHub repository.'
         }
     }
 }
