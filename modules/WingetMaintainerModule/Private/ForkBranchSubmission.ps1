@@ -18,14 +18,18 @@ function Invoke-WingetPkgsGitHubApi {
         [string] $Token,
 
         [Parameter(Mandatory = $false)]
+        [switch] $Unauthenticated,
+
+        [Parameter(Mandatory = $false)]
         [object] $Body
     )
-
     $headers = @{
         Accept                 = 'application/vnd.github+json'
-        Authorization          = "Bearer $Token"
         'X-GitHub-Api-Version' = '2022-11-28'
         'User-Agent'           = 'winget-pkgs-updates'
+    }
+    if (-not $Unauthenticated) {
+        $headers.Authorization = "Bearer $Token"
     }
     $request = @{
         Uri         = "https://api.github.com/$($Path.TrimStart('/'))"
@@ -84,6 +88,22 @@ function Get-ForkBranchSubmissionFiles {
     )
 }
 
+function Assert-SafeWingetPkgsForkRepository {
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory = $true)]
+        [string] $ForkRepository
+    )
+
+    $upstreamRepository = 'microsoft/winget-pkgs'
+    if ($ForkRepository -notmatch '^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$') {
+        throw "WINGET_PKGS_FORK_REPO must be an owner/repository name, not '$ForkRepository'."
+    }
+    if ($ForkRepository -ieq $upstreamRepository) {
+        throw 'WINGET_PKGS_FORK_REPO must name a user-owned fork, never microsoft/winget-pkgs.'
+    }
+}
+
 function Invoke-ForkBranchSubmission {
     <#
     .SYNOPSIS
@@ -110,39 +130,33 @@ function Invoke-ForkBranchSubmission {
         [string] $ForkRepository,
 
         [Parameter(Mandatory = $false)]
-        [ValidateSet('Upstream', 'Fork')]
-        [string] $SubmissionTarget = 'Upstream',
-
-        [Parameter(Mandatory = $false)]
         [string] $Resolves
     )
 
     $upstreamRepository = 'microsoft/winget-pkgs'
-    if ($ForkRepository -notmatch '^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$') {
-        throw "WINGET_PKGS_FORK_REPO must be an owner/repository name, not '$ForkRepository'."
-    }
-    if ($ForkRepository -ieq $upstreamRepository) {
-        throw 'WINGET_PKGS_FORK_REPO must name a user-owned fork, never microsoft/winget-pkgs.'
-    }
+    Assert-SafeWingetPkgsForkRepository -ForkRepository $ForkRepository
 
     $fork = Invoke-WingetPkgsGitHubApi -Method Get -Path "repos/$ForkRepository" -Token $Token
     if (-not $fork.fork -or "$($fork.parent.full_name)" -ine $upstreamRepository) {
         throw "Configured repository '$ForkRepository' is not a fork of $upstreamRepository."
     }
 
-    $targetRepository = if ($SubmissionTarget -eq 'Fork') { $ForkRepository } else { $upstreamRepository }
-    $targetDefaultBranch = "$($fork.default_branch)"
+    # The fine-grained fork token cannot necessarily read the public upstream.
+    # Keep its use to fork writes and the final cross-repository PR creation.
+    $targetRepository = $upstreamRepository
+    $upstream = Invoke-WingetPkgsGitHubApi `
+        -Method Get `
+        -Path "repos/$upstreamRepository" `
+        -Token $Token `
+        -Unauthenticated
+    $targetDefaultBranch = "$($upstream.default_branch)"
     $baseRepository = $targetRepository
-
-    if ($SubmissionTarget -eq 'Upstream') {
-        $upstream = Invoke-WingetPkgsGitHubApi -Method Get -Path "repos/$upstreamRepository" -Token $Token
-        $targetDefaultBranch = "$($upstream.default_branch)"
-    }
 
     $baseReference = Invoke-WingetPkgsGitHubApi `
         -Method Get `
         -Path "repos/$baseRepository/git/ref/heads/$targetDefaultBranch" `
-        -Token $Token
+        -Token $Token `
+        -Unauthenticated
     $baseSha = "$($baseReference.object.sha)"
     if ([string]::IsNullOrWhiteSpace($baseSha)) {
         throw "Could not resolve the $baseRepository/$targetDefaultBranch commit SHA."
@@ -150,7 +164,8 @@ function Invoke-ForkBranchSubmission {
     $baseCommit = Invoke-WingetPkgsGitHubApi `
         -Method Get `
         -Path "repos/$baseRepository/git/commits/$baseSha" `
-        -Token $Token
+        -Token $Token `
+        -Unauthenticated
     $baseTreeSha = "$($baseCommit.tree.sha)"
     if ([string]::IsNullOrWhiteSpace($baseTreeSha)) {
         throw "Could not resolve the base tree for $baseRepository/$targetDefaultBranch."

@@ -58,8 +58,11 @@ foreach ($workflowRelativePath in $workflowPaths) {
         -Message "$workflowName does not provide the configured user-owned fork." | Out-Null
     Assert-Match `
         -Actual $submitJob `
-        -Pattern "(?m)^          WINGET_PKGS_SUBMISSION_TARGET: \$\{\{\s*github\.ref == 'refs/heads/main' && 'Upstream' \|\| 'Fork'\s*\}\}\s*$" `
-        -Message "$workflowName does not isolate non-main test submissions to the user-owned fork." | Out-Null
+        -Pattern '(?m)^          WINGET_PKGS_SUBMISSION_TARGET: Upstream\s*$' `
+        -Message "$workflowName must use the upstream pull request target for every trigger." | Out-Null
+    if ([regex]::IsMatch($submitJob, '(?i)WINGET_PKGS_SUBMISSION_TARGET:\s*Fork')) {
+        throw "$workflowName may not create fork-only pull requests."
+    }
 }
 
 Write-Host 'All submission workflow authorization regression tests passed.' -ForegroundColor Green

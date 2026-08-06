@@ -30,8 +30,10 @@
     fork's default branch.
 
     .PARAMETER SubmissionTarget
-    ForkBranch target: "Upstream" opens the normal PR against
-    microsoft/winget-pkgs; "Fork" opens a fork-only PR for test runs.
+    ForkBranch is restricted to "Upstream". It creates the branch and manifest
+    commit in the configured, topology-verified user-owned fork, then opens a
+    pull request against microsoft/winget-pkgs. It never directly pushes or
+    commits content to microsoft/winget-pkgs.
 
 .PARAMETER Token
     GitHub Personal Access Token with repo scope. If not provided, uses
@@ -249,6 +251,15 @@ function Submit-WingetPackage {
             }
 
             "ForkBranch" {
+                if ($SubmissionTarget -ne 'Upstream') {
+                    return @{
+                        Success  = $false
+                        Error    = 'ForkBranch submissions are restricted to the Upstream target; manifest writes remain in the configured fork.'
+                        PrUrl    = $null
+                        PrNumber = $null
+                    }
+                }
+
                 $forkRepository = "$env:WINGET_PKGS_FORK_REPO".Trim()
                 if ([string]::IsNullOrWhiteSpace($forkRepository)) {
                     return @{
@@ -259,12 +270,8 @@ function Submit-WingetPackage {
                     }
                 }
 
-                $targetRepository = if ($SubmissionTarget -eq 'Fork') {
-                    $forkRepository
-                }
-                else {
-                    'microsoft/winget-pkgs'
-                }
+                Assert-SafeWingetPkgsForkRepository -ForkRepository $forkRepository
+                $targetRepository = 'microsoft/winget-pkgs'
 
                 if (Test-ExistingPRs -PackageIdentifier $PackageId -Version $Version -Repository $targetRepository) {
                     $existingPrUrl = Get-WingetPkgsPrUrl `
@@ -294,7 +301,6 @@ function Submit-WingetPackage {
                     -PrTitle $PrTitle `
                     -Token $Token `
                     -ForkRepository $forkRepository `
-                    -SubmissionTarget $SubmissionTarget `
                     -Resolves $Resolves
 
                 if (-not $forkSubmission.Created) {
