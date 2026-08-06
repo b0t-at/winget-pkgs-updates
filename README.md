@@ -24,9 +24,12 @@ the manifest files to that branch. It never syncs or writes the fork default
 branch.
 
 Every trigger, including scheduled main-branch runs, opens the pull request
-inside the configured fork. Submissions to `microsoft/winget-pkgs` are
-disabled. A fine-grained PAT needs Contents write and Pull requests write on
-the configured fork; it does not need GitHub Actions workflow scope.
+from the configured fork branch to `microsoft/winget-pkgs`. The submission
+flow never directly pushes or commits content to `microsoft/winget-pkgs`.
+Public upstream duplicate and base reads are unauthenticated so a
+fork-scoped fine-grained token cannot block them. A fine-grained PAT needs
+Contents write on the configured fork and Pull requests write on the upstream
+target; it does not need GitHub Actions workflow scope.
 
 ## Package-specific WinMatsch overrides
 

@@ -30,9 +30,10 @@
     fork's default branch.
 
     .PARAMETER SubmissionTarget
-    ForkBranch is restricted to "Fork" and opens the pull request inside the
-    configured, topology-verified user-owned fork. Submissions to
-    microsoft/winget-pkgs are disabled.
+    ForkBranch is restricted to "Upstream". It creates the branch and manifest
+    commit in the configured, topology-verified user-owned fork, then opens a
+    pull request against microsoft/winget-pkgs. It never directly pushes or
+    commits content to microsoft/winget-pkgs.
 
 .PARAMETER Token
     GitHub Personal Access Token with repo scope. If not provided, uses
@@ -98,7 +99,7 @@ function Submit-WingetPackage {
 
         [Parameter(Mandatory = $false)]
         [ValidateSet('Upstream', 'Fork')]
-        [string] $SubmissionTarget = 'Fork'
+        [string] $SubmissionTarget = 'Upstream'
     )
 
     # Get GitHub token
@@ -250,10 +251,10 @@ function Submit-WingetPackage {
             }
 
             "ForkBranch" {
-                if ($SubmissionTarget -ne 'Fork') {
+                if ($SubmissionTarget -ne 'Upstream') {
                     return @{
                         Success  = $false
-                        Error    = 'ForkBranch submissions are restricted to the Fork target; submissions to microsoft/winget-pkgs are disabled.'
+                        Error    = 'ForkBranch submissions are restricted to the Upstream target; manifest writes remain in the configured fork.'
                         PrUrl    = $null
                         PrNumber = $null
                     }
@@ -270,7 +271,7 @@ function Submit-WingetPackage {
                 }
 
                 Assert-SafeWingetPkgsForkRepository -ForkRepository $forkRepository
-                $targetRepository = $forkRepository
+                $targetRepository = 'microsoft/winget-pkgs'
 
                 if (Test-ExistingPRs -PackageIdentifier $PackageId -Version $Version -Repository $targetRepository) {
                     $existingPrUrl = Get-WingetPkgsPrUrl `

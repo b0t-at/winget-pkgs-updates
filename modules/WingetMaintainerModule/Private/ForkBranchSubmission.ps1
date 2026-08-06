@@ -18,14 +18,18 @@ function Invoke-WingetPkgsGitHubApi {
         [string] $Token,
 
         [Parameter(Mandatory = $false)]
+        [switch] $Unauthenticated,
+
+        [Parameter(Mandatory = $false)]
         [object] $Body
     )
-
     $headers = @{
         Accept                 = 'application/vnd.github+json'
-        Authorization          = "Bearer $Token"
         'X-GitHub-Api-Version' = '2022-11-28'
         'User-Agent'           = 'winget-pkgs-updates'
+    }
+    if (-not $Unauthenticated) {
+        $headers.Authorization = "Bearer $Token"
     }
     $request = @{
         Uri         = "https://api.github.com/$($Path.TrimStart('/'))"
@@ -137,14 +141,22 @@ function Invoke-ForkBranchSubmission {
         throw "Configured repository '$ForkRepository' is not a fork of $upstreamRepository."
     }
 
-    $targetRepository = $ForkRepository
-    $targetDefaultBranch = "$($fork.default_branch)"
+    # The fine-grained fork token cannot necessarily read the public upstream.
+    # Keep its use to fork writes and the final cross-repository PR creation.
+    $targetRepository = $upstreamRepository
+    $upstream = Invoke-WingetPkgsGitHubApi `
+        -Method Get `
+        -Path "repos/$upstreamRepository" `
+        -Token $Token `
+        -Unauthenticated
+    $targetDefaultBranch = "$($upstream.default_branch)"
     $baseRepository = $targetRepository
 
     $baseReference = Invoke-WingetPkgsGitHubApi `
         -Method Get `
         -Path "repos/$baseRepository/git/ref/heads/$targetDefaultBranch" `
-        -Token $Token
+        -Token $Token `
+        -Unauthenticated
     $baseSha = "$($baseReference.object.sha)"
     if ([string]::IsNullOrWhiteSpace($baseSha)) {
         throw "Could not resolve the $baseRepository/$targetDefaultBranch commit SHA."
@@ -152,7 +164,8 @@ function Invoke-ForkBranchSubmission {
     $baseCommit = Invoke-WingetPkgsGitHubApi `
         -Method Get `
         -Path "repos/$baseRepository/git/commits/$baseSha" `
-        -Token $Token
+        -Token $Token `
+        -Unauthenticated
     $baseTreeSha = "$($baseCommit.tree.sha)"
     if ([string]::IsNullOrWhiteSpace($baseTreeSha)) {
         throw "Could not resolve the base tree for $baseRepository/$targetDefaultBranch."

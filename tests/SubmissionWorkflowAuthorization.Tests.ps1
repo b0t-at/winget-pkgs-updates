@@ -58,10 +58,10 @@ foreach ($workflowRelativePath in $workflowPaths) {
         -Message "$workflowName does not provide the configured user-owned fork." | Out-Null
     Assert-Match `
         -Actual $submitJob `
-        -Pattern '(?m)^          WINGET_PKGS_SUBMISSION_TARGET: Fork\s*$' `
-        -Message "$workflowName must use the fork-only submission target for every trigger." | Out-Null
-    if ([regex]::IsMatch($submitJob, '(?i)microsoft/winget-pkgs|SubmissionTarget:\s*Upstream')) {
-        throw "$workflowName submit-pr job may not target microsoft/winget-pkgs."
+        -Pattern '(?m)^          WINGET_PKGS_SUBMISSION_TARGET: Upstream\s*$' `
+        -Message "$workflowName must use the upstream pull request target for every trigger." | Out-Null
+    if ([regex]::IsMatch($submitJob, '(?i)WINGET_PKGS_SUBMISSION_TARGET:\s*Fork')) {
+        throw "$workflowName may not create fork-only pull requests."
     }
 }
 
