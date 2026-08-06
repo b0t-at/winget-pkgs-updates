@@ -86,20 +86,28 @@ foreach ($workflowRelativePath in $workflowPaths) {
         throw "$workflowName must probe the Actions token separately before generation and submission."
     }
 
+    $primaryReadTokenAssignments = [regex]::Matches(
+        $workflow,
+        '(?m)^          WINGET_UPSTREAM_READ_TOKEN: \$\{\{\s*secrets\.WINGET_PAT\s*\}\}\s*$'
+    )
+    if ($primaryReadTokenAssignments.Count -ne 2) {
+        throw "$workflowName must pass the classic WINGET_PAT as the primary upstream read token in both the generation and submission steps."
+    }
+
     $generateReadTokenAssignments = [regex]::Matches(
         $workflow,
-        '(?m)^          WINGET_UPSTREAM_READ_TOKEN: \$\{\{\s*steps\.upstream-read-probe\.outputs\.available == ''true'' && github\.token \|\| secrets\.WINGET_PUBLIC_READ_TOKEN\s*\}\}\s*$'
+        '(?m)^          WINGET_UPSTREAM_READ_FALLBACK_TOKEN: \$\{\{\s*steps\.upstream-read-probe\.outputs\.available == ''true'' && github\.token \|\| secrets\.WINGET_PUBLIC_READ_TOKEN\s*\}\}\s*$'
     )
     if ($generateReadTokenAssignments.Count -ne 1) {
-        throw "$workflowName must use the generation probe result only as the dedicated upstream read token, with the documented optional fallback."
+        throw "$workflowName must use the generation probe result only as the upstream read fallback token, with the documented optional fallback."
     }
 
     $submitReadTokenAssignments = [regex]::Matches(
         $workflow,
-        '(?m)^          WINGET_UPSTREAM_READ_TOKEN: \$\{\{\s*steps\.upstream-read-probe-submit\.outputs\.available == ''true'' && github\.token \|\| secrets\.WINGET_PUBLIC_READ_TOKEN\s*\}\}\s*$'
+        '(?m)^          WINGET_UPSTREAM_READ_FALLBACK_TOKEN: \$\{\{\s*steps\.upstream-read-probe-submit\.outputs\.available == ''true'' && github\.token \|\| secrets\.WINGET_PUBLIC_READ_TOKEN\s*\}\}\s*$'
     )
     if ($submitReadTokenAssignments.Count -ne 1) {
-        throw "$workflowName must use the submission probe result only as the dedicated upstream read token, with the documented optional fallback."
+        throw "$workflowName must use the submission probe result only as the upstream read fallback token, with the documented optional fallback."
     }
 
     foreach ($stepName in @('Generate manifest', 'Submit PR')) {

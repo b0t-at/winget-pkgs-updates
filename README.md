@@ -28,19 +28,20 @@ Every trigger, including scheduled main-branch runs, opens the pull request
 from the configured fork branch to `microsoft/winget-pkgs`. The submission
 flow never directly pushes or commits content to `microsoft/winget-pkgs`.
 
-Each generation and submission job probes `${{ github.token }}` with one
-read-only `GET /repos/microsoft/winget-pkgs` request. When the probe succeeds,
-the token is passed only as `WINGET_UPSTREAM_READ_TOKEN` for upstream
-duplicate and base-ref reads; fork writes and the cross-repository PR POST
-continue to use `WINGET_PAT`. A failed probe leaves those reads anonymous.
-Optionally, administrators may configure `WINGET_PUBLIC_READ_TOKEN` as a
-separate public-read credential for that fallback. The repository does not
-create or require that secret, and it is never used for fork writes or PR
-creation.
-Public upstream duplicate and base reads are unauthenticated so a
-fork-scoped fine-grained token cannot block them. A fine-grained PAT needs
-Contents write on the configured fork and Pull requests write on the upstream
-target; it does not need GitHub Actions workflow scope.
+Upstream duplicate and base-ref reads use a tiered credential chain. The
+classic `WINGET_PAT` (`public_repo` scope, 5,000 requests/hour) is passed as
+`WINGET_UPSTREAM_READ_TOKEN` and used first. Each generation and submission
+job also probes `${{ github.token }}` with one read-only
+`GET /repos/microsoft/winget-pkgs` request; when the probe succeeds, that
+Actions token is passed as `WINGET_UPSTREAM_READ_FALLBACK_TOKEN` (1,000
+requests/hour). Administrators may optionally configure
+`WINGET_PUBLIC_READ_TOKEN` as a separate public-read credential for the
+fallback slot when the probe fails; the repository does not create or require
+that secret. If an upstream read fails with HTTP 401, 403, 404, or 429, the
+module retries the same request with the next tier, ending with anonymous
+public access, so a rate-limited or misbehaving credential can never block a
+submission. Read tokens are never used for fork writes or PR creation; fork
+writes and the cross-repository PR POST always use `WINGET_PAT`.
 
 ## Package-specific WinMatsch overrides
 

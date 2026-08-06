@@ -46,6 +46,49 @@ function Invoke-WingetPkgsGitHubApi {
     return Invoke-RestMethod @request
 }
 
+function Invoke-WingetPkgsUpstreamReadApi {
+    <#
+    .SYNOPSIS
+        Performs a public upstream GET with tiered read credentials.
+    .DESCRIPTION
+        Attempts WINGET_UPSTREAM_READ_TOKEN first, then
+        WINGET_UPSTREAM_READ_FALLBACK_TOKEN, then anonymous access, failing
+        over only on authorization or rate-limit statuses (401/403/404/429).
+        The fork-scoped submission token is never used here.
+    #>
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory = $true)]
+        [ValidateNotNullOrEmpty()]
+        [string] $Path
+    )
+
+    $credentialTiers = @(Get-WingetPkgsUpstreamReadCredentialTiers)
+    for ($tierIndex = 0; $tierIndex -lt $credentialTiers.Count; $tierIndex++) {
+        $tier = $credentialTiers[$tierIndex]
+        $isAnonymous = [string]::IsNullOrWhiteSpace($tier.Token)
+        # -Token is mandatory; the placeholder is never sent because
+        # -Unauthenticated omits the Authorization header entirely.
+        $requestToken = if ($isAnonymous) { 'unused-anonymous-read' } else { $tier.Token }
+        try {
+            return Invoke-WingetPkgsGitHubApi `
+                -Method Get `
+                -Path $Path `
+                -Token $requestToken `
+                -Unauthenticated:$isAnonymous
+        }
+        catch {
+            $statusCode = Get-WingetPkgsUpstreamReadFailureStatusCode -ErrorRecord $_
+            $isLastTier = $tierIndex -eq ($credentialTiers.Count - 1)
+            if ($isLastTier -or -not (Test-WingetPkgsUpstreamReadFailoverStatus -StatusCode $statusCode)) {
+                throw
+            }
+            $nextTier = $credentialTiers[$tierIndex + 1]
+            Write-Warning "Upstream read '$Path' with $($tier.Label) failed with HTTP $statusCode; retrying with $($nextTier.Label)."
+        }
+    }
+}
+
 function Get-ForkBranchSubmissionFiles {
     [CmdletBinding()]
     param(
@@ -141,35 +184,20 @@ function Invoke-ForkBranchSubmission {
         throw "Configured repository '$ForkRepository' is not a fork of $upstreamRepository."
     }
 
-    # The fine-grained fork token cannot necessarily read the public upstream.
-    # A separately probed read token is restricted to the upstream GETs below;
-    # fork writes and the final cross-repository PR creation keep using $Token.
+    # Upstream reads use the tiered read credentials (WINGET_UPSTREAM_READ_TOKEN,
+    # then WINGET_UPSTREAM_READ_FALLBACK_TOKEN, then anonymous); fork writes and
+    # the final cross-repository PR creation keep using $Token.
     $targetRepository = $upstreamRepository
-    $upstreamReadToken = "$env:WINGET_UPSTREAM_READ_TOKEN".Trim()
-    $useUnauthenticatedUpstreamReads = [string]::IsNullOrWhiteSpace($upstreamReadToken)
-    $upstreamRequestToken = if ($useUnauthenticatedUpstreamReads) { $Token } else { $upstreamReadToken }
-    $upstream = Invoke-WingetPkgsGitHubApi `
-        -Method Get `
-        -Path "repos/$upstreamRepository" `
-        -Token $upstreamRequestToken `
-        -Unauthenticated:$useUnauthenticatedUpstreamReads
+    $upstream = Invoke-WingetPkgsUpstreamReadApi -Path "repos/$upstreamRepository"
     $targetDefaultBranch = "$($upstream.default_branch)"
     $baseRepository = $targetRepository
 
-    $baseReference = Invoke-WingetPkgsGitHubApi `
-        -Method Get `
-        -Path "repos/$baseRepository/git/ref/heads/$targetDefaultBranch" `
-        -Token $upstreamRequestToken `
-        -Unauthenticated:$useUnauthenticatedUpstreamReads
+    $baseReference = Invoke-WingetPkgsUpstreamReadApi -Path "repos/$baseRepository/git/ref/heads/$targetDefaultBranch"
     $baseSha = "$($baseReference.object.sha)"
     if ([string]::IsNullOrWhiteSpace($baseSha)) {
         throw "Could not resolve the $baseRepository/$targetDefaultBranch commit SHA."
     }
-    $baseCommit = Invoke-WingetPkgsGitHubApi `
-        -Method Get `
-        -Path "repos/$baseRepository/git/commits/$baseSha" `
-        -Token $upstreamRequestToken `
-        -Unauthenticated:$useUnauthenticatedUpstreamReads
+    $baseCommit = Invoke-WingetPkgsUpstreamReadApi -Path "repos/$baseRepository/git/commits/$baseSha"
     $baseTreeSha = "$($baseCommit.tree.sha)"
     if ([string]::IsNullOrWhiteSpace($baseTreeSha)) {
         throw "Could not resolve the base tree for $baseRepository/$targetDefaultBranch."
