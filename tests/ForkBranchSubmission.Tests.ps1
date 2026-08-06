@@ -85,7 +85,7 @@ Describe 'Submit-WingetPackage ForkBranch' {
         Remove-Variable -Name OriginalForkRepository -Scope Global -ErrorAction SilentlyContinue
     }
 
-    It 'rejects a fork-only ForkBranch target before querying GitHub' {
+    It 'rejects a pull request target in the source fork before querying GitHub' {
         $result = Submit-WingetPackage `
             -ManifestPath $global:ForkBranchSubmissionManifestPath `
             -PackageId 'Test.Package' `
@@ -95,13 +95,13 @@ Describe 'Submit-WingetPackage ForkBranch' {
             -SubmissionTarget Fork
 
         if ($result.Success -ne $false) {
-            throw "Expected a fork-only ForkBranch submission to fail, got: $($result | ConvertTo-Json -Compress)"
+            throw "Expected a source-fork PR target to fail, got: $($result | ConvertTo-Json -Compress)"
         }
         if ($result.Error -notmatch 'restricted to the Upstream target') {
             throw "The fork-only rejection was not explained clearly: $($result.Error)"
         }
         if ($global:ForkBranchSubmissionRequests.Count -ne 0) {
-            throw 'A fork-only ForkBranch target queried or wrote a GitHub repository.'
+            throw 'A source-fork PR target queried or wrote a GitHub repository.'
         }
     }
 
@@ -114,7 +114,7 @@ Describe 'Submit-WingetPackage ForkBranch' {
             -With ForkBranch
 
         if ($result.Success -ne $true) {
-            throw "Expected a successful fork-only ForkBranch submission, got: $($result.Error)"
+            throw "Expected a successful cross-repository ForkBranch submission, got: $($result.Error)"
         }
         if ($global:ForkBranchDuplicateRepositories.Count -ne 2 -or @($global:ForkBranchDuplicateRepositories | Where-Object { $_ -cne 'microsoft/winget-pkgs' }).Count -ne 0) {
             throw "Fork submission did not perform duplicate checks against the upstream target: $($global:ForkBranchDuplicateRepositories -join ', ')"

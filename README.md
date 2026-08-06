@@ -1,9 +1,10 @@
 # winget-pkgs-updates
-**Submission repo:** [damn-good-b0t/winget-pkgs](https://github.com/damn-good-b0t/winget-pkgs)
+**PR repo:** [winget-pkgs](https://github.com/microsoft/winget-pkgs.git)
+**Fork repo:** [damn-good-b0t/winget-pkgs](https://github.com/damn-good-b0t/winget-pkgs)
 
-### Fork submissions:
-- [**all open PRs**](https://github.com/damn-good-b0t/winget-pkgs/pulls)
-- [**need attention**](https://github.com/damn-good-b0t/winget-pkgs/pulls?q=is%3Aopen+is%3Apr+author%3Adamn-good-b0t)
+### Pull requests:
+- [**all open PRs**](https://github.com/microsoft/winget-pkgs/pulls/damn-good-b0t)
+- [**need attention**](https://github.com/microsoft/winget-pkgs/pulls?q=is%3Aopen+is%3Apr+author%3Adamn-good-b0t)
 
 | Package Version Handling| Count|
 |----------------------------|---------------------------------------------------------------|
