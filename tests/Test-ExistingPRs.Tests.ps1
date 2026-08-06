@@ -7,6 +7,12 @@ Import-Module (Join-Path $repositoryRoot 'modules/WingetMaintainerModule/WingetM
 Describe 'Test-ExistingPRs' {
     BeforeEach {
         $global:ExistingPrSearchRequests = [System.Collections.Generic.List[object]]::new()
+        $global:OriginalUpstreamReadToken = $env:WINGET_UPSTREAM_READ_TOKEN
+        $global:OriginalGitHubToken = $env:GITHUB_TOKEN
+        $global:OriginalWingetPat = $env:WINGET_PAT
+        $env:WINGET_UPSTREAM_READ_TOKEN = ''
+        $env:GITHUB_TOKEN = 'fork-write-token'
+        $env:WINGET_PAT = 'fork-write-token'
 
         InModuleScope WingetMaintainerModule {
             Mock Invoke-RestMethod {
@@ -30,10 +36,16 @@ Describe 'Test-ExistingPRs' {
     }
 
     AfterEach {
+        $env:WINGET_UPSTREAM_READ_TOKEN = $global:OriginalUpstreamReadToken
+        $env:GITHUB_TOKEN = $global:OriginalGitHubToken
+        $env:WINGET_PAT = $global:OriginalWingetPat
         Remove-Variable -Name ExistingPrSearchRequests -Scope Global -ErrorAction SilentlyContinue
+        Remove-Variable -Name OriginalUpstreamReadToken -Scope Global -ErrorAction SilentlyContinue
+        Remove-Variable -Name OriginalGitHubToken -Scope Global -ErrorAction SilentlyContinue
+        Remove-Variable -Name OriginalWingetPat -Scope Global -ErrorAction SilentlyContinue
     }
 
-    It 'searches the public upstream REST API without the fork-scoped token' {
+    It 'falls back to an anonymous public upstream search without a dedicated read token' {
         $result = Test-ExistingPRs `
             -PackageIdentifier 'Test.Package' `
             -Version '1.0.0' `
@@ -51,12 +63,32 @@ Describe 'Test-ExistingPRs' {
             throw "Unexpected upstream PR search request: $($request | ConvertTo-Json -Compress)"
         }
         if ($request.Headers.ContainsKey('Authorization')) {
-            throw 'The public upstream PR search must not send the fork-scoped token.'
+            throw 'The anonymous fallback must not send the fork-scoped token.'
         }
 
         $query = [uri]::UnescapeDataString(([uri] $request.Uri).Query)
         if ($query -notmatch 'repo:microsoft/winget-pkgs' -or $query -notmatch '\(is:open OR is:merged\)' -or $query -notmatch 'Test.Package 1.0.0') {
             throw "The public upstream PR search used an unexpected query: $query"
+        }
+    }
+
+    It 'uses only the dedicated upstream read token for the public search' {
+        $env:WINGET_UPSTREAM_READ_TOKEN = 'upstream-read-token'
+
+        Test-ExistingPRs `
+            -PackageIdentifier 'Test.Package' `
+            -Version '1.0.0' `
+            -Repository 'microsoft/winget-pkgs' | Out-Null
+
+        if ($global:ExistingPrSearchRequests.Count -ne 1) {
+            throw "Expected one upstream duplicate search, got $($global:ExistingPrSearchRequests.Count)."
+        }
+        $authorization = $global:ExistingPrSearchRequests[0].Headers.Authorization
+        if ($authorization -cne 'Bearer upstream-read-token') {
+            throw "The upstream duplicate search used an unexpected credential: $authorization"
+        }
+        if ($authorization -match 'fork-write-token') {
+            throw 'The upstream duplicate search consumed a fork-scoped credential.'
         }
     }
 

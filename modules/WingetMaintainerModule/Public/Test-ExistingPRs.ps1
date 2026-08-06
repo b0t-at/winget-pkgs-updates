@@ -4,10 +4,12 @@
 
 .DESCRIPTION
     The `Test-ExistingPRs` function searches for existing open and merged pull requests in the 'microsoft/winget-pkgs' repository that match the specified package identifier and version.
-    It uses GitHub's public REST search endpoint without credentials so a
-    fine-grained submission token scoped only to the source fork cannot turn a
-    readable upstream lookup into a 404. It returns `true` if matching open or
-    merged PRs are found, otherwise returns `false`.
+    It uses the dedicated `WINGET_UPSTREAM_READ_TOKEN` only when a workflow
+    capability probe has confirmed it can read the public upstream repository.
+    Without that token, it uses GitHub's public REST search endpoint without
+    credentials so a fine-grained submission token scoped only to the source
+    fork cannot turn a readable upstream lookup into a 404. It returns `true`
+    if matching open or merged PRs are found, otherwise returns `false`.
 
 .PARAMETER Version
     The version of the package to check for existing PRs. This parameter is mandatory.
@@ -48,6 +50,10 @@ function Test-ExistingPRs {
         Accept                 = 'application/vnd.github+json'
         'X-GitHub-Api-Version' = '2022-11-28'
         'User-Agent'           = 'winget-pkgs-updates'
+    }
+    $upstreamReadToken = "$env:WINGET_UPSTREAM_READ_TOKEN".Trim()
+    if (-not [string]::IsNullOrWhiteSpace($upstreamReadToken)) {
+        $headers.Authorization = "Bearer $upstreamReadToken"
     }
     $escapedPackageIdentifier = $PackageIdentifier.Replace('"', '\"')
     $escapedVersion = $Version.Replace('"', '\"')

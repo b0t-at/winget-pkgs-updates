@@ -142,21 +142,25 @@ function Invoke-ForkBranchSubmission {
     }
 
     # The fine-grained fork token cannot necessarily read the public upstream.
-    # Keep its use to fork writes and the final cross-repository PR creation.
+    # A separately probed read token is restricted to the upstream GETs below;
+    # fork writes and the final cross-repository PR creation keep using $Token.
     $targetRepository = $upstreamRepository
+    $upstreamReadToken = "$env:WINGET_UPSTREAM_READ_TOKEN".Trim()
+    $useUnauthenticatedUpstreamReads = [string]::IsNullOrWhiteSpace($upstreamReadToken)
+    $upstreamRequestToken = if ($useUnauthenticatedUpstreamReads) { $Token } else { $upstreamReadToken }
     $upstream = Invoke-WingetPkgsGitHubApi `
         -Method Get `
         -Path "repos/$upstreamRepository" `
-        -Token $Token `
-        -Unauthenticated
+        -Token $upstreamRequestToken `
+        -Unauthenticated:$useUnauthenticatedUpstreamReads
     $targetDefaultBranch = "$($upstream.default_branch)"
     $baseRepository = $targetRepository
 
     $baseReference = Invoke-WingetPkgsGitHubApi `
         -Method Get `
         -Path "repos/$baseRepository/git/ref/heads/$targetDefaultBranch" `
-        -Token $Token `
-        -Unauthenticated
+        -Token $upstreamRequestToken `
+        -Unauthenticated:$useUnauthenticatedUpstreamReads
     $baseSha = "$($baseReference.object.sha)"
     if ([string]::IsNullOrWhiteSpace($baseSha)) {
         throw "Could not resolve the $baseRepository/$targetDefaultBranch commit SHA."
@@ -164,8 +168,8 @@ function Invoke-ForkBranchSubmission {
     $baseCommit = Invoke-WingetPkgsGitHubApi `
         -Method Get `
         -Path "repos/$baseRepository/git/commits/$baseSha" `
-        -Token $Token `
-        -Unauthenticated
+        -Token $upstreamRequestToken `
+        -Unauthenticated:$useUnauthenticatedUpstreamReads
     $baseTreeSha = "$($baseCommit.tree.sha)"
     if ([string]::IsNullOrWhiteSpace($baseTreeSha)) {
         throw "Could not resolve the base tree for $baseRepository/$targetDefaultBranch."

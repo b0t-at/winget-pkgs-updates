@@ -75,11 +75,18 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      
+
+      - name: Probe upstream read access
+        id: upstream-read-probe
+        uses: ./.github/actions/probe-winget-upstream-read
+        with:
+          github-token: ${{ github.token }}
+
       - name: Generate manifest
         id: generate
         env:
           GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
+          WINGET_UPSTREAM_READ_TOKEN: ${{ steps.upstream-read-probe.outputs.available == 'true' && github.token || secrets.WINGET_PUBLIC_READ_TOKEN }}
           WINGET_PKGS_FORK_REPO: ${{ vars.WINGET_PKGS_FORK_REPO }}
           WebsiteURL: ${{ matrix.WebsiteURL }}
           PackageName: ${{ matrix.PackageName }}
@@ -718,12 +725,20 @@ jobs:
           $manifestPath = ($yamlFiles | Select-Object -First 1).DirectoryName
           Write-Host "Manifest path: $manifestPath"
           "path=$manifestPath" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
-      
+
+      - name: Probe upstream read access
+        if: steps.check-submit.outputs.skip != 'true'
+        id: upstream-read-probe
+        uses: ./.github/actions/probe-winget-upstream-read
+        with:
+          github-token: ${{ github.token }}
+
       - name: Submit PR
         if: steps.check-submit.outputs.skip != 'true'
         shell: pwsh
         env:
           GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
+          WINGET_UPSTREAM_READ_TOKEN: ${{ steps.upstream-read-probe.outputs.available == 'true' && github.token || secrets.WINGET_PUBLIC_READ_TOKEN }}
           WINGET_PKGS_FORK_REPO: ${{ vars.WINGET_PKGS_FORK_REPO }}
           WINGET_PKGS_SUBMISSION_TARGET: Upstream
           STEPS_MANIFEST_OUTPUTS_PATH: ${{ steps.manifest.outputs.path }}
