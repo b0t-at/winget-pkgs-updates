@@ -26,10 +26,13 @@ Describe 'Test-ExistingPRs' {
                     Headers = $Headers
                 })
                 return [pscustomobject]@{
+                    total_count = 1
                     items = @(
                         [pscustomobject]@{
-                            title    = 'Update version: Test.Package version 1.0.0'
-                            html_url = 'https://github.com/microsoft/winget-pkgs/pull/12345'
+                            title        = 'Update version: Test.Package version 1.0.0'
+                            state        = 'open'
+                            html_url     = 'https://github.com/microsoft/winget-pkgs/pull/12345'
+                            pull_request = [pscustomobject]@{ merged_at = $null }
                         }
                     )
                 }
@@ -71,7 +74,8 @@ Describe 'Test-ExistingPRs' {
         }
 
         $query = [uri]::UnescapeDataString(([uri] $request.Uri).Query)
-        if ($query -notmatch 'repo:microsoft/winget-pkgs' -or $query -notmatch '\(is:open OR is:merged\)' -or $query -notmatch 'Test.Package 1.0.0') {
+        if ($query -notmatch 'repo:microsoft/winget-pkgs' -or $query -notmatch 'Test.Package 1.0.0' -or
+            $query -match '\(is:open OR is:merged\)' -or $query -match 'is:merged') {
             throw "The public upstream PR search used an unexpected query: $query"
         }
     }
@@ -113,7 +117,7 @@ Describe 'Test-ExistingPRs' {
                     $rateLimitedResponse = [System.Net.Http.HttpResponseMessage]::new([System.Net.HttpStatusCode]::Forbidden)
                     throw [Microsoft.PowerShell.Commands.HttpResponseException]::new('API rate limit exceeded', $rateLimitedResponse)
                 }
-                return [pscustomobject]@{ items = @() }
+                return [pscustomobject]@{ total_count = 0; items = @() }
             }
         }
 
@@ -177,7 +181,7 @@ Describe 'Test-ExistingPRs' {
         }
     }
 
-    It 'checks open and merged pull requests in one upstream request' {
+    It 'detects exact open and merged titles while ignoring closed-unmerged and substring candidates' {
         InModuleScope WingetMaintainerModule {
             Mock Invoke-RestMethod {
                 param($Method, $Uri, $Headers, $ErrorAction)
@@ -187,7 +191,77 @@ Describe 'Test-ExistingPRs' {
                     Uri     = $Uri
                     Headers = $Headers
                 })
-                return [pscustomobject]@{ items = @() }
+                return [pscustomobject]@{
+                    total_count = 4
+                    items = @(
+                        [pscustomobject]@{
+                            title        = 'Update version: Test.Package version 1.0.0'
+                            state        = 'open'
+                            html_url     = 'https://github.com/microsoft/winget-pkgs/pull/100'
+                            pull_request = [pscustomobject]@{ merged_at = $null }
+                        },
+                        [pscustomobject]@{
+                            title        = 'Add version: Test.Package version 1.0.0 - Update version: Test.Package version 1.0.0'
+                            state        = 'closed'
+                            html_url     = 'https://github.com/microsoft/winget-pkgs/pull/101'
+                            pull_request = [pscustomobject]@{ merged_at = '2026-08-06T12:00:00Z' }
+                        },
+                        [pscustomobject]@{
+                            title        = 'Update version: Test.Package version 1.0.0'
+                            state        = 'closed'
+                            html_url     = 'https://github.com/microsoft/winget-pkgs/pull/102'
+                            pull_request = [pscustomobject]@{ merged_at = $null }
+                        },
+                        [pscustomobject]@{
+                            title        = 'Update version: Test.Package.Extra version 1.0.0'
+                            state        = 'open'
+                            html_url     = 'https://github.com/microsoft/winget-pkgs/pull/103'
+                            pull_request = [pscustomobject]@{ merged_at = $null }
+                        }
+                    )
+                }
+            }
+        }
+
+        $result = Test-ExistingPRs `
+            -PackageIdentifier 'Test.Package' `
+            -Version '1.0.0' `
+            -Repository 'microsoft/winget-pkgs'
+
+        if ($result -ne $true) {
+            throw 'An exact matching open upstream pull request was not found.'
+        }
+        if ($global:ExistingPrSearchRequests.Count -ne 1) {
+            throw "Duplicate detection performed $($global:ExistingPrSearchRequests.Count) requests instead of one."
+        }
+
+        $query = [uri]::UnescapeDataString(([uri] $global:ExistingPrSearchRequests[0].Uri).Query)
+        if ($query -match '\(is:open OR is:merged\)' -or $query -match 'is:merged') {
+            throw "Duplicate detection used the invalid GitHub Search state expression: $query"
+        }
+    }
+
+    It 'ignores an exact closed-unmerged title when no open or merged title exists' {
+        InModuleScope WingetMaintainerModule {
+            Mock Invoke-RestMethod {
+                param($Method, $Uri, $Headers, $ErrorAction)
+
+                $global:ExistingPrSearchRequests.Add([pscustomobject]@{
+                    Method  = $Method
+                    Uri     = $Uri
+                    Headers = $Headers
+                })
+                return [pscustomobject]@{
+                    total_count = 1
+                    items = @(
+                        [pscustomobject]@{
+                            title        = 'Update version: Test.Package version 1.0.0'
+                            state        = 'closed'
+                            html_url     = 'https://github.com/microsoft/winget-pkgs/pull/102'
+                            pull_request = [pscustomobject]@{ merged_at = $null }
+                        }
+                    )
+                }
             }
         }
 
@@ -197,10 +271,70 @@ Describe 'Test-ExistingPRs' {
             -Repository 'microsoft/winget-pkgs'
 
         if ($result -ne $false) {
-            throw 'An empty upstream PR search unexpectedly found a match.'
+            throw 'A closed-unmerged upstream PR was treated as a duplicate.'
         }
         if ($global:ExistingPrSearchRequests.Count -ne 1) {
-            throw "Open and merged duplicate detection performed $($global:ExistingPrSearchRequests.Count) requests instead of one."
+            throw "Duplicate detection performed $($global:ExistingPrSearchRequests.Count) requests instead of one."
+        }
+    }
+
+    It 'detects the legacy combined add-and-update title when the PR was merged' {
+        InModuleScope WingetMaintainerModule {
+            Mock Invoke-RestMethod {
+                return [pscustomobject]@{
+                    total_count = 1
+                    items = @(
+                        [pscustomobject]@{
+                            title        = 'Add version: Test.Package version 1.0.0 - Update version: Test.Package version 1.0.0'
+                            state        = 'closed'
+                            html_url     = 'https://github.com/microsoft/winget-pkgs/pull/101'
+                            pull_request = [pscustomobject]@{ merged_at = '2026-08-06T12:00:00Z' }
+                        }
+                    )
+                }
+            }
+        }
+
+        $result = Test-ExistingPRs `
+            -PackageIdentifier 'Test.Package' `
+            -Version '1.0.0' `
+            -Repository 'microsoft/winget-pkgs'
+
+        if ($result -ne $true) {
+            throw 'A merged legacy add-and-update pull request was not detected.'
+        }
+    }
+
+    It 'ignores substring and tokenized title search candidates' {
+        InModuleScope WingetMaintainerModule {
+            Mock Invoke-RestMethod {
+                return [pscustomobject]@{
+                    total_count = 2
+                    items = @(
+                        [pscustomobject]@{
+                            title        = 'Update version: Test.Package.Extra version 1.0.0'
+                            state        = 'open'
+                            html_url     = 'https://github.com/microsoft/winget-pkgs/pull/103'
+                            pull_request = [pscustomobject]@{ merged_at = $null }
+                        },
+                        [pscustomobject]@{
+                            title        = 'Update version: Test.Package version 1.0.0.1'
+                            state        = 'open'
+                            html_url     = 'https://github.com/microsoft/winget-pkgs/pull/104'
+                            pull_request = [pscustomobject]@{ merged_at = $null }
+                        }
+                    )
+                }
+            }
+        }
+
+        $result = Test-ExistingPRs `
+            -PackageIdentifier 'Test.Package' `
+            -Version '1.0.0' `
+            -Repository 'microsoft/winget-pkgs'
+
+        if ($result -ne $false) {
+            throw 'A substring or tokenized title candidate was treated as an exact duplicate.'
         }
     }
 
@@ -214,7 +348,7 @@ Describe 'Test-ExistingPRs' {
                     Uri     = $Uri
                     Headers = $Headers
                 })
-                return [pscustomobject]@{ items = @() }
+                return [pscustomobject]@{ total_count = 0; items = @() }
             }
         }
 
@@ -234,6 +368,59 @@ Describe 'Test-ExistingPRs' {
         $query = [uri]::UnescapeDataString(([uri] $global:ExistingPrSearchRequests[0].Uri).Query)
         if ($query -notmatch 'is:open' -or $query -match 'is:merged') {
             throw "OnlyOpen used an unexpected query: $query"
+        }
+    }
+
+    It 'fails closed when GitHub cannot provide state metadata for a candidate' {
+        InModuleScope WingetMaintainerModule {
+            Mock Invoke-RestMethod {
+                return [pscustomobject]@{
+                    total_count = 1
+                    items = @(
+                        [pscustomobject]@{
+                            title        = 'Update version: Test.Package version 1.0.0'
+                            html_url     = 'https://github.com/microsoft/winget-pkgs/pull/12345'
+                            pull_request = [pscustomobject]@{ merged_at = $null }
+                        }
+                    )
+                }
+            }
+        }
+
+        {
+            Test-ExistingPRs `
+                -PackageIdentifier 'Test.Package' `
+                -Version '1.0.0' `
+                -Repository 'microsoft/winget-pkgs'
+        } | Should -Throw '*without a title or state*'
+    }
+
+    It 'fails closed rather than treating a malformed authenticated response as no duplicate' {
+        $env:WINGET_UPSTREAM_READ_TOKEN = 'primary-read-token'
+        $env:WINGET_UPSTREAM_READ_FALLBACK_TOKEN = 'fallback-read-token'
+
+        InModuleScope WingetMaintainerModule {
+            Mock Invoke-RestMethod {
+                param($Method, $Uri, $Headers, $ErrorAction)
+
+                $global:ExistingPrSearchRequests.Add([pscustomobject]@{
+                    Method  = $Method
+                    Uri     = $Uri
+                    Headers = $Headers
+                })
+                return [pscustomobject]@{ total_count = 1 }
+            }
+        }
+
+        {
+            Test-ExistingPRs `
+                -PackageIdentifier 'Test.Package' `
+                -Version '1.0.0' `
+                -Repository 'microsoft/winget-pkgs'
+        } | Should -Throw '*incomplete response*'
+
+        if ($global:ExistingPrSearchRequests.Count -ne 1) {
+            throw 'A malformed primary response was converted into a fallback no-duplicate decision.'
         }
     }
 }

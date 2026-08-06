@@ -73,7 +73,7 @@ function Get-WingetPkgsPrUrl {
             --search "$PackageId $Version in:title" `
             --state 'open' `
             --limit 10 `
-            --json 'url,createdAt' `
+            --json 'title,url,createdAt' `
             --repo $Repository 2>$null
 
         if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($json)) {
@@ -85,7 +85,20 @@ function Get-WingetPkgsPrUrl {
             return $null
         }
 
-        $newest = $pullRequests |
+        $matchingPullRequests = @(
+            $pullRequests |
+                Where-Object {
+                    Test-WingetPkgsExistingPrTitle `
+                        -Title "$($_.title)" `
+                        -PackageIdentifier $PackageId `
+                        -Version $Version
+                }
+        )
+        if ($matchingPullRequests.Count -eq 0) {
+            return $null
+        }
+
+        $newest = $matchingPullRequests |
             Sort-Object -Property { [datetime] $_.createdAt } -Descending |
             Select-Object -First 1
 

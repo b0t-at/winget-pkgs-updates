@@ -282,10 +282,19 @@ function Submit-WingetPackage {
                     -Resolves $Resolves
 
                 if (-not $forkSubmission.Created) {
+                    if (-not $forkSubmission.DuplicateDetected) {
+                        return @{
+                            Success  = $false
+                            Error    = $forkSubmission.Error
+                            PrUrl    = $null
+                            PrNumber = $null
+                        }
+                    }
+
                     $existingPrUrl = Get-WingetPkgsPrUrl `
                         -PackageId $PackageId `
                         -Version $Version `
-                        -Repository $targetRepository
+                        -Repository 'microsoft/winget-pkgs'
                     $existingPrNumber = if ($existingPrUrl -match '/pull/(?<Number>\d+)$') {
                         $Matches['Number']
                     }

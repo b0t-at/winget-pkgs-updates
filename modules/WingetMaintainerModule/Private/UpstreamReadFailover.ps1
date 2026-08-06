@@ -44,7 +44,7 @@ function Get-WingetPkgsUpstreamReadCredentialTiers {
     return $tiers
 }
 
-function Get-WingetPkgsUpstreamReadFailureStatusCode {
+function Get-WingetPkgsGitHubApiFailureStatusCode {
     [CmdletBinding()]
     [OutputType([int])]
     param(
@@ -60,6 +60,17 @@ function Get-WingetPkgsUpstreamReadFailureStatusCode {
     }
 
     return 0
+}
+
+function Get-WingetPkgsUpstreamReadFailureStatusCode {
+    [CmdletBinding()]
+    [OutputType([int])]
+    param(
+        [Parameter(Mandatory = $true)]
+        [System.Management.Automation.ErrorRecord] $ErrorRecord
+    )
+
+    return Get-WingetPkgsGitHubApiFailureStatusCode -ErrorRecord $ErrorRecord
 }
 
 function Test-WingetPkgsUpstreamReadFailoverStatus {

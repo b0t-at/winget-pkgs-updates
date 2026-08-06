@@ -20,9 +20,11 @@
 Validated scheduled manifests use `ForkBranch` submission rather than
 `wingetcreate submit`. `WINGET_PKGS_FORK_REPO` must name a user-owned fork;
 the module verifies that repository is a fork of `microsoft/winget-pkgs`,
-creates a disposable branch directly from its default branch, and commits only
-the manifest files to that branch. It never syncs or writes the fork default
-branch.
+atomically claims a deterministic package/version branch rooted at the
+upstream base commit, and commits only the manifest files to that branch. It
+never syncs or writes the fork default branch. If the claim already exists,
+the module reconciles it to a matching upstream PR when searchable; otherwise
+it fails closed and leaves the branch untouched for manual reconciliation.
 
 Every trigger, including scheduled main-branch runs, opens the pull request
 from the configured fork branch to `microsoft/winget-pkgs`. The submission
@@ -42,6 +44,13 @@ module retries the same request with the next tier, ending with anonymous
 public access, so a rate-limited or misbehaving credential can never block a
 submission. Read tokens are never used for fork writes or PR creation; fork
 writes and the cross-repository PR POST always use `WINGET_PAT`.
+
+Duplicate detection uses one broad `repo:<repository> is:pr in:title` search
+and accepts only exact current or legacy combined title formats for the package
+and version. It filters GitHub's returned `state` and `pull_request.merged_at`
+fields client-side, accepting open or actually merged PRs while ignoring
+closed-unmerged PRs. Search/API response failures and incomplete result pages
+fail closed rather than being treated as no duplicate.
 
 ## Package-specific WinMatsch overrides
 

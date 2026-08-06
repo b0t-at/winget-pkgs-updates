@@ -75,11 +75,6 @@ Describe 'Submit-WingetPackage ForkBranch' {
                     '/git/refs$' {
                         return [pscustomobject]@{ ref = 'refs/heads/winget-autosubmit/test' }
                     }
-                    '/git/refs/heads/winget-autosubmit/' {
-                        if ($Method -eq 'Delete') {
-                            return $null
-                        }
-                    }
                     '/pulls$' {
                         return [pscustomobject]@{
                             html_url = 'https://github.com/microsoft/winget-pkgs/pull/12345'
@@ -172,6 +167,15 @@ Describe 'Submit-WingetPackage ForkBranch' {
         $treeRequest = $forkWrites | Where-Object { $_.Path -eq 'repos/damn-good-b0t/winget-pkgs/git/trees' }
         if ($treeRequest.Body.base_tree -cne 'base-tree-sha') {
             throw "ForkBranch did not base the manifest tree on the resolved base tree: $($treeRequest.Body.base_tree)"
+        }
+        $branchClaim = $forkWrites |
+            Where-Object { $_.Path -eq 'repos/damn-good-b0t/winget-pkgs/git/refs' -and $_.Method -eq 'Post' } |
+            Select-Object -Last 1
+        if ($null -eq $branchClaim -or $branchClaim.Body.ref -notmatch '^refs/heads/winget-autosubmit/test\.package-1\.0\.0-[a-f0-9]{16}$') {
+            throw "ForkBranch did not create the deterministic package/version claim ref: $($branchClaim | ConvertTo-Json -Compress)"
+        }
+        if ($branchClaim.Body.sha -cne 'commit-sha') {
+            throw "ForkBranch did not claim the manifest commit: $($branchClaim.Body.sha)"
         }
 
         $pullRequest = $global:ForkBranchSubmissionRequests |
@@ -280,7 +284,7 @@ Describe 'Submit-WingetPackage ForkBranch' {
         }
     }
 
-    It 'removes the temporary fork branch when the final duplicate preflight finds a target PR' {
+    It 'keeps its claimed branch and skips PR creation when the final duplicate preflight finds a target PR' {
         InModuleScope WingetMaintainerModule {
             Mock Test-ExistingPRs {
                 param($PackageIdentifier, $Version, $Repository)
@@ -311,11 +315,118 @@ Describe 'Submit-WingetPackage ForkBranch' {
                     $_.Path -match '^repos/damn-good-b0t/winget-pkgs/git/refs/heads/winget-autosubmit/'
                 }
         )
-        if ($branchDeletes.Count -ne 1) {
-            throw "The temporary fork branch was not removed after duplicate detection: $($global:ForkBranchSubmissionRequests | ConvertTo-Json -Compress)"
+        if ($branchDeletes.Count -ne 0) {
+            throw "Duplicate handling deleted a deterministic claim that could belong to an existing PR: $($global:ForkBranchSubmissionRequests | ConvertTo-Json -Compress)"
         }
         if (@($global:ForkBranchSubmissionRequests | Where-Object { $_.Path -eq 'repos/microsoft/winget-pkgs/pulls' -and $_.Method -eq 'Post' }).Count -ne 0) {
             throw 'Duplicate detection created an upstream pull request.'
+        }
+    }
+
+    It 'uses one deterministic source ref claim when competing submissions cannot yet search each other PRs' {
+        $competingResults = InModuleScope WingetMaintainerModule {
+            $script:DeterministicClaimCreated = $false
+            Mock Test-ExistingPRs { $false }
+            Mock Invoke-WingetPkgsGitHubApi {
+                param($Method, $Path, $Token, $Unauthenticated, $Body)
+
+                $global:ForkBranchSubmissionRequests.Add([pscustomobject]@{
+                    Method          = $Method
+                    Path            = $Path
+                    Token           = $Token
+                    Unauthenticated = [bool] $Unauthenticated
+                    Body            = $Body
+                })
+
+                switch -Regex ($Path) {
+                    '^repos/damn-good-b0t/winget-pkgs$' {
+                        return [pscustomobject]@{
+                            fork           = $true
+                            default_branch = 'master'
+                            parent         = [pscustomobject]@{ full_name = 'microsoft/winget-pkgs' }
+                        }
+                    }
+                    '^repos/microsoft/winget-pkgs$' {
+                        return [pscustomobject]@{ default_branch = 'master' }
+                    }
+                    '/git/ref/heads/master$' {
+                        return [pscustomobject]@{ object = [pscustomobject]@{ sha = 'base-sha' } }
+                    }
+                    '/git/commits/base-sha$' {
+                        return [pscustomobject]@{ tree = [pscustomobject]@{ sha = 'base-tree-sha' } }
+                    }
+                    '/git/trees$' {
+                        return [pscustomobject]@{ sha = 'tree-sha' }
+                    }
+                    '/git/commits$' {
+                        return [pscustomobject]@{ sha = 'commit-sha' }
+                    }
+                    '/git/refs$' {
+                        if (-not $script:DeterministicClaimCreated) {
+                            $script:DeterministicClaimCreated = $true
+                            return [pscustomobject]@{ ref = "$($Body.ref)" }
+                        }
+
+                        $conflictResponse = [System.Net.Http.HttpResponseMessage]::new([System.Net.HttpStatusCode]::UnprocessableEntity)
+                        throw [Microsoft.PowerShell.Commands.HttpResponseException]::new('Reference already exists', $conflictResponse)
+                    }
+                    '/pulls$' {
+                        return [pscustomobject]@{
+                            html_url = 'https://github.com/microsoft/winget-pkgs/pull/12345'
+                            number   = 12345
+                        }
+                    }
+                    default {
+                        throw "Unexpected GitHub API request: $Method $Path"
+                    }
+                }
+            }
+
+            $first = Invoke-ForkBranchSubmission `
+                -ManifestPath $global:ForkBranchSubmissionManifestPath `
+                -PackageId 'Test.Package' `
+                -Version '1.0.0' `
+                -PrTitle 'Update version: Test.Package version 1.0.0' `
+                -Token 'test-token' `
+                -ForkRepository 'damn-good-b0t/winget-pkgs'
+            $second = Invoke-ForkBranchSubmission `
+                -ManifestPath $global:ForkBranchSubmissionManifestPath `
+                -PackageId 'Test.Package' `
+                -Version '1.0.0' `
+                -PrTitle 'Update version: Test.Package version 1.0.0' `
+                -Token 'test-token' `
+                -ForkRepository 'damn-good-b0t/winget-pkgs'
+
+            return [pscustomobject]@{
+                First  = $first
+                Second = $second
+            }
+        }
+
+        $first = $competingResults.First
+        $second = $competingResults.Second
+        if (-not $first.Created) {
+            throw "The claim owner did not create the PR: $($first | ConvertTo-Json -Compress)"
+        }
+        if ($second.Created -or $second.DuplicateDetected -or $second.Error -notmatch 'already exists') {
+            throw "The competing submission was not fail-closed by the existing claim: $($second | ConvertTo-Json -Compress)"
+        }
+
+        $claimRequests = @(
+            $global:ForkBranchSubmissionRequests |
+                Where-Object {
+                    $_.Method -eq 'Post' -and
+                    $_.Path -eq 'repos/damn-good-b0t/winget-pkgs/git/refs'
+                }
+        )
+        if ($claimRequests.Count -ne 2 -or $claimRequests[0].Body.ref -cne $claimRequests[1].Body.ref) {
+            throw "Competing submissions did not use the same deterministic source ref: $($claimRequests | ConvertTo-Json -Compress)"
+        }
+        if (@($global:ForkBranchSubmissionRequests | Where-Object { $_.Path -eq 'repos/damn-good-b0t/winget-pkgs/git/trees' -and $_.Method -eq 'Post' }).Count -ne 2) {
+            throw 'Both competing submissions must reach their immutable manifest commits before the deterministic ref claim arbitrates ownership.'
+        }
+        if (@($global:ForkBranchSubmissionRequests | Where-Object { $_.Path -eq 'repos/microsoft/winget-pkgs/pulls' -and $_.Method -eq 'Post' }).Count -ne 1) {
+            throw 'Competing submissions created more than one upstream pull request.'
         }
     }
 
