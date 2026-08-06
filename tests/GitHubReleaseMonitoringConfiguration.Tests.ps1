@@ -27,7 +27,8 @@ $configurationPaths = @(
 
 $excludedPackageIds = @(
     'benaclejames.VRCFaceTracking',
-    'SVGExplorerExtension.SVGExplorerExtension'
+    'SVGExplorerExtension.SVGExplorerExtension',
+    'Gruntwork.Terragrunt'
 )
 
 foreach ($configurationRelativePath in $configurationPaths) {
@@ -38,7 +39,7 @@ foreach ($configurationRelativePath in $configurationPaths) {
         Assert-NotMatch `
             -Actual $configuration `
             -Pattern "^\s*-\s+id:\s*`"?$([regex]::Escape($packageId))`"?\s*$" `
-            -Message "$configurationRelativePath must not monitor $packageId until its upstream release artifacts change."
+            -Message "$configurationRelativePath must not monitor $packageId while its documented validation exclusion applies."
     }
 }
 
