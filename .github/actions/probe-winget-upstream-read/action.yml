@@ -1,0 +1,45 @@
+name: Probe winget upstream read access
+description: Check whether the current Actions token can read the public winget-pkgs repository.
+
+inputs:
+  github-token:
+    description: Actions token to probe for upstream read access.
+    required: true
+
+outputs:
+  available:
+    description: Whether the Actions token can read microsoft/winget-pkgs.
+    value: ${{ steps.probe.outputs.available }}
+
+runs:
+  using: composite
+  steps:
+    - id: probe
+      shell: pwsh
+      env:
+        WINGET_UPSTREAM_READ_PROBE_TOKEN: ${{ inputs.github-token }}
+      run: |
+        $headers = @{
+          Accept                 = 'application/vnd.github+json'
+          Authorization           = "Bearer $env:WINGET_UPSTREAM_READ_PROBE_TOKEN"
+          'X-GitHub-Api-Version' = '2022-11-28'
+          'User-Agent'           = 'winget-pkgs-updates'
+        }
+
+        try {
+          Invoke-RestMethod `
+            -Method Get `
+            -Uri 'https://api.github.com/repos/microsoft/winget-pkgs' `
+            -Headers $headers `
+            -ErrorAction Stop | Out-Null
+          'available=true' | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          Write-Host 'The Actions token can read microsoft/winget-pkgs.'
+        } catch {
+          $statusCode = if ($_.Exception.Response) {
+            [int] $_.Exception.Response.StatusCode
+          } else {
+            'unavailable'
+          }
+          'available=false' | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          Write-Warning "The Actions token cannot read microsoft/winget-pkgs (HTTP $statusCode); using the configured fallback."
+        }

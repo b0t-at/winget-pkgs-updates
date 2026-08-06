@@ -18,6 +18,60 @@ permissions:
   contents: read
 
 jobs:
+  upstream-read-capability:
+    name: Upstream read capability (diagnostic)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Probe upstream read endpoints
+        shell: pwsh
+        env:
+          ACTIONS_TOKEN_PROBE: ${{ github.token }}
+          WINGET_PAT_PROBE: ${{ secrets.WINGET_PAT }}
+        run: |
+          # Read-only diagnostic: reports HTTP status codes per credential for the
+          # exact upstream endpoints the submission flow reads. Never fails the
+          # workflow, performs no writes, and never prints token values.
+          $endpoints = @(
+            'https://api.github.com/repos/microsoft/winget-pkgs'
+            'https://api.github.com/repos/microsoft/winget-pkgs/git/ref/heads/master'
+            'https://api.github.com/search/issues?q=repo%3Amicrosoft%2Fwinget-pkgs+is%3Apr+capability+probe&per_page=1'
+          )
+          $credentials = [ordered]@{
+            'anonymous'    = $null
+            'github.token' = $env:ACTIONS_TOKEN_PROBE
+            'WINGET_PAT'   = $env:WINGET_PAT_PROBE
+          }
+          $lines = @('| Credential | Endpoint | Status |', '| --- | --- | --- |')
+          foreach ($credential in $credentials.GetEnumerator()) {
+            foreach ($endpoint in $endpoints) {
+              $shortEndpoint = $endpoint -replace '^https://api\.github\.com/', '' -replace '\?.*$', ''
+              if ($credential.Key -ne 'anonymous' -and [string]::IsNullOrWhiteSpace($credential.Value)) {
+                $lines += "| $($credential.Key) | $shortEndpoint | not configured |"
+                continue
+              }
+              $headers = @{
+                Accept                 = 'application/vnd.github+json'
+                'X-GitHub-Api-Version' = '2022-11-28'
+                'User-Agent'           = 'winget-pkgs-updates-capability-probe'
+              }
+              if ($credential.Key -ne 'anonymous') {
+                $headers.Authorization = "Bearer $($credential.Value)"
+              }
+              try {
+                $response = Invoke-WebRequest -Uri $endpoint -Headers $headers -SkipHttpErrorCheck -ErrorAction Stop
+                $status = [int]$response.StatusCode
+              }
+              catch {
+                $status = 'request error'
+              }
+              $lines += "| $($credential.Key) | $shortEndpoint | $status |"
+            }
+          }
+          $report = $lines -join "`n"
+          Write-Host $report
+          $report | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+          exit 0
+
   package-state:
     name: Package state (${{ matrix.os }})
     runs-on: ${{ matrix.os }}

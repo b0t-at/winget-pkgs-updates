@@ -15,8 +15,13 @@ Describe 'Submit-WingetPackage ForkBranch' {
 
         $global:ForkBranchSubmissionRequests = [System.Collections.Generic.List[object]]::new()
         $global:ForkBranchDuplicateRepositories = [System.Collections.Generic.List[string]]::new()
+        $global:ForkBranchUpstreamReadFailTokens = @()
         $global:OriginalForkRepository = $env:WINGET_PKGS_FORK_REPO
+        $global:OriginalUpstreamReadToken = $env:WINGET_UPSTREAM_READ_TOKEN
+        $global:OriginalUpstreamReadFallbackToken = $env:WINGET_UPSTREAM_READ_FALLBACK_TOKEN
         $env:WINGET_PKGS_FORK_REPO = 'damn-good-b0t/winget-pkgs'
+        $env:WINGET_UPSTREAM_READ_TOKEN = ''
+        $env:WINGET_UPSTREAM_READ_FALLBACK_TOKEN = ''
 
         InModuleScope WingetMaintainerModule {
             Mock Test-ExistingPRs {
@@ -32,9 +37,17 @@ Describe 'Submit-WingetPackage ForkBranch' {
                 $global:ForkBranchSubmissionRequests.Add([pscustomobject]@{
                     Method          = $Method
                     Path            = $Path
+                    Token           = $Token
                     Unauthenticated = [bool] $Unauthenticated
                     Body            = $Body
                 })
+
+                if ($Method -eq 'Get' -and
+                    $Path -match '^repos/microsoft/winget-pkgs($|/)' -and
+                    $global:ForkBranchUpstreamReadFailTokens -ccontains $Token) {
+                    $rateLimitedResponse = [System.Net.Http.HttpResponseMessage]::new([System.Net.HttpStatusCode]::Forbidden)
+                    throw [Microsoft.PowerShell.Commands.HttpResponseException]::new('API rate limit exceeded', $rateLimitedResponse)
+                }
 
                 switch -Regex ($Path) {
                     '^repos/damn-good-b0t/winget-pkgs$' {
@@ -84,10 +97,15 @@ Describe 'Submit-WingetPackage ForkBranch' {
     AfterEach {
         Remove-Item -LiteralPath $global:ForkBranchSubmissionManifestPath -Recurse -Force -ErrorAction SilentlyContinue
         $env:WINGET_PKGS_FORK_REPO = $global:OriginalForkRepository
+        $env:WINGET_UPSTREAM_READ_TOKEN = $global:OriginalUpstreamReadToken
+        $env:WINGET_UPSTREAM_READ_FALLBACK_TOKEN = $global:OriginalUpstreamReadFallbackToken
         Remove-Variable -Name ForkBranchSubmissionManifestPath -Scope Global -ErrorAction SilentlyContinue
         Remove-Variable -Name ForkBranchSubmissionRequests -Scope Global -ErrorAction SilentlyContinue
         Remove-Variable -Name ForkBranchDuplicateRepositories -Scope Global -ErrorAction SilentlyContinue
+        Remove-Variable -Name ForkBranchUpstreamReadFailTokens -Scope Global -ErrorAction SilentlyContinue
         Remove-Variable -Name OriginalForkRepository -Scope Global -ErrorAction SilentlyContinue
+        Remove-Variable -Name OriginalUpstreamReadToken -Scope Global -ErrorAction SilentlyContinue
+        Remove-Variable -Name OriginalUpstreamReadFallbackToken -Scope Global -ErrorAction SilentlyContinue
     }
 
     It 'rejects a pull request target in the source fork before querying GitHub' {
@@ -123,9 +141,6 @@ Describe 'Submit-WingetPackage ForkBranch' {
         }
         if ($global:ForkBranchDuplicateRepositories.Count -ne 1 -or $global:ForkBranchDuplicateRepositories[0] -cne 'microsoft/winget-pkgs') {
             throw "Fork submission did not perform exactly one duplicate check against the upstream target: $($global:ForkBranchDuplicateRepositories -join ', ')"
-        }
-        InModuleScope WingetMaintainerModule {
-            Assert-MockCalled Test-ExistingPRs -Times 1 -Exactly -Scope It
         }
         $upstreamReads = @(
             $global:ForkBranchSubmissionRequests |
@@ -177,6 +192,91 @@ Describe 'Submit-WingetPackage ForkBranch' {
         )
         if ($upstreamWrites.Count -ne 1 -or $upstreamWrites[0].Path -cne 'repos/microsoft/winget-pkgs/pulls') {
             throw "Upstream write surface is not limited to creating the intended pull request: $($upstreamWrites.Path -join ', ')"
+        }
+    }
+
+    It 'uses a dedicated token only for upstream base reads' {
+        $env:WINGET_UPSTREAM_READ_TOKEN = 'upstream-read-token'
+
+        $result = Submit-WingetPackage `
+            -ManifestPath $global:ForkBranchSubmissionManifestPath `
+            -PackageId 'Test.Package' `
+            -Version '1.0.0' `
+            -Token 'fork-write-token' `
+            -With ForkBranch
+
+        if ($result.Success -ne $true) {
+            throw "Expected a successful ForkBranch submission, got: $($result.Error)"
+        }
+        $upstreamReads = @(
+            $global:ForkBranchSubmissionRequests |
+                Where-Object { $_.Path -match '^repos/microsoft/winget-pkgs($|/)' -and $_.Method -eq 'Get' }
+        )
+        if ($upstreamReads.Count -ne 3 -or @($upstreamReads | Where-Object { $_.Unauthenticated -or $_.Token -cne 'upstream-read-token' }).Count -ne 0) {
+            throw "Upstream base reads did not exclusively use the dedicated token: $($upstreamReads | ConvertTo-Json -Compress)"
+        }
+
+        $forkRequests = @(
+            $global:ForkBranchSubmissionRequests |
+                Where-Object { $_.Path -match '^repos/damn-good-b0t/winget-pkgs($|/)' }
+        )
+        if (@($forkRequests | Where-Object { $_.Token -cne 'fork-write-token' }).Count -ne 0) {
+            throw "A fork operation used the upstream read token: $($forkRequests | ConvertTo-Json -Compress)"
+        }
+        $pullRequest = $global:ForkBranchSubmissionRequests |
+            Where-Object { $_.Path -eq 'repos/microsoft/winget-pkgs/pulls' } |
+            Select-Object -Last 1
+        if ($null -eq $pullRequest -or $pullRequest.Token -cne 'fork-write-token') {
+            throw 'The upstream PR creation did not retain the fork submission token.'
+        }
+    }
+
+    It 'fails over to the fallback read token when the primary upstream read token is rate limited' {
+        $env:WINGET_UPSTREAM_READ_TOKEN = 'primary-read-token'
+        $env:WINGET_UPSTREAM_READ_FALLBACK_TOKEN = 'fallback-read-token'
+        $global:ForkBranchUpstreamReadFailTokens = @('primary-read-token')
+
+        $result = Submit-WingetPackage `
+            -ManifestPath $global:ForkBranchSubmissionManifestPath `
+            -PackageId 'Test.Package' `
+            -Version '1.0.0' `
+            -Token 'fork-write-token' `
+            -With ForkBranch
+
+        if ($result.Success -ne $true) {
+            throw "Expected the submission to succeed via the fallback read token, got: $($result.Error)"
+        }
+        $upstreamReads = @(
+            $global:ForkBranchSubmissionRequests |
+                Where-Object { $_.Path -match '^repos/microsoft/winget-pkgs($|/)' -and $_.Method -eq 'Get' }
+        )
+        if ($upstreamReads.Count -ne 6) {
+            throw "Expected each of the three upstream reads to retry exactly once with the fallback token: $($upstreamReads | ConvertTo-Json -Compress)"
+        }
+        foreach ($group in ($upstreamReads | Group-Object Path)) {
+            $attempts = @($group.Group)
+            if ($attempts.Count -ne 2 -or
+                $attempts[0].Token -cne 'primary-read-token' -or
+                $attempts[1].Token -cne 'fallback-read-token') {
+                throw "Upstream read for $($group.Name) did not fail over from the primary to the fallback token: $($attempts | ConvertTo-Json -Compress)"
+            }
+        }
+        if (@($upstreamReads | Where-Object { $_.Unauthenticated }).Count -ne 0) {
+            throw 'A tokened upstream read attempt was marked unauthenticated.'
+        }
+
+        $forkRequests = @(
+            $global:ForkBranchSubmissionRequests |
+                Where-Object { $_.Path -match '^repos/damn-good-b0t/winget-pkgs($|/)' }
+        )
+        if (@($forkRequests | Where-Object { $_.Token -cne 'fork-write-token' }).Count -ne 0) {
+            throw "A fork operation used a read token during failover: $($forkRequests | ConvertTo-Json -Compress)"
+        }
+        $pullRequest = $global:ForkBranchSubmissionRequests |
+            Where-Object { $_.Path -eq 'repos/microsoft/winget-pkgs/pulls' } |
+            Select-Object -Last 1
+        if ($null -eq $pullRequest -or $pullRequest.Token -cne 'fork-write-token') {
+            throw 'The upstream PR creation did not retain the fork submission token during failover.'
         }
     }
 

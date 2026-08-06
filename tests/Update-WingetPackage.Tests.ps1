@@ -204,4 +204,51 @@ if (@($rewriteUpdateArguments | Where-Object { $_ -eq '--allow-structural-rewrit
     throw 'Update-WingetPackage did not pass structural rewrite approval exactly once.'
 }
 
+Write-Host 'TEST: existing PR guard stops generation before the manifest generator starts'
+$preGenerationGuardResult = & $module {
+    $script:ExistingPrChecks = 0
+
+    function Test-GitHubToken { 'test-token' }
+    function Test-PackageAndVersionInGithub {
+        [PSCustomObject]@{
+            PackageExists          = $true
+            ShouldGenerate         = $true
+            VersionExists          = $false
+            CanonicalVersion       = '1.0.0'
+            PublishedVersion       = $null
+            LatestPublishedVersion = $null
+        }
+    }
+    function Test-ExistingPRs {
+        $script:ExistingPrChecks++
+        return $true
+    }
+    function Install-WinMatsch {
+        throw 'Manifest generation started despite an existing upstream PR.'
+    }
+    function winmatsch {
+        throw 'Manifest generation started despite an existing upstream PR.'
+    }
+    function Test-GeneratedInstallerArchitecture {
+        throw 'Manifest generation started despite an existing upstream PR.'
+    }
+
+    $result = Update-WingetPackage `
+        -WingetPackage 'Test.Package' `
+        -With 'WinMatsch' `
+        -latestVersion '1.0.0' `
+        -latestVersionURL 'https://example.invalid/app.zip'
+
+    [PSCustomObject]@{
+        Result           = $result
+        ExistingPrChecks = $script:ExistingPrChecks
+    }
+}
+if ($preGenerationGuardResult.ExistingPrChecks -ne 1) {
+    throw "The pre-generation existing-PR guard ran $($preGenerationGuardResult.ExistingPrChecks) times instead of once."
+}
+if ($preGenerationGuardResult.Result.Generated -or $preGenerationGuardResult.Result.Reason -cne 'PRExists') {
+    throw "The pre-generation existing-PR guard did not stop generation: $($preGenerationGuardResult.Result | ConvertTo-Json -Compress)"
+}
+
 Write-Host 'All Update-WingetPackage regression tests passed.' -ForegroundColor Green
