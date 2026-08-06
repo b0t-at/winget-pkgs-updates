@@ -812,6 +812,22 @@ jobs:
           retention-days: 7
           if-no-files-found: error
 
+      - name: Record structural rewrite approval
+        if: steps.generate.outputs.generated == 'true' && fromJSON(toJSON(matrix)).allowStructuralRewrite == true
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path ./structural-rewrite-approval | Out-Null
+          Set-Content -Path ./structural-rewrite-approval/approved -Value 'true' -NoNewline
+
+      - name: Upload structural rewrite approval marker
+        if: steps.generate.outputs.generated == 'true' && fromJSON(toJSON(matrix)).allowStructuralRewrite == true
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: structural-rewrite__${{ matrix.id }}__${{ steps.generate.outputs.version }}
+          path: ./structural-rewrite-approval
+          retention-days: 7
+          if-no-files-found: error
+
       - name: Record generation failure
         if: failure()
         shell: pwsh
@@ -874,20 +890,35 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          $packages = @()
+          $artifacts = @()
           $page = 1
           do {
             $response = gh api "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts?per_page=100&page=$page" | ConvertFrom-Json
-            foreach ($artifact in $response.artifacts) {
-              if ($artifact.name -match '^manifest__(.+)__(.+)$') {
-                $packageName = $Matches[1]
-                $version = $Matches[2]
-                $packages += @{ PackageName = $packageName; version = $version }
-                Write-Host "Found: $packageName @ $version"
-              }
-            }
+            $artifacts += $response.artifacts
             $page++
           } while ($response.artifacts.Count -eq 100)
+
+          $structuralRewriteApprovals = @{}
+          foreach ($artifact in $artifacts) {
+            if ($artifact.name -match '^structural-rewrite__(.+)__(.+)$') {
+              $structuralRewriteApprovals["$($Matches[1])__$($Matches[2])"] = $true
+            }
+          }
+
+          $packages = @()
+          foreach ($artifact in $artifacts) {
+            if ($artifact.name -match '^manifest__(.+)__(.+)$') {
+              $packageName = $Matches[1]
+              $version = $Matches[2]
+              $approvalKey = "$packageName__$version"
+              $packages += @{
+                PackageName = $packageName
+                version = $version
+                allowStructuralRewrite = $structuralRewriteApprovals.ContainsKey($approvalKey)
+              }
+              Write-Host "Found: $packageName @ $version (structural rewrite: $($structuralRewriteApprovals.ContainsKey($approvalKey)))"
+            }
+          }
 
           $hasPackages = ($packages.Count -gt 0).ToString().ToLower()
           $matrix = @{ include = @($packages) } | ConvertTo-Json -Compress -Depth 3
@@ -1053,7 +1084,7 @@ jobs:
 
           Write-Host "Running content validation for: $manifestPath"
 
-          & .\Scripts\validation\Test-ManifestContent.ps1 -ManifestPath $manifestPath -AllowStructuralRewrite $allowStructuralRewrite
+          & .\Scripts\validation\Test-ManifestContent.ps1 -ManifestPath $manifestPath -AllowStructuralRewrite:$allowStructuralRewrite
           $exitCode = $LASTEXITCODE
 
           if ($exitCode -eq 0) {

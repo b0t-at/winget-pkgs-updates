@@ -54,7 +54,7 @@ param(
     [string] $PublishedPackageRoot,
 
     [Parameter(Mandatory = $false, HelpMessage = 'Allow an explicitly approved generator structural rewrite to remove inherited installer metadata.')]
-    [bool] $AllowStructuralRewrite = $false
+    [switch] $AllowStructuralRewrite
 )
 
 #region Helper Functions

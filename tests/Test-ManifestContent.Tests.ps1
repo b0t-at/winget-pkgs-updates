@@ -62,13 +62,13 @@ try {
         -IncludeNestedInstallerMetadata $false
 
     Write-Host 'TEST: structural metadata removal fails without explicit approval'
-    $null = & $validationScript -ManifestPath $generatedManifestPath -PublishedPackageRoot (Split-Path -Parent $publishedVersionPath) -AllowStructuralRewrite $false
+    $null = & $validationScript -ManifestPath $generatedManifestPath -PublishedPackageRoot (Split-Path -Parent $publishedVersionPath) -AllowStructuralRewrite:$false
     if ($LASTEXITCODE -ne 4) {
         throw "Expected metadata consistency validation to fail with exit code 4, got $LASTEXITCODE."
     }
 
     Write-Host 'TEST: structural metadata removal passes with explicit approval'
-    $null = & $validationScript -ManifestPath $generatedManifestPath -PublishedPackageRoot (Split-Path -Parent $publishedVersionPath) -AllowStructuralRewrite $true
+    $null = & $validationScript -ManifestPath $generatedManifestPath -PublishedPackageRoot (Split-Path -Parent $publishedVersionPath) -AllowStructuralRewrite:$true
     if ($LASTEXITCODE -ne 0) {
         throw "Expected approved structural rewrite validation to pass, got exit code $LASTEXITCODE."
     }
