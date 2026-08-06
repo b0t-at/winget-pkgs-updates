@@ -51,7 +51,10 @@ param(
         }
         return $true
     })]
-    [string] $PublishedPackageRoot
+    [string] $PublishedPackageRoot,
+
+    [Parameter(Mandatory = $false, HelpMessage = 'Allow an explicitly approved generator structural rewrite to remove inherited installer metadata.')]
+    [switch] $AllowStructuralRewrite
 )
 
 #region Helper Functions
@@ -820,9 +823,14 @@ if ($errors.Count -eq 0) {
                     Select-Object -First 1
 
                 if ($baselinePublishedManifest) {
-                    $consistencyErrors = @(Test-InstallerMetadataConsistency -CurrentManifestSet $localManifestSet -PreviousManifestSet $baselinePublishedManifest)
-                    foreach ($consistencyError in $consistencyErrors) {
-                        $errors += $consistencyError
+                    if ($AllowStructuralRewrite) {
+                        $warnings += "Skipping installer metadata consistency comparison against published version $($baselinePublishedManifest.PackageVersion) because structural rewrite approval was explicitly provided."
+                    }
+                    else {
+                        $consistencyErrors = @(Test-InstallerMetadataConsistency -CurrentManifestSet $localManifestSet -PreviousManifestSet $baselinePublishedManifest)
+                        foreach ($consistencyError in $consistencyErrors) {
+                            $errors += $consistencyError
+                        }
                     }
                 }
             }
