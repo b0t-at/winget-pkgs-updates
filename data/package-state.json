@@ -24,20 +24,20 @@
   "AdGuard.AdGuardHome": {
     "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 3,
+    "validationCount": 4,
     "installerHashes": [
       "481C8666B9CE8CD2EF12D4F758FCF07B40F7EB8A919A70E3355F15B5D84EDDBE",
       "1BE07B35765DB199F88BE3838473BA7682EF51DC58217DD49142C1650B5A4532",
       "416F3E1F9A27A5704F51A63C8A3D07852E4BEF390049722E6633C62CE657C4BA"
     ],
-    "lastUpdated": "2026-08-06T10:56:40.5885149Z",
+    "lastUpdated": "2026-08-06T14:10:17.4048445Z",
     "manifestHash": "88FF875B5DEA51BC3B743F06098AADAF42AB87DA966E19E5EFA189C21F4EC081",
     "version": "0.107.78"
   },
   "AdGuard.dnsproxy": {
     "manifestHash": "00F752576BF16BA6AAA9151BAFDFCEB85365A2EB2A1C97A0498073400A6042C1",
-    "lastUpdated": "2026-08-06T10:56:40.2270599Z",
-    "validationCount": 2,
+    "lastUpdated": "2026-08-06T14:10:17.4464701Z",
+    "validationCount": 3,
     "installerHashes": [
       "B764A3E3D8B00A4021B0F4E6C1A389FDB29FC6354331449DC4BF13A99596C3E9",
       "3FA9F9299412F32B4F074E2A9690980E9DA3631F64D243BCA2D7B973C7DDB426",
@@ -255,14 +255,14 @@
     "version": "47.0.3"
   },
   "CameronSutter.Plottr": {
-    "validationCount": 5,
+    "validationCount": 6,
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "B3FFEC171D83FC9F00658B18959EF84A0ADCC4329AD502BBEC5DE4127D9F3609"
     ],
     "description": "",
     "manifestHash": "41DCEE0BA2835FFC0ABE3A005816734972C57CD8949531D90C35FD3658508065",
-    "lastUpdated": "2026-08-06T10:56:40.5205975Z",
+    "lastUpdated": "2026-08-06T14:10:17.5710223Z",
     "version": "2026.6.3"
   },
   "CESNET.UltraGrid": {
@@ -277,25 +277,25 @@
     "version": "1.10.7"
   },
   "ChiaNetwork.GUIforChiaBlockchain": {
-    "validationCount": 5,
+    "validationCount": 6,
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "0291D2658E77AA8ACA8CA72FBE19339A0A1EFAAB0A93AAB4EEB04A1F9C65AA45"
     ],
     "description": "",
     "manifestHash": "F379D1B02840F9F951718473A4DBEEA84B9CFD10C36E390148C3FC8A85DCC56A",
-    "lastUpdated": "2026-08-06T10:56:40.3572273Z",
+    "lastUpdated": "2026-08-06T14:10:17.5207025Z",
     "version": "2.7.3"
   },
   "Cilium.CiliumCLI": {
     "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 3,
+    "validationCount": 4,
     "installerHashes": [
       "332CCAFA4CEB0C87CAA61AC18B02FE35B9E5B6184AD14E92B95134B6C0FE7FB7",
       "98FC12DF89BA57906566A5F898E2259CBC364402FB56483C3397BDD5F0423274"
     ],
-    "lastUpdated": "2026-08-06T10:56:40.2956063Z",
+    "lastUpdated": "2026-08-06T14:10:17.4315848Z",
     "manifestHash": "D414DA37AA68791A8AF114CCEAC460F11E273F3FC34AAFC9B6730FE23B47A7CF",
     "version": "0.19.7"
   },
@@ -311,25 +311,25 @@
     "version": "4.12.6"
   },
   "CircleCI.CLI": {
-    "validationCount": 1,
-    "version": "1.0.47091",
-    "lastUpdated": "2026-08-06T10:56:40.6152553Z",
+    "version": "1.0.47122",
+    "manifestHash": "984B5F9A009D21904C96C18FA62D455A0679E5FB74F5A38BF43ED17E2BE64B4B",
     "installerHashes": [
-      "9057B8DCEBFB3E593121DF984B6A65ACD6CBFB0730DFFC2EBA362FBC0C4CC92A",
-      "45E744023F97CCEBA4D4528619DCB3F364ED3900BEA15A7D693AFBAC9A924B05"
+      "D10304F22D2D5E9DC5CC65A9912F3AF12C71605EA3ACB0D45F466AAE5A6CEE6F",
+      "33F92A442157BF3E0F5916378CCA8FD9DFD50BCE55F44D9BEF1240801E94BB34"
     ],
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "13F4B1015CC06F806746180508D921EB771AB54EB9E259D0B3029A6806832687"
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-06T14:10:17.551121Z"
   },
   "ciromattia.KCC": {
     "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 7,
+    "validationCount": 8,
     "installerHashes": [
       "101FD6F0AFAA6666B3284819E5CDA824BF6CBC9992419412632472189D1F5662"
     ],
-    "lastUpdated": "2026-08-06T10:56:40.324063Z",
+    "lastUpdated": "2026-08-06T14:10:17.4763391Z",
     "manifestHash": "411F6F13229B0DB69AFE5E97FD7386D091979B9A469D9DE39B063600CE2C0316",
     "version": "11.0.1"
   },
@@ -531,11 +531,11 @@
   "etcd-io.etcd": {
     "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 7,
+    "validationCount": 8,
     "installerHashes": [
       "228D600D103E0F48715687C768DE8DCAEACB19EEF2006261160A9A677E36CC59"
     ],
-    "lastUpdated": "2026-08-06T10:56:40.2849461Z",
+    "lastUpdated": "2026-08-06T14:10:17.1948268Z",
     "manifestHash": "E2F908491FB8FB63701502F5CDEABDEDE014F91F9D83BFBCAEE65FE0E5046167",
     "version": "3.7.1"
   },
@@ -551,14 +551,14 @@
     "description": ""
   },
   "fairdataihub.SODA-for-SPARC": {
-    "validationCount": 5,
+    "validationCount": 6,
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "86A75FEAF01B71B23C06897189481212ECC469ED2DE6AB818B5572EC9B7DC1CE"
     ],
     "description": "",
     "manifestHash": "7CAEF11F31BCCF3343E80FA78D25C6CC2BA4FA8B77A3F8085BED2D8F863798B7",
-    "lastUpdated": "2026-08-06T10:56:40.2743393Z",
+    "lastUpdated": "2026-08-06T14:10:17.3217046Z",
     "version": "18.2.0"
   },
   "Firstversionist.Polypane": {
@@ -936,11 +936,11 @@
   "InTheLoop.LoopEmail": {
     "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 3,
+    "validationCount": 4,
     "installerHashes": [
       "754A071041469FE0A868177D8B3C9CDB0A31DEAE93FBBAB3E9CA7183751BCB14"
     ],
-    "lastUpdated": "2026-08-06T10:56:40.2398331Z",
+    "lastUpdated": "2026-08-06T14:10:17.4892889Z",
     "manifestHash": "5081EFCE167B24740E8F0F4E0EB4897DA0100C030977D31025F89E2C214F45E9",
     "version": "8.0.5"
   },
@@ -991,13 +991,13 @@
   "JanProchazka.dbgate": {
     "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 3,
+    "validationCount": 4,
     "installerHashes": [
       "7C4C8B474049A76BC3E3E2AB98842001890F2BEC86132CC25A796CF2376547C1",
       "FBF54248522A8FF0B8F48855A93E3A3E10F007D50F954A2ED533AE2D64500480",
       "22042ECAB9A48E19A47FF7B88D7F66B4E49F92C7CD0F5E2C06C4EB8150360F57"
     ],
-    "lastUpdated": "2026-08-06T10:56:40.5750907Z",
+    "lastUpdated": "2026-08-06T14:10:17.53352Z",
     "manifestHash": "00C9098961E5E5498B0C0F4CA4A8CE71A1AF1A0F8BE54618097B63AE27F8215F",
     "version": "7.2.4"
   },
@@ -1014,7 +1014,7 @@
     "lastUpdated": "2026-06-06T17:48:44.5235411Z"
   },
   "jj-vcs.jj": {
-    "validationCount": 2,
+    "validationCount": 3,
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "A33732415DB40E84F43C911B04751CF88AA2C7A5D12EA86BEC3AC18F23F463FD",
@@ -1022,13 +1022,13 @@
     ],
     "version": "0.44.0",
     "description": "",
-    "lastUpdated": "2026-08-06T10:56:40.3350776Z",
+    "lastUpdated": "2026-08-06T14:10:17.3921348Z",
     "manifestHash": "1E843D90602194E32EF0F84E333BE9BC20D09621BCA43AA304BDA7952A621BAB"
   },
   "JohannesMillan.superProductivity": {
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "18.16.0",
-    "lastUpdated": "2026-08-06T10:56:40.3110921Z",
+    "lastUpdated": "2026-08-06T14:10:17.4637552Z",
     "installerHashes": [
       "7CC3800B61CD3DE40A8BE6FF7B2A93D7E61A728078EAA91076D36C50655694BF",
       "BC7F1F936B13AB99C0BABF6051CB5E8D337853F491B7E9248A16C4D9E16D833A",
@@ -1063,22 +1063,22 @@
   "JustArchiNET.ArchiSteamFarm": {
     "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 7,
+    "validationCount": 8,
     "installerHashes": [
       "2802261CAD70E73615C380D6EB070FE162787F10278A752777FB2ABF404725BC"
     ],
-    "lastUpdated": "2026-08-06T10:56:40.4707296Z",
+    "lastUpdated": "2026-08-06T14:10:17.3375985Z",
     "manifestHash": "F9726356260C797AA08B794BC34273158BD5C5CB8941749A35B362D160CA54D1",
     "version": "6.3.8.4"
   },
   "KeeperSecurity.Commander": {
     "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 3,
+    "validationCount": 4,
     "installerHashes": [
       "F9611E9DC9F56271093D069D58B6E8008B614BD9C2B9454873BE1F33B702CD60"
     ],
-    "lastUpdated": "2026-08-06T10:56:40.6018447Z",
+    "lastUpdated": "2026-08-06T14:10:17.5853556Z",
     "manifestHash": "ED04962F152B7F6338068D498CA82A88AD56E37147B39B0250D10B6139CD47C1",
     "version": "18.0.15"
   },
@@ -1285,13 +1285,13 @@
   "MilkShift.GoofCord": {
     "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 3,
+    "validationCount": 4,
     "installerHashes": [
       "DC22E239917FD4B55C1B8D6CFCE1885FEEF912C3BA9F4CFA40F991C0F3CDC765",
       "94F7BE87184D111261C48CD86390D028E6A2344D3EC72CCE32D2CE44169FBF86",
       "7E8082945EF12A0086A59E45F42EF4CFFF652CDA8FB2457FBE5C6B5058527E1D"
     ],
-    "lastUpdated": "2026-08-06T10:56:40.2636754Z",
+    "lastUpdated": "2026-08-06T14:10:17.4172097Z",
     "manifestHash": "5614AC57165FFCF59691032A73D89BCE1DF739C120A9FD77E85C4C80E9D5ABDA",
     "version": "2.3.0"
   },
@@ -1480,12 +1480,12 @@
   "Open-Component-Model.ocm-cli": {
     "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 7,
+    "validationCount": 8,
     "installerHashes": [
       "253E41712CA1E1B482F6F0EECA5F4D522A2D8120EED6292E1C8243D735FA8F8D",
       "A2062885B217500B49E74D56DCB0D92352080030584E14C8C8E69A1D7806500A"
     ],
-    "lastUpdated": "2026-08-06T10:56:40.2528786Z",
+    "lastUpdated": "2026-08-06T14:10:17.502032Z",
     "manifestHash": "D7728294C137D72E17A7EF72348CC72598070B8B517CE4452AB71478EA535BC8",
     "version": "0.47.0"
   },
@@ -1667,7 +1667,7 @@
   },
   "Prometheus.WindowsExporter": {
     "manifestHash": "F7B20222587B5D04CA612C9432BABFADF66AD0F52C720C9B9BA8B250ADDCBD87",
-    "lastUpdated": "2026-08-06T10:56:40.381178Z",
+    "lastUpdated": "2026-08-06T14:10:17.3782534Z",
     "description": "",
     "version": "0.31.8",
     "installerHashes": [
@@ -1677,7 +1677,7 @@
       "1ACC1C92040D0189AA5D2572F3D2CCD8C7D41A1A0FB2561B9A529D930D3A46D3"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 4
+    "validationCount": 5
   },
   "Pulsar-Edit.Pulsar": {
     "installerHashes": [
