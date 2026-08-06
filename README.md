@@ -1,9 +1,9 @@
 # winget-pkgs-updates
-**Submission repo:** [Utesgui/winget-pkgs](https://github.com/Utesgui/winget-pkgs)
+**Submission repo:** [damn-good-b0t/winget-pkgs](https://github.com/damn-good-b0t/winget-pkgs)
 
 ### Fork submissions:
-- [**all open PRs**](https://github.com/Utesgui/winget-pkgs/pulls)
-- [**need attention**](https://github.com/Utesgui/winget-pkgs/pulls?q=is%3Aopen+is%3Apr+author%3AUtesgui)
+- [**all open PRs**](https://github.com/damn-good-b0t/winget-pkgs/pulls)
+- [**need attention**](https://github.com/damn-good-b0t/winget-pkgs/pulls?q=is%3Aopen+is%3Apr+author%3Adamn-good-b0t)
 
 | Package Version Handling| Count|
 |----------------------------|---------------------------------------------------------------|
@@ -17,16 +17,16 @@
 ## Scheduled submission topology
 
 Validated scheduled manifests use `ForkBranch` submission rather than
-`wingetcreate submit`. `WINGET_PKGS_FORK_REPO` must be configured as
-`Utesgui/winget-pkgs`; the module verifies that exact repository is a fork of
-`microsoft/winget-pkgs`, creates a disposable branch directly from its default
-branch, and commits only the manifest files to that branch. It never syncs or
-writes the fork default branch.
+`wingetcreate submit`. `WINGET_PKGS_FORK_REPO` must name a user-owned fork;
+the module verifies that repository is a fork of `microsoft/winget-pkgs`,
+creates a disposable branch directly from its default branch, and commits only
+the manifest files to that branch. It never syncs or writes the fork default
+branch.
 
 Every trigger, including scheduled main-branch runs, opens the pull request
-inside `Utesgui/winget-pkgs`. Submissions to `microsoft/winget-pkgs` are
+inside the configured fork. Submissions to `microsoft/winget-pkgs` are
 disabled. A fine-grained PAT needs Contents write and Pull requests write on
-`Utesgui/winget-pkgs`; it does not need GitHub Actions workflow scope.
+the configured fork; it does not need GitHub Actions workflow scope.
 
 ## Package-specific WinMatsch overrides
 

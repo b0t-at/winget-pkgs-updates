@@ -31,8 +31,8 @@
 
     .PARAMETER SubmissionTarget
     ForkBranch is restricted to "Fork" and opens the pull request inside the
-    verified Utesgui/winget-pkgs fork. Submissions to microsoft/winget-pkgs
-    are disabled.
+    configured, topology-verified user-owned fork. Submissions to
+    microsoft/winget-pkgs are disabled.
 
 .PARAMETER Token
     GitHub Personal Access Token with repo scope. If not provided, uses

@@ -14,11 +14,17 @@ Describe 'Submit-WingetPackage ForkBranch' {
         ) | Set-Content -LiteralPath (Join-Path $global:ForkBranchSubmissionManifestPath 'Test.Package.yaml')
 
         $global:ForkBranchSubmissionRequests = [System.Collections.Generic.List[object]]::new()
+        $global:ForkBranchDuplicateRepositories = [System.Collections.Generic.List[string]]::new()
         $global:OriginalForkRepository = $env:WINGET_PKGS_FORK_REPO
-        $env:WINGET_PKGS_FORK_REPO = 'Utesgui/winget-pkgs'
+        $env:WINGET_PKGS_FORK_REPO = 'damn-good-b0t/winget-pkgs'
 
         InModuleScope WingetMaintainerModule {
-            Mock Test-ExistingPRs { $false }
+            Mock Test-ExistingPRs {
+                param($PackageIdentifier, $Version, $Repository)
+
+                $global:ForkBranchDuplicateRepositories.Add($Repository)
+                return $false
+            }
             Mock Get-WingetPkgsPrUrl { $null }
             Mock Invoke-WingetPkgsGitHubApi {
                 param($Method, $Path, $Token, $Body)
@@ -30,7 +36,7 @@ Describe 'Submit-WingetPackage ForkBranch' {
                 })
 
                 switch -Regex ($Path) {
-                    '^repos/Utesgui/winget-pkgs$' {
+                    '^repos/damn-good-b0t/winget-pkgs$' {
                         return [pscustomobject]@{
                             fork           = $true
                             default_branch = 'master'
@@ -54,7 +60,7 @@ Describe 'Submit-WingetPackage ForkBranch' {
                     }
                     '/pulls$' {
                         return [pscustomobject]@{
-                            html_url = 'https://github.com/Utesgui/winget-pkgs/pull/12345'
+                            html_url = 'https://github.com/damn-good-b0t/winget-pkgs/pull/12345'
                             number   = 12345
                         }
                     }
@@ -71,6 +77,7 @@ Describe 'Submit-WingetPackage ForkBranch' {
         $env:WINGET_PKGS_FORK_REPO = $global:OriginalForkRepository
         Remove-Variable -Name ForkBranchSubmissionManifestPath -Scope Global -ErrorAction SilentlyContinue
         Remove-Variable -Name ForkBranchSubmissionRequests -Scope Global -ErrorAction SilentlyContinue
+        Remove-Variable -Name ForkBranchDuplicateRepositories -Scope Global -ErrorAction SilentlyContinue
         Remove-Variable -Name OriginalForkRepository -Scope Global -ErrorAction SilentlyContinue
     }
 
@@ -94,7 +101,7 @@ Describe 'Submit-WingetPackage ForkBranch' {
         }
     }
 
-    It 'keeps Fork submissions entirely within the verified Utesgui fork' {
+    It 'keeps Fork submissions entirely within the configured verified fork' {
         $result = Submit-WingetPackage `
             -ManifestPath $global:ForkBranchSubmissionManifestPath `
             -PackageId 'Test.Package' `
@@ -108,19 +115,22 @@ Describe 'Submit-WingetPackage ForkBranch' {
         if (@($global:ForkBranchSubmissionRequests | Where-Object { $_.Path -match 'microsoft/winget-pkgs' }).Count -ne 0) {
             throw 'Fork submission called the Microsoft repository API.'
         }
+        if ($global:ForkBranchDuplicateRepositories.Count -ne 2 -or @($global:ForkBranchDuplicateRepositories | Where-Object { $_ -cne 'damn-good-b0t/winget-pkgs' }).Count -ne 0) {
+            throw "Fork submission did not perform duplicate checks against the configured fork: $($global:ForkBranchDuplicateRepositories -join ', ')"
+        }
 
         $forkWrites = @(
             $global:ForkBranchSubmissionRequests |
                 Where-Object {
-                    $_.Path -match '^repos/Utesgui/winget-pkgs/' -and
+                    $_.Path -match '^repos/damn-good-b0t/winget-pkgs/' -and
                     $_.Method -in @('Post', 'Patch', 'Delete')
                 }
         )
         foreach ($expectedPath in @(
-            'repos/Utesgui/winget-pkgs/git/trees',
-            'repos/Utesgui/winget-pkgs/git/commits',
-            'repos/Utesgui/winget-pkgs/git/refs',
-            'repos/Utesgui/winget-pkgs/pulls'
+            'repos/damn-good-b0t/winget-pkgs/git/trees',
+            'repos/damn-good-b0t/winget-pkgs/git/commits',
+            'repos/damn-good-b0t/winget-pkgs/git/refs',
+            'repos/damn-good-b0t/winget-pkgs/pulls'
         )) {
             if ($forkWrites.Path -notcontains $expectedPath) {
                 throw "Expected fork write was not made: $expectedPath"
@@ -129,26 +139,31 @@ Describe 'Submit-WingetPackage ForkBranch' {
         if (@($forkWrites | Where-Object { $_.Path -match 'merge-upstream|refs/heads/master' }).Count -ne 0) {
             throw 'ForkBranch wrote or synchronized the fork default branch.'
         }
-        $treeRequest = $forkWrites | Where-Object { $_.Path -eq 'repos/Utesgui/winget-pkgs/git/trees' }
+        $treeRequest = $forkWrites | Where-Object { $_.Path -eq 'repos/damn-good-b0t/winget-pkgs/git/trees' }
         if ($treeRequest.Body.base_tree -cne 'base-tree-sha') {
             throw "ForkBranch did not base the manifest tree on the resolved base tree: $($treeRequest.Body.base_tree)"
         }
 
         $pullRequest = $global:ForkBranchSubmissionRequests |
-            Where-Object { $_.Path -eq 'repos/Utesgui/winget-pkgs/pulls' } |
+            Where-Object { $_.Path -eq 'repos/damn-good-b0t/winget-pkgs/pulls' } |
             Select-Object -Last 1
         if ($pullRequest.Body.base -cne 'master') {
             throw "Fork test submission used an unexpected base branch: $($pullRequest.Body.base)"
         }
-        if ($pullRequest.Body.head -notmatch '^Utesgui:winget-autosubmit/') {
+        if ($pullRequest.Body.head -notmatch '^damn-good-b0t:winget-autosubmit/') {
             throw "Fork test submission used an unexpected PR head: $($pullRequest.Body.head)"
         }
     }
 
     It 'does not create a fork branch when the matching target PR already exists' {
         InModuleScope WingetMaintainerModule {
-            Mock Test-ExistingPRs { $true }
-            Mock Get-WingetPkgsPrUrl { 'https://github.com/Utesgui/winget-pkgs/pull/54321' }
+            Mock Test-ExistingPRs {
+                param($PackageIdentifier, $Version, $Repository)
+
+                $global:ForkBranchDuplicateRepositories.Add($Repository)
+                return $true
+            }
+            Mock Get-WingetPkgsPrUrl { 'https://github.com/damn-good-b0t/winget-pkgs/pull/54321' }
         }
 
         $result = Submit-WingetPackage `
@@ -158,16 +173,34 @@ Describe 'Submit-WingetPackage ForkBranch' {
             -Token 'test-token' `
             -With ForkBranch
 
-        if ($result.Success -ne $true -or $result.PrUrl -cne 'https://github.com/Utesgui/winget-pkgs/pull/54321') {
+        if ($result.Success -ne $true -or $result.PrUrl -cne 'https://github.com/damn-good-b0t/winget-pkgs/pull/54321') {
             throw "Existing submission PR was not returned: $($result | ConvertTo-Json -Compress)"
+        }
+        if ($global:ForkBranchDuplicateRepositories.Count -ne 1 -or $global:ForkBranchDuplicateRepositories[0] -cne 'damn-good-b0t/winget-pkgs') {
+            throw "Duplicate detection did not use the configured fork: $($global:ForkBranchDuplicateRepositories -join ', ')"
         }
         if ($global:ForkBranchSubmissionRequests.Count -ne 0) {
             throw 'Duplicate detection attempted a fork API request.'
         }
     }
 
-    It 'rejects an unapproved fork configuration before querying GitHub' {
-        $env:WINGET_PKGS_FORK_REPO = 'damn-good-b0t/winget-pkgs'
+    It 'rejects a configured repository that is not a winget-pkgs fork before writing' {
+        InModuleScope WingetMaintainerModule {
+            Mock Invoke-WingetPkgsGitHubApi {
+                param($Method, $Path, $Token, $Body)
+
+                $global:ForkBranchSubmissionRequests.Add([pscustomobject]@{
+                    Method = $Method
+                    Path   = $Path
+                    Body   = $Body
+                })
+                return [pscustomobject]@{
+                    fork           = $false
+                    default_branch = 'master'
+                    parent         = [pscustomobject]@{ full_name = 'unrelated/repository' }
+                }
+            }
+        }
 
         $result = Submit-WingetPackage `
             -ManifestPath $global:ForkBranchSubmissionManifestPath `
@@ -177,13 +210,37 @@ Describe 'Submit-WingetPackage ForkBranch' {
             -With ForkBranch
 
         if ($result.Success -ne $false) {
-            throw 'An unapproved fork configuration unexpectedly succeeded.'
+            throw 'A repository that is not a fork unexpectedly succeeded.'
         }
-        if ($result.Error -notmatch 'must be configured as Utesgui/winget-pkgs') {
+        if ($result.Error -notmatch 'is not a fork of microsoft/winget-pkgs') {
+            throw "The invalid fork topology was not identified clearly: $($result.Error)"
+        }
+        if (@($global:ForkBranchSubmissionRequests | Where-Object { $_.Method -in @('Post', 'Patch', 'Delete') }).Count -ne 0) {
+            throw 'An invalid fork topology attempted a GitHub write.'
+        }
+    }
+
+    It 'rejects microsoft/winget-pkgs as the configured fork before querying GitHub' {
+        $env:WINGET_PKGS_FORK_REPO = 'microsoft/winget-pkgs'
+
+        $result = Submit-WingetPackage `
+            -ManifestPath $global:ForkBranchSubmissionManifestPath `
+            -PackageId 'Test.Package' `
+            -Version '1.0.0' `
+            -Token 'test-token' `
+            -With ForkBranch
+
+        if ($result.Success -ne $false) {
+            throw 'The Microsoft repository configuration unexpectedly succeeded.'
+        }
+        if ($result.Error -notmatch 'user-owned fork') {
             throw "The unsafe fork configuration was not identified clearly: $($result.Error)"
         }
         if ($global:ForkBranchSubmissionRequests.Count -ne 0) {
-            throw 'An unapproved fork configuration queried or wrote a GitHub repository.'
+            throw 'The Microsoft repository configuration queried or wrote a GitHub repository.'
+        }
+        if ($global:ForkBranchDuplicateRepositories.Count -ne 0) {
+            throw 'The Microsoft repository configuration performed duplicate detection.'
         }
     }
 

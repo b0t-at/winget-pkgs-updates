@@ -91,12 +91,12 @@ function Assert-SafeWingetPkgsForkRepository {
         [string] $ForkRepository
     )
 
-    $approvedForkRepository = 'Utesgui/winget-pkgs'
+    $upstreamRepository = 'microsoft/winget-pkgs'
     if ($ForkRepository -notmatch '^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$') {
         throw "WINGET_PKGS_FORK_REPO must be an owner/repository name, not '$ForkRepository'."
     }
-    if ($ForkRepository -ine $approvedForkRepository) {
-        throw "WINGET_PKGS_FORK_REPO must be configured as $approvedForkRepository for ForkBranch submissions; received '$ForkRepository'."
+    if ($ForkRepository -ieq $upstreamRepository) {
+        throw 'WINGET_PKGS_FORK_REPO must name a user-owned fork, never microsoft/winget-pkgs.'
     }
 }
 
