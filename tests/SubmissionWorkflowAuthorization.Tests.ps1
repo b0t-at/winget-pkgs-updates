@@ -86,12 +86,20 @@ foreach ($workflowRelativePath in $workflowPaths) {
         throw "$workflowName must probe the Actions token separately before generation and submission."
     }
 
-    $readTokenAssignments = [regex]::Matches(
+    $generateReadTokenAssignments = [regex]::Matches(
         $workflow,
         '(?m)^          WINGET_UPSTREAM_READ_TOKEN: \$\{\{\s*steps\.upstream-read-probe\.outputs\.available == ''true'' && github\.token \|\| secrets\.WINGET_PUBLIC_READ_TOKEN\s*\}\}\s*$'
     )
-    if ($readTokenAssignments.Count -ne 2) {
-        throw "$workflowName must use the probed Actions token only as the dedicated upstream read token, with the documented optional fallback."
+    if ($generateReadTokenAssignments.Count -ne 1) {
+        throw "$workflowName must use the generation probe result only as the dedicated upstream read token, with the documented optional fallback."
+    }
+
+    $submitReadTokenAssignments = [regex]::Matches(
+        $workflow,
+        '(?m)^          WINGET_UPSTREAM_READ_TOKEN: \$\{\{\s*steps\.upstream-read-probe-submit\.outputs\.available == ''true'' && github\.token \|\| secrets\.WINGET_PUBLIC_READ_TOKEN\s*\}\}\s*$'
+    )
+    if ($submitReadTokenAssignments.Count -ne 1) {
+        throw "$workflowName must use the submission probe result only as the dedicated upstream read token, with the documented optional fallback."
     }
 
     foreach ($stepName in @('Generate manifest', 'Submit PR')) {
