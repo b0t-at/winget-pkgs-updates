@@ -46,11 +46,12 @@ submission. Read tokens are never used for fork writes or PR creation; fork
 writes and the cross-repository PR POST always use `WINGET_PAT`.
 
 Duplicate detection uses one broad `repo:<repository> is:pr in:title` search
-and accepts only exact current or legacy combined title formats for the package
-and version. It filters GitHub's returned `state` and `pull_request.merged_at`
-fields client-side, accepting open or actually merged PRs while ignoring
-closed-unmerged PRs. Search/API response failures and incomplete result pages
-fail closed rather than being treated as no duplicate.
+and requires bounded package and normalized-version title tokens, including
+the current and legacy combined formats. It filters GitHub's returned `state`
+and `pull_request.merged_at` fields client-side, accepting open or actually
+merged PRs while ignoring closed-unmerged PRs. Search/API response failures
+and incomplete result pages fail closed rather than being treated as no
+duplicate.
 
 ## Package-specific WinMatsch overrides
 

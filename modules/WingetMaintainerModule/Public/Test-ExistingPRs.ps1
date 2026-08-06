@@ -57,7 +57,7 @@ function Test-ExistingPRs {
     $escapedPackageIdentifier = $PackageIdentifier.Replace('"', '\"')
     $escapedVersion = $Version.Replace('"', '\"')
     $openOnlyQuery = if ($OnlyOpen) { ' is:open' } else { '' }
-    $query = "repo:$Repository is:pr$openOnlyQuery in:title `"$escapedPackageIdentifier $escapedVersion`""
+    $query = "repo:$Repository is:pr$openOnlyQuery in:title `"$escapedPackageIdentifier`" `"$escapedVersion`""
     $encodedQuery = [uri]::EscapeDataString($query)
 
     $credentialTiers = @(Get-WingetPkgsUpstreamReadCredentialTiers)
@@ -98,6 +98,17 @@ function Test-ExistingPRs {
     $totalCountProperty = $response.PSObject.Properties['total_count']
     if ($null -eq $itemsProperty -or $null -eq $totalCountProperty -or $null -eq $itemsProperty.Value) {
         throw 'GitHub existing-PR search returned an incomplete response.'
+    }
+
+    $incompleteResultsProperty = $response.PSObject.Properties['incomplete_results']
+    if ($null -ne $incompleteResultsProperty) {
+        $incompleteResults = $false
+        if (-not [bool]::TryParse("$($incompleteResultsProperty.Value)", [ref] $incompleteResults)) {
+            throw 'GitHub existing-PR search returned an invalid incomplete_results value.'
+        }
+        if ($incompleteResults) {
+            throw 'GitHub existing-PR search reported incomplete_results=true; refusing to make a duplicate decision.'
+        }
     }
 
     $totalCount = 0

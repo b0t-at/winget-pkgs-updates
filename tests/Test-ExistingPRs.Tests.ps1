@@ -74,7 +74,7 @@ Describe 'Test-ExistingPRs' {
         }
 
         $query = [uri]::UnescapeDataString(([uri] $request.Uri).Query)
-        if ($query -notmatch 'repo:microsoft/winget-pkgs' -or $query -notmatch 'Test.Package 1.0.0' -or
+        if ($query -notmatch 'repo:microsoft/winget-pkgs' -or $query -notmatch 'in:title "Test\.Package" "1\.0\.0"' -or
             $query -match '\(is:open OR is:merged\)' -or $query -match 'is:merged') {
             throw "The public upstream PR search used an unexpected query: $query"
         }
@@ -213,7 +213,7 @@ Describe 'Test-ExistingPRs' {
                             pull_request = [pscustomobject]@{ merged_at = $null }
                         },
                         [pscustomobject]@{
-                            title        = 'Update version: Test.Package.Extra version 1.0.0'
+                            title        = 'Update version: Test.PackagePro version 1.0.0'
                             state        = 'open'
                             html_url     = 'https://github.com/microsoft/winget-pkgs/pull/103'
                             pull_request = [pscustomobject]@{ merged_at = $null }
@@ -305,6 +305,25 @@ Describe 'Test-ExistingPRs' {
         }
     }
 
+    It 'detects community and custom title forms with bounded package and version tokens' {
+        $titleMatches = InModuleScope WingetMaintainerModule {
+            [pscustomobject]@{
+                Community = Test-WingetPkgsExistingPrTitle `
+                    -Title 'Community update: Test.Package v1.0.0' `
+                    -PackageIdentifier 'Test.Package' `
+                    -Version '1.0.0'
+                Custom = Test-WingetPkgsExistingPrTitle `
+                    -Title 'Bump Test.Package from 0.9.0 to 1.0.0' `
+                    -PackageIdentifier 'Test.Package' `
+                    -Version '1.0.0'
+            }
+        }
+
+        if (-not $titleMatches.Community -or -not $titleMatches.Custom) {
+            throw "Bounded package/version matching did not recognize custom title forms: $($titleMatches | ConvertTo-Json -Compress)"
+        }
+    }
+
     It 'ignores substring and tokenized title search candidates' {
         InModuleScope WingetMaintainerModule {
             Mock Invoke-RestMethod {
@@ -312,7 +331,7 @@ Describe 'Test-ExistingPRs' {
                     total_count = 2
                     items = @(
                         [pscustomobject]@{
-                            title        = 'Update version: Test.Package.Extra version 1.0.0'
+                            title        = 'Update version: Test.PackagePro version 1.0.0'
                             state        = 'open'
                             html_url     = 'https://github.com/microsoft/winget-pkgs/pull/103'
                             pull_request = [pscustomobject]@{ merged_at = $null }
@@ -336,6 +355,32 @@ Describe 'Test-ExistingPRs' {
         if ($result -ne $false) {
             throw 'A substring or tokenized title candidate was treated as an exact duplicate.'
         }
+    }
+
+    It 'fails closed when GitHub Search reports incomplete results despite a complete page' {
+        InModuleScope WingetMaintainerModule {
+            Mock Invoke-RestMethod {
+                return [pscustomobject]@{
+                    incomplete_results = $true
+                    total_count        = 1
+                    items              = @(
+                        [pscustomobject]@{
+                            title        = 'Update version: Test.Package version 1.0.0'
+                            state        = 'open'
+                            html_url     = 'https://github.com/microsoft/winget-pkgs/pull/12345'
+                            pull_request = [pscustomobject]@{ merged_at = $null }
+                        }
+                    )
+                }
+            }
+        }
+
+        {
+            Test-ExistingPRs `
+                -PackageIdentifier 'Test.Package' `
+                -Version '1.0.0' `
+                -Repository 'microsoft/winget-pkgs'
+        } | Should -Throw '*incomplete_results=true*'
     }
 
     It 'searches only open pull requests when requested' {
