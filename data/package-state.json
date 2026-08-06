@@ -2157,10 +2157,10 @@
     "state": "VALIDATION_PASSED"
   },
   "vcmi.vcmi": {
-    "validationCount": 2,
+    "validationCount": 3,
     "description": "",
     "version": "1.7.4",
-    "lastUpdated": "2026-08-05T20:41:04.1149333Z",
+    "lastUpdated": "2026-08-06T01:08:46.3277793Z",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "F2068C1F0BE6D2E77C2D37D3F270DA55AC4E049E58DDBE9D4120266897FBA819",
@@ -2214,10 +2214,10 @@
     ]
   },
   "WillyJL.F95Checker": {
-    "validationCount": 2,
+    "validationCount": 3,
     "description": "",
     "version": "11.1.3",
-    "lastUpdated": "2026-08-05T20:41:04.0848673Z",
+    "lastUpdated": "2026-08-06T01:08:46.38251Z",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "639FC81249E20EC01F0362E4E765B93DBBAB56AAA1F9F8DABA5E61DC08AE71E9"
@@ -2291,11 +2291,11 @@
     "manifestHash": "09B393FE05C1899D6E6FA28E20FA9C8EBE1D54C32039B0C27EF5361773E27FA3"
   },
   "ZeroInstall.ZeroInstall": {
-    "lastUpdated": "2026-08-05T20:41:04.0747152Z",
+    "lastUpdated": "2026-08-06T01:08:46.3700832Z",
     "state": "VALIDATION_PASSED",
     "description": "",
     "version": "2.29.2",
-    "validationCount": 3,
+    "validationCount": 4,
     "installerHashes": [
       "B8DDFA63CF7B7ED777F43FC7AC4A69690445AEBB6BEB6CA801380AAE83FFDF33"
     ],
