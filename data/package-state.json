@@ -1955,15 +1955,15 @@
     "version": "2.1.12"
   },
   "Storj.Uplink": {
-    "manifestHash": "CD83B7570AE70CD0CF7740F5FBC93A25011A72239B76E8B3A73588BD91E0CCA3",
-    "validationCount": 2,
-    "description": "",
     "installerHashes": [
-      "A6BB2B030B469C1C39B9E77A651CE0358FC6B4C0EFE08549B8143FFED7B494C4"
+      "B6562D8CEF0E05CDDB892EDE8946698A5C499D977072E1BB55A4C1CCA85B3FC9"
     ],
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-06T14:13:45.9859222Z",
-    "version": "1.161.6"
+    "manifestHash": "ACC2F439DE17283F8B3F9483424C7B37359AF151C8CED6715A9C7F216FAF6163",
+    "version": "1.161.7",
+    "lastUpdated": "2026-08-07T12:34:16.1869531Z",
+    "description": ""
   },
   "Stripe.StripeCli": {
     "version": "1.43.5",
@@ -2338,15 +2338,15 @@
     "manifestHash": "09B393FE05C1899D6E6FA28E20FA9C8EBE1D54C32039B0C27EF5361773E27FA3"
   },
   "ZeroInstall.ZeroInstall": {
-    "lastUpdated": "2026-08-06T14:13:45.9384898Z",
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "version": "2.29.2",
-    "validationCount": 7,
     "installerHashes": [
-      "B8DDFA63CF7B7ED777F43FC7AC4A69690445AEBB6BEB6CA801380AAE83FFDF33"
+      "D54AB922C4B186C66DD94C687F5060E25DF7077DE45308CB5DFDC4D1C736C5ED"
     ],
-    "manifestHash": "E3F991159D64F2617E66137FB168593281BCB0ABBB718A55C9E1B416CDB86797"
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "D68866FE6B88BE7433457D1288CCE16D89C734FFE5394E997DBCD7637B046707",
+    "version": "2.29.3",
+    "lastUpdated": "2026-08-07T12:34:16.1518418Z",
+    "description": ""
   },
   "zkSNACKs.WasabiWallet": {
     "state": "VALIDATION_PASSED",
