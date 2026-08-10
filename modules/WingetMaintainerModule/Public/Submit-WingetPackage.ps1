@@ -36,8 +36,10 @@
     commits content to microsoft/winget-pkgs.
 
     .PARAMETER Repository
-    The repository where existing pull requests are checked. ForkBranch only
-    supports microsoft/winget-pkgs as its write target.
+    The repository where existing pull requests are checked and, for
+    ForkBranch, where the pull request is created. ForkBranch supports
+    microsoft/winget-pkgs or the configured verified fork, allowing an
+    explicitly scoped test-fork submission.
 
 .PARAMETER Token
     GitHub Personal Access Token with repo scope. If not provided, uses
@@ -156,15 +158,6 @@ function Submit-WingetPackage {
                     PrNumber = $null
                 }
             }
-            if ($Repository -ine 'microsoft/winget-pkgs') {
-                return @{
-                    Success  = $false
-                    Error    = 'ForkBranch submissions can only target microsoft/winget-pkgs.'
-                    PrUrl    = $null
-                    PrNumber = $null
-                }
-            }
-
             $forkRepository = "$env:WINGET_PKGS_FORK_REPO".Trim()
             if ([string]::IsNullOrWhiteSpace($forkRepository)) {
                 return @{
@@ -176,6 +169,14 @@ function Submit-WingetPackage {
             }
 
             Assert-SafeWingetPkgsForkRepository -ForkRepository $forkRepository
+            if ($Repository -ine 'microsoft/winget-pkgs' -and $Repository -ine $forkRepository) {
+                return @{
+                    Success  = $false
+                    Error    = "ForkBranch submissions can only target microsoft/winget-pkgs or the configured fork '$forkRepository'."
+                    PrUrl    = $null
+                    PrNumber = $null
+                }
+            }
         }
 
         # A durable upstream check protects all submitters; tool-specific
@@ -319,6 +320,7 @@ function Submit-WingetPackage {
                     -PrTitle $PrTitle `
                     -Token $Token `
                     -ForkRepository $forkRepository `
+                    -TargetRepository $Repository `
                     -Resolves $Resolves
 
                 if (-not $forkSubmission.Created) {
@@ -334,7 +336,7 @@ function Submit-WingetPackage {
                     $existingPrUrl = Get-WingetPkgsPrUrl `
                         -PackageId $PackageId `
                         -Version $Version `
-                        -Repository 'microsoft/winget-pkgs'
+                        -Repository $Repository
                     $existingPrNumber = if ($existingPrUrl -match '/pull/(?<Number>\d+)$') {
                         $Matches['Number']
                     }
