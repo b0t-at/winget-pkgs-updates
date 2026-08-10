@@ -136,8 +136,9 @@ Describe 'Submit-WingetPackage ForkBranch' {
         if ($result.Success -ne $true) {
             throw "Expected a successful cross-repository ForkBranch submission, got: $($result.Error)"
         }
-        if ($global:ForkBranchDuplicateRepositories.Count -ne 1 -or $global:ForkBranchDuplicateRepositories[0] -cne 'microsoft/winget-pkgs') {
-            throw "Fork submission did not perform exactly one duplicate check against the upstream target: $($global:ForkBranchDuplicateRepositories -join ', ')"
+        if ($global:ForkBranchDuplicateRepositories.Count -ne 2 -or
+            @($global:ForkBranchDuplicateRepositories | Where-Object { $_ -cne 'microsoft/winget-pkgs' }).Count -ne 0) {
+            throw "Fork submission did not perform preflight and final duplicate checks against the upstream target: $($global:ForkBranchDuplicateRepositories -join ', ')"
         }
         $upstreamReads = @(
             $global:ForkBranchSubmissionRequests |

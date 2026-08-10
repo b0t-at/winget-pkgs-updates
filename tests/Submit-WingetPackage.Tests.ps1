@@ -81,7 +81,7 @@ Describe 'Submit-WingetPackage branch-moved retry' {
                     throw "The retry returned an unexpected PR URL: $($result.PrUrl)"
                 }
                 Assert-MockCalled Invoke-WinMatschSubmitAttempt -Times 2 -Exactly -Scope It
-                Assert-MockCalled Test-ExistingPRs -Times 2 -Exactly -Scope It
+                Assert-MockCalled Test-ExistingPRs -Times 3 -Exactly -Scope It
             }
         }
 
@@ -105,7 +105,7 @@ Describe 'Submit-WingetPackage branch-moved retry' {
                     throw "Retry exhaustion did not report the bounded attempt count: $($result.Error)"
                 }
                 Assert-MockCalled Invoke-WinMatschSubmitAttempt -Times 2 -Exactly -Scope It
-                Assert-MockCalled Test-ExistingPRs -Times 2 -Exactly -Scope It
+                Assert-MockCalled Test-ExistingPRs -Times 3 -Exactly -Scope It
             }
         }
 
@@ -114,7 +114,7 @@ Describe 'Submit-WingetPackage branch-moved retry' {
                 $script:existingChecks = 0
                 Mock Test-ExistingPRs {
                     $script:existingChecks++
-                    return $script:existingChecks -eq 2
+                    return $script:existingChecks -eq 3
                 }
                 Mock Get-WingetPkgsPrUrl { 'https://github.com/microsoft/winget-pkgs/pull/54321' }
                 Mock Invoke-WinMatschSubmitAttempt {
@@ -135,7 +135,32 @@ Describe 'Submit-WingetPackage branch-moved retry' {
                     throw "The existing PR URL was not returned: $($result.PrUrl)"
                 }
                 Assert-MockCalled Invoke-WinMatschSubmitAttempt -Times 1 -Exactly -Scope It
-                Assert-MockCalled Test-ExistingPRs -Times 2 -Exactly -Scope It
+                Assert-MockCalled Test-ExistingPRs -Times 3 -Exactly -Scope It
+            }
+        }
+
+        It 'skips every submission attempt when the explicit target already has an open PR' {
+            InModuleScope WingetMaintainerModule {
+                Mock Test-ExistingPRs { $true }
+                Mock Get-WingetPkgsPrUrl { 'https://github.com/damn-good-b0t/winget-pkgs/pull/99' }
+                Mock Install-WinMatsch {}
+                Mock Invoke-WinMatschSubmitAttempt {}
+
+                $result = Submit-WingetPackage `
+                    -ManifestPath $global:SubmitWingetPackageTestManifestPath `
+                    -PackageId 'Test.Package' `
+                    -Version '1.0.0' `
+                    -Token 'test-token' `
+                    -Repository 'damn-good-b0t/winget-pkgs'
+
+                if ($result.Success -ne $true -or $result.PrUrl -cne 'https://github.com/damn-good-b0t/winget-pkgs/pull/99') {
+                    throw "The explicit-target duplicate was not returned: $($result | ConvertTo-Json -Compress)"
+                }
+                Assert-MockCalled Test-ExistingPRs -Times 1 -Exactly -Scope It -ParameterFilter {
+                    $OnlyOpen -and $Repository -ceq 'damn-good-b0t/winget-pkgs'
+                }
+                Assert-MockCalled Install-WinMatsch -Times 0 -Exactly -Scope It
+                Assert-MockCalled Invoke-WinMatschSubmitAttempt -Times 0 -Exactly -Scope It
             }
         }
 
@@ -159,7 +184,7 @@ Describe 'Submit-WingetPackage branch-moved retry' {
                     throw 'An uncertain remote outcome unexpectedly retried or reported success.'
                 }
                 Assert-MockCalled Invoke-WinMatschSubmitAttempt -Times 1 -Exactly -Scope It
-                Assert-MockCalled Test-ExistingPRs -Times 1 -Exactly -Scope It
+                Assert-MockCalled Test-ExistingPRs -Times 2 -Exactly -Scope It
             }
         }
     }

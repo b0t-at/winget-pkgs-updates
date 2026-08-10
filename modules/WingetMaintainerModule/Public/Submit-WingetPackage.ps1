@@ -35,6 +35,10 @@
     pull request against microsoft/winget-pkgs. It never directly pushes or
     commits content to microsoft/winget-pkgs.
 
+    .PARAMETER Repository
+    The repository where existing pull requests are checked. ForkBranch only
+    supports microsoft/winget-pkgs as its write target.
+
 .PARAMETER Token
     GitHub Personal Access Token with repo scope. If not provided, uses
     GITHUB_TOKEN or WINGET_PAT environment variables.
@@ -99,7 +103,11 @@ function Submit-WingetPackage {
 
         [Parameter(Mandatory = $false)]
         [ValidateSet('Upstream', 'Fork')]
-        [string] $SubmissionTarget = 'Upstream'
+        [string] $SubmissionTarget = 'Upstream',
+
+        [Parameter(Mandatory = $false)]
+        [ValidatePattern('^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$')]
+        [string] $Repository = 'microsoft/winget-pkgs'
     )
 
     # Get GitHub token
@@ -137,6 +145,59 @@ function Submit-WingetPackage {
     try {
         $winmatschResult = $null
 
+        # Reject invalid ForkBranch configurations before contacting the
+        # upstream read API.
+        if ($With -eq 'ForkBranch') {
+            if ($SubmissionTarget -ne 'Upstream') {
+                return @{
+                    Success  = $false
+                    Error    = 'ForkBranch submissions are restricted to the Upstream target; manifest writes remain in the configured fork.'
+                    PrUrl    = $null
+                    PrNumber = $null
+                }
+            }
+            if ($Repository -ine 'microsoft/winget-pkgs') {
+                return @{
+                    Success  = $false
+                    Error    = 'ForkBranch submissions can only target microsoft/winget-pkgs.'
+                    PrUrl    = $null
+                    PrNumber = $null
+                }
+            }
+
+            $forkRepository = "$env:WINGET_PKGS_FORK_REPO".Trim()
+            if ([string]::IsNullOrWhiteSpace($forkRepository)) {
+                return @{
+                    Success  = $false
+                    Error    = 'WINGET_PKGS_FORK_REPO is required for ForkBranch submissions.'
+                    PrUrl    = $null
+                    PrNumber = $null
+                }
+            }
+
+            Assert-SafeWingetPkgsForkRepository -ForkRepository $forkRepository
+        }
+
+        # A durable upstream check protects all submitters; tool-specific
+        # concurrency only serializes workers from this workflow.
+        if (Test-ExistingPRs -PackageIdentifier $PackageId -Version $Version -OnlyOpen -Repository $Repository) {
+            $existingPrUrl = Get-WingetPkgsPrUrl -PackageId $PackageId -Version $Version -Repository $Repository
+            $existingPrNumber = if ($existingPrUrl -match '/pull/(?<Number>\d+)$') {
+                $Matches['Number']
+            }
+            else {
+                $null
+            }
+
+            Write-Host "A matching open PR already exists in $Repository; skipping submission." -ForegroundColor Yellow
+            return @{
+                Success  = $true
+                Error    = $null
+                PrUrl    = $existingPrUrl
+                PrNumber = $existingPrNumber
+            }
+        }
+
         switch ($With) {
             "WinMatsch" {
                 # Ensure WinMatsch is installed
@@ -144,10 +205,10 @@ function Submit-WingetPackage {
 
                 $maxAttempts = $MaxBranchMovedRetries + 1
                 for ($attempt = 1; $attempt -le $maxAttempts; $attempt++) {
-                    # This is a read-only check against microsoft/winget-pkgs.
-                    # WinMatsch remains the only component that creates the PR.
-                    if (Test-ExistingPRs -PackageIdentifier $PackageId -Version $Version) {
-                        $existingPrUrl = Get-WingetPkgsPrUrl -PackageId $PackageId -Version $Version
+                    # Recheck before each retry in case another worker created
+                    # the PR after the universal preflight completed.
+                    if (Test-ExistingPRs -PackageIdentifier $PackageId -Version $Version -OnlyOpen -Repository $Repository) {
+                        $existingPrUrl = Get-WingetPkgsPrUrl -PackageId $PackageId -Version $Version -Repository $Repository
                         $existingPrNumber = if ($existingPrUrl -match '/pull/(?<Number>\d+)$') {
                             $Matches['Number']
                         }
@@ -251,27 +312,6 @@ function Submit-WingetPackage {
             }
 
             "ForkBranch" {
-                if ($SubmissionTarget -ne 'Upstream') {
-                    return @{
-                        Success  = $false
-                        Error    = 'ForkBranch submissions are restricted to the Upstream target; manifest writes remain in the configured fork.'
-                        PrUrl    = $null
-                        PrNumber = $null
-                    }
-                }
-
-                $forkRepository = "$env:WINGET_PKGS_FORK_REPO".Trim()
-                if ([string]::IsNullOrWhiteSpace($forkRepository)) {
-                    return @{
-                        Success  = $false
-                        Error    = 'WINGET_PKGS_FORK_REPO is required for ForkBranch submissions.'
-                        PrUrl    = $null
-                        PrNumber = $null
-                    }
-                }
-
-                Assert-SafeWingetPkgsForkRepository -ForkRepository $forkRepository
-
                 $forkSubmission = Invoke-ForkBranchSubmission `
                     -ManifestPath $fullManifestPath `
                     -PackageId $PackageId `

@@ -357,6 +357,71 @@ Describe 'Test-ExistingPRs' {
         }
     }
 
+    It 'paginates the explicit test-fork search until it finds a matching open PR' {
+        InModuleScope WingetMaintainerModule {
+            Mock Invoke-RestMethod {
+                param($Method, $Uri, $Headers, $ErrorAction)
+
+                $global:ExistingPrSearchRequests.Add([pscustomobject]@{
+                    Method  = $Method
+                    Uri     = $Uri
+                    Headers = $Headers
+                })
+                $pageMatch = [regex]::Match(([uri] $Uri).Query, '(?:\?|&)page=(\d+)(?:&|$)')
+                if (-not $pageMatch.Success) {
+                    throw "The paginated request did not include a page number: $Uri"
+                }
+                $page = [int] $pageMatch.Groups[1].Value
+                if ($page -eq 1) {
+                    return [pscustomobject]@{
+                        total_count = 101
+                        items = @(
+                            foreach ($index in 1..100) {
+                                [pscustomobject]@{
+                                    title        = "Update version: Test.Package version 2.0.$index"
+                                    state        = 'open'
+                                    html_url     = "https://github.com/damn-good-b0t/winget-pkgs/pull/$index"
+                                    pull_request = [pscustomobject]@{ merged_at = $null }
+                                }
+                            }
+                        )
+                    }
+                }
+
+                return [pscustomobject]@{
+                    total_count = 101
+                    items = @(
+                        [pscustomobject]@{
+                            title        = 'Update version: Test.Package version 1.0.0'
+                            state        = 'open'
+                            html_url     = 'https://github.com/damn-good-b0t/winget-pkgs/pull/101'
+                            pull_request = [pscustomobject]@{ merged_at = $null }
+                        }
+                    )
+                }
+            }
+        }
+
+        $result = Test-ExistingPRs `
+            -PackageIdentifier 'Test.Package' `
+            -Version '1.0.0' `
+            -Repository 'damn-good-b0t/winget-pkgs' `
+            -OnlyOpen
+
+        if ($result -ne $true) {
+            throw 'The second page matching test-fork pull request was not found.'
+        }
+        if ($global:ExistingPrSearchRequests.Count -ne 2) {
+            throw "Expected two paginated test-fork requests, got $($global:ExistingPrSearchRequests.Count)."
+        }
+        $firstUri = [uri] $global:ExistingPrSearchRequests[0].Uri
+        $secondUri = [uri] $global:ExistingPrSearchRequests[1].Uri
+        if ($firstUri.Query -notmatch 'page=1' -or $secondUri.Query -notmatch 'page=2' -or
+            $global:ExistingPrSearchRequests[0].Uri -notmatch 'repo%3Adamn-good-b0t%2Fwinget-pkgs') {
+            throw 'The test-fork search did not request the expected paginated repository scope.'
+        }
+    }
+
     It 'fails closed when GitHub Search reports incomplete results despite a complete page' {
         InModuleScope WingetMaintainerModule {
             Mock Invoke-RestMethod {
