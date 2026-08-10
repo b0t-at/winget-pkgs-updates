@@ -64,7 +64,7 @@ foreach ($workflowRelativePath in $workflowPaths) {
         -Message "$workflowName may cancel an in-progress same-package submission." | Out-Null
     Assert-Match `
         -Actual $submitJob `
-        -Pattern '(?s)\$result = Submit-WingetPackage.*?-With "ForkBranch".*?-SubmissionTarget "\$env:WINGET_PKGS_SUBMISSION_TARGET"' `
+        -Pattern '(?s)\$result = Submit-WingetPackage.*?-With "ForkBranch".*?-SubmissionTarget "\$env:WINGET_PKGS_SUBMISSION_TARGET".*?-Repository "\$env:WINGET_PKGS_SUBMISSION_REPOSITORY"' `
         -Message "$workflowName must use the no-sync ForkBranch submission mode." | Out-Null
     Assert-Match `
         -Actual $submitJob `
@@ -74,6 +74,10 @@ foreach ($workflowRelativePath in $workflowPaths) {
         -Actual $submitJob `
         -Pattern '(?m)^          WINGET_PKGS_SUBMISSION_TARGET: Upstream\s*$' `
         -Message "$workflowName must use the upstream pull request target for every trigger." | Out-Null
+    Assert-Match `
+        -Actual $submitJob `
+        -Pattern '(?m)^          WINGET_PKGS_SUBMISSION_REPOSITORY: microsoft/winget-pkgs\s*$' `
+        -Message "$workflowName must explicitly preserve the production upstream repository." | Out-Null
     if ([regex]::IsMatch($submitJob, '(?i)WINGET_PKGS_SUBMISSION_TARGET:\s*Fork')) {
         throw "$workflowName may not create fork-only pull requests."
     }

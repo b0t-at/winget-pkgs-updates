@@ -1064,6 +1064,7 @@ jobs:
           WINGET_UPSTREAM_READ_FALLBACK_TOKEN: ${{ steps.upstream-read-probe-submit.outputs.available == 'true' && github.token || secrets.WINGET_PUBLIC_READ_TOKEN }}
           WINGET_PKGS_FORK_REPO: ${{ vars.WINGET_PKGS_FORK_REPO }}
           WINGET_PKGS_SUBMISSION_TARGET: Upstream
+          WINGET_PKGS_SUBMISSION_REPOSITORY: microsoft/winget-pkgs
           STEPS_MANIFEST_OUTPUTS_PATH: ${{ steps.manifest.outputs.path }}
           MATRIX_PACKAGENAME: ${{ matrix.PackageName }}
           MATRIX_VERSION: ${{ matrix.version }}
@@ -1075,7 +1076,8 @@ jobs:
             -PackageId "$env:MATRIX_PACKAGENAME" `
             -Version "$env:MATRIX_VERSION" `
             -With "ForkBranch" `
-            -SubmissionTarget "$env:WINGET_PKGS_SUBMISSION_TARGET"
+            -SubmissionTarget "$env:WINGET_PKGS_SUBMISSION_TARGET" `
+            -Repository "$env:WINGET_PKGS_SUBMISSION_REPOSITORY"
 
           if ($result.Success) {
             Write-Host "PR submitted successfully!" -ForegroundColor Green
