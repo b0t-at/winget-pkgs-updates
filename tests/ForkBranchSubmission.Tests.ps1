@@ -78,7 +78,7 @@ Describe 'Submit-WingetPackage ForkBranch' {
                     }
                     '/pulls$' {
                         return [pscustomobject]@{
-                            html_url = 'https://github.com/microsoft/winget-pkgs/pull/12345'
+                            html_url = "https://github.com/$($Path.Substring(6, $Path.Length - 12))/pull/12345"
                             number   = 12345
                         }
                     }
@@ -199,6 +199,59 @@ Describe 'Submit-WingetPackage ForkBranch' {
         )
         if ($upstreamWrites.Count -ne 1 -or $upstreamWrites[0].Path -cne 'repos/microsoft/winget-pkgs/pulls') {
             throw "Upstream write surface is not limited to creating the intended pull request: $($upstreamWrites.Path -join ', ')"
+        }
+    }
+
+    It 'creates an explicitly targeted pull request only in the configured test fork' {
+        $result = Submit-WingetPackage `
+            -ManifestPath $global:ForkBranchSubmissionManifestPath `
+            -PackageId 'Test.Package' `
+            -Version '1.0.0' `
+            -Token 'test-token' `
+            -With ForkBranch `
+            -Repository 'damn-good-b0t/winget-pkgs'
+
+        if ($result.Success -ne $true -or $result.PrUrl -cne 'https://github.com/damn-good-b0t/winget-pkgs/pull/12345') {
+            throw "Expected a successful test-fork submission, got: $($result | ConvertTo-Json -Compress)"
+        }
+        if (@($global:ForkBranchDuplicateRepositories | Where-Object { $_ -cne 'damn-good-b0t/winget-pkgs' }).Count -ne 0) {
+            throw "Test-fork duplicate detection queried another repository: $($global:ForkBranchDuplicateRepositories -join ', ')"
+        }
+
+        $testForkPullRequest = $global:ForkBranchSubmissionRequests |
+            Where-Object { $_.Method -eq 'Post' -and $_.Path -eq 'repos/damn-good-b0t/winget-pkgs/pulls' } |
+            Select-Object -Last 1
+        if ($null -eq $testForkPullRequest) {
+            throw 'The explicit test-fork target did not receive the pull request write.'
+        }
+        if ($testForkPullRequest.Body.head -match ':') {
+            throw "A same-repository test-fork PR must use its local branch name, got: $($testForkPullRequest.Body.head)"
+        }
+        if ($testForkPullRequest.Body.base -cne 'master') {
+            throw "The test-fork PR used an unexpected base branch: $($testForkPullRequest.Body.base)"
+        }
+        if (@($global:ForkBranchSubmissionRequests | Where-Object { $_.Path -match '^repos/microsoft/winget-pkgs($|/)' }).Count -ne 0) {
+            throw "The explicit test-fork route touched the production repository: $($global:ForkBranchSubmissionRequests | ConvertTo-Json -Compress)"
+        }
+    }
+
+    It 'rejects an unconfigured ForkBranch target before querying GitHub' {
+        $result = Submit-WingetPackage `
+            -ManifestPath $global:ForkBranchSubmissionManifestPath `
+            -PackageId 'Test.Package' `
+            -Version '1.0.0' `
+            -Token 'test-token' `
+            -With ForkBranch `
+            -Repository 'untrusted/example'
+
+        if ($result.Success -ne $false) {
+            throw 'An unconfigured ForkBranch target unexpectedly succeeded.'
+        }
+        if ($result.Error -notmatch 'configured fork') {
+            throw "The unconfigured target was not identified clearly: $($result.Error)"
+        }
+        if ($global:ForkBranchSubmissionRequests.Count -ne 0) {
+            throw 'An unconfigured ForkBranch target queried or wrote GitHub.'
         }
     }
 

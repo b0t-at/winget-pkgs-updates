@@ -219,6 +219,9 @@ function Invoke-ForkBranchSubmission {
         [string] $ForkRepository,
 
         [Parameter(Mandatory = $false)]
+        [string] $TargetRepository = 'microsoft/winget-pkgs',
+
+        [Parameter(Mandatory = $false)]
         [string] $Resolves
     )
 
@@ -230,12 +233,16 @@ function Invoke-ForkBranchSubmission {
         throw "Configured repository '$ForkRepository' is not a fork of $upstreamRepository."
     }
 
-    # Upstream reads use the tiered read credentials (WINGET_UPSTREAM_READ_TOKEN,
-    # then WINGET_UPSTREAM_READ_FALLBACK_TOKEN, then anonymous); fork writes and
-    # the final cross-repository PR creation keep using $Token.
-    $targetRepository = $upstreamRepository
-    $upstream = Invoke-WingetPkgsUpstreamReadApi -Path "repos/$upstreamRepository"
-    $targetDefaultBranch = "$($upstream.default_branch)"
+    if ($TargetRepository -ine $upstreamRepository -and $TargetRepository -ine $ForkRepository) {
+        throw "ForkBranch target '$TargetRepository' must be microsoft/winget-pkgs or the configured fork '$ForkRepository'."
+    }
+
+    # Target base reads use the tiered read credentials
+    # (WINGET_UPSTREAM_READ_TOKEN, then WINGET_UPSTREAM_READ_FALLBACK_TOKEN,
+    # then anonymous); fork writes and PR creation keep using $Token.
+    $targetRepository = $TargetRepository
+    $target = Invoke-WingetPkgsUpstreamReadApi -Path "repos/$targetRepository"
+    $targetDefaultBranch = "$($target.default_branch)"
     $baseRepository = $targetRepository
 
     $baseReference = Invoke-WingetPkgsUpstreamReadApi -Path "repos/$baseRepository/git/ref/heads/$targetDefaultBranch"
@@ -263,7 +270,7 @@ function Invoke-ForkBranchSubmission {
         }
 
     # The fork default branch remains read-only. The manifest commit is rooted
-    # at the selected upstream base commit before its ref is atomically claimed.
+    # at the selected target base commit before its ref is atomically claimed.
     $tree = Invoke-WingetPkgsGitHubApi `
         -Method Post `
         -Path "repos/$ForkRepository/git/trees" `
@@ -284,7 +291,7 @@ function Invoke-ForkBranchSubmission {
 
     # Creating this deterministic ref is the atomic package/version claim.
     # A collision is never retried with another name because that could open a
-    # second upstream PR while the first worker's PR is not searchable yet.
+    # second target PR while the first worker's PR is not searchable yet.
     $branchName = Get-WingetPkgsSubmissionBranchName -PackageId $PackageId -Version $Version
     try {
         Invoke-WingetPkgsGitHubApi `
@@ -319,11 +326,11 @@ function Invoke-ForkBranchSubmission {
             SubmissionClaimed   = $true
             BranchName          = $branchName
             PullRequest         = $null
-            Error               = "The deterministic submission branch '$branchName' already exists, but no matching upstream PR is searchable. Refusing to create another PR; reconcile the existing branch before retrying."
+            Error               = "The deterministic submission branch '$branchName' already exists, but no matching target PR is searchable. Refusing to create another PR; reconcile the existing branch before retrying."
         }
     }
 
-    # Recheck immediately before the external PR write. The branch claim closes
+    # Recheck immediately before the target PR write. The branch claim closes
     # the remaining read-to-write race when GitHub Search has not indexed a PR.
     if (Test-ExistingPRs -PackageIdentifier $PackageId -Version $Version -Repository $targetRepository) {
         return [pscustomobject]@{
@@ -337,6 +344,7 @@ function Invoke-ForkBranchSubmission {
     }
 
     $forkOwner = $ForkRepository.Split('/')[0]
+    $headReference = if ($targetRepository -ieq $ForkRepository) { $branchName } else { "${forkOwner}:$branchName" }
     $body = if ([string]::IsNullOrWhiteSpace($Resolves)) { $null } else { "Resolves #$Resolves" }
     $pullRequest = Invoke-WingetPkgsGitHubApi `
         -Method Post `
@@ -344,7 +352,7 @@ function Invoke-ForkBranchSubmission {
         -Token $Token `
         -Body @{
             title = $PrTitle
-            head  = "${forkOwner}:$branchName"
+            head  = $headReference
             base  = $targetDefaultBranch
             body  = $body
         }

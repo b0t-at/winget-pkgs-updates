@@ -2,6 +2,20 @@ name: GH Packages R-Z
 
 on:
   workflow_dispatch:
+    inputs:
+      submission_repository:
+        description: "Pull request target; test fork requires acknowledgement"
+        required: true
+        default: microsoft/winget-pkgs
+        type: choice
+        options:
+          - microsoft/winget-pkgs
+          - damn-good-b0t/winget-pkgs
+      allow_test_fork_submission:
+        description: "Acknowledge that this dispatch may create PRs only in damn-good-b0t/winget-pkgs"
+        required: true
+        default: false
+        type: boolean
   schedule:
     - cron: "3 0/4 * * *" # every 4 hours
   push:
@@ -995,15 +1009,28 @@ jobs:
         id: check-submit
         shell: pwsh
         run: |
+          $targetRepository = "$env:WINGET_PKGS_SUBMISSION_REPOSITORY"
+          $isTestForkTarget = $targetRepository -ceq 'damn-good-b0t/winget-pkgs'
+          if ($isTestForkTarget -and "$env:WINGET_PKGS_ALLOW_TEST_FORK_SUBMISSION" -cne 'true') {
+            throw 'Test-fork submission requires the allow_test_fork_submission workflow_dispatch acknowledgement.'
+          }
+          if ($targetRepository -notin @('microsoft/winget-pkgs', 'damn-good-b0t/winget-pkgs')) {
+            throw "Unsupported submission repository '$targetRepository'."
+          }
           if ("$env:VARS_SUBMIT_PR" -ne "true") {
             Write-Host "::warning::SUBMIT_PR is not set to 'true', skipping PR submission"
             "skip=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
           } else {
+            if ($isTestForkTarget) {
+              Write-Host 'Test-fork submission is explicitly acknowledged; any PR will be created only in damn-good-b0t/winget-pkgs.'
+            }
             Write-Host "SUBMIT_PR is enabled, proceeding with PR submission"
             "skip=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
           }
         env:
           VARS_SUBMIT_PR: ${{ vars.SUBMIT_PR }}
+          WINGET_PKGS_SUBMISSION_REPOSITORY: ${{ github.event_name == 'workflow_dispatch' && inputs.submission_repository || 'microsoft/winget-pkgs' }}
+          WINGET_PKGS_ALLOW_TEST_FORK_SUBMISSION: ${{ github.event_name == 'workflow_dispatch' && inputs.allow_test_fork_submission || 'false' }}
 
       - name: Checkout
         if: steps.check-submit.outputs.skip != 'true'
@@ -1064,7 +1091,7 @@ jobs:
           WINGET_UPSTREAM_READ_FALLBACK_TOKEN: ${{ steps.upstream-read-probe-submit.outputs.available == 'true' && github.token || secrets.WINGET_PUBLIC_READ_TOKEN }}
           WINGET_PKGS_FORK_REPO: ${{ vars.WINGET_PKGS_FORK_REPO }}
           WINGET_PKGS_SUBMISSION_TARGET: Upstream
-          WINGET_PKGS_SUBMISSION_REPOSITORY: microsoft/winget-pkgs
+          WINGET_PKGS_SUBMISSION_REPOSITORY: ${{ github.event_name == 'workflow_dispatch' && inputs.submission_repository || 'microsoft/winget-pkgs' }}
           STEPS_MANIFEST_OUTPUTS_PATH: ${{ steps.manifest.outputs.path }}
           MATRIX_PACKAGENAME: ${{ matrix.PackageName }}
           MATRIX_VERSION: ${{ matrix.version }}

@@ -74,10 +74,31 @@ foreach ($workflowRelativePath in $workflowPaths) {
         -Actual $submitJob `
         -Pattern '(?m)^          WINGET_PKGS_SUBMISSION_TARGET: Upstream\s*$' `
         -Message "$workflowName must use the upstream pull request target for every trigger." | Out-Null
-    Assert-Match `
-        -Actual $submitJob `
-        -Pattern '(?m)^          WINGET_PKGS_SUBMISSION_REPOSITORY: microsoft/winget-pkgs\s*$' `
-        -Message "$workflowName must explicitly preserve the production upstream repository." | Out-Null
+    $isRzWorkflow = $workflowRelativePath -ceq '.github/workflows/update-github-packages-r-z.yml'
+    if ($isRzWorkflow) {
+        Assert-Match `
+            -Actual $workflow `
+            -Pattern '(?ms)^  workflow_dispatch:\r?\n    inputs:\r?\n      submission_repository:.*?^          - microsoft/winget-pkgs\r?\n          - damn-good-b0t/winget-pkgs\s*$' `
+            -Message "$workflowName must expose only the production and designated test-fork targets." | Out-Null
+        Assert-Match `
+            -Actual $workflow `
+            -Pattern '(?ms)^      allow_test_fork_submission:.*?^        type: boolean\s*$' `
+            -Message "$workflowName must require an explicit test-fork acknowledgement." | Out-Null
+        Assert-Match `
+            -Actual $submitJob `
+            -Pattern '(?m)^          WINGET_PKGS_SUBMISSION_REPOSITORY: \$\{\{\s*github\.event_name == ''workflow_dispatch'' && inputs\.submission_repository \|\| ''microsoft/winget-pkgs''\s*\}\}\s*$' `
+            -Message "$workflowName must keep scheduled and push submissions pinned to production." | Out-Null
+        Assert-Match `
+            -Actual $submitJob `
+            -Pattern '(?ms)allow_test_fork_submission workflow_dispatch acknowledgement.*?WINGET_PKGS_ALLOW_TEST_FORK_SUBMISSION: \$\{\{\s*github\.event_name == ''workflow_dispatch'' && inputs\.allow_test_fork_submission \|\| ''false''\s*\}\}' `
+            -Message "$workflowName must block test-fork submission without acknowledgement." | Out-Null
+    }
+    else {
+        Assert-Match `
+            -Actual $submitJob `
+            -Pattern '(?m)^          WINGET_PKGS_SUBMISSION_REPOSITORY: microsoft/winget-pkgs\s*$' `
+            -Message "$workflowName must explicitly preserve the production upstream repository." | Out-Null
+    }
     if ([regex]::IsMatch($submitJob, '(?i)WINGET_PKGS_SUBMISSION_TARGET:\s*Fork')) {
         throw "$workflowName may not create fork-only pull requests."
     }
