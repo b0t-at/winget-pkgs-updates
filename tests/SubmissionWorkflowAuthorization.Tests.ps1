@@ -48,6 +48,20 @@ foreach ($workflowRelativePath in $workflowPaths) {
     $workflowName = Split-Path -Leaf $workflowPath
     $workflow = Get-Content -LiteralPath $workflowPath -Raw
 
+    $saveStateStepMatch = Assert-Match `
+        -Actual $workflow `
+        -Pattern '(?ms)^      - name: Save package state\r?\n(?<step>.*?)(?=^      - |^  [a-zA-Z]|\z)' `
+        -Message "$workflowName does not contain a Save package state step."
+    $saveStateStep = $saveStateStepMatch.Groups['step'].Value
+    Assert-Match `
+        -Actual $saveStateStep `
+        -Pattern '(?m)^          GH_TOKEN: \$\{\{\s*github\.token\s*\}\}\s*$' `
+        -Message "$workflowName does not provide the workflow token to the package-state writer." | Out-Null
+    Assert-Match `
+        -Actual $saveStateStep `
+        -Pattern '(?m)^          gh auth setup-git\s*$' `
+        -Message "$workflowName does not configure an explicit Git credential helper before saving package state." | Out-Null
+
     $submitMatch = Assert-Match `
         -Actual $workflow `
         -Pattern '(?ms)^  submit-pr:\r?\n(?<submitJob>.*?)(?=^  notify-failure:)' `

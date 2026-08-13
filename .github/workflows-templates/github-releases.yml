@@ -635,11 +635,14 @@ jobs:
       - name: Save package state
         if: vars.SKIP_VALIDATION != 'true'
         shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           Import-Module ./modules/WingetMaintainerModule/WingetMaintainerModule.psd1 -Force
 
           $stateFile = Join-Path $env:GITHUB_WORKSPACE "data/package-state.json"
 
+          gh auth setup-git
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 

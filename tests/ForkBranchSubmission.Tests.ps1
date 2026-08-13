@@ -25,6 +25,9 @@ Describe 'Submit-WingetPackage ForkBranch' {
         $env:WINGET_UPSTREAM_READ_FALLBACK_TOKEN = ''
 
         InModuleScope WingetMaintainerModule {
+            Mock Test-WingetManifestContent {
+                [pscustomobject]@{ Valid = $true; Errors = @(); Warnings = @() }
+            }
             Mock Test-ExistingPRs {
                 param($PackageIdentifier, $Version, $Repository)
 
@@ -87,6 +90,7 @@ Describe 'Submit-WingetPackage ForkBranch' {
                     }
                 }
             }
+
         }
     }
 
@@ -103,6 +107,46 @@ Describe 'Submit-WingetPackage ForkBranch' {
         Remove-Variable -Name OriginalForkRepository -Scope Global -ErrorAction SilentlyContinue
         Remove-Variable -Name OriginalUpstreamReadToken -Scope Global -ErrorAction SilentlyContinue
         Remove-Variable -Name OriginalUpstreamReadFallbackToken -Scope Global -ErrorAction SilentlyContinue
+    }
+
+    It 'fails closed when manifest artifacts change during ForkBranch submission' {
+        InModuleScope WingetMaintainerModule {
+            $script:snapshotCalls = 0
+            Mock Get-SubmittedManifestSnapshot {
+                $script:snapshotCalls++
+                [pscustomobject]@{
+                    Files = @(
+                        [pscustomobject]@{
+                            RelativePath = 'Test.Package.yaml'
+                            Sha256 = if ($script:snapshotCalls -eq 1) { 'before' } else { 'after' }
+                        }
+                    )
+                }
+            }
+            Mock Invoke-ForkBranchSubmission {
+                [pscustomobject]@{
+                    Created = $true
+                    DuplicateDetected = $false
+                    Error = $null
+                    PullRequest = [pscustomobject]@{
+                        html_url = 'https://github.com/microsoft/winget-pkgs/pull/12345'
+                        number = 12345
+                    }
+                }
+            }
+
+            $result = Submit-WingetPackage `
+                -ManifestPath $global:ForkBranchSubmissionManifestPath `
+                -PackageId 'Test.Package' `
+                -Version '1.0.0' `
+                -Token 'test-token' `
+                -With ForkBranch
+
+            if ($result.Success -ne $false -or $result.Error -notmatch 'changed during submission') {
+                throw "ForkBranch did not fail closed after manifest mutation: $($result | ConvertTo-Json -Compress)"
+            }
+            Assert-MockCalled Get-SubmittedManifestSnapshot -Times 2 -Exactly -Scope It
+        }
     }
 
     It 'rejects a pull request target in the source fork before querying GitHub' {
