@@ -14,9 +14,9 @@ on:
 permissions:
   contents: read
 
-# Keep package generation serialized across all update workflows.
+# Do not overlap runs of this workflow.
 concurrency:
-  group: generate-update-packages
+  group: update-script-packages
   cancel-in-progress: false
 
 jobs:
