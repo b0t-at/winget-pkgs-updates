@@ -199,6 +199,10 @@ function Submit-WingetPackage {
             }
         }
 
+        # Generators can emit mixed line endings. Normalize only after validation
+        # and immediately before any submitter or fork commit consumes the files.
+        Normalize-WingetManifestLineEndings -ManifestPath $fullManifestPath
+
         switch ($With) {
             "WinMatsch" {
                 # Ensure WinMatsch is installed

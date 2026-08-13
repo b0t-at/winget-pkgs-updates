@@ -164,6 +164,52 @@ Describe 'Submit-WingetPackage branch-moved retry' {
             }
         }
 
+        It 'normalizes mixed-ending locale YAML before WinMatsch submission' {
+            $localeManifestPath = Join-Path $global:SubmitWingetPackageTestManifestPath 'Test.Package.locale.en-US.yaml'
+            $mixedContent = "PackageLocale: en-US`r`nPublisher: Test Publisher`nPackageName: Test Package`r`nShortDescription: Mixed line endings`n"
+            [System.IO.File]::WriteAllText(
+                $localeManifestPath,
+                $mixedContent,
+                [System.Text.UTF8Encoding]::new($false)
+            )
+
+            InModuleScope WingetMaintainerModule {
+                Mock Invoke-WinMatschSubmitAttempt {
+                    & $global:NewTestSubmissionAttempt -ExitCode 0 -PrUrl 'https://github.com/microsoft/winget-pkgs/pull/12345'
+                }
+
+                $result = Submit-WingetPackage `
+                    -ManifestPath $global:SubmitWingetPackageTestManifestPath `
+                    -PackageId 'Test.Package' `
+                    -Version '1.0.0' `
+                    -Token 'test-token'
+
+                if ($result.Success -ne $true) {
+                    throw "Expected the WinMatsch submission to succeed, got: $($result.Error)"
+                }
+            }
+
+            $normalizedBytes = [System.IO.File]::ReadAllBytes($localeManifestPath)
+            $bareLineFeedCount = 0
+            for ($index = 0; $index -lt $normalizedBytes.Length; $index++) {
+                if ($normalizedBytes[$index] -eq 10 -and ($index -eq 0 -or $normalizedBytes[$index - 1] -ne 13)) {
+                    $bareLineFeedCount++
+                }
+            }
+            if ($bareLineFeedCount -ne 0) {
+                throw "The submitted locale YAML still contains $bareLineFeedCount bare LF character(s)."
+            }
+
+            $normalizedContent = [System.Text.Encoding]::UTF8.GetString($normalizedBytes)
+            $expectedContent = "PackageLocale: en-US`r`nPublisher: Test Publisher`r`nPackageName: Test Package`r`nShortDescription: Mixed line endings`r`n"
+            if ($normalizedContent -cne $expectedContent) {
+                throw "Locale YAML content changed beyond line endings: $normalizedContent"
+            }
+            if (-not $normalizedContent.EndsWith("`r`n") -or $normalizedContent.EndsWith("`r`n`r`n")) {
+                throw 'The submitted locale YAML does not have exactly one final CRLF.'
+            }
+        }
+
         It 'fails closed instead of retrying an uncertain GH2020 remote outcome' {
             InModuleScope WingetMaintainerModule {
                 Mock Invoke-WinMatschSubmitAttempt {
