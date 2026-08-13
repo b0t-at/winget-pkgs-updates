@@ -48,6 +48,11 @@ foreach ($workflowRelativePath in $workflowPaths) {
     $workflowName = Split-Path -Leaf $workflowPath
     $workflow = Get-Content -LiteralPath $workflowPath -Raw
 
+    Assert-Match `
+        -Actual $workflow `
+        -Pattern '(?ms)^      - name: Normalize manifest line endings\r?\n.*?Normalize-WingetManifestLineEndings -ManifestPath "\$env:STEPS_GENERATE_OUTPUTS_MANIFEST_PATH".*?^      - name: Upload manifest artifact\r?\n' `
+        -Message "$workflowName must normalize generated manifests before uploading the manifest artifact." | Out-Null
+
     $saveStateStepMatch = Assert-Match `
         -Actual $workflow `
         -Pattern '(?ms)^      - name: Save package state\r?\n(?<step>.*?)(?=^      - |^  [a-zA-Z]|\z)' `

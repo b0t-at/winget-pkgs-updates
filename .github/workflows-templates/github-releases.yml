@@ -82,6 +82,15 @@ jobs:
           STEPS_GENERATE_OUTPUTS_MANIFEST_PATH: ${{ steps.generate.outputs.manifest-path }}
           STEPS_GENERATE_OUTPUTS_VERSION: ${{ steps.generate.outputs.version }}
 
+      - name: Normalize manifest line endings
+        if: steps.generate.outputs.generated == 'true'
+        shell: pwsh
+        run: |
+          Import-Module .\modules\WingetMaintainerModule\WingetMaintainerModule.psd1 -Force
+          Normalize-WingetManifestLineEndings -ManifestPath "$env:STEPS_GENERATE_OUTPUTS_MANIFEST_PATH"
+        env:
+          STEPS_GENERATE_OUTPUTS_MANIFEST_PATH: ${{ steps.generate.outputs.manifest-path }}
+
       - name: Upload manifest artifact
         if: steps.generate.outputs.generated == 'true'
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1

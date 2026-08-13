@@ -50,6 +50,23 @@ try {
     if ($extraTrailingResult.Valid -or -not ($extraTrailingResult.Errors -join "`n" -match 'more than one trailing blank line')) {
         throw "Expected extra trailing blank lines to fail, got: $($extraTrailingResult | ConvertTo-Json -Compress)"
     }
+
+    Write-Host 'TEST: public normalizer produces exactly one final CRLF'
+    $normalizationPath = Join-Path $testRoot 'normalization'
+    $normalizationFile = Join-Path $normalizationPath 'Test.Package.yaml'
+    New-TestManifestFile -Path $normalizationFile -Bytes ([System.Text.Encoding]::UTF8.GetBytes("PackageIdentifier: Test.Package`nPackageVersion: 1.0.0`r`n`r"))
+    Normalize-WingetManifestLineEndings -ManifestPath $normalizationPath
+
+    $normalizedBytes = [System.IO.File]::ReadAllBytes($normalizationFile)
+    $expectedBytes = [System.Text.Encoding]::UTF8.GetBytes("PackageIdentifier: Test.Package`r`nPackageVersion: 1.0.0`r`n")
+    if (-not [System.Linq.Enumerable]::SequenceEqual([byte[]]$normalizedBytes, [byte[]]$expectedBytes)) {
+        throw 'The public manifest normalizer did not produce canonical CRLF content.'
+    }
+
+    $normalizedResult = & $module { param($Path) Test-SubmittedManifestArtifacts -ManifestPath $Path } $normalizationPath
+    if (-not $normalizedResult.Valid) {
+        throw "Expected normalized manifest to pass artifact validation, got: $($normalizedResult.Errors -join '; ')"
+    }
 }
 finally {
     if (Test-Path -LiteralPath $testRoot) {
