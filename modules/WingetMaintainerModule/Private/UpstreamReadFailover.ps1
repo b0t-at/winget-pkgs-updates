@@ -85,10 +85,13 @@ function Get-WingetPkgsGitHubApiFailureResponseBody {
         return $ErrorRecord.ErrorDetails.Message
     }
 
-    $response = $ErrorRecord.Exception.Response
-    if ($null -eq $response) {
+    $exception = $ErrorRecord.Exception
+    if ($null -eq $exception -or
+        $null -eq $exception.PSObject.Properties['Response'] -or
+        $null -eq $exception.Response) {
         return $null
     }
+    $response = $exception.Response
 
     if ($null -ne $response.PSObject.Properties['Content'] -and $null -ne $response.Content) {
         return $response.Content.ReadAsStringAsync().GetAwaiter().GetResult()

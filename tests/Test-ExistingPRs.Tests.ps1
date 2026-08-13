@@ -67,6 +67,7 @@ Describe 'Test-ExistingPRs' {
         if ($result -ne $true) {
             throw 'A matching upstream pull request was not found.'
         }
+
         if ($global:ExistingPrSearchRequests.Count -ne 1) {
             throw "Expected the open PR search to stop after one match, got $($global:ExistingPrSearchRequests.Count) request(s)."
         }
@@ -83,6 +84,38 @@ Describe 'Test-ExistingPRs' {
         if ($query -notmatch 'repo:microsoft/winget-pkgs' -or $query -notmatch 'in:title "Test\.Package" "1\.0\.0"' -or
             $query -match '\(is:open OR is:merged\)' -or $query -match 'is:merged') {
             throw "The public upstream PR search used an unexpected query: $query"
+        }
+    }
+
+    It 'extracts GitHub response details without masking errors that have no response' {
+        $details = InModuleScope WingetMaintainerModule {
+            $httpError = [System.Management.Automation.ErrorRecord]::new(
+                [System.Exception]::new('GitHub request failed'),
+                'GitHubRequestFailed',
+                [System.Management.Automation.ErrorCategory]::InvalidOperation,
+                $null
+            )
+            $httpError.ErrorDetails = [System.Management.Automation.ErrorDetails]::new(
+                '{"message":"Validation Failed"}'
+            )
+            $networkError = [System.Management.Automation.ErrorRecord]::new(
+                [System.Net.Http.HttpRequestException]::new('Network unavailable'),
+                'NetworkUnavailable',
+                [System.Management.Automation.ErrorCategory]::ConnectionError,
+                $null
+            )
+
+            [pscustomobject]@{
+                ResponseBody = Get-WingetPkgsGitHubApiFailureResponseBody -ErrorRecord $httpError
+                NetworkBody  = Get-WingetPkgsGitHubApiFailureResponseBody -ErrorRecord $networkError
+            }
+        }
+
+        if ($details.ResponseBody -cne '{"message":"Validation Failed"}') {
+            throw "GitHub response details were not preserved: $($details.ResponseBody)"
+        }
+        if ($null -ne $details.NetworkBody) {
+            throw 'A network failure without an HTTP response unexpectedly produced a response body.'
         }
     }
 
