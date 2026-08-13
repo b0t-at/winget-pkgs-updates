@@ -43,7 +43,40 @@ function Invoke-WingetPkgsGitHubApi {
         $request.Body = $Body | ConvertTo-Json -Depth 20 -Compress
     }
 
-    return Invoke-RestMethod @request
+    try {
+        return Invoke-RestMethod @request
+    }
+    catch {
+        # Capture and surface the GitHub API response body so callers can log it.
+        # PowerShell 7: $_.ErrorDetails.Message contains the parsed response body.
+        # PowerShell 5: the response stream must be read from $_.Exception.Response.
+        $responseBody = $null
+        try {
+            if (-not [string]::IsNullOrWhiteSpace($_.ErrorDetails.Message)) {
+                $responseBody = $_.ErrorDetails.Message
+            }
+            else {
+                $response = $_.Exception.Response
+                if ($null -ne $response) {
+                    $stream = $response.GetResponseStream()
+                    if ($null -ne $stream) {
+                        $reader = [System.IO.StreamReader]::new($stream)
+                        $responseBody = $reader.ReadToEnd()
+                        $reader.Dispose()
+                    }
+                }
+            }
+        }
+        catch {
+            # Swallow stream-read errors; the original exception is re-thrown below.
+        }
+        if (-not [string]::IsNullOrWhiteSpace($responseBody)) {
+            $statusCode = 0
+            try { $statusCode = [int]$_.Exception.Response.StatusCode } catch { }
+            Write-Warning "GitHub API $Method $($Path.TrimStart('/')) returned HTTP $statusCode. Response body: $responseBody"
+        }
+        throw
+    }
 }
 
 function Invoke-WingetPkgsUpstreamReadApi {
@@ -228,6 +261,7 @@ function Invoke-ForkBranchSubmission {
     $upstreamRepository = 'microsoft/winget-pkgs'
     Assert-SafeWingetPkgsForkRepository -ForkRepository $ForkRepository
 
+    Write-Host "ForkBranch: verifying fork $ForkRepository" -ForegroundColor DarkGray
     $fork = Invoke-WingetPkgsGitHubApi -Method Get -Path "repos/$ForkRepository" -Token $Token
     if (-not $fork.fork -or "$($fork.parent.full_name)" -ine $upstreamRepository) {
         throw "Configured repository '$ForkRepository' is not a fork of $upstreamRepository."
@@ -241,15 +275,18 @@ function Invoke-ForkBranchSubmission {
     # (WINGET_UPSTREAM_READ_TOKEN, then WINGET_UPSTREAM_READ_FALLBACK_TOKEN,
     # then anonymous); fork writes and PR creation keep using $Token.
     $targetRepository = $TargetRepository
+    Write-Host "ForkBranch: resolving $targetRepository default branch" -ForegroundColor DarkGray
     $target = Invoke-WingetPkgsUpstreamReadApi -Path "repos/$targetRepository"
     $targetDefaultBranch = "$($target.default_branch)"
     $baseRepository = $targetRepository
 
+    Write-Host "ForkBranch: fetching base ref $baseRepository/$targetDefaultBranch" -ForegroundColor DarkGray
     $baseReference = Invoke-WingetPkgsUpstreamReadApi -Path "repos/$baseRepository/git/ref/heads/$targetDefaultBranch"
     $baseSha = "$($baseReference.object.sha)"
     if ([string]::IsNullOrWhiteSpace($baseSha)) {
         throw "Could not resolve the $baseRepository/$targetDefaultBranch commit SHA."
     }
+    Write-Host "ForkBranch: base SHA $baseSha" -ForegroundColor DarkGray
     $baseCommit = Invoke-WingetPkgsUpstreamReadApi -Path "repos/$baseRepository/git/commits/$baseSha"
     $baseTreeSha = "$($baseCommit.tree.sha)"
     if ([string]::IsNullOrWhiteSpace($baseTreeSha)) {
@@ -268,6 +305,7 @@ function Invoke-ForkBranchSubmission {
                 content = $_.Content
             }
         }
+    Write-Host "ForkBranch: creating tree with $(@($treeItems).Count) file(s) in $ForkRepository" -ForegroundColor DarkGray
 
     # The fork default branch remains read-only. The manifest commit is rooted
     # at the selected target base commit before its ref is atomically claimed.
@@ -279,6 +317,7 @@ function Invoke-ForkBranchSubmission {
             base_tree = $baseTreeSha
             tree      = @($treeItems)
         }
+    Write-Host "ForkBranch: creating commit in $ForkRepository" -ForegroundColor DarkGray
     $commit = Invoke-WingetPkgsGitHubApi `
         -Method Post `
         -Path "repos/$ForkRepository/git/commits" `
@@ -293,6 +332,7 @@ function Invoke-ForkBranchSubmission {
     # A collision is never retried with another name because that could open a
     # second target PR while the first worker's PR is not searchable yet.
     $branchName = Get-WingetPkgsSubmissionBranchName -PackageId $PackageId -Version $Version
+    Write-Host "ForkBranch: claiming branch $branchName in $ForkRepository" -ForegroundColor DarkGray
     try {
         Invoke-WingetPkgsGitHubApi `
             -Method Post `
@@ -309,6 +349,7 @@ function Invoke-ForkBranchSubmission {
             throw
         }
 
+        Write-Host "ForkBranch: branch claim returned HTTP $statusCode; checking for existing PR" -ForegroundColor DarkGray
         if (Test-ExistingPRs -PackageIdentifier $PackageId -Version $Version -Repository $targetRepository) {
             return [pscustomobject]@{
                 Created             = $false
@@ -346,6 +387,7 @@ function Invoke-ForkBranchSubmission {
     $forkOwner = $ForkRepository.Split('/')[0]
     $headReference = if ($targetRepository -ieq $ForkRepository) { $branchName } else { "${forkOwner}:$branchName" }
     $body = if ([string]::IsNullOrWhiteSpace($Resolves)) { $null } else { "Resolves #$Resolves" }
+    Write-Host "ForkBranch: opening PR in $targetRepository (head: $headReference)" -ForegroundColor DarkGray
     $pullRequest = Invoke-WingetPkgsGitHubApi `
         -Method Post `
         -Path "repos/$targetRepository/pulls" `
