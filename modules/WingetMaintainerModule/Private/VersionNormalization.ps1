@@ -30,11 +30,14 @@ function Get-WingetGitHubHeaders {
 
 function Get-WingetPublishedVersionsFromGitHub {
     param(
-        [Parameter(Mandatory = $true)] [string] $PackageIdentifier
+        [Parameter(Mandatory = $true)] [string] $PackageIdentifier,
+        [Parameter(Mandatory = $false)]
+        [ValidatePattern('^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$')]
+        [string] $Repository = 'microsoft/winget-pkgs'
     )
 
     $packageRelativePath = Get-WingetPackageRelativePath -PackageIdentifier $PackageIdentifier
-    $uri = "https://api.github.com/repos/microsoft/winget-pkgs/contents/$packageRelativePath`?ref=master"
+    $uri = "https://api.github.com/repos/$Repository/contents/$packageRelativePath`?ref=master"
     $response = Invoke-WebRequest -Uri $uri -Headers (Get-WingetGitHubHeaders) -Method Get -SkipHttpErrorCheck
     $statusCode = [int]$response.StatusCode
 
@@ -46,7 +49,7 @@ function Get-WingetPublishedVersionsFromGitHub {
     }
 
     if ($statusCode -lt 200 -or $statusCode -ge 300) {
-        throw "GitHub API request failed for $PackageIdentifier with HTTP status $statusCode."
+        throw "GitHub API request failed for $PackageIdentifier in $Repository with HTTP status $statusCode."
     }
 
     $entries = @($response.Content | ConvertFrom-Json)

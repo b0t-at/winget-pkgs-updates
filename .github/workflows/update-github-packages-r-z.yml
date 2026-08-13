@@ -386,6 +386,7 @@ jobs:
           WINGET_UPSTREAM_READ_TOKEN: ${{ secrets.WINGET_PAT }}
           WINGET_UPSTREAM_READ_FALLBACK_TOKEN: ${{ steps.upstream-read-probe.outputs.available == 'true' && github.token || secrets.WINGET_PUBLIC_READ_TOKEN }}
           WINGET_PKGS_FORK_REPO: ${{ vars.WINGET_PKGS_FORK_REPO }}
+          WINGET_PKGS_SUBMISSION_REPOSITORY: ${{ github.event_name == 'workflow_dispatch' && inputs.submission_repository || 'microsoft/winget-pkgs' }}
           GHURLs: ${{ matrix.url }}
           GHRepo: ${{ matrix.repo }}
           GHTagPattern: ${{ fromJSON(toJSON(matrix)).tagPattern }}
