@@ -396,6 +396,7 @@ jobs:
           }
         env:
           STEPS_MANIFEST_OUTPUTS_PATH: ${{ steps.manifest.outputs.path }}
+          WINGET_PKGS_GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
           GITHUB_TOKEN: ${{ github.token }}
       
       - name: Run sandbox validation

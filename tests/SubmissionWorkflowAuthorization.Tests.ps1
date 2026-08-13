@@ -43,6 +43,22 @@ if ($probeAction -match '(?im)-Method\s+(Post|Put|Patch|Delete)\b') {
     throw 'The upstream read probe must not perform writes.'
 }
 
+$validateAndSubmitActionPath = Join-Path $repositoryRoot '.github/actions/validate-and-submit/action.yml'
+$validateAndSubmitAction = Get-Content -LiteralPath $validateAndSubmitActionPath -Raw
+$compositeContentValidationMatch = Assert-Match `
+    -Actual $validateAndSubmitAction `
+    -Pattern '(?ms)^    - name: Validate manifest content\r?\n(?<step>.*?)(?=^    - |\z)' `
+    -Message 'The validate-and-submit action does not contain its content-validation step.'
+$compositeContentValidationStep = $compositeContentValidationMatch.Groups['step'].Value
+Assert-Match `
+    -Actual $compositeContentValidationStep `
+    -Pattern '(?m)^        WINGET_PKGS_GITHUB_TOKEN: \$\{\{\s*inputs\.github-token\s*\}\}\s*$' `
+    -Message 'The validate-and-submit action must use its supplied PAT for content validation.' | Out-Null
+Assert-Match `
+    -Actual $compositeContentValidationStep `
+    -Pattern '(?m)^        GITHUB_TOKEN: \$\{\{\s*github\.token\s*\}\}\s*$' `
+    -Message 'The validate-and-submit action must retain the workflow token as the content-validation fallback.' | Out-Null
+
 foreach ($workflowRelativePath in $workflowPaths) {
     $workflowPath = Join-Path $repositoryRoot $workflowRelativePath
     $workflowName = Split-Path -Leaf $workflowPath
@@ -66,6 +82,20 @@ foreach ($workflowRelativePath in $workflowPaths) {
         -Actual $saveStateStep `
         -Pattern '(?m)^          gh auth setup-git\s*$' `
         -Message "$workflowName does not configure an explicit Git credential helper before saving package state." | Out-Null
+
+    $contentValidationStepMatch = Assert-Match `
+        -Actual $workflow `
+        -Pattern '(?ms)^      - name: Run content validation\r?\n(?<step>.*?)(?=^      - |\z)' `
+        -Message "$workflowName does not contain a content-validation step."
+    $contentValidationStep = $contentValidationStepMatch.Groups['step'].Value
+    Assert-Match `
+        -Actual $contentValidationStep `
+        -Pattern '(?m)^          WINGET_PKGS_GITHUB_TOKEN: \$\{\{\s*secrets\.WINGET_PAT\s*\}\}\s*$' `
+        -Message "$workflowName must prefer WINGET_PAT for published-manifest validation." | Out-Null
+    Assert-Match `
+        -Actual $contentValidationStep `
+        -Pattern '(?m)^          GITHUB_TOKEN: \$\{\{\s*github\.token\s*\}\}\s*$' `
+        -Message "$workflowName must retain the workflow token as the content-validation fallback." | Out-Null
 
     $submitMatch = Assert-Match `
         -Actual $workflow `
