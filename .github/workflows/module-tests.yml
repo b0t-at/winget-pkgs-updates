@@ -105,7 +105,8 @@ jobs:
             './tests/Submit-WingetPackage.Tests.ps1',
             './tests/Test-SubmitFinalValidation.Tests.ps1',
             './tests/ForkBranchSubmission.Tests.ps1',
-            './tests/Test-ExistingPRs.Tests.ps1'
+            './tests/Test-ExistingPRs.Tests.ps1',
+            './tests/Test-ManifestRemoteReads.Tests.ps1'
           )
           $pesterConfig.Run.Exit = $true
           Invoke-Pester -Configuration $pesterConfig

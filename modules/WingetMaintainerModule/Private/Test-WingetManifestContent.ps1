@@ -601,11 +601,43 @@ function Test-WingetManifestContent {
         }
     }
 
-    function Invoke-RemoteTextDownload {
-        param([Parameter(Mandatory = $true)] [string] $Uri)
+    function Invoke-GitHubGraphQl {
+        param([Parameter(Mandatory = $true)] [string] $Query)
 
-        $response = Invoke-WebRequest -Uri $Uri -Headers (Get-GitHubHeaders) -Method Get -ErrorAction Stop
-        return $response.Content
+        $headers = Get-GitHubHeaders
+        if (-not $headers.ContainsKey('Authorization')) {
+            throw 'GitHub authentication is required to batch published manifest reads.'
+        }
+
+        $body = @{ query = $Query } | ConvertTo-Json -Compress
+        $response = Invoke-RestMethod `
+            -Uri 'https://api.github.com/graphql' `
+            -Headers $headers `
+            -Method Post `
+            -ContentType 'application/json' `
+            -Body $body `
+            -ErrorAction Stop
+
+        if ($null -ne $response.PSObject.Properties['errors'] -and @($response.errors).Count -gt 0) {
+            $messages = @($response.errors | ForEach-Object { [string]$_.message })
+            throw "GitHub GraphQL request failed: $($messages -join '; ')"
+        }
+
+        return $response.data
+    }
+
+    function ConvertFrom-GitHubContentResponse {
+        param(
+            [Parameter(Mandatory = $true)] [pscustomobject] $Response,
+            [Parameter(Mandatory = $true)] [string] $SourceName
+        )
+
+        if ([string]$Response.encoding -ne 'base64' -or [string]::IsNullOrWhiteSpace([string]$Response.content)) {
+            throw "GitHub returned unsupported content for '$SourceName'."
+        }
+
+        $encodedContent = ([string]$Response.content) -replace '\s', ''
+        return [System.Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($encodedContent))
     }
 
     function Get-PublishedVersionSources {
@@ -638,8 +670,92 @@ function Test-WingetManifestContent {
                     Kind   = 'GitHub'
                     Path   = [string]$_.path
                     ApiUrl = [string]$_.url
+                    PackageIdentifier = $PackageIdentifier
                 }
             })
+    }
+
+    function Read-GitHubPublishedManifestSets {
+        param(
+            [Parameter(Mandatory = $true)] [object[]] $VersionSources,
+            [Parameter(Mandatory = $true)] [string] $PackageIdentifier
+        )
+
+        $manifestSets = [System.Collections.Generic.List[object]]::new()
+        $batchSize = 50
+
+        for ($offset = 0; $offset -lt $VersionSources.Count; $offset += $batchSize) {
+            $batch = @($VersionSources | Select-Object -Skip $offset -First $batchSize)
+            $queryFields = [System.Collections.Generic.List[string]]::new()
+            $fieldMappings = [System.Collections.Generic.List[object]]::new()
+
+            for ($batchIndex = 0; $batchIndex -lt $batch.Count; $batchIndex++) {
+                $versionSource = $batch[$batchIndex]
+                $globalIndex = $offset + $batchIndex
+                $installerAlias = "installer$globalIndex"
+                $baseAlias = "base$globalIndex"
+                $installerPath = "$($versionSource.Path)/$PackageIdentifier.installer.yaml"
+                $basePath = "$($versionSource.Path)/$PackageIdentifier.yaml"
+                $installerExpression = ConvertTo-Json -InputObject "master:$installerPath" -Compress
+                $baseExpression = ConvertTo-Json -InputObject "master:$basePath" -Compress
+
+                $queryFields.Add("      ${installerAlias}: object(expression: $installerExpression) { ... on Blob { text } }")
+                $queryFields.Add("      ${baseAlias}: object(expression: $baseExpression) { ... on Blob { text } }")
+                $fieldMappings.Add([pscustomobject]@{
+                        VersionSource = $versionSource
+                        InstallerAlias = $installerAlias
+                        InstallerPath = $installerPath
+                        BaseAlias = $baseAlias
+                        BasePath = $basePath
+                    })
+            }
+
+            $query = @"
+query {
+  repository(owner: "microsoft", name: "winget-pkgs") {
+$($queryFields -join [Environment]::NewLine)
+  }
+}
+"@
+            $data = Invoke-GitHubGraphQl -Query $query
+            $repositoryData = $data.repository
+            if ($null -eq $repositoryData) {
+                throw 'GitHub GraphQL did not return microsoft/winget-pkgs.'
+            }
+
+            foreach ($mapping in $fieldMappings) {
+                $installerBlob = $repositoryData.PSObject.Properties[$mapping.InstallerAlias].Value
+                $baseBlob = $repositoryData.PSObject.Properties[$mapping.BaseAlias].Value
+                $content = $null
+                $path = $null
+
+                if ($null -ne $installerBlob -and -not [string]::IsNullOrWhiteSpace([string]$installerBlob.text)) {
+                    $content = [string]$installerBlob.text
+                    $path = $mapping.InstallerPath
+                }
+                elseif ($null -ne $baseBlob -and -not [string]::IsNullOrWhiteSpace([string]$baseBlob.text)) {
+                    $content = [string]$baseBlob.text
+                    $path = $mapping.BasePath
+                }
+                else {
+                    continue
+                }
+
+                $parseResult = Test-YamlParseable -Content $content -SourceName $path
+                if (-not $parseResult.Success) {
+                    throw "Failed to parse published manifest '$path': $($parseResult.Error)"
+                }
+
+                $documents = @([pscustomobject]@{
+                        Name = Split-Path -Leaf $path
+                        Path = $path
+                        Data = $parseResult.Data
+                    })
+                $manifestSets.Add((ConvertTo-ManifestSet -Documents $documents -Source $mapping.VersionSource.Name))
+            }
+        }
+
+        return $manifestSets.ToArray()
     }
 
     function Read-PublishedManifestSet {
@@ -668,14 +784,24 @@ function Test-WingetManifestContent {
             if ([string]::IsNullOrWhiteSpace($apiUrl)) {
                 throw "ApiUrl is null or empty for published version source '$($VersionSource.Name)'."
             }
+            $packageIdentifier = [string]$VersionSource.PackageIdentifier
+            if ([string]::IsNullOrWhiteSpace($packageIdentifier)) {
+                throw "PackageIdentifier is null or empty for published version source '$($VersionSource.Name)'."
+            }
             $files = Invoke-GitHubApiJson -Uri $apiUrl
-            $yamlFiles = @($files | Where-Object { $_.type -eq 'file' -and $_.name -like '*.yaml' } | Sort-Object name)
+            $installerName = "$packageIdentifier.installer.yaml"
+            $baseName = "$packageIdentifier.yaml"
+            $yamlFiles = @($files | Where-Object { $_.type -eq 'file' -and $_.name -eq $installerName } | Select-Object -First 1)
+            if ($yamlFiles.Count -eq 0) {
+                $yamlFiles = @($files | Where-Object { $_.type -eq 'file' -and $_.name -eq $baseName } | Select-Object -First 1)
+            }
             foreach ($yamlFile in $yamlFiles) {
-                $downloadUrl = [string]$yamlFile.download_url
-                if ([string]::IsNullOrWhiteSpace($downloadUrl)) {
-                    throw "download_url is null or empty for file '$($yamlFile.name)' in version '$($VersionSource.Name)'."
+                $contentUrl = [string]$yamlFile.url
+                if ([string]::IsNullOrWhiteSpace($contentUrl)) {
+                    throw "API URL is null or empty for file '$($yamlFile.name)' in version '$($VersionSource.Name)'."
                 }
-                $content = Invoke-RemoteTextDownload -Uri $downloadUrl
+                $contentResponse = Invoke-GitHubApiJson -Uri $contentUrl
+                $content = ConvertFrom-GitHubContentResponse -Response $contentResponse -SourceName $yamlFile.path
                 $parseResult = Test-YamlParseable -Content $content -SourceName $yamlFile.path
                 if (-not $parseResult.Success) {
                     throw "Failed to parse published manifest '$($yamlFile.path)': $($parseResult.Error)"
@@ -966,10 +1092,18 @@ function Test-WingetManifestContent {
                     Write-Host "  Found $($publishedVersionSources.Count) published version folder(s) to compare against." -ForegroundColor Gray
 
                     $publishedManifestSets = @()
-                    foreach ($publishedVersionSource in $publishedVersionSources) {
-                        $publishedManifestSet = Read-PublishedManifestSet -VersionSource $publishedVersionSource
-                        if ($null -ne $publishedManifestSet) {
-                            $publishedManifestSets += $publishedManifestSet
+                    $githubHeaders = Get-GitHubHeaders
+                    if ($publishedVersionSources[0].Kind -eq 'GitHub' -and $githubHeaders.ContainsKey('Authorization')) {
+                        $publishedManifestSets = @(Read-GitHubPublishedManifestSets `
+                                -VersionSources $publishedVersionSources `
+                                -PackageIdentifier $localManifestSet.PackageIdentifier)
+                    }
+                    else {
+                        foreach ($publishedVersionSource in $publishedVersionSources) {
+                            $publishedManifestSet = Read-PublishedManifestSet -VersionSource $publishedVersionSource
+                            if ($null -ne $publishedManifestSet) {
+                                $publishedManifestSets += $publishedManifestSet
+                            }
                         }
                     }
 
