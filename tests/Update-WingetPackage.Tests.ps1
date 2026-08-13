@@ -251,4 +251,85 @@ if ($preGenerationGuardResult.Result.Generated -or $preGenerationGuardResult.Res
     throw "The pre-generation existing-PR guard did not stop generation: $($preGenerationGuardResult.Result | ConvertTo-Json -Compress)"
 }
 
+Write-Host 'TEST: selected repository scopes version and existing-PR checks'
+$selectedRepositoryResult = & $module {
+    $script:VersionCheckRepository = $null
+    $script:ExistingPrRepository = $null
+
+    function Test-GitHubToken { 'test-token' }
+    function Test-PackageAndVersionInGithub {
+        param($latestVersion, $wingetPackage, $Repository)
+
+        $script:VersionCheckRepository = $Repository
+        [PSCustomObject]@{
+            PackageExists          = $true
+            ShouldGenerate         = $true
+            VersionExists          = $false
+            CanonicalVersion       = '1.0.0'
+            PublishedVersion       = $null
+            LatestPublishedVersion = $null
+        }
+    }
+    function Test-ExistingPRs {
+        param($PackageIdentifier, $Version, $Repository)
+
+        $script:ExistingPrRepository = $Repository
+        return $true
+    }
+    function Install-WinMatsch {
+        throw 'Manifest generation started despite the selected target having an existing PR.'
+    }
+
+    $result = Update-WingetPackage `
+        -WingetPackage 'Test.Package' `
+        -With 'WinMatsch' `
+        -latestVersion '1.0.0' `
+        -latestVersionURL 'https://example.invalid/app.zip' `
+        -Repository 'damn-good-b0t/winget-pkgs'
+
+    [PSCustomObject]@{
+        Result                 = $result
+        VersionCheckRepository = $script:VersionCheckRepository
+        ExistingPrRepository   = $script:ExistingPrRepository
+    }
+}
+if ($selectedRepositoryResult.VersionCheckRepository -cne 'damn-good-b0t/winget-pkgs' -or
+    $selectedRepositoryResult.ExistingPrRepository -cne 'damn-good-b0t/winget-pkgs') {
+    throw "Generation did not scope its duplicate checks to the selected repository: $($selectedRepositoryResult | ConvertTo-Json -Compress)"
+}
+if ($selectedRepositoryResult.Result.Generated -or $selectedRepositoryResult.Result.Reason -cne 'PRExists') {
+    throw "The selected-repository existing-PR guard did not stop generation: $($selectedRepositoryResult.Result | ConvertTo-Json -Compress)"
+}
+
+Write-Host 'TEST: version lookup queries the selected repository'
+$publishedVersionLookupResult = & $module {
+    $script:PublishedVersionRepository = $null
+
+    function Get-WingetPublishedVersionsFromGitHub {
+        param($PackageIdentifier, $Repository)
+
+        $script:PublishedVersionRepository = $Repository
+        [PSCustomObject]@{
+            PackageExists = $true
+            Versions      = @('0.69.0')
+        }
+    }
+
+    $result = Test-PackageAndVersionInGithub `
+        -wingetPackage 'Wilfred.difftastic' `
+        -latestVersion '0.70.0' `
+        -Repository 'damn-good-b0t/winget-pkgs'
+
+    [PSCustomObject]@{
+        Result       = $result
+        Repository   = $script:PublishedVersionRepository
+    }
+}
+if ($publishedVersionLookupResult.Repository -cne 'damn-good-b0t/winget-pkgs') {
+    throw "The version lookup did not query the selected repository: $($publishedVersionLookupResult | ConvertTo-Json -Compress)"
+}
+if (-not $publishedVersionLookupResult.Result.ShouldGenerate) {
+    throw "The version lookup incorrectly suppressed a version missing from the selected repository: $($publishedVersionLookupResult.Result | ConvertTo-Json -Compress)"
+}
+
 Write-Host 'All Update-WingetPackage regression tests passed.' -ForegroundColor Green

@@ -18,10 +18,15 @@ function Test-PackageAndVersionInGithub {
     #>
     param(
         [Parameter(Mandatory = $true)] [string] $latestVersion,
-        [Parameter(Mandatory = $false)] [string] $wingetPackage = ${Env:PackageName}
+        [Parameter(Mandatory = $false)] [string] $wingetPackage = ${Env:PackageName},
+        [Parameter(Mandatory = $false)]
+        [ValidatePattern('^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$')]
+        [string] $Repository = 'microsoft/winget-pkgs'
     )
-    Write-Host "Checking if $wingetPackage is already in winget (via GH) and version $latestVersion is already present"
-    $publishedVersionInfo = Get-WingetPublishedVersionsFromGitHub -PackageIdentifier $wingetPackage
+    Write-Host "Checking if $wingetPackage version $latestVersion is already present in $Repository"
+    $publishedVersionInfo = Get-WingetPublishedVersionsFromGitHub `
+        -PackageIdentifier $wingetPackage `
+        -Repository $Repository
     $publishedVersions = @($publishedVersionInfo.Versions)
     $latestPublishedVersion = $publishedVersions |
         Sort-Object { Get-WingetSortableVersionKey -Version $_ } -Descending |
@@ -39,7 +44,7 @@ function Test-PackageAndVersionInGithub {
     }
 
     if (-not $publishedVersionInfo.PackageExists) {
-        Write-Host "Package not yet in winget. Please add new package manually"
+        Write-Host "Package not yet in $Repository. Please add new package manually"
         $result.PackageExists = $false
         return $result
     }
@@ -52,10 +57,10 @@ function Test-PackageAndVersionInGithub {
         $result.CanonicalVersion = $versionMatch.Version
 
         if ($versionMatch.MatchType -eq 'Exact') {
-            Write-Host "Latest version of $wingetPackage $latestVersion is already present in winget."
+            Write-Host "Latest version of $wingetPackage $latestVersion is already present in $Repository."
         }
         else {
-            Write-Host "Latest version of $wingetPackage $latestVersion is already present in winget as $($versionMatch.Version) ($($versionMatch.MatchType))."
+            Write-Host "Latest version of $wingetPackage $latestVersion is already present in $Repository as $($versionMatch.Version) ($($versionMatch.MatchType))."
         }
 
         return $result
@@ -68,7 +73,7 @@ function Test-PackageAndVersionInGithub {
         Write-Host "Aligning PackageVersion notation with published winget versions: $latestVersion -> $canonicalVersion"
     }
 
-    Write-Host "Package $wingetPackage is in winget, but version $latestVersion is not present."
+    Write-Host "Package $wingetPackage is in $Repository, but version $latestVersion is not present."
     $result.ShouldGenerate = $true
     return $result
 }

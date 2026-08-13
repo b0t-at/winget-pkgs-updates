@@ -60,5 +60,8 @@ if ($Env:WinMatschOverridePack) {
 if ($Env:AllowStructuralRewrite -eq $true) {
     $params.Add("AllowStructuralRewrite", $true)
 }
+if ($Env:WINGET_PKGS_SUBMISSION_REPOSITORY) {
+    $params.Add("Repository", $Env:WINGET_PKGS_SUBMISSION_REPOSITORY)
+}
 
 Update-WingetPackage @params

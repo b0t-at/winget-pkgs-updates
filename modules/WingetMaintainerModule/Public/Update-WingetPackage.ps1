@@ -33,7 +33,10 @@ function Update-WingetPackage {
         [Parameter(Mandatory = $false)] [string] $GHTagPattern,
         [Parameter(Mandatory = $false)][ValidateSet('Tag', 'ReleaseName')] [string] $GHVersionSource = 'Tag',
         [Parameter(Mandatory = $false)] [string] $WinMatschOverridePack,
-        [Parameter(Mandatory = $false)] [bool] $AllowStructuralRewrite = $false
+        [Parameter(Mandatory = $false)] [bool] $AllowStructuralRewrite = $false,
+        [Parameter(Mandatory = $false)]
+        [ValidatePattern('^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$')]
+        [string] $Repository = 'microsoft/winget-pkgs'
     )
 
     # Initialize result object
@@ -143,7 +146,10 @@ function Update-WingetPackage {
     $prMessage = "Update version: $wingetPackage version $($Latest.Version)"
     $result.PrTitle = $prMessage
 
-    $PackageAndVersionInWinget = Test-PackageAndVersionInGithub -wingetPackage $wingetPackage -latestVersion $($Latest.Version)
+    $PackageAndVersionInWinget = Test-PackageAndVersionInGithub `
+        -wingetPackage $wingetPackage `
+        -latestVersion $($Latest.Version) `
+        -Repository $Repository
     $canonicalVersionProperty = $PackageAndVersionInWinget.PSObject.Properties['CanonicalVersion']
     $canonicalVersion = if ($canonicalVersionProperty) { [string]$canonicalVersionProperty.Value } else { $Latest.Version }
     $publishedVersionProperty = $PackageAndVersionInWinget.PSObject.Properties['PublishedVersion']
@@ -178,7 +184,10 @@ function Update-WingetPackage {
 
     if ($PackageAndVersionInWinget.ShouldGenerate) {
 
-        $PRExists = Test-ExistingPRs -PackageIdentifier $wingetPackage -Version $($Latest.Version)
+        $PRExists = Test-ExistingPRs `
+            -PackageIdentifier $wingetPackage `
+            -Version $($Latest.Version) `
+            -Repository $Repository
 
         if (!$PRExists) {
             Write-Host "Downloading $EffectiveWith and generate manifest for $wingetPackage Version $($Latest.Version)"

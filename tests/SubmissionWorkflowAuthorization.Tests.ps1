@@ -88,6 +88,15 @@ foreach ($workflowRelativePath in $workflowPaths) {
             -Actual $submitJob `
             -Pattern '(?m)^          WINGET_PKGS_SUBMISSION_REPOSITORY: \$\{\{\s*github\.event_name == ''workflow_dispatch'' && inputs\.submission_repository \|\| ''microsoft/winget-pkgs''\s*\}\}\s*$' `
             -Message "$workflowName must keep scheduled and push submissions pinned to production." | Out-Null
+        $generateStepMatch = Assert-Match `
+            -Actual $workflow `
+            -Pattern '(?ms)^      - name: Generate manifest\r?\n(?<step>.*?)(?=^      - |\z)' `
+            -Message "$workflowName does not contain the Generate manifest step."
+        $generateStep = $generateStepMatch.Groups['step'].Value
+        Assert-Match `
+            -Actual $generateStep `
+            -Pattern '(?m)^          WINGET_PKGS_SUBMISSION_REPOSITORY: \$\{\{\s*github\.event_name == ''workflow_dispatch'' && inputs\.submission_repository \|\| ''microsoft/winget-pkgs''\s*\}\}\s*$' `
+            -Message "$workflowName must use the selected target for its generation duplicate checks." | Out-Null
         Assert-Match `
             -Actual $submitJob `
             -Pattern '(?ms)allow_test_fork_submission workflow_dispatch acknowledgement.*?WINGET_PKGS_ALLOW_TEST_FORK_SUBMISSION: \$\{\{\s*github\.event_name == ''workflow_dispatch'' && inputs\.allow_test_fork_submission \|\| ''false''\s*\}\}' `
