@@ -29,11 +29,11 @@ NestedInstallerFiles:
     $installerManifest = @"
 PackageIdentifier: Test.StructuralRewrite
 PackageVersion: $Version
-InstallerType: nullsoft
+InstallerType: zip
 $nestedInstallerMetadata
 Installers:
 - Architecture: x64
-  InstallerUrl: https://example.invalid/test-$Version.exe
+  InstallerUrl: https://example.invalid/test-$Version.zip
   InstallerSha256: $Hash
 ManifestType: installer
 ManifestVersion: 1.12.0
