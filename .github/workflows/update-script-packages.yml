@@ -14,6 +14,11 @@ on:
 permissions:
   contents: read
 
+# Keep package generation serialized across all update workflows.
+concurrency:
+  group: generate-update-packages
+  cancel-in-progress: false
+
 jobs:
   # Job 1: Generate manifests for all packages
   generate-manifest:
