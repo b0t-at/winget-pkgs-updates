@@ -912,6 +912,28 @@ $($queryFields -join [Environment]::NewLine)
         return Get-PropertyValue -Object $InstallerDocument -Name $Name
     }
 
+    # Nested installer metadata is only meaningful for archive installers. Carrying it over to a
+    # non-archive installer produces manifests that winget itself rejects.
+    $script:NestedInstallerStickyProperties = @(
+        'NestedInstallerType', 'NestedInstallerFiles', 'ArchiveBinariesDependOnPath'
+    )
+
+    function Test-SupportsNestedInstallerMetadata {
+        param(
+            [Parameter(Mandatory = $true)] [AllowNull()] [object] $Installer,
+            [Parameter(Mandatory = $true)] [object] $InstallerDocument
+        )
+
+        $installerType = if ($null -eq $Installer) {
+            [string](Get-PropertyValue -Object $InstallerDocument -Name 'InstallerType')
+        }
+        else {
+            [string](Get-EffectiveInstallerProperty -Installer $Installer -InstallerDocument $InstallerDocument -Name 'InstallerType')
+        }
+
+        return $installerType -ieq 'zip'
+    }
+
     function Test-InstallerMetadataConsistency {
         param(
             [Parameter(Mandatory = $true)] [pscustomobject] $CurrentManifestSet,
@@ -928,6 +950,25 @@ $($queryFields -join [Environment]::NewLine)
 
         $currentInstallers = @($CurrentManifestSet.InstallerEntries)
         foreach ($propertyName in $script:InstallerManifestStickyProperties) {
+            if ($script:NestedInstallerStickyProperties -contains $propertyName) {
+                $supportsNested = $false
+                if ($currentInstallers.Count -eq 0) {
+                    $supportsNested = Test-SupportsNestedInstallerMetadata -Installer $null -InstallerDocument $currentInstallerDocument
+                }
+                else {
+                    foreach ($currentInstaller in $currentInstallers) {
+                        if (Test-SupportsNestedInstallerMetadata -Installer $currentInstaller -InstallerDocument $currentInstallerDocument) {
+                            $supportsNested = $true
+                            break
+                        }
+                    }
+                }
+
+                if (-not $supportsNested) {
+                    continue
+                }
+            }
+
             $previousValue = Get-PropertyValue -Object $previousInstallerDocument -Name $propertyName
             $currentValue = Get-PropertyValue -Object $currentInstallerDocument -Name $propertyName
 
@@ -955,6 +996,11 @@ $($queryFields -join [Environment]::NewLine)
             $architectureSuffix = if (Test-HasValue $architecture) { " for architecture '$architecture'" } else { '' }
 
             foreach ($propertyName in $script:InstallerEntryStickyProperties) {
+                if (($script:NestedInstallerStickyProperties -contains $propertyName) -and
+                    -not (Test-SupportsNestedInstallerMetadata -Installer $matchingInstaller -InstallerDocument $currentInstallerDocument)) {
+                    continue
+                }
+
                 $previousValue = Get-EffectiveInstallerProperty -Installer $previousInstaller -InstallerDocument $previousInstallerDocument -Name $propertyName
                 $currentValue = Get-EffectiveInstallerProperty -Installer $matchingInstaller -InstallerDocument $currentInstallerDocument -Name $propertyName
 

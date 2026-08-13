@@ -248,6 +248,107 @@ Installers:
     if ($LASTEXITCODE -ne 0) {
         throw "Expected inherited nested installer metadata to pass, got exit code $LASTEXITCODE."
     }
+
+    Write-Host 'TEST: nested installer metadata is not sticky for non-archive installers'
+    $staleNestedPublishedRoot = Join-Path $testRoot 'published-stale-nested'
+    Write-ManifestFile -Path (Join-Path $staleNestedPublishedRoot '0.269/Test.Portable.installer.yaml') -Content @"
+PackageIdentifier: Test.Portable
+PackageVersion: "0.269"
+InstallerType: portable
+NestedInstallerFiles:
+- RelativeFilePath: app.exe
+  PortableCommandAlias: app
+Commands:
+- app
+ManifestType: installer
+ManifestVersion: 1.12.0
+Installers:
+- Architecture: x64
+  InstallerUrl: https://downloads.example.invalid/v0.269/app.exe
+  InstallerSha256: DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+"@
+    Write-ManifestFile -Path (Join-Path $staleNestedPublishedRoot '0.269/Test.Portable.yaml') -Content @"
+PackageIdentifier: Test.Portable
+PackageVersion: "0.269"
+DefaultLocale: en-US
+ManifestType: version
+ManifestVersion: 1.12.0
+"@
+
+    $droppedNestedPath = Join-Path $testRoot 'dropped-nested-portable'
+    Write-ManifestFile -Path (Join-Path $droppedNestedPath 'Test.Portable.installer.yaml') -Content @"
+PackageIdentifier: Test.Portable
+PackageVersion: "0.274"
+InstallerType: portable
+Commands:
+- app
+ManifestType: installer
+ManifestVersion: 1.12.0
+Installers:
+- Architecture: x64
+  InstallerUrl: https://downloads.example.invalid/v0.274/app.exe
+  InstallerSha256: EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+"@
+    Write-ManifestFile -Path (Join-Path $droppedNestedPath 'Test.Portable.yaml') -Content @"
+PackageIdentifier: Test.Portable
+PackageVersion: "0.274"
+DefaultLocale: en-US
+ManifestType: version
+ManifestVersion: 1.12.0
+"@
+    $null = & $validationScript -ManifestPath $droppedNestedPath -PublishedPackageRoot $staleNestedPublishedRoot
+    if ($LASTEXITCODE -ne 0) {
+        throw "Expected dropping inapplicable nested metadata on a portable installer to pass, got exit code $LASTEXITCODE."
+    }
+
+    Write-Host 'TEST: nested installer metadata stays sticky for archive installers'
+    $archivePublishedRoot = Join-Path $testRoot 'published-archive-nested'
+    Write-ManifestFile -Path (Join-Path $archivePublishedRoot '1.0.0/Test.Archive.installer.yaml') -Content @"
+PackageIdentifier: Test.Archive
+PackageVersion: 1.0.0
+InstallerType: zip
+NestedInstallerType: portable
+NestedInstallerFiles:
+- RelativeFilePath: app.exe
+  PortableCommandAlias: app
+ManifestType: installer
+ManifestVersion: 1.12.0
+Installers:
+- Architecture: x64
+  InstallerUrl: https://downloads.example.invalid/v1.0.0/app.zip
+  InstallerSha256: 11111111111111111111111111111111111111111111111111111111111111AA
+"@
+    Write-ManifestFile -Path (Join-Path $archivePublishedRoot '1.0.0/Test.Archive.yaml') -Content @"
+PackageIdentifier: Test.Archive
+PackageVersion: 1.0.0
+DefaultLocale: en-US
+ManifestType: version
+ManifestVersion: 1.12.0
+"@
+
+    $archiveRegressionPath = Join-Path $testRoot 'dropped-nested-archive'
+    Write-ManifestFile -Path (Join-Path $archiveRegressionPath 'Test.Archive.installer.yaml') -Content @"
+PackageIdentifier: Test.Archive
+PackageVersion: 2.0.0
+InstallerType: zip
+ManifestType: installer
+ManifestVersion: 1.12.0
+Installers:
+- Architecture: x64
+  InstallerUrl: https://downloads.example.invalid/v2.0.0/app.zip
+  InstallerSha256: 22222222222222222222222222222222222222222222222222222222222222BB
+"@
+    Write-ManifestFile -Path (Join-Path $archiveRegressionPath 'Test.Archive.yaml') -Content @"
+PackageIdentifier: Test.Archive
+PackageVersion: 2.0.0
+DefaultLocale: en-US
+ManifestType: version
+ManifestVersion: 1.12.0
+"@
+    $null = & $validationScript -ManifestPath $archiveRegressionPath -PublishedPackageRoot $archivePublishedRoot
+    if ($LASTEXITCODE -ne 4) {
+        throw "Expected dropping nested metadata on a zip installer to fail with exit code 4, got $LASTEXITCODE."
+    }
 }
 finally {
     if (Test-Path -LiteralPath $testRoot) {
