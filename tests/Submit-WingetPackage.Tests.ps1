@@ -8,6 +8,34 @@ Describe 'Submit-WingetPackage branch-moved retry' {
     BeforeEach {
         $global:SubmitWingetPackageTestManifestPath = Join-Path ([IO.Path]::GetTempPath()) "winget-submit-tests-$([guid]::NewGuid().ToString('N'))"
         New-Item -ItemType Directory -Path $global:SubmitWingetPackageTestManifestPath -Force | Out-Null
+        @"
+PackageIdentifier: Test.Package
+PackageVersion: 1.0.0
+DefaultLocale: en-US
+ManifestType: version
+ManifestVersion: 1.12.0
+"@ | Set-Content -LiteralPath (Join-Path $global:SubmitWingetPackageTestManifestPath 'Test.Package.yaml')
+        @"
+PackageIdentifier: Test.Package
+PackageVersion: 1.0.0
+PackageLocale: en-US
+Publisher: Test Publisher
+PackageName: Test Package
+ShortDescription: Test package
+ManifestType: defaultLocale
+ManifestVersion: 1.12.0
+"@ | Set-Content -LiteralPath (Join-Path $global:SubmitWingetPackageTestManifestPath 'Test.Package.locale.en-US.yaml')
+        @"
+PackageIdentifier: Test.Package
+PackageVersion: 1.0.0
+Installers:
+  - Architecture: x64
+    InstallerType: zip
+    InstallerUrl: https://downloads.example.invalid/test-package.zip
+    InstallerSha256: 1111111111111111111111111111111111111111111111111111111111111111
+ManifestType: installer
+ManifestVersion: 1.12.0
+"@ | Set-Content -LiteralPath (Join-Path $global:SubmitWingetPackageTestManifestPath 'Test.Package.installer.yaml')
         $global:NewTestSubmissionAttempt = {
             param(
                 [int] $ExitCode,
@@ -166,7 +194,7 @@ Describe 'Submit-WingetPackage branch-moved retry' {
 
         It 'normalizes mixed-ending locale YAML before WinMatsch submission' {
             $localeManifestPath = Join-Path $global:SubmitWingetPackageTestManifestPath 'Test.Package.locale.en-US.yaml'
-            $mixedContent = "PackageLocale: en-US`r`nPublisher: Test Publisher`nPackageName: Test Package`r`nShortDescription: Mixed line endings`n"
+            $mixedContent = "PackageIdentifier: Test.Package`r`nPackageVersion: 1.0.0`nPackageLocale: en-US`r`nPublisher: Test Publisher`nPackageName: Test Package`r`nShortDescription: Mixed line endings`nManifestType: defaultLocale`r`nManifestVersion: 1.12.0`n"
             [System.IO.File]::WriteAllText(
                 $localeManifestPath,
                 $mixedContent,
@@ -201,7 +229,7 @@ Describe 'Submit-WingetPackage branch-moved retry' {
             }
 
             $normalizedContent = [System.Text.Encoding]::UTF8.GetString($normalizedBytes)
-            $expectedContent = "PackageLocale: en-US`r`nPublisher: Test Publisher`r`nPackageName: Test Package`r`nShortDescription: Mixed line endings`r`n"
+            $expectedContent = "PackageIdentifier: Test.Package`r`nPackageVersion: 1.0.0`r`nPackageLocale: en-US`r`nPublisher: Test Publisher`r`nPackageName: Test Package`r`nShortDescription: Mixed line endings`r`nManifestType: defaultLocale`r`nManifestVersion: 1.12.0`r`n"
             if ($normalizedContent -cne $expectedContent) {
                 throw "Locale YAML content changed beyond line endings: $normalizedContent"
             }

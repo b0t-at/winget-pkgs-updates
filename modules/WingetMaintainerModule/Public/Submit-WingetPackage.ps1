@@ -202,6 +202,16 @@ function Submit-WingetPackage {
         # Generators can emit mixed line endings. Normalize only after validation
         # and immediately before any submitter or fork commit consumes the files.
         Normalize-WingetManifestLineEndings -ManifestPath $fullManifestPath
+        $finalValidation = Test-WingetManifestContent -ManifestPath $fullManifestPath -SkipPublishedComparison
+        if (-not $finalValidation.Valid) {
+            return @{
+                Success  = $false
+                Error    = "Final submit validation failed after line-ending normalization. $($finalValidation.Errors -join ' ')"
+                PrUrl    = $null
+                PrNumber = $null
+            }
+        }
+        $submitReadySnapshot = Get-SubmittedManifestSnapshot -ManifestPath $fullManifestPath
 
         switch ($With) {
             "WinMatsch" {
@@ -335,6 +345,16 @@ function Submit-WingetPackage {
                     -TargetRepository $Repository `
                     -Resolves $Resolves
 
+                $postSubmitSnapshot = Get-SubmittedManifestSnapshot -ManifestPath $fullManifestPath
+                if (($submitReadySnapshot | ConvertTo-Json -Compress -Depth 5) -ne ($postSubmitSnapshot | ConvertTo-Json -Compress -Depth 5)) {
+                    return @{
+                        Success  = $false
+                        Error    = 'Manifest artifacts changed during submission. Treating the submit result as unsafe; inspect the local manifest directory before retrying.'
+                        PrUrl    = $null
+                        PrNumber = $null
+                    }
+                }
+
                 if (-not $forkSubmission.Created) {
                     if (-not $forkSubmission.DuplicateDetected) {
                         return @{
@@ -377,6 +397,16 @@ function Submit-WingetPackage {
 
         Write-Host ""
         Write-Host "PR submitted successfully!" -ForegroundColor Green
+
+        $postSubmitSnapshot = Get-SubmittedManifestSnapshot -ManifestPath $fullManifestPath
+        if (($submitReadySnapshot | ConvertTo-Json -Compress -Depth 5) -ne ($postSubmitSnapshot | ConvertTo-Json -Compress -Depth 5)) {
+            return @{
+                Success  = $false
+                Error    = 'Manifest artifacts changed during submission. Treating the submit result as unsafe; inspect the local manifest directory before retrying.'
+                PrUrl    = $null
+                PrNumber = $null
+            }
+        }
 
         # Prefer the structured result; fall back to scraping the console output.
         $prUrl = $null

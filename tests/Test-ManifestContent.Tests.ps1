@@ -37,7 +37,7 @@ Installers:
   InstallerSha256: $Hash
 ManifestType: installer
 ManifestVersion: 1.12.0
-"@ | Set-Content -LiteralPath (Join-Path $Path 'Test.StructuralRewrite.installer.yaml') -NoNewline
+"@ | Set-Content -LiteralPath (Join-Path $Path 'Test.StructuralRewrite.installer.yaml')
 
     @"
 PackageIdentifier: Test.StructuralRewrite
@@ -45,7 +45,7 @@ PackageVersion: $Version
 DefaultLocale: en-US
 ManifestType: version
 ManifestVersion: 1.12.0
-"@ | Set-Content -LiteralPath (Join-Path $Path 'Test.StructuralRewrite.yaml') -NoNewline
+"@ | Set-Content -LiteralPath (Join-Path $Path 'Test.StructuralRewrite.yaml')
 }
 
 try {
