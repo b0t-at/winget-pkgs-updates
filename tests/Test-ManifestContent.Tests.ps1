@@ -26,7 +26,7 @@ NestedInstallerFiles:
         ''
     }
 
-    @"
+    $installerManifest = @"
 PackageIdentifier: Test.StructuralRewrite
 PackageVersion: $Version
 InstallerType: nullsoft
@@ -37,15 +37,27 @@ Installers:
   InstallerSha256: $Hash
 ManifestType: installer
 ManifestVersion: 1.12.0
-"@ | Set-Content -LiteralPath (Join-Path $Path 'Test.StructuralRewrite.installer.yaml')
+"@
 
-    @"
+    $versionManifest = @"
 PackageIdentifier: Test.StructuralRewrite
 PackageVersion: $Version
 DefaultLocale: en-US
 ManifestType: version
 ManifestVersion: 1.12.0
-"@ | Set-Content -LiteralPath (Join-Path $Path 'Test.StructuralRewrite.yaml')
+"@
+
+    $utf8NoBom = [System.Text.UTF8Encoding]::new($false)
+    [System.IO.File]::WriteAllText(
+        (Join-Path $Path 'Test.StructuralRewrite.installer.yaml'),
+        (($installerManifest -replace '\r?\n', "`r`n").TrimEnd([char[]]"`r`n") + "`r`n"),
+        $utf8NoBom
+    )
+    [System.IO.File]::WriteAllText(
+        (Join-Path $Path 'Test.StructuralRewrite.yaml'),
+        (($versionManifest -replace '\r?\n', "`r`n").TrimEnd([char[]]"`r`n") + "`r`n"),
+        $utf8NoBom
+    )
 }
 
 try {

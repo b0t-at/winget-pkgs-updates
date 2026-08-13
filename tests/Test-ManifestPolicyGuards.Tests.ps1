@@ -12,7 +12,8 @@ function Write-ManifestFile {
     )
 
     New-Item -ItemType Directory -Path (Split-Path -Parent $Path) -Force | Out-Null
-    $Content | Set-Content -LiteralPath $Path
+    $normalizedContent = ($Content -replace '\r?\n', "`r`n").TrimEnd([char[]]"`r`n") + "`r`n"
+    [System.IO.File]::WriteAllText($Path, $normalizedContent, [System.Text.UTF8Encoding]::new($false))
 }
 
 try {
