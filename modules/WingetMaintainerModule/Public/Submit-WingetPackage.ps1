@@ -199,6 +199,10 @@ function Submit-WingetPackage {
             }
         }
 
+        # Generators can emit mixed line endings. Normalize only after validation
+        # and immediately before any submitter or fork commit consumes the files.
+        Normalize-WingetManifestLineEndings -ManifestPath $fullManifestPath
+
         switch ($With) {
             "WinMatsch" {
                 # Ensure WinMatsch is installed
@@ -292,12 +296,20 @@ function Submit-WingetPackage {
             }
 
             "WinGetCreate" {
-                # Ensure WinGetCreate is installed
-                Install-WingetCreate
+                # Prefer a PATH-installed wingetcreate; otherwise download it and pin
+                # the absolute path so the call is independent of the working directory.
+                $wingetCreateCommand = Get-Command 'wingetcreate.exe' -CommandType Application -ErrorAction SilentlyContinue
+                if ($wingetCreateCommand) {
+                    $wingetCreatePath = $wingetCreateCommand.Source
+                }
+                else {
+                    Install-WingetCreate
+                    $wingetCreatePath = (Resolve-Path -LiteralPath '.\wingetcreate.exe').Path
+                }
 
                 Write-Host "--> Running: wingetcreate submit" -ForegroundColor White
 
-                $output = & .\wingetcreate.exe submit --prtitle $PrTitle -t $Token $fullManifestPath 2>&1
+                $output = & $wingetCreatePath submit --prtitle $PrTitle -t $Token $fullManifestPath 2>&1
                 $exitCode = $LASTEXITCODE
 
                 Write-Host $output

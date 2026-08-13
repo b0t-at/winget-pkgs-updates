@@ -203,8 +203,17 @@ function Create-GitHubPRPlaceholder {
         Write-Host "    PR body suggestion: $prBody"
         #Write-Host "    >>>> INSERT YOUR PR CREATION CODE HERE <<<<" -ForegroundColor Cyan
         Write-Host "  No existing PR found for $PackageId $PackageVersion. Proceeding with PR creation." -ForegroundColor Green
-        wingetcreate.exe submit --prtitle $prTitle -t $gitToken $ManifestPath.replace($ManifestPath.split("\")[-1], "")
-        #.\wingetcreate.exe submit --prtitle $prMessage -t $gitToken $ManifestPath
+        Import-Module (Join-Path $PSScriptRoot '..\modules\WingetMaintainerModule\WingetMaintainerModule.psd1') -Force
+        $submission = Submit-WingetPackage `
+            -ManifestPath (Split-Path -Parent $ManifestPath) `
+            -PackageId $PackageId `
+            -Version $PackageVersion `
+            -PrTitle $prTitle `
+            -Token $gitToken `
+            -With WinGetCreate
+        if (-not $submission.Success) {
+            throw "WinGetCreate submission failed: $($submission.Error)"
+        }
     }
 }
 
@@ -535,4 +544,3 @@ if ($MyInvocation.MyCommand.CommandType -eq 'ExternalScript') {
         # (Ensure https://example.com/latest.exe is actually reachable or mock the Download-FileContent function)
     }
 }
-
