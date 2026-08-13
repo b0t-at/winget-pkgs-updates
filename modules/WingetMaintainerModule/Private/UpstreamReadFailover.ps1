@@ -94,11 +94,21 @@ function Get-WingetPkgsGitHubApiFailureResponseBody {
     $response = $exception.Response
 
     if ($null -ne $response.PSObject.Properties['Content'] -and $null -ne $response.Content) {
-        return $response.Content.ReadAsStringAsync().GetAwaiter().GetResult()
+        try {
+            return $response.Content.ReadAsStringAsync().GetAwaiter().GetResult()
+        }
+        catch {
+            return $null
+        }
     }
 
     if ($null -ne $response.PSObject.Methods['GetResponseStream']) {
-        $stream = $response.GetResponseStream()
+        try {
+            $stream = $response.GetResponseStream()
+        }
+        catch {
+            return $null
+        }
         if ($null -ne $stream) {
             $reader = [System.IO.StreamReader]::new($stream)
             try {
