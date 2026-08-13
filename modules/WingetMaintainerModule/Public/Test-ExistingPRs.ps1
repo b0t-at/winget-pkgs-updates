@@ -16,8 +16,10 @@
     (401/403/404/429), the search retries once with
     `WINGET_UPSTREAM_READ_FALLBACK_TOKEN` and finally falls back to the
     anonymous public REST search endpoint. The fork-scoped submission token is
-    never used for this search. API and response-shape failures are surfaced so
-    callers fail closed instead of treating an uncertain result as no duplicate.
+    never used for this search. A transient HTTP 422 from GitHub Search is
+    retried twice with the same credential before the failure is surfaced. API
+    and response-shape failures are surfaced so callers fail closed instead of
+    treating an uncertain result as no duplicate.
 
 .PARAMETER Version
     The version of the package to check for existing PRs. This parameter is mandatory.
@@ -65,6 +67,7 @@ function Test-ExistingPRs {
     $page = 1
     $retrievedCount = 0
     $totalCount = $null
+    $maximumSearchAttempts = 3
 
     while ($true) {
         $response = $null
@@ -79,22 +82,45 @@ function Test-ExistingPRs {
             if (-not [string]::IsNullOrWhiteSpace($tier.Token)) {
                 $headers.Authorization = "Bearer $($tier.Token)"
             }
-            try {
-                $response = Invoke-RestMethod `
-                    -Method Get `
-                    -Uri "https://api.github.com/search/issues?q=$encodedQuery&per_page=$pageSize&page=$page" `
-                    -Headers $headers `
-                    -ErrorAction Stop
-                break
-            }
-            catch {
-                $statusCode = Get-WingetPkgsUpstreamReadFailureStatusCode -ErrorRecord $_
-                $isLastTier = $tierIndex -eq ($credentialTiers.Count - 1)
-                if ($isLastTier -or -not (Test-WingetPkgsUpstreamReadFailoverStatus -StatusCode $statusCode)) {
-                    throw
+            for ($attempt = 1; $attempt -le $maximumSearchAttempts; $attempt++) {
+                try {
+                    $response = Invoke-RestMethod `
+                        -Method Get `
+                        -Uri "https://api.github.com/search/issues?q=$encodedQuery&per_page=$pageSize&page=$page" `
+                        -Headers $headers `
+                        -ErrorAction Stop
+                    break
                 }
-                $nextTier = $credentialTiers[$tierIndex + 1]
-                Write-Warning "Existing-PR search page $page with $($tier.Label) failed with HTTP $statusCode; retrying with $($nextTier.Label)."
+                catch {
+                    $statusCode = Get-WingetPkgsUpstreamReadFailureStatusCode -ErrorRecord $_
+                    $responseBody = Get-WingetPkgsGitHubApiFailureResponseBody -ErrorRecord $_
+                    $responseDetail = if ([string]::IsNullOrWhiteSpace($responseBody)) {
+                        ''
+                    }
+                    else {
+                        " Response body: $responseBody"
+                    }
+
+                    if ($statusCode -eq 422 -and $attempt -lt $maximumSearchAttempts) {
+                        Write-Warning "GitHub existing-PR search page $page returned HTTP 422 on attempt $attempt of $maximumSearchAttempts; retrying.$responseDetail"
+                        Start-Sleep -Seconds $attempt
+                        continue
+                    }
+
+                    $isLastTier = $tierIndex -eq ($credentialTiers.Count - 1)
+                    if ($isLastTier -or -not (Test-WingetPkgsUpstreamReadFailoverStatus -StatusCode $statusCode)) {
+                        if (-not [string]::IsNullOrWhiteSpace($responseDetail)) {
+                            Write-Warning "GitHub existing-PR search page $page failed with HTTP $statusCode.$responseDetail"
+                        }
+                        throw
+                    }
+                    $nextTier = $credentialTiers[$tierIndex + 1]
+                    Write-Warning "Existing-PR search page $page with $($tier.Label) failed with HTTP $statusCode; retrying with $($nextTier.Label).$responseDetail"
+                    break
+                }
+            }
+            if ($null -ne $response) {
+                break
             }
         }
         if ($null -eq $response) {
@@ -184,6 +210,7 @@ function Test-ExistingPRs {
 
         $retrievedCount += $existingPrs.Count
         if ($retrievedCount -ge $totalCount) {
+            Write-Host "No matching PR found for $PackageIdentifier $Version in $Repository"
             return $false
         }
         if ($existingPrs.Count -lt $pageSize) {

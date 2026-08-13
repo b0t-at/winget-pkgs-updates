@@ -91,6 +91,7 @@ jobs:
           - id: seerge.g-helper
             repo: seerge/g-helper
             url: https://github.com/seerge/g-helper/releases/download/v{VERSION}/GHelper.exe
+            allowStructuralRewrite: true
           - id: shawnbanasick.kade
             repo: shawnbanasick/kade
             url: https://github.com/shawnbanasick/kade/releases/download/v{VERSION}/KADE.Setup.{VERSION}.exe

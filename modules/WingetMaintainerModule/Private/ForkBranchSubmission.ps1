@@ -47,32 +47,9 @@ function Invoke-WingetPkgsGitHubApi {
         return Invoke-RestMethod @request
     }
     catch {
-        # Capture and surface the GitHub API response body so callers can log it.
-        # PowerShell 7: $_.ErrorDetails.Message contains the parsed response body.
-        # PowerShell 5: the response stream must be read from $_.Exception.Response.
-        $responseBody = $null
-        try {
-            if (-not [string]::IsNullOrWhiteSpace($_.ErrorDetails.Message)) {
-                $responseBody = $_.ErrorDetails.Message
-            }
-            else {
-                $response = $_.Exception.Response
-                if ($null -ne $response) {
-                    $stream = $response.GetResponseStream()
-                    if ($null -ne $stream) {
-                        $reader = [System.IO.StreamReader]::new($stream)
-                        $responseBody = $reader.ReadToEnd()
-                        $reader.Dispose()
-                    }
-                }
-            }
-        }
-        catch {
-            # Swallow stream-read errors; the original exception is re-thrown below.
-        }
+        $responseBody = Get-WingetPkgsGitHubApiFailureResponseBody -ErrorRecord $_
         if (-not [string]::IsNullOrWhiteSpace($responseBody)) {
-            $statusCode = 0
-            try { $statusCode = [int]$_.Exception.Response.StatusCode } catch { }
+            $statusCode = Get-WingetPkgsGitHubApiFailureStatusCode -ErrorRecord $_
             Write-Warning "GitHub API $Method $($Path.TrimStart('/')) returned HTTP $statusCode. Response body: $responseBody"
         }
         throw

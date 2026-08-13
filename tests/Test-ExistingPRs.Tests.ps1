@@ -7,6 +7,7 @@ Import-Module (Join-Path $repositoryRoot 'modules/WingetMaintainerModule/WingetM
 Describe 'Test-ExistingPRs' {
     BeforeEach {
         $global:ExistingPrSearchRequests = [System.Collections.Generic.List[object]]::new()
+        $global:ExistingPrSearchSleeps = [System.Collections.Generic.List[int]]::new()
         $global:OriginalUpstreamReadToken = $env:WINGET_UPSTREAM_READ_TOKEN
         $global:OriginalUpstreamReadFallbackToken = $env:WINGET_UPSTREAM_READ_FALLBACK_TOKEN
         $global:OriginalGitHubToken = $env:GITHUB_TOKEN
@@ -17,6 +18,10 @@ Describe 'Test-ExistingPRs' {
         $env:WINGET_PAT = 'fork-write-token'
 
         InModuleScope WingetMaintainerModule {
+            Mock Start-Sleep {
+                param($Seconds)
+                $global:ExistingPrSearchSleeps.Add($Seconds)
+            }
             Mock Invoke-RestMethod {
                 param($Method, $Uri, $Headers, $ErrorAction)
 
@@ -46,6 +51,7 @@ Describe 'Test-ExistingPRs' {
         $env:GITHUB_TOKEN = $global:OriginalGitHubToken
         $env:WINGET_PAT = $global:OriginalWingetPat
         Remove-Variable -Name ExistingPrSearchRequests -Scope Global -ErrorAction SilentlyContinue
+        Remove-Variable -Name ExistingPrSearchSleeps -Scope Global -ErrorAction SilentlyContinue
         Remove-Variable -Name OriginalUpstreamReadToken -Scope Global -ErrorAction SilentlyContinue
         Remove-Variable -Name OriginalUpstreamReadFallbackToken -Scope Global -ErrorAction SilentlyContinue
         Remove-Variable -Name OriginalGitHubToken -Scope Global -ErrorAction SilentlyContinue
@@ -178,6 +184,51 @@ Describe 'Test-ExistingPRs' {
         }
         if ($global:ExistingPrSearchRequests.Count -ne 1) {
             throw "A non-rate-limit error was retried: $($global:ExistingPrSearchRequests.Count) request(s)."
+        }
+    }
+
+    It 'retries a transient GitHub Search 422 before continuing the duplicate check' {
+        $env:WINGET_UPSTREAM_READ_TOKEN = 'primary-read-token'
+
+        InModuleScope WingetMaintainerModule {
+            Mock Invoke-RestMethod {
+                param($Method, $Uri, $Headers, $ErrorAction)
+
+                $global:ExistingPrSearchRequests.Add([pscustomobject]@{
+                    Method  = $Method
+                    Uri     = $Uri
+                    Headers = $Headers
+                })
+                if ($global:ExistingPrSearchRequests.Count -lt 3) {
+                    $unprocessableResponse = [System.Net.Http.HttpResponseMessage]::new(
+                        [System.Net.HttpStatusCode]::UnprocessableEntity
+                    )
+                    throw [Microsoft.PowerShell.Commands.HttpResponseException]::new(
+                        'GitHub Search could not process the query',
+                        $unprocessableResponse
+                    )
+                }
+
+                return [pscustomobject]@{ total_count = 0; items = @() }
+            }
+        }
+
+        $result = Test-ExistingPRs `
+            -PackageIdentifier 'Test.Package' `
+            -Version '1.0.0' `
+            -Repository 'microsoft/winget-pkgs' `
+            -WarningAction SilentlyContinue
+
+        if ($result -ne $false) {
+            throw 'The successful retry unexpectedly reported a duplicate.'
+        }
+        if ($global:ExistingPrSearchRequests.Count -ne 3) {
+            throw "Expected three attempts after transient HTTP 422 responses, got $($global:ExistingPrSearchRequests.Count)."
+        }
+        if ($global:ExistingPrSearchSleeps.Count -ne 2 -or
+            $global:ExistingPrSearchSleeps[0] -ne 1 -or
+            $global:ExistingPrSearchSleeps[1] -ne 2) {
+            throw "Expected retry delays of one and two seconds, got $($global:ExistingPrSearchSleeps -join ', ')."
         }
     }
 

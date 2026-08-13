@@ -73,6 +73,43 @@ function Get-WingetPkgsUpstreamReadFailureStatusCode {
     return Get-WingetPkgsGitHubApiFailureStatusCode -ErrorRecord $ErrorRecord
 }
 
+function Get-WingetPkgsGitHubApiFailureResponseBody {
+    [CmdletBinding()]
+    [OutputType([string])]
+    param(
+        [Parameter(Mandatory = $true)]
+        [System.Management.Automation.ErrorRecord] $ErrorRecord
+    )
+
+    if (-not [string]::IsNullOrWhiteSpace($ErrorRecord.ErrorDetails.Message)) {
+        return $ErrorRecord.ErrorDetails.Message
+    }
+
+    $response = $ErrorRecord.Exception.Response
+    if ($null -eq $response) {
+        return $null
+    }
+
+    if ($null -ne $response.PSObject.Properties['Content'] -and $null -ne $response.Content) {
+        return $response.Content.ReadAsStringAsync().GetAwaiter().GetResult()
+    }
+
+    if ($null -ne $response.PSObject.Methods['GetResponseStream']) {
+        $stream = $response.GetResponseStream()
+        if ($null -ne $stream) {
+            $reader = [System.IO.StreamReader]::new($stream)
+            try {
+                return $reader.ReadToEnd()
+            }
+            finally {
+                $reader.Dispose()
+            }
+        }
+    }
+
+    return $null
+}
+
 function Test-WingetPkgsUpstreamReadFailoverStatus {
     [CmdletBinding()]
     [OutputType([bool])]
