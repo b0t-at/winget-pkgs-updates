@@ -45,25 +45,11 @@ ManifestVersion: 1.12.0
         $global:ManifestReadRoot = Join-Path ([IO.Path]::GetTempPath()) "winget-remote-read-test-$([guid]::NewGuid().ToString('N'))"
         New-Item -ItemType Directory -Path $global:ManifestReadRoot -Force | Out-Null
 
-        @'
-PackageIdentifier: Test.BatchReads
-PackageVersion: 2.0.0
-InstallerType: nullsoft
-Installers:
-- Architecture: x64
-  InstallerUrl: https://example.invalid/test-2.0.0.exe
-  InstallerSha256: BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
-ManifestType: installer
-ManifestVersion: 1.12.0
-'@ | Set-Content -LiteralPath (Join-Path $global:ManifestReadRoot 'Test.BatchReads.installer.yaml') -Encoding utf8
+        $localInstallerContent = "PackageIdentifier: Test.BatchReads`r`nPackageVersion: 2.0.0`r`nInstallerType: nullsoft`r`nInstallers:`r`n- Architecture: x64`r`n  InstallerUrl: https://example.invalid/test-2.0.0.exe`r`n  InstallerSha256: BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB`r`nManifestType: installer`r`nManifestVersion: 1.12.0`r`n"
+        [System.IO.File]::WriteAllBytes((Join-Path $global:ManifestReadRoot 'Test.BatchReads.installer.yaml'), [System.Text.Encoding]::UTF8.GetBytes($localInstallerContent))
 
-        @'
-PackageIdentifier: Test.BatchReads
-PackageVersion: 2.0.0
-DefaultLocale: en-US
-ManifestType: version
-ManifestVersion: 1.12.0
-'@ | Set-Content -LiteralPath (Join-Path $global:ManifestReadRoot 'Test.BatchReads.yaml') -Encoding utf8
+        $localVersionContent = "PackageIdentifier: Test.BatchReads`r`nPackageVersion: 2.0.0`r`nDefaultLocale: en-US`r`nManifestType: version`r`nManifestVersion: 1.12.0`r`n"
+        [System.IO.File]::WriteAllBytes((Join-Path $global:ManifestReadRoot 'Test.BatchReads.yaml'), [System.Text.Encoding]::UTF8.GetBytes($localVersionContent))
 
         InModuleScope WingetMaintainerModule {
             Mock Invoke-WebRequest {
