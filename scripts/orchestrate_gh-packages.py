@@ -2,7 +2,6 @@ import os
 import glob
 import json
 import yaml
-from collections import defaultdict
 
 # Paths
 base_dir = os.path.dirname(os.path.abspath(__file__))
@@ -11,21 +10,12 @@ workflows_dir = os.path.join(base_dir, "../.github/workflows")
 template_file = os.path.join(base_dir, "../.github/workflows-templates/github-releases.yml")
 
 # Constants
-batch_size = 250
 workflow_prefix = "update-github-packages-"
 workflow_suffix = ".yml"
 
 # Step 1: Read the monitored file
 with open(monitored_file, "r") as file:
     monitored_data = yaml.safe_load(file)
-
-# Step 2: Split the objects into batches of 250
-batches_dict = defaultdict(list)
-for item in monitored_data:
-    first_char = item['id'][0].lower()  # Group by the first character of 'id'
-    batches_dict[first_char].append(item)
-
-batches = list(batches_dict.values())
 
 # Step 3: Delete existing workflow files
 existing_workflows = glob.glob(os.path.join(workflows_dir, f"{workflow_prefix}*{workflow_suffix}"))
@@ -162,8 +152,9 @@ def apply_test_fork_dispatch(content, workflow_file):
 
 
 def create_workflow_file(chunk, workflows_dir, workflow_prefix, workflow_suffix, template_content, cron_minute, is_dispatch_target):
-    start_char = chunk[0]['id'][0].lower()
-    end_char = chunk[-1]['id'][0].lower()
+    # min/max keeps the slug order-independent of the monitored list.
+    start_char = min(item['id'][0].lower() for item in chunk)
+    end_char = max(item['id'][0].lower() for item in chunk)
     range_slug = f"{start_char}-{end_char}"
 
     # Create a workflow file name with the starting and ending characters
@@ -207,20 +198,12 @@ def create_workflow_file(chunk, workflows_dir, workflow_prefix, workflow_suffix,
     with open(workflow_file, "w") as file:
         file.write(updated_content)
 
-chunks = []
-chunk = []
-for batch_key, batch_items in batches_dict.items():
-    if len(chunk)+len(batch_items) >= batch_size:
-      chunks.append(chunk)
-      chunk = []
-    for item in batch_items:
-        chunk.append(item)
+chunks = [monitored_data]
 
-if chunk:
-  chunks.append(chunk)
-
-# Spread the workflows evenly across the hour (base minute 3). The last chunk
-# is the designated workflow_dispatch target for acknowledged test-fork runs.
+# The check-updates precheck keeps the runtime matrix small (and caps any
+# fail-open fallback at GitHub's 256-job matrix limit), so a single workflow
+# covers all monitored packages. The single chunk is also the designated
+# workflow_dispatch target for acknowledged test-fork runs.
 minute_step = 60 // max(1, len(chunks))
 for index, chunk in enumerate(chunks):
     cron_minute = (3 + index * minute_step) % 60

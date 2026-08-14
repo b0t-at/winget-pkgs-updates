@@ -34,6 +34,17 @@ catch {
     $include = $packages
 }
 
+# GitHub Actions rejects matrices with more than 256 jobs. This mainly guards
+# the fail-open fallback above (full monitored list > 256). The selection is
+# randomized so repeated capped runs rotate coverage across all packages
+# instead of starving the alphabetical tail.
+$maxMatrixJobs = 256
+if (@($include).Count -gt $maxMatrixJobs) {
+    $deferredCount = @($include).Count - $maxMatrixJobs
+    Write-Warning "Include list ($(@($include).Count)) exceeds the $maxMatrixJobs-job matrix limit. Randomly selecting $maxMatrixJobs package(s); $deferredCount deferred to the next scheduled run."
+    $include = @($include | Get-Random -Count $maxMatrixJobs)
+}
+
 $includeJson = ConvertTo-Json -InputObject @($include) -Depth 10 -Compress
 $any = if (@($include).Count -gt 0) { 'true' } else { 'false' }
 
