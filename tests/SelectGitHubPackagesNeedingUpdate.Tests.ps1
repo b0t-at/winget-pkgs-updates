@@ -52,6 +52,27 @@ $result = & $module {
         param([string] $Query)
         $script:queries.Add($Query)
 
+        if ($Query -match 'u\d+: repository') {
+            $data = @{}
+            foreach ($alias in [regex]::Matches($Query, '(u\d+): repository\(owner: "[^"]+", name: "([^"]+)"\)')) {
+                $data[$alias.Groups[1].Value] = switch ($alias.Groups[2].Value) {
+                    'tagged' {
+                        @{ releases = @{ nodes = @(
+                            @{ tagName = 'v2.0.0'; name = 'v2'; isDraft = $false; isPrerelease = $false; publishedAt = '2026-05-01T00:00:00Z' },
+                            @{ tagName = 'v1.9.0'; name = 'v1.9 pre'; isDraft = $false; isPrerelease = $true; publishedAt = '2026-04-20T00:00:00Z' },
+                            @{ tagName = 'v1.4.0'; name = 'v1.4'; isDraft = $false; isPrerelease = $false; publishedAt = '2026-03-01T00:00:00Z' },
+                            @{ tagName = 'v1.5.0'; name = 'v1.5'; isDraft = $false; isPrerelease = $false; publishedAt = '2026-04-01T00:00:00Z' }
+                        ) } }
+                    }
+                    'arpurl' {
+                        @{ latestRelease = @{ tagName = 'v3.2.1'; releaseAssets = @{ nodes = @(@{ downloadUrl = 'https://example.com/3.2.1.exe' }) } } }
+                    }
+                    default { $null }
+                }
+            }
+            return @{ data = $data }
+        }
+
         if ($Query -notmatch 'winget-pkgs') {
             $data = @{}
             foreach ($alias in [regex]::Matches($Query, '(r\d+): repository\(owner: "[^"]+", name: "([^"]+)"\)')) {
@@ -78,6 +99,8 @@ $result = & $module {
                 'NoRelease'  { @(@{ name = '1.0.0'; type = 'tree' }) }
                 'TagSource'  { @(@{ name = '5.0'; type = 'tree' }) }
                 'AliasMatch' { @(@{ name = '1.2.0'; type = 'tree' }) }
+                'Tagged'     { @(@{ name = '1.5.0'; type = 'tree' }) }
+                'ArpUrl'     { @(@{ name = '1.0.0'; type = 'tree' }) }
                 default      { @() }
             }
             $repoData[$alias.Groups[1].Value] = if ($null -eq $entries) { $null } else { @{ entries = $entries } }
@@ -98,14 +121,14 @@ Assert-Equal 'Skipped:AlreadyPublished' (Get-ReasonFor $selection 'Vendor.Publis
 Assert-Equal 'Include:NewVersion' (Get-ReasonFor $selection 'Vendor.Outdated') 'new release is included'
 Assert-Equal 'Skipped:PackageMissing' (Get-ReasonFor $selection 'Vendor.Missing') 'package missing from winget-pkgs is skipped'
 Assert-Equal 'Include:NoReleaseFound' (Get-ReasonFor $selection 'Vendor.NoRelease') 'repo without latest release is included'
-Assert-Equal 'Include:UnpredictableVersionSource' (Get-ReasonFor $selection 'Vendor.Tagged') 'tagPattern package is always included'
+Assert-Equal 'Skipped:AlreadyPublished' (Get-ReasonFor $selection 'Vendor.Tagged') 'tagPattern package resolved from the release list is skipped when published'
 Assert-Equal 'Include:UnpredictableVersionSource' (Get-ReasonFor $selection 'Vendor.ArpSource') 'non-Tag versionSource is always included'
 Assert-Equal 'Skipped:AlreadyPublished' (Get-ReasonFor $selection 'Vendor.TagSource') 'versionSource Tag with published RELEASE_ tag is skipped'
-Assert-Equal 'Include:UnpredictableVersionSource' (Get-ReasonFor $selection 'Vendor.ArpUrl') 'ARPVERSION url is always included'
+Assert-Equal 'Include:NewVersion' (Get-ReasonFor $selection 'Vendor.ArpUrl') 'ARPVERSION url resolved from assets is included as a new version'
 Assert-Equal 'Include:UnpredictableVersionSource' (Get-ReasonFor $selection 'Vendor.Override') 'overridePack package is always included'
 Assert-Equal 'Include:InvalidRepoFormat' (Get-ReasonFor $selection 'Vendor.BadRepo') 'invalid repo format is included'
 Assert-Equal 'Skipped:AlreadyPublished' (Get-ReasonFor $selection 'Vendor.AliasMatch') 'numeric alias match counts as published'
-Assert-Equal 2 $result.QueryCount 'one release query and one manifest query for small lists'
+Assert-Equal 3 $result.QueryCount 'one release query, one resolvable query and one manifest query for small lists'
 Assert-Equal 5 ($selection.Include.Count + $selection.Skipped.Count - 6) 'all eleven packages are accounted for'
 
 # 2) Included entries carry the original package objects unmodified.
@@ -347,6 +370,78 @@ $openPrCapped = & $module {
 Assert-Equal 1 $openPrCapped.TesterCalls 'live PR searches stop at MaxOpenPrChecks'
 Assert-Equal 1 $openPrCapped.SkippedCount 'checked candidate with open PR is skipped'
 Assert-Equal 2 $openPrCapped.IncludeCount 'capped candidates are included unchecked'
+
+# 10) Resolvable version sources (tagPattern / ReleaseName / {ARPVERSION}) are
+#     resolved in the precheck; every resolution failure falls back to include.
+$resolved = & $module {
+    $script:queries = [System.Collections.Generic.List[string]]::new()
+
+    $packages = @(
+        @{ id = 'Vendor.NameSource'; repo = 'vendor/namesource'; url = 'https://example.com/{VERSION}.exe'; versionSource = 'ReleaseName' },
+        @{ id = 'Vendor.NameNew'; repo = 'vendor/namenew'; url = 'https://example.com/{VERSION}.exe'; versionSource = 'ReleaseName' },
+        @{ id = 'Vendor.NameEmpty'; repo = 'vendor/nameempty'; url = 'https://example.com/{VERSION}.exe'; versionSource = 'ReleaseName' },
+        @{ id = 'Vendor.NoTagMatch'; repo = 'vendor/notagmatch'; url = 'https://example.com/{VERSION}.exe'; tagPattern = '^release-' },
+        @{ id = 'Vendor.NoAssetMatch'; repo = 'vendor/noassetmatch'; url = 'https://example.com/{ARPVERSION}.msi' },
+        @{ id = 'Vendor.AssetCap'; repo = 'vendor/assetcap'; url = 'https://example.com/{ARPVERSION}.msi' },
+        @{ id = 'Vendor.TagArpCombo'; repo = 'vendor/tagarp'; url = 'https://example.com/{ARPVERSION}.msi'; tagPattern = '^v' },
+        @{ id = 'Vendor.TagWithArp'; repo = 'vendor/tagwitharp'; url = 'https://github.com/x/y/releases/download/{TAG}/setup-{ARPVERSION}-x64.msi' }
+    )
+
+    $invoker = {
+        param([string] $Query)
+        $script:queries.Add($Query)
+
+        if ($Query -match 'u\d+: repository') {
+            $data = @{}
+            foreach ($alias in [regex]::Matches($Query, '(u\d+): repository\(owner: "[^"]+", name: "([^"]+)"\)')) {
+                $data[$alias.Groups[1].Value] = switch ($alias.Groups[2].Value) {
+                    'namesource'   { @{ latestRelease = @{ tagName = 'namesource-2026'; name = ' 7.7.7 ' } } }
+                    'namenew'      { @{ latestRelease = @{ tagName = 'weekly-build'; name = '8.8.8' } } }
+                    'nameempty'    { @{ latestRelease = @{ tagName = 'v1'; name = '   ' } } }
+                    'notagmatch'   { @{ releases = @{ nodes = @(@{ tagName = 'v1.0'; name = 'v1'; isDraft = $false; isPrerelease = $false; publishedAt = '2026-01-01T00:00:00Z' }) } } }
+                    'noassetmatch' { @{ latestRelease = @{ tagName = 'v2.0'; releaseAssets = @{ nodes = @(@{ downloadUrl = 'https://example.com/other.zip' }) } } } }
+                    'assetcap'     { @{ latestRelease = @{ tagName = 'v4.0'; releaseAssets = @{ nodes = @(1..100 | ForEach-Object { @{ downloadUrl = "https://example.com/$_.msi" } }) } } } }
+                    'tagwitharp'   { @{ latestRelease = @{ tagName = 'v9.0'; releaseAssets = @{ nodes = @(@{ downloadUrl = 'https://github.com/x/y/releases/download/v9.0/setup-9.0.1234-x64.msi' }) } } } }
+                    default        { $null }
+                }
+            }
+            return @{ data = $data }
+        }
+
+        $repoData = @{}
+        foreach ($alias in [regex]::Matches($Query, '(p\d+): object\(expression: "master:manifests/[a-z0-9]/Vendor/([^"]+)"\)')) {
+            $entries = switch ($alias.Groups[2].Value) {
+                'NameSource' { @(@{ name = '7.7.7'; type = 'tree' }) }
+                'TagWithArp' { @(@{ name = '9.0.1234'; type = 'tree' }) }
+                default      { @() }
+            }
+            $repoData[$alias.Groups[1].Value] = @{ entries = $entries }
+        }
+        return @{ data = @{ repository = $repoData } }
+    }
+
+    $stateFile = Join-Path ([System.IO.Path]::GetTempPath()) "openpr-resolved-$([guid]::NewGuid()).json"
+    $tester = { param([string] $PackageIdentifier, [string] $Version) $PackageIdentifier -eq 'Vendor.NameNew' -and $Version -eq '8.8.8' }
+
+    $selection = Select-GitHubPackagesNeedingUpdate -Packages $packages -GraphQlInvoker $invoker -StateFilePath $stateFile -OpenPrTester $tester -WarningAction SilentlyContinue
+    Remove-Item -Path $stateFile -Force -ErrorAction SilentlyContinue
+
+    [PSCustomObject]@{
+        Selection         = $selection
+        ResolvableQueries = @($script:queries | Where-Object { $_ -match 'u\d+: repository' })
+        NameSourceVersion = @($selection.Skipped | Where-Object { $_.Package.id -eq 'Vendor.NameSource' })[0].Version
+    }
+}
+Assert-Equal 'Skipped:AlreadyPublished' (Get-ReasonFor $resolved.Selection 'Vendor.NameSource') 'published release name version is skipped'
+Assert-Equal '7.7.7' $resolved.NameSourceVersion 'release name version is trimmed'
+Assert-Equal 'Skipped:OpenPrExists' (Get-ReasonFor $resolved.Selection 'Vendor.NameNew') 'resolved new version participates in the open-PR check'
+Assert-Equal 'Include:UnpredictableVersionSource' (Get-ReasonFor $resolved.Selection 'Vendor.NameEmpty') 'blank release name fails open'
+Assert-Equal 'Include:UnpredictableVersionSource' (Get-ReasonFor $resolved.Selection 'Vendor.NoTagMatch') 'tagPattern without a matching stable release fails open'
+Assert-Equal 'Include:UnpredictableVersionSource' (Get-ReasonFor $resolved.Selection 'Vendor.NoAssetMatch') 'ARPVERSION url without a matching asset fails open'
+Assert-Equal 'Include:UnpredictableVersionSource' (Get-ReasonFor $resolved.Selection 'Vendor.AssetCap') 'a full asset page fails open against truncation'
+Assert-Equal 'Include:UnpredictableVersionSource' (Get-ReasonFor $resolved.Selection 'Vendor.TagArpCombo') 'tagPattern plus ARPVERSION combination is not resolved'
+Assert-Equal 'Skipped:AlreadyPublished' (Get-ReasonFor $resolved.Selection 'Vendor.TagWithArp') 'published ARPVERSION asset version is skipped'
+Assert-Equal $false ($resolved.ResolvableQueries -join ' ' -match 'tagarp') 'unsupported combination is never queried'
 
 if ($script:failures -gt 0) {
     Write-Host "$script:failures assertion(s) failed."
