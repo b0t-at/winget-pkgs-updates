@@ -498,16 +498,16 @@
     "lastUpdated": "2026-06-30T06:01:23.7315361Z"
   },
   "eksctl.eksctl": {
-    "manifestHash": "F5DF51169D128FCEDF3DAB8F8B97FDC2506D0FD87522B3B06F730DBECC2194AA",
-    "validationCount": 1,
-    "version": "0.229.0",
+    "lastUpdated": "2026-08-14T20:30:13.6147174Z",
+    "version": "0.230.0",
     "description": "",
-    "lastUpdated": "2026-07-02T01:50:08.3242888Z",
+    "validationCount": 1,
+    "manifestHash": "116C12B57D2CE5356229C48037929635266951CBAE1CD572795660B7978531F8",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "7E5387D8AE8346F51448ADA616950AF3047714A83BEE6611070181E3C47F6DC0",
-      "D8F28428106AF1D6851226A5A05D122595EA5A4AB9C2CE33126607C0C49DC016"
-    ],
-    "state": "VALIDATION_PASSED"
+      "D50171918A7E9B16C5799C94543C8C71EF08F990098CA5C3A28FCEC78EA3B8EE",
+      "C26D5EA967BE9785FE907F2CA9D9897E5C38D482281C085E83D7024F7FB71842"
+    ]
   },
   "electerm.electerm": {
     "lastUpdated": "2026-08-06T10:56:40.3920689Z",
@@ -1123,15 +1123,13 @@
     ]
   },
   "KeeperSecurity.Commander": {
-    "installerHashes": [
-      "67889DAE4A00B3F76F622B5E598514E50ACA328BE501735A95EBBEB60038C3AC"
-    ],
+    "description": "",
+    "installerHashes": "407E11B5BEF944868783DB8AC7419284578E526ABE33446D8DF2201032766221",
+    "lastUpdated": "2026-08-14T20:30:13.6260468Z",
+    "manifestHash": "1B7D562145110A2AB4483E50909945476B8ED7491B1F57E8408A373E465946E7",
     "state": "VALIDATION_PASSED",
-    "version": "18.1.0",
-    "manifestHash": "3EC083D8919F19CC7A69AD8D85001DE66C55EF23B07034B72197EEDA97F14C35",
     "validationCount": 1,
-    "lastUpdated": "2026-08-14T09:49:55.9910006Z",
-    "description": ""
+    "version": "18.1.1"
   },
   "Kitware.CMake": {
     "manifestHash": "121F8FD3EA060F3AEA761D3226125FB10283F447EF7DF408C2300D9760816B01",
@@ -2176,15 +2174,15 @@
     "version": "1.12.0"
   },
   "TeXstudio.TeXstudio": {
-    "version": "4.9.5",
-    "lastUpdated": "2026-06-06T10:27:14.6500845Z",
-    "installerHashes": [
-      "618C633E1AD6D9ABA90FF8C4498D265B2CBFB6D02173D4577CA8BA3C989CC1E4"
-    ],
-    "manifestHash": "7603F1823BD9AD5613A97E9D91B40E8D3805976A42CD373CDBF032636746A3EE",
-    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-14T20:30:13.5676463Z",
+    "version": "4.9.7",
+    "description": "",
     "validationCount": 1,
-    "description": ""
+    "manifestHash": "1AECD37026A1101F911D094242BF7F3E004C41A79B5CE99D90BFB1C52DCA4244",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "B536C57E657FFF7A15D5A5D5A081F5562874A50D1C201C9B374DD898CEFC1F74"
+    ]
   },
   "ThePyzoteam.pyzo": {
     "state": "VALIDATION_PASSED",
@@ -2379,15 +2377,15 @@
     ]
   },
   "Yaak.app": {
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "7E9DBBF148E6430667C3D1685BFA268D90FC300F3A6A8DBC1573BB9FB1247148",
-    "installerHashes": [
-      "29A9CB37473C3A0DE234F8AF4130B02F85537F17AC4B411BAFC08411F1555F9F"
-    ],
+    "lastUpdated": "2026-08-14T20:30:13.6035935Z",
+    "version": "2026.6.0",
     "description": "",
-    "validationCount": 4,
-    "version": "2026.5.0",
-    "lastUpdated": "2026-08-05T07:49:49.3251948Z"
+    "validationCount": 1,
+    "manifestHash": "D598859F1C81B76FEE5977A071DBED0CA8872CD420348FA341ED5304185E93AA",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "8AE03DB3915F8DA8B1030812F4D2B5233B0B4DEB3C28482DCD7A8FE73A3B0BD7"
+    ]
   },
   "Yubico.Authenticator": {
     "installerHashes": [
