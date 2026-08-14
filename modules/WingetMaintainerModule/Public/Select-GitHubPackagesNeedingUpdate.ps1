@@ -95,6 +95,93 @@ function Get-WingetPrecheckPackageField {
     return [string]$value
 }
 
+function Resolve-WingetPrecheckReleaseVersion {
+    <#
+    .SYNOPSIS
+        Resolves a package's pending version from release metadata.
+
+    .DESCRIPTION
+        Mirrors the full update job's version resolution (Get-LatestGHVersionTag
+        + Get-LatestARPVersion) using a single package-scoped GraphQL response:
+        tagPattern packages pick the newest stable release whose tag matches,
+        versionSource=ReleaseName uses the release name, {ARPVERSION} URLs derive
+        the version from asset download URLs, everything else strips known tag
+        prefixes. Returns $null whenever resolution is not possible so callers
+        can fail open and include the package.
+    #>
+    param(
+        [Parameter(Mandatory = $true)] $Package,
+        [Parameter()] $Repository
+    )
+
+    $url = Get-WingetPrecheckPackageField -Package $Package -Name 'url'
+    $tagPattern = Get-WingetPrecheckPackageField -Package $Package -Name 'tagPattern'
+    $versionSource = Get-WingetPrecheckPackageField -Package $Package -Name 'versionSource'
+
+    $release = $null
+    if (-not [string]::IsNullOrWhiteSpace($tagPattern)) {
+        $releasesValue = Get-WingetGraphQlFieldValue -InputObject (Get-WingetGraphQlFieldValue -InputObject $Repository -Name 'releases') -Name 'nodes'
+        $releaseNodes = if ($null -eq $releasesValue) { @() } else { @($releasesValue) }
+        # Same selection as Get-LatestGHVersionTag: stable releases whose tag
+        # matches the pattern, newest publish date first.
+        $matching = @($releaseNodes |
+                Where-Object {
+                    $null -ne $_ -and
+                    -not [bool](Get-WingetGraphQlFieldValue -InputObject $_ -Name 'isDraft') -and
+                    -not [bool](Get-WingetGraphQlFieldValue -InputObject $_ -Name 'isPrerelease') -and
+                    "$(Get-WingetGraphQlFieldValue -InputObject $_ -Name 'tagName')" -match $tagPattern
+                } |
+                Sort-Object -Property @{ Expression = { "$(Get-WingetGraphQlFieldValue -InputObject $_ -Name 'publishedAt')" } } -Descending)
+        if ($matching.Count -gt 0) {
+            $release = $matching[0]
+        }
+    }
+    else {
+        # latestRelease already excludes drafts and prereleases, matching the
+        # full job's isLatest selection.
+        $release = Get-WingetGraphQlFieldValue -InputObject $Repository -Name 'latestRelease'
+    }
+
+    if ($null -eq $release) {
+        return $null
+    }
+
+    $tag = [string](Get-WingetGraphQlFieldValue -InputObject $release -Name 'tagName')
+    if ([string]::IsNullOrWhiteSpace($tag)) {
+        return $null
+    }
+
+    if ($versionSource -eq 'ReleaseName') {
+        $releaseName = [string](Get-WingetGraphQlFieldValue -InputObject $release -Name 'name')
+        if ([string]::IsNullOrWhiteSpace($releaseName)) {
+            return $null
+        }
+        return $releaseName.Trim()
+    }
+
+    if ($url -match '\{ARPVERSION\}') {
+        $assetsValue = Get-WingetGraphQlFieldValue -InputObject (Get-WingetGraphQlFieldValue -InputObject $release -Name 'releaseAssets') -Name 'nodes'
+        $assetNodes = if ($null -eq $assetsValue) { @() } else { @($assetsValue) }
+        # A full first page could mean truncated results; fail open then.
+        if ($assetNodes.Count -eq 0 -or $assetNodes.Count -ge 100) {
+            return $null
+        }
+        # Same URL-derived regexes as Get-LatestARPVersion.
+        $assetRegexes = @($url.Split(' ') -replace '{ARPVERSION}', '(.+?)' -replace '{TAG}', [Regex]::Escape($tag))
+        foreach ($assetNode in $assetNodes) {
+            $downloadUrl = [string](Get-WingetGraphQlFieldValue -InputObject $assetNode -Name 'downloadUrl')
+            foreach ($assetRegex in $assetRegexes) {
+                if ($downloadUrl -match $assetRegex) {
+                    return $matches[1]
+                }
+            }
+        }
+        return $null
+    }
+
+    return Remove-GHTagPrefixes -Tag $tag
+}
+
 function Select-GitHubPackagesNeedingUpdate {
     <#
     .SYNOPSIS
@@ -103,7 +190,10 @@ function Select-GitHubPackagesNeedingUpdate {
     .DESCRIPTION
         Uses batched GraphQL queries (instead of one REST round-trip per package)
         to read every repository's latest release tag and every package's published
-        winget-pkgs versions, then compares them. Packages whose latest release is
+        winget-pkgs versions, then compares them. Packages whose version needs
+        more than the latest tag (tagPattern, versionSource=ReleaseName,
+        {ARPVERSION} URLs) are resolved from release metadata in an extra
+        batched query. Packages whose latest release is
         already published are skipped; every ambiguous case is included so a
         precheck miss can never suppress a real update (fail-open).
 
@@ -160,6 +250,7 @@ function Select-GitHubPackagesNeedingUpdate {
     $include = [System.Collections.Generic.List[object]]::new()
     $skipped = [System.Collections.Generic.List[object]]::new()
     $comparable = [System.Collections.Generic.List[object]]::new()
+    $resolvable = [System.Collections.Generic.List[object]]::new()
 
     foreach ($package in $Packages) {
         $packageId = Get-WingetPrecheckPackageField -Package $package -Name 'id'
@@ -176,9 +267,19 @@ function Select-GitHubPackagesNeedingUpdate {
             (-not [string]::IsNullOrWhiteSpace($versionSource) -and $versionSource -ne 'Tag') -or
             -not [string]::IsNullOrWhiteSpace($overridePack) -or
             $url -match '\{ARPVERSION\}') {
-            # Version determination goes beyond "latest release tag", so the
-            # cheap precheck cannot predict it. Always run the full job.
-            $include.Add([PSCustomObject]@{ Package = $package; Reason = 'UnpredictableVersionSource' })
+            # Version determination goes beyond "latest release tag". Most such
+            # cases can still be resolved here from release metadata (release
+            # name, asset URLs, tag pattern); the rest always run the full job.
+            $isResolvable = [string]::IsNullOrWhiteSpace($overridePack) -and
+                ([string]::IsNullOrWhiteSpace($versionSource) -or $versionSource -in @('Tag', 'ReleaseName')) -and
+                $repo -match '^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$' -and
+                -not (-not [string]::IsNullOrWhiteSpace($tagPattern) -and $url -match '\{ARPVERSION\}')
+            if ($isResolvable) {
+                $resolvable.Add($package)
+            }
+            else {
+                $include.Add([PSCustomObject]@{ Package = $package; Reason = 'UnpredictableVersionSource' })
+            }
         }
         elseif ($repo -notmatch '^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$') {
             $include.Add([PSCustomObject]@{ Package = $package; Reason = 'InvalidRepoFormat' })
@@ -188,7 +289,7 @@ function Select-GitHubPackagesNeedingUpdate {
         }
     }
 
-    if ($comparable.Count -eq 0) {
+    if ($comparable.Count -eq 0 -and $resolvable.Count -eq 0) {
         return [PSCustomObject]@{ Include = @($include); Skipped = @($skipped) }
     }
 
@@ -213,35 +314,10 @@ function Select-GitHubPackagesNeedingUpdate {
         }
     }
 
-    # Pass 2: published versions per package from microsoft/winget-pkgs, batched
-    # as multiple object() fields under a single repository field.
-    $publishedEntriesByPackageId = @{}
-    $comparableArray = @($comparable)
-    for ($offset = 0; $offset -lt $comparableArray.Count; $offset += $BatchSize) {
-        $packageSlice = @($comparableArray[$offset..([Math]::Min($offset + $BatchSize, $comparableArray.Count) - 1)])
-        $fields = for ($i = 0; $i -lt $packageSlice.Count; $i++) {
-            $packageId = Get-WingetPrecheckPackageField -Package $packageSlice[$i] -Name 'id'
-            $expression = 'master:' + (Get-WingetPackageRelativePath -PackageIdentifier $packageId)
-            "p$($i): object(expression: $(ConvertTo-WingetGraphQlStringLiteral -Value $expression)) { ... on Tree { entries { name type } } }"
-        }
-        $query = "query {`n  repository(owner: `"microsoft`", name: `"winget-pkgs`") {`n" +
-            (($fields | ForEach-Object { "    $_" }) -join "`n") +
-            "`n  }`n}"
-        $response = & $GraphQlInvoker $query
-        $data = Get-WingetGraphQlFieldValue -InputObject $response -Name 'data'
-        $repository = Get-WingetGraphQlFieldValue -InputObject $data -Name 'repository'
-        if ($null -eq $repository) {
-            throw 'GitHub GraphQL update precheck could not read microsoft/winget-pkgs.'
-        }
-
-        for ($i = 0; $i -lt $packageSlice.Count; $i++) {
-            $packageId = Get-WingetPrecheckPackageField -Package $packageSlice[$i] -Name 'id'
-            $publishedEntriesByPackageId[$packageId] = Get-WingetGraphQlFieldValue -InputObject $repository -Name "p$i"
-        }
-    }
-
-    foreach ($package in $comparableArray) {
-        $packageId = Get-WingetPrecheckPackageField -Package $package -Name 'id'
+    # Candidates carry a package plus its resolved pending version; they feed
+    # the published-version comparison and the open-PR check below.
+    $candidates = [System.Collections.Generic.List[object]]::new()
+    foreach ($package in @($comparable)) {
         $repo = Get-WingetPrecheckPackageField -Package $package -Name 'repo'
 
         $latestTag = [string]$latestTagByRepo[$repo]
@@ -255,6 +331,83 @@ function Select-GitHubPackagesNeedingUpdate {
             $include.Add([PSCustomObject]@{ Package = $package; Reason = 'NoReleaseFound' })
             continue
         }
+
+        $candidates.Add([PSCustomObject]@{ Package = $package; Version = $version })
+    }
+
+    # Pass 1b: resolve versions for packages whose version needs release
+    # metadata beyond the latest tag (tagPattern / ReleaseName / {ARPVERSION}),
+    # batched with one aliased repository field per package. Any resolution
+    # failure includes the package unconditionally (fail-open).
+    $resolvableArray = @($resolvable)
+    for ($offset = 0; $offset -lt $resolvableArray.Count; $offset += $BatchSize) {
+        $packageSlice = @($resolvableArray[$offset..([Math]::Min($offset + $BatchSize, $resolvableArray.Count) - 1)])
+        $fields = for ($i = 0; $i -lt $packageSlice.Count; $i++) {
+            $slicePackage = $packageSlice[$i]
+            $owner, $name = (Get-WingetPrecheckPackageField -Package $slicePackage -Name 'repo').Split('/', 2)
+            $sliceTagPattern = Get-WingetPrecheckPackageField -Package $slicePackage -Name 'tagPattern'
+            $sliceVersionSource = Get-WingetPrecheckPackageField -Package $slicePackage -Name 'versionSource'
+            $sliceUrl = Get-WingetPrecheckPackageField -Package $slicePackage -Name 'url'
+
+            $selection = if (-not [string]::IsNullOrWhiteSpace($sliceTagPattern)) {
+                'releases(first: 50, orderBy: {field: CREATED_AT, direction: DESC}) { nodes { tagName name isDraft isPrerelease publishedAt } }'
+            }
+            else {
+                $releaseFields = 'tagName'
+                if ($sliceVersionSource -eq 'ReleaseName') { $releaseFields += ' name' }
+                if ($sliceUrl -match '\{ARPVERSION\}') { $releaseFields += ' releaseAssets(first: 100) { nodes { downloadUrl } }' }
+                "latestRelease { $releaseFields }"
+            }
+            "u$($i): repository(owner: $(ConvertTo-WingetGraphQlStringLiteral -Value $owner), name: $(ConvertTo-WingetGraphQlStringLiteral -Value $name)) { $selection }"
+        }
+        $query = "query {`n" + (($fields | ForEach-Object { "  $_" }) -join "`n") + "`n}"
+        $response = & $GraphQlInvoker $query
+        $data = Get-WingetGraphQlFieldValue -InputObject $response -Name 'data'
+
+        for ($i = 0; $i -lt $packageSlice.Count; $i++) {
+            $slicePackage = $packageSlice[$i]
+            $repository = Get-WingetGraphQlFieldValue -InputObject $data -Name "u$i"
+            $resolvedVersion = Resolve-WingetPrecheckReleaseVersion -Package $slicePackage -Repository $repository
+            if ([string]::IsNullOrWhiteSpace([string]$resolvedVersion)) {
+                $include.Add([PSCustomObject]@{ Package = $slicePackage; Reason = 'UnpredictableVersionSource' })
+            }
+            else {
+                $candidates.Add([PSCustomObject]@{ Package = $slicePackage; Version = [string]$resolvedVersion })
+            }
+        }
+    }
+
+    # Pass 2: published versions per package from microsoft/winget-pkgs, batched
+    # as multiple object() fields under a single repository field.
+    $publishedEntriesByPackageId = @{}
+    $candidatesArray = @($candidates)
+    for ($offset = 0; $offset -lt $candidatesArray.Count; $offset += $BatchSize) {
+        $candidateSlice = @($candidatesArray[$offset..([Math]::Min($offset + $BatchSize, $candidatesArray.Count) - 1)])
+        $fields = for ($i = 0; $i -lt $candidateSlice.Count; $i++) {
+            $packageId = Get-WingetPrecheckPackageField -Package $candidateSlice[$i].Package -Name 'id'
+            $expression = 'master:' + (Get-WingetPackageRelativePath -PackageIdentifier $packageId)
+            "p$($i): object(expression: $(ConvertTo-WingetGraphQlStringLiteral -Value $expression)) { ... on Tree { entries { name type } } }"
+        }
+        $query = "query {`n  repository(owner: `"microsoft`", name: `"winget-pkgs`") {`n" +
+            (($fields | ForEach-Object { "    $_" }) -join "`n") +
+            "`n  }`n}"
+        $response = & $GraphQlInvoker $query
+        $data = Get-WingetGraphQlFieldValue -InputObject $response -Name 'data'
+        $repository = Get-WingetGraphQlFieldValue -InputObject $data -Name 'repository'
+        if ($null -eq $repository) {
+            throw 'GitHub GraphQL update precheck could not read microsoft/winget-pkgs.'
+        }
+
+        for ($i = 0; $i -lt $candidateSlice.Count; $i++) {
+            $packageId = Get-WingetPrecheckPackageField -Package $candidateSlice[$i].Package -Name 'id'
+            $publishedEntriesByPackageId[$packageId] = Get-WingetGraphQlFieldValue -InputObject $repository -Name "p$i"
+        }
+    }
+
+    foreach ($candidate in $candidatesArray) {
+        $package = $candidate.Package
+        $version = [string]$candidate.Version
+        $packageId = Get-WingetPrecheckPackageField -Package $package -Name 'id'
 
         $treeObject = $publishedEntriesByPackageId[$packageId]
         if ($null -eq $treeObject) {
