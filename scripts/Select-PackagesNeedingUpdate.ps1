@@ -16,7 +16,8 @@ $packages = @($env:MONITORED_PACKAGES | ConvertFrom-Json)
 $include = $packages
 
 try {
-    $result = Select-GitHubPackagesNeedingUpdate -Packages $packages
+    $stateFilePath = Join-Path $PSScriptRoot '..' 'data' 'package-state.json'
+    $result = Select-GitHubPackagesNeedingUpdate -Packages $packages -StateFilePath $stateFilePath
     $include = @($result.Include | ForEach-Object { $_.Package })
 
     $skippedGroups = @($result.Skipped | Group-Object -Property Reason)

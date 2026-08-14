@@ -38,6 +38,11 @@ jobs:
     name: Check for updates
     runs-on: ubuntu-latest
     environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Test' }}
+    concurrency:
+      group: package-state-write
+      cancel-in-progress: false
+    permissions:
+      contents: write
     outputs:
       include: ${{ steps.select.outputs.include }}
       any: ${{ steps.select.outputs.any }}
@@ -46,7 +51,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          persist-credentials: false
+          persist-credentials: true
 
       - name: Select packages needing update
         id: select
@@ -402,6 +407,24 @@ jobs:
               {"id": "CrowdSecurity.CrowdSec", "repo": "crowdsecurity/crowdsec", "url": "https://github.com/crowdsecurity/crowdsec/releases/download/v{VERSION}/crowdsec_{VERSION}.msi"}
             ]
         run: ./scripts/Select-PackagesNeedingUpdate.ps1
+
+      # The precheck caches open-PR markers in the state file; persisting them
+      # is best-effort and must never block the update matrix.
+      - name: Save package state
+        continue-on-error: true
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          Import-Module ./modules/WingetMaintainerModule/WingetMaintainerModule.psd1 -Force
+
+          $stateFile = Join-Path $env:GITHUB_WORKSPACE "data/package-state.json"
+
+          gh auth setup-git
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          Save-PackageState -StateFilePath $stateFile -RepoPath $env:GITHUB_WORKSPACE
 
   # Job 1: Generate manifests
   generate-manifest:

@@ -216,6 +216,138 @@ Assert-Equal 2 $rateLimit.Calls 'RATE_LIMITED response is retried'
 Assert-Equal $true $rateLimit.Ok 'successful retry returns the GraphQL payload'
 Assert-Equal '5' $rateLimit.Sleeps 'retry uses backoff delay'
 
+# 7) Open-PR cache: fresh marker skips, stale/mismatched markers trigger a live
+#    check, tester results are recorded, and tester failures fail open.
+$openPr = & $module {
+    $invoker = {
+        param([string] $Query)
+        if ($Query -notmatch 'winget-pkgs') {
+            $data = @{}
+            foreach ($alias in [regex]::Matches($Query, '(r\d+): repository\(')) {
+                $data[$alias.Groups[1].Value] = @{ latestRelease = @{ tagName = 'v2.0.0' } }
+            }
+            return @{ data = $data }
+        }
+        $repoData = @{}
+        foreach ($alias in [regex]::Matches($Query, '(p\d+): object\(')) {
+            $repoData[$alias.Groups[1].Value] = @{ entries = @(@{ name = '1.0.0'; type = 'tree' }) }
+        }
+        return @{ data = @{ repository = $repoData } }
+    }
+
+    $newPackage = { param([string] $Id) @{ id = $Id; repo = "vendor/$($Id.ToLowerInvariant())"; url = 'https://example.com/{VERSION}.exe' } }
+    $stateFile = Join-Path ([System.IO.Path]::GetTempPath()) "openpr-state-$([guid]::NewGuid()).json"
+
+    # Seed: fresh marker for Vendor.Fresh, expired marker for Vendor.Expired,
+    # version-mismatched marker for Vendor.Mismatch.
+    Set-PackageStateOpenPr -StateFilePath $stateFile -PackageIdentifier 'Vendor.Fresh' -Version '2.0.0'
+    Set-PackageStateOpenPr -StateFilePath $stateFile -PackageIdentifier 'Vendor.Expired' -Version '2.0.0' -CheckedAt ((Get-Date).ToUniversalTime().AddHours(-48))
+    Set-PackageStateOpenPr -StateFilePath $stateFile -PackageIdentifier 'Vendor.Mismatch' -Version '1.5.0'
+
+    $script:testerCalls = [System.Collections.Generic.List[string]]::new()
+    $tester = {
+        param([string] $PackageIdentifier, [string] $Version)
+        $script:testerCalls.Add("$PackageIdentifier@$Version")
+        switch ($PackageIdentifier) {
+            'Vendor.Expired'  { return $true }   # PR still open -> refresh marker
+            'Vendor.Mismatch' { return $false }  # stale marker -> clear
+            'Vendor.PrFound'  { return $true }   # new marker recorded
+            'Vendor.Error'    { throw 'search unavailable' }
+            default           { return $false }
+        }
+    }
+
+    $packages = @(
+        (& $newPackage 'Vendor.Fresh'),
+        (& $newPackage 'Vendor.Expired'),
+        (& $newPackage 'Vendor.Mismatch'),
+        (& $newPackage 'Vendor.PrFound'),
+        (& $newPackage 'Vendor.Error'),
+        (& $newPackage 'Vendor.NoPr')
+    )
+
+    $selection = Select-GitHubPackagesNeedingUpdate -Packages $packages -GraphQlInvoker $invoker -StateFilePath $stateFile -OpenPrTester $tester -WarningAction SilentlyContinue
+
+    $state = Get-PackageState -StateFilePath $stateFile
+    Remove-Item -Path $stateFile -Force -ErrorAction SilentlyContinue
+
+    [PSCustomObject]@{
+        Selection        = $selection
+        TesterCalls      = @($script:testerCalls)
+        FreshMarker      = $state.ContainsKey('Vendor.Fresh')
+        ExpiredVersion   = $state['Vendor.Expired']['openPr']['version']
+        MismatchCleared  = -not $state.ContainsKey('Vendor.Mismatch')
+        PrFoundVersion   = $state['Vendor.PrFound']['openPr']['version']
+        ErrorHasMarker   = $state.ContainsKey('Vendor.Error')
+        NoPrHasMarker    = $state.ContainsKey('Vendor.NoPr')
+    }
+}
+Assert-Equal 'Skipped:OpenPrExists' (Get-ReasonFor $openPr.Selection 'Vendor.Fresh') 'fresh cached open-PR marker skips the package'
+Assert-Equal 'Skipped:OpenPrExists' (Get-ReasonFor $openPr.Selection 'Vendor.Expired') 'expired marker with still-open PR is re-checked and skipped'
+Assert-Equal 'Include:NewVersion' (Get-ReasonFor $openPr.Selection 'Vendor.Mismatch') 'mismatched marker with no open PR is included'
+Assert-Equal 'Skipped:OpenPrExists' (Get-ReasonFor $openPr.Selection 'Vendor.PrFound') 'live check finding an open PR skips the package'
+Assert-Equal 'Include:NewVersion' (Get-ReasonFor $openPr.Selection 'Vendor.Error') 'tester failure fails open and includes the package'
+Assert-Equal 'Include:NewVersion' (Get-ReasonFor $openPr.Selection 'Vendor.NoPr') 'no cached marker and no open PR includes the package'
+Assert-Equal $false ($openPr.TesterCalls -contains 'Vendor.Fresh@2.0.0') 'fresh marker avoids a live PR search'
+Assert-Equal 5 $openPr.TesterCalls.Count 'every non-fresh candidate performs one live PR search'
+Assert-Equal $true $openPr.FreshMarker 'fresh marker is left in place'
+Assert-Equal '2.0.0' $openPr.ExpiredVersion 'refreshed marker keeps the pending version'
+Assert-Equal $true $openPr.MismatchCleared 'stale marker is cleared when no open PR exists'
+Assert-Equal '2.0.0' $openPr.PrFoundVersion 'newly found open PR is recorded in the state file'
+Assert-Equal $false $openPr.ErrorHasMarker 'tester failure records no marker'
+Assert-Equal $false $openPr.NoPrHasMarker 'absent PR records no marker'
+
+# 8) Without a state file path the tester is never consulted.
+$openPrDisabled = & $module {
+    $invoker = {
+        param([string] $Query)
+        if ($Query -notmatch 'winget-pkgs') {
+            return @{ data = @{ r0 = @{ latestRelease = @{ tagName = 'v2.0.0' } } } }
+        }
+        return @{ data = @{ repository = @{ p0 = @{ entries = @(@{ name = '1.0.0'; type = 'tree' }) } } } }
+    }
+    $script:testerCalls = 0
+    $selection = Select-GitHubPackagesNeedingUpdate -Packages @(@{ id = 'Vendor.A'; repo = 'vendor/a'; url = 'https://example.com/{VERSION}.exe' }) -GraphQlInvoker $invoker -OpenPrTester { $script:testerCalls++; $true }
+    [PSCustomObject]@{ Reason = $selection.Include[0].Reason; TesterCalls = $script:testerCalls }
+}
+Assert-Equal 'NewVersion' $openPrDisabled.Reason 'open-PR check is disabled without a state file path'
+Assert-Equal 0 $openPrDisabled.TesterCalls 'tester is not consulted without a state file path'
+
+# 9) MaxOpenPrChecks caps live searches; capped candidates are included.
+$openPrCapped = & $module {
+    $invoker = {
+        param([string] $Query)
+        if ($Query -notmatch 'winget-pkgs') {
+            $data = @{}
+            foreach ($alias in [regex]::Matches($Query, '(r\d+): repository\(')) {
+                $data[$alias.Groups[1].Value] = @{ latestRelease = @{ tagName = 'v2.0.0' } }
+            }
+            return @{ data = $data }
+        }
+        $repoData = @{}
+        foreach ($alias in [regex]::Matches($Query, '(p\d+): object\(')) {
+            $repoData[$alias.Groups[1].Value] = @{ entries = @(@{ name = '1.0.0'; type = 'tree' }) }
+        }
+        return @{ data = @{ repository = $repoData } }
+    }
+
+    $stateFile = Join-Path ([System.IO.Path]::GetTempPath()) "openpr-cap-$([guid]::NewGuid()).json"
+    $script:testerCalls = 0
+    $packages = @(1..3 | ForEach-Object { @{ id = "Vendor.P$_"; repo = "vendor/p$_"; url = 'https://example.com/{VERSION}.exe' } })
+
+    $selection = Select-GitHubPackagesNeedingUpdate -Packages $packages -GraphQlInvoker $invoker -StateFilePath $stateFile -OpenPrTester { $script:testerCalls++; $true } -MaxOpenPrChecks 1
+    Remove-Item -Path $stateFile -Force -ErrorAction SilentlyContinue
+
+    [PSCustomObject]@{
+        TesterCalls  = $script:testerCalls
+        SkippedCount = $selection.Skipped.Count
+        IncludeCount = $selection.Include.Count
+    }
+}
+Assert-Equal 1 $openPrCapped.TesterCalls 'live PR searches stop at MaxOpenPrChecks'
+Assert-Equal 1 $openPrCapped.SkippedCount 'checked candidate with open PR is skipped'
+Assert-Equal 2 $openPrCapped.IncludeCount 'capped candidates are included unchecked'
+
 if ($script:failures -gt 0) {
     Write-Host "$script:failures assertion(s) failed."
     exit 1
