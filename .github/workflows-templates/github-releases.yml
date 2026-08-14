@@ -14,17 +14,44 @@ permissions:
   contents: read
 
 jobs:
+  # Job 0: Batched precheck - skip packages whose latest release is already published
+  check-updates:
+    name: Check for updates
+    runs-on: ubuntu-latest
+    environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Test' }}
+    outputs:
+      include: ${{ steps.select.outputs.include }}
+      any: ${{ steps.select.outputs.any }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Select packages needing update
+        id: select
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
+          WINGET_UPSTREAM_READ_TOKEN: ${{ secrets.WINGET_PAT }}
+          MONITORED_PACKAGES: |
+            # Orchestrator will insert Packages JSON here
+        run: ./scripts/Select-PackagesNeedingUpdate.ps1
+
   # Job 1: Generate manifests
   generate-manifest:
     name: Generate ${{ matrix.id }}
+    needs: check-updates
+    if: needs.check-updates.outputs.any == 'true'
     runs-on: windows-2025
     environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Test' }}
 
     strategy:
       fail-fast: false
+      max-parallel: 8
       matrix:
-        include:
-    # Orchestrator will insert Packages here
+        include: ${{ fromJSON(needs.check-updates.outputs.include) }}
 
     steps:
       - name: Checkout
@@ -793,6 +820,7 @@ jobs:
     name: Notify Failure
     needs:
       [
+        check-updates,
         generate-manifest,
         collect-generated,
         validate-and-test,

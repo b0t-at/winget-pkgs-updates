@@ -24,8 +24,38 @@ $fixedNow = [DateTimeOffset]::Parse('2026-08-05T12:00:00Z')
 $utcNowProvider = { $fixedNow }
 $responseContent = '[{"tag_name":"v1.0.0","prerelease":false,"published_at":"2026-08-01T00:00:00Z","assets":[]}]'
 $cacheDirectory = Join-Path ([System.IO.Path]::GetTempPath()) "winget-api-cache-tests-$([Guid]::NewGuid().ToString('N'))"
+$repositoryRoot = Split-Path -Parent $PSScriptRoot
+$module = Import-Module (Join-Path $repositoryRoot 'modules/WingetMaintainerModule/WingetMaintainerModule.psd1') -Force -PassThru
 
 try {
+    Write-Host 'TEST: winget version lookup uses the shared rate-limit retry helper'
+    $versionLookup = & $module {
+        $script:CapturedMaxAttempts = $null
+        $script:CapturedMaxWaitSeconds = $null
+
+        function Invoke-GitHubApiRequest {
+            param($Uri, $Token, $MaxAttempts, $MaxTotalWaitSeconds)
+
+            $script:CapturedMaxAttempts = $MaxAttempts
+            $script:CapturedMaxWaitSeconds = $MaxTotalWaitSeconds
+            return [PSCustomObject]@{
+                type = 'dir'
+                name = '2.12.0'
+            }
+        }
+
+        $result = Get-WingetPublishedVersionsFromGitHub -PackageIdentifier 'Romanitho.Winget-AutoUpdate'
+        [PSCustomObject]@{
+            Result         = $result
+            MaxAttempts    = $script:CapturedMaxAttempts
+            MaxWaitSeconds = $script:CapturedMaxWaitSeconds
+        }
+    }
+
+    Assert-Equal -Actual $versionLookup.MaxAttempts -Expected 6 -Message 'The winget version lookup did not use the extended retry count.'
+    Assert-Equal -Actual $versionLookup.MaxWaitSeconds -Expected 300 -Message 'The winget version lookup did not use the extended wait budget.'
+    Assert-Equal -Actual $versionLookup.Result.Versions[0] -Expected '2.12.0' -Message 'The winget version lookup did not return the API response.'
+
     Write-Host 'TEST: authenticated GitHub response is fetched once and reused for the UTC day'
     $requests = [System.Collections.Generic.List[int]]::new()
     $authenticatedRequests = [System.Collections.Generic.List[bool]]::new()
@@ -99,6 +129,38 @@ try {
     Assert-Equal -Actual $retryRequests.Count -Expected 2 -Message 'The rate-limited request was not retried.'
     Assert-Equal -Actual $sleepDurations[0] -Expected 5 -Message 'The first backoff delay was incorrect.'
     Assert-Equal -Actual $retryResult[0].tag_name -Expected 'v1.0.0' -Message 'The retry result was incorrect.'
+
+    Write-Host 'TEST: HTTP 429 retries after GitHub retry-after delay'
+    $tooManyRequests = [System.Collections.Generic.List[int]]::new()
+    $retryAfterSleepDurations = [System.Collections.Generic.List[int]]::new()
+    $tooManyRequestsInvoker = {
+        param([hashtable]$Parameters)
+
+        $tooManyRequests.Add(1)
+        if ($tooManyRequests.Count -eq 1) {
+            $exception = [System.Exception]::new('Too many requests')
+            $exception.Data['StatusCode'] = 429
+            $exception.Data['Headers'] = @{ 'Retry-After' = '7' }
+            throw $exception
+        }
+
+        return [PSCustomObject]@{
+            Headers = @{ 'X-RateLimit-Remaining' = '4998' }
+            Content = $responseContent
+        }
+    }
+    $retryAfterSleep = { param([int]$Seconds) $retryAfterSleepDurations.Add($Seconds) }
+
+    $tooManyRequestsResult = @(Invoke-GitHubApiRequest `
+            -Uri 'https://api.github.test/too-many-requests' `
+            -Token 'test-token' `
+            -RequestInvoker $tooManyRequestsInvoker `
+            -Sleep $retryAfterSleep `
+            -UtcNowProvider $utcNowProvider)
+
+    Assert-Equal -Actual $tooManyRequests.Count -Expected 2 -Message 'The HTTP 429 request was not retried.'
+    Assert-Equal -Actual $retryAfterSleepDurations[0] -Expected 7 -Message 'The retry-after delay was not honored.'
+    Assert-Equal -Actual $tooManyRequestsResult[0].tag_name -Expected 'v1.0.0' -Message 'The HTTP 429 retry result was incorrect.'
 
     Write-Host 'TEST: distant rate-limit reset fails with actionable guidance'
     $distantResetInvoker = {

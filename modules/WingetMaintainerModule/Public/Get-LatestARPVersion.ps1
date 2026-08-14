@@ -9,7 +9,9 @@ function Get-LatestARPVersion {
         [string]$VersionSource = 'Tag'
     )
     if ($VersionSource -eq 'ReleaseName') {
-        $release = gh release view --repo $Repo $Tag --json name | ConvertFrom-Json
+        $release = Invoke-GhCliWithRetry -OperationName "gh release view $Tag for $Repo" -ScriptBlock {
+            gh release view --repo $Repo $Tag --json name
+        } | ConvertFrom-Json
         if ([string]::IsNullOrWhiteSpace($release.name)) {
             throw "No release name found for tag $Tag in repo $Repo"
         }
@@ -20,7 +22,9 @@ function Get-LatestARPVersion {
     $splittedGHURLs = $GHURLs.split(" ")
     # If the GHURLs contain {ARPVERSION}, find the ARP version from the asset links via regex
     if ( $splittedGHURLs -match "{ARPVERSION}") {
-        $latestRelease = gh release view --repo $Repo $Tag --json assets | ConvertFrom-Json
+        $latestRelease = Invoke-GhCliWithRetry -OperationName "gh release view $Tag assets for $Repo" -ScriptBlock {
+            gh release view --repo $Repo $Tag --json assets
+        } | ConvertFrom-Json
 
         # Build the regex pattern from GHURLs, capturing the ARP version
         $regexURLS = $splittedGHURLs -replace "{ARPVERSION}", "(.+?)" -replace "{TAG}", [Regex]::Escape($Tag)

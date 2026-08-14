@@ -5,7 +5,9 @@ function Get-LatestGHVersionTag {
     )
 
 
-    $releases = gh release list --repo $Repo --json "name,tagName,publishedAt,isLatest,isPrerelease" | ConvertFrom-Json | Where-Object { $_.isPrerelease -eq $false }
+    $releases = Invoke-GhCliWithRetry -OperationName "gh release list for $Repo" -ScriptBlock {
+        gh release list --repo $Repo --json "name,tagName,publishedAt,isLatest,isPrerelease"
+    } | ConvertFrom-Json | Where-Object { $_.isPrerelease -eq $false }
     if ($TagPattern) {
         $releases = $releases | Where-Object { $_.tagName -match $TagPattern }
         $latestRelease = $releases | Sort-Object -Property publishedAt -Descending | Select-Object -First 1
@@ -19,7 +21,9 @@ function Get-LatestGHVersionTag {
     # Query the dedicated releases/latest endpoint as a backup.
     if (-not $latestVersionTag -and -not $TagPattern) {
         try {
-            $latestApi = gh api "repos/$Repo/releases/latest" 2>$null | ConvertFrom-Json
+            $latestApi = Invoke-GhCliWithRetry -OperationName "gh api releases/latest for $Repo" -WarningAction SilentlyContinue -ScriptBlock {
+                gh api "repos/$Repo/releases/latest"
+            } | ConvertFrom-Json
             if ($latestApi.tag_name) {
                 $latestVersionTag = $latestApi.tag_name
             }

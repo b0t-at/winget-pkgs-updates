@@ -1,0 +1,1116 @@
+name: GH Packages 1-R
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "3 0/4 * * *" # every 4 hours
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows-templates/github-releases.yml
+
+permissions:
+  contents: read
+
+# Do not overlap runs of this workflow.
+concurrency:
+  group: update-github-packages-1-r
+  cancel-in-progress: false
+
+jobs:
+  # Job 0: Batched precheck - skip packages whose latest release is already published
+  check-updates:
+    name: Check for updates
+    runs-on: ubuntu-latest
+    environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Test' }}
+    outputs:
+      include: ${{ steps.select.outputs.include }}
+      any: ${{ steps.select.outputs.any }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Select packages needing update
+        id: select
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
+          WINGET_UPSTREAM_READ_TOKEN: ${{ secrets.WINGET_PAT }}
+          MONITORED_PACKAGES: |
+            [
+              {"id": "1zilc.FishingFunds", "repo": "1zilc/fishing-funds", "url": "https://github.com/1zilc/fishing-funds/releases/download/v{VERSION}/Fishing-Funds-Setup-{VERSION}.exe https://github.com/1zilc/fishing-funds/releases/download/v{VERSION}/Fishing-Funds-Setup-{VERSION}.exe"},
+              {"id": "achannarasappa.ticker", "repo": "achannarasappa/ticker", "url": "https://github.com/achannarasappa/ticker/releases/download/v{VERSION}/ticker-{VERSION}-windows-amd64.zip"},
+              {"id": "activescott.lessmsi", "repo": "activescott/lessmsi", "url": "https://github.com/activescott/lessmsi/releases/download/v{VERSION}/lessmsi-v{VERSION}.zip"},
+              {"id": "ActivityWatch.ActivityWatch", "repo": "ActivityWatch/activitywatch", "url": "https://github.com/ActivityWatch/activitywatch/releases/download/v{VERSION}/activitywatch-v{VERSION}-windows-x86_64-setup.exe"},
+              {"id": "AdaLang.Alire", "repo": "alire-project/alire", "url": "https://github.com/alire-project/alire/releases/download/v{VERSION}/alr-{VERSION}-installer-x86_64-windows.exe", "With": "wingetcreate"},
+              {"id": "AdaLang.Alire.Portable", "repo": "alire-project/alire", "url": "https://github.com/alire-project/alire/releases/download/v{VERSION}/alr-{VERSION}-bin-x86_64-windows.zip"},
+              {"id": "Adamant.Messenger", "repo": "Adamant-im/adamant-im", "url": "https://github.com/Adamant-im/adamant-im/releases/download/v{VERSION}/ADAMANT.Messenger.Setup.{VERSION}.exe"},
+              {"id": "AdGuard.AdGuardHome", "repo": "AdguardTeam/AdGuardHome", "url": "https://github.com/AdguardTeam/AdGuardHome/releases/download/v{VERSION}/AdGuardHome_windows_386.zip https://github.com/AdguardTeam/AdGuardHome/releases/download/v{VERSION}/AdGuardHome_windows_amd64.zip https://github.com/AdguardTeam/AdGuardHome/releases/download/v{VERSION}/AdGuardHome_windows_arm64.zip"},
+              {"id": "AdGuard.dnsproxy", "repo": "AdguardTeam/dnsproxy", "url": "https://github.com/AdguardTeam/dnsproxy/releases/download/v{VERSION}/dnsproxy-windows-386-v{VERSION}.zip https://github.com/AdguardTeam/dnsproxy/releases/download/v{VERSION}/dnsproxy-windows-amd64-v{VERSION}.zip https://github.com/AdguardTeam/dnsproxy/releases/download/v{VERSION}/dnsproxy-windows-arm64-v{VERSION}.zip"},
+              {"id": "aimotrens.impulsar", "repo": "aimotrens/impulsar", "url": "https://github.com/aimotrens/impulsar/releases/download/v{VERSION}/impulsar_windows_amd64.zip https://github.com/aimotrens/impulsar/releases/download/v{VERSION}/impulsar_windows_arm64.zip"},
+              {"id": "aislx.FlameLauncher", "repo": "theflames-presence/flame-launcher", "url": "https://github.com/theflames-presence/flame-launcher/releases/download/v{VERSION}/Flame-Launcher.-v{VERSION}.-setup-x64.exe"},
+              {"id": "AllanBoll.FilesRemote", "repo": "allanrbo/filesremote", "url": "https://github.com/allanrbo/filesremote/releases/download/v{VERSION}/filesremote-{VERSION}-Windows-x86_64-static.zip"},
+              {"id": "altair-graphql.altair", "repo": "altair-graphql/altair", "url": "https://github.com/altair-graphql/altair/releases/download/v{VERSION}/altair_{VERSION}_x64_win.exe"},
+              {"id": "AltSnap.AltSnap", "repo": "RamonUnch/AltSnap", "url": "https://github.com/RamonUnch/AltSnap/releases/download/{VERSION}/AltSnap{VERSION}-inst.exe"},
+              {"id": "AMD.OCAT", "repo": "GPUOpen-Tools/ocat", "url": "https://github.com/GPUOpen-Tools/ocat/releases/download/v{VERSION}/OCAT_v{VERSION}.exe"},
+              {"id": "ameshkov.dnslookup", "repo": "ameshkov/dnslookup", "url": "https://github.com/ameshkov/dnslookup/releases/download/v{VERSION}/dnslookup-windows-386-v{VERSION}.zip https://github.com/ameshkov/dnslookup/releases/download/v{VERSION}/dnslookup-windows-amd64-v{VERSION}.zip"},
+              {"id": "AndrewCantino.McFly", "repo": "cantino/mcfly", "url": "https://github.com/cantino/mcfly/releases/download/v{VERSION}/mcfly-v{VERSION}-x86_64-pc-windows-msvc.zip"},
+              {"id": "Anki.Anki", "repo": "ankitects/anki", "url": "https://github.com/ankitects/anki/releases/download/{VERSION}/anki-{VERSION}-win-x64.msi https://github.com/ankitects/anki/releases/download/{VERSION}/anki-{VERSION}-win-arm64.msi"},
+              {"id": "ANTOrg-Inc.ASCIIEngine", "repo": "hdfsyu/ASCIIEngine", "url": "https://github.com/hdfsyu/ASCIIEngine/releases/download/v{VERSION}/ASCIIEngine.msi"},
+              {"id": "AppFlowy.AppFlowy", "repo": "AppFlowy-IO/AppFlowy", "url": "https://github.com/AppFlowy-IO/AppFlowy/releases/download/{VERSION}/AppFlowy-{VERSION}-windows-x86_64.exe"},
+              {"id": "AppiumDevelopers.AppiumInspector", "repo": "appium/appium-inspector", "url": "https://github.com/appium/appium-inspector/releases/download/v{VERSION}/Appium-Inspector-{VERSION}-win-x64.exe"},
+              {"id": "AquaSecurity.Trivy", "repo": "aquasecurity/trivy", "url": "https://github.com/aquasecurity/trivy/releases/download/v{VERSION}/trivy_{VERSION}_windows-64bit.zip"},
+              {"id": "argoproj.argocd", "repo": "argoproj/argo-cd", "url": "https://github.com/argoproj/argo-cd/releases/download/v{VERSION}/argocd-windows-amd64.exe"},
+              {"id": "Aries-Sciences-LLC.AI-Chess", "repo": "Aries-Sciences-LLC/AI-Chess", "url": "https://github.com/Aries-Sciences-LLC/AI-Chess/releases/download/{VERSION}/AI.Chess.Game.Installer.exe"},
+              {"id": "Aserto.DSLoad", "repo": "aserto-dev/ds-load", "url": "https://github.com/aserto-dev/ds-load/releases/download/v{VERSION}/ds-load_{VERSION}_windows_x86_64.zip"},
+              {"id": "ASGARDEXMaintainers.ASGARDEX", "repo": "asgardex/asgardex-desktop", "url": "https://github.com/asgardex/asgardex-desktop/releases/download/v{VERSION}/ASGARDEX-{VERSION}-win.exe"},
+              {"id": "AssetRipper.AssetRipper", "repo": "AssetRipper/AssetRipper", "url": "https://github.com/AssetRipper/AssetRipper/releases/download/{VERSION}/AssetRipper_win_x64.zip"},
+              {"id": "Avidemux.Avidemux", "repo": "mean00/avidemux2", "url": "https://github.com/mean00/avidemux2/releases/download/{VERSION}/avidemux_{VERSION}_win64.exe"},
+              {"id": "AVRDudes.AVRDUDE", "repo": "avrdudes/avrdude", "url": "https://github.com/avrdudes/avrdude/releases/download/v{VERSION}/avrdude-v{VERSION}-windows-x86.zip https://github.com/avrdudes/avrdude/releases/download/v{VERSION}/avrdude-v{VERSION}-windows-x64.zip https://github.com/avrdudes/avrdude/releases/download/v{VERSION}/avrdude-v{VERSION}-windows-arm64.zip"},
+              {"id": "badboy.mdbook-mermaid", "repo": "badboy/mdbook-mermaid", "url": "https://github.com/badboy/mdbook-mermaid/releases/download/v{VERSION}/mdbook-mermaid-v{VERSION}-x86_64-pc-windows-msvc.zip"},
+              {"id": "Baulk.Baulk", "repo": "baulk/baulk", "url": "https://github.com/baulk/baulk/releases/download/v{VERSION}/BaulkSetup-arm64.exe https://github.com/baulk/baulk/releases/download/v{VERSION}/BaulkSetup-x64.exe https://github.com/baulk/baulk/releases/download/v{VERSION}/BaulkUserSetup-arm64.exe https://github.com/baulk/baulk/releases/download/v{VERSION}/BaulkUserSetup-x64.exe"},
+              {"id": "bcssov.IronyModManager", "repo": "bcssov/IronyModManager", "url": "https://github.com/bcssov/IronyModManager/releases/download/v{VERSION}/win-x64-setup.zip https://github.com/bcssov/IronyModManager/releases/download/v{VERSION}/win-x64-setup.zip"},
+              {"id": "Benbuck.Finestray", "repo": "benbuck/finestray", "url": "https://github.com/benbuck/finestray/releases/download/v{VERSION}/Finestray-{VERSION}-win64.exe"},
+              {"id": "BenjaminLSR.HandheldCompanion", "repo": "Valkirie/HandheldCompanion", "url": "https://github.com/Valkirie/HandheldCompanion/releases/download/{VERSION}/HandheldCompanion-{VERSION}.exe"},
+              {"id": "bootandy.dust", "repo": "bootandy/dust", "url": "https://github.com/bootandy/dust/releases/download/v{VERSION}/dust-v{VERSION}-i686-pc-windows-gnu.zip https://github.com/bootandy/dust/releases/download/v{VERSION}/dust-v{VERSION}-x86_64-pc-windows-gnu.zip"},
+              {"id": "bornova.numara", "repo": "bornova/numara-calculator", "url": "https://github.com/bornova/numara-calculator/releases/download/v{VERSION}/Numara-{VERSION}-x64.exe"},
+              {"id": "bufbuild.buf", "repo": "bufbuild/buf", "url": "https://github.com/bufbuild/buf/releases/download/v{VERSION}/buf-Windows-x86_64.zip https://github.com/bufbuild/buf/releases/download/v{VERSION}/buf-Windows-arm64.zip"},
+              {"id": "BytecodeAlliance.Wasmtime.Portable", "repo": "bytecodealliance/wasmtime", "url": "https://github.com/bytecodealliance/wasmtime/releases/download/v{VERSION}/wasmtime-v{VERSION}-x86_64-windows.zip"},
+              {"id": "CameronSutter.Plottr", "repo": "cameronsutter/plottr_electron", "url": "https://github.com/cameronsutter/plottr_electron/releases/download/v{VERSION}/Plottr-win-installer-latest.exe|x64"},
+              {"id": "CargoLambda.CargoLambda", "repo": "cargo-lambda/cargo-lambda", "url": "https://github.com/cargo-lambda/cargo-lambda/releases/download/v{VERSION}/cargo-lambda-v{VERSION}.windows-x64.zip"},
+              {"id": "Carvel.ytt", "repo": "carvel-dev/ytt", "url": "https://github.com/carvel-dev/ytt/releases/download/v{VERSION}/ytt-windows-amd64.exe https://github.com/carvel-dev/ytt/releases/download/v{VERSION}/ytt-windows-arm64.exe"},
+              {"id": "CESNET.UltraGrid", "repo": "CESNET/UltraGrid", "url": "https://github.com/CESNET/UltraGrid/releases/download/v{VERSION}/UltraGrid-{VERSION}-win64.zip"},
+              {"id": "CharlesMilette.TranslucentTB", "repo": "TranslucentTB/TranslucentTB", "url": "https://github.com/TranslucentTB/TranslucentTB/releases/download/{VERSION}/bundle.msixbundle https://github.com/TranslucentTB/TranslucentTB/releases/download/{VERSION}/bundle.msixbundle"},
+              {"id": "ChiaNetwork.GUIforChiaBlockchain", "repo": "Chia-Network/chia-blockchain", "url": "https://github.com/Chia-Network/chia-blockchain/releases/download/{VERSION}/ChiaSetup-{VERSION}.exe|x64"},
+              {"id": "chylex.DiscordHistoryTracker", "repo": "chylex/Discord-History-Tracker", "url": "https://github.com/chylex/Discord-History-Tracker/releases/download/v{VERSION}/win-x64.zip"},
+              {"id": "Cilium.CiliumCLI", "repo": "cilium/cilium-cli", "url": "https://github.com/cilium/cilium-cli/releases/download/v{VERSION}/cilium-windows-amd64.zip https://github.com/cilium/cilium-cli/releases/download/v{VERSION}/cilium-windows-arm64.zip"},
+              {"id": "cinnyapp.cinny-desktop", "repo": "cinnyapp/cinny-desktop", "url": "https://github.com/cinnyapp/cinny-desktop/releases/download/v{VERSION}/Cinny_desktop-x86_64.msi"},
+              {"id": "CircleCI.CLI", "repo": "CircleCI-Public/circleci-cli", "url": "https://github.com/CircleCI-Public/circleci-cli/releases/download/v{VERSION}/circleci-cli_{VERSION}_windows_amd64.zip"},
+              {"id": "ciromattia.KCC", "repo": "ciromattia/kcc", "url": "https://github.com/ciromattia/kcc/releases/download/v{VERSION}/KCC_{VERSION}.exe"},
+              {"id": "cobalt-org.cobalt", "repo": "cobalt-org/cobalt.rs", "url": "https://github.com/cobalt-org/cobalt.rs/releases/download/v{VERSION}/cobalt-v{VERSION}-x86_64-pc-windows-msvc.zip"},
+              {"id": "Codectory.AutoActions", "repo": "Codectory/AutoActions", "url": "https://github.com/Codectory/AutoActions/releases/download/{VERSION}/Release_AutoActions_{VERSION}_x86.zip https://github.com/Codectory/AutoActions/releases/download/{VERSION}/Release_AutoActions_{VERSION}_x64.zip"},
+              {"id": "commercialhaskell.stack", "repo": "commercialhaskell/stack", "url": "https://github.com/commercialhaskell/stack/releases/download/v{VERSION}/stack-{VERSION}-windows-x86_64-installer.exe"},
+              {"id": "Commitly.Commitly", "repo": "glconti/commitly-hub", "url": "https://github.com/glconti/commitly-hub/releases/download/v{VERSION}/Commitly-win-Setup.exe"},
+              {"id": "Concourse.Fly", "repo": "concourse/concourse", "url": "https://github.com/concourse/concourse/releases/download/v{VERSION}/fly-{VERSION}-windows-amd64.zip"},
+              {"id": "CoolPlayLin.Installer.LANDrop", "repo": "CoolPlayLin/Windows-Setups", "url": "https://github.com/CoolPlayLin/Windows-Setups/releases/download/v{VERSION}/LANDrop.Setup.ia32.exe https://github.com/CoolPlayLin/Windows-Setups/releases/download/v{VERSION}/LANDrop.Setup.ia32.exe"},
+              {"id": "CorporateClashCrew.ToontownCorporateClash", "repo": "CorporateClash/pyside2-releases", "url": "https://github.com/CorporateClash/pyside2-releases/releases/download/v{VERSION}/installer.exe"},
+              {"id": "craftablescience.VPKEdit", "repo": "craftablescience/VPKEdit", "url": "https://github.com/craftablescience/VPKEdit/releases/download/v{VERSION}/VPKEdit-Windows-Installer-msvc-Release.zip"},
+              {"id": "creativeprojects.resticprofile", "repo": "creativeprojects/resticprofile", "url": "https://github.com/creativeprojects/resticprofile/releases/download/v{VERSION}/resticprofile_{VERSION}_windows_386.zip https://github.com/creativeprojects/resticprofile/releases/download/v{VERSION}/resticprofile_{VERSION}_windows_amd64.zip https://github.com/creativeprojects/resticprofile/releases/download/v{VERSION}/resticprofile_{VERSION}_windows_arm64.zip"},
+              {"id": "cristiano100.roforge", "repo": "cristiano100/roforge", "url": "https://github.com/Cristiano100/roforge/releases/download/v{VERSION}/Roforge.exe"},
+              {"id": "CryptoPro.Chromium-Gost", "repo": "deemru/Chromium-Gost", "url": "https://github.com/deemru/Chromium-Gost/releases/download/{VERSION}/chromium-gost-{VERSION}-windows-386-installer.exe https://github.com/deemru/Chromium-Gost/releases/download/{VERSION}/chromium-gost-{VERSION}-windows-amd64-installer.exe", "allowStructuralRewrite": true},
+              {"id": "CueLang.Cue", "repo": "cue-lang/cue", "url": "https://github.com/cue-lang/cue/releases/download/v{VERSION}/cue_v{VERSION}_windows_amd64.zip https://github.com/cue-lang/cue/releases/download/v{VERSION}/cue_v{VERSION}_windows_arm64.zip"},
+              {"id": "Curiosity.Curiosity", "repo": "curiosity-ai/curiosity-app-win", "url": "https://github.com/curiosity-ai/curiosity-app-win/releases/download/v{VERSION}/Curiosity-Setup-{VERSION}.exe"},
+              {"id": "CrowdSecurity.CrowdSec", "repo": "crowdsecurity/crowdsec", "url": "https://github.com/crowdsecurity/crowdsec/releases/download/v{VERSION}/crowdsec_{VERSION}.msi"},
+              {"id": "dbrgn.tealdeer", "repo": "dbrgn/tealdeer", "url": "https://github.com/dbrgn/tealdeer/releases/download/v{VERSION}/tealdeer-windows-x86_64-msvc.exe"},
+              {"id": "DDEVFoundation.DDEV", "repo": "ddev/ddev", "url": "https://github.com/ddev/ddev/releases/download/v{VERSION}/ddev_windows_amd64_installer.v{VERSION}.exe https://github.com/ddev/ddev/releases/download/v{VERSION}/ddev_windows_arm64_installer.v{VERSION}.exe"},
+              {"id": "Decred.Decrediton", "repo": "decred/decred-binaries", "url": "https://github.com/decred/decred-binaries/releases/download/v{VERSION}/decrediton-windows-amd64-v{VERSION}.exe"},
+              {"id": "deep5050.qikQR", "repo": "deep5050/qikQR", "url": "https://github.com/deep5050/qikQR/releases/download/v{VERSION}/qikqr-{VERSION}.exe"},
+              {"id": "defi.defi", "repo": "BirthdayResearch/defichain-app", "url": "https://github.com/BirthdayResearch/defichain-app/releases/download/v{VERSION}/DeFi-Wallet-Setup-{VERSION}.exe https://github.com/BirthdayResearch/defichain-app/releases/download/v{VERSION}/DeFi-Wallet-Setup-{VERSION}.exe"},
+              {"id": "divVerent.AAAAXY", "repo": "divVerent/aaaaxy", "url": "https://github.com/divVerent/aaaaxy/releases/download/v{VERSION}/aaaaxy-windows-amd64-v{VERSION}.zip https://github.com/divVerent/aaaaxy/releases/download/v{VERSION}/aaaaxy-windows-amd64-v{VERSION}.zip"},
+              {"id": "Docker.DockerCompose", "repo": "docker/compose", "url": "https://github.com/docker/compose/releases/download/v{VERSION}/docker-compose-windows-x86_64.exe https://github.com/docker/compose/releases/download/v{VERSION}/docker-compose-windows-aarch64.exe"},
+              {"id": "DogecoinCoreproject.DogecoinCore", "repo": "dogecoin/dogecoin", "url": "https://github.com/dogecoin/dogecoin/releases/download/v{VERSION}/dogecoin-{VERSION}-win64-setup-unsigned.exe"},
+              {"id": "dprint.dprint", "repo": "dprint/dprint", "url": "https://github.com/dprint/dprint/releases/download/{VERSION}/dprint-x86_64-pc-windows-msvc.zip"},
+              {"id": "DrewNaylor.UXL-Launcher", "repo": "DrewNaylor/UXL-Launcher", "url": "https://github.com/DrewNaylor/UXL-Launcher/releases/download/v{VERSION}/UXL-Launcher_v{VERSION}-Stable.exe"},
+              {"id": "dsymbol.yt-dlp-gui", "repo": "dsymbol/yt-dlp-gui", "url": "https://github.com/dsymbol/yt-dlp-gui/releases/download/{VERSION}/yt-dlp-gui-win64.zip"},
+              {"id": "Dystroy.broot", "repo": "Canop/broot", "url": "https://github.com/Canop/broot/releases/download/v{VERSION}/broot_{VERSION}.zip"},
+              {"id": "eask.cli", "repo": "emacs-eask/cli", "url": "https://github.com/emacs-eask/cli/releases/download/{VERSION}/eask_{VERSION}_win-x64.zip https://github.com/emacs-eask/cli/releases/download/{VERSION}/eask_{VERSION}_win-arm64.zip"},
+              {"id": "EdgeTX.Companion", "repo": "EdgeTX/edgetx", "url": "https://github.com/EdgeTX/edgetx/releases/download/v{VERSION}/edgetx-cpn-win64-v{VERSION}.zip"},
+              {"id": "EditorConfig-Checker.EditorConfig-Checker", "repo": "editorconfig-checker/editorconfig-checker", "url": "https://github.com/editorconfig-checker/editorconfig-checker/releases/download/v{VERSION}/ec-windows-386.zip https://github.com/editorconfig-checker/editorconfig-checker/releases/download/v{VERSION}/ec-windows-amd64.zip https://github.com/editorconfig-checker/editorconfig-checker/releases/download/v{VERSION}/ec-windows-armv6.zip https://github.com/editorconfig-checker/editorconfig-checker/releases/download/v{VERSION}/ec-windows-arm64.zip"},
+              {"id": "eksctl.eksctl", "repo": "eksctl-io/eksctl", "url": "https://github.com/eksctl-io/eksctl/releases/download/v{VERSION}/eksctl_Windows_amd64.zip https://github.com/eksctl-io/eksctl/releases/download/v{VERSION}/eksctl_Windows_arm64.zip"},
+              {"id": "electerm.electerm", "repo": "electerm/electerm", "url": "https://github.com/electerm/electerm/releases/download/v{VERSION}/electerm-{VERSION}-win-x64-installer.exe https://github.com/electerm/electerm/releases/download/v{VERSION}/electerm-{VERSION}-win-x64-installer.exe"},
+              {"id": "ElectronCommunity.ElectronFiddle", "repo": "electron/fiddle", "url": "https://github.com/electron/fiddle/releases/download/v{VERSION}/electron-fiddle-{VERSION}-win32-ia32-setup.exe https://github.com/electron/fiddle/releases/download/v{VERSION}/electron-fiddle-{VERSION}-win32-x64-setup.exe"},
+              {"id": "ente-io.photos-desktop", "repo": "ente-io/photos-desktop", "url": "https://github.com/ente-io/photos-desktop/releases/download/v{VERSION}/ente-{VERSION}.exe|x86 https://github.com/ente-io/photos-desktop/releases/download/v{VERSION}/ente-{VERSION}-x64.exe|x64 https://github.com/ente-io/photos-desktop/releases/download/v{VERSION}/ente-{VERSION}-arm64.exe|arm64", "With": "wingetcreate"},
+              {"id": "Envoy49.go-spotify-cli", "repo": "Envoy49/go-spotify-cli", "url": "https://github.com/Envoy49/go-spotify-cli/releases/download/v{VERSION}/go-spotify-cli_windows_amd64.zip https://github.com/Envoy49/go-spotify-cli/releases/download/v{VERSION}/go-spotify-cli_windows_arm64.zip"},
+              {"id": "EQAditu.AdvancedCombatTracker", "repo": "EQAditu/AdvancedCombatTracker", "url": "https://github.com/EQAditu/AdvancedCombatTracker/releases/download/{VERSION}/ACTv3-Setup.exe"},
+              {"id": "Equicord.Equibop", "repo": "Equicord/Equibop", "url": "https://github.com/Equicord/Equibop/releases/download/v{VERSION}/Equibop-Setup-{VERSION}.exe"},
+              {"id": "erdemkosk.envolve", "repo": "erdemkosk/envolve", "url": "https://github.com/erdemkosk/envolve/releases/download/v{VERSION}/envolve_Windows_i386.zip https://github.com/erdemkosk/envolve/releases/download/v{VERSION}/envolve_Windows_arm64.zip https://github.com/erdemkosk/envolve/releases/download/v{VERSION}/envolve_Windows_x86_64.zip"},
+              {"id": "errata-ai.Vale", "repo": "errata-ai/vale", "url": "https://github.com/errata-ai/vale/releases/download/v{VERSION}/vale_{VERSION}_Windows_64-bit.zip"},
+              {"id": "etcd-io.etcd", "repo": "etcd-io/etcd", "url": "https://github.com/etcd-io/etcd/releases/download/v{VERSION}/etcd-v{VERSION}-windows-amd64.zip", "With": "wingetcreate"},
+              {"id": "EtternaProject.EtternaGame", "repo": "etternagame/etterna", "url": "https://github.com/etternagame/etterna/releases/download/v{VERSION}/Etterna-{VERSION}-win32.exe https://github.com/etternagame/etterna/releases/download/v{VERSION}/Etterna-{VERSION}-win64.exe"},
+              {"id": "Exploitox.GoAwayEdge", "repo": "valnoxy/GoAwayEdge", "url": "https://github.com/valnoxy/GoAwayEdge/releases/download/v{VERSION}/GoAwayEdge.exe"},
+              {"id": "f4exb.sdrangel", "repo": "f4exb/sdrangel", "url": "https://github.com/f4exb/sdrangel/releases/download/v{VERSION}/sdrangel-{VERSION}-win64.exe"},
+              {"id": "Fabio286.antares", "repo": "antares-sql/antares", "url": "https://github.com/antares-sql/antares/releases/download/v{VERSION}/Antares-{VERSION}-win_x64.exe"},
+              {"id": "fairdataihub.SODA-for-SPARC", "repo": "fairdataihub/SODA-for-SPARC", "url": "https://github.com/fairdataihub/SODA-for-SPARC/releases/download/v{VERSION}/soda-for-sparc-{VERSION}-setup.exe|x86"},
+              {"id": "Falcosoft.VSTMidiDriver", "repo": "Falcosoft/vstdriver", "url": "https://github.com/Falcosoft/vstdriver/releases/download/v{VERSION}/vstmididrv.exe"},
+              {"id": "FilenCloud.Filen-cli", "repo": "FilenCloudDienste/filen-cli", "url": "https://github.com/FilenCloudDienste/filen-cli/releases/download/v{VERSION}/filen-cli-v{VERSION}-win-x64.exe"},
+              {"id": "Firstversionist.Polypane", "repo": "firstversionist/polypane", "url": "https://github.com/firstversionist/polypane/releases/download/v{VERSION}/Polypane-Setup-{VERSION}.exe|x86"},
+              {"id": "flawiddsouza.Restfox", "repo": "flawiddsouza/Restfox", "url": "https://github.com/flawiddsouza/Restfox/releases/download/v{VERSION}/Restfox-{VERSION}.Setup.exe"},
+              {"id": "Flowscripter.example-cli", "repo": "flowscripter/example-cli", "url": "https://github.com/flowscripter/example-cli/releases/download/v{VERSION}/example-cli_Windows_x86_64.zip"},
+              {"id": "Fly-io.flyctl", "repo": "superfly/flyctl", "url": "https://github.com/superfly/flyctl/releases/download/v{VERSION}/flyctl_{VERSION}_Windows_x86_64.zip https://github.com/superfly/flyctl/releases/download/v{VERSION}/flyctl_{VERSION}_Windows_arm64.zip"},
+              {"id": "FlyByWireSimulations.FlyByWireSimulationsInstaller", "repo": "flybywiresim/installer", "url": "https://github.com/flybywiresim/installer/releases/download/v{VERSION}/FlyByWire-Installer-{VERSION}-x64.exe"},
+              {"id": "flyingpie.windows-terminal-quake.prerelease", "repo": "flyingpie/windows-terminal-quake", "url": "https://github.com/flyingpie/windows-terminal-quake/releases/download/v{VERSION}/win-x64_self-contained.zip"},
+              {"id": "Forkgram.Forkgram", "repo": "forkgram/tdesktop", "url": "https://github.com/forkgram/tdesktop/releases/download/v{VERSION}/Telegram.zip"},
+              {"id": "FOSSA.FOSSA-cli", "repo": "fossas/fossa-cli", "url": "https://github.com/fossas/fossa-cli/releases/download/v{VERSION}/fossa_{VERSION}_windows_amd64.zip"},
+              {"id": "FrancisBanyikwa.MediaDownloader", "repo": "mhogomchungu/media-downloader", "url": "https://github.com/mhogomchungu/media-downloader/releases/download/{VERSION}/MediaDownloaderQt5-{VERSION}.setup.exe"},
+              {"id": "FrankBijnen.ExifToolGUI", "repo": "FrankBijnen/ExifToolGui", "url": "https://github.com/FrankBijnen/ExifToolGui/releases/download/V{VERSION}/ExifToolGUI.exe|x86 https://github.com/FrankBijnen/ExifToolGui/releases/download/V{VERSION}/ExifToolGUI_X64.exe|x64", "With": "wingetcreate"},
+              {"id": "fselect.fselect", "repo": "jhspetersson/fselect", "url": "https://github.com/jhspetersson/fselect/releases/download/{VERSION}/fselect-x86_64-win.zip"},
+              {"id": "Gardener.gardenctl", "repo": "gardener/gardenctl-v2", "url": "https://github.com/gardener/gardenctl-v2/releases/download/v{VERSION}/gardenctl_v2_windows_amd64.exe"},
+              {"id": "Gardener.gardenlogin", "repo": "gardener/gardenlogin", "url": "https://github.com/gardener/gardenlogin/releases/download/v{VERSION}/gardenlogin_windows_amd64.exe"},
+              {"id": "Gather.Gather", "repo": "gathertown/gather-town-desktop-releases", "url": "https://github.com/gathertown/gather-town-desktop-releases/releases/download/v{VERSION}/Gather-{VERSION}-Setup.exe"},
+              {"id": "GeodeSDK.GeodeCLI", "repo": "geode-sdk/cli", "url": "https://github.com/geode-sdk/cli/releases/download/v{VERSION}/geode-cli-v{VERSION}-win.zip"},
+              {"id": "Geomitron.Bridge", "repo": "Geomitron/Bridge", "url": "https://github.com/Geomitron/Bridge/releases/download/v{VERSION}/Bridge-Setup-{VERSION}.exe"},
+              {"id": "git-cola.git-cola", "repo": "git-cola/git-cola", "url": "https://github.com/git-cola/git-cola/releases/download/v{VERSION}/git-cola-{VERSION}.windows.zip"},
+              {"id": "GiulioSorrentino.wheelofnumfortune.avalonia", "repo": "GiulianoSpaghetti/WheelOfNumFortune.Material", "url": "https://github.com/GiulianoSpaghetti/WheelOfNumFortune.Material/releases/download/0.4/wheelofnumfortune.avalonia-{VERSION}-material-amd64.msi https://github.com/GiulianoSpaghetti/WheelOfNumFortune.Material/releases/download/0.4/wheelofnumfortune.avalonia-{VERSION}-material-arm64.msi"},
+              {"id": "Gleam.Gleam", "repo": "gleam-lang/gleam", "url": "https://github.com/gleam-lang/gleam/releases/download/v{VERSION}/gleam-v{VERSION}-x86_64-pc-windows-msvc.zip"},
+              {"id": "GolangCI.golangci-lint", "repo": "golangci/golangci-lint", "url": "https://github.com/golangci/golangci-lint/releases/download/v{VERSION}/golangci-lint-{VERSION}-windows-386.zip https://github.com/golangci/golangci-lint/releases/download/v{VERSION}/golangci-lint-{VERSION}-windows-amd64.zip https://github.com/golangci/golangci-lint/releases/download/v{VERSION}/golangci-lint-{VERSION}-windows-arm64.zip"},
+              {"id": "Google.FirebaseCLI", "repo": "firebase/firebase-tools", "url": "https://github.com/firebase/firebase-tools/releases/download/v{VERSION}/firebase-tools-win.exe"},
+              {"id": "Google.IAPDesktop", "repo": "GoogleCloudPlatform/iap-desktop", "url": "https://github.com/GoogleCloudPlatform/iap-desktop/releases/download/{VERSION}/IapDesktop.msi"},
+              {"id": "Google.OSVScanner", "repo": "google/osv-scanner", "url": "https://github.com/google/osv-scanner/releases/download/v{VERSION}/osv-scanner_windows_amd64.exe https://github.com/google/osv-scanner/releases/download/v{VERSION}/osv-scanner_windows_arm64.exe"},
+              {"id": "Google.Protobuf", "repo": "protocolbuffers/protobuf", "url": "https://github.com/protocolbuffers/protobuf/releases/download/v{VERSION}/protoc-{VERSION}-win32.zip https://github.com/protocolbuffers/protobuf/releases/download/v{VERSION}/protoc-{VERSION}-win64.zip"},
+              {"id": "Governikus.AusweisApp", "repo": "Governikus/AusweisApp", "url": "https://github.com/Governikus/AusweisApp/releases/download/{VERSION}/AusweisApp-{VERSION}.msi"},
+              {"id": "GoXLR-on-Linux.GoXLR-Utility", "repo": "GoXLR-on-Linux/goxlr-utility", "url": "https://github.com/GoXLR-on-Linux/goxlr-utility/releases/download/v{VERSION}/goxlr-utility-{VERSION}.exe"},
+              {"id": "Gruntwork.cloud-nuke", "repo": "gruntwork-io/cloud-nuke", "url": "https://github.com/gruntwork-io/cloud-nuke/releases/download/v{VERSION}/cloud-nuke_windows_386.exe https://github.com/gruntwork-io/cloud-nuke/releases/download/v{VERSION}/cloud-nuke_windows_amd64.exe"},
+              {"id": "h3poteto.fedistar", "repo": "h3poteto/fedistar", "url": "https://github.com/h3poteto/fedistar/releases/download/v{VERSION}/fedistar_{VERSION}_x64_en-US.msi"},
+              {"id": "h3poteto.whalebird-desktop", "repo": "h3poteto/whalebird-desktop", "url": "https://github.com/h3poteto/whalebird-desktop/releases/download/v{VERSION}/Whalebird-{VERSION}-win-x64.exe https://github.com/h3poteto/whalebird-desktop/releases/download/v{VERSION}/Whalebird-{VERSION}-win-x64.exe"},
+              {"id": "hickford.git-credential-azure", "repo": "hickford/git-credential-azure", "url": "https://github.com/hickford/git-credential-azure/releases/download/v{VERSION}/git-credential-azure_{VERSION}_windows_amd64.zip https://github.com/hickford/git-credential-azure/releases/download/v{VERSION}/git-credential-azure_{VERSION}_windows_arm64.zip"},
+              {"id": "hickford.git-credential-oauth", "repo": "hickford/git-credential-oauth", "url": "https://github.com/hickford/git-credential-oauth/releases/download/v{VERSION}/git-credential-oauth_{VERSION}_windows_386.zip https://github.com/hickford/git-credential-oauth/releases/download/v{VERSION}/git-credential-oauth_{VERSION}_windows_amd64.zip https://github.com/hickford/git-credential-oauth/releases/download/v{VERSION}/git-credential-oauth_{VERSION}_windows_arm64.zip"},
+              {"id": "HiroshibaKazuyuki.VOICEVOX.CPU", "repo": "VOICEVOX/voicevox", "url": "https://github.com/VOICEVOX/voicevox/releases/download/{VERSION}/voicevox-windows-cpu-{VERSION}.zip"},
+              {"id": "hluk.CopyQ", "repo": "hluk/CopyQ", "url": "https://github.com/hluk/CopyQ/releases/download/v{VERSION}/copyq-{VERSION}-setup.exe https://github.com/hluk/CopyQ/releases/download/v{VERSION}/copyq-{VERSION}-setup.exe"},
+              {"id": "hoppscotch.agent", "repo": "hoppscotch/agent-releases", "url": "https://github.com/hoppscotch/agent-releases/releases/download/v{VERSION}/Hoppscotch_Agent_win_x64.msi"},
+              {"id": "hoppscotch.Hoppscotch", "repo": "hoppscotch/releases", "url": "https://github.com/hoppscotch/releases/releases/download/v{VERSION}/Hoppscotch_win_x64.msi"},
+              {"id": "houmain.keymapper", "repo": "houmain/keymapper", "url": "https://github.com/houmain/keymapper/releases/download/{VERSION}/keymapper-{VERSION}-Windows-x86_64.msi"},
+              {"id": "IanWalton.JellyfinMPVShim", "repo": "jellyfin/jellyfin-mpv-shim", "url": "https://github.com/jellyfin/jellyfin-mpv-shim/releases/download/v{VERSION}/jellyfin-mpv-shim_{VERSION}_installer.exe https://github.com/jellyfin/jellyfin-mpv-shim/releases/download/v{VERSION}/jellyfin-mpv-shim_{VERSION}_installer.exe https://github.com/jellyfin/jellyfin-mpv-shim/releases/download/v{VERSION}/jellyfin-mpv-shim_{VERSION}_installer.exe https://github.com/jellyfin/jellyfin-mpv-shim/releases/download/v{VERSION}/jellyfin-mpv-shim_{VERSION}_installer.exe"},
+              {"id": "icsharpcode.ILSpy", "repo": "icsharpcode/ILSpy", "url": "https://github.com/icsharpcode/ILSpy/releases/download/{TAG}/ILSpy_Installer_{ARPVERSION}-x64.msi https://github.com/icsharpcode/ILSpy/releases/download/{TAG}/ILSpy_Installer_{ARPVERSION}-arm64.msi"},
+              {"id": "igoogolx.itun2socks", "repo": "igoogolx/itun2socks", "url": "https://github.com/igoogolx/itun2socks/releases/download/v{VERSION}/itun2socks_{VERSION}_windows_amd64.zip"},
+              {"id": "igoogolx.lux", "repo": "igoogolx/lux", "url": "https://github.com/igoogolx/lux/releases/download/v{VERSION}/lux-{VERSION}-windows-setup.exe"},
+              {"id": "InTheLoop.LoopEmail", "repo": "4thOffice/loopinupdater", "url": "https://github.com/4thOffice/loopinupdater/releases/download/v{VERSION}/Loop-Email-Setup-{VERSION}.exe https://github.com/4thOffice/loopinupdater/releases/download/v{VERSION}/Loop-Email-Setup-{VERSION}.exe"},
+              {"id": "Istio.Istio", "repo": "istio/istio", "url": "https://github.com/istio/istio/releases/download/{VERSION}/istio-{VERSION}-win.zip"},
+              {"id": "Jacalz.Rymdport", "repo": "Jacalz/rymdport", "url": "https://github.com/Jacalz/rymdport/releases/download/v{VERSION}/rymdport-v{VERSION}-windows-x86_64.zip"},
+              {"id": "JackenWu.MSearcher", "repo": "Jacken-Wu/MSearcher", "url": "https://github.com/Jacken-Wu/MSearcher/releases/download/v{VERSION}/MSearcher_setup_{VERSION}_x64.exe"},
+              {"id": "JackieLiu.NotepadsApp", "repo": "0x7c13/Notepads", "url": "https://github.com/0x7c13/Notepads/releases/download/v{VERSION}/Notepads_{VERSION}_x86_x64_arm64.msixbundle https://github.com/0x7c13/Notepads/releases/download/v{VERSION}/Notepads_{VERSION}_x86_x64_arm64.msixbundle https://github.com/0x7c13/Notepads/releases/download/v{VERSION}/Notepads_{VERSION}_x86_x64_arm64.msixbundle"},
+              {"id": "jaegertracing.jaeger", "repo": "jaegertracing/jaeger", "url": "https://github.com/jaegertracing/jaeger/releases/download/v{VERSION}/jaeger-{VERSION}-windows-amd64.zip"},
+              {"id": "JakobHellermann.Atlas", "repo": "jakobhellermann/Atlas", "url": "https://github.com/jakobhellermann/Atlas/releases/download/v{VERSION}/Atlas.msi"},
+              {"id": "JannisX11.Blockbench", "repo": "JannisX11/blockbench", "url": "https://github.com/JannisX11/blockbench/releases/download/v{VERSION}/Blockbench_{VERSION}.exe"},
+              {"id": "JanProchazka.dbgate", "repo": "dbgate/dbgate", "url": "https://github.com/dbgate/dbgate/releases/download/v{VERSION}/dbgate-{VERSION}-win_arm64.exe|arm64 https://github.com/dbgate/dbgate/releases/download/v{VERSION}/dbgate-{VERSION}-win_x64.exe|x64 https://github.com/dbgate/dbgate/releases/download/v{VERSION}/dbgate-{VERSION}-win.exe|x86", "With": "wingetcreate"},
+              {"id": "jdx.mise", "repo": "jdx/mise", "url": "https://github.com/jdx/mise/releases/download/v{VERSION}/mise-v{VERSION}-windows-x64.zip https://github.com/jdx/mise/releases/download/v{VERSION}/mise-v{VERSION}-windows-arm64.zip"},
+              {"id": "Jellyfin.FFmpeg", "repo": "jellyfin/jellyfin-ffmpeg", "url": "https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v{VERSION}/jellyfin-ffmpeg_{VERSION}_portable_win64-clang-gpl.zip|x64 https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v{VERSION}/jellyfin-ffmpeg_{VERSION}_portable_winarm64-clang-gpl.zip|arm64"},
+              {"id": "jendrikseipp.RedNotebook", "repo": "jendrikseipp/rednotebook", "url": "https://github.com/jendrikseipp/rednotebook/releases/download/v{VERSION}/rednotebook-{VERSION}.exe"},
+              {"id": "JGraph.Draw", "repo": "jgraph/drawio-desktop", "url": "https://github.com/jgraph/drawio-desktop/releases/download/v{VERSION}/draw.io-ia32-{VERSION}-windows-32bit-installer.exe|x86 https://github.com/jgraph/drawio-desktop/releases/download/v{VERSION}/draw.io-{VERSION}-windows-installer.exe|x64 https://github.com/jgraph/drawio-desktop/releases/download/v{VERSION}/draw.io-arm64-{VERSION}-windows-arm64-installer.exe|arm64 https://github.com/jgraph/drawio-desktop/releases/download/v{VERSION}/draw.io-ia32-{VERSION}-windows-32bit-no-installer.exe|x86 https://github.com/jgraph/drawio-desktop/releases/download/v{VERSION}/draw.io-{VERSION}-windows-no-installer.exe|x64 https://github.com/jgraph/drawio-desktop/releases/download/v{VERSION}/draw.io-arm64-{VERSION}-windows-arm64-no-installer.exe|arm64", "With": "wingetcreate"},
+              {"id": "jj-vcs.jj", "repo": "jj-vcs/jj", "url": "https://github.com/jj-vcs/jj/releases/download/v{VERSION}/jj-v{VERSION}-x86_64-pc-windows-msvc.zip https://github.com/jj-vcs/jj/releases/download/v{VERSION}/jj-v{VERSION}-aarch64-pc-windows-msvc.zip"},
+              {"id": "JohannesMillan.superProductivity", "repo": "johannesjo/super-productivity", "url": "https://github.com/johannesjo/super-productivity/releases/download/v{VERSION}/Super-Productivity-Setup.exe|x86 https://github.com/johannesjo/super-productivity/releases/download/v{VERSION}/Super-Productivity-Setup-x64.exe|x64 https://github.com/johannesjo/super-productivity/releases/download/v{VERSION}/Super-Productivity-Setup-arm64.exe|arm64", "With": "wingetcreate"},
+              {"id": "JosephFinney.Text-Grab", "repo": "TheJoeFin/Text-Grab", "url": "https://github.com/TheJoeFin/Text-Grab/releases/download/v{VERSION}/Text-Grab.exe"},
+              {"id": "JReleaser.jreleaser", "repo": "jreleaser/jreleaser", "url": "https://github.com/jreleaser/jreleaser/releases/download/v{VERSION}/jreleaser-installer-{VERSION}-windows-x86_64.msi"},
+              {"id": "JustArchiNET.ArchiSteamFarm", "repo": "JustArchiNET/ArchiSteamFarm", "url": "https://github.com/JustArchiNET/ArchiSteamFarm/releases/download/{VERSION}/ASF-win-x64.zip"},
+              {"id": "kangyu-california.PersistentWindows", "repo": "kangyu-california/PersistentWindows", "url": "https://github.com/kangyu-california/PersistentWindows/releases/download/{VERSION}/PersistentWindows{VERSION}.zip"},
+              {"id": "KeeperSecurity.Commander", "repo": "Keeper-Security/Commander", "url": "https://github.com/Keeper-Security/Commander/releases/download/v{VERSION}/keeper-commander-windows-v{VERSION}.exe"},
+              {"id": "Kitware.CMake", "repo": "Kitware/CMake", "url": "https://github.com/Kitware/CMake/releases/download/v{VERSION}/cmake-{VERSION}-windows-i386.msi https://github.com/Kitware/CMake/releases/download/v{VERSION}/cmake-{VERSION}-windows-x86_64.msi https://github.com/Kitware/CMake/releases/download/v{VERSION}/cmake-{VERSION}-windows-arm64.msi https://github.com/Kitware/CMake/releases/download/v{VERSION}/cmake-{VERSION}-windows-i386.zip https://github.com/Kitware/CMake/releases/download/v{VERSION}/cmake-{VERSION}-windows-x86_64.zip https://github.com/Kitware/CMake/releases/download/v{VERSION}/cmake-{VERSION}-windows-arm64.zip"},
+              {"id": "KoalaBear84.OpenDirectoryDownloader", "repo": "KoalaBear84/OpenDirectoryDownloader", "url": "https://github.com/KoalaBear84/OpenDirectoryDownloader/releases/download/v{VERSION}/OpenDirectoryDownloader-{VERSION}-win-x64.zip"},
+              {"id": "kramo.Cartridges", "repo": "kra-mo/cartridges", "url": "https://github.com/kra-mo/cartridges/releases/download/v{VERSION}/Cartridges.Windows.exe https://github.com/kra-mo/cartridges/releases/download/v{VERSION}/Cartridges.Windows.exe"},
+              {"id": "KRTirtho.Spotube", "repo": "KRTirtho/spotube", "url": "https://github.com/KRTirtho/spotube/releases/download/v{VERSION}/Spotube-windows-x86_64-setup.exe https://github.com/KRTirtho/spotube/releases/download/v{VERSION}/Spotube-windows-x86_64-setup.exe"},
+              {"id": "Kubernetes.clusterctl", "repo": "kubernetes-sigs/cluster-api", "url": "https://github.com/kubernetes-sigs/cluster-api/releases/download/v{VERSION}/clusterctl-windows-amd64.exe"},
+              {"id": "kukuruzka165.materialgram", "repo": "kukuruzka165/materialgram", "url": "https://github.com/kukuruzka165/materialgram/releases/download/v{VERSION}/win64_materialgram_v{VERSION}.zip"},
+              {"id": "Lauriethefish.QuestPatcher", "repo": "Lauriethefish/QuestPatcher", "url": "https://github.com/Lauriethefish/QuestPatcher/releases/download/{VERSION}/QuestPatcher-windows.exe https://github.com/Lauriethefish/QuestPatcher/releases/download/{VERSION}/QuestPatcher-windows.exe"},
+              {"id": "LeNgocKhoa.Laragon", "repo": "leokhoa/laragon", "url": "https://github.com/leokhoa/laragon/releases/download/{VERSION}/laragon-wamp.exe"},
+              {"id": "Levminer.Authme", "repo": "Levminer/authme", "url": "https://github.com/Levminer/authme/releases/download/{VERSION}/authme-{VERSION}-windows-x64.msi"},
+              {"id": "liberodark.ODrive", "repo": "liberodark/ODrive", "url": "https://github.com/liberodark/ODrive/releases/download/{VERSION}/OpenDrive.Setup.{VERSION}.exe"},
+              {"id": "LibreCAD.LibreCAD", "repo": "LibreCAD/LibreCAD", "url": "https://github.com/LibreCAD/LibreCAD/releases/download/v{VERSION}/LibreCAD-v{VERSION}.exe|x86 https://github.com/LibreCAD/LibreCAD/releases/download/v{VERSION}/LibreCAD-v{VERSION}-win64.exe|x64", "With": "wingetcreate"},
+              {"id": "LibreHardwareMonitor.LibreHardwareMonitor", "repo": "LibreHardwareMonitor/LibreHardwareMonitor", "url": "https://github.com/LibreHardwareMonitor/LibreHardwareMonitor/releases/download/v{VERSION}/LibreHardwareMonitor-net472.zip"},
+              {"id": "LittleTijn.SpookyView", "repo": "littletijn/spooky-view", "url": "https://github.com/littletijn/spooky-view/releases/download/v{VERSION}/SpookyView_{VERSION}_x64_Installer.msi https://github.com/littletijn/spooky-view/releases/download/v{VERSION}/SpookyView_{VERSION}_x86_Installer.msi https://github.com/littletijn/spooky-view/releases/download/v{VERSION}/SpookyView_{VERSION}_ARM64_Installer.msi https://github.com/littletijn/spooky-view/releases/download/v{VERSION}/SpookyView_{VERSION}_x64_Portable.exe https://github.com/littletijn/spooky-view/releases/download/v{VERSION}/SpookyView_{VERSION}_x86_Portable.exe https://github.com/littletijn/spooky-view/releases/download/v{VERSION}/SpookyView_{VERSION}_ARM64_Portable.exe"},
+              {"id": "LiveKit.LiveKitCLI", "repo": "livekit/livekit-cli", "url": "https://github.com/livekit/livekit-cli/releases/download/v{VERSION}/lk_{VERSION}_windows_arm64.zip https://github.com/livekit/livekit-cli/releases/download/v{VERSION}/lk_{VERSION}_windows_amd64.zip"},
+              {"id": "LocalStack.localstack-cli", "repo": "localstack/localstack-cli", "url": "https://github.com/localstack/localstack-cli/releases/download/v{VERSION}/localstack-cli-{VERSION}-windows-amd64-onefile.zip"},
+              {"id": "loft-sh.vcluster", "repo": "loft-sh/vcluster", "url": "https://github.com/loft-sh/vcluster/releases/download/v{VERSION}/vcluster-windows-amd64.exe"},
+              {"id": "LowLevelDesign.ProcessGovernor", "repo": "lowleveldesign/process-governor", "url": "https://github.com/lowleveldesign/process-governor/releases/download/{VERSION}/procgov.zip"},
+              {"id": "MarceloLvCabral.BrightScriptEmulator", "repo": "lvcabral/brs-desktop", "url": "https://github.com/lvcabral/brs-desktop/releases/download/v{VERSION}/brs-desktop-{VERSION}-windows.exe"},
+              {"id": "marha.VcXsrv", "repo": "marchaesen/vcxsrv", "url": "https://github.com/marchaesen/vcxsrv/releases/download/{VERSION}/vcxsrv-64.{VERSION}.0.installer.exe"},
+              {"id": "Martchus.syncthingctl", "repo": "Martchus/syncthingtray", "url": "https://github.com/Martchus/syncthingtray/releases/download/v{VERSION}/syncthingctl-qt5-{VERSION}-i686-w64-mingw32.exe.zip https://github.com/Martchus/syncthingtray/releases/download/v{VERSION}/syncthingctl-{VERSION}-x86_64-w64-mingw32.exe.zip"},
+              {"id": "Metanorma.Metanorma", "repo": "metanorma/packed-mn", "url": "https://github.com/metanorma/packed-mn/releases/download/v{VERSION}/metanorma-windows-x86_64.zip"},
+              {"id": "MichaelDiCarlo.PostyBirb+", "repo": "mvdicarlo/postybirb-plus", "url": "https://github.com/mvdicarlo/postybirb-plus/releases/download/v{VERSION}/postybirb-plus-setup-{VERSION}.exe"},
+              {"id": "Micronaut.Launch", "repo": "micronaut-projects/micronaut-starter", "url": "https://github.com/micronaut-projects/micronaut-starter/releases/download/v{VERSION}/mn-win-amd64-v{VERSION}.zip"},
+              {"id": "Microsoft.DotNet.UninstallTool", "repo": "dotnet/cli-lab", "url": "https://github.com/dotnet/cli-lab/releases/download/{VERSION}/dotnet-core-uninstall.msi"},
+              {"id": "Microsoft.Ntttcp", "repo": "microsoft/ntttcp", "url": "https://github.com/microsoft/ntttcp/releases/download/v{VERSION}/ntttcp.exe|x64 https://github.com/microsoft/ntttcp/releases/download/v{VERSION}/ntttcp_arm64.exe|arm64", "With": "wingetcreate"},
+              {"id": "Microsoft.PerfView", "repo": "microsoft/perfview", "url": "https://github.com/microsoft/perfview/releases/download/v{VERSION}/PerfView.exe"},
+              {"id": "Microsoft.Sqlcmd", "repo": "microsoft/go-sqlcmd", "url": "https://github.com/microsoft/go-sqlcmd/releases/download/v{VERSION}/sqlcmd-amd64.msi https://github.com/microsoft/go-sqlcmd/releases/download/v{VERSION}/sqlcmd-arm64.msi"},
+              {"id": "MilkShift.GoofCord", "repo": "Milkshiift/GoofCord", "url": "https://github.com/Milkshiift/GoofCord/releases/download/v{VERSION}/GoofCord-Setup-ia32.exe https://github.com/Milkshiift/GoofCord/releases/download/v{VERSION}/GoofCord-Setup-x64.exe https://github.com/Milkshiift/GoofCord/releases/download/v{VERSION}/GoofCord-Setup-arm64.exe"},
+              {"id": "MilkyTracker.MilkyTracker", "repo": "milkytracker/MilkyTracker", "url": "https://github.com/milkytracker/MilkyTracker/releases/download/v{VERSION}/milkytracker-{VERSION}-win32.zip https://github.com/milkytracker/MilkyTracker/releases/download/v{VERSION}/milkytracker-{VERSION}-win64.zip"},
+              {"id": "MinBrowser.Min", "repo": "minbrowser/min", "url": "https://github.com/minbrowser/min/releases/download/v{VERSION}/min-{VERSION}-ia32-setup.exe"},
+              {"id": "mitmproxy.mitmproxy", "repo": "mitmproxy/mitmproxy", "url": "https://downloads.mitmproxy.org/{VERSION}/mitmproxy-{VERSION}-windows-x86_64-installer.exe"},
+              {"id": "Morpheus.Bazarr", "repo": "bazarr/bazarr.github.io", "url": "https://github.com/bazarr/bazarr.github.io/releases/download/v{VERSION}/bazarr.zip"},
+              {"id": "mortenn.BrowserPicker", "repo": "mortenn/BrowserPicker", "url": "https://github.com/mortenn/BrowserPicker/releases/download/v{VERSION}/BrowserPicker.msi"},
+              {"id": "MotionTeam.MotionDesktopApp", "repo": "usemotion/desktopapp", "url": "https://github.com/usemotion/desktopapp/releases/download/{VERSION}/motion.exe"},
+              {"id": "muffinista.before-dawn", "repo": "muffinista/before-dawn", "url": "https://github.com/muffinista/before-dawn/releases/download/v{VERSION}/Before-Dawn-Setup-{VERSION}.exe"},
+              {"id": "MullvadVPN.MullvadVPN", "repo": "mullvad/mullvadvpn-app", "url": "https://github.com/mullvad/mullvadvpn-app/releases/download/{VERSION}/MullvadVPN-{VERSION}_x64.exe https://github.com/mullvad/mullvadvpn-app/releases/download/{VERSION}/MullvadVPN-{VERSION}_arm64.exe", "tagPattern": "^[0-9]"},
+              {"id": "nao1215.gup", "repo": "nao1215/gup", "url": "https://github.com/nao1215/gup/releases/download/v{VERSION}/gup_{VERSION}_windows_386.zip https://github.com/nao1215/gup/releases/download/v{VERSION}/gup_{VERSION}_windows_amd64.zip https://github.com/nao1215/gup/releases/download/v{VERSION}/gup_{VERSION}_windows_arm64.zip"},
+              {"id": "NATSAuthors.CLI", "repo": "nats-io/natscli", "url": "https://github.com/nats-io/natscli/releases/download/v{VERSION}/nats-{VERSION}-windows-386.zip https://github.com/nats-io/natscli/releases/download/v{VERSION}/nats-{VERSION}-windows-amd64.zip https://github.com/nats-io/natscli/releases/download/v{VERSION}/nats-{VERSION}-windows-arm64.zip"},
+              {"id": "Neovim.Neovim", "repo": "neovim/neovim", "url": "https://github.com/neovim/neovim/releases/download/v{VERSION}/nvim-win64.msi https://github.com/neovim/neovim/releases/download/v{VERSION}/nvim-win-arm64.msi"},
+              {"id": "Netmaker.Netmaker", "repo": "gravitl/netmaker", "url": "https://github.com/gravitl/netmaker/releases/download/v{VERSION}/nmctl-windows-amd64.exe"},
+              {"id": "NitrokeyGmbH.Nitropy", "repo": "Nitrokey/pynitrokey", "url": "https://github.com/Nitrokey/pynitrokey/releases/download/v{VERSION}/nitropy-v{VERSION}-x64-windows-installer.msi"},
+              {"id": "nolanderc.glsl_analyzer", "repo": "nolanderc/glsl_analyzer", "url": "https://github.com/nolanderc/glsl_analyzer/releases/download/v{VERSION}/x86_64-windows.zip"},
+              {"id": "nomacs.nomacs", "repo": "nomacs/nomacs", "url": "https://github.com/nomacs/nomacs/releases/download/{VERSION}/nomacs-setup-x64.msi https://github.com/nomacs/nomacs/releases/download/{VERSION}/nomacs-setup-x64.exe https://github.com/nomacs/nomacs/releases/download/{VERSION}/nomacs-setup-x64.exe"},
+              {"id": "nomic.gpt4all", "repo": "nomic-ai/gpt4all", "url": "https://github.com/nomic-ai/gpt4all/releases/download/v{VERSION}/gpt4all-installer-win64-v{VERSION}.exe"},
+              {"id": "obsidianforensics.HindsightGUI", "repo": "obsidianforensics/hindsight", "url": "https://github.com/obsidianforensics/hindsight/releases/download/v{VERSION}/hindsight_gui.exe"},
+              {"id": "Odamex.Odamex", "repo": "odamex/odamex", "url": "https://github.com/odamex/odamex/releases/download/{VERSION}/odamex-win-{VERSION}.exe"},
+              {"id": "OliverSchwendener.ueli", "repo": "oliverschwendener/ueli", "url": "https://github.com/oliverschwendener/ueli/releases/download/v{VERSION}/Ueli-Setup-{VERSION}.exe"},
+              {"id": "Ollama.Ollama", "repo": "ollama/ollama", "url": "https://github.com/ollama/ollama/releases/download/v{VERSION}/OllamaSetup.exe"},
+              {"id": "Olympus.Olympus", "repo": "EverestAPI/Olympus", "url": "https://github.com/EverestAPI/Olympus/releases/download/v{VERSION}/Olympus.exe"},
+              {"id": "Ombrelin.PandocGui", "repo": "Ombrelin/pandoc-gui", "url": "https://github.com/Ombrelin/pandoc-gui/releases/download/v{VERSION}/pandoc-gui-setup.exe"},
+              {"id": "OneKey.OneKey", "repo": "OneKeyHQ/app-monorepo", "url": "https://github.com/OneKeyHQ/app-monorepo/releases/download/v{VERSION}/OneKey-Wallet-{VERSION}-win-x64.exe"},
+              {"id": "Open-Component-Model.ocm-cli", "repo": "open-component-model/ocm", "url": "https://github.com/open-component-model/ocm/releases/download/v{VERSION}/ocm-{VERSION}-windows-amd64.zip https://github.com/open-component-model/ocm/releases/download/v{VERSION}/ocm-{VERSION}-windows-arm64.zip"},
+              {"id": "openpubkey.opkssh", "repo": "openpubkey/opkssh", "url": "https://github.com/openpubkey/opkssh/releases/download/v{VERSION}/opkssh-windows-amd64.exe"},
+              {"id": "OpenTelemetry.Weaver", "repo": "open-telemetry/weaver", "url": "https://github.com/open-telemetry/weaver/releases/download/v{VERSION}/weaver-x86_64-pc-windows-msvc.zip", "allowStructuralRewrite": true},
+              {"id": "OpenTofu.Tofu", "repo": "opentofu/opentofu", "url": "https://github.com/opentofu/opentofu/releases/download/v{VERSION}/tofu_{VERSION}_windows_386.zip https://github.com/opentofu/opentofu/releases/download/v{VERSION}/tofu_{VERSION}_windows_amd64.zip"},
+              {"id": "OramaInteractive.Pixelorama", "repo": "Orama-Interactive/Pixelorama", "url": "https://github.com/Orama-Interactive/Pixelorama/releases/download/v{VERSION}/Pixelorama-Windows-32bit.zip https://github.com/Orama-Interactive/Pixelorama/releases/download/v{VERSION}/Pixelorama-Windows-64bit.zip"},
+              {"id": "orhun.git-cliff", "repo": "orhun/git-cliff", "url": "https://github.com/orhun/git-cliff/releases/download/v{VERSION}/git-cliff-{VERSION}-i686-pc-windows-msvc.zip https://github.com/orhun/git-cliff/releases/download/v{VERSION}/git-cliff-{VERSION}-x86_64-pc-windows-gnu.zip https://github.com/orhun/git-cliff/releases/download/v{VERSION}/git-cliff-{VERSION}-aarch64-pc-windows-msvc.zip"},
+              {"id": "ossia.score", "repo": "ossia/score", "url": "https://github.com/ossia/score/releases/download/v{VERSION}/ossia.score-{VERSION}-win64.exe"},
+              {"id": "OWASP.ThreatDragon", "repo": "OWASP/threat-dragon", "url": "https://github.com/OWASP/threat-dragon/releases/download/v{VERSION}/Threat-Dragon-ng-Setup-{VERSION}.exe"},
+              {"id": "oxygendioxide.utaformatix", "repo": "oxygen-dioxide/utaformatix-electron", "url": "https://github.com/oxygen-dioxide/utaformatix-electron/releases/download/{VERSION}/UtaFormatix-{VERSION}-win32-x64.exe"},
+              {"id": "P-StSoftware.WinSSHTerm", "repo": "WinSSHTerm/WinSSHTerm", "url": "https://github.com/WinSSHTerm/WinSSHTerm/releases/download/{VERSION}/WinSSHTerm-{VERSION}-x64.msi https://github.com/WinSSHTerm/WinSSHTerm/releases/download/{VERSION}/WinSSHTerm-{VERSION}-x64.msi https://github.com/WinSSHTerm/WinSSHTerm/releases/download/{VERSION}/WinSSHTerm-{VERSION}-arm64.msi https://github.com/WinSSHTerm/WinSSHTerm/releases/download/{VERSION}/WinSSHTerm-{VERSION}-arm64.msi"},
+              {"id": "PasteIntoFile.PasteIntoFile", "repo": "eltos/PasteIntoFile", "url": "https://github.com/eltos/PasteIntoFile/releases/download/v{VERSION}/PasteIntoFile_v{VERSION}_installer_signed.msi"},
+              {"id": "PBH-BTN.PeerBanHelper", "repo": "PBH-BTN/PeerBanHelper", "url": "https://github.com/PBH-BTN/PeerBanHelper/releases/download/v{VERSION}/PeerBanHelper_windows-x64_{VERSION}.exe https://github.com/PBH-BTN/PeerBanHelper/releases/download/v{VERSION}/PeerBanHelper_windows-x64_{VERSION}.exe https://github.com/PBH-BTN/PeerBanHelper/releases/download/v{VERSION}/PeerBanHelper_windows-arm64_{VERSION}.exe https://github.com/PBH-BTN/PeerBanHelper/releases/download/v{VERSION}/PeerBanHelper_windows-arm64_{VERSION}.exe"},
+              {"id": "peanut996.CloudflareWarpSpeedTest", "repo": "peanut996/CloudflareWarpSpeedTest", "url": "https://github.com/peanut996/CloudflareWarpSpeedTest/releases/download/v{VERSION}/CloudflareWarpSpeedTest-v{VERSION}-windows-amd64.zip"},
+              {"id": "PersepolisDownloadManager.Persepolis", "repo": "persepolisdm/persepolis", "url": "https://github.com/persepolisdm/persepolis/releases/download/{VERSION}/persepolis_{VERSION}.0_windows_64bit.exe"},
+              {"id": "Picocrypt-NG.Picocrypt-NG", "repo": "Picocrypt-NG/Picocrypt-NG", "url": "https://github.com/Picocrypt-NG/Picocrypt-NG/releases/download/{VERSION}/Picocrypt-NG-Setup.exe"},
+              {"id": "pinokiocomputer.pinokio", "repo": "pinokiocomputer/pinokio", "url": "https://github.com/pinokiocomputer/pinokio/releases/download/v{VERSION}/Pinokio.exe", "allowStructuralRewrite": true},
+              {"id": "pluveto.Upgit", "repo": "pluveto/upgit", "url": "https://github.com/pluveto/upgit/releases/download/v{VERSION}/upgit_win_386.exe https://github.com/pluveto/upgit/releases/download/v{VERSION}/upgit_win_amd64.exe https://github.com/pluveto/upgit/releases/download/v{VERSION}/upgit_win_arm.exe https://github.com/pluveto/upgit/releases/download/v{VERSION}/upgit_win_arm64.exe"},
+              {"id": "pnpm.pnpm", "repo": "pnpm/pnpm", "url": "https://github.com/pnpm/pnpm/releases/download/v{VERSION}/pnpm-win32-x64.zip https://github.com/pnpm/pnpm/releases/download/v{VERSION}/pnpm-win32-arm64.zip"},
+              {"id": "PocketSync.PocketSync", "repo": "neil-morrison44/pocket-sync", "url": "https://github.com/neil-morrison44/pocket-sync/releases/download/v{VERSION}/Pocket.Sync_{VERSION}_x64-setup.exe"},
+              {"id": "PolarGoose.CoffeeBean", "repo": "PolarGoose/CoffeeBean", "url": "https://github.com/PolarGoose/CoffeeBean/releases/download/v{VERSION}/CoffeeBean.msi"},
+              {"id": "PolarGoose.ShowWhatProcessLocksFile", "repo": "PolarGoose/ShowWhatProcessLocksFile", "url": "https://github.com/PolarGoose/ShowWhatProcessLocksFile/releases/download/v{VERSION}/ShowWhatProcessLocksFile.msi.zip"},
+              {"id": "PolyMC.PolyMC", "repo": "PolyMC/PolyMC", "url": "https://github.com/PolyMC/PolyMC/releases/download/{VERSION}/PolyMC-Windows-Setup-amd64-{VERSION}.exe"},
+              {"id": "Primecount.Primecount", "repo": "kimwalisch/primecount-winget", "url": "https://github.com/kimwalisch/primecount-winget/releases/download/v{VERSION}/Primecount-{VERSION}-win-x64.exe https://github.com/kimwalisch/primecount-winget/releases/download/v{VERSION}/Primecount-{VERSION}-win-arm64.exe"},
+              {"id": "printfn.fend", "repo": "printfn/fend", "url": "https://github.com/printfn/fend/releases/download/v{VERSION}/fend-{VERSION}-windows-x64-exe.zip https://github.com/printfn/fend/releases/download/v{VERSION}/fend-{VERSION}-windows-x64.msi"},
+              {"id": "Prometheus.WindowsExporter", "repo": "prometheus-community/windows_exporter", "url": "https://github.com/prometheus-community/windows_exporter/releases/download/v{VERSION}/windows_exporter-{VERSION}-amd64.exe https://github.com/prometheus-community/windows_exporter/releases/download/v{VERSION}/windows_exporter-{VERSION}-arm64.exe https://github.com/prometheus-community/windows_exporter/releases/download/v{VERSION}/windows_exporter-{VERSION}-amd64.msi https://github.com/prometheus-community/windows_exporter/releases/download/v{VERSION}/windows_exporter-{VERSION}-arm64.msi"},
+              {"id": "Psenix.OverlayTimer", "repo": "Psenix/OverlayTimer", "url": "https://github.com/Psenix/OverlayTimer/releases/download/v{VERSION}/OverlayTimer-Installer.exe"},
+              {"id": "Pulsar-Edit.Pulsar", "repo": "pulsar-edit/pulsar", "url": "https://github.com/pulsar-edit/pulsar/releases/download/v{VERSION}/Windows.Pulsar.Setup.{VERSION}.exe"},
+              {"id": "qarmin.czkawka.cli", "repo": "qarmin/czkawka", "url": "https://github.com/qarmin/czkawka/releases/download/{VERSION}/windows_czkawka_cli.exe"},
+              {"id": "QGIS.QField", "repo": "opengisch/QField", "url": "https://github.com/opengisch/QField/releases/download/v{VERSION}/qfield-v{VERSION}-windows-x64.exe"},
+              {"id": "quotient-im.Quaternion", "repo": "quotient-im/Quaternion", "url": "https://github.com/quotient-im/Quaternion/releases/download/{VERSION}/quaternion-{VERSION}.zip"},
+              {"id": "Radius.Radius", "repo": "radius-project/radius", "url": "https://github.com/radius-project/radius/releases/download/v{VERSION}/rad_windows_amd64.exe"},
+              {"id": "RadolynLabs.AyuGramDesktop", "repo": "AyuGram/AyuGramDesktop", "url": "https://github.com/AyuGram/AyuGramDesktop/releases/download/v{VERSION}/AyuGram.zip"},
+              {"id": "raphamorim.rio", "repo": "raphamorim/rio", "url": "https://github.com/raphamorim/rio/releases/download/v{VERSION}/Rio-installer-x86_64.msi https://github.com/raphamorim/rio/releases/download/v{VERSION}/Rio-installer-aarch64.msi"},
+              {"id": "rejetto.hfs", "repo": "rejetto/hfs", "url": "https://github.com/rejetto/hfs/releases/download/v{VERSION}/hfs-windows-x64-{VERSION}.zip"},
+              {"id": "restic.restic", "repo": "restic/restic", "url": "https://github.com/restic/restic/releases/download/v{VERSION}/restic_{VERSION}_windows_386.zip https://github.com/restic/restic/releases/download/v{VERSION}/restic_{VERSION}_windows_amd64.zip"},
+              {"id": "RivaFarabi.Deckboard", "repo": "rivafarabi/deckboard", "url": "https://github.com/rivafarabi/deckboard/releases/download/v{VERSION}/Deckboard-Setup-{VERSION}.exe|x86|user https://github.com/rivafarabi/deckboard/releases/download/v{VERSION}/Deckboard-Setup-{VERSION}.exe|x86|machine"},
+              {"id": "Romanitho.Winget-AutoUpdate", "repo": "Romanitho/Winget-AutoUpdate", "url": "https://github.com/Romanitho/Winget-AutoUpdate/releases/download/v{VERSION}/WAU.msi"},
+              {"id": "RoslynPad.RoslynPad", "repo": "roslynpad/roslynpad", "url": "https://github.com/roslynpad/roslynpad/releases/download/{VERSION}/RoslynPad-windows-x64.zip https://github.com/roslynpad/roslynpad/releases/download/{VERSION}/RoslynPad-windows-arm64.zip"},
+              {"id": "ryanvolz.radioconda", "repo": "ryanvolz/radioconda", "url": "https://github.com/ryanvolz/radioconda/releases/download/{VERSION}/radioconda-{VERSION}-Windows-x86_64.exe"},
+              {"id": "Rye.Rye", "repo": "astral-sh/rye", "url": "https://github.com/astral-sh/rye/releases/download/{VERSION}/rye-x86-windows.exe https://github.com/astral-sh/rye/releases/download/{VERSION}/rye-x86_64-windows.exe"}
+            ]
+        run: ./scripts/Select-PackagesNeedingUpdate.ps1
+
+  # Job 1: Generate manifests
+  generate-manifest:
+    name: Generate ${{ matrix.id }}
+    needs: check-updates
+    if: needs.check-updates.outputs.any == 'true'
+    runs-on: windows-2025
+    environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Test' }}
+
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix:
+        include: ${{ fromJSON(needs.check-updates.outputs.include) }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Probe upstream read access
+        id: upstream-read-probe
+        uses: ./.github/actions/probe-winget-upstream-read
+        with:
+          github-token: ${{ github.token }}
+
+      - name: Generate manifest
+        id: generate
+        env:
+          GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
+          WINGET_UPSTREAM_READ_TOKEN: ${{ secrets.WINGET_PAT }}
+          WINGET_UPSTREAM_READ_FALLBACK_TOKEN: ${{ steps.upstream-read-probe.outputs.available == 'true' && github.token || secrets.WINGET_PUBLIC_READ_TOKEN }}
+          WINGET_PKGS_FORK_REPO: ${{ vars.WINGET_PKGS_FORK_REPO }}
+          GHURLs: ${{ matrix.url }}
+          GHRepo: ${{ matrix.repo }}
+          GHTagPattern: ${{ fromJSON(toJSON(matrix)).tagPattern }}
+          GHVersionSource: ${{ fromJSON(toJSON(matrix)).versionSource }}
+          WinMatschOverridePack: ${{ fromJSON(toJSON(matrix)).overridePack }}
+          AllowStructuralRewrite: ${{ fromJSON(toJSON(matrix)).allowStructuralRewrite }}
+          PackageName: ${{ matrix.id }}
+          With: ${{ matrix.With }}
+          Submit: "false"
+          IsTemplateUpdate: "true"
+        run: |
+          # Import the module
+          Import-Module .\modules\WingetMaintainerModule\WingetMaintainerModule.psd1 -Force
+
+          # Load HtmlAgilityPack if needed
+          $htmlAgilityPath = ".\libraries\HtmlAgilityPack\HtmlAgilityPack.dll"
+          if (Test-Path $htmlAgilityPath) {
+            Add-Type -Path $htmlAgilityPath
+          }
+
+          # Call the update script - now returns result instead of submitting
+          .\scripts\Update-Package.ps1
+
+      - name: Export manifest to job summary
+        if: steps.generate.outputs.generated == 'true'
+        shell: pwsh
+        run: |
+          Import-Module .\modules\WingetMaintainerModule\WingetMaintainerModule.psd1 -Force
+
+          Export-ManifestToJobSummary `
+            -ManifestPath "$env:STEPS_GENERATE_OUTPUTS_MANIFEST_PATH" `
+            -PackageId "${{ matrix.id }}" `
+            -Version "$env:STEPS_GENERATE_OUTPUTS_VERSION"
+        env:
+          STEPS_GENERATE_OUTPUTS_MANIFEST_PATH: ${{ steps.generate.outputs.manifest-path }}
+          STEPS_GENERATE_OUTPUTS_VERSION: ${{ steps.generate.outputs.version }}
+
+      - name: Normalize manifest line endings
+        if: steps.generate.outputs.generated == 'true'
+        shell: pwsh
+        run: |
+          Import-Module .\modules\WingetMaintainerModule\WingetMaintainerModule.psd1 -Force
+          Normalize-WingetManifestLineEndings -ManifestPath "$env:STEPS_GENERATE_OUTPUTS_MANIFEST_PATH"
+        env:
+          STEPS_GENERATE_OUTPUTS_MANIFEST_PATH: ${{ steps.generate.outputs.manifest-path }}
+
+      - name: Upload manifest artifact
+        if: steps.generate.outputs.generated == 'true'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: manifest__${{ matrix.id }}__${{ steps.generate.outputs.version }}
+          path: ${{ steps.generate.outputs.manifest-path }}
+          retention-days: 7
+          if-no-files-found: error
+
+      - name: Record structural rewrite approval
+        if: steps.generate.outputs.generated == 'true' && fromJSON(toJSON(matrix)).allowStructuralRewrite == true
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path ./structural-rewrite-approval | Out-Null
+          Set-Content -Path ./structural-rewrite-approval/approved -Value 'true' -NoNewline
+
+      - name: Upload structural rewrite approval marker
+        if: steps.generate.outputs.generated == 'true' && fromJSON(toJSON(matrix)).allowStructuralRewrite == true
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: structural-rewrite__${{ matrix.id }}__${{ steps.generate.outputs.version }}
+          path: ./structural-rewrite-approval
+          retention-days: 7
+          if-no-files-found: error
+
+      - name: Record generation failure
+        if: failure()
+        shell: pwsh
+        env:
+          JOB_NAME: Generate ${{ matrix.id }}
+          MATRIX_PACKAGENAME: ${{ matrix.id }}
+          STEPS_GENERATE_OUTPUTS_VERSION: ${{ steps.generate.outputs.version }}
+          STEPS_GENERATE_OUTPUTS_GENERATOR: ${{ steps.generate.outputs.generator }}
+          STEPS_GENERATE_OUTPUTS_EXIT_CODE: ${{ steps.generate.outputs.generator-exit-code }}
+          STEPS_GENERATE_OUTPUTS_ERROR_CODE: ${{ steps.generate.outputs.error-code }}
+          STEPS_GENERATE_OUTPUTS_ERROR: ${{ steps.generate.outputs.error }}
+        run: |
+          New-Item -ItemType Directory -Force -Path ./generate-failure | Out-Null
+
+          $errorText = "$env:STEPS_GENERATE_OUTPUTS_ERROR"
+          if ([string]::IsNullOrWhiteSpace($errorText)) {
+            $errorText = "Generation failed before the manifest generator reported a result - see job log."
+          }
+
+          @{
+            job       = "$env:JOB_NAME"
+            package   = "$env:MATRIX_PACKAGENAME"
+            version   = "$env:STEPS_GENERATE_OUTPUTS_VERSION"
+            generator = "$env:STEPS_GENERATE_OUTPUTS_GENERATOR"
+            exitCode  = "$env:STEPS_GENERATE_OUTPUTS_EXIT_CODE"
+            errorCode = "$env:STEPS_GENERATE_OUTPUTS_ERROR_CODE"
+            error     = $errorText
+          } | ConvertTo-Json | Out-File -FilePath ./generate-failure/failure.json -Encoding utf8
+
+          Get-Content -Path ./generate-failure/failure.json
+
+      - name: Upload generation failure marker
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        continue-on-error: true
+        with:
+          name: generate-failure__${{ matrix.id }}
+          path: ./generate-failure
+          retention-days: 7
+          if-no-files-found: ignore
+
+  # Job 2: Collect successful manifest generations into a dynamic matrix
+  collect-generated:
+    name: Collect Generated Manifests
+    needs: generate-manifest
+    runs-on: ubuntu-latest
+    if: always() && needs.generate-manifest.result != 'cancelled'
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+      has_packages: ${{ steps.set-matrix.outputs.has_packages }}
+
+    steps:
+      # Note: actions/download-artifact@v8 has a quirk where a single matched artifact
+      # is extracted directly into `path` (no per-artifact subdirectory), making the
+      # filesystem-based scan unreliable. Use the GitHub API to list artifact names
+      # for this run instead — the actual files are downloaded later in validate-and-test.
+      - name: Build dynamic matrix from artifacts
+        id: set-matrix
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $artifacts = @()
+          $page = 1
+          do {
+            $response = gh api "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts?per_page=100&page=$page" | ConvertFrom-Json
+            $artifacts += $response.artifacts
+            $page++
+          } while ($response.artifacts.Count -eq 100)
+
+          $structuralRewriteApprovals = @{}
+          foreach ($artifact in $artifacts) {
+            if ($artifact.name -match '^structural-rewrite__(.+)__(.+)$') {
+              $structuralRewriteApprovals["$($Matches[1])__$($Matches[2])"] = $true
+            }
+          }
+
+          $packages = @()
+          foreach ($artifact in $artifacts) {
+            if ($artifact.name -match '^manifest__(.+)__(.+)$') {
+              $packageName = $Matches[1]
+              $version = $Matches[2]
+              $approvalKey = "$packageName__$version"
+              $packages += @{
+                PackageName = $packageName
+                version = $version
+                allowStructuralRewrite = $structuralRewriteApprovals.ContainsKey($approvalKey)
+              }
+              Write-Host "Found: $packageName @ $version (structural rewrite: $($structuralRewriteApprovals.ContainsKey($approvalKey)))"
+            }
+          }
+
+          $hasPackages = ($packages.Count -gt 0).ToString().ToLower()
+          $matrix = @{ include = @($packages) } | ConvertTo-Json -Compress -Depth 3
+          Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "matrix=$matrix"
+          Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "has_packages=$hasPackages"
+          Write-Host "Matrix: $matrix"
+          Write-Host "Has packages: $hasPackages"
+
+      - name: Download generation failure markers
+        if: always()
+        continue-on-error: true
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          pattern: generate-failure__*
+          path: ./generate-failures
+
+      - name: Summarize failed generations
+        if: always()
+        shell: pwsh
+        run: |
+          $files = @(Get-ChildItem -Path ./generate-failures -Filter *.json -Recurse -ErrorAction SilentlyContinue)
+
+          if ($files.Count -eq 0) {
+            Write-Host "No generation failures recorded."
+            return
+          }
+
+          $rows = @(foreach ($file in $files) {
+            try {
+              Get-Content -Path $file.FullName -Raw | ConvertFrom-Json
+            }
+            catch {
+              Write-Warning "Could not read $($file.FullName): $($_.Exception.Message)"
+            }
+          })
+
+          $summary = @(
+            "## :x: Failed generations ($($rows.Count))"
+            ""
+            "| Failed Job | Package | Version | Exit Code | Error |"
+            "| --- | --- | --- | --- | --- |"
+          )
+
+          foreach ($row in ($rows | Sort-Object -Property package)) {
+            # Show the generator's stable error code as inline code when it reported one.
+            $errorCell = "$($row.error)"
+            if (-not [string]::IsNullOrWhiteSpace($row.errorCode) -and -not $errorCell.StartsWith("$($row.errorCode)")) {
+              $errorCell = "``$($row.errorCode)`` $errorCell"
+            }
+            elseif (-not [string]::IsNullOrWhiteSpace($row.errorCode)) {
+              $errorCell = $errorCell.Replace("$($row.errorCode)", "``$($row.errorCode)``", 1)
+            }
+
+            $cells = @($row.job, $row.package, $row.version, $row.exitCode, $errorCell) | ForEach-Object {
+              # Collapse to a single line and escape pipes so the markdown table stays intact.
+              $text = ("$_" -replace '\s*[\r\n]+\s*', ' ').Trim()
+              if ([string]::IsNullOrWhiteSpace($text)) { '-' } else { $text.Replace('|', '\|') }
+            }
+            $summary += "| $($cells -join ' | ') |"
+          }
+
+          ($summary -join "`n") | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+          Write-Host "Reported $($rows.Count) failed generation(s) in the job summary."
+
+  # Job 3: Validate and test manifests in sandbox (self-hosted runner with Windows Sandbox)
+  # Uses dynamic matrix - only runs for packages that generated manifests
+  validate-and-test:
+    name: Validate ${{ matrix.PackageName }}
+    needs: collect-generated
+    runs-on: [self-hosted, Windows, X64]
+    if: always() && needs.collect-generated.result == 'success' && needs.collect-generated.outputs.has_packages == 'true' && vars.SKIP_VALIDATION != 'true'
+
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.collect-generated.outputs.matrix) }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Resolve Sandbox Log Paths
+        id: resolve_logs
+        shell: pwsh
+        run: |
+          $logsRoot = Join-Path $env:LOCALAPPDATA "Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\SandboxTest\Logs"
+          "sandbox_logs=$logsRoot" >> $env:GITHUB_OUTPUT
+
+      - name: Download manifest artifact
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: manifest__${{ matrix.PackageName }}__${{ matrix.version }}
+          path: ./downloaded-manifests
+
+      - name: Set manifest path
+        id: manifest
+        shell: pwsh
+        run: |
+          $yamlFiles = Get-ChildItem -Path "./downloaded-manifests" -Filter "*.yaml" -Recurse
+          $manifestPath = ($yamlFiles | Select-Object -First 1).DirectoryName
+          Write-Host "Manifest path: $manifestPath"
+          "path=$manifestPath" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+
+      - name: Check package validation state
+        id: state-check
+        shell: pwsh
+        run: |
+          Import-Module .\modules\WingetMaintainerModule\WingetMaintainerModule.psd1 -Force
+
+          $stateFile = Join-Path $env:GITHUB_WORKSPACE "data/package-state.json"
+          $manifestPath = "$env:STEPS_MANIFEST_OUTPUTS_PATH"
+
+          $hashResult = Get-ManifestHash -ManifestPath $manifestPath
+          Write-Host "Manifest hash: $($hashResult.ManifestHash)"
+          Write-Host "Installer hashes: $($hashResult.InstallerHashes -join ', ')"
+
+          # Output hash info for downstream steps
+          "manifest_hash=$($hashResult.ManifestHash)" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          "installer_hashes=$($hashResult.InstallerHashes -join ',')" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+
+          $shouldSkip = Test-PackageStateSkip `
+            -StateFilePath $stateFile `
+            -PackageIdentifier $env:MATRIX_PACKAGENAME `
+            -Version $env:MATRIX_VERSION `
+            -ManifestHash $hashResult.ManifestHash
+
+          if ($shouldSkip) {
+            $entry = Get-PackageState -StateFilePath $stateFile -PackageIdentifier $env:MATRIX_PACKAGENAME
+            Write-Host "::warning::Skipping $env:MATRIX_PACKAGENAME $env:MATRIX_VERSION - failed validation $($entry.validationCount) times with same manifest (hash: $($hashResult.ManifestHash.Substring(0,12))...)"
+            "skip=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          } else {
+            Write-Host "Package state check passed - proceeding with validation"
+            "skip=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          }
+        env:
+          STEPS_MANIFEST_OUTPUTS_PATH: ${{ steps.manifest.outputs.path }}
+          MATRIX_PACKAGENAME: ${{ matrix.PackageName }}
+          MATRIX_VERSION: ${{ matrix.version }}
+
+      - name: Export manifest to job summary
+        if: steps.state-check.outputs.skip != 'true'
+        shell: pwsh
+        run: |
+          Import-Module .\modules\WingetMaintainerModule\WingetMaintainerModule.psd1 -Force
+
+          Export-ManifestToJobSummary `
+            -ManifestPath "$env:STEPS_MANIFEST_OUTPUTS_PATH" `
+            -PackageId "$env:MATRIX_PACKAGENAME" `
+            -Version "$env:MATRIX_VERSION"
+        env:
+          STEPS_MANIFEST_OUTPUTS_PATH: ${{ steps.manifest.outputs.path }}
+          MATRIX_PACKAGENAME: ${{ matrix.PackageName }}
+          MATRIX_VERSION: ${{ matrix.version }}
+
+      - name: Run content validation
+        id: content-validation
+        if: steps.state-check.outputs.skip != 'true'
+        shell: pwsh
+        run: |
+          $manifestPath = "$env:STEPS_MANIFEST_OUTPUTS_PATH"
+          $allowStructuralRewrite = "$env:MATRIX_ALLOW_STRUCTURAL_REWRITE" -eq 'true'
+
+          Write-Host "Running content validation for: $manifestPath"
+
+          & .\Scripts\validation\Test-ManifestContent.ps1 -ManifestPath $manifestPath -AllowStructuralRewrite:$allowStructuralRewrite
+          $exitCode = $LASTEXITCODE
+
+          if ($exitCode -eq 0) {
+            "passed=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          } else {
+            "passed=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            exit $exitCode
+          }
+        env:
+          STEPS_MANIFEST_OUTPUTS_PATH: ${{ steps.manifest.outputs.path }}
+          MATRIX_ALLOW_STRUCTURAL_REWRITE: ${{ fromJSON(toJSON(matrix)).allowStructuralRewrite }}
+          WINGET_PKGS_GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Run sandbox validation
+        id: sandbox-validation
+        if: steps.state-check.outputs.skip != 'true' && steps.content-validation.outputs.passed == 'true'
+        timeout-minutes: 30
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          STEPS_MANIFEST_OUTPUTS_PATH: ${{ steps.manifest.outputs.path }}
+        run: |
+          $manifestPath = "$env:STEPS_MANIFEST_OUTPUTS_PATH"
+
+          Write-Host "Running sandbox validation for: $manifestPath"
+
+          & .\Scripts\validation\Test-Manifest-Sandbox.ps1 -ManifestPath $manifestPath
+          $exitCode = $LASTEXITCODE
+
+          if ($exitCode -eq 0) {
+            "passed=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          } else {
+            "passed=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            exit $exitCode
+          }
+
+      - name: Upload sandbox logs
+        if: always() && steps.state-check.outputs.skip != 'true'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        continue-on-error: true
+        with:
+          name: sandbox-logs-${{ matrix.PackageName }}
+          path: ${{ steps.resolve_logs.outputs.sandbox_logs }}
+          retention-days: 7
+          if-no-files-found: ignore
+
+      - name: Set validation result
+        id: validation
+        if: always() && steps.state-check.outputs.skip != 'true'
+        shell: pwsh
+        run: |
+          $contentPassed = "$env:STEPS_CONTENT_VALIDATION_OUTPUTS_PASSED"
+          $sandboxPassed = "$env:STEPS_SANDBOX_VALIDATION_OUTPUTS_PASSED"
+
+          if ($contentPassed -eq "true" -and $sandboxPassed -eq "true") {
+            Write-Host "All validations passed!" -ForegroundColor Green
+            "passed=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          } else {
+            Write-Host "Validation failed" -ForegroundColor Red
+            Write-Host "  Content: $contentPassed"
+            Write-Host "  Sandbox: $sandboxPassed"
+            "passed=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          }
+        env:
+          STEPS_CONTENT_VALIDATION_OUTPUTS_PASSED: ${{ steps.content-validation.outputs.passed }}
+          STEPS_SANDBOX_VALIDATION_OUTPUTS_PASSED: ${{ steps.sandbox-validation.outputs.passed }}
+
+      - name: Upload validation result marker
+        if: always() && steps.state-check.outputs.skip != 'true' && steps.validation.outputs.passed == 'true'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: validated__${{ matrix.PackageName }}__${{ matrix.version }}
+          path: ${{ steps.manifest.outputs.path }}
+          retention-days: 1
+          if-no-files-found: error
+
+  # Job 4: Collect validated packages into matrix for PR submission
+  # When SKIP_VALIDATION is 'true', uses manifest__ artifacts directly instead of validated__
+  collect-validated:
+    name: Collect Validated Packages
+    needs: [collect-generated, validate-and-test]
+    runs-on: ubuntu-latest
+    concurrency:
+      group: package-state-write
+      cancel-in-progress: false
+    permissions:
+      contents: write
+    environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Test' }}
+    if: always() && (needs.validate-and-test.result != 'cancelled' || vars.SKIP_VALIDATION == 'true')
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+      has_packages: ${{ steps.set-matrix.outputs.has_packages }}
+      skip_validation: ${{ steps.set-matrix.outputs.skip_validation }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: true
+
+      - name: Build matrix from validated packages
+        id: set-matrix
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SKIP_VALIDATION: ${{ vars.SKIP_VALIDATION }}
+        run: |
+          $skipValidation = $env:SKIP_VALIDATION -eq 'true'
+          $artifactPrefix = if ($skipValidation) { 'manifest__' } else { 'validated__' }
+
+          if ($skipValidation) {
+            Write-Host "::warning::SKIP_VALIDATION is enabled - using generated manifests directly without validation"
+          }
+
+          # Collect all manifest__ and validated__ artifacts
+          $allArtifacts = @()
+          $page = 1
+          do {
+            $response = gh api "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts?per_page=100&page=$page" | ConvertFrom-Json
+            $allArtifacts += $response.artifacts
+            $page++
+          } while ($response.artifacts.Count -eq 100)
+
+          # Build list of validated/submitted packages
+          $packages = @()
+          foreach ($artifact in $allArtifacts) {
+            if ($artifact.name -match "^${artifactPrefix}(.+)__(.+)$") {
+              $packageName = $Matches[1]
+              $version = $Matches[2]
+              $packages += @{ PackageName = $packageName; version = $version }
+              Write-Host "Found validated: $packageName @ $version"
+            }
+          }
+
+          # Build list of all generated manifests
+          $generatedPackages = @()
+          foreach ($artifact in $allArtifacts) {
+            if ($artifact.name -match '^manifest__(.+)__(.+)$') {
+              $packageName = $Matches[1]
+              $version = $Matches[2]
+              $generatedPackages += @{ PackageName = $packageName; version = $version }
+            }
+          }
+
+          # Determine failed packages (generated but not validated) — only when validation is active
+          $failedPackages = @()
+          if (-not $skipValidation) {
+            $validatedSet = @{}
+            foreach ($pkg in $packages) {
+              $validatedSet["$($pkg.PackageName)__$($pkg.version)"] = $true
+            }
+            foreach ($pkg in $generatedPackages) {
+              $key = "$($pkg.PackageName)__$($pkg.version)"
+              if (-not $validatedSet.ContainsKey($key)) {
+                $failedPackages += $pkg
+                Write-Host "Failed validation: $($pkg.PackageName) @ $($pkg.version)"
+              }
+            }
+          }
+
+          # Output results
+          $hasPackages = ($packages.Count -gt 0).ToString().ToLower()
+          $skipValidationOut = $skipValidation.ToString().ToLower()
+          $matrix = @{ include = @($packages) } | ConvertTo-Json -Compress -Depth 3
+          Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "matrix=$matrix"
+          Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "has_packages=$hasPackages"
+          Add-Content -Path $env:GITHUB_OUTPUT -Encoding utf8 -Value "skip_validation=$skipValidationOut"
+
+          # Save package lists for state update step
+          ConvertTo-Json -InputObject @($generatedPackages) -Depth 3 | Set-Content -Path "./generated-packages.json" -Encoding utf8
+          ConvertTo-Json -InputObject @($failedPackages) -Depth 3 | Set-Content -Path "./failed-packages.json" -Encoding utf8
+          ConvertTo-Json -InputObject @($packages) -Depth 3 | Set-Content -Path "./validated-packages.json" -Encoding utf8
+
+          Write-Host "Matrix: $matrix"
+          Write-Host "Has packages: $hasPackages"
+          Write-Host "Generated: $($generatedPackages.Count), Validated: $($packages.Count), Failed: $($failedPackages.Count)"
+
+      - name: Download all manifest artifacts for state update
+        if: vars.SKIP_VALIDATION != 'true'
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          pattern: manifest__*
+          path: ./state-manifests
+
+      - name: Update package validation state
+        if: vars.SKIP_VALIDATION != 'true'
+        shell: pwsh
+        run: |
+          Import-Module ./modules/WingetMaintainerModule/WingetMaintainerModule.psd1 -Force
+
+          $stateFile = Join-Path $env:GITHUB_WORKSPACE "data/package-state.json"
+
+          $failedPackages = Get-Content -Path "./failed-packages.json" -Raw | ConvertFrom-Json
+          $validatedPackages = Get-Content -Path "./validated-packages.json" -Raw | ConvertFrom-Json
+
+          # Record failed packages
+          foreach ($pkg in $failedPackages) {
+            $manifestDir = Get-ChildItem -Path "./state-manifests/manifest__$($pkg.PackageName)__$($pkg.version)" -Directory -ErrorAction SilentlyContinue | Select-Object -First 1
+            if (-not $manifestDir) {
+              # Artifacts from download-artifact v8 may extract directly without subdirectory
+              $manifestDir = Get-Item -Path "./state-manifests/manifest__$($pkg.PackageName)__$($pkg.version)" -ErrorAction SilentlyContinue
+            }
+
+            if ($manifestDir -and (Get-ChildItem -Path $manifestDir.FullName -Filter "*.yaml" -Recurse)) {
+              $yamlDir = $manifestDir.FullName
+              # If yaml files are in a subdirectory, find them
+              $firstYaml = Get-ChildItem -Path $manifestDir.FullName -Filter "*.yaml" -Recurse | Select-Object -First 1
+              if ($firstYaml) {
+                $yamlDir = $firstYaml.DirectoryName
+              }
+
+              $hashResult = Get-ManifestHash -ManifestPath $yamlDir
+
+              # Skip state update if package is already at the skip threshold
+              $shouldSkip = Test-PackageStateSkip `
+                -StateFilePath $stateFile `
+                -PackageIdentifier $pkg.PackageName `
+                -Version $pkg.version `
+                -ManifestHash $hashResult.ManifestHash
+              if ($shouldSkip) {
+                Write-Host "Skipping state update for $($pkg.PackageName) @ $($pkg.version) — already at skip threshold"
+                continue
+              }
+
+              Set-PackageState `
+                -StateFilePath $stateFile `
+                -PackageIdentifier $pkg.PackageName `
+                -Version $pkg.version `
+                -ManifestHash $hashResult.ManifestHash `
+                -InstallerHashes $hashResult.InstallerHashes `
+                -State "VALIDATION_FAILED"
+
+              Write-Host "Recorded VALIDATION_FAILED for $($pkg.PackageName) @ $($pkg.version)"
+            } else {
+              Write-Warning "Could not find manifest artifact for $($pkg.PackageName) @ $($pkg.version)"
+            }
+          }
+
+          # Record passed packages
+          foreach ($pkg in $validatedPackages) {
+            $manifestDir = Get-ChildItem -Path "./state-manifests/manifest__$($pkg.PackageName)__$($pkg.version)" -Directory -ErrorAction SilentlyContinue | Select-Object -First 1
+            if (-not $manifestDir) {
+              $manifestDir = Get-Item -Path "./state-manifests/manifest__$($pkg.PackageName)__$($pkg.version)" -ErrorAction SilentlyContinue
+            }
+
+            if ($manifestDir -and (Get-ChildItem -Path $manifestDir.FullName -Filter "*.yaml" -Recurse)) {
+              $yamlDir = $manifestDir.FullName
+              $firstYaml = Get-ChildItem -Path $manifestDir.FullName -Filter "*.yaml" -Recurse | Select-Object -First 1
+              if ($firstYaml) {
+                $yamlDir = $firstYaml.DirectoryName
+              }
+
+              $hashResult = Get-ManifestHash -ManifestPath $yamlDir
+
+              Set-PackageState `
+                -StateFilePath $stateFile `
+                -PackageIdentifier $pkg.PackageName `
+                -Version $pkg.version `
+                -ManifestHash $hashResult.ManifestHash `
+                -InstallerHashes $hashResult.InstallerHashes `
+                -State "VALIDATION_PASSED"
+
+              Write-Host "Recorded VALIDATION_PASSED for $($pkg.PackageName) @ $($pkg.version)"
+            } else {
+              Write-Warning "Could not find manifest artifact for $($pkg.PackageName) @ $($pkg.version)"
+            }
+          }
+
+      - name: Save package state
+        if: vars.SKIP_VALIDATION != 'true'
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          Import-Module ./modules/WingetMaintainerModule/WingetMaintainerModule.psd1 -Force
+
+          $stateFile = Join-Path $env:GITHUB_WORKSPACE "data/package-state.json"
+
+          gh auth setup-git
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          Save-PackageState -StateFilePath $stateFile -RepoPath $env:GITHUB_WORKSPACE
+
+  # Job 5: Submit PRs for validated packages
+  # Uses dynamic matrix from collect-validated - only runs for packages that passed validation
+  submit-pr:
+    name: Submit ${{ matrix.PackageName }}
+    needs: [collect-validated]
+    runs-on: windows-2025
+    if: always() && needs.collect-validated.result == 'success' && needs.collect-validated.outputs.has_packages == 'true'
+    environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Test' }}
+    # Serialize submissions for the same package across scheduled runs.
+    concurrency:
+      group: winget-pkgs-submit-${{ matrix.PackageName }}
+      cancel-in-progress: false
+
+    strategy:
+      fail-fast: false
+      max-parallel: 10
+      matrix: ${{ fromJson(needs.collect-validated.outputs.matrix) }}
+
+    steps:
+      - name: Check SUBMIT_PR variable
+        id: check-submit
+        shell: pwsh
+        run: |
+          if ("$env:VARS_SUBMIT_PR" -ne "true") {
+            Write-Host "::warning::SUBMIT_PR is not set to 'true', skipping PR submission"
+            "skip=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          } else {
+            Write-Host "SUBMIT_PR is enabled, proceeding with PR submission"
+            "skip=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          }
+        env:
+          VARS_SUBMIT_PR: ${{ vars.SUBMIT_PR }}
+
+      - name: Checkout
+        if: steps.check-submit.outputs.skip != 'true'
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Determine artifact name
+        if: steps.check-submit.outputs.skip != 'true'
+        id: artifact
+        shell: pwsh
+        run: |
+          $prefix = if ("$env:NEEDS_COLLECT_VALIDATED_OUTPUTS_SKIP_VALIDATION" -eq "true") { "manifest" } else { "validated" }
+          if ([string]::IsNullOrWhiteSpace($env:MATRIX_PACKAGENAME)) {
+            throw "Matrix package name is empty; cannot determine artifact name."
+          }
+          if ([string]::IsNullOrWhiteSpace($env:MATRIX_VERSION)) {
+            throw "Matrix version is empty; cannot determine artifact name."
+          }
+          $name = '{0}__{1}__{2}' -f $prefix, $env:MATRIX_PACKAGENAME, $env:MATRIX_VERSION
+          Write-Host "Artifact name: $name"
+          "name=$name" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+        env:
+          NEEDS_COLLECT_VALIDATED_OUTPUTS_SKIP_VALIDATION: ${{ needs.collect-validated.outputs.skip_validation }}
+          MATRIX_PACKAGENAME: ${{ matrix.PackageName }}
+          MATRIX_VERSION: ${{ matrix.version }}
+
+      - name: Download manifest artifact
+        if: steps.check-submit.outputs.skip != 'true'
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: ${{ steps.artifact.outputs.name }}
+          path: ./downloaded-manifests
+
+      - name: Set manifest path
+        if: steps.check-submit.outputs.skip != 'true'
+        id: manifest
+        shell: pwsh
+        run: |
+          $yamlFiles = Get-ChildItem -Path "./downloaded-manifests" -Filter "*.yaml" -Recurse
+          $manifestPath = ($yamlFiles | Select-Object -First 1).DirectoryName
+          Write-Host "Manifest path: $manifestPath"
+          "path=$manifestPath" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+
+      - name: Probe upstream read access
+        if: steps.check-submit.outputs.skip != 'true'
+        id: upstream-read-probe-submit
+        uses: ./.github/actions/probe-winget-upstream-read
+        with:
+          github-token: ${{ github.token }}
+
+      - name: Submit PR
+        if: steps.check-submit.outputs.skip != 'true'
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
+          WINGET_UPSTREAM_READ_TOKEN: ${{ secrets.WINGET_PAT }}
+          WINGET_UPSTREAM_READ_FALLBACK_TOKEN: ${{ steps.upstream-read-probe-submit.outputs.available == 'true' && github.token || secrets.WINGET_PUBLIC_READ_TOKEN }}
+          WINGET_PKGS_FORK_REPO: ${{ vars.WINGET_PKGS_FORK_REPO }}
+          WINGET_PKGS_SUBMISSION_TARGET: Upstream
+          WINGET_PKGS_SUBMISSION_REPOSITORY: microsoft/winget-pkgs
+          STEPS_MANIFEST_OUTPUTS_PATH: ${{ steps.manifest.outputs.path }}
+          MATRIX_PACKAGENAME: ${{ matrix.PackageName }}
+          MATRIX_VERSION: ${{ matrix.version }}
+        run: |
+          Import-Module .\modules\WingetMaintainerModule\WingetMaintainerModule.psd1 -Force
+
+          $result = Submit-WingetPackage `
+            -ManifestPath "$env:STEPS_MANIFEST_OUTPUTS_PATH" `
+            -PackageId "$env:MATRIX_PACKAGENAME" `
+            -Version "$env:MATRIX_VERSION" `
+            -With "ForkBranch" `
+            -SubmissionTarget "$env:WINGET_PKGS_SUBMISSION_TARGET" `
+            -Repository "$env:WINGET_PKGS_SUBMISSION_REPOSITORY"
+
+          if ($result.Success) {
+            Write-Host "PR submitted successfully!" -ForegroundColor Green
+            # Add to job summary
+            $summary = @(
+              "## :rocket: PR Submitted"
+              ""
+              "**Package:** $env:MATRIX_PACKAGENAME"
+              "**Version:** $env:MATRIX_VERSION"
+            )
+
+            if ($result.PrUrl) {
+              $prLabel = if ($result.PrNumber) { "#$($result.PrNumber)" } else { $result.PrUrl }
+              $summary += "**Pull request:** [$prLabel]($($result.PrUrl))"
+            } else {
+              $summary += "**Pull request:** _URL could not be determined - see step log._"
+            }
+
+            ($summary -join "`n") | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+          } else {
+            Write-Host "Failed to submit PR: $($result.Error)" -ForegroundColor Red
+            exit 1
+          }
+
+  # Job 6: Notify on failure
+  notify-failure:
+    name: Notify Failure
+    needs:
+      [
+        check-updates,
+        generate-manifest,
+        collect-generated,
+        validate-and-test,
+        collect-validated,
+        submit-pr,
+      ]
+    runs-on: ubuntu-latest
+    if: always() && failure() && vars.NTFY_URL != ''
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Send failure notification
+        shell: pwsh
+        run: |
+          $runUrl = "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+
+          $body = @{
+            topic    = "$env:VARS_NTFY_TOPIC"
+            title    = "Winget Package Update Failed"
+            message  = "Workflow: $env:GITHUB_WORKFLOW`nRun: $runUrl`n`nOne or more packages failed validation or submission."
+            priority = 4
+            tags     = @("x", "package", "warning")
+            click    = $runUrl
+          } | ConvertTo-Json
+
+          try {
+            Invoke-RestMethod -Uri "$env:VARS_NTFY_URL/$env:VARS_NTFY_TOPIC" `
+              -Method Post `
+              -ContentType 'application/json' `
+              -Body $body
+            Write-Host "Notification sent successfully"
+          } catch {
+            Write-Warning "Failed to send notification: $_"
+          }
+        env:
+          VARS_NTFY_TOPIC: ${{ vars.NTFY_TOPIC }}
+          VARS_NTFY_URL: ${{ vars.NTFY_URL }}

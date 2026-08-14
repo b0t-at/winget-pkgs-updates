@@ -59,6 +59,12 @@ function Get-WingetPkgsGitHubApiFailureStatusCode {
         return [int] $exception.Response.StatusCode
     }
 
+    # Rate-limit retry helpers surface the final status via Exception.Data so
+    # exhaustion after retries can still trigger credential-tier failover.
+    if ($null -ne $exception -and $null -ne $exception.Data['StatusCode']) {
+        return [int] $exception.Data['StatusCode']
+    }
+
     return 0
 }
 

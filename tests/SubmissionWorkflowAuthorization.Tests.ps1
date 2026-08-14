@@ -22,12 +22,19 @@ function Assert-Match {
 }
 
 $repositoryRoot = Split-Path -Parent $PSScriptRoot
-$workflowPaths = @(
-    '.github/workflows/update-github-packages-1-q.yml',
-    '.github/workflows/update-github-packages-r-z.yml',
+$generatedWorkflowPaths = @(
+    Get-ChildItem -LiteralPath (Join-Path $repositoryRoot '.github/workflows') -Filter 'update-github-packages-*.yml' |
+        Sort-Object -Property Name |
+        ForEach-Object { ".github/workflows/$($_.Name)" }
+)
+if ($generatedWorkflowPaths.Count -lt 1) {
+    throw 'No generated update-github-packages workflows were found.'
+}
+$workflowPaths = $generatedWorkflowPaths + @(
     '.github/workflows/update-script-packages.yml',
     '.github/workflows-templates/github-releases.yml'
 )
+$dispatchTargetWorkflows = @()
 
 $probeActionPath = Join-Path $repositoryRoot '.github/actions/probe-winget-upstream-read/action.yml'
 $probeAction = Get-Content -LiteralPath $probeActionPath -Raw
@@ -123,8 +130,9 @@ foreach ($workflowRelativePath in $workflowPaths) {
         -Actual $submitJob `
         -Pattern '(?m)^          WINGET_PKGS_SUBMISSION_TARGET: Upstream\s*$' `
         -Message "$workflowName must use the upstream pull request target for every trigger." | Out-Null
-    $isRzWorkflow = $workflowRelativePath -ceq '.github/workflows/update-github-packages-r-z.yml'
-    if ($isRzWorkflow) {
+    $isDispatchTargetWorkflow = $workflow -match 'allow_test_fork_submission'
+    if ($isDispatchTargetWorkflow) {
+        $dispatchTargetWorkflows += $workflowRelativePath
         Assert-Match `
             -Actual $workflow `
             -Pattern '(?ms)^  workflow_dispatch:\r?\n    inputs:\r?\n      submission_repository:.*?^          - microsoft/winget-pkgs\r?\n          - damn-good-b0t/winget-pkgs\s*$' `
@@ -169,12 +177,15 @@ foreach ($workflowRelativePath in $workflowPaths) {
         throw "$workflowName must probe the Actions token separately before generation and submission."
     }
 
+    # The check-updates precheck job in github-releases workflows adds a third
+    # WINGET_PAT read-token assignment on top of generation and submission.
+    $expectedPrimaryReadTokenCount = if ($workflow -match '(?m)^  check-updates:') { 3 } else { 2 }
     $primaryReadTokenAssignments = [regex]::Matches(
         $workflow,
         '(?m)^          WINGET_UPSTREAM_READ_TOKEN: \$\{\{\s*secrets\.WINGET_PAT\s*\}\}\s*$'
     )
-    if ($primaryReadTokenAssignments.Count -ne 2) {
-        throw "$workflowName must pass the classic WINGET_PAT as the primary upstream read token in both the generation and submission steps."
+    if ($primaryReadTokenAssignments.Count -ne $expectedPrimaryReadTokenCount) {
+        throw "$workflowName must pass the classic WINGET_PAT as the primary upstream read token in each generation, submission, and (where present) precheck step; expected $expectedPrimaryReadTokenCount assignments but found $($primaryReadTokenAssignments.Count)."
     }
 
     $generateReadTokenAssignments = [regex]::Matches(
@@ -206,6 +217,13 @@ foreach ($workflowRelativePath in $workflowPaths) {
             throw "$workflowName must not replace the fork submission token with the Actions token in $stepName."
         }
     }
+}
+
+if ($dispatchTargetWorkflows.Count -ne 1) {
+    throw "Exactly one workflow may expose the acknowledged test-fork dispatch target, found $($dispatchTargetWorkflows.Count): $($dispatchTargetWorkflows -join ', ')"
+}
+if ($dispatchTargetWorkflows[0] -cne $generatedWorkflowPaths[-1]) {
+    throw "The test-fork dispatch target must be the last generated workflow ($($generatedWorkflowPaths[-1])), but it is $($dispatchTargetWorkflows[0])."
 }
 
 Write-Host 'All submission workflow authorization regression tests passed.' -ForegroundColor Green
