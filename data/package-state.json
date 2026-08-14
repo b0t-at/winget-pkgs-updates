@@ -117,15 +117,15 @@
     "version": "2026.7.1"
   },
   "AquaSecurity.Trivy": {
-    "state": "VALIDATION_FAILED",
-    "description": "",
-    "validationCount": 1,
+    "lastUpdated": "2026-08-14T12:36:40.1551024Z",
+    "manifestHash": "39580114013C0BAB51AB1C8D7631435B902F10F75EBFCE35F12041441E4B44A2",
     "installerHashes": [
-      "D2D3AD5292AAE470A03EB6506DB86FCE81B1894592B8451CADAF60EAA22F2025"
+      "94C40E0696E4B907A74B7B2E1438D5D72EBACA83115817407F568A002D520842"
     ],
-    "lastUpdated": "2026-08-05T12:38:59.3660369Z",
-    "manifestHash": "F2D6D7C1783F7404784216714FC1242C183C159DE8E88E0F0DCE77CE6A3D2701",
-    "version": "0.73.0"
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "version": "0.74.0",
+    "validationCount": 1
   },
   "argoproj.argocd": {
     "installerHashes": [
@@ -161,6 +161,17 @@
     "manifestHash": "97705F857E8540A1C2B5A7A28F910984B11D56C53A461555E3FFB1B2390E9D87",
     "version": "8.2",
     "lastUpdated": "2026-07-11T12:53:25.9025673Z"
+  },
+  "badboy.mdbook-mermaid": {
+    "lastUpdated": "2026-08-14T12:36:40.1220884Z",
+    "manifestHash": "1DEF8190BA0B3C715AA7096913B45AA1C4E3FD2FACC9217C2424E370E1C1B285",
+    "installerHashes": [
+      "BB1E3D99D06E799D4A95A7E6BEB6E8E041BA2C3B1528185E873F3F751E52FEB5"
+    ],
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "version": "0.17.1",
+    "validationCount": 1
   },
   "Baulk.Baulk": {
     "lastUpdated": "2026-05-23T06:59:27.4952257Z",
