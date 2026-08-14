@@ -363,7 +363,12 @@ function Invoke-ForkBranchSubmission {
 
     $forkOwner = $ForkRepository.Split('/')[0]
     $headReference = if ($targetRepository -ieq $ForkRepository) { $branchName } else { "${forkOwner}:$branchName" }
-    $body = if ([string]::IsNullOrWhiteSpace($Resolves)) { $null } else { "Resolves #$Resolves" }
+    $bodyLines = @("Update $PackageId to version $Version.")
+    if (-not [string]::IsNullOrWhiteSpace($Resolves)) {
+        $bodyLines += ''
+        $bodyLines += "Resolves #$Resolves"
+    }
+    $body = $bodyLines -join "`n"
     Write-Host "ForkBranch: opening PR in $targetRepository (head: $headReference)" -ForegroundColor DarkGray
     $pullRequest = Invoke-WingetPkgsGitHubApi `
         -Method Post `
