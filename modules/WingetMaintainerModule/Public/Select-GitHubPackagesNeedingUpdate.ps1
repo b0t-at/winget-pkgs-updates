@@ -123,12 +123,39 @@ function Select-GitHubPackagesNeedingUpdate {
 
         [Parameter()]
         [ValidateRange(1, 200)]
-        [int] $BatchSize = 100
+        [int] $BatchSize = 100,
+
+        # Optional path to package-state.json. When provided, packages whose new
+        # version already has an open upstream PR are skipped, using a cached
+        # marker in the state file (TTL-bound) to avoid repeated live searches.
+        [Parameter()]
+        [string] $StateFilePath,
+
+        [Parameter()]
+        [ValidateRange(1, 8760)]
+        [int] $OpenPrTtlHours = 24,
+
+        # Injectable for tests: receives (PackageIdentifier, Version), returns
+        # $true when an open upstream PR for that version exists.
+        [Parameter()]
+        [scriptblock] $OpenPrTester,
+
+        # Cap on live PR searches per invocation; candidates beyond the cap are
+        # included without a check (fail-open).
+        [Parameter()]
+        [ValidateRange(0, 1000)]
+        [int] $MaxOpenPrChecks = 30
     )
 
     if ($null -eq $GraphQlInvoker) {
         $GraphQlInvoker = { param([string] $Query) Invoke-WingetPrecheckGraphQlRequest -Query $Query }
     }
+
+    $openPrCheckEnabled = -not [string]::IsNullOrWhiteSpace($StateFilePath)
+    if ($openPrCheckEnabled -and $null -eq $OpenPrTester) {
+        $OpenPrTester = { param([string] $PackageIdentifier, [string] $Version) Test-ExistingPRs -Version $Version -PackageIdentifier $PackageIdentifier -OnlyOpen }
+    }
+    $openPrChecksUsed = 0
 
     $include = [System.Collections.Generic.List[object]]::new()
     $skipped = [System.Collections.Generic.List[object]]::new()
@@ -246,8 +273,52 @@ function Select-GitHubPackagesNeedingUpdate {
         if ($null -ne $match) {
             $skipped.Add([PSCustomObject]@{ Package = $package; Reason = 'AlreadyPublished'; Version = $version })
         }
-        else {
+        elseif (-not $openPrCheckEnabled) {
             $include.Add([PSCustomObject]@{ Package = $package; Reason = 'NewVersion'; Version = $version })
+        }
+        elseif (Test-PackageStateOpenPrFresh -StateFilePath $StateFilePath -PackageIdentifier $packageId -Version $version -TtlHours $OpenPrTtlHours) {
+            # Cached marker is fresh — an open upstream PR for this version was
+            # seen recently, so skip without spending a live search.
+            $skipped.Add([PSCustomObject]@{ Package = $package; Reason = 'OpenPrExists'; Version = $version })
+        }
+        elseif ($openPrChecksUsed -ge $MaxOpenPrChecks) {
+            $include.Add([PSCustomObject]@{ Package = $package; Reason = 'NewVersion'; Version = $version })
+        }
+        else {
+            $openPrChecksUsed++
+            $hasOpenPr = $false
+            $openPrCheckSucceeded = $true
+            try {
+                $hasOpenPr = [bool](& $OpenPrTester $packageId $version)
+            }
+            catch {
+                # Fail-open: a PR search error must never suppress a real update.
+                Write-Warning "Open-PR check for $packageId $version failed: $($_.Exception.Message). Including the package."
+                $openPrCheckSucceeded = $false
+            }
+
+            if (-not $openPrCheckSucceeded) {
+                $include.Add([PSCustomObject]@{ Package = $package; Reason = 'NewVersion'; Version = $version })
+            }
+            elseif ($hasOpenPr) {
+                $skipped.Add([PSCustomObject]@{ Package = $package; Reason = 'OpenPrExists'; Version = $version })
+                try {
+                    Set-PackageStateOpenPr -StateFilePath $StateFilePath -PackageIdentifier $packageId -Version $version
+                }
+                catch {
+                    Write-Warning "Could not record open-PR marker for $packageId : $($_.Exception.Message)"
+                }
+            }
+            else {
+                $include.Add([PSCustomObject]@{ Package = $package; Reason = 'NewVersion'; Version = $version })
+                try {
+                    # Drop any stale marker so future runs don't trust it.
+                    Set-PackageStateOpenPr -StateFilePath $StateFilePath -PackageIdentifier $packageId -Clear
+                }
+                catch {
+                    Write-Warning "Could not clear open-PR marker for $packageId : $($_.Exception.Message)"
+                }
+            }
         }
     }
 
