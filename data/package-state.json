@@ -338,16 +338,16 @@
     "version": "4.12.6"
   },
   "CircleCI.CLI": {
+    "version": "1.0.48254",
+    "validationCount": 1,
+    "description": "",
     "installerHashes": [
-      "C396022BC9EB3EA26E74CE2C5654B2FF8F3CDB5365173C6472E7353857F6728C",
-      "84C3A5B843BBBC2C62FF302CED057CDBE4089CA12A8493ABCD7A7A3F7A079AFF"
+      "CCC49E57A34CB5866830971529BF7364398D49323DFB652F52955CB0CC4958DD",
+      "271C2D6A4C91E554A33A78F1345CF0C3B42E6810E3B13539180F5AFF231266BF"
     ],
     "state": "VALIDATION_PASSED",
-    "version": "1.0.48223",
-    "manifestHash": "3D7C68D0918547F4E2A1AB85C41DB45D0F6931DF4E3B07B091092371B2E0495C",
-    "validationCount": 2,
-    "lastUpdated": "2026-08-14T10:42:15.1644771Z",
-    "description": ""
+    "lastUpdated": "2026-08-14T16:34:46.1916136Z",
+    "manifestHash": "0340885C4608442798BEBCA33E09133E7D65531BB1A1C2E40427A74DD44D45D1"
   },
   "ciromattia.KCC": {
     "installerHashes": [
@@ -1197,6 +1197,17 @@
     "manifestHash": "F877FA5F3CB7023E0385FDD3E255431708BBDC70BE8B69096F1D1D38C5ADB660",
     "version": "7.0.5.1"
   },
+  "LeNgocKhoa.Laragon": {
+    "version": "8.7.0",
+    "validationCount": 1,
+    "description": "",
+    "installerHashes": [
+      "92E2EB7BD2F0DE4C458D9DDF53BB957AED98D21F679C3E35C7EED7BBF03A42A3"
+    ],
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-14T16:34:46.1443381Z",
+    "manifestHash": "E2B20C530E7089F81C211528C6D2DD0F52E524C1D63AD5051E880427A6AB934A"
+  },
   "Levminer.Authme": {
     "lastUpdated": "2026-07-07T21:52:02.4861044Z",
     "installerHashes": [
@@ -1282,15 +1293,15 @@
     ]
   },
   "MichaelDiCarlo.PostyBirb+": {
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "458A86F188ED4272A4187D82CECEAEF706947B892D72E78281B2B16A20807EA3"
-    ],
-    "lastUpdated": "2026-07-17T21:01:33.5242157Z",
+    "version": "3.1.74",
+    "validationCount": 1,
     "description": "",
-    "manifestHash": "BBC1F7512AA9D6591C8C1B4EC0201FF34B5ABAF2CBC897E937D154E10403AF1A",
-    "version": "3.1.73",
-    "validationCount": 1
+    "installerHashes": [
+      "1B2421DB752669783ED25D4B011761A7ECEA52E7AE93F4AD8992D148F7985660"
+    ],
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-14T16:34:46.1775536Z",
+    "manifestHash": "E6D5F813D098405E345D20B7BE2E11139E6B0F19FD5FCF398D9D3EEFEBD6DE23"
   },
   "Micronaut.Launch": {
     "state": "VALIDATION_PASSED",
