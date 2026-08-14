@@ -28,6 +28,19 @@ function Get-WingetGitHubHeaders {
     return $headers
 }
 
+function Get-WingetGitHubToken {
+    if (-not [string]::IsNullOrWhiteSpace($env:WINGET_UPSTREAM_READ_TOKEN)) {
+        return $env:WINGET_UPSTREAM_READ_TOKEN
+    }
+
+    $authorization = [string](Get-WingetGitHubHeaders)['Authorization']
+    if (-not [string]::IsNullOrWhiteSpace($authorization)) {
+        return $authorization.Substring('Bearer '.Length)
+    }
+
+    return $null
+}
+
 function Get-WingetPublishedVersionsFromGitHub {
     param(
         [Parameter(Mandatory = $true)] [string] $PackageIdentifier,
@@ -38,21 +51,25 @@ function Get-WingetPublishedVersionsFromGitHub {
 
     $packageRelativePath = Get-WingetPackageRelativePath -PackageIdentifier $PackageIdentifier
     $uri = "https://api.github.com/repos/$Repository/contents/$packageRelativePath`?ref=master"
-    $response = Invoke-WebRequest -Uri $uri -Headers (Get-WingetGitHubHeaders) -Method Get -SkipHttpErrorCheck
-    $statusCode = [int]$response.StatusCode
-
-    if ($statusCode -eq 404) {
-        return [PSCustomObject]@{
-            PackageExists = $false
-            Versions      = @()
+    try {
+        $entries = @(Invoke-GitHubApiRequest `
+                -Uri $uri `
+                -Token (Get-WingetGitHubToken) `
+                -MaxAttempts 6 `
+                -MaxTotalWaitSeconds 300)
+    }
+    catch {
+        $details = Get-GitHubApiErrorDetails -ErrorRecord $_
+        if ($details.StatusCode -eq 404) {
+            return [PSCustomObject]@{
+                PackageExists = $false
+                Versions      = @()
+            }
         }
+
+        throw
     }
 
-    if ($statusCode -lt 200 -or $statusCode -ge 300) {
-        throw "GitHub API request failed for $PackageIdentifier in $Repository with HTTP status $statusCode."
-    }
-
-    $entries = @($response.Content | ConvertFrom-Json)
     $versions = @($entries | Where-Object { $_.type -eq 'dir' } | ForEach-Object { [string]$_.name } | Sort-Object -Unique)
 
     return [PSCustomObject]@{

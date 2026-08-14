@@ -17,9 +17,11 @@
     `WINGET_UPSTREAM_READ_FALLBACK_TOKEN` and finally falls back to the
     anonymous public REST search endpoint. The fork-scoped submission token is
     never used for this search. A transient HTTP 422 from GitHub Search is
-    retried twice with the same credential before the failure is surfaced. API
-    and response-shape failures are surfaced so callers fail closed instead of
-    treating an uncertain result as no duplicate.
+    retried twice with the same credential before the failure is surfaced.
+    Rate-limited responses (HTTP 429, or 403 with an exhausted quota) are
+    retried with header-aware backoff before falling over to the next
+    credential tier. API and response-shape failures are surfaced so callers
+    fail closed instead of treating an uncertain result as no duplicate.
 
 .PARAMETER Version
     The version of the package to check for existing PRs. This parameter is mandatory.
@@ -84,11 +86,18 @@ function Test-ExistingPRs {
             }
             for ($attempt = 1; $attempt -le $maximumSearchAttempts; $attempt++) {
                 try {
-                    $response = Invoke-RestMethod `
-                        -Method Get `
-                        -Uri "https://api.github.com/search/issues?q=$encodedQuery&per_page=$pageSize&page=$page" `
-                        -Headers $headers `
-                        -ErrorAction Stop
+                    $searchUri = "https://api.github.com/search/issues?q=$encodedQuery&per_page=$pageSize&page=$page"
+                    $response = Invoke-WithGitHubRateLimitRetry `
+                        -OperationName "existing-PR search page $page" `
+                        -MaxAttempts 4 `
+                        -MaxTotalWaitSeconds 120 `
+                        -ScriptBlock {
+                            Invoke-RestMethod `
+                                -Method Get `
+                                -Uri $searchUri `
+                                -Headers $headers `
+                                -ErrorAction Stop
+                        }
                     break
                 }
                 catch {

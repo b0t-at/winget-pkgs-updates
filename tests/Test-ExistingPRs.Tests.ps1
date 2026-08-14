@@ -169,16 +169,20 @@ Describe 'Test-ExistingPRs' {
         if ($result -ne $false) {
             throw 'The anonymous final tier unexpectedly reported a duplicate.'
         }
-        if ($global:ExistingPrSearchRequests.Count -ne 3) {
-            throw "Expected primary, fallback, and anonymous attempts, got $($global:ExistingPrSearchRequests.Count) request(s)."
+        if ($global:ExistingPrSearchRequests.Count -ne 9) {
+            throw "Expected 4 primary retries, 4 fallback retries, and one anonymous attempt, got $($global:ExistingPrSearchRequests.Count) request(s)."
         }
-        if ($global:ExistingPrSearchRequests[0].Headers.Authorization -notlike '*primary-read-token') {
-            throw 'The first attempt did not use the primary read token.'
+        foreach ($index in 0..3) {
+            if ($global:ExistingPrSearchRequests[$index].Headers.Authorization -notlike '*primary-read-token') {
+                throw "Attempt $($index + 1) did not use the primary read token."
+            }
         }
-        if ($global:ExistingPrSearchRequests[1].Headers.Authorization -notlike '*fallback-read-token') {
-            throw 'The second attempt did not use the fallback read token.'
+        foreach ($index in 4..7) {
+            if ($global:ExistingPrSearchRequests[$index].Headers.Authorization -notlike '*fallback-read-token') {
+                throw "Attempt $($index + 1) did not use the fallback read token."
+            }
         }
-        if ($global:ExistingPrSearchRequests[2].Headers.ContainsKey('Authorization')) {
+        if ($global:ExistingPrSearchRequests[8].Headers.ContainsKey('Authorization')) {
             throw 'The final anonymous attempt sent a credential.'
         }
     }

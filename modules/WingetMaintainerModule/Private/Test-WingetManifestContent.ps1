@@ -590,7 +590,9 @@ function Test-WingetManifestContent {
         )
 
         try {
-            return Invoke-RestMethod -Uri $Uri -Headers (Get-GitHubHeaders) -Method Get -ErrorAction Stop
+            return Invoke-WithGitHubRateLimitRetry -OperationName $Uri -ScriptBlock {
+                Invoke-RestMethod -Uri $Uri -Headers (Get-GitHubHeaders) -Method Get -ErrorAction Stop
+            }
         }
         catch {
             $statusCode = Get-HttpStatusCode -ErrorRecord $_
@@ -610,20 +612,29 @@ function Test-WingetManifestContent {
         }
 
         $body = @{ query = $Query } | ConvertTo-Json -Compress
-        $response = Invoke-RestMethod `
-            -Uri 'https://api.github.com/graphql' `
-            -Headers $headers `
-            -Method Post `
-            -ContentType 'application/json' `
-            -Body $body `
-            -ErrorAction Stop
+        return Invoke-WithGitHubRateLimitRetry -OperationName 'GitHub GraphQL manifest read' -ScriptBlock {
+            $response = Invoke-RestMethod `
+                -Uri 'https://api.github.com/graphql' `
+                -Headers $headers `
+                -Method Post `
+                -ContentType 'application/json' `
+                -Body $body `
+                -ErrorAction Stop
 
-        if ($null -ne $response.PSObject.Properties['errors'] -and @($response.errors).Count -gt 0) {
-            $messages = @($response.errors | ForEach-Object { [string]$_.message })
-            throw "GitHub GraphQL request failed: $($messages -join '; ')"
+            if ($null -ne $response.PSObject.Properties['errors'] -and @($response.errors).Count -gt 0) {
+                $messages = @($response.errors | ForEach-Object { [string]$_.message })
+                $isRateLimited = @($response.errors | Where-Object { "$($_.type)" -eq 'RATE_LIMITED' }).Count -gt 0
+                $graphQlFailure = [System.Exception]::new("GitHub GraphQL request failed: $($messages -join '; ')")
+                if ($isRateLimited) {
+                    # GraphQL rate limits arrive as HTTP 200 with an errors array;
+                    # tag the failure so the retry helper treats it as a 429.
+                    $graphQlFailure.Data['StatusCode'] = 429
+                }
+                throw $graphQlFailure
+            }
+
+            return $response.data
         }
-
-        return $response.data
     }
 
     function ConvertFrom-GitHubContentResponse {
