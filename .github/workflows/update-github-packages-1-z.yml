@@ -1,7 +1,21 @@
-name: GH Packages 1-R
+name: GH Packages 1-Z
 
 on:
   workflow_dispatch:
+    inputs:
+      submission_repository:
+        description: "Pull request target; test fork requires acknowledgement"
+        required: true
+        default: microsoft/winget-pkgs
+        type: choice
+        options:
+          - microsoft/winget-pkgs
+          - damn-good-b0t/winget-pkgs
+      allow_test_fork_submission:
+        description: "Acknowledge that this dispatch may create PRs only in damn-good-b0t/winget-pkgs"
+        required: true
+        default: false
+        type: boolean
   schedule:
     - cron: "3 0/4 * * *" # every 4 hours
   push:
@@ -15,7 +29,7 @@ permissions:
 
 # Do not overlap runs of this workflow.
 concurrency:
-  group: update-github-packages-1-r
+  group: update-github-packages-1-z
   cancel-in-progress: false
 
 jobs:
@@ -104,7 +118,6 @@ jobs:
               {"id": "CryptoPro.Chromium-Gost", "repo": "deemru/Chromium-Gost", "url": "https://github.com/deemru/Chromium-Gost/releases/download/{VERSION}/chromium-gost-{VERSION}-windows-386-installer.exe https://github.com/deemru/Chromium-Gost/releases/download/{VERSION}/chromium-gost-{VERSION}-windows-amd64-installer.exe", "allowStructuralRewrite": true},
               {"id": "CueLang.Cue", "repo": "cue-lang/cue", "url": "https://github.com/cue-lang/cue/releases/download/v{VERSION}/cue_v{VERSION}_windows_amd64.zip https://github.com/cue-lang/cue/releases/download/v{VERSION}/cue_v{VERSION}_windows_arm64.zip"},
               {"id": "Curiosity.Curiosity", "repo": "curiosity-ai/curiosity-app-win", "url": "https://github.com/curiosity-ai/curiosity-app-win/releases/download/v{VERSION}/Curiosity-Setup-{VERSION}.exe"},
-              {"id": "CrowdSecurity.CrowdSec", "repo": "crowdsecurity/crowdsec", "url": "https://github.com/crowdsecurity/crowdsec/releases/download/v{VERSION}/crowdsec_{VERSION}.msi"},
               {"id": "dbrgn.tealdeer", "repo": "dbrgn/tealdeer", "url": "https://github.com/dbrgn/tealdeer/releases/download/v{VERSION}/tealdeer-windows-x86_64-msvc.exe"},
               {"id": "DDEVFoundation.DDEV", "repo": "ddev/ddev", "url": "https://github.com/ddev/ddev/releases/download/v{VERSION}/ddev_windows_amd64_installer.v{VERSION}.exe https://github.com/ddev/ddev/releases/download/v{VERSION}/ddev_windows_arm64_installer.v{VERSION}.exe"},
               {"id": "Decred.Decrediton", "repo": "decred/decred-binaries", "url": "https://github.com/decred/decred-binaries/releases/download/v{VERSION}/decrediton-windows-amd64-v{VERSION}.exe"},
@@ -287,7 +300,106 @@ jobs:
               {"id": "Romanitho.Winget-AutoUpdate", "repo": "Romanitho/Winget-AutoUpdate", "url": "https://github.com/Romanitho/Winget-AutoUpdate/releases/download/v{VERSION}/WAU.msi"},
               {"id": "RoslynPad.RoslynPad", "repo": "roslynpad/roslynpad", "url": "https://github.com/roslynpad/roslynpad/releases/download/{VERSION}/RoslynPad-windows-x64.zip https://github.com/roslynpad/roslynpad/releases/download/{VERSION}/RoslynPad-windows-arm64.zip"},
               {"id": "ryanvolz.radioconda", "repo": "ryanvolz/radioconda", "url": "https://github.com/ryanvolz/radioconda/releases/download/{VERSION}/radioconda-{VERSION}-Windows-x86_64.exe"},
-              {"id": "Rye.Rye", "repo": "astral-sh/rye", "url": "https://github.com/astral-sh/rye/releases/download/{VERSION}/rye-x86-windows.exe https://github.com/astral-sh/rye/releases/download/{VERSION}/rye-x86_64-windows.exe"}
+              {"id": "Rye.Rye", "repo": "astral-sh/rye", "url": "https://github.com/astral-sh/rye/releases/download/{VERSION}/rye-x86-windows.exe https://github.com/astral-sh/rye/releases/download/{VERSION}/rye-x86_64-windows.exe"},
+              {"id": "S3Drive.S3Drive", "repo": "s3drive/windows-app", "url": "https://github.com/s3drive/windows-app/releases/download/{VERSION}/s3drive-win-x64.exe"},
+              {"id": "SaeraSoft.CaesiumImageCompressor", "repo": "Lymphatus/caesium-image-compressor", "url": "https://github.com/Lymphatus/caesium-image-compressor/releases/download/v{VERSION}/caesium-image-compressor-{VERSION}-win-setup.exe"},
+              {"id": "Sayuri.FFFTP", "repo": "ffftp/ffftp", "url": "https://github.com/ffftp/ffftp/releases/download/v{VERSION}/ffftp-v{VERSION}-x64.msi https://github.com/ffftp/ffftp/releases/download/v{VERSION}/ffftp-v{VERSION}-x86.msi"},
+              {"id": "schollz.croc", "repo": "schollz/croc", "url": "https://github.com/schollz/croc/releases/download/v{VERSION}/croc_v{VERSION}_Windows-32bit.zip https://github.com/schollz/croc/releases/download/v{VERSION}/croc_v{VERSION}_Windows-64bit.zip https://github.com/schollz/croc/releases/download/v{VERSION}/croc_v{VERSION}_Windows-ARM.zip https://github.com/schollz/croc/releases/download/v{VERSION}/croc_v{VERSION}_Windows-ARM64.zip"},
+              {"id": "sebescudie.GammaLauncher", "repo": "sebescudie/GammaLauncher", "url": "https://github.com/sebescudie/GammaLauncher/releases/download/{VERSION}/gammalauncher_{VERSION}_win-x64_installer.exe https://github.com/sebescudie/GammaLauncher/releases/download/{VERSION}/gammalauncher_{VERSION}_win-arm64_installer.exe"},
+              {"id": "seerge.g-helper", "repo": "seerge/g-helper", "url": "https://github.com/seerge/g-helper/releases/download/v{VERSION}/GHelper.exe"},
+              {"id": "shawnbanasick.kade", "repo": "shawnbanasick/kade", "url": "https://github.com/shawnbanasick/kade/releases/download/v{VERSION}/KADE.Setup.{VERSION}.exe"},
+              {"id": "Shemnei.punktf", "repo": "Shemnei/punktf", "url": "https://github.com/Shemnei/punktf/releases/download/v{VERSION}/punktf-x86_64-pc-windows-msvc-static.zip"},
+              {"id": "sidneys.pb-for-desktop", "repo": "sidneys/pb-for-desktop", "url": "https://github.com/sidneys/pb-for-desktop/releases/download/v{VERSION}/pb-for-desktop-{VERSION}-setup.msi"},
+              {"id": "Sigstore.Cosign", "repo": "sigstore/cosign", "url": "https://github.com/sigstore/cosign/releases/download/v{VERSION}/cosign-windows-amd64.exe"},
+              {"id": "SimpleX.SimpleX-Chat", "repo": "simplex-chat/simplex-chat", "url": "https://github.com/simplex-chat/simplex-chat/releases/download/v{VERSION}/simplex-desktop-windows-x86_64.msi"},
+              {"id": "simulot.immich-go", "repo": "simulot/immich-go", "url": "https://github.com/simulot/immich-go/releases/download/v{VERSION}/immich-go_Windows_arm64.zip https://github.com/simulot/immich-go/releases/download/v{VERSION}/immich-go_Windows_x86_64.zip"},
+              {"id": "SnailDOS.SnailKM", "repo": "SnailKM/SnailKM-Software", "url": "https://github.com/SnailKM/SnailKM-Software/releases/download/v{VERSION}/SnailKM-Setup-{VERSION}.exe"},
+              {"id": "SnapNet.SnapNet", "repo": "stijnvdb88/Snap.Net", "url": "https://github.com/stijnvdb88/Snap.Net/releases/download/v{VERSION}/Snap.Net-{VERSION}-Setup.exe"},
+              {"id": "snowfoxsh.aplang", "repo": "snowfoxsh/aplang", "url": "https://github.com/snowfoxsh/aplang/releases/download/v{VERSION}/aplang.exe"},
+              {"id": "Snyk.Snyk", "repo": "snyk/cli", "url": "https://github.com/snyk/cli/releases/download/v{VERSION}/snyk-win.exe"},
+              {"id": "sonnylab.chatgpt", "repo": "sonnylazuardi/chatgpt-desktop", "url": "https://github.com/sonnylazuardi/chat-ai-desktop/releases/download/v{VERSION}/chatgpt.msi"},
+              {"id": "SparkLabs.openvpn-configuration-generator", "repo": "thesparklabs/openvpn-configuration-generator", "url": "https://github.com/thesparklabs/openvpn-configuration-generator/releases/download/{VERSION}/ovpngen-{VERSION}-windows.exe"},
+              {"id": "sparrowwallet.sparrow", "repo": "sparrowwallet/sparrow", "url": "https://github.com/sparrowwallet/sparrow/releases/download/{VERSION}/Sparrow-{VERSION}.msi"},
+              {"id": "SpikeHD.swerve", "repo": "SpikeHD/swerve", "url": "https://github.com/SpikeHD/swerve/releases/download/v{VERSION}/swerve-x86_64-pc-windows-msvc.exe https://github.com/SpikeHD/swerve/releases/download/v{VERSION}/swerve-aarch64-pc-windows-msvc.exe"},
+              {"id": "srevinsaju.guiscrcpy.PyQt5", "repo": "srevinsaju/guiscrcpy", "url": "https://github.com/srevinsaju/guiscrcpy/releases/download/v{VERSION}/guiscrcpy-PyQt5-x64.exe https://github.com/srevinsaju/guiscrcpy/releases/download/v{VERSION}/guiscrcpy-PyQt5-x86.exe"},
+              {"id": "srevinsaju.guiscrcpy.PySide2", "repo": "srevinsaju/guiscrcpy", "url": "https://github.com/srevinsaju/guiscrcpy/releases/download/v{VERSION}/guiscrcpy-PySide2-x64.exe https://github.com/srevinsaju/guiscrcpy/releases/download/v{VERSION}/guiscrcpy-PySide2-x86.exe"},
+              {"id": "stacklok.frizbee", "repo": "stacklok/frizbee", "url": "https://github.com/stacklok/frizbee/releases/download/v{VERSION}/frizbee_{VERSION}_windows_arm64.zip https://github.com/stacklok/frizbee/releases/download/v{VERSION}/frizbee_{VERSION}_windows_amd64.zip"},
+              {"id": "stackrox.kube-linter", "repo": "stackrox/kube-linter", "url": "https://github.com/stackrox/kube-linter/releases/download/v{VERSION}/kube-linter.exe"},
+              {"id": "Starpine.Screenbox", "repo": "huynhsontung/Screenbox", "url": "https://github.com/huynhsontung/Screenbox/releases/download/v{VERSION}/Screenbox_{VERSION}.0_neutral.msixbundle https://github.com/huynhsontung/Screenbox/releases/download/v{VERSION}/Screenbox_{VERSION}.0_neutral.msixbundle https://github.com/huynhsontung/Screenbox/releases/download/v{VERSION}/Screenbox_{VERSION}.0_neutral.msixbundle"},
+              {"id": "StefanLobbenmeier.youtube-dl-gui", "repo": "StefanLobbenmeier/youtube-dl-gui", "url": "https://github.com/StefanLobbenmeier/youtube-dl-gui/releases/download/v{VERSION}/Open-Video-Downloader-Setup-{VERSION}.exe"},
+              {"id": "StefansTools.BowPad", "repo": "stefankueng/BowPad", "url": "https://github.com/stefankueng/BowPad/releases/download/{VERSION}/BowPad-{VERSION}.msi https://github.com/stefankueng/BowPad/releases/download/{VERSION}/BowPad64-{VERSION}.msi"},
+              {"id": "StefansTools.grepWin", "repo": "stefankueng/grepWin", "url": "https://github.com/stefankueng/grepWin/releases/download/{VERSION}/grepWin-{VERSION}.msi|x86 https://github.com/stefankueng/grepWin/releases/download/{VERSION}/grepWin-{VERSION}-x64.msi|x64", "With": "wingetcreate"},
+              {"id": "StephanDilly.gitui", "repo": "extrawurst/gitui", "url": "https://github.com/extrawurst/gitui/releases/download/v{VERSION}/gitui-win.msi"},
+              {"id": "StirlingTools.StirlingPDF", "repo": "Stirling-Tools/Stirling-PDF", "url": "https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v{VERSION}/Stirling-PDF-win-installer.exe"},
+              {"id": "Storj.Uplink", "repo": "storj/storj", "url": "https://github.com/storj/storj/releases/download/v{VERSION}/uplink_windows_amd64.zip"},
+              {"id": "Stripe.StripeCli", "repo": "stripe/stripe-cli", "url": "https://github.com/stripe/stripe-cli/releases/download/v{VERSION}/stripe_{VERSION}_windows_x86_64.zip"},
+              {"id": "StudioRack.StudioRack", "repo": "studiorack/studiorack-app", "url": "https://github.com/studiorack/studiorack-app/releases/download/v{VERSION}/studiorack-win.exe"},
+              {"id": "stuncloud.uwscr", "repo": "stuncloud/UWSCR", "url": "https://github.com/stuncloud/UWSCR/releases/download/{VERSION}/UWSCRx64.zip"},
+              {"id": "STYInc.STY1001.UnowhyTools", "repo": "STY1001/Unowhy-Tools", "url": "https://github.com/STY1001/Unowhy-Tools/releases/download/v{VERSION}/Unowhy.Tools.{VERSION}.Installer.exe"},
+              {"id": "sunfish-shogi.shogihome", "repo": "sunfish-shogi/shogihome", "url": "https://github.com/sunfish-shogi/shogihome/releases/download/v{VERSION}/release-v{VERSION}-win.zip|x86"},
+              {"id": "SUSE.RancherDesktop", "repo": "rancher-sandbox/rancher-desktop", "url": "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v{VERSION}/Rancher.Desktop.Setup.{VERSION}.msi"},
+              {"id": "Syncplay.Syncplay", "repo": "Syncplay/syncplay", "url": "https://github.com/Syncplay/syncplay/releases/download/v{VERSION}/Syncplay-{VERSION}-Setup.exe"},
+              {"id": "T-Troll.AlienFXTools", "repo": "T-Troll/alienfx-tools", "url": "https://github.com/T-Troll/alienfx-tools/releases/download/{VERSION}/alienfx-tools.msi"},
+              {"id": "tagspaces.tagspaces", "repo": "tagspaces/tagspaces", "url": "https://github.com/tagspaces/tagspaces/releases/download/v{VERSION}/tagspaces-win-x64-{VERSION}.exe https://github.com/tagspaces/tagspaces/releases/download/v{VERSION}/tagspaces-win-x64-{VERSION}.exe"},
+              {"id": "tanshuai.alphabiz", "repo": "tanshuai/alphabiz", "url": "https://github.com/tanshuai/alphabiz/releases/download/{VERSION}/alphabiz-{VERSION}.msi"},
+              {"id": "TeamLidarr.Lidarr", "repo": "Lidarr/Lidarr", "url": "https://github.com/Lidarr/Lidarr/releases/download/v{VERSION}/Lidarr.master.{VERSION}.windows-core-x86-installer.exe https://github.com/Lidarr/Lidarr/releases/download/v{VERSION}/Lidarr.master.{VERSION}.windows-core-x64-installer.exe"},
+              {"id": "TEdit.TEdit", "repo": "TEdit/Terraria-Map-Editor", "url": "https://github.com/TEdit/Terraria-Map-Editor/releases/download/{VERSION}/TEdit-stable-Setup.exe"},
+              {"id": "TeraTermProject.teraterm5", "repo": "TeraTermProject/teraterm", "url": "https://github.com/TeraTermProject/teraterm/releases/download/v{VERSION}/teraterm-{VERSION}-x86.exe https://github.com/TeraTermProject/teraterm/releases/download/v{VERSION}/teraterm-{VERSION}-x64.exe https://github.com/TeraTermProject/teraterm/releases/download/v{VERSION}/teraterm-{VERSION}-arm64.exe"},
+              {"id": "TermoraDev.Termora", "repo": "TermoraDev/termora", "url": "https://github.com/TermoraDev/termora/releases/download/{VERSION}/termora-{VERSION}-windows-x86-64.exe"},
+              {"id": "TerraformLinters.tflint", "repo": "terraform-linters/tflint", "url": "https://github.com/terraform-linters/tflint/releases/download/v{VERSION}/tflint_windows_386.zip https://github.com/terraform-linters/tflint/releases/download/v{VERSION}/tflint_windows_amd64.zip"},
+              {"id": "terreng.SimpleWebServer", "repo": "terreng/simple-web-server", "url": "https://github.com/terreng/simple-web-server/releases/download/v{VERSION}/Simple-Web-Server-Installer-{VERSION}-x64.exe https://github.com/terreng/simple-web-server/releases/download/v{VERSION}/Simple-Web-Server-Installer-{VERSION}-ia32.exe https://github.com/terreng/simple-web-server/releases/download/v{VERSION}/Simple-Web-Server-Installer-{VERSION}-arm64.exe"},
+              {"id": "Tetrate.wazero", "repo": "tetratelabs/wazero", "url": "https://github.com/tetratelabs/wazero/releases/download/v{VERSION}/wazero_{VERSION}_windows_amd64.zip"},
+              {"id": "TeXstudio.TeXstudio", "repo": "texstudio-org/texstudio", "url": " https://github.com/texstudio-org/texstudio/releases/download/{VERSION}/texstudio-{VERSION}-win-qt6-signed.exe"},
+              {"id": "ThaddeusMcCleary.Seatsmart", "repo": "thaddeusm/seatsmart-FHSU", "url": "https://github.com/thaddeusm/seatsmart-FHSU/releases/download/v{VERSION}/Seatsmart-Setup-{VERSION}.exe"},
+              {"id": "ThePyzoteam.pyzo", "repo": "pyzo/pyzo", "url": "https://github.com/pyzo/pyzo/releases/download/v{VERSION}/pyzo-{VERSION}-win64.exe"},
+              {"id": "TheQucsTeam.Qucs-S", "repo": "ra3xdh/qucs_s", "url": "https://github.com/ra3xdh/qucs_s/releases/download/{VERSION}/Qucs-S-{VERSION}-win64-setup.exe"},
+              {"id": "TheWaWaR.simple-http-server", "repo": "TheWaWaR/simple-http-server", "url": "https://github.com/TheWaWaR/simple-http-server/releases/download/v{VERSION}/x86_64-pc-windows-msvc-simple-http-server.exe"},
+              {"id": "Thoughtworks.Talisman", "repo": "thoughtworks/talisman", "url": "https://github.com/thoughtworks/talisman/releases/download/v{VERSION}/talisman_windows_386.exe https://github.com/thoughtworks/talisman/releases/download/v{VERSION}/talisman_windows_amd64.exe https://github.com/thoughtworks/talisman/releases/download/v{VERSION}/talisman_windows_arm64.exe"},
+              {"id": "tinygo-org.tinygo", "repo": "tinygo-org/tinygo", "url": "https://github.com/tinygo-org/tinygo/releases/download/v{VERSION}/tinygo{VERSION}.windows-amd64.zip"},
+              {"id": "TobyAllen.DocTo", "repo": "tobya/DocTo", "url": "https://github.com/tobya/DocTo/releases/download/v{VERSION}/docto.exe"},
+              {"id": "TomEnglert.RegionToShare", "repo": "tom-englert/RegionToShare", "url": "https://github.com/tom-englert/RegionToShare/releases/download/{TAG}/RegionToShare.zip", "versionSource": "ReleaseName"},
+              {"id": "TravisLane.SteamArtManager", "repo": "Tormak9970/Steam-Art-Manager", "url": "https://github.com/Tormak9970/Steam-Art-Manager/releases/download/v{VERSION}/steam-art-manager.msi"},
+              {"id": "tuna-f1sh.cyme", "repo": "tuna-f1sh/cyme", "url": "https://github.com/tuna-f1sh/cyme/releases/download/v{VERSION}/cyme-v{VERSION}-x86_64-pc-windows-gnu.zip"},
+              {"id": "Typst.Typst", "repo": "typst/typst", "url": "https://github.com/typst/typst/releases/download/v{VERSION}/typst-x86_64-pc-windows-msvc.zip"},
+              {"id": "Tyrrrz.DiscordChatExporter.GUI", "repo": "Tyrrrz/DiscordChatExporter", "url": "https://github.com/Tyrrrz/DiscordChatExporter/releases/download/{VERSION}/DiscordChatExporter.win-x86.zip https://github.com/Tyrrrz/DiscordChatExporter/releases/download/{VERSION}/DiscordChatExporter.win-x64.zip https://github.com/Tyrrrz/DiscordChatExporter/releases/download/{VERSION}/DiscordChatExporter.win-arm64.zip"},
+              {"id": "UltimateGadgetLaboratories.UHKAgent", "repo": "UltimateHackingKeyboard/agent", "url": "https://github.com/UltimateHackingKeyboard/agent/releases/download/v{VERSION}/UHK.Agent-{VERSION}-win-ia32.exe|x86 https://github.com/UltimateHackingKeyboard/agent/releases/download/v{VERSION}/UHK.Agent-{VERSION}-win-x64.exe|x64", "With": "wingetcreate"},
+              {"id": "Universal-Debloater-Alliance.uad-ng", "repo": "Universal-Debloater-Alliance/universal-android-debloater-next-generation", "url": "https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/releases/download/v{VERSION}/uad-ng-windows.exe"},
+              {"id": "univrsal.tuna", "repo": "univrsal/tuna", "url": "https://github.com/univrsal/tuna/releases/download/v{VERSION}/tuna-{VERSION}-windows-x64-Installer.exe https://github.com/univrsal/tuna/releases/download/v{VERSION}/tuna-{VERSION}-windows-x64-Installer.exe"},
+              {"id": "unlimited-clipboard.unlimited-clipboard", "repo": "unlimited-clipboard/unlimited-clipboard", "url": "https://github.com/unlimited-clipboard/unlimited-clipboard/releases/download/v{VERSION}/unlimited-clipboard.exe"},
+              {"id": "vcmi.vcmi", "repo": "vcmi/vcmi", "url": "https://github.com/vcmi/vcmi/releases/download/{VERSION}/VCMI-Windows-x64.exe"},
+              {"id": "Vendicated.Vencord.Canary", "repo": "Vencord/Installer", "url": "https://github.com/Vencord/Installer/releases/download/v{VERSION}/VencordInstallerCli.exe"},
+              {"id": "VictorIX.BlenderLauncher", "repo": "Victor-IX/Blender-Launcher-V2", "url": "https://github.com/Victor-IX/Blender-Launcher-V2/releases/download/v{VERSION}/Blender_Launcher_v{VERSION}_Windows_x64.zip"},
+              {"id": "VirusTotal.vt-cli", "repo": "VirusTotal/vt-cli", "url": "https://github.com/VirusTotal/vt-cli/releases/download/{VERSION}/Windows64.zip"},
+              {"id": "VirusTotal.YARA-X", "repo": "VirusTotal/yara-x", "url": "https://github.com/VirusTotal/yara-x/releases/download/v{VERSION}/yara-x-v{VERSION}-x86_64-pc-windows-msvc.zip"},
+              {"id": "VisualBoyAdvance-M.VisualBoyAdvance-M", "repo": "visualboyadvance-m/visualboyadvance-m", "url": "https://github.com/visualboyadvance-m/visualboyadvance-m/releases/download/v{VERSION}/visualboyadvance-m-Win-x86_64.zip"},
+              {"id": "vivainio.RoughGrep", "repo": "vivainio/RoughGrep", "url": "https://github.com/vivainio/RoughGrep/releases/download/v{VERSION}/RoughGrep-{VERSION}.zip"},
+              {"id": "VividDesigns.WifiMouseServer", "repo": "michaelnpsp/WifiMouseServer", "url": "https://github.com/michaelnpsp/WifiMouseServer/releases/download/{VERSION}/WifiMouseServerInstall.exe|x64"},
+              {"id": "Vup.Vup", "repo": "vup-app/vup", "url": "https://github.com/vup-app/vup/releases/download/v{VERSION}/Vup-{VERSION}-BETA-Windows-Installer.exe"},
+              {"id": "w4po.ExplorerTabUtility", "repo": "w4po/ExplorerTabUtility", "url": "https://github.com/w4po/ExplorerTabUtility/releases/download/v{VERSION}/ExplorerTabUtility_v{VERSION}_arm64_Net9.0_FrameworkDependent.zip https://github.com/w4po/ExplorerTabUtility/releases/download/v{VERSION}/ExplorerTabUtility_v{VERSION}_x86_Net9.0_FrameworkDependent.zip https://github.com/w4po/ExplorerTabUtility/releases/download/v{VERSION}/ExplorerTabUtility_v{VERSION}_x64_Net9.0_FrameworkDependent.zip"},
+              {"id": "wagoodman.dive", "repo": "wagoodman/dive", "url": "https://github.com/wagoodman/dive/releases/download/v{VERSION}/dive_{VERSION}_windows_amd64.zip https://github.com/wagoodman/dive/releases/download/v{VERSION}/dive_{VERSION}_windows_arm64.zip"},
+              {"id": "WerWolv.ImHex", "repo": "WerWolv/ImHex", "url": "https://github.com/WerWolv/ImHex/releases/download/v{VERSION}/imhex-{VERSION}-Windows-x86_64.msi"},
+              {"id": "WFCD.WFInfo", "repo": "WFCD/WFinfo", "url": "https://github.com/WFCD/WFinfo/releases/download/v{VERSION}/WFInfo.zip"},
+              {"id": "WHONET.AMRIE", "repo": "AClark-WHONET/AMRIE", "url": "https://github.com/AClark-WHONET/AMRIE/releases/download/v{VERSION}/AMR_Interpretation_Engine_v{VERSION}.msi"},
+              {"id": "WidelandsDevelopmentTeam.Widelands", "repo": "widelands/widelands", "url": "https://github.com/widelands/widelands/releases/download/v{VERSION}/Widelands-{VERSION}-x64.exe https://github.com/widelands/widelands/releases/download/v{VERSION}/Widelands-{VERSION}-x86.exe"},
+              {"id": "WikimediaProject.Huggle", "repo": "huggle/huggle3-qt-lx", "url": "https://github.com/huggle/huggle3-qt-lx/releases/download/{VERSION}/huggle_{VERSION}.exe|x86 https://github.com/huggle/huggle3-qt-lx/releases/download/{VERSION}/huggle_{VERSION}_x64.exe|x64", "With": "wingetcreate"},
+              {"id": "Wilfred.difftastic", "repo": "Wilfred/difftastic", "url": "https://github.com/Wilfred/difftastic/releases/download/{VERSION}/difft-x86_64-pc-windows-msvc.zip"},
+              {"id": "WillyJL.F95Checker", "repo": "Willy-JL/F95Checker", "url": "https://github.com/Willy-JL/F95Checker/releases/download/{VERSION}/F95Checker-Windows.zip|neutral"},
+              {"id": "WiXToolset.WiXCLI", "repo": "wixtoolset/wix", "url": "https://github.com/wixtoolset/wix/releases/download/v{VERSION}/wix-cli-x64.msi"},
+              {"id": "wkjarosz.hdrview", "repo": "wkjarosz/hdrview", "url": "https://github.com/wkjarosz/hdrview/releases/download/v{VERSION}/HDRView-{VERSION}-windows.zip"},
+              {"id": "woaitsAryan.regit", "repo": "woaitsAryan/regit", "url": "https://github.com/woaitsAryan/regit/releases/download/v{VERSION}/regit_Windows_arm64.zip https://github.com/woaitsAryan/regit/releases/download/v{VERSION}/regit_Windows_x86_64.zip"},
+              {"id": "xiSage.ncmdump-net", "repo": "xiSage/ncmdump-net", "url": "https://github.com/xiSage/ncmdump-net/releases/download/v{VERSION}/ncmdump-net-win-x64.zip https://github.com/xiSage/ncmdump-net/releases/download/v{VERSION}/ncmdump-net-win-arm64.zip"},
+              {"id": "xoofx.kalk", "repo": "xoofx/kalk", "url": "https://github.com/xoofx/kalk/releases/download/{VERSION}/kalk.{VERSION}.win-x64.zip"},
+              {"id": "xpipe-io.xpipe.portable", "repo": "xpipe-io/xpipe", "url": "https://github.com/xpipe-io/xpipe/releases/download/{VERSION}/xpipe-portable-windows-x86_64.zip"},
+              {"id": "XTLS.Xray-core", "repo": "XTLS/Xray-core", "url": "https://github.com/XTLS/Xray-core/releases/download/v{VERSION}/Xray-windows-arm64-v8a.zip https://github.com/XTLS/Xray-core/releases/download/v{VERSION}/Xray-windows-64.zip https://github.com/XTLS/Xray-core/releases/download/v{VERSION}/Xray-windows-32.zip"},
+              {"id": "Yaak.app", "repo": "mountain-loop/yaak", "url": "https://github.com/mountain-loop/yaak/releases/download/v{VERSION}/Yaak_{VERSION}_x64-setup.exe"},
+              {"id": "yitsushi.totp-cli", "repo": "yitsushi/totp-cli", "url": "https://github.com/yitsushi/totp-cli/releases/download/v{VERSION}/totp-cli_Windows_x86_64.zip"},
+              {"id": "Yubico.Authenticator", "repo": "Yubico/yubioath-flutter", "url": "https://github.com/Yubico/yubioath-flutter/releases/download/{VERSION}/yubico-authenticator-{VERSION}-win64.msi"},
+              {"id": "Yubico.YubiKeyManagerCLI", "repo": "Yubico/yubikey-manager", "url": "https://developers.yubico.com/yubikey-manager/Releases/yubikey-manager-{VERSION}-win64.msi"},
+              {"id": "Zagrios.BSManager", "repo": "Zagrios/bs-manager", "url": "https://github.com/Zagrios/bs-manager/releases/download/v{VERSION}/BSManager-Setup-{VERSION}.exe"},
+              {"id": "ZeroInstall.ZeroInstall", "repo": "0install/0install-win", "url": "https://github.com/0install/0install-win/releases/download/{VERSION}/zero-install.exe|x86|user https://github.com/0install/0install-win/releases/download/{VERSION}/zero-install.exe|x86|machine"},
+              {"id": "zkSNACKs.WasabiWallet", "repo": "WalletWasabi/WalletWasabi", "url": "https://github.com/WalletWasabi/WalletWasabi/releases/download/v{VERSION}/Wasabi-{VERSION}.msi"},
+              {"id": "ZugferdCommunity.QubaViewer", "repo": "ZUGFeRD/quba-viewer", "url": "https://github.com/ZUGFeRD/quba-viewer/releases/download/v{VERSION}/Quba.{VERSION}.msi"},
+              {"id": "CrowdSecurity.CrowdSec", "repo": "crowdsecurity/crowdsec", "url": "https://github.com/crowdsecurity/crowdsec/releases/download/v{VERSION}/crowdsec_{VERSION}.msi"}
             ]
         run: ./scripts/Select-PackagesNeedingUpdate.ps1
 
@@ -324,6 +436,7 @@ jobs:
           WINGET_UPSTREAM_READ_TOKEN: ${{ secrets.WINGET_PAT }}
           WINGET_UPSTREAM_READ_FALLBACK_TOKEN: ${{ steps.upstream-read-probe.outputs.available == 'true' && github.token || secrets.WINGET_PUBLIC_READ_TOKEN }}
           WINGET_PKGS_FORK_REPO: ${{ vars.WINGET_PKGS_FORK_REPO }}
+          WINGET_PKGS_SUBMISSION_REPOSITORY: ${{ github.event_name == 'workflow_dispatch' && inputs.submission_repository || 'microsoft/winget-pkgs' }}
           GHURLs: ${{ matrix.url }}
           GHRepo: ${{ matrix.repo }}
           GHTagPattern: ${{ fromJSON(toJSON(matrix)).tagPattern }}
@@ -960,15 +1073,28 @@ jobs:
         id: check-submit
         shell: pwsh
         run: |
+          $targetRepository = "$env:WINGET_PKGS_SUBMISSION_REPOSITORY"
+          $isTestForkTarget = $targetRepository -ceq 'damn-good-b0t/winget-pkgs'
+          if ($isTestForkTarget -and "$env:WINGET_PKGS_ALLOW_TEST_FORK_SUBMISSION" -cne 'true') {
+            throw 'Test-fork submission requires the allow_test_fork_submission workflow_dispatch acknowledgement.'
+          }
+          if ($targetRepository -notin @('microsoft/winget-pkgs', 'damn-good-b0t/winget-pkgs')) {
+            throw "Unsupported submission repository '$targetRepository'."
+          }
           if ("$env:VARS_SUBMIT_PR" -ne "true") {
             Write-Host "::warning::SUBMIT_PR is not set to 'true', skipping PR submission"
             "skip=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
           } else {
+            if ($isTestForkTarget) {
+              Write-Host 'Test-fork submission is explicitly acknowledged; any PR will be created only in damn-good-b0t/winget-pkgs.'
+            }
             Write-Host "SUBMIT_PR is enabled, proceeding with PR submission"
             "skip=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
           }
         env:
           VARS_SUBMIT_PR: ${{ vars.SUBMIT_PR }}
+          WINGET_PKGS_SUBMISSION_REPOSITORY: ${{ github.event_name == 'workflow_dispatch' && inputs.submission_repository || 'microsoft/winget-pkgs' }}
+          WINGET_PKGS_ALLOW_TEST_FORK_SUBMISSION: ${{ github.event_name == 'workflow_dispatch' && inputs.allow_test_fork_submission || 'false' }}
 
       - name: Checkout
         if: steps.check-submit.outputs.skip != 'true'
@@ -1029,7 +1155,7 @@ jobs:
           WINGET_UPSTREAM_READ_FALLBACK_TOKEN: ${{ steps.upstream-read-probe-submit.outputs.available == 'true' && github.token || secrets.WINGET_PUBLIC_READ_TOKEN }}
           WINGET_PKGS_FORK_REPO: ${{ vars.WINGET_PKGS_FORK_REPO }}
           WINGET_PKGS_SUBMISSION_TARGET: Upstream
-          WINGET_PKGS_SUBMISSION_REPOSITORY: microsoft/winget-pkgs
+          WINGET_PKGS_SUBMISSION_REPOSITORY: ${{ github.event_name == 'workflow_dispatch' && inputs.submission_repository || 'microsoft/winget-pkgs' }}
           STEPS_MANIFEST_OUTPUTS_PATH: ${{ steps.manifest.outputs.path }}
           MATRIX_PACKAGENAME: ${{ matrix.PackageName }}
           MATRIX_VERSION: ${{ matrix.version }}

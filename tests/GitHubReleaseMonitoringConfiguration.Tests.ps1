@@ -44,8 +44,8 @@ $generatedWorkflowPaths = @(
         ForEach-Object { ".github/workflows/$($_.Name)" } |
         Sort-Object
 )
-if ($generatedWorkflowPaths.Count -lt 2) {
-    throw "Expected at least two generated update-github-packages-*.yml workflows, found $($generatedWorkflowPaths.Count)."
+if ($generatedWorkflowPaths.Count -lt 1) {
+    throw "Expected at least one generated update-github-packages-*.yml workflow, found $($generatedWorkflowPaths.Count)."
 }
 
 $configurationPaths = @('github-releases-monitored.yml') + $generatedWorkflowPaths
