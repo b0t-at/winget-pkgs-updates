@@ -45,7 +45,11 @@
     ],
     "version": "0.83.2",
     "state": "VALIDATION_PASSED",
-    "description": ""
+    "description": "",
+    "openPr": {
+      "version": "0.84.0",
+      "checkedAt": "2026-08-14T13:17:45.3888548Z"
+    }
   },
   "aimotrens.impulsar": {
     "state": "VALIDATION_FAILED",
