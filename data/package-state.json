@@ -1131,11 +1131,7 @@
     "manifestHash": "3EC083D8919F19CC7A69AD8D85001DE66C55EF23B07034B72197EEDA97F14C35",
     "validationCount": 1,
     "lastUpdated": "2026-08-14T09:49:55.9910006Z",
-    "description": "",
-    "openPr": {
-      "version": "18.1.0",
-      "checkedAt": "2026-08-14T13:07:23.2062698Z"
-    }
+    "description": ""
   },
   "Kitware.CMake": {
     "manifestHash": "121F8FD3EA060F3AEA761D3226125FB10283F447EF7DF408C2300D9760816B01",
@@ -1530,7 +1526,11 @@
       "526E47DB7C295D017E9514DF5BB20C6F32B3D1170F2C8BB9C59B53185F5BD6FF"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 1
+    "validationCount": 1,
+    "openPr": {
+      "checkedAt": "2026-08-14T20:16:23.3120363Z",
+      "version": "0.32.13"
+    }
   },
   "OneKey.OneKey": {
     "version": "6.5.0",
