@@ -1048,8 +1048,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.8.5",
-      "checkedAt": "2026-08-14T13:07:22.4686752Z"
+      "checkedAt": "2026-08-15T00:23:14.6161403Z",
+      "version": "2026.8.6"
     }
   },
   "Jellyfin.FFmpeg": {
@@ -1129,7 +1129,11 @@
     "manifestHash": "1B7D562145110A2AB4483E50909945476B8ED7491B1F57E8408A373E465946E7",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "18.1.1"
+    "version": "18.1.1",
+    "openPr": {
+      "checkedAt": "2026-08-15T00:23:15.4029436Z",
+      "version": "18.1.1"
+    }
   },
   "Kitware.CMake": {
     "manifestHash": "121F8FD3EA060F3AEA761D3226125FB10283F447EF7DF408C2300D9760816B01",
