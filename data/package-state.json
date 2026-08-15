@@ -21,6 +21,12 @@
     ],
     "state": "VALIDATION_PASSED"
   },
+  "Adamant.Messenger": {
+    "openPr": {
+      "checkedAt": "2026-08-15T16:10:26.3558951Z",
+      "version": "4.12.0"
+    }
+  },
   "AdGuard.AdGuardHome": {
     "state": "VALIDATION_PASSED",
     "description": "",
@@ -47,8 +53,8 @@
     "state": "VALIDATION_PASSED",
     "description": "",
     "openPr": {
-      "version": "0.84.0",
-      "checkedAt": "2026-08-14T13:17:45.3888548Z"
+      "checkedAt": "2026-08-15T16:10:26.8010704Z",
+      "version": "0.84.0"
     }
   },
   "aimotrens.impulsar": {
@@ -520,8 +526,8 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "3EAB1E5A6E607AC40A8D48C149D5E5B2207604A2D465245704CB6FD111942437",
     "openPr": {
-      "version": "5.1.20",
-      "checkedAt": "2026-08-14T13:07:20.7117971Z"
+      "checkedAt": "2026-08-15T16:10:28.089406Z",
+      "version": "5.1.20"
     }
   },
   "ente-io.photos-desktop": {
@@ -605,8 +611,8 @@
   },
   "Flowscripter.example-cli": {
     "openPr": {
-      "version": "1.8.9",
-      "checkedAt": "2026-08-14T13:07:21.189741Z"
+      "checkedAt": "2026-08-15T16:10:28.5214162Z",
+      "version": "1.8.9"
     }
   },
   "Fly-io.flyctl": {
@@ -834,8 +840,8 @@
     "lastUpdated": "2026-08-14T09:49:55.9133448Z",
     "description": "",
     "openPr": {
-      "version": "2.5.0",
-      "checkedAt": "2026-08-14T13:07:21.6313323Z"
+      "checkedAt": "2026-08-15T16:10:29.0133425Z",
+      "version": "2.5.0"
     }
   },
   "Google.Protobuf": {
@@ -1448,7 +1454,11 @@
       "4DDC69C9E2BA987E9F20E12561E0E39801EDB971A1C065032C58DE8FE17D20DD",
       "C1D12C0C6A9B2A438DEB6661FF27D6224D1FED908714F1B94D0A4F52AC34B1AE",
       "6F82338F77AF50E6B0B5300C01F41369EBF34E629FC9896BDD558E14166D1F73"
-    ]
+    ],
+    "openPr": {
+      "checkedAt": "2026-08-15T16:10:30.0208746Z",
+      "version": "1.8.1"
+    }
   },
   "NATSAuthors.CLI": {
     "validationCount": 2,
@@ -1673,8 +1683,8 @@
     "lastUpdated": "2026-08-14T09:49:55.842265Z",
     "description": "",
     "openPr": {
-      "version": "8.0.40",
-      "checkedAt": "2026-08-14T13:07:23.7415655Z"
+      "checkedAt": "2026-08-15T16:10:30.4609594Z",
+      "version": "8.0.40"
     }
   },
   "pluveto.Upgit": {
