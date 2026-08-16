@@ -1054,8 +1054,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-08-15T00:23:14.6161403Z",
-      "version": "2026.8.6"
+      "version": "2026.8.6",
+      "checkedAt": "2026-08-16T00:24:31.0240953Z"
     }
   },
   "Jellyfin.FFmpeg": {
@@ -1137,8 +1137,8 @@
     "validationCount": 1,
     "version": "18.1.1",
     "openPr": {
-      "checkedAt": "2026-08-15T00:23:15.4029436Z",
-      "version": "18.1.1"
+      "version": "18.1.1",
+      "checkedAt": "2026-08-16T00:24:31.5430016Z"
     }
   },
   "Kitware.CMake": {
