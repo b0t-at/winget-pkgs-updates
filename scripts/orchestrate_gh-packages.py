@@ -46,10 +46,19 @@ def render_packages_json(chunk):
 
 DISPATCH_EXPRESSION = "${{ github.event_name == 'workflow_dispatch' && inputs.submission_repository || 'microsoft/winget-pkgs' }}"
 
-DISPATCH_INPUTS = """on:
+# Present verbatim in the template, so it doubles as the anchor that the
+# test-fork dispatch inputs are appended to.
+DISPATCH_BASE_INPUTS = """on:
   workflow_dispatch:
     inputs:
-      submission_repository:
+      batch_size:
+        description: "Packages to process in this run (random pick from everything needing an update)"
+        required: false
+        default: 30
+        type: number
+"""
+
+DISPATCH_INPUTS = DISPATCH_BASE_INPUTS + """      submission_repository:
         description: "Pull request target; test fork requires acknowledgement"
         required: true
         default: microsoft/winget-pkgs
@@ -121,7 +130,7 @@ def apply_test_fork_dispatch(content, workflow_file):
     """
     content = replace_exactly_once(
         content,
-        "on:\n  workflow_dispatch:\n",
+        DISPATCH_BASE_INPUTS,
         DISPATCH_INPUTS,
         "the workflow_dispatch trigger",
         workflow_file,

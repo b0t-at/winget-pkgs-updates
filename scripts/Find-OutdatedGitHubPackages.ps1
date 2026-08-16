@@ -102,12 +102,24 @@ $githubReleaseUrlPattern = '^https?://github\.com/(?<owner>[^/\s]+)/(?<repo>[^/\
 #region helpers
 
 function Get-MonitoredPackageId {
+    <#
+        Returns every identifier the monitored file already has an opinion
+        about. Commented-out entries and prose exclusion notes count too: they
+        record a deliberate decision to park a package, so a scan must not
+        propose them again.
+    #>
     param([string] $Path)
 
     $ids = [System.Collections.Generic.HashSet[string]]::new([System.StringComparer]::OrdinalIgnoreCase)
     if (-not (Test-Path -LiteralPath $Path)) { return $ids }
 
-    foreach ($match in [regex]::Matches((Get-Content -LiteralPath $Path -Raw), '(?m)^\s*-\s*id:\s*"?([^"\r\n]+?)"?\s*$')) {
+    $content = Get-Content -LiteralPath $Path -Raw
+
+    foreach ($match in [regex]::Matches($content, '(?m)^\s*#?\s*-\s*id:\s*"?([^"#\r\n]+?)"?\s*(?:#.*)?$')) {
+        [void]$ids.Add($match.Groups[1].Value.Trim())
+    }
+
+    foreach ($match in [regex]::Matches($content, '(?m)^\s*#\s*([A-Za-z0-9][A-Za-z0-9._+-]*\.[A-Za-z0-9._+-]+)\s+is excluded:')) {
         [void]$ids.Add($match.Groups[1].Value.Trim())
     }
 

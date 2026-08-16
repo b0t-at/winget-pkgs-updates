@@ -35,15 +35,35 @@ catch {
     $include = $packages
 }
 
-# GitHub Actions rejects matrices with more than 256 jobs. This mainly guards
-# the fail-open fallback above (full monitored list > 256). The selection is
-# randomized so repeated capped runs rotate coverage across all packages
-# instead of starving the alphabetical tail.
+# Two separate limits apply here:
+#   * GitHub Actions rejects matrices with more than 256 jobs (hard limit).
+#   * A scheduled run should stay short and predictable, so only a slice of the
+#     eligible packages runs per invocation. UPDATE_BATCH_SIZE tunes that slice.
+# The selection is randomized so repeated capped runs rotate coverage across all
+# packages instead of starving the alphabetical tail.
 $maxMatrixJobs = 256
-if (@($include).Count -gt $maxMatrixJobs) {
-    $deferredCount = @($include).Count - $maxMatrixJobs
-    Write-Warning "Include list ($(@($include).Count)) exceeds the $maxMatrixJobs-job matrix limit. Randomly selecting $maxMatrixJobs package(s); $deferredCount deferred to the next scheduled run."
-    $include = @($include | Get-Random -Count $maxMatrixJobs)
+$defaultBatchSize = 30
+$batchSize = $defaultBatchSize
+
+if (-not [string]::IsNullOrWhiteSpace($env:UPDATE_BATCH_SIZE)) {
+    $parsedBatchSize = 0
+    if ([int]::TryParse($env:UPDATE_BATCH_SIZE.Trim(), [ref] $parsedBatchSize) -and $parsedBatchSize -gt 0) {
+        $batchSize = $parsedBatchSize
+    }
+    else {
+        Write-Warning "UPDATE_BATCH_SIZE '$($env:UPDATE_BATCH_SIZE)' is not a positive integer; using the default of $defaultBatchSize."
+    }
+}
+
+if ($batchSize -gt $maxMatrixJobs) {
+    Write-Warning "UPDATE_BATCH_SIZE $batchSize exceeds the $maxMatrixJobs-job matrix limit; capping at $maxMatrixJobs."
+    $batchSize = $maxMatrixJobs
+}
+
+if (@($include).Count -gt $batchSize) {
+    $deferredCount = @($include).Count - $batchSize
+    Write-Warning "Include list ($(@($include).Count)) exceeds the batch size of $batchSize. Randomly selecting $batchSize package(s); $deferredCount deferred to the next scheduled run."
+    $include = @($include | Get-Random -Count $batchSize)
 }
 
 $includeJson = ConvertTo-Json -InputObject @($include) -Depth 10 -Compress

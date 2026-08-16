@@ -135,7 +135,7 @@ foreach ($workflowRelativePath in $workflowPaths) {
         $dispatchTargetWorkflows += $workflowRelativePath
         Assert-Match `
             -Actual $workflow `
-            -Pattern '(?ms)^  workflow_dispatch:\r?\n    inputs:\r?\n      submission_repository:.*?^          - microsoft/winget-pkgs\r?\n          - damn-good-b0t/winget-pkgs\s*$' `
+            -Pattern '(?ms)^  workflow_dispatch:\r?\n    inputs:\r?\n.*?^      submission_repository:.*?^          - microsoft/winget-pkgs\r?\n          - damn-good-b0t/winget-pkgs\s*$(?!\r?\n          - )' `
             -Message "$workflowName must expose only the production and designated test-fork targets." | Out-Null
         Assert-Match `
             -Actual $workflow `

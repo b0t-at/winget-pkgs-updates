@@ -2,64 +2,62 @@
 
 <#
 .SYNOPSIS
-    Classifies scan candidates by how actively they are already being maintained
-    in `microsoft/winget-pkgs`, so only unmaintained packages get adopted.
+    Decides which scan candidates are genuinely unclaimed, by checking whether
+    the new version is already published in `microsoft/winget-pkgs` or already
+    has a pull request.
 
 .DESCRIPTION
-    A package being out of date does not mean nobody is looking after it. The
-    publisher may self-submit, another maintainer may run their own pipeline, or
-    a pull request for the new version may already be open. Adopting those
-    packages produces duplicate PRs and friction with existing maintainers.
+    The maintenance question that matters is narrow: is somebody already
+    handling *this specific version*? Broad "was there any activity lately"
+    heuristics reject packages that nobody is actually going to update.
 
-    For each candidate this script runs one `repo:microsoft/winget-pkgs is:pr
-    in:title "<PackageId>"` search and inspects the most recent pull requests.
-    Searches are batched with GraphQL aliases so hundreds of packages cost a few
-    dozen requests instead of one REST search each.
+    Two checks decide the verdict, both scoped to the version the scan found:
 
-    GitHub Search tokenizes on punctuation, so `Foo.Bar` can match `Foo.Bar.Baz`.
-    Every returned title is therefore re-checked client-side against the exact
-    package identifier before it counts as evidence of maintenance.
+      1. Published    - the version directory already exists under the package's
+                        manifest path on `master`. The source index lags the
+                        repository by up to a day, so this catches versions that
+                        landed between the index build and the scan.
+      2. PrForLatest  - an open or merged pull request whose title carries both
+                        the package identifier and that version.
 
-    Resulting status per package:
-      OpenPr       - a pull request is open right now; leave it alone.
-      Maintained   - somebody other than us submitted within -MaintainedWithinDays.
-      Ours         - only our own account submitted recently.
-      Unmaintained - no qualifying pull request activity at all.
+    Anything else is unclaimed and safe to adopt.
+
+    Both checks are batched with GraphQL aliases. Published-version lookups read
+    the repository tree, so they are cheap; pull request lookups use GitHub
+    Search, which tokenizes on punctuation, so every returned title is
+    re-validated client-side against the exact identifier and version. Closed
+    but unmerged pull requests are ignored, matching the duplicate-detection
+    rules the submission pipeline already uses.
 
 .PARAMETER InputPath
     Verified candidate report from Test-OutdatedPackageCandidate.ps1.
 
 .PARAMETER OutputPath
-    CSV report with the maintenance verdict for every candidate.
-
-.PARAMETER SelfAuthor
-    Accounts that belong to this pipeline. Activity from these does not count as
-    third-party maintenance.
-
-.PARAMETER MaintainedWithinDays
-    How recent a third-party pull request has to be for the package to count as
-    actively maintained.
+    CSV report with the verdict for every candidate.
 
 .PARAMETER BatchSize
-    Number of aliased searches per GraphQL request. GitHub applies a secondary
-    rate limit to search, so this is deliberately small.
+    Packages per GraphQL search request. GitHub applies a secondary rate limit
+    to search, so this is deliberately small.
+
+.PARAMETER TreeBatchSize
+    Packages per published-version request. Tree reads are cheap, so this can be
+    considerably larger than BatchSize.
 
 .PARAMETER Top
     Only classify the first N candidates. Intended for smoke tests.
 
 .EXAMPLE
-    ./scripts/Test-PackageMaintenanceStatus.ps1 -Top 30 -Verbose
+    ./scripts/Test-PackageMaintenanceStatus.ps1
 
 .EXAMPLE
-    ./scripts/Test-PackageMaintenanceStatus.ps1 -MaintainedWithinDays 180
+    ./scripts/Test-PackageMaintenanceStatus.ps1 -Top 30 -Verbose
 #>
 [CmdletBinding()]
 param(
     [string] $InputPath,
     [string] $OutputPath,
-    [string[]] $SelfAuthor = @('damn-good-b0t'),
-    [int] $MaintainedWithinDays = 120,
     [int] $BatchSize = 10,
+    [int] $TreeBatchSize = 30,
     [int] $Top = 0
 )
 
@@ -88,7 +86,82 @@ $invoker = {
     & $module { param($q) Invoke-WingetPrecheckGraphQlRequest -Query $q } $Query
 }.GetNewClosure()
 
-function Invoke-PrSearchBatch {
+function ConvertTo-GraphQlLiteral {
+    param([Parameter(Mandatory = $true)] [string] $Value)
+    return '"' + $Value.Replace('\', '\\').Replace('"', '\"') + '"'
+}
+
+# --- pass 1: is the version already published in winget-pkgs? ----------------
+
+function Invoke-PublishedVersionBatch {
+    param(
+        [Parameter(Mandatory = $true)] [object[]] $Packages,
+        [Parameter(Mandatory = $true)] [hashtable] $Result,
+        [Parameter(Mandatory = $true)] [scriptblock] $Invoker,
+        [Parameter(Mandatory = $true)] $Module
+    )
+
+    if ($Packages.Count -eq 0) { return }
+
+    $fields = for ($i = 0; $i -lt $Packages.Count; $i++) {
+        $relative = & $Module { param($id) Get-WingetPackageRelativePath -PackageIdentifier $id } $Packages[$i].PackageId
+        $expression = ConvertTo-GraphQlLiteral -Value "master:$relative"
+        "    p$($i): object(expression: $expression) { ... on Tree { entries { name type } } }"
+    }
+
+    $query = "query {`n  repository(owner: `"microsoft`", name: `"winget-pkgs`") {`n" + ($fields -join "`n") + "`n  }`n}"
+
+    try {
+        $response = & $Invoker $query
+    }
+    catch {
+        if ($Packages.Count -eq 1) {
+            Write-Verbose "Published-version lookup failed for $($Packages[0].PackageId): $($_.Exception.Message)"
+            $Result[$Packages[0].PackageId] = $null
+            return
+        }
+
+        $half = [int][Math]::Floor($Packages.Count / 2)
+        Invoke-PublishedVersionBatch -Packages $Packages[0..($half - 1)] -Result $Result -Invoker $Invoker -Module $Module
+        Invoke-PublishedVersionBatch -Packages $Packages[$half..($Packages.Count - 1)] -Result $Result -Invoker $Invoker -Module $Module
+        return
+    }
+
+    $dataProperty = if ($null -ne $response) { $response.PSObject.Properties['data'] } else { $null }
+    $data = if ($dataProperty) { $dataProperty.Value } else { $null }
+    $repositoryProperty = if ($null -ne $data) { $data.PSObject.Properties['repository'] } else { $null }
+    $repository = if ($repositoryProperty) { $repositoryProperty.Value } else { $null }
+
+    for ($i = 0; $i -lt $Packages.Count; $i++) {
+        $treeProperty = if ($null -ne $repository) { $repository.PSObject.Properties["p$i"] } else { $null }
+        $tree = if ($treeProperty) { $treeProperty.Value } else { $null }
+
+        if ($null -eq $tree) {
+            $Result[$Packages[$i].PackageId] = $null
+            continue
+        }
+
+        $entriesProperty = $tree.PSObject.Properties['entries']
+        $entries = if ($entriesProperty -and $null -ne $entriesProperty.Value) { @($entriesProperty.Value) } else { @() }
+        $Result[$Packages[$i].PackageId] = [string[]]@(
+            $entries | Where-Object { $_.type -eq 'tree' } | ForEach-Object { [string]$_.name }
+        )
+    }
+}
+
+$publishedByPackage = @{}
+for ($offset = 0; $offset -lt $candidates.Count; $offset += $TreeBatchSize) {
+    $slice = @($candidates[$offset..([Math]::Min($offset + $TreeBatchSize, $candidates.Count) - 1)])
+    Write-Progress -Activity 'Reading published versions from winget-pkgs' `
+        -Status "$offset/$($candidates.Count)" `
+        -PercentComplete (100 * $offset / $candidates.Count)
+    Invoke-PublishedVersionBatch -Packages $slice -Result $publishedByPackage -Invoker $invoker -Module $module
+}
+Write-Progress -Activity 'Reading published versions from winget-pkgs' -Completed
+
+# --- pass 2: is there a pull request for exactly this version? ---------------
+
+function Invoke-VersionPrSearchBatch {
     param(
         [Parameter(Mandatory = $true)] [object[]] $Packages,
         [Parameter(Mandatory = $true)] [hashtable] $Result,
@@ -99,9 +172,10 @@ function Invoke-PrSearchBatch {
 
     $fields = for ($i = 0; $i -lt $Packages.Count; $i++) {
         $id = $Packages[$i].PackageId
-        $search = "repo:microsoft/winget-pkgs is:pr in:title `"$($id.Replace('"', '\"'))`" sort:created-desc"
-        $literal = '"' + $search.Replace('\', '\\').Replace('"', '\"') + '"'
-        "  s$($i): search(query: $literal, type: ISSUE, first: 20) { nodes { ... on PullRequest { number title state createdAt mergedAt url author { login } } } }"
+        $version = $Packages[$i].LatestVersion
+        $search = "repo:microsoft/winget-pkgs is:pr in:title `"$($id.Replace('"', '\"'))`" `"$($version.Replace('"', '\"'))`""
+        $literal = ConvertTo-GraphQlLiteral -Value $search
+        "  v$($i): search(query: $literal, type: ISSUE, first: 15) { nodes { ... on PullRequest { number title state url createdAt mergedAt author { login } } } }"
     }
 
     $query = "query {`n" + ($fields -join "`n") + "`n}"
@@ -111,14 +185,14 @@ function Invoke-PrSearchBatch {
     }
     catch {
         if ($Packages.Count -eq 1) {
-            Write-Verbose "PR search failed for $($Packages[0].PackageId): $($_.Exception.Message)"
+            Write-Verbose "Version PR search failed for $($Packages[0].PackageId): $($_.Exception.Message)"
             $Result[$Packages[0].PackageId] = $null
             return
         }
 
         $half = [int][Math]::Floor($Packages.Count / 2)
-        Invoke-PrSearchBatch -Packages $Packages[0..($half - 1)] -Result $Result -Invoker $Invoker
-        Invoke-PrSearchBatch -Packages $Packages[$half..($Packages.Count - 1)] -Result $Result -Invoker $Invoker
+        Invoke-VersionPrSearchBatch -Packages $Packages[0..($half - 1)] -Result $Result -Invoker $Invoker
+        Invoke-VersionPrSearchBatch -Packages $Packages[$half..($Packages.Count - 1)] -Result $Result -Invoker $Invoker
         return
     }
 
@@ -126,7 +200,7 @@ function Invoke-PrSearchBatch {
     $data = if ($dataProperty) { $dataProperty.Value } else { $null }
 
     for ($i = 0; $i -lt $Packages.Count; $i++) {
-        $node = if ($null -ne $data) { $data.PSObject.Properties["s$i"] } else { $null }
+        $node = if ($null -ne $data) { $data.PSObject.Properties["v$i"] } else { $null }
         $search = if ($node) { $node.Value } else { $null }
 
         # Assign through the index directly: using `if` as an assignment
@@ -141,36 +215,53 @@ function Invoke-PrSearchBatch {
     }
 }
 
-$pullRequestsByPackage = @{}
-for ($offset = 0; $offset -lt $candidates.Count; $offset += $BatchSize) {
-    $slice = @($candidates[$offset..([Math]::Min($offset + $BatchSize, $candidates.Count) - 1)])
-    Write-Progress -Activity 'Searching winget-pkgs pull requests' `
-        -Status "$offset/$($candidates.Count)" `
-        -PercentComplete (100 * $offset / $candidates.Count)
-    Invoke-PrSearchBatch -Packages $slice -Result $pullRequestsByPackage -Invoker $invoker
-}
-Write-Progress -Activity 'Searching winget-pkgs pull requests' -Completed
+# Packages already published need no search at all.
+$needsSearch = [System.Collections.Generic.List[object]]::new()
+$publishedMatchByPackage = @{}
+foreach ($candidate in $candidates) {
+    $versions = $publishedByPackage[$candidate.PackageId]
+    $match = $null
+    if ($null -ne $versions -and $versions.Count -gt 0) {
+        $match = & $module {
+            param($v, $list) Find-WingetPublishedVersionMatch -Version $v -PublishedVersions $list
+        } $candidate.LatestVersion ([string[]]$versions)
+    }
 
-$cutoff = (Get-Date).ToUniversalTime().AddDays(-$MaintainedWithinDays)
+    $publishedMatchByPackage[$candidate.PackageId] = $match
+    if ($null -eq $match) { $needsSearch.Add($candidate) }
+}
+
+Write-Host "  $($candidates.Count - $needsSearch.Count) already published upstream; searching pull requests for the remaining $($needsSearch.Count)."
+
+$prByPackage = @{}
+$searchArray = @($needsSearch)
+for ($offset = 0; $offset -lt $searchArray.Count; $offset += $BatchSize) {
+    $slice = @($searchArray[$offset..([Math]::Min($offset + $BatchSize, $searchArray.Count) - 1)])
+    Write-Progress -Activity 'Searching winget-pkgs pull requests for the new version' `
+        -Status "$offset/$($searchArray.Count)" `
+        -PercentComplete (100 * $offset / $searchArray.Count)
+    Invoke-VersionPrSearchBatch -Packages $slice -Result $prByPackage -Invoker $invoker
+}
+Write-Progress -Activity 'Searching winget-pkgs pull requests for the new version' -Completed
+
+# --- verdict -----------------------------------------------------------------
+
 $report = [System.Collections.Generic.List[object]]::new()
 
 foreach ($candidate in $candidates) {
-    $nodes = $pullRequestsByPackage[$candidate.PackageId]
+    $published = $publishedMatchByPackage[$candidate.PackageId]
 
-    if ($null -eq $nodes) {
-        # Fail closed: an unresolved search is not evidence that nobody is
-        # maintaining the package.
+    if ($null -ne $published) {
         $report.Add([PSCustomObject]@{
                 PackageId       = $candidate.PackageId
                 CurrentVersion  = $candidate.CurrentVersion
                 LatestVersion   = $candidate.LatestVersion
-                Status          = 'Unknown'
-                OpenPrCount     = 0
-                OpenPrForLatest = $false
-                LastPrAt        = ''
-                DaysSinceLastPr = ''
-                RecentAuthors   = ''
-                LatestPrUrl     = ''
+                Status          = 'PublishedAlready'
+                Evidence        = "manifest version $($published.Version) ($($published.MatchType))"
+                PrNumber        = ''
+                PrState         = ''
+                PrAuthor        = ''
+                PrUrl           = ''
                 GitHubOwner     = $candidate.GitHubOwner
                 GitHubRepo      = $candidate.GitHubRepo
                 UrlTemplate     = $candidate.UrlTemplate
@@ -178,41 +269,66 @@ foreach ($candidate in $candidates) {
         continue
     }
 
-    # GitHub Search splits identifiers on dots, so `Foo.Bar` also matches
-    # `Foo.Bar.Baz`. Require the exact identifier in the title.
+    $nodes = $prByPackage[$candidate.PackageId]
+
+    if ($null -eq $nodes) {
+        # Fail closed: an unresolved search is not evidence that the version is
+        # unclaimed.
+        $report.Add([PSCustomObject]@{
+                PackageId       = $candidate.PackageId
+                CurrentVersion  = $candidate.CurrentVersion
+                LatestVersion   = $candidate.LatestVersion
+                Status          = 'Unknown'
+                Evidence        = 'pull request search failed'
+                PrNumber        = ''
+                PrState         = ''
+                PrAuthor        = ''
+                PrUrl           = ''
+                GitHubOwner     = $candidate.GitHubOwner
+                GitHubRepo      = $candidate.GitHubRepo
+                UrlTemplate     = $candidate.UrlTemplate
+            })
+        continue
+    }
+
+    # GitHub Search splits on punctuation, so require both the exact identifier
+    # and the exact version in the title, and ignore closed-unmerged PRs.
     $matching = @($nodes | Where-Object {
-            $null -ne $_ -and "$($_.title)".IndexOf($candidate.PackageId, [System.StringComparison]::OrdinalIgnoreCase) -ge 0
-        })
+            $null -ne $_ -and
+            "$($_.title)".IndexOf($candidate.PackageId, [System.StringComparison]::OrdinalIgnoreCase) -ge 0 -and
+            "$($_.title)".IndexOf($candidate.LatestVersion, [System.StringComparison]::OrdinalIgnoreCase) -ge 0 -and
+            ($_.state -eq 'OPEN' -or $null -ne $_.mergedAt)
+        } | Sort-Object { [datetime]$_.createdAt } -Descending)
 
-    $open = @($matching | Where-Object { $_.state -eq 'OPEN' })
-    $openForLatest = @($open | Where-Object { "$($_.title)".Contains($candidate.LatestVersion) })
-
-    $recent = @($matching | Where-Object { [datetime]$_.createdAt -ge $cutoff })
-    $recentAuthors = @($recent |
-            ForEach-Object { if ($_.author) { [string]$_.author.login } else { '' } } |
-            Where-Object { -not [string]::IsNullOrWhiteSpace($_) } |
-            Sort-Object -Unique)
-    $thirdPartyAuthors = @($recentAuthors | Where-Object { $_ -notin $SelfAuthor })
-
-    $newest = $matching | Sort-Object { [datetime]$_.createdAt } -Descending | Select-Object -First 1
-
-    $status =
-        if ($open.Count -gt 0) { 'OpenPr' }
-        elseif ($thirdPartyAuthors.Count -gt 0) { 'Maintained' }
-        elseif ($recentAuthors.Count -gt 0) { 'Ours' }
-        else { 'Unmaintained' }
+    if ($matching.Count -gt 0) {
+        $pr = $matching[0]
+        $report.Add([PSCustomObject]@{
+                PackageId       = $candidate.PackageId
+                CurrentVersion  = $candidate.CurrentVersion
+                LatestVersion   = $candidate.LatestVersion
+                Status          = 'PrForLatest'
+                Evidence        = "PR #$($pr.number) $($pr.state)"
+                PrNumber        = [string]$pr.number
+                PrState         = [string]$pr.state
+                PrAuthor        = if ($pr.author) { [string]$pr.author.login } else { '' }
+                PrUrl           = [string]$pr.url
+                GitHubOwner     = $candidate.GitHubOwner
+                GitHubRepo      = $candidate.GitHubRepo
+                UrlTemplate     = $candidate.UrlTemplate
+            })
+        continue
+    }
 
     $report.Add([PSCustomObject]@{
             PackageId       = $candidate.PackageId
             CurrentVersion  = $candidate.CurrentVersion
             LatestVersion   = $candidate.LatestVersion
-            Status          = $status
-            OpenPrCount     = $open.Count
-            OpenPrForLatest = ($openForLatest.Count -gt 0)
-            LastPrAt        = if ($newest) { ([datetime]$newest.createdAt).ToString('yyyy-MM-dd') } else { '' }
-            DaysSinceLastPr = if ($newest) { [int]((Get-Date).ToUniversalTime() - [datetime]$newest.createdAt).TotalDays } else { '' }
-            RecentAuthors   = $recentAuthors -join ';'
-            LatestPrUrl     = if ($newest) { [string]$newest.url } else { '' }
+            Status          = 'Unclaimed'
+            Evidence        = 'no published version and no pull request'
+            PrNumber        = ''
+            PrState         = ''
+            PrAuthor        = ''
+            PrUrl           = ''
             GitHubOwner     = $candidate.GitHubOwner
             GitHubRepo      = $candidate.GitHubRepo
             UrlTemplate     = $candidate.UrlTemplate
@@ -223,20 +339,20 @@ $ordered = @($report | Sort-Object Status, PackageId)
 New-Item -ItemType Directory -Path (Split-Path -Parent $OutputPath) -Force | Out-Null
 $ordered | Export-Csv -LiteralPath $OutputPath -NoTypeInformation -Encoding utf8
 
-$unmaintainedPath = Join-Path (Split-Path -Parent $OutputPath) 'github-outdated-candidates-unmaintained.yml'
-$snippet = foreach ($row in @($ordered | Where-Object { $_.Status -in @('Unmaintained', 'Ours') })) {
+$unclaimedPath = Join-Path (Split-Path -Parent $OutputPath) 'github-outdated-candidates-unmaintained.yml'
+$snippet = foreach ($row in @($ordered | Where-Object { $_.Status -eq 'Unclaimed' })) {
     "          - id: `"$($row.PackageId)`""
     "            repo: `"$($row.GitHubOwner)/$($row.GitHubRepo)`""
     "            url: `"$($row.UrlTemplate)`""
 }
-Set-Content -LiteralPath $unmaintainedPath -Value ($snippet -join "`n") -Encoding utf8
+Set-Content -LiteralPath $unclaimedPath -Value ($snippet -join "`n") -Encoding utf8
 
 Write-Host ''
 Write-Host 'Maintenance status' -ForegroundColor Cyan
 $ordered | Group-Object Status | Sort-Object Count -Descending | ForEach-Object {
     $percent = [math]::Round(100 * $_.Count / $ordered.Count, 1)
-    Write-Host ("  {0,-14} {1,5}  ({2}%)" -f $_.Name, $_.Count, $percent)
+    Write-Host ("  {0,-18} {1,5}  ({2}%)" -f $_.Name, $_.Count, $percent)
 }
 Write-Host ''
 Write-Host "Report        : $OutputPath"
-Write-Host "Adoptable yml : $unmaintainedPath"
+Write-Host "Adoptable yml : $unclaimedPath"

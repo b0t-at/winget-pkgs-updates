@@ -2,6 +2,12 @@ name: GH Packages
 
 on:
   workflow_dispatch:
+    inputs:
+      batch_size:
+        description: "Packages to process in this run (random pick from everything needing an update)"
+        required: false
+        default: 30
+        type: number
   schedule:
     - cron: "3 0/4 * * *" # every 4 hours
   push:
@@ -40,6 +46,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
           WINGET_UPSTREAM_READ_TOKEN: ${{ secrets.WINGET_PAT }}
+          # Packages processed per run. The precheck picks this many at random
+          # from everything that needs an update, so consecutive runs rotate
+          # across the whole monitored list instead of always starting at 'a'.
+          # Scheduled and push runs have no inputs context, hence the fallback.
+          UPDATE_BATCH_SIZE: ${{ inputs.batch_size || 30 }}
           MONITORED_PACKAGES: |
             # Orchestrator will insert Packages JSON here
         run: ./scripts/Select-PackagesNeedingUpdate.ps1
@@ -72,7 +83,7 @@ jobs:
 
     strategy:
       fail-fast: false
-      max-parallel: 8
+      max-parallel: 10
       matrix:
         include: ${{ fromJSON(needs.check-updates.outputs.include) }}
 

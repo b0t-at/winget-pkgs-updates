@@ -35,6 +35,23 @@ function Assert-Match {
     }
 }
 
+function Get-ActiveConfigurationText {
+    <#
+        Commented-out entries and prose exclusion notes are how a deliberate
+        exclusion is recorded, so they must not count as "monitored". Only the
+        active lines decide whether a package is actually being processed.
+    #>
+    param(
+        [Parameter(Mandatory = $true)]
+        [string] $Path
+    )
+
+    return (
+        Get-Content -LiteralPath $Path |
+            Where-Object { $_ -notmatch '^\s*#' }
+    ) -join [Environment]::NewLine
+}
+
 $repositoryRoot = Split-Path -Parent $PSScriptRoot
 
 # Generated workflow names depend on chunk boundaries of the monitored list,
@@ -58,7 +75,7 @@ $excludedPackageIds = @(
 
 foreach ($configurationRelativePath in $configurationPaths) {
     $configurationPath = Join-Path $repositoryRoot $configurationRelativePath
-    $configuration = Get-Content -LiteralPath $configurationPath -Raw
+    $configuration = Get-ActiveConfigurationText -Path $configurationPath
 
     foreach ($packageId in $excludedPackageIds) {
         Assert-NotMatch `
@@ -76,8 +93,16 @@ foreach ($workflowRelativePath in $workflowPaths) {
 
     Assert-Match `
         -Actual $workflow `
-        -Pattern '(?ms)generate-manifest:.*?strategy:\r?\n      fail-fast: false\r?\n      max-parallel: 8' `
+        -Pattern '(?ms)generate-manifest:.*?strategy:\r?\n      fail-fast: false\r?\n      max-parallel: 10' `
         -Message "$workflowRelativePath must limit simultaneous manifest generation jobs to avoid GitHub API rate-limit bursts."
+    Assert-Match `
+        -Actual $workflow `
+        -Pattern '(?ms)^on:\r?\n  workflow_dispatch:\r?\n    inputs:\r?\n      batch_size:.*?default: 30\r?\n        type: number' `
+        -Message "$workflowRelativePath must expose the per-run batch size as a workflow input defaulting to 30."
+    Assert-Match `
+        -Actual $workflow `
+        -Pattern ([regex]::Escape('UPDATE_BATCH_SIZE: ${{ inputs.batch_size || 30 }}')) `
+        -Message "$workflowRelativePath must pass the batch size input to the precheck and fall back to 30 for scheduled runs."
     Assert-Match `
         -Actual $workflow `
         -Pattern ([regex]::Escape("name: structural-rewrite__`${{ matrix.id }}__`${{ steps.generate.outputs.version }}")) `

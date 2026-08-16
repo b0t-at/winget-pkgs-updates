@@ -2,7 +2,7 @@ $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
 # End-to-end tests for scripts/Select-PackagesNeedingUpdate.ps1: the fail-open
-# fallback and the randomized 256-job matrix cap.
+# fallback and the randomized batch cap.
 
 $repositoryRoot = Split-Path -Parent $PSScriptRoot
 $scriptPath = Join-Path $repositoryRoot 'scripts/Select-PackagesNeedingUpdate.ps1'
@@ -10,17 +10,27 @@ $scriptPath = Join-Path $repositoryRoot 'scripts/Select-PackagesNeedingUpdate.ps
 function Invoke-PrecheckScript {
     param(
         [Parameter(Mandatory = $true)]
-        [object[]] $Packages
+        [object[]] $Packages,
+        [Parameter(Mandatory = $false)]
+        [string] $BatchSize
     )
 
     $outputFile = Join-Path ([System.IO.Path]::GetTempPath()) ("precheck-output-" + [guid]::NewGuid().ToString('N') + ".txt")
     New-Item -Path $outputFile -ItemType File -Force | Out-Null
     try {
+        $batchSizeLine = if ([string]::IsNullOrWhiteSpace($BatchSize)) {
+            "`$env:UPDATE_BATCH_SIZE = `$null"
+        }
+        else {
+            "`$env:UPDATE_BATCH_SIZE = '$BatchSize'"
+        }
+
         # No tokens: the precheck GraphQL call fails, exercising the fail-open path.
         $psi = @(
             "`$env:WINGET_UPSTREAM_READ_TOKEN = `$null",
             "`$env:GITHUB_TOKEN = `$null",
             "`$env:GH_TOKEN = `$null",
+            $batchSizeLine,
             "`$env:MONITORED_PACKAGES = @'",
             (ConvertTo-Json -InputObject $Packages -Depth 10 -Compress),
             "'@",
@@ -61,11 +71,11 @@ if ($smallResult.Any -ne 'true') {
     $failures += "Fallback below the cap must report any=true, got '$($smallResult.Any)'."
 }
 
-# --- Fallback above the cap is limited to 256 randomly selected packages ---
+# --- Fallback above the default batch size is limited to 30 random packages ---
 $largeList = @(1..300 | ForEach-Object { [PSCustomObject]@{ id = "Package.Large$_"; repo = "owner/repo$_"; url = "https://example.invalid/$_" } })
 $largeResult = Invoke-PrecheckScript -Packages $largeList
-if (@($largeResult.Include).Count -ne 256) {
-    $failures += "Fallback above the cap must select exactly 256 packages, got $(@($largeResult.Include).Count)."
+if (@($largeResult.Include).Count -ne 30) {
+    $failures += "Fallback above the cap must select exactly 30 packages, got $(@($largeResult.Include).Count)."
 }
 if ($largeResult.Any -ne 'true') {
     $failures += "Fallback above the cap must report any=true, got '$($largeResult.Any)'."
@@ -76,8 +86,31 @@ $unknown = @($selectedIds | Where-Object { $_ -notin $knownIds })
 if ($unknown.Count -gt 0) {
     $failures += "Capped selection contains unknown package ids: $($unknown -join ', ')."
 }
-if (@($selectedIds | Select-Object -Unique).Count -ne 256) {
+if (@($selectedIds | Select-Object -Unique).Count -ne 30) {
     $failures += "Capped selection must not contain duplicate packages."
+}
+
+# --- The batch size is tunable, and never exceeds the 256-job matrix limit ---
+$tunedResult = Invoke-PrecheckScript -Packages $largeList -BatchSize '12'
+if (@($tunedResult.Include).Count -ne 12) {
+    $failures += "UPDATE_BATCH_SIZE must override the default, expected 12, got $(@($tunedResult.Include).Count)."
+}
+
+$overLimitResult = Invoke-PrecheckScript -Packages $largeList -BatchSize '1000'
+if (@($overLimitResult.Include).Count -ne 256) {
+    $failures += "UPDATE_BATCH_SIZE above the matrix limit must cap at 256, got $(@($overLimitResult.Include).Count)."
+}
+
+$invalidResult = Invoke-PrecheckScript -Packages $largeList -BatchSize 'not-a-number'
+if (@($invalidResult.Include).Count -ne 30) {
+    $failures += "An invalid UPDATE_BATCH_SIZE must fall back to the default of 30, got $(@($invalidResult.Include).Count)."
+}
+
+# --- A selection below the batch size keeps every eligible package ---
+$underBatch = @(1..7 | ForEach-Object { [PSCustomObject]@{ id = "Package.Under$_"; repo = "owner/repo$_"; url = "https://example.invalid/$_" } })
+$underResult = Invoke-PrecheckScript -Packages $underBatch
+if (@($underResult.Include).Count -ne 7) {
+    $failures += "A list below the batch size must stay intact, got $(@($underResult.Include).Count) of 7."
 }
 
 if ($failures.Count -gt 0) {
