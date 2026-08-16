@@ -1999,8 +1999,8 @@
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
     "openPr": {
-      "checkedAt": "2026-08-14T20:16:23.3120363Z",
-      "version": "0.32.13"
+      "checkedAt": "2026-08-16T20:11:09.2184686Z",
+      "version": "0.32.14"
     }
   },
   "Omibranch.Gitty": {
