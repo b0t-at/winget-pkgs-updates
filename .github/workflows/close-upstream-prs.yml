@@ -4,14 +4,18 @@ on:
   workflow_dispatch:
     inputs:
       pr_numbers:
-        description: 'Comma or space separated microsoft/winget-pkgs PR numbers to close'
+        description: 'Comma or space separated microsoft/winget-pkgs PR numbers'
         required: true
         type: string
-      comment:
-        description: 'Comment to post before closing'
-        required: false
-        default: 'Closing this automated pull request. The update pipeline that created it has been disabled, so the validation feedback will not be addressed. Sorry for the noise.'
-        type: string
+      action:
+        description: 'What to do with the listed pull requests'
+        required: true
+        default: close
+        type: choice
+        options:
+          - close
+          - delete-bot-comments
+          - delete-bot-comments-and-close
 
 permissions: {}
 
@@ -20,11 +24,11 @@ jobs:
     name: close pull requests
     runs-on: ubuntu-latest
     steps:
-      - name: Close pull requests
+      - name: Process pull requests
         env:
           GH_TOKEN: ${{ secrets.WINGET_PAT }}
           PR_NUMBERS: ${{ inputs.pr_numbers }}
-          PR_COMMENT: ${{ inputs.comment }}
+          PR_ACTION: ${{ inputs.action }}
         shell: bash
         run: |
           set -euo pipefail
@@ -34,6 +38,18 @@ jobs:
               echo "::error::Invalid pull request number: $pr"
               exit 1
             fi
-            echo "Closing microsoft/winget-pkgs#$pr"
-            gh pr close "$pr" --repo microsoft/winget-pkgs --comment "$PR_COMMENT"
+            if [[ "$PR_ACTION" == delete-bot-comments* ]]; then
+              echo "Deleting own comments on microsoft/winget-pkgs#$pr"
+              gh api --paginate "repos/microsoft/winget-pkgs/issues/$pr/comments" \
+                --jq '.[] | select(.user.login == "damn-good-b0t") | .id' \
+              | while read -r id; do
+                  [ -n "$id" ] || continue
+                  gh api -X DELETE "repos/microsoft/winget-pkgs/issues/comments/$id"
+                  echo "  deleted comment $id"
+                done
+            fi
+            if [[ "$PR_ACTION" == *close ]]; then
+              echo "Closing microsoft/winget-pkgs#$pr"
+              gh pr close "$pr" --repo microsoft/winget-pkgs
+            fi
           done
