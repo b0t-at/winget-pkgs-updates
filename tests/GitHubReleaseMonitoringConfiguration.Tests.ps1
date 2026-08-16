@@ -152,24 +152,44 @@ foreach ($workflowRelativePath in $workflowPaths) {
         -Message "$workflowRelativePath must include check-updates in failure notifications."
 }
 
-# Generated workflows must embed the monitored package list as JSON for the
-# precheck job (the template only carries the placeholder).
+# Generated workflows must point at a sidecar package list. Inlining it into an
+# environment variable breaks the Linux 128 KiB per-variable limit and fails the
+# precheck step with "Argument list too long".
 foreach ($generatedRelativePath in $generatedWorkflowPaths) {
     $generatedContent = Get-Content -LiteralPath (Join-Path $repositoryRoot $generatedRelativePath) -Raw
-    if ($generatedContent -notmatch '(?ms)MONITORED_PACKAGES: \|\r?\n            \[\r?\n(.*?)\r?\n            \]') {
-        throw "$generatedRelativePath must embed the monitored package list as JSON in MONITORED_PACKAGES."
+
+    if ($generatedContent -match '(?m)^\s+MONITORED_PACKAGES:\s*\|') {
+        throw "$generatedRelativePath must not inline the package list into an environment variable."
     }
-    $packagesJson = ('[' + ($Matches[1] -replace '(?m)^\s+', '') + ']')
-    $packages = @($packagesJson | ConvertFrom-Json)
+
+    if ($generatedContent -notmatch '(?m)^\s+MONITORED_PACKAGES_FILE:\s*(\S+)\s*$') {
+        throw "$generatedRelativePath must reference the monitored package list through MONITORED_PACKAGES_FILE."
+    }
+
+    $packagesRelativePath = $Matches[1]
+    $packagesPath = Join-Path $repositoryRoot $packagesRelativePath
+    if (-not (Test-Path -LiteralPath $packagesPath)) {
+        throw "$generatedRelativePath references '$packagesRelativePath', which does not exist."
+    }
+
+    $packages = @((Get-Content -LiteralPath $packagesPath -Raw) | ConvertFrom-Json)
     if ($packages.Count -lt 1) {
-        throw "$generatedRelativePath must embed at least one monitored package."
+        throw "$packagesRelativePath must list at least one monitored package."
     }
+
     foreach ($package in $packages | Select-Object -First 5) {
         foreach ($requiredField in @('id', 'repo', 'url')) {
             if ([string]::IsNullOrWhiteSpace([string]$package.$requiredField)) {
-                throw "$generatedRelativePath embeds a package without the required '$requiredField' field."
+                throw "$packagesRelativePath lists a package without the required '$requiredField' field."
             }
         }
+    }
+
+    # A single environment variable must stay under the Linux limit; the file
+    # indirection is what keeps the workflow itself small.
+    $workflowBytes = [System.Text.Encoding]::UTF8.GetByteCount($generatedContent)
+    if ($workflowBytes -gt 131072) {
+        throw "$generatedRelativePath is $workflowBytes bytes; the package list must live in its sidecar file."
     }
 }
 

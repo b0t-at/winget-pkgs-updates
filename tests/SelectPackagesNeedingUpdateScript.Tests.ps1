@@ -12,11 +12,14 @@ function Invoke-PrecheckScript {
         [Parameter(Mandatory = $true)]
         [object[]] $Packages,
         [Parameter(Mandatory = $false)]
-        [string] $BatchSize
+        [string] $BatchSize,
+        [Parameter(Mandatory = $false)]
+        [switch] $ViaFile
     )
 
     $outputFile = Join-Path ([System.IO.Path]::GetTempPath()) ("precheck-output-" + [guid]::NewGuid().ToString('N') + ".txt")
     New-Item -Path $outputFile -ItemType File -Force | Out-Null
+    $packagesFile = $null
     try {
         $batchSizeLine = if ([string]::IsNullOrWhiteSpace($BatchSize)) {
             "`$env:UPDATE_BATCH_SIZE = `$null"
@@ -25,15 +28,34 @@ function Invoke-PrecheckScript {
             "`$env:UPDATE_BATCH_SIZE = '$BatchSize'"
         }
 
+        $packagesJson = ConvertTo-Json -InputObject $Packages -Depth 10 -Compress
+
+        # The generated workflows pass a file path; inline JSON stays supported
+        # for ad-hoc runs.
+        if ($ViaFile) {
+            $packagesFile = Join-Path ([System.IO.Path]::GetTempPath()) ("precheck-packages-" + [guid]::NewGuid().ToString('N') + ".json")
+            Set-Content -LiteralPath $packagesFile -Value $packagesJson -Encoding utf8
+            $packageLines = @(
+                "`$env:MONITORED_PACKAGES = `$null",
+                "`$env:MONITORED_PACKAGES_FILE = '$packagesFile'"
+            )
+        }
+        else {
+            $packageLines = @(
+                "`$env:MONITORED_PACKAGES_FILE = `$null",
+                "`$env:MONITORED_PACKAGES = @'",
+                $packagesJson,
+                "'@"
+            )
+        }
+
         # No tokens: the precheck GraphQL call fails, exercising the fail-open path.
         $psi = @(
             "`$env:WINGET_UPSTREAM_READ_TOKEN = `$null",
             "`$env:GITHUB_TOKEN = `$null",
             "`$env:GH_TOKEN = `$null",
-            $batchSizeLine,
-            "`$env:MONITORED_PACKAGES = @'",
-            (ConvertTo-Json -InputObject $Packages -Depth 10 -Compress),
-            "'@",
+            $batchSizeLine
+        ) + $packageLines + @(
             "`$env:GITHUB_OUTPUT = '$outputFile'",
             "& '$scriptPath'"
         ) -join [Environment]::NewLine
@@ -56,6 +78,9 @@ function Invoke-PrecheckScript {
     }
     finally {
         Remove-Item -LiteralPath $outputFile -Force -ErrorAction SilentlyContinue
+        if ($packagesFile) {
+            Remove-Item -LiteralPath $packagesFile -Force -ErrorAction SilentlyContinue
+        }
     }
 }
 
@@ -112,6 +137,32 @@ $underResult = Invoke-PrecheckScript -Packages $underBatch
 if (@($underResult.Include).Count -ne 7) {
     $failures += "A list below the batch size must stay intact, got $(@($underResult.Include).Count) of 7."
 }
+
+# --- The package list can be supplied as a file, which is what the generated
+#     workflows do: the full list far exceeds the Linux 128 KiB limit for a
+#     single environment variable. ---
+$fileResult = Invoke-PrecheckScript -Packages $underBatch -ViaFile
+if (@($fileResult.Include).Count -ne 7) {
+    $failures += "MONITORED_PACKAGES_FILE must be honoured, got $(@($fileResult.Include).Count) of 7."
+}
+if ($fileResult.Any -ne 'true') {
+    $failures += "A file-supplied list must report any=true, got '$($fileResult.Any)'."
+}
+
+# --- A missing package file must fail loudly instead of silently doing nothing ---
+$missingFileOutput = Join-Path ([System.IO.Path]::GetTempPath()) ("precheck-output-" + [guid]::NewGuid().ToString('N') + ".txt")
+New-Item -Path $missingFileOutput -ItemType File -Force | Out-Null
+$missingScript = @(
+    "`$env:MONITORED_PACKAGES = `$null",
+    "`$env:MONITORED_PACKAGES_FILE = 'does-not-exist.packages.json'",
+    "`$env:GITHUB_OUTPUT = '$missingFileOutput'",
+    "& '$scriptPath'"
+) -join [Environment]::NewLine
+$null = & pwsh -NoProfile -Command $missingScript 2>&1
+if ($LASTEXITCODE -eq 0) {
+    $failures += 'A missing MONITORED_PACKAGES_FILE must fail the precheck.'
+}
+Remove-Item -LiteralPath $missingFileOutput -Force -ErrorAction SilentlyContinue
 
 if ($failures.Count -gt 0) {
     $failures | ForEach-Object { Write-Host "FAILED: $_" -ForegroundColor Red }

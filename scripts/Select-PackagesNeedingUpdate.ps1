@@ -1,6 +1,12 @@
-# Reads the monitored package list from MONITORED_PACKAGES (JSON), determines
-# which packages actually need a manifest update via batched GraphQL queries,
-# and writes the resulting matrix include list to GITHUB_OUTPUT.
+# Reads the monitored package list, determines which packages actually need a
+# manifest update via batched GraphQL queries, and writes the resulting matrix
+# include list to GITHUB_OUTPUT.
+#
+# The list arrives either as a file path (MONITORED_PACKAGES_FILE, what the
+# generated workflows use) or inline as JSON (MONITORED_PACKAGES, convenient for
+# ad-hoc runs and tests). The file form exists because Linux caps a single
+# environment variable at 128 KiB; the full monitored list is well past that and
+# would fail the step with "Argument list too long".
 #
 # Fail-open: if the precheck itself fails for any reason, all packages are
 # emitted so a broken precheck can never suppress real updates.
@@ -8,11 +14,30 @@ $ErrorActionPreference = 'Stop'
 
 Import-Module (Join-Path $PSScriptRoot '..' 'modules' 'WingetMaintainerModule' 'WingetMaintainerModule.psd1') -Force
 
-if ([string]::IsNullOrWhiteSpace($env:MONITORED_PACKAGES)) {
-    throw 'The MONITORED_PACKAGES environment variable is empty. The orchestrator must inject the package list.'
+if (-not [string]::IsNullOrWhiteSpace($env:MONITORED_PACKAGES_FILE)) {
+    $packagesPath = $env:MONITORED_PACKAGES_FILE
+    if (-not [System.IO.Path]::IsPathRooted($packagesPath)) {
+        $packagesPath = Join-Path $PSScriptRoot '..' $packagesPath
+    }
+
+    if (-not (Test-Path -LiteralPath $packagesPath)) {
+        throw "MONITORED_PACKAGES_FILE points at '$($env:MONITORED_PACKAGES_FILE)', which does not exist. The orchestrator must generate the package list alongside the workflow."
+    }
+
+    $packagesJson = Get-Content -LiteralPath $packagesPath -Raw
+}
+elseif (-not [string]::IsNullOrWhiteSpace($env:MONITORED_PACKAGES)) {
+    $packagesJson = $env:MONITORED_PACKAGES
+}
+else {
+    throw 'Neither MONITORED_PACKAGES_FILE nor MONITORED_PACKAGES is set. The orchestrator must inject the package list.'
 }
 
-$packages = @($env:MONITORED_PACKAGES | ConvertFrom-Json)
+$packages = @($packagesJson | ConvertFrom-Json)
+if ($packages.Count -eq 0) {
+    throw 'The monitored package list is empty.'
+}
+
 $include = $packages
 
 try {

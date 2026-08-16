@@ -7,20 +7,30 @@ import yaml
 base_dir = os.path.dirname(os.path.abspath(__file__))
 monitored_file = os.path.join(base_dir, "../github-releases-monitored.yml")
 workflows_dir = os.path.join(base_dir, "../.github/workflows")
+# The package list is written next to the workflows instead of being inlined:
+# a 1000+ package payload exceeds the Linux 128 KiB per-environment-variable
+# limit and fails the precheck step with "Argument list too long".
+packages_dir = os.path.join(base_dir, "../.github/workflows-data")
+packages_dir_relative = ".github/workflows-data"
 template_file = os.path.join(base_dir, "../.github/workflows-templates/github-releases.yml")
 
 # Constants
 workflow_prefix = "update-github-packages-"
 workflow_suffix = ".yml"
+packages_suffix = ".packages.json"
 
 # Step 1: Read the monitored file
 with open(monitored_file, "r") as file:
     monitored_data = yaml.safe_load(file)
 
-# Step 3: Delete existing workflow files
+# Step 3: Delete existing workflow files and their package sidecars
 existing_workflows = glob.glob(os.path.join(workflows_dir, f"{workflow_prefix}*{workflow_suffix}"))
 for workflow in existing_workflows:
     os.remove(workflow)
+
+os.makedirs(packages_dir, exist_ok=True)
+for packages_file in glob.glob(os.path.join(packages_dir, f"{workflow_prefix}*{packages_suffix}")):
+    os.remove(packages_file)
 
 # Step 4: Create new workflow files
 with open(template_file, "r") as file:
@@ -37,11 +47,7 @@ def transform_matrix_item(item):
 
 def render_packages_json(chunk):
     transformed_chunk = [transform_matrix_item(item) for item in chunk]
-    item_lines = ",\n".join(
-        f"              {json.dumps(item, ensure_ascii=False)}"
-        for item in transformed_chunk
-    )
-    return f"            [\n{item_lines}\n            ]"
+    return json.dumps(transformed_chunk, ensure_ascii=False, indent=2) + "\n"
 
 
 DISPATCH_EXPRESSION = "${{ github.event_name == 'workflow_dispatch' && inputs.submission_repository || 'microsoft/winget-pkgs' }}"
@@ -172,11 +178,17 @@ def create_workflow_file(chunk, workflows_dir, workflow_prefix, workflow_suffix,
         f"{workflow_prefix}{range_slug}{workflow_suffix}"
     )
     
-    # Replace the placeholder inside the MONITORED_PACKAGES block scalar with
-    # the package list as JSON (consumed by Select-PackagesNeedingUpdate.ps1).
-    updated_content = template_content.replace(
-        "            # Orchestrator will insert Packages JSON here",
-        render_packages_json(chunk)
+    # Write the package list to a sidecar file and point the workflow at it.
+    packages_file_name = f"{workflow_prefix}{range_slug}{packages_suffix}"
+    with open(os.path.join(packages_dir, packages_file_name), "w", encoding="utf-8") as file:
+        file.write(render_packages_json(chunk))
+
+    updated_content = replace_exactly_once(
+        template_content,
+        "PACKAGES_JSON_PATH",
+        f"{packages_dir_relative}/{packages_file_name}",
+        "the monitored packages file placeholder",
+        workflow_file,
     )
     # Update filename
     updated_content = updated_content.replace(

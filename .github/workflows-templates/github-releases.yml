@@ -51,8 +51,11 @@ jobs:
           # across the whole monitored list instead of always starting at 'a'.
           # Scheduled and push runs have no inputs context, hence the fallback.
           UPDATE_BATCH_SIZE: ${{ inputs.batch_size || 30 }}
-          MONITORED_PACKAGES: |
-            # Orchestrator will insert Packages JSON here
+          # The package list is read from a sidecar file rather than passed in
+          # an environment variable: Linux caps a single variable at 128 KiB and
+          # the monitored list is well past that, which makes the runner fail
+          # the step with "Argument list too long" before pwsh even starts.
+          MONITORED_PACKAGES_FILE: PACKAGES_JSON_PATH
         run: ./scripts/Select-PackagesNeedingUpdate.ps1
 
       # The precheck caches open-PR markers in the state file; persisting them

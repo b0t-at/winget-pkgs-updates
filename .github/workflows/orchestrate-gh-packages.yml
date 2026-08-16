@@ -42,3 +42,4 @@ jobs:
                 commit_message: Update package count badge
                 file_pattern: |
                   .github/workflows/update-github-packages-*.yml
+                  .github/workflows-data/update-github-packages-*.packages.json
