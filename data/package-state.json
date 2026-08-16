@@ -23,7 +23,7 @@
   },
   "Adamant.Messenger": {
     "openPr": {
-      "checkedAt": "2026-08-15T16:10:26.3558951Z",
+      "checkedAt": "2026-08-16T16:11:29.167503Z",
       "version": "4.12.0"
     }
   },
@@ -53,7 +53,7 @@
     "state": "VALIDATION_PASSED",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-08-15T16:10:26.8010704Z",
+      "checkedAt": "2026-08-16T16:11:29.5323606Z",
       "version": "0.84.0"
     }
   },
@@ -78,7 +78,11 @@
     "version": "1.2.0",
     "description": "",
     "lastUpdated": "2026-08-16T12:25:11.5865372Z",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "checkedAt": "2026-08-16T16:11:37.4600348Z",
+      "version": "1.2.0"
+    }
   },
   "aimotrens.impulsar": {
     "state": "VALIDATION_FAILED",
@@ -639,7 +643,7 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "3EAB1E5A6E607AC40A8D48C149D5E5B2207604A2D465245704CB6FD111942437",
     "openPr": {
-      "checkedAt": "2026-08-15T16:10:28.089406Z",
+      "checkedAt": "2026-08-16T16:11:30.8911919Z",
       "version": "5.1.20"
     }
   },
@@ -735,7 +739,7 @@
   },
   "Flowscripter.example-cli": {
     "openPr": {
-      "checkedAt": "2026-08-15T16:10:28.5214162Z",
+      "checkedAt": "2026-08-16T16:11:31.3113215Z",
       "version": "1.8.9"
     }
   },
@@ -1009,7 +1013,7 @@
     "lastUpdated": "2026-08-14T09:49:55.9133448Z",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-08-15T16:10:29.0133425Z",
+      "checkedAt": "2026-08-16T16:11:31.7421487Z",
       "version": "2.5.0"
     }
   },
@@ -1774,7 +1778,7 @@
       "6F82338F77AF50E6B0B5300C01F41369EBF34E629FC9896BDD558E14166D1F73"
     ],
     "openPr": {
-      "checkedAt": "2026-08-15T16:10:30.0208746Z",
+      "checkedAt": "2026-08-16T16:11:32.5487366Z",
       "version": "1.8.1"
     }
   },
@@ -2035,7 +2039,7 @@
     "lastUpdated": "2026-08-14T09:49:55.842265Z",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-08-15T16:10:30.4609594Z",
+      "checkedAt": "2026-08-16T16:11:32.9685438Z",
       "version": "8.0.40"
     }
   },
