@@ -1,0 +1,39 @@
+name: Close Upstream PRs
+
+on:
+  workflow_dispatch:
+    inputs:
+      pr_numbers:
+        description: 'Comma or space separated microsoft/winget-pkgs PR numbers to close'
+        required: true
+        type: string
+      comment:
+        description: 'Comment to post before closing'
+        required: false
+        default: 'Closing this automated pull request. The update pipeline that created it has been disabled, so the validation feedback will not be addressed. Sorry for the noise.'
+        type: string
+
+permissions: {}
+
+jobs:
+  close:
+    name: close pull requests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Close pull requests
+        env:
+          GH_TOKEN: ${{ secrets.WINGET_PAT }}
+          PR_NUMBERS: ${{ inputs.pr_numbers }}
+          PR_COMMENT: ${{ inputs.comment }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          numbers=$(printf '%s' "$PR_NUMBERS" | tr ',;' '  ')
+          for pr in $numbers; do
+            if ! [[ "$pr" =~ ^[0-9]+$ ]]; then
+              echo "::error::Invalid pull request number: $pr"
+              exit 1
+            fi
+            echo "Closing microsoft/winget-pkgs#$pr"
+            gh pr close "$pr" --repo microsoft/winget-pkgs --comment "$PR_COMMENT"
+          done
