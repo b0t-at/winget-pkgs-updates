@@ -8,7 +8,11 @@
     "validationCount": 1,
     "installerHashes": [
       "6A0E4ECEF8D6550574028FF367BB623C362A99D5D71C6FDBAB2115F6DDBE19E9"
-    ]
+    ],
+    "openPr": {
+      "checkedAt": "2026-08-17T14:45:02.4768002Z",
+      "version": "4.2.1.0"
+    }
   },
   "achannarasappa.ticker": {
     "lastUpdated": "2026-06-21T18:31:48.864373Z",
@@ -747,8 +751,8 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "3EAB1E5A6E607AC40A8D48C149D5E5B2207604A2D465245704CB6FD111942437",
     "openPr": {
-      "checkedAt": "2026-08-16T16:11:30.8911919Z",
-      "version": "5.1.20"
+      "checkedAt": "2026-08-17T14:44:47.8033868Z",
+      "version": "5.2.0"
     }
   },
   "ente-io.photos-desktop": {
@@ -1115,11 +1119,7 @@
     "manifestHash": "9397EBBB43ECACB8E8FDFF61F46EFDD5C0FFF9D2544C35A7D697C2BD0B4F2FC4",
     "validationCount": 1,
     "lastUpdated": "2026-08-14T09:49:55.9133448Z",
-    "description": "",
-    "openPr": {
-      "checkedAt": "2026-08-16T16:11:31.7421487Z",
-      "version": "2.5.0"
-    }
+    "description": ""
   },
   "Google.Protobuf": {
     "description": "",
@@ -1400,8 +1400,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.8.6",
-      "checkedAt": "2026-08-16T00:24:31.0240953Z"
+      "checkedAt": "2026-08-17T14:44:50.3072269Z",
+      "version": "2026.8.6"
     }
   },
   "Jellyfin.FFmpeg": {
@@ -1517,8 +1517,8 @@
     "validationCount": 1,
     "version": "18.1.1",
     "openPr": {
-      "version": "18.1.1",
-      "checkedAt": "2026-08-16T00:24:31.5430016Z"
+      "checkedAt": "2026-08-17T14:44:52.7928856Z",
+      "version": "18.1.1"
     }
   },
   "KellyBrazil.jc": {
