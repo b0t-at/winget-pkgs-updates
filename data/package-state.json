@@ -1486,8 +1486,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-08-17T14:44:50.3072269Z",
-      "version": "2026.8.6"
+      "checkedAt": "2026-08-17T20:13:22.6704353Z",
+      "version": "2026.8.8"
     }
   },
   "Jellyfin.FFmpeg": {
@@ -2233,7 +2233,7 @@
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
     "openPr": {
-      "checkedAt": "2026-08-16T20:11:09.2184686Z",
+      "checkedAt": "2026-08-17T20:13:23.6836365Z",
       "version": "0.32.14"
     }
   },
