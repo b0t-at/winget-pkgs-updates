@@ -53,6 +53,37 @@ merged PRs while ignoring closed-unmerged PRs. Search/API response failures
 and incomplete result pages fail closed rather than being treated as no
 duplicate.
 
+## Pipeline noise reduction
+
+Four mechanisms keep the scheduled runs green and the upstream review queue
+clean:
+
+- **Installer URL preflight (submit gate).** Immediately before submission,
+  every `InstallerUrl` in the validated manifest is probed (HEAD, ranged-GET
+  fallback). A definitive HTTP 404/410 blocks the submission - the release
+  asset was deleted after generation and the PR would only earn an upstream
+  `URL-Validation-Error`. All other outcomes (403/405/429/5xx, network
+  errors) fail open with a warning; upstream validation stays authoritative.
+- **Safety questions do not fail runs.** When WinMatsch stops at a
+  fail-closed safety question (exit code 4: `ARCH_CONFLICT`, `MAP_REMOVED`,
+  `MAP_STRUCTURAL_REWRITE`, ...), the generate job succeeds and the package is
+  listed in a dedicated *needs-decision* run-summary table instead of failing
+  the workflow. Real generator/infrastructure errors still fail the job.
+  Answer the question by editing the package's matrix entry (URL architecture
+  hints like `...msi|x64`, `overridePack`, or `allowStructuralRewrite`).
+- **Superseded PRs are closed automatically.** After a successful submission,
+  any still-open older-version PR of the same package by the bot is closed
+  with a comment pointing at the successor. The daily `Upstream PR Hygiene`
+  workflow additionally sweeps all open bot PRs: it closes PRs superseded by a
+  newer open PR or whose exact version is already published, and reports the
+  remaining PRs grouped by validation-error labels. Title parsing is strict -
+  anything that does not match this tool's own title format is never touched.
+- **Config health report.** The weekly `Config Health` workflow re-resolves
+  every monitored package's release and verifies each URL template against
+  the real asset list (tagPattern streams are resolved to their own stream).
+  Broken templates (renamed assets, deleted releases, vanished repositories)
+  land in a report instead of producing doomed generation attempts.
+
 ## Package-specific WinMatsch overrides
 
 Keep safety questions enabled by default. When a package has reviewed, stable

@@ -75,6 +75,10 @@ ManifestVersion: 1.12.0
             Mock Install-WinMatsch {}
             Mock Test-ExistingPRs { $false }
             Mock Get-WingetPkgsPrUrl { $null }
+            # The URL preflight probes the network; tests stub it as alive.
+            Mock Test-WingetInstallerUrlsAlive {
+                [PSCustomObject]@{ Valid = $true; DeadUrls = @(); Warnings = @(); CheckedCount = 1 }
+            }
         }
     }
 
@@ -259,6 +263,34 @@ ManifestVersion: 1.12.0
                 }
                 Assert-MockCalled Invoke-WinMatschSubmitAttempt -Times 1 -Exactly -Scope It
                 Assert-MockCalled Test-ExistingPRs -Times 2 -Exactly -Scope It
+            }
+        }
+
+        It 'blocks submission when an installer URL is definitively dead' {
+            InModuleScope WingetMaintainerModule {
+                Mock Test-WingetInstallerUrlsAlive {
+                    [PSCustomObject]@{
+                        Valid        = $false
+                        DeadUrls     = @('https://downloads.example.invalid/test-package.zip')
+                        Warnings     = @()
+                        CheckedCount = 1
+                    }
+                }
+                Mock Invoke-WinMatschSubmitAttempt {}
+
+                $result = Submit-WingetPackage `
+                    -ManifestPath $global:SubmitWingetPackageTestManifestPath `
+                    -PackageId 'Test.Package' `
+                    -Version '1.0.0' `
+                    -Token 'test-token'
+
+                if ($result.Success -ne $false) {
+                    throw 'A dead installer URL unexpectedly reported success.'
+                }
+                if ($result.Error -notmatch 'Installer URL preflight failed' -or $result.Error -notmatch 'test-package\.zip') {
+                    throw "The dead-URL error did not name the URL: $($result.Error)"
+                }
+                Assert-MockCalled Invoke-WinMatschSubmitAttempt -Times 0 -Exactly -Scope It
             }
         }
     }

@@ -213,6 +213,26 @@ function Submit-WingetPackage {
         }
         $submitReadySnapshot = Get-SubmittedManifestSnapshot -ManifestPath $fullManifestPath
 
+        # Publishers occasionally delete or re-cut release assets between
+        # generation and submission; a dead InstallerUrl would produce an
+        # upstream URL-Validation-Error PR that only a human can clean up.
+        # Only definitive HTTP 404/410 block the submission (fail-open otherwise).
+        $urlPreflight = Test-WingetInstallerUrlsAlive -ManifestPath $fullManifestPath
+        foreach ($urlWarning in $urlPreflight.Warnings) {
+            Write-Warning $urlWarning
+        }
+        if (-not $urlPreflight.Valid) {
+            return @{
+                Success  = $false
+                Error    = "Installer URL preflight failed; the following installer URL(s) no longer exist (HTTP 404/410): $($urlPreflight.DeadUrls -join ', '). The release asset was likely removed after manifest generation."
+                PrUrl    = $null
+                PrNumber = $null
+            }
+        }
+        if ($urlPreflight.CheckedCount -gt 0) {
+            Write-Host "Installer URL preflight passed for $($urlPreflight.CheckedCount) URL(s)." -ForegroundColor Gray
+        }
+
         switch ($With) {
             "WinMatsch" {
                 # Ensure WinMatsch is installed

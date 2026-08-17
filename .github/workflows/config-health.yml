@@ -1,0 +1,43 @@
+name: Config Health
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 5 * * 1" # weekly, Monday 05:17 UTC
+
+permissions:
+  contents: read
+
+concurrency:
+  group: config-health
+  cancel-in-progress: false
+
+jobs:
+  check-monitored-config:
+    name: Check monitored package URLs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # Report-only: verifies that every monitored package's release-asset URL
+      # template still matches a real asset, so broken templates surface here
+      # instead of as failed generations or upstream URL-Validation-Error PRs.
+      - name: Check release-asset URL templates
+        id: check
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ secrets.WINGET_PAT }}
+          WINGET_UPSTREAM_READ_TOKEN: ${{ secrets.WINGET_PAT }}
+          MONITORED_PACKAGES_FILE: .github/workflows-data/update-github-packages-1-z.packages.json
+        run: ./scripts/Test-MonitoredPackageAssets.ps1
+
+      - name: Upload report
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: config-health-report
+          path: ./config-health-report.json
+          retention-days: 30
+          if-no-files-found: warn

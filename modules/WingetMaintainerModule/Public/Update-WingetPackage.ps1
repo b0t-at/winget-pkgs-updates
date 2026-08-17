@@ -286,6 +286,30 @@ function Update-WingetPackage {
                     $generatorError = Get-GeneratorFailureMessage -GeneratorOutput $generatorOutput
                 }
 
+                # WinMatsch exit code 4 means the run stopped at a fail-closed
+                # safety question (ARCH_CONFLICT, MAP_REMOVED, ...). That is the
+                # tool working as designed - a human has to review the package
+                # config - so it must not fail the scheduled run like an
+                # infrastructure error would. The workflow renders these
+                # packages in a dedicated needs-decision summary instead.
+                if ($EffectiveWith -eq 'WinMatsch' -and $generatorExitCode -eq 4) {
+                    $result.Reason = "QuestionsRequired"
+                    Write-Warning "$EffectiveWith stopped at a safety question for $wingetPackage $($Latest.Version): $generatorError Review the package's matrix entry (URL architecture hints, overridePack, allowStructuralRewrite)."
+
+                    if ($env:GITHUB_OUTPUT) {
+                        "generated=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                        "reason=QuestionsRequired" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                        "package-id=$wingetPackage" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                        "version=$($Latest.Version)" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                        "generator=$EffectiveWith" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                        "generator-exit-code=$generatorExitCode" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                        "error-code=$generatorErrorCode" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                        "error=$generatorError" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                    }
+
+                    return $result
+                }
+
                 $result.Reason = "GeneratorFailed"
 
                 # Surface the failure details so the workflow can render them in the run summary.

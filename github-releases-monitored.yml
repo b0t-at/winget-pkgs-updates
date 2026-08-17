@@ -2199,7 +2199,12 @@
             url: "https://github.com/recherchesolutions/mdreader/releases/download/v{VERSION}/mdreader-setup-{VERSION}.exe"
           - id: "melon-masou.MonMouse"
             repo: "melon-masou/MonMouse"
+            # The published 0.2.0 manifest declares x86 for an x64 payload; the
+            # approved rewrite emits x64 plus the VCRedist dependency detected from
+            # the binaries (reviewed 2026-08; drop the approval once a corrected
+            # version is published).
             url: "https://github.com/melon-masou/MonMouse/releases/download/v{VERSION}/monmouse-v{VERSION}-windows.zip"
+            allowStructuralRewrite: true
           - id: "mentebinaria.dz6"
             repo: "mentebinaria/dz6"
             url: "https://github.com/mentebinaria/dz6/releases/download/v{VERSION}/dz6-x86_64-pc-windows-msvc.zip"
@@ -2553,7 +2558,12 @@
             url: "https://github.com/oras-project/oras/releases/download/v{VERSION}/oras_{VERSION}_windows_amd64.zip"
           - id: "orbatschow.kontext"
             repo: "orbatschow/kontext"
-            url: "https://github.com/orbatschow/kontext/releases/download/v{VERSION}/kontext_Windows_x86_64.zip https://github.com/orbatschow/kontext/releases/download/v{VERSION}/kontext_Windows_arm64.zip"
+            # The published 1.6.0 manifest mislabels the arm64 zip as 'arm'; the arm64
+            # hint plus the structural-rewrite approval lets WinMatsch replace that
+            # stale entry with a correct arm64 installer (reviewed 2026-08; the
+            # approval can be dropped once a corrected version is published).
+            url: "https://github.com/orbatschow/kontext/releases/download/v{VERSION}/kontext_Windows_x86_64.zip https://github.com/orbatschow/kontext/releases/download/v{VERSION}/kontext_Windows_arm64.zip|arm64"
+            allowStructuralRewrite: true
           - id: "Orthogonal.APM"
             repo: "orthogonalhq/apm"
             url: "https://github.com/orthogonalhq/apm/releases/download/v{VERSION}/apm-v{VERSION}-x86_64-pc-windows-msvc.zip"
@@ -2710,7 +2720,9 @@
             url: "https://github.com/RikkiGibson/DreamPotato/releases/download/v{VERSION}/DreamPotato-Windows-x64-v{VERSION}.zip"
           - id: "RimSort.RimSort"
             repo: "RimSort/RimSort"
-            url: "https://github.com/RimSort/RimSort/releases/download/v{VERSION}/RimSort-v{VERSION}-Windows_x86_64.msi"
+            # The MSI carries ambiguous embedded architecture evidence; the explicit
+            # x64 hint answers WinMatsch's ARCH_CONFLICT question (reviewed 2026-08).
+            url: "https://github.com/RimSort/RimSort/releases/download/v{VERSION}/RimSort-v{VERSION}-Windows_x86_64.msi|x64"
           - id: "Ripose.Memento"
             repo: "ripose-jp/Memento"
             url: "https://github.com/ripose-jp/Memento/releases/download/v{VERSION}/Memento_Windows_x86_64_Installer.exe"
