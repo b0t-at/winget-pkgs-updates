@@ -104,42 +104,59 @@ function Test-MonitoredPackageAssets {
         }
     }
 
-    # Pass 2: tagPattern packages need the recent release list to pick their stream.
+    # Pass 2: tagPattern packages need the recent release list to pick their
+    # stream. Multiple packages often share one repository (e.g. every
+    # Electron major), so the release list is fetched once per unique repo -
+    # asset-heavy repositories make the per-package form time out server-side.
     $tagPatternArray = @($withTagPattern)
-    for ($offset = 0; $offset -lt $tagPatternArray.Count; $offset += $TagPatternBatchSize) {
-        $slice = @($tagPatternArray[$offset..([Math]::Min($offset + $TagPatternBatchSize, $tagPatternArray.Count) - 1)])
+    $releaseNodesByRepo = @{}
+    $repoMissingByRepo = @{}
+    $uniqueTagPatternRepos = @($tagPatternArray |
+            ForEach-Object { Get-WingetPrecheckPackageField -Package $_ -Name 'repo' } |
+            Sort-Object -Unique)
+
+    for ($offset = 0; $offset -lt $uniqueTagPatternRepos.Count; $offset += $TagPatternBatchSize) {
+        $slice = @($uniqueTagPatternRepos[$offset..([Math]::Min($offset + $TagPatternBatchSize, $uniqueTagPatternRepos.Count) - 1)])
         $fields = for ($i = 0; $i -lt $slice.Count; $i++) {
-            $owner, $name = (Get-WingetPrecheckPackageField -Package $slice[$i] -Name 'repo').Split('/', 2)
-            "t$($i): repository(owner: $(ConvertTo-WingetGraphQlStringLiteral -Value $owner), name: $(ConvertTo-WingetGraphQlStringLiteral -Value $name)) { releases(first: 60, orderBy: {field: CREATED_AT, direction: DESC}) { nodes { isDraft isPrerelease publishedAt $releaseSelection } } }"
+            $owner, $name = $slice[$i].Split('/', 2)
+            "t$($i): repository(owner: $(ConvertTo-WingetGraphQlStringLiteral -Value $owner), name: $(ConvertTo-WingetGraphQlStringLiteral -Value $name)) { releases(first: 40, orderBy: {field: CREATED_AT, direction: DESC}) { nodes { isDraft isPrerelease publishedAt $releaseSelection } } }"
         }
         $query = "query {`n" + (($fields | ForEach-Object { "  $_" }) -join "`n") + "`n}"
         $response = & $GraphQlInvoker $query
         $data = Get-WingetGraphQlFieldValue -InputObject $response -Name 'data'
 
         for ($i = 0; $i -lt $slice.Count; $i++) {
-            $slicePackage = $slice[$i]
             $repository = Get-WingetGraphQlFieldValue -InputObject $data -Name "t$i"
-            $release = $null
-
-            if ($null -ne $repository) {
-                $tagPattern = Get-WingetPrecheckPackageField -Package $slicePackage -Name 'tagPattern'
-                $releasesValue = Get-WingetGraphQlFieldValue -InputObject (Get-WingetGraphQlFieldValue -InputObject $repository -Name 'releases') -Name 'nodes'
-                $releaseNodes = if ($null -eq $releasesValue) { @() } else { @($releasesValue) }
-                $matching = @($releaseNodes |
-                        Where-Object {
-                            $null -ne $_ -and
-                            -not [bool](Get-WingetGraphQlFieldValue -InputObject $_ -Name 'isDraft') -and
-                            -not [bool](Get-WingetGraphQlFieldValue -InputObject $_ -Name 'isPrerelease') -and
-                            "$(Get-WingetGraphQlFieldValue -InputObject $_ -Name 'tagName')" -match $tagPattern
-                        } |
-                        Sort-Object -Property @{ Expression = { "$(Get-WingetGraphQlFieldValue -InputObject $_ -Name 'publishedAt')" } } -Descending)
-                if ($matching.Count -gt 0) {
-                    $release = $matching[0]
-                }
+            if ($null -eq $repository) {
+                $repoMissingByRepo[$slice[$i]] = $true
+                continue
             }
-
-            $results.Add((Resolve-WingetMonitoredAssetStatus -Package $slicePackage -Repository $repository -Release $release -NoReleaseStatus 'NoMatchingRelease'))
+            $releasesValue = Get-WingetGraphQlFieldValue -InputObject (Get-WingetGraphQlFieldValue -InputObject $repository -Name 'releases') -Name 'nodes'
+            $releaseNodesByRepo[$slice[$i]] = if ($null -eq $releasesValue) { @() } else { @($releasesValue) }
         }
+    }
+
+    foreach ($package in $tagPatternArray) {
+        $repo = Get-WingetPrecheckPackageField -Package $package -Name 'repo'
+
+        if ($repoMissingByRepo.ContainsKey($repo)) {
+            $results.Add((Resolve-WingetMonitoredAssetStatus -Package $package -Repository $null -Release $null -NoReleaseStatus 'NoMatchingRelease'))
+            continue
+        }
+
+        $tagPattern = Get-WingetPrecheckPackageField -Package $package -Name 'tagPattern'
+        $releaseNodes = @($releaseNodesByRepo[$repo])
+        $matching = @($releaseNodes |
+                Where-Object {
+                    $null -ne $_ -and
+                    -not [bool](Get-WingetGraphQlFieldValue -InputObject $_ -Name 'isDraft') -and
+                    -not [bool](Get-WingetGraphQlFieldValue -InputObject $_ -Name 'isPrerelease') -and
+                    "$(Get-WingetGraphQlFieldValue -InputObject $_ -Name 'tagName')" -match $tagPattern
+                } |
+                Sort-Object -Property @{ Expression = { "$(Get-WingetGraphQlFieldValue -InputObject $_ -Name 'publishedAt')" } } -Descending)
+        $release = if ($matching.Count -gt 0) { $matching[0] } else { $null }
+
+        $results.Add((Resolve-WingetMonitoredAssetStatus -Package $package -Repository ([PSCustomObject]@{ present = $true }) -Release $release -NoReleaseStatus 'NoMatchingRelease'))
     }
 
     return @($results | Sort-Object -Property PackageId)

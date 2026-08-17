@@ -3913,54 +3913,6 @@
     "url": "https://github.com/OpenHV/OpenHV/releases/download/{VERSION}/OpenHV-{VERSION}-x64.exe https://github.com/OpenHV/OpenHV/releases/download/{VERSION}/OpenHV-{VERSION}-x86.exe"
   },
   {
-    "id": "OpenJS.Electron.33",
-    "repo": "electron/electron",
-    "url": "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip",
-    "tagPattern": "^v33\\."
-  },
-  {
-    "id": "OpenJS.Electron.34",
-    "repo": "electron/electron",
-    "url": "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip",
-    "tagPattern": "^v34\\."
-  },
-  {
-    "id": "OpenJS.Electron.35",
-    "repo": "electron/electron",
-    "url": "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip",
-    "tagPattern": "^v35\\."
-  },
-  {
-    "id": "OpenJS.Electron.36",
-    "repo": "electron/electron",
-    "url": "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip",
-    "tagPattern": "^v36\\."
-  },
-  {
-    "id": "OpenJS.Electron.37",
-    "repo": "electron/electron",
-    "url": "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip",
-    "tagPattern": "^v37\\."
-  },
-  {
-    "id": "OpenJS.Electron.38",
-    "repo": "electron/electron",
-    "url": "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip",
-    "tagPattern": "^v38\\."
-  },
-  {
-    "id": "OpenJS.Electron.39",
-    "repo": "electron/electron",
-    "url": "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip",
-    "tagPattern": "^v39\\."
-  },
-  {
-    "id": "OpenJS.Electron.40",
-    "repo": "electron/electron",
-    "url": "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip",
-    "tagPattern": "^v40\\."
-  },
-  {
     "id": "OpenJS.Electron.41",
     "repo": "electron/electron",
     "url": "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip",
@@ -3971,6 +3923,12 @@
     "repo": "electron/electron",
     "url": "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip",
     "tagPattern": "^v42\\."
+  },
+  {
+    "id": "OpenJS.Electron.43",
+    "repo": "electron/electron",
+    "url": "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip",
+    "tagPattern": "^v43\\."
   },
   {
     "id": "OpenOrienteering.Mapper",
