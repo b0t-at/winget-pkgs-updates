@@ -1,0 +1,40 @@
+name: Upstream PR Hygiene
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Plan only; do not close anything"
+        required: false
+        default: false
+        type: boolean
+  schedule:
+    - cron: "41 6 * * *" # daily, 06:41 UTC
+
+permissions: {}
+
+concurrency:
+  group: upstream-pr-hygiene
+  cancel-in-progress: false
+
+jobs:
+  sweep:
+    name: Sweep superseded upstream PRs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # Closes this bot's own open upstream PRs that are superseded by a newer
+      # open PR or whose version is already published; everything else is only
+      # reported (grouped by validation labels) in the job summary.
+      - name: Sweep open upstream PRs
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ secrets.WINGET_PAT }}
+          WINGET_UPSTREAM_READ_TOKEN: ${{ secrets.WINGET_PAT }}
+          WINGET_PKGS_FORK_REPO: ${{ vars.WINGET_PKGS_FORK_REPO }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || 'false' }}
+        run: ./scripts/Invoke-UpstreamPrHygiene.ps1

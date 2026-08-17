@@ -332,4 +332,96 @@ if (-not $publishedVersionLookupResult.Result.ShouldGenerate) {
     throw "The version lookup incorrectly suppressed a version missing from the selected repository: $($publishedVersionLookupResult.Result | ConvertTo-Json -Compress)"
 }
 
+Write-Host 'TEST: WinMatsch exit code 4 (safety question) soft-fails with QuestionsRequired'
+$questionsRequiredResult = & $module {
+    function Test-GitHubToken { 'test-token' }
+    function Test-PackageAndVersionInGithub {
+        [PSCustomObject]@{
+            PackageExists          = $true
+            ShouldGenerate         = $true
+            VersionExists          = $false
+            CanonicalVersion       = '1.0.0'
+            PublishedVersion       = $null
+            LatestPublishedVersion = $null
+        }
+    }
+    function Test-ExistingPRs { $false }
+    function Install-WinMatsch {}
+    function Test-GeneratedInstallerArchitecture { throw 'Architecture validation must not run after a safety question.' }
+    function winmatsch {
+        if ($args -contains '--help') {
+            $global:LASTEXITCODE = 0
+            return
+        }
+        Write-Output 'ARCH_CONFLICT : Select an architecture for this asset.'
+        $global:LASTEXITCODE = 4
+    }
+
+    $originalGitHubOutput = $env:GITHUB_OUTPUT
+    $outputFile = Join-Path ([IO.Path]::GetTempPath()) "winget-questions-required-$([guid]::NewGuid().ToString('N')).txt"
+    $env:GITHUB_OUTPUT = $outputFile
+    try {
+        $result = Update-WingetPackage `
+            -WingetPackage 'Test.Package' `
+            -With 'WinMatsch' `
+            -latestVersion '1.0.0' `
+            -latestVersionURL 'https://example.invalid/app.zip'
+
+        [PSCustomObject]@{
+            Result        = $result
+            OutputContent = (Get-Content -LiteralPath $outputFile -Raw)
+        }
+    }
+    finally {
+        $env:GITHUB_OUTPUT = $originalGitHubOutput
+        Remove-Item -LiteralPath $outputFile -Force -ErrorAction SilentlyContinue
+    }
+}
+if ($questionsRequiredResult.Result.Generated -or $questionsRequiredResult.Result.Reason -cne 'QuestionsRequired') {
+    throw "A WinMatsch safety question did not soft-fail with QuestionsRequired: $($questionsRequiredResult.Result | ConvertTo-Json -Compress)"
+}
+if ($questionsRequiredResult.OutputContent -notmatch '(?m)^reason=QuestionsRequired\s*$') {
+    throw "The QuestionsRequired reason was not written to GITHUB_OUTPUT: $($questionsRequiredResult.OutputContent)"
+}
+
+Write-Host 'TEST: non-question WinMatsch failures still throw as GeneratorFailed'
+$generatorFailedResult = & $module {
+    function Test-GitHubToken { 'test-token' }
+    function Test-PackageAndVersionInGithub {
+        [PSCustomObject]@{
+            PackageExists          = $true
+            ShouldGenerate         = $true
+            VersionExists          = $false
+            CanonicalVersion       = '1.0.0'
+            PublishedVersion       = $null
+            LatestPublishedVersion = $null
+        }
+    }
+    function Test-ExistingPRs { $false }
+    function Install-WinMatsch {}
+    function winmatsch {
+        if ($args -contains '--help') {
+            $global:LASTEXITCODE = 0
+            return
+        }
+        Write-Output 'OPERATION_FAILED : Something genuinely broke.'
+        $global:LASTEXITCODE = 5
+    }
+
+    try {
+        Update-WingetPackage `
+            -WingetPackage 'Test.Package' `
+            -With 'WinMatsch' `
+            -latestVersion '1.0.0' `
+            -latestVersionURL 'https://example.invalid/app.zip' | Out-Null
+        [PSCustomObject]@{ Threw = $false; Message = $null }
+    }
+    catch {
+        [PSCustomObject]@{ Threw = $true; Message = $_.Exception.Message }
+    }
+}
+if (-not $generatorFailedResult.Threw -or $generatorFailedResult.Message -notmatch 'exit code 5') {
+    throw "A real generator failure no longer fails the job: $($generatorFailedResult | ConvertTo-Json -Compress)"
+}
+
 Write-Host 'All Update-WingetPackage regression tests passed.' -ForegroundColor Green

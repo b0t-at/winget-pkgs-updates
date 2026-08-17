@@ -180,6 +180,42 @@ jobs:
           retention-days: 7
           if-no-files-found: error
 
+      - name: Record needs-decision marker
+        if: steps.generate.outputs.reason == 'QuestionsRequired'
+        shell: pwsh
+        env:
+          JOB_NAME: Generate ${{ matrix.id }}
+          MATRIX_PACKAGENAME: ${{ matrix.id }}
+          STEPS_GENERATE_OUTPUTS_VERSION: ${{ steps.generate.outputs.version }}
+          STEPS_GENERATE_OUTPUTS_GENERATOR: ${{ steps.generate.outputs.generator }}
+          STEPS_GENERATE_OUTPUTS_EXIT_CODE: ${{ steps.generate.outputs.generator-exit-code }}
+          STEPS_GENERATE_OUTPUTS_ERROR_CODE: ${{ steps.generate.outputs.error-code }}
+          STEPS_GENERATE_OUTPUTS_ERROR: ${{ steps.generate.outputs.error }}
+        run: |
+          New-Item -ItemType Directory -Force -Path ./needs-decision | Out-Null
+
+          @{
+            job       = "$env:JOB_NAME"
+            package   = "$env:MATRIX_PACKAGENAME"
+            version   = "$env:STEPS_GENERATE_OUTPUTS_VERSION"
+            generator = "$env:STEPS_GENERATE_OUTPUTS_GENERATOR"
+            exitCode  = "$env:STEPS_GENERATE_OUTPUTS_EXIT_CODE"
+            errorCode = "$env:STEPS_GENERATE_OUTPUTS_ERROR_CODE"
+            error     = "$env:STEPS_GENERATE_OUTPUTS_ERROR"
+          } | ConvertTo-Json | Out-File -FilePath ./needs-decision/question.json -Encoding utf8
+
+          Get-Content -Path ./needs-decision/question.json
+
+      - name: Upload needs-decision marker
+        if: steps.generate.outputs.reason == 'QuestionsRequired'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        continue-on-error: true
+        with:
+          name: needs-decision__${{ matrix.id }}
+          path: ./needs-decision
+          retention-days: 7
+          if-no-files-found: ignore
+
       - name: Record generation failure
         if: failure()
         shell: pwsh
@@ -286,6 +322,55 @@ jobs:
         with:
           pattern: generate-failure__*
           path: ./generate-failures
+
+      - name: Download needs-decision markers
+        if: always()
+        continue-on-error: true
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          pattern: needs-decision__*
+          path: ./needs-decisions
+
+      - name: Summarize packages needing a decision
+        if: always()
+        shell: pwsh
+        run: |
+          $files = @(Get-ChildItem -Path ./needs-decisions -Filter *.json -Recurse -ErrorAction SilentlyContinue)
+
+          if ($files.Count -eq 0) {
+            Write-Host "No packages are waiting on a safety-question decision."
+            return
+          }
+
+          $rows = @(foreach ($file in $files) {
+            try {
+              Get-Content -Path $file.FullName -Raw | ConvertFrom-Json
+            }
+            catch {
+              Write-Warning "Could not read $($file.FullName): $($_.Exception.Message)"
+            }
+          })
+
+          $summary = @(
+            "## :warning: Packages waiting on a safety-question decision ($($rows.Count))"
+            ""
+            "The generator stopped at a fail-closed safety question. Review each package's"
+            "matrix entry (URL architecture hints, ``overridePack``, ``allowStructuralRewrite``)."
+            ""
+            "| Package | Version | Question | Detail |"
+            "| --- | --- | --- | --- |"
+          )
+
+          foreach ($row in ($rows | Sort-Object -Property package)) {
+            $cells = @($row.package, $row.version, $row.errorCode, $row.error) | ForEach-Object {
+              $text = ("$_" -replace '\s*[\r\n]+\s*', ' ').Trim()
+              if ([string]::IsNullOrWhiteSpace($text)) { '-' } else { $text.Replace('|', '\|') }
+            }
+            $summary += "| $($cells -join ' | ') |"
+          }
+
+          ($summary -join "`n") | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+          Write-Host "Reported $($rows.Count) package(s) needing a decision in the job summary."
 
       - name: Summarize failed generations
         if: always()
@@ -847,6 +932,29 @@ jobs:
             }
 
             ($summary -join "`n") | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+
+            # A freshly submitted version supersedes any still-open older PR of
+            # the same package; close those immediately so moderators never see
+            # both. Best-effort: a failure here never fails the submission.
+            $forkRepository = "$env:WINGET_PKGS_FORK_REPO".Trim()
+            if ($forkRepository -match '^(?<Owner>[A-Za-z0-9_.-]+)/') {
+              $newPrNumber = 0
+              if (-not [int]::TryParse("$($result.PrNumber)", [ref] $newPrNumber)) { $newPrNumber = 0 }
+              $superseded = Close-SupersededWingetPrs `
+                -PackageId "$env:MATRIX_PACKAGENAME" `
+                -Version "$env:MATRIX_VERSION" `
+                -BotLogin $Matches['Owner'] `
+                -NewPrNumber $newPrNumber `
+                -NewPrUrl "$($result.PrUrl)" `
+                -Repository "$env:WINGET_PKGS_SUBMISSION_REPOSITORY"
+              foreach ($warning in @($superseded.Warnings)) {
+                Write-Warning $warning
+              }
+              if (@($superseded.ClosedPrNumbers).Count -gt 0) {
+                "**Closed superseded PR(s):** $(@($superseded.ClosedPrNumbers | ForEach-Object { "#$_" }) -join ', ')" |
+                  Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+              }
+            }
           } else {
             Write-Host "Failed to submit PR: $($result.Error)" -ForegroundColor Red
             exit 1

@@ -2199,7 +2199,12 @@
             url: "https://github.com/recherchesolutions/mdreader/releases/download/v{VERSION}/mdreader-setup-{VERSION}.exe"
           - id: "melon-masou.MonMouse"
             repo: "melon-masou/MonMouse"
+            # The published 0.2.0 manifest declares x86 for an x64 payload; the
+            # approved rewrite emits x64 plus the VCRedist dependency detected from
+            # the binaries (reviewed 2026-08; drop the approval once a corrected
+            # version is published).
             url: "https://github.com/melon-masou/MonMouse/releases/download/v{VERSION}/monmouse-v{VERSION}-windows.zip"
+            allowStructuralRewrite: true
           - id: "mentebinaria.dz6"
             repo: "mentebinaria/dz6"
             url: "https://github.com/mentebinaria/dz6/releases/download/v{VERSION}/dz6-x86_64-pc-windows-msvc.zip"
@@ -2490,38 +2495,46 @@
           - id: "OpenHV.OpenHV"
             repo: "OpenHV/OpenHV"
             url: "https://github.com/OpenHV/OpenHV/releases/download/{VERSION}/OpenHV-{VERSION}-x64.exe https://github.com/OpenHV/OpenHV/releases/download/{VERSION}/OpenHV-{VERSION}-x86.exe"
-          - id: "OpenJS.Electron.33"
-            repo: "electron/electron"
-            url: "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip"
-            tagPattern: '^v33\.'
-          - id: "OpenJS.Electron.34"
-            repo: "electron/electron"
-            url: "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip"
-            tagPattern: '^v34\.'
-          - id: "OpenJS.Electron.35"
-            repo: "electron/electron"
-            url: "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip"
-            tagPattern: '^v35\.'
-          - id: "OpenJS.Electron.36"
-            repo: "electron/electron"
-            url: "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip"
-            tagPattern: '^v36\.'
-          - id: "OpenJS.Electron.37"
-            repo: "electron/electron"
-            url: "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip"
-            tagPattern: '^v37\.'
-          - id: "OpenJS.Electron.38"
-            repo: "electron/electron"
-            url: "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip"
-            tagPattern: '^v38\.'
-          - id: "OpenJS.Electron.39"
-            repo: "electron/electron"
-            url: "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip"
-            tagPattern: '^v39\.'
-          - id: "OpenJS.Electron.40"
-            repo: "electron/electron"
-            url: "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip"
-            tagPattern: '^v40\.'
+#          OpenJS.Electron.33 is excluded: v33 is end-of-life upstream and its final patch 33.4.11 is already published in winget; the stream's releases fell out of the 30-release window Get-LatestGHVersionTag scans, so every run would fail to resolve it.
+#          - id: "OpenJS.Electron.33"
+#            repo: "electron/electron"
+#            url: "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip"
+#            tagPattern: '^v33\.'
+#          OpenJS.Electron.34 is excluded: v34 is end-of-life upstream and its final patch 34.5.8 is already published in winget; the stream's releases fell out of the 30-release window Get-LatestGHVersionTag scans, so every run would fail to resolve it.
+#          - id: "OpenJS.Electron.34"
+#            repo: "electron/electron"
+#            url: "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip"
+#            tagPattern: '^v34\.'
+#          OpenJS.Electron.35 is excluded: v35 is end-of-life upstream and its final patch 35.7.5 is already published in winget; the stream's releases fell out of the 30-release window Get-LatestGHVersionTag scans, so every run would fail to resolve it.
+#          - id: "OpenJS.Electron.35"
+#            repo: "electron/electron"
+#            url: "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip"
+#            tagPattern: '^v35\.'
+#          OpenJS.Electron.36 is excluded: v36 is end-of-life upstream and its final patch 36.9.5 is already published in winget; the stream's releases fell out of the 30-release window Get-LatestGHVersionTag scans, so every run would fail to resolve it.
+#          - id: "OpenJS.Electron.36"
+#            repo: "electron/electron"
+#            url: "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip"
+#            tagPattern: '^v36\.'
+#          OpenJS.Electron.37 is excluded: v37 is end-of-life upstream and its final patch 37.10.3 is already published in winget; the stream's releases fell out of the 30-release window Get-LatestGHVersionTag scans, so every run would fail to resolve it.
+#          - id: "OpenJS.Electron.37"
+#            repo: "electron/electron"
+#            url: "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip"
+#            tagPattern: '^v37\.'
+#          OpenJS.Electron.38 is excluded: v38 is end-of-life upstream and its final patch 38.8.6 is already published in winget; the stream's releases fell out of the 30-release window Get-LatestGHVersionTag scans, so every run would fail to resolve it.
+#          - id: "OpenJS.Electron.38"
+#            repo: "electron/electron"
+#            url: "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip"
+#            tagPattern: '^v38\.'
+#          OpenJS.Electron.39 is excluded: v39 is end-of-life upstream and its final patch 39.8.10 is already published in winget; the stream's releases fell out of the 30-release window Get-LatestGHVersionTag scans, so every run would fail to resolve it.
+#          - id: "OpenJS.Electron.39"
+#            repo: "electron/electron"
+#            url: "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip"
+#            tagPattern: '^v39\.'
+#          OpenJS.Electron.40 is excluded: v40 is end-of-life upstream and its final patch 40.10.6 is already published in winget; the stream's releases will shortly fall out of the 30-release window Get-LatestGHVersionTag scans, after which every run would fail to resolve it.
+#          - id: "OpenJS.Electron.40"
+#            repo: "electron/electron"
+#            url: "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip"
+#            tagPattern: '^v40\.'
           - id: "OpenJS.Electron.41"
             repo: "electron/electron"
             url: "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip"
@@ -2530,6 +2543,10 @@
             repo: "electron/electron"
             url: "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip"
             tagPattern: '^v42\.'
+          - id: "OpenJS.Electron.43"
+            repo: "electron/electron"
+            url: "https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-ia32.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-arm64.zip"
+            tagPattern: '^v43\.'
           - id: "OpenOrienteering.Mapper"
             repo: "OpenOrienteering/mapper"
             url: "https://github.com/OpenOrienteering/mapper/releases/download/v{VERSION}/OpenOrienteering-Mapper-{VERSION}-Windows-x86.exe https://github.com/OpenOrienteering/mapper/releases/download/v{VERSION}/OpenOrienteering-Mapper-{VERSION}-Windows-x64.exe"
@@ -2553,7 +2570,12 @@
             url: "https://github.com/oras-project/oras/releases/download/v{VERSION}/oras_{VERSION}_windows_amd64.zip"
           - id: "orbatschow.kontext"
             repo: "orbatschow/kontext"
-            url: "https://github.com/orbatschow/kontext/releases/download/v{VERSION}/kontext_Windows_x86_64.zip https://github.com/orbatschow/kontext/releases/download/v{VERSION}/kontext_Windows_arm64.zip"
+            # The published 1.6.0 manifest mislabels the arm64 zip as 'arm'; the arm64
+            # hint plus the structural-rewrite approval lets WinMatsch replace that
+            # stale entry with a correct arm64 installer (reviewed 2026-08; the
+            # approval can be dropped once a corrected version is published).
+            url: "https://github.com/orbatschow/kontext/releases/download/v{VERSION}/kontext_Windows_x86_64.zip https://github.com/orbatschow/kontext/releases/download/v{VERSION}/kontext_Windows_arm64.zip|arm64"
+            allowStructuralRewrite: true
           - id: "Orthogonal.APM"
             repo: "orthogonalhq/apm"
             url: "https://github.com/orthogonalhq/apm/releases/download/v{VERSION}/apm-v{VERSION}-x86_64-pc-windows-msvc.zip"
@@ -2710,7 +2732,9 @@
             url: "https://github.com/RikkiGibson/DreamPotato/releases/download/v{VERSION}/DreamPotato-Windows-x64-v{VERSION}.zip"
           - id: "RimSort.RimSort"
             repo: "RimSort/RimSort"
-            url: "https://github.com/RimSort/RimSort/releases/download/v{VERSION}/RimSort-v{VERSION}-Windows_x86_64.msi"
+            # The MSI carries ambiguous embedded architecture evidence; the explicit
+            # x64 hint answers WinMatsch's ARCH_CONFLICT question (reviewed 2026-08).
+            url: "https://github.com/RimSort/RimSort/releases/download/v{VERSION}/RimSort-v{VERSION}-Windows_x86_64.msi|x64"
           - id: "Ripose.Memento"
             repo: "ripose-jp/Memento"
             url: "https://github.com/ripose-jp/Memento/releases/download/v{VERSION}/Memento_Windows_x86_64_Installer.exe"
