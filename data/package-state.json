@@ -288,6 +288,17 @@
     "manifestHash": "C524DD4DEABA443AA84D590A7A59CB569FB2C007FC8D8F94EFA50462E25B2A52",
     "version": "1.27.206"
   },
+  "bdash-app.bdash": {
+    "validationCount": 1,
+    "version": "1.35.1",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "B5D05E3367C9F7DC78D3975DA79F945195F22D02FC2431F44BDA33AF3D7FD4AE",
+    "description": "",
+    "installerHashes": [
+      "25D117CB4658EFED68387B7D8928DDD63982C8807EB2FE363EBBC38227A33FAE"
+    ],
+    "lastUpdated": "2026-08-17T21:15:38.3689994Z"
+  },
   "BeagleEditor.BeagleEditor": {
     "lastUpdated": "2026-08-17T17:04:35.1470706Z",
     "description": "",
@@ -440,6 +451,29 @@
     "manifestHash": "41DCEE0BA2835FFC0ABE3A005816734972C57CD8949531D90C35FD3658508065",
     "lastUpdated": "2026-08-06T14:10:17.5710223Z",
     "version": "2026.6.3"
+  },
+  "Camunda.Modeler": {
+    "validationCount": 1,
+    "version": "5.50.1",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "9F6DF868C4C5F5D2C52E58F207702FD60B42A890ECAEBECE1C2A1EAA4763ACEE",
+    "description": "",
+    "installerHashes": [
+      "6689D55629960259AA5DF1DA7BFA88D378A5AC57EDC1F668A863327D8014E029",
+      "5DBB072D4A1C90901BC30ED1984D34CD53304252F5AC8AEB43B275F842038D6F"
+    ],
+    "lastUpdated": "2026-08-17T21:15:38.2889056Z"
+  },
+  "CCGnomes.VaultFlasher": {
+    "validationCount": 1,
+    "version": "0.6.10",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "43FC63038A007B0DAC3FD2784AD717559D968A1924AC708F770662594DBF3CE0",
+    "description": "",
+    "installerHashes": [
+      "731FEF1EF700B551041BE20D6E3DF28BA3E674B1E0F92D30EBADE2DD93699C1E"
+    ],
+    "lastUpdated": "2026-08-17T21:15:38.1071095Z"
   },
   "CerberAuth.jwtop": {
     "manifestHash": "F354F442DCD1DD03AA6E4753B525D4BCB1352F2462035ED59880F82A2632EDF0",
@@ -668,6 +702,18 @@
     ],
     "version": "1.25.3"
   },
+  "DeliveryStation.ds": {
+    "validationCount": 1,
+    "version": "1.6.2",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "04CA2961C8C72671E5E693D85792D517EB01798898669A0F8341D84999D53ADA",
+    "description": "",
+    "installerHashes": [
+      "98787BE7F3117A63540ECD61BDA3C80E610B4E8CDF278ABC8A2CE2EBF68DD3DE",
+      "02CD518A735F5615D7CCE5B1998AA83358DFD329C9486ED73CA9DDAEB2E01A07"
+    ],
+    "lastUpdated": "2026-08-17T21:15:38.3875985Z"
+  },
   "DeskRipple.DeskRipple": {
     "lastUpdated": "2026-08-16T21:14:49.2032114Z",
     "description": "",
@@ -779,6 +825,17 @@
     "description": "",
     "lastUpdated": "2026-08-16T12:25:11.6780393Z",
     "state": "VALIDATION_PASSED"
+  },
+  "edenian-prince.rust-secrets": {
+    "validationCount": 1,
+    "version": "0.5.0",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "CCFEB7D0CE56721569DF84EB208EA7E5FAE151140A050471B4BB1DE71E1540C3",
+    "description": "",
+    "installerHashes": [
+      "0E0B546884CECAA22201949C760A7629BE690C860ADA3D24C0E0BD02EEA875C7"
+    ],
+    "lastUpdated": "2026-08-17T21:15:38.4244206Z"
   },
   "EdgeTX.Companion": {
     "state": "VALIDATION_PASSED",
@@ -1332,6 +1389,17 @@
     ],
     "state": "VALIDATION_PASSED"
   },
+  "holland-built.Bloxsmith": {
+    "validationCount": 1,
+    "version": "3.66.6",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "A4FB47A7BC91CB3A21C76578669C6466555E3C2A86DE8923625699D2C886897B",
+    "description": "",
+    "installerHashes": [
+      "8B6F0F11E58980A75215ED1F8578D0D242DB9B83AF6C5AF68EBA7E50FDD71A51"
+    ],
+    "lastUpdated": "2026-08-17T21:15:38.0454259Z"
+  },
   "HongMinhee.Gukhanmun": {
     "manifestHash": "089D5FCFFB565DBC52073976471BB7BB53E1FA33EA888133D45A589919D3AE52",
     "installerHashes": [
@@ -1412,6 +1480,17 @@
     "version": "0.10.45",
     "state": "VALIDATION_PASSED"
   },
+  "instaloader.instaloader": {
+    "validationCount": 1,
+    "version": "4.15.3",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "C66746C42F584AEED18592643D465C19EE43FBF5BBC0E035A55929BEFDE4322B",
+    "description": "",
+    "installerHashes": [
+      "F91EE705F04C2C679B43E7E2EA90ED279AF2CEF83A84EF733CBD958564C06FB4"
+    ],
+    "lastUpdated": "2026-08-17T21:15:38.3094778Z"
+  },
   "InTheLoop.LoopEmail": {
     "state": "VALIDATION_PASSED",
     "description": "",
@@ -1433,6 +1512,17 @@
     "description": "",
     "lastUpdated": "2026-06-04T22:15:30.5734589Z",
     "manifestHash": "06EA63CBA95A079A2638DFF25282D03EB7E6B1FD2E589F9F80A37CDBF09C37BB"
+  },
+  "iWillink.AgentDeck": {
+    "validationCount": 1,
+    "version": "0.3.4",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "F1767A9F6EC57D59A98399DB67C989BB9BC08CA943E55BB18E5B0F989336A008",
+    "description": "",
+    "installerHashes": [
+      "966EFB1119EC181BE9260F6A5BD8EEEC9B885289BFCE89F6668EE16008A601B2"
+    ],
+    "lastUpdated": "2026-08-17T21:15:38.1998021Z"
   },
   "jadquir.MRA": {
     "validationCount": 3,
@@ -1841,6 +1931,18 @@
     "version": "2.1.1",
     "state": "VALIDATION_PASSED"
   },
+  "Marko19907.OLEDShift": {
+    "validationCount": 1,
+    "version": "1.1.5",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "8E86EBFE99BF74019951780736BF7EDB65BAAC4C12F3AC048E76280724A28055",
+    "description": "",
+    "installerHashes": [
+      "4C72506CCFEB1CD73A621F4886AE83B1552DCBA3347010E2190377D26F4B462D",
+      "DE7932031751809D9A390001D44AD534A4A39EAE3976E48CDD62014DCE704FF8"
+    ],
+    "lastUpdated": "2026-08-17T21:15:38.0625821Z"
+  },
   "marlocarlo.psnet": {
     "lastUpdated": "2026-08-17T17:04:34.9259587Z",
     "description": "",
@@ -2155,6 +2257,19 @@
     "lastUpdated": "2026-06-12T12:32:11.6305511Z",
     "manifestHash": "FAEFE9425460BAAC48B68C28234D28324B6DD9D19CB996714DC8033F3EA1251B"
   },
+  "nginx.nginx-prometheus-exporter": {
+    "validationCount": 1,
+    "version": "1.5.3",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "9048B39B4BDEC6D66B2363265FEDD4F4786BFF9D1FBA77F163220007BED4A000",
+    "description": "",
+    "installerHashes": [
+      "471838FD7F47BD248E89CCC55037A08C25DCC93DF85491C625CFFF24BBF32F78",
+      "1D83F404567474ABBFC84AE408DB755545FA0328BF2E2AE57FDE74658F997643",
+      "1C38550AFD2EBAC10C41EC34FAD7D8E55A37B1DD021DE6311930E5DB07A9CC4F"
+    ],
+    "lastUpdated": "2026-08-17T21:15:38.2489184Z"
+  },
   "NimaShafie.OxideSLOC": {
     "version": "1.6.16",
     "installerHashes": [
@@ -2401,6 +2516,17 @@
       "155F667B349561F666E0BA302DB3C5F5A5704F0A0A21A1D61D815D3399C4F591"
     ]
   },
+  "Oxolan.Oxolan": {
+    "validationCount": 1,
+    "version": "1.4.0",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "1D906D48C10B281D345F4696821F35A6D3BD4F8450B9B6AD59A7BE1E5521274C",
+    "description": "",
+    "installerHashes": [
+      "C7D97DC711D928EF64D0257819AECCFEBD11A0BBC9F71321A1F75D61D785B189"
+    ],
+    "lastUpdated": "2026-08-17T21:15:38.1325928Z"
+  },
   "P-StSoftware.WinSSHTerm": {
     "version": "2.42.2",
     "installerHashes": [
@@ -2469,6 +2595,18 @@
     "lastUpdated": "2026-07-09T17:52:24.6713678Z",
     "description": "",
     "validationCount": 1
+  },
+  "PicGo.PicGo": {
+    "validationCount": 1,
+    "version": "3.0.2",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "15A1F8CF73CA6A9AEA10345F78B26DC2EE8FEB2A45BD8D3F696B8B7CEC599E20",
+    "description": "",
+    "installerHashes": [
+      "D9C3464D89EC05DA85CD5B1BECB059F386332F415BB6649CF59A667670E200F8",
+      "6324CA9ACBD034A48986432E18EA4521A7FE970F06F9F6C97466389574501281"
+    ],
+    "lastUpdated": "2026-08-17T21:15:38.1612245Z"
   },
   "Picocrypt-NG.Picocrypt-NG": {
     "installerHashes": [
@@ -2717,6 +2855,17 @@
     ],
     "manifestHash": "85BF6426EF0B09B75FF0330AA7AE1CF527A18807D48021EA2DE02786EEE2B503"
   },
+  "RohitKumarNaidu.Forgevena": {
+    "validationCount": 1,
+    "version": "1.3.0",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "761FC4F178AE2999095BB97FA85BDAA641CFAC6C29A9E6996884C2D4BE9BC3AC",
+    "description": "",
+    "installerHashes": [
+      "1999C45AB3F85C2516E3470E091AB196825A8EE522FECD2897DB50B7583DE33A"
+    ],
+    "lastUpdated": "2026-08-17T21:15:38.3289848Z"
+  },
   "Rojo.Rojo": {
     "lastUpdated": "2026-08-16T21:14:48.9813983Z",
     "description": "",
@@ -2761,6 +2910,18 @@
     "description": "",
     "version": "6.3.1.0",
     "state": "VALIDATION_PASSED"
+  },
+  "rullerzhou-afk.clawd-on-desk": {
+    "validationCount": 1,
+    "version": "0.15.0",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "F4C9B03317189289F63E6AAFF9F32FBB8F6A9EC31588EE65B332AEA71DC40D1D",
+    "description": "",
+    "installerHashes": [
+      "27127A3D75F8B62D7F35A663F5F033B51E1E42178A7106A0EFFEA28D36B812B8",
+      "850BA857477D81C9C9A9CD9755C33E474A049BE82A34891DD4FBD74E834FA87C"
+    ],
+    "lastUpdated": "2026-08-17T21:15:38.0119956Z"
   },
   "RythenGlyth.masterclass-dl": {
     "manifestHash": "7EC111B1FD33692156682F815A4D4F92E90C3DC3573E1B2C76B655B7BBF53DA7",
@@ -2888,6 +3049,40 @@
       "version": "0.274",
       "checkedAt": "2026-08-14T13:07:24.2268824Z"
     }
+  },
+  "ServersCom.srvctl": {
+    "validationCount": 1,
+    "version": "1.3.0",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "3C41B4BA718853A10B3B4C3776280D3C1DDA575E77B059925A8B456D97028776",
+    "description": "",
+    "installerHashes": [
+      "3FB334D887713AC5655B808C69234F94FDF57F32FD30B5C7922C90A0CB3DFF1D",
+      "5F505C0E7C136166C011A7335980CBF00162266C5F79540580E28C5737D3CA4D"
+    ],
+    "lastUpdated": "2026-08-17T21:15:38.3483707Z"
+  },
+  "ShoneAnstey.Inkstone": {
+    "validationCount": 1,
+    "version": "0.9.1",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "C39E7B5F6CADA2481C123D8BAFD7B231BAD54D0FE541E479B96B8C07E0A5B318",
+    "description": "",
+    "installerHashes": [
+      "82CF26B14E0A88ECF92005DB3539F19471047BB22884C356BE8CDBA661909D5A"
+    ],
+    "lastUpdated": "2026-08-17T21:15:38.1734845Z"
+  },
+  "Siddharth.VSSProgrammingLanguage": {
+    "validationCount": 1,
+    "version": "2.2.2",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "C7193BFA11786EE191F3CA1CEEE9C55DF9053C0E01D423BF3D4FA8C9863E2D62",
+    "description": "",
+    "installerHashes": [
+      "EE0C3585AAFFE0582D1D0198109A0F19B844EDB1E366489C7A0A57C38BE5C291"
+    ],
+    "lastUpdated": "2026-08-17T21:15:38.120171Z"
   },
   "Sigstore.Cosign": {
     "installerHashes": [
@@ -3308,6 +3503,17 @@
       "B536C57E657FFF7A15D5A5D5A081F5562874A50D1C201C9B374DD898CEFC1F74"
     ]
   },
+  "TheHomelessTwig.newc": {
+    "validationCount": 1,
+    "version": "1.1.0",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "BB808D6EC46D62E6C498D02A2C48DDA52A4061468D6C6F306C3A0291E18D0A49",
+    "description": "",
+    "installerHashes": [
+      "DE7B73B76048ADBB33433F24A41480B2BB0FE9528D36F94C6CE072757E9E7332"
+    ],
+    "lastUpdated": "2026-08-17T21:15:38.1861418Z"
+  },
   "ThePandemoniumInstitute.BloodontheClocktowerOnline": {
     "version": "3.57.2",
     "installerHashes": [
@@ -3362,6 +3568,17 @@
     "state": "VALIDATION_PASSED",
     "version": "3.17.0",
     "manifestHash": "11DAAF2989C26BFB67826BDF503B3BA0553FF91CE696E74C1C6F27DC4AF7BC08"
+  },
+  "TrellisLab.Trellis": {
+    "validationCount": 1,
+    "version": "1.5.2",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "97546297D77837285AB46BBB19B46FEF231699001BFC9436964A32E7DCEF0D69",
+    "description": "",
+    "installerHashes": [
+      "400A4E3F769C1D0ADF4C77DABD285FDBBBFEB5FE5D3D87CA9B6A3F54767B25F5"
+    ],
+    "lastUpdated": "2026-08-17T21:15:38.4059211Z"
   },
   "tsouth89.Ceiling": {
     "manifestHash": "782F9F8DAFCE77FFA7F936E830D09134C732C2B38C0AB8D00429DC3A39065718",
@@ -3420,6 +3637,17 @@
     "installerHashes": [
       "B435B1E9C64789C476060F2AA6875732A3883FAED7AC32303C5E3C361280A026"
     ]
+  },
+  "Unibo.Alchemist": {
+    "validationCount": 1,
+    "version": "43.1.5",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "5022975B05D673E339438ECBCE51869A3420B856E73ABA22C1F0E139FA2F9C8A",
+    "description": "",
+    "installerHashes": [
+      "B1A37334BC55F5138B51B7DD8B3DE26ED0B98BB8CCF453A3582F13CF5D64F574"
+    ],
+    "lastUpdated": "2026-08-17T21:15:38.2286715Z"
   },
   "UnknownSKL.Greenlight": {
     "manifestHash": "A67278E64CA6847252D895C15EA71F2FC66370DACA2B51EE16F8FC4C47B5235C",
@@ -3545,6 +3773,17 @@
     "description": "",
     "validationCount": 1,
     "lastUpdated": "2026-08-16T17:10:10.812528Z"
+  },
+  "WasmEdge.WasmEdge": {
+    "validationCount": 1,
+    "version": "0.17.1",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "6055238E94892939777EA95A33377EDDDDC00CC92E6C17A60ECCC42B3495C0C3",
+    "description": "",
+    "installerHashes": [
+      "0B2EAEDD59B744DA6F4548C7498454D34E2D8A71DF75AB9C05084FAE16E89568"
+    ],
+    "lastUpdated": "2026-08-17T21:15:38.2673616Z"
   },
   "Wawtor.Aperio": {
     "version": "0.2.2",
@@ -3690,6 +3929,17 @@
     "description": "",
     "version": "0.3.4",
     "state": "VALIDATION_PASSED"
+  },
+  "YongcanYang.GameSaveManager": {
+    "validationCount": 1,
+    "version": "2.2.0",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "ECF14C3B8226C957C71A1BAC4F7586B0D344BD0EC53201B080CA654D72162E87",
+    "description": "",
+    "installerHashes": [
+      "E20A5859CD641D9857EF2BDB141722501E95204CF2B02B41B8C12E0900FDA041"
+    ],
+    "lastUpdated": "2026-08-17T21:15:38.1463722Z"
   },
   "Yubico.Authenticator": {
     "installerHashes": [
