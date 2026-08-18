@@ -72,6 +72,47 @@ if ($results[0].Status -ne 'OK') {
     throw "Expected whitespace-delimited URL template to resolve, got: $($results[0] | ConvertTo-Json -Compress)"
 }
 
+Write-Host 'TEST: latest release URLs and query strings normalize to release assets'
+$latestPackages = @([PSCustomObject]@{
+        id   = 'Test.Latest'
+        repo = 'owner/latest'
+        url  = 'https://github.com/OWNER/LATEST/releases/latest/download/setup-{VERSION}.exe'
+    })
+$invoker = New-FakeGraphQlInvoker -RepositoriesByAlias @{
+    'a0' = [PSCustomObject]@{ latestRelease = (New-Release -Tag 'v1.2.3' -AssetUrls @('https://github.com/owner/latest/releases/download/v1.2.3/setup-1.2.3.exe')) }
+}
+$results = @(Test-MonitoredPackageAssets -Packages $latestPackages -GraphQlInvoker $invoker)
+if ($results[0].Status -ne 'OK') {
+    throw "Expected latest/download URL to resolve, got: $($results[0] | ConvertTo-Json -Compress)"
+}
+
+$queryPackages = @([PSCustomObject]@{
+        id   = 'Test.Query'
+        repo = 'owner/query'
+        url  = 'https://github.com/owner/query/releases/download/{TAG}/setup-{VERSION}.exe?download=1'
+    })
+$invoker = New-FakeGraphQlInvoker -RepositoriesByAlias @{
+    'a0' = [PSCustomObject]@{ latestRelease = (New-Release -Tag 'v1.2.3' -AssetUrls @('https://github.com/owner/query/releases/download/v1.2.3/setup-1.2.3.exe')) }
+}
+$results = @(Test-MonitoredPackageAssets -Packages $queryPackages -GraphQlInvoker $invoker)
+if ($results[0].Status -ne 'OK') {
+    throw "Expected query-string URL to resolve, got: $($results[0] | ConvertTo-Json -Compress)"
+}
+
+Write-Host 'TEST: external download URLs are left to submission preflight'
+$externalPackages = @([PSCustomObject]@{
+        id   = 'Test.External'
+        repo = 'owner/external'
+        url  = 'https://downloads.example.invalid/setup-{VERSION}.exe'
+    })
+$invoker = New-FakeGraphQlInvoker -RepositoriesByAlias @{
+    'a0' = [PSCustomObject]@{ latestRelease = (New-Release -Tag 'v1.2.3' -AssetUrls @('https://github.com/owner/external/releases/download/v1.2.3/setup-1.2.3.exe')) }
+}
+$results = @(Test-MonitoredPackageAssets -Packages $externalPackages -GraphQlInvoker $invoker)
+if ($results[0].Status -ne 'Skipped') {
+    throw "Expected external download URL to be skipped, got: $($results[0] | ConvertTo-Json -Compress)"
+}
+
 Write-Host 'TEST: renamed asset reports AssetMissing with the expected URL'
 $invoker = New-FakeGraphQlInvoker -RepositoriesByAlias @{
     'a0' = [PSCustomObject]@{ latestRelease = (New-Release -Tag 'v1.2.3' -AssetUrls @('https://github.com/owner/ok/releases/download/v1.2.3/renamed.msi')) }

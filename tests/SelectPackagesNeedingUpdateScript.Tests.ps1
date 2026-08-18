@@ -14,12 +14,17 @@ function Invoke-PrecheckScript {
         [Parameter(Mandatory = $false)]
         [string] $BatchSize,
         [Parameter(Mandatory = $false)]
-        [switch] $ViaFile
+        [switch] $ViaFile,
+        [Parameter(Mandatory = $false)]
+        [System.Collections.IDictionary] $PackageState,
+        [Parameter(Mandatory = $false)]
+        [string] $PackageStateContent
     )
 
     $outputFile = Join-Path ([System.IO.Path]::GetTempPath()) ("precheck-output-" + [guid]::NewGuid().ToString('N') + ".txt")
     New-Item -Path $outputFile -ItemType File -Force | Out-Null
     $packagesFile = $null
+    $stateFile = $null
     try {
         $batchSizeLine = if ([string]::IsNullOrWhiteSpace($BatchSize)) {
             "`$env:UPDATE_BATCH_SIZE = `$null"
@@ -49,37 +54,60 @@ function Invoke-PrecheckScript {
             )
         }
 
+        $hasPackageState = $PSBoundParameters.ContainsKey('PackageState')
+        $hasPackageStateContent = $PSBoundParameters.ContainsKey('PackageStateContent')
+        if ($hasPackageState -or $hasPackageStateContent) {
+            $stateFile = Join-Path ([System.IO.Path]::GetTempPath()) ("precheck-state-" + [guid]::NewGuid().ToString('N') + ".json")
+            if ($hasPackageStateContent) {
+                Set-Content -LiteralPath $stateFile -Value $PackageStateContent -Encoding utf8
+            }
+            else {
+                $PackageState | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath $stateFile -Encoding utf8
+            }
+            $stateLines = @("`$env:PACKAGE_STATE_FILE = '$stateFile'")
+        }
+        else {
+            $stateLines = @("`$env:PACKAGE_STATE_FILE = `$null")
+        }
+
         # No tokens: the precheck GraphQL call fails, exercising the fail-open path.
         $psi = @(
             "`$env:WINGET_UPSTREAM_READ_TOKEN = `$null",
             "`$env:GITHUB_TOKEN = `$null",
             "`$env:GH_TOKEN = `$null",
             $batchSizeLine
-        ) + $packageLines + @(
+        ) + $stateLines + $packageLines + @(
             "`$env:GITHUB_OUTPUT = '$outputFile'",
             "& '$scriptPath'"
         ) -join [Environment]::NewLine
-        $null = & pwsh -NoProfile -Command $psi 2>&1
+        $childOutput = @(& pwsh -NoProfile -Command $psi 2>&1)
         if ($LASTEXITCODE -ne 0) {
-            throw "Precheck script exited with code $LASTEXITCODE."
+            throw "Precheck script exited with code ${LASTEXITCODE}: $($childOutput -join "`n")"
         }
 
         $outputContent = Get-Content -LiteralPath $outputFile -Raw
         $includeLine = ($outputContent -split "`r?`n") | Where-Object { $_ -like 'include=*' } | Select-Object -First 1
         $anyLine = ($outputContent -split "`r?`n") | Where-Object { $_ -like 'any=*' } | Select-Object -First 1
-        if (-not $includeLine -or -not $anyLine) {
-            throw "GITHUB_OUTPUT is missing include=/any= lines: $outputContent"
+        $healthBlockedLine = ($outputContent -split "`r?`n") | Where-Object { $_ -like 'health_blocked_count=*' } | Select-Object -First 1
+        if (-not $includeLine -or -not $anyLine -or -not $healthBlockedLine) {
+            throw "GITHUB_OUTPUT is missing include=/any=/health_blocked_count= lines: $outputContent"
         }
 
         return [PSCustomObject]@{
-            Include = @(($includeLine.Substring('include='.Length)) | ConvertFrom-Json)
-            Any     = $anyLine.Substring('any='.Length)
+            Include            = @(($includeLine.Substring('include='.Length)) | ConvertFrom-Json)
+            Any                = $anyLine.Substring('any='.Length)
+            HealthBlockedCount = [int]$healthBlockedLine.Substring('health_blocked_count='.Length)
+            ChildOutput        = ($childOutput | ForEach-Object { "$_" }) -join "`n"
+            StateContent       = if ($stateFile) { Get-Content -LiteralPath $stateFile -Raw } else { '' }
         }
     }
     finally {
         Remove-Item -LiteralPath $outputFile -Force -ErrorAction SilentlyContinue
         if ($packagesFile) {
             Remove-Item -LiteralPath $packagesFile -Force -ErrorAction SilentlyContinue
+        }
+        if ($stateFile) {
+            Remove-Item -LiteralPath $stateFile -Force -ErrorAction SilentlyContinue
         }
     }
 }
@@ -147,6 +175,45 @@ if (@($fileResult.Include).Count -ne 7) {
 }
 if ($fileResult.Any -ne 'true') {
     $failures += "A file-supplied list must report any=true, got '$($fileResult.Any)'."
+}
+
+# --- Definitive Config Health blocks survive GraphQL precheck fallback. ---
+$healthState = @{
+    'Package.Blocked' = @{
+        configHealth = @{
+            status    = 'AssetMissing'
+            detail    = 'Expected setup.exe is absent.'
+            checkedAt = '2026-08-18T00:00:00Z'
+        }
+    }
+}
+$healthPackages = @(
+    [PSCustomObject]@{ id = 'Package.Blocked'; repo = 'owner/blocked'; url = 'https://example.invalid/blocked' },
+    [PSCustomObject]@{ id = 'Package.Healthy'; repo = 'owner/healthy'; url = 'https://example.invalid/healthy' }
+)
+$healthResult = Invoke-PrecheckScript -Packages $healthPackages -PackageState $healthState
+if (@($healthResult.Include).Count -ne 1 -or $healthResult.Include[0].id -ne 'Package.Healthy') {
+    $failures += "Config Health block must remain excluded when GraphQL precheck falls back. State: $($healthResult.StateContent) Child output: $($healthResult.ChildOutput)"
+}
+if ($healthResult.HealthBlockedCount -ne 1) {
+    $failures += "Expected one Config Health block in fallback, got $($healthResult.HealthBlockedCount). State: $($healthResult.StateContent) Child output: $($healthResult.ChildOutput)"
+}
+if ($healthResult.Any -ne 'true') {
+    $failures += "Fallback with one healthy package must report any=true, got '$($healthResult.Any)'."
+}
+
+$allBlockedResult = Invoke-PrecheckScript -Packages @($healthPackages[0]) -PackageState $healthState
+if (@($allBlockedResult.Include).Count -ne 0 -or $allBlockedResult.Any -ne 'false') {
+    $failures += 'All Config Health-blocked packages must suppress the generation matrix.'
+}
+
+# --- A corrupt health cache is loud but does not halt healthy packages. ---
+$corruptStateResult = Invoke-PrecheckScript -Packages $healthPackages -PackageStateContent '{not-json'
+if (@($corruptStateResult.Include).Count -ne 2 -or $corruptStateResult.Any -ne 'true') {
+    $failures += 'A corrupt Config Health cache must fall back to processing all packages.'
+}
+if ($corruptStateResult.HealthBlockedCount -ne 0) {
+    $failures += "A corrupt Config Health cache must report zero trusted blocks, got $($corruptStateResult.HealthBlockedCount)."
 }
 
 # --- A missing package file must fail loudly instead of silently doing nothing ---

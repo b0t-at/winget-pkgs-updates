@@ -38,14 +38,52 @@ if ($packages.Count -eq 0) {
     throw 'The monitored package list is empty.'
 }
 
+$stateFilePath = $env:PACKAGE_STATE_FILE
+if ([string]::IsNullOrWhiteSpace($stateFilePath)) {
+    $stateFilePath = Join-Path $PSScriptRoot '..' 'data' 'package-state.json'
+}
+elseif (-not [System.IO.Path]::IsPathRooted($stateFilePath)) {
+    $stateFilePath = Join-Path $PSScriptRoot '..' $stateFilePath
+}
+
+# Health blocks are a safety control, but a corrupt cache must not take down
+# every healthy package. The final installer URL preflight still blocks
+# definitive dead URLs when this cache cannot be read.
+try {
+    $configHealthBlocks = Get-PackageStateConfigHealthBlocks -StateFilePath $stateFilePath
+}
+catch {
+    Write-Warning "Could not load Config Health blocks from '$stateFilePath': $($_.Exception.Message). Continuing without cached blocks; final installer URL preflight remains active."
+    $configHealthBlocks = @{}
+}
+
+function New-ConfigHealthSkippedEntry {
+    param(
+        [Parameter(Mandatory = $true)] $Package,
+        [Parameter(Mandatory = $true)] [System.Collections.IDictionary] $Health
+    )
+
+    return [PSCustomObject]@{
+        Package      = $Package
+        Reason       = 'ConfigHealthBlocked'
+        HealthStatus = [string]$Health['status']
+        Detail       = [string]$Health['detail']
+        CheckedAt    = [string]$Health['checkedAt']
+    }
+}
+
 $include = $packages
+$skipped = @()
 
 try {
-    $stateFilePath = Join-Path $PSScriptRoot '..' 'data' 'package-state.json'
-    $result = Select-GitHubPackagesNeedingUpdate -Packages $packages -StateFilePath $stateFilePath
+    $result = Select-GitHubPackagesNeedingUpdate `
+        -Packages $packages `
+        -StateFilePath $stateFilePath `
+        -ConfigHealthBlocks $configHealthBlocks
     $include = @($result.Include | ForEach-Object { $_.Package })
+    $skipped = @($result.Skipped)
 
-    $skippedGroups = @($result.Skipped | Group-Object -Property Reason)
+    $skippedGroups = @($skipped | Group-Object -Property Reason)
     foreach ($group in $skippedGroups) {
         Write-Host "Skipping $($group.Count) package(s) [$($group.Name)]: $(@($group.Group | ForEach-Object { $_.Package.id }) -join ', ')"
     }
@@ -56,8 +94,41 @@ try {
     }
 }
 catch {
-    Write-Warning "Update precheck failed: $($_.Exception.Message). Falling back to processing all $($packages.Count) monitored packages."
-    $include = $packages
+    Write-Warning "Update precheck failed: $($_.Exception.Message). Falling back to all packages except known Config Health blocks."
+    $fallbackInclude = [System.Collections.Generic.List[object]]::new()
+    $fallbackSkipped = [System.Collections.Generic.List[object]]::new()
+    foreach ($package in $packages) {
+        $packageId = [string]$package.id
+        if ($configHealthBlocks.Contains($packageId)) {
+            $fallbackSkipped.Add((New-ConfigHealthSkippedEntry -Package $package -Health $configHealthBlocks[$packageId]))
+            continue
+        }
+        $fallbackInclude.Add($package)
+    }
+    $include = @($fallbackInclude)
+    $skipped = @($fallbackSkipped)
+}
+
+$healthBlocked = @($skipped | Where-Object { $_.Reason -eq 'ConfigHealthBlocked' })
+if ($healthBlocked.Count -gt 0) {
+    Write-Warning "Config Health blocked $($healthBlocked.Count) package(s) with known stale GitHub release assets."
+    $summary = @(
+        '## Config Health submission gate'
+        ''
+        "Blocked **$($healthBlocked.Count)** package(s) with a definitive stale GitHub release asset:"
+        ''
+        '| Package | Status | Detail | Checked UTC |'
+        '| --- | --- | --- | --- |'
+    )
+    foreach ($entry in ($healthBlocked | Sort-Object { $_.Package.id })) {
+        $detail = ("$($entry.Detail)" -replace '\s*[\r\n]+\s*', ' ').Replace('|', '\|')
+        $summary += "| $($entry.Package.id) | ``$($entry.HealthStatus)`` | $detail | $($entry.CheckedAt) |"
+    }
+    $summaryText = $summary -join "`n"
+    Write-Host $summaryText
+    if (-not [string]::IsNullOrWhiteSpace($env:GITHUB_STEP_SUMMARY)) {
+        $summaryText | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+    }
 }
 
 # Two separate limits apply here:
@@ -99,4 +170,5 @@ Write-Host "Selected $(@($include).Count) of $($packages.Count) monitored packag
 if (-not [string]::IsNullOrWhiteSpace($env:GITHUB_OUTPUT)) {
     Add-Content -Path $env:GITHUB_OUTPUT -Value "include=$includeJson"
     Add-Content -Path $env:GITHUB_OUTPUT -Value "any=$any"
+    Add-Content -Path $env:GITHUB_OUTPUT -Value "health_blocked_count=$($healthBlocked.Count)"
 }
