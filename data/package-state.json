@@ -225,6 +225,14 @@
     "lastUpdated": "2026-08-14T09:49:55.9514681Z",
     "description": ""
   },
+  "Aries-Sciences-LLC.AI-Chess": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/Aries-Sciences-LLC/AI-Chess/releases/download/1.0/AI.Chess.Game.Installer.exe",
+      "tag": "1.0",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
+  },
   "ASGARDEXMaintainers.ASGARDEX": {
     "installerHashes": [
       "DD6C0D2CF5DF5BE7F59B121AC5873405685CFD565D091BAA44E17F4D85446A7E"
@@ -257,6 +265,14 @@
     "description": "",
     "lastUpdated": "2026-08-16T12:25:11.5966992Z",
     "state": "VALIDATION_PASSED"
+  },
+  "Avidemux.Avidemux": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/mean00/avidemux2/releases/download/2.8.1/avidemux_2.8.1_win64.exe",
+      "tag": "2.8.1",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "AVRDudes.AVRDUDE": {
     "validationCount": 1,
@@ -427,7 +443,13 @@
     "description": "",
     "manifestHash": "38B5975C2B0E0CA37426698A77A76DAA5E7A7EEF3387C5077EFE54E2337DB59A",
     "validationCount": 1,
-    "version": "0.12.0"
+    "version": "0.12.0",
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/evoggy/cfcli/releases/download/0.12.0/cfcli-x86_64-pc-windows-msvc.zip",
+      "tag": "0.12.0",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "Bitwarden.CLI": {
     "manifestHash": "C2DE2355F913F6DB6F549DB1C0EF49B4B2E7BDC5DF373F788C33AD6507B140D1",
@@ -473,6 +495,14 @@
     "validationCount": 1,
     "lastUpdated": "2026-08-14T09:49:55.9314164Z",
     "description": ""
+  },
+  "BrowserStackInc.Requestly": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/requestly/requestly-desktop-app/releases/download/v26.6.29/Requestly-Setup-26.6.29.exe",
+      "tag": "v26.6.29",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "bufbuild.buf": {
     "state": "VALIDATION_PASSED",
@@ -780,6 +810,14 @@
     "lastUpdated": "2026-08-05T03:03:19.2401984Z",
     "validationCount": 8
   },
+  "dbrgn.tealdeer": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/dbrgn/tealdeer/releases/download/v1.8.1/tealdeer-windows-x86_64-msvc.exe",
+      "tag": "v1.8.1",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
+  },
   "DDEVFoundation.DDEV": {
     "description": "",
     "state": "VALIDATION_PASSED",
@@ -791,6 +829,22 @@
       "9C3F2E67E78588D9264AFE2E072E8457BCAA668C20653ABB1C75AA6735C6EED3"
     ],
     "version": "1.25.3"
+  },
+  "deep5050.qikQR": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/deep5050/qikQR/releases/download/v1.0.0/qikqr-1.0.0.exe",
+      "tag": "v1.0.0",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
+  },
+  "defi.defi": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/BirthdayResearch/defichain-app/releases/download/v4.2.5/DeFi-Wallet-Setup-4.2.5.exe https://github.com/BirthdayResearch/defichain-app/releases/download/v4.2.5/DeFi-Wallet-Setup-4.2.5.exe",
+      "tag": "v4.2.5",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "DeliveryStation.ds": {
     "validationCount": 1,
@@ -893,7 +947,13 @@
     ],
     "description": "",
     "version": "0.10.3",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/DonutWare/Fladder/releases/download/nightly/Fladder-Windows-0.10.3-nightly-Setup.exe",
+      "tag": "v0.10.3",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "dprint.dprint": {
     "lastUpdated": "2026-07-14T21:06:34.8449761Z",
@@ -906,6 +966,14 @@
       "12E8C26ABC8C436223E70F5A30A2864001C92FA356A859EB93E06B97AB7DBD12"
     ]
   },
+  "Dweymouth.Supersonic": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/dweymouth/supersonic/releases/download/v0.22.1/Supersonic-0.22.1-windows-x64-installer.exe",
+      "tag": "v0.22.1",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
+  },
   "Dystroy.broot": {
     "state": "VALIDATION_PASSED",
     "installerHashes": [
@@ -916,6 +984,14 @@
     "validationCount": 1,
     "lastUpdated": "2026-07-10T21:10:02.5099141Z",
     "version": "1.58.0"
+  },
+  "Easure.HelpMePrint": {
+    "configHealth": {
+      "status": "RepoMissing",
+      "detail": "The GitHub repository does not exist or is not readable.",
+      "tag": "",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "Echonuit.VigieChiroCompanion": {
     "manifestHash": "0111BFD58D5D6589842ADB1BD9797923BF9872792532E04BCA0113FBA7E46F6E",
@@ -949,6 +1025,14 @@
     "manifestHash": "AA0B3A7B7B6C18ED6CE8B36583ED837E6EA7C933F118A96CDD8031A920812D1D",
     "validationCount": 2,
     "lastUpdated": "2026-06-30T06:01:23.7315361Z"
+  },
+  "EditorConfig-Checker.EditorConfig-Checker": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/editorconfig-checker/editorconfig-checker/releases/download/v3.11.1/ec-windows-armv6.zip",
+      "tag": "v3.11.1",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "eksctl.eksctl": {
     "lastUpdated": "2026-08-14T20:30:13.6147174Z",
@@ -988,7 +1072,13 @@
       "EB7E21C21AB066963737417C3B5C15568AE230863ED565634E90A85BC9B0C6F6",
       "D989E024FAF8BB7BD0099E060A45A361E4BD5F24522B728BDB82A399C76FACE3"
     ],
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/ente-io/photos-desktop/releases/download/v1.7.27/ente-1.7.27.exe https://github.com/ente-io/photos-desktop/releases/download/v1.7.27/ente-1.7.27-x64.exe https://github.com/ente-io/photos-desktop/releases/download/v1.7.27/ente-1.7.27-arm64.exe",
+      "tag": "v1.7.27",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "Equicord.Equibop": {
     "state": "VALIDATION_FAILED",
@@ -1010,7 +1100,13 @@
       "0BE3FEAD4E845FC7E740AD8A7E744EEE3041EF8C874748A947B7ADB63250A642"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 4
+    "validationCount": 4,
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/errata-ai/vale/releases/download/v3.17.1/vale_3.17.1_Windows_64-bit.zip",
+      "tag": "v3.17.1",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "Esubaalew.Run": {
     "manifestHash": "CE6CDFB60DBB3B0596B9FD2D537D925ECED86D5E46E1E580143EA4C7C73E2EB8",
@@ -1102,6 +1198,14 @@
     "lastUpdated": "2026-08-06T14:10:17.3217046Z",
     "version": "18.2.0"
   },
+  "feliperbroering.eai": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/feliperbroering/eai/releases/download/v0.14.0/eai-windows-amd64.zip https://github.com/feliperbroering/eai/releases/download/v0.14.0/eai-windows-arm64.zip",
+      "tag": "v0.14.0",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
+  },
   "Firstversionist.Polypane": {
     "validationCount": 2,
     "version": "29.0.0",
@@ -1117,6 +1221,12 @@
     "openPr": {
       "checkedAt": "2026-08-17T16:13:07.5472602Z",
       "version": "1.8.9"
+    },
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/flowscripter/example-cli/releases/download/v1.8.9/example-cli_Windows_x86_64.zip",
+      "tag": "v1.8.9",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
     }
   },
   "Fly-io.flyctl": {
@@ -1208,6 +1318,14 @@
       "6C872BD6434DD00CCF6885ED330B9BE7C3FA746B55E0F36CCEC2C4925A644BFF"
     ],
     "description": ""
+  },
+  "FrankZhu.ZManagerCLI": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/frankmanzhu/zmanager/releases/download/v2.0.1/zm-x86_64-pc-windows-msvc.zip https://github.com/frankmanzhu/zmanager/releases/download/v2.0.1/zm-aarch64-pc-windows-msvc.zip",
+      "tag": "v2.0.1",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "Frnsys.Half_earth": {
     "manifestHash": "1ED544A7D31EB518EF06177CFB7B4012E082279A60838300968151EE9CEED09B",
@@ -1342,6 +1460,14 @@
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-08-05T03:03:19.1410721Z"
   },
+  "GiulioSorrentino.wheelofnumfortune.avalonia": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/GiulianoSpaghetti/WheelOfNumFortune.Material/releases/download/0.4/wheelofnumfortune.avalonia-1.1.0.7-material-amd64.msi https://github.com/GiulianoSpaghetti/WheelOfNumFortune.Material/releases/download/0.4/wheelofnumfortune.avalonia-1.1.0.7-material-arm64.msi",
+      "tag": "1.1.0.7",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
+  },
   "Glarysoft.GlaryUtilities": {
     "validationCount": 1,
     "description": "",
@@ -1433,6 +1559,14 @@
     "validationCount": 1,
     "lastUpdated": "2026-08-14T09:49:55.9786837Z",
     "description": ""
+  },
+  "Grandpied33.STH": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/Grandpied33/sth-releases/releases/download/v0.2.41/sth-windows-amd64.zip",
+      "tag": "v0.2.41",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "greyishsong.bellit": {
     "manifestHash": "170AC8C7590D43914631A95E0D8AF87025940EB7439716C40D42FBB5D027089E",
@@ -1546,7 +1680,13 @@
     "description": "",
     "manifestHash": "C9DE955E676808858E8848A4BF9AE55B93356914558D3FC16A4BDE1E4924DE05",
     "validationCount": 1,
-    "version": "4.1.1"
+    "version": "4.1.1",
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/hiddify/hiddify-next/releases/download/v4.1.1/Hiddify-Windows-Setup-x64.exe",
+      "tag": "v4.1.1",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "Hitalin.NoteDeck": {
     "manifestHash": "8CDE7AD7010F8C9115352636A1876A5CEE54F3D0BD1D504159903A15DB0DCA48",
@@ -1569,6 +1709,14 @@
       "F271A1467589CA55CD56D1FAF727A4BC34E686B4965AC742854A93BE4B186F82"
     ],
     "state": "VALIDATION_PASSED"
+  },
+  "hoijun-kim.flip": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/hoijun-kim/flip/releases/download/v0.1.1/flip-v0.1.1-windows-amd64.zip",
+      "tag": "v0.1.1",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "holland-built.Bloxsmith": {
     "validationCount": 1,
@@ -1660,6 +1808,14 @@
     "lastUpdated": "2026-08-05T12:38:58.9237357Z",
     "manifestHash": "F6A1F3A00D8809C92A75FC3D1484A20BB981A4B852201CB1D85DC2B6052F3066",
     "version": "1.35.1"
+  },
+  "igoogolx.lux": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/igoogolx/lux/releases/download/v1.41.0/lux-1.41.0-windows-setup.exe",
+      "tag": "v1.41.0",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "Infracost.Infracost": {
     "manifestHash": "717C69D6517A1337C4994F2EDB4D07FF03D90B5236221E7067E228792EDD26C3",
@@ -1789,6 +1945,14 @@
     "validationCount": 1,
     "version": "1.34"
   },
+  "jawhitti.INTERCAL64": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/jawhitti/INTERCAL64/releases/download/v2.0.3/intercal64-2.0.3-win-x64-setup.exe",
+      "tag": "v2.0.3",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
+  },
   "jdx.mise": {
     "openPr": {
       "checkedAt": "2026-08-17T20:13:22.6704353Z",
@@ -1806,6 +1970,14 @@
     "manifestHash": "94FE9492FACF71C6D4BB67DEC0E02F563A3FF8FEF87523285C13978EA94F893D",
     "validationCount": 1,
     "lastUpdated": "2026-06-06T17:48:44.5235411Z"
+  },
+  "JGraph.Draw": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/jgraph/drawio-desktop/releases/download/v31.1.8/draw.io-ia32-31.1.8-windows-32bit-no-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v31.1.8/draw.io-31.1.8-windows-no-installer.exe",
+      "tag": "v31.1.8",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "JitzuLang.Jitzu": {
     "version": "0.1.43",
@@ -1864,7 +2036,13 @@
     ],
     "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "9A4DF16EBDCE59232C54B5DF04D449A66D61F5A11ADD46BF707CB15A166AB223"
+    "manifestHash": "9A4DF16EBDCE59232C54B5DF04D449A66D61F5A11ADD46BF707CB15A166AB223",
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/johannesjo/super-productivity/releases/download/v18.19.0/Super-Productivity-Setup.exe https://github.com/johannesjo/super-productivity/releases/download/v18.19.0/Super-Productivity-Setup-x64.exe https://github.com/johannesjo/super-productivity/releases/download/v18.19.0/Super-Productivity-Setup-arm64.exe",
+      "tag": "v18.19.0",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "JosephFinney.Text-Grab": {
     "state": "VALIDATION_PASSED",
@@ -2040,6 +2218,14 @@
     "manifestHash": "F877FA5F3CB7023E0385FDD3E255431708BBDC70BE8B69096F1D1D38C5ADB660",
     "version": "7.0.5.1"
   },
+  "Laker.EasyPostman": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/lakernote/EasyPostman/releases/download/v6.0.19/EasyPostman-6.0.19-windows-x64.exe",
+      "tag": "v6.0.19",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
+  },
   "LeNgocKhoa.Laragon": {
     "version": "8.7.0",
     "validationCount": 1,
@@ -2072,6 +2258,22 @@
     "description": "",
     "version": "1.6.4",
     "state": "VALIDATION_PASSED"
+  },
+  "LibreCAD.LibreCAD": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/LibreCAD/LibreCAD/releases/download/v2.2.1.5/LibreCAD-v2.2.1.5.exe https://github.com/LibreCAD/LibreCAD/releases/download/v2.2.1.5/LibreCAD-v2.2.1.5-win64.exe",
+      "tag": "v2.2.1.5",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
+  },
+  "LibreHardwareMonitor.LibreHardwareMonitor": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/LibreHardwareMonitor/LibreHardwareMonitor/releases/download/v0.9.6/LibreHardwareMonitor-net472.zip",
+      "tag": "v0.9.6",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "LittleTijn.SpookyView": {
     "validationCount": 2,
@@ -2191,6 +2393,14 @@
       "69A26E7B49841063F690E4419725A99BEA77A586EED3F27B831061114C14A860"
     ]
   },
+  "marha.VcXsrv": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/marchaesen/vcxsrv/releases/download/21.1.16.1/vcxsrv-64.21.1.16.1.0.installer.exe",
+      "tag": "21.1.16.1",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
+  },
   "Marko19907.OLEDShift": {
     "validationCount": 1,
     "version": "1.1.5",
@@ -2212,7 +2422,13 @@
     "validationCount": 1,
     "manifestHash": "F071ED2BB1DD0FEB6B854E38B1381B196D7DE9011FF7FD593F112E47951752C3",
     "version": "1.1.0",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/marlocarlo/psnet/releases/download/v1.1.0/psnet.exe",
+      "tag": "v1.1.0",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "Martchus.syncthingctl": {
     "lastUpdated": "2026-08-14T10:42:15.1510807Z",
@@ -2225,6 +2441,14 @@
       "2618C54791497D762FCE61011661636A7EB9E7A4D962767743AE523E2560E88D",
       "A639CAAA1E1BD065350A56B4C4D608FCE32FF2B49B74101A95C5DE5F7818EF9A"
     ]
+  },
+  "Mateuscruz19.BATorrent": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/Mateuscruz19/BATorrent/releases/download/v4.8.0/BATorrent-setup-x86_64.exe",
+      "tag": "v4.8.0",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "MaximumADHD.RobloxStudioModManager": {
     "manifestHash": "43CC80AD5E1655CEB8BB82A69545E9A7C00B120B605316AC1F396EBB14CDA3FD",
@@ -2497,6 +2721,14 @@
       "8BD6F75FD8E2703DBD36BB4D289CAA1CB4FB5537BD4B451C4876CC232C60A6B6"
     ]
   },
+  "myrachane.emtypyie-cli": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/myrachane/emtypyie-cli/releases/download/v3.0.2/emtypyie-cli-windows-x64-3.0.2.zip",
+      "tag": "v3.0.2",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
+  },
   "Naeem5877.VibeDownloader": {
     "version": "1.7.1",
     "installerHashes": [
@@ -2607,6 +2839,22 @@
     "state": "VALIDATION_PASSED",
     "validationCount": 1
   },
+  "NixieTechLLC.Lait": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/Nixie-Tech-LLC/lait/releases/download/v0.9.0/lait-x86_64-pc-windows-msvc.zip",
+      "tag": "v0.9.0",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
+  },
+  "nomacs.nomacs": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/nomacs/nomacs/releases/download/3.22.1/nomacs-setup-x64.exe https://github.com/nomacs/nomacs/releases/download/3.22.1/nomacs-setup-x64.exe",
+      "tag": "3.22.1",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
+  },
   "obsidianforensics.HindsightGUI": {
     "manifestHash": "F4D11F99D9E5362A97FEF33DE05E764E29E57E24EB032F2FFFEC3B32D39B575E",
     "description": "",
@@ -2616,7 +2864,13 @@
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
     "lastUpdated": "2026-07-09T01:33:32.5391045Z",
-    "version": "2026.06"
+    "version": "2026.06",
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/obsidianforensics/hindsight/releases/download/v2026.06/hindsight_gui.exe",
+      "tag": "v2026.06",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "OCSInventoryNG.WindowsAgent": {
     "manifestHash": "ADDB703555DE0642AC0D9A0CE336646E292BD36F8822BBE1FC87E436402F1226",
@@ -2665,6 +2919,14 @@
     "openPr": {
       "checkedAt": "2026-08-17T20:13:23.6836365Z",
       "version": "0.32.14"
+    }
+  },
+  "Ombrelin.PandocGui": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/Ombrelin/pandoc-gui/releases/download/v1.1.2/pandoc-gui-setup.exe",
+      "tag": "1.1.2",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
     }
   },
   "Omibranch.Gitty": {
@@ -2735,6 +2997,14 @@
       "CEDFC64AAD26F11212D0F58BC435B962C5D6EA814BE327C2466F18635C4EFA27"
     ]
   },
+  "OpenDumpViewer.OpenDumpViewer.BETA": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/Open-DUMP-Viewer/Open-DUMP-Viewer/releases/download/v4.5.0-beta/OpenDumpViewer_v4.5.0-beta_installer_x64.exe https://github.com/Open-DUMP-Viewer/Open-DUMP-Viewer/releases/download/v4.5.0-beta/OpenDumpViewer_v4.5.0-beta_installer_arm64.exe",
+      "tag": "v4.5.0",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
+  },
   "OpenJS.Electron.39": {
     "lastUpdated": "2026-08-16T21:14:49.156773Z",
     "description": "",
@@ -2782,6 +3052,14 @@
     "manifestHash": "C25C5956C22D6226EF64621EB2C145B133722196236B40B43033B9D444A64EA1",
     "version": "1.9.5",
     "state": "VALIDATION_FAILED"
+  },
+  "OpenStenoProject.Plover": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/openstenoproject/plover/releases/download/v5.4.0/plover-5.4.0-win64.setup.exe",
+      "tag": "v5.4.0",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "OpenTelemetry.Weaver": {
     "manifestHash": "9E4969BE7A0DEA0EE9398609D32C3F118F5BBD53BBF1C58146F0D1381C57DB7D",
@@ -2921,6 +3199,14 @@
     "validationCount": 1,
     "lastUpdated": "2026-08-16T17:10:10.9292925Z"
   },
+  "PatrickHener.Goshs": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/patrickhener/goshs/releases/download/v2.1.5/goshs_v2.1.5_windows_x86_64.zip https://github.com/patrickhener/goshs/releases/download/v2.1.5/goshs_v2.1.5_windows_386.zip https://github.com/patrickhener/goshs/releases/download/v2.1.5/goshs_v2.1.5_windows_arm64.zip",
+      "tag": "v2.1.5",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
+  },
   "PatrickMatthiesen.oh-my-dot": {
     "lastUpdated": "2026-08-17T17:04:35.2155181Z",
     "description": "",
@@ -2944,6 +3230,14 @@
     "lastUpdated": "2026-07-09T17:52:24.6713678Z",
     "description": "",
     "validationCount": 1
+  },
+  "peanut996.CloudflareWarpSpeedTest": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/peanut996/CloudflareWarpSpeedTest/releases/download/v1.5.15/CloudflareWarpSpeedTest-v1.5.15-windows-amd64.zip",
+      "tag": "v1.5.15",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "Pencil.Desktop": {
     "manifestHash": "C4EE87B0CC9764C0F5737AC23FED643FDCF66A0CF3152C79A8770CA186C6674E",
@@ -2993,6 +3287,14 @@
     "openPr": {
       "checkedAt": "2026-08-17T16:13:13.0626794Z",
       "version": "8.0.40"
+    }
+  },
+  "PlebOne.nos": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/PlebOne/nos/releases/download/v1.1.9/nos-1.1.9-windows-amd64.exe https://github.com/PlebOne/nos/releases/download/v1.1.9/nos-1.1.9-windows-arm64.exe",
+      "tag": "v1.1.9",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
     }
   },
   "PLFJY.ContextMenuMgrPlus.Beta": {
@@ -3181,7 +3483,13 @@
     "state": "VALIDATION_PASSED",
     "description": "",
     "validationCount": 1,
-    "lastUpdated": "2026-08-16T17:10:10.7238483Z"
+    "lastUpdated": "2026-08-16T17:10:10.7238483Z",
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/raskell-io/hx/releases/download/v0.9.1/hx-v0.9.1-x86_64-pc-windows-msvc.zip",
+      "tag": "v0.9.1",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "rejetto.hfs": {
     "state": "VALIDATION_PASSED",
@@ -3318,6 +3626,14 @@
     ],
     "lastUpdated": "2026-08-17T21:15:38.0119956Z"
   },
+  "ryanvolz.radioconda": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/ryanvolz/radioconda/releases/download/2025.03.14/radioconda-2025.03.14-Windows-x86_64.exe",
+      "tag": "2025.03.14",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
+  },
   "RythenGlyth.masterclass-dl": {
     "manifestHash": "7EC111B1FD33692156682F815A4D4F92E90C3DC3573E1B2C76B655B7BBF53DA7",
     "installerHashes": [
@@ -3401,7 +3717,13 @@
       "1E85E64C8CE7F7200379A149DF8DCBBD02356B477F51AA3840CD3FA5A9985B77"
     ],
     "validationCount": 1,
-    "lastUpdated": "2026-05-20T22:15:05.5255716Z"
+    "lastUpdated": "2026-05-20T22:15:05.5255716Z",
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/schollz/croc/releases/download/v11.1.2/croc_v11.1.2_Windows-ARM.zip",
+      "tag": "v11.1.2",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "scottlerch.hosts-file-editor": {
     "manifestHash": "BCDC40D79E5E0EE74220FB261B27C2806CA2FB23D4A0603A413C5DE2749CAF2C",
@@ -3454,6 +3776,14 @@
     "openPr": {
       "version": "0.274",
       "checkedAt": "2026-08-14T13:07:24.2268824Z"
+    }
+  },
+  "Sefinek.GenshinStellaMod": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/sefinek/Genshin-Impact-ReShade/releases/download/v8.11.0.0/Stella-Mod-Setup_8.11.0.0.exe",
+      "tag": "v8.11.0.0",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
     }
   },
   "SERGEYDJUM.dwmEOTFrs": {
@@ -3603,6 +3933,14 @@
     "description": "",
     "state": "VALIDATION_PASSED"
   },
+  "Sonuscape.Mouseless": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/croian/mouseless/releases/download/v1.0.0/mouseless-installer_v1.0.0.exe https://github.com/croian/mouseless/releases/download/v1.0.0/mouseless-portable_v1.0.0.zip",
+      "tag": "v1.0.0",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
+  },
   "SparkLabs.openvpn-configuration-generator": {
     "description": "",
     "validationCount": 3,
@@ -3646,6 +3984,14 @@
     "description": "",
     "lastUpdated": "2026-08-16T12:25:11.576332Z",
     "state": "VALIDATION_PASSED"
+  },
+  "sqlectron.sqlectron-gui": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/sqlectron/sqlectron-gui/releases/download/v1.39.0/sqlectron-Setup-1.39.0.exe",
+      "tag": "v1.39.0",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "srevinsaju.guiscrcpy.PyQt5": {
     "description": "",
@@ -3727,7 +4073,21 @@
     "state": "VALIDATION_PASSED",
     "description": "",
     "validationCount": 1,
-    "lastUpdated": "2026-08-16T17:10:10.7401725Z"
+    "lastUpdated": "2026-08-16T17:10:10.7401725Z",
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/f8l124/AzurePAM/releases/download/v1.9.0/EntraChecks_1.9.0_x64-setup.exe",
+      "tag": "v1.9.0",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
+  },
+  "StephanDilly.gitui": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/extrawurst/gitui/releases/download/v0.28.1/gitui-win.msi",
+      "tag": "v0.28.1",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "Stephanvs.hypr": {
     "lastUpdated": "2026-08-18T01:43:26.5904806Z",
@@ -3739,6 +4099,14 @@
     "manifestHash": "FD00CF05A47E0F4A1288C2B821A4BB0D8566ABD5ADEF213F858B9E5C331C8C96",
     "validationCount": 1,
     "version": "0.3.2"
+  },
+  "StirlingTools.StirlingPDF": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v2.14.3/Stirling-PDF-win-installer.exe",
+      "tag": "v2.14.3",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "Storj.Uplink": {
     "lastUpdated": "2026-08-13T18:32:17.4123548Z",
@@ -3953,7 +4321,13 @@
     "validationCount": 1,
     "manifestHash": "0CB4BEAA0890CAC6563B2E6FA6B0DC605BE6AC4561D978E8505ACA98EBE002E5",
     "lastUpdated": "2026-05-29T11:48:45.0920473Z",
-    "version": "1.12.0"
+    "version": "1.12.0",
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/tetratelabs/wazero/releases/download/v1.12.0/wazero_1.12.0_windows_amd64.zip",
+      "tag": "v1.12.0",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "TeXstudio.TeXstudio": {
     "lastUpdated": "2026-08-14T20:30:13.5676463Z",
@@ -4009,6 +4383,14 @@
     "installerHashes": [
       "8092B5B12D501838EF48440372C866FDF1C1E750561A3A484790321AF2802A43"
     ]
+  },
+  "tobylai-toby.qmcli": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/tobylai-toby/QMCLI/releases/download/v0.2.2/qmcli-windows-x64-v0.2.2.zip",
+      "tag": "v0.2.2",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "tomcoolpxl.CoolWSL": {
     "manifestHash": "2F4B80DD4F9701C4DE41A3BCFEBB220C1F89126471CEDC6D7ED1C37D83C13A20",
@@ -4075,6 +4457,14 @@
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
     "description": ""
+  },
+  "Tweag.Topiary": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/tweag/topiary/releases/download/v0.7.3/topiary-cli-x86_64-pc-windows-msvc.zip",
+      "tag": "v0.7.3",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "Tylergibbs1.Substrate": {
     "lastUpdated": "2026-08-18T01:43:26.1871724Z",
@@ -4315,6 +4705,14 @@
       "EA99F94CA3945ECF1966675C22B5CC1E7E103306313BCD410DF73792C269495D"
     ]
   },
+  "WHONET.AMRIE": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/AClark-WHONET/AMRIE/releases/download/v26.3.26/AMR_Interpretation_Engine_v26.3.26.msi",
+      "tag": "v26.3.26",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
+  },
   "WillyJL.F95Checker": {
     "validationCount": 4,
     "description": "",
@@ -4324,7 +4722,13 @@
     "installerHashes": [
       "639FC81249E20EC01F0362E4E765B93DBBAB56AAA1F9F8DABA5E61DC08AE71E9"
     ],
-    "manifestHash": "90FC8D80ED92A44B5300A1EDDEF27872EDF1BED31601A73C95982209A79C06C3"
+    "manifestHash": "90FC8D80ED92A44B5300A1EDDEF27872EDF1BED31601A73C95982209A79C06C3",
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/Willy-JL/F95Checker/releases/download/11.1.3/F95Checker-Windows.zip",
+      "tag": "11.1.3",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "Winix.Peep": {
     "manifestHash": "2C9272FFE21EE6DD39FEBCD7B4A175A7A6B6E8E65B1398EB9F2BCE7072153BF6",
@@ -4391,6 +4795,14 @@
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
     "version": "2.8.1"
+  },
+  "XaoSProject.XaoS": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/xaos-project/XaoS/releases/download/release-release-4.3.7/xaos-setup-release-4.3.7.exe",
+      "tag": "release-4.3.7",
+      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
   },
   "xarthurx.Whisperi": {
     "manifestHash": "3645CD3C16197E110734A2FB5CFDEAAFB8712D569BFF22A6FCFA33CD03645595",
