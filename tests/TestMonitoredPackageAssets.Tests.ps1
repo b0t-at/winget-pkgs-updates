@@ -58,6 +58,20 @@ if ($results[0].Status -ne 'OK') {
     throw "Expected OK, got: $($results[0] | ConvertTo-Json -Compress)"
 }
 
+Write-Host 'TEST: URL templates with repeated whitespace are accepted'
+$whitespacePackages = @([PSCustomObject]@{
+        id   = 'Test.Whitespace'
+        repo = 'owner/whitespace'
+        url  = '  https://github.com/owner/whitespace/releases/download/v{VERSION}/app-{VERSION}-x64.msi|x64   '
+    })
+$invoker = New-FakeGraphQlInvoker -RepositoriesByAlias @{
+    'a0' = [PSCustomObject]@{ latestRelease = (New-Release -Tag 'v1.2.3' -AssetUrls @('https://github.com/owner/whitespace/releases/download/v1.2.3/app-1.2.3-x64.msi')) }
+}
+$results = @(Test-MonitoredPackageAssets -Packages $whitespacePackages -GraphQlInvoker $invoker)
+if ($results[0].Status -ne 'OK') {
+    throw "Expected whitespace-delimited URL template to resolve, got: $($results[0] | ConvertTo-Json -Compress)"
+}
+
 Write-Host 'TEST: renamed asset reports AssetMissing with the expected URL'
 $invoker = New-FakeGraphQlInvoker -RepositoriesByAlias @{
     'a0' = [PSCustomObject]@{ latestRelease = (New-Release -Tag 'v1.2.3' -AssetUrls @('https://github.com/owner/ok/releases/download/v1.2.3/renamed.msi')) }

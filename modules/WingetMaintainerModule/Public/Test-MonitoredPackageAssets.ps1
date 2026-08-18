@@ -252,7 +252,8 @@ function Resolve-WingetMonitoredAssetStatus {
 
     $missing = [System.Collections.Generic.List[string]]::new()
 
-    foreach ($entry in @(Get-InstallerUrlEntries -InstallerValues @($url.Split(' ')))) {
+    $installerValues = @($url -split '\s+' | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
+    foreach ($entry in @(Get-InstallerUrlEntries -InstallerValues $installerValues)) {
         $template = $entry.InstallerUrl
         if ($template -match '\{ARPVERSION\}') {
             $assetRegex = [regex]::Escape($template).
