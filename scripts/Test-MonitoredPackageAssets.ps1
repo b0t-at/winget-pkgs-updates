@@ -12,8 +12,8 @@
 #   GITHUB_STEP_SUMMARY      Markdown summary target (optional).
 #   GITHUB_OUTPUT            Receives broken_count / checked_count (optional).
 #
-# The script always exits 0: it is a report, not a gate. The workflow
-# publishes the summary and the JSON report artifact.
+# The script always exits 0: it produces the report consumed by the workflow,
+# which persists definitive findings as per-package submission blocks.
 $ErrorActionPreference = 'Stop'
 
 Import-Module (Join-Path $PSScriptRoot '..' 'modules' 'WingetMaintainerModule' 'WingetMaintainerModule.psd1') -Force

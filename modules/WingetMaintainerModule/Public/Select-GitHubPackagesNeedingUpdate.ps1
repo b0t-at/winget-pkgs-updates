@@ -221,6 +221,11 @@ function Select-GitHubPackagesNeedingUpdate {
         [Parameter()]
         [string] $StateFilePath,
 
+        # Optional preloaded Config Health blocks. Supplying this lets callers
+        # retain definitive URL blocks even when the GraphQL precheck fails open.
+        [Parameter()]
+        [System.Collections.IDictionary] $ConfigHealthBlocks,
+
         [Parameter()]
         [ValidateRange(1, 8760)]
         [int] $OpenPrTtlHours = 24,
@@ -245,6 +250,14 @@ function Select-GitHubPackagesNeedingUpdate {
     if ($openPrCheckEnabled -and $null -eq $OpenPrTester) {
         $OpenPrTester = { param([string] $PackageIdentifier, [string] $Version) Test-ExistingPRs -Version $Version -PackageIdentifier $PackageIdentifier -OnlyOpen }
     }
+    if ($null -eq $ConfigHealthBlocks) {
+        $ConfigHealthBlocks = if ($openPrCheckEnabled) {
+            Get-PackageStateConfigHealthBlocks -StateFilePath $StateFilePath
+        }
+        else {
+            @{}
+        }
+    }
     $openPrChecksUsed = 0
 
     $include = [System.Collections.Generic.List[object]]::new()
@@ -260,7 +273,17 @@ function Select-GitHubPackagesNeedingUpdate {
         $versionSource = Get-WingetPrecheckPackageField -Package $package -Name 'versionSource'
         $overridePack = Get-WingetPrecheckPackageField -Package $package -Name 'overridePack'
 
-        if ([string]::IsNullOrWhiteSpace($packageId) -or [string]::IsNullOrWhiteSpace($repo)) {
+        if ($ConfigHealthBlocks.Contains($packageId)) {
+            $health = $ConfigHealthBlocks[$packageId]
+            $skipped.Add([PSCustomObject]@{
+                    Package      = $package
+                    Reason       = 'ConfigHealthBlocked'
+                    HealthStatus = [string]$health['status']
+                    Detail       = [string]$health['detail']
+                    CheckedAt    = [string]$health['checkedAt']
+                })
+        }
+        elseif ([string]::IsNullOrWhiteSpace($packageId) -or [string]::IsNullOrWhiteSpace($repo)) {
             $include.Add([PSCustomObject]@{ Package = $package; Reason = 'IncompleteConfiguration' })
         }
         elseif (-not [string]::IsNullOrWhiteSpace($tagPattern) -or

@@ -93,7 +93,10 @@ jobs:
         run: |
           ./tests/Save-PackageState.Tests.ps1
           ./tests/PackageStateOpenPr.Tests.ps1
+          ./tests/PackageStateConfigHealth.Tests.ps1
           ./tests/SelectGitHubPackagesNeedingUpdate.Tests.ps1
+          ./tests/SelectPackagesNeedingUpdateScript.Tests.ps1
+          ./tests/TestMonitoredPackageAssets.Tests.ps1
           ./tests/Update-WingetPackage.Tests.ps1
           ./tests/GitHubApiCache.Tests.ps1
           ./tests/SubmissionWorkflowAuthorization.Tests.ps1

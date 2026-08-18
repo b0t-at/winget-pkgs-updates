@@ -6,7 +6,7 @@ on:
     - cron: "17 5 * * 1" # weekly, Monday 05:17 UTC
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: config-health
@@ -16,15 +16,17 @@ jobs:
   check-monitored-config:
     name: Check monitored package URLs
     runs-on: ubuntu-latest
+    concurrency:
+      group: package-state-write
+      cancel-in-progress: false
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          persist-credentials: false
+          persist-credentials: true
 
-      # Report-only: verifies that every monitored package's release-asset URL
-      # template still matches a real asset, so broken templates surface here
-      # instead of as failed generations or upstream URL-Validation-Error PRs.
+      # Verifies every monitored package's release-asset URL template, then
+      # persists only definitive failures as per-package submission blocks.
       - name: Check release-asset URL templates
         id: check
         shell: pwsh
@@ -34,7 +36,34 @@ jobs:
           MONITORED_PACKAGES_FILE: .github/workflows-data/update-github-packages-1-z.packages.json
         run: ./scripts/Test-MonitoredPackageAssets.ps1
 
+      - name: Persist definitive Config Health blocks
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          Import-Module ./modules/WingetMaintainerModule/WingetMaintainerModule.psd1 -Force
+
+          $stateFile = Join-Path $env:GITHUB_WORKSPACE 'data/package-state.json'
+          $results = @(Get-Content -LiteralPath ./config-health-report.json -Raw | ConvertFrom-Json)
+          $sync = Update-PackageStateConfigHealth -StateFilePath $stateFile -Results $results
+
+          $summary = @(
+            '## Config Health submission gate'
+            ''
+            "Definitive blocks: **$($sync.Blocked)**; updated: $($sync.Updated); cleared: $($sync.Cleared)."
+          ) -join "`n"
+          Write-Host $summary
+          $summary | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+
+          if ($sync.Changed) {
+            gh auth setup-git
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            Save-PackageState -StateFilePath $stateFile -RepoPath $env:GITHUB_WORKSPACE
+          }
+
       - name: Upload report
+        if: always()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: config-health-report

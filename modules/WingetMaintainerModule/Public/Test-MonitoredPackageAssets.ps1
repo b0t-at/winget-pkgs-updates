@@ -250,11 +250,36 @@ function Resolve-WingetMonitoredAssetStatus {
     $totalCountValue = Get-WingetGraphQlFieldValue -InputObject $assetsObject -Name 'totalCount'
     $assetsTruncated = $null -ne $totalCountValue -and [int]$totalCountValue -gt $assetUrls.Count
 
-    $missing = [System.Collections.Generic.List[string]]::new()
-
     $installerValues = @($url -split '\s+' | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
+    $assetTemplates = [System.Collections.Generic.List[string]]::new()
+    $deferredTemplates = [System.Collections.Generic.List[string]]::new()
+    $releasePrefix = "https://github.com/$repo/releases/"
+    $escapedRepo = [regex]::Escape($repo)
+    $latestDownloadPattern = "^(?i:https://github\.com/$escapedRepo/releases/latest/download/)"
     foreach ($entry in @(Get-InstallerUrlEntries -InstallerValues $installerValues)) {
-        $template = $entry.InstallerUrl
+        $template = $entry.InstallerUrl -replace '[?#].*$', ''
+        if ($template -notlike "$releasePrefix*") {
+            $deferredTemplates.Add($entry.InstallerUrl)
+            continue
+        }
+
+        $latestDownloadMatch = [regex]::Match($template, $latestDownloadPattern)
+        if ($latestDownloadMatch.Success) {
+            $template = "$releasePrefix`download/$tag/" + $template.Substring($latestDownloadMatch.Length)
+        }
+        if ($template -notlike "$releasePrefix`download/*") {
+            $deferredTemplates.Add($entry.InstallerUrl)
+            continue
+        }
+        $assetTemplates.Add($template)
+    }
+
+    if ($assetTemplates.Count -eq 0) {
+        return & $newResult 'Skipped' 'No GitHub release-asset URL template to verify; final installer URL preflight remains responsible.' $tag
+    }
+
+    $missing = [System.Collections.Generic.List[string]]::new()
+    foreach ($template in $assetTemplates) {
         if ($template -match '\{ARPVERSION\}') {
             $assetRegex = [regex]::Escape($template).
                 Replace('\{ARPVERSION}', '(.+?)').
@@ -280,5 +305,11 @@ function Resolve-WingetMonitoredAssetStatus {
         return & $newResult 'AssetMissing' "No release asset matches: $($missing -join ' ')" $tag
     }
 
-    return & $newResult 'OK' "All URL templates resolve against release $tag." $tag
+    $deferredNote = if ($deferredTemplates.Count -gt 0) {
+        " $($deferredTemplates.Count) external URL template(s) remain covered by submission preflight."
+    }
+    else {
+        ''
+    }
+    return & $newResult 'OK' "All GitHub release-asset URL templates resolve against release ${tag}.$deferredNote" $tag
 }

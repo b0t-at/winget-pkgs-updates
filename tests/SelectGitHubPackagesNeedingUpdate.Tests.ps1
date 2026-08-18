@@ -371,7 +371,59 @@ Assert-Equal 1 $openPrCapped.TesterCalls 'live PR searches stop at MaxOpenPrChec
 Assert-Equal 1 $openPrCapped.SkippedCount 'checked candidate with open PR is skipped'
 Assert-Equal 2 $openPrCapped.IncludeCount 'capped candidates are included unchecked'
 
-# 10) Resolvable version sources (tagPattern / ReleaseName / {ARPVERSION}) are
+# 10) Definitive Config Health blocks bypass GraphQL and prevent a package from
+#     entering the generation matrix.
+$healthBlocked = & $module {
+    $stateFile = Join-Path ([System.IO.Path]::GetTempPath()) "config-health-state-$([guid]::NewGuid()).json"
+    @{
+        'Vendor.AssetMissing' = @{
+            configHealth = @{
+                status    = 'AssetMissing'
+                detail    = 'Expected setup.exe is absent.'
+                checkedAt = '2026-08-18T00:00:00Z'
+            }
+        }
+        'Vendor.RepoMissing' = @{
+            configHealth = @{
+                status    = 'RepoMissing'
+                detail    = 'Repository no longer exists.'
+                checkedAt = '2026-08-18T00:00:00Z'
+            }
+        }
+    } | ConvertTo-Json -Depth 5 | Set-Content -Path $stateFile -Encoding utf8
+
+    $script:queries = [System.Collections.Generic.List[string]]::new()
+    $invoker = {
+        param([string] $Query)
+        $script:queries.Add($Query)
+        if ($Query -notmatch 'winget-pkgs') {
+            return @{ data = @{ r0 = @{ latestRelease = @{ tagName = 'v2.0.0' } } } }
+        }
+        return @{ data = @{ repository = @{ p0 = @{ entries = @(@{ name = '1.0.0'; type = 'tree' }) } } } }
+    }
+
+    try {
+        $selection = Select-GitHubPackagesNeedingUpdate -Packages @(
+            @{ id = 'Vendor.AssetMissing'; repo = 'vendor/assetmissing'; url = 'https://example.com/{VERSION}.exe' },
+            @{ id = 'Vendor.RepoMissing'; repo = 'vendor/repomissing'; url = 'https://example.com/{VERSION}.exe' },
+            @{ id = 'Vendor.Healthy'; repo = 'vendor/healthy'; url = 'https://example.com/{VERSION}.exe' }
+        ) -GraphQlInvoker $invoker -StateFilePath $stateFile -OpenPrTester { $false }
+    }
+    finally {
+        Remove-Item -Path $stateFile -Force -ErrorAction SilentlyContinue
+    }
+
+    [PSCustomObject]@{
+        Selection = $selection
+        Queries  = @($script:queries)
+    }
+}
+Assert-Equal 'Skipped:ConfigHealthBlocked' (Get-ReasonFor $healthBlocked.Selection 'Vendor.AssetMissing') 'missing asset block skips package'
+Assert-Equal 'Skipped:ConfigHealthBlocked' (Get-ReasonFor $healthBlocked.Selection 'Vendor.RepoMissing') 'missing repository block skips package'
+Assert-Equal 'Include:NewVersion' (Get-ReasonFor $healthBlocked.Selection 'Vendor.Healthy') 'healthy package remains eligible'
+Assert-Equal $false (($healthBlocked.Queries -join ' ') -match 'assetmissing|repomissing') 'blocked packages are omitted from GraphQL queries'
+
+# 11) Resolvable version sources (tagPattern / ReleaseName / {ARPVERSION}) are
 #     resolved in the precheck; every resolution failure falls back to include.
 $resolved = & $module {
     $script:queries = [System.Collections.Generic.List[string]]::new()
