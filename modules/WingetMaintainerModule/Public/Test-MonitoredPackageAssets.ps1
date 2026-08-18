@@ -48,7 +48,36 @@ function Test-MonitoredPackageAssets {
     )
 
     if ($null -eq $GraphQlInvoker) {
-        $GraphQlInvoker = { param([string] $Query) Invoke-WingetPrecheckGraphQlRequest -Query $Query }
+        # A weekly report spanning ~30 batched queries must shrug off the odd
+        # transient GraphQL 5xx; the shared precheck invoker only retries
+        # rate limits, so transport-level retries are layered on here.
+        $GraphQlInvoker = {
+            param([string] $Query)
+
+            $maxAttempts = 5
+            for ($attempt = 1; $attempt -le $maxAttempts; $attempt++) {
+                try {
+                    return Invoke-WingetPrecheckGraphQlRequest -Query $Query
+                }
+                catch {
+                    if ($attempt -ge $maxAttempts) { throw }
+                    $message = "$($_.Exception.Message)"
+                    $statusCode = $null
+                    if ($null -ne $_.Exception.Data -and $null -ne $_.Exception.Data['StatusCode']) {
+                        $statusCode = [int]$_.Exception.Data['StatusCode']
+                    }
+                    elseif ($_.Exception -is [Microsoft.PowerShell.Commands.HttpResponseException]) {
+                        $statusCode = [int]$_.Exception.Response.StatusCode
+                    }
+                    $isTransient = ($statusCode -ge 500 -and $statusCode -le 599) -or
+                        $message -match 'No server is currently available|couldn.t respond to your request in time|502|503|504'
+                    if (-not $isTransient) { throw }
+                    $delay = [int][Math]::Min(60, 5 * [Math]::Pow(2, $attempt - 1))
+                    Write-Warning "Monitored-asset GraphQL query hit a transient failure (attempt $attempt/$maxAttempts): $message Retrying in $delay s."
+                    Start-Sleep -Seconds $delay
+                }
+            }
+        }
     }
 
     $results = [System.Collections.Generic.List[object]]::new()
