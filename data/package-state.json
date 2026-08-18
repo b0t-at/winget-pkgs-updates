@@ -10,7 +10,7 @@
       "6A0E4ECEF8D6550574028FF367BB623C362A99D5D71C6FDBAB2115F6DDBE19E9"
     ],
     "openPr": {
-      "checkedAt": "2026-08-17T14:45:02.4768002Z",
+      "checkedAt": "2026-08-18T16:15:27.6020257Z",
       "version": "4.2.1.0"
     }
   },
@@ -38,7 +38,7 @@
   },
   "Adamant.Messenger": {
     "openPr": {
-      "checkedAt": "2026-08-17T16:12:59.0371192Z",
+      "checkedAt": "2026-08-18T16:15:20.2793912Z",
       "version": "4.12.0"
     }
   },
@@ -68,7 +68,7 @@
     "state": "VALIDATION_PASSED",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-08-17T16:13:01.3387264Z",
+      "checkedAt": "2026-08-18T16:15:20.882324Z",
       "version": "0.84.0"
     }
   },
@@ -1147,7 +1147,7 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "3EAB1E5A6E607AC40A8D48C149D5E5B2207604A2D465245704CB6FD111942437",
     "openPr": {
-      "checkedAt": "2026-08-17T14:44:47.8033868Z",
+      "checkedAt": "2026-08-18T16:15:22.7792523Z",
       "version": "5.2.0"
     }
   },
@@ -2278,7 +2278,7 @@
     "validationCount": 1,
     "version": "18.1.1",
     "openPr": {
-      "checkedAt": "2026-08-17T14:44:52.7928856Z",
+      "checkedAt": "2026-08-18T16:15:24.2154439Z",
       "version": "18.1.1"
     }
   },
@@ -2946,7 +2946,7 @@
       "6F82338F77AF50E6B0B5300C01F41369EBF34E629FC9896BDD558E14166D1F73"
     ],
     "openPr": {
-      "checkedAt": "2026-08-17T16:13:11.9220656Z",
+      "checkedAt": "2026-08-18T16:15:24.6387756Z",
       "version": "1.8.1"
     }
   },
@@ -3525,7 +3525,7 @@
     "lastUpdated": "2026-08-14T09:49:55.842265Z",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-08-17T16:13:13.0626794Z",
+      "checkedAt": "2026-08-18T16:15:25.0882634Z",
       "version": "8.0.40"
     }
   },
