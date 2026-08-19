@@ -6,6 +6,12 @@ on:
       - ".github/workflows/module-tests.yml"
       - "modules/WingetMaintainerModule/**"
       - "tests/**"
+      # Configuration inputs validated by GitHubReleaseMonitoringConfiguration.Tests.ps1:
+      # a config-only PR must not bypass the stream-config and sidecar-consistency guards.
+      - "github-releases-monitored.yml"
+      - ".github/workflows-data/**"
+      - ".github/workflows-templates/**"
+      - ".github/workflows/update-github-packages-*.yml"
   push:
     branches:
       - main
@@ -13,6 +19,10 @@ on:
       - ".github/workflows/module-tests.yml"
       - "modules/WingetMaintainerModule/**"
       - "tests/**"
+      - "github-releases-monitored.yml"
+      - ".github/workflows-data/**"
+      - ".github/workflows-templates/**"
+      - ".github/workflows/update-github-packages-*.yml"
 
 permissions:
   contents: read

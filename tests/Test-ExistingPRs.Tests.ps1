@@ -794,6 +794,26 @@ Describe 'Test-ExistingPRs' {
                     -Title 'Submitting Godot Launcher v1.11.1' `
                     -PackageIdentifier 'GodotLauncher.Launcher' `
                     -Version '1.11.1'
+                FileNameToken  = Test-WingetPkgsTitleNamesOtherPackage `
+                    -Title 'Add GodotLauncher setup.exe 1.11.1' `
+                    -PackageIdentifier 'GodotLauncher.Launcher' `
+                    -Version '1.11.1'
+                DomainToken    = Test-WingetPkgsTitleNamesOtherPackage `
+                    -Title 'Submitting Godot Launcher 1.11.1 from godotlauncher.org' `
+                    -PackageIdentifier 'GodotLauncher.Launcher' `
+                    -Version '1.11.1'
+                UrlToken       = Test-WingetPkgsTitleNamesOtherPackage `
+                    -Title 'Add Godot Launcher 1.11.1 (see https://downloads.example.gallery/godot.launcher.portable)' `
+                    -PackageIdentifier 'GodotLauncher.Launcher' `
+                    -Version '1.11.1'
+                OtherIdToken   = Test-WingetPkgsTitleNamesOtherPackage `
+                    -Title 'New version: Contoso.OtherApp 2.0' `
+                    -PackageIdentifier 'GodotLauncher.Launcher' `
+                    -Version '1.11.1'
+                PureVersions   = Test-WingetPkgsTitleNamesOtherPackage `
+                    -Title 'Bump Godot Launcher from 1.10.2 to 1.11.1' `
+                    -PackageIdentifier 'GodotLauncher.Launcher' `
+                    -Version '1.11.1'
             }
         }
 
@@ -811,6 +831,21 @@ Describe 'Test-ExistingPRs' {
         }
         if ($helperResults.VersionToken) {
             throw 'A version-like dotted token was misclassified as another package identifier.'
+        }
+        if ($helperResults.FileNameToken) {
+            throw 'A file-name token (setup.exe) was misclassified as another package identifier.'
+        }
+        if ($helperResults.DomainToken) {
+            throw 'A domain-like token was misclassified as another package identifier.'
+        }
+        if ($helperResults.UrlToken) {
+            throw 'A URL-embedded token was misclassified as another package identifier.'
+        }
+        if (-not $helperResults.OtherIdToken) {
+            throw 'A title naming a genuinely different package identifier was not classified as such.'
+        }
+        if ($helperResults.PureVersions) {
+            throw 'Pure version tokens were misclassified as another package identifier.'
         }
     }
 }

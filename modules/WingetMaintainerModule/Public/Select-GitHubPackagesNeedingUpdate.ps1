@@ -96,6 +96,56 @@ function Get-WingetPrecheckPackageField {
     return [string]$value
 }
 
+function Get-WingetPrecheckErroredAlias {
+    <#
+    .SYNOPSIS
+        Attributes GraphQL partial errors to the aliased fields of a batch query.
+
+    .DESCRIPTION
+        A GraphQL response can be HTTP 200 with an errors array and partially
+        null data: per-alias errors carry the failed field's response path
+        (e.g. ["p3"] or ["repository", "p3"]). A null aliased object WITH a
+        corresponding error entry is a failed lookup, not evidence of absence,
+        so callers must not treat it as a skip decision. Returns the batch
+        aliases the errors attribute to, plus WholeBatchFailed when the
+        response cannot be trusted at all: data is null/absent, or an error
+        exists whose path matches none of the expected aliases (fail-open,
+        identical handling to a thrown batch).
+    #>
+    param(
+        [Parameter()] $Response,
+        [Parameter(Mandatory = $true)] [AllowEmptyCollection()] [string[]] $ExpectedAliases
+    )
+
+    $aliasSet = [System.Collections.Generic.HashSet[string]]::new([string[]]$ExpectedAliases, [System.StringComparer]::Ordinal)
+    $errorsValue = Get-WingetGraphQlFieldValue -InputObject $Response -Name 'errors'
+    $graphQlErrors = if ($null -eq $errorsValue) { @() } else { @($errorsValue) }
+
+    $erroredAliases = [System.Collections.Generic.HashSet[string]]::new([System.StringComparer]::Ordinal)
+    $hasUnattributableErrors = $false
+    foreach ($graphQlError in $graphQlErrors) {
+        $pathValue = Get-WingetGraphQlFieldValue -InputObject $graphQlError -Name 'path'
+        $pathEntries = if ($null -eq $pathValue) { @() } else { @($pathValue) }
+        $matched = $false
+        foreach ($pathEntry in $pathEntries) {
+            if ($aliasSet.Contains("$pathEntry")) {
+                $null = $erroredAliases.Add("$pathEntry")
+                $matched = $true
+            }
+        }
+        if (-not $matched) {
+            $hasUnattributableErrors = $true
+        }
+    }
+
+    $data = Get-WingetGraphQlFieldValue -InputObject $Response -Name 'data'
+
+    return [PSCustomObject]@{
+        ErroredAliases   = $erroredAliases
+        WholeBatchFailed = ($null -eq $data) -or ($graphQlErrors.Count -gt 0 -and $hasUnattributableErrors)
+    }
+}
+
 function Resolve-WingetPrecheckReleaseVersion {
     <#
     .SYNOPSIS
@@ -200,7 +250,11 @@ function Select-GitHubPackagesNeedingUpdate {
 
         GraphQL failures are contained per batch: packages in a failed batch are
         included (Reason 'PrecheckBatchFailed') while other batches still produce
-        normal skip decisions. When the winget-pkgs published-versions query
+        normal skip decisions. Partial GraphQL errors (HTTP 200 with an errors
+        array) are attributed per aliased field: an errored alias is a failed
+        lookup — never evidence of a missing release or manifest folder — and
+        unattributable errors or null data fail the whole batch. When the
+        winget-pkgs published-versions query
         fails, the winget source index (a CDN copy of the catalog) supplies the
         published versions instead, so a transient GitHub error no longer forces
         the whole run open.
@@ -365,9 +419,24 @@ function Select-GitHubPackagesNeedingUpdate {
             }
             continue
         }
+        $graphQlErrorInfo = Get-WingetPrecheckErroredAlias -Response $response -ExpectedAliases @(for ($i = 0; $i -lt $repoSlice.Count; $i++) { "r$i" })
+        if ($graphQlErrorInfo.WholeBatchFailed) {
+            Write-Warning "Update precheck release query returned unattributable GraphQL errors for a batch of $($repoSlice.Count) repositories. Including their packages."
+            foreach ($failedRepo in $repoSlice) {
+                $null = $failedRepoLookups.Add($failedRepo)
+            }
+            continue
+        }
         $data = Get-WingetGraphQlFieldValue -InputObject $response -Name 'data'
 
         for ($i = 0; $i -lt $repoSlice.Count; $i++) {
+            if ($graphQlErrorInfo.ErroredAliases.Contains("r$i")) {
+                # A per-alias error is a failed lookup, not evidence the
+                # repository has no releases; only positive evidence may skip.
+                Write-Warning "Update precheck release query returned an error for repository $($repoSlice[$i]). Including its packages."
+                $null = $failedRepoLookups.Add($repoSlice[$i])
+                continue
+            }
             $repository = Get-WingetGraphQlFieldValue -InputObject $data -Name "r$i"
             $latestRelease = Get-WingetGraphQlFieldValue -InputObject $repository -Name 'latestRelease'
             $tagName = Get-WingetGraphQlFieldValue -InputObject $latestRelease -Name 'tagName'
@@ -441,10 +510,25 @@ function Select-GitHubPackagesNeedingUpdate {
             }
             continue
         }
+        $graphQlErrorInfo = Get-WingetPrecheckErroredAlias -Response $response -ExpectedAliases @(for ($i = 0; $i -lt $packageSlice.Count; $i++) { "u$i" })
+        if ($graphQlErrorInfo.WholeBatchFailed) {
+            Write-Warning "Update precheck release-metadata query returned unattributable GraphQL errors for a batch of $($packageSlice.Count) packages. Including them."
+            foreach ($slicePackage in $packageSlice) {
+                $include.Add([PSCustomObject]@{ Package = $slicePackage; Reason = 'PrecheckBatchFailed' })
+            }
+            continue
+        }
         $data = Get-WingetGraphQlFieldValue -InputObject $response -Name 'data'
 
         for ($i = 0; $i -lt $packageSlice.Count; $i++) {
             $slicePackage = $packageSlice[$i]
+            if ($graphQlErrorInfo.ErroredAliases.Contains("u$i")) {
+                # A per-alias error is a failed lookup, not an unresolvable
+                # version source; include the package like a failed batch.
+                Write-Warning "Update precheck release-metadata query returned an error for package $(Get-WingetPrecheckPackageField -Package $slicePackage -Name 'id'). Including it."
+                $include.Add([PSCustomObject]@{ Package = $slicePackage; Reason = 'PrecheckBatchFailed' })
+                continue
+            }
             $repository = Get-WingetGraphQlFieldValue -InputObject $data -Name "u$i"
             $resolvedVersion = Resolve-WingetPrecheckReleaseVersion -Package $slicePackage -Repository $repository
             if ([string]::IsNullOrWhiteSpace([string]$resolvedVersion)) {
@@ -478,8 +562,13 @@ function Select-GitHubPackagesNeedingUpdate {
             "`n  }`n}"
         $repository = $null
         $batchFailure = $null
+        $graphQlErrorInfo = $null
         try {
             $response = & $GraphQlInvoker $query
+            $graphQlErrorInfo = Get-WingetPrecheckErroredAlias -Response $response -ExpectedAliases @(for ($i = 0; $i -lt $candidateSlice.Count; $i++) { "p$i" })
+            if ($graphQlErrorInfo.WholeBatchFailed) {
+                throw 'GitHub GraphQL update precheck returned unattributable errors for the winget-pkgs batch.'
+            }
             $data = Get-WingetGraphQlFieldValue -InputObject $response -Name 'data'
             $repository = Get-WingetGraphQlFieldValue -InputObject $data -Name 'repository'
             if ($null -eq $repository) {
@@ -490,9 +579,19 @@ function Select-GitHubPackagesNeedingUpdate {
             $batchFailure = $_.Exception.Message
         }
 
+        # Candidate indexes whose lookup failed: the whole slice after a failed
+        # call, or the individually errored aliases of an otherwise successful
+        # call. Both fall back to the winget source index below.
+        $failedCandidateIndexes = [System.Collections.Generic.List[int]]::new()
         if ($null -eq $batchFailure) {
             for ($i = 0; $i -lt $candidateSlice.Count; $i++) {
                 $packageId = Get-WingetPrecheckPackageField -Package $candidateSlice[$i].Package -Name 'id'
+                if ($graphQlErrorInfo.ErroredAliases.Contains("p$i")) {
+                    # A per-alias error is a failed lookup, never evidence the
+                    # manifest folder is absent; only positive evidence may skip.
+                    $failedCandidateIndexes.Add($i)
+                    continue
+                }
                 $treeObject = Get-WingetGraphQlFieldValue -InputObject $repository -Name "p$i"
                 if ($null -eq $treeObject) {
                     $publishedStateByPackageId[$packageId] = [PSCustomObject]@{ Status = 'Missing'; Versions = @() }
@@ -505,10 +604,18 @@ function Select-GitHubPackagesNeedingUpdate {
                         ForEach-Object { [string](Get-WingetGraphQlFieldValue -InputObject $_ -Name 'name') })
                 $publishedStateByPackageId[$packageId] = [PSCustomObject]@{ Status = 'Resolved'; Versions = $publishedVersions }
             }
-            continue
+            if ($failedCandidateIndexes.Count -eq 0) {
+                continue
+            }
+            Write-Warning "Update precheck winget-pkgs query returned errors for $($failedCandidateIndexes.Count) of $($candidateSlice.Count) packages in a batch. Falling back to the winget source index for them."
+        }
+        else {
+            Write-Warning "Update precheck winget-pkgs query failed for a batch of $($candidateSlice.Count) packages: $batchFailure. Falling back to the winget source index."
+            for ($i = 0; $i -lt $candidateSlice.Count; $i++) {
+                $failedCandidateIndexes.Add($i)
+            }
         }
 
-        Write-Warning "Update precheck winget-pkgs query failed for a batch of $($candidateSlice.Count) packages: $batchFailure. Falling back to the winget source index."
         if (-not $sourceIndexLoadAttempted) {
             $sourceIndexLoadAttempted = $true
             try {
@@ -528,7 +635,7 @@ function Select-GitHubPackagesNeedingUpdate {
             }
         }
 
-        for ($i = 0; $i -lt $candidateSlice.Count; $i++) {
+        foreach ($i in $failedCandidateIndexes) {
             $packageId = Get-WingetPrecheckPackageField -Package $candidateSlice[$i].Package -Name 'id'
             if ($null -ne $sourceIndexVersionsById -and $sourceIndexVersionsById.ContainsKey($packageId)) {
                 $publishedStateByPackageId[$packageId] = [PSCustomObject]@{ Status = 'Resolved'; Versions = @([string]$sourceIndexVersionsById[$packageId]) }

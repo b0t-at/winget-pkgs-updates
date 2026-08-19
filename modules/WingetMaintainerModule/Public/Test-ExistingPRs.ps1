@@ -340,9 +340,13 @@ function Test-WingetPkgsTitleNamesOtherPackage {
         Used to skip pull request file reads for manifest-path candidates that
         obviously belong to another package (bot and tool titles always spell
         out the package identifier). A dotted token counts as another package
-        identifier only when at least two of its segments contain letters and
-        it neither contains the requested identifier nor equals the requested
-        version, so version-like tokens ('1.2.3', 'v1.2.3') never suppress a
+        identifier only when it plausibly IS a winget package identifier: at
+        least two of its dot-separated segments start with a letter, its final
+        segment is neither a known file extension (setup.exe, manifest.yaml)
+        nor a common top-level domain (example.com), it is not part of a URL
+        or a www-prefixed host name, and it neither contains the requested
+        identifier nor equals the requested version. File names, domains, and
+        version-like tokens ('1.2.3', 'v1.2.3') therefore never suppress a
         candidate.
     #>
     [CmdletBinding()]
@@ -353,10 +357,37 @@ function Test-WingetPkgsTitleNamesOtherPackage {
         [Parameter(Mandatory = $true)] [string] $Version
     )
 
-    $dottedTokens = @([regex]::Matches($Title, '(?<![A-Za-z0-9._+-])[A-Za-z0-9_+-]+(?:\.[A-Za-z0-9_+-]+)+(?![A-Za-z0-9._+-])') | ForEach-Object { $_.Value })
-    foreach ($token in $dottedTokens) {
-        $letteredSegments = @($token.Split('.') | Where-Object { $_ -match '[A-Za-z]' })
-        if ($letteredSegments.Count -lt 2) {
+    # File-name tokens (setup.exe) and domain tokens (example.com) look like
+    # dotted identifiers but never name a winget package; treating them as one
+    # suppressed genuine human duplicates (e.g. 'Add GodotLauncher setup.exe 1.11.1').
+    $fileExtensionSegments = @(
+        'exe', 'msi', 'msix', 'zip', 'appx', 'appinstaller', 'nupkg', 'yaml',
+        'yml', 'json', 'ps1', 'cmd', 'bat', 'dll', 'jar', 'deb', 'rpm', 'dmg',
+        'pkg', 'txt', 'md', 'sig', 'sha256', 'iso', '7z', 'gz', 'xz', 'bin'
+    )
+    $topLevelDomainSegments = @('com', 'org', 'net', 'io', 'dev', 'de', 'app', 'sh', 'co', 'uk', 'us', 'me', 'gg')
+
+    $dottedTokenMatches = @([regex]::Matches($Title, '(?<![A-Za-z0-9._+-])[A-Za-z0-9_+-]+(?:\.[A-Za-z0-9_+-]+)+(?![A-Za-z0-9._+-])'))
+    foreach ($tokenMatch in $dottedTokenMatches) {
+        $token = $tokenMatch.Value
+        $segments = $token.Split('.')
+        $letterLedSegments = @($segments | Where-Object { $_ -match '^[A-Za-z]' })
+        if ($letterLedSegments.Count -lt 2) {
+            continue
+        }
+        $finalSegment = $segments[-1].ToLowerInvariant()
+        if ($finalSegment -in $fileExtensionSegments) {
+            continue
+        }
+        if ($finalSegment -in $topLevelDomainSegments) {
+            continue
+        }
+        if ($segments[0] -ieq 'www') {
+            continue
+        }
+        # Tokens inside a URL (https://example.gallery/path) are host names or
+        # path components, not package identifiers.
+        if ($Title.Substring(0, $tokenMatch.Index) -match '(?i)[a-z][a-z0-9+.-]*://\S*$') {
             continue
         }
         if ($token -ieq $Version -or $token -ieq "v$Version") {
