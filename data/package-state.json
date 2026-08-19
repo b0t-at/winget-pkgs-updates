@@ -78,16 +78,16 @@
     "version": "0.107.78"
   },
   "AdGuard.dnsproxy": {
-    "manifestHash": "00F752576BF16BA6AAA9151BAFDFCEB85365A2EB2A1C97A0498073400A6042C1",
-    "lastUpdated": "2026-08-06T14:10:17.4464701Z",
-    "validationCount": 3,
     "installerHashes": [
-      "B764A3E3D8B00A4021B0F4E6C1A389FDB29FC6354331449DC4BF13A99596C3E9",
-      "3FA9F9299412F32B4F074E2A9690980E9DA3631F64D243BCA2D7B973C7DDB426",
-      "68F27A0CEE8E8352F812D8DB1D0F01AB863FC21AC3FF214344013BB64FEC645C"
+      "9A78ED5386B7963B14FE90E5B40C26AD73C00602A8D08AD352DA978504971173",
+      "83AF4B4D8B185B93F7B2EB001D30EB93A659E8F5F057C085F662810A76AA87E5",
+      "6613EB5030185E65EA12AB240E462AE9F36D5A929B6766257A9B467F93B690E7"
     ],
-    "version": "0.83.2",
+    "version": "0.84.1",
+    "manifestHash": "3BD6D6F7B48462CF3A02CF2DC2AFC0881BD072C354168DB528A71B4A35E8E30B",
     "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-19T17:02:25.8797854Z",
+    "validationCount": 1,
     "description": ""
   },
   "AES256Afro.VideoKidnapper": {
@@ -1156,6 +1156,18 @@
     "manifestHash": "8682823202C99D136F4F0601DBEA7DF47E97BA049B46D4503A78E48340CF383B",
     "validationCount": 1
   },
+  "D2L.BMX": {
+    "installerHashes": [
+      "0B21370355F7088B8A5F8F4E57E70BCC588A04B1C06B6E02F626166E71E4521F",
+      "FEFA8C51B3B0E8932DD8246A62BC26282EB6B55145F82685D477588D608894B1"
+    ],
+    "version": "3.3.0",
+    "manifestHash": "7C237E50DF7F31611946802A759921846B854E9E021038A87F1844ED26E80817",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-19T17:02:25.7172724Z",
+    "validationCount": 1,
+    "description": ""
+  },
   "DamianH.BrowserWrangler": {
     "lastUpdated": "2026-08-18T17:25:13.7738684Z",
     "description": "",
@@ -1237,6 +1249,17 @@
     "installerHashes": [
       "262C864BC83AA764D91D65BB7168F9CDC816AB17C46283EC341EA2EF0ECCA1CD"
     ]
+  },
+  "Digimezzo.Dopamine.3": {
+    "installerHashes": [
+      "41C999AE094D4E0546B0D93BD27E5E69065FC1F64305488CC52B482A41EC8542"
+    ],
+    "version": "3.0.8",
+    "manifestHash": "5ABAAED75A7D81F2B76E4B5B3E1CD9A864091EAFD0E5441CF965839EB36CF15D",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-19T17:02:25.5716964Z",
+    "validationCount": 1,
+    "description": ""
   },
   "DimonSmart.NugetMcpServer": {
     "version": "1.1.9",
@@ -1637,15 +1660,15 @@
     "manifestHash": "B172B25C22B46415561AD8ECBA7F302155A4BB5FE816B09DE382AE91C974F27D"
   },
   "Excelano.xshape": {
-    "manifestHash": "EAE1271C24763F6EE5284BE6724E02A404F94BD0898CDCB9E5FEB5AEA816EC9E",
-    "lastUpdated": "2026-08-16T13:40:51.6065321Z",
-    "validationCount": 1,
     "installerHashes": [
-      "7EB7A9A228DFF3E80457EB8024CA03ACB78D8C68A5A10ED11039EABC2D56F004"
+      "FF9D9F5BC56F3D3F333A27FEC2CEF7BC1C05456B9DBD09C2E55A61D26CD3BE19"
     ],
-    "description": "",
-    "version": "0.5.1",
-    "state": "VALIDATION_PASSED"
+    "version": "0.5.2",
+    "manifestHash": "F0F22317AF422E4908007664BB24460F63DAE2B5513091AECF5251F871869A08",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-19T17:02:25.9363729Z",
+    "validationCount": 1,
+    "description": ""
   },
   "Execode.exeQuote": {
     "version": "1.0.8",
@@ -2000,6 +2023,17 @@
     "version": "8.0.2",
     "state": "VALIDATION_PASSED"
   },
+  "GioPalusa.SRTDownloader": {
+    "installerHashes": [
+      "C606CE5F130587BEC12786CD4DC2BC4F658D8BC89570241F3C1C21F80105F42C"
+    ],
+    "version": "0.1.5",
+    "manifestHash": "D6B2B8AD6A58957F99E97FA61F1153B3C224CC0D40A0D806F90E5BEAFCE9F431",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-19T17:02:25.6795511Z",
+    "validationCount": 1,
+    "description": ""
+  },
   "GiovaniFreitag.lode": {
     "validationCount": 1,
     "lastUpdated": "2026-08-19T01:25:20.4782683Z",
@@ -2253,6 +2287,17 @@
     "installerHashes": [
       "73EA434379EB46D8174065EB6A85170D89318FA67469D30A6C15902EEB1FB7B5"
     ]
+  },
+  "haberwooki.LiveCaptions": {
+    "installerHashes": [
+      "09BADBAE29383D858B03F590DB4422809E7DC05C728234437447CFEB1188D5D1"
+    ],
+    "version": "0.4.3",
+    "manifestHash": "C7E85989560B37B67DC361DC1D455A017AAEA664344F77F3F36EA08BCB9D83DA",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-19T17:02:25.7007752Z",
+    "validationCount": 1,
+    "description": ""
   },
   "hadolint.hadolint": {
     "lastUpdated": "2026-08-17T17:04:35.1900863Z",
@@ -2659,6 +2704,17 @@
     "manifestHash": "94FE9492FACF71C6D4BB67DEC0E02F563A3FF8FEF87523285C13978EA94F893D",
     "validationCount": 1,
     "lastUpdated": "2026-06-06T17:48:44.5235411Z"
+  },
+  "JeromeHerrman.VPinCommander": {
+    "installerHashes": [
+      "9948933AB6441C2463B0FFE069291CF4729BCB70CE3EAFAEF534975EC15C37AA"
+    ],
+    "version": "0.9.1",
+    "manifestHash": "8FD95DE29B2B64F246EAFAAF1E9DD2CD759EE383C8CFBA33D3E25BCBCD9450AB",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-19T17:02:25.9096128Z",
+    "validationCount": 1,
+    "description": ""
   },
   "JGraph.Draw": {
     "configHealth": {
@@ -3084,15 +3140,15 @@
     "state": "VALIDATION_PASSED"
   },
   "loreste.mako": {
-    "version": "0.5.6",
     "installerHashes": [
-      "887B11A042EA512D942E73D9FD4BFF56DC7C28BC2158E18C56544E0C2C4BCEE5"
+      "3961EC286E0E45A75BC2A5CBABFB931DA6AA3D86CA924DF266700AAED46125FD"
     ],
+    "version": "0.5.7",
+    "manifestHash": "87CA366846773C15EF9C6E673364CBA1C790578F29C6AB08F38E58A76C10BD74",
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "lastUpdated": "2026-08-18T09:30:09.1345818Z",
+    "lastUpdated": "2026-08-19T17:02:25.6274023Z",
     "validationCount": 1,
-    "manifestHash": "CEF88250057EED6309346C4DFA573E4A3CEFF953CA48B5184430F1D740EFCE44"
+    "description": ""
   },
   "LowLevelDesign.ProcessGovernor": {
     "manifestHash": "09E69D0C7C3FCD8235F3E38BE39881FEE7DC968A99C30941A28BED33654E0AA0",
@@ -3190,6 +3246,18 @@
       "tag": "21.1.16.1",
       "checkedAt": "2026-08-18T08:42:19.3437599Z"
     }
+  },
+  "MarkJamesHoward.TGit": {
+    "installerHashes": [
+      "BFC70BD655DC0403B7A9E2D68103E1053A1A414654E38DD8632B7E564A8CD249",
+      "520A441CAE18FABA4431E205254A8E8F857C08CC8E68747F616A0F8EF34206A3"
+    ],
+    "version": "1.6.1",
+    "manifestHash": "4BC89D7BA8424D02C031668B7E98C90CB695EECFFEC4DDBF4B598E00B7C41CA5",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-19T17:02:25.7329526Z",
+    "validationCount": 1,
+    "description": ""
   },
   "Marko19907.OLEDShift": {
     "validationCount": 1,
@@ -3650,6 +3718,17 @@
     ],
     "manifestHash": "77CFED035E8B90FC50F6448291D28F4AE2A0AFCDE8BE619DF4F658DD5710FC58"
   },
+  "Mukunku.ParquetViewer": {
+    "installerHashes": [
+      "DAC1AA6E410ECF1F345A747F1A09D8BFBD321D08AC5C9EA295C20E9210EF3326"
+    ],
+    "version": "4.2.0.0",
+    "manifestHash": "3D6E07B6B25C5B38C8240EB4B6537F68AE97A7AD35B32F1BD9A90D54718482BB",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-19T17:02:25.8150866Z",
+    "validationCount": 1,
+    "description": ""
+  },
   "MullvadVPN.MullvadVPN": {
     "installerHashes": [
       "E335507B948083100B54F8000EF5BB733E3EE959F8DF6A573E9404C506CB139A",
@@ -3886,6 +3965,17 @@
       "checkedAt": "2026-08-18T08:42:19.3437599Z"
     }
   },
+  "NotedeckDev.NoteDeck": {
+    "installerHashes": [
+      "E962E3E46E290143BE8D4A0C9652E1D7C3C68F75447BDB14BCCD24C936C47534"
+    ],
+    "version": "1.53.0",
+    "manifestHash": "F52FD0C025B138561D3152FCF33B6234DBC9D9E728582124B4DDF67D1F79CBBC",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-19T17:02:25.751218Z",
+    "validationCount": 1,
+    "description": ""
+  },
   "nvisionative.nvQuickSite": {
     "version": "2.5.2",
     "lastUpdated": "2026-08-18T13:04:36.6847995Z",
@@ -4038,6 +4128,17 @@
     "lastUpdated": "2026-08-14T09:49:56.0032601Z",
     "description": ""
   },
+  "OpenCLICollective.gmail-ro": {
+    "installerHashes": [
+      "BAD6DD28384D1E658C3A85A6DFEAF17F5E695C67FCBA3D3DAF9A160D1353C6DC"
+    ],
+    "version": "1.0.27",
+    "manifestHash": "24D9275F94E8CDEB278F81EAE8F6C346D0CC4963FFCC40693A4047A76718986B",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-19T17:02:25.7832725Z",
+    "validationCount": 1,
+    "description": ""
+  },
   "OpenCLICollective.google-readonly": {
     "lastUpdated": "2026-08-16T21:14:49.218161Z",
     "description": "",
@@ -4148,6 +4249,17 @@
       "46AEB9DA8008B60D43D988A37F0334C6898EA1FE13AF2C0378D4F3AB7A494243"
     ],
     "version": "3.44.0"
+  },
+  "openwong2kim.wsnap": {
+    "installerHashes": [
+      "DCA6D134B4AC95BC3C877BB7B5F945798AB4567731D9568AE50A862895B55D06"
+    ],
+    "version": "2.0.0",
+    "manifestHash": "E3A445F1438417AE0BF6D51B5A81A1342D6CEFAAE1DE384FAEE9EE4F240D5FAD",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-19T17:02:25.7671588Z",
+    "validationCount": 1,
+    "description": ""
   },
   "OramaInteractive.Pixelorama": {
     "state": "VALIDATION_FAILED",
@@ -4782,6 +4894,18 @@
       "9CA17A8CB8F61BD6DA4F044F9A8996FCB014852D0F8FD7A5717BEF633868296A"
     ],
     "manifestHash": "85BF6426EF0B09B75FF0330AA7AE1CF527A18807D48021EA2DE02786EEE2B503"
+  },
+  "Rizin.Rizin": {
+    "installerHashes": [
+      "6CB487DC5EF31FF00D5FD1AE5675B12C0A89F9CDB808633AD48F70831E2A4BB5",
+      "3BFEA0E6E4CD3C557FA61E2118805047DA73DA8907A26007C64D7F32BC113F22"
+    ],
+    "version": "0.9.1",
+    "manifestHash": "F41174EABB436172968896C8AAC9DF028FD10BF19C90ECC70AC5F5ECE0744FDA",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-19T17:02:25.9709501Z",
+    "validationCount": 1,
+    "description": ""
   },
   "RocketResearchInc.Compair": {
     "version": "0.6.4",
@@ -5714,6 +5838,17 @@
     "manifestHash": "4B796A972C2DBB5AE75EB8F4F8B332F0CBE77928187E84989680F6AB184F42AA",
     "state": "VALIDATION_PASSED"
   },
+  "termio.soft-jp.com.TermioWin": {
+    "installerHashes": [
+      "84743457DC8E8DE0E3DE452A6E6723B62B854CFC4C63306BE433BF21F5E78583"
+    ],
+    "version": "1.2.23",
+    "manifestHash": "AB22D0C371122C5EAD77EE65F2DAA605BC3802F53E11737D7ED5A761CEBE2CDB",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-19T17:02:25.84848Z",
+    "validationCount": 1,
+    "description": ""
+  },
   "TerraformLinters.tflint": {
     "lastUpdated": "2026-07-17T16:58:17.5554288Z",
     "installerHashes": [
@@ -6202,6 +6337,17 @@
     "manifestHash": "3399E6E02584E58DB2E0509AD2F33915ACDEEB630E8D15FDDA43C0775643F978",
     "state": "VALIDATION_PASSED"
   },
+  "VoiceWave.LocalCore": {
+    "installerHashes": [
+      "0C0DDF0F4E2EE19FE9EB06F76BD4E9EB529F8DB9DB77A30F69BA08B7682DF927"
+    ],
+    "version": "0.6.0",
+    "manifestHash": "5481D2C48B857AFA27362AF24D784D94587C52491CB6FC373D2EB064D027AC08",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-19T17:02:26.0049615Z",
+    "validationCount": 1,
+    "description": ""
+  },
   "Vortenia.Overwatch": {
     "version": "2.0.2",
     "installerHashes": [
@@ -6374,6 +6520,17 @@
     "validationCount": 1,
     "lastUpdated": "2026-08-16T17:10:10.8055461Z"
   },
+  "Winix.When": {
+    "installerHashes": [
+      "D5A2BE3F8DBD4B1BBE361F5F39F8C295F6E728D9B736501F9B9889E45A13BD5A"
+    ],
+    "version": "0.4.0",
+    "manifestHash": "CE852FC84F0FD3EE249D400B297A418CBD3F7EBB1B301D9AA539DC9447FAD884",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-19T17:02:26.0318291Z",
+    "validationCount": 1,
+    "description": ""
+  },
   "Winix.WhoHolds": {
     "manifestHash": "42A8F17B660E32DC30193FBDE3A34B6D0078EAB84A1ECEC0EEFC0122A2D928FD",
     "lastUpdated": "2026-08-18T05:33:46.9236391Z",
@@ -6505,15 +6662,15 @@
     ]
   },
   "yetone.OpenAITranslator": {
-    "version": "0.6.38",
-    "lastUpdated": "2026-08-18T13:04:36.5669241Z",
-    "validationCount": 1,
     "installerHashes": [
-      "28BA2AFE06D1D769F069354499BBCD3480BB2F1214DC3D099C1AF2DB940EF55B"
+      "959E3FD44D666B1A94AC3228BAE17AD5BC05C697EBDD7A62B21D91A3F679C0A3"
     ],
+    "version": "0.6.40",
+    "manifestHash": "B509398342D91C235025AAB12388ACBA4D5C218565642A6379EBE6166A0DC4A7",
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "manifestHash": "02B36C2FE313031C69AE27D21EB1B8FF6911BBA5589ABB829A830295004BE992"
+    "lastUpdated": "2026-08-19T17:02:25.6552217Z",
+    "validationCount": 1,
+    "description": ""
   },
   "yhay81.sqrail": {
     "manifestHash": "AA92A5D534BC7C7BFCE7B9D1BCB8DE43E95DC9878930BB120FDE47BDA7C2F27F",
