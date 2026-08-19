@@ -14,6 +14,17 @@
       "version": "4.2.1.0"
     }
   },
+  "Accreation.Aide": {
+    "version": "0.8.0",
+    "installerHashes": [
+      "3BA25B31A97164D9DBE6C4DE4ACCD0252E26BD5392CB176DEBDBD47FAE9150E3"
+    ],
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "DEA3EBC1D16A0FDD79EFD00D98F1456F0272CFFB1F575244146CBD1FF6F1C8EF",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-19T15:56:01.8183145Z"
+  },
   "achannarasappa.ticker": {
     "lastUpdated": "2026-06-21T18:31:48.864373Z",
     "description": "",
@@ -580,6 +591,17 @@
     "lastUpdated": "2026-08-19T05:34:55.6721554Z",
     "manifestHash": "1D3F22CB5D08647D2C345496D2A3FEA702B321C0C2CC217587B7FCC190045BCC"
   },
+  "bgreenwell.lstr": {
+    "version": "0.4.0",
+    "installerHashes": [
+      "4F0D52C72E4BAE8194108F55DF0A6E2E4D3302D61FC80F0EC6D2A78BFD139F38"
+    ],
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "AD09C3BB6748359E6CAE2BC34BF76CB026150E0EE6303FFB260588A5EF501502",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-19T15:56:01.5776293Z"
+  },
   "biglexj.ElyTesia": {
     "lastUpdated": "2026-08-17T17:04:34.9944895Z",
     "description": "",
@@ -1063,6 +1085,17 @@
     ],
     "version": "1.7.8"
   },
+  "CrowdSecurity.CrowdSecWindowsFirewallBouncer": {
+    "version": "0.0.6",
+    "installerHashes": [
+      "7E5696A6D6D1EC1E33ED953B809792F5D46EA0785A8EA8CB04AFCCC36FBCB3CD"
+    ],
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "2890FB7983A95E66A3019E3FEE122D1EB23108EF96859D0A19C8A6E7E454ED81",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-19T15:56:01.4509515Z"
+  },
   "CryptoPro.Chromium-Gost": {
     "lastUpdated": "2026-08-14T10:42:15.0508057Z",
     "manifestHash": "BBF20B99D387F7FE28DBD12ECAB7BFBF07FF8468EB4EFE7DDAFDB04E2A5AC45D",
@@ -1524,6 +1557,18 @@
       "checkedAt": "2026-08-18T08:42:19.3437599Z"
     }
   },
+  "Essenciary.Githical": {
+    "version": "0.1.5",
+    "installerHashes": [
+      "97B399078C61E3C6FC3EC2A7B05F986B35991D611883EED4392C0C26FEC15F00",
+      "C073EB9D236BB29C32C78060EBE9FF22DFB2D2C97A21D7E4281DB4382E9C67FF"
+    ],
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "85F2C4FA3143784B6D906E66B050BA4AD9E869142A6A6EEC31E171DAB3B473DA",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-19T15:56:01.7976361Z"
+  },
   "Esubaalew.Run": {
     "manifestHash": "CE6CDFB60DBB3B0596B9FD2D537D925ECED86D5E46E1E580143EA4C7C73E2EB8",
     "lastUpdated": "2026-08-18T05:33:46.8322159Z",
@@ -1677,6 +1722,17 @@
       "tag": "v0.14.0",
       "checkedAt": "2026-08-18T08:42:19.3437599Z"
     }
+  },
+  "Fidpa.Hablara": {
+    "version": "1.7.4",
+    "installerHashes": [
+      "F4488FA71BE1E1B203E5A79E0A0F6423115C3BB03D7F677F78F20DA6A2F6883A"
+    ],
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "7064E30536BB862512B412DB3330FCF80DE428DA18258FEEC2F43133FA8B5BF2",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-19T15:56:01.4740262Z"
   },
   "FirenzeLor.gemini-collector": {
     "validationCount": 1,
@@ -2306,15 +2362,15 @@
     }
   },
   "holland-built.Bloxsmith": {
-    "validationCount": 1,
-    "version": "3.66.6",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "A4FB47A7BC91CB3A21C76578669C6466555E3C2A86DE8923625699D2C886897B",
-    "description": "",
+    "version": "3.67.4",
     "installerHashes": [
-      "8B6F0F11E58980A75215ED1F8578D0D242DB9B83AF6C5AF68EBA7E50FDD71A51"
+      "4E81A373DA42A0789583CDDF5033E376D104F2846F3BE3D583C22A56A003EA26"
     ],
-    "lastUpdated": "2026-08-17T21:15:38.0454259Z"
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "E0024AB91FD709FD40837A989C66711258BEABCD7C58AA44381B52B862DA81F4",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-19T15:56:01.650861Z"
   },
   "HongMinhee.Gukhanmun": {
     "manifestHash": "089D5FCFFB565DBC52073976471BB7BB53E1FA33EA888133D45A589919D3AE52",
@@ -2360,6 +2416,17 @@
     "description": "",
     "validationCount": 1,
     "lastUpdated": "2026-08-16T17:10:10.7917233Z"
+  },
+  "hrkfdn.ncspot": {
+    "version": "1.3.4",
+    "installerHashes": [
+      "8D64F13F810D5C6FBBD643C03B64601F88CE4A6CC225FB4D6A0808004B5B1C53"
+    ],
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "E61E75F42212B6FDDC18BB02D7948F6CC13E11BF3DE9BAC8EF2C8B98FE9230A7",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-19T15:56:01.7447536Z"
   },
   "Humanity.DJV2": {
     "lastUpdated": "2026-08-18T01:43:26.4630291Z",
@@ -2829,6 +2896,18 @@
     "state": "VALIDATION_PASSED",
     "validationCount": 4
   },
+  "kmiya-culti.RLogin": {
+    "version": "2.31.8",
+    "installerHashes": [
+      "0522DD4801E67BED63BE3F74E31392148D6A6BC52FB2FE5D98C0E42FA93156FB",
+      "C90B0B665ACAF2170628F60FC7E64E66362FC576E6E55402FDE70D8962BA200B"
+    ],
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "12667776ECA7AA0538D8B16C4ED854862459D002ACEEED445CF56C7A85D28DED",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-19T15:56:01.6784984Z"
+  },
   "KoalaBear84.OpenDirectoryDownloader": {
     "lastUpdated": "2026-07-19T09:22:45.420996Z",
     "installerHashes": [
@@ -3263,6 +3342,17 @@
     ],
     "manifestHash": "BC8B1CFD73DEC4D43A0EDBA5910A9F870D23AC28E2686C1615B72E9A8865F891"
   },
+  "Microsoft.Gaming.GDK.XboxGamePackageManager": {
+    "version": "3.1.18",
+    "installerHashes": [
+      "4DE838D9F308BACBC25F62E0F39D2E6C503B62591CD84FEDAC2D8E26F60E8354"
+    ],
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "E08801E6C13E4898F744537917C7DD2E9C63F108E31AE20C24D4127F70A5EF96",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-19T15:56:01.8384972Z"
+  },
   "Microsoft.LogCheetah": {
     "version": "1.1.0",
     "lastUpdated": "2026-08-18T13:04:36.5492914Z",
@@ -3321,6 +3411,18 @@
       "E7FABE0BD2A14A6021B813F73857FAA691033D54D75FAC0912E4F1A1B379162B",
       "79899F95246AD063F4A57CB4108D1D3FD9A487CE69BBE9BA0E15ED5D230D9AB0"
     ]
+  },
+  "Microsoft.WSL.PreRelease": {
+    "version": "2.7.12",
+    "installerHashes": [
+      "A460D4560215F2EFE003C136244B78EA3415D773824D7A688EA9DED36DBE9145",
+      "1035D7870ED6155B56FEF6966B22ECE5CB8CACACBEA1561140A066111B3E962D"
+    ],
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "AC43E418585B585070DF8599272956558BD4A498AF50E98D093D62A83E4C377D",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-19T15:56:01.6254291Z"
   },
   "MilkShift.GoofCord": {
     "state": "VALIDATION_PASSED",
@@ -3480,6 +3582,17 @@
       "580EBF00BEBA2D20AF6BFED54076169D5AEE0BE0A11CAB3061F68A7F0F370FFF"
     ]
   },
+  "MorganZWest.HSEmulate": {
+    "version": "0.4.1",
+    "installerHashes": [
+      "9577D2DFD4E4285BA2163C1B02D4F654AEC115AF0F31CBE6D2D5303AFAC46F83"
+    ],
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "BFE088BA3CA62A6312C620AD504D8F1BAF7C1E3B04624C1FDA6C24C42BEDC770",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-19T15:56:01.5348059Z"
+  },
   "mpc-qt.mpc-qt": {
     "lastUpdated": "2026-08-18T21:24:38.7912751Z",
     "state": "VALIDATION_PASSED",
@@ -3490,6 +3603,18 @@
       "129A3CFC51CB714EFBA7F97FE0DA090CB4AB8ECE3C2C0F1466B26733B83C2AB4"
     ],
     "version": "26.07"
+  },
+  "MrKaran.Doggo": {
+    "version": "1.3.0",
+    "installerHashes": [
+      "52504B5C399737BE93B23C891F8C6140731F44E2B732AF5DC84C929F319CC58C",
+      "5668BBC6A627930CE0C9262724CB21C180AC15E4F6D2AD841A1EAA2144F9A093"
+    ],
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "D1AF16E191179FD3D62B9D757299657242939DAF134BCA6ABE4BE163C6E9C5D6",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-19T15:56:01.7171088Z"
   },
   "MrMYHuang.cbetar2": {
     "validationCount": 1,
@@ -4140,6 +4265,19 @@
     "version": "3.0.94",
     "state": "VALIDATION_PASSED"
   },
+  "PasteBar.PasteBar": {
+    "version": "0.7.0",
+    "installerHashes": [
+      "141D4577E8DD612A1248AD14D589E2B70DE002BB5EC8F8F92DAB33EA32E578A9",
+      "19214D697F9A4D051DF8438F556FF21FB7FE1716F4C85D478BAB35A2CD1BD92C",
+      "751F0C9AD4F09521A04C9255F289EC52DD6EA7BEB7DE39CE88057AF1D258157D"
+    ],
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "0E51F883A6AE692ED6899CA0EC6E6F268DAFE69727E53F1B08612C21C1D404A5",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-19T15:56:01.7726221Z"
+  },
   "PasteIntoFile.PasteIntoFile": {
     "manifestHash": "2A58645323CF7B59F73C09EDBC577DDC24AD3BAF20371F90F10BDDE91C874B7C",
     "validationCount": 1,
@@ -4483,15 +4621,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Radius.Radius": {
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "lastUpdated": "2026-06-18T23:02:45.7018739Z",
-    "description": "",
-    "manifestHash": "1F3858B92E19097EF365D4AD612736CBCA73504449FC08DC5EBF00852B6E8D71",
-    "version": "0.59.0",
+    "version": "0.60.0",
     "installerHashes": [
-      "DD18E3C0F1A6069358375E78984DF9F499E78354EFFAAAE97D716AAFDE54E470"
-    ]
+      "8427AF4ED14FA8F3DB3EC6490C14F4784CB8AEEB264F7377FD3C7BCDA02C6D2D"
+    ],
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "CC60AA3FCE47A8BBFC36AE963049118CEFD29C6AC8A895CBC315914E54969E0A",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-19T15:56:01.5112998Z"
   },
   "ramdor.Thetis": {
     "version": "2.10.3.15",
@@ -4793,14 +4931,14 @@
     "lastUpdated": "2026-08-16T17:10:10.8626644Z"
   },
   "SanthoshReddy352.NammaAgent": {
-    "lastUpdated": "2026-08-19T12:47:12.7333Z",
+    "lastUpdated": "2026-08-19T15:56:01.3463185Z",
     "state": "VALIDATION_FAILED",
     "installerHashes": [
       "38C3BA3855821505842E7E2C7C809C9BB3BA88391251690CA3FF9A4F3AFAF5AD"
     ],
     "description": "",
     "manifestHash": "49E6C509F0C931FF36BB5D88EE8942341D8265255EC629CA7EF350C74D14BBCE",
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "2.3.2"
   },
   "Saturneric.GpgFrontend": {
@@ -5649,6 +5787,17 @@
     "version": "4.22.0",
     "lastUpdated": "2026-08-05T07:49:49.3068253Z"
   },
+  "Thurbeen.thurbox": {
+    "version": "1.8.6",
+    "installerHashes": [
+      "D75BEEC76C1E0DCC87A1A7F8F8F1AA613FD56CC9D873836CA0A4F6E8682F7AC8"
+    ],
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "17AF06C9923E7AFAEF00F01FBA324EC52E49B408DEB7B6A5F2719C819C8DDCC5",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-19T15:56:01.602663Z"
+  },
   "timminator.VideOCR.CPU": {
     "manifestHash": "CFC267C26B8EF07672651665F457081878373674AA47203E9C0295E1AC077719",
     "lastUpdated": "2026-08-18T05:33:46.9674851Z",
@@ -5938,6 +6087,17 @@
     ],
     "manifestHash": "6516330AEA5FE1E8181DD5322EF6BF5F094B3FA4FFB269CA7006A352FD97E324",
     "validationCount": 1
+  },
+  "vantoan1511.TableView": {
+    "version": "0.6.7",
+    "installerHashes": [
+      "A029255D9ABD2045DE69F1E01ACD6DF07B5D16799D84A3982D66E984E45FA439"
+    ],
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "149E76022D565F22BB6F0FD3E9944E3508768F187DAED146AC94553EF0E39527",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-19T15:56:01.4257805Z"
   },
   "Vathivis.paperq": {
     "manifestHash": "B06377DD1B66556E25E7480DEB2CD833F5CAD6119FFB5963F4405E7D89651FA8",
