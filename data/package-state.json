@@ -3940,7 +3940,11 @@
     "state": "VALIDATION_FAILED",
     "lastUpdated": "2026-07-09T17:52:24.6713678Z",
     "description": "",
-    "validationCount": 1
+    "validationCount": 1,
+    "openPr": {
+      "checkedAt": "2026-08-19T04:22:00.5814648Z",
+      "version": "9.5.0"
+    }
   },
   "peanut996.CloudflareWarpSpeedTest": {
     "configHealth": {
