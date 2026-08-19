@@ -192,9 +192,79 @@ Write-Host 'TEST: truncated asset lists downgrade a miss to Inconclusive'
 $invoker = New-FakeGraphQlInvoker -RepositoriesByAlias @{
     'a0' = [PSCustomObject]@{ latestRelease = (New-Release -Tag 'v1.2.3' -AssetUrls @('https://github.com/owner/ok/releases/download/v1.2.3/other.msi') -TotalCount 150) }
 }
-$results = @(Test-MonitoredPackageAssets -Packages $packages -GraphQlInvoker $invoker)
+$results = @(Test-MonitoredPackageAssets -Packages $packages -GraphQlInvoker $invoker 3>$null)
 if ($results[0].Status -ne 'Inconclusive') {
     throw "Expected Inconclusive on truncated assets, got: $($results[0] | ConvertTo-Json -Compress)"
+}
+
+Write-Host 'TEST: asset lists beyond 100 entries are paginated before matching'
+$script:AssetPageQueries = 0
+$pagedRelease = New-Release -Tag 'v1.2.3' -AssetUrls @('https://github.com/owner/ok/releases/download/v1.2.3/other.msi') -TotalCount 150
+$pagedRelease.releaseAssets | Add-Member -NotePropertyName pageInfo -NotePropertyValue ([PSCustomObject]@{ hasNextPage = $true; endCursor = 'cursor-1' })
+$pagedInvoker = {
+    param([string] $Query)
+
+    if ($Query -match 'after:') {
+        $script:AssetPageQueries++
+        if ($Query -notmatch '"cursor-1"') {
+            throw "The asset pagination query did not reuse the first page's endCursor: $Query"
+        }
+        return [PSCustomObject]@{
+            data = [PSCustomObject]@{
+                repository = [PSCustomObject]@{
+                    release = [PSCustomObject]@{
+                        releaseAssets = [PSCustomObject]@{
+                            pageInfo = [PSCustomObject]@{ hasNextPage = $false; endCursor = $null }
+                            nodes    = @([PSCustomObject]@{ downloadUrl = 'https://github.com/owner/ok/releases/download/v1.2.3/app-1.2.3-x64.msi' })
+                        }
+                    }
+                }
+            }
+        }
+    }
+    $aliases = @([regex]::Matches($Query, '(?m)^\s*(?<Alias>[at]\d+):') | ForEach-Object { $_.Groups['Alias'].Value })
+    $data = [ordered]@{}
+    foreach ($alias in $aliases) {
+        $data[$alias] = [PSCustomObject]@{ latestRelease = $pagedRelease }
+    }
+    [PSCustomObject]@{ data = [PSCustomObject]$data }
+}
+$twoSharedRepoPackages = @(
+    [PSCustomObject]@{
+        id   = 'Test.Ok'
+        repo = 'owner/ok'
+        url  = 'https://github.com/owner/ok/releases/download/v{VERSION}/app-{VERSION}-x64.msi|x64'
+    },
+    [PSCustomObject]@{
+        id   = 'Test.OkTwin'
+        repo = 'owner/ok'
+        url  = 'https://github.com/owner/ok/releases/download/v{VERSION}/app-{VERSION}-x64.msi|x64'
+    }
+)
+$results = @(Test-MonitoredPackageAssets -Packages $twoSharedRepoPackages -GraphQlInvoker $pagedInvoker)
+foreach ($result in $results) {
+    if ($result.Status -ne 'OK') {
+        throw "Expected the paginated asset match to report OK, got: $($result | ConvertTo-Json -Compress)"
+    }
+}
+if ($script:AssetPageQueries -ne 1) {
+    throw "Expected one memoized asset pagination query for the shared release, got $script:AssetPageQueries."
+}
+
+Write-Host 'TEST: failed asset pagination keeps a miss Inconclusive'
+$brokenRelease = New-Release -Tag 'v1.2.3' -AssetUrls @('https://github.com/owner/ok/releases/download/v1.2.3/other.msi') -TotalCount 150
+$brokenRelease.releaseAssets | Add-Member -NotePropertyName pageInfo -NotePropertyValue ([PSCustomObject]@{ hasNextPage = $true; endCursor = 'cursor-1' })
+$brokenInvoker = {
+    param([string] $Query)
+
+    if ($Query -match 'after:') {
+        return [PSCustomObject]@{ data = $null }
+    }
+    return [PSCustomObject]@{ data = [PSCustomObject]@{ a0 = [PSCustomObject]@{ latestRelease = $brokenRelease } } }
+}
+$results = @(Test-MonitoredPackageAssets -Packages $packages -GraphQlInvoker $brokenInvoker 3>$null)
+if ($results[0].Status -ne 'Inconclusive') {
+    throw "Expected Inconclusive when asset pagination fails, got: $($results[0] | ConvertTo-Json -Compress)"
 }
 
 Write-Host 'TEST: entries without repo/url are skipped'
