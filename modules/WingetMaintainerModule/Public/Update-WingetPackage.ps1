@@ -32,6 +32,7 @@ function Update-WingetPackage {
         [Parameter(Mandatory = $false)] [string] $GHURLs,
         [Parameter(Mandatory = $false)] [string] $GHTagPattern,
         [Parameter(Mandatory = $false)][ValidateSet('Tag', 'ReleaseName')] [string] $GHVersionSource = 'Tag',
+        [Parameter(Mandatory = $false)] [bool] $GHPreRelease = $false,
         [Parameter(Mandatory = $false)] [string] $WinMatschOverridePack,
         [Parameter(Mandatory = $false)] [bool] $AllowStructuralRewrite = $false,
         [Parameter(Mandatory = $false)]
@@ -96,7 +97,7 @@ function Update-WingetPackage {
     }
     elseif ($GHRepo -and $GHURLs) {
 
-        $versionTag = Get-LatestGHVersionTag -Repo $GHRepo -TagPattern $GHTagPattern
+        $versionTag = Get-LatestGHVersionTag -Repo $GHRepo -TagPattern $GHTagPattern -PackageId $WingetPackage -AllowPrerelease:$GHPreRelease
         $latestVersion = Get-LatestARPVersion `
             -Repo $GHRepo `
             -Tag $versionTag `

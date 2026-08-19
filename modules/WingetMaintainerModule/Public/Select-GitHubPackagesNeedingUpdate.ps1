@@ -304,6 +304,13 @@ function Select-GitHubPackagesNeedingUpdate {
         elseif ([string]::IsNullOrWhiteSpace($packageId) -or [string]::IsNullOrWhiteSpace($repo)) {
             $include.Add([PSCustomObject]@{ Package = $package; Reason = 'IncompleteConfiguration' })
         }
+        elseif (Test-WingetPreReleaseOptIn -Value (Get-WingetGraphQlFieldValue -InputObject $package -Name 'pre-release')) {
+            # Prerelease-channel packages cannot be resolved from latestRelease
+            # (GraphQL latestRelease and isLatest never point at prereleases) and
+            # the precheck's release matching is stable-only, so a stable-derived
+            # comparison could wrongly skip them. Always run the full job (fail-open).
+            $include.Add([PSCustomObject]@{ Package = $package; Reason = 'PrereleaseChannel' })
+        }
         elseif (-not [string]::IsNullOrWhiteSpace($tagPattern) -or
             (-not [string]::IsNullOrWhiteSpace($versionSource) -and $versionSource -ne 'Tag') -or
             -not [string]::IsNullOrWhiteSpace($overridePack) -or
@@ -410,7 +417,9 @@ function Select-GitHubPackagesNeedingUpdate {
             $sliceUrl = Get-WingetPrecheckPackageField -Package $slicePackage -Name 'url'
 
             $selection = if (-not [string]::IsNullOrWhiteSpace($sliceTagPattern)) {
-                'releases(first: 50, orderBy: {field: CREATED_AT, direction: DESC}) { nodes { tagName name isDraft isPrerelease publishedAt } }'
+                # Window shared with Get-LatestGHVersionTag so precheck and full
+                # job scan the same set of recent releases.
+                "releases(first: $(Get-WingetReleaseLookbackWindow), orderBy: {field: CREATED_AT, direction: DESC}) { nodes { tagName name isDraft isPrerelease publishedAt } }"
             }
             else {
                 $releaseFields = 'tagName'

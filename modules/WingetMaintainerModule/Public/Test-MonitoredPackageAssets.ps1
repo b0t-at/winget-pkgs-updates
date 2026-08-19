@@ -180,12 +180,15 @@ function Test-MonitoredPackageAssets {
         }
 
         $tagPattern = Get-WingetPrecheckPackageField -Package $package -Name 'tagPattern'
+        # Prerelease-channel entries (pre-release: "true") resolve against
+        # prerelease-flagged releases, mirroring Get-LatestGHVersionTag.
+        $allowPrerelease = Test-WingetPreReleaseOptIn -Value (Get-WingetGraphQlFieldValue -InputObject $package -Name 'pre-release')
         $releaseNodes = @($releaseNodesByRepo[$repo])
         $matching = @($releaseNodes |
                 Where-Object {
                     $null -ne $_ -and
                     -not [bool](Get-WingetGraphQlFieldValue -InputObject $_ -Name 'isDraft') -and
-                    -not [bool](Get-WingetGraphQlFieldValue -InputObject $_ -Name 'isPrerelease') -and
+                    ($allowPrerelease -or -not [bool](Get-WingetGraphQlFieldValue -InputObject $_ -Name 'isPrerelease')) -and
                     "$(Get-WingetGraphQlFieldValue -InputObject $_ -Name 'tagName')" -match $tagPattern
                 } |
                 Sort-Object -Property @{ Expression = { "$(Get-WingetGraphQlFieldValue -InputObject $_ -Name 'publishedAt')" } } -Descending)

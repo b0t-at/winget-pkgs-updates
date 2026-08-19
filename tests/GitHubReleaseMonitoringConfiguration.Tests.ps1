@@ -208,4 +208,64 @@ if ($distinctCronMinutes.Count -ne $generatedCronMinutes.Count) {
     throw "Generated GH package workflows must use distinct cron minutes to stagger API load, got: $($generatedCronMinutes.Values -join ', ')."
 }
 
+# Stream-versioned monitored entries (Vendor.App.39, Vendor.App.Beta, ...) must
+# pin their stream explicitly; resolving them from the repo-global latest
+# release publishes wrong-stream versions (OpenJS.Electron.39 -> 43.4.0).
+# Validated in both the source-of-truth yml and every generated sidecar so a
+# config edit cannot re-introduce the failure mode.
+$module = Import-Module (Join-Path $repositoryRoot 'modules/WingetMaintainerModule/WingetMaintainerModule.psd1') -Force -PassThru -WarningAction SilentlyContinue
+
+# PLFJY.ContextMenuMgrPlus.Beta is being disabled in a parallel change;
+# reconfiguring it here would conflict. Follow-up: re-enable the entry with
+# tagPattern '-Beta' + pre-release: "true" once both changes have landed.
+$streamGuardExemptPackageIds = @('PLFJY.ContextMenuMgrPlus.Beta')
+
+function Get-ActiveMonitoredEntries {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string] $Path
+    )
+
+    $entries = [System.Collections.Generic.List[object]]::new()
+    $current = $null
+    foreach ($line in (Get-Content -LiteralPath $Path)) {
+        if ($line -match '^\s*#') { continue }
+        if ($line -match '^\s*-\s*id:\s*(?<q>[''"])(?<id>.+?)\k<q>\s*$') {
+            if ($null -ne $current) { $entries.Add($current) }
+            $current = @{ id = $Matches['id'] }
+            continue
+        }
+        if ($null -ne $current -and $line -match '^\s*(?<key>[A-Za-z-]+)\s*:\s*(?<q>[''"])(?<value>.*?)\k<q>\s*$') {
+            $current[$Matches['key']] = $Matches['value']
+        }
+    }
+    if ($null -ne $current) { $entries.Add($current) }
+    return @($entries)
+}
+
+$monitoredEntries = Get-ActiveMonitoredEntries -Path (Join-Path $repositoryRoot 'github-releases-monitored.yml')
+if ($monitoredEntries.Count -lt 100) {
+    throw "Parsing github-releases-monitored.yml yielded only $($monitoredEntries.Count) active entries; the parser or the file is broken."
+}
+
+$entrySets = [ordered]@{ 'github-releases-monitored.yml' = $monitoredEntries }
+foreach ($generatedRelativePath in $generatedWorkflowPaths) {
+    $generatedContent = Get-Content -LiteralPath (Join-Path $repositoryRoot $generatedRelativePath) -Raw
+    if ($generatedContent -match '(?m)^\s+MONITORED_PACKAGES_FILE:\s*(\S+)\s*$') {
+        $sidecarRelativePath = $Matches[1]
+        $entrySets[$sidecarRelativePath] = @((Get-Content -LiteralPath (Join-Path $repositoryRoot $sidecarRelativePath) -Raw) | ConvertFrom-Json)
+    }
+}
+
+foreach ($entrySet in $entrySets.GetEnumerator()) {
+    $violations = @(& $module {
+            param($Packages, $ExemptPackageIds)
+            Get-WingetStreamConfigViolation -Packages $Packages -ExemptPackageIds $ExemptPackageIds
+        } $entrySet.Value $streamGuardExemptPackageIds)
+    if ($violations.Count -gt 0) {
+        $details = @($violations | ForEach-Object { "  - $($_.Message)" }) -join [Environment]::NewLine
+        throw "$($entrySet.Key) contains stream-versioned entries without a stream pin:$([Environment]::NewLine)$details"
+    }
+}
+
 Write-Host 'GitHub release monitoring configuration regression tests passed.' -ForegroundColor Green

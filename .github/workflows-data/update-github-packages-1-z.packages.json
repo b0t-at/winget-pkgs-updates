@@ -501,7 +501,9 @@
   {
     "id": "flyingpie.windows-terminal-quake.prerelease",
     "repo": "flyingpie/windows-terminal-quake",
-    "url": "https://github.com/flyingpie/windows-terminal-quake/releases/download/v{VERSION}/win-x64_self-contained.zip"
+    "url": "https://github.com/flyingpie/windows-terminal-quake/releases/download/v{VERSION}/win-x64_self-contained.zip",
+    "tagPattern": "^v\\d+\\.\\d+\\.\\d+-pre",
+    "pre-release": "true"
   },
   {
     "id": "Forkgram.Forkgram",
@@ -2374,7 +2376,8 @@
   {
     "id": "Digimezzo.Dopamine.3",
     "repo": "digimezzo/dopamine",
-    "url": "https://github.com/digimezzo/dopamine/releases/download/v{VERSION}/Dopamine-{VERSION}.exe"
+    "url": "https://github.com/digimezzo/dopamine/releases/download/v{VERSION}/Dopamine-{VERSION}.exe",
+    "tagPattern": "^v3\\."
   },
   {
     "id": "Dimmy.Dimmy",
@@ -2424,7 +2427,9 @@
   {
     "id": "DonutWare.Fladder.Nightly",
     "repo": "DonutWare/Fladder",
-    "url": "https://github.com/DonutWare/Fladder/releases/download/nightly/Fladder-Windows-{VERSION}-nightly-Setup.exe"
+    "url": "https://github.com/DonutWare/Fladder/releases/download/{TAG}/Fladder-Windows-{ARPVERSION}-nightly-Setup.exe",
+    "tagPattern": "^nightly$",
+    "pre-release": "true"
   },
   {
     "id": "dragonflylee.switchfin",
@@ -3515,12 +3520,14 @@
   {
     "id": "Microsoft.WSL.PreRelease",
     "repo": "microsoft/WSL",
-    "url": "https://github.com/microsoft/WSL/releases/download/{VERSION}/wsl.{VERSION}.0.x64.msi https://github.com/microsoft/WSL/releases/download/{VERSION}/wsl.{VERSION}.0.arm64.msi"
+    "url": "https://github.com/microsoft/WSL/releases/download/{VERSION}/wsl.{VERSION}.0.x64.msi https://github.com/microsoft/WSL/releases/download/{VERSION}/wsl.{VERSION}.0.arm64.msi",
+    "pre-release": "true"
   },
   {
     "id": "mikf.gallery-dl.Nightly",
     "repo": "gdl-org/builds",
-    "url": "https://github.com/gdl-org/builds/releases/download/{VERSION}/gallery-dl_windows_x86.exe https://github.com/gdl-org/builds/releases/download/{VERSION}/gallery-dl_windows.exe"
+    "url": "https://github.com/gdl-org/builds/releases/download/{VERSION}/gallery-dl_windows_x86.exe https://github.com/gdl-org/builds/releases/download/{VERSION}/gallery-dl_windows.exe",
+    "tagPattern": "^\\d{4}\\."
   },
   {
     "id": "Miller.Miller",
@@ -3890,7 +3897,9 @@
   {
     "id": "OpenDumpViewer.OpenDumpViewer.BETA",
     "repo": "Open-DUMP-Viewer/Open-DUMP-Viewer",
-    "url": "https://github.com/Open-DUMP-Viewer/Open-DUMP-Viewer/releases/download/v{VERSION}-beta/OpenDumpViewer_v{VERSION}-beta_installer_x64.exe https://github.com/Open-DUMP-Viewer/Open-DUMP-Viewer/releases/download/v{VERSION}-beta/OpenDumpViewer_v{VERSION}-beta_installer_arm64.exe"
+    "url": "https://github.com/Open-DUMP-Viewer/Open-DUMP-Viewer/releases/download/{TAG}/OpenDumpViewer_v{ARPVERSION}-beta_installer_x64.exe https://github.com/Open-DUMP-Viewer/Open-DUMP-Viewer/releases/download/{TAG}/OpenDumpViewer_v{ARPVERSION}-beta_installer_arm64.exe",
+    "tagPattern": "-beta$",
+    "pre-release": "true"
   },
   {
     "id": "OpenGeos.GeoLibre",
@@ -4374,7 +4383,8 @@
   {
     "id": "seerge.g-helper.PreRelease",
     "repo": "seerge/g-helper",
-    "url": "https://github.com/seerge/g-helper/releases/download/v{VERSION}/GHelper.zip"
+    "url": "https://github.com/seerge/g-helper/releases/download/v{VERSION}/GHelper.zip",
+    "pre-release": "true"
   },
   {
     "id": "Sefinek.GenshinStellaMod",
@@ -5169,7 +5179,8 @@
   {
     "id": "yt-dlp.yt-dlp.nightly",
     "repo": "yt-dlp/yt-dlp-nightly-builds",
-    "url": "https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/download/{VERSION}/yt-dlp_x86.exe https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/download/{VERSION}/yt-dlp.exe https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/download/{VERSION}/yt-dlp_arm64.exe"
+    "url": "https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/download/{VERSION}/yt-dlp_x86.exe https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/download/{VERSION}/yt-dlp.exe https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/download/{VERSION}/yt-dlp_arm64.exe",
+    "tagPattern": "^\\d{4}\\."
   },
   {
     "id": "YuminZhan.WinLinker",
