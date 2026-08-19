@@ -578,15 +578,15 @@
     }
   },
   "BenModigell.Vibes": {
-    "lastUpdated": "2026-08-18T01:43:26.498181Z",
+    "lastUpdated": "2026-08-19T17:46:50.1099889Z",
+    "version": "1.4.3",
+    "validationCount": 1,
+    "description": "",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "6F4D447857804AF5A3B78DA9E3593CB2683ACA5D2409B9B910E4A6E0AD2B31DB"
+      "6CE4E86045F11AD634187BA273E92494F51151DC54B88AEDB4E2DFF1209F2EF2"
     ],
-    "description": "",
-    "manifestHash": "C8E45D6309FEAD3173CE090390EF95350CF6FAF5FA49A41DD0A1585EFDE8EB64",
-    "validationCount": 1,
-    "version": "1.4.2"
+    "manifestHash": "9D3B0C943EF9812892D6DA59E0BAFEE5E5EC91526CF0F4A11F4FD3BDEDA4242D"
   },
   "bensadeh.tailspin": {
     "validationCount": 1,
@@ -935,6 +935,17 @@
       "C6A49FDF8F85D22BC91E09C13D10AAE0405A995ED202779427D3545DD0D5F4BA"
     ],
     "manifestHash": "CB0825A096FCC95E520B44198542F6C1553ED3C12FA5C3E4219D7A57A15AECF5"
+  },
+  "chuthree.BrewGuide": {
+    "lastUpdated": "2026-08-19T17:46:49.9495234Z",
+    "version": "1.6.2",
+    "validationCount": 1,
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "916BF2952EEAC762265838F5F596231506ABFEF5214FA307BA259EDD110812BB"
+    ],
+    "manifestHash": "82351274A9E01E7CFD70287374193F07DDA2D0C8B813622DCC78D1394FA4972E"
   },
   "Cilium.CiliumCLI": {
     "state": "VALIDATION_PASSED",
@@ -1506,6 +1517,18 @@
       "checkedAt": "2026-08-19T17:08:37.7814003Z",
       "version": "5.2.0"
     }
+  },
+  "Ellosoft.AWSCredentialsManager": {
+    "lastUpdated": "2026-08-19T17:46:49.9916688Z",
+    "version": "1.2.0",
+    "validationCount": 1,
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "12C2B24E5B1BEDA3F053043564C9B61199BFDF11B8DFDB383B60A6CAEC72C71F",
+      "6295310005F6FF6F79848BE24BB78B5B1D1CA9DA6B82E67E660E3BDDEB9C5A7C"
+    ],
+    "manifestHash": "DD19C4F6466DFE8D79750E310CC6D6A372536FF7A9D1803D607590F31E4AA3F4"
   },
   "EmanueleMicheletti.Proxelar": {
     "validationCount": 1,
@@ -2175,16 +2198,16 @@
     ]
   },
   "Google.OSVScanner": {
-    "installerHashes": [
-      "4342285BD8BE36B9F113468F3EEA86E7900BEFBCD19CA8DC6AC4F0F6CBE7C362",
-      "B8BB8D499E0636E193688C96834A11A8F74E353734053F9641E546D76A0CB857"
-    ],
-    "state": "VALIDATION_PASSED",
-    "version": "2.5.0",
-    "manifestHash": "9397EBBB43ECACB8E8FDFF61F46EFDD5C0FFF9D2544C35A7D697C2BD0B4F2FC4",
+    "lastUpdated": "2026-08-19T17:46:50.172129Z",
+    "version": "2.5.1",
     "validationCount": 1,
-    "lastUpdated": "2026-08-14T09:49:55.9133448Z",
-    "description": ""
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "25E42F5EF6711FD8C0FB45390972205891DD44C6BD02AC93F0F63E8E98D9BFB6",
+      "33FEB0B210A3E5EA7B338C719DEFC899F8833D990CDD297BCAD4FF1A2586EC8B"
+    ],
+    "manifestHash": "8A93D198AD57BF64282A1C20A5B26813247BA8F368CBBC5002B3A2AECCF79CDA"
   },
   "Google.Protobuf": {
     "description": "",
@@ -2383,6 +2406,17 @@
       "tag": "v4.1.1",
       "checkedAt": "2026-08-18T08:42:19.3437599Z"
     }
+  },
+  "HishamMedhat.PortPeek": {
+    "lastUpdated": "2026-08-19T17:46:50.1862956Z",
+    "version": "1.2.3",
+    "validationCount": 1,
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "71281F1A95121DADA4E58FFD0A54066107FEB7314A2AF52EDA65A268185D9773"
+    ],
+    "manifestHash": "423C80406767A6B457D4F90B359A7368A66D86CBBA37E520C851AF1E35914488"
   },
   "Hitalin.NoteDeck": {
     "manifestHash": "8CDE7AD7010F8C9115352636A1876A5CEE54F3D0BD1D504159903A15DB0DCA48",
@@ -4024,6 +4058,17 @@
     "version": "2.11.0.1",
     "state": "VALIDATION_PASSED"
   },
+  "OctopusDeploy.Cli": {
+    "lastUpdated": "2026-08-19T17:46:50.0246358Z",
+    "version": "2.23.10",
+    "validationCount": 1,
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "F6B7E3417A35FCFB1C71C4A5003836DC553744CA1F889497F99BAE1235127C7E"
+    ],
+    "manifestHash": "DE3CC668750C9F3AC782C73D69AB58FD57C5AB835C4DB1364586BD7ED2B51E6C"
+  },
   "Odonno.jj-commit": {
     "manifestHash": "5DEEC796FC97FAFB87D651D8665D1047EEC17B48138E6BB533E18E19ED7B19F2",
     "lastUpdated": "2026-08-16T13:40:51.6717348Z",
@@ -4090,6 +4135,17 @@
     "installerHashes": [
       "AB3C94A150B3F659A74DA27A9038C3F057AAF8E9B033499BD199CBB4F2173018"
     ]
+  },
+  "OmniEdge.OmniEdgeCLI": {
+    "lastUpdated": "2026-08-19T17:46:50.0401148Z",
+    "version": "2.9.0",
+    "validationCount": 1,
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "E9B44B428A5D631EE4803799FD3BDF26B443D84060DC30B70E6D15EDAD91513A"
+    ],
+    "manifestHash": "15BB42ACAAFCC898439282B5E53B4B20528B638D0DE165421DDB22C157A464BA"
   },
   "OneGal.Viper": {
     "lastUpdated": "2026-08-18T21:24:38.5283803Z",
@@ -5026,10 +5082,10 @@
       "73E28654DA750A58CC710CFF82C245C5AFBD2FF68652E531FBDE12935416A713",
       "E2AA8C22252DA6115ED67DE2A865DDF0D15372A875789906D3CEA55CE59087CF"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "1.1.0",
     "description": "",
-    "lastUpdated": "2026-08-16T12:25:11.4997852Z",
+    "lastUpdated": "2026-08-19T17:46:50.1356101Z",
     "state": "VALIDATION_PASSED"
   },
   "S3Drive.S3Drive": {
@@ -5703,6 +5759,17 @@
     ],
     "manifestHash": "7FAD77E1870F482FEA66C41E65F6AF3ED6BDD80F5DB3976E7F98C8F62E9E4F48"
   },
+  "swperb.imgcli": {
+    "lastUpdated": "2026-08-19T17:46:50.2068484Z",
+    "version": "0.5.0",
+    "validationCount": 1,
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "9113BDCA6D3F3BE1763390A69631179AAC6EABE0C598E04F38363762AA22866C"
+    ],
+    "manifestHash": "AEE9C9A6572BF5A672F693C608FEFFBE6717BB20A6DA3F676D7CF11E11FD0C11"
+  },
   "Syncplay.Syncplay": {
     "installerHashes": [
       "76D0614A97DD2695F2B00988847BABFD53F7EC6CE5C6914ACD7F875D7F2EB1D3"
@@ -6145,6 +6212,17 @@
     "manifestHash": "F79CB6AE5B2EA822011E5858038ACA43647AC0422147951DB9DD63138B02F65D",
     "state": "VALIDATION_PASSED"
   },
+  "ulyssa.iamb": {
+    "lastUpdated": "2026-08-19T17:46:50.0947991Z",
+    "version": "0.0.11",
+    "validationCount": 1,
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "E3B03084ABF9FB1BF7B2B1E8B27F01B9701D76B1AAA5EB82102181043A76211E"
+    ],
+    "manifestHash": "FB70380E9348261DF9D1DFF3F8DBCF7C76A8288DE9C9D88BC4BAC1BDAA5EBD3D"
+  },
   "ungive.MusicPresence": {
     "lastUpdated": "2026-08-16T21:14:48.9639019Z",
     "description": "",
@@ -6459,6 +6537,17 @@
       "tag": "v26.3.26",
       "checkedAt": "2026-08-18T08:42:19.3437599Z"
     }
+  },
+  "WildByDesign.AppControlTrayTool": {
+    "lastUpdated": "2026-08-19T17:46:50.1567077Z",
+    "version": "6.1.0",
+    "validationCount": 1,
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "7D74E2A09D9205156D98BB01968FE1BB72AB35743687A1A710427CD0B0D5B002"
+    ],
+    "manifestHash": "E765AA019AE4E6C19DD4D567B2492C389CBFF4EB1DDC84E7BFCE19C3F8DB7ED3"
   },
   "WillyJL.F95Checker": {
     "validationCount": 4,
