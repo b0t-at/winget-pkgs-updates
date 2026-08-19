@@ -9,7 +9,7 @@
 | Package Version Handling| Count|
 |----------------------------|---------------------------------------------------------------|
 | Script based     | ![Script based Packages](https://img.shields.io/badge/ScriptPackages-23-green) |
-| GitHub Release based     | ![GitHub based Packages](https://img.shields.io/badge/GithubPackages-1045-blue) |
+| GitHub Release based     | ![GitHub based Packages](https://img.shields.io/badge/GithubPackages-1042-blue) |
 
 
 ## Package-specific WinMatsch overrides
