@@ -162,6 +162,74 @@ try {
     Assert-Equal -Actual $retryAfterSleepDurations[0] -Expected 7 -Message 'The retry-after delay was not honored.'
     Assert-Equal -Actual $tooManyRequestsResult[0].tag_name -Expected 'v1.0.0' -Message 'The HTTP 429 retry result was incorrect.'
 
+    Write-Host 'TEST: transient server errors retry when opted in'
+    $transientAttempts = [System.Collections.Generic.List[int]]::new()
+    $transientSleeps = [System.Collections.Generic.List[int]]::new()
+    $transientResult = Invoke-WithGitHubRateLimitRetry `
+        -ScriptBlock {
+            $transientAttempts.Add(1)
+            if ($transientAttempts.Count -eq 1) {
+                $exception = [System.Exception]::new('Bad gateway')
+                $exception.Data['StatusCode'] = 502
+                throw $exception
+            }
+            return 'recovered'
+        } `
+        -OperationName 'transient test' `
+        -RetryTransientServerErrors `
+        -Sleep { param([int]$Seconds) $transientSleeps.Add($Seconds) } `
+        -UtcNowProvider $utcNowProvider `
+        -WarningAction SilentlyContinue
+
+    Assert-Equal -Actual $transientAttempts.Count -Expected 2 -Message 'The HTTP 502 request was not retried.'
+    Assert-Equal -Actual $transientSleeps[0] -Expected 5 -Message 'The transient retry backoff delay was incorrect.'
+    Assert-Equal -Actual $transientResult -Expected 'recovered' -Message 'The transient retry result was incorrect.'
+
+    Write-Host 'TEST: transient server errors are not retried without opt-in'
+    $nonOptInAttempts = [System.Collections.Generic.List[int]]::new()
+    $nonOptInMessage = $null
+    try {
+        Invoke-WithGitHubRateLimitRetry `
+            -ScriptBlock {
+                $nonOptInAttempts.Add(1)
+                $exception = [System.Exception]::new('Bad gateway')
+                $exception.Data['StatusCode'] = 502
+                throw $exception
+            } `
+            -Sleep { param([int]$Seconds) } `
+            -UtcNowProvider $utcNowProvider
+    }
+    catch {
+        $nonOptInMessage = $_.Exception.Message
+    }
+
+    Assert-Equal -Actual $nonOptInAttempts.Count -Expected 1 -Message 'The HTTP 502 request was retried without opt-in.'
+    Assert-Equal -Actual $nonOptInMessage -Expected 'Bad gateway' -Message 'The non-opt-in failure was not rethrown as-is.'
+
+    Write-Host 'TEST: exhausted transient server errors rethrow the original failure'
+    $exhaustedAttempts = [System.Collections.Generic.List[int]]::new()
+    $exhaustedStatusCode = $null
+    try {
+        Invoke-WithGitHubRateLimitRetry `
+            -ScriptBlock {
+                $exhaustedAttempts.Add(1)
+                $exception = [System.Exception]::new('Service unavailable')
+                $exception.Data['StatusCode'] = 503
+                throw $exception
+            } `
+            -RetryTransientServerErrors `
+            -MaxAttempts 2 `
+            -Sleep { param([int]$Seconds) } `
+            -UtcNowProvider $utcNowProvider `
+            -WarningAction SilentlyContinue
+    }
+    catch {
+        $exhaustedStatusCode = $_.Exception.Data['StatusCode']
+    }
+
+    Assert-Equal -Actual $exhaustedAttempts.Count -Expected 2 -Message 'The exhausted transient request attempt count was incorrect.'
+    Assert-Equal -Actual $exhaustedStatusCode -Expected 503 -Message 'The exhausted transient failure did not keep its original status code.'
+
     Write-Host 'TEST: distant rate-limit reset fails with actionable guidance'
     $distantResetInvoker = {
         param([hashtable]$Parameters)

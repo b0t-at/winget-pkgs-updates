@@ -48,6 +48,7 @@ function Invoke-WingetPrecheckGraphQlRequest {
         -OperationName 'GitHub GraphQL update precheck' `
         -MaxAttempts 5 `
         -MaxTotalWaitSeconds 240 `
+        -RetryTransientServerErrors `
         -ScriptBlock {
             $response = Invoke-RestMethod `
                 -Method Post `
@@ -197,6 +198,13 @@ function Select-GitHubPackagesNeedingUpdate {
         already published are skipped; every ambiguous case is included so a
         precheck miss can never suppress a real update (fail-open).
 
+        GraphQL failures are contained per batch: packages in a failed batch are
+        included (Reason 'PrecheckBatchFailed') while other batches still produce
+        normal skip decisions. When the winget-pkgs published-versions query
+        fails, the winget source index (a CDN copy of the catalog) supplies the
+        published versions instead, so a transient GitHub error no longer forces
+        the whole run open.
+
     .OUTPUTS
         PSCustomObject with Include and Skipped lists. Each entry carries the
         original Package object plus a Reason string.
@@ -239,11 +247,21 @@ function Select-GitHubPackagesNeedingUpdate {
         # included without a check (fail-open).
         [Parameter()]
         [ValidateRange(0, 1000)]
-        [int] $MaxOpenPrChecks = 30
+        [int] $MaxOpenPrChecks = 30,
+
+        # Injectable for tests: returns winget source-index rows (objects with
+        # PackageIdentifier and WingetVersion properties) used as the
+        # published-versions fallback when a winget-pkgs batch query fails.
+        # Defaults to Get-WingetSourceIndexPackage.
+        [Parameter()]
+        [scriptblock] $SourceIndexProvider
     )
 
     if ($null -eq $GraphQlInvoker) {
         $GraphQlInvoker = { param([string] $Query) Invoke-WingetPrecheckGraphQlRequest -Query $Query }
+    }
+    if ($null -eq $SourceIndexProvider) {
+        $SourceIndexProvider = { Get-WingetSourceIndexPackage }
     }
 
     $openPrCheckEnabled = -not [string]::IsNullOrWhiteSpace($StateFilePath)
@@ -317,8 +335,11 @@ function Select-GitHubPackagesNeedingUpdate {
     }
 
     # Pass 1: latest release tag per unique repository, batched with aliases.
+    # A failed batch marks its repositories so their packages fail open below,
+    # while other batches still produce normal skip decisions.
     $uniqueRepos = @($comparable | ForEach-Object { Get-WingetPrecheckPackageField -Package $_ -Name 'repo' } | Sort-Object -Unique)
     $latestTagByRepo = @{}
+    $failedRepoLookups = [System.Collections.Generic.HashSet[string]]::new([System.StringComparer]::OrdinalIgnoreCase)
     for ($offset = 0; $offset -lt $uniqueRepos.Count; $offset += $BatchSize) {
         $repoSlice = @($uniqueRepos[$offset..([Math]::Min($offset + $BatchSize, $uniqueRepos.Count) - 1)])
         $fields = for ($i = 0; $i -lt $repoSlice.Count; $i++) {
@@ -326,7 +347,17 @@ function Select-GitHubPackagesNeedingUpdate {
             "r$($i): repository(owner: $(ConvertTo-WingetGraphQlStringLiteral -Value $owner), name: $(ConvertTo-WingetGraphQlStringLiteral -Value $name)) { latestRelease { tagName } }"
         }
         $query = "query {`n" + (($fields | ForEach-Object { "  $_" }) -join "`n") + "`n}"
-        $response = & $GraphQlInvoker $query
+        $response = $null
+        try {
+            $response = & $GraphQlInvoker $query
+        }
+        catch {
+            Write-Warning "Update precheck release query failed for a batch of $($repoSlice.Count) repositories: $($_.Exception.Message). Including their packages."
+            foreach ($failedRepo in $repoSlice) {
+                $null = $failedRepoLookups.Add($failedRepo)
+            }
+            continue
+        }
         $data = Get-WingetGraphQlFieldValue -InputObject $response -Name 'data'
 
         for ($i = 0; $i -lt $repoSlice.Count; $i++) {
@@ -342,6 +373,11 @@ function Select-GitHubPackagesNeedingUpdate {
     $candidates = [System.Collections.Generic.List[object]]::new()
     foreach ($package in @($comparable)) {
         $repo = Get-WingetPrecheckPackageField -Package $package -Name 'repo'
+
+        if ($failedRepoLookups.Contains($repo)) {
+            $include.Add([PSCustomObject]@{ Package = $package; Reason = 'PrecheckBatchFailed' })
+            continue
+        }
 
         $latestTag = [string]$latestTagByRepo[$repo]
         if ([string]::IsNullOrWhiteSpace($latestTag)) {
@@ -361,7 +397,8 @@ function Select-GitHubPackagesNeedingUpdate {
     # Pass 1b: resolve versions for packages whose version needs release
     # metadata beyond the latest tag (tagPattern / ReleaseName / {ARPVERSION}),
     # batched with one aliased repository field per package. Any resolution
-    # failure includes the package unconditionally (fail-open).
+    # failure includes the package unconditionally (fail-open); a failed batch
+    # query includes only that batch.
     $resolvableArray = @($resolvable)
     for ($offset = 0; $offset -lt $resolvableArray.Count; $offset += $BatchSize) {
         $packageSlice = @($resolvableArray[$offset..([Math]::Min($offset + $BatchSize, $resolvableArray.Count) - 1)])
@@ -384,7 +421,17 @@ function Select-GitHubPackagesNeedingUpdate {
             "u$($i): repository(owner: $(ConvertTo-WingetGraphQlStringLiteral -Value $owner), name: $(ConvertTo-WingetGraphQlStringLiteral -Value $name)) { $selection }"
         }
         $query = "query {`n" + (($fields | ForEach-Object { "  $_" }) -join "`n") + "`n}"
-        $response = & $GraphQlInvoker $query
+        $response = $null
+        try {
+            $response = & $GraphQlInvoker $query
+        }
+        catch {
+            Write-Warning "Update precheck release-metadata query failed for a batch of $($packageSlice.Count) packages: $($_.Exception.Message). Including them."
+            foreach ($slicePackage in $packageSlice) {
+                $include.Add([PSCustomObject]@{ Package = $slicePackage; Reason = 'PrecheckBatchFailed' })
+            }
+            continue
+        }
         $data = Get-WingetGraphQlFieldValue -InputObject $response -Name 'data'
 
         for ($i = 0; $i -lt $packageSlice.Count; $i++) {
@@ -401,8 +448,14 @@ function Select-GitHubPackagesNeedingUpdate {
     }
 
     # Pass 2: published versions per package from microsoft/winget-pkgs, batched
-    # as multiple object() fields under a single repository field.
-    $publishedEntriesByPackageId = @{}
+    # as multiple object() fields under a single repository field. When a batch
+    # fails even after retries, the winget source index (a CDN copy of the
+    # catalog that lags master by a few hours) supplies the published versions
+    # instead — the lag can only cause an extra include, never a false skip.
+    # Packages the fallback cannot resolve are included.
+    $publishedStateByPackageId = @{}
+    $sourceIndexVersionsById = $null
+    $sourceIndexLoadAttempted = $false
     $candidatesArray = @($candidates)
     for ($offset = 0; $offset -lt $candidatesArray.Count; $offset += $BatchSize) {
         $candidateSlice = @($candidatesArray[$offset..([Math]::Min($offset + $BatchSize, $candidatesArray.Count) - 1)])
@@ -414,16 +467,68 @@ function Select-GitHubPackagesNeedingUpdate {
         $query = "query {`n  repository(owner: `"microsoft`", name: `"winget-pkgs`") {`n" +
             (($fields | ForEach-Object { "    $_" }) -join "`n") +
             "`n  }`n}"
-        $response = & $GraphQlInvoker $query
-        $data = Get-WingetGraphQlFieldValue -InputObject $response -Name 'data'
-        $repository = Get-WingetGraphQlFieldValue -InputObject $data -Name 'repository'
-        if ($null -eq $repository) {
-            throw 'GitHub GraphQL update precheck could not read microsoft/winget-pkgs.'
+        $repository = $null
+        $batchFailure = $null
+        try {
+            $response = & $GraphQlInvoker $query
+            $data = Get-WingetGraphQlFieldValue -InputObject $response -Name 'data'
+            $repository = Get-WingetGraphQlFieldValue -InputObject $data -Name 'repository'
+            if ($null -eq $repository) {
+                throw 'GitHub GraphQL update precheck could not read microsoft/winget-pkgs.'
+            }
+        }
+        catch {
+            $batchFailure = $_.Exception.Message
+        }
+
+        if ($null -eq $batchFailure) {
+            for ($i = 0; $i -lt $candidateSlice.Count; $i++) {
+                $packageId = Get-WingetPrecheckPackageField -Package $candidateSlice[$i].Package -Name 'id'
+                $treeObject = Get-WingetGraphQlFieldValue -InputObject $repository -Name "p$i"
+                if ($null -eq $treeObject) {
+                    $publishedStateByPackageId[$packageId] = [PSCustomObject]@{ Status = 'Missing'; Versions = @() }
+                    continue
+                }
+                $entriesValue = Get-WingetGraphQlFieldValue -InputObject $treeObject -Name 'entries'
+                $entries = if ($null -eq $entriesValue) { @() } else { @($entriesValue) }
+                $publishedVersions = @($entries |
+                        Where-Object { "$(Get-WingetGraphQlFieldValue -InputObject $_ -Name 'type')" -eq 'tree' } |
+                        ForEach-Object { [string](Get-WingetGraphQlFieldValue -InputObject $_ -Name 'name') })
+                $publishedStateByPackageId[$packageId] = [PSCustomObject]@{ Status = 'Resolved'; Versions = $publishedVersions }
+            }
+            continue
+        }
+
+        Write-Warning "Update precheck winget-pkgs query failed for a batch of $($candidateSlice.Count) packages: $batchFailure. Falling back to the winget source index."
+        if (-not $sourceIndexLoadAttempted) {
+            $sourceIndexLoadAttempted = $true
+            try {
+                $indexVersions = [System.Collections.Generic.Dictionary[string, string]]::new([System.StringComparer]::OrdinalIgnoreCase)
+                foreach ($row in @(& $SourceIndexProvider)) {
+                    $rowId = [string](Get-WingetGraphQlFieldValue -InputObject $row -Name 'PackageIdentifier')
+                    $rowVersion = [string](Get-WingetGraphQlFieldValue -InputObject $row -Name 'WingetVersion')
+                    if (-not [string]::IsNullOrWhiteSpace($rowId) -and -not [string]::IsNullOrWhiteSpace($rowVersion)) {
+                        $indexVersions[$rowId] = $rowVersion
+                    }
+                }
+                $sourceIndexVersionsById = $indexVersions
+            }
+            catch {
+                # Fail-open: without the index, failed batches stay included.
+                Write-Warning "Winget source index fallback unavailable: $($_.Exception.Message). Including the affected packages."
+            }
         }
 
         for ($i = 0; $i -lt $candidateSlice.Count; $i++) {
             $packageId = Get-WingetPrecheckPackageField -Package $candidateSlice[$i].Package -Name 'id'
-            $publishedEntriesByPackageId[$packageId] = Get-WingetGraphQlFieldValue -InputObject $repository -Name "p$i"
+            if ($null -ne $sourceIndexVersionsById -and $sourceIndexVersionsById.ContainsKey($packageId)) {
+                $publishedStateByPackageId[$packageId] = [PSCustomObject]@{ Status = 'Resolved'; Versions = @([string]$sourceIndexVersionsById[$packageId]) }
+            }
+            else {
+                # Not in the index (brand-new package, or index unavailable): the
+                # precheck cannot prove it is published, so it stays included.
+                $publishedStateByPackageId[$packageId] = [PSCustomObject]@{ Status = 'Failed'; Versions = @() }
+            }
         }
     }
 
@@ -432,20 +537,19 @@ function Select-GitHubPackagesNeedingUpdate {
         $version = [string]$candidate.Version
         $packageId = Get-WingetPrecheckPackageField -Package $package -Name 'id'
 
-        $treeObject = $publishedEntriesByPackageId[$packageId]
-        if ($null -eq $treeObject) {
+        $publishedState = $publishedStateByPackageId[$packageId]
+        if ($null -eq $publishedState -or $publishedState.Status -eq 'Failed') {
+            $include.Add([PSCustomObject]@{ Package = $package; Reason = 'PrecheckBatchFailed'; Version = $version })
+            continue
+        }
+
+        if ($publishedState.Status -eq 'Missing') {
             Write-Warning "Package $packageId was not found in microsoft/winget-pkgs. Skipping it in the update precheck."
             $skipped.Add([PSCustomObject]@{ Package = $package; Reason = 'PackageMissing' })
             continue
         }
 
-        $entriesValue = Get-WingetGraphQlFieldValue -InputObject $treeObject -Name 'entries'
-        $entries = if ($null -eq $entriesValue) { @() } else { @($entriesValue) }
-        $publishedVersions = @($entries |
-                Where-Object { "$(Get-WingetGraphQlFieldValue -InputObject $_ -Name 'type')" -eq 'tree' } |
-                ForEach-Object { [string](Get-WingetGraphQlFieldValue -InputObject $_ -Name 'name') })
-
-        $match = Find-WingetPublishedVersionMatch -Version $version -PublishedVersions $publishedVersions
+        $match = Find-WingetPublishedVersionMatch -Version $version -PublishedVersions @($publishedState.Versions)
         if ($null -ne $match) {
             $skipped.Add([PSCustomObject]@{ Package = $package; Reason = 'AlreadyPublished'; Version = $version })
         }
