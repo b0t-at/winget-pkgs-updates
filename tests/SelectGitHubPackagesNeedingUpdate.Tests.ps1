@@ -590,6 +590,125 @@ Assert-Equal 'Include:UnpredictableVersionSource' (Get-ReasonFor $resolved.Selec
 Assert-Equal 'Skipped:AlreadyPublished' (Get-ReasonFor $resolved.Selection 'Vendor.TagWithArp') 'published ARPVERSION asset version is skipped'
 Assert-Equal $false ($resolved.ResolvableQueries -join ' ' -match 'tagarp') 'unsupported combination is never queried'
 
+# 12) GraphQL partial errors (HTTP 200 + errors array) never masquerade as
+#     positive evidence: an errored pass-2 alias is a failed lookup (not
+#     PackageMissing), sibling aliases keep their real results, and an
+#     error-free null object remains a legitimate missing-package skip.
+$partialErrors = & $module {
+    $invoker = {
+        param([string] $Query)
+        if ($Query -notmatch 'winget-pkgs') {
+            $data = @{}
+            foreach ($alias in [regex]::Matches($Query, '(r\d+): repository\(')) {
+                $data[$alias.Groups[1].Value] = @{ latestRelease = @{ tagName = 'v2.0.0' } }
+            }
+            return @{ data = $data }
+        }
+        # Pass 2: p0 errors out with a null object, p1 resolves normally,
+        # p2 is null WITHOUT an error entry (manifest folder genuinely absent).
+        return @{
+            errors = @(@{ path = @('p0'); message = 'timeout reading tree' })
+            data   = @{ repository = @{
+                p0 = $null
+                p1 = @{ entries = @(@{ name = '2.0.0'; type = 'tree' }) }
+                p2 = $null
+            } }
+        }
+    }
+    Select-GitHubPackagesNeedingUpdate -Packages @(
+        @{ id = 'Vendor.Errored'; repo = 'vendor/errored'; url = 'https://example.com/{VERSION}.exe' },
+        @{ id = 'Vendor.Sibling'; repo = 'vendor/sibling'; url = 'https://example.com/{VERSION}.exe' },
+        @{ id = 'Vendor.Absent'; repo = 'vendor/absent'; url = 'https://example.com/{VERSION}.exe' }
+    ) -GraphQlInvoker $invoker -SourceIndexProvider { throw 'index unavailable' } -WarningAction SilentlyContinue
+}
+Assert-Equal 'Include:PrecheckBatchFailed' (Get-ReasonFor $partialErrors 'Vendor.Errored') 'pass-2 per-alias error fails open instead of PackageMissing'
+Assert-Equal 'Skipped:AlreadyPublished' (Get-ReasonFor $partialErrors 'Vendor.Sibling') 'error-free sibling alias in the same batch keeps its real result'
+Assert-Equal 'Skipped:PackageMissing' (Get-ReasonFor $partialErrors 'Vendor.Absent') 'null object without an error entry remains a missing-package skip'
+
+# 12b) A per-alias pass-2 error resolves through the winget source-index
+#      fallback when the index knows the package.
+$partialErrorIndexed = & $module {
+    $invoker = {
+        param([string] $Query)
+        if ($Query -notmatch 'winget-pkgs') {
+            return @{ data = @{ r0 = @{ latestRelease = @{ tagName = 'v1.0.0' } } } }
+        }
+        return @{
+            errors = @(@{ path = @('p0'); message = 'timeout reading tree' })
+            data   = @{ repository = @{ p0 = $null } }
+        }
+    }
+    Select-GitHubPackagesNeedingUpdate -Packages @(
+        @{ id = 'Vendor.Errored'; repo = 'vendor/errored'; url = 'https://example.com/{VERSION}.exe' }
+    ) -GraphQlInvoker $invoker -SourceIndexProvider {
+        @([PSCustomObject]@{ PackageIdentifier = 'Vendor.Errored'; WingetVersion = '1.0.0' })
+    } -WarningAction SilentlyContinue
+}
+Assert-Equal 'Skipped:AlreadyPublished' (Get-ReasonFor $partialErrorIndexed 'Vendor.Errored') 'per-alias pass-2 error resolves via the source-index fallback'
+
+# 12c) Errors with null data fail the whole batch open.
+$nullData = & $module {
+    $invoker = {
+        param([string] $Query)
+        if ($Query -notmatch 'winget-pkgs') {
+            return @{ data = @{ r0 = @{ latestRelease = @{ tagName = 'v1.0.0' } } } }
+        }
+        return @{ errors = @(@{ message = 'total failure' }); data = $null }
+    }
+    Select-GitHubPackagesNeedingUpdate -Packages @(
+        @{ id = 'Vendor.A'; repo = 'vendor/a'; url = 'https://example.com/{VERSION}.exe' }
+    ) -GraphQlInvoker $invoker -SourceIndexProvider { throw 'index unavailable' } -WarningAction SilentlyContinue
+}
+Assert-Equal 'Include:PrecheckBatchFailed' (Get-ReasonFor $nullData 'Vendor.A') 'errors with null data fail the whole batch open'
+
+# 12d) A pass-1 per-alias error becomes a failed repository lookup instead of
+#      "repo without releases"; the error-free sibling keeps its skip decision.
+$pass1Partial = & $module {
+    $invoker = {
+        param([string] $Query)
+        if ($Query -notmatch 'winget-pkgs') {
+            # r0 errors out, r1 resolves; aliases follow the sorted unique
+            # repository list (vendor/errored before vendor/good).
+            return @{
+                errors = @(@{ path = @('r0'); message = 'server error' })
+                data   = @{ r0 = $null; r1 = @{ latestRelease = @{ tagName = 'v1.0.0' } } }
+            }
+        }
+        $repoData = @{}
+        foreach ($alias in [regex]::Matches($Query, '(p\d+): object\(')) {
+            $repoData[$alias.Groups[1].Value] = @{ entries = @(@{ name = '1.0.0'; type = 'tree' }) }
+        }
+        return @{ data = @{ repository = $repoData } }
+    }
+    Select-GitHubPackagesNeedingUpdate -Packages @(
+        @{ id = 'Vendor.Errored'; repo = 'vendor/errored'; url = 'https://example.com/{VERSION}.exe' },
+        @{ id = 'Vendor.Good'; repo = 'vendor/good'; url = 'https://example.com/{VERSION}.exe' }
+    ) -GraphQlInvoker $invoker -WarningAction SilentlyContinue
+}
+Assert-Equal 'Include:PrecheckBatchFailed' (Get-ReasonFor $pass1Partial 'Vendor.Errored') 'pass-1 per-alias error becomes a failed repo lookup'
+Assert-Equal 'Skipped:AlreadyPublished' (Get-ReasonFor $pass1Partial 'Vendor.Good') 'pass-1 sibling alias without an error keeps its result'
+
+# 12e) A pass-1b per-alias error includes the package as batch-failed instead
+#      of mislabeling it an unresolvable version source.
+$pass1bPartial = & $module {
+    $invoker = {
+        param([string] $Query)
+        if ($Query -match 'u\d+: repository') {
+            return @{
+                errors = @(@{ path = @('u0'); message = 'server error' })
+                data   = @{ u0 = $null }
+            }
+        }
+        if ($Query -notmatch 'winget-pkgs') { return @{ data = @{} } }
+        return @{ data = @{ repository = @{} } }
+    }
+    Select-GitHubPackagesNeedingUpdate -Packages @(
+        @{ id = 'Vendor.Tagged'; repo = 'vendor/tagged'; url = 'https://example.com/{VERSION}.exe'; tagPattern = '^v1\..*' }
+    ) -GraphQlInvoker $invoker -WarningAction SilentlyContinue
+}
+Assert-Equal 'Include:PrecheckBatchFailed' (Get-ReasonFor $pass1bPartial 'Vendor.Tagged') 'pass-1b per-alias error includes the package as batch-failed'
+
+
 if ($script:failures -gt 0) {
     Write-Host "$script:failures assertion(s) failed."
     exit 1
