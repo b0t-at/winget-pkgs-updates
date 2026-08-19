@@ -10,7 +10,7 @@
       "6A0E4ECEF8D6550574028FF367BB623C362A99D5D71C6FDBAB2115F6DDBE19E9"
     ],
     "openPr": {
-      "checkedAt": "2026-08-18T16:15:27.6020257Z",
+      "checkedAt": "2026-08-19T17:09:39.0492195Z",
       "version": "4.2.1.0"
     }
   },
@@ -23,7 +23,11 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "DEA3EBC1D16A0FDD79EFD00D98F1456F0272CFFB1F575244146CBD1FF6F1C8EF",
     "validationCount": 1,
-    "lastUpdated": "2026-08-19T15:56:01.8183145Z"
+    "lastUpdated": "2026-08-19T15:56:01.8183145Z",
+    "openPr": {
+      "checkedAt": "2026-08-19T17:09:40.4413681Z",
+      "version": "0.8.0"
+    }
   },
   "achannarasappa.ticker": {
     "lastUpdated": "2026-06-21T18:31:48.864373Z",
@@ -78,17 +82,21 @@
     "version": "0.107.78"
   },
   "AdGuard.dnsproxy": {
+    "description": "",
     "installerHashes": [
       "9A78ED5386B7963B14FE90E5B40C26AD73C00602A8D08AD352DA978504971173",
       "83AF4B4D8B185B93F7B2EB001D30EB93A659E8F5F057C085F662810A76AA87E5",
       "6613EB5030185E65EA12AB240E462AE9F36D5A929B6766257A9B467F93B690E7"
     ],
-    "version": "0.84.1",
-    "manifestHash": "3BD6D6F7B48462CF3A02CF2DC2AFC0881BD072C354168DB528A71B4A35E8E30B",
-    "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-08-19T17:02:25.8797854Z",
+    "manifestHash": "3BD6D6F7B48462CF3A02CF2DC2AFC0881BD072C354168DB528A71B4A35E8E30B",
+    "openPr": {
+      "checkedAt": "2026-08-19T17:08:35.0316239Z",
+      "version": "0.84.1"
+    },
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "description": ""
+    "version": "0.84.1"
   },
   "AES256Afro.VideoKidnapper": {
     "lastUpdated": "2026-08-18T17:25:13.9659991Z",
@@ -1495,7 +1503,7 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "3EAB1E5A6E607AC40A8D48C149D5E5B2207604A2D465245704CB6FD111942437",
     "openPr": {
-      "checkedAt": "2026-08-18T16:15:22.7792523Z",
+      "checkedAt": "2026-08-19T17:08:37.7814003Z",
       "version": "5.2.0"
     }
   },
@@ -2899,7 +2907,7 @@
     "validationCount": 1,
     "version": "18.1.1",
     "openPr": {
-      "checkedAt": "2026-08-18T16:15:24.2154439Z",
+      "checkedAt": "2026-08-19T17:08:39.4639181Z",
       "version": "18.1.1"
     }
   },
@@ -4741,7 +4749,11 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "CC60AA3FCE47A8BBFC36AE963049118CEFD29C6AC8A895CBC315914E54969E0A",
     "validationCount": 1,
-    "lastUpdated": "2026-08-19T15:56:01.5112998Z"
+    "lastUpdated": "2026-08-19T15:56:01.5112998Z",
+    "openPr": {
+      "checkedAt": "2026-08-19T17:08:39.7943471Z",
+      "version": "0.60.0"
+    }
   },
   "ramdor.Thetis": {
     "version": "2.10.3.15",
