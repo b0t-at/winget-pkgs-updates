@@ -50,6 +50,30 @@ function Update-WingetPackage {
         Reason       = $null
     }
 
+    # Every terminating error below - own throws as well as ones bubbling out of
+    # helper functions such as Test-GeneratedInstallerArchitecture - must surface a
+    # structured failure payload first, otherwise the workflow's generate-failure
+    # marker steps have no details to render. The GeneratorFailed branch writes a
+    # richer payload itself and sets $failurePayloadWritten so this trap skips it.
+    $failurePayloadWritten = $false
+    trap {
+        if ($env:GITHUB_OUTPUT -and -not $failurePayloadWritten) {
+            $trapGeneratorVariable = Get-Variable -Name EffectiveWith -ErrorAction SilentlyContinue
+            $trapGenerator = if ($trapGeneratorVariable) { $trapGeneratorVariable.Value } else { $With }
+            $trapVersion = if ($result.Version) { $result.Version } else { $latestVersion }
+            # GITHUB_OUTPUT key=value entries are line based, so flatten the message.
+            $trapError = ("$_" -replace '\r?\n', ' ').Trim()
+            "generated=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            "reason=UnhandledError" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            "package-id=$WingetPackage" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            "version=$trapVersion" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            "generator=$trapGenerator" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            "error=$trapError" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+        }
+        # Rethrow the original error so the step still fails.
+        break
+    }
+
     # Custom validation
     if (-not $IsTemplateUpdate -and -not $WebsiteURL -and (-not $latestVersion -or -not $latestVersionURL)) {
         throw "Either WebsiteURL or both latestVersion and latestVersionURL are required."
@@ -307,6 +331,12 @@ function Update-WingetPackage {
                         "error=$generatorError" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
                     }
 
+                    # The GitHub runner's pwsh step epilogue runs
+                    # `if (Test-Path variable:\LASTEXITCODE) { exit $LASTEXITCODE }`,
+                    # so winmatsch's leftover exit code 4 would fail the step even
+                    # though this benign stop returns without throwing. Reset it so
+                    # the job stays green and the needs-decision steps can run.
+                    $global:LASTEXITCODE = 0
                     return $result
                 }
 
@@ -322,6 +352,7 @@ function Update-WingetPackage {
                     "generator-exit-code=$generatorExitCode" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
                     "error-code=$generatorErrorCode" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
                     "error=$generatorError" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                    $failurePayloadWritten = $true
                 }
 
                 throw "$EffectiveWith update failed for $wingetPackage $($Latest.Version) with exit code $generatorExitCode. $generatorError"

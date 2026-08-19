@@ -200,7 +200,7 @@ jobs:
           if-no-files-found: error
 
       - name: Record needs-decision marker
-        if: steps.generate.outputs.reason == 'QuestionsRequired'
+        if: ${{ !cancelled() && steps.generate.outputs.reason == 'QuestionsRequired' }}
         shell: pwsh
         env:
           JOB_NAME: Generate ${{ matrix.id }}
@@ -226,7 +226,7 @@ jobs:
           Get-Content -Path ./needs-decision/question.json
 
       - name: Upload needs-decision marker
-        if: steps.generate.outputs.reason == 'QuestionsRequired'
+        if: ${{ !cancelled() && steps.generate.outputs.reason == 'QuestionsRequired' }}
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         continue-on-error: true
         with:
@@ -236,7 +236,7 @@ jobs:
           if-no-files-found: ignore
 
       - name: Record generation failure
-        if: failure()
+        if: ${{ failure() && steps.generate.outputs.reason != 'QuestionsRequired' }}
         shell: pwsh
         env:
           JOB_NAME: Generate ${{ matrix.id }}
@@ -267,7 +267,7 @@ jobs:
           Get-Content -Path ./generate-failure/failure.json
 
       - name: Upload generation failure marker
-        if: failure()
+        if: ${{ failure() && steps.generate.outputs.reason != 'QuestionsRequired' }}
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         continue-on-error: true
         with:
@@ -1005,7 +1005,9 @@ jobs:
         submit-pr,
       ]
     runs-on: ubuntu-latest
-    if: always() && failure() && vars.NTFY_URL != ''
+    # Run on every failure - even without NTFY_URL - so the missing-variable
+    # warning below is visible instead of the job being silently skipped.
+    if: always() && failure()
 
     steps:
       - name: Checkout
@@ -1013,7 +1015,14 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Warn when NTFY_URL is not configured
+        if: vars.NTFY_URL == ''
+        shell: pwsh
+        run: |
+          Write-Host "::warning::NTFY_URL not configured — failure notifications disabled"
+
       - name: Send failure notification
+        if: vars.NTFY_URL != ''
         shell: pwsh
         run: |
           $runUrl = "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
