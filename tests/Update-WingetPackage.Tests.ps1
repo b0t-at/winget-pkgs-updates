@@ -366,10 +366,12 @@ $questionsRequiredResult = & $module {
             -With 'WinMatsch' `
             -latestVersion '1.0.0' `
             -latestVersionURL 'https://example.invalid/app.zip'
+        $exitCodeAfterUpdate = $LASTEXITCODE
 
         [PSCustomObject]@{
-            Result        = $result
-            OutputContent = (Get-Content -LiteralPath $outputFile -Raw)
+            Result              = $result
+            ExitCodeAfterUpdate = $exitCodeAfterUpdate
+            OutputContent       = (Get-Content -LiteralPath $outputFile -Raw)
         }
     }
     finally {
@@ -382,6 +384,9 @@ if ($questionsRequiredResult.Result.Generated -or $questionsRequiredResult.Resul
 }
 if ($questionsRequiredResult.OutputContent -notmatch '(?m)^reason=QuestionsRequired\s*$') {
     throw "The QuestionsRequired reason was not written to GITHUB_OUTPUT: $($questionsRequiredResult.OutputContent)"
+}
+if ($questionsRequiredResult.ExitCodeAfterUpdate -ne 0) {
+    throw "QuestionsRequired left LASTEXITCODE=$($questionsRequiredResult.ExitCodeAfterUpdate); the GitHub runner pwsh epilogue (exit `$LASTEXITCODE) would fail the step."
 }
 
 Write-Host 'TEST: non-question WinMatsch failures still throw as GeneratorFailed'
@@ -408,20 +413,144 @@ $generatorFailedResult = & $module {
         $global:LASTEXITCODE = 5
     }
 
+    $originalGitHubOutput = $env:GITHUB_OUTPUT
+    $outputFile = Join-Path ([IO.Path]::GetTempPath()) "winget-generator-failed-$([guid]::NewGuid().ToString('N')).txt"
+    $env:GITHUB_OUTPUT = $outputFile
     try {
-        Update-WingetPackage `
-            -WingetPackage 'Test.Package' `
-            -With 'WinMatsch' `
-            -latestVersion '1.0.0' `
-            -latestVersionURL 'https://example.invalid/app.zip' | Out-Null
-        [PSCustomObject]@{ Threw = $false; Message = $null }
+        $threw = $false
+        $message = $null
+        try {
+            Update-WingetPackage `
+                -WingetPackage 'Test.Package' `
+                -With 'WinMatsch' `
+                -latestVersion '1.0.0' `
+                -latestVersionURL 'https://example.invalid/app.zip' | Out-Null
+        }
+        catch {
+            $threw = $true
+            $message = $_.Exception.Message
+        }
+        [PSCustomObject]@{
+            Threw         = $threw
+            Message       = $message
+            OutputContent = (Get-Content -LiteralPath $outputFile -Raw)
+        }
     }
-    catch {
-        [PSCustomObject]@{ Threw = $true; Message = $_.Exception.Message }
+    finally {
+        $env:GITHUB_OUTPUT = $originalGitHubOutput
+        Remove-Item -LiteralPath $outputFile -Force -ErrorAction SilentlyContinue
     }
 }
 if (-not $generatorFailedResult.Threw -or $generatorFailedResult.Message -notmatch 'exit code 5') {
     throw "A real generator failure no longer fails the job: $($generatorFailedResult | ConvertTo-Json -Compress)"
+}
+if ($generatorFailedResult.OutputContent -notmatch '(?m)^reason=GeneratorFailed\s*$') {
+    throw "The GeneratorFailed reason was not written to GITHUB_OUTPUT: $($generatorFailedResult.OutputContent)"
+}
+if ($generatorFailedResult.OutputContent -match '(?m)^reason=UnhandledError\s*$') {
+    throw "The trap overwrote the GeneratorFailed payload: $($generatorFailedResult.OutputContent)"
+}
+
+Write-Host 'TEST: architecture-validation failures write the failure payload before throwing'
+$archValidationResult = & $module {
+    function Test-GitHubToken { 'test-token' }
+    function Test-PackageAndVersionInGithub {
+        [PSCustomObject]@{
+            PackageExists          = $true
+            ShouldGenerate         = $true
+            VersionExists          = $false
+            CanonicalVersion       = '1.0.0'
+            PublishedVersion       = $null
+            LatestPublishedVersion = $null
+        }
+    }
+    function Test-ExistingPRs { $false }
+    function Install-WinMatsch {}
+    function winmatsch {
+        $global:LASTEXITCODE = 0
+    }
+    function Test-GeneratedInstallerArchitecture {
+        throw "Installer architecture validation failed for Test.Package 1.0.0:`n - Generated architecture mismatch for https://example.invalid/app.zip: expected x86, got [x64]"
+    }
+
+    $originalGitHubOutput = $env:GITHUB_OUTPUT
+    $outputFile = Join-Path ([IO.Path]::GetTempPath()) "winget-arch-failure-$([guid]::NewGuid().ToString('N')).txt"
+    $env:GITHUB_OUTPUT = $outputFile
+    try {
+        $threw = $false
+        $message = $null
+        try {
+            Update-WingetPackage `
+                -WingetPackage 'Test.Package' `
+                -With 'WinMatsch' `
+                -latestVersion '1.0.0' `
+                -latestVersionURL 'https://example.invalid/app.zip' | Out-Null
+        }
+        catch {
+            $threw = $true
+            $message = $_.Exception.Message
+        }
+        [PSCustomObject]@{
+            Threw         = $threw
+            Message       = $message
+            OutputContent = (Get-Content -LiteralPath $outputFile -Raw)
+        }
+    }
+    finally {
+        $env:GITHUB_OUTPUT = $originalGitHubOutput
+        Remove-Item -LiteralPath $outputFile -Force -ErrorAction SilentlyContinue
+    }
+}
+if (-not $archValidationResult.Threw -or $archValidationResult.Message -notmatch 'architecture validation failed') {
+    throw "The architecture-validation failure no longer propagates: $($archValidationResult | ConvertTo-Json -Compress)"
+}
+if ($archValidationResult.OutputContent -notmatch '(?m)^reason=UnhandledError\s*$') {
+    throw "The architecture-validation failure did not write the failure payload: $($archValidationResult.OutputContent)"
+}
+if ($archValidationResult.OutputContent -notmatch '(?m)^package-id=Test\.Package\s*$') {
+    throw "The failure payload is missing the package id: $($archValidationResult.OutputContent)"
+}
+if ($archValidationResult.OutputContent -notmatch '(?m)^version=1\.0\.0\s*$') {
+    throw "The failure payload is missing the version: $($archValidationResult.OutputContent)"
+}
+if ($archValidationResult.OutputContent -notmatch '(?m)^error=.*architecture validation failed.*Generated architecture mismatch.*$') {
+    throw "The failure payload did not flatten the error message onto one line: $($archValidationResult.OutputContent)"
+}
+
+Write-Host 'TEST: early validation failures write the failure payload before throwing'
+$earlyValidationResult = & $module {
+    $originalGitHubOutput = $env:GITHUB_OUTPUT
+    $outputFile = Join-Path ([IO.Path]::GetTempPath()) "winget-early-failure-$([guid]::NewGuid().ToString('N')).txt"
+    $env:GITHUB_OUTPUT = $outputFile
+    try {
+        $threw = $false
+        $message = $null
+        try {
+            Update-WingetPackage -WingetPackage 'Test.Package' -With 'WinMatsch' | Out-Null
+        }
+        catch {
+            $threw = $true
+            $message = $_.Exception.Message
+        }
+        [PSCustomObject]@{
+            Threw         = $threw
+            Message       = $message
+            OutputContent = (Get-Content -LiteralPath $outputFile -Raw)
+        }
+    }
+    finally {
+        $env:GITHUB_OUTPUT = $originalGitHubOutput
+        Remove-Item -LiteralPath $outputFile -Force -ErrorAction SilentlyContinue
+    }
+}
+if (-not $earlyValidationResult.Threw -or $earlyValidationResult.Message -notmatch 'WebsiteURL') {
+    throw "The early validation failure no longer propagates: $($earlyValidationResult | ConvertTo-Json -Compress)"
+}
+if ($earlyValidationResult.OutputContent -notmatch '(?m)^reason=UnhandledError\s*$') {
+    throw "The early validation failure did not write the failure payload: $($earlyValidationResult.OutputContent)"
+}
+if ($earlyValidationResult.OutputContent -notmatch '(?m)^package-id=Test\.Package\s*$') {
+    throw "The early failure payload is missing the package id: $($earlyValidationResult.OutputContent)"
 }
 
 Write-Host 'All Update-WingetPackage regression tests passed.' -ForegroundColor Green
