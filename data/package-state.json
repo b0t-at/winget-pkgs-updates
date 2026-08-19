@@ -822,6 +822,18 @@
     "manifestHash": "BC6ED50F594F6C11603A1671BAF99E11AEE602F827D9F3123AE74880C853F704",
     "version": "47.0.3"
   },
+  "ByteNess.AWSVault": {
+    "description": "",
+    "manifestHash": "3D6708079E709C32028709CCFBDAF2A9953F07FBCE64DA70141D7F40B0B4D8A0",
+    "lastUpdated": "2026-08-19T21:00:00.3076345Z",
+    "version": "7.13.5",
+    "installerHashes": [
+      "C1474248B5444BA8A20E72009F05904EAF9A537E1C5CED126B309E0CC93E8270",
+      "408C0F2F7B50C9D4B062307F45AF3557FDF0C7807F27E59504B4445FB860C859"
+    ],
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
+  },
   "CameronSutter.Plottr": {
     "validationCount": 6,
     "state": "VALIDATION_PASSED",
@@ -1003,6 +1015,18 @@
     "description": "",
     "validationCount": 1,
     "lastUpdated": "2026-08-16T17:10:10.9033621Z"
+  },
+  "Cloudreve.Cloudreve": {
+    "description": "",
+    "manifestHash": "9E2CFB92696FB40D0BCCC4D4ABA9F28AE821B50D7B3FABA8419822D3C5F724C9",
+    "lastUpdated": "2026-08-19T21:00:00.3901991Z",
+    "version": "4.18.0",
+    "installerHashes": [
+      "48F8FCE4EA95AA9F43F16843EF77D913BBB824F714C96E24884BEBE64B7C361F",
+      "7ABDA5F4DB043FB9007302DB855DED3CCB7EFCCAE6B91A7E3E1AB8BFCC51B95B"
+    ],
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
   },
   "CoderKinley.Musik": {
     "lastUpdated": "2026-08-17T17:04:34.9387433Z",
@@ -1541,6 +1565,17 @@
     "lastUpdated": "2026-08-19T05:34:55.9273398Z",
     "manifestHash": "CF417CC1A7DAF1863F2D844A685BBF9EFFCF6D406C95E6FF0D2D27D685AC4C3B"
   },
+  "ENIAC-Tech.FlexDesigner": {
+    "description": "",
+    "manifestHash": "BEC0CFFCFF54E945A6F621BB3815546461F3BEE3F278BD1957CE44DF3C528200",
+    "lastUpdated": "2026-08-19T21:00:00.3490987Z",
+    "version": "2.2.3",
+    "installerHashes": [
+      "290B7C140F0E8EC23B247F960D79F9CADDE84220008CCCEC78C7F71F033AC7B2"
+    ],
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
+  },
   "ente-io.photos-desktop": {
     "lastUpdated": "2026-07-08T05:44:24.163119Z",
     "validationCount": 1,
@@ -1736,15 +1771,15 @@
     "state": "VALIDATION_PASSED"
   },
   "f4exb.sdrangel": {
-    "validationCount": 1,
-    "lastUpdated": "2026-07-04T20:57:39.6397377Z",
-    "version": "7.27.1",
-    "state": "VALIDATION_PASSED",
+    "description": "",
+    "manifestHash": "7D6168B0A7F55F89FBA39A8CE1CC318BF2345C47712DF4752054810669E1231C",
+    "lastUpdated": "2026-08-19T21:00:00.1840355Z",
+    "version": "7.27.2",
     "installerHashes": [
-      "F8130BBF67D962202AA0136C89C6AB3DB5E07FB4C0E66378836ABFFE1C297A99"
+      "96E4D6C83AD554A78173310F78302162FD52463D6A890DA58211021DABF74DC2"
     ],
-    "manifestHash": "B8F084B62E83EDF5947A3A45543CE6B9279924550BC17FD7AEE86D5AA655B1FD",
-    "description": ""
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
   },
   "facebook.pyrefly": {
     "version": "1.2.0",
@@ -2008,6 +2043,17 @@
     "state": "VALIDATION_PASSED",
     "version": "1.39.2",
     "description": ""
+  },
+  "GavinGe021.hasher": {
+    "description": "",
+    "manifestHash": "8BDE6802C8C786D13807E96BE1CF0BD9DB4FB21704E15190072774C4B456DD96",
+    "lastUpdated": "2026-08-19T21:00:00.2945298Z",
+    "version": "2.3.0",
+    "installerHashes": [
+      "4B7CB519EA93DAEA0EE910DF897388EA600997CCDA139CEDBB547192E9FAC8FB"
+    ],
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
   },
   "GDQuest.GDScript.Formatter": {
     "version": "0.24.0",
@@ -2663,6 +2709,17 @@
       "B36B2CC2A4ED654679048FA6DEE511B2A59D310805FF247EABEF6FC499B29505"
     ],
     "manifestHash": "FB784A67B80076E60928D7AAB4077C6E94D2E06CA1426B21DCD2E45E34310FB6"
+  },
+  "jaimecartodb.MSXCP": {
+    "description": "",
+    "manifestHash": "C4A81C6EACB5FC747AEACE3C3A9DD667EEC43B6110ED8FA9A3D100DA201F051B",
+    "lastUpdated": "2026-08-19T21:00:00.3314487Z",
+    "version": "0.5.2",
+    "installerHashes": [
+      "B2A46FBBB6EC56B0945172A226C27EF40A97B544D880FDD3C7DAE77F068FD5E0"
+    ],
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
   },
   "JamboCompany.RunEnv": {
     "version": "0.1.11",
@@ -3718,6 +3775,19 @@
     ],
     "version": "26.07"
   },
+  "mq1.TinyWiiBackupManager": {
+    "description": "",
+    "manifestHash": "978C3B52D3A1B141E33B104C422AE48570AC3A0292DC09D216A2B639E385E468",
+    "lastUpdated": "2026-08-19T21:00:00.3715506Z",
+    "version": "6.0.8",
+    "installerHashes": [
+      "30D788E295C898034DC875B6A344B5A42643FD327D4436E7E812301F32475078",
+      "C12F91B984ABD50D58FB57493B6480DF8C85404CC3E6A1C1FE23FFC8FCC6F637",
+      "185CC9113C527D771FB4760BDC0E73D1CD23A86CC6116C012555F7D5B40CFB64"
+    ],
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
+  },
   "MrKaran.Doggo": {
     "version": "1.3.0",
     "installerHashes": [
@@ -4074,14 +4144,14 @@
     "manifestHash": "DE3CC668750C9F3AC782C73D69AB58FD57C5AB835C4DB1364586BD7ED2B51E6C"
   },
   "Odonno.jj-commit": {
-    "manifestHash": "5DEEC796FC97FAFB87D651D8665D1047EEC17B48138E6BB533E18E19ED7B19F2",
-    "lastUpdated": "2026-08-16T13:40:51.6717348Z",
-    "validationCount": 1,
+    "description": "",
+    "manifestHash": "7C763BFEEA42EE9C17ECDC1DFE53FEB33A02D47D87FF65C6F1F243673CB0584E",
+    "lastUpdated": "2026-08-19T21:00:00.2671793Z",
+    "version": "0.43.0",
     "installerHashes": [
       "A09547BA3263DED2D280C13CBFC0C01B03364CEC298118CA198FF3233F4725D6"
     ],
-    "description": "",
-    "version": "0.43.0",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED"
   },
   "OliverSchwendener.ueli": {
@@ -4435,12 +4505,12 @@
     "version": "0.47.0"
   },
   "Passportogo.Voio": {
-    "lastUpdated": "2026-08-17T17:04:35.1275268Z",
+    "lastUpdated": "2026-08-19T21:00:00.1586395Z",
     "description": "",
     "installerHashes": [
       "EAA5EC4BA4862A00FD4FF2B5AF4ED40D352704E48A1E09BD9EF52EB5C4338309"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "4098F9FDDA34F731B486D1261B06FE31843052F93DF2BCC1B955D1E8EA6E2FEF",
     "version": "3.0.94",
     "state": "VALIDATION_PASSED"
@@ -4640,6 +4710,18 @@
     "validationCount": 2,
     "lastUpdated": "2026-08-14T10:42:15.1350825Z",
     "description": ""
+  },
+  "PocketBase.PocketBase": {
+    "description": "",
+    "manifestHash": "AE912547D37EBD73F35809AC5878BCC76AF2E1A15DBFD37F96332AB69165DA62",
+    "lastUpdated": "2026-08-19T21:00:00.2457758Z",
+    "version": "0.39.11",
+    "installerHashes": [
+      "B4EFDC14054E1E32DE998D4C216BF598C3F84FEF59B3D41966C19E2600B845A9",
+      "8A02990C590843DB33525328C006BC2B573CF6B97DB0EDF8653824400DB873D7"
+    ],
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
   },
   "PocketSync.PocketSync": {
     "installerHashes": [
@@ -5024,6 +5106,17 @@
       "F5AB2303FDF82FBFCB2248CCA4F96479FE17D74584A528B0F86B3DBE9F9E9718"
     ]
   },
+  "RoniLehto.LMath": {
+    "description": "",
+    "manifestHash": "CD21DBF419775D508B87E98387430A2451CC590551E56775822BFB84C3D6D966",
+    "lastUpdated": "2026-08-19T21:00:00.1970136Z",
+    "version": "1.11.1",
+    "installerHashes": [
+      "1B1837B83E11421438AF91F87E71898FE0A5231FA0A1A7CF3DC7939B3A2D3CD1"
+    ],
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
+  },
   "RoslynPad.RoslynPad": {
     "installerHashes": [
       "40ACF22DC8CA71C1C2D85A7F98F0E1BEDF26D0152C89CD8493C0A5189901AA55",
@@ -5056,6 +5149,18 @@
     ],
     "description": "",
     "version": "6.3.1.0",
+    "state": "VALIDATION_PASSED"
+  },
+  "RubyMetric.chsrc": {
+    "description": "",
+    "manifestHash": "3B0579B418F59244EE7D0F34262E5475D714BEC6ECFF6197700E9A218D218C8D",
+    "lastUpdated": "2026-08-19T21:00:00.2799873Z",
+    "version": "0.2.6",
+    "installerHashes": [
+      "7CF7F3CE3616552AD803087EBB26B2F4AF3B12EEF5DAEEDD2601B128F8667043",
+      "11BF00186EF496579E4FA9000AB6D655ABC10FEB467193B29162F338542F65DE"
+    ],
+    "validationCount": 1,
     "state": "VALIDATION_PASSED"
   },
   "rullerzhou-afk.clawd-on-desk": {
@@ -5496,6 +5601,17 @@
       "checkedAt": "2026-08-18T08:42:19.3437599Z"
     }
   },
+  "SoupBuild.Soup": {
+    "description": "",
+    "manifestHash": "FFCE1D0F7F1723A81CDA30B8F40E6F6585A9CE8B4E870E158D7FA900CD8A7C98",
+    "lastUpdated": "2026-08-19T21:00:00.1039494Z",
+    "version": "0.48.1",
+    "installerHashes": [
+      "D816BA70B104A0D027D618C34A9D9C0C2F4B1B264B72390CF01651C4DEAD9F82"
+    ],
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
+  },
   "SparkLabs.openvpn-configuration-generator": {
     "description": "",
     "validationCount": 3,
@@ -5517,6 +5633,17 @@
     "validationCount": 4,
     "version": "2.5.3",
     "lastUpdated": "2026-08-05T07:49:49.172883Z"
+  },
+  "SparshSam.OpenReader": {
+    "description": "",
+    "manifestHash": "689BFBF5342F3B9EAA765A4ABF39CCE84A1CD1ECAF9498331DFBA4007856A38B",
+    "lastUpdated": "2026-08-19T21:00:00.2171622Z",
+    "version": "1.2.7",
+    "installerHashes": [
+      "9C2F1832369FFDC277097C3EBF78C3C3299D0C5D6C771F6459B501D6BC00DC9B"
+    ],
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
   },
   "SpectrumQT.XXMILauncher": {
     "manifestHash": "7E4B307A64D1414DC500F402B4364500613FF06E6746261EF5D93EE020590434",
@@ -5853,6 +5980,17 @@
     "version": "0.9.1",
     "description": "",
     "lastUpdated": "2026-08-16T12:25:11.6225142Z",
+    "state": "VALIDATION_PASSED"
+  },
+  "TamKungZ.ImageMerge": {
+    "description": "",
+    "manifestHash": "25DBD46A908A87E213814903FB7B591197B533F82F9CF1D05E7733CF131F050D",
+    "lastUpdated": "2026-08-19T21:00:00.2303996Z",
+    "version": "1.1.1",
+    "installerHashes": [
+      "F80C52A0D5726F58CDFB3A548C1393A2B1BE17D7DB4C9304585E8DA06FE43173"
+    ],
+    "validationCount": 1,
     "state": "VALIDATION_PASSED"
   },
   "Taraflex.Voltglean": {
