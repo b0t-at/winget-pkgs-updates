@@ -97,6 +97,7 @@ jobs:
           ./tests/SelectGitHubPackagesNeedingUpdate.Tests.ps1
           ./tests/SelectPackagesNeedingUpdateScript.Tests.ps1
           ./tests/TestMonitoredPackageAssets.Tests.ps1
+          ./tests/TestGeneratedInstallerArchitecture.Tests.ps1
           ./tests/Update-WingetPackage.Tests.ps1
           ./tests/GitHubApiCache.Tests.ps1
           ./tests/SubmissionWorkflowAuthorization.Tests.ps1

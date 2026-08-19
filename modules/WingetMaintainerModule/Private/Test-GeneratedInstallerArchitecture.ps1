@@ -227,19 +227,40 @@ function Test-GeneratedInstallerArchitecture {
                     $previousEntriesByNormalizedUrl[$normalizedInstallerUrl].Add([string]$previousEntry.Architecture)
                 }
 
+                $generatedEntriesByNormalizedUrl = @{}
                 foreach ($generatedEntry in $generatedEntries) {
                     if ($hintedInstallerUrls -contains $generatedEntry.InstallerUrl) {
                         continue
                     }
 
                     $normalizedInstallerUrl = Get-NormalizedInstallerUrl -InstallerUrl $generatedEntry.InstallerUrl -KnownVersions $knownVersions
+                    if (-not $generatedEntriesByNormalizedUrl.ContainsKey($normalizedInstallerUrl)) {
+                        $generatedEntriesByNormalizedUrl[$normalizedInstallerUrl] = [PSCustomObject]@{
+                            InstallerUrl  = [string]$generatedEntry.InstallerUrl
+                            Architectures = [System.Collections.Generic.List[string]]::new()
+                        }
+                    }
+
+                    $generatedEntriesByNormalizedUrl[$normalizedInstallerUrl].Architectures.Add([string]$generatedEntry.Architecture)
+                }
+
+                # The generator legitimately emits one URL under several
+                # architectures (e.g. winmatsch publishing a dual-payload
+                # installer as both x86 and x64), so the generated set may be a
+                # superset of the previously published architectures. Genuine
+                # drift is a previously published architecture that disappears
+                # (or is replaced) for the same normalized URL.
+                foreach ($normalizedInstallerUrl in $generatedEntriesByNormalizedUrl.Keys) {
                     if (-not $previousEntriesByNormalizedUrl.ContainsKey($normalizedInstallerUrl)) {
                         continue
                     }
 
+                    $generatedGroup = $generatedEntriesByNormalizedUrl[$normalizedInstallerUrl]
                     $previousArchitectures = @($previousEntriesByNormalizedUrl[$normalizedInstallerUrl] | Sort-Object -Unique)
-                    if ($previousArchitectures.Count -eq 1 -and $previousArchitectures[0] -ne $generatedEntry.Architecture) {
-                        [void]$validationErrors.Add("Generated architecture drift detected for $($generatedEntry.InstallerUrl): expected $($previousArchitectures[0]) based on previous winget manifest, got $($generatedEntry.Architecture)")
+                    $generatedArchitectures = @($generatedGroup.Architectures | Sort-Object -Unique)
+                    $missingArchitectures = @($previousArchitectures | Where-Object { $generatedArchitectures -notcontains $_ })
+                    if ($missingArchitectures.Count -gt 0) {
+                        [void]$validationErrors.Add("Generated architecture drift detected for $($generatedGroup.InstallerUrl): previously published architecture(s) [$($missingArchitectures -join ', ')] missing from generated entries (previous winget manifest: [$($previousArchitectures -join ', ')]; generated: [$($generatedArchitectures -join ', ')])")
                     }
                 }
             }
