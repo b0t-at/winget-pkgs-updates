@@ -106,6 +106,15 @@ function Test-GitHubRateLimitErrorDetails {
     )
 }
 
+function Test-GitHubTransientServerErrorDetails {
+    param(
+        [Parameter(Mandatory = $true)]
+        [object] $Details
+    )
+
+    return $Details.StatusCode -in 500, 502, 503, 504
+}
+
 function Invoke-WithGitHubRateLimitRetry {
     <#
     .SYNOPSIS
@@ -113,10 +122,13 @@ function Invoke-WithGitHubRateLimitRetry {
 
     .DESCRIPTION
         Retries only rate-limit failures (HTTP 429, or 403 with an exhausted quota).
-        Wait time honors Retry-After / X-RateLimit-Reset headers when present and
-        falls back to exponential backoff. On exhaustion it throws an exception with
-        Data['StatusCode'] = 429 so callers (e.g. credential-tier failover) can still
-        detect the rate limit.
+        With -RetryTransientServerErrors, transient server failures (HTTP 500/502/
+        503/504) are retried as well. Wait time honors Retry-After /
+        X-RateLimit-Reset headers when present and falls back to exponential
+        backoff. On rate-limit exhaustion it throws an exception with
+        Data['StatusCode'] = 429 so callers (e.g. credential-tier failover) can
+        still detect the rate limit; exhausted transient server errors rethrow
+        the original failure.
     #>
     param(
         [Parameter(Mandatory = $true)]
@@ -124,6 +136,9 @@ function Invoke-WithGitHubRateLimitRetry {
 
         [Parameter()]
         [string] $OperationName = 'GitHub API request',
+
+        [Parameter()]
+        [switch] $RetryTransientServerErrors,
 
         [Parameter()]
         [ValidateRange(1, 10)]
@@ -147,7 +162,9 @@ function Invoke-WithGitHubRateLimitRetry {
         }
         catch {
             $details = Get-GitHubApiErrorDetails -ErrorRecord $_
-            if (!(Test-GitHubRateLimitErrorDetails -Details $details)) {
+            $isRateLimit = Test-GitHubRateLimitErrorDetails -Details $details
+            $isTransientServerError = $RetryTransientServerErrors.IsPresent -and (Test-GitHubTransientServerErrorDetails -Details $details)
+            if (-not $isRateLimit -and -not $isTransientServerError) {
                 throw
             }
 
@@ -167,6 +184,12 @@ function Invoke-WithGitHubRateLimitRetry {
             }
 
             if ($attempt -eq $MaxAttempts -or $delaySeconds -gt $remainingWaitBudget) {
+                if (-not $isRateLimit) {
+                    # Exhausted transient server errors rethrow the original
+                    # failure so callers see the real status code instead of a
+                    # synthetic rate-limit error.
+                    throw
+                }
                 $exhausted = [System.Exception]::new(
                     "GitHub API rate limit exhausted for $OperationName. Reset: $resetAt. Retry the workflow after the reset or provide a token with available quota."
                 )
@@ -177,7 +200,12 @@ function Invoke-WithGitHubRateLimitRetry {
                 throw $exhausted
             }
 
-            Write-Warning "GitHub API rate limit reached. Retrying in $delaySeconds seconds (attempt $($attempt + 1)/$MaxAttempts; reset: $resetAt)."
+            if ($isRateLimit) {
+                Write-Warning "GitHub API rate limit reached. Retrying in $delaySeconds seconds (attempt $($attempt + 1)/$MaxAttempts; reset: $resetAt)."
+            }
+            else {
+                Write-Warning "GitHub API transient server error (HTTP $($details.StatusCode)) for $OperationName. Retrying in $delaySeconds seconds (attempt $($attempt + 1)/$MaxAttempts)."
+            }
             & $Sleep $delaySeconds
             $totalWaitSeconds += $delaySeconds
         }
