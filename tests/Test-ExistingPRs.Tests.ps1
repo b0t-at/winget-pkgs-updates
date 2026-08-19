@@ -169,21 +169,23 @@ Describe 'Test-ExistingPRs' {
         if ($result -ne $false) {
             throw 'The anonymous final tier unexpectedly reported a duplicate.'
         }
-        if ($global:ExistingPrSearchRequests.Count -ne 9) {
-            throw "Expected 4 primary retries, 4 fallback retries, and one anonymous attempt, got $($global:ExistingPrSearchRequests.Count) request(s)."
+        if ($global:ExistingPrSearchRequests.Count -ne 18) {
+            throw "Expected both search stages to run 4 primary retries, 4 fallback retries, and one anonymous attempt each, got $($global:ExistingPrSearchRequests.Count) request(s)."
         }
-        foreach ($index in 0..3) {
-            if ($global:ExistingPrSearchRequests[$index].Headers.Authorization -notlike '*primary-read-token') {
-                throw "Attempt $($index + 1) did not use the primary read token."
+        foreach ($stageOffset in @(0, 9)) {
+            foreach ($index in 0..3) {
+                if ($global:ExistingPrSearchRequests[$stageOffset + $index].Headers.Authorization -notlike '*primary-read-token') {
+                    throw "Attempt $($stageOffset + $index + 1) did not use the primary read token."
+                }
             }
-        }
-        foreach ($index in 4..7) {
-            if ($global:ExistingPrSearchRequests[$index].Headers.Authorization -notlike '*fallback-read-token') {
-                throw "Attempt $($index + 1) did not use the fallback read token."
+            foreach ($index in 4..7) {
+                if ($global:ExistingPrSearchRequests[$stageOffset + $index].Headers.Authorization -notlike '*fallback-read-token') {
+                    throw "Attempt $($stageOffset + $index + 1) did not use the fallback read token."
+                }
             }
-        }
-        if ($global:ExistingPrSearchRequests[8].Headers.ContainsKey('Authorization')) {
-            throw 'The final anonymous attempt sent a credential.'
+            if ($global:ExistingPrSearchRequests[$stageOffset + 8].Headers.ContainsKey('Authorization')) {
+                throw 'The final anonymous attempt sent a credential.'
+            }
         }
     }
 
@@ -259,8 +261,8 @@ Describe 'Test-ExistingPRs' {
         if ($result -ne $false) {
             throw 'The successful retry unexpectedly reported a duplicate.'
         }
-        if ($global:ExistingPrSearchRequests.Count -ne 3) {
-            throw "Expected three attempts after transient HTTP 422 responses, got $($global:ExistingPrSearchRequests.Count)."
+        if ($global:ExistingPrSearchRequests.Count -ne 4) {
+            throw "Expected three title-search attempts after transient HTTP 422 responses plus one manifest-path search, got $($global:ExistingPrSearchRequests.Count)."
         }
         if ($global:ExistingPrSearchSleeps.Count -ne 2 -or
             $global:ExistingPrSearchSleeps[0] -ne 1 -or
@@ -361,8 +363,8 @@ Describe 'Test-ExistingPRs' {
         if ($result -ne $false) {
             throw 'A closed-unmerged upstream PR was treated as a duplicate.'
         }
-        if ($global:ExistingPrSearchRequests.Count -ne 1) {
-            throw "Duplicate detection performed $($global:ExistingPrSearchRequests.Count) requests instead of one."
+        if ($global:ExistingPrSearchRequests.Count -ne 2) {
+            throw "Duplicate detection performed $($global:ExistingPrSearchRequests.Count) requests instead of two (title search plus manifest-path search)."
         }
     }
 
@@ -415,18 +417,28 @@ Describe 'Test-ExistingPRs' {
     It 'ignores substring and tokenized title search candidates' {
         InModuleScope WingetMaintainerModule {
             Mock Invoke-RestMethod {
+                param($Method, $Uri, $Headers, $ErrorAction)
+
+                if ($Uri -match '/pulls/\d+/files') {
+                    return @(
+                        [pscustomobject]@{ filename = 'manifests/t/Test/PackagePro/1.0.0/Test.PackagePro.installer.yaml' },
+                        [pscustomobject]@{ filename = 'manifests/t/Test/Package/1.0.0.1/Test.Package.installer.yaml' }
+                    )
+                }
                 return [pscustomobject]@{
                     total_count = 2
                     items = @(
                         [pscustomobject]@{
                             title        = 'Update version: Test.PackagePro version 1.0.0'
                             state        = 'open'
+                            number       = 103
                             html_url     = 'https://github.com/microsoft/winget-pkgs/pull/103'
                             pull_request = [pscustomobject]@{ merged_at = $null }
                         },
                         [pscustomobject]@{
                             title        = 'Update version: Test.Package version 1.0.0.1'
                             state        = 'open'
+                            number       = 104
                             html_url     = 'https://github.com/microsoft/winget-pkgs/pull/104'
                             pull_request = [pscustomobject]@{ merged_at = $null }
                         }
@@ -559,13 +571,15 @@ Describe 'Test-ExistingPRs' {
         if ($result -ne $false) {
             throw 'An empty upstream PR search unexpectedly found a match.'
         }
-        if ($global:ExistingPrSearchRequests.Count -ne 1) {
-            throw "OnlyOpen performed $($global:ExistingPrSearchRequests.Count) search requests instead of one."
+        if ($global:ExistingPrSearchRequests.Count -ne 2) {
+            throw "OnlyOpen performed $($global:ExistingPrSearchRequests.Count) search requests instead of two (title search plus manifest-path search)."
         }
 
-        $query = [uri]::UnescapeDataString(([uri] $global:ExistingPrSearchRequests[0].Uri).Query)
-        if ($query -notmatch 'is:open' -or $query -match 'is:merged') {
-            throw "OnlyOpen used an unexpected query: $query"
+        foreach ($request in $global:ExistingPrSearchRequests) {
+            $query = [uri]::UnescapeDataString(([uri] $request.Uri).Query)
+            if ($query -notmatch 'is:open' -or $query -match 'is:merged') {
+                throw "OnlyOpen used an unexpected query: $query"
+            }
         }
     }
 
@@ -619,6 +633,184 @@ Describe 'Test-ExistingPRs' {
 
         if ($global:ExistingPrSearchRequests.Count -ne 1) {
             throw 'A malformed primary response was converted into a fallback no-duplicate decision.'
+        }
+    }
+
+    It 'detects an open PR by manifest path when the title omits the package identifier' {
+        InModuleScope WingetMaintainerModule {
+            Mock Invoke-RestMethod {
+                param($Method, $Uri, $Headers, $ErrorAction)
+
+                $global:ExistingPrSearchRequests.Add([pscustomobject]@{
+                    Method  = $Method
+                    Uri     = $Uri
+                    Headers = $Headers
+                })
+                if ($Uri -match '/pulls/555/files') {
+                    return @(
+                        [pscustomobject]@{ filename = 'manifests/t/Test/Package/1.0.0/Test.Package.installer.yaml' }
+                    )
+                }
+                if ($Uri -match 'Test\.Package') {
+                    # Title search: the human PR title omits the package identifier.
+                    return [pscustomobject]@{ total_count = 0; items = @() }
+                }
+                return [pscustomobject]@{
+                    total_count = 1
+                    items = @(
+                        [pscustomobject]@{
+                            title        = 'Submitting Test Package 1.0.0'
+                            state        = 'open'
+                            number       = 555
+                            html_url     = 'https://github.com/microsoft/winget-pkgs/pull/555'
+                            pull_request = [pscustomobject]@{ merged_at = $null }
+                        }
+                    )
+                }
+            }
+        }
+
+        $result = Test-ExistingPRs `
+            -PackageIdentifier 'Test.Package' `
+            -Version '1.0.0' `
+            -Repository 'microsoft/winget-pkgs'
+
+        if ($result -ne $true) {
+            throw 'An open PR touching the manifest path was not detected.'
+        }
+
+        $fileRequests = @($global:ExistingPrSearchRequests | Where-Object { $_.Uri -match '/pulls/555/files' })
+        if ($fileRequests.Count -ne 1) {
+            throw "Expected exactly one PR files read, got $($fileRequests.Count)."
+        }
+        $versionSearches = @($global:ExistingPrSearchRequests | Where-Object {
+            $_.Uri -match 'search/issues' -and $_.Uri -notmatch 'Test\.Package'
+        })
+        if ($versionSearches.Count -ne 1) {
+            throw "Expected exactly one manifest-path candidate search, got $($versionSearches.Count)."
+        }
+        $query = [uri]::UnescapeDataString(([uri] $versionSearches[0].Uri).Query)
+        if ($query -notmatch 'is:open' -or $query -notmatch 'in:title "1\.0\.0"') {
+            throw "The manifest-path candidate search used an unexpected query: $query"
+        }
+    }
+
+    It 'does not treat a manifest-path candidate for a different version directory as a duplicate' {
+        InModuleScope WingetMaintainerModule {
+            Mock Invoke-RestMethod {
+                param($Method, $Uri, $Headers, $ErrorAction)
+
+                if ($Uri -match '/pulls/556/files') {
+                    return @(
+                        [pscustomobject]@{ filename = 'manifests/t/Test/Package/1.0.0.1/Test.Package.installer.yaml' }
+                    )
+                }
+                if ($Uri -match 'Test\.Package') {
+                    return [pscustomobject]@{ total_count = 0; items = @() }
+                }
+                return [pscustomobject]@{
+                    total_count = 1
+                    items = @(
+                        [pscustomobject]@{
+                            title        = 'Submitting Test Package 1.0.0'
+                            state        = 'open'
+                            number       = 556
+                            html_url     = 'https://github.com/microsoft/winget-pkgs/pull/556'
+                            pull_request = [pscustomobject]@{ merged_at = $null }
+                        }
+                    )
+                }
+            }
+        }
+
+        $result = Test-ExistingPRs `
+            -PackageIdentifier 'Test.Package' `
+            -Version '1.0.0' `
+            -Repository 'microsoft/winget-pkgs'
+
+        if ($result -ne $false) {
+            throw 'A PR touching a different version directory was treated as a duplicate.'
+        }
+    }
+
+    It 'skips manifest-path file reads for candidates that name another package' {
+        InModuleScope WingetMaintainerModule {
+            Mock Invoke-RestMethod {
+                param($Method, $Uri, $Headers, $ErrorAction)
+
+                $global:ExistingPrSearchRequests.Add([pscustomobject]@{
+                    Method  = $Method
+                    Uri     = $Uri
+                    Headers = $Headers
+                })
+                if ($Uri -match '/pulls/') {
+                    throw 'The manifest-path check must not read files of PRs that name another package.'
+                }
+                if ($Uri -match 'Test\.Package') {
+                    return [pscustomobject]@{ total_count = 0; items = @() }
+                }
+                return [pscustomobject]@{
+                    total_count = 1
+                    items = @(
+                        [pscustomobject]@{
+                            title        = 'New version: Other.Package version 1.0.0'
+                            state        = 'open'
+                            number       = 700
+                            html_url     = 'https://github.com/microsoft/winget-pkgs/pull/700'
+                            pull_request = [pscustomobject]@{ merged_at = $null }
+                        }
+                    )
+                }
+            }
+        }
+
+        $result = Test-ExistingPRs `
+            -PackageIdentifier 'Test.Package' `
+            -Version '1.0.0' `
+            -Repository 'microsoft/winget-pkgs'
+
+        if ($result -ne $false) {
+            throw 'A candidate naming another package changed the duplicate decision.'
+        }
+        if (@($global:ExistingPrSearchRequests | Where-Object { $_.Uri -match '/pulls/' }).Count -ne 0) {
+            throw 'A candidate naming another package triggered a PR files read.'
+        }
+    }
+
+    It 'builds manifest path prefixes and classifies other-package titles correctly' {
+        $helperResults = InModuleScope WingetMaintainerModule {
+            [pscustomobject]@{
+                SimplePrefix   = Get-WingetPkgsManifestVersionPathPrefix -PackageIdentifier 'GodotLauncher.Launcher' -Version '1.11.1'
+                MultiDotPrefix = Get-WingetPkgsManifestVersionPathPrefix -PackageIdentifier 'A.B.C' -Version '2.0'
+                OtherPackage   = Test-WingetPkgsTitleNamesOtherPackage `
+                    -Title 'New version: heymaikol.NetworkDoctor 1.11.1' `
+                    -PackageIdentifier 'GodotLauncher.Launcher' `
+                    -Version '1.11.1'
+                OwnPackage     = Test-WingetPkgsTitleNamesOtherPackage `
+                    -Title 'Update GodotLauncher.Launcher to 1.11.1' `
+                    -PackageIdentifier 'GodotLauncher.Launcher' `
+                    -Version '1.11.1'
+                VersionToken   = Test-WingetPkgsTitleNamesOtherPackage `
+                    -Title 'Submitting Godot Launcher v1.11.1' `
+                    -PackageIdentifier 'GodotLauncher.Launcher' `
+                    -Version '1.11.1'
+            }
+        }
+
+        if ($helperResults.SimplePrefix -cne 'manifests/g/GodotLauncher/Launcher/1.11.1/') {
+            throw "Unexpected manifest path prefix: $($helperResults.SimplePrefix)"
+        }
+        if ($helperResults.MultiDotPrefix -cne 'manifests/a/A/B/C/2.0/') {
+            throw "Unexpected multi-dot manifest path prefix: $($helperResults.MultiDotPrefix)"
+        }
+        if (-not $helperResults.OtherPackage) {
+            throw 'A title naming another package identifier was not classified as such.'
+        }
+        if ($helperResults.OwnPackage) {
+            throw 'A title naming the requested package identifier was misclassified as another package.'
+        }
+        if ($helperResults.VersionToken) {
+            throw 'A version-like dotted token was misclassified as another package identifier.'
         }
     }
 }

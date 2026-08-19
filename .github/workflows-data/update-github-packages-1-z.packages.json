@@ -1814,11 +1814,6 @@
     "url": "https://github.com/alegauss/claude-tray/releases/download/v{VERSION}/ClaudeTray-Setup.exe"
   },
   {
-    "id": "AlekseyHoffman.Sigma-File-Manager",
-    "repo": "aleksey-hoffman/sigma-file-manager",
-    "url": "https://github.com/aleksey-hoffman/sigma-file-manager/releases/download/v{VERSION}/Sigma-File-Manager-{VERSION}-Windows-Setup.exe"
-  },
-  {
     "id": "AlexanderBrandt.AIConsumptionTracker",
     "repo": "rygel/AIUsageTracker",
     "url": "https://github.com/rygel/AIUsageTracker/releases/download/v{VERSION}/AIUsageTracker_v{VERSION}_win-x86.zip https://github.com/rygel/AIUsageTracker/releases/download/v{VERSION}/AIUsageTracker_v{VERSION}_win-x64.zip https://github.com/rygel/AIUsageTracker/releases/download/v{VERSION}/AIUsageTracker_v{VERSION}_win-arm64.zip https://github.com/rygel/AIUsageTracker/releases/download/v{VERSION}/AIUsageTracker_Setup_v{VERSION}_win-x86.exe https://github.com/rygel/AIUsageTracker/releases/download/v{VERSION}/AIUsageTracker_Setup_v{VERSION}_win-x64.exe https://github.com/rygel/AIUsageTracker/releases/download/v{VERSION}/AIUsageTracker_Setup_v{VERSION}_win-arm64.exe"
@@ -2423,11 +2418,6 @@
     "id": "Docker.docker-credential-wincred",
     "repo": "docker/docker-credential-helpers",
     "url": "https://github.com/docker/docker-credential-helpers/releases/download/v{VERSION}/docker-credential-wincred-v{VERSION}.windows-amd64.exe https://github.com/docker/docker-credential-helpers/releases/download/v{VERSION}/docker-credential-wincred-v{VERSION}.windows-arm64.exe"
-  },
-  {
-    "id": "Docker.ds",
-    "repo": "docker/sbx-releases",
-    "url": "https://github.com/docker/sbx-releases/releases/download/v{VERSION}/DockerSandboxes.msi"
   },
   {
     "id": "DoiT.dci",
@@ -4089,11 +4079,6 @@
     "id": "PlebOne.nos",
     "repo": "PlebOne/nos",
     "url": "https://github.com/PlebOne/nos/releases/download/v{VERSION}/nos-{VERSION}-windows-amd64.exe https://github.com/PlebOne/nos/releases/download/v{VERSION}/nos-{VERSION}-windows-arm64.exe"
-  },
-  {
-    "id": "PLFJY.ContextMenuMgrPlus.Beta",
-    "repo": "PLFJY/ContextMenuMgr",
-    "url": "https://github.com/PLFJY/ContextMenuMgr/releases/download/v{VERSION}/ContextMenuMgrPlus-{VERSION}-x64-self-contained-Setup.exe https://github.com/PLFJY/ContextMenuMgr/releases/download/v{VERSION}/ContextMenuMgrPlus-{VERSION}-x86-self-contained-Setup.exe https://github.com/PLFJY/ContextMenuMgr/releases/download/v{VERSION}/ContextMenuMgrPlus-{VERSION}-arm64-self-contained-Setup.exe"
   },
   {
     "id": "PocketBase.PocketBase",

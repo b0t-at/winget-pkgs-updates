@@ -185,24 +185,91 @@ Assert-Equal 0 $empty.IncludeCount 'empty input produces empty include list'
 Assert-Equal 0 $empty.SkippedCount 'empty input produces empty skipped list'
 Assert-Equal 0 $empty.QueryCount 'empty input makes no GraphQL calls'
 
-# 5) A failing manifest read (repository null) throws so the caller can fail open.
-$threw = & $module {
+# 5) A failed winget-pkgs read falls back to the winget source index: indexed
+#    versions still produce skip/include decisions, unindexed packages fail open.
+$indexFallback = & $module {
+    $invoker = {
+        param([string] $Query)
+        if ($Query -notmatch 'winget-pkgs') {
+            $data = @{}
+            foreach ($alias in [regex]::Matches($Query, '(r\d+): repository\(owner: "[^"]+", name: "([^"]+)"\)')) {
+                $tag = switch ($alias.Groups[2].Value) {
+                    'outdated' { 'v2.0.0' }
+                    default    { 'v1.0.0' }
+                }
+                $data[$alias.Groups[1].Value] = @{ latestRelease = @{ tagName = $tag } }
+            }
+            return @{ data = $data }
+        }
+        return @{ data = @{ repository = $null } }
+    }
+    $sourceIndex = {
+        @(
+            [PSCustomObject]@{ PackageIdentifier = 'Vendor.Published'; WingetVersion = '1.0.0' },
+            [PSCustomObject]@{ PackageIdentifier = 'Vendor.Outdated'; WingetVersion = '1.0.0' }
+        )
+    }
+    Select-GitHubPackagesNeedingUpdate -Packages @(
+        @{ id = 'Vendor.Published'; repo = 'vendor/published'; url = 'https://example.com/{VERSION}.exe' },
+        @{ id = 'Vendor.Outdated'; repo = 'vendor/outdated'; url = 'https://example.com/{VERSION}.exe' },
+        @{ id = 'Vendor.Unindexed'; repo = 'vendor/unindexed'; url = 'https://example.com/{VERSION}.exe' }
+    ) -GraphQlInvoker $invoker -SourceIndexProvider $sourceIndex -WarningAction SilentlyContinue
+}
+Assert-Equal 'Skipped:AlreadyPublished' (Get-ReasonFor $indexFallback 'Vendor.Published') 'index fallback skips versions the index already lists'
+Assert-Equal 'Include:NewVersion' (Get-ReasonFor $indexFallback 'Vendor.Outdated') 'index fallback includes versions newer than the index'
+Assert-Equal 'Include:PrecheckBatchFailed' (Get-ReasonFor $indexFallback 'Vendor.Unindexed') 'packages missing from the index fail open'
+
+# 5b) When the source index is also unavailable, failed batches fail open.
+$indexUnavailable = & $module {
     $invoker = {
         param([string] $Query)
         if ($Query -notmatch 'winget-pkgs') {
             return @{ data = @{ r0 = @{ latestRelease = @{ tagName = 'v1.0.0' } } } }
         }
-        return @{ data = @{ repository = $null } }
+        throw 'winget-pkgs read boom'
     }
-
-    try {
-        $null = Select-GitHubPackagesNeedingUpdate -Packages @(@{ id = 'Vendor.A'; repo = 'vendor/a'; url = 'https://example.com/{VERSION}.exe' }) -GraphQlInvoker $invoker
-        return $false
-    } catch {
-        return $_.Exception.Message -match 'winget-pkgs'
-    }
+    Select-GitHubPackagesNeedingUpdate -Packages @(@{ id = 'Vendor.A'; repo = 'vendor/a'; url = 'https://example.com/{VERSION}.exe' }) -GraphQlInvoker $invoker -SourceIndexProvider { throw 'index download failed' } -WarningAction SilentlyContinue
 }
-Assert-Equal $true $threw 'null winget-pkgs repository response throws'
+Assert-Equal 'Include:PrecheckBatchFailed' (Get-ReasonFor $indexUnavailable 'Vendor.A') 'failed batch without a usable index fails open'
+
+# 5c) A failed release batch only fails open its own packages; other batches
+#     still produce normal skip decisions.
+$partialPass1 = & $module {
+    $invoker = {
+        param([string] $Query)
+        if ($Query -notmatch 'winget-pkgs') {
+            if ($Query -match '"bad"') { throw 'release query boom' }
+            $data = @{}
+            foreach ($alias in [regex]::Matches($Query, '(r\d+): repository\(')) {
+                $data[$alias.Groups[1].Value] = @{ latestRelease = @{ tagName = 'v1.0.0' } }
+            }
+            return @{ data = $data }
+        }
+        $repoData = @{}
+        foreach ($alias in [regex]::Matches($Query, '(p\d+): object\(')) {
+            $repoData[$alias.Groups[1].Value] = @{ entries = @(@{ name = '1.0.0'; type = 'tree' }) }
+        }
+        return @{ data = @{ repository = $repoData } }
+    }
+    Select-GitHubPackagesNeedingUpdate -Packages @(
+        @{ id = 'Vendor.Bad'; repo = 'vendor/bad'; url = 'https://example.com/{VERSION}.exe' },
+        @{ id = 'Vendor.Good'; repo = 'vendor/good'; url = 'https://example.com/{VERSION}.exe' }
+    ) -GraphQlInvoker $invoker -BatchSize 1 -WarningAction SilentlyContinue
+}
+Assert-Equal 'Include:PrecheckBatchFailed' (Get-ReasonFor $partialPass1 'Vendor.Bad') 'failed release batch includes its packages'
+Assert-Equal 'Skipped:AlreadyPublished' (Get-ReasonFor $partialPass1 'Vendor.Good') 'other release batches still skip published packages'
+
+# 5d) A failed release-metadata batch includes its resolvable packages.
+$resolvableFailure = & $module {
+    $invoker = {
+        param([string] $Query)
+        if ($Query -match 'u\d+: repository') { throw 'metadata query boom' }
+        if ($Query -notmatch 'winget-pkgs') { return @{ data = @{} } }
+        return @{ data = @{ repository = @{} } }
+    }
+    Select-GitHubPackagesNeedingUpdate -Packages @(@{ id = 'Vendor.Tagged'; repo = 'vendor/tagged'; url = 'https://example.com/{VERSION}.exe'; tagPattern = '^v1\..*' }) -GraphQlInvoker $invoker -WarningAction SilentlyContinue
+}
+Assert-Equal 'Include:PrecheckBatchFailed' (Get-ReasonFor $resolvableFailure 'Vendor.Tagged') 'failed release-metadata batch includes its packages'
 
 # 6) GraphQL rate limits (HTTP 200 + RATE_LIMITED error) are retried by the default invoker.
 $rateLimit = & $module {
@@ -238,6 +305,34 @@ $rateLimit = & $module {
 Assert-Equal 2 $rateLimit.Calls 'RATE_LIMITED response is retried'
 Assert-Equal $true $rateLimit.Ok 'successful retry returns the GraphQL payload'
 Assert-Equal '5' $rateLimit.Sleeps 'retry uses backoff delay'
+
+# 6b) Transient server errors (HTTP 5xx) are retried by the default invoker.
+$transient = & $module {
+    $script:restCalls = 0
+    $env:WINGET_UPSTREAM_READ_TOKEN = 'test-token'
+
+    function script:Invoke-RestMethod {
+        param($Method, $Uri, $Headers, $Body, $ContentType)
+        $script:restCalls++
+        if ($script:restCalls -eq 1) {
+            $exception = [System.Exception]::new('Response status code does not indicate success: 502 (Bad Gateway).')
+            $exception.Data['StatusCode'] = 502
+            throw $exception
+        }
+        return @{ data = @{ ok = $true } }
+    }
+    function script:Start-Sleep { param($Seconds) }
+
+    $response = Invoke-WingetPrecheckGraphQlRequest -Query 'query { viewer { login } }' -WarningAction SilentlyContinue
+
+    Remove-Item function:Invoke-RestMethod
+    Remove-Item function:Start-Sleep
+    Remove-Item env:WINGET_UPSTREAM_READ_TOKEN
+
+    [PSCustomObject]@{ Calls = $script:restCalls; Ok = $response.data.ok }
+}
+Assert-Equal 2 $transient.Calls 'HTTP 502 response is retried by the default invoker'
+Assert-Equal $true $transient.Ok 'successful 502 retry returns the GraphQL payload'
 
 # 7) Open-PR cache: fresh marker skips, stale/mismatched markers trigger a live
 #    check, tester results are recorded, and tester failures fail open.

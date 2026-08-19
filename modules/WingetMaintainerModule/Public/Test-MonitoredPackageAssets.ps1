@@ -21,8 +21,10 @@ function Test-MonitoredPackageAssets {
             usable name.
           - AssetMissing: at least one URL template matches no asset on the
             resolved release (details list the missing URLs).
-          - Inconclusive: the release carries more than 100 assets, so a missed
-            match cannot be distinguished from truncation.
+          - Inconclusive: the release carries more than 100 assets and the
+            remaining asset pages could not be retrieved, so a missed match
+            cannot be distinguished from truncation. Releases with more than
+            100 assets are otherwise fully paginated before matching.
           - Skipped: the entry has no repo/url pair to check.
 
     .OUTPUTS
@@ -83,6 +85,10 @@ function Test-MonitoredPackageAssets {
     $results = [System.Collections.Generic.List[object]]::new()
     $simple = [System.Collections.Generic.List[object]]::new()
     $withTagPattern = [System.Collections.Generic.List[object]]::new()
+    # Releases are shared across packages (e.g. every Electron major); memoize
+    # paginated asset lists per repo+tag so each truncated release is expanded
+    # at most once per sweep.
+    $assetPageCache = @{}
 
     foreach ($package in $Packages) {
         $packageId = Get-WingetPrecheckPackageField -Package $package -Name 'id'
@@ -112,7 +118,7 @@ function Test-MonitoredPackageAssets {
         }
     }
 
-    $releaseSelection = 'tagName name releaseAssets(first: 100) { totalCount nodes { downloadUrl } }'
+    $releaseSelection = 'tagName name releaseAssets(first: 100) { totalCount pageInfo { hasNextPage endCursor } nodes { downloadUrl } }'
 
     # Pass 1: packages that follow the repository's latest stable release.
     $simpleArray = @($simple)
@@ -129,7 +135,7 @@ function Test-MonitoredPackageAssets {
         for ($i = 0; $i -lt $slice.Count; $i++) {
             $repository = Get-WingetGraphQlFieldValue -InputObject $data -Name "a$i"
             $release = Get-WingetGraphQlFieldValue -InputObject $repository -Name 'latestRelease'
-            $results.Add((Resolve-WingetMonitoredAssetStatus -Package $slice[$i] -Repository $repository -Release $release))
+            $results.Add((Resolve-WingetMonitoredAssetStatus -Package $slice[$i] -Repository $repository -Release $release -GraphQlInvoker $GraphQlInvoker -AssetPageCache $assetPageCache))
         }
     }
 
@@ -188,7 +194,7 @@ function Test-MonitoredPackageAssets {
                 Sort-Object -Property @{ Expression = { "$(Get-WingetGraphQlFieldValue -InputObject $_ -Name 'publishedAt')" } } -Descending)
         $release = if ($matching.Count -gt 0) { $matching[0] } else { $null }
 
-        $results.Add((Resolve-WingetMonitoredAssetStatus -Package $package -Repository ([PSCustomObject]@{ present = $true }) -Release $release -NoReleaseStatus 'NoMatchingRelease'))
+        $results.Add((Resolve-WingetMonitoredAssetStatus -Package $package -Repository ([PSCustomObject]@{ present = $true }) -Release $release -NoReleaseStatus 'NoMatchingRelease' -GraphQlInvoker $GraphQlInvoker -AssetPageCache $assetPageCache))
     }
 
     return @($results | Sort-Object -Property PackageId)
@@ -204,7 +210,9 @@ function Resolve-WingetMonitoredAssetStatus {
         [Parameter(Mandatory = $true)] $Package,
         [Parameter()] $Repository,
         [Parameter()] $Release,
-        [Parameter()] [string] $NoReleaseStatus = 'NoRelease'
+        [Parameter()] [string] $NoReleaseStatus = 'NoRelease',
+        [Parameter()] [scriptblock] $GraphQlInvoker,
+        [Parameter()] [hashtable] $AssetPageCache
     )
 
     $packageId = Get-WingetPrecheckPackageField -Package $Package -Name 'id'
@@ -252,6 +260,23 @@ function Resolve-WingetMonitoredAssetStatus {
     $assetUrls = @($assetNodes | ForEach-Object { [string](Get-WingetGraphQlFieldValue -InputObject $_ -Name 'downloadUrl') })
     $totalCountValue = Get-WingetGraphQlFieldValue -InputObject $assetsObject -Name 'totalCount'
     $assetsTruncated = $null -ne $totalCountValue -and [int]$totalCountValue -gt $assetUrls.Count
+    $assetPaginationDetail = $null
+
+    # Releases with more than 100 assets (e.g. binbat.*, Winix.*) would
+    # otherwise be permanently Inconclusive; page through the remaining
+    # assets so every asset is examined before classifying a miss.
+    if ($assetsTruncated -and $null -ne $GraphQlInvoker) {
+        $expansion = Expand-WingetMonitoredReleaseAssetUrls `
+            -Repo $repo `
+            -Tag $tag `
+            -AssetsObject $assetsObject `
+            -InitialUrls $assetUrls `
+            -GraphQlInvoker $GraphQlInvoker `
+            -AssetPageCache $AssetPageCache
+        $assetUrls = @($expansion.Urls)
+        $assetsTruncated = -not $expansion.Complete
+        $assetPaginationDetail = $expansion.Detail
+    }
 
     $installerValues = @($url -split '\s+' | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
     $assetTemplates = [System.Collections.Generic.List[string]]::new()
@@ -303,7 +328,8 @@ function Resolve-WingetMonitoredAssetStatus {
 
     if ($missing.Count -gt 0) {
         if ($assetsTruncated) {
-            return & $newResult 'Inconclusive' "The release lists more than $($assetUrls.Count) assets; unmatched URL(s) may exist beyond the first page: $($missing -join ' ')" $tag
+            $paginationNote = if ([string]::IsNullOrWhiteSpace($assetPaginationDetail)) { '' } else { " ($assetPaginationDetail)" }
+            return & $newResult 'Inconclusive' "The release lists more than $($assetUrls.Count) assets and the remaining pages could not be retrieved$paginationNote; unmatched URL(s) may exist beyond the retrieved assets: $($missing -join ' ')" $tag
         }
         return & $newResult 'AssetMissing' "No release asset matches: $($missing -join ' ')" $tag
     }
@@ -315,4 +341,103 @@ function Resolve-WingetMonitoredAssetStatus {
         ''
     }
     return & $newResult 'OK' "All GitHub release-asset URL templates resolve against release ${tag}.$deferredNote" $tag
+}
+
+function Expand-WingetMonitoredReleaseAssetUrls {
+    <#
+    .SYNOPSIS
+        Pages through a release's remaining asset URLs beyond the first 100.
+
+    .DESCRIPTION
+        Follows the releaseAssets pageInfo cursor of an already-fetched release
+        until every asset URL is retrieved. Results are memoized per repo+tag
+        because multiple monitored packages often share one release. Failures
+        never throw: the caller keeps its truncation flag and reports
+        Inconclusive with the returned detail.
+
+    .OUTPUTS
+        PSCustomObject with Urls (string[]), Complete (bool), Detail (string).
+    #>
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory = $true)] [string] $Repo,
+        [Parameter(Mandatory = $true)] [string] $Tag,
+        [Parameter(Mandatory = $true)] $AssetsObject,
+        [Parameter()] [AllowEmptyCollection()] [string[]] $InitialUrls = @(),
+        [Parameter(Mandatory = $true)] [scriptblock] $GraphQlInvoker,
+        [Parameter()] [hashtable] $AssetPageCache
+    )
+
+    $cacheKey = "$Repo|$Tag"
+    if ($null -ne $AssetPageCache -and $AssetPageCache.ContainsKey($cacheKey)) {
+        return $AssetPageCache[$cacheKey]
+    }
+
+    $urls = [System.Collections.Generic.List[string]]::new()
+    foreach ($url in $InitialUrls) { $urls.Add($url) }
+
+    $complete = $false
+    $detail = $null
+    $pageInfo = Get-WingetGraphQlFieldValue -InputObject $AssetsObject -Name 'pageInfo'
+    if ($null -eq $pageInfo) {
+        $detail = 'release asset pagination metadata unavailable'
+    }
+    else {
+        $owner, $name = $Repo.Split('/', 2)
+        $maximumAssetPages = 100
+        try {
+            for ($pageIndex = 0; $pageIndex -lt $maximumAssetPages; $pageIndex++) {
+                if (-not [bool](Get-WingetGraphQlFieldValue -InputObject $pageInfo -Name 'hasNextPage')) {
+                    $complete = $true
+                    break
+                }
+                $endCursor = [string](Get-WingetGraphQlFieldValue -InputObject $pageInfo -Name 'endCursor')
+                if ([string]::IsNullOrWhiteSpace($endCursor)) {
+                    $detail = 'release asset pagination returned no endCursor'
+                    break
+                }
+
+                $query = "query { repository(owner: $(ConvertTo-WingetGraphQlStringLiteral -Value $owner), name: $(ConvertTo-WingetGraphQlStringLiteral -Value $name)) { release(tagName: $(ConvertTo-WingetGraphQlStringLiteral -Value $Tag)) { releaseAssets(first: 100, after: $(ConvertTo-WingetGraphQlStringLiteral -Value $endCursor)) { pageInfo { hasNextPage endCursor } nodes { downloadUrl } } } } }"
+                $response = & $GraphQlInvoker $query
+                $release = Get-WingetGraphQlFieldValue -InputObject (Get-WingetGraphQlFieldValue -InputObject (Get-WingetGraphQlFieldValue -InputObject $response -Name 'data') -Name 'repository') -Name 'release'
+                $pagedAssets = Get-WingetGraphQlFieldValue -InputObject $release -Name 'releaseAssets'
+                if ($null -eq $pagedAssets) {
+                    $detail = 'release asset pagination returned no releaseAssets payload'
+                    break
+                }
+
+                $pagedNodesValue = Get-WingetGraphQlFieldValue -InputObject $pagedAssets -Name 'nodes'
+                foreach ($node in @($pagedNodesValue)) {
+                    if ($null -eq $node) { continue }
+                    $urls.Add([string](Get-WingetGraphQlFieldValue -InputObject $node -Name 'downloadUrl'))
+                }
+
+                $pageInfo = Get-WingetGraphQlFieldValue -InputObject $pagedAssets -Name 'pageInfo'
+                if ($null -eq $pageInfo) {
+                    $detail = 'release asset pagination returned no pageInfo'
+                    break
+                }
+            }
+            if (-not $complete -and $null -eq $detail) {
+                $detail = "release asset pagination stopped after $maximumAssetPages pages"
+            }
+        }
+        catch {
+            $detail = "release asset pagination failed: $($_.Exception.Message)"
+        }
+    }
+
+    if (-not $complete) {
+        Write-Warning "Could not page through all release assets of $Repo@${Tag}: $detail"
+    }
+
+    $result = [PSCustomObject]@{
+        Urls     = @($urls)
+        Complete = $complete
+        Detail   = $detail
+    }
+    if ($null -ne $AssetPageCache) {
+        $AssetPageCache[$cacheKey] = $result
+    }
+    return $result
 }
