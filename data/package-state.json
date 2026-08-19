@@ -152,6 +152,17 @@
     "manifestHash": "29DF979500F14CE735E2F65D8EEA858FB96D77C0E3578EF3FEAA2D45F15E7338",
     "version": "0.19.6"
   },
+  "alegauss.ClaudeCodeTray": {
+    "state": "VALIDATION_PASSED",
+    "version": "1.7.1",
+    "lastUpdated": "2026-08-19T12:47:12.8690998Z",
+    "description": "",
+    "installerHashes": [
+      "6BEE63C686C4527D2C76D3AEBFB992762755BEF43E4EDCAAD8C9B0BAA548E9B5"
+    ],
+    "manifestHash": "5D5BBBACDD143FCFD2434ED7FEAE1EC98832150A9490FC6A9268D266E47C0E45",
+    "validationCount": 1
+  },
   "AlekseyHoffman.Sigma-File-Manager": {
     "lastUpdated": "2026-08-18T21:24:38.6686757Z",
     "state": "VALIDATION_PASSED",
@@ -1103,6 +1114,19 @@
     "lastUpdated": "2026-08-05T03:03:19.2401984Z",
     "validationCount": 8
   },
+  "CycloneDX.CLI": {
+    "state": "VALIDATION_PASSED",
+    "version": "0.33.1",
+    "lastUpdated": "2026-08-19T12:47:12.8406854Z",
+    "description": "",
+    "installerHashes": [
+      "A9FEE1F946B4D6B200B898CE16715274444E88A7B6AB5EBFF4FD1AA2EC6EAEB5",
+      "9B360974C41A5D612EB026FB5E3BB1FA28E08865F7A4F915665B8BC94BD3BC31",
+      "49E169FE8DD579E16DC5D31B32CB5C832CEBBD1E6D4D317DF9D363985FB907A2"
+    ],
+    "manifestHash": "8682823202C99D136F4F0601DBEA7DF47E97BA049B46D4503A78E48340CF383B",
+    "validationCount": 1
+  },
   "DamianH.BrowserWrangler": {
     "lastUpdated": "2026-08-18T17:25:13.7738684Z",
     "description": "",
@@ -1474,6 +1498,18 @@
     "lastUpdated": "2026-08-06T10:56:40.1667008Z",
     "manifestHash": "63C75683FC17D8BE95D299DD74736B6B875DEB4A8B9748F532EE0F4505833E3C",
     "version": "3.2.2"
+  },
+  "ErichDonahue.SpinnerforDiscogs": {
+    "state": "VALIDATION_PASSED",
+    "version": "0.2.3",
+    "lastUpdated": "2026-08-19T12:47:12.8213034Z",
+    "description": "",
+    "installerHashes": [
+      "3EB076AF62B928D4701B6AB479CDF21DBC034FD9C221CE0A18A457568A2AE8E7",
+      "D38030F62D43C7FCF5E7BE097DDAFBC05CB6DCA3BE8087586ECDDCED9882EEE5"
+    ],
+    "manifestHash": "C35D040A598D2807844F3E9AB8AA27E56936495B1C9AB7700E2763F7BF448967",
+    "validationCount": 1
   },
   "errata-ai.Vale": {
     "manifestHash": "2C0EFC470626560B28FAED591EDACA7DACB4E9C27D8307ED515D929D40E25EB1",
@@ -4371,6 +4407,17 @@
     "description": "",
     "manifestHash": "204DB854AFDD00DAFFD3C2FB93508B8A12AA22644D2FF03FD81056BE2A47D8C3"
   },
+  "Probably.BackScene": {
+    "state": "VALIDATION_PASSED",
+    "version": "1.6",
+    "lastUpdated": "2026-08-19T12:47:12.9298159Z",
+    "description": "",
+    "installerHashes": [
+      "E0C78A009B765836AF0F2EF0243B9175E4D0442F833A175A350B4B053B0C188C"
+    ],
+    "manifestHash": "7F0DA5414547A21941914C19B09724CB55E71D683A425C68E534234DB1152E77",
+    "validationCount": 1
+  },
   "Prometheus.WindowsExporter": {
     "installerHashes": [
       "03BB0FE80B8AD0B4E39606B96C4C5CC56B1F766760011EA2B00111157C6EF077",
@@ -4785,14 +4832,14 @@
     "lastUpdated": "2026-08-16T17:10:10.8626644Z"
   },
   "SanthoshReddy352.NammaAgent": {
-    "lastUpdated": "2026-08-18T01:43:26.1312445Z",
+    "lastUpdated": "2026-08-19T12:47:12.7333Z",
     "state": "VALIDATION_FAILED",
     "installerHashes": [
       "38C3BA3855821505842E7E2C7C809C9BB3BA88391251690CA3FF9A4F3AFAF5AD"
     ],
     "description": "",
     "manifestHash": "49E6C509F0C931FF36BB5D88EE8942341D8265255EC629CA7EF350C74D14BBCE",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "2.3.2"
   },
   "Saturneric.GpgFrontend": {
@@ -5919,6 +5966,18 @@
     "version": "1.3.8",
     "state": "VALIDATION_PASSED"
   },
+  "V2Free.ClashVergeForV2free": {
+    "state": "VALIDATION_PASSED",
+    "version": "2.5.21",
+    "lastUpdated": "2026-08-19T12:47:12.9133037Z",
+    "description": "",
+    "installerHashes": [
+      "FEC2D75C80CBBDA315BA6283FA6FFF4F4ADC8E6182DC17E8EEBF259FC2E336BD",
+      "B1E720B6305546AABB25A5EF1AB9D56A16BC2591F1A7E91192BDC4E509B98C99"
+    ],
+    "manifestHash": "6516330AEA5FE1E8181DD5322EF6BF5F094B3FA4FFB269CA7006A352FD97E324",
+    "validationCount": 1
+  },
   "Vathivis.paperq": {
     "manifestHash": "B06377DD1B66556E25E7480DEB2CD833F5CAD6119FFB5963F4405E7D89651FA8",
     "installerHashes": [
@@ -5977,6 +6036,17 @@
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-08-19T05:34:55.7950507Z",
     "manifestHash": "BB31ACAB92F8EABD41375B96D9495D2DEC7EF679F46ECD74C9BCAD958C2AD066"
+  },
+  "Victor141516.Voolime": {
+    "state": "VALIDATION_PASSED",
+    "version": "0.6.0",
+    "lastUpdated": "2026-08-19T12:47:12.8857793Z",
+    "description": "",
+    "installerHashes": [
+      "A315E9532ABC0ED02DEDB19B5655E22F4D2B7CE1B2051DA69F7635A2517BE11D"
+    ],
+    "manifestHash": "86B7FC8D01D61C7D3B988F3CA6C76A1A24CE4012128D7AA9C6E9B64F04E0FB11",
+    "validationCount": 1
   },
   "Vipre.IPVTest": {
     "description": "",
@@ -6278,6 +6348,18 @@
     "installerHashes": [
       "E63E33484CEE30E78EC22AE840FDA8323FCCDBEAFA1FDA8FBB7BD8F025360F7B"
     ]
+  },
+  "Y-ASLant.ElegantClipboard": {
+    "state": "VALIDATION_PASSED",
+    "version": "1.2.7",
+    "lastUpdated": "2026-08-19T12:47:12.801054Z",
+    "description": "",
+    "installerHashes": [
+      "86FB9B5FFE87496E705E081F81FB4C1E35AA3BB6D08B9CCBFED21820EF31E9FD",
+      "D8C00A0669E4913EE74F2DFD812A254E1F6A3F9232736E9784E478A993FA5635"
+    ],
+    "manifestHash": "44491F2187A87A2FE42D76D44DFF39417191428FEF7FDBF3F6E4ABDCCDD54E47",
+    "validationCount": 1
   },
   "Yaak.app": {
     "lastUpdated": "2026-08-14T20:30:13.6035935Z",
