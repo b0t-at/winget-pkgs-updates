@@ -582,7 +582,11 @@
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-08-20T01:39:37.4401846Z",
     "validationCount": 1,
-    "version": "0.5"
+    "version": "0.5",
+    "openPr": {
+      "checkedAt": "2026-08-20T04:21:13.9302946Z",
+      "version": "0.5"
+    }
   },
   "BenjaminLSR.HandheldCompanion": {
     "state": "VALIDATION_PASSED",
