@@ -225,6 +225,17 @@
       "checkedAt": "2026-08-19T00:24:06.3004366Z"
     }
   },
+  "alirezagsm.trayy": {
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "B04275BF962529D22C9D0D730838F7E7F519535B742C43885945053B504A68F1",
+    "validationCount": 1,
+    "description": "",
+    "installerHashes": [
+      "AB4B8E96A0526F640A483722726C13D613988441106A602DAF0B88CA5FAD15AC"
+    ],
+    "lastUpdated": "2026-08-20T16:48:27.9600489Z",
+    "version": "3.1"
+  },
   "Alochi.Monitoring": {
     "description": "",
     "validationCount": 1,
@@ -688,6 +699,18 @@
     "lastUpdated": "2026-08-19T05:34:55.6721554Z",
     "manifestHash": "1D3F22CB5D08647D2C345496D2A3FEA702B321C0C2CC217587B7FCC190045BCC"
   },
+  "Betterleaks.Betterleaks": {
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "FF93B42372E403EA5183FA204FBD9B90F9A7B6462092148363223C1C4F42B3C4",
+    "validationCount": 1,
+    "description": "",
+    "installerHashes": [
+      "94310D028285A1BCCE7F160BC19EB62F87DE6460C95BFD4319151EF5B501ED3F",
+      "AA12BEB9CE1F6A911DA91E1D0D8A72D7E68DAF56A52A53F930038FD81F10F0BA"
+    ],
+    "lastUpdated": "2026-08-20T16:48:27.8860955Z",
+    "version": "1.8.1"
+  },
   "bgreenwell.lstr": {
     "version": "0.4.0",
     "installerHashes": [
@@ -1011,15 +1034,15 @@
     "version": "0.16.3"
   },
   "CarthageSoftware.Mago": {
-    "manifestHash": "643C2A545266D1D75556C67AC6E3D3D14FAFB634260E8CFB12FA6F1AE9EBB925",
-    "lastUpdated": "2026-08-18T05:33:46.7554234Z",
     "state": "VALIDATION_PASSED",
-    "version": "1.46.0",
+    "manifestHash": "E1FF0BCF486ECE9761CF85C8F672881EE7769DA643E7980894612C3A0A3936D5",
     "validationCount": 1,
     "description": "",
     "installerHashes": [
-      "C6846C95116EB266E13B4E97EC35C8D07F1B724BE37E832DA31177A8D2867775"
-    ]
+      "8EAB193A83EA48A367B361F8D16E660C7A1129794BFA31E62762B2EF152811BF"
+    ],
+    "lastUpdated": "2026-08-20T16:48:27.9082422Z",
+    "version": "1.47.2"
   },
   "CCGnomes.VaultFlasher": {
     "validationCount": 1,
@@ -2138,14 +2161,14 @@
   },
   "FOSSA.FOSSA-cli": {
     "state": "VALIDATION_PASSED",
+    "manifestHash": "07F47C9FB7B5C2F80ACEE050971752B2CADAC81F7C7D8A1CEE7FD7B21A31340C",
+    "validationCount": 1,
     "description": "",
-    "validationCount": 7,
     "installerHashes": [
-      "AFC6DDE66C199A98CF156D1B1D855BE88278CA6C5DC82E1E60F7C23799D9B0BD"
+      "60EF46B933C88D9C0CC077B55CA462E5E5B70C10231838519EE132EF7A2201BE"
     ],
-    "lastUpdated": "2026-08-06T10:56:40.4597768Z",
-    "manifestHash": "8E4C356A09AD836E5920805168E3A666005A46ED977549A315C3E66DE0FF18DA",
-    "version": "3.17.16"
+    "lastUpdated": "2026-08-20T16:48:28.0250448Z",
+    "version": "3.18.0"
   },
   "FrancisBanyikwa.MediaDownloader": {
     "installerHashes": [
@@ -3254,15 +3277,15 @@
     "manifestHash": "7A9A2E14303ABC11F2C21D21A080F61F04C283AE57A72346F31268FE2BA88F60"
   },
   "JuanjoFuchs.atref": {
-    "lastUpdated": "2026-08-17T17:04:34.9128832Z",
+    "lastUpdated": "2026-08-20T16:48:27.9784407Z",
     "description": "",
     "installerHashes": [
       "2B5155280A0E19954BEC2E36B56923620CBA4115309D7752F163A9B7CDD5ECCD"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "79F201DB8365DE6B0AED5A66CD569BAC8D80C3A2C3BF463FD3AFA3CE527033BC",
     "version": "0.6.0",
-    "state": "VALIDATION_FAILED"
+    "state": "VALIDATION_PASSED"
   },
   "JustArchiNET.ArchiSteamFarm": {
     "lastUpdated": "2026-08-14T10:42:15.0793071Z",
@@ -3979,6 +4002,18 @@
     "manifestHash": "AC43E418585B585070DF8599272956558BD4A498AF50E98D093D62A83E4C377D",
     "validationCount": 1,
     "lastUpdated": "2026-08-19T15:56:01.6254291Z"
+  },
+  "mikf.gallery-dl.Nightly": {
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "E4B5570987C8FDF516F80884C9582DCF1C162CC9B59E2F0245C09B78D1C72A48",
+    "validationCount": 1,
+    "description": "",
+    "installerHashes": [
+      "A42842DE47D39A8FDDB9206D6F5941CA9354486CE718CB8018BBF121F2E3CB7D",
+      "97EE29A7B4BB73FC3206690CB5D18702323E6F9DF1BE7B103C4C8A122E9A5174"
+    ],
+    "lastUpdated": "2026-08-20T16:48:27.8651411Z",
+    "version": "2026.08.20"
   },
   "MilkShift.GoofCord": {
     "state": "VALIDATION_PASSED",
@@ -5725,10 +5760,10 @@
     "installerHashes": [
       "38C3BA3855821505842E7E2C7C809C9BB3BA88391251690CA3FF9A4F3AFAF5AD"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "2.3.2",
     "manifestHash": "72473C55E49BFC70C95847002835B59BF7FF61B24226BE49CE450E45F7E9872C",
-    "lastUpdated": "2026-08-20T09:17:27.2675816Z"
+    "lastUpdated": "2026-08-20T16:48:27.7938142Z"
   },
   "Saturneric.GpgFrontend": {
     "validationCount": 1,
@@ -6838,6 +6873,17 @@
     ],
     "lastUpdated": "2026-08-17T21:15:38.4059211Z"
   },
+  "TrenchBroom.TrenchBroom": {
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "41F605AA063A49D7D252D2A91C2DB924C02FB84DC782A36042360095A3FDF5F7",
+    "validationCount": 1,
+    "description": "",
+    "installerHashes": [
+      "F30A1C74585E39C869CA65DF2E81E9ED834303A06399D0CA595E493B20C5C2D6"
+    ],
+    "lastUpdated": "2026-08-20T16:48:27.9274741Z",
+    "version": "2026.1"
+  },
   "tsouth89.Ceiling": {
     "validationCount": 1,
     "description": "",
@@ -7510,6 +7556,17 @@
     "installerHashes": [
       "E63E33484CEE30E78EC22AE840FDA8323FCCDBEAFA1FDA8FBB7BD8F025360F7B"
     ]
+  },
+  "xssnick.TON-Torrent": {
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "E71027E473A33614222144C99EBA80BEA066E5F7E3BE78E610208D758AC9EC3D",
+    "validationCount": 1,
+    "description": "",
+    "installerHashes": [
+      "4C85BEF8194D07E9237C5B48F1A21B9B9C4F275D465A2EA9AAF05A8B21CAF83C"
+    ],
+    "lastUpdated": "2026-08-20T16:48:27.9977024Z",
+    "version": "1.7.2"
   },
   "Y-ASLant.ElegantClipboard": {
     "state": "VALIDATION_PASSED",
