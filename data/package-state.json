@@ -1779,7 +1779,11 @@
       "96E4D6C83AD554A78173310F78302162FD52463D6A890DA58211021DABF74DC2"
     ],
     "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "version": "7.27.2",
+      "checkedAt": "2026-08-20T00:25:19.2671154Z"
+    }
   },
   "facebook.pyrefly": {
     "version": "1.2.0",
@@ -2792,8 +2796,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.8.8",
-      "checkedAt": "2026-08-19T00:24:00.5467228Z"
+      "version": "2026.8.9",
+      "checkedAt": "2026-08-20T00:25:21.6175744Z"
     }
   },
   "Jellyfin.FFmpeg": {
@@ -4177,7 +4181,7 @@
     "validationCount": 1,
     "openPr": {
       "version": "0.32.14",
-      "checkedAt": "2026-08-19T00:24:01.0949836Z"
+      "checkedAt": "2026-08-20T00:25:22.5921049Z"
     }
   },
   "Ombrelin.PandocGui": {
