@@ -226,15 +226,15 @@
     }
   },
   "Alochi.Monitoring": {
-    "lastUpdated": "2026-08-18T21:24:38.492187Z",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "manifestHash": "EE604747DF4CA084754C230E07D2C593168604EC0BCD6373598C6C9671CCF088",
     "description": "",
+    "validationCount": 1,
+    "manifestHash": "CBF3D24AECB1B5B3A61C0C96752D5973690B960F33340F5B1BFD4DBC8CF86596",
+    "lastUpdated": "2026-08-20T12:54:39.4695603Z",
     "installerHashes": [
-      "BABDFA944EB5AC152FB2B5E9A08748A10C906FBEBDD327692917499F45B35E07"
+      "03FA80947DCE077EC4600F1CF0ECDDA3D4F4618F38BC0C2606323BFC88C918E1"
     ],
-    "version": "1.0.102"
+    "state": "VALIDATION_PASSED",
+    "version": "1.0.105"
   },
   "AloproAgency.WAutoChat": {
     "lastUpdated": "2026-08-18T01:43:26.4458545Z",
@@ -365,6 +365,18 @@
     "lastUpdated": "2026-08-06T10:56:40.2158706Z",
     "manifestHash": "3AC84AA16424EB952BDD6A291E7E19648431D2ADC337AA9ADF88712458B0316C",
     "version": "2026.7.1"
+  },
+  "Aptivi.BassBoom": {
+    "description": "",
+    "validationCount": 1,
+    "manifestHash": "FF47CADB9CB77B42B7DF9550EBA5BC24B994943BA8E3B53B0B32C83C0E104898",
+    "lastUpdated": "2026-08-20T12:54:39.2865009Z",
+    "installerHashes": [
+      "531B78C55C5335970C0B8474D70F3CA1812F437AE494D13323B7E434F6FA2B16",
+      "071C753F34D42A9891B2B4573937F05073B191293641A16664A0CB63677E5FE4"
+    ],
+    "state": "VALIDATION_PASSED",
+    "version": "1.0.1"
   },
   "AquaSecurity.Trivy": {
     "lastUpdated": "2026-08-14T12:36:40.1551024Z",
@@ -2629,6 +2641,17 @@
     "version": "0.10.7",
     "state": "VALIDATION_PASSED"
   },
+  "Happ.Happ": {
+    "description": "",
+    "validationCount": 1,
+    "manifestHash": "B44AD9905BB8E8A5561FA8B7C339E50598A7E60F694DB94D3D8AE33AA4F11134",
+    "lastUpdated": "2026-08-20T12:54:39.396218Z",
+    "installerHashes": [
+      "619F6B29E0485D35FBF2F40414D29E92D113B8AFEB96BB9AA4E03C0A809FAA6E"
+    ],
+    "state": "VALIDATION_PASSED",
+    "version": "3.3.6"
+  },
   "HarjotSinghRana.Reinstate": {
     "version": "0.4.0",
     "validationCount": 1,
@@ -3041,6 +3064,19 @@
     "validationCount": 1,
     "version": "1.34"
   },
+  "JasperDevs.OddSnap": {
+    "description": "",
+    "validationCount": 1,
+    "manifestHash": "024A3FE216E700923734C39A29A687CBC367293D5C13B35A0C4DE1D789754AFF",
+    "lastUpdated": "2026-08-20T12:54:39.5125502Z",
+    "installerHashes": [
+      "9946AF0D6855BC2BE6C0A47C54AB9184C652F937D9317435E428DA17A5881C4F",
+      "9498C63CF4A1C43E2B0B03A08B9B55BE02EE456C5B83F9B715A45F75C0827E80",
+      "0979A0F5ECACE80B147860F21961CA92420CC5911EF30B2907B741C4755F6BF9"
+    ],
+    "state": "VALIDATION_PASSED",
+    "version": "0.8.48"
+  },
   "jawhitti.INTERCAL64": {
     "configHealth": {
       "status": "AssetMissing",
@@ -3411,6 +3447,18 @@
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-08-20T01:39:37.5147556Z",
     "validationCount": 1,
+    "version": "2.1.10"
+  },
+  "LANCommander.Server": {
+    "description": "",
+    "validationCount": 1,
+    "manifestHash": "B0DAB2033458F2486DB033BF406D50526241898A9AF691BC28086B8298EE9DDD",
+    "lastUpdated": "2026-08-20T12:54:39.3587989Z",
+    "installerHashes": [
+      "6C93E7A74BB74292067058ED7A6F0DAB8CEC10147CBA9F6B5D1B3AC6E28FD1B2",
+      "F27A051821898D92063C21DB4619AA9E12DA7D214E6FC3C9CC4E1B814E254F8F"
+    ],
+    "state": "VALIDATION_PASSED",
     "version": "2.1.10"
   },
   "LeNgocKhoa.Laragon": {
@@ -4398,6 +4446,17 @@
     "state": "VALIDATION_PASSED",
     "description": "",
     "manifestHash": "E9DE9EC1C4BA4D4597861D0B0F5257818672DF97E664157434FA5567E47D3DBD"
+  },
+  "NoirArchitects.Ncored": {
+    "description": "",
+    "validationCount": 1,
+    "manifestHash": "13721745B68D91CE6568BB4D5CD498C6327FCF344F54ACA1F5AB40D4E87ADDA3",
+    "lastUpdated": "2026-08-20T12:54:39.3769307Z",
+    "installerHashes": [
+      "8437748AEF1D8DBB24BD74D5E9B58CBC6C10DE9EAC8453FF2BF9368F63DF3C4E"
+    ],
+    "state": "VALIDATION_PASSED",
+    "version": "2026.2.5"
   },
   "nomacs.nomacs": {
     "configHealth": {
@@ -6254,15 +6313,15 @@
     }
   },
   "Storj.Uplink": {
-    "lastUpdated": "2026-08-13T18:32:17.4123548Z",
-    "validationCount": 1,
-    "manifestHash": "423EBE534B5EA69F5859E87BEF7104266DCB50FEDBF2A520FAA840AAFDC77847",
-    "installerHashes": [
-      "5CCE7A6FA695465062DB6A5256BABF1B51755585218C1CCDAAE4AC6F4818F480"
-    ],
-    "version": "1.161.9",
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "validationCount": 1,
+    "manifestHash": "0600C496D8323F4D7726561C737CF968B91DB4050F64162356FF9B8F7B214B00",
+    "lastUpdated": "2026-08-20T12:54:39.4216739Z",
+    "installerHashes": [
+      "6A19197705836DC205BC699FC5CE5917547454086FF3F142391E03E1B33FB194"
+    ],
+    "state": "VALIDATION_PASSED",
+    "version": "1.162.3"
   },
   "str4d.rage": {
     "state": "VALIDATION_PASSED",
@@ -6576,6 +6635,18 @@
     "installerHashes": [
       "B536C57E657FFF7A15D5A5D5A081F5562874A50D1C201C9B374DD898CEFC1F74"
     ]
+  },
+  "tg123.oci-to-wsl": {
+    "description": "",
+    "validationCount": 1,
+    "manifestHash": "A1FAE19B0F658AE685AA8A8BD3EA95831710443A359180C3E103BAE4296227F1",
+    "lastUpdated": "2026-08-20T12:54:39.4467419Z",
+    "installerHashes": [
+      "4E2F5163B882A3365AB6D03365896E70D10B6F8BEB6F283E1246357F05E15E1C",
+      "D5899B65DB754AF23D94AE763FF24D2197CD6AEF864939BA62B24592674239DC"
+    ],
+    "state": "VALIDATION_PASSED",
+    "version": "0.0.2"
   },
   "TheHomelessTwig.newc": {
     "validationCount": 1,
@@ -7492,6 +7563,19 @@
       "E20A5859CD641D9857EF2BDB141722501E95204CF2B02B41B8C12E0900FDA041"
     ],
     "lastUpdated": "2026-08-17T21:15:38.1463722Z"
+  },
+  "yt-dlp.yt-dlp.nightly": {
+    "description": "",
+    "validationCount": 1,
+    "manifestHash": "30580F0E97CCB1BC715CA2A00AF677863A12DBD1AC7096B7FBC784CEFD453C82",
+    "lastUpdated": "2026-08-20T12:54:39.486999Z",
+    "installerHashes": [
+      "D50098CED7DD806E4903D90C696E3F734A94ADC0DB31140700529FA61DCFBE60",
+      "02BCC69A2A65A2AF5DA81A79356763522B611EDC028C476E78C282735E28D442",
+      "0217496D95D680795A634B5F7258067E7DF6D1840D1E888C603AEE572EFB368A"
+    ],
+    "state": "VALIDATION_PASSED",
+    "version": "2026.08.19.233000"
   },
   "Yubico.Authenticator": {
     "installerHashes": [
