@@ -49,6 +49,7 @@ param(
     [switch] $SkipAnalyze,
     [switch] $SkipManifest,
     [switch] $SkipSandbox,
+    [switch] $KeepSandboxOpen,
 
     [string] $OutputDir
 )
@@ -246,7 +247,7 @@ if (-not $SkipSandbox) {
         # Test-Manifest-Sandbox expects the flat folder that directly contains the yaml files.
         $installerYaml = @($report.Manifest.Files | Where-Object { $_ -match '\.installer\.yaml$' } | Select-Object -First 1)
         $sandboxManifestPath = if ($installerYaml) { Split-Path -Parent $installerYaml } else { $report.Manifest.Path }
-        & $sandboxScript -ManifestPath $sandboxManifestPath
+        & $sandboxScript -ManifestPath $sandboxManifestPath -KeepSandboxOpen:$KeepSandboxOpen
         $sandboxExit = $LASTEXITCODE
         $report.Sandbox = [ordered]@{ ExitCode = $sandboxExit }
         Write-Host "Sandbox exit code: $sandboxExit (0 = success)"

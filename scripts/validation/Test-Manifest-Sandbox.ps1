@@ -40,7 +40,11 @@ Param(
     [switch] $SkipManifestValidation,
     [switch] $Prerelease,
     [switch] $EnableExperimentalFeatures,
-    [switch] $Clean
+    [switch] $Clean,
+    # Keep the sandbox window open after the install finishes so a human can
+    # inspect the machine state. Defaults to on for interactive local runs and
+    # off in CI (GitHub Actions / Azure Pipelines / generic CI).
+    [switch] $KeepSandboxOpen
 )
 
 . (Join-Path $PSScriptRoot 'GitHubApiCache.ps1')
@@ -877,18 +881,40 @@ $TimeoutSeconds = 900 # 15 minutes
 $ElapsedSeconds = 0
 $CheckIntervalSeconds = 2
 
+$isCiEnvironment = ($env:CI -eq 'true') -or ($env:GITHUB_ACTIONS -eq 'true') -or ($env:TF_BUILD -eq 'true')
+$canPrompt = [Environment]::UserInteractive -and -not [Console]::IsInputRedirected -and -not $isCiEnvironment
+$keepSandboxOpenEffective = $KeepSandboxOpen.IsPresent -or $canPrompt
+
 $sandboxCompleted = $false
 while ($ElapsedSeconds -lt $TimeoutSeconds) {
     if ((Test-Path $LogsFolder) -and (Test-Path $FinishedFile)) {
         Write-Information "--> Sandbox installation completed successfully"
         $sandboxCompleted = $true
-        
-        # Kill the sandbox processes now that installation is complete
-        Write-Information "--> Closing Windows Sandbox"
-        Stop-NamedProcess -ProcessName 'WindowsSandboxClient'
-        Stop-NamedProcess -ProcessName 'WindowsSandboxRemoteSession'
-        Start-Sleep -Seconds 20 # Allow time for the sandbox to close gracefully
-        
+
+        if ($keepSandboxOpenEffective) {
+            # The logs folder is a read-write mapped folder, so all results are
+            # already on the host - the sandbox only needs to stay alive for
+            # manual inspection of the machine state.
+            Write-Host "--> Sandbox left open for inspection. Logs stream live to: $LogsFolder" -ForegroundColor Yellow
+            if ($canPrompt) {
+                Read-Host '--> Look around in the sandbox, then press ENTER to close it'
+                Write-Information "--> Closing Windows Sandbox"
+                Stop-NamedProcess -ProcessName 'WindowsSandboxClient'
+                Stop-NamedProcess -ProcessName 'WindowsSandboxRemoteSession'
+                Start-Sleep -Seconds 20 # Allow time for the sandbox to close gracefully
+            }
+            else {
+                Write-Host '--> Close the sandbox window when done; all state is discarded on close.' -ForegroundColor Yellow
+            }
+        }
+        else {
+            # Kill the sandbox processes now that installation is complete
+            Write-Information "--> Closing Windows Sandbox"
+            Stop-NamedProcess -ProcessName 'WindowsSandboxClient'
+            Stop-NamedProcess -ProcessName 'WindowsSandboxRemoteSession'
+            Start-Sleep -Seconds 20 # Allow time for the sandbox to close gracefully
+        }
+
         break
     }
     
