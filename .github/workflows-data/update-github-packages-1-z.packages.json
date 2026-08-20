@@ -2677,11 +2677,6 @@
     "url": "https://github.com/frnsys/half_earth/releases/download/v{VERSION}/half-earth-socialism-v{VERSION}-x86_64-windows.zip"
   },
   {
-    "id": "futrime.lip",
-    "repo": "futrime/lip",
-    "url": "https://github.com/futrime/lip/releases/download/v{VERSION}/lip-{VERSION}-win-x64.zip https://github.com/futrime/lip/releases/download/v{VERSION}/lip-{VERSION}-win-arm64.zip"
-  },
-  {
     "id": "futrime.lipd",
     "repo": "futrime/lip",
     "url": "https://github.com/futrime/lip/releases/download/v{VERSION}/lip-{VERSION}-win-arm64.zip https://github.com/futrime/lip/releases/download/v{VERSION}/lip-{VERSION}-win-x64.zip"

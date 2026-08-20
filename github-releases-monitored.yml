@@ -1716,9 +1716,10 @@
           - id: "Frnsys.Half_earth"
             repo: "frnsys/half_earth"
             url: "https://github.com/frnsys/half_earth/releases/download/v{VERSION}/half-earth-socialism-v{VERSION}-x86_64-windows.zip"
-          - id: "futrime.lip"
-            repo: "futrime/lip"
-            url: "https://github.com/futrime/lip/releases/download/v{VERSION}/lip-{VERSION}-win-x64.zip https://github.com/futrime/lip/releases/download/v{VERSION}/lip-{VERSION}-win-arm64.zip"
+#          futrime.lip is excluded: retired 2026-08-21 because the ID is superseded by futrime.lipd in winget-pkgs; the old ID is frozen at 0.34.7 (its 0.34.8 submission was closed as a duplicate) while futrime.lipd jumped straight from 0.33.1 to 0.34.8, so every new upstream release was resubmitted under the dead ID as a guaranteed duplicate.
+#          - id: "futrime.lip"
+#            repo: "futrime/lip"
+#            url: "https://github.com/futrime/lip/releases/download/v{VERSION}/lip-{VERSION}-win-x64.zip https://github.com/futrime/lip/releases/download/v{VERSION}/lip-{VERSION}-win-arm64.zip"
           - id: "futrime.lipd"
             repo: "futrime/lip"
             url: "https://github.com/futrime/lip/releases/download/v{VERSION}/lip-{VERSION}-win-arm64.zip https://github.com/futrime/lip/releases/download/v{VERSION}/lip-{VERSION}-win-x64.zip"
