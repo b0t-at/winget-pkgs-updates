@@ -234,7 +234,11 @@
       "03FA80947DCE077EC4600F1CF0ECDDA3D4F4618F38BC0C2606323BFC88C918E1"
     ],
     "state": "VALIDATION_PASSED",
-    "version": "1.0.105"
+    "version": "1.0.105",
+    "openPr": {
+      "version": "1.0.105",
+      "checkedAt": "2026-08-20T16:17:45.1989161Z"
+    }
   },
   "AloproAgency.WAutoChat": {
     "lastUpdated": "2026-08-18T01:43:26.4458545Z",
@@ -863,7 +867,11 @@
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-08-20T01:39:37.5821562Z",
     "validationCount": 1,
-    "version": "27.1"
+    "version": "27.1",
+    "openPr": {
+      "version": "27.1",
+      "checkedAt": "2026-08-20T16:17:46.7287823Z"
+    }
   },
   "BogdanCalapod.pdq-cli": {
     "manifestHash": "C5AF44C23D4A45ED54FC7392BAAE6B072B62F99365A4095B03BCCFDF3C12AA71",
@@ -874,7 +882,11 @@
     "description": "",
     "installerHashes": [
       "4244DEC7644B541DCF75B3780D9C31002C8C3D03E2D8FE39264640CC379BA1B1"
-    ]
+    ],
+    "openPr": {
+      "version": "0.1.12",
+      "checkedAt": "2026-08-20T16:17:47.7335713Z"
+    }
   },
   "bootandy.dust": {
     "state": "VALIDATION_PASSED",
@@ -930,6 +942,12 @@
     "version": "1.72.0",
     "validationCount": 1
   },
+  "Byron.dua-cli": {
+    "openPr": {
+      "version": "2.42.1",
+      "checkedAt": "2026-08-20T16:17:50.7584816Z"
+    }
+  },
   "BytecodeAlliance.Wasmtime.Portable": {
     "state": "VALIDATION_PASSED",
     "description": "",
@@ -951,7 +969,11 @@
       "408C0F2F7B50C9D4B062307F45AF3557FDF0C7807F27E59504B4445FB860C859"
     ],
     "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "version": "7.13.5",
+      "checkedAt": "2026-08-20T16:17:51.5220575Z"
+    }
   },
   "CameronSutter.Plottr": {
     "validationCount": 6,
@@ -4806,7 +4828,7 @@
     "state": "VALIDATION_FAILED",
     "openPr": {
       "version": "1.12.6",
-      "checkedAt": "2026-08-19T15:03:37.9036228Z"
+      "checkedAt": "2026-08-20T16:16:46.4320333Z"
     }
   },
   "openwong2kim.wmux": {
@@ -6321,7 +6343,11 @@
       "6A19197705836DC205BC699FC5CE5917547454086FF3F142391E03E1B33FB194"
     ],
     "state": "VALIDATION_PASSED",
-    "version": "1.162.3"
+    "version": "1.162.3",
+    "openPr": {
+      "version": "1.162.3",
+      "checkedAt": "2026-08-20T16:17:36.7760845Z"
+    }
   },
   "str4d.rage": {
     "state": "VALIDATION_PASSED",
