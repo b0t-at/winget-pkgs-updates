@@ -8,11 +8,7 @@
     "validationCount": 1,
     "installerHashes": [
       "6A0E4ECEF8D6550574028FF367BB623C362A99D5D71C6FDBAB2115F6DDBE19E9"
-    ],
-    "openPr": {
-      "checkedAt": "2026-08-19T17:09:39.0492195Z",
-      "version": "4.2.1.0"
-    }
+    ]
   },
   "ABowlOfEleven.hopscout": {
     "manifestHash": "1F3AE2A47F29CCDE4BDE142A406D060AE04B93D9EE44F9F9F28DB6D583CF4D25",
@@ -23,7 +19,11 @@
     ],
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "version": "0.1.2"
+    "version": "0.1.2",
+    "openPr": {
+      "checkedAt": "2026-08-20T08:20:40.4822196Z",
+      "version": "0.1.2"
+    }
   },
   "Accreation.Aide": {
     "version": "0.8.0",
@@ -77,7 +77,11 @@
     ],
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "version": "0.13.7"
+    "version": "0.13.7",
+    "openPr": {
+      "checkedAt": "2026-08-20T08:20:40.7957336Z",
+      "version": "0.13.7"
+    }
   },
   "ADELA.Devmate": {
     "lastUpdated": "2026-08-18T17:25:13.9756157Z",
@@ -101,7 +105,11 @@
     ],
     "lastUpdated": "2026-08-06T14:10:17.4048445Z",
     "manifestHash": "88FF875B5DEA51BC3B743F06098AADAF42AB87DA966E19E5EFA189C21F4EC081",
-    "version": "0.107.78"
+    "version": "0.107.78",
+    "openPr": {
+      "checkedAt": "2026-08-20T08:19:34.2328069Z",
+      "version": "0.107.79"
+    }
   },
   "AdGuard.dnsproxy": {
     "description": "",
