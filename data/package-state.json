@@ -123,7 +123,7 @@
     "lastUpdated": "2026-08-19T17:02:25.8797854Z",
     "manifestHash": "3BD6D6F7B48462CF3A02CF2DC2AFC0881BD072C354168DB528A71B4A35E8E30B",
     "openPr": {
-      "checkedAt": "2026-08-19T17:08:35.0316239Z",
+      "checkedAt": "2026-08-20T20:15:04.9873697Z",
       "version": "0.84.1"
     },
     "state": "VALIDATION_PASSED",
@@ -1747,7 +1747,7 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "3EAB1E5A6E607AC40A8D48C149D5E5B2207604A2D465245704CB6FD111942437",
     "openPr": {
-      "checkedAt": "2026-08-19T17:08:37.7814003Z",
+      "checkedAt": "2026-08-20T20:15:09.3895505Z",
       "version": "5.2.0"
     }
   },
@@ -2168,7 +2168,11 @@
       "60EF46B933C88D9C0CC077B55CA462E5E5B70C10231838519EE132EF7A2201BE"
     ],
     "lastUpdated": "2026-08-20T16:48:28.0250448Z",
-    "version": "3.18.0"
+    "version": "3.18.0",
+    "openPr": {
+      "checkedAt": "2026-08-20T20:15:11.1869299Z",
+      "version": "3.18.0"
+    }
   },
   "FrancisBanyikwa.MediaDownloader": {
     "installerHashes": [
@@ -2525,7 +2529,7 @@
     ],
     "manifestHash": "8A93D198AD57BF64282A1C20A5B26813247BA8F368CBBC5002B3A2AECCF79CDA",
     "openPr": {
-      "checkedAt": "2026-08-19T20:14:34.3982665Z",
+      "checkedAt": "2026-08-20T20:15:12.8190922Z",
       "version": "2.5.1"
     }
   },
@@ -3143,8 +3147,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.8.9",
-      "checkedAt": "2026-08-20T00:25:21.6175744Z"
+      "checkedAt": "2026-08-20T20:15:14.4869427Z",
+      "version": "2026.8.10"
     }
   },
   "Jellyfin.FFmpeg": {
@@ -3353,7 +3357,7 @@
     "validationCount": 1,
     "version": "18.1.1",
     "openPr": {
-      "checkedAt": "2026-08-19T17:08:39.4639181Z",
+      "checkedAt": "2026-08-20T20:15:14.8685613Z",
       "version": "18.1.1"
     }
   },
@@ -4641,8 +4645,8 @@
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
     "openPr": {
-      "version": "0.32.14",
-      "checkedAt": "2026-08-20T00:25:22.5921049Z"
+      "checkedAt": "2026-08-20T20:16:06.4924919Z",
+      "version": "0.32.15"
     }
   },
   "Ombrelin.PandocGui": {
