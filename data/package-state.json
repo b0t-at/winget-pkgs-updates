@@ -336,16 +336,16 @@
     }
   },
   "AnInsomniacy.Aria2Next": {
-    "version": "2.5.5",
-    "lastUpdated": "2026-08-18T13:04:36.7050275Z",
+    "lastUpdated": "2026-08-20T21:12:49.6634602Z",
+    "manifestHash": "A6835787A39482137992ABEBF706836A64E0E6C5CEC9B5E79F032BEDE00D0043",
+    "version": "2.5.6",
     "validationCount": 1,
     "installerHashes": [
-      "554F2F81CA53731DC9E01710CFB16081A34759F3276FF16EB4B12656C1B6E5B9",
-      "FE029B00C72014690F128C17830F51924B6C07BAFEE28E28763D1FED93CB393E"
+      "1D86C1AD76384F0DD5AD459D5B0CC302FFCC8D12346660307DCD3F2D78BCF25D",
+      "6D590C64B93D01537292C8351F14FDCE8977AE98C7810B9EDD46415F075CF49F"
     ],
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "manifestHash": "D32BDC3AF5B32BC98AA5FC28B7882714B9EA44DB61443828A2B845A54C2FE99D"
+    "description": ""
   },
   "Anki.Anki": {
     "manifestHash": "0D9714050B0D59E7B030281F9DF9D711AF26AFF8475786C412B799325297275B",
@@ -678,15 +678,15 @@
     }
   },
   "BenModigell.Vibes": {
-    "lastUpdated": "2026-08-19T17:46:50.1099889Z",
-    "version": "1.4.3",
+    "lastUpdated": "2026-08-20T21:12:49.6017002Z",
+    "manifestHash": "130963AB811E12E73C1CABEBA601A70763CF6B974ACA8F506F743D86C033F0FD",
+    "version": "1.4.4",
     "validationCount": 1,
-    "description": "",
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "6CE4E86045F11AD634187BA273E92494F51151DC54B88AEDB4E2DFF1209F2EF2"
+      "42FE5D76F2F07DBE64A3CD9EA1FF84C869772C88BDB6B69186FBE115D78CD9EE"
     ],
-    "manifestHash": "9D3B0C943EF9812892D6DA59E0BAFEE5E5EC91526CF0F4A11F4FD3BDEDA4242D"
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "bensadeh.tailspin": {
     "validationCount": 1,
@@ -1044,6 +1044,17 @@
     "lastUpdated": "2026-08-20T16:48:27.9082422Z",
     "version": "1.47.2"
   },
+  "ccccraz.cogmoteGO": {
+    "lastUpdated": "2026-08-20T21:12:49.643883Z",
+    "manifestHash": "08B8108641665163B9F95226770A1A31C6983FA07619378FFDAA4C5497966A23",
+    "version": "0.1.45",
+    "validationCount": 1,
+    "installerHashes": [
+      "A6D29E3CD2F028227DC97F083A20D5C440568D8B49BD29E9F422DE1C4173D6F7"
+    ],
+    "state": "VALIDATION_PASSED",
+    "description": ""
+  },
   "CCGnomes.VaultFlasher": {
     "validationCount": 1,
     "description": "",
@@ -1193,15 +1204,15 @@
     "description": ""
   },
   "closeio.Close": {
-    "version": "9.2.9",
-    "installerHashes": [
-      "CA98359471751230BCE24F84C543DF6E10BEEA4F93BBBEDA217BFAA6C5E360AB"
-    ],
-    "manifestHash": "367F4DBCB61F46E2A1C347F5730B3E6D92A0EA3129C537CCD783CB1779DD02CE",
-    "state": "VALIDATION_PASSED",
-    "description": "",
+    "lastUpdated": "2026-08-20T21:12:49.4833707Z",
+    "manifestHash": "B6D9118D049ABCEE9D5C3042B6CAF132322B86E37E93448F5EA3B1C91138901A",
+    "version": "9.3.0",
     "validationCount": 1,
-    "lastUpdated": "2026-08-16T17:10:10.9033621Z"
+    "installerHashes": [
+      "53B420F57D5C0A9CEF8502877C4CD97DBDAA560357BDBED534E20A90FFC67A9F"
+    ],
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "Cloudreve.Cloudreve": {
     "description": "",
@@ -1712,6 +1723,17 @@
       "tag": "v3.11.1",
       "checkedAt": "2026-08-18T08:42:19.3437599Z"
     }
+  },
+  "EduMIPS64.EduMIPS64": {
+    "lastUpdated": "2026-08-20T21:12:49.4649014Z",
+    "manifestHash": "54A712BDA3E287D206C148636E666F303D24ECE7ACFFB0E92569C90E2BFC76AB",
+    "version": "1.4.0",
+    "validationCount": 1,
+    "installerHashes": [
+      "08831280620C8F1697A0E5867A0DD1AD67D6539F528163AAA453537159F20D98"
+    ],
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "EinsVier.BlitzText": {
     "validationCount": 1,
@@ -2678,6 +2700,18 @@
     "version": "2.15.1",
     "state": "VALIDATION_PASSED"
   },
+  "Hanselman.PeekDesktop": {
+    "lastUpdated": "2026-08-20T21:12:49.5606509Z",
+    "manifestHash": "78380DF3560A6DF51505797BC91ECF9EAE6625D8E707054FF5254800583CB54B",
+    "version": "0.9.7",
+    "validationCount": 1,
+    "installerHashes": [
+      "C14BF965CE65E3418A0434377926F18B5C31A9FD5C741EB0D4D1ADE2A8C3D006",
+      "2865356F10B1616D342CD2203952EACB081FD681E71A93C0307DF024016D28E9"
+    ],
+    "state": "VALIDATION_PASSED",
+    "description": ""
+  },
   "Hanthor.BluefinCLI": {
     "manifestHash": "6F4882864AA37A84EAB303AC3B4FB40E468DD32902AD649EF7CA63C112192076",
     "lastUpdated": "2026-08-16T13:40:51.6621027Z",
@@ -2725,6 +2759,17 @@
       "3210CFDBE32FDBB1BEF4EFA3F03EF9B3A532BA9CAE85659E25DCC7EB51D82A58"
     ],
     "version": "0.3.32"
+  },
+  "hellobertrand.zxc": {
+    "lastUpdated": "2026-08-20T21:12:49.6254344Z",
+    "manifestHash": "BCC102C0B845CBB8D0EBD1A9161CD7D9A335A77D0A45A99637F64E483CBBC2E0",
+    "version": "0.13.3",
+    "validationCount": 1,
+    "installerHashes": [
+      "4589E99CF081F844518EA1A6C40D851120C1A8A0EC75A92BE352AF402DF53AF0"
+    ],
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "HeroicGamesLauncher.GOGDL": {
     "lastUpdated": "2026-08-17T17:04:34.9817596Z",
@@ -2896,6 +2941,17 @@
     "manifestHash": "395E671D4DACD8F2A81F0A3ABF389DBC29D0216F6A2F3C6936190DC5991AF9D8",
     "validationCount": 1,
     "version": "3.5.0"
+  },
+  "humbinal.ParqForge": {
+    "lastUpdated": "2026-08-20T21:12:49.3909731Z",
+    "manifestHash": "8EC97AEC57F7BCD17E0EB75E1BDF6BAD1FAE5B925DB7295ADAF2CB897D441D5C",
+    "version": "0.1.2",
+    "validationCount": 1,
+    "installerHashes": [
+      "B6AEA775FA1B100A628AEA7999B2B1D6403729EAC485B51B4711709BF1B4E6C4"
+    ],
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "icsharpcode.ILSpy": {
     "state": "VALIDATION_PASSED",
@@ -3521,6 +3577,17 @@
     "lastUpdated": "2026-08-14T16:34:46.1443381Z",
     "manifestHash": "E2B20C530E7089F81C211528C6D2DD0F52E524C1D63AD5051E880427A6AB934A"
   },
+  "leonsnajdr.sast": {
+    "lastUpdated": "2026-08-20T21:12:49.5382807Z",
+    "manifestHash": "1FC40C05377F04EC09FCB90FDCC4B02B10D521992E8CC72B31B7A65AFCC4E0B7",
+    "version": "26.8.64",
+    "validationCount": 1,
+    "installerHashes": [
+      "F8A22672BEEBDF415818D4DB4DDC3C84A468386756B6C054D367093D370A6E6C"
+    ],
+    "state": "VALIDATION_PASSED",
+    "description": ""
+  },
   "Levminer.Authme": {
     "lastUpdated": "2026-07-07T21:52:02.4861044Z",
     "installerHashes": [
@@ -3936,6 +4003,17 @@
     "validationCount": 1,
     "lastUpdated": "2026-08-19T15:56:01.8384972Z"
   },
+  "Microsoft.LightGBM": {
+    "lastUpdated": "2026-08-20T21:12:49.5072525Z",
+    "manifestHash": "59C9460165C1EB47F3811C63062DF7CCE7E921C37DE33266A52BF1F89F0C9440",
+    "version": "4.7.0",
+    "validationCount": 1,
+    "installerHashes": [
+      "D729041792BF885AE1ED6F6C4FA4531F7D5B48024AF7C5820AEB22EC87733DA5"
+    ],
+    "state": "VALIDATION_PASSED",
+    "description": ""
+  },
   "Microsoft.LogCheetah": {
     "version": "1.1.0",
     "lastUpdated": "2026-08-18T13:04:36.5492914Z",
@@ -3996,16 +4074,16 @@
     ]
   },
   "Microsoft.WSL.PreRelease": {
-    "version": "2.7.12",
-    "installerHashes": [
-      "A460D4560215F2EFE003C136244B78EA3415D773824D7A688EA9DED36DBE9145",
-      "1035D7870ED6155B56FEF6966B22ECE5CB8CACACBEA1561140A066111B3E962D"
-    ],
-    "description": "",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "AC43E418585B585070DF8599272956558BD4A498AF50E98D093D62A83E4C377D",
+    "lastUpdated": "2026-08-20T21:12:49.584017Z",
+    "manifestHash": "1BEDD5B2576DA5649216BD8219E3685CA104879567839B38971C9D3D23F3EC31",
+    "version": "2.9.4",
     "validationCount": 1,
-    "lastUpdated": "2026-08-19T15:56:01.6254291Z"
+    "installerHashes": [
+      "826D71865B3A45BEE03B8D9BD100D7217DD7389761D75AFA7C77106EAC5CD78E",
+      "62CC1FB47A62938BBFB4352FF33DC802C1A3CC5B1982FF01BAF9D4C7F73D06CA"
+    ],
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "mikf.gallery-dl.Nightly": {
     "state": "VALIDATION_PASSED",
