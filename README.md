@@ -33,3 +33,24 @@ For a reviewed installer architecture, type, or scope transition, set
 `allowStructuralRewrite: true` on that package's matrix entry. This approval is
 disabled by default and maps only to WinMatsch's `--allow-structural-rewrite`
 option.
+
+## End-to-end installer analysis
+
+`scripts/analyze/Invoke-InstallerE2E.ps1` answers "what would our pipeline do
+with this installer?" without touching any monitored package:
+
+```powershell
+# Direct URL(s)
+./scripts/analyze/Invoke-InstallerE2E.ps1 -InstallerUrl 'https://example.com/setup.exe'
+
+# Any winget-pkgs PR - installer URLs are extracted from the PR's manifests
+./scripts/analyze/Invoke-InstallerE2E.ps1 -WingetPkgsPr 421311
+```
+
+It runs `winmatsch analyze` per URL (architecture, installer type, silent
+switches, hashes, dependencies), generates a throwaway manifest with
+`winmatsch new` under a demo identifier (nothing is submitted), validates it,
+and - when Windows Sandbox is enabled - installs it via
+`scripts/validation/Test-Manifest-Sandbox.ps1`. `report.md` and `report.json`
+are written to `data/e2e-analysis/<timestamp>/` (gitignored). Use
+`-SkipSandbox`, `-SkipManifest`, or `-SkipAnalyze` to shorten the loop.

@@ -10,3 +10,5 @@ scripts/package-cleanup/cleaned_packages.csv
 *.appx
 *.msix
 *.msixbundle
+
+data/e2e-analysis/

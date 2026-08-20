@@ -1,0 +1,84 @@
+name: Analyze Installer E2E
+
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: 'Installer URL(s), space separated (alternative to pr)'
+        required: false
+      pr:
+        description: 'winget-pkgs PR number - installer URLs are extracted from its manifest'
+        required: false
+      packageId:
+        description: 'Demo package identifier used for the throwaway manifest'
+        required: false
+        default: 'Demo.Analysis'
+      skipSandbox:
+        description: 'Skip the Windows Sandbox install test'
+        required: true
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  analyze:
+    name: "E2E: ${{ inputs.pr && format('PR #{0}', inputs.pr) || inputs.urls }}"
+    runs-on: [self-hosted, windows, x64]
+    timeout-minutes: 45
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Run E2E analysis
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          INPUT_URLS: ${{ inputs.urls }}
+          INPUT_PR: ${{ inputs.pr }}
+          INPUT_PACKAGEID: ${{ inputs.packageId }}
+          INPUT_SKIPSANDBOX: ${{ inputs.skipSandbox }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+
+          $urls = @($env:INPUT_URLS -split '[\s,]+' | Where-Object { $_ })
+          $pr = 0
+          [void] [int]::TryParse($env:INPUT_PR, [ref] $pr)
+
+          if (($urls.Count -gt 0) -eq ($pr -gt 0)) {
+            Write-Error 'Provide exactly one of "urls" or "pr".'
+            exit 1
+          }
+
+          $params = @{ PackageId = $env:INPUT_PACKAGEID }
+          if ($pr -gt 0) { $params.WingetPkgsPr = $pr } else { $params.InstallerUrl = $urls }
+          if ($env:INPUT_SKIPSANDBOX -eq 'true') { $params.SkipSandbox = $true }
+
+          & .\scripts\analyze\Invoke-InstallerE2E.ps1 @params
+          # Analysis failures (e.g. validation-failed) are findings, not workflow
+          # errors - the report carries them. Only hard script errors fail the job.
+
+      - name: Publish report to job summary
+        if: always()
+        shell: pwsh
+        run: |
+          $latest = Get-ChildItem -Path 'data\e2e-analysis' -Directory -ErrorAction SilentlyContinue |
+            Sort-Object Name -Descending | Select-Object -First 1
+          if ($latest -and (Test-Path (Join-Path $latest.FullName 'report.md'))) {
+            Get-Content (Join-Path $latest.FullName 'report.md') |
+              Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append -Encoding utf8
+          } else {
+            'No report.md was produced.' | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append -Encoding utf8
+          }
+
+      - name: Upload report artifacts
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: e2e-analysis-${{ github.run_id }}
+          path: data/e2e-analysis/
+          retention-days: 30
+          if-no-files-found: warn
