@@ -8,8 +8,8 @@
     "validationCount": 1,
     "version": "4.3.0.0",
     "openPr": {
-      "checkedAt": "2026-08-20T12:18:00.6744272Z",
-      "version": "4.3.0.0"
+      "version": "4.3.0.0",
+      "checkedAt": "2026-08-21T16:16:53.6210059Z"
     }
   },
   "ABowlOfEleven.hopscout": {
@@ -2732,7 +2732,11 @@
     "installerHashes": [
       "50B904FE09980EB44D566755EB65B4693A0DEAC30998EA3323C6901D9540E60D",
       "510FB2369A4720ADB457783768C5E1481A0E1137D9E7694478DFE9B8FE445DC1"
-    ]
+    ],
+    "openPr": {
+      "version": "36.0",
+      "checkedAt": "2026-08-21T16:15:54.7190195Z"
+    }
   },
   "goplus.xgo": {
     "manifestHash": "3BFF78AAF18769D1748DE57CF066A27AFDA17E289D83BDC8F984990CDB300F6B",
