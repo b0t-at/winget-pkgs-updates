@@ -109,7 +109,7 @@
     "manifestHash": "88FF875B5DEA51BC3B743F06098AADAF42AB87DA966E19E5EFA189C21F4EC081",
     "version": "0.107.78",
     "openPr": {
-      "checkedAt": "2026-08-20T08:19:34.2328069Z",
+      "checkedAt": "2026-08-21T08:20:34.0489897Z",
       "version": "0.107.79"
     }
   },
@@ -1217,7 +1217,11 @@
     "description": "",
     "manifestHash": "452B307A1F4E795FB5198446B88E2B92A70442795275A9151A0FBA1332F6D801",
     "validationCount": 1,
-    "version": "1.0.48275"
+    "version": "1.0.48275",
+    "openPr": {
+      "checkedAt": "2026-08-21T08:20:35.5892359Z",
+      "version": "1.0.48692"
+    }
   },
   "ciromattia.KCC": {
     "installerHashes": [
