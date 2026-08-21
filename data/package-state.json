@@ -1807,7 +1807,11 @@
     "description": "",
     "manifestHash": "9F80B9984F1DF1445F8D7F7B68CD4991EF8A75DAAEF4747862B1BDDA7C5A89F2",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "version": "0.56.1",
+      "checkedAt": "2026-08-21T20:12:59.3088649Z"
+    }
   },
   "dragonflylee.switchfin": {
     "validationCount": 1,
@@ -5388,7 +5392,7 @@
     "state": "VALIDATION_FAILED",
     "openPr": {
       "version": "1.12.6",
-      "checkedAt": "2026-08-20T16:16:46.4320333Z"
+      "checkedAt": "2026-08-21T20:13:02.0209519Z"
     }
   },
   "OpenWhispr.OpenWhispr": {
@@ -7066,8 +7070,8 @@
     "validationCount": 1,
     "manifestHash": "2FC17D10387329E5E73DBDDCBE45541A670D1711C99B916B986BBD747577DEC7",
     "openPr": {
-      "checkedAt": "2026-08-19T20:15:31.6684063Z",
-      "version": "1.50.2"
+      "version": "1.50.4",
+      "checkedAt": "2026-08-21T20:13:04.9968451Z"
     }
   },
   "stuncloud.uwscr": {
