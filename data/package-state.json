@@ -36,11 +36,7 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "DEA3EBC1D16A0FDD79EFD00D98F1456F0272CFFB1F575244146CBD1FF6F1C8EF",
     "validationCount": 1,
-    "lastUpdated": "2026-08-19T15:56:01.8183145Z",
-    "openPr": {
-      "checkedAt": "2026-08-19T17:09:40.4413681Z",
-      "version": "0.8.0"
-    }
+    "lastUpdated": "2026-08-19T15:56:01.8183145Z"
   },
   "achannarasappa.ticker": {
     "lastUpdated": "2026-06-21T18:31:48.864373Z",
@@ -2636,7 +2632,11 @@
     "lastUpdated": "2026-08-21T09:07:38.3833158Z",
     "validationCount": 1,
     "manifestHash": "AF845B6B4A27BEFC93F53DE38287768CF00C46CDDBA1CA71D9E06D0907339F56",
-    "description": ""
+    "description": "",
+    "openPr": {
+      "version": "2.13.1",
+      "checkedAt": "2026-08-21T12:16:41.0102942Z"
+    }
   },
   "Google.ContainerTools.Skaffold": {
     "version": "2.24.0",
