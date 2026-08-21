@@ -1310,9 +1310,9 @@
     "state": "VALIDATION_FAILED",
     "manifestHash": "8BE274DE21ABB33C33201D6CAFE132CDC1C0BF43F14AA03B9B7C656C860986A9",
     "description": "",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "0.9.5",
-    "lastUpdated": "2026-08-21T17:17:39.7305365Z"
+    "lastUpdated": "2026-08-21T20:47:48.3076694Z"
   },
   "closeio.Close": {
     "lastUpdated": "2026-08-20T21:12:49.4833707Z",
@@ -3100,6 +3100,17 @@
     "validationCount": 1,
     "version": "0.2.3"
   },
+  "HiroSystems.Clarinet": {
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "3DE6E6586FEDCC6DE25F6F2BEC9EA49230ED0775B1AA2EAEE381F60A314A517E"
+    ],
+    "version": "3.23.1",
+    "lastUpdated": "2026-08-21T20:47:48.4447886Z",
+    "validationCount": 1,
+    "manifestHash": "3D3F462B0E3FF03CA4242B1081B8E7EC5320BE2F470497CD1935AFED1DAAB5E2"
+  },
   "HishamMedhat.PortPeek": {
     "lastUpdated": "2026-08-19T17:46:50.1862956Z",
     "version": "1.2.3",
@@ -3210,15 +3221,15 @@
     "description": ""
   },
   "hrkfdn.ncspot": {
-    "version": "1.3.4",
-    "installerHashes": [
-      "8D64F13F810D5C6FBBD643C03B64601F88CE4A6CC225FB4D6A0808004B5B1C53"
-    ],
     "description": "",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "E61E75F42212B6FDDC18BB02D7948F6CC13E11BF3DE9BAC8EF2C8B98FE9230A7",
+    "installerHashes": [
+      "0A7F99E5F59FB6C553AD81E3E65DC816CC087DA8CD7B3B809B058FB79443042C"
+    ],
+    "version": "1.4.0",
+    "lastUpdated": "2026-08-21T20:47:48.5223419Z",
     "validationCount": 1,
-    "lastUpdated": "2026-08-19T15:56:01.7447536Z"
+    "manifestHash": "0E67D289685CA32A7682745388CD26F782C1317B16986349A057DFC291AB2625"
   },
   "Humanity.DJV2": {
     "lastUpdated": "2026-08-18T01:43:26.4630291Z",
@@ -4225,6 +4236,17 @@
       "checkedAt": "2026-08-18T08:42:19.3437599Z"
     }
   },
+  "matkrin.bashd": {
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "04CEF84228E8F8F434846F46307F75A1C0FC430C1F5A5DA59305D7F5CAABF9D4"
+    ],
+    "version": "0.2.3",
+    "lastUpdated": "2026-08-21T20:47:48.4911356Z",
+    "validationCount": 1,
+    "manifestHash": "198C9E0E6BC8A6327AE820ABD2447E58970FC983B8605FA8D850CB3385828788"
+  },
   "MaximumADHD.RobloxStudioModManager": {
     "manifestHash": "43CC80AD5E1655CEB8BB82A69545E9A7C00B120B605316AC1F396EBB14CDA3FD",
     "lastUpdated": "2026-08-18T05:33:46.8797734Z",
@@ -4257,6 +4279,17 @@
     "installerHashes": [
       "EB44A8128AFC293FF9E99BF8483B7BE9F5D76407296D3859BBA02D401DFC3BEE"
     ]
+  },
+  "Mew.Wrec": {
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "F50C02977825F70FC2585BA1E695FA2760BD02EF5C27CDCA0AD49678E99780B7"
+    ],
+    "version": "0.3.1",
+    "lastUpdated": "2026-08-21T20:47:48.5425088Z",
+    "validationCount": 1,
+    "manifestHash": "C48B66F51C35D68FE88124020524728E46E5C00B4F1CF5C1DA5736611F0B09BC"
   },
   "Mibuw.miPDFsignCommunity": {
     "manifestHash": "309EF4203B7F173FCE3262CFE23E317671485069AC197DDABECCAD6C2FADF5FD",
@@ -6046,13 +6079,13 @@
   },
   "Reloaded-Project.Reloaded-II": {
     "version": "1.30.3",
-    "lastUpdated": "2026-08-21T09:07:38.0801698Z",
+    "lastUpdated": "2026-08-21T20:47:48.3949839Z",
     "installerHashes": [
       "FB5EDE9F15686BA4A001082A75A77EDB5F9F181EDE6C31A80FF578257C5B7D4E"
     ],
     "description": "",
     "manifestHash": "599EE4D6F93BC174C9DFF02C66D4F224DF6FF9F3D72539E79C49C2BCFD588043",
-    "validationCount": 2,
+    "validationCount": 3,
     "state": "VALIDATION_FAILED"
   },
   "restic.restic": {
@@ -6122,6 +6155,17 @@
     "installerHashes": [
       "7CE4DE9D8C5C6C5CCE9067B2408AD63DF73C0B35FCEFE51DC8684D6AACAF7B3B"
     ]
+  },
+  "Ripose.Memento": {
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "6A4164F612A9B8B3C8A2CB70961E027F93D72C3448014B2390BAC62EA4393474"
+    ],
+    "version": "2.0.2",
+    "lastUpdated": "2026-08-21T20:47:48.4210433Z",
+    "validationCount": 1,
+    "manifestHash": "E250B0EE8AFA47B29A6B270A1105ED75E766651E15F2C1BFF85B7FFC9CF96ECB"
   },
   "RivaFarabi.Deckboard": {
     "lastUpdated": "2026-08-05T17:18:05.257089Z",
@@ -6503,15 +6547,15 @@
     }
   },
   "seerge.g-helper.PreRelease": {
-    "version": "0.274",
-    "lastUpdated": "2026-08-18T13:04:36.5363408Z",
-    "validationCount": 1,
-    "installerHashes": [
-      "2BB116B3245AD9B4E62493107234A06A99BB23C795DAD8DC3F9865892AD3B595"
-    ],
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "D3F9732D27E6384A7D0C0707AE7D2400CD7F28F82A371EC294CBDB0286C22E3F"
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "9BFF23A04832EBE02306831C98899617485EB922B1D7971A12E95D78F4AC7497"
+    ],
+    "version": "0.277",
+    "lastUpdated": "2026-08-21T20:47:48.4702186Z",
+    "validationCount": 1,
+    "manifestHash": "D2FDFBA96C583ABF64410A34FD3D3253A5A17F0DA3E5A5505B4A2904F3459755"
   },
   "Sefinek.GenshinStellaMod": {
     "configHealth": {
