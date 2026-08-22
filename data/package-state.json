@@ -180,15 +180,15 @@
     "state": "VALIDATION_PASSED"
   },
   "agentty.agentty": {
-    "version": "0.3.0",
-    "installerHashes": [
-      "52D48EDBAFD8353DDC407BA948D70B8A38D8415B53B1A30CEA420118428A5BA5"
-    ],
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "lastUpdated": "2026-08-18T09:30:08.966482Z",
+    "version": "0.3.1",
+    "manifestHash": "AEE039A043F83E1B9C30CB37C1E09FEBFB40A1849175986B5DE1DB72E1C121B7",
+    "installerHashes": [
+      "A864EFDAB5A1ECF89008BA1D5468AF29AADC6AE80AC8E1F0DF1BE2ABB33361E1"
+    ],
     "validationCount": 1,
-    "manifestHash": "527AE8CF86FE513570307E98705746C68490BF2B69696D861A97E25A793037F2"
+    "lastUpdated": "2026-08-22T08:51:40.3129391Z",
+    "state": "VALIDATION_PASSED"
   },
   "Aiden1020.LocalSubs": {
     "manifestHash": "213A97D3D7C6F3B5FE864420C3CEF1C3280D138B6B91B0272DB5230389D73EB2",
@@ -376,6 +376,18 @@
     ],
     "state": "VALIDATION_PASSED",
     "validationCount": 4
+  },
+  "AntimatterStudios.ext4-win-driver": {
+    "description": "",
+    "version": "0.2.2",
+    "manifestHash": "DF33F98E4BCF1D09B35BC8378BEC65B5DD9A957222951F55C12895367EECFC08",
+    "installerHashes": [
+      "9E92DDAC5155A9ECEE5A4CA44AC3B06E2FEC9DF96B1D3466F1E2BE2301671D49",
+      "967A001E6BD80DE0AF44B085C73097A96EA4AB0F5DD4D766CCA4959231891031"
+    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-08-22T08:51:40.3505732Z",
+    "state": "VALIDATION_PASSED"
   },
   "AntiMicroX.antimicrox": {
     "version": "3.6.1",
@@ -591,6 +603,17 @@
     "manifestHash": "97705F857E8540A1C2B5A7A28F910984B11D56C53A461555E3FFB1B2390E9D87",
     "version": "8.2",
     "lastUpdated": "2026-07-11T12:53:25.9025673Z"
+  },
+  "axcore.tartube": {
+    "description": "",
+    "version": "2.5.231",
+    "manifestHash": "272BB2940959EBB1288F4C48F5DAF2DB897779CF813258B30AEA5D1A8D03A14A",
+    "installerHashes": [
+      "202E8D00E307A8305AD8F856BD728E39115881AB66BA5AEA42F7E0CEAA24AB67"
+    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-08-22T08:51:40.2799072Z",
+    "state": "VALIDATION_PASSED"
   },
   "axeprpr.lscpu-win": {
     "version": "0.1.3",
@@ -1527,6 +1550,17 @@
     "description": "",
     "lastUpdated": "2026-08-05T03:03:19.2401984Z",
     "validationCount": 8
+  },
+  "CyberSkill.CyberOS": {
+    "description": "",
+    "version": "1.13.0",
+    "manifestHash": "88E9BEB297F511F852D5319B0455B982C1BAD7EF6829224DD3DB6C4C374566B5",
+    "installerHashes": [
+      "E092E451E34AB4449B6B3220DBC2FD26AED9D0C3304627A0E88DCDD7DE116FB2"
+    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-08-22T08:51:40.4255232Z",
+    "state": "VALIDATION_PASSED"
   },
   "CycloneDX.CLI": {
     "state": "VALIDATION_PASSED",
@@ -3129,8 +3163,8 @@
       "3DE6E6586FEDCC6DE25F6F2BEC9EA49230ED0775B1AA2EAEE381F60A314A517E"
     ],
     "version": "3.23.1",
-    "lastUpdated": "2026-08-21T20:47:48.4447886Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-08-22T08:51:40.3822138Z",
+    "validationCount": 2,
     "manifestHash": "3D3F462B0E3FF03CA4242B1081B8E7EC5320BE2F470497CD1935AFED1DAAB5E2"
   },
   "HiroyukiFuruno.katana-desktop": {
@@ -4084,6 +4118,17 @@
     "lastUpdated": "2026-07-09T01:33:32.5635007Z",
     "version": "4.1.26190"
   },
+  "LoxSmoke.OpenLogiNet": {
+    "description": "",
+    "version": "0.16.1",
+    "manifestHash": "1A6C07FDDCCBD2FE3ADFA644B02C6AF6CC4BAE98B4ADABC7306F5BEDD3B525D2",
+    "installerHashes": [
+      "1EBF2F7B0FE98B3E39DA5F79849D5CCC95474154733CEEEBC4A37B01797EE56C"
+    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-08-22T08:51:40.328627Z",
+    "state": "VALIDATION_PASSED"
+  },
   "LuantiTeam.Luanti": {
     "installerHashes": [
       "DD27C83C0756D296E18946577620DB5BB9188C7C9CF1B5FC7A28D6ACC491530B",
@@ -4334,6 +4379,17 @@
       "D7E9AE24ADCF056C2CC0431A5763427A504508C14E3ACC0EDDD3F54892BD253E"
     ],
     "description": ""
+  },
+  "mesonbuild.meson": {
+    "description": "",
+    "version": "1.12.0",
+    "manifestHash": "F7759BDD412D7068388ABFED826B68EC64C559F04A9CAFCFFA484F6B368791F1",
+    "installerHashes": [
+      "C35383106327E20795A3C4010D40DB0BFE952BAF5490584C2535F70899833DCE"
+    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-08-22T08:51:40.4112949Z",
+    "state": "VALIDATION_PASSED"
   },
   "Mew.Wrec": {
     "description": "",
@@ -6126,6 +6182,17 @@
       "checkedAt": "2026-08-18T08:42:19.3437599Z"
     }
   },
+  "RedisInsight.RedisInsight": {
+    "description": "",
+    "version": "3.8.0",
+    "manifestHash": "15D4B351239AE6C888BDF7053D81ABCE8B80482C50A3A9604F1BE337C8FF206C",
+    "installerHashes": [
+      "8A47E3700690C63D26B7AE25CFCED00FA8A2EEA7A0567FD2E4605C77D2A04549"
+    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-08-22T08:51:40.1915967Z",
+    "state": "VALIDATION_FAILED"
+  },
   "rejetto.hfs": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "CE1DA7685ACAE6DF0C3C52585292527B683875F92C25D7CD4DEC8A893BC8DB7D",
@@ -6467,13 +6534,13 @@
   },
   "SanthoshReddy352.NammaAgent": {
     "version": "2.3.2",
-    "lastUpdated": "2026-08-21T04:59:56.7945605Z",
+    "lastUpdated": "2026-08-22T08:51:40.258926Z",
     "installerHashes": [
       "38C3BA3855821505842E7E2C7C809C9BB3BA88391251690CA3FF9A4F3AFAF5AD"
     ],
     "description": "",
     "manifestHash": "5B9292BBED2221554F3FF7C31D4C56B0134DA21BD4BD36665643694FDB73581D",
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_FAILED"
   },
   "Saturneric.GpgFrontend": {
@@ -7578,15 +7645,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "manifestHash": "80381FD0F2BA4FD9928416256F90D35FFD442D1830D8DFC556619D9E6FCB9D87",
-    "validationCount": 1,
-    "lastUpdated": "2026-08-22T01:07:19.6600577Z",
-    "version": "2.4.1",
-    "state": "VALIDATION_PASSED",
+    "description": "",
+    "version": "2.4.3",
+    "manifestHash": "A5C8E50E7B20D7622D94EC03E4C29923C230D237AFACC93B095E220AD20ED378",
     "installerHashes": [
-      "3D872EAEECD915B16B501C65ED8909260CF10EB24DA820F741F01EE41C5A3ADC"
+      "39420FDC81758A13F0534D84B5F172DA560150E859E9D0491B7B2D3B59ED7EA3"
     ],
-    "description": ""
+    "validationCount": 1,
+    "lastUpdated": "2026-08-22T08:51:40.2949865Z",
+    "state": "VALIDATION_PASSED"
   },
   "timminator.VideOCR.CPU": {
     "manifestHash": "CFC267C26B8EF07672651665F457081878373674AA47203E9C0295E1AC077719",
@@ -7934,15 +8001,15 @@
     "lastUpdated": "2026-08-19T15:56:01.4257805Z"
   },
   "Vathivis.paperq": {
-    "manifestHash": "B06377DD1B66556E25E7480DEB2CD833F5CAD6119FFB5963F4405E7D89651FA8",
+    "description": "",
+    "version": "1.0.1",
+    "manifestHash": "F1FE0E8C5BC0E1247575064D51A24693180182667D5D5958BED566ADDE463834",
     "installerHashes": [
-      "444EE244B5FAC9B0728A82377619134CA730BCF3F10C88821DD8DC2AEEF67575",
-      "371674A3E6551D801518416F84240C0A6FED5276F68272D4FCBED97E1EAD2DD2"
+      "29BF4430C5FA48796A84D759937861EF497E1499FCBF09F4D568E35073734BFB",
+      "70E3FC97E51D61EA5D91CED6B345832B9DCBF5D30D5A0A82E56364056313397B"
     ],
     "validationCount": 1,
-    "version": "1.0.0",
-    "description": "",
-    "lastUpdated": "2026-08-16T12:25:11.6487645Z",
+    "lastUpdated": "2026-08-22T08:51:40.3660225Z",
     "state": "VALIDATION_PASSED"
   },
   "vcmi.vcmi": {
