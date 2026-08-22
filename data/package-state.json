@@ -1738,6 +1738,18 @@
     "manifestHash": "CBBF8C72DC64FF8690BB0DC4407547C04068C03301317886B3FA873EF539F98A",
     "description": ""
   },
+  "Devolutions.Jetsocat": {
+    "version": "2026.2.4",
+    "lastUpdated": "2026-08-22T20:40:59.7904022Z",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "F497E82356D6829913C9F379591B18A81D11C505DE63145FD560148D18366FF5",
+    "validationCount": 1,
+    "installerHashes": [
+      "C1477B2325ABBE248E617F2E59E809CAC8C1BD91194C31E00F86909171459ECA",
+      "CE0DB7B1236E03DC8C83E42FDF4B9CD0927863E60F0EFF4FC1DD5E23702535B2"
+    ]
+  },
   "Digimezzo.Dopamine.3": {
     "state": "VALIDATION_PASSED",
     "description": "",
@@ -2547,16 +2559,16 @@
     "state": "VALIDATION_PASSED"
   },
   "GAM-Team.gam.Portable": {
-    "installerHashes": [
-      "61DA3C3C576C2BDB9171BB59521C5AC02F1C382FA0A56C21610B10BEEF57C2D4",
-      "3DE6A0FD6F0BDF84F941A956B0B475C1C26146576A857527C951E67B70E5543E"
-    ],
+    "version": "7.48.00",
+    "lastUpdated": "2026-08-22T20:40:59.859681Z",
+    "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-21T01:21:03.6667133Z",
-    "version": "7.47.07",
+    "manifestHash": "CEA419729472EDBEEA75EEA51EE7F10078A28737650B511B4A2D3059B0F19E9C",
     "validationCount": 1,
-    "manifestHash": "05C3457440FAEF84D9D9E9064C5D496CF96A6D0CAC77EA07B68BA58C3E3DB174",
-    "description": ""
+    "installerHashes": [
+      "0C5117FD314F7404E5BDB30BE4692BFDCE79E3773D89553923C7AFFF75CF9C3A",
+      "2DA6C5384289F1C551B12B6027B6117A9593ED9622C744FC71BC8EFC9312948E"
+    ]
   },
   "GAM-Team.GotYourBack": {
     "manifestHash": "5FA8B6D2D4E530BE07C6DD57FE8084020045530DE65F68E8DC47F1F3B96490C9",
@@ -3951,6 +3963,17 @@
     "state": "VALIDATION_PASSED",
     "validationCount": 2,
     "description": ""
+  },
+  "koedame.chordsketch": {
+    "version": "0.5.0",
+    "lastUpdated": "2026-08-22T20:40:59.8402014Z",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "9219E2C3439E0DE630F5EE55CBA320B6D1BCF5198D3A9EE4A0E89607E44D6EFA",
+    "validationCount": 1,
+    "installerHashes": [
+      "A347C61C24186FAA1571E8C90BD585B1DD8AE8047F46FEAFB58B9315F652B115"
+    ]
   },
   "KRTirtho.Spotube": {
     "manifestHash": "48B938BDAA7E2ADCDF3C6E7B71A7214AF24FFD5388F587258C452A189DDE760D",
@@ -6691,6 +6714,17 @@
     "validationCount": 1,
     "manifestHash": "CB27BB8B668F663EE845B90A9AD92AE1D2F7FB469334B566F9EF43DCBE776E0E"
   },
+  "Scandum.WinTin++": {
+    "version": "2.02.61",
+    "lastUpdated": "2026-08-22T20:40:59.8952916Z",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "2C9A618908F2C08C9E373327E7A15409C25EEB6AE563F45807A611269A686250",
+    "validationCount": 1,
+    "installerHashes": [
+      "421A1458080413D5135A7490DC05AC0F4B54F1CAADBFC033214536237420E847"
+    ]
+  },
   "schollz.croc": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "89CF70BEE57A126C98A8F4686593C389B26140B6B02493DE8B52ABB9637C7234",
@@ -7941,6 +7975,19 @@
     "validationCount": 1,
     "version": "0.3.6"
   },
+  "Tyrrrz.DiscordChatExporter.CLI": {
+    "version": "2.47.3",
+    "lastUpdated": "2026-08-22T20:40:59.711308Z",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "6227F66CB290FA071B0FD4950244513F98CECC935A4008889362B480ED874D3C",
+    "validationCount": 1,
+    "installerHashes": [
+      "3C246BEEF59EA317BBE4C579CF55BAEF5785BD130EB4555A063FA4DBBB2ED87C",
+      "D7C91731E190FC9A59F96275DAE958DFA8102309263F4ACD1CCB946725023A3D",
+      "1D72943480D5C29D9EAE544167F7087FF59A259E4E8144A61FFE13A544A173BD"
+    ]
+  },
   "Tyrrrz.DiscordChatExporter.GUI": {
     "validationCount": 1,
     "lastUpdated": "2026-06-29T14:16:32.1929887Z",
@@ -8409,6 +8456,17 @@
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
     "version": "0.4.0"
+  },
+  "Winix.Schedule": {
+    "version": "0.4.0",
+    "lastUpdated": "2026-08-22T20:40:59.810947Z",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "DE7880987CD75677916E4F6C861A0E513E14B90C597399FDBBB2EF8E483F5623",
+    "validationCount": 1,
+    "installerHashes": [
+      "FE3CAAA058441A066166A109FD4753BDA68C10B5301E8D96C5B87E89282581A4"
+    ]
   },
   "Winix.Squeeze": {
     "validationCount": 1,
