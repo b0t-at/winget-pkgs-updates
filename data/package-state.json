@@ -255,7 +255,7 @@
     "version": "3.1",
     "openPr": {
       "version": "3.1",
-      "checkedAt": "2026-08-21T00:27:04.4508734Z"
+      "checkedAt": "2026-08-22T04:19:40.575857Z"
     }
   },
   "Alochi.Monitoring": {
@@ -1135,7 +1135,11 @@
     "installerHashes": [
       "0AB876271D6283548F6D31F2F748E4C27C78802D4650B93D5F465B81E07E1332"
     ],
-    "description": ""
+    "description": "",
+    "openPr": {
+      "version": "1.9.2",
+      "checkedAt": "2026-08-22T04:18:36.1521184Z"
+    }
   },
   "CarthageSoftware.Mago": {
     "state": "VALIDATION_PASSED",
