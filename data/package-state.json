@@ -130,8 +130,8 @@
     "lastUpdated": "2026-08-19T17:02:25.8797854Z",
     "manifestHash": "3BD6D6F7B48462CF3A02CF2DC2AFC0881BD072C354168DB528A71B4A35E8E30B",
     "openPr": {
-      "checkedAt": "2026-08-20T20:15:04.9873697Z",
-      "version": "0.84.1"
+      "version": "0.84.1",
+      "checkedAt": "2026-08-22T00:24:02.4277725Z"
     },
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
@@ -1939,8 +1939,8 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "3EAB1E5A6E607AC40A8D48C149D5E5B2207604A2D465245704CB6FD111942437",
     "openPr": {
-      "checkedAt": "2026-08-20T20:15:09.3895505Z",
-      "version": "5.2.0"
+      "version": "5.3.0",
+      "checkedAt": "2026-08-22T00:24:04.9969824Z"
     }
   },
   "Ellosoft.AWSCredentialsManager": {
@@ -2803,8 +2803,8 @@
     ],
     "manifestHash": "8A93D198AD57BF64282A1C20A5B26813247BA8F368CBBC5002B3A2AECCF79CDA",
     "openPr": {
-      "checkedAt": "2026-08-20T20:15:12.8190922Z",
-      "version": "2.5.1"
+      "version": "2.5.1",
+      "checkedAt": "2026-08-22T00:24:06.4078669Z"
     }
   },
   "Google.Protobuf": {
@@ -3515,8 +3515,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-08-20T20:15:14.4869427Z",
-      "version": "2026.8.10"
+      "version": "2026.8.10",
+      "checkedAt": "2026-08-22T00:24:06.7751791Z"
     }
   },
   "Jellyfin.FFmpeg": {
@@ -3723,11 +3723,7 @@
     "manifestHash": "1B7D562145110A2AB4483E50909945476B8ED7491B1F57E8408A373E465946E7",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "18.1.1",
-    "openPr": {
-      "checkedAt": "2026-08-20T20:15:14.8685613Z",
-      "version": "18.1.1"
-    }
+    "version": "18.1.1"
   },
   "KellyBrazil.jc": {
     "manifestHash": "581B010EF6D6BA5C1BB9F081F03D78363D346E88B98291FB112C51BA8C72911F",
