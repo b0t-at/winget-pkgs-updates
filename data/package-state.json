@@ -206,16 +206,16 @@
     ]
   },
   "aimotrens.impulsar": {
-    "state": "VALIDATION_FAILED",
-    "description": "",
+    "manifestHash": "B846D3BC68F9234A8718EFE8F25F85DD7D97B6E49919F67ED79B6BD8C72C0C39",
     "validationCount": 1,
+    "lastUpdated": "2026-08-22T01:07:19.548728Z",
+    "version": "0.19.7",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "D5CA26011DB09844B96448724A9C368FA8ACFC20A97AA5DBBC016A07174D99D5",
-      "DE2CB6B39B4F53682A8FEE3A2A88591E581C152D4BC4E6AF9D3497F15D170A55"
+      "58D58E2394E5CA3892BCBB9EE8DC0722B83E0B1115845AF48406299D499F4302",
+      "B9D8AF7153160EBA9AE5D1D0CF7C6D233E55B3091A9D4617B1AF53B251FBDCF4"
     ],
-    "lastUpdated": "2026-08-05T12:38:59.3289263Z",
-    "manifestHash": "29DF979500F14CE735E2F65D8EEA858FB96D77C0E3578EF3FEAA2D45F15E7338",
-    "version": "0.19.6"
+    "description": ""
   },
   "alegauss.ClaudeCodeTray": {
     "state": "VALIDATION_PASSED",
@@ -332,15 +332,15 @@
     ]
   },
   "Amnezia.AmneziaWG": {
-    "version": "2.0.2",
-    "installerHashes": [
-      "1B7308D0C74685193DEE5D30FD30F370B5A2748A7F648869CD16F25286EFC784"
-    ],
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "lastUpdated": "2026-08-18T09:30:09.2271892Z",
+    "manifestHash": "5E2D1BB78F4111EED1794EF36DD536483803242F6E1CC59252BEFBF07F58B2DF",
     "validationCount": 1,
-    "manifestHash": "65DA51E124CCAAD7C6A0324A8161D7577471BF9FF8F9A68A5F8FE62E2757E707"
+    "lastUpdated": "2026-08-22T01:07:19.5894138Z",
+    "version": "3.1.0",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "A1B48EA8699CD347832A3691D832004574EF8AD65BCF887611AC8ACB99B7DE8B"
+    ],
+    "description": ""
   },
   "AndreaBozzo.GitNodes": {
     "description": "",
@@ -1126,6 +1126,17 @@
     "validationCount": 1,
     "version": "0.16.3"
   },
+  "CargoLambda.CargoLambda": {
+    "manifestHash": "B8DD0B022742F2371ED57474DE9FEE6CB654CD7DD96A113241259E85D6F5ABF3",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-22T01:07:19.4743088Z",
+    "version": "1.9.2",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "0AB876271D6283548F6D31F2F748E4C27C78802D4650B93D5F465B81E07E1332"
+    ],
+    "description": ""
+  },
   "CarthageSoftware.Mago": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "E1FF0BCF486ECE9761CF85C8F672881EE7769DA643E7980894612C3A0A3936D5",
@@ -1149,15 +1160,15 @@
     "description": ""
   },
   "CCGnomes.VaultFlasher": {
+    "manifestHash": "4C5AFC689C7A8ABADDA6BC349BA9EDA488E30FFE2CBD3749ACEB2951C3AE4F99",
     "validationCount": 1,
-    "description": "",
-    "version": "0.7.1",
-    "installerHashes": [
-      "B8BE652F3E91827FFBA82E4FC187C7326196074EF7AEC1323D6BD0AADD1971D0"
-    ],
+    "lastUpdated": "2026-08-22T01:07:19.6115746Z",
+    "version": "0.7.3",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-19T05:34:56.0644435Z",
-    "manifestHash": "23E7DDD4E99170485E4475C53A4C7AA5B8A88E64EAB42279CD42AB35B9BEE8D9"
+    "installerHashes": [
+      "FA5DA2638D59D6C1B740A5F1A109A930ED015B883E3E5741FD1ADF9D3D082EDF"
+    ],
+    "description": ""
   },
   "Celerp.Celerp": {
     "description": "",
@@ -2600,15 +2611,15 @@
     "version": "3.8.0"
   },
   "getzola.zola": {
-    "manifestHash": "79A3F3AB951504F93E262D5EC1C49F3CA0D83656D19069FDBEC158564DD38B2A",
-    "description": "",
-    "lastUpdated": "2026-08-20T05:16:37.8412607Z",
-    "installerHashes": [
-      "7D5D860E620E5EDD460D3796B0A98A6428C845A246F0F4D45929A29D44BBC6B8"
-    ],
+    "manifestHash": "2AD0D8502E653E34D70DC1A01F61D1061D3ED1D053F514354B49F5E4D9C22AB7",
     "validationCount": 1,
+    "lastUpdated": "2026-08-22T01:07:19.4236522Z",
+    "version": "0.23.4",
     "state": "VALIDATION_PASSED",
-    "version": "0.23.3"
+    "installerHashes": [
+      "DC839498E27B631F60FD5E1527935198B7F002EB09B8446A1E2913A8FA386925"
+    ],
+    "description": ""
   },
   "Ghostshadowplays.GhostyTools": {
     "manifestHash": "2361B8FCC4E69E766CB56CB1F0B0EE0D317DC8A5FA4837AC0885F00A2EB57FE1",
@@ -3061,6 +3072,17 @@
     "version": "1.3.0",
     "state": "VALIDATION_PASSED"
   },
+  "HexmosTech.IPM": {
+    "manifestHash": "8249606B3416464BF33927774347CA9870382EB4A56BE0CF9E4619F7BF635B5D",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-22T01:07:19.6251562Z",
+    "version": "0.1.44",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "1BF313F383F3A9578BB8404F42E6B9A43E6EA1AE5C9E47E719E85F9BE4E4094A"
+    ],
+    "description": ""
+  },
   "hiadamhere.spm": {
     "manifestHash": "DDAE99CCF67C36D94771866E331A1D6C5ED1D92CCE0E0F03806403BA53969AA7",
     "description": "",
@@ -3110,6 +3132,17 @@
     "lastUpdated": "2026-08-21T20:47:48.4447886Z",
     "validationCount": 1,
     "manifestHash": "3D3F462B0E3FF03CA4242B1081B8E7EC5320BE2F470497CD1935AFED1DAAB5E2"
+  },
+  "HiroyukiFuruno.katana-desktop": {
+    "manifestHash": "159F5851C0FBCEFC5E2C2BDF3A55C89B737D3C96008653864A730C196F0275E5",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-22T01:07:19.4926604Z",
+    "version": "0.22.40",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "67F07C0E8133146ABF874A6DE55B6D5FBC3362FE44D19636A856ECEA85997A29"
+    ],
+    "description": ""
   },
   "HishamMedhat.PortPeek": {
     "lastUpdated": "2026-08-19T17:46:50.1862956Z",
@@ -4275,6 +4308,17 @@
     "installerHashes": [
       "EB44A8128AFC293FF9E99BF8483B7BE9F5D76407296D3859BBA02D401DFC3BEE"
     ]
+  },
+  "mentebinaria.dz6": {
+    "manifestHash": "76D27682D0C1DEB21DA180F782973FDA60DA9E582F001A9ACEB4CED44E77B3CF",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-22T01:07:19.6734334Z",
+    "version": "0.7.1",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "D7E9AE24ADCF056C2CC0431A5763427A504508C14E3ACC0EDDD3F54892BD253E"
+    ],
+    "description": ""
   },
   "Mew.Wrec": {
     "description": "",
@@ -7503,15 +7547,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "version": "1.8.6",
-    "installerHashes": [
-      "D75BEEC76C1E0DCC87A1A7F8F8F1AA613FD56CC9D873836CA0A4F6E8682F7AC8"
-    ],
-    "description": "",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "17AF06C9923E7AFAEF00F01FBA324EC52E49B408DEB7B6A5F2719C819C8DDCC5",
+    "manifestHash": "80381FD0F2BA4FD9928416256F90D35FFD442D1830D8DFC556619D9E6FCB9D87",
     "validationCount": 1,
-    "lastUpdated": "2026-08-19T15:56:01.602663Z"
+    "lastUpdated": "2026-08-22T01:07:19.6600577Z",
+    "version": "2.4.1",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "3D872EAEECD915B16B501C65ED8909260CF10EB24DA820F741F01EE41C5A3ADC"
+    ],
+    "description": ""
   },
   "timminator.VideOCR.CPU": {
     "manifestHash": "CFC267C26B8EF07672651665F457081878373674AA47203E9C0295E1AC077719",
@@ -7612,15 +7656,15 @@
     "lastUpdated": "2026-08-17T21:15:38.4059211Z"
   },
   "TrenchBroom.TrenchBroom": {
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "41F605AA063A49D7D252D2A91C2DB924C02FB84DC782A36042360095A3FDF5F7",
+    "manifestHash": "989EB55DC4DCCE006A1A8E7810CECB2266582F01FF5FDDC16E6DEE67626770FD",
     "validationCount": 1,
-    "description": "",
+    "lastUpdated": "2026-08-22T01:07:19.6385937Z",
+    "version": "2026.2",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "F30A1C74585E39C869CA65DF2E81E9ED834303A06399D0CA595E493B20C5C2D6"
+      "DD2C5491851275A805110CE465EEE3DEB45BE98E80B00E7B21BB6D250DE57FE6"
     ],
-    "lastUpdated": "2026-08-20T16:48:27.9274741Z",
-    "version": "2026.1"
+    "description": ""
   },
   "tritant.MiniMediaEdit": {
     "version": "1.6",
@@ -8017,6 +8061,17 @@
     "installerHashes": [
       "75B20DBB3750C1103D57E8B9B1DCB2BE013D260B4EF2298F3CD2CA3A88F984F5"
     ]
+  },
+  "wasmCloud.wash": {
+    "manifestHash": "1D694C97B8075965441CE77A5D908D0747AD5CF91F8833E126ADD12183BC0838",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-22T01:07:19.5673768Z",
+    "version": "2.7.0",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "F76A3D0AC0C1D280F49564BDE94104F24F4F5B61D7AC1F5DA0504D9733D8994C"
+    ],
+    "description": ""
   },
   "WasmEdge.WasmEdge": {
     "validationCount": 1,
