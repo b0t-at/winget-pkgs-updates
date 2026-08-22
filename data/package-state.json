@@ -582,14 +582,14 @@
   },
   "AtaraxyLabs.sem": {
     "state": "VALIDATION_PASSED",
-    "description": "",
+    "lastUpdated": "2026-08-22T12:51:56.4965789Z",
     "installerHashes": [
-      "11F937755E7A51C85D1451EF1B1EF6BCAF1F3BE7A84C68A1C8157B26527FE4F9"
+      "825BD79FB22B0200495B98B02FFB85B49D9482CEE9609A903C30E722BB9F6B81"
     ],
     "validationCount": 1,
-    "version": "0.22.1",
-    "manifestHash": "AE955981DE2500C8FAB6289E354DAC75FB6BE4F2B214D89243201BE89CD461EA",
-    "lastUpdated": "2026-08-20T09:17:27.336998Z"
+    "manifestHash": "3C721960C9F37FFFB4B5FDA872C48A6D1A5406116A30998B58D5361C38587A98",
+    "version": "0.23.0",
+    "description": ""
   },
   "Avidemux.Avidemux": {
     "configHealth": {
@@ -1191,14 +1191,14 @@
     "description": ""
   },
   "CCGnomes.VaultFlasher": {
-    "manifestHash": "4C5AFC689C7A8ABADDA6BC349BA9EDA488E30FFE2CBD3749ACEB2951C3AE4F99",
-    "validationCount": 1,
-    "lastUpdated": "2026-08-22T01:07:19.6115746Z",
-    "version": "0.7.3",
     "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-22T12:51:56.6038906Z",
     "installerHashes": [
-      "FA5DA2638D59D6C1B740A5F1A109A930ED015B883E3E5741FD1ADF9D3D082EDF"
+      "FE14EE25D1363F663F75A3604BDAA8AB63B61002111E3280E2B72FDDBA42F5BF"
     ],
+    "validationCount": 1,
+    "manifestHash": "DF748EC16AFC956A7B6E5A0F51DAD77EB6441859293AB4B961F10D9F29C20A55",
+    "version": "0.7.4",
     "description": ""
   },
   "Celerp.Celerp": {
@@ -1455,6 +1455,17 @@
     "description": "",
     "version": "4.12.0",
     "state": "VALIDATION_PASSED"
+  },
+  "Crate-CI.Typos": {
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-22T12:51:56.470895Z",
+    "installerHashes": [
+      "06D3A1B71C282E021671070696A72696D5C60EA485B47DC4F8F1FBCF90144D02"
+    ],
+    "validationCount": 1,
+    "manifestHash": "C0EA3AC04DBCAEC6D56FEB0F54EE692690BFC8391EBCCA54D69037B7A7F8B32D",
+    "version": "1.49.0",
+    "description": ""
   },
   "CrewHaus.CLI": {
     "manifestHash": "3A048F0330453F030AB23F11F831104BF782CF013D8396559EB68BA29C382B14",
@@ -2274,15 +2285,15 @@
     "version": "18.2.0"
   },
   "Fangyuan025.Chaty": {
-    "installerHashes": [
-      "F1E94C505A285F478281DAEF1E3F95A81691336BDA0E0BCC893DD7BCCD19687F"
-    ],
     "state": "VALIDATION_PASSED",
-    "manifestHash": "832BBE5B79DE83C72D8685C49C6424669FFF2629CD35F8B0924D99B8A1C013B0",
-    "description": "",
+    "lastUpdated": "2026-08-22T12:51:56.5205229Z",
+    "installerHashes": [
+      "4055F2A4488F9698CCBFBA89E0F6CB922A0DF1E6B9D2655F88C3991C8667E88D"
+    ],
     "validationCount": 1,
-    "version": "2.1.0",
-    "lastUpdated": "2026-08-21T17:17:40.0366361Z"
+    "manifestHash": "7FFE2F2AD91A8B288119228696CD29FF0030AC8BC3E1CEE86A1D935F4C6344A1",
+    "version": "2.1.1",
+    "description": ""
   },
   "Feho.LogNav": {
     "installerHashes": [
@@ -3008,6 +3019,17 @@
     "manifestHash": "197A399E1CC468155E819D02C9EB33469821830A16A9F80DF1B6D7AA73A1FE05",
     "version": "2.15.1",
     "state": "VALIDATION_PASSED"
+  },
+  "Haivision.libsrt": {
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-22T12:51:56.6345409Z",
+    "installerHashes": [
+      "62A9D0AF13931DA1C0E57F39824AC3B016092B18551D2B56AF8BA03008B95CEE"
+    ],
+    "validationCount": 1,
+    "manifestHash": "E52575E307C631D753E35EF1E3DBD2CFC5983FE3896C395D4FF7972B4D1449EC",
+    "version": "1.5.6",
+    "description": ""
   },
   "Hanselman.PeekDesktop": {
     "lastUpdated": "2026-08-20T21:12:49.5606509Z",
@@ -3822,6 +3844,17 @@
     "lastUpdated": "2026-08-16T12:25:11.5292731Z",
     "state": "VALIDATION_PASSED"
   },
+  "KellyElton.Max.Backup": {
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-22T12:51:56.3902863Z",
+    "installerHashes": [
+      "2A14B5381D67945D91696FAE69FAE8BF986147408857B26C5DB333EBCC63F59A"
+    ],
+    "validationCount": 1,
+    "manifestHash": "D58A6888CFF79B3F7BA09ADE8979C3D830B3A9868D0C14034DB12915EAD99208",
+    "version": "0.2.32",
+    "description": ""
+  },
   "Kesomannen.Gale": {
     "version": "1.21.0",
     "validationCount": 1,
@@ -4232,15 +4265,15 @@
     }
   },
   "marcinz606.NegPy": {
-    "lastUpdated": "2026-08-18T21:24:38.7641201Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "manifestHash": "E76EFCDAC8F4E1C7EB31969BA28A1691764CD4C2F643FD74D7FF7C0EA88AC1E8",
-    "description": "",
+    "lastUpdated": "2026-08-22T12:51:56.655296Z",
     "installerHashes": [
-      "D07EF562E6644FD249518BD5C893D1118B7C4290CD3A3AE1446C698B34129616"
+      "2A7E007C796D137969631E7A1EFDDBB2ED62D4959684243BAEB9F4312EF2FE4D"
     ],
-    "version": "0.52.0"
+    "validationCount": 1,
+    "manifestHash": "D88AE941CF6231B90162303EAD7B77AD203F9885811CEF08637E40C17DE73271",
+    "version": "0.53.0",
+    "description": ""
   },
   "MarcoHefti.YTVodManager": {
     "manifestHash": "D6B8CC28C195C1925AC443615826FDE9EB33D111F50144DC9CE7DF76A34B98CB",
@@ -4409,6 +4442,17 @@
     "lastUpdated": "2026-08-21T20:47:48.5425088Z",
     "validationCount": 1,
     "manifestHash": "C48B66F51C35D68FE88124020524728E46E5C00B4F1CF5C1DA5736611F0B09BC"
+  },
+  "mi0bot.Thetis": {
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-22T12:51:56.6188645Z",
+    "installerHashes": [
+      "23AE8700A4D13EEDDEADBD55F13D91183B67D036D6A831320F425574DF2DABC4"
+    ],
+    "validationCount": 1,
+    "manifestHash": "E377BC12D6ADAA249D63C8995FAA9D1911C8F030E6ED973AAF353BADF28EB845",
+    "version": "2.10.3.14",
+    "description": ""
   },
   "Mibuw.miPDFsignCommunity": {
     "manifestHash": "309EF4203B7F173FCE3262CFE23E317671485069AC197DDABECCAD6C2FADF5FD",
@@ -5222,15 +5266,15 @@
     ]
   },
   "OctopusDeploy.Cli": {
-    "lastUpdated": "2026-08-19T17:46:50.0246358Z",
-    "version": "2.23.10",
-    "validationCount": 1,
-    "description": "",
     "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-22T12:51:56.569166Z",
     "installerHashes": [
-      "F6B7E3417A35FCFB1C71C4A5003836DC553744CA1F889497F99BAE1235127C7E"
+      "CAE9A0A549EC509F69820B7CA9B4625DA29BFA31512C0F73D0DD1EACB7408277"
     ],
-    "manifestHash": "DE3CC668750C9F3AC782C73D69AB58FD57C5AB835C4DB1364586BD7ED2B51E6C"
+    "validationCount": 1,
+    "manifestHash": "76BB79075A67F99D76ECD75B03441CA6D3077B3C8ED5504EE231FB5C19540AC9",
+    "version": "2.24.0",
+    "description": ""
   },
   "Odonno.jj-commit": {
     "description": "",
@@ -6357,6 +6401,17 @@
     "version": "3.15.0",
     "validationCount": 1,
     "manifestHash": "8953C3F7CCE2C8953C1DA01AE3E3250A68D84AE47F39FE98A6889EB249890C98",
+    "description": ""
+  },
+  "Rnwood.Smtp4dev.Desktop": {
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-22T12:51:56.4556654Z",
+    "installerHashes": [
+      "D791B5C3AD651CC7BC65B41B00F94D899DC8942526325046932D61AFAF0E2F08"
+    ],
+    "validationCount": 1,
+    "manifestHash": "372E36E3D29313C45F9E2A998550590579159FC23FD6085FF7CA735A364C3D65",
+    "version": "3.15.0",
     "description": ""
   },
   "RocketResearchInc.Compair": {
@@ -8489,6 +8544,17 @@
     "lastUpdated": "2026-08-20T16:48:27.9977024Z",
     "version": "1.7.2"
   },
+  "xushengfeng.eSearch": {
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-22T12:51:56.5536873Z",
+    "installerHashes": [
+      "A7428C4D380C1E165AA80B5220E9615A35B33CBA12C45E3EBF0AA4B1367ADBA9"
+    ],
+    "validationCount": 1,
+    "manifestHash": "2573A0457E57D6C1DEA41E55D4C36CF131AADF103B4A81A4D7FBE78BF62BBA01",
+    "version": "15.4.2",
+    "description": ""
+  },
   "Y-ASLant.ElegantClipboard": {
     "state": "VALIDATION_PASSED",
     "version": "1.2.7",
@@ -8511,6 +8577,18 @@
     "installerHashes": [
       "8AE03DB3915F8DA8B1030812F4D2B5233B0B4DEB3C28482DCD7A8FE73A3B0BD7"
     ]
+  },
+  "yang991178.fluent-reader": {
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-22T12:51:56.5839678Z",
+    "installerHashes": [
+      "D3AC8178EEA9D533174CDA6A6F9DA23C21CB203DA8A4F6CBB02824EBDEC6C049",
+      "8B62C3804BC9664676ADD4F06B2B92B4D36F38C39CAA6AF89788F34F30030CAE"
+    ],
+    "validationCount": 1,
+    "manifestHash": "75279FCA02A9592F198B722DBED475A2F1DE936FD318508239411E637F9B1B57",
+    "version": "1.2.2",
+    "description": ""
   },
   "YasuhisaKakurai.Pulsebar": {
     "lastUpdated": "2026-08-16T21:14:49.0777789Z",
