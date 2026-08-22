@@ -2819,7 +2819,7 @@
     "description": "",
     "openPr": {
       "version": "2.13.1",
-      "checkedAt": "2026-08-21T12:16:41.0102942Z"
+      "checkedAt": "2026-08-22T16:12:34.1300734Z"
     }
   },
   "Google.ContainerTools.Skaffold": {
@@ -3316,6 +3316,12 @@
     "validationCount": 1,
     "manifestHash": "A2BF4F40C4EC51E3A1317D2AADA736A827D27B198E32A90D05596CF54AC3D385",
     "description": ""
+  },
+  "houmain.keymapper": {
+    "openPr": {
+      "version": "5.7.0",
+      "checkedAt": "2026-08-22T16:12:35.1827317Z"
+    }
   },
   "hrkfdn.ncspot": {
     "description": "",
