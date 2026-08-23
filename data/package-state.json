@@ -261,7 +261,7 @@
     "version": "3.1",
     "openPr": {
       "version": "3.1",
-      "checkedAt": "2026-08-22T04:19:40.575857Z"
+      "checkedAt": "2026-08-23T04:22:13.8237889Z"
     }
   },
   "Alochi.Monitoring": {
@@ -485,7 +485,11 @@
     "lastUpdated": "2026-08-23T01:00:02.2291276Z",
     "validationCount": 1,
     "manifestHash": "A189F0337CA1F029CB5EFC67153F643FA19981278580811CC50696F9BABF1F6D",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "version": "1.5.2",
+      "checkedAt": "2026-08-23T04:22:17.5130283Z"
+    }
   },
   "archisvaze.ArcDLP": {
     "installerHashes": [
@@ -1183,7 +1187,7 @@
     "description": "",
     "openPr": {
       "version": "1.9.2",
-      "checkedAt": "2026-08-22T04:18:36.1521184Z"
+      "checkedAt": "2026-08-23T04:21:10.4346285Z"
     }
   },
   "CarthageSoftware.Mago": {
