@@ -41,15 +41,15 @@
     }
   },
   "Accreation.Aide": {
-    "version": "0.8.0",
-    "installerHashes": [
-      "3BA25B31A97164D9DBE6C4DE4ACCD0252E26BD5392CB176DEBDBD47FAE9150E3"
-    ],
+    "version": "0.9.0",
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "DEA3EBC1D16A0FDD79EFD00D98F1456F0272CFFB1F575244146CBD1FF6F1C8EF",
+    "installerHashes": [
+      "11153BA9F9453449D7E9635DB866CC57F2068BE9A7539CD9D3306B6E3F4E8093"
+    ],
+    "lastUpdated": "2026-08-23T01:00:02.1298057Z",
     "validationCount": 1,
-    "lastUpdated": "2026-08-19T15:56:01.8183145Z"
+    "manifestHash": "ABE592F33EA11E31D5FB00DF0177BD0731B3E417507DFA4ECF0BB444F0AF6379",
+    "state": "VALIDATION_PASSED"
   },
   "achannarasappa.ticker": {
     "lastUpdated": "2026-06-21T18:31:48.864373Z",
@@ -474,6 +474,18 @@
     "description": "",
     "validationCount": 1,
     "lastUpdated": "2026-08-16T17:10:10.6577549Z"
+  },
+  "Archeb.OpenTrace": {
+    "version": "1.5.2",
+    "description": "",
+    "installerHashes": [
+      "326BBC045E47955263587773C1EBFC6A3EF24D4EAC0D7176504DAD5C603F8683",
+      "40B53763F7213AC46AFE26DD01230CDF4186116CA12CEFF1BA518F1FE8C46F42"
+    ],
+    "lastUpdated": "2026-08-23T01:00:02.2291276Z",
+    "validationCount": 1,
+    "manifestHash": "A189F0337CA1F029CB5EFC67153F643FA19981278580811CC50696F9BABF1F6D",
+    "state": "VALIDATION_PASSED"
   },
   "archisvaze.ArcDLP": {
     "installerHashes": [
@@ -1794,6 +1806,17 @@
     ],
     "version": "2.4.1"
   },
+  "Divaaaan.Tenebra": {
+    "version": "0.5.0",
+    "description": "",
+    "installerHashes": [
+      "0A8DB3A8CFF376B5030F98E370821119BB1F0259CCF0FD0CFA5AD4ADF473B482"
+    ],
+    "lastUpdated": "2026-08-23T01:00:02.2736659Z",
+    "validationCount": 1,
+    "manifestHash": "2B45B4619D04E57F5159661BFA966757C70CACB36B53C4F3F3EE72380EA794CD",
+    "state": "VALIDATION_PASSED"
+  },
   "divVerent.AAAAXY": {
     "state": "VALIDATION_FAILED",
     "description": "",
@@ -3049,6 +3072,17 @@
     "version": "1.5.6",
     "description": ""
   },
+  "Hanselman.BabySmash": {
+    "version": "4.2.1",
+    "description": "",
+    "installerHashes": [
+      "18FDE00640F5D82186352C9A2D47A524CB1754C7B2D2353D113C56933A27B519"
+    ],
+    "lastUpdated": "2026-08-23T01:00:02.0422048Z",
+    "validationCount": 1,
+    "manifestHash": "2F2125A050685BE756CFB8E2A65B9BE241784D1976D4F5991A25584CFC5D9D80",
+    "state": "VALIDATION_PASSED"
+  },
   "Hanselman.PeekDesktop": {
     "lastUpdated": "2026-08-20T21:12:49.5606509Z",
     "manifestHash": "78380DF3560A6DF51505797BC91ECF9EAE6625D8E707054FF5254800583CB54B",
@@ -3695,15 +3729,15 @@
     "manifestHash": "1E843D90602194E32EF0F84E333BE9BC20D09621BCA43AA304BDA7952A621BAB"
   },
   "jmrplens.gitlab-mcp-server": {
-    "lastUpdated": "2026-08-22T04:43:29.0861283Z",
-    "manifestHash": "F8005E7E1F50D4F250F7A35968172D81284441182A742335E76596B5874EF741",
-    "installerHashes": [
-      "8FCB712A93C04948F87C6CBFC73F1BE70117CC38D34B18E4866B4C27DBD60989",
-      "FEF73AC3532CEE3A6D2DE6F0409620DDBC480BD79F2A404F5A794FCB62FDFB5D"
-    ],
-    "validationCount": 1,
+    "version": "2.6.6",
     "description": "",
-    "version": "2.6.5",
+    "installerHashes": [
+      "444B6ED7C159BC4CC6AF0007F1A96C4BF254BBBF5CCCCE4E56421FBCC6F447D7",
+      "AF74ACC8164A8D60834A323E3A7F2870063FCDFD51D2E237F8A330E312BB01BE"
+    ],
+    "lastUpdated": "2026-08-23T01:00:02.3225177Z",
+    "validationCount": 1,
+    "manifestHash": "F6AA5E2EF179919C53CEB5B25DE0943340351D73328ABD65664460A1793D16C1",
     "state": "VALIDATION_PASSED"
   },
   "JoernBerkefeld.SFMCDataLoader": {
@@ -4629,15 +4663,15 @@
     "manifestHash": "9335EE3851620488D53FC153F63AB184A5B25A20076D1999C098FDB4C8E4EAC7"
   },
   "Microsoft.PerfView": {
-    "validationCount": 1,
-    "installerHashes": [
-      "BB511F45A0DF4CEEC52210A6D24519C1D507A05224CFA19D6B2EC3E5923D9627"
-    ],
+    "version": "3.2.6",
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "8881537D6247B5FF7F540FE49EDB5D18AF84D8E8ABD750646F77E3D5179A3F21",
-    "lastUpdated": "2026-07-18T01:32:30.6355443Z",
-    "version": "3.2.5"
+    "installerHashes": [
+      "84B8523F7FB4783FD0BAAE6B080ADB1B5AAC388192145AD713E504C69954556D"
+    ],
+    "lastUpdated": "2026-08-23T01:00:02.2458331Z",
+    "validationCount": 1,
+    "manifestHash": "E18F495D78F1E701640257C7647434CC9C93D806BFAF0AF9A3B96AFD78DCC300",
+    "state": "VALIDATION_PASSED"
   },
   "Microsoft.Sqlcmd": {
     "validationCount": 2,
@@ -4723,6 +4757,17 @@
     "version": "1.35.6",
     "description": "",
     "validationCount": 3
+  },
+  "Miorin.BloomingBlockery": {
+    "version": "0.0.27",
+    "description": "",
+    "installerHashes": [
+      "831433DB0EA8FAB291AD7A995505D5E3FC914E09C4D01BA09D8F6CBC0E4745FF"
+    ],
+    "lastUpdated": "2026-08-23T01:00:02.1129816Z",
+    "validationCount": 1,
+    "manifestHash": "686D0B5FAF6005685A4A61F773DB45E1E0A01636784A6B50BCC4FC7708CC8638",
+    "state": "VALIDATION_PASSED"
   },
   "mitmproxy.mitmproxy": {
     "lastUpdated": "2026-05-12T15:05:19.4011587Z",
@@ -6716,11 +6761,11 @@
   },
   "Scandum.WinTin++": {
     "version": "2.02.61",
-    "lastUpdated": "2026-08-22T20:40:59.8952916Z",
+    "lastUpdated": "2026-08-23T01:00:02.2056424Z",
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "2C9A618908F2C08C9E373327E7A15409C25EEB6AE563F45807A611269A686250",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "421A1458080413D5135A7490DC05AC0F4B54F1CAADBFC033214536237420E847"
     ]
@@ -7066,16 +7111,16 @@
     ]
   },
   "sluicesync.sluice": {
+    "version": "0.131.1",
     "description": "",
-    "manifestHash": "AB03B0657C61EF177E997BC2D7806E1D1B4FFBEDED45C7560816FB75B490B83E",
     "installerHashes": [
-      "16B2BB4A1CC38A68C9CE6C05C6DF6C48E236E949010770C8C6A6D8F9902A554A",
-      "342708F47AC0136326ED7A5EC3BADC2DF8C672039D120871AC4FBB0A71AA8BA4"
+      "75573DBF8C6230A08D1016F424706811357AC6391F08024E89021FB92630072B",
+      "EB46348ADE0D7CE2EC2F8956DCB7ABAC23ED75F65E0C80B461D86BACC10549AB"
     ],
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-20T01:39:37.3947465Z",
+    "lastUpdated": "2026-08-23T01:00:02.1593929Z",
     "validationCount": 1,
-    "version": "0.130.0"
+    "manifestHash": "2CFFC4127731EBC0CD9AEC2420C0F27C79232326361F6673CCAF705CA56221C1",
+    "state": "VALIDATION_PASSED"
   },
   "SnosMe.AwakenedPoETrade": {
     "installerHashes": [
@@ -7781,14 +7826,14 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
+    "version": "2.5.1",
     "description": "",
-    "version": "2.4.3",
-    "manifestHash": "A5C8E50E7B20D7622D94EC03E4C29923C230D237AFACC93B095E220AD20ED378",
     "installerHashes": [
-      "39420FDC81758A13F0534D84B5F172DA560150E859E9D0491B7B2D3B59ED7EA3"
+      "6777B90047563BB405A6F8C7F2CE6F0F156688F3F948BD67C057C6EF06252035"
     ],
+    "lastUpdated": "2026-08-23T01:00:02.1769248Z",
     "validationCount": 1,
-    "lastUpdated": "2026-08-22T08:51:40.2949865Z",
+    "manifestHash": "4DC86F293C953FF5ECFBF17645DB1C9EEA799257D500FAFCE78171FC25B59DB8",
     "state": "VALIDATION_PASSED"
   },
   "timminator.VideOCR.CPU": {
@@ -8640,6 +8685,17 @@
     ],
     "lastUpdated": "2026-08-20T16:48:27.9977024Z",
     "version": "1.7.2"
+  },
+  "xssnick.tonutils-storage": {
+    "version": "1.5.3",
+    "description": "",
+    "installerHashes": [
+      "6AB4D722D0317946E6A0CE42AC0B97DBDF3A36F1421B5525979527BC4784B9B8"
+    ],
+    "lastUpdated": "2026-08-23T01:00:02.2918701Z",
+    "validationCount": 1,
+    "manifestHash": "5DA995BDCDED43689F52FAE4D9A2C47AE2F3E3C009813B3CA5BD81FFDFAEAB3E",
+    "state": "VALIDATION_PASSED"
   },
   "xushengfeng.eSearch": {
     "state": "VALIDATION_PASSED",
