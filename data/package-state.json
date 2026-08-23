@@ -680,15 +680,15 @@
     "manifestHash": "C71A6E160AC6A85572AFA73CCA7A972CAD01C8411B8217390738C684FC69BEF1"
   },
   "axllent.mailpit": {
+    "validationCount": 1,
+    "version": "1.31.0",
     "installerHashes": [
-      "E4815D2C961A4AD024F4D942D0D286FD7B7DA49C49FC7F01C565FF296BD3FDCE",
-      "07EE2BEE83E5B54F8CD7B013CB4A9D1582665A5280DE3B2BDD47B24C7139AA84"
+      "39B5F1B9A671A5F1738E3792E8495BEF2FEC8176B02EE1E22635626C5888C6E3",
+      "AF0013C31253BEFB73DD1974891D37921DE6454563D83074D27D443C40F2F0CE"
     ],
     "state": "VALIDATION_PASSED",
-    "version": "1.30.7",
-    "lastUpdated": "2026-08-21T09:07:38.1756372Z",
-    "validationCount": 1,
-    "manifestHash": "6956BBF04794B2852C64108B406B145F5121225C0B7814A8F852D16486B47AE7",
+    "manifestHash": "0FEDF66D42744E7F3FD422178E4A250157AA80A832B9661A135E6EC99D49E3F4",
+    "lastUpdated": "2026-08-23T16:49:52.1822271Z",
     "description": ""
   },
   "AyoubTadlaoui.logx": {
@@ -1181,6 +1181,17 @@
     "installerHashes": [
       "1419FB81F56174672406F504022B39F71F3024A5425BB9A276748C86B5036BC4"
     ]
+  },
+  "Calibrite.PROFILER": {
+    "validationCount": 1,
+    "version": "3.1.0",
+    "installerHashes": [
+      "C875A21A60B289B029DDDC3AF7FC7A305F6ACB5DC0B7D889AD165E384F298773"
+    ],
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "DCF58343EA1FFF339D7B5115B10A96404E8A122AA8768BBA64252F0700B4FCE8",
+    "lastUpdated": "2026-08-23T16:49:52.0832191Z",
+    "description": ""
   },
   "CameronSutter.Plottr": {
     "validationCount": 6,
@@ -2427,15 +2438,15 @@
     "lastUpdated": "2026-08-19T15:56:01.4740262Z"
   },
   "Filamental.Filamental": {
-    "description": "",
-    "manifestHash": "3139F98AA88C0C515A745381823FA56A07BA8843EC6EBDF0406AFEB48549EAEA",
+    "validationCount": 1,
+    "version": "0.3.34",
     "installerHashes": [
-      "506E92F1E011257878DFD5F786C94F586EB0CD5232A27A7BD1008462DF95F37D"
+      "DAB41714F2DC21455409285F6640A891A90E6FB6E10008F0BBBCFC9085C66EC9"
     ],
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-20T01:39:37.6252688Z",
-    "validationCount": 1,
-    "version": "0.3.33"
+    "manifestHash": "775C8CDEDF0A06BA8F58CF5360862383D4430C78DA251E792D2B769A141E1DD9",
+    "lastUpdated": "2026-08-23T16:49:52.1591555Z",
+    "description": ""
   },
   "FirenzeLor.gemini-collector": {
     "validationCount": 1,
@@ -4369,6 +4380,17 @@
       "190256F30298A86FF98AC451F751D25AE851598A9DEBECDB698065AF6506D572"
     ]
   },
+  "lukehaas.RunJS": {
+    "validationCount": 1,
+    "version": "4.1.0",
+    "installerHashes": [
+      "1CF20CB4C69ED25586AF033B782FEED7A80E80ECB501E0DB7E0F3D88A43A5844"
+    ],
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "B1301C444B4F9F2C7A9FAF87E01AA63148C3A35E040A2EE416A445BD1F530BF4",
+    "lastUpdated": "2026-08-23T16:49:52.2723068Z",
+    "description": ""
+  },
   "Luxview.AgainstMe": {
     "installerHashes": [
       "1C673B21E9621B423D052096DCCFFF5D3CD43441AEECC3C67EA2C2A7FC867571"
@@ -4443,11 +4465,11 @@
     "description": "",
     "version": "0.54.0",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "2D28FAACFEA7FB2F0ECA3C848B3C367DD2E9A4997C200F118B5B17E8E41D4418"
     ],
-    "lastUpdated": "2026-08-23T08:49:22.8044279Z",
+    "lastUpdated": "2026-08-23T16:49:52.2345042Z",
     "manifestHash": "99A27DFC8AFB035E84492CF7DFE12EA7C4AFA49AC12769BFE1FAF87A4AA52C0C"
   },
   "MarcoHefti.YTVodManager": {
@@ -6175,15 +6197,15 @@
     "version": "0.2.25"
   },
   "pnpm.pnpm": {
+    "validationCount": 1,
+    "version": "11.23.0",
     "installerHashes": [
-      "6643043CAA3B01C65C431039926A2AF954326D5CEFBDB4DA7BACECEB17F5051F",
-      "694FBB992C1631983729887318FC26F0921ECC826655FCFA29514D470A6725D1"
+      "55F9836C9FA93CA48D0E27ED0864F8BC91B0D3DF8CB4B8ECE43CFB6DA3B090C2",
+      "1861DCC076242B15D91A29C9212D6AAC50FBA7995F407948CC43BF0B7E258076"
     ],
     "state": "VALIDATION_PASSED",
-    "version": "11.21.0",
-    "manifestHash": "91EB44826E05C74B8998C772A5C70E78A6241AB1CD48EE71E893119262B962AF",
-    "validationCount": 2,
-    "lastUpdated": "2026-08-14T10:42:15.1350825Z",
+    "manifestHash": "55FB78C517BF018F87826D658BC06588C9F6216A3D9E46218AFEDB8FC98505A7",
+    "lastUpdated": "2026-08-23T16:49:52.2916627Z",
     "description": ""
   },
   "PocketBase.PocketBase": {
@@ -6590,6 +6612,17 @@
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-08-19T17:02:25.9709501Z",
     "validationCount": 1,
+    "description": ""
+  },
+  "rizukirr.apic": {
+    "validationCount": 1,
+    "version": "0.4.1",
+    "installerHashes": [
+      "EF1B8A49078D1D2D9EE07A950CB547CA7AB54D32BEC458D48FDE295E5C56ECAE"
+    ],
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "37A12BD5C7F00F06D220C74FF363AA26670AAB3BE7439D90F260ECDE0C29B79B",
+    "lastUpdated": "2026-08-23T16:49:52.214789Z",
     "description": ""
   },
   "rizukirr.apic-gui": {
@@ -8076,11 +8109,11 @@
     "description": "",
     "version": "1.7.15",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "8D60676F56EF22E3EA9F0335232A24E94C73E92DA1E03A1CAD2171847A8E5702"
     ],
-    "lastUpdated": "2026-08-23T08:49:22.8447764Z",
+    "lastUpdated": "2026-08-23T16:49:52.3175803Z",
     "manifestHash": "C6F43E1A89173CEE922A1DF5150C261231321387B7F06CDA22803817C25DEED7"
   },
   "tsouth89.Ceiling": {
