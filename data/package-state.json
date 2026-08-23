@@ -814,7 +814,11 @@
       "42FE5D76F2F07DBE64A3CD9EA1FF84C869772C88BDB6B69186FBE115D78CD9EE"
     ],
     "state": "VALIDATION_PASSED",
-    "description": ""
+    "description": "",
+    "openPr": {
+      "version": "1.4.4",
+      "checkedAt": "2026-08-23T08:16:46.9758832Z"
+    }
   },
   "bensadeh.tailspin": {
     "validationCount": 1,
