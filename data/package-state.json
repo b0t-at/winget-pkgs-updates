@@ -249,6 +249,18 @@
       "checkedAt": "2026-08-19T00:24:06.3004366Z"
     }
   },
+  "AlexGladkov.Harnest": {
+    "description": "",
+    "version": "0.12.0",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "installerHashes": [
+      "CC266B4B7C9B18264B0D80CFABB086D57904CBE89CDA6864F14F861C195D6711",
+      "6A5A91AD9B056CA507D107BF0110DD4D6EE60CD548C341EEA27025878A026705"
+    ],
+    "lastUpdated": "2026-08-23T08:49:22.8713134Z",
+    "manifestHash": "F6134453913F7B82D68C8604DAA54282A9000BB9E6FB1FB820D0DF1C81D69D02"
+  },
   "alirezagsm.trayy": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "B04275BF962529D22C9D0D730838F7E7F519535B742C43885945053B504A68F1",
@@ -2090,6 +2102,20 @@
     "lastUpdated": "2026-08-19T05:34:55.9273398Z",
     "manifestHash": "CF417CC1A7DAF1863F2D844A685BBF9EFFCF6D406C95E6FF0D2D27D685AC4C3B"
   },
+  "EndlessSky.EndlessSky": {
+    "description": "",
+    "version": "0.11.2",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "installerHashes": [
+      "2DD8A191396739307B590F50FF249E7537D3D2BA75EE85C7341256873F0ADC26",
+      "28C7069175923B345308B1BC74B1A853B5BDC9E125888F6D38F33FC2C500A4F7",
+      "C8D4C429D6C6662A67C9ADCBFC6B142E184B3771DF272A9D5F48F5A4BD0E9800",
+      "930005CDE9943895110D0F3255A2AE2CAAA794310453EFF9EE7C47AC091CAA4F"
+    ],
+    "lastUpdated": "2026-08-23T08:49:22.7334927Z",
+    "manifestHash": "90CA9A8C83C8C7BD67A57DB120D82E4D43922C9363422254DFE976A518301304"
+  },
   "ENIAC-Tech.FlexDesigner": {
     "description": "",
     "manifestHash": "BEC0CFFCFF54E945A6F621BB3815546461F3BEE3F278BD1957CE44DF3C528200",
@@ -2345,15 +2371,15 @@
     "version": "18.2.0"
   },
   "Fangyuan025.Chaty": {
+    "description": "",
+    "version": "2.1.2",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-22T12:51:56.5205229Z",
-    "installerHashes": [
-      "4055F2A4488F9698CCBFBA89E0F6CB922A0DF1E6B9D2655F88C3991C8667E88D"
-    ],
     "validationCount": 1,
-    "manifestHash": "7FFE2F2AD91A8B288119228696CD29FF0030AC8BC3E1CEE86A1D935F4C6344A1",
-    "version": "2.1.1",
-    "description": ""
+    "installerHashes": [
+      "F2CA8975B9FAD0F19485148783E976C97C68AC47D643236EB476A2D8492EB03B"
+    ],
+    "lastUpdated": "2026-08-23T08:49:22.6817485Z",
+    "manifestHash": "DFA3EA368228ACE28F5108B314A3F0259BC84A42E5C60DD6B6058AB905CE3069"
   },
   "Feho.LogNav": {
     "installerHashes": [
@@ -4377,15 +4403,15 @@
     }
   },
   "marcinz606.NegPy": {
+    "description": "",
+    "version": "0.54.0",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-22T12:51:56.655296Z",
-    "installerHashes": [
-      "2A7E007C796D137969631E7A1EFDDBB2ED62D4959684243BAEB9F4312EF2FE4D"
-    ],
     "validationCount": 1,
-    "manifestHash": "D88AE941CF6231B90162303EAD7B77AD203F9885811CEF08637E40C17DE73271",
-    "version": "0.53.0",
-    "description": ""
+    "installerHashes": [
+      "2D28FAACFEA7FB2F0ECA3C848B3C367DD2E9A4997C200F118B5B17E8E41D4418"
+    ],
+    "lastUpdated": "2026-08-23T08:49:22.8044279Z",
+    "manifestHash": "99A27DFC8AFB035E84492CF7DFE12EA7C4AFA49AC12769BFE1FAF87A4AA52C0C"
   },
   "MarcoHefti.YTVodManager": {
     "manifestHash": "D6B8CC28C195C1925AC443615826FDE9EB33D111F50144DC9CE7DF76A34B98CB",
@@ -6390,8 +6416,8 @@
     "installerHashes": [
       "8A47E3700690C63D26B7AE25CFCED00FA8A2EEA7A0567FD2E4605C77D2A04549"
     ],
-    "validationCount": 1,
-    "lastUpdated": "2026-08-22T08:51:40.1915967Z",
+    "validationCount": 2,
+    "lastUpdated": "2026-08-23T08:49:22.6287037Z",
     "state": "VALIDATION_FAILED"
   },
   "rejetto.hfs": {
@@ -6803,11 +6829,11 @@
   },
   "Scandum.WinTin++": {
     "version": "2.02.61",
-    "lastUpdated": "2026-08-23T05:10:59.6584008Z",
+    "lastUpdated": "2026-08-23T08:49:22.7847216Z",
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "2C9A618908F2C08C9E373327E7A15409C25EEB6AE563F45807A611269A686250",
-    "validationCount": 3,
+    "validationCount": 4,
     "installerHashes": [
       "421A1458080413D5135A7490DC05AC0F4B54F1CAADBFC033214536237420E847"
     ]
@@ -7130,6 +7156,17 @@
     "lastUpdated": "2026-05-11T15:42:46.9540533Z",
     "validationCount": 3
   },
+  "Skvetter.DevPod": {
+    "description": "",
+    "version": "0.26.1",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "installerHashes": [
+      "0F70A668FFA805737B5BA01D069E2CD315B743BE158366882501A266A04DB3C7"
+    ],
+    "lastUpdated": "2026-08-23T08:49:22.8251094Z",
+    "manifestHash": "E4D15C9B9ACA24469BA775750BC0FBDB8CE744F1C8AE63AB01DFF3DDD13895A8"
+  },
   "skyhook-io.Radar": {
     "version": "1.11.0",
     "lastUpdated": "2026-08-21T04:59:56.919664Z",
@@ -7153,16 +7190,16 @@
     ]
   },
   "sluicesync.sluice": {
-    "version": "0.131.1",
     "description": "",
-    "installerHashes": [
-      "75573DBF8C6230A08D1016F424706811357AC6391F08024E89021FB92630072B",
-      "EB46348ADE0D7CE2EC2F8956DCB7ABAC23ED75F65E0C80B461D86BACC10549AB"
-    ],
-    "lastUpdated": "2026-08-23T01:00:02.1593929Z",
+    "version": "0.131.2",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "manifestHash": "2CFFC4127731EBC0CD9AEC2420C0F27C79232326361F6673CCAF705CA56221C1",
-    "state": "VALIDATION_PASSED"
+    "installerHashes": [
+      "01401C8632F0B1DA40AEFA7F6BA9B4BDA0022A79AD7D1317EADDAEBC88F0735C",
+      "8D840A4274932EBDB268B3587952FAEDD5A7B536E98BE24B9A4A66970AEE4249"
+    ],
+    "lastUpdated": "2026-08-23T08:49:22.753611Z",
+    "manifestHash": "711D9FB270098AE6E6B12377EBB4C1341CCA7080184550D58DC9794BE0DE33C6"
   },
   "SnosMe.AwakenedPoETrade": {
     "installerHashes": [
@@ -7998,6 +8035,17 @@
     "validationCount": 1,
     "state": "VALIDATION_PASSED"
   },
+  "Tseli485.MENA-Tuteur": {
+    "description": "",
+    "version": "1.7.15",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "installerHashes": [
+      "8D60676F56EF22E3EA9F0335232A24E94C73E92DA1E03A1CAD2171847A8E5702"
+    ],
+    "lastUpdated": "2026-08-23T08:49:22.8447764Z",
+    "manifestHash": "C6F43E1A89173CEE922A1DF5150C261231321387B7F06CDA22803817C25DEED7"
+  },
   "tsouth89.Ceiling": {
     "validationCount": 1,
     "description": "",
@@ -8532,6 +8580,17 @@
       "7AB63E76B09E6A40801D166EC828C0EE9B80FEC04D27D7FA90DC03721AB92F63"
     ],
     "manifestHash": "69C6F74EDFFED58BC9A32A548BBC44662ABE57E02D715013DDA44F74B6298143"
+  },
+  "Winix.NetCat": {
+    "description": "",
+    "version": "0.4.0",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "installerHashes": [
+      "2B83EEBB0382359082309DCD7F12EAA6C8413D9EC51245DAB4F066FBD12E7B09"
+    ],
+    "lastUpdated": "2026-08-23T08:49:22.7076523Z",
+    "manifestHash": "AFE4DAC544A25D90E03D062A865B53C95D6A099145270C465E7DF9B468CA679D"
   },
   "Winix.Peep": {
     "manifestHash": "74394366AA30E68406B690FCC7B41C4C5674469E278E2D5D5E5F790B064A5DA1",
