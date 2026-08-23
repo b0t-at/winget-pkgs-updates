@@ -487,16 +487,16 @@
     }
   },
   "ArcBox.LinkCode": {
-    "version": "0.20.0",
-    "installerHashes": [
-      "C090F4FFECFD2F7ADB7929F27CB67AE993908E3CD5682D18DE3429DEEE7ECB74",
-      "583717A04F49B9EC008FCFE40DE335CD25AC4AE113565BA681DBE8949234AD67"
-    ],
-    "manifestHash": "045667FE9D67EABF36E13F783FB7FA7A633FC57FA89C417F3547C82DDB39A361",
-    "state": "VALIDATION_PASSED",
-    "description": "",
     "validationCount": 1,
-    "lastUpdated": "2026-08-16T17:10:10.6577549Z"
+    "lastUpdated": "2026-08-23T12:49:18.3609221Z",
+    "description": "",
+    "manifestHash": "61457B84913C2AD07B8AD6BD19478E56AF4E663955DBCE2A6DD92C8C598235EE",
+    "version": "0.25.2",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "5E4FE8C57FB10EF2A80D0A6B3AEBE155D62C73E3CC1B99D4167B254FD49CE952",
+      "32931CC41FE0B7A7024F032BED37DED9E7BEE68FA2FE48DA462E011E59A86C7F"
+    ]
   },
   "Archeb.OpenTrace": {
     "version": "1.5.2",
@@ -1170,6 +1170,17 @@
       "version": "7.13.5",
       "checkedAt": "2026-08-20T16:17:51.5220575Z"
     }
+  },
+  "C-POPLO.Unreal-GUI": {
+    "validationCount": 1,
+    "lastUpdated": "2026-08-23T12:49:18.3034764Z",
+    "description": "",
+    "manifestHash": "1C44BE9E98BF30ACD4EA4904480DE56D3AD86A654ADD47E953BA18D8FC9AA561",
+    "version": "0.6.2.0",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "1419FB81F56174672406F504022B39F71F3024A5425BB9A276748C86B5036BC4"
+    ]
   },
   "CameronSutter.Plottr": {
     "validationCount": 6,
@@ -3203,6 +3214,17 @@
     "version": "2.2.1",
     "lastUpdated": "2026-08-21T17:17:39.833691Z"
   },
+  "Hawaii_Beach.TinyNvidiaUpdateChecker": {
+    "validationCount": 1,
+    "lastUpdated": "2026-08-23T12:49:18.2260349Z",
+    "description": "",
+    "manifestHash": "40CF1AF78F11E0D59E138ACEA4C305B198C14B462B7068C89E34F964CD8D5912",
+    "version": "1.26.0",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "893A833FD570940B29C89479EF57FEA7CAFE36ACED9CC9A8EACC167B1059661A"
+    ]
+  },
   "hdrover.DiscordDrover": {
     "manifestHash": "5A1ED359EEF5861CC67505FCEA15C0C03557140C4A27208646FBD092F3DF4B14",
     "state": "VALIDATION_PASSED",
@@ -3351,15 +3373,15 @@
     }
   },
   "holland-built.Bloxsmith": {
-    "version": "3.67.4",
-    "installerHashes": [
-      "4E81A373DA42A0789583CDDF5033E376D104F2846F3BE3D583C22A56A003EA26"
-    ],
-    "description": "",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "E0024AB91FD709FD40837A989C66711258BEABCD7C58AA44381B52B862DA81F4",
     "validationCount": 1,
-    "lastUpdated": "2026-08-19T15:56:01.650861Z"
+    "lastUpdated": "2026-08-23T12:49:18.3236212Z",
+    "description": "",
+    "manifestHash": "066206A50D87B983318BD586D8DE6FF0652ADAA9BFBAA0050E81A5AA15F32754",
+    "version": "3.69.0",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "A4F8AC836ADCD6B3AB3943A301A8490CCE616820036C4CA4B7C05E231799BBD9"
+    ]
   },
   "HongMinhee.Gukhanmun": {
     "manifestHash": "089D5FCFFB565DBC52073976471BB7BB53E1FA33EA888133D45A589919D3AE52",
@@ -4335,6 +4357,17 @@
     "description": "",
     "validationCount": 1,
     "lastUpdated": "2026-08-16T17:10:10.8349524Z"
+  },
+  "luckjiawei.frp-desktop": {
+    "validationCount": 1,
+    "lastUpdated": "2026-08-23T12:49:18.4114547Z",
+    "description": "",
+    "manifestHash": "D9D549F38464CA91D54C7D8072A0D26BB2842929F8F2BFB67A7FFF63BC115DFE",
+    "version": "1.2.6",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "190256F30298A86FF98AC451F751D25AE851598A9DEBECDB698065AF6506D572"
+    ]
   },
   "Luxview.AgainstMe": {
     "installerHashes": [
@@ -8052,14 +8085,14 @@
   },
   "tsouth89.Ceiling": {
     "validationCount": 1,
+    "lastUpdated": "2026-08-23T12:49:18.3811377Z",
     "description": "",
-    "version": "1.5.34",
-    "installerHashes": [
-      "B05E221E118A66943F54175F116E8EE9A9441186C7D4CDA829AB25F764DE6B8C"
-    ],
+    "manifestHash": "728BDA1CAF37754AFEB523A1970632B2B7492F84F7BEEA837F5D6EACA45E22F7",
+    "version": "1.5.35",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-19T05:34:55.8718459Z",
-    "manifestHash": "9DC66887480178DB901F870325E9CDAF32C3EA63DF54376A4D53F1171EEBFFCB"
+    "installerHashes": [
+      "8E0358290C0701B37CDE2D0C9B243A0C71740124EDC17E50EAA3E6E61ACD43E0"
+    ]
   },
   "tsouth89.CubbyClipboard": {
     "validationCount": 1,
