@@ -119,7 +119,7 @@
     "version": "0.107.78",
     "openPr": {
       "version": "0.107.79",
-      "checkedAt": "2026-08-22T12:13:20.4701665Z"
+      "checkedAt": "2026-08-23T16:12:39.3840275Z"
     }
   },
   "AdGuard.dnsproxy": {
@@ -423,7 +423,7 @@
     "state": "VALIDATION_PASSED",
     "openPr": {
       "version": "0.2.2",
-      "checkedAt": "2026-08-22T12:14:27.3496579Z"
+      "checkedAt": "2026-08-23T16:13:45.3560419Z"
     }
   },
   "AntiMicroX.antimicrox": {
@@ -2920,7 +2920,7 @@
     "description": "",
     "openPr": {
       "version": "2.13.1",
-      "checkedAt": "2026-08-22T16:12:34.1300734Z"
+      "checkedAt": "2026-08-23T16:12:41.3300101Z"
     }
   },
   "Google.ContainerTools.Skaffold": {
