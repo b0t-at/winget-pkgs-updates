@@ -387,6 +387,17 @@
     "state": "VALIDATION_PASSED",
     "validationCount": 4
   },
+  "ankitshuxe.Neko": {
+    "installerHashes": [
+      "4062C6DBFE0F4839FE4041F04FC465AFE87DB9950602867513E55C7FBFCF536C"
+    ],
+    "description": "",
+    "manifestHash": "22BD9C3AB4C1CD3D7C2E66BC3804C105FADACB419BFCC9C956CCD57D97C933F5",
+    "version": "1.0.2",
+    "lastUpdated": "2026-08-23T05:10:59.6886704Z",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
+  },
   "AntimatterStudios.ext4-win-driver": {
     "description": "",
     "version": "0.2.2",
@@ -1374,9 +1385,9 @@
     "state": "VALIDATION_FAILED",
     "manifestHash": "8BE274DE21ABB33C33201D6CAFE132CDC1C0BF43F14AA03B9B7C656C860986A9",
     "description": "",
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "0.9.5",
-    "lastUpdated": "2026-08-21T20:47:48.3076694Z"
+    "lastUpdated": "2026-08-23T05:10:59.5192367Z"
   },
   "closeio.Close": {
     "lastUpdated": "2026-08-20T21:12:49.4833707Z",
@@ -2483,15 +2494,15 @@
     "version": "2.20.1"
   },
   "Forkgram.Forkgram": {
-    "lastUpdated": "2026-08-14T10:42:14.9507225Z",
-    "manifestHash": "AA5FC5450FA8DA4DAEFFEBEE405E1DF30C6D7EB89F59D30A1FB326EBA8EF2519",
-    "version": "7.0.9",
-    "validationCount": 1,
-    "description": "",
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "93A239746E7E81B3D0A54DA836C3FCD75C4185B543CEBAC357F5717B77C7089A"
-    ]
+      "CD13A7C3DF5DCA6D54629E1F19D53B7CE135DE1035DEADB3CDBB7868D80C361E"
+    ],
+    "description": "",
+    "manifestHash": "E26F6493CD0C96F5BD517E1BB39CFF2CBCDDF17DFEDDC5F4ACF0E35E032757E1",
+    "version": "7.1.0",
+    "lastUpdated": "2026-08-23T05:10:59.562026Z",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
   },
   "FOSSA.FOSSA-cli": {
     "state": "VALIDATION_PASSED",
@@ -2540,15 +2551,15 @@
     }
   },
   "Frnsys.Half_earth": {
-    "manifestHash": "1ED544A7D31EB518EF06177CFB7B4012E082279A60838300968151EE9CEED09B",
-    "lastUpdated": "2026-08-18T05:33:46.9095608Z",
-    "state": "VALIDATION_PASSED",
-    "version": "1.0.14",
-    "validationCount": 1,
-    "description": "",
     "installerHashes": [
       "392F916AF427392AD90CB80E226420CBC4ADB6C48135CE9B9FED61AA1F735452"
-    ]
+    ],
+    "description": "",
+    "manifestHash": "A4B0A2532C22E8509634F1289507E7CE0F5F02F6F5D34B2B8FF796539325C3D6",
+    "version": "1.0.14",
+    "lastUpdated": "2026-08-23T05:10:59.6015483Z",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
   },
   "fselect.fselect": {
     "installerHashes": [
@@ -3455,6 +3466,17 @@
       "checkedAt": "2026-08-18T08:42:19.3437599Z"
     }
   },
+  "IneedABUFF.BuffMyBar": {
+    "installerHashes": [
+      "B8FC866FECC9C903B7429063B6989DEB12E901A5BCEDF74F435FF3AEB4D44CCF"
+    ],
+    "description": "",
+    "manifestHash": "C4EB9BA41A64E123D011C3EE2F26464316C5D4FF4483A27B4CE7A17FB3E23794",
+    "version": "0.9.2",
+    "lastUpdated": "2026-08-23T05:10:59.6738815Z",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
+  },
   "Infracost.Infracost": {
     "manifestHash": "717C69D6517A1337C4994F2EDB4D07FF03D90B5236221E7067E228792EDD26C3",
     "lastUpdated": "2026-08-16T13:40:51.7009012Z",
@@ -4201,15 +4223,15 @@
     "version": "0.36.1"
   },
   "Longbridge.LongbridgeTerminal": {
-    "manifestHash": "F07AEA57C4AE8DFA5F177E73DB155534F281BB3523469ED7E6E6537F125E2ABC",
-    "description": "",
-    "lastUpdated": "2026-08-20T05:16:37.8280579Z",
     "installerHashes": [
-      "C26AF9231843E7502674B4DD15F6AABED867486F58681B27E7A1E563B4E2831B"
+      "96A82D284EB7C65A0A2755D3897ED975E46A8D81EDE291D58499AB12303E32F2"
     ],
+    "description": "",
+    "manifestHash": "323289FFF8C2AB6EA5EDDAA11970E284F0749200FD67CB78F11F6C93CEBBCB5A",
+    "version": "0.28.2",
+    "lastUpdated": "2026-08-23T05:10:59.616773Z",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "version": "0.27.1"
+    "state": "VALIDATION_PASSED"
   },
   "LookupFoundation.RevitLookup.2021": {
     "manifestHash": "128610B2BC6F960BB40A16C24D3F7CF0F8C87E1B9B978E39601108907C2FEBC3",
@@ -4281,15 +4303,15 @@
     "lastUpdated": "2026-08-16T17:10:10.8349524Z"
   },
   "Luxview.AgainstMe": {
-    "validationCount": 1,
-    "lastUpdated": "2026-08-19T01:25:20.6122775Z",
-    "description": "",
-    "state": "VALIDATION_PASSED",
-    "version": "0.5.127",
     "installerHashes": [
       "1C673B21E9621B423D052096DCCFFF5D3CD43441AEECC3C67EA2C2A7FC867571"
     ],
-    "manifestHash": "07B56B0077E5DB9C1B8488EA822FF1805534F035E1CDC9C787AA6DDA4D9CAA09"
+    "description": "",
+    "manifestHash": "67C6F58F64F691A4A51450225CD7DABC69E9880610A4DF9FCA899E3C2072ADD1",
+    "version": "0.5.127",
+    "lastUpdated": "2026-08-23T05:10:59.5820936Z",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
   },
   "machinewrapped.SmartCopy": {
     "manifestHash": "71B9B40D4B838DFBFA5FD39FB0CE6B31B66B28ACFF0427463FB36ED17EC1C422",
@@ -4714,15 +4736,15 @@
     "description": ""
   },
   "mikf.gallery-dl.Nightly": {
-    "lastUpdated": "2026-08-22T04:43:28.9522417Z",
-    "manifestHash": "707F913398BD0E9ED931B9E9DDEDCFDDF9A7E192F8FB8CA2FD4B7CD859DE8ABC",
     "installerHashes": [
-      "12FBCD6896DDA00C5097D92C8A1FF0AE741B2AD467F79B1FB15304435AA7E8A5",
-      "F2B10591E18B9236E1798AD29E1D017528FA2A1232263100C9FD94AE25159DEB"
+      "E7E52076A2C6D63325CC5F1DCEBBF8A470611FC681433F10CC539F7883B02D14",
+      "6BD15B1836001C49544B4424AC2CDEF7EC59447773622F9D287F903DABBB6A30"
     ],
-    "validationCount": 1,
     "description": "",
-    "version": "2026.08.22",
+    "manifestHash": "192EADB374D32FA0F21C8DF3B7DB0B1107E22DECACDFB29BD8201B7E29D3BBDB",
+    "version": "2026.08.23",
+    "lastUpdated": "2026-08-23T05:10:59.7247525Z",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED"
   },
   "MilkShift.GoofCord": {
@@ -5798,6 +5820,18 @@
       "155F667B349561F666E0BA302DB3C5F5A5704F0A0A21A1D61D815D3399C4F591"
     ]
   },
+  "Orzazade.Gitch": {
+    "installerHashes": [
+      "C987ECB876357AA3E16F2EA15000A5D1A88731F7C16B1DC2CE6ECC02D9A8BB0E",
+      "C5B5F038FB9247E8A42763AD625B58A238E1EBFFDB2EA9C70F20DAF30CDDB43C"
+    ],
+    "description": "",
+    "manifestHash": "FAB2B44A2D6222CB62198B524A1CFB9AE70E78CEFF62E0FED0DD97423B5DD021",
+    "version": "2.3.0",
+    "lastUpdated": "2026-08-23T05:10:59.6425788Z",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
+  },
   "Oxolan.Oxolan": {
     "validationCount": 1,
     "version": "1.4.0",
@@ -6765,11 +6799,11 @@
   },
   "Scandum.WinTin++": {
     "version": "2.02.61",
-    "lastUpdated": "2026-08-23T01:00:02.2056424Z",
+    "lastUpdated": "2026-08-23T05:10:59.6584008Z",
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "2C9A618908F2C08C9E373327E7A15409C25EEB6AE563F45807A611269A686250",
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "421A1458080413D5135A7490DC05AC0F4B54F1CAADBFC033214536237420E847"
     ]
@@ -7334,14 +7368,14 @@
     "lastUpdated": "2026-08-16T17:10:10.6924691Z"
   },
   "stefanprodan.timoni": {
-    "lastUpdated": "2026-08-17T17:04:34.9562471Z",
-    "description": "",
     "installerHashes": [
-      "76FD669F54E3F4942E2906D1D84DED5A7C819794B20EB903F740F9B232662267"
+      "BE295167E1B85C18B3FC027EC064E2646B60526B244E1533E2C13BA95479A16E"
     ],
+    "description": "",
+    "manifestHash": "DF5C33B4719851985DA0C8484CC6B9461BD819C6A19B604487233F8A5B29623B",
+    "version": "0.33.0",
+    "lastUpdated": "2026-08-23T05:10:59.7500136Z",
     "validationCount": 1,
-    "manifestHash": "C53186C6F3CAC0370E196BEC27C76097A69084F5DC47B7B7542497C7D4CD9104",
-    "version": "0.32.0",
     "state": "VALIDATION_PASSED"
   },
   "StefansTools.grepWin": {
@@ -7928,15 +7962,15 @@
     "manifestHash": "11DAAF2989C26BFB67826BDF503B3BA0553FF91CE696E74C1C6F27DC4AF7BC08"
   },
   "TrellisLab.Trellis": {
-    "validationCount": 1,
-    "version": "1.5.2",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "97546297D77837285AB46BBB19B46FEF231699001BFC9436964A32E7DCEF0D69",
-    "description": "",
     "installerHashes": [
-      "400A4E3F769C1D0ADF4C77DABD285FDBBBFEB5FE5D3D87CA9B6A3F54767B25F5"
+      "9501DEB0D4C4BC12F0DE4F70A05BBD5278EFF87C62F90220183550872442D97B"
     ],
-    "lastUpdated": "2026-08-17T21:15:38.4059211Z"
+    "description": "",
+    "manifestHash": "334A588534B56BDA6777D142366B8C9D4CADB52DE460635CA64B979801D6BB2D",
+    "version": "1.6.0",
+    "lastUpdated": "2026-08-23T05:10:59.710205Z",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
   },
   "TrenchBroom.TrenchBroom": {
     "manifestHash": "989EB55DC4DCCE006A1A8E7810CECB2266582F01FF5FDDC16E6DEE67626770FD",
