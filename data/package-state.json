@@ -3763,8 +3763,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.8.10",
-      "checkedAt": "2026-08-23T00:27:13.6092645Z"
+      "checkedAt": "2026-08-23T20:12:22.0877644Z",
+      "version": "2026.8.11"
     }
   },
   "Jellyfin.FFmpeg": {
@@ -6206,7 +6206,11 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "55FB78C517BF018F87826D658BC06588C9F6216A3D9E46218AFEDB8FC98505A7",
     "lastUpdated": "2026-08-23T16:49:52.2916627Z",
-    "description": ""
+    "description": "",
+    "openPr": {
+      "checkedAt": "2026-08-23T20:12:24.9804594Z",
+      "version": "11.23.0"
+    }
   },
   "PocketBase.PocketBase": {
     "description": "",
