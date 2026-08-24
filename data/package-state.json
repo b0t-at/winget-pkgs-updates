@@ -6296,11 +6296,7 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "55FB78C517BF018F87826D658BC06588C9F6216A3D9E46218AFEDB8FC98505A7",
     "lastUpdated": "2026-08-23T16:49:52.2916627Z",
-    "description": "",
-    "openPr": {
-      "checkedAt": "2026-08-23T20:12:24.9804594Z",
-      "version": "11.23.0"
-    }
+    "description": ""
   },
   "PocketBase.PocketBase": {
     "description": "",
