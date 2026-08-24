@@ -372,16 +372,16 @@
     }
   },
   "AnInsomniacy.Aria2Next": {
-    "lastUpdated": "2026-08-20T21:12:49.6634602Z",
-    "manifestHash": "A6835787A39482137992ABEBF706836A64E0E6C5CEC9B5E79F032BEDE00D0043",
-    "version": "2.5.6",
-    "validationCount": 1,
     "installerHashes": [
-      "1D86C1AD76384F0DD5AD459D5B0CC302FFCC8D12346660307DCD3F2D78BCF25D",
-      "6D590C64B93D01537292C8351F14FDCE8977AE98C7810B9EDD46415F075CF49F"
+      "C6A876C17D49956D7631CD0F8BE184CCB183640414FBE7060A83C327EA8BBB0B",
+      "3D662B497A5C1A68BD2EC69A74F995D1D9A9F02EB1D4E35A682C5C6225899C33"
     ],
-    "state": "VALIDATION_PASSED",
-    "description": ""
+    "validationCount": 1,
+    "description": "",
+    "lastUpdated": "2026-08-24T12:52:12.8326614Z",
+    "version": "2.5.9",
+    "manifestHash": "FA118C8F095F177275B6C1B2325E4168A636519993D0E9C96E0999A28BB813E2",
+    "state": "VALIDATION_PASSED"
   },
   "Anki.Anki": {
     "manifestHash": "0D9714050B0D59E7B030281F9DF9D711AF26AFF8475786C412B799325297275B",
@@ -1868,15 +1868,15 @@
     "version": "2.4.1"
   },
   "Divaaaan.Tenebra": {
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "version": "0.4.6",
-    "lastUpdated": "2026-08-24T08:49:14.2193415Z",
-    "manifestHash": "E1171D3D1FE081C3103F4F6DBBC801128CA2A2E86B18418593BFDC499335E3F4",
     "installerHashes": [
-      "51B2B171ADBA901A2E324F9FCF2A3328635F72276394A0EF58F122FB1AAA91F3"
-    ]
+      "A71D537A63538225C68622B0E359F30F42D5ACDE2FE1BD6D035873BBB95360F2"
+    ],
+    "validationCount": 1,
+    "description": "",
+    "lastUpdated": "2026-08-24T12:52:12.9633558Z",
+    "version": "0.5.1",
+    "manifestHash": "06E6B35FE4BA515FEED27CE09CCE215773DE94D51F144AB529FBF3D6D81AFCEC",
+    "state": "VALIDATION_PASSED"
   },
   "divVerent.AAAAXY": {
     "state": "VALIDATION_FAILED",
@@ -2014,14 +2014,14 @@
     }
   },
   "Echonuit.VigieChiroCompanion": {
-    "manifestHash": "0111BFD58D5D6589842ADB1BD9797923BF9872792532E04BCA0113FBA7E46F6E",
     "installerHashes": [
-      "B9AE34E22CD7595390C3598C0555041FD18655F676FC1B2EE9145FFA6188B324"
+      "D19B076047EDCDAE7E23D1E2F586B5D7A0875B6A8022C283B686A62F29A02728"
     ],
     "validationCount": 1,
-    "version": "2.185.0",
     "description": "",
-    "lastUpdated": "2026-08-16T12:25:11.6780393Z",
+    "lastUpdated": "2026-08-24T12:52:12.9833148Z",
+    "version": "2.189.0",
+    "manifestHash": "2472E3AAF78FB67198AD495981A6FD28E5F1C0E5E8B499CFAB84B898401784A9",
     "state": "VALIDATION_PASSED"
   },
   "edenian-prince.rust-secrets": {
@@ -3183,15 +3183,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Happ.Happ": {
-    "description": "",
-    "validationCount": 1,
-    "manifestHash": "B44AD9905BB8E8A5561FA8B7C339E50598A7E60F694DB94D3D8AE33AA4F11134",
-    "lastUpdated": "2026-08-20T12:54:39.396218Z",
     "installerHashes": [
-      "619F6B29E0485D35FBF2F40414D29E92D113B8AFEB96BB9AA4E03C0A809FAA6E"
+      "8F813F37FE2482286EAA01668030A239CDA8BAF639A1DBB8792CD7E13CAE1A9A"
     ],
-    "state": "VALIDATION_PASSED",
-    "version": "3.3.6"
+    "validationCount": 1,
+    "description": "",
+    "lastUpdated": "2026-08-24T12:52:12.9370914Z",
+    "version": "4.1.1",
+    "manifestHash": "1A384BF6D7CB65307DAA2BB02EA8763A989132EB97B8A23264A9DB8D831BF75A",
+    "state": "VALIDATION_PASSED"
   },
   "HarjotSinghRana.Reinstate": {
     "description": "",
@@ -3331,8 +3331,8 @@
       "3DE6E6586FEDCC6DE25F6F2BEC9EA49230ED0775B1AA2EAEE381F60A314A517E"
     ],
     "version": "3.23.1",
-    "lastUpdated": "2026-08-22T08:51:40.3822138Z",
-    "validationCount": 2,
+    "lastUpdated": "2026-08-24T12:52:12.7296801Z",
+    "validationCount": 3,
     "manifestHash": "3D3F462B0E3FF03CA4242B1081B8E7EC5320BE2F470497CD1935AFED1DAAB5E2"
   },
   "HiroyukiFuruno.katana-desktop": {
@@ -3968,17 +3968,17 @@
     "state": "VALIDATION_PASSED"
   },
   "katahiromz.RisohEditor": {
-    "manifestHash": "0600566C6DBED62A9C633417688FC2E26227B8BE7B95CDB8218F5807F4A863E2",
-    "state": "VALIDATION_PASSED",
-    "version": "6.1.5",
-    "description": "",
-    "validationCount": 1,
     "installerHashes": [
-      "212554CECF10237B34CBC71478AC3CE93BCAD8BC8CEF13C9D22111BF535D611D",
-      "6B2353B0022FFC5117149B20B27F9A0D943CF9E3547DF65C4627C0F6710DAFBE",
-      "F4CBF3A004DCC7F3820FFEF807A7E6EC537DC1BE814180AE15D2CBA0DC483F93"
+      "346E980ACA597FD3F6642B28373129963991C6C938C54D78ECACDCFF521FD416",
+      "DD50FE31277A9C58ABAEF243D37DCFA211A941D2AD862B4C65DD10926C8B82F1",
+      "AA53787F5F87F49B8DADFE84C0EE8A73685E1D96D6C9FC3133BC22AC0D7F00F1"
     ],
-    "lastUpdated": "2026-08-22T16:46:28.5412324Z"
+    "validationCount": 1,
+    "description": "",
+    "lastUpdated": "2026-08-24T12:52:12.8661483Z",
+    "version": "6.1.6",
+    "manifestHash": "D0EFD05570D37EEA83E5CFCB5C0CBEACBF569E6DF8C7EACC8C442DE0FE9BC529",
+    "state": "VALIDATION_PASSED"
   },
   "kbrdn1.gwm": {
     "version": "1.9.0",
@@ -4874,14 +4874,14 @@
   },
   "mikf.gallery-dl.Nightly": {
     "installerHashes": [
-      "E7E52076A2C6D63325CC5F1DCEBBF8A470611FC681433F10CC539F7883B02D14",
-      "6BD15B1836001C49544B4424AC2CDEF7EC59447773622F9D287F903DABBB6A30"
+      "7AA37912E73F31E12B2DC36E0B01127B883D9B03B6DAE0E4AA61BDAF81F22283",
+      "6C33DC44210BCD075DCAD0520AB18522C65B6A6489DAEDAE203D5747BFA663B5"
     ],
-    "description": "",
-    "manifestHash": "192EADB374D32FA0F21C8DF3B7DB0B1107E22DECACDFB29BD8201B7E29D3BBDB",
-    "version": "2026.08.23",
-    "lastUpdated": "2026-08-23T05:10:59.7247525Z",
     "validationCount": 1,
+    "description": "",
+    "lastUpdated": "2026-08-24T12:52:12.8867636Z",
+    "version": "2026.08.24",
+    "manifestHash": "2EFAE288C8ABF9A0C71839086C392A2D563C9852125FEAE53DA86F393194DE4F",
     "state": "VALIDATION_PASSED"
   },
   "MilkShift.GoofCord": {
@@ -5482,6 +5482,17 @@
     "lastUpdated": "2026-08-20T01:39:37.3816628Z",
     "validationCount": 1,
     "version": "0.7.0"
+  },
+  "nptr.msstyleEditor": {
+    "installerHashes": [
+      "A08D8316B40F52BD880272DAEC449A47A01CC98DD7EF35CAFCFB35CE72E080A4"
+    ],
+    "validationCount": 1,
+    "description": "",
+    "lastUpdated": "2026-08-24T12:52:12.8102642Z",
+    "version": "2.1.2.0",
+    "manifestHash": "AE7532CC719F30752D29F8F80FF3B7320A63C71D5D940C9F715ED45E0587D6AF",
+    "state": "VALIDATION_PASSED"
   },
   "nu774.qaac": {
     "installerHashes": [
@@ -7398,6 +7409,18 @@
       "tag": "v1.0.0",
       "checkedAt": "2026-08-18T08:42:19.3437599Z"
     }
+  },
+  "sorairolake.qrtool": {
+    "installerHashes": [
+      "C0CAD331B96632E74DA48F4E9D32E924CC5D3BD2BE4258A4A0A39DA99202D712",
+      "240919208A4031C1AF8B24D7A988FA192282E1F6BBE0263999137F0A5B5DF16D"
+    ],
+    "validationCount": 1,
+    "description": "",
+    "lastUpdated": "2026-08-24T12:52:12.9170414Z",
+    "version": "0.13.2",
+    "manifestHash": "B6AF9ABED0545CB9C7E009EFAFF797965FA33803AB413A04B7DA728A123D9CA1",
+    "state": "VALIDATION_PASSED"
   },
   "SoupBuild.Soup": {
     "description": "",
