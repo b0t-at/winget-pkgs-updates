@@ -19,11 +19,7 @@
     "installerHashes": [
       "79AB3B0773F7115B479AD3BAB0B1FBA753F6880D62D1DF037B7BF7D209762922"
     ],
-    "lastUpdated": "2026-08-22T16:46:28.684973Z",
-    "openPr": {
-      "version": "4.3.1.0",
-      "checkedAt": "2026-08-24T00:25:19.9872089Z"
-    }
+    "lastUpdated": "2026-08-22T16:46:28.684973Z"
   },
   "ABowlOfEleven.hopscout": {
     "manifestHash": "1F3AE2A47F29CCDE4BDE142A406D060AE04B93D9EE44F9F9F28DB6D583CF4D25",
@@ -3771,8 +3767,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-08-23T20:12:22.0877644Z",
-      "version": "2026.8.11"
+      "version": "2026.8.12",
+      "checkedAt": "2026-08-24T12:17:36.1340904Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -7645,11 +7641,7 @@
       "6A19197705836DC205BC699FC5CE5917547454086FF3F142391E03E1B33FB194"
     ],
     "state": "VALIDATION_PASSED",
-    "version": "1.162.3",
-    "openPr": {
-      "version": "1.162.3",
-      "checkedAt": "2026-08-20T16:17:36.7760845Z"
-    }
+    "version": "1.162.3"
   },
   "str4d.rage": {
     "state": "VALIDATION_PASSED",
