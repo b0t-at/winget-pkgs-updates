@@ -1952,13 +1952,7 @@
     ],
     "description": "",
     "version": "0.10.3",
-    "state": "VALIDATION_PASSED",
-    "configHealth": {
-      "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/DonutWare/Fladder/releases/download/nightly/Fladder-Windows-0.10.3-nightly-Setup.exe",
-      "tag": "v0.10.3",
-      "checkedAt": "2026-08-18T08:42:19.3437599Z"
-    }
+    "state": "VALIDATION_PASSED"
   },
   "dprint.dprint": {
     "version": "0.56.0",
@@ -2229,9 +2223,9 @@
     "validationCount": 4,
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/errata-ai/vale/releases/download/v3.17.1/vale_3.17.1_Windows_64-bit.zip",
-      "tag": "v3.17.1",
-      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+      "detail": "No release asset matches: https://github.com/errata-ai/vale/releases/download/v3.18.0/vale_3.18.0_Windows_64-bit.zip",
+      "tag": "v3.18.0",
+      "checkedAt": "2026-08-24T05:33:14.2025456Z"
     }
   },
   "Essenciary.Githical": {
@@ -2601,9 +2595,9 @@
   "FrankZhu.ZManagerCLI": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/frankmanzhu/zmanager/releases/download/v2.0.1/zm-x86_64-pc-windows-msvc.zip https://github.com/frankmanzhu/zmanager/releases/download/v2.0.1/zm-aarch64-pc-windows-msvc.zip",
-      "tag": "v2.0.1",
-      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+      "detail": "No release asset matches: https://github.com/frankmanzhu/zmanager/releases/download/v2.1.0/zm-x86_64-pc-windows-msvc.zip https://github.com/frankmanzhu/zmanager/releases/download/v2.1.0/zm-aarch64-pc-windows-msvc.zip",
+      "tag": "v2.1.0",
+      "checkedAt": "2026-08-24T05:33:14.2025456Z"
     }
   },
   "Frnsys.Half_earth": {
@@ -2728,7 +2722,13 @@
       "4B7CB519EA93DAEA0EE910DF897388EA600997CCDA139CEDBB547192E9FAC8FB"
     ],
     "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "configHealth": {
+      "status": "RepoMissing",
+      "detail": "The GitHub repository does not exist or is not readable.",
+      "tag": "",
+      "checkedAt": "2026-08-24T05:33:14.2025456Z"
+    }
   },
   "GDQuest.GDScript.Formatter": {
     "version": "0.24.0",
@@ -3804,9 +3804,9 @@
   "JGraph.Draw": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/jgraph/drawio-desktop/releases/download/v31.1.8/draw.io-ia32-31.1.8-windows-32bit-no-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v31.1.8/draw.io-31.1.8-windows-no-installer.exe",
-      "tag": "v31.1.8",
-      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+      "detail": "No release asset matches: https://github.com/jgraph/drawio-desktop/releases/download/v31.3.2/draw.io-ia32-31.3.2-windows-32bit-no-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v31.3.2/draw.io-31.3.2-windows-no-installer.exe",
+      "tag": "v31.3.2",
+      "checkedAt": "2026-08-24T05:33:14.2025456Z"
     }
   },
   "JitzuLang.Jitzu": {
@@ -5772,14 +5772,6 @@
     "manifestHash": "BD13779CF79369CACF2D222AB1630EAF7DA00B2B56222A1B42FFF48B5A04E450",
     "description": ""
   },
-  "OpenDumpViewer.OpenDumpViewer.BETA": {
-    "configHealth": {
-      "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/Open-DUMP-Viewer/Open-DUMP-Viewer/releases/download/v4.5.0-beta/OpenDumpViewer_v4.5.0-beta_installer_x64.exe https://github.com/Open-DUMP-Viewer/Open-DUMP-Viewer/releases/download/v4.5.0-beta/OpenDumpViewer_v4.5.0-beta_installer_arm64.exe",
-      "tag": "v4.5.0",
-      "checkedAt": "2026-08-18T08:42:19.3437599Z"
-    }
-  },
   "OpenGeos.GeoLibre": {
     "lastUpdated": "2026-08-18T17:25:14.0418715Z",
     "description": "",
@@ -6439,6 +6431,14 @@
     "description": "",
     "validationCount": 1
   },
+  "qp888n.Yumedana": {
+    "configHealth": {
+      "status": "RepoMissing",
+      "detail": "The GitHub repository does not exist or is not readable.",
+      "tag": "",
+      "checkedAt": "2026-08-24T05:33:14.2025456Z"
+    }
+  },
   "QPDF.QPDF": {
     "state": "VALIDATION_PASSED",
     "description": "",
@@ -6982,9 +6982,9 @@
     "lastUpdated": "2026-05-20T22:15:05.5255716Z",
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/schollz/croc/releases/download/v11.1.2/croc_v11.1.2_Windows-ARM.zip",
-      "tag": "v11.1.2",
-      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+      "detail": "No release asset matches: https://github.com/schollz/croc/releases/download/v11.2.5/croc_v11.2.5_Windows-ARM.zip",
+      "tag": "v11.2.5",
+      "checkedAt": "2026-08-24T05:33:14.2025456Z"
     }
   },
   "scimusmn.stele": {
