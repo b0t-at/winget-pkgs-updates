@@ -554,7 +554,11 @@
     ],
     "state": "VALIDATION_PASSED",
     "manifestHash": "22E09A01B0EC244FEA41B0691EBE65C15B3FC9DE4DBC20A72ECB34CE94626F5F",
-    "lastUpdated": "2026-08-24T05:01:37.9292394Z"
+    "lastUpdated": "2026-08-24T05:01:37.9292394Z",
+    "openPr": {
+      "checkedAt": "2026-08-24T08:25:09.8379524Z",
+      "version": "1.1.1"
+    }
   },
   "armbian.imager": {
     "version": "2.0.3",
@@ -828,8 +832,8 @@
     "state": "VALIDATION_PASSED",
     "description": "",
     "openPr": {
-      "version": "1.4.4",
-      "checkedAt": "2026-08-23T08:16:46.9758832Z"
+      "checkedAt": "2026-08-24T08:25:12.5591435Z",
+      "version": "1.4.4"
     }
   },
   "bensadeh.tailspin": {
@@ -918,7 +922,11 @@
     ],
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-08-19T05:34:56.0337907Z",
-    "manifestHash": "D522ADCAEA6AF313E84786BEF98F61EA026F67DB04B43C791F640EE82331A692"
+    "manifestHash": "D522ADCAEA6AF313E84786BEF98F61EA026F67DB04B43C791F640EE82331A692",
+    "openPr": {
+      "checkedAt": "2026-08-24T08:25:12.9388046Z",
+      "version": "0.9.0"
+    }
   },
   "binbat.whepfrom": {
     "lastUpdated": "2026-08-18T17:25:13.9468251Z",
