@@ -133,7 +133,7 @@
     "manifestHash": "3BD6D6F7B48462CF3A02CF2DC2AFC0881BD072C354168DB528A71B4A35E8E30B",
     "openPr": {
       "version": "0.84.1",
-      "checkedAt": "2026-08-23T00:27:10.3451753Z"
+      "checkedAt": "2026-08-24T04:24:25.8493403Z"
     },
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
@@ -273,7 +273,7 @@
     "version": "3.1",
     "openPr": {
       "version": "3.1",
-      "checkedAt": "2026-08-23T04:22:13.8237889Z"
+      "checkedAt": "2026-08-24T04:25:30.7437418Z"
     }
   },
   "Alochi.Monitoring": {
@@ -1240,7 +1240,7 @@
     "description": "",
     "openPr": {
       "version": "1.9.2",
-      "checkedAt": "2026-08-23T04:21:10.4346285Z"
+      "checkedAt": "2026-08-24T04:24:26.7599131Z"
     }
   },
   "CarthageSoftware.Mago": {
@@ -2980,7 +2980,7 @@
     "manifestHash": "8A93D198AD57BF64282A1C20A5B26813247BA8F368CBBC5002B3A2AECCF79CDA",
     "openPr": {
       "version": "2.5.1",
-      "checkedAt": "2026-08-23T00:27:13.2466569Z"
+      "checkedAt": "2026-08-24T04:24:28.6572653Z"
     }
   },
   "Google.Protobuf": {
@@ -5847,7 +5847,7 @@
     "state": "VALIDATION_FAILED",
     "openPr": {
       "version": "1.12.6",
-      "checkedAt": "2026-08-23T00:27:14.9936452Z"
+      "checkedAt": "2026-08-24T04:24:29.9676473Z"
     }
   },
   "OpenWhispr.OpenWhispr": {
