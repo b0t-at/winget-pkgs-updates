@@ -515,15 +515,15 @@
     }
   },
   "archisvaze.ArcDLP": {
-    "installerHashes": [
-      "EB2D0C6547E47A485A4B8B687E023AD220648BB96DC7EC850F3BE74B1FFBC558"
-    ],
-    "state": "VALIDATION_PASSED",
-    "version": "1.4.1",
-    "lastUpdated": "2026-08-21T09:07:38.4157073Z",
     "validationCount": 1,
-    "manifestHash": "2ED60DF20DFE30401E1160BDB3DA7668679BB544E8DE8673D0717D0CD14A49FF",
-    "description": ""
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "version": "1.4.2",
+    "lastUpdated": "2026-08-24T08:49:14.2972453Z",
+    "manifestHash": "C40FAD329ABB40A5AE32126750F000E59D154D4AB9EA59032C37C485BC5E6DE4",
+    "installerHashes": [
+      "1FC1560B4CC2BA671E48AE56A4820AE803D3E4ABC28B1523433FF2E2F237C343"
+    ]
   },
   "argoproj.argocd": {
     "installerHashes": [
@@ -1872,15 +1872,15 @@
     "version": "2.4.1"
   },
   "Divaaaan.Tenebra": {
-    "version": "0.5.0",
-    "description": "",
-    "installerHashes": [
-      "0A8DB3A8CFF376B5030F98E370821119BB1F0259CCF0FD0CFA5AD4ADF473B482"
-    ],
-    "lastUpdated": "2026-08-23T01:00:02.2736659Z",
     "validationCount": 1,
-    "manifestHash": "2B45B4619D04E57F5159661BFA966757C70CACB36B53C4F3F3EE72380EA794CD",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "version": "0.4.6",
+    "lastUpdated": "2026-08-24T08:49:14.2193415Z",
+    "manifestHash": "E1171D3D1FE081C3103F4F6DBBC801128CA2A2E86B18418593BFDC499335E3F4",
+    "installerHashes": [
+      "51B2B171ADBA901A2E324F9FCF2A3328635F72276394A0EF58F122FB1AAA91F3"
+    ]
   },
   "divVerent.AAAAXY": {
     "state": "VALIDATION_FAILED",
@@ -4431,6 +4431,17 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "A78A321D8CE9714F96926BED00ED132FC118E8A480281ABC69F826F52F269DCC",
     "lastUpdated": "2026-08-24T05:01:37.911788Z"
+  },
+  "Lunasans.MovieShelf": {
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "version": "1.2.1",
+    "lastUpdated": "2026-08-24T08:49:14.2485351Z",
+    "manifestHash": "5D275057965D10B5A846078DFCB0B0E0720B17A3AB7E41FBD7BEDF17EA633723",
+    "installerHashes": [
+      "8C490E8E4FA0DAE35A9A2D53922DD374C32A76C0A3DD867A5F3009FCBA3E1D4F"
+    ]
   },
   "Luxview.AgainstMe": {
     "installerHashes": [
@@ -8209,15 +8220,15 @@
   },
   "tsouth89.CubbyClipboard": {
     "validationCount": 1,
-    "lastUpdated": "2026-08-19T01:25:20.6947267Z",
-    "description": "",
     "state": "VALIDATION_PASSED",
-    "version": "1.3.2",
+    "description": "",
+    "version": "1.3.3",
+    "lastUpdated": "2026-08-24T08:49:14.3169227Z",
+    "manifestHash": "60EDEBCF64C89E76E6994A915962C476A65E0AC646EAAB8AE77ED6197DAF997D",
     "installerHashes": [
-      "3F086705A0926F7F72347B8ACC867702E55C79F99346EDFF27F303787E7BF10D",
-      "B6B03EBA60AADAEAB3FD604FE0F3C78B3D84252185387B6324B81517385F19E3"
-    ],
-    "manifestHash": "1204A3EF60DBD0FBAB8296A05532CD1F991499233853E656B73B1913A04E1155"
+      "9D45498B6DB70B4F09598194B98A3AC32E707732F3B009C95D5A3F6FFD4BEAE2",
+      "719BE256C0B8246C915BE64191A76C0AC7068BBEBC81DAB377F91B08E92BA040"
+    ]
   },
   "tuna-f1sh.cyme": {
     "version": "3.0.1",
@@ -8387,6 +8398,19 @@
     "state": "VALIDATION_FAILED",
     "lastUpdated": "2026-08-06T14:13:45.9090767Z",
     "version": "1.0.1"
+  },
+  "Urlscan.urlscan-cli": {
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "version": "2026.8.18",
+    "lastUpdated": "2026-08-24T08:49:14.2691741Z",
+    "manifestHash": "921142ADC565311CABE05BB8C5C4EF67F2BDFDB2760D6AD110AF09D9BF3249AE",
+    "installerHashes": [
+      "DC4E70BC28EDF571A9853C9672CA1EF68A797D831510DA63281B7A865630308D",
+      "BD47A8D1E8367BF650AA1EFA58C80FC7C83841A4F45144127DCD64446A504D04",
+      "04F1C6E71961B9B769DEC749CA7C7E76F082F1AC8A05AE4437AEB41D6263862E"
+    ]
   },
   "UsamaEjaz.PeekWin": {
     "lastUpdated": "2026-08-18T17:25:14.1152343Z",
@@ -8905,14 +8929,14 @@
     "state": "VALIDATION_PASSED"
   },
   "xonsh.xonsh-winget": {
-    "manifestHash": "EF0DA41ABD4DFB02A2953C7F8C53889531D358872E81533584FF0A2FB2F0575F",
-    "lastUpdated": "2026-08-18T05:33:46.9948287Z",
-    "state": "VALIDATION_PASSED",
-    "version": "0.24.1",
     "validationCount": 1,
+    "state": "VALIDATION_PASSED",
     "description": "",
+    "version": "0.24.2",
+    "lastUpdated": "2026-08-24T08:49:14.1822779Z",
+    "manifestHash": "4136E15BF8CB2CE1E62F827FEB593CB06211418CE79DE918AE0410D22DF60203",
     "installerHashes": [
-      "C64D124FC048B1B075E2EC2C20E6293C0D212677EA0FA31CAF10D28FCD9040DE"
+      "8AD9EC390F5BA05A57FEB5D53208951E92AA3268D434BCD0A22CEFDAF6FDB2BA"
     ]
   },
   "xpipe-io.xpipe.portable": {
