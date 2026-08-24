@@ -1153,15 +1153,15 @@
     }
   },
   "BytecodeAlliance.Wasmtime.Portable": {
-    "manifestHash": "2F96B2733AE49C0F2C1C6733E1CC2FE903D606ADF674180AE4CAA16343C68BAC",
-    "state": "VALIDATION_PASSED",
-    "version": "48.0.0",
-    "description": "",
     "validationCount": 1,
+    "version": "48.0.1",
+    "lastUpdated": "2026-08-24T20:51:39.5785965Z",
+    "manifestHash": "C30D8817DD2FB41FD733F9858BD1E6EA16A7D3546CDD6372FA7141D040123BF9",
     "installerHashes": [
-      "D6CC742660E9EDF35C92B47179808802F01ECA3BF60AB4B0AC723C167592131F"
+      "A9CB78E5F2705B35192052026138EE14EEB6983FE2D2AEFED6B0C797F01D1A0F"
     ],
-    "lastUpdated": "2026-08-22T16:46:28.5771015Z"
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "ByteNess.AWSVault": {
     "description": "",
@@ -1872,14 +1872,14 @@
     "version": "2.4.1"
   },
   "Divaaaan.Tenebra": {
-    "installerHashes": [
-      "A71D537A63538225C68622B0E359F30F42D5ACDE2FE1BD6D035873BBB95360F2"
-    ],
     "validationCount": 1,
+    "version": "0.5.2",
+    "lastUpdated": "2026-08-24T20:51:39.4511169Z",
+    "manifestHash": "433BE567D559C85E900DBAACFB45D854253188BE1E5DD4AA2968455C3B0C5F78",
+    "installerHashes": [
+      "1F7F4ADCF5E4450213D31E0D924047F265707833BD2A273255143603BC6FD557"
+    ],
     "description": "",
-    "lastUpdated": "2026-08-24T12:52:12.9633558Z",
-    "version": "0.5.1",
-    "manifestHash": "06E6B35FE4BA515FEED27CE09CCE215773DE94D51F144AB529FBF3D6D81AFCEC",
     "state": "VALIDATION_PASSED"
   },
   "divVerent.AAAAXY": {
@@ -2528,6 +2528,17 @@
       "46BAB637983BB80417A58AEA8240AFA16A3A8A3897DE4EAB8A62D4DBFB926CA1"
     ],
     "description": ""
+  },
+  "flyingpie.windows-terminal-quake.prerelease": {
+    "validationCount": 1,
+    "version": "2.2.0-pre2",
+    "lastUpdated": "2026-08-24T20:51:39.37097Z",
+    "manifestHash": "755E6CA290E8C701F883B51898990330B4CC5D69BC07E082C79A3DE12D5AEED9",
+    "installerHashes": [
+      "4FC81D74B4FFFFFA3D03604B0A527D10E6B66CC984B1B83B3BC1DB5E42BB5736"
+    ],
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "ForgeLabsSoft.DriveForge": {
     "lastUpdated": "2026-08-18T01:43:26.3383227Z",
@@ -3362,14 +3373,14 @@
     "manifestHash": "423C80406767A6B457D4F90B359A7368A66D86CBBA37E520C851AF1E35914488"
   },
   "Hitalin.NoteDeck": {
-    "manifestHash": "8CDE7AD7010F8C9115352636A1876A5CEE54F3D0BD1D504159903A15DB0DCA48",
-    "lastUpdated": "2026-08-16T13:40:51.7524955Z",
     "validationCount": 1,
+    "version": "1.53.1",
+    "lastUpdated": "2026-08-24T20:51:39.5256168Z",
+    "manifestHash": "E7F5FF55B46FCDAA0A0EC4319A202CAEF8EC522107D063F5FEA68D8076727585",
     "installerHashes": [
-      "E962E3E46E290143BE8D4A0C9652E1D7C3C68F75447BDB14BCCD24C936C47534"
+      "F7045CD0EFB1B394A0560197A369121B414C03F1253CFB2A381FED4D988AE95C"
     ],
     "description": "",
-    "version": "1.53.0",
     "state": "VALIDATION_PASSED"
   },
   "hluk.CopyQ": {
@@ -5572,6 +5583,17 @@
       "EA83E8EEC79F257EE2A5EFDB6A5ED19315641AA00F3C7B9BA775A4793D150B12"
     ]
   },
+  "Octonove.CapturaStudio": {
+    "validationCount": 1,
+    "version": "1.9.3",
+    "lastUpdated": "2026-08-24T20:51:39.5048209Z",
+    "manifestHash": "9AA6B519A799BA281F953763E2825F2F7607DD9569C27EAB57515002301ADB95",
+    "installerHashes": [
+      "302564F81C7647EC60B208327E430D4D420CF62D317A3971E6C7CF9F738E0875"
+    ],
+    "description": "",
+    "state": "VALIDATION_PASSED"
+  },
   "OctopusDeploy.Cli": {
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-08-22T12:51:56.569166Z",
@@ -5651,15 +5673,15 @@
     ]
   },
   "OmniEdge.OmniEdgeCLI": {
-    "lastUpdated": "2026-08-19T17:46:50.0401148Z",
-    "version": "2.9.0",
     "validationCount": 1,
-    "description": "",
-    "state": "VALIDATION_PASSED",
+    "version": "2.9.0",
+    "lastUpdated": "2026-08-24T20:51:39.5571782Z",
+    "manifestHash": "4EF7FAC5A97A15A7029D7A163C81BFB1712E0EA59D2DDC951AA45113377E1EA7",
     "installerHashes": [
       "E9B44B428A5D631EE4803799FD3BDF26B443D84060DC30B70E6D15EDAD91513A"
     ],
-    "manifestHash": "15BB42ACAAFCC898439282B5E53B4B20528B638D0DE165421DDB22C157A464BA"
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "omnimistic.pain": {
     "version": "3.2",
@@ -5803,15 +5825,15 @@
     "description": ""
   },
   "OpenGeos.GeoLibre": {
-    "lastUpdated": "2026-08-18T17:25:14.0418715Z",
-    "description": "",
     "validationCount": 1,
-    "version": "2.6.0",
+    "version": "2.7.0",
+    "lastUpdated": "2026-08-24T20:51:39.475196Z",
+    "manifestHash": "7D7A1681E3780E9B2EC955B28A265CC54202B3A90B3C794659A091D0AF0C0E52",
     "installerHashes": [
-      "F8B9A2F5132E1E38F932E73AEDB14B8B298ED5B1BE68842F8012189A0DC0B4FD"
+      "7CEB4F139A0B3159C8A3950C9198BF0B3B73E1566C4A1D3F3B6E359B1CE60663"
     ],
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "F2C6678C7BB40FB7D60E4498BBDD9F246F13454ACDB691E969C4A12CA1976720"
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "OpenHV.OpenHV": {
     "description": "",
@@ -8170,14 +8192,14 @@
     "validationCount": 3
   },
   "tosuapp.tosu": {
-    "version": "4.25.1",
     "validationCount": 1,
-    "description": "",
-    "manifestHash": "E6980AD24E36811D2BE808BD23320A1C36F3EFE020B67103E4ABB28003206352",
-    "lastUpdated": "2026-08-19T09:31:51.2980333Z",
+    "version": "4.26.0",
+    "lastUpdated": "2026-08-24T20:51:39.6055371Z",
+    "manifestHash": "4D36D3632C95D0EB0239373E9C06EE6F1A6C889AC73353AF8FFC6B3F9666CA57",
     "installerHashes": [
-      "D9B1436BD5466157035E1CDE5312BD4C85A0D5C3E50B32238479E39E17E221C9"
+      "3562802792FF1C56ABE97563458D8005003040C1A7ED91F72F092174E06A5725"
     ],
+    "description": "",
     "state": "VALIDATION_PASSED"
   },
   "TravisLane.SteamArtManager": {
