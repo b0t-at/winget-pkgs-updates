@@ -487,16 +487,16 @@
     }
   },
   "ArcBox.LinkCode": {
-    "validationCount": 1,
-    "lastUpdated": "2026-08-23T12:49:18.3609221Z",
-    "description": "",
-    "manifestHash": "61457B84913C2AD07B8AD6BD19478E56AF4E663955DBCE2A6DD92C8C598235EE",
-    "version": "0.25.2",
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "5E4FE8C57FB10EF2A80D0A6B3AEBE155D62C73E3CC1B99D4167B254FD49CE952",
-      "32931CC41FE0B7A7024F032BED37DED9E7BEE68FA2FE48DA462E011E59A86C7F"
-    ]
+      "21F83C6ED84D0FC1337A3D8381A1D982226E6F40DB4B5507EED1C0790EF66DEF",
+      "0EA77B785186EBCA4028A9CF5F3D35797BAC94049F0FD61C9331F97D84A82AD4"
+    ],
+    "manifestHash": "E19E614D306493F2E49889255C2E7B7966B0100CA2D7FB5FBC85A42F79BCF703",
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "lastUpdated": "2026-08-24T16:43:31.7843681Z",
+    "version": "0.26.0",
+    "validationCount": 1
   },
   "Archeb.OpenTrace": {
     "version": "1.5.2",
@@ -5825,6 +5825,19 @@
     "validationCount": 1,
     "version": "20250725"
   },
+  "OpenJS.Electron.42": {
+    "installerHashes": [
+      "F22690F5209B22CABB043B96D8E4DA5D518571A0D70738F88903BE0E768AFD90",
+      "6988553DC944800C127F6600133B9DD7810A83A82B9B68D2FAA07DBB10EF5071",
+      "B6204381CFC035FEC831678A24EDDE7803622468C814CC1487E5910EE688A739"
+    ],
+    "manifestHash": "658292B15F6F9AB55B451CA0B0D638A25F6849C427326B1998EE5808A3B08597",
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "lastUpdated": "2026-08-24T16:43:31.8279329Z",
+    "version": "42.10.0",
+    "validationCount": 1
+  },
   "OpenOrienteering.Mapper": {
     "state": "VALIDATION_PASSED",
     "description": "",
@@ -6931,13 +6944,13 @@
   },
   "SanthoshReddy352.NammaAgent": {
     "version": "2.3.2",
-    "lastUpdated": "2026-08-22T08:51:40.258926Z",
+    "lastUpdated": "2026-08-24T16:43:31.7390471Z",
     "installerHashes": [
       "38C3BA3855821505842E7E2C7C809C9BB3BA88391251690CA3FF9A4F3AFAF5AD"
     ],
     "description": "",
     "manifestHash": "5B9292BBED2221554F3FF7C31D4C56B0134DA21BD4BD36665643694FDB73581D",
-    "validationCount": 2,
+    "validationCount": 3,
     "state": "VALIDATION_FAILED"
   },
   "Saturneric.GpgFrontend": {
@@ -7730,16 +7743,16 @@
     "lastUpdated": "2026-08-06T14:13:45.9556005Z"
   },
   "SuperRadCompany.Microsandbox": {
-    "manifestHash": "0D7D5D0C7A29DFEA70CB69B415AC46F9566571EE8DA97942D992D3FDDB8C5ABA",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-21T13:09:59.529915Z",
-    "validationCount": 1,
-    "version": "0.6.12",
-    "description": "",
     "installerHashes": [
-      "472A6B25CA4D906BB87ACD1794F53DCEA2FC81612A27A08DE3AC6CC7A39AA5E8",
-      "390B34F1E76D0EC7ED082422BA1F6FC534F286F88FAE4450835A74F55B522953"
-    ]
+      "2BCEEA646DE0383358EC72FD8AF85734DD9BB7C3B8BA8A87E51590F531F9BCFE",
+      "FD401E54777865FFEF7E808588312EEA7518D2D883CA0DC1E34DB10BA2BEBE7D"
+    ],
+    "manifestHash": "61EEAF0349A1E534B3F20C6AAAF6F51942D9C5B2F981713A607DA512EBB07C60",
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "lastUpdated": "2026-08-24T16:43:31.8119869Z",
+    "version": "0.6.14",
+    "validationCount": 1
   },
   "SUSE.RancherDesktop": {
     "description": "",
@@ -9060,16 +9073,16 @@
     "lastUpdated": "2026-08-24T05:01:38.0143894Z"
   },
   "yhay81.sqrail": {
-    "manifestHash": "AA92A5D534BC7C7BFCE7B9D1BCB8DE43E95DC9878930BB120FDE47BDA7C2F27F",
-    "lastUpdated": "2026-08-19T01:25:20.5730222Z",
-    "validationCount": 2,
     "installerHashes": [
       "DE2B14B6EF07A029B9EA06C62030B00CCDB2345351D04FE1C06992DDED21912D",
       "02D1E582F7A0066D338A584815C0B36B99482E25E187A04F4BE7769FDD3A5696"
     ],
+    "manifestHash": "6A00440D4BA21CA1C1827B8CB627FBBB6E8127A5445CA512F6A6AA322471B2E6",
+    "state": "VALIDATION_PASSED",
     "description": "",
+    "lastUpdated": "2026-08-24T16:43:31.8594347Z",
     "version": "0.3.4",
-    "state": "VALIDATION_PASSED"
+    "validationCount": 1
   },
   "YongcanYang.GameCheatsManager": {
     "lastUpdated": "2026-08-18T01:43:26.3622361Z",
