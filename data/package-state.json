@@ -867,15 +867,15 @@
     "lastUpdated": "2026-08-19T15:56:01.5776293Z"
   },
   "biglexj.ElyTesia": {
-    "lastUpdated": "2026-08-17T17:04:34.9944895Z",
     "description": "",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-24T00:43:52.6627652Z",
+    "state": "VALIDATION_PASSED",
+    "version": "1.0.8",
+    "manifestHash": "D9EDA6BFDB3D7D516FCE8D6BA3B72AF72925FF387BE052CCD7C928DA9BC6BD37",
     "installerHashes": [
       "06F5C634565FF4E34B96BF5DE749B5FC7202015B3AB973F58C85E6327BD96750"
-    ],
-    "validationCount": 1,
-    "manifestHash": "D20C02D8E14903258C57FDF91979B6CC87A5FB058846F2E11B7091B08805B1A1",
-    "version": "1.0.8",
-    "state": "VALIDATION_PASSED"
+    ]
   },
   "binbat.live777": {
     "manifestHash": "8B2360BE2EFAE3A9521507275A8FFD7FE0FC201574F5ACAD0AC5E554B7571870",
@@ -4179,6 +4179,17 @@
     "state": "VALIDATION_PASSED",
     "version": "2.1.10"
   },
+  "LaurentPRenedeCotret.pandoc-plot": {
+    "description": "",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-24T00:43:52.7047129Z",
+    "state": "VALIDATION_PASSED",
+    "version": "1.9.2",
+    "manifestHash": "AB58DD6284C8DD3DB8C75082AD490EB9FD1ED7C5A6EA17BCC55DE6981F7F5B36",
+    "installerHashes": [
+      "25321CCC00D3BCEB8605D2BD7949B5B354DE049B2F88AECB03889284ACD545EE"
+    ]
+  },
   "LeNgocKhoa.Laragon": {
     "version": "8.7.0",
     "validationCount": 1,
@@ -5121,6 +5132,17 @@
       "DDB062FD85D59D1E109899158D36C92A58EB177D9323A829228D86998209A586"
     ],
     "manifestHash": "77CFED035E8B90FC50F6448291D28F4AE2A0AFCDE8BE619DF4F658DD5710FC58"
+  },
+  "muimsd.tilefeed": {
+    "description": "",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-24T00:43:52.6053671Z",
+    "state": "VALIDATION_PASSED",
+    "version": "0.7.1",
+    "manifestHash": "EB894394484AEF9294DBD7115C2C7E8A2C0D79FF5EF20E30EA0A57892AF8410D",
+    "installerHashes": [
+      "2BDEBE4B0140B3E2954CDE000C183E95596A0FAF386951D0595095ED8CF5DBA2"
+    ]
   },
   "Mukunku.ParquetViewer": {
     "installerHashes": [
