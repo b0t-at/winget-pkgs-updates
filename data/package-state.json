@@ -253,12 +253,12 @@
     "description": "",
     "version": "0.12.0",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "CC266B4B7C9B18264B0D80CFABB086D57904CBE89CDA6864F14F861C195D6711",
       "6A5A91AD9B056CA507D107BF0110DD4D6EE60CD548C341EEA27025878A026705"
     ],
-    "lastUpdated": "2026-08-23T08:49:22.8713134Z",
+    "lastUpdated": "2026-08-24T05:01:37.954533Z",
     "manifestHash": "F6134453913F7B82D68C8604DAA54282A9000BB9E6FB1FB820D0DF1C81D69D02"
   },
   "alirezagsm.trayy": {
@@ -545,16 +545,16 @@
     }
   },
   "Arihant25.Chargle": {
+    "description": "",
+    "version": "1.1.1",
+    "validationCount": 1,
     "installerHashes": [
-      "31B7B3994B6567859623DF4BCCACBC2DBE5D949DB6DA3825F4A7A8119B4D00B6",
-      "5560E277E0B8E4F5A96CAB854F74705267B54815DFBB68FD435C294732E4C996"
+      "4EA6368F5E7A84D6ACE76ECB87D4DEE73336D912D88D14A242FA621F55DC38E4",
+      "7A7BD8B2A3B3B56D225306671B8A0488AC1AF88E9029741E1928DE163624A7B9"
     ],
     "state": "VALIDATION_PASSED",
-    "manifestHash": "1E6CC03D4F21702F79F6953BEBA616029B4D14E7391B2CA75EE60284A90D1E2F",
-    "description": "",
-    "validationCount": 1,
-    "version": "1.1.0",
-    "lastUpdated": "2026-08-21T17:17:39.8629332Z"
+    "manifestHash": "22E09A01B0EC244FEA41B0691EBE65C15B3FC9DE4DBC20A72ECB34CE94626F5F",
+    "lastUpdated": "2026-08-24T05:01:37.9292394Z"
   },
   "armbian.imager": {
     "version": "2.0.3",
@@ -626,15 +626,15 @@
     "manifestHash": "6B3AFD4458FDAAC2AE71F98F5AD48D4DE1D9404978C83AED0E1348C61D862C75"
   },
   "AtaraxyLabs.sem": {
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-22T12:51:56.4965789Z",
-    "installerHashes": [
-      "825BD79FB22B0200495B98B02FFB85B49D9482CEE9609A903C30E722BB9F6B81"
-    ],
+    "description": "",
+    "version": "0.23.1",
     "validationCount": 1,
-    "manifestHash": "3C721960C9F37FFFB4B5FDA872C48A6D1A5406116A30998B58D5361C38587A98",
-    "version": "0.23.0",
-    "description": ""
+    "installerHashes": [
+      "DEB77E79F16ACB19D1E4B5FFF01CE0274E724BC39F6EA3042EBE36EA4710EDE5"
+    ],
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "EEDED2817E439E86D2B7FC8700C185272045BD87218EA3E191B7D8D8632E6C52",
+    "lastUpdated": "2026-08-24T05:01:38.050141Z"
   },
   "Avidemux.Avidemux": {
     "configHealth": {
@@ -2613,8 +2613,8 @@
     "description": "",
     "manifestHash": "A4B0A2532C22E8509634F1289507E7CE0F5F02F6F5D34B2B8FF796539325C3D6",
     "version": "1.0.14",
-    "lastUpdated": "2026-08-23T05:10:59.6015483Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-08-24T05:01:37.8436188Z",
+    "validationCount": 2,
     "state": "VALIDATION_PASSED"
   },
   "fselect.fselect": {
@@ -3190,15 +3190,15 @@
     "version": "3.3.6"
   },
   "HarjotSinghRana.Reinstate": {
-    "version": "0.4.0",
-    "validationCount": 1,
     "description": "",
-    "manifestHash": "23AE93E38524D01F1A679CFC4D86D6CF78FA5B0BCBE21A14B35ED9137353825F",
-    "lastUpdated": "2026-08-19T09:31:51.3163392Z",
+    "version": "0.5.1",
+    "validationCount": 1,
     "installerHashes": [
-      "DE2C384DB0E350725F0E4AA59C508A4042B858B7E12706A004C20CD3ED41EC8F"
+      "B724CA3DA4E124004063032D63240C244FB9A59279076F0E87441D327A826E8C"
     ],
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "792B0F83BC7067E12DB2BFA38B480FDDD3C9DD657E59EDBA862B62B4ED8D73F6",
+    "lastUpdated": "2026-08-24T05:01:38.0914227Z"
   },
   "Harmonoid.Harmonoid": {
     "lastUpdated": "2026-08-18T21:24:38.5587134Z",
@@ -3767,6 +3767,17 @@
       "version": "2026.8.11"
     }
   },
+  "jeffaristi92.Sweeft": {
+    "description": "",
+    "version": "1.1.0",
+    "validationCount": 1,
+    "installerHashes": [
+      "EA7ED995B572FD30C1D5EA0B0AAFF6063DEF871CA7005F4370DB3EA1146217BD"
+    ],
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "4F3DD37485B0C58AA3430ED36FBB6F121607AD4C61A906779BA5BED5497BB10C",
+    "lastUpdated": "2026-08-24T05:01:38.0704347Z"
+  },
   "Jellyfin.FFmpeg": {
     "description": "",
     "installerHashes": [
@@ -4324,15 +4335,15 @@
     "state": "VALIDATION_PASSED"
   },
   "loreste.mako": {
-    "manifestHash": "560186890E06ACEA7D27BDACF3FFFCEA5DC045867C6EB2F706C68A1D03EAC7AF",
-    "state": "VALIDATION_PASSED",
-    "version": "0.5.9",
     "description": "",
+    "version": "0.5.11",
     "validationCount": 1,
     "installerHashes": [
-      "9B78A8AA2D70CFCB115760719CB41DD3F37B048087B78097E795C37148270F1F"
+      "73DC2E9C2F61F0F8FE937C236D3F272E17BAE23CB5EDBCD4E3786AE6997BC70B"
     ],
-    "lastUpdated": "2026-08-22T16:46:28.5207503Z"
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "A59A91F18434D988EEE50EBA19CF8E9C97C2F993F6FBF5BAFBC7E0E2DA28D7CC",
+    "lastUpdated": "2026-08-24T05:01:38.0348906Z"
   },
   "LowLevelDesign.ProcessGovernor": {
     "manifestHash": "09E69D0C7C3FCD8235F3E38BE39881FEE7DC968A99C30941A28BED33654E0AA0",
@@ -4401,6 +4412,17 @@
     "manifestHash": "B1301C444B4F9F2C7A9FAF87E01AA63148C3A35E040A2EE416A445BD1F530BF4",
     "lastUpdated": "2026-08-23T16:49:52.2723068Z",
     "description": ""
+  },
+  "LumiOwO.LumiTracker": {
+    "description": "",
+    "version": "1.3.12",
+    "validationCount": 1,
+    "installerHashes": [
+      "8DDEB4E92F7DDCEEDF967AD6079FA39E51448EE67B5B3B54EE1CD4BC65C60914"
+    ],
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "A78A321D8CE9714F96926BED00ED132FC118E8A480281ABC69F826F52F269DCC",
+    "lastUpdated": "2026-08-24T05:01:37.911788Z"
   },
   "Luxview.AgainstMe": {
     "installerHashes": [
@@ -7094,15 +7116,15 @@
     "manifestHash": "8EB9B09B3F34BBD62C6214FD2953C00CB9D31C7E105179C4F7BC763B6B0DE45D"
   },
   "shakaran.whatly": {
-    "lastUpdated": "2026-08-18T17:25:14.0030577Z",
     "description": "",
+    "version": "7.3.1",
     "validationCount": 1,
-    "version": "7.3.0",
     "installerHashes": [
-      "ED0EF56479C96DBB2E3FAACC51B0FBEF730FACB32851F0185966B924456E95AA"
+      "13D0652BD86A161A04A3A72518413A255A8DDC8026A57EE260F3B074F1E231D3"
     ],
     "state": "VALIDATION_PASSED",
-    "manifestHash": "275E5B0185B1A06BB9D0D930765B4C2D44854F38003E3E14B8B9DC078F4F30F0"
+    "manifestHash": "34B1492D1C5CE8B0D4BDAC673726D4B8B8F55641C59CA18E82E6BB2698C8E6E8",
+    "lastUpdated": "2026-08-24T05:01:37.9989473Z"
   },
   "ShatteredChaos.FightPlanner": {
     "installerHashes": [
@@ -8705,11 +8727,11 @@
     "description": "",
     "version": "0.4.0",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "2B83EEBB0382359082309DCD7F12EAA6C8413D9EC51245DAB4F066FBD12E7B09"
     ],
-    "lastUpdated": "2026-08-23T08:49:22.7076523Z",
+    "lastUpdated": "2026-08-24T05:01:37.9741986Z",
     "manifestHash": "AFE4DAC544A25D90E03D062A865B53C95D6A099145270C465E7DF9B468CA679D"
   },
   "Winix.Peep": {
@@ -8976,15 +8998,15 @@
     ]
   },
   "yetone.OpenAITranslator": {
-    "installerHashes": [
-      "959E3FD44D666B1A94AC3228BAE17AD5BC05C697EBDD7A62B21D91A3F679C0A3"
-    ],
-    "version": "0.6.40",
-    "manifestHash": "B509398342D91C235025AAB12388ACBA4D5C218565642A6379EBE6166A0DC4A7",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-19T17:02:25.6552217Z",
+    "description": "",
+    "version": "0.6.43",
     "validationCount": 1,
-    "description": ""
+    "installerHashes": [
+      "B9BAF43B8BAFAF19AD2BCA82FC4A015D1ABFE514B5BA5EA1C0143B5793FB2A1E"
+    ],
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "26592B8A8FE0692308E68B2BD46BDE3D366C1352816B2D1886527003F6AAC4BC",
+    "lastUpdated": "2026-08-24T05:01:38.0143894Z"
   },
   "yhay81.sqrail": {
     "manifestHash": "AA92A5D534BC7C7BFCE7B9D1BCB8DE43E95DC9878930BB120FDE47BDA7C2F27F",
