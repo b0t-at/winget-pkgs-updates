@@ -412,8 +412,8 @@
     "lastUpdated": "2026-08-22T08:51:40.3505732Z",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "checkedAt": "2026-08-24T16:19:20.7805559Z",
-      "version": "0.2.2"
+      "version": "0.2.2",
+      "checkedAt": "2026-08-25T20:15:21.7460326Z"
     }
   },
   "AntiMicroX.antimicrox": {
