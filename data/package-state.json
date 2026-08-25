@@ -190,11 +190,7 @@
     ],
     "validationCount": 1,
     "lastUpdated": "2026-08-22T08:51:40.3129391Z",
-    "state": "VALIDATION_PASSED",
-    "openPr": {
-      "version": "0.3.1",
-      "checkedAt": "2026-08-22T12:14:24.515204Z"
-    }
+    "state": "VALIDATION_PASSED"
   },
   "Aiden1020.LocalSubs": {
     "manifestHash": "213A97D3D7C6F3B5FE864420C3CEF1C3280D138B6B91B0272DB5230389D73EB2",
@@ -1161,7 +1157,11 @@
       "A9CB78E5F2705B35192052026138EE14EEB6983FE2D2AEFED6B0C797F01D1A0F"
     ],
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "version": "48.0.1",
+      "checkedAt": "2026-08-25T00:25:40.2542902Z"
+    }
   },
   "ByteNess.AWSVault": {
     "description": "",
@@ -3015,7 +3015,7 @@
     ],
     "openPr": {
       "version": "36.0",
-      "checkedAt": "2026-08-24T00:25:14.0005661Z"
+      "checkedAt": "2026-08-25T00:25:43.7234795Z"
     }
   },
   "goplus.xgo": {
