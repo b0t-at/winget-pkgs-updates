@@ -11,15 +11,15 @@
     "lastUpdated": "2026-08-21T17:17:39.9807177Z"
   },
   "8bit2qubit.OmniConsole": {
-    "manifestHash": "3D00EEFA0D3B333F8AAEDCFABF9B3DF1DC4CE0D7D652C2959A3DD8B71293CF5C",
     "state": "VALIDATION_PASSED",
-    "version": "4.3.1.0",
-    "description": "",
-    "validationCount": 1,
     "installerHashes": [
-      "79AB3B0773F7115B479AD3BAB0B1FBA753F6880D62D1DF037B7BF7D209762922"
+      "BEB26EE272849BECEBCB13C3CE08EBA5BAD8337064A26D6EBC1B2B60FF3E166E"
     ],
-    "lastUpdated": "2026-08-22T16:46:28.684973Z"
+    "lastUpdated": "2026-08-25T00:57:29.8441841Z",
+    "description": "",
+    "manifestHash": "9C30E9DFA8CB7366C57D0BD5C430F9494CF8DBA066F4B42DE6C7743F1D788165",
+    "version": "4.4.0.0",
+    "validationCount": 1
   },
   "ABowlOfEleven.hopscout": {
     "manifestHash": "1F3AE2A47F29CCDE4BDE142A406D060AE04B93D9EE44F9F9F28DB6D583CF4D25",
@@ -4354,15 +4354,15 @@
     "state": "VALIDATION_PASSED"
   },
   "loreste.mako": {
-    "description": "",
-    "version": "0.5.11",
-    "validationCount": 1,
-    "installerHashes": [
-      "73DC2E9C2F61F0F8FE937C236D3F272E17BAE23CB5EDBCD4E3786AE6997BC70B"
-    ],
     "state": "VALIDATION_PASSED",
-    "manifestHash": "A59A91F18434D988EEE50EBA19CF8E9C97C2F993F6FBF5BAFBC7E0E2DA28D7CC",
-    "lastUpdated": "2026-08-24T05:01:38.0348906Z"
+    "installerHashes": [
+      "2DAB678FDDC759F8B560A347E0FDDE1A1B642ED922408825883EC9D7BC0BCB05"
+    ],
+    "lastUpdated": "2026-08-25T00:57:29.9026029Z",
+    "description": "",
+    "manifestHash": "F2089874B19DF40AC1D117799A4BE237F4760DDA98E4C59111886961406F1C39",
+    "version": "0.5.12",
+    "validationCount": 1
   },
   "LowLevelDesign.ProcessGovernor": {
     "manifestHash": "09E69D0C7C3FCD8235F3E38BE39881FEE7DC968A99C30941A28BED33654E0AA0",
@@ -4749,15 +4749,15 @@
     "lastUpdated": "2026-08-22T16:46:28.6307886Z"
   },
   "Micronaut.Launch": {
-    "lastUpdated": "2026-08-18T01:43:26.518193Z",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "40D1C330798E84A77E526C437CB5518D20C55E9F3FD35FA45285C70CF4435FEB"
+      "CECF072AB337338C9D6717B6923C23D835B77AB72BB5027176EE0ABFA2E29D85"
     ],
+    "lastUpdated": "2026-08-25T00:57:29.8826931Z",
     "description": "",
-    "manifestHash": "FFA375D2F44CD9099F34EEA323787A4C0A14B3D941D4CBB45E9309F13A5813FD",
-    "validationCount": 1,
-    "version": "5.1.1"
+    "manifestHash": "63FDDDEFB3D8D3F869CB820126ACD9E4100080495BB8D67FB472EB0E8799BD31",
+    "version": "5.1.2",
+    "validationCount": 1
   },
   "Microsoft.Azure.GuestProxyAgent.AllowListTool": {
     "lastUpdated": "2026-08-16T21:14:49.0927805Z",
@@ -4926,15 +4926,15 @@
     "lastUpdated": "2026-08-16T17:10:10.8258049Z"
   },
   "MinBrowser.Min": {
-    "manifestHash": "52F885FF20E3B4F619B0004F007C17CADDD51910FCEE06FE1806F2B9D057A6C1",
-    "lastUpdated": "2026-07-07T10:05:49.2752995Z",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "6C7A09E1B5556A55DAEFF23120EC5D7466CF70D0FC4C3DB45D1C1F4C34B4A4C3"
+      "7C2909CEFC682A876FCA25DF09B2F5E3EB078FA920380B2C9ABFDBE303C47A57"
     ],
-    "version": "1.35.6",
+    "lastUpdated": "2026-08-25T00:57:29.921981Z",
     "description": "",
-    "validationCount": 3
+    "manifestHash": "854CA0912494A41A84760C1928589E373CF5F52AF559A7B05C9FAF211EF9778E",
+    "version": "1.35.7",
+    "validationCount": 1
   },
   "Miorin.BloomingBlockery": {
     "version": "0.0.27",
@@ -5721,16 +5721,16 @@
     }
   },
   "OneWare.OneWareStudio": {
-    "version": "1.0.26",
-    "lastUpdated": "2026-08-21T04:59:56.9444553Z",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "926088AF6ED7C52D787C27E4212D702687BE3FAA06B1774B808344B9B6D9AE1D",
-      "2B886580BBAB82E79A895A608354A1E648C8218019F0D5F880DE211E52F44D78"
+      "5443D00B1A8691AA0D2916EE62301013D078F3DFAA78C43C077F917658B23E61",
+      "6E361862F31CC8A7ECB9236E0CE5202AA4D835456FBD0ED476AC29E8DE8B86CA"
     ],
+    "lastUpdated": "2026-08-25T00:57:29.7867135Z",
     "description": "",
-    "manifestHash": "0C88B940A289204F6AD0E11DFB8C44D23F52F1B4BCA6008ED2637EB5FFBBFD38",
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "manifestHash": "D92913821350C2D7E191A39C199033BD314F80DA2447ED659A38F567F17E0EEC",
+    "version": "1.0.28",
+    "validationCount": 1
   },
   "OnionShare.OnionShare": {
     "version": "2.6.5",
@@ -6595,8 +6595,8 @@
     "installerHashes": [
       "8A47E3700690C63D26B7AE25CFCED00FA8A2EEA7A0567FD2E4605C77D2A04549"
     ],
-    "validationCount": 2,
-    "lastUpdated": "2026-08-23T08:49:22.6287037Z",
+    "validationCount": 3,
+    "lastUpdated": "2026-08-25T00:57:29.7346838Z",
     "state": "VALIDATION_FAILED"
   },
   "rejetto.hfs": {
@@ -6690,15 +6690,15 @@
     "version": "0.3.1"
   },
   "RimSort.RimSort": {
-    "manifestHash": "59A7B03047C869B20C3BAC01CD7F22B6D95534BA37903C009CCF9F5BA9BFFC27",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-21T13:09:59.5500196Z",
-    "validationCount": 1,
-    "version": "1.11.1",
-    "description": "",
     "installerHashes": [
-      "7CE4DE9D8C5C6C5CCE9067B2408AD63DF73C0B35FCEFE51DC8684D6AACAF7B3B"
-    ]
+      "C2DE7818E271A77F387D1CFC8EE419127C18CB999A1391044EA79365BD650D71"
+    ],
+    "lastUpdated": "2026-08-25T00:57:29.8215719Z",
+    "description": "",
+    "manifestHash": "7CA1FE2E1CF8DACB5D55BC4DBA6823D92288532B4DF1817D30FA1C0B58C0E0F7",
+    "version": "1.12.0",
+    "validationCount": 1
   },
   "Ripose.Memento": {
     "description": "",
