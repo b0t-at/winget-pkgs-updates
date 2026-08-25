@@ -1278,15 +1278,15 @@
     "description": ""
   },
   "CCGnomes.VaultFlasher": {
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-22T12:51:56.6038906Z",
-    "installerHashes": [
-      "FE14EE25D1363F663F75A3604BDAA8AB63B61002111E3280E2B72FDDBA42F5BF"
-    ],
     "validationCount": 1,
-    "manifestHash": "DF748EC16AFC956A7B6E5A0F51DAD77EB6441859293AB4B961F10D9F29C20A55",
-    "version": "0.7.4",
-    "description": ""
+    "lastUpdated": "2026-08-25T04:55:28.4930093Z",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "75AB43DF8C268683C7F11F169EF3028AD68367CBA569E7C6A435E1B8DE22FF30"
+    ],
+    "description": "",
+    "version": "0.7.5",
+    "manifestHash": "981BA0FE5764523FA2A21AB131F54793BC88D9F97BFDC6575DC67491DC43986F"
   },
   "Celerp.Celerp": {
     "description": "",
@@ -2003,15 +2003,15 @@
     }
   },
   "Dystroy.broot": {
+    "validationCount": 1,
+    "lastUpdated": "2026-08-25T04:55:28.4191209Z",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "590068B6C3DBA327B91BF6509D55FDF1BC67ECCEF6961EF2F47977C5E4BE5507"
+      "F89462CC883D79B548E207A4B2EC34B3736604D0CC54C86F59BE5B4F1570A2FD"
     ],
-    "manifestHash": "A3410068D63651A3547AD169595D8A7DDB12AB5AF64F2C1B98F042233BA678FC",
     "description": "",
-    "validationCount": 1,
-    "lastUpdated": "2026-07-10T21:10:02.5099141Z",
-    "version": "1.58.0"
+    "version": "1.59.0",
+    "manifestHash": "ECE2D8E8B3EE85B70B4E00207ECD8482B9D443E3CAF484D15EA5D84662F15E4D"
   },
   "Easure.HelpMePrint": {
     "configHealth": {
@@ -4071,6 +4071,18 @@
       "90431C5CAC984113D90E5F5177C1CF681303E5A7FFD1EDDBE6417AE6EF46FB5B"
     ]
   },
+  "kevin.Astral": {
+    "validationCount": 1,
+    "lastUpdated": "2026-08-25T04:55:28.3458106Z",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "6B1E9AADD2F81C4E7B30A1DF1B2E25F3CF81DCD55792FE9ACD9F56F1922019E3",
+      "9A4F7DA706F7F58240748EDD51A92CE1D96791C8DEAA67FB6BBF47E1C7C103A0"
+    ],
+    "description": "",
+    "version": "2.9.12",
+    "manifestHash": "7A09640ABAE6107A6895BE599690554A585357B06580B02D899D5C9EB7C4E016"
+  },
   "KinichiAnjuMakino.unifocl": {
     "version": "3.17.0",
     "lastUpdated": "2026-08-21T04:59:57.0994045Z",
@@ -6091,15 +6103,15 @@
     "lastUpdated": "2026-08-21T17:17:40.0995696Z"
   },
   "Parslee.Car": {
-    "description": "",
-    "manifestHash": "9A142A93C65E366BF803427BE1B4A57F01FC7822A7C419C2DD082583275FD03B",
-    "installerHashes": [
-      "48CEFB2DF8403995473FCA9738A7134362F264D252ED15D53FAF62CD49C2B1FF"
-    ],
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-20T01:39:37.3106998Z",
     "validationCount": 1,
-    "version": "0.48.0"
+    "lastUpdated": "2026-08-25T04:55:28.4427055Z",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "B587C51E32E943E3A6BFB90D601FAD3BE5AD781B83E11EE304AB3A347F432648"
+    ],
+    "description": "",
+    "version": "0.49.0",
+    "manifestHash": "D95F891A8FD35552719D89884B31C17A6599DAD18777EBCF34588C069C81BF31"
   },
   "Passportogo.Voio": {
     "lastUpdated": "2026-08-19T21:00:00.1586395Z",
@@ -6667,16 +6679,16 @@
     ]
   },
   "RicardoCabral.icuvisor": {
-    "lastUpdated": "2026-08-22T04:43:29.022266Z",
-    "manifestHash": "1193E242AAB59CF24D9FE33D340708DC46884F4C79A21313E0BF54BD1125145F",
-    "installerHashes": [
-      "D73A2C8232303F6C2FA1B37DD2F6025007980B873F1795D28A30D203D1A1B0B2",
-      "25E091BBDDE0E2FC7E555C07DF19EC38A5441710F66CF0CBD6FC2029A7D87717"
-    ],
     "validationCount": 1,
+    "lastUpdated": "2026-08-25T04:55:28.4720175Z",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "6D3DD69B95DAA5B8BC639A22E3E8C5E81410A598B3EBA4FA8EBADF65DAD8A124",
+      "FD19930B2B86DE999B96183666AE28FC27E4972222BC93B056DD14DB0B8B79A3"
+    ],
     "description": "",
-    "version": "1.6.0",
-    "state": "VALIDATION_PASSED"
+    "version": "1.6.1",
+    "manifestHash": "5E6F7CCA1608332BE3123C72FC25ED1DA5E6747327623B423B3CA87D6D898249"
   },
   "RikkiGibson.DreamPotato": {
     "lastUpdated": "2026-08-18T01:43:26.5566063Z",
