@@ -2579,15 +2579,15 @@
     "state": "VALIDATION_PASSED"
   },
   "FOSSA.FOSSA-cli": {
+    "manifestHash": "BF74CCCD6E432481C9A787B075CA641A084980A51F794B3DA429A70161C975F5",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "07F47C9FB7B5C2F80ACEE050971752B2CADAC81F7C7D8A1CEE7FD7B21A31340C",
     "validationCount": 1,
-    "description": "",
     "installerHashes": [
-      "60EF46B933C88D9C0CC077B55CA462E5E5B70C10231838519EE132EF7A2201BE"
+      "270D19D03B21695570B63663733A47C7A99BAEBE5E3B459C5FD8DD9B919218ED"
     ],
-    "lastUpdated": "2026-08-20T16:48:28.0250448Z",
-    "version": "3.18.0"
+    "version": "3.18.1",
+    "lastUpdated": "2026-08-25T16:48:54.050705Z",
+    "description": ""
   },
   "FrancisBanyikwa.MediaDownloader": {
     "installerHashes": [
@@ -3534,6 +3534,18 @@
     "manifestHash": "E3E54E931B3DE7B7964E0B1F6AE2F5439BBFC83C45B6080BFCD6BB0191E6B467",
     "version": "11.0.0.9335-rc"
   },
+  "idleberg.ardent": {
+    "manifestHash": "B9C0A46B4F8DCF56EE1755944682F1BDB7602AFC27C18627A561D873C1FB8889",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "installerHashes": [
+      "DE57FF5B681A30E8A7679A7D418128A2F715EC555E652F17049945748F19073B",
+      "C72D4B2FBEB76DB88F1131FAA27082678FFA25F90F182EF8A98476F682F25ED5"
+    ],
+    "version": "0.13.1",
+    "lastUpdated": "2026-08-25T16:48:53.8838515Z",
+    "description": ""
+  },
   "igoogolx.itun2socks": {
     "state": "VALIDATION_FAILED",
     "description": "",
@@ -4199,16 +4211,16 @@
     }
   },
   "LANCommander.Launcher": {
-    "description": "",
-    "manifestHash": "F7E42A6234135968BA31D80FDA1C2FB5CA10353EE1B45B1F9CE2D8B4C06F6E40",
-    "installerHashes": [
-      "7B831C171A25423A05FB56E8BE670AF6E8D596C2D8AAD2498D0D85A955E255EA",
-      "30F04B98A2D3B5CEB9D2C7F7B7D56CC019DD7737FF51CAC69770458F94F3F280"
-    ],
+    "manifestHash": "74C819016AE14A8C02E495689A82481C7F37189F346107F639AAC2B6F5B6DAEC",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-20T01:39:37.5147556Z",
     "validationCount": 1,
-    "version": "2.1.10"
+    "installerHashes": [
+      "1AFA8510A3E5924FAF70692115F1B93C59A5A07EB0E0E6B378F4789B1AA6A6A6",
+      "9124D2062DC2C7DB043832F4FC79A3F4695C983784DFCAFC23FDE3B5A756FEC9"
+    ],
+    "version": "2.1.11",
+    "lastUpdated": "2026-08-25T16:48:53.9782517Z",
+    "description": ""
   },
   "LANCommander.Server": {
     "description": "",
@@ -5523,14 +5535,14 @@
     "state": "VALIDATION_PASSED"
   },
   "nu774.qaac": {
-    "installerHashes": [
-      "AA00C6540C5B374834097CE44E398BAF142E87EECE8F62EB088C16AA94B8402E"
-    ],
+    "manifestHash": "08A9DAF291086C790999D4FBC7524B3CC219EBF22297AD06376A0E7491FA8273",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-21T01:21:03.6053569Z",
-    "version": "3.3",
     "validationCount": 1,
-    "manifestHash": "7E1E1138A3F04983E053D47DAB75AF75D58C9D154006FDAFF3FE545801CF1630",
+    "installerHashes": [
+      "8A4A589E49880C921E846110632F499DFECE34864621450C959085DC0BF324B6"
+    ],
+    "version": "3.5",
+    "lastUpdated": "2026-08-25T16:48:54.1511339Z",
     "description": ""
   },
   "nvisionative.nvQuickSite": {
@@ -6440,15 +6452,15 @@
     ]
   },
   "PSerban93.Achievements": {
-    "lastUpdated": "2026-08-17T17:04:35.1700834Z",
-    "description": "",
-    "installerHashes": [
-      "329BF111B45264A1F170EC71DCE343DA35D5E8787A224824DF6931F70F9ACD28"
-    ],
+    "manifestHash": "0EA33742F10B34426069BF71EE7BCF2ECA1C2F8D1504306090193C1FEC81F2DD",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "manifestHash": "1A26BEA41C576E2E1C4326845E9723EC5C900FDEBD23B680137326CEEC718ACF",
-    "version": "1.2.8",
-    "state": "VALIDATION_PASSED"
+    "installerHashes": [
+      "52706F85D8D12327E451AEF55C5A8E5BADA5F17FFE8F2060888A1C54816FD1C1"
+    ],
+    "version": "1.2.9",
+    "lastUpdated": "2026-08-25T16:48:54.1242045Z",
+    "description": ""
   },
   "Pulsar-Edit.Pulsar": {
     "installerHashes": [
@@ -6600,6 +6612,17 @@
       "tag": "v0.9.1",
       "checkedAt": "2026-08-18T08:42:19.3437599Z"
     }
+  },
+  "ReactOS.RosBE": {
+    "manifestHash": "B6353EE49DEEB6626B67F1E14E62ED8542BEF0BC8E23997B3D8148DAD5B140C9",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "installerHashes": [
+      "2D7472D4C3BD2E577DBC3AFD018DD80C47204473037DE72F26E41C6A14C27867"
+    ],
+    "version": "20260629",
+    "lastUpdated": "2026-08-25T16:48:54.0101133Z",
+    "description": ""
   },
   "RedisInsight.RedisInsight": {
     "description": "",
@@ -6759,15 +6782,15 @@
     "description": ""
   },
   "rizukirr.apic-gui": {
-    "manifestHash": "EA8C0656A2E9C238FD438D3162EC90250AC9A25B80EAF52729E2BCE5F536FBC5",
+    "manifestHash": "4FE8968ED357FC8ECDA61513F8AB0A63E5433D9847EE4DFEFFC8B9FE9A75DE25",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-21T13:09:59.6992206Z",
     "validationCount": 1,
-    "version": "0.4.1",
-    "description": "",
     "installerHashes": [
-      "D65685AADADB89CA3ED4FBBAB14CCFBD5D72E84A3D0664848B0CC38B2CE02E89"
-    ]
+      "411437E918D7E47A08567A10060A01252DD8A3198DAD8A112C5698EEC5D2E6DD"
+    ],
+    "version": "0.5.0",
+    "lastUpdated": "2026-08-25T16:48:54.0835544Z",
+    "description": ""
   },
   "Rnwood.Smtp4dev": {
     "installerHashes": [
