@@ -695,6 +695,17 @@
     "lastUpdated": "2026-08-23T16:49:52.1822271Z",
     "description": ""
   },
+  "axodotdev.dist": {
+    "lastUpdated": "2026-08-25T08:46:33.3252842Z",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "0.32.0",
+    "manifestHash": "CE74CA415621E851ACCE19C9F803F0776A838EE8C32349107CD0CE681AECBAB4",
+    "installerHashes": [
+      "26E845CABFF12A92911CE960AF73A86C8F9B2B2D9072B01DFE5B662ACF044FA3"
+    ]
+  },
   "AyoubTadlaoui.logx": {
     "lastUpdated": "2026-08-18T17:25:13.9116095Z",
     "description": "",
@@ -4900,16 +4911,16 @@
     "description": ""
   },
   "mikf.gallery-dl.Nightly": {
-    "installerHashes": [
-      "7AA37912E73F31E12B2DC36E0B01127B883D9B03B6DAE0E4AA61BDAF81F22283",
-      "6C33DC44210BCD075DCAD0520AB18522C65B6A6489DAEDAE203D5747BFA663B5"
-    ],
-    "validationCount": 1,
+    "lastUpdated": "2026-08-25T08:46:33.2472028Z",
     "description": "",
-    "lastUpdated": "2026-08-24T12:52:12.8867636Z",
-    "version": "2026.08.24",
-    "manifestHash": "2EFAE288C8ABF9A0C71839086C392A2D563C9852125FEAE53DA86F393194DE4F",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "2026.08.25",
+    "manifestHash": "30D617D0F03F4F57D0B56774CB0D834EFD8F2640A5E3CFC3AD24A0D6E28185AE",
+    "installerHashes": [
+      "5450DD861F4A9272FF403D0F32177C7397D193D3441D687F0E39AE6D29EB9654",
+      "736253BC6ABE199ABAC35BEB54B2353483904D8F69AA765B1DFD4D54382B909C"
+    ]
   },
   "MilkShift.GoofCord": {
     "state": "VALIDATION_PASSED",
@@ -7246,15 +7257,15 @@
     "manifestHash": "6A6DF588D3B93A2A2CBEC3F02678BA7CB0256FB0809EC84F1DD6A082686F9D7E"
   },
   "Siddharth.VSSProgrammingLanguage": {
-    "validationCount": 1,
-    "version": "2.2.2",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "C7193BFA11786EE191F3CA1CEEE9C55DF9053C0E01D423BF3D4FA8C9863E2D62",
+    "lastUpdated": "2026-08-25T08:46:33.2793047Z",
     "description": "",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "3.0.0",
+    "manifestHash": "F66538E35211CB956CD89B0CBF111FFAB4E8BF30AF443DEFE306FA218F354786",
     "installerHashes": [
-      "EE0C3585AAFFE0582D1D0198109A0F19B844EDB1E366489C7A0A57C38BE5C291"
-    ],
-    "lastUpdated": "2026-08-17T21:15:38.120171Z"
+      "2EF885620469A4326AC63B5559A389BAED9707E17C51BB496578406D04617476"
+    ]
   },
   "Sigstore.Cosign": {
     "installerHashes": [
@@ -9135,6 +9146,17 @@
       "E20A5859CD641D9857EF2BDB141722501E95204CF2B02B41B8C12E0900FDA041"
     ],
     "lastUpdated": "2026-08-17T21:15:38.1463722Z"
+  },
+  "yoogie27.largecopy": {
+    "lastUpdated": "2026-08-25T08:46:33.3050689Z",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "3.0.16",
+    "manifestHash": "3BE64D8BFE4CF26BE5C6ECC019BAE1D4C6F807F52B6A4C575B1318CD9D4E1CDD",
+    "installerHashes": [
+      "37886C8E20F030583636EAB538608124370DAC8F8849EE2BD799C7094DC026F1"
+    ]
   },
   "yt-dlp.yt-dlp.nightly": {
     "lastUpdated": "2026-08-22T04:43:28.9787247Z",
