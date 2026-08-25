@@ -19,11 +19,7 @@
     "description": "",
     "manifestHash": "9C30E9DFA8CB7366C57D0BD5C430F9494CF8DBA066F4B42DE6C7743F1D788165",
     "version": "4.4.0.0",
-    "validationCount": 1,
-    "openPr": {
-      "checkedAt": "2026-08-25T04:23:31.0893208Z",
-      "version": "4.4.0.0"
-    }
+    "validationCount": 1
   },
   "ABowlOfEleven.hopscout": {
     "manifestHash": "1F3AE2A47F29CCDE4BDE142A406D060AE04B93D9EE44F9F9F28DB6D583CF4D25",
@@ -381,11 +377,7 @@
     "lastUpdated": "2026-08-24T12:52:12.8326614Z",
     "version": "2.5.9",
     "manifestHash": "FA118C8F095F177275B6C1B2325E4168A636519993D0E9C96E0999A28BB813E2",
-    "state": "VALIDATION_PASSED",
-    "openPr": {
-      "checkedAt": "2026-08-24T16:19:20.3602982Z",
-      "version": "2.5.9"
-    }
+    "state": "VALIDATION_PASSED"
   },
   "Anki.Anki": {
     "manifestHash": "0D9714050B0D59E7B030281F9DF9D711AF26AFF8475786C412B799325297275B",
@@ -556,8 +548,8 @@
     "manifestHash": "22E09A01B0EC244FEA41B0691EBE65C15B3FC9DE4DBC20A72ECB34CE94626F5F",
     "lastUpdated": "2026-08-24T05:01:37.9292394Z",
     "openPr": {
-      "checkedAt": "2026-08-24T08:25:09.8379524Z",
-      "version": "1.1.1"
+      "version": "1.1.1",
+      "checkedAt": "2026-08-25T12:18:29.1568547Z"
     }
   },
   "armbian.imager": {
