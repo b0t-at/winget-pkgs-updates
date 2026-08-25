@@ -11,15 +11,13 @@
     "lastUpdated": "2026-08-21T17:17:39.9807177Z"
   },
   "8bit2qubit.OmniConsole": {
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "BEB26EE272849BECEBCB13C3CE08EBA5BAD8337064A26D6EBC1B2B60FF3E166E"
-    ],
-    "lastUpdated": "2026-08-25T00:57:29.8441841Z",
     "description": "",
-    "manifestHash": "9C30E9DFA8CB7366C57D0BD5C430F9494CF8DBA066F4B42DE6C7743F1D788165",
-    "version": "4.4.0.0",
-    "validationCount": 1
+    "installerHashes": "725AAC5302DCF564A20A45443CBCA6B5524183EAC10C918DEC55EA462232ADC9",
+    "lastUpdated": "2026-08-25T12:45:34.5696762Z",
+    "manifestHash": "BD1471352F3242F1A0BA7B50AD9389DC7202FFC8BC86070A9C908E16A1132F5A",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "4.4.1.0"
   },
   "ABowlOfEleven.hopscout": {
     "manifestHash": "1F3AE2A47F29CCDE4BDE142A406D060AE04B93D9EE44F9F9F28DB6D583CF4D25",
@@ -1232,16 +1230,16 @@
     "lastUpdated": "2026-08-17T21:15:38.2889056Z"
   },
   "caomengxuan666.WinuxCmd": {
-    "description": "",
-    "manifestHash": "1F0CC6B7A52989B82D19D7A02C1FA20166FA898B3B25D54C3E1B99DE3F734B6F",
-    "installerHashes": [
-      "8F98D4ADA9B09B173193FF9471973650BA52435F94A1C43DDA876AF09E7BEB08",
-      "68A671FCF664141883CE1FF35BFC7C5A90BE9EDA682591EBB82F0CE1E0D1A8DB"
-    ],
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-20T01:39:37.3277323Z",
     "validationCount": 1,
-    "version": "0.16.3"
+    "installerHashes": [
+      "798B8621AAC548200E094F34E6F86B46E54B4A1842C51F11D3F5BC00A845A080",
+      "778FBC6EC8137460D46ABFE6C6C2A122F174EF9D88B6099DA4BA973E3A0E4E7C"
+    ],
+    "description": "",
+    "manifestHash": "51FBAB6C9525B19B74142FB9F9EF46744B126AC62B158E805C06AB278D0E4486",
+    "lastUpdated": "2026-08-25T12:45:34.5490446Z",
+    "state": "VALIDATION_PASSED",
+    "version": "0.17.1"
   },
   "CargoLambda.CargoLambda": {
     "manifestHash": "B8DD0B022742F2371ED57474DE9FEE6CB654CD7DD96A113241259E85D6F5ABF3",
@@ -1327,15 +1325,15 @@
     ]
   },
   "CESNET.UltraGrid": {
-    "state": "VALIDATION_FAILED",
-    "description": "",
     "validationCount": 1,
     "installerHashes": [
-      "0CE411BE8C8374F997D3C421C2D700F8A484BC824DF5C9D9423846D1EB8AEE89"
+      "2C7C89BD37D9B690A1B922A2732CF685EA7F91C912AB79B0754FA00C4A856530"
     ],
-    "lastUpdated": "2026-08-05T12:38:59.3116012Z",
-    "manifestHash": "329EDD3E426B5AC7ACB8A060F3C55A660C8922EC8E5F9BFBC92BD72D636E0B97",
-    "version": "1.10.7"
+    "description": "",
+    "manifestHash": "5F8F66CA413BE57838EC7C4936BCB0A254F53F4CA5E43A5728E6ECA8871E60F1",
+    "lastUpdated": "2026-08-25T12:45:34.458276Z",
+    "state": "VALIDATION_PASSED",
+    "version": "1.10.8"
   },
   "ChiaNetwork.GUIforChiaBlockchain": {
     "validationCount": 6,
@@ -1801,15 +1799,15 @@
     "lastUpdated": "2026-08-17T21:15:38.3875985Z"
   },
   "DeskRipple.DeskRipple": {
-    "installerHashes": [
-      "F9A61B3A4A9A7CDCDCA0060C8F1191A37A665625CFB1387FFC7C71A7C310CA07"
-    ],
-    "state": "VALIDATION_PASSED",
-    "version": "0.5.1",
-    "lastUpdated": "2026-08-21T09:07:38.4480187Z",
     "validationCount": 1,
-    "manifestHash": "5C0C6C3922EE712D34C111ECAFFF36EC168F7C68C505AB0FEE08DD324310A52A",
-    "description": ""
+    "installerHashes": [
+      "9048D969D3378998A01FBE3FE6C5F5812FE65D108D1570BB6ADFC5183E569177"
+    ],
+    "description": "",
+    "manifestHash": "0EFF94E3171D1DEBE2F0499D67619CE2B42DDEEBF4504DA6F5E2A99490E1FECC",
+    "lastUpdated": "2026-08-25T12:45:34.4909356Z",
+    "state": "VALIDATION_PASSED",
+    "version": "1.0.0"
   },
   "DeutLab.HandyVoice": {
     "installerHashes": [
@@ -1880,14 +1878,14 @@
   },
   "Divaaaan.Tenebra": {
     "validationCount": 1,
-    "version": "0.5.2",
-    "lastUpdated": "2026-08-24T20:51:39.4511169Z",
-    "manifestHash": "433BE567D559C85E900DBAACFB45D854253188BE1E5DD4AA2968455C3B0C5F78",
     "installerHashes": [
-      "1F7F4ADCF5E4450213D31E0D924047F265707833BD2A273255143603BC6FD557"
+      "72D9EC9435257E7B82C0C02094796F6F1363AA48B2FC07C14DCEF912E042D731"
     ],
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "manifestHash": "6B020630710D62EE0DABE0D8E337FE90FABDE54CB9E99EED41D6E6FBA457FE02",
+    "lastUpdated": "2026-08-25T12:45:34.5175766Z",
+    "state": "VALIDATION_PASSED",
+    "version": "0.5.4"
   },
   "divVerent.AAAAXY": {
     "state": "VALIDATION_FAILED",
@@ -7034,11 +7032,11 @@
   },
   "Scandum.WinTin++": {
     "version": "2.02.61",
-    "lastUpdated": "2026-08-23T08:49:22.7847216Z",
+    "lastUpdated": "2026-08-25T12:45:34.4166039Z",
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "2C9A618908F2C08C9E373327E7A15409C25EEB6AE563F45807A611269A686250",
-    "validationCount": 4,
+    "validationCount": 5,
     "installerHashes": [
       "421A1458080413D5135A7490DC05AC0F4B54F1CAADBFC033214536237420E847"
     ]
