@@ -459,7 +459,11 @@
       "071C753F34D42A9891B2B4573937F05073B191293641A16664A0CB63677E5FE4"
     ],
     "state": "VALIDATION_PASSED",
-    "version": "1.0.1"
+    "version": "1.0.1",
+    "openPr": {
+      "checkedAt": "2026-08-26T12:19:40.3428772Z",
+      "version": "1.0.2"
+    }
   },
   "AquaSecurity.Trivy": {
     "lastUpdated": "2026-08-14T12:36:40.1551024Z",
@@ -4346,7 +4350,11 @@
     "validationCount": 1,
     "description": "",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "9E6B3820C810C36BC11C25399800490EE4E204608B7ACB305C8B4B7300D5DCBF"
+    "manifestHash": "9E6B3820C810C36BC11C25399800490EE4E204608B7ACB305C8B4B7300D5DCBF",
+    "openPr": {
+      "checkedAt": "2026-08-26T12:18:35.0799508Z",
+      "version": "2.18.3"
+    }
   },
   "LocalStack.localstack-cli": {
     "state": "VALIDATION_PASSED",
