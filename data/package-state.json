@@ -3015,8 +3015,8 @@
       "510FB2369A4720ADB457783768C5E1481A0E1137D9E7694478DFE9B8FE445DC1"
     ],
     "openPr": {
-      "version": "36.0",
-      "checkedAt": "2026-08-25T00:25:43.7234795Z"
+      "checkedAt": "2026-08-26T04:22:19.7076937Z",
+      "version": "36.0"
     }
   },
   "goplus.xgo": {
@@ -3795,8 +3795,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.8.13",
-      "checkedAt": "2026-08-26T00:25:41.6668176Z"
+      "checkedAt": "2026-08-26T04:22:20.0182811Z",
+      "version": "2026.8.14"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -5678,8 +5678,8 @@
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
     "openPr": {
-      "checkedAt": "2026-08-20T20:16:06.4924919Z",
-      "version": "0.32.15"
+      "checkedAt": "2026-08-26T04:22:21.2198647Z",
+      "version": "0.33.0"
     }
   },
   "Ombrelin.PandocGui": {
