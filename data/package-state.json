@@ -3795,8 +3795,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.8.12",
-      "checkedAt": "2026-08-25T16:20:05.9727612Z"
+      "version": "2026.8.13",
+      "checkedAt": "2026-08-26T00:25:41.6668176Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -4121,7 +4121,11 @@
     "version": "4.4.3",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D"
+    "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D",
+    "openPr": {
+      "version": "4.4.3",
+      "checkedAt": "2026-08-26T00:25:42.7510824Z"
+    }
   },
   "kmiya-culti.RLogin": {
     "version": "2.31.8",
