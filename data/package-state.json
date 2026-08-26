@@ -6575,11 +6575,7 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "CC60AA3FCE47A8BBFC36AE963049118CEFD29C6AC8A895CBC315914E54969E0A",
     "validationCount": 1,
-    "lastUpdated": "2026-08-19T15:56:01.5112998Z",
-    "openPr": {
-      "checkedAt": "2026-08-19T17:08:39.7943471Z",
-      "version": "0.60.0"
-    }
+    "lastUpdated": "2026-08-19T15:56:01.5112998Z"
   },
   "ramdor.Thetis": {
     "version": "2.10.3.15",
