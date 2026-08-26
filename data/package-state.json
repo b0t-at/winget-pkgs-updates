@@ -510,14 +510,14 @@
   },
   "archisvaze.ArcDLP": {
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-08-26T21:23:48.2380739Z",
     "description": "",
-    "version": "1.4.2",
-    "lastUpdated": "2026-08-24T08:49:14.2972453Z",
-    "manifestHash": "C40FAD329ABB40A5AE32126750F000E59D154D4AB9EA59032C37C485BC5E6DE4",
     "installerHashes": [
-      "1FC1560B4CC2BA671E48AE56A4820AE803D3E4ABC28B1523433FF2E2F237C343"
-    ]
+      "B5BB4BD9079B9332F3A0C715830793EB49782AC316FEB2B3FB1274F40665D88E"
+    ],
+    "manifestHash": "486AFEE4C65B4249E0C7BD2E49770871DFDF046CBD741CAB822D93C2076B0BAD",
+    "version": "1.4.3",
+    "state": "VALIDATION_PASSED"
   },
   "argoproj.argocd": {
     "installerHashes": [
@@ -1878,14 +1878,14 @@
   },
   "Divaaaan.Tenebra": {
     "validationCount": 1,
-    "installerHashes": [
-      "72D9EC9435257E7B82C0C02094796F6F1363AA48B2FC07C14DCEF912E042D731"
-    ],
+    "lastUpdated": "2026-08-26T21:23:48.317253Z",
     "description": "",
-    "manifestHash": "6B020630710D62EE0DABE0D8E337FE90FABDE54CB9E99EED41D6E6FBA457FE02",
-    "lastUpdated": "2026-08-25T12:45:34.5175766Z",
-    "state": "VALIDATION_PASSED",
-    "version": "0.5.4"
+    "installerHashes": [
+      "E26CB40CD677C2487F71CD4C4AD9AA4A3E6BAC7BB4B081778C01E9525270A91E"
+    ],
+    "manifestHash": "81CC312D4F4FA6EDD63BB81243BA072584407B9645F1C69EC636C5878CCA5FC4",
+    "version": "0.5.10",
+    "state": "VALIDATION_PASSED"
   },
   "divVerent.AAAAXY": {
     "state": "VALIDATION_FAILED",
@@ -2627,8 +2627,8 @@
     "description": "",
     "manifestHash": "A4B0A2532C22E8509634F1289507E7CE0F5F02F6F5D34B2B8FF796539325C3D6",
     "version": "1.0.14",
-    "lastUpdated": "2026-08-24T05:01:37.8436188Z",
-    "validationCount": 2,
+    "lastUpdated": "2026-08-26T21:23:48.2582007Z",
+    "validationCount": 3,
     "state": "VALIDATION_PASSED"
   },
   "fselect.fselect": {
@@ -3341,15 +3341,15 @@
     "version": "0.2.3"
   },
   "HiroSystems.Clarinet": {
+    "validationCount": 1,
+    "lastUpdated": "2026-08-26T21:23:48.1514445Z",
     "description": "",
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "3DE6E6586FEDCC6DE25F6F2BEC9EA49230ED0775B1AA2EAEE381F60A314A517E"
+      "1CB9EE0B54E7F0A208B9F7E2160D6671C092F423B301A0EB619DE4B48F075C58"
     ],
-    "version": "3.23.1",
-    "lastUpdated": "2026-08-24T12:52:12.7296801Z",
-    "validationCount": 3,
-    "manifestHash": "3D3F462B0E3FF03CA4242B1081B8E7EC5320BE2F470497CD1935AFED1DAAB5E2"
+    "manifestHash": "3F74822D4274BED8E1ADBEA61040ADB6B6C6F2FF0DF82A712120E343351FF7ED",
+    "version": "3.23.2",
+    "state": "VALIDATION_PASSED"
   },
   "HiroyukiFuruno.katana-desktop": {
     "lastUpdated": "2026-08-26T17:03:52.1051721Z",
@@ -7986,10 +7986,10 @@
       "99B10D6EA21A5E4EDF4A35D8DC8E70B17BC96629D700120EF1AA82173C6F0E6C",
       "ECF8F7D921927D2DC8B9F731E3F9F1F35F8B8AD923CA81D73B091627DBF8E215"
     ],
-    "lastUpdated": "2026-08-26T00:54:46.1555941Z",
+    "lastUpdated": "2026-08-26T21:23:48.3496418Z",
     "state": "VALIDATION_PASSED",
     "version": "4.3.3.206",
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "C20C8B30835B56FD8C27645B0D1926E37BC41A56A64B72706495CB1DF074D8C0"
   },
   "TeamSlop.Slopcode": {
@@ -8665,13 +8665,13 @@
   },
   "VirusTotal.YARA-X": {
     "validationCount": 1,
-    "lastUpdated": "2026-06-29T14:16:32.2150477Z",
-    "version": "1.19.0",
+    "lastUpdated": "2026-08-26T21:23:48.2960742Z",
     "description": "",
     "installerHashes": [
-      "A68D3FCC9CB846A92A1233A6581EE21E777CD5C404D00EEBF0628B25900C4F0D"
+      "B1E2840BAC593AEA353D2B2B341F5A862C9D61C0C406D9ABBBAD9E1FA35163A1"
     ],
-    "manifestHash": "3399E6E02584E58DB2E0509AD2F33915ACDEEB630E8D15FDDA43C0775643F978",
+    "manifestHash": "96AF3299C2275A4EEAD22995191692CF329A2389AC39D8862E3EFAAA08C154C3",
+    "version": "1.20.0",
     "state": "VALIDATION_PASSED"
   },
   "VoiceWave.LocalCore": {
