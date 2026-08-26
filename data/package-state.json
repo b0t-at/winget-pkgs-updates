@@ -827,19 +827,15 @@
     }
   },
   "BenModigell.Vibes": {
-    "lastUpdated": "2026-08-20T21:12:49.6017002Z",
-    "manifestHash": "130963AB811E12E73C1CABEBA601A70763CF6B974ACA8F506F743D86C033F0FD",
-    "version": "1.4.4",
-    "validationCount": 1,
-    "installerHashes": [
-      "42FE5D76F2F07DBE64A3CD9EA1FF84C869772C88BDB6B69186FBE115D78CD9EE"
-    ],
+    "lastUpdated": "2026-08-26T17:03:52.0175147Z",
+    "version": "1.4.5",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "openPr": {
-      "checkedAt": "2026-08-24T08:25:12.5591435Z",
-      "version": "1.4.4"
-    }
+    "manifestHash": "BB8E26206BA07BA08B3C232CEA2BAB6B7395560E09D82E814039FDB4F88F0BD5",
+    "installerHashes": [
+      "8BB1BB09C7464E2547FB83115E75CA3395B5AA046B750504AD30C3F048F2B4EE"
+    ],
+    "validationCount": 1
   },
   "bensadeh.tailspin": {
     "validationCount": 1,
@@ -2583,15 +2579,15 @@
     "state": "VALIDATION_PASSED"
   },
   "FOSSA.FOSSA-cli": {
-    "manifestHash": "BF74CCCD6E432481C9A787B075CA641A084980A51F794B3DA429A70161C975F5",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "lastUpdated": "2026-08-26T17:03:51.9405129Z",
+    "version": "3.18.2",
+    "state": "VALIDATION_FAILED",
+    "description": "",
+    "manifestHash": "4C6CABCC43353B7CE3053810BFD0EEA5CDB0354CF6D13AFF03042DF1677781B4",
     "installerHashes": [
-      "270D19D03B21695570B63663733A47C7A99BAEBE5E3B459C5FD8DD9B919218ED"
+      "07D2C4F246BE39BC98ADEA35BC46840A1B6BDBB738CD3171CDDACEBA9A4EC909"
     ],
-    "version": "3.18.1",
-    "lastUpdated": "2026-08-25T16:48:54.050705Z",
-    "description": ""
+    "validationCount": 1
   },
   "FrancisBanyikwa.MediaDownloader": {
     "installerHashes": [
@@ -3356,15 +3352,15 @@
     "manifestHash": "3D3F462B0E3FF03CA4242B1081B8E7EC5320BE2F470497CD1935AFED1DAAB5E2"
   },
   "HiroyukiFuruno.katana-desktop": {
-    "manifestHash": "159F5851C0FBCEFC5E2C2BDF3A55C89B737D3C96008653864A730C196F0275E5",
-    "validationCount": 1,
-    "lastUpdated": "2026-08-22T01:07:19.4926604Z",
-    "version": "0.22.40",
+    "lastUpdated": "2026-08-26T17:03:52.1051721Z",
+    "version": "0.22.41",
     "state": "VALIDATION_PASSED",
+    "description": "",
+    "manifestHash": "7A0AB54DD8FE5CDD704D9B42AD2339955148C805043A7B7F89E5828C956EAEC3",
     "installerHashes": [
-      "67F07C0E8133146ABF874A6DE55B6D5FBC3362FE44D19636A856ECEA85997A29"
+      "3653767B1350890D9D94847F7DCC1A3F7748C3B21E16BF38916AE7BEA7F2A7D9"
     ],
-    "description": ""
+    "validationCount": 1
   },
   "HishamMedhat.PortPeek": {
     "lastUpdated": "2026-08-19T17:46:50.1862956Z",
@@ -4424,15 +4420,15 @@
     "version": "4.1.26190"
   },
   "LoxSmoke.OpenLogiNet": {
+    "lastUpdated": "2026-08-26T17:03:52.0704317Z",
+    "version": "0.17.0",
+    "state": "VALIDATION_PASSED",
     "description": "",
-    "version": "0.16.1",
-    "manifestHash": "1A6C07FDDCCBD2FE3ADFA644B02C6AF6CC4BAE98B4ADABC7306F5BEDD3B525D2",
+    "manifestHash": "5242560E6C488B54947DEA86E31378F86210A3B7F3A6EE48CC6BDAE99A147887",
     "installerHashes": [
-      "1EBF2F7B0FE98B3E39DA5F79849D5CCC95474154733CEEEBC4A37B01797EE56C"
+      "DFC3105A75F77F07EB546FDFBE4A29B7445A5039D4D5A27C53BF7EBAE119EC21"
     ],
-    "validationCount": 1,
-    "lastUpdated": "2026-08-22T08:51:40.328627Z",
-    "state": "VALIDATION_PASSED"
+    "validationCount": 1
   },
   "LuantiTeam.Luanti": {
     "installerHashes": [
@@ -6369,16 +6365,16 @@
     "description": ""
   },
   "PocketBase.PocketBase": {
+    "lastUpdated": "2026-08-26T17:03:52.0479773Z",
+    "version": "0.40.1",
+    "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "AE912547D37EBD73F35809AC5878BCC76AF2E1A15DBFD37F96332AB69165DA62",
-    "lastUpdated": "2026-08-19T21:00:00.2457758Z",
-    "version": "0.39.11",
+    "manifestHash": "CAC76DDCD14C77C4EB288015A159A0949270B9C41F9C1768DAC9614C2AAC1CB1",
     "installerHashes": [
-      "B4EFDC14054E1E32DE998D4C216BF598C3F84FEF59B3D41966C19E2600B845A9",
-      "8A02990C590843DB33525328C006BC2B573CF6B97DB0EDF8653824400DB873D7"
+      "B22AB683C98113771BA3BEAD32193DA7FFD0FD5CC4442D364DC9FB1DD9B1C47F",
+      "A5305DBF967854E904C325FB804BAD099327658F0B42D7826FE06A57AD7DA2A6"
     ],
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "validationCount": 1
   },
   "PocketSync.PocketSync": {
     "installerHashes": [
@@ -9207,17 +9203,17 @@
     ]
   },
   "yt-dlp.yt-dlp.nightly": {
-    "lastUpdated": "2026-08-22T04:43:28.9787247Z",
-    "manifestHash": "6D9C7342D52D2058C53924EF7C9EAAE1803452D9E67FEDAEDA377DB2F84EF3BD",
-    "installerHashes": [
-      "C08A1816DB89277182332F65D30A216B8451B4E77BB68F5C33E7F4525A3B045D",
-      "1F9A9F1F99BFAB0BB106F323A05C0ACAEAC501970FABEB18B1324C9942FFC263",
-      "E6243A334EB4688DFF86FB64B3DA0843D28227BDAACF23B44746A9FC468907D6"
-    ],
-    "validationCount": 1,
+    "lastUpdated": "2026-08-26T17:03:52.126372Z",
+    "version": "2026.08.25.233329",
+    "state": "VALIDATION_PASSED",
     "description": "",
-    "version": "2026.08.20.234504",
-    "state": "VALIDATION_PASSED"
+    "manifestHash": "4108C7C46146D07C55C727325B1DD06C06138E12113DA295C7A1837779196181",
+    "installerHashes": [
+      "DD444D2F91E717F32605741496B34A223AB695252012D5865378836C0A12F1CC",
+      "05D3BD5D2AE149256EBF9F2840B5A8DAF6E6F1A2F9A346EB60E1FD906BA06BA8",
+      "3E1ED74D4FA055319FC3504A5440A378018052B9E5CA23F1298EFBFBA278387F"
+    ],
+    "validationCount": 1
   },
   "Yubico.Authenticator": {
     "installerHashes": [
