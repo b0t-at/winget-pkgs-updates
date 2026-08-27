@@ -17,11 +17,7 @@
     "manifestHash": "BD1471352F3242F1A0BA7B50AD9389DC7202FFC8BC86070A9C908E16A1132F5A",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "4.4.1.0",
-    "openPr": {
-      "checkedAt": "2026-08-26T16:36:51.0751639Z",
-      "version": "4.4.1.0"
-    }
+    "version": "4.4.1.0"
   },
   "ABowlOfEleven.hopscout": {
     "manifestHash": "1F3AE2A47F29CCDE4BDE142A406D060AE04B93D9EE44F9F9F28DB6D583CF4D25",
@@ -7768,7 +7764,11 @@
     "installerHashes": [
       "78E0F3F69CD064D8D0DE340CD51C34286E335BA5347BE580F6EE8E6BD0CAC35C"
     ],
-    "validationCount": 1
+    "validationCount": 1,
+    "openPr": {
+      "version": "1.162.4",
+      "checkedAt": "2026-08-27T15:57:05.492352Z"
+    }
   },
   "str4d.rage": {
     "state": "VALIDATION_PASSED",
