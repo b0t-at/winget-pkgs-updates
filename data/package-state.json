@@ -3648,7 +3648,11 @@
     "validationCount": 1,
     "description": "",
     "lastUpdated": "2026-06-04T22:15:30.5734589Z",
-    "manifestHash": "06EA63CBA95A079A2638DFF25282D03EB7E6B1FD2E589F9F80A37CDBF09C37BB"
+    "manifestHash": "06EA63CBA95A079A2638DFF25282D03EB7E6B1FD2E589F9F80A37CDBF09C37BB",
+    "openPr": {
+      "checkedAt": "2026-08-27T23:15:59.9115797Z",
+      "version": "1.30.4"
+    }
   },
   "IvanIsCoding.celq": {
     "description": "",
