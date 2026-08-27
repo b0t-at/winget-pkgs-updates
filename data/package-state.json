@@ -4134,8 +4134,8 @@
     "description": "",
     "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D",
     "openPr": {
-      "version": "4.4.3",
-      "checkedAt": "2026-08-26T00:25:42.7510824Z"
+      "checkedAt": "2026-08-27T01:59:14.2751256Z",
+      "version": "4.4.3"
     }
   },
   "kmiya-culti.RLogin": {
@@ -5680,11 +5680,7 @@
       "526E47DB7C295D017E9514DF5BB20C6F32B3D1170F2C8BB9C59B53185F5BD6FF"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "openPr": {
-      "checkedAt": "2026-08-26T04:22:21.2198647Z",
-      "version": "0.33.0"
-    }
+    "validationCount": 1
   },
   "Ombrelin.PandocGui": {
     "configHealth": {
@@ -8672,7 +8668,11 @@
     ],
     "manifestHash": "96AF3299C2275A4EEAD22995191692CF329A2389AC39D8862E3EFAAA08C154C3",
     "version": "1.20.0",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "checkedAt": "2026-08-27T02:00:15.0993146Z",
+      "version": "1.20.0"
+    }
   },
   "VoiceWave.LocalCore": {
     "installerHashes": [
