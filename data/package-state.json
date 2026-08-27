@@ -112,7 +112,7 @@
     "manifestHash": "88FF875B5DEA51BC3B743F06098AADAF42AB87DA966E19E5EFA189C21F4EC081",
     "version": "0.107.78",
     "openPr": {
-      "checkedAt": "2026-08-26T16:35:44.9943405Z",
+      "checkedAt": "2026-08-27T19:40:25.9538807Z",
       "version": "0.107.79"
     }
   },
@@ -2957,7 +2957,7 @@
     "manifestHash": "AF845B6B4A27BEFC93F53DE38287768CF00C46CDDBA1CA71D9E06D0907339F56",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-08-26T16:35:49.9264897Z",
+      "checkedAt": "2026-08-27T19:40:31.3405066Z",
       "version": "2.13.1"
     }
   },
