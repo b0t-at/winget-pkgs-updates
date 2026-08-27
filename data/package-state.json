@@ -516,15 +516,15 @@
     "state": "VALIDATION_PASSED"
   },
   "argoproj.argocd": {
+    "manifestHash": "7D20EA803B90374BEFEFE0218A9A3D4B7AF79621B425EF3C321E24FED894AF03",
+    "version": "3.5.2",
+    "description": "",
     "installerHashes": [
-      "F7DC9289A43BE9F1AB8FAE0CA89F67D05069B73DFEA5BCC8C5C86CF7433A3166"
+      "B9AE7274C180BDD6F61D7251DCCAD7C5E50B62873F4CB0813BBB482CF7D909F1"
     ],
-    "state": "VALIDATION_PASSED",
-    "version": "3.5.1",
-    "manifestHash": "988100A48DBF8F6150AA84EFEF798B627E6AF9A570337964AF8E3B17F8AD4977",
+    "lastUpdated": "2026-08-27T23:45:19.669617Z",
     "validationCount": 1,
-    "lastUpdated": "2026-08-14T09:49:55.9514681Z",
-    "description": ""
+    "state": "VALIDATION_PASSED"
   },
   "Aries-Sciences-LLC.AI-Chess": {
     "configHealth": {
@@ -2400,15 +2400,15 @@
     "version": "18.2.0"
   },
   "Fangyuan025.Chaty": {
+    "manifestHash": "E12ED0D5DCE2090ED3B77E2788E5ADD2AA9D0368BF6EF94EF3BDF2825480024E",
+    "version": "2.1.3",
     "description": "",
-    "version": "2.1.2",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
     "installerHashes": [
-      "F2CA8975B9FAD0F19485148783E976C97C68AC47D643236EB476A2D8492EB03B"
+      "A4F64094B07865870BBBEEE38A85704A9FCD88E0FEB5956ED989155844B937F7"
     ],
-    "lastUpdated": "2026-08-23T08:49:22.6817485Z",
-    "manifestHash": "DFA3EA368228ACE28F5108B314A3F0259BC84A42E5C60DD6B6058AB905CE3069"
+    "lastUpdated": "2026-08-27T23:45:19.4516545Z",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
   },
   "Feho.LogNav": {
     "installerHashes": [
@@ -5567,12 +5567,12 @@
   "nu774.qaac": {
     "manifestHash": "08A9DAF291086C790999D4FBC7524B3CC219EBF22297AD06376A0E7491FA8273",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "8A4A589E49880C921E846110632F499DFECE34864621450C959085DC0BF324B6"
     ],
     "version": "3.5",
-    "lastUpdated": "2026-08-25T16:48:54.1511339Z",
+    "lastUpdated": "2026-08-27T23:45:19.5355466Z",
     "description": ""
   },
   "nvisionative.nvQuickSite": {
@@ -5992,15 +5992,15 @@
     "manifestHash": "DAAE262DDBCA8045BA820F7EC06C74045EEB133E258FE2A3F673A0B772EE98C5"
   },
   "openwong2kim.wmux": {
-    "installerHashes": [
-      "BB182B87C63403D68E8C61F306CC9AD1D969848E724DFCCE08DA3421A4D22E57"
-    ],
+    "manifestHash": "E0E600EFE828BD8558340577B9C7818308954A646F46FA01DD5794344DC2CDA5",
+    "version": "3.48.1",
     "description": "",
+    "installerHashes": [
+      "640A91A344401164BDF0F32408DDF8ECE2753889AA8AFA6781894CEA823B5839"
+    ],
+    "lastUpdated": "2026-08-27T23:45:19.5933085Z",
     "validationCount": 1,
-    "version": "3.46.0",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-23T20:39:20.302242Z",
-    "manifestHash": "D11E2723281F79F6A1CEB2CC7B87CF9866406EE33475841DE5689FCFE49E4DCB"
+    "state": "VALIDATION_PASSED"
   },
   "openwong2kim.wsnap": {
     "installerHashes": [
@@ -6793,15 +6793,15 @@
     "description": ""
   },
   "rizukirr.apic": {
-    "installerHashes": [
-      "DEF171B59C7A0E3A58A58FF548A749CDB432E273969CFC7EEB7F57F569D09BEA"
-    ],
-    "lastUpdated": "2026-08-25T20:45:21.6334831Z",
-    "validationCount": 1,
-    "version": "0.5.0",
-    "state": "VALIDATION_PASSED",
+    "manifestHash": "89FF9F0F91CBDD7B964E810A7DD935AA252A41BA11B837A85AED18B868311A2C",
+    "version": "0.5.1",
     "description": "",
-    "manifestHash": "39237A6D751D1664FF220D3572B32053F53DC163F14EBF94CAB1182090C11C64"
+    "installerHashes": [
+      "F167388B57354640845343195375C68118753ECACA2F6FF398EEB83D2210EAAD"
+    ],
+    "lastUpdated": "2026-08-27T23:45:19.695586Z",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
   },
   "rizukirr.apic-gui": {
     "manifestHash": "4FE8968ED357FC8ECDA61513F8AB0A63E5433D9847EE4DFEFFC8B9FE9A75DE25",
@@ -7485,14 +7485,14 @@
     "lastUpdated": "2026-08-21T17:17:40.1468046Z"
   },
   "Snyk.Snyk": {
-    "lastUpdated": "2026-08-13T18:32:17.4726515Z",
-    "validationCount": 1,
-    "manifestHash": "2C3D3725C89409071624953C281001E9746BE861B12A9F7335AADB2C1786E228",
-    "installerHashes": [
-      "45E0A8F6F451B471E86E7D94ED9622E53B66F92B7E2BCC1A0680D3306F256296"
-    ],
-    "version": "1.1306.4",
+    "manifestHash": "2B090B3D9A7A4A3B29C17AA33C256DAE8727A45198402E2C57A352D9D2FBAC8F",
+    "version": "1.1307.0",
     "description": "",
+    "installerHashes": [
+      "C8A3C1BF841F1C81E9FD01F0DA275492F8BC3002EFE44B84CFB69E095B3A4AD7"
+    ],
+    "lastUpdated": "2026-08-27T23:45:19.5622262Z",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED"
   },
   "soldforaloss.DevHUD": {
@@ -7549,15 +7549,15 @@
     "version": "2.4.0"
   },
   "SparkLabs.openvpn-configuration-generator": {
+    "manifestHash": "6E0DD9662A379DE4317FA6E7F4A4CBC93A8E1EED8B98A7A90F7BE0AD8FF1725B",
+    "version": "2.0.3",
     "description": "",
-    "validationCount": 3,
-    "state": "VALIDATION_FAILED",
-    "version": "2.0.2",
-    "manifestHash": "8BA24056BFE4690EB9A794FE281B4C284AC3168C09D33EF3127FFEFB4F8FAF55",
-    "lastUpdated": "2026-07-03T17:06:34.5013312Z",
     "installerHashes": [
-      "E416F0153DA04A3C3534F9326C0AE1B9FFDA7997E2D7FC084B04268123329850"
-    ]
+      "A03B0214FCB5360C37DD80D271C3B663DB5CB4D03D819BA4F98FE2A1173AEF5C"
+    ],
+    "lastUpdated": "2026-08-27T23:45:19.6190776Z",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
   },
   "sparrowwallet.sparrow": {
     "state": "VALIDATION_PASSED",
@@ -8431,16 +8431,16 @@
     ]
   },
   "Tyrrrz.DiscordChatExporter.GUI": {
-    "validationCount": 1,
-    "lastUpdated": "2026-06-29T14:16:32.1929887Z",
-    "version": "2.47.3",
+    "manifestHash": "556E14C96F873C491A947B94C47837EAB5CB1E51EAB31EA560EF3528B3282DE3",
+    "version": "2.48",
     "description": "",
     "installerHashes": [
-      "2ACA37848A122EAB3E6FF4031705B432DDCD39A40FD30E2F6FF4BF2020129BAA",
-      "D9A9E908E693F80C4A49D845BBDE3481F788E9749DA0E54E231BEE3268A86EEE",
-      "0386CF2C97DF59BAC54890F4631069F40E750517097864E09E683B02C7C2AE1C"
+      "7EC491CA0E8772AA9D0536C4D6A2F9C59D4B9AB99C8D328062A1974D25DA803C",
+      "8952EC09078964220B24B23485FDCB1D2B1975D0BBCFCCF8775AFFAD12C42C89",
+      "88843C079159189AABBCBAB8EF198E11FF61CD41499E841FE05D102B6240C245"
     ],
-    "manifestHash": "45D8D6D160EA335BAFC0229013E2B5025B548045FACA2B8615F9192A13D4FC68",
+    "lastUpdated": "2026-08-27T23:45:19.6494217Z",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED"
   },
   "Tyrrrz.LightBulb": {
