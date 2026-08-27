@@ -1280,14 +1280,14 @@
   },
   "CCGnomes.VaultFlasher": {
     "validationCount": 1,
-    "lastUpdated": "2026-08-25T04:55:28.4930093Z",
+    "version": "0.7.7",
+    "lastUpdated": "2026-08-27T02:25:42.6887893Z",
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "75AB43DF8C268683C7F11F169EF3028AD68367CBA569E7C6A435E1B8DE22FF30"
-    ],
     "description": "",
-    "version": "0.7.5",
-    "manifestHash": "981BA0FE5764523FA2A21AB131F54793BC88D9F97BFDC6575DC67491DC43986F"
+    "manifestHash": "A3D676E7F7F7DEFEEB44964A4B8C8FAB5107D2262B9CAF8A102433FF70273213",
+    "installerHashes": [
+      "FD6B8E2D311E208C223C6B61236DB9386A84EF1031A269203E6040C6BD61F1E3"
+    ]
   },
   "Celerp.Celerp": {
     "lastUpdated": "2026-08-26T08:46:14.973447Z",
@@ -2445,15 +2445,15 @@
     "lastUpdated": "2026-08-19T15:56:01.4740262Z"
   },
   "Filamental.Filamental": {
-    "installerHashes": [
-      "90C8D383395882D12B0A4942A6E9B46EDD057C528996C751D1F91835EFC4481E"
-    ],
-    "lastUpdated": "2026-08-25T20:45:21.5847619Z",
     "validationCount": 1,
-    "version": "0.3.35",
+    "version": "0.3.36",
+    "lastUpdated": "2026-08-27T02:25:42.6641871Z",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "C25158DE6E3D36033944F08D794FE95A829E8D0768DCDDED139B71EF9CDB5EC7"
+    "manifestHash": "1ACCD02ACD024EBC5C2D161EB8738CEC4894BA588925A4C3AD59054F40FCDEEF",
+    "installerHashes": [
+      "3027C67664FB7DC21471A48194D0D10AFC8C846890D76FFFE490D960732FF275"
+    ]
   },
   "FirenzeLor.gemini-collector": {
     "validationCount": 1,
@@ -2688,6 +2688,17 @@
     "description": "",
     "version": "1.95",
     "state": "VALIDATION_PASSED"
+  },
+  "GameshowPro.BgRaster": {
+    "validationCount": 1,
+    "version": "1.1.9",
+    "lastUpdated": "2026-08-27T02:25:42.7123122Z",
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "manifestHash": "AF971048E88E2070C88B84768A502A3604D0DAD9A1D0CB33F11175B12EEE22B6",
+    "installerHashes": [
+      "3CC09196C11EB878CD7C927C2CBE2BD78E03A1CF85728D83DAC634CF1D03506D"
+    ]
   },
   "Gardener.gardenctl": {
     "state": "VALIDATION_FAILED",
@@ -7636,15 +7647,15 @@
     "validationCount": 1
   },
   "StacksLabs.Clarinet": {
-    "lastUpdated": "2026-08-18T01:43:26.2753949Z",
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "3DE6E6586FEDCC6DE25F6F2BEC9EA49230ED0775B1AA2EAEE381F60A314A517E"
-    ],
-    "description": "",
-    "manifestHash": "36F11CD9380B10D6E1B414F504831687AF07F2ED3AD202640CF0F7B07CD241ED",
     "validationCount": 1,
-    "version": "3.23.1"
+    "version": "3.23.2",
+    "lastUpdated": "2026-08-27T02:25:42.598943Z",
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "manifestHash": "6F8E6F89DEC99E0AA8AD505AC87BD1534B6F2E0C0023A2B25323A3A437CED548",
+    "installerHashes": [
+      "1CB9EE0B54E7F0A208B9F7E2160D6671C092F423B301A0EB619DE4B48F075C58"
+    ]
   },
   "stakpak.agent": {
     "description": "",
