@@ -2397,7 +2397,11 @@
     "validationCount": 1,
     "version": "19.0.0",
     "lastUpdated": "2026-08-28T04:01:09.6136803Z",
-    "description": ""
+    "description": "",
+    "openPr": {
+      "checkedAt": "2026-08-28T06:45:31.2389435Z",
+      "version": "19.0.0"
+    }
   },
   "Fangyuan025.Chaty": {
     "manifestHash": "E12ED0D5DCE2090ED3B77E2788E5ADD2AA9D0368BF6EF94EF3BDF2825480024E",
@@ -3802,8 +3806,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.8.14",
-      "checkedAt": "2026-08-27T06:18:36.6743469Z"
+      "checkedAt": "2026-08-28T06:45:34.6960498Z",
+      "version": "2026.8.14"
     }
   },
   "jeffaristi92.Sweeft": {
