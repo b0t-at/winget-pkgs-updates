@@ -424,14 +424,14 @@
     "state": "VALIDATION_PASSED"
   },
   "AppFlowy.AppFlowy": {
+    "version": "0.14.0",
     "installerHashes": [
-      "56719B46CDA2A68A60B0A64B496DC2CF157B404A73B2FE378895E0F20C00C3DD"
+      "48B5E2CFFCBDB1730B6EB78AE15CBC5285C7197F79BF5704BC5D18B49ADE9702"
     ],
     "state": "VALIDATION_PASSED",
-    "version": "0.13.2",
-    "manifestHash": "EE4DBBC57DE73AFC8B5ECFADE8605692F87F4070393455978C8E681090EFC6AF",
     "validationCount": 1,
-    "lastUpdated": "2026-08-14T09:49:55.8876519Z",
+    "manifestHash": "1BEB29E316644EC524AEA9B9D693460C2E0746B983338DC2F19E618A6721591E",
+    "lastUpdated": "2026-08-28T16:40:58.6069828Z",
     "description": ""
   },
   "AppiumDevelopers.AppiumInspector": {
@@ -5981,15 +5981,15 @@
     }
   },
   "OpenWhispr.OpenWhispr": {
-    "description": "",
+    "version": "1.9.1",
     "installerHashes": [
-      "11BACA44EAD34EBA3A7A4367BB5A136DBAF8E82474C29D3BFB274FAA22D0727E"
+      "A0EC663603B8A36FD8E9332EBE3B2F967045DC015F2153DAB67C9A232600C5C7"
     ],
-    "lastUpdated": "2026-08-27T12:10:02.2454073Z",
     "state": "VALIDATION_PASSED",
-    "version": "1.9.0",
-    "validationCount": 2,
-    "manifestHash": "DAAE262DDBCA8045BA820F7EC06C74045EEB133E258FE2A3F673A0B772EE98C5"
+    "validationCount": 1,
+    "manifestHash": "04FD0FB7E977B0564D1698836153628C7B8A335B07D80E7D3958AFC1BA7A5996",
+    "lastUpdated": "2026-08-28T16:40:58.658143Z",
+    "description": ""
   },
   "openwong2kim.wmux": {
     "manifestHash": "E0E600EFE828BD8558340577B9C7818308954A646F46FA01DD5794344DC2CDA5",
