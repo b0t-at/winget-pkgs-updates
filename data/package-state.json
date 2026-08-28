@@ -524,7 +524,11 @@
     ],
     "lastUpdated": "2026-08-27T23:45:19.669617Z",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "version": "3.5.2",
+      "checkedAt": "2026-08-28T03:23:15.3117613Z"
+    }
   },
   "Aries-Sciences-LLC.AI-Chess": {
     "configHealth": {
@@ -2102,11 +2106,7 @@
     ],
     "description": "",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "3EAB1E5A6E607AC40A8D48C149D5E5B2207604A2D465245704CB6FD111942437",
-    "openPr": {
-      "version": "5.3.0",
-      "checkedAt": "2026-08-22T00:24:04.9969824Z"
-    }
+    "manifestHash": "3EAB1E5A6E607AC40A8D48C149D5E5B2207604A2D465245704CB6FD111942437"
   },
   "Ellosoft.AWSCredentialsManager": {
     "lastUpdated": "2026-08-19T17:46:49.9916688Z",
@@ -2955,11 +2955,7 @@
     "lastUpdated": "2026-08-21T09:07:38.3833158Z",
     "validationCount": 1,
     "manifestHash": "AF845B6B4A27BEFC93F53DE38287768CF00C46CDDBA1CA71D9E06D0907339F56",
-    "description": "",
-    "openPr": {
-      "checkedAt": "2026-08-27T19:40:31.3405066Z",
-      "version": "2.13.1"
-    }
+    "description": ""
   },
   "Google.ContainerTools.Skaffold": {
     "version": "2.24.0",
@@ -7557,7 +7553,11 @@
     ],
     "lastUpdated": "2026-08-27T23:45:19.6190776Z",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "version": "2.0.3",
+      "checkedAt": "2026-08-28T03:24:18.2088399Z"
+    }
   },
   "sparrowwallet.sparrow": {
     "state": "VALIDATION_PASSED",
@@ -8441,7 +8441,11 @@
     ],
     "lastUpdated": "2026-08-27T23:45:19.6494217Z",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "version": "2.48",
+      "checkedAt": "2026-08-28T03:24:20.8725428Z"
+    }
   },
   "Tyrrrz.LightBulb": {
     "validationCount": 1,
