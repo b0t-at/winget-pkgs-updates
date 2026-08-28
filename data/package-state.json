@@ -1415,8 +1415,8 @@
     "validationCount": 1,
     "version": "1.0.48275",
     "openPr": {
-      "checkedAt": "2026-08-26T16:35:47.3514083Z",
-      "version": "1.0.48773"
+      "version": "1.0.48894",
+      "checkedAt": "2026-08-28T16:22:22.3547935Z"
     }
   },
   "ciromattia.KCC": {
@@ -7771,7 +7771,7 @@
     "validationCount": 1,
     "openPr": {
       "version": "1.162.4",
-      "checkedAt": "2026-08-27T15:57:05.492352Z"
+      "checkedAt": "2026-08-28T16:23:25.4195314Z"
     }
   },
   "str4d.rage": {
