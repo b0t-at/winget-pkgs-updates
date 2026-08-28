@@ -181,7 +181,9 @@ function ConvertTo-WingetVersionStyle {
             $alignedSegments.Add($normalizedSegment.PadLeft($styleSegment.Length, '0'))
         }
         else {
-            $alignedSegments.Add($normalizedSegment)
+            # Preserve the upstream notation (including leading zeros, e.g. qaac 3.05);
+            # only a zero-padded published style may reshape a segment.
+            $alignedSegments.Add($requestedSegment)
         }
     }
 
