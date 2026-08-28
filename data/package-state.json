@@ -126,8 +126,8 @@
     "lastUpdated": "2026-08-19T17:02:25.8797854Z",
     "manifestHash": "3BD6D6F7B48462CF3A02CF2DC2AFC0881BD072C354168DB528A71B4A35E8E30B",
     "openPr": {
-      "version": "0.84.1",
-      "checkedAt": "2026-08-27T11:36:06.4399345Z"
+      "checkedAt": "2026-08-28T12:03:26.2134216Z",
+      "version": "0.84.1"
     },
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
@@ -1252,8 +1252,8 @@
     ],
     "description": "",
     "openPr": {
-      "version": "1.9.2",
-      "checkedAt": "2026-08-27T11:36:09.9476794Z"
+      "checkedAt": "2026-08-28T12:03:29.8710862Z",
+      "version": "1.9.2"
     }
   },
   "CarthageSoftware.Mago": {
@@ -3006,8 +3006,8 @@
     ],
     "manifestHash": "8A93D198AD57BF64282A1C20A5B26813247BA8F368CBBC5002B3A2AECCF79CDA",
     "openPr": {
-      "version": "2.5.1",
-      "checkedAt": "2026-08-27T11:36:13.1523274Z"
+      "checkedAt": "2026-08-28T12:03:35.250981Z",
+      "version": "2.5.1"
     }
   },
   "Google.Protobuf": {
@@ -5976,8 +5976,8 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "openPr": {
-      "version": "1.12.6",
-      "checkedAt": "2026-08-27T11:36:14.7456741Z"
+      "checkedAt": "2026-08-28T12:04:27.162621Z",
+      "version": "1.12.6"
     }
   },
   "OpenWhispr.OpenWhispr": {
@@ -7175,11 +7175,7 @@
     ],
     "version": "0.264",
     "state": "VALIDATION_FAILED",
-    "manifestHash": "5C9C2B5C8944C616B955A76C17C4544046FB50FED06CE2831032B7D798380292",
-    "openPr": {
-      "version": "0.274",
-      "checkedAt": "2026-08-14T13:07:24.2268824Z"
-    }
+    "manifestHash": "5C9C2B5C8944C616B955A76C17C4544046FB50FED06CE2831032B7D798380292"
   },
   "seerge.g-helper.PreRelease": {
     "description": "",
