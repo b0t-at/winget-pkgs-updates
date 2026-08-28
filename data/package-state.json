@@ -1445,15 +1445,15 @@
     "lastUpdated": "2026-08-23T05:10:59.5192367Z"
   },
   "closeio.Close": {
-    "lastUpdated": "2026-08-20T21:12:49.4833707Z",
-    "manifestHash": "B6D9118D049ABCEE9D5C3042B6CAF132322B86E37E93448F5EA3B1C91138901A",
-    "version": "9.3.0",
-    "validationCount": 1,
     "installerHashes": [
-      "53B420F57D5C0A9CEF8502877C4CD97DBDAA560357BDBED534E20A90FFC67A9F"
+      "3750C2167392EEF311AA7751A83CFE044A8B4F0F62AEE8CE6D6E7A46A0D4850F"
     ],
+    "lastUpdated": "2026-08-28T12:35:05.6387782Z",
+    "version": "9.3.1",
+    "manifestHash": "B481F6625E6341CCCBB1D10888F4B10486AC26479ADFCC4357C4D2A0B4E9B3E6",
     "state": "VALIDATION_PASSED",
-    "description": ""
+    "description": "",
+    "validationCount": 1
   },
   "Cloudreve.Cloudreve": {
     "description": "",
@@ -3253,8 +3253,8 @@
     "lastUpdated": "2026-08-21T17:17:39.833691Z"
   },
   "Hawaii_Beach.TinyNvidiaUpdateChecker": {
-    "validationCount": 3,
-    "lastUpdated": "2026-08-26T12:41:50.9092455Z",
+    "validationCount": 4,
+    "lastUpdated": "2026-08-28T12:35:05.5073988Z",
     "description": "",
     "manifestHash": "40CF1AF78F11E0D59E138ACEA4C305B198C14B462B7068C89E34F964CD8D5912",
     "version": "1.26.0",
@@ -3411,15 +3411,15 @@
     }
   },
   "holland-built.Bloxsmith": {
-    "validationCount": 1,
-    "lastUpdated": "2026-08-23T12:49:18.3236212Z",
-    "description": "",
-    "manifestHash": "066206A50D87B983318BD586D8DE6FF0652ADAA9BFBAA0050E81A5AA15F32754",
-    "version": "3.69.0",
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "A4F8AC836ADCD6B3AB3943A301A8490CCE616820036C4CA4B7C05E231799BBD9"
-    ]
+      "5AF5ACD813469B27DCD5638B8CF4475E16FCDD0D5D8EC6BED33E452CFE4AAF15"
+    ],
+    "lastUpdated": "2026-08-28T12:35:05.5885317Z",
+    "version": "3.70.5",
+    "manifestHash": "68919CEA835FCE70AEA7A3AE5B43AF07404FC5D478201BE77502A9D5B74AE43C",
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "validationCount": 1
   },
   "HongMinhee.Gukhanmun": {
     "manifestHash": "089D5FCFFB565DBC52073976471BB7BB53E1FA33EA888133D45A589919D3AE52",
@@ -4943,16 +4943,16 @@
     "description": ""
   },
   "mikf.gallery-dl.Nightly": {
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-27T16:27:48.2496793Z",
     "installerHashes": [
-      "544A6C42E5AD05D137BF45AC492809EBC0D1FDEADDA2F74736BEDF6FD76E1834",
-      "AD5B95A95D93588C42F65822755DDD32D6785C10F3399886DFB0C41AF3DAAED4"
+      "028D0E40FFB983D82FF788F2554C68861FBD35BEF5599C5E3EE36EE963193260",
+      "F3A669A49ECE12A745AF88B5A418FD278F7F0571273B7FAA9DDB31B5032CE0A6"
     ],
-    "validationCount": 1,
-    "version": "2026.08.27",
+    "lastUpdated": "2026-08-28T12:35:05.6619501Z",
+    "version": "2026.08.28",
+    "manifestHash": "DA18411C924343ADEFFDC255446B81B8F7636E0AFD31BCBE41DD6DF7681E67F5",
+    "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "207594B3A5F7B603D20AAC15430C400B5AD4EE6569C1684F42298BF7AC96C557"
+    "validationCount": 1
   },
   "MilkShift.GoofCord": {
     "state": "VALIDATION_PASSED",
@@ -6026,15 +6026,15 @@
     "version": "1.2"
   },
   "ORASProject.ORAS": {
+    "installerHashes": [
+      "FFDB6AA40267686B5D507DA1F21A57FC502A9A7C86B90C54557D335644C99DBD"
+    ],
+    "lastUpdated": "2026-08-28T12:35:05.6110988Z",
+    "version": "1.3.4",
+    "manifestHash": "08B168F5C268C89D99E5D16862CA7EC10D20889DFB6DC6765C0CE37E532A3B0D",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "installerHashes": [
-      "30CA213A565A450DE33001DAE83053DB53C221E6674C5233DC3406B686657969"
-    ],
-    "validationCount": 1,
-    "version": "1.3.3",
-    "manifestHash": "79D25A622CCF1DD3067DB13CD35FCBAFFA8F587EF90D91B915D8DCDE55335EDD",
-    "lastUpdated": "2026-08-20T09:17:27.4440467Z"
+    "validationCount": 1
   },
   "orbatschow.kontext": {
     "lastUpdated": "2026-08-18T17:25:14.061431Z",
@@ -7680,17 +7680,17 @@
     "version": "0.3.88"
   },
   "SteamDatabase.SteamTokenDumper": {
-    "version": "2025.12.17",
     "installerHashes": [
-      "9F8B7F29CF8425D97F4BF0F3FB14EE750C7DB5C73F4728DAAC807749759F86C7",
-      "8740372621643B8F464AFCCF62912328BCECECBFF6BB1ADE211BD144C2D81E7D",
-      "54B3CCDB8D5FA7149BDF9A4F1817BC39196002F6989EB1D9B33D3A51FE4AC0AB"
+      "4227A36EC120F0A668BCF410167FF39ED1F9845A2B0826759BA0A30706C35F05",
+      "75D448F689E023C7557D7FA97EA4268FF442357BB6285C8734BAFBCED25D5E60",
+      "7555153A898E343F047063659CEEBB75AAB446CD5A76CFB97032CE2494FF754E"
     ],
-    "manifestHash": "2B6FC5056A4385EFEC9C55CA4A3240AB25143BFD06E15F6FF2CDE6D58FB5BE1C",
+    "lastUpdated": "2026-08-28T12:35:05.7143177Z",
+    "version": "2026.8.20",
+    "manifestHash": "3BF7FCF400AB5A3940B59F0EF592B6E96869F2568E91C1542C4F7B463A340F77",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 1,
-    "lastUpdated": "2026-08-16T17:10:10.6924691Z"
+    "validationCount": 1
   },
   "stefanprodan.timoni": {
     "installerHashes": [
@@ -8212,15 +8212,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-27T16:27:48.3643424Z",
     "installerHashes": [
-      "DB38C18B2D2B00846D9CE9F4FBB819B903D6E1F5712BCEEFA8543782A4DDCE3C"
+      "FB2024E4736015C20921A7740CC343325848F59D2285FFBB4860DDED1A9EFDD3"
     ],
-    "validationCount": 1,
-    "version": "2.7.3",
+    "lastUpdated": "2026-08-28T12:35:05.6930706Z",
+    "version": "2.8.1",
+    "manifestHash": "4B2D982A2F2B0306A505312C5DE89519A5BAB28CF466C79936962ED388E580E0",
+    "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "6CB1A1B5545E72368F3CE8914C0BF818AFEDFCB41D58FC5B6C901540104FFA64"
+    "validationCount": 1
   },
   "timminator.VideOCR.CPU": {
     "manifestHash": "CFC267C26B8EF07672651665F457081878373674AA47203E9C0295E1AC077719",
