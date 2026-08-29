@@ -622,7 +622,11 @@
       "9A7EF0E7C5C3EA5B90B4E6D855E2D98D5F7EC8C3F9E26FCCBC194C6A7B01BAF7",
       "C2C3A335948AA0ECAF26BAF22AC77E36993D1A1695B5DB291CB63F66872627F1"
     ],
-    "lastUpdated": "2026-08-28T22:46:20.519755Z"
+    "lastUpdated": "2026-08-28T22:46:20.519755Z",
+    "openPr": {
+      "version": "2.0.0",
+      "checkedAt": "2026-08-29T00:50:20.7705172Z"
+    }
   },
   "AsterPrivacy.AsterMail": {
     "version": "1.4.64",
@@ -2409,11 +2413,7 @@
     "validationCount": 1,
     "version": "19.0.0",
     "lastUpdated": "2026-08-28T04:01:09.6136803Z",
-    "description": "",
-    "openPr": {
-      "checkedAt": "2026-08-28T06:45:31.2389435Z",
-      "version": "19.0.0"
-    }
+    "description": ""
   },
   "Fangyuan025.Chaty": {
     "state": "VALIDATION_PASSED",
