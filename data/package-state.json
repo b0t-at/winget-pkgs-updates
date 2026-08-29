@@ -347,19 +347,15 @@
     "description": ""
   },
   "AndreaBozzo.GitNodes": {
-    "description": "",
-    "manifestHash": "7C0219D4796C1AFF36B84392D8EFE0AB456308B1A6EA1B72243067EBE0F26DA1",
-    "installerHashes": [
-      "7C2C16AB9ACF73ACE78B778A926C5A6B3A7A74A9D95B1AF4CC7296361726262D"
-    ],
+    "manifestHash": "C2038E8DA6EE5A5CC032EE18063EAF89191891F874273E6738DA38241D04B7D0",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-20T01:39:37.3443051Z",
+    "description": "",
     "validationCount": 1,
-    "version": "0.1.1",
-    "openPr": {
-      "checkedAt": "2026-08-20T12:18:08.3695645Z",
-      "version": "0.1.1"
-    }
+    "lastUpdated": "2026-08-29T04:57:37.4283647Z",
+    "installerHashes": [
+      "0ADD202AD72672C684620B819C183FCA6155954ECDDEC3A598C025181199192E"
+    ],
+    "version": "0.2.0"
   },
   "AnInsomniacy.Aria2Next": {
     "version": "2.6.6",
@@ -843,7 +839,7 @@
     }
   },
   "BenModigell.Vibes": {
-    "lastUpdated": "2026-08-28T22:46:20.4652417Z",
+    "lastUpdated": "2026-08-29T04:57:37.333849Z",
     "version": "1.4.5",
     "state": "VALIDATION_PASSED",
     "description": "",
@@ -851,7 +847,7 @@
     "installerHashes": [
       "8BB1BB09C7464E2547FB83115E75CA3395B5AA046B750504AD30C3F048F2B4EE"
     ],
-    "validationCount": 2
+    "validationCount": 3
   },
   "bensadeh.tailspin": {
     "validationCount": 1,
@@ -1539,15 +1535,15 @@
     "manifestHash": "CFF2AF32A1BCF085F76ED908C1D6F6187EED81BCCD0AA29D18476696BBFEE5E5"
   },
   "CosX.ServiceBusExplorerTui": {
-    "version": "0.0.21",
-    "installerHashes": [
-      "6231D8A3D76B4780D2378933EBFBE669891D19ADEB23ECD6F7680943DAC6F4FE"
-    ],
+    "manifestHash": "EF8F2D73677A3D7C98748D39C8E8095BC47150F9004ECADD60DE2FAE4AF291E4",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "lastUpdated": "2026-08-18T09:30:09.2078785Z",
     "validationCount": 1,
-    "manifestHash": "B7C9C62B90715E4570CD1BC938A415D13B031B5CB2CB1299CD37EA226D24C794"
+    "lastUpdated": "2026-08-29T04:57:37.5113155Z",
+    "installerHashes": [
+      "8B73293467CD1227C74772C2E83B605FE137E369E7F3339013BC91257B9603EC"
+    ],
+    "version": "0.0.22"
   },
   "cpvalente.ontime": {
     "manifestHash": "D7B22CAB3EAC0D812F8EE5A9B446A84D363C06716E946D42BB99E753870B862E",
@@ -2810,15 +2806,15 @@
     "lastUpdated": "2026-08-20T09:17:27.5844052Z"
   },
   "GeodeSDK.GeodeCLI": {
-    "installerHashes": [
-      "9913D6688CC1E2524EBEB916EC979F674EFC3FA3FC83AA56189EC8B5CEE244BF"
-    ],
-    "validationCount": 3,
-    "description": "",
+    "manifestHash": "0A387278D170C0DB0746E8D36E601F96BB1C173E80ABDF5C782E697299643801",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "26B9A0790C4F1C992A0A09D5DE73071D5D3CA1E50CCAE924FA1E5DFDC31DB918",
-    "lastUpdated": "2026-07-12T09:25:00.5331525Z",
-    "version": "3.8.0"
+    "description": "",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-29T04:57:37.4522416Z",
+    "installerHashes": [
+      "CE7EAAA6766AE350A33D6CC1371C20644DFC489CD32A6CD33B4D15C673E1C858"
+    ],
+    "version": "3.9.0"
   },
   "getzola.zola": {
     "manifestHash": "2AD0D8502E653E34D70DC1A01F61D1061D3ED1D053F514354B49F5E4D9C22AB7",
@@ -3220,15 +3216,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Happ.Happ": {
-    "installerHashes": [
-      "8F813F37FE2482286EAA01668030A239CDA8BAF639A1DBB8792CD7E13CAE1A9A"
-    ],
-    "validationCount": 1,
+    "manifestHash": "33DB1CF7FF47D75AB959B128D26A8811B8D64B7DF52BB358240E889CB728C0CA",
+    "state": "VALIDATION_PASSED",
     "description": "",
-    "lastUpdated": "2026-08-24T12:52:12.9370914Z",
-    "version": "4.1.1",
-    "manifestHash": "1A384BF6D7CB65307DAA2BB02EA8763A989132EB97B8A23264A9DB8D831BF75A",
-    "state": "VALIDATION_PASSED"
+    "validationCount": 1,
+    "lastUpdated": "2026-08-29T04:57:37.4842089Z",
+    "installerHashes": [
+      "0C585EC29B654109E986C1373D774E00E0A12B46DAE9F69847EC4EDC58F7F7C5"
+    ],
+    "version": "4.1.2"
   },
   "HarjotSinghRana.Reinstate": {
     "description": "",
