@@ -1845,15 +1845,15 @@
     ]
   },
   "Digimezzo.Dopamine.3": {
+    "version": "3.0.10",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
     "description": "",
     "installerHashes": [
-      "194C2EDE2BE4FCCC372BF6B7CF2189BF1C6B6F282A443D0643F655F1C80C451C"
+      "560956E1A04597FEDDCB90908A341227D536177866B35A432F15EC30BECCA009"
     ],
-    "validationCount": 1,
-    "version": "3.0.9",
-    "manifestHash": "288356AD949C6A4A56FA94EF3510C48AD458E18D96501A1E949925428B835A72",
-    "lastUpdated": "2026-08-20T09:17:27.4618848Z"
+    "manifestHash": "65CFBA73C5D707465FDA6ED267DBE85FFEAFFA60583953BAA5EEF5B52903D62C",
+    "lastUpdated": "2026-08-29T12:58:34.0694394Z"
   },
   "DimonSmart.NugetMcpServer": {
     "version": "1.1.9",
@@ -2637,8 +2637,8 @@
     "description": "",
     "manifestHash": "A4B0A2532C22E8509634F1289507E7CE0F5F02F6F5D34B2B8FF796539325C3D6",
     "version": "1.0.14",
-    "lastUpdated": "2026-08-29T01:17:50.026256Z",
-    "validationCount": 4,
+    "lastUpdated": "2026-08-29T12:58:34.151958Z",
+    "validationCount": 5,
     "state": "VALIDATION_PASSED"
   },
   "fselect.fselect": {
@@ -4590,15 +4590,15 @@
     }
   },
   "marcinz606.NegPy": {
-    "description": "",
-    "version": "0.54.0",
+    "version": "0.55.0",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "description": "",
     "installerHashes": [
-      "2D28FAACFEA7FB2F0ECA3C848B3C367DD2E9A4997C200F118B5B17E8E41D4418"
+      "524A454631861703D48D4E28F1F3CEDC1DB0CDA063B269023F431D452F1C205B"
     ],
-    "lastUpdated": "2026-08-23T16:49:52.2345042Z",
-    "manifestHash": "99A27DFC8AFB035E84492CF7DFE12EA7C4AFA49AC12769BFE1FAF87A4AA52C0C"
+    "manifestHash": "8BB362E927CED402F76082658847ED34C9BB94B6AB28F6F3D9EC583C4C29D65B",
+    "lastUpdated": "2026-08-29T12:58:34.208687Z"
   },
   "MarcoHefti.YTVodManager": {
     "manifestHash": "D6B8CC28C195C1925AC443615826FDE9EB33D111F50144DC9CE7DF76A34B98CB",
@@ -5575,15 +5575,15 @@
     "state": "VALIDATION_PASSED"
   },
   "nu774.qaac": {
-    "manifestHash": "08A9DAF291086C790999D4FBC7524B3CC219EBF22297AD06376A0E7491FA8273",
+    "version": "3.05",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "description": "",
     "installerHashes": [
       "8A4A589E49880C921E846110632F499DFECE34864621450C959085DC0BF324B6"
     ],
-    "version": "3.5",
-    "lastUpdated": "2026-08-27T23:45:19.5355466Z",
-    "description": ""
+    "manifestHash": "6A9CF1F99906480D081B80D7DAC0D5F6CF81D48F6080D32398B941B2F5929B7E",
+    "lastUpdated": "2026-08-29T12:58:34.1198705Z"
   },
   "nvisionative.nvQuickSite": {
     "version": "2.5.2",
@@ -5734,9 +5734,9 @@
     ]
   },
   "OmniEdge.OmniEdgeCLI": {
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "2.9.0",
-    "lastUpdated": "2026-08-29T08:57:32.3909747Z",
+    "lastUpdated": "2026-08-29T12:58:34.1799252Z",
     "manifestHash": "4EF7FAC5A97A15A7029D7A163C81BFB1712E0EA59D2DDC951AA45113377E1EA7",
     "installerHashes": [
       "E9B44B428A5D631EE4803799FD3BDF26B443D84060DC30B70E6D15EDAD91513A"
@@ -6002,15 +6002,15 @@
     "description": ""
   },
   "openwong2kim.wmux": {
-    "manifestHash": "E0E600EFE828BD8558340577B9C7818308954A646F46FA01DD5794344DC2CDA5",
-    "version": "3.48.1",
+    "version": "3.49.0",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
     "description": "",
     "installerHashes": [
-      "640A91A344401164BDF0F32408DDF8ECE2753889AA8AFA6781894CEA823B5839"
+      "ECBD6C29FDBFE8F208A22BE19400945958667CA9DB5634A46B76AE811E70ADD3"
     ],
-    "lastUpdated": "2026-08-27T23:45:19.5933085Z",
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "manifestHash": "CB661E998F554D711F0F2BF9BD12B29C6512D9F1CBA9AA4DE8F25F7BF3AFA8B1",
+    "lastUpdated": "2026-08-29T12:58:33.9632008Z"
   },
   "openwong2kim.wsnap": {
     "installerHashes": [
@@ -6562,15 +6562,15 @@
     }
   },
   "QPDF.QPDF": {
+    "version": "12.4.1",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
     "description": "",
     "installerHashes": [
-      "0CDAB89B14CDAE19194FBD45C19A684A360ADBF728F19FC1557C2D58FE5E3658"
+      "59FD63675FBC23787B6D29E0D16EB6F0EA3797920E77E23AF86FC674C3425D0D"
     ],
-    "validationCount": 1,
-    "version": "12.4.0",
-    "manifestHash": "173B548C33BFD1B6854840A27D29B314863BE7385DF9989C5680AC50378CDA5B",
-    "lastUpdated": "2026-08-20T09:17:27.556656Z"
+    "manifestHash": "795815253EA456F37A0F3055A135B7F4C66D7665DEB02695E5EA368FC188F4EB",
+    "lastUpdated": "2026-08-29T12:58:34.0490534Z"
   },
   "Radiantly.Invisiwind": {
     "version": "2.1.0",
@@ -7694,17 +7694,17 @@
     "version": "0.3.88"
   },
   "SteamDatabase.SteamTokenDumper": {
+    "version": "2026.08.20",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "description": "",
     "installerHashes": [
       "4227A36EC120F0A668BCF410167FF39ED1F9845A2B0826759BA0A30706C35F05",
       "75D448F689E023C7557D7FA97EA4268FF442357BB6285C8734BAFBCED25D5E60",
       "7555153A898E343F047063659CEEBB75AAB446CD5A76CFB97032CE2494FF754E"
     ],
-    "lastUpdated": "2026-08-28T12:35:05.7143177Z",
-    "version": "2026.8.20",
-    "manifestHash": "3BF7FCF400AB5A3940B59F0EF592B6E96869F2568E91C1542C4F7B463A340F77",
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "validationCount": 1
+    "manifestHash": "D0F40996829A8E32178E65278C562E61544BB6B62A6C386D1ABAD2497245E108",
+    "lastUpdated": "2026-08-29T12:58:34.0986752Z"
   },
   "stefanprodan.timoni": {
     "installerHashes": [
