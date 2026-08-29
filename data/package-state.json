@@ -3475,7 +3475,11 @@
       "0FC281BEDA104F944FB0E0AEDA91F36DFC4C25716B18E3DD3376FF913081F7E7"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 4
+    "validationCount": 4,
+    "openPr": {
+      "checkedAt": "2026-08-29T08:25:51.899761Z",
+      "version": "26.8.0-0"
+    }
   },
   "houmain.GPUpad": {
     "manifestHash": "A276F3A5641C4E61E8F321E6120CA7A503832350E2E244B58DB14A8DBC062F4F",
@@ -3816,7 +3820,7 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-08-28T06:45:34.6960498Z",
+      "checkedAt": "2026-08-29T08:25:52.2032252Z",
       "version": "2026.8.14"
     }
   },
