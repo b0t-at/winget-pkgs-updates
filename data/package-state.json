@@ -2411,7 +2411,11 @@
     "manifestHash": "DA3E482A5E8BA3B2B83D71D507137B59222AC102AD6ECED00905255F7DC06F81",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "19.0.1"
+    "version": "19.0.1",
+    "openPr": {
+      "checkedAt": "2026-08-29T04:22:35.0788107Z",
+      "version": "19.0.1"
+    }
   },
   "Fangyuan025.Chaty": {
     "state": "VALIDATION_PASSED",
@@ -7181,7 +7185,11 @@
     ],
     "version": "0.264",
     "state": "VALIDATION_FAILED",
-    "manifestHash": "5C9C2B5C8944C616B955A76C17C4544046FB50FED06CE2831032B7D798380292"
+    "manifestHash": "5C9C2B5C8944C616B955A76C17C4544046FB50FED06CE2831032B7D798380292",
+    "openPr": {
+      "checkedAt": "2026-08-29T04:23:35.4791292Z",
+      "version": "0.279"
+    }
   },
   "seerge.g-helper.PreRelease": {
     "description": "",
@@ -7561,8 +7569,8 @@
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "version": "2.0.3",
-      "checkedAt": "2026-08-28T03:24:18.2088399Z"
+      "checkedAt": "2026-08-29T04:23:36.3605159Z",
+      "version": "2.0.3"
     }
   },
   "sparrowwallet.sparrow": {
