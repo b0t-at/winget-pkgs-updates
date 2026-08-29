@@ -839,7 +839,7 @@
     }
   },
   "BenModigell.Vibes": {
-    "lastUpdated": "2026-08-29T04:57:37.333849Z",
+    "lastUpdated": "2026-08-29T17:06:32.6440726Z",
     "version": "1.4.5",
     "state": "VALIDATION_PASSED",
     "description": "",
@@ -847,7 +847,7 @@
     "installerHashes": [
       "8BB1BB09C7464E2547FB83115E75CA3395B5AA046B750504AD30C3F048F2B4EE"
     ],
-    "validationCount": 3
+    "validationCount": 4
   },
   "bensadeh.tailspin": {
     "validationCount": 1,
@@ -1969,15 +1969,15 @@
     "state": "VALIDATION_PASSED"
   },
   "DonutWare.Fladder.Nightly": {
+    "validationCount": 1,
+    "lastUpdated": "2026-08-29T17:06:32.8778377Z",
     "description": "",
     "installerHashes": [
-      "398C3527B5ADB5C7CBA6007FF91374A95C6A88B1267AEC0E2E3EF28C5C65290E"
+      "9E01669FF787497897BEFCCE3ED4D1280DF6A9D892AF7804B07DB366EF4F7038"
     ],
-    "lastUpdated": "2026-08-26T00:54:46.2044112Z",
+    "manifestHash": "BEEFE068A3F741A44F06859711FA9388CA500CFAACC7511B677773796CB84898",
     "state": "VALIDATION_PASSED",
-    "version": "0.11.0",
-    "validationCount": 1,
-    "manifestHash": "A43A87DCA25EF81532BC2EF14D1EDBABFCA42008B4CBAB94AE33A8DFA2849CB6"
+    "version": "0.11.0"
   },
   "dprint.dprint": {
     "version": "0.56.0",
@@ -2637,8 +2637,8 @@
     "description": "",
     "manifestHash": "A4B0A2532C22E8509634F1289507E7CE0F5F02F6F5D34B2B8FF796539325C3D6",
     "version": "1.0.14",
-    "lastUpdated": "2026-08-29T12:58:34.151958Z",
-    "validationCount": 5,
+    "lastUpdated": "2026-08-29T17:06:32.7464536Z",
+    "validationCount": 6,
     "state": "VALIDATION_PASSED"
   },
   "fselect.fselect": {
@@ -2839,16 +2839,16 @@
     "state": "VALIDATION_PASSED"
   },
   "Gildas.Bitbucket-CLI": {
-    "description": "",
-    "manifestHash": "EDB7A5FE7201F2BF98C15F7297FF2737DA239AF1EAB2CD276D2337B210447700",
-    "installerHashes": [
-      "19A5E8FF40EF45283126853BB236599ABE39B2ECD2BBBE108D23C6D3E6132EAC",
-      "66BB530E240EEA548227307248EEAE0A0411AAAA9CEA9ED6BAE2A9570AB7AEEF"
-    ],
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-20T01:39:37.4268757Z",
     "validationCount": 1,
-    "version": "0.18.4"
+    "lastUpdated": "2026-08-29T17:06:32.83047Z",
+    "description": "",
+    "installerHashes": [
+      "CC31931BA3402F477A601725D6E7D7B54015D8CB29AB809D2F954C6D367EB0C6",
+      "CFB9389DB46A7F746FBBD4722C32A198CE270BA91B1DDF97B829BAA3D4FF7F4F"
+    ],
+    "manifestHash": "1DE0BEE97340ACC1E3A68EAA6CB0D0AE0BEC75F462CD9BE8E260A339B2B7E83F",
+    "state": "VALIDATION_PASSED",
+    "version": "0.18.5"
   },
   "GioPalusa.SRTDownloader": {
     "installerHashes": [
@@ -2984,14 +2984,14 @@
   },
   "Google.FirebaseCLI": {
     "validationCount": 1,
-    "lastUpdated": "2026-08-27T06:42:24.820997Z",
-    "installerHashes": [
-      "863865B5CFDF7F1E63C8BF0E436F1BAF08002A4A9DC80066A2207C60072A7054"
-    ],
+    "lastUpdated": "2026-08-29T17:06:32.9282695Z",
     "description": "",
-    "manifestHash": "116D29FA2B17C2B59B8F38FCED393BA57D1F83C182250842BB1CAC8080DC584E",
-    "version": "15.28.1",
-    "state": "VALIDATION_PASSED"
+    "installerHashes": [
+      "2FAA512A8613B93B24560075D1D2936924EE75DB9015B4BAAA6C5A2C4D67575F"
+    ],
+    "manifestHash": "05B31442D2F86C20F3E56586FD7F6B77DF4467AF7B7077349712EF5382171582",
+    "state": "VALIDATION_PASSED",
+    "version": "15.28.2"
   },
   "Google.IAPDesktop": {
     "lastUpdated": "2026-06-30T01:55:05.1221847Z",
@@ -3263,8 +3263,8 @@
     "lastUpdated": "2026-08-21T17:17:39.833691Z"
   },
   "Hawaii_Beach.TinyNvidiaUpdateChecker": {
-    "validationCount": 4,
-    "lastUpdated": "2026-08-28T12:35:05.5073988Z",
+    "validationCount": 5,
+    "lastUpdated": "2026-08-29T17:06:32.7265227Z",
     "description": "",
     "manifestHash": "40CF1AF78F11E0D59E138ACEA4C305B198C14B462B7068C89E34F964CD8D5912",
     "version": "1.26.0",
@@ -5886,14 +5886,14 @@
     "description": ""
   },
   "OpenGeos.GeoLibre": {
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "2.8.0",
     "description": "",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "2FC0D617B0C4A4267890E22AEEEFC11428BF8111150A503372374FF0B1762E12"
     ],
-    "lastUpdated": "2026-08-29T01:17:49.9968138Z",
+    "lastUpdated": "2026-08-29T17:06:32.7736897Z",
     "manifestHash": "CBC2CF6C55018E1C1E3B5C992171F78490C5CFA064B09ABCFA93A24B719A0ABD"
   },
   "OpenHV.OpenHV": {
@@ -6814,15 +6814,15 @@
     "state": "VALIDATION_PASSED"
   },
   "rizukirr.apic-gui": {
-    "manifestHash": "4FE8968ED357FC8ECDA61513F8AB0A63E5433D9847EE4DFEFFC8B9FE9A75DE25",
-    "state": "VALIDATION_PASSED",
     "validationCount": 1,
+    "lastUpdated": "2026-08-29T17:06:32.8982446Z",
+    "description": "",
     "installerHashes": [
-      "411437E918D7E47A08567A10060A01252DD8A3198DAD8A112C5698EEC5D2E6DD"
+      "3C1C234A838BE73EC9D2AE9816E6FA7E89BB5ED98E9B7B573787E1907D6B5D87"
     ],
-    "version": "0.5.0",
-    "lastUpdated": "2026-08-25T16:48:54.0835544Z",
-    "description": ""
+    "manifestHash": "1E86392822FC30BDBC4D49D02098E9F520CE06A82F416C3170A97A4B406E83F5",
+    "state": "VALIDATION_PASSED",
+    "version": "0.5.1"
   },
   "Rnwood.Smtp4dev": {
     "installerHashes": [
@@ -7459,16 +7459,16 @@
     ]
   },
   "sluicesync.sluice": {
+    "validationCount": 1,
+    "lastUpdated": "2026-08-29T17:06:32.8506123Z",
     "description": "",
     "installerHashes": [
-      "07A542897D9095840D6B9D428B36A162F99CA6F600515A416B7F8F0C2AD4B2E9",
-      "DCEBD8CEA77CA66521EBD6F68D49E921CCA019C26AED92933ACE32818588F1D6"
+      "A188C11E06A268BFFFB727A60C0DC5F78714F4D8E342530B58F433EC472FEAD6",
+      "980E288E82FA108DDA205D97D8F315F210D062838C70F9058263F5FCAF537431"
     ],
-    "lastUpdated": "2026-08-28T07:09:40.5005216Z",
-    "version": "0.133.0",
+    "manifestHash": "0B75BE888F6112434C624B5DCEF2BB564365900E357325BA1C469DA725FFFD81",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "manifestHash": "10B33A975905929FDF3F090AB9E0FB97CC5574BDBF4323DAD57996D89C01CAF6"
+    "version": "0.134.0"
   },
   "Snesnopic.Flacoutcpp": {
     "installerHashes": [
@@ -8226,15 +8226,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "installerHashes": [
-      "FB2024E4736015C20921A7740CC343325848F59D2285FFBB4860DDED1A9EFDD3"
-    ],
-    "lastUpdated": "2026-08-28T12:35:05.6930706Z",
-    "version": "2.8.1",
-    "manifestHash": "4B2D982A2F2B0306A505312C5DE89519A5BAB28CF466C79936962ED388E580E0",
-    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-29T17:06:32.7977538Z",
     "description": "",
-    "validationCount": 1
+    "installerHashes": [
+      "8B0D312C4A1AD7F36B821249BB8F77C4BBC6265B9F54E62CDF64D39A43A900CB"
+    ],
+    "manifestHash": "A76C95A1E1E42C1F11C845D4C6E3D8238A2813E19A9A59CDE5AFE269AB1CCC53",
+    "state": "VALIDATION_PASSED",
+    "version": "2.9.6"
   },
   "timminator.VideOCR.CPU": {
     "manifestHash": "CFC267C26B8EF07672651665F457081878373674AA47203E9C0295E1AC077719",
