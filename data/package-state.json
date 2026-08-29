@@ -1306,15 +1306,15 @@
     ]
   },
   "Celerp.Celerp": {
-    "lastUpdated": "2026-08-26T08:46:14.973447Z",
-    "version": "2.3.1",
-    "installerHashes": [
-      "648F2AD63B294C3B4DC86FFB0D162C762FFE53788AD7E0D94C9D577A08A365F1"
-    ],
     "validationCount": 1,
+    "version": "2.3.2",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "3AFD88F384EF0CD0BE561250D621638629F9C2CBD052F0AF44D130F609262F15"
+    "installerHashes": [
+      "22671C5396FE8757395C14CBC9BFC40A09379383B64B27881D7726E51EDB034B"
+    ],
+    "lastUpdated": "2026-08-29T01:17:49.9762531Z",
+    "manifestHash": "3670ABDE7A02D169B4F117A73FC7DD3C9FB8D84C09940946C0114986CFC11C17"
   },
   "CerberAuth.jwtop": {
     "manifestHash": "F354F442DCD1DD03AA6E4753B525D4BCB1352F2462035ED59880F82A2632EDF0",
@@ -2405,15 +2405,13 @@
     "manifestHash": "2FA3C99A6E935DFE3F000C74CF1FF6E1B82E2F8CBAD67D5AFB6E3C9BDB9FE935"
   },
   "fairdataihub.SODA-for-SPARC": {
-    "manifestHash": "A337D5D764DFD27A3F853C95189135FB3AA0439B2FE84E66421FD2B44B28A0AE",
+    "description": "",
+    "installerHashes": "15EACB58A1DF5879D3A589EF07C862578C911EE44CBAC71DEBE3FED28CCE481C",
+    "lastUpdated": "2026-08-29T01:17:49.8924512Z",
+    "manifestHash": "DA3E482A5E8BA3B2B83D71D507137B59222AC102AD6ECED00905255F7DC06F81",
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "85688DD229E776AE2A89F28767D9039278339A59F0FA2AEE40FA08C3B8E62497"
-    ],
     "validationCount": 1,
-    "version": "19.0.0",
-    "lastUpdated": "2026-08-28T04:01:09.6136803Z",
-    "description": ""
+    "version": "19.0.1"
   },
   "Fangyuan025.Chaty": {
     "state": "VALIDATION_PASSED",
@@ -2639,8 +2637,8 @@
     "description": "",
     "manifestHash": "A4B0A2532C22E8509634F1289507E7CE0F5F02F6F5D34B2B8FF796539325C3D6",
     "version": "1.0.14",
-    "lastUpdated": "2026-08-26T21:23:48.2582007Z",
-    "validationCount": 3,
+    "lastUpdated": "2026-08-29T01:17:50.026256Z",
+    "validationCount": 4,
     "state": "VALIDATION_PASSED"
   },
   "fselect.fselect": {
@@ -5885,14 +5883,14 @@
   },
   "OpenGeos.GeoLibre": {
     "validationCount": 1,
-    "version": "2.7.0",
-    "lastUpdated": "2026-08-24T20:51:39.475196Z",
-    "manifestHash": "7D7A1681E3780E9B2EC955B28A265CC54202B3A90B3C794659A091D0AF0C0E52",
-    "installerHashes": [
-      "7CEB4F139A0B3159C8A3950C9198BF0B3B73E1566C4A1D3F3B6E359B1CE60663"
-    ],
+    "version": "2.8.0",
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "2FC0D617B0C4A4267890E22AEEEFC11428BF8111150A503372374FF0B1762E12"
+    ],
+    "lastUpdated": "2026-08-29T01:17:49.9968138Z",
+    "manifestHash": "CBC2CF6C55018E1C1E3B5C992171F78490C5CFA064B09ABCFA93A24B719A0ABD"
   },
   "OpenHV.OpenHV": {
     "description": "",
@@ -9221,9 +9219,9 @@
     "manifestHash": "6A00440D4BA21CA1C1827B8CB627FBBB6E8127A5445CA512F6A6AA322471B2E6",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "lastUpdated": "2026-08-24T16:43:31.8594347Z",
+    "lastUpdated": "2026-08-29T01:17:50.0587189Z",
     "version": "0.3.4",
-    "validationCount": 1
+    "validationCount": 2
   },
   "YongcanYang.GameCheatsManager": {
     "lastUpdated": "2026-08-18T01:43:26.3622361Z",
