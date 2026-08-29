@@ -262,8 +262,8 @@
     "lastUpdated": "2026-08-20T16:48:27.9600489Z",
     "version": "3.1",
     "openPr": {
-      "version": "3.1",
-      "checkedAt": "2026-08-26T08:25:01.2016561Z"
+      "checkedAt": "2026-08-29T16:21:40.3847955Z",
+      "version": "3.1"
     }
   },
   "Alochi.Monitoring": {
@@ -3494,8 +3494,8 @@
   },
   "houmain.keymapper": {
     "openPr": {
-      "version": "5.7.0",
-      "checkedAt": "2026-08-22T16:12:35.1827317Z"
+      "checkedAt": "2026-08-29T16:20:37.1898386Z",
+      "version": "5.7.2"
     }
   },
   "hrkfdn.ncspot": {
