@@ -214,15 +214,15 @@
     "description": ""
   },
   "alegauss.ClaudeCodeTray": {
-    "state": "VALIDATION_PASSED",
-    "version": "1.7.1",
-    "lastUpdated": "2026-08-19T12:47:12.8690998Z",
+    "manifestHash": "3A5636944E686BB73252D323C67F9E42F31569C60046EE756B3FA2ABFDAFE5A8",
+    "version": "1.7.2",
+    "lastUpdated": "2026-08-30T08:52:12.3523842Z",
     "description": "",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "6BEE63C686C4527D2C76D3AEBFB992762755BEF43E4EDCAAD8C9B0BAA548E9B5"
-    ],
-    "manifestHash": "5D5BBBACDD143FCFD2434ED7FEAE1EC98832150A9490FC6A9268D266E47C0E45",
-    "validationCount": 1
+      "4ECF103CC13CAEA72B79D0C4ED59B12B89E7AEB91FC0CD80CA90730FB3E9BAC3"
+    ]
   },
   "AlekseyHoffman.Sigma-File-Manager": {
     "lastUpdated": "2026-08-18T21:24:38.6686757Z",
@@ -358,16 +358,16 @@
     "version": "0.2.0"
   },
   "AnInsomniacy.Aria2Next": {
-    "version": "2.6.6",
+    "manifestHash": "8438DC1E8744520ECB3739A20F06B0BC940D5378B844DE98ACCB889D2798F9A6",
+    "version": "2.6.8",
+    "lastUpdated": "2026-08-30T08:52:12.3268724Z",
     "description": "",
-    "installerHashes": [
-      "7EB6509CDC12AD7E9D4756EE6E14C1E011734776FC73AD8335FA5EACB0C8B23C",
-      "9918CC0A7A34AE680D4AF6D7689F1A32EAD9D9E9495E260B44C546C3FE394DC6"
-    ],
     "validationCount": 1,
-    "lastUpdated": "2026-08-27T20:02:49.0206588Z",
-    "manifestHash": "E5B732FEDB19D0F905A7F7A3FBE36E07AB4212017FDCEB12F9ACD94B896B4EC5",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "0F933313B79AC338CE2FEC69FCB715B7FF79F02D2DC55EA2A2E650552A201336",
+      "941ED0C9AFAF9518ADA12EF7DD2C9B8704910D85EF1A577E15D2F2B997BF4B00"
+    ]
   },
   "Anki.Anki": {
     "manifestHash": "0D9714050B0D59E7B030281F9DF9D711AF26AFF8475786C412B799325297275B",
@@ -557,8 +557,8 @@
       "07EA980B9C2EA1E8E4D7E7EF9ECD77C9859626B6063E626225B7BEF4352ECAEB",
       "91242F0BAF7D99224E745772B89EADA567A0B0D75025A791FB8EFB8AE614615A"
     ],
-    "lastUpdated": "2026-08-25T20:45:21.6058323Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-08-30T08:52:12.3058481Z",
+    "validationCount": 2,
     "version": "2.0.4",
     "state": "VALIDATION_PASSED",
     "description": "",
@@ -1442,7 +1442,7 @@
     "state": "VALIDATION_FAILED",
     "manifestHash": "E927FF828D7364C91696C566C421154E38A4E37A2B42F2D7CE8AC1A97A34EE2C",
     "description": "",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "0.9.6",
     "installerHashes": [
       "D1BF9C961B9729B947D5F23BA169D1F3D04D23485765EE32D2B221E5168982E2",
@@ -1450,7 +1450,7 @@
       "97001A6E04545C35F3151AB298045CBC93AD3CA25D5411F1A529F9EDC51F4EB9",
       "278A048B40BA532303BADB120B0E8CF1C01490B9F02DA5C2D87A2687EECF871E"
     ],
-    "lastUpdated": "2026-08-28T22:46:20.4227139Z"
+    "lastUpdated": "2026-08-30T08:52:12.1375048Z"
   },
   "closeio.Close": {
     "installerHashes": [
@@ -1534,8 +1534,8 @@
     "manifestHash": "EF8F2D73677A3D7C98748D39C8E8095BC47150F9004ECADD60DE2FAE4AF291E4",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 1,
-    "lastUpdated": "2026-08-29T04:57:37.5113155Z",
+    "validationCount": 2,
+    "lastUpdated": "2026-08-30T08:52:12.226573Z",
     "installerHashes": [
       "8B73293467CD1227C74772C2E83B605FE137E369E7F3339013BC91257B9603EC"
     ],
@@ -6394,15 +6394,15 @@
     "validationCount": 1
   },
   "PocketSync.PocketSync": {
-    "installerHashes": [
-      "F28C3CD0D6946AA8124B15897F306142696270BC21484CE6E5A1F74C0D2A9274"
-    ],
+    "manifestHash": "CC5E6D6A686E4938DC0AD63CA2FCC692D859C4A68A66A9979CA173AF2C8B7DDC",
+    "version": "6.4.0",
+    "lastUpdated": "2026-08-30T08:52:12.1898754Z",
+    "description": "",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "version": "6.3.2",
-    "manifestHash": "4FE03D7CB0D2D05EE33123DFA1785146EBFB67EF3943C4ED15F11F8BD4829B0E",
-    "validationCount": 2,
-    "lastUpdated": "2026-08-14T10:42:15.1053558Z",
-    "description": ""
+    "installerHashes": [
+      "B021946E80AF89780B45264FC60AE6EA1C7E35CCD21706C3B3CDBC5C2B1CAA5D"
+    ]
   },
   "PolyMC.PolyMC": {
     "state": "VALIDATION_PASSED",
@@ -7087,11 +7087,11 @@
   },
   "Scandum.WinTin++": {
     "version": "2.02.61",
-    "lastUpdated": "2026-08-28T04:01:09.6932664Z",
+    "lastUpdated": "2026-08-30T08:52:12.2845872Z",
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "2C9A618908F2C08C9E373327E7A15409C25EEB6AE563F45807A611269A686250",
-    "validationCount": 8,
+    "validationCount": 9,
     "installerHashes": [
       "421A1458080413D5135A7490DC05AC0F4B54F1CAADBFC033214536237420E847"
     ]
@@ -9405,15 +9405,15 @@
     "manifestHash": "BFB9E61856B0AD3E65544E2625E483505D95FB935F61E601D9D1FF0834B9147B"
   },
   "zkSNACKs.WasabiWallet": {
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "7E3D97505F4230E39893578DB628DC5F479394B711DF0FF000F0AF4F1D20DD34",
-    "installerHashes": [
-      "80C5DB8C28589F03CB74D63D6B96A7D6D598C75E29B59D82B41B8204C628F640"
-    ],
+    "manifestHash": "97B1DC746A4E8012599C02E3AAB20BD9748D53D8C8C49AC2197F34AF6B9EEA85",
+    "version": "2.8.2",
+    "lastUpdated": "2026-08-30T08:52:12.2491353Z",
     "description": "",
-    "validationCount": 4,
-    "version": "2.8.1",
-    "lastUpdated": "2026-08-05T07:49:49.2978205Z"
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "901E72797F7C2AF3AE30DB78F4F8D363C9E53879E0EFC308671EE726ADE0A7CA"
+    ]
   },
   "ZPTStudio.02Engine": {
     "state": "VALIDATION_PASSED",
