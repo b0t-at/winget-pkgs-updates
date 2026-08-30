@@ -262,8 +262,8 @@
     "lastUpdated": "2026-08-20T16:48:27.9600489Z",
     "version": "3.1",
     "openPr": {
-      "checkedAt": "2026-08-29T16:21:40.3847955Z",
-      "version": "3.1"
+      "version": "3.1",
+      "checkedAt": "2026-08-30T16:21:53.5467505Z"
     }
   },
   "Alochi.Monitoring": {
@@ -367,7 +367,11 @@
     "installerHashes": [
       "0F933313B79AC338CE2FEC69FCB715B7FF79F02D2DC55EA2A2E650552A201336",
       "941ED0C9AFAF9518ADA12EF7DD2C9B8704910D85EF1A577E15D2F2B997BF4B00"
-    ]
+    ],
+    "openPr": {
+      "version": "2.6.8",
+      "checkedAt": "2026-08-30T16:21:55.2206929Z"
+    }
   },
   "Anki.Anki": {
     "manifestHash": "0D9714050B0D59E7B030281F9DF9D711AF26AFF8475786C412B799325297275B",
@@ -405,7 +409,7 @@
     "state": "VALIDATION_PASSED",
     "openPr": {
       "version": "0.2.2",
-      "checkedAt": "2026-08-25T20:15:21.7460326Z"
+      "checkedAt": "2026-08-30T16:21:55.5917744Z"
     }
   },
   "AntiMicroX.antimicrox": {
