@@ -127,7 +127,7 @@
     "manifestHash": "3BD6D6F7B48462CF3A02CF2DC2AFC0881BD072C354168DB528A71B4A35E8E30B",
     "openPr": {
       "version": "0.84.1",
-      "checkedAt": "2026-08-29T12:27:33.0831266Z"
+      "checkedAt": "2026-08-30T12:28:34.8386767Z"
     },
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
@@ -1261,7 +1261,7 @@
     "description": "",
     "openPr": {
       "version": "1.9.2",
-      "checkedAt": "2026-08-29T12:27:35.0215081Z"
+      "checkedAt": "2026-08-30T12:28:36.7587421Z"
     }
   },
   "CarthageSoftware.Mago": {
@@ -3013,7 +3013,7 @@
     "manifestHash": "8A93D198AD57BF64282A1C20A5B26813247BA8F368CBBC5002B3A2AECCF79CDA",
     "openPr": {
       "version": "2.5.1",
-      "checkedAt": "2026-08-29T12:27:40.6363549Z"
+      "checkedAt": "2026-08-30T12:28:42.4138924Z"
     }
   },
   "Google.Protobuf": {
@@ -5983,7 +5983,7 @@
     "state": "VALIDATION_FAILED",
     "openPr": {
       "version": "1.12.6",
-      "checkedAt": "2026-08-29T12:27:43.1571734Z"
+      "checkedAt": "2026-08-30T12:28:45.4148455Z"
     }
   },
   "OpenWhispr.OpenWhispr": {
@@ -6402,7 +6402,11 @@
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "B021946E80AF89780B45264FC60AE6EA1C7E35CCD21706C3B3CDBC5C2B1CAA5D"
-    ]
+    ],
+    "openPr": {
+      "version": "6.4.0",
+      "checkedAt": "2026-08-30T12:29:36.9558291Z"
+    }
   },
   "PolyMC.PolyMC": {
     "state": "VALIDATION_PASSED",
@@ -9413,7 +9417,11 @@
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "901E72797F7C2AF3AE30DB78F4F8D363C9E53879E0EFC308671EE726ADE0A7CA"
-    ]
+    ],
+    "openPr": {
+      "version": "2.8.2",
+      "checkedAt": "2026-08-30T12:29:43.0616011Z"
+    }
   },
   "ZPTStudio.02Engine": {
     "state": "VALIDATION_PASSED",
