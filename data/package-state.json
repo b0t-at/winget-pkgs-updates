@@ -1291,15 +1291,15 @@
     "description": ""
   },
   "CCGnomes.VaultFlasher": {
-    "validationCount": 2,
-    "version": "0.7.7",
-    "lastUpdated": "2026-08-27T16:27:48.3037445Z",
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "manifestHash": "A3D676E7F7F7DEFEEB44964A4B8C8FAB5107D2262B9CAF8A102433FF70273213",
     "installerHashes": [
-      "FD6B8E2D311E208C223C6B61236DB9386A84EF1031A269203E6040C6BD61F1E3"
-    ]
+      "D60CF09CB5CC33622A4A62F4B2F3793564D7169637DF2E60A86207BAD6F97838"
+    ],
+    "lastUpdated": "2026-08-30T20:55:29.5018449Z",
+    "description": "",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "D29B161F36525D38149F3FE7E209E678F16423C8DAC405CF56B6140569FBD2CD",
+    "version": "0.7.8"
   },
   "Celerp.Celerp": {
     "validationCount": 1,
@@ -3684,15 +3684,15 @@
     }
   },
   "IvanIsCoding.celq": {
-    "description": "",
-    "manifestHash": "DBC8E599A52EE44D59777A9D00A7B4FAAC12834A1B20F37CFF33B043E5109FF7",
     "installerHashes": [
-      "100D577C79611B16D9A46A992135AEFFA5E78E47251C7C19797A4CAD2EB00642"
+      "6661C6E14A52599CB217D5989E8CDF794C25A0B7B0E998349AD874517F092B36"
     ],
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-20T01:39:37.6051493Z",
+    "lastUpdated": "2026-08-30T20:55:29.416237Z",
+    "description": "",
     "validationCount": 1,
-    "version": "0.5.0"
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "25B16B8E6E58A046386E5A12E661662A7919CCE075EA9EB4DBE15B028B9FDD9F",
+    "version": "0.6.0"
   },
   "iWillink.AgentDeck": {
     "validationCount": 1,
@@ -4545,8 +4545,8 @@
     "description": "",
     "manifestHash": "67C6F58F64F691A4A51450225CD7DABC69E9880610A4DF9FCA899E3C2072ADD1",
     "version": "0.5.127",
-    "lastUpdated": "2026-08-23T05:10:59.5820936Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-08-30T20:55:29.5584677Z",
+    "validationCount": 2,
     "state": "VALIDATION_PASSED"
   },
   "machinewrapped.SmartCopy": {
@@ -7114,11 +7114,11 @@
   },
   "Scandum.WinTin++": {
     "version": "2.02.61",
-    "lastUpdated": "2026-08-30T13:08:52.1614253Z",
+    "lastUpdated": "2026-08-30T20:55:29.5218722Z",
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "2C9A618908F2C08C9E373327E7A15409C25EEB6AE563F45807A611269A686250",
-    "validationCount": 10,
+    "validationCount": 11,
     "installerHashes": [
       "421A1458080413D5135A7490DC05AC0F4B54F1CAADBFC033214536237420E847"
     ]
