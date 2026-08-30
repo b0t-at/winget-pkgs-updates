@@ -3816,7 +3816,7 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-08-29T08:25:52.2032252Z",
+      "checkedAt": "2026-08-30T08:26:47.0766091Z",
       "version": "2026.8.14"
     }
   },
@@ -6375,7 +6375,11 @@
     "installerHashes": [
       "2D0203AF85FC6FBB40F786A2671F175E9119A7C6DFCC4F30B1FA17E0F072C301",
       "07244C16AE5C6A38C4C1B24798D4D587F0F5492F603504FD608A5916890EC427"
-    ]
+    ],
+    "openPr": {
+      "checkedAt": "2026-08-30T08:26:49.5899287Z",
+      "version": "11.25.0"
+    }
   },
   "PocketBase.PocketBase": {
     "lastUpdated": "2026-08-26T17:03:52.0479773Z",
