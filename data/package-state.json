@@ -550,8 +550,8 @@
     "manifestHash": "22E09A01B0EC244FEA41B0691EBE65C15B3FC9DE4DBC20A72ECB34CE94626F5F",
     "lastUpdated": "2026-08-24T05:01:37.9292394Z",
     "openPr": {
-      "version": "1.1.1",
-      "checkedAt": "2026-08-25T12:18:29.1568547Z"
+      "checkedAt": "2026-08-30T20:20:54.2264917Z",
+      "version": "1.1.1"
     }
   },
   "armbian.imager": {
@@ -2825,7 +2825,11 @@
     "installerHashes": [
       "CE7EAAA6766AE350A33D6CC1371C20644DFC489CD32A6CD33B4D15C673E1C858"
     ],
-    "version": "3.9.0"
+    "version": "3.9.0",
+    "openPr": {
+      "checkedAt": "2026-08-30T20:19:49.6634666Z",
+      "version": "3.9.0"
+    }
   },
   "getzola.zola": {
     "manifestHash": "2AD0D8502E653E34D70DC1A01F61D1061D3ED1D053F514354B49F5E4D9C22AB7",
@@ -6645,7 +6649,11 @@
     ],
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-08-06T13:08:37.6487059Z",
-    "version": "0.5.15"
+    "version": "0.5.15",
+    "openPr": {
+      "checkedAt": "2026-08-30T20:19:53.7162661Z",
+      "version": "0.5.27"
+    }
   },
   "raskell-io.hx": {
     "version": "0.9.1",
