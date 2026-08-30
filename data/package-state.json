@@ -2405,8 +2405,8 @@
     "validationCount": 1,
     "version": "19.0.1",
     "openPr": {
-      "checkedAt": "2026-08-29T04:22:35.0788107Z",
-      "version": "19.0.1"
+      "version": "19.0.1",
+      "checkedAt": "2026-08-30T04:23:59.3446814Z"
     }
   },
   "Fangyuan025.Chaty": {
@@ -4583,11 +4583,7 @@
     "description": "",
     "validationCount": 1,
     "version": "2.5.0",
-    "lastUpdated": "2026-08-21T17:17:40.0750323Z",
-    "openPr": {
-      "checkedAt": "2026-08-22T08:15:01.950204Z",
-      "version": "2.5.1"
-    }
+    "lastUpdated": "2026-08-21T17:17:40.0750323Z"
   },
   "marcinz606.NegPy": {
     "version": "0.55.0",
@@ -7569,8 +7565,8 @@
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "checkedAt": "2026-08-29T04:23:36.3605159Z",
-      "version": "2.0.3"
+      "version": "2.0.3",
+      "checkedAt": "2026-08-30T04:24:59.727478Z"
     }
   },
   "sparrowwallet.sparrow": {
