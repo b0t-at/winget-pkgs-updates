@@ -113,7 +113,7 @@
     "version": "0.107.78",
     "openPr": {
       "version": "0.107.79",
-      "checkedAt": "2026-08-28T22:01:35.1427101Z"
+      "checkedAt": "2026-08-30T00:59:54.8579028Z"
     }
   },
   "AdGuard.dnsproxy": {
@@ -4382,7 +4382,11 @@
     "lastUpdated": "2026-08-29T20:47:20.136064Z",
     "version": "2026.8.0",
     "validationCount": 1,
-    "manifestHash": "57F8800DB719DDF8C26EB31782E8B1406E5F0B43BFE48FE93D4F3061DC1338D2"
+    "manifestHash": "57F8800DB719DDF8C26EB31782E8B1406E5F0B43BFE48FE93D4F3061DC1338D2",
+    "openPr": {
+      "version": "2026.8.0",
+      "checkedAt": "2026-08-30T01:00:01.3632371Z"
+    }
   },
   "loft-sh.vcluster": {
     "state": "VALIDATION_PASSED",
