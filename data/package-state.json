@@ -19,7 +19,11 @@
       "E752A6C77F7FE33F942A3C890D40218FADE24C47298A1F36B6A489D026ACD88C"
     ],
     "lastUpdated": "2026-08-31T08:56:17.0981073Z",
-    "validationCount": 1
+    "validationCount": 1,
+    "openPr": {
+      "version": "4.4.2.0",
+      "checkedAt": "2026-08-31T12:34:36.2935595Z"
+    }
   },
   "ABowlOfEleven.hopscout": {
     "manifestHash": "1F3AE2A47F29CCDE4BDE142A406D060AE04B93D9EE44F9F9F28DB6D583CF4D25",
@@ -129,7 +133,7 @@
     "manifestHash": "3BD6D6F7B48462CF3A02CF2DC2AFC0881BD072C354168DB528A71B4A35E8E30B",
     "openPr": {
       "version": "0.84.1",
-      "checkedAt": "2026-08-30T12:28:34.8386767Z"
+      "checkedAt": "2026-08-31T12:33:32.5396251Z"
     },
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
@@ -1277,7 +1281,7 @@
     "description": "",
     "openPr": {
       "version": "1.9.2",
-      "checkedAt": "2026-08-30T12:28:36.7587421Z"
+      "checkedAt": "2026-08-31T12:33:33.3217259Z"
     }
   },
   "CarthageSoftware.Mago": {
@@ -2634,7 +2638,11 @@
     "installerHashes": [
       "07D2C4F246BE39BC98ADEA35BC46840A1B6BDBB738CD3171CDDACEBA9A4EC909"
     ],
-    "validationCount": 2
+    "validationCount": 2,
+    "openPr": {
+      "version": "3.18.2",
+      "checkedAt": "2026-08-31T12:33:35.0869719Z"
+    }
   },
   "FrancisBanyikwa.MediaDownloader": {
     "installerHashes": [
@@ -3058,7 +3066,7 @@
     "manifestHash": "8A93D198AD57BF64282A1C20A5B26813247BA8F368CBBC5002B3A2AECCF79CDA",
     "openPr": {
       "version": "2.5.1",
-      "checkedAt": "2026-08-30T12:28:42.4138924Z"
+      "checkedAt": "2026-08-31T12:33:35.3726503Z"
     }
   },
   "Google.Protobuf": {
@@ -3810,11 +3818,7 @@
     ],
     "lastUpdated": "2026-08-06T14:10:17.53352Z",
     "manifestHash": "00C9098961E5E5498B0C0F4CA4A8CE71A1AF1A0F8BE54618097B63AE27F8215F",
-    "version": "7.2.4",
-    "openPr": {
-      "version": "7.2.5",
-      "checkedAt": "2026-08-14T13:07:22.0753292Z"
-    }
+    "version": "7.2.4"
   },
   "jark006.jarkViewer": {
     "lastUpdated": "2026-08-18T01:43:26.4804154Z",
@@ -6042,7 +6046,7 @@
     "state": "VALIDATION_FAILED",
     "openPr": {
       "version": "1.12.6",
-      "checkedAt": "2026-08-30T12:28:45.4148455Z"
+      "checkedAt": "2026-08-31T12:33:37.1981576Z"
     }
   },
   "OpenWhispr.OpenWhispr": {
@@ -6464,7 +6468,7 @@
     ],
     "openPr": {
       "version": "6.4.0",
-      "checkedAt": "2026-08-30T12:29:36.9558291Z"
+      "checkedAt": "2026-08-31T12:33:38.6784618Z"
     }
   },
   "PolyMC.PolyMC": {
@@ -9493,7 +9497,7 @@
     ],
     "openPr": {
       "version": "2.8.2",
-      "checkedAt": "2026-08-30T12:29:43.0616011Z"
+      "checkedAt": "2026-08-31T12:34:36.0102616Z"
     }
   },
   "ZPTStudio.02Engine": {
