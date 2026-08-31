@@ -2591,15 +2591,15 @@
     "state": "VALIDATION_PASSED"
   },
   "ForgeLabsSoft.DriveForge": {
-    "lastUpdated": "2026-08-18T01:43:26.3383227Z",
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "EFBE2F4493AD4F0F4EBFF0726E9ED0B96523203B8C6B551FD307DAE355789F3C"
+      "5CB267C06C9501DE84FBB8F1A41EC0DF62617F92C5A5B9E9CF7349F1DFC61F0C"
     ],
-    "description": "",
-    "manifestHash": "78DFCAEB0A26042213306DF3696B0AD2D4A253FE72C5794FF33895C40AFDF2AA",
+    "manifestHash": "7E6C8BD8151E1E7239A968C3BA9CE9ECD8F105B171BF7CADDBB40CFA9F5E4952",
     "validationCount": 1,
-    "version": "4.3.0"
+    "description": "",
+    "version": "4.3.1",
+    "lastUpdated": "2026-08-31T20:39:22.5825119Z",
+    "state": "VALIDATION_PASSED"
   },
   "Fork.Fork": {
     "description": "",
@@ -4446,13 +4446,13 @@
   },
   "Longbridge.LongbridgeTerminal": {
     "installerHashes": [
-      "96A82D284EB7C65A0A2755D3897ED975E46A8D81EDE291D58499AB12303E32F2"
+      "4B56971452A399E74CBC4E36E079E9E854B1046884E57CF4E9E7FFC6726195B4"
     ],
-    "description": "",
-    "manifestHash": "323289FFF8C2AB6EA5EDDAA11970E284F0749200FD67CB78F11F6C93CEBBCB5A",
-    "version": "0.28.2",
-    "lastUpdated": "2026-08-23T05:10:59.616773Z",
+    "manifestHash": "0281ED4A2AE1F3EF75AB9053FEC878CF0A7F591016C2B1E10A5F134F55935437",
     "validationCount": 1,
+    "description": "",
+    "version": "0.28.4",
+    "lastUpdated": "2026-08-31T20:39:22.5108991Z",
     "state": "VALIDATION_PASSED"
   },
   "LookupFoundation.RevitLookup.2021": {
