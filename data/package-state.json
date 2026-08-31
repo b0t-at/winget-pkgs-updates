@@ -382,7 +382,7 @@
     ],
     "openPr": {
       "version": "2.6.8",
-      "checkedAt": "2026-08-30T16:21:55.2206929Z"
+      "checkedAt": "2026-08-31T16:25:14.302101Z"
     }
   },
   "Anki.Anki": {
@@ -421,7 +421,7 @@
     "state": "VALIDATION_PASSED",
     "openPr": {
       "version": "0.2.2",
-      "checkedAt": "2026-08-30T16:21:55.5917744Z"
+      "checkedAt": "2026-08-31T16:25:14.7729685Z"
     }
   },
   "AntiMicroX.antimicrox": {
@@ -3713,8 +3713,8 @@
     "lastUpdated": "2026-06-04T22:15:30.5734589Z",
     "manifestHash": "06EA63CBA95A079A2638DFF25282D03EB7E6B1FD2E589F9F80A37CDBF09C37BB",
     "openPr": {
-      "checkedAt": "2026-08-27T23:15:59.9115797Z",
-      "version": "1.30.4"
+      "version": "1.31.0",
+      "checkedAt": "2026-08-31T16:24:07.896675Z"
     }
   },
   "IvanIsCoding.celq": {
@@ -3865,8 +3865,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.8.15",
-      "checkedAt": "2026-08-31T01:01:16.3419818Z"
+      "version": "2026.8.16",
+      "checkedAt": "2026-08-31T16:24:09.1793488Z"
     }
   },
   "jeffaristi92.Sweeft": {
