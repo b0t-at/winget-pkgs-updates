@@ -2420,8 +2420,8 @@
     "validationCount": 1,
     "version": "19.0.1",
     "openPr": {
-      "version": "19.0.1",
-      "checkedAt": "2026-08-30T04:23:59.3446814Z"
+      "checkedAt": "2026-08-31T04:27:57.5809592Z",
+      "version": "19.0.1"
     }
   },
   "Fangyuan025.Chaty": {
@@ -5364,8 +5364,8 @@
       "6F82338F77AF50E6B0B5300C01F41369EBF34E629FC9896BDD558E14166D1F73"
     ],
     "openPr": {
-      "checkedAt": "2026-08-18T16:15:24.6387756Z",
-      "version": "1.8.1"
+      "checkedAt": "2026-08-31T04:28:01.5156781Z",
+      "version": "1.9.1"
     }
   },
   "NASS.AvUpload": {
@@ -7596,8 +7596,8 @@
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "version": "2.0.3",
-      "checkedAt": "2026-08-30T04:24:59.727478Z"
+      "checkedAt": "2026-08-31T04:28:05.0164648Z",
+      "version": "2.0.3"
     }
   },
   "sparrowwallet.sparrow": {
