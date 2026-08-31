@@ -591,15 +591,15 @@
     "state": "VALIDATION_PASSED"
   },
   "ASGARDEXMaintainers.ASGARDEX": {
-    "installerHashes": [
-      "DD6C0D2CF5DF5BE7F59B121AC5873405685CFD565D091BAA44E17F4D85446A7E"
-    ],
-    "state": "VALIDATION_PASSED",
-    "version": "1.45.2",
-    "manifestHash": "88795DC9BA1ABD13E84D99A9BDEFD1E5B33CE5B331B1F54DF3838446B43DE824",
+    "description": "",
+    "version": "1.45.3",
+    "manifestHash": "7F6900B0ECD14C529D6AB63FBC844522A8C891D53F599DE42B569B54B3B2F932",
     "validationCount": 1,
-    "lastUpdated": "2026-08-14T09:49:55.857132Z",
-    "description": ""
+    "lastUpdated": "2026-08-31T01:30:48.2171302Z",
+    "installerHashes": [
+      "561D11C1A191A167FCC66030E60A3B260620854BA9C371DFD5E5250E4C3E6031"
+    ],
+    "state": "VALIDATION_PASSED"
   },
   "asheroto.MessagesforWeb": {
     "state": "VALIDATION_PASSED",
@@ -2648,8 +2648,8 @@
     "description": "",
     "manifestHash": "A4B0A2532C22E8509634F1289507E7CE0F5F02F6F5D34B2B8FF796539325C3D6",
     "version": "1.0.14",
-    "lastUpdated": "2026-08-29T17:06:32.7464536Z",
-    "validationCount": 6,
+    "lastUpdated": "2026-08-31T01:30:48.2489385Z",
+    "validationCount": 7,
     "state": "VALIDATION_PASSED"
   },
   "fselect.fselect": {
@@ -3278,8 +3278,8 @@
     "lastUpdated": "2026-08-21T17:17:39.833691Z"
   },
   "Hawaii_Beach.TinyNvidiaUpdateChecker": {
-    "validationCount": 5,
-    "lastUpdated": "2026-08-29T17:06:32.7265227Z",
+    "validationCount": 6,
+    "lastUpdated": "2026-08-31T01:30:48.1942033Z",
     "description": "",
     "manifestHash": "40CF1AF78F11E0D59E138ACEA4C305B198C14B462B7068C89E34F964CD8D5912",
     "version": "1.26.0",
@@ -4969,15 +4969,15 @@
   },
   "mikf.gallery-dl.Nightly": {
     "description": "",
+    "version": "2026.08.31",
+    "manifestHash": "383DE6E017EE86FED639A7B6CD4950402C87828A4AC9C451DD12E849DFDDDE01",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-31T01:30:48.1268523Z",
     "installerHashes": [
-      "014866A35E3347AB994536B5A15E516E24B563802208A58DA915C1A2728C3E3A",
-      "8FB35FA2DB0A9F4F45E75BEC85EF43302AC294D3249F32B9213FA224A6667E39"
+      "D4F4A6E95CF375DB6625B2B0E4442070E354E255ED8C5106341169A1E2674EA5",
+      "95EDE8BE89AC61091B0C2B1C3439E2F10F5411925D0167C355710B9F7F5BA6F9"
     ],
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-30T01:17:08.978899Z",
-    "manifestHash": "5BDBD67CB78FE59D17F3200AAE798C10FC6DC0EEA7111FBFF84C41C6C48910D4",
-    "version": "2026.08.30",
-    "validationCount": 1
+    "state": "VALIDATION_PASSED"
   },
   "MilkShift.GoofCord": {
     "state": "VALIDATION_PASSED",
@@ -6763,15 +6763,15 @@
   },
   "RicardoCabral.icuvisor": {
     "description": "",
-    "installerHashes": [
-      "DFEC398AF3714B1DA886BF2797E433A444E1276E173D0194F87BDF64B7AC804E",
-      "27B6E5D8165170B374DEDCB6D9F8CB6361D970F4C0C7370D903310F301E8598D"
-    ],
-    "lastUpdated": "2026-08-28T07:09:40.4476835Z",
-    "version": "1.6.3",
-    "state": "VALIDATION_PASSED",
+    "version": "1.6.4",
+    "manifestHash": "F60C770D3836F7264CFA0D7BB6A46B5AAF97854959E6C4C2C7E0D53E7690BB8F",
     "validationCount": 1,
-    "manifestHash": "1F843B5EBE981383DECB365CA0E03E8AA419B1EFBAC5F7C3186855EF4B7E2092"
+    "lastUpdated": "2026-08-31T01:30:48.1653831Z",
+    "installerHashes": [
+      "9C0F74D615F98B50C2360AA4BB1E179FBC4B38318EA7D2FD9744922F649DF62F",
+      "4AE73A7A489593889B9CF7C10C2DA2DF433407126A4F4C25CFE23E9355B2F748"
+    ],
+    "state": "VALIDATION_PASSED"
   },
   "RikkiGibson.DreamPotato": {
     "lastUpdated": "2026-08-18T01:43:26.5566063Z",
@@ -9254,9 +9254,9 @@
     "manifestHash": "6A00440D4BA21CA1C1827B8CB627FBBB6E8127A5445CA512F6A6AA322471B2E6",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "lastUpdated": "2026-08-29T08:57:32.426954Z",
+    "lastUpdated": "2026-08-31T01:30:48.269355Z",
     "version": "0.3.4",
-    "validationCount": 3
+    "validationCount": 4
   },
   "YongcanYang.GameCheatsManager": {
     "lastUpdated": "2026-08-18T01:43:26.3622361Z",
