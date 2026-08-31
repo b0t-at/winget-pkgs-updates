@@ -3265,15 +3265,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Happ.Happ": {
-    "manifestHash": "33DB1CF7FF47D75AB959B128D26A8811B8D64B7DF52BB358240E889CB728C0CA",
-    "state": "VALIDATION_PASSED",
+    "version": "4.1.3",
+    "manifestHash": "1631479F9692AE3DFBCD9CDCFE789DD5481F37268747091C8CD64B99A690EC81",
     "description": "",
-    "validationCount": 1,
-    "lastUpdated": "2026-08-29T04:57:37.4842089Z",
     "installerHashes": [
-      "0C585EC29B654109E986C1373D774E00E0A12B46DAE9F69847EC4EDC58F7F7C5"
+      "451A56394D3A79620FFBE494719B73F4BC2AC36F08736A2424BBB2D15B47ABF8"
     ],
-    "version": "4.1.2"
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-31T12:51:11.4274825Z"
   },
   "HarjotSinghRana.Reinstate": {
     "description": "",
@@ -4635,15 +4635,15 @@
     ]
   },
   "marcinz606.NegPy": {
-    "version": "0.55.0",
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
+    "version": "0.56.0",
+    "manifestHash": "580A3B8695517C40931FFFA3F1552C7C662586ADEED810C65BEA0526233C0DFF",
     "description": "",
     "installerHashes": [
-      "524A454631861703D48D4E28F1F3CEDC1DB0CDA063B269023F431D452F1C205B"
+      "85464F8AF99EBDCC27D6E417EB8AE8F5F3C44227358CE1EE131A0E96E95F0927"
     ],
-    "manifestHash": "8BB362E927CED402F76082658847ED34C9BB94B6AB28F6F3D9EC583C4C29D65B",
-    "lastUpdated": "2026-08-29T12:58:34.208687Z"
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-31T12:51:11.5162805Z"
   },
   "MarcoHefti.YTVodManager": {
     "manifestHash": "D6B8CC28C195C1925AC443615826FDE9EB33D111F50144DC9CE7DF76A34B98CB",
@@ -6211,15 +6211,15 @@
     "lastUpdated": "2026-08-21T17:17:40.0995696Z"
   },
   "Parslee.Car": {
-    "state": "VALIDATION_PASSED",
+    "version": "0.51.0",
+    "manifestHash": "23E5209AFB16EDFAC0546634BD3F55DB8C9328DD4AF1C95B67C78C5CF08F7AFF",
     "description": "",
-    "version": "0.50.0",
-    "manifestHash": "55774DE7DD4BAEA1AE12EBDB18120B422637BD05422E71D6F1E3645D446A1886",
-    "lastUpdated": "2026-08-27T12:10:02.3527575Z",
     "installerHashes": [
-      "E78CCEBA160C8D309512C14E2D06E0432A9CDDCC28FDB7EC177A8776B4190273"
+      "ACDFE447135150CC4AABCC7B67C31E549170C3D2B86125A929C819C99974DF26"
     ],
-    "validationCount": 1
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-08-31T12:51:11.4974348Z"
   },
   "Passportogo.Voio": {
     "lastUpdated": "2026-08-19T21:00:00.1586395Z",
