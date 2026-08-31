@@ -741,15 +741,15 @@
     "manifestHash": "C06BDAE1D061B91C49BEC413137D11211BC395CCCD107E51905B933E2FF6CC06"
   },
   "Babashka.Babashka": {
-    "version": "1.13.219",
-    "installerHashes": [
-      "3F29A2338C30C2750E11F8EBEBBADCC58DD71612286CF4B44DEFB8C11CE44006"
-    ],
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "lastUpdated": "2026-08-18T09:30:09.2794365Z",
     "validationCount": 1,
-    "manifestHash": "F331268FA1DB566A6396C09B06D162940A5FAF934F5FAE28E6AAAEC4193F3664"
+    "installerHashes": [
+      "BAF87302DB04377D44F10DD1CB5C29924FC418D5765DC149213E793BE5DE0E9E"
+    ],
+    "lastUpdated": "2026-08-31T16:59:15.4314395Z",
+    "version": "1.13.220",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "005A9501D196F9A210BF5B0FEF8AA0470A1D195094FE55F32ACCF6E6130238B2"
   },
   "badboy.mdbook-mermaid": {
     "lastUpdated": "2026-08-14T12:36:40.1220884Z",
@@ -3312,8 +3312,8 @@
     "lastUpdated": "2026-08-21T17:17:39.833691Z"
   },
   "Hawaii_Beach.TinyNvidiaUpdateChecker": {
-    "validationCount": 6,
-    "lastUpdated": "2026-08-31T01:30:48.1942033Z",
+    "validationCount": 7,
+    "lastUpdated": "2026-08-31T16:59:15.3915339Z",
     "description": "",
     "manifestHash": "40CF1AF78F11E0D59E138ACEA4C305B198C14B462B7068C89E34F964CD8D5912",
     "version": "1.26.0",
@@ -3988,15 +3988,15 @@
     "version": "4.15.0"
   },
   "JReleaser.jreleaser": {
+    "description": "",
+    "validationCount": 1,
     "installerHashes": [
-      "4C746DF6DDA8291771AAB9284B932C792E3BCC8E7C5E9C0BEE5C6E648ABF19CA"
+      "F0FFB78F74D1D647836B07AAA54A11965EC6280ACCC91B2E0D2CDB69E68A27AF"
     ],
-    "lastUpdated": "2026-06-29T21:33:10.8482044Z",
-    "manifestHash": "457CB689044D19B8C99C2E3A249959E253FFC84F464A58B3E2766E46C36CB687",
-    "validationCount": 2,
+    "lastUpdated": "2026-08-31T16:59:15.5371237Z",
+    "version": "1.26.0",
     "state": "VALIDATION_PASSED",
-    "version": "1.25.0",
-    "description": ""
+    "manifestHash": "3807BDC8DE176918EDF85CF8CB76779AC3699DDD7895C387C7C508A0F66BE37A"
   },
   "JuanjoFuchs.agent-mail-cli": {
     "lastUpdated": "2026-08-18T17:25:13.9909902Z",
@@ -5484,15 +5484,15 @@
     "manifestHash": "DDD49EF781B045A7179949D01E9BE4414843793263660E2421FAF7088060AC3C"
   },
   "Netmaker.Netmaker": {
-    "installerHashes": [
-      "B9A5E2B30D81A4C8247786D792E251E2278B7036D2A7902CFB4C1905DDCFCDD9"
-    ],
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "version": "1.6.0",
     "description": "",
-    "lastUpdated": "2026-06-12T12:32:11.6305511Z",
-    "manifestHash": "FAEFE9425460BAAC48B68C28234D28324B6DD9D19CB996714DC8033F3EA1251B"
+    "validationCount": 1,
+    "installerHashes": [
+      "511A9CA49390CBEE0895BB20DD5D07102C6AC83C6E35973B99073CAF818DE841"
+    ],
+    "lastUpdated": "2026-08-31T16:59:15.4617276Z",
+    "version": "1.7.0",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "3E13AB55E1E426A6111FD4AF76CB71C4B57ACB40CC6445D580F7A075908E1788"
   },
   "nginx.nginx-prometheus-exporter": {
     "validationCount": 1,
@@ -5719,15 +5719,15 @@
     "state": "VALIDATION_PASSED"
   },
   "OctopusDeploy.Cli": {
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-22T12:51:56.569166Z",
-    "installerHashes": [
-      "CAE9A0A549EC509F69820B7CA9B4625DA29BFA31512C0F73D0DD1EACB7408277"
-    ],
+    "description": "",
     "validationCount": 1,
-    "manifestHash": "76BB79075A67F99D76ECD75B03441CA6D3077B3C8ED5504EE231FB5C19540AC9",
-    "version": "2.24.0",
-    "description": ""
+    "installerHashes": [
+      "4C52A23CFBBF7C626A666C3098EAA8D25F36AC658F0A49AAC82F4B1FD0383B08"
+    ],
+    "lastUpdated": "2026-08-31T16:59:15.516576Z",
+    "version": "2.24.1",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "0216DF8976F444307CC5163280B847DDA33CCE9046D6043868BA3D358DD96447"
   },
   "Odonno.jj-commit": {
     "description": "",
@@ -7072,15 +7072,15 @@
     "state": "VALIDATION_PASSED"
   },
   "S3Drive.S3Drive": {
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-06-07T21:37:58.3968861Z",
     "description": "",
+    "validationCount": 1,
     "installerHashes": [
-      "6B7CFDA454AB34107C85A533BD3F87302CBDE978DA3F463AC0C289DA26CD9F5A"
+      "DCFBF4C5EC715F23F9C22F2249F09C0D06A7319D6074EE2BA22BFFD2A47227B4"
     ],
-    "version": "1.17.9",
-    "manifestHash": "F46548F6618D05E9401D2E33DE8808D3F0F1CAEAF274524428ACFA1358B031C4"
+    "lastUpdated": "2026-08-31T16:59:15.4846601Z",
+    "version": "1.18.2",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "53DD3110B2C2089C43F52CE66C62AAE1B64573D683174B2E4D06EAE4C3A576CD"
   },
   "Saghul.TxikiJS": {
     "version": "26.6.0",
