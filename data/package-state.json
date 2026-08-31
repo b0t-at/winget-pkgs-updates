@@ -113,7 +113,7 @@
     "version": "0.107.78",
     "openPr": {
       "version": "0.107.79",
-      "checkedAt": "2026-08-30T00:59:54.8579028Z"
+      "checkedAt": "2026-08-31T01:01:10.6425623Z"
     }
   },
   "AdGuard.dnsproxy": {
@@ -3835,8 +3835,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-08-30T08:26:47.0766091Z",
-      "version": "2026.8.14"
+      "version": "2026.8.15",
+      "checkedAt": "2026-08-31T01:01:16.3419818Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -4400,7 +4400,7 @@
     "manifestHash": "57F8800DB719DDF8C26EB31782E8B1406E5F0B43BFE48FE93D4F3061DC1338D2",
     "openPr": {
       "version": "2026.8.0",
-      "checkedAt": "2026-08-30T01:00:01.3632371Z"
+      "checkedAt": "2026-08-31T01:01:17.4989664Z"
     }
   },
   "loft-sh.vcluster": {
