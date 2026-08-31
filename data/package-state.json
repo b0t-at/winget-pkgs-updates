@@ -264,6 +264,12 @@
     "openPr": {
       "version": "3.1",
       "checkedAt": "2026-08-30T16:21:53.5467505Z"
+    },
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/alirezagsm/Trayy/releases/download/v3.1/Trayy.zip",
+      "tag": "v3.1",
+      "checkedAt": "2026-08-31T05:29:26.4693539Z"
     }
   },
   "Alochi.Monitoring": {
@@ -1754,9 +1760,9 @@
   "dbrgn.tealdeer": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/dbrgn/tealdeer/releases/download/v1.8.1/tealdeer-windows-x86_64-msvc.exe",
-      "tag": "v1.8.1",
-      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+      "detail": "No release asset matches: https://github.com/dbrgn/tealdeer/releases/download/v1.9.0/tealdeer-windows-x86_64-msvc.exe",
+      "tag": "v1.9.0",
+      "checkedAt": "2026-08-31T05:29:26.4693539Z"
     }
   },
   "DDEVFoundation.DDEV": {
@@ -2081,9 +2087,9 @@
   "EditorConfig-Checker.EditorConfig-Checker": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/editorconfig-checker/editorconfig-checker/releases/download/v3.11.1/ec-windows-armv6.zip",
-      "tag": "v3.11.1",
-      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+      "detail": "No release asset matches: https://github.com/editorconfig-checker/editorconfig-checker/releases/download/v3.11.2/ec-windows-armv6.zip",
+      "tag": "v3.11.2",
+      "checkedAt": "2026-08-31T05:29:26.4693539Z"
     }
   },
   "EduMIPS64.EduMIPS64": {
@@ -2255,9 +2261,9 @@
     "validationCount": 4,
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/errata-ai/vale/releases/download/v3.18.0/vale_3.18.0_Windows_64-bit.zip",
-      "tag": "v3.18.0",
-      "checkedAt": "2026-08-24T05:33:14.2025456Z"
+      "detail": "No release asset matches: https://github.com/errata-ai/vale/releases/download/v3.19.0/vale_3.19.0_Windows_64-bit.zip",
+      "tag": "v3.19.0",
+      "checkedAt": "2026-08-31T05:29:26.4693539Z"
     }
   },
   "Essenciary.Githical": {
@@ -2305,6 +2311,14 @@
     "version": "0.55.2",
     "lastUpdated": "2026-08-28T04:01:09.8836374Z",
     "description": ""
+  },
+  "EtternaProject.EtternaGame": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/etternagame/etterna/releases/download/v0.75.0/Etterna-0.75.0-win32.exe",
+      "tag": "v0.75.0",
+      "checkedAt": "2026-08-31T05:29:26.4693539Z"
+    }
   },
   "Excelano.paxc": {
     "manifestHash": "41FA516FAE4AD796F69DAB0238A81310DD70C27070D3D5CC67351CA74A5343AD",
@@ -2527,9 +2541,9 @@
     },
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/flowscripter/example-cli/releases/download/v1.8.9/example-cli_Windows_x86_64.zip",
-      "tag": "v1.8.9",
-      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+      "detail": "No release asset matches: https://github.com/flowscripter/example-cli/releases/download/v1.8.11/example-cli_Windows_x86_64.zip",
+      "tag": "v1.8.11",
+      "checkedAt": "2026-08-31T05:29:26.4693539Z"
     }
   },
   "Fly-io.flyctl": {
@@ -2597,7 +2611,13 @@
     "validationCount": 1,
     "version": "7.1.1",
     "description": "",
-    "manifestHash": "E1ED487DECD7B1869B29DFA8B853A38D6DF1D5E87F9006EC1FA70E3F6DCE08F1"
+    "manifestHash": "E1ED487DECD7B1869B29DFA8B853A38D6DF1D5E87F9006EC1FA70E3F6DCE08F1",
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/forkgram/tdesktop/releases/download/v7.1.3/Telegram.zip",
+      "tag": "v7.1.3",
+      "checkedAt": "2026-08-31T05:29:26.4693539Z"
+    }
   },
   "FOSSA.FOSSA-cli": {
     "lastUpdated": "2026-08-26T17:03:51.9405129Z",
@@ -2636,9 +2656,9 @@
   "FrankZhu.ZManagerCLI": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/frankmanzhu/zmanager/releases/download/v2.1.0/zm-x86_64-pc-windows-msvc.zip https://github.com/frankmanzhu/zmanager/releases/download/v2.1.0/zm-aarch64-pc-windows-msvc.zip",
-      "tag": "v2.1.0",
-      "checkedAt": "2026-08-24T05:33:14.2025456Z"
+      "detail": "No release asset matches: https://github.com/frankmanzhu/zmanager/releases/download/v2.1.2/zm-x86_64-pc-windows-msvc.zip https://github.com/frankmanzhu/zmanager/releases/download/v2.1.2/zm-aarch64-pc-windows-msvc.zip",
+      "tag": "v2.1.2",
+      "checkedAt": "2026-08-31T05:29:26.4693539Z"
     }
   },
   "Frnsys.Half_earth": {
@@ -3089,9 +3109,9 @@
   "Grandpied33.STH": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/Grandpied33/sth-releases/releases/download/v0.2.41/sth-windows-amd64.zip",
-      "tag": "v0.2.41",
-      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+      "detail": "No release asset matches: https://github.com/Grandpied33/sth-releases/releases/download/v0.2.42/sth-windows-amd64.zip",
+      "tag": "v0.2.42",
+      "checkedAt": "2026-08-31T05:29:26.4693539Z"
     }
   },
   "greyishsong.bellit": {
@@ -3941,9 +3961,9 @@
     "manifestHash": "9A4DF16EBDCE59232C54B5DF04D449A66D61F5A11ADD46BF707CB15A166AB223",
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/johannesjo/super-productivity/releases/download/v18.19.0/Super-Productivity-Setup.exe https://github.com/johannesjo/super-productivity/releases/download/v18.19.0/Super-Productivity-Setup-x64.exe https://github.com/johannesjo/super-productivity/releases/download/v18.19.0/Super-Productivity-Setup-arm64.exe",
-      "tag": "v18.19.0",
-      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+      "detail": "No release asset matches: https://github.com/johannesjo/super-productivity/releases/download/v18.21.1/Super-Productivity-Setup.exe https://github.com/johannesjo/super-productivity/releases/download/v18.21.1/Super-Productivity-Setup-x64.exe https://github.com/johannesjo/super-productivity/releases/download/v18.21.1/Super-Productivity-Setup-arm64.exe",
+      "tag": "v18.21.1",
+      "checkedAt": "2026-08-31T05:29:26.4693539Z"
     }
   },
   "JosephFinney.Text-Grab": {
@@ -4260,9 +4280,9 @@
   "Laker.EasyPostman": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/lakernote/EasyPostman/releases/download/v6.0.19/EasyPostman-6.0.19-windows-x64.exe",
-      "tag": "v6.0.19",
-      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+      "detail": "No release asset matches: https://github.com/lakernote/EasyPostman/releases/download/v6.0.22/EasyPostman-6.0.22-windows-x64.exe",
+      "tag": "v6.0.22",
+      "checkedAt": "2026-08-31T05:29:26.4693539Z"
     }
   },
   "LANCommander.Launcher": {
@@ -4771,6 +4791,14 @@
     "validationCount": 1,
     "lastUpdated": "2026-08-22T08:51:40.4112949Z",
     "state": "VALIDATION_PASSED"
+  },
+  "Metanorma.Metanorma": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/metanorma/packed-mn/releases/download/v1.16.9-2/metanorma-windows-x86_64.zip",
+      "tag": "v1.16.9-2",
+      "checkedAt": "2026-08-31T05:29:26.4693539Z"
+    }
   },
   "Mew.Wrec": {
     "description": "",
@@ -5366,6 +5394,12 @@
     "openPr": {
       "checkedAt": "2026-08-31T04:28:01.5156781Z",
       "version": "1.9.1"
+    },
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/nao1215/gup/releases/download/v1.9.1/gup_1.9.1_windows_386.zip",
+      "tag": "v1.9.1",
+      "checkedAt": "2026-08-31T05:29:26.4693539Z"
     }
   },
   "NASS.AvUpload": {
@@ -5551,9 +5585,9 @@
   "nomacs.nomacs": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/nomacs/nomacs/releases/download/3.22.1/nomacs-setup-x64.exe https://github.com/nomacs/nomacs/releases/download/3.22.1/nomacs-setup-x64.exe",
-      "tag": "3.22.1",
-      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+      "detail": "No release asset matches: https://github.com/nomacs/nomacs/releases/download/3.22.2/nomacs-setup-x64.exe https://github.com/nomacs/nomacs/releases/download/3.22.2/nomacs-setup-x64.exe",
+      "tag": "3.22.2",
+      "checkedAt": "2026-08-31T05:29:26.4693539Z"
     }
   },
   "NotedeckDev.NoteDeck": {
@@ -5973,9 +6007,9 @@
   "OpenStenoProject.Plover": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/openstenoproject/plover/releases/download/v5.4.0/plover-5.4.0-win64.setup.exe",
-      "tag": "v5.4.0",
-      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+      "detail": "No release asset matches: https://github.com/openstenoproject/plover/releases/download/v5.4.1/plover-5.4.1-win64.setup.exe",
+      "tag": "v5.4.1",
+      "checkedAt": "2026-08-31T05:29:26.4693539Z"
     }
   },
   "OpenTelemetry.Weaver": {
@@ -6226,9 +6260,9 @@
   "PatrickHener.Goshs": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/patrickhener/goshs/releases/download/v2.1.5/goshs_v2.1.5_windows_x86_64.zip https://github.com/patrickhener/goshs/releases/download/v2.1.5/goshs_v2.1.5_windows_386.zip https://github.com/patrickhener/goshs/releases/download/v2.1.5/goshs_v2.1.5_windows_arm64.zip",
-      "tag": "v2.1.5",
-      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+      "detail": "No release asset matches: https://github.com/patrickhener/goshs/releases/download/v2.1.6/goshs_v2.1.6_windows_x86_64.zip https://github.com/patrickhener/goshs/releases/download/v2.1.6/goshs_v2.1.6_windows_386.zip https://github.com/patrickhener/goshs/releases/download/v2.1.6/goshs_v2.1.6_windows_arm64.zip",
+      "tag": "v2.1.6",
+      "checkedAt": "2026-08-31T05:29:26.4693539Z"
     }
   },
   "PatrickMatthiesen.oh-my-dot": {
@@ -6574,7 +6608,13 @@
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-07-09T17:52:24.7808173Z",
     "description": "",
-    "validationCount": 1
+    "validationCount": 1,
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/opengisch/QField/releases/download/v4.3.0/qfield-v4.3.0-windows-x64.exe",
+      "tag": "v4.3.0",
+      "checkedAt": "2026-08-31T05:29:26.4693539Z"
+    }
   },
   "qp888n.Yumedana": {
     "configHealth": {
@@ -7138,9 +7178,9 @@
     "lastUpdated": "2026-05-20T22:15:05.5255716Z",
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/schollz/croc/releases/download/v11.2.5/croc_v11.2.5_Windows-ARM.zip",
-      "tag": "v11.2.5",
-      "checkedAt": "2026-08-24T05:33:14.2025456Z"
+      "detail": "No release asset matches: https://github.com/schollz/croc/releases/download/v11.3.6/croc_v11.3.6_Windows-ARM.zip",
+      "tag": "v11.3.6",
+      "checkedAt": "2026-08-31T05:29:26.4693539Z"
     }
   },
   "scimusmn.stele": {
