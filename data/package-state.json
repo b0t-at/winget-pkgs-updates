@@ -2568,7 +2568,11 @@
       "E794C179F6B0F10879F8B86F53A150877934B8CB5E70558B4013EE34546E94C0",
       "879D7A40AB1276B2BCC3788215105C0C9A7C147BB8F08E9CEB5A230DB29638CB"
     ],
-    "description": ""
+    "description": "",
+    "openPr": {
+      "version": "0.4.96",
+      "checkedAt": "2026-09-01T08:32:11.6046004Z"
+    }
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
     "validationCount": 1,
@@ -7648,8 +7652,8 @@
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "checkedAt": "2026-08-31T04:28:05.0164648Z",
-      "version": "2.0.3"
+      "version": "2.0.3",
+      "checkedAt": "2026-09-01T08:32:20.8470823Z"
     }
   },
   "sparrowwallet.sparrow": {
