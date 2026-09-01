@@ -1454,14 +1454,14 @@
     }
   },
   "ciromattia.KCC": {
-    "installerHashes": [
-      "101FD6F0AFAA6666B3284819E5CDA824BF6CBC9992419412632472189D1F5662"
-    ],
+    "manifestHash": "7F40B15D74C0E8468B4603D79A99E9E5889DC04449F1262E37DF9371A754B393",
+    "version": "11.0.3",
+    "lastUpdated": "2026-09-01T04:42:47.9885511Z",
     "state": "VALIDATION_PASSED",
-    "version": "11.0.1",
-    "manifestHash": "263708770558E811F84DE8047E12FA0EC638DC0EC8DA4143F380EDA2ECC16F03",
     "validationCount": 1,
-    "lastUpdated": "2026-08-14T09:49:55.9658614Z",
+    "installerHashes": [
+      "A88B3B99C900F14F09732F242F9632C0861D2C90429FBB8990E9671936E781B7"
+    ],
     "description": ""
   },
   "cjpais.Handy": {
@@ -2559,16 +2559,16 @@
     }
   },
   "Fly-io.flyctl": {
-    "version": "0.4.94",
-    "description": "",
-    "installerHashes": [
-      "E8CD6815FA07193017DB76287F4A7FE45244BB4816A1617D4FFEE576AB100878",
-      "5C9923D62CCCC46EED5768757C5D4F7C54649BB91393BFF83D9B889B04CB17FD"
-    ],
+    "manifestHash": "C0160F3F84DEFC07D22300E993941F2C831CAC779EEC4D1EE837A16255C4E84F",
+    "version": "0.4.96",
+    "lastUpdated": "2026-09-01T04:42:47.9637876Z",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "lastUpdated": "2026-08-27T20:02:48.9185711Z",
-    "manifestHash": "21C7EC8A681B72584754C7D907D055C0C55054BA58EADF69E1864E43AF576C0A",
-    "state": "VALIDATION_FAILED"
+    "installerHashes": [
+      "E794C179F6B0F10879F8B86F53A150877934B8CB5E70558B4013EE34546E94C0",
+      "879D7A40AB1276B2BCC3788215105C0C9A7C147BB8F08E9CEB5A230DB29638CB"
+    ],
+    "description": ""
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
     "validationCount": 1,
@@ -5722,13 +5722,13 @@
   },
   "OctopusDeploy.Cli": {
     "description": "",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "4C52A23CFBBF7C626A666C3098EAA8D25F36AC658F0A49AAC82F4B1FD0383B08"
     ],
-    "lastUpdated": "2026-08-31T16:59:15.516576Z",
+    "lastUpdated": "2026-09-01T04:42:47.8866437Z",
     "version": "2.24.1",
-    "state": "VALIDATION_PASSED",
+    "state": "VALIDATION_FAILED",
     "manifestHash": "0216DF8976F444307CC5163280B847DDA33CCE9046D6043868BA3D358DD96447"
   },
   "Odonno.jj-commit": {
