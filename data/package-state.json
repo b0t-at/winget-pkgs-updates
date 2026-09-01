@@ -2450,7 +2450,11 @@
     "version": "19.0.2",
     "installerHashes": [
       "9A0B7352DFEF40C8EBF8733F77CB777565AA4EAEDE4F79FE928C11DA5C35CE40"
-    ]
+    ],
+    "openPr": {
+      "version": "19.0.2",
+      "checkedAt": "2026-09-01T12:32:45.2515956Z"
+    }
   },
   "Fangyuan025.Chaty": {
     "version": "2.1.5",
@@ -3873,8 +3877,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.8.16",
-      "checkedAt": "2026-08-31T16:24:09.1793488Z"
+      "version": "2026.9.0",
+      "checkedAt": "2026-09-01T12:32:46.0459605Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -6316,11 +6320,7 @@
     "state": "VALIDATION_FAILED",
     "lastUpdated": "2026-07-09T17:52:24.6713678Z",
     "description": "",
-    "validationCount": 1,
-    "openPr": {
-      "checkedAt": "2026-08-19T04:22:00.5814648Z",
-      "version": "9.5.0"
-    }
+    "validationCount": 1
   },
   "pdfcpu.pdfcpu": {
     "state": "VALIDATION_PASSED",
