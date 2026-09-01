@@ -21,8 +21,8 @@
     "lastUpdated": "2026-08-31T08:56:17.0981073Z",
     "validationCount": 1,
     "openPr": {
-      "version": "4.4.2.0",
-      "checkedAt": "2026-08-31T12:34:36.2935595Z"
+      "checkedAt": "2026-09-01T16:43:53.9182782Z",
+      "version": "4.4.2.0"
     }
   },
   "ABowlOfEleven.hopscout": {
@@ -132,8 +132,8 @@
     "lastUpdated": "2026-08-19T17:02:25.8797854Z",
     "manifestHash": "3BD6D6F7B48462CF3A02CF2DC2AFC0881BD072C354168DB528A71B4A35E8E30B",
     "openPr": {
-      "version": "0.84.1",
-      "checkedAt": "2026-08-31T12:33:32.5396251Z"
+      "checkedAt": "2026-09-01T16:42:46.4315852Z",
+      "version": "0.84.1"
     },
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
@@ -1280,8 +1280,8 @@
     ],
     "description": "",
     "openPr": {
-      "version": "1.9.2",
-      "checkedAt": "2026-08-31T12:33:33.3217259Z"
+      "checkedAt": "2026-09-01T16:42:47.7187662Z",
+      "version": "1.9.2"
     }
   },
   "CarthageSoftware.Mago": {
@@ -1449,8 +1449,8 @@
     "validationCount": 1,
     "version": "1.0.48275",
     "openPr": {
-      "version": "1.0.49012",
-      "checkedAt": "2026-08-28T22:01:38.6864124Z"
+      "checkedAt": "2026-09-01T16:42:48.2017902Z",
+      "version": "1.0.49129"
     }
   },
   "ciromattia.KCC": {
@@ -3077,8 +3077,8 @@
     ],
     "manifestHash": "8A93D198AD57BF64282A1C20A5B26813247BA8F368CBBC5002B3A2AECCF79CDA",
     "openPr": {
-      "version": "2.5.1",
-      "checkedAt": "2026-08-31T12:33:35.3726503Z"
+      "checkedAt": "2026-09-01T16:42:49.4071697Z",
+      "version": "2.5.1"
     }
   },
   "Google.Protobuf": {
@@ -3830,7 +3830,11 @@
     "lastUpdated": "2026-09-01T12:59:06.9887974Z",
     "validationCount": 1,
     "manifestHash": "C6AF35C4CB48F9319AEF4E399DC36FCCE7E537C1A9631EDCA2AFE97605E57D9A",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "checkedAt": "2026-09-01T16:42:49.8767478Z",
+      "version": "7.2.6"
+    }
   },
   "jark006.jarkViewer": {
     "lastUpdated": "2026-08-18T01:43:26.4804154Z",
@@ -6057,8 +6061,8 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "openPr": {
-      "version": "1.12.6",
-      "checkedAt": "2026-08-31T12:33:37.1981576Z"
+      "checkedAt": "2026-09-01T16:42:52.7128846Z",
+      "version": "1.12.6"
     }
   },
   "OpenWhispr.OpenWhispr": {
@@ -6320,7 +6324,11 @@
     "state": "VALIDATION_FAILED",
     "lastUpdated": "2026-07-09T17:52:24.6713678Z",
     "description": "",
-    "validationCount": 1
+    "validationCount": 1,
+    "openPr": {
+      "checkedAt": "2026-09-01T16:42:55.4576526Z",
+      "version": "9.5.1"
+    }
   },
   "pdfcpu.pdfcpu": {
     "state": "VALIDATION_PASSED",
