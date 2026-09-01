@@ -3081,7 +3081,11 @@
     "manifestHash": "0BC03140F204E4810004840AD2F1017E023FACA4502DB0A5501770572B7ED62F",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "36.1"
+    "version": "36.1",
+    "openPr": {
+      "version": "36.1",
+      "checkedAt": "2026-09-01T04:27:27.401653Z"
+    }
   },
   "goplus.xgo": {
     "manifestHash": "3BFF78AAF18769D1748DE57CF066A27AFDA17E289D83BDC8F984990CDB300F6B",
