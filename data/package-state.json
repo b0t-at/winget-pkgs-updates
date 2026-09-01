@@ -19,11 +19,7 @@
       "E752A6C77F7FE33F942A3C890D40218FADE24C47298A1F36B6A489D026ACD88C"
     ],
     "lastUpdated": "2026-08-31T08:56:17.0981073Z",
-    "validationCount": 1,
-    "openPr": {
-      "checkedAt": "2026-09-01T16:43:53.9182782Z",
-      "version": "4.4.2.0"
-    }
+    "validationCount": 1
   },
   "ABowlOfEleven.hopscout": {
     "manifestHash": "1F3AE2A47F29CCDE4BDE142A406D060AE04B93D9EE44F9F9F28DB6D583CF4D25",
@@ -382,7 +378,7 @@
     ],
     "openPr": {
       "version": "2.6.8",
-      "checkedAt": "2026-08-31T16:25:14.302101Z"
+      "checkedAt": "2026-09-01T20:23:48.6454142Z"
     }
   },
   "Anki.Anki": {
@@ -421,7 +417,7 @@
     "state": "VALIDATION_PASSED",
     "openPr": {
       "version": "0.2.2",
-      "checkedAt": "2026-08-31T16:25:14.7729685Z"
+      "checkedAt": "2026-09-01T20:23:49.0881085Z"
     }
   },
   "AntiMicroX.antimicrox": {
@@ -2574,11 +2570,7 @@
       "E794C179F6B0F10879F8B86F53A150877934B8CB5E70558B4013EE34546E94C0",
       "879D7A40AB1276B2BCC3788215105C0C9A7C147BB8F08E9CEB5A230DB29638CB"
     ],
-    "description": "",
-    "openPr": {
-      "version": "0.4.96",
-      "checkedAt": "2026-09-01T08:32:11.6046004Z"
-    }
+    "description": ""
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
     "validationCount": 1,
@@ -7916,8 +7908,8 @@
     "validationCount": 1,
     "manifestHash": "2FC17D10387329E5E73DBDDCBE45541A670D1711C99B916B986BBD747577DEC7",
     "openPr": {
-      "version": "1.50.4",
-      "checkedAt": "2026-08-21T20:13:04.9968451Z"
+      "version": "1.50.8",
+      "checkedAt": "2026-09-01T20:22:49.1581858Z"
     }
   },
   "stuncloud.uwscr": {
@@ -9289,11 +9281,7 @@
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "8AE03DB3915F8DA8B1030812F4D2B5233B0B4DEB3C28482DCD7A8FE73A3B0BD7"
-    ],
-    "openPr": {
-      "checkedAt": "2026-08-31T08:33:46.7055613Z",
-      "version": "2026.7.0"
-    }
+    ]
   },
   "yang991178.fluent-reader": {
     "state": "VALIDATION_PASSED",
