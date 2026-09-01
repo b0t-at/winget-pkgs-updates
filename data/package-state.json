@@ -2443,12 +2443,14 @@
   },
   "fairdataihub.SODA-for-SPARC": {
     "description": "",
-    "installerHashes": "15EACB58A1DF5879D3A589EF07C862578C911EE44CBAC71DEBE3FED28CCE481C",
-    "lastUpdated": "2026-08-29T01:17:49.8924512Z",
-    "manifestHash": "DA3E482A5E8BA3B2B83D71D507137B59222AC102AD6ECED00905255F7DC06F81",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "19.0.1"
+    "lastUpdated": "2026-09-01T09:14:40.0899568Z",
+    "manifestHash": "5D3E53BCC509EF5BE9FACAF47FE08CE55FDCA13520B064EF117936BDDFD6E7B2",
+    "version": "19.0.2",
+    "installerHashes": [
+      "9A0B7352DFEF40C8EBF8733F77CB777565AA4EAEDE4F79FE928C11DA5C35CE40"
+    ]
   },
   "Fangyuan025.Chaty": {
     "version": "2.1.5",
@@ -6056,15 +6058,15 @@
     }
   },
   "OpenWhispr.OpenWhispr": {
-    "version": "1.9.1",
-    "installerHashes": [
-      "A0EC663603B8A36FD8E9332EBE3B2F967045DC015F2153DAB67C9A232600C5C7"
-    ],
+    "description": "",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "manifestHash": "04FD0FB7E977B0564D1698836153628C7B8A335B07D80E7D3958AFC1BA7A5996",
-    "lastUpdated": "2026-08-28T16:40:58.658143Z",
-    "description": ""
+    "lastUpdated": "2026-09-01T09:14:40.1698153Z",
+    "manifestHash": "00BFA43EAB007A711EBFD2DC22C54351A14E20A783F24F831CA911B6155C157E",
+    "version": "1.9.2",
+    "installerHashes": [
+      "96E84935BB68BE2B45AA56B4C85D6CB9C0231EE0536BA365EED1DA9FA345F16B"
+    ]
   },
   "openwong2kim.wmux": {
     "version": "3.49.0",
@@ -7510,14 +7512,14 @@
   },
   "skyhook-io.Radar": {
     "description": "",
-    "manifestHash": "230CAA05C8AA8C8754E5A149EFF01421CC27BA533BE8B4851D20AEEE47FA0284",
-    "installerHashes": [
-      "066FABACB723A113CCF753B6F2034E3930BE9050689C9F3DD1656C3E922F2DD9"
-    ],
-    "version": "1.12.1",
-    "lastUpdated": "2026-08-30T13:08:52.1883919Z",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-09-01T09:14:40.1926348Z",
+    "manifestHash": "D534FB7A453006672A48CBA721DBA0E40AB7D20B9569CEC42D671295376D60BC",
+    "version": "1.12.2",
+    "installerHashes": [
+      "64ECCD9806F352C77D73E4ECD819FD3DF603C4BFB1137734AA7B064B29473D7C"
+    ]
   },
   "Skylot.jadx": {
     "validationCount": 1,
@@ -9150,15 +9152,15 @@
     "description": ""
   },
   "WowUp.Wowup": {
-    "version": "2.23.0",
-    "installerHashes": [
-      "F0D42F4DE19BCF94287CD4B327D1C7741514323F009EE4808B58F451FE073A59"
-    ],
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "lastUpdated": "2026-08-18T09:30:09.0325441Z",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "manifestHash": "F589D4B9D8F6026D639C164FE43F5E19C3F0C696E3E99C5F3464204A326383E7"
+    "lastUpdated": "2026-09-01T09:14:40.1543594Z",
+    "manifestHash": "9308EBD166407A010951731CC724AED0C5CBAB99DE8895CD8A2A19A5F93D9A23",
+    "version": "2.23.1",
+    "installerHashes": [
+      "245EA9F17B95B41A2668CE557BBBE86E89322EE4D9E35D41EA461DC41C15566B"
+    ]
   },
   "XaoSProject.XaoS": {
     "configHealth": {
