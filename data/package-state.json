@@ -132,8 +132,8 @@
     "lastUpdated": "2026-08-19T17:02:25.8797854Z",
     "manifestHash": "3BD6D6F7B48462CF3A02CF2DC2AFC0881BD072C354168DB528A71B4A35E8E30B",
     "openPr": {
-      "checkedAt": "2026-09-01T16:42:46.4315852Z",
-      "version": "0.84.1"
+      "version": "0.84.1",
+      "checkedAt": "2026-09-02T20:23:07.158347Z"
     },
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
@@ -1284,8 +1284,8 @@
     ],
     "description": "",
     "openPr": {
-      "checkedAt": "2026-09-01T16:42:47.7187662Z",
-      "version": "1.9.2"
+      "version": "1.9.2",
+      "checkedAt": "2026-09-02T20:23:07.9902231Z"
     }
   },
   "CarthageSoftware.Mago": {
@@ -1453,8 +1453,8 @@
     "validationCount": 1,
     "version": "1.0.48275",
     "openPr": {
-      "version": "1.0.49271",
-      "checkedAt": "2026-09-02T12:34:11.6793799Z"
+      "version": "1.0.49308",
+      "checkedAt": "2026-09-02T20:23:08.2613835Z"
     }
   },
   "ciromattia.KCC": {
@@ -2106,7 +2106,11 @@
     "installerHashes": [
       "A2250FD6FF2500204599D0522592CAE1D982178E6B9C2F0DE1386B702F42C79E"
     ],
-    "manifestHash": "31947E74E60A0462F2AAA67D5F8C21F460756C9F606A2E99B5AA0055A2064E78"
+    "manifestHash": "31947E74E60A0462F2AAA67D5F8C21F460756C9F606A2E99B5AA0055A2064E78",
+    "openPr": {
+      "version": "2.12.4",
+      "checkedAt": "2026-09-02T20:23:08.985148Z"
+    }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
     "configHealth": {
@@ -3085,8 +3089,8 @@
     ],
     "manifestHash": "8A93D198AD57BF64282A1C20A5B26813247BA8F368CBBC5002B3A2AECCF79CDA",
     "openPr": {
-      "checkedAt": "2026-09-01T16:42:49.4071697Z",
-      "version": "2.5.1"
+      "version": "2.5.1",
+      "checkedAt": "2026-09-02T20:23:09.7998221Z"
     }
   },
   "Google.Protobuf": {
@@ -6082,8 +6086,8 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "openPr": {
-      "checkedAt": "2026-09-01T16:42:52.7128846Z",
-      "version": "1.12.6"
+      "version": "1.12.6",
+      "checkedAt": "2026-09-02T20:23:13.140247Z"
     }
   },
   "OpenWhispr.OpenWhispr": {
@@ -7936,8 +7940,8 @@
     "validationCount": 1,
     "manifestHash": "2FC17D10387329E5E73DBDDCBE45541A670D1711C99B916B986BBD747577DEC7",
     "openPr": {
-      "version": "1.50.9",
-      "checkedAt": "2026-09-02T16:26:11.186152Z"
+      "version": "1.50.10",
+      "checkedAt": "2026-09-02T20:24:08.0058746Z"
     }
   },
   "stuncloud.uwscr": {
