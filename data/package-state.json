@@ -3889,8 +3889,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.9.0",
-      "checkedAt": "2026-09-02T12:34:14.0647053Z"
+      "version": "2026.9.1",
+      "checkedAt": "2026-09-02T16:26:04.2759244Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -6215,7 +6215,11 @@
     "state": "VALIDATION_PASSED",
     "description": "",
     "manifestHash": "F8847421B933350900A143A19FED15B84506A7D277B0DA75DAA69F2A353D8DDA",
-    "lastUpdated": "2026-06-17T19:11:26.6499207Z"
+    "lastUpdated": "2026-06-17T19:11:26.6499207Z",
+    "openPr": {
+      "version": "2.43.0",
+      "checkedAt": "2026-09-02T16:26:08.4536226Z"
+    }
   },
   "PaddiM8.kalker": {
     "manifestHash": "7E2CC72EBF46A0D136A34A5BF7756CF1BB121A146402F085F10982A56E37C41F",
@@ -7932,8 +7936,8 @@
     "validationCount": 1,
     "manifestHash": "2FC17D10387329E5E73DBDDCBE45541A670D1711C99B916B986BBD747577DEC7",
     "openPr": {
-      "version": "1.50.8",
-      "checkedAt": "2026-09-01T20:22:49.1581858Z"
+      "version": "1.50.9",
+      "checkedAt": "2026-09-02T16:26:11.186152Z"
     }
   },
   "stuncloud.uwscr": {
