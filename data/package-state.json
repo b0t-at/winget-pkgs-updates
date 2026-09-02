@@ -1445,8 +1445,8 @@
     "validationCount": 1,
     "version": "1.0.48275",
     "openPr": {
-      "checkedAt": "2026-09-01T16:42:48.2017902Z",
-      "version": "1.0.49129"
+      "checkedAt": "2026-09-02T00:56:58.7402917Z",
+      "version": "1.0.49221"
     }
   },
   "ciromattia.KCC": {
@@ -2570,7 +2570,11 @@
     "manifestHash": "0156456DFC6E33E5967255255CC3875316676D4BC540192FEC3038A7BC5C05CD",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "0.4.97"
+    "version": "0.4.97",
+    "openPr": {
+      "checkedAt": "2026-09-02T00:57:00.6071559Z",
+      "version": "0.4.97"
+    }
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
     "validationCount": 1,
@@ -2865,7 +2869,7 @@
     ],
     "version": "3.9.0",
     "openPr": {
-      "checkedAt": "2026-08-31T20:23:35.7593133Z",
+      "checkedAt": "2026-09-02T00:57:01.0931125Z",
       "version": "3.9.0"
     }
   },
