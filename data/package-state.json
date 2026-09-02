@@ -115,7 +115,7 @@
     "version": "0.107.78",
     "openPr": {
       "version": "0.107.79",
-      "checkedAt": "2026-09-01T01:08:08.1479733Z"
+      "checkedAt": "2026-09-02T04:28:08.4191386Z"
     }
   },
   "AdGuard.dnsproxy": {
@@ -1362,7 +1362,7 @@
   "CharlesMilette.TranslucentTB": {
     "openPr": {
       "version": "2026.2",
-      "checkedAt": "2026-09-01T01:08:09.438775Z"
+      "checkedAt": "2026-09-02T04:28:09.4686128Z"
     }
   },
   "ChiaNetwork.GUIforChiaBlockchain": {
@@ -3090,7 +3090,7 @@
     "version": "36.1",
     "openPr": {
       "version": "36.1",
-      "checkedAt": "2026-09-01T04:27:27.401653Z"
+      "checkedAt": "2026-09-02T04:28:11.057802Z"
     }
   },
   "goplus.xgo": {
@@ -4442,7 +4442,7 @@
     "manifestHash": "57F8800DB719DDF8C26EB31782E8B1406E5F0B43BFE48FE93D4F3061DC1338D2",
     "openPr": {
       "version": "2026.8.0",
-      "checkedAt": "2026-09-01T01:08:15.6300377Z"
+      "checkedAt": "2026-09-02T04:28:13.1949458Z"
     }
   },
   "loft-sh.vcluster": {
@@ -6153,7 +6153,11 @@
       "6769FF0F5D65D1892FF8A3711AC76B78BF0C13EB124A80BC04147F6CFFC03D0C"
     ],
     "version": "2.14.1",
-    "description": ""
+    "description": "",
+    "openPr": {
+      "version": "2.14.1",
+      "checkedAt": "2026-09-02T04:28:15.0307005Z"
+    }
   },
   "Orthogonal.APM": {
     "lastUpdated": "2026-08-16T21:14:49.1724894Z",
