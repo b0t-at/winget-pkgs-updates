@@ -11,15 +11,15 @@
     "lastUpdated": "2026-08-21T17:17:39.9807177Z"
   },
   "8bit2qubit.OmniConsole": {
+    "validationCount": 1,
+    "lastUpdated": "2026-09-02T04:46:10.400437Z",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "0914DFA8D57418F5E8BAE03DFF0CC5581EBDF6425FD5B3567E1A075AEA6996C7",
-    "version": "4.4.2.0",
     "description": "",
+    "version": "4.4.3.0",
     "installerHashes": [
-      "E752A6C77F7FE33F942A3C890D40218FADE24C47298A1F36B6A489D026ACD88C"
+      "B680C4930E119C2A74790DDAF1FD7CFBF9B570187F05EFA748709FCC57EB9232"
     ],
-    "lastUpdated": "2026-08-31T08:56:17.0981073Z",
-    "validationCount": 1
+    "manifestHash": "597303FCB3CC2071FAE93480A59BA65F15EFBCEBF2D659C3381C16FC3C3C9867"
   },
   "ABowlOfEleven.hopscout": {
     "manifestHash": "1F3AE2A47F29CCDE4BDE142A406D060AE04B93D9EE44F9F9F28DB6D583CF4D25",
@@ -1909,13 +1909,13 @@
   "Divaaaan.Tenebra": {
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-01T17:21:07.3701117Z",
+    "lastUpdated": "2026-09-02T04:46:10.3807463Z",
     "version": "0.5.11",
     "manifestHash": "EAC83E5FDF01B33FAE66B92D2E0314F0AB76C4824EA448141558012FC121FC91",
     "installerHashes": [
       "D39A3B0EC1D393F3ECA7DB87F190B50E6F76DC17D2A4E90BD39259BEA0EF527F"
     ],
-    "validationCount": 1
+    "validationCount": 2
   },
   "divVerent.AAAAXY": {
     "state": "VALIDATION_FAILED",
@@ -7102,11 +7102,11 @@
   },
   "S3Drive.S3Drive": {
     "description": "",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "DCFBF4C5EC715F23F9C22F2249F09C0D06A7319D6074EE2BA22BFFD2A47227B4"
     ],
-    "lastUpdated": "2026-08-31T16:59:15.4846601Z",
+    "lastUpdated": "2026-09-02T04:46:10.2994193Z",
     "version": "1.18.2",
     "state": "VALIDATION_PASSED",
     "manifestHash": "53DD3110B2C2089C43F52CE66C62AAE1B64573D683174B2E4D06EAE4C3A576CD"
