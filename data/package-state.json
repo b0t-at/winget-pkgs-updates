@@ -194,7 +194,11 @@
     "version": "0.4.0",
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "description": ""
+    "description": "",
+    "openPr": {
+      "checkedAt": "2026-09-03T00:58:46.3777145Z",
+      "version": "0.6.0"
+    }
   },
   "Aiden1020.LocalSubs": {
     "manifestHash": "213A97D3D7C6F3B5FE864420C3CEF1C3280D138B6B91B0272DB5230389D73EB2",
@@ -381,8 +385,8 @@
       "941ED0C9AFAF9518ADA12EF7DD2C9B8704910D85EF1A577E15D2F2B997BF4B00"
     ],
     "openPr": {
-      "version": "2.6.8",
-      "checkedAt": "2026-09-01T20:23:48.6454142Z"
+      "checkedAt": "2026-09-03T00:58:48.1024454Z",
+      "version": "2.6.8"
     }
   },
   "Anki.Anki": {
@@ -420,8 +424,8 @@
     "lastUpdated": "2026-08-22T08:51:40.3505732Z",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "version": "0.2.2",
-      "checkedAt": "2026-09-01T20:23:49.0881085Z"
+      "checkedAt": "2026-09-03T00:58:48.3920554Z",
+      "version": "0.2.2"
     }
   },
   "AntiMicroX.antimicrox": {
@@ -1799,7 +1803,11 @@
       "A0BCA7D8F97612D2AAFAA627FF941AA3EB427D4D6014F0395CC01AC612ABE9AE",
       "5793174B1C8D6B0CDE4E372F245071890BB9DAB1FD8C5F979B8FA1727A3B23B4"
     ],
-    "version": "1.25.4"
+    "version": "1.25.4",
+    "openPr": {
+      "checkedAt": "2026-09-03T00:57:41.9400714Z",
+      "version": "1.25.4"
+    }
   },
   "Decred.Decrediton": {
     "installerHashes": [
@@ -2885,7 +2893,7 @@
     ],
     "version": "3.9.0",
     "openPr": {
-      "checkedAt": "2026-09-02T00:57:01.0931125Z",
+      "checkedAt": "2026-09-03T00:57:42.8131996Z",
       "version": "3.9.0"
     }
   },
@@ -6438,11 +6446,7 @@
     "manifestHash": "821D85244155389B49EECD347BA934133C66CDC109ED4FD8D6291C8A442A9641",
     "validationCount": 1,
     "lastUpdated": "2026-08-14T09:49:55.842265Z",
-    "description": "",
-    "openPr": {
-      "checkedAt": "2026-08-18T16:15:25.0882634Z",
-      "version": "8.0.40"
-    }
+    "description": ""
   },
   "PiusPP.Celestial": {
     "version": "2.1.0",
