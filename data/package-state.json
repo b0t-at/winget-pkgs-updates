@@ -2588,11 +2588,7 @@
     "manifestHash": "0156456DFC6E33E5967255255CC3875316676D4BC540192FEC3038A7BC5C05CD",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "0.4.97",
-    "openPr": {
-      "checkedAt": "2026-09-02T00:57:00.6071559Z",
-      "version": "0.4.97"
-    }
+    "version": "0.4.97"
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
     "validationCount": 1,
@@ -3896,7 +3892,7 @@
   "jdx.mise": {
     "openPr": {
       "version": "2026.9.1",
-      "checkedAt": "2026-09-02T16:26:04.2759244Z"
+      "checkedAt": "2026-09-03T20:21:10.4567507Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -3964,8 +3960,8 @@
     "lastUpdated": "2026-08-06T14:10:17.3921348Z",
     "manifestHash": "1E843D90602194E32EF0F84E333BE9BC20D09621BCA43AA304BDA7952A621BAB",
     "openPr": {
-      "version": "0.45.0",
-      "checkedAt": "2026-09-03T05:23:13.0744817Z"
+      "version": "0.45.1",
+      "checkedAt": "2026-09-03T20:21:10.9390664Z"
     }
   },
   "jmrplens.gitlab-mcp-server": {
