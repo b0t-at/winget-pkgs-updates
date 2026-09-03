@@ -30,7 +30,7 @@ jobs:
               with:
                 python-version: '3.x'
             - name: Install dependencies
-              run: pip install pyyaml ruamel.yaml
+              run: pip install pyyaml
             - name: Count packages
               id: count
               run: |
