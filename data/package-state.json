@@ -1324,15 +1324,15 @@
     "version": "0.7.8"
   },
   "Celerp.Celerp": {
-    "validationCount": 1,
-    "version": "2.3.2",
-    "description": "",
-    "state": "VALIDATION_PASSED",
+    "manifestHash": "F0BAA9E5851A74329CEBC5EAA88415F0F47E5A3B8D1474F4100B1FDC2AC493ED",
+    "lastUpdated": "2026-09-03T20:56:43.7603566Z",
     "installerHashes": [
-      "22671C5396FE8757395C14CBC9BFC40A09379383B64B27881D7726E51EDB034B"
+      "A99EC9FA9D4322B8B127B6687348719AC235E2FB25762CA6D6155F1004570BC3"
     ],
-    "lastUpdated": "2026-08-29T01:17:49.9762531Z",
-    "manifestHash": "3670ABDE7A02D169B4F117A73FC7DD3C9FB8D84C09940946C0114986CFC11C17"
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "version": "2.3.3",
+    "description": ""
   },
   "CerberAuth.jwtop": {
     "description": "",
@@ -2704,8 +2704,8 @@
     "description": "",
     "manifestHash": "A4B0A2532C22E8509634F1289507E7CE0F5F02F6F5D34B2B8FF796539325C3D6",
     "version": "1.0.14",
-    "lastUpdated": "2026-09-02T21:00:13.8989872Z",
-    "validationCount": 8,
+    "lastUpdated": "2026-09-03T20:56:43.7050714Z",
+    "validationCount": 9,
     "state": "VALIDATION_PASSED"
   },
   "fselect.fselect": {
