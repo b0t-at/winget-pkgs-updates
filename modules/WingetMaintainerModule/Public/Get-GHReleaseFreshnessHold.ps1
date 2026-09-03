@@ -49,7 +49,7 @@ function Get-GHReleaseFreshnessHold {
 
         [Parameter()]
         [ValidateRange(0, 8760)]
-        [double] $MinAgeHours = 4,
+        [double] $MinAgeHours = 0,
 
         [Parameter()]
         [scriptblock] $ReleaseProvider,
@@ -136,14 +136,14 @@ function Resolve-WingetMinReleaseAgeHours {
     .DESCRIPTION
         Precedence: the package's configured value (matrix field
         minReleaseAgeHours) > WINGET_MIN_RELEASE_AGE_HOURS environment variable
-        > built-in default of 4 hours. Blank or non-numeric values fall through
+        > built-in default of 0 hours (disabled). Blank or non-numeric values fall through
         to the next tier; negative values are treated as 0 (disabled).
     #>
     [CmdletBinding()]
     [OutputType([double])]
     param(
         [Parameter()] [AllowNull()] [AllowEmptyString()] [string] $Configured,
-        [Parameter()] [double] $Default = 4
+        [Parameter()] [double] $Default = 0
     )
 
     foreach ($candidate in @($Configured, $env:WINGET_MIN_RELEASE_AGE_HOURS)) {

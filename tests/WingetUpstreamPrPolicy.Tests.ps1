@@ -180,9 +180,9 @@ Write-Host 'TEST: minimum release age precedence'
 $originalMinAge = $env:WINGET_MIN_RELEASE_AGE_HOURS
 try {
     $env:WINGET_MIN_RELEASE_AGE_HOURS = ''
-    Assert-True ((& $module { Resolve-WingetMinReleaseAgeHours -Configured '' }) -eq 4) 'Default must be 4 hours.'
+    Assert-True ((& $module { Resolve-WingetMinReleaseAgeHours -Configured '' }) -eq 0) 'Default must be 0 hours (disabled).'
     Assert-True ((& $module { Resolve-WingetMinReleaseAgeHours -Configured '48' }) -eq 48) 'Configured value must win.'
-    Assert-True ((& $module { Resolve-WingetMinReleaseAgeHours -Configured $null }) -eq 4) 'Null configuration must fall back.'
+    Assert-True ((& $module { Resolve-WingetMinReleaseAgeHours -Configured $null }) -eq 0) 'Null configuration must fall back.'
     $env:WINGET_MIN_RELEASE_AGE_HOURS = '6'
     Assert-True ((& $module { Resolve-WingetMinReleaseAgeHours -Configured '' }) -eq 6) 'Environment variable must override the default.'
     Assert-True ((& $module { Resolve-WingetMinReleaseAgeHours -Configured '48' }) -eq 48) 'Configured value must override the environment.'

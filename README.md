@@ -59,7 +59,7 @@ stops (reason in the job output) when one of these holds applies:
 
 | Reason | Rule |
 | --- | --- |
-| `ReleaseTooFresh` | The GitHub release is younger than the minimum age, measured from the newest of the release's publish time and the upload time of the assets the package uses. Default 4 hours (`WINGET_MIN_RELEASE_AGE_HOURS`); per package via `minReleaseAgeHours` on the matrix entry, e.g. `48` for packages whose publisher files their own PR within a day. `0` disables the delay. |
+| `ReleaseTooFresh` | The GitHub release is younger than the minimum age, measured from the newest of the release's publish time and the upload time of the assets the package uses. Disabled by default (`0`); set globally via `WINGET_MIN_RELEASE_AGE_HOURS` or per package via `minReleaseAgeHours` on the matrix entry, e.g. `48` for packages whose publisher files their own PR within a day. |
 | `BlockedByUpstreamValidation` | The bot's previous PR for the identical version was closed unmerged with a blocking label (`Validation-Defender-Error`, `Binary-Validation-Error`, `Validation-Certificate-Root`, `URL-Validation-Error`, `Validation-Unattended-Failed`, `Validation-Installation-Error`, `Validation-Shell-Execute`, `Blocking-Issue`, `DriverInstall`). A new upstream version is submitted normally. |
 | `HeldForManualValidation` | The bot's open PR for an older version carries `Azure-Pipeline-Passed` plus `Validation-Executable-Error`/`Validation-No-Executables` (moderators' manual-validation queue), is younger than 14 days, and the new version is only a patch bump. Superseding would reset the package's place in that queue. Non-patch releases and PRs older than 14 days supersede as before. |
 

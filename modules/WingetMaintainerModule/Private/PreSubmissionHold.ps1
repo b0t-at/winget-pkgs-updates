@@ -8,7 +8,7 @@ function Get-WingetPreSubmissionHold {
     .DESCRIPTION
         Evaluated in order; the first hold wins:
           1. ReleaseTooFresh - the GitHub release (newest relevant asset upload)
-             is younger than the package's minimum age (default 4 h, see
+             is younger than the package's minimum age (disabled by default, see
              Resolve-WingetMinReleaseAgeHours). GitHub-release packages only.
           2. BlockedByUpstreamValidation - the bot's previous PR for this exact
              version was closed unmerged with a blocking validation label
