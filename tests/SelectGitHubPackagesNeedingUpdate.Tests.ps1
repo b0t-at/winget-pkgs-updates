@@ -415,6 +415,61 @@ Assert-Equal '2.0.0' $openPr.PrFoundVersion 'newly found open PR is recorded in 
 Assert-Equal $false $openPr.ErrorHasMarker 'tester failure records no marker'
 Assert-Equal $false $openPr.NoPrHasMarker 'absent PR records no marker'
 
+# 7b) Channel packages validated within the cooldown window are throttled;
+#     everything else is untouched, and preloaded blocks win over the state file.
+$channelCooldown = & $module {
+    $invoker = {
+        param([string] $Query)
+        if ($Query -match 'u\d+: repository') {
+            $data = @{}
+            foreach ($alias in [regex]::Matches($Query, '(u\d+): repository\(')) {
+                $data[$alias.Groups[1].Value] = @{ releases = @{ nodes = @(@{ tagName = '2026.09.03'; name = 'nightly'; isDraft = $false; isPrerelease = $false; publishedAt = '2026-09-03T00:00:00Z' }) } }
+            }
+            return @{ data = $data }
+        }
+        if ($Query -notmatch 'winget-pkgs') {
+            $data = @{}
+            foreach ($alias in [regex]::Matches($Query, '(r\d+): repository\(')) {
+                $data[$alias.Groups[1].Value] = @{ latestRelease = @{ tagName = 'v2.0.0' } }
+            }
+            return @{ data = $data }
+        }
+        $repoData = @{}
+        foreach ($alias in [regex]::Matches($Query, '(p\d+): object\(')) {
+            $repoData[$alias.Groups[1].Value] = @{ entries = @(@{ name = '1.0.0'; type = 'tree' }) }
+        }
+        return @{ data = @{ repository = $repoData } }
+    }
+
+    $stateFile = Join-Path ([System.IO.Path]::GetTempPath()) "channel-state-$([guid]::NewGuid()).json"
+    $nowUtc = (Get-Date).ToUniversalTime()
+    @{
+        'Vendor.Recent.Nightly' = @{ version = '2026.09.02'; state = 'VALIDATION_FAILED'; lastUpdated = $nowUtc.AddDays(-1).ToString('o') }
+        'Vendor.Old.Nightly'    = @{ version = '2026.08.28'; state = 'VALIDATION_PASSED'; lastUpdated = $nowUtc.AddDays(-5).ToString('o') }
+        'Vendor.Stable'         = @{ version = '1.0.0'; state = 'VALIDATION_FAILED'; lastUpdated = $nowUtc.ToString('o') }
+    } | ConvertTo-Json -Depth 4 | Set-Content -Path $stateFile -Encoding utf8
+
+    $packages = @(
+        @{ id = 'Vendor.Recent.Nightly'; repo = 'vendor/recent'; url = 'https://example.com/{VERSION}.exe'; tagPattern = '^\d{4}\.' },
+        @{ id = 'Vendor.Old.Nightly'; repo = 'vendor/old'; url = 'https://example.com/{VERSION}.exe'; tagPattern = '^\d{4}\.' },
+        @{ id = 'Vendor.Stable'; repo = 'vendor/stable'; url = 'https://example.com/{VERSION}.exe' }
+    )
+
+    $fromState = Select-GitHubPackagesNeedingUpdate -Packages $packages -GraphQlInvoker $invoker -StateFilePath $stateFile -OpenPrTester { $false } -WarningAction SilentlyContinue
+    $disabled = Select-GitHubPackagesNeedingUpdate -Packages $packages -GraphQlInvoker $invoker -StateFilePath $stateFile -OpenPrTester { $false } -ChannelCooldownDays 0 -WarningAction SilentlyContinue
+    $preloaded = Select-GitHubPackagesNeedingUpdate -Packages $packages -GraphQlInvoker $invoker -StateFilePath $stateFile -OpenPrTester { $false } -ChannelCooldownBlocks @{} -WarningAction SilentlyContinue
+    Remove-Item -Path $stateFile -Force -ErrorAction SilentlyContinue
+
+    [PSCustomObject]@{ FromState = $fromState; Disabled = $disabled; Preloaded = $preloaded }
+}
+Assert-Equal 'Skipped:ChannelCooldown' (Get-ReasonFor $channelCooldown.FromState 'Vendor.Recent.Nightly') 'nightly validated yesterday is throttled'
+Assert-Equal 'Include:NewVersion' (Get-ReasonFor $channelCooldown.FromState 'Vendor.Old.Nightly') 'nightly validated five days ago is included'
+Assert-Equal 'Include:NewVersion' (Get-ReasonFor $channelCooldown.FromState 'Vendor.Stable') 'stable packages are never throttled'
+Assert-Equal 'Include:NewVersion' (Get-ReasonFor $channelCooldown.Disabled 'Vendor.Recent.Nightly') 'ChannelCooldownDays 0 disables the throttle'
+Assert-Equal 'Include:NewVersion' (Get-ReasonFor $channelCooldown.Preloaded 'Vendor.Recent.Nightly') 'preloaded empty blocks bypass the state file'
+$cooldownEntry = @($channelCooldown.FromState.Skipped | Where-Object { $_.Package.id -eq 'Vendor.Recent.Nightly' })[0]
+Assert-Equal '2026.09.02' $cooldownEntry.LastVersion 'throttled entry reports the last validated version'
+
 # 8) Without a state file path the tester is never consulted.
 $openPrDisabled = & $module {
     $invoker = {

@@ -30,3 +30,25 @@ function Get-WingetPackageIdStreamKind {
     }
     return 'None'
 }
+
+function Test-WingetChannelPackageId {
+    <#
+    .SYNOPSIS
+        Tests whether an identifier names a fast-moving release channel that is
+        subject to the submission cooldown.
+
+    .DESCRIPTION
+        Broader than the ChannelSuffix stream kind: Canary channels (e.g.
+        Vendicated.Vencord.Canary) follow the repository's normal releases and
+        therefore need no stream pin, but they still churn like nightlies and
+        share the same Defender/AV false-positive pattern.
+    #>
+    [CmdletBinding()]
+    [OutputType([bool])]
+    param(
+        [Parameter(Mandatory = $true)]
+        [string] $PackageId
+    )
+
+    return $PackageId -match '\.(Nightly|Beta|Preview|Pre-?Release|Canary)$'
+}

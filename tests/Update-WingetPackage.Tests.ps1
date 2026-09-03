@@ -251,6 +251,105 @@ if ($preGenerationGuardResult.Result.Generated -or $preGenerationGuardResult.Res
     throw "The pre-generation existing-PR guard did not stop generation: $($preGenerationGuardResult.Result | ConvertTo-Json -Compress)"
 }
 
+Write-Host 'TEST: submission policy hold stops generation and reports its reason'
+$policyHoldResult = & $module {
+    $script:PolicyHoldCalls = @()
+
+    function Test-GitHubToken { 'test-token' }
+    function Test-PackageAndVersionInGithub {
+        [PSCustomObject]@{
+            PackageExists          = $true
+            ShouldGenerate         = $true
+            VersionExists          = $false
+            CanonicalVersion       = '1.0.0'
+            PublishedVersion       = $null
+            LatestPublishedVersion = $null
+        }
+    }
+    function Test-ExistingPRs { $false }
+    function Get-WingetPreSubmissionHold {
+        param($PackageId, $Version, $InstallerUrls, $Repository, $GHRepo, $GHTag, $MinReleaseAgeHours)
+        $script:PolicyHoldCalls += [PSCustomObject]@{ PackageId = $PackageId; Version = $Version; InstallerUrls = @($InstallerUrls); MinReleaseAgeHours = $MinReleaseAgeHours }
+        [PSCustomObject]@{ Reason = 'ReleaseTooFresh'; Detail = 'release is 1 h old' }
+    }
+    function Install-WinMatsch { throw 'Manifest generation started despite a submission policy hold.' }
+    function winmatsch { throw 'Manifest generation started despite a submission policy hold.' }
+    function Test-GeneratedInstallerArchitecture { throw 'Manifest generation started despite a submission policy hold.' }
+
+    $result = Update-WingetPackage `
+        -WingetPackage 'Test.Package' `
+        -With 'WinMatsch' `
+        -latestVersion '1.0.0' `
+        -latestVersionURL 'https://example.invalid/app.zip|x64' `
+        -GHMinReleaseAgeHours '48'
+
+    [PSCustomObject]@{
+        Result = $result
+        Calls  = $script:PolicyHoldCalls
+    }
+}
+if ($policyHoldResult.Result.Generated -or $policyHoldResult.Result.Reason -cne 'ReleaseTooFresh') {
+    throw "The submission policy hold did not stop generation: $($policyHoldResult.Result | ConvertTo-Json -Compress)"
+}
+if (@($policyHoldResult.Calls).Count -ne 1 -or
+    $policyHoldResult.Calls[0].PackageId -cne 'Test.Package' -or
+    $policyHoldResult.Calls[0].Version -cne '1.0.0' -or
+    $policyHoldResult.Calls[0].MinReleaseAgeHours -cne '48' -or
+    (@($policyHoldResult.Calls[0].InstallerUrls) -join ',') -cne 'https://example.invalid/app.zip') {
+    throw "The submission policy hold received unexpected arguments: $($policyHoldResult.Calls | ConvertTo-Json -Compress)"
+}
+
+Write-Host 'TEST: submission policies are not consulted when an open PR already exists'
+$policySkippedResult = & $module {
+    function Test-GitHubToken { 'test-token' }
+    function Test-PackageAndVersionInGithub {
+        [PSCustomObject]@{
+            PackageExists          = $true
+            ShouldGenerate         = $true
+            VersionExists          = $false
+            CanonicalVersion       = '1.0.0'
+            PublishedVersion       = $null
+            LatestPublishedVersion = $null
+        }
+    }
+    function Test-ExistingPRs { $true }
+    function Get-WingetPreSubmissionHold { throw 'Policy checks ran although a duplicate PR already exists.' }
+
+    Update-WingetPackage `
+        -WingetPackage 'Test.Package' `
+        -With 'WinMatsch' `
+        -latestVersion '1.0.0' `
+        -latestVersionURL 'https://example.invalid/app.zip'
+}
+if ($policySkippedResult.Reason -cne 'PRExists') {
+    throw "Expected PRExists without policy checks, got: $($policySkippedResult | ConvertTo-Json -Compress)"
+}
+
+Write-Host 'TEST: numeric stream identifiers reject a foreign-stream release at generation time'
+$streamGuardError = $null
+try {
+    & $module {
+        function Test-GitHubToken { 'test-token' }
+        function Get-LatestGHVersionTag { 'v43.4.0' }
+        function Get-LatestARPVersion { '43.4.0' }
+        function Test-PackageAndVersionInGithub { throw 'Version lookup ran although the stream guard should have thrown first.' }
+
+        Update-WingetPackage `
+            -WingetPackage 'OpenJS.Electron.41' `
+            -With 'WinMatsch' `
+            -GHRepo 'electron/electron' `
+            -GHURLs 'https://github.com/electron/electron/releases/download/v{VERSION}/electron-v{VERSION}-win32-x64.zip' `
+            -GHTagPattern '^v4' `
+            -IsTemplateUpdate $true | Out-Null
+    }
+}
+catch {
+    $streamGuardError = $_
+}
+if ($null -eq $streamGuardError -or "$streamGuardError" -notmatch 'belongs to the 43 stream') {
+    throw "The numeric stream guard did not reject the foreign-stream release: $streamGuardError"
+}
+
 Write-Host 'TEST: selected repository scopes version and existing-PR checks'
 $selectedRepositoryResult = & $module {
     $script:VersionCheckRepository = $null

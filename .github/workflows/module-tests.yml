@@ -117,6 +117,8 @@ jobs:
           ./tests/Test-SubmittedManifestSnapshot.Tests.ps1
           ./tests/Test-ManifestContent.Tests.ps1
           ./tests/Test-ManifestPolicyGuards.Tests.ps1
+          ./tests/WingetPrSupersession.Tests.ps1
+          ./tests/WingetUpstreamPrPolicy.Tests.ps1
           $pesterConfig = New-PesterConfiguration
           $pesterConfig.Run.Path = @(
             './tests/Submit-WingetPackage.Tests.ps1',

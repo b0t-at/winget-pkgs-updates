@@ -35,6 +35,9 @@ function Update-WingetPackage {
         [Parameter(Mandatory = $false)] [bool] $GHPreRelease = $false,
         [Parameter(Mandatory = $false)] [string] $WinMatschOverridePack,
         [Parameter(Mandatory = $false)] [bool] $AllowStructuralRewrite = $false,
+        # Minimum age of the GitHub release (newest asset upload) before it is
+        # submitted; blank resolves via WINGET_MIN_RELEASE_AGE_HOURS, then 4 h.
+        [Parameter(Mandatory = $false)] [string] $GHMinReleaseAgeHours,
         [Parameter(Mandatory = $false)]
         [ValidatePattern('^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$')]
         [string] $Repository = 'microsoft/winget-pkgs'
@@ -87,6 +90,7 @@ function Update-WingetPackage {
     }
 
     $gitToken = Test-GitHubToken
+    $resolvedGHTag = $null
 
     if ($latestVersion -and $latestVersionURL) {
         $Latest = @{
@@ -103,6 +107,11 @@ function Update-WingetPackage {
             -Tag $versionTag `
             -GHURLs $GHURLs `
             -VersionSource $GHVersionSource
+
+        # A tagPattern that is too loose (e.g. '^v4') would still let a pinned
+        # stream pick a foreign line; the resolved version itself is the last check.
+        Assert-WingetNumericStreamVersion -PackageId $WingetPackage -Version $latestVersion -Tag $versionTag
+        $resolvedGHTag = $versionTag
 
         $Latest = @{
             Version = $latestVersion
@@ -214,7 +223,31 @@ function Update-WingetPackage {
             -Version $($Latest.Version) `
             -Repository $Repository
 
+        $policyHold = $null
         if (!$PRExists) {
+            $policyHold = Get-WingetPreSubmissionHold `
+                -PackageId $wingetPackage `
+                -Version $Latest.Version `
+                -InstallerUrls $RequestedInstallerUrls `
+                -Repository $Repository `
+                -GHRepo $GHRepo `
+                -GHTag $resolvedGHTag `
+                -MinReleaseAgeHours $GHMinReleaseAgeHours
+        }
+
+        if ($null -ne $policyHold) {
+            Write-Host "::notice::Not generating $wingetPackage $($Latest.Version) [$($policyHold.Reason)]: $($policyHold.Detail)"
+            $result.Reason = $policyHold.Reason
+
+            if ($env:GITHUB_OUTPUT) {
+                "generated=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                "reason=$($policyHold.Reason)" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                "package-id=$wingetPackage" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                "version=$($Latest.Version)" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                "detail=$(("$($policyHold.Detail)" -replace '\r?\n', ' ').Trim())" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            }
+        }
+        elseif (!$PRExists) {
             Write-Host "Downloading $EffectiveWith and generate manifest for $wingetPackage Version $($Latest.Version)"
             $generatorResult = $null
             Switch ($EffectiveWith) {

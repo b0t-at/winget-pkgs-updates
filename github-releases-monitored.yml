@@ -275,6 +275,7 @@
             repo: "etcd-io/etcd"
             url: "https://github.com/etcd-io/etcd/releases/download/v{VERSION}/etcd-v{VERSION}-windows-amd64.zip"
             with: "wingetcreate"
+            minReleaseAgeHours: 48
           - id: "EtternaProject.EtternaGame"
             repo: "etternagame/etterna"
             url: "https://github.com/etternagame/etterna/releases/download/v{VERSION}/Etterna-{VERSION}-win32.exe https://github.com/etternagame/etterna/releases/download/v{VERSION}/Etterna-{VERSION}-win64.exe"
@@ -469,6 +470,7 @@
             repo: "dbgate/dbgate"
             url: "https://github.com/dbgate/dbgate/releases/download/v{VERSION}/dbgate-{VERSION}-win_arm64.exe|arm64 https://github.com/dbgate/dbgate/releases/download/v{VERSION}/dbgate-{VERSION}-win_x64.exe|x64 https://github.com/dbgate/dbgate/releases/download/v{VERSION}/dbgate-{VERSION}-win.exe|x86"
             with: "wingetcreate"
+            minReleaseAgeHours: 48
           - id: "jdx.mise"
             repo: "jdx/mise"
             url: "https://github.com/jdx/mise/releases/download/v{VERSION}/mise-v{VERSION}-windows-x64.zip https://github.com/jdx/mise/releases/download/v{VERSION}/mise-v{VERSION}-windows-arm64.zip"
@@ -485,10 +487,12 @@
           - id: "jj-vcs.jj"
             repo: "jj-vcs/jj"
             url: "https://github.com/jj-vcs/jj/releases/download/v{VERSION}/jj-v{VERSION}-x86_64-pc-windows-msvc.zip https://github.com/jj-vcs/jj/releases/download/v{VERSION}/jj-v{VERSION}-aarch64-pc-windows-msvc.zip"
+            minReleaseAgeHours: 48
           - id: "JohannesMillan.superProductivity"
             repo: "johannesjo/super-productivity"
             url: "https://github.com/johannesjo/super-productivity/releases/download/v{VERSION}/Super-Productivity-Setup.exe|x86 https://github.com/johannesjo/super-productivity/releases/download/v{VERSION}/Super-Productivity-Setup-x64.exe|x64 https://github.com/johannesjo/super-productivity/releases/download/v{VERSION}/Super-Productivity-Setup-arm64.exe|arm64"
             with: "wingetcreate"
+            minReleaseAgeHours: 48
           - id: "JosephFinney.Text-Grab"
             repo: "TheJoeFin/Text-Grab"
             url: "https://github.com/TheJoeFin/Text-Grab/releases/download/v{VERSION}/Text-Grab.exe"
@@ -788,6 +792,7 @@
           - id: "raphamorim.rio"
             repo: "raphamorim/rio"
             url: "https://github.com/raphamorim/rio/releases/download/v{VERSION}/Rio-installer-x86_64.msi https://github.com/raphamorim/rio/releases/download/v{VERSION}/Rio-installer-aarch64.msi"
+            minReleaseAgeHours: 48
           - id: "rejetto.hfs"
             repo: "rejetto/hfs"
             url: "https://github.com/rejetto/hfs/releases/download/v{VERSION}/hfs-windows-x64-{VERSION}.zip"
@@ -827,6 +832,7 @@
           - id: "seerge.g-helper"
             repo: "seerge/g-helper"
             url: "https://github.com/seerge/g-helper/releases/download/v{VERSION}/GHelper.exe"
+            minReleaseAgeHours: 48
           - id: "shawnbanasick.kade"
             repo: "shawnbanasick/kade"
             url: "https://github.com/shawnbanasick/kade/releases/download/v{VERSION}/KADE.Setup.{VERSION}.exe"
@@ -928,6 +934,7 @@
           - id: "sunfish-shogi.shogihome"
             repo: "sunfish-shogi/shogihome"
             url: "https://github.com/sunfish-shogi/shogihome/releases/download/v{VERSION}/release-v{VERSION}-win.zip|x86"
+            minReleaseAgeHours: 48
           - id: "SUSE.RancherDesktop"
             repo: "rancher-sandbox/rancher-desktop"
             url: "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v{VERSION}/Rancher.Desktop.Setup.{VERSION}.msi"
@@ -1383,9 +1390,10 @@
           - id: "C-POPLO.Unreal-GUI"
             repo: "G-POPLO/unreal-GUI"
             url: "https://github.com/G-POPLO/unreal-GUI/releases/download/{VERSION}/unreal-gui_setup.exe"
-          - id: "Calibrite.PROFILER"
-            repo: "LUMESCA/calibrite-profiler-releases"
-            url: "https://github.com/LUMESCA/calibrite-profiler-releases/releases/download/v{VERSION}/calibrite-PROFILER-Setup-{VERSION}.exe"
+#          Calibrite.PROFILER is excluded: retired 2026-09-03 because the installer installs a driver; upstream flags every submission DriverInstall + Blocking-Issue (PR #422969, left to the moderators). Automated updates cannot pass validation for this package.
+#          - id: "Calibrite.PROFILER"
+#            repo: "LUMESCA/calibrite-profiler-releases"
+#            url: "https://github.com/LUMESCA/calibrite-profiler-releases/releases/download/v{VERSION}/calibrite-PROFILER-Setup-{VERSION}.exe"
           - id: "Camunda.Modeler"
             repo: "camunda/camunda-modeler"
             url: "https://github.com/camunda/camunda-modeler/releases/download/v{VERSION}/camunda-modeler-{VERSION}-win-ia32.zip https://github.com/camunda/camunda-modeler/releases/download/v{VERSION}/camunda-modeler-{VERSION}-win-x64.zip"
@@ -1726,6 +1734,7 @@
           - id: "futrime.lipd"
             repo: "futrime/lip"
             url: "https://github.com/futrime/lip/releases/download/v{VERSION}/lip-{VERSION}-win-arm64.zip https://github.com/futrime/lip/releases/download/v{VERSION}/lip-{VERSION}-win-x64.zip"
+            minReleaseAgeHours: 48
           - id: "fwupd.fwupd"
             repo: "fwupd/fwupd"
             url: "https://github.com/fwupd/fwupd/releases/download/{VERSION}/fwupd-{VERSION}-setup-x86_64.msi"
@@ -1783,6 +1792,7 @@
           - id: "GodotLauncher.Launcher"
             repo: "godotlauncher/launcher"
             url: "https://github.com/godotlauncher/launcher/releases/download/v{VERSION}/Godot_Launcher-{VERSION}-win_arm64.exe https://github.com/godotlauncher/launcher/releases/download/v{VERSION}/Godot_Launcher-{VERSION}-win_x64.exe"
+            minReleaseAgeHours: 48
           - id: "GoHarbor.Harbor"
             repo: "goharbor/harbor-cli"
             url: "https://github.com/goharbor/harbor-cli/releases/download/v{VERSION}/harbor-cli_{VERSION}_windows_amd64.zip"
@@ -1879,9 +1889,10 @@
           - id: "hikari-no-yume.touchHLE"
             repo: "touchHLE/touchHLE"
             url: "https://github.com/touchHLE/touchHLE/releases/download/v{VERSION}/touchHLE_v{VERSION}_Windows_x86_64.zip"
-          - id: "HiroSystems.Clarinet"
-            repo: "stx-labs/clarinet"
-            url: "https://github.com/stx-labs/clarinet/releases/download/v{VERSION}/clarinet-windows-x64.zip"
+#          HiroSystems.Clarinet is excluded: retired 2026-09-03 because the ID is superseded by StacksLabs.Clarinet in winget-pkgs (already monitored below); the validator matched the installer hash to manifests/s/StacksLabs/Clarinet/3.23.1, so every release was re-published under the dead ID as a guaranteed duplicate (upstream PR #422360).
+#          - id: "HiroSystems.Clarinet"
+#            repo: "stx-labs/clarinet"
+#            url: "https://github.com/stx-labs/clarinet/releases/download/v{VERSION}/clarinet-windows-x64.zip"
           - id: "HiroyukiFuruno.katana-desktop"
             repo: "HiroyukiFuruno/KatanA"
             url: "https://github.com/HiroyukiFuruno/KatanA/releases/download/v{VERSION}/KatanA-windows-x86_64.msi"
@@ -2320,9 +2331,10 @@
 #          - id: "MongoDB.Compass.Community"
 #            repo: "mongodb-js/compass"
 #            url: "https://github.com/mongodb-js/compass/releases/download/v{VERSION}/mongodb-compass-{VERSION}-win32-x64.msi"
-          - id: "MonzerOsman.YallaVideo"
-            repo: "monzer15/yalla-video-releases"
-            url: "https://github.com/monzer15/yalla-video-releases/releases/download/v{VERSION}/Yalla-Video-Setup-{VERSION}.exe"
+#          MonzerOsman.YallaVideo is excluded: retired 2026-09-03 because the published LicenseUrl (.../YallaVideo/blob/master/LICENSE) returns 404, so every automated update fails URL validation (upstream PR #418595). Re-enable with an override pack that replaces LicenseUrl once a reviewer has confirmed the correct license location.
+#          - id: "MonzerOsman.YallaVideo"
+#            repo: "monzer15/yalla-video-releases"
+#            url: "https://github.com/monzer15/yalla-video-releases/releases/download/v{VERSION}/Yalla-Video-Setup-{VERSION}.exe"
           - id: "MorganZWest.HSEmulate"
             repo: "morganzwest/hsemulator"
             url: "https://github.com/morganzwest/hsemulator/releases/download/v{VERSION}/hsemulate-{VERSION}-windows-x64-installer.exe"
@@ -2777,6 +2789,7 @@
           - id: "rizukirr.apic-gui"
             repo: "rizukirr/apic"
             url: "https://github.com/rizukirr/apic/releases/download/v{VERSION}/apic-gui-v{VERSION}-x86_64.msi"
+            minReleaseAgeHours: 48
           - id: "Rnwood.Smtp4dev"
             repo: "rnwood/smtp4dev"
             url: "https://github.com/rnwood/smtp4dev/releases/download/{VERSION}/Rnwood.Smtp4dev-win-x64-{VERSION}.zip https://github.com/rnwood/smtp4dev/releases/download/{VERSION}/Rnwood.Smtp4dev-win-arm64-{VERSION}.zip"
@@ -3002,9 +3015,10 @@
           - id: "stefanprodan.timoni"
             repo: "stefanprodan/timoni"
             url: "https://github.com/stefanprodan/timoni/releases/download/v{VERSION}/timoni_{VERSION}_windows_amd64.zip"
-          - id: "Stells.EntraChecks"
-            repo: "f8l124/AzurePAM"
-            url: "https://github.com/f8l124/AzurePAM/releases/download/v{VERSION}/EntraChecks_{VERSION}_x64-setup.exe"
+#          Stells.EntraChecks is excluded: retired 2026-09-03 because the GitHub user f8l124 was renamed; the monitored repo no longer resolves (Config Health AssetMissing) and the published PublisherUrl https://github.com/f8l124 returns 404 (upstream PR #418503 URL-Validation-Error). Re-enable with the new repo slug and a PublisherUrl override pack once the publisher's new location is known.
+#          - id: "Stells.EntraChecks"
+#            repo: "f8l124/AzurePAM"
+#            url: "https://github.com/f8l124/AzurePAM/releases/download/v{VERSION}/EntraChecks_{VERSION}_x64-setup.exe"
           - id: "Stephanvs.hypr"
             repo: "Stephanvs/hypr"
             url: "https://github.com/Stephanvs/hypr/releases/download/v{VERSION}/hypr-windows-x64.zip"

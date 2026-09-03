@@ -268,4 +268,47 @@ foreach ($entrySet in $entrySets.GetEnumerator()) {
     }
 }
 
+# The generated sidecars are what the workflows actually process. They are
+# produced by scripts/orchestrate_gh-packages.py; when that step is skipped
+# after editing github-releases-monitored.yml, retired packages keep being
+# submitted (2026-08: ten retired entries stayed live for two weeks because
+# the orchestrate workflow was disabled). Run
+#   python scripts/orchestrate_gh-packages.py
+# after every edit of the monitored list.
+$monitoredIds = @($monitoredEntries | ForEach-Object { [string]$_['id'] })
+$sidecarIds = @($entrySets.GetEnumerator() |
+        Where-Object { $_.Key -ne 'github-releases-monitored.yml' } |
+        ForEach-Object { @($_.Value) } |
+        ForEach-Object { [string]$_.id })
+$staleSidecarIds = @($sidecarIds | Where-Object { $_ -notin $monitoredIds } | Sort-Object -Unique)
+$missingSidecarIds = @($monitoredIds | Where-Object { $_ -notin $sidecarIds } | Sort-Object -Unique)
+if ($staleSidecarIds.Count -gt 0 -or $missingSidecarIds.Count -gt 0) {
+    $details = @()
+    if ($staleSidecarIds.Count -gt 0) {
+        $details += "  retired in github-releases-monitored.yml but still in a sidecar: $($staleSidecarIds -join ', ')"
+    }
+    if ($missingSidecarIds.Count -gt 0) {
+        $details += "  monitored in github-releases-monitored.yml but missing from every sidecar: $($missingSidecarIds -join ', ')"
+    }
+    throw "The generated package sidecars are out of sync with github-releases-monitored.yml; run 'python scripts/orchestrate_gh-packages.py' and commit the result.$([Environment]::NewLine)$($details -join [Environment]::NewLine)"
+}
+
+# Per-package fields the workflow forwards must survive the yml -> sidecar
+# rendering with their configured values.
+$monitoredByIdText = Get-Content -LiteralPath (Join-Path $repositoryRoot 'github-releases-monitored.yml') -Raw
+$sidecarById = @{}
+foreach ($sidecarEntry in ($entrySets.GetEnumerator() | Where-Object { $_.Key -ne 'github-releases-monitored.yml' } | ForEach-Object { @($_.Value) })) {
+    $sidecarById[[string]$sidecarEntry.id] = $sidecarEntry
+}
+foreach ($minAgeMatch in [regex]::Matches($monitoredByIdText, '(?m)^\s*-\s*id:\s*"(?<id>[^"]+)"(?:\r?\n(?!\s*-\s*id:)[^\r\n]*)*?\r?\n\s*minReleaseAgeHours:\s*(?<hours>\d+(?:\.\d+)?)\s*$')) {
+    $id = $minAgeMatch.Groups['id'].Value
+    $hours = $minAgeMatch.Groups['hours'].Value
+    if (-not $sidecarById.ContainsKey($id)) { continue }
+    $sidecarProperty = $sidecarById[$id].PSObject.Properties['minReleaseAgeHours']
+    $sidecarValue = if ($null -ne $sidecarProperty) { [string]$sidecarProperty.Value } else { '' }
+    if ($sidecarValue -ne $hours) {
+        throw "Sidecar entry for $id carries minReleaseAgeHours '$sidecarValue' but github-releases-monitored.yml configures '$hours'; regenerate the sidecars."
+    }
+}
+
 Write-Host 'GitHub release monitoring configuration regression tests passed.' -ForegroundColor Green

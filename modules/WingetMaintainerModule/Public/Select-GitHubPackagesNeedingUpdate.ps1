@@ -288,6 +288,17 @@ function Select-GitHubPackagesNeedingUpdate {
         [Parameter()]
         [System.Collections.IDictionary] $ConfigHealthBlocks,
 
+        # Optional preloaded channel cooldown blocks (see
+        # Get-PackageStateChannelCooldownBlocks). Computed from the state file
+        # when omitted; an empty dictionary disables the throttle.
+        [Parameter()]
+        [System.Collections.IDictionary] $ChannelCooldownBlocks,
+
+        # Minimum days between validation runs of a Nightly/Beta/Canary package.
+        [Parameter()]
+        [ValidateRange(0, 365)]
+        [double] $ChannelCooldownDays = 3,
+
         [Parameter()]
         [ValidateRange(1, 8760)]
         [int] $OpenPrTtlHours = 24,
@@ -330,6 +341,14 @@ function Select-GitHubPackagesNeedingUpdate {
             @{}
         }
     }
+    if ($null -eq $ChannelCooldownBlocks) {
+        $ChannelCooldownBlocks = if ($openPrCheckEnabled) {
+            Get-PackageStateChannelCooldownBlocks -StateFilePath $StateFilePath -CooldownDays $ChannelCooldownDays
+        }
+        else {
+            @{}
+        }
+    }
     $openPrChecksUsed = 0
 
     $include = [System.Collections.Generic.List[object]]::new()
@@ -353,6 +372,18 @@ function Select-GitHubPackagesNeedingUpdate {
                     HealthStatus = [string]$health['status']
                     Detail       = [string]$health['detail']
                     CheckedAt    = [string]$health['checkedAt']
+                })
+        }
+        elseif ($ChannelCooldownBlocks.Contains($packageId)) {
+            # Nightly/Beta/Canary throttle: one validation run per cooldown
+            # window, independent of whether the last one passed or failed.
+            $cooldown = $ChannelCooldownBlocks[$packageId]
+            $skipped.Add([PSCustomObject]@{
+                    Package     = $package
+                    Reason      = 'ChannelCooldown'
+                    LastUpdated = [string]$cooldown['lastUpdated']
+                    LastVersion = [string]$cooldown['lastVersion']
+                    Detail      = "last validation run $([string]$cooldown['ageDays']) day(s) ago ($([string]$cooldown['lastVersion']) $([string]$cooldown['lastState'])); channel packages wait $([string]$cooldown['cooldownDays']) day(s) between submissions"
                 })
         }
         elseif ([string]::IsNullOrWhiteSpace($packageId) -or [string]::IsNullOrWhiteSpace($repo)) {

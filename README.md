@@ -34,6 +34,43 @@ For a reviewed installer architecture, type, or scope transition, set
 disabled by default and maps only to WinMatsch's `--allow-structural-rewrite`
 option.
 
+## Editing the monitored list
+
+`github-releases-monitored.yml` is the source of truth, but the workflows read
+the generated sidecar `.github/workflows-data/update-github-packages-*.packages.json`.
+After every edit (adding, retiring or reconfiguring a package) regenerate the
+sidecar and commit it together with the yml:
+
+```powershell
+pip install pyyaml
+python scripts/orchestrate_gh-packages.py
+```
+
+`tests/GitHubReleaseMonitoringConfiguration.Tests.ps1` fails when the sidecar
+and the yml disagree, so a retired package can no longer keep being submitted
+because the regeneration step was skipped. Retire a package by commenting out
+its entry and adding a `#  <Id> is excluded: <reason>` note above it;
+`scripts/Disable-ReAddedExcludedPackages.ps1` re-applies documented exclusions.
+
+## Submission policies
+
+Besides the duplicate-PR and published-version checks, manifest generation
+stops (reason in the job output) when one of these holds applies:
+
+| Reason | Rule |
+| --- | --- |
+| `ReleaseTooFresh` | The GitHub release is younger than the minimum age, measured from the newest of the release's publish time and the upload time of the assets the package uses. Default 4 hours (`WINGET_MIN_RELEASE_AGE_HOURS`); per package via `minReleaseAgeHours` on the matrix entry, e.g. `48` for packages whose publisher files their own PR within a day. `0` disables the delay. |
+| `BlockedByUpstreamValidation` | The bot's previous PR for the identical version was closed unmerged with a blocking label (`Validation-Defender-Error`, `Binary-Validation-Error`, `Validation-Certificate-Root`, `URL-Validation-Error`, `Validation-Unattended-Failed`, `Validation-Installation-Error`, `Validation-Shell-Execute`, `Blocking-Issue`, `DriverInstall`). A new upstream version is submitted normally. |
+| `HeldForManualValidation` | The bot's open PR for an older version carries `Azure-Pipeline-Passed` plus `Validation-Executable-Error`/`Validation-No-Executables` (moderators' manual-validation queue), is younger than 14 days, and the new version is only a patch bump. Superseding would reset the package's place in that queue. Non-patch releases and PRs older than 14 days supersede as before. |
+
+The update precheck additionally skips `ChannelCooldown` packages: identifiers
+ending in `.Nightly`, `.Beta`, `.Preview`, `.PreRelease` or `.Canary` run at
+most once every 3 days, regardless of the previous run's verdict.
+
+Numeric-stream identifiers (`OpenJS.Electron.41`) must pin their stream with a
+`tagPattern`; generation additionally fails closed when the resolved version
+does not start with the pinned number.
+
 ## End-to-end installer analysis
 
 `scripts/analyze/Invoke-InstallerE2E.ps1` answers "what would our pipeline do

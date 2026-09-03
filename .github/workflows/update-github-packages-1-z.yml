@@ -135,6 +135,7 @@ jobs:
           GHVersionSource: ${{ fromJSON(toJSON(matrix)).versionSource }}
           WinMatschOverridePack: ${{ fromJSON(toJSON(matrix)).overridePack }}
           AllowStructuralRewrite: ${{ fromJSON(toJSON(matrix)).allowStructuralRewrite }}
+          GHMinReleaseAgeHours: ${{ fromJSON(toJSON(matrix)).minReleaseAgeHours }}
           PackageName: ${{ matrix.id }}
           With: ${{ matrix.With }}
           Submit: "false"

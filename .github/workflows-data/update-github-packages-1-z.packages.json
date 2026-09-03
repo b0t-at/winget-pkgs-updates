@@ -436,7 +436,8 @@
     "id": "etcd-io.etcd",
     "repo": "etcd-io/etcd",
     "url": "https://github.com/etcd-io/etcd/releases/download/v{VERSION}/etcd-v{VERSION}-windows-amd64.zip",
-    "With": "wingetcreate"
+    "With": "wingetcreate",
+    "minReleaseAgeHours": 48
   },
   {
     "id": "EtternaProject.EtternaGame",
@@ -720,7 +721,8 @@
     "id": "JanProchazka.dbgate",
     "repo": "dbgate/dbgate",
     "url": "https://github.com/dbgate/dbgate/releases/download/v{VERSION}/dbgate-{VERSION}-win_arm64.exe|arm64 https://github.com/dbgate/dbgate/releases/download/v{VERSION}/dbgate-{VERSION}-win_x64.exe|x64 https://github.com/dbgate/dbgate/releases/download/v{VERSION}/dbgate-{VERSION}-win.exe|x86",
-    "With": "wingetcreate"
+    "With": "wingetcreate",
+    "minReleaseAgeHours": 48
   },
   {
     "id": "jdx.mise",
@@ -746,13 +748,15 @@
   {
     "id": "jj-vcs.jj",
     "repo": "jj-vcs/jj",
-    "url": "https://github.com/jj-vcs/jj/releases/download/v{VERSION}/jj-v{VERSION}-x86_64-pc-windows-msvc.zip https://github.com/jj-vcs/jj/releases/download/v{VERSION}/jj-v{VERSION}-aarch64-pc-windows-msvc.zip"
+    "url": "https://github.com/jj-vcs/jj/releases/download/v{VERSION}/jj-v{VERSION}-x86_64-pc-windows-msvc.zip https://github.com/jj-vcs/jj/releases/download/v{VERSION}/jj-v{VERSION}-aarch64-pc-windows-msvc.zip",
+    "minReleaseAgeHours": 48
   },
   {
     "id": "JohannesMillan.superProductivity",
     "repo": "johannesjo/super-productivity",
     "url": "https://github.com/johannesjo/super-productivity/releases/download/v{VERSION}/Super-Productivity-Setup.exe|x86 https://github.com/johannesjo/super-productivity/releases/download/v{VERSION}/Super-Productivity-Setup-x64.exe|x64 https://github.com/johannesjo/super-productivity/releases/download/v{VERSION}/Super-Productivity-Setup-arm64.exe|arm64",
-    "With": "wingetcreate"
+    "With": "wingetcreate",
+    "minReleaseAgeHours": 48
   },
   {
     "id": "JosephFinney.Text-Grab",
@@ -1202,7 +1206,8 @@
   {
     "id": "raphamorim.rio",
     "repo": "raphamorim/rio",
-    "url": "https://github.com/raphamorim/rio/releases/download/v{VERSION}/Rio-installer-x86_64.msi https://github.com/raphamorim/rio/releases/download/v{VERSION}/Rio-installer-aarch64.msi"
+    "url": "https://github.com/raphamorim/rio/releases/download/v{VERSION}/Rio-installer-x86_64.msi https://github.com/raphamorim/rio/releases/download/v{VERSION}/Rio-installer-aarch64.msi",
+    "minReleaseAgeHours": 48
   },
   {
     "id": "rejetto.hfs",
@@ -1267,7 +1272,8 @@
   {
     "id": "seerge.g-helper",
     "repo": "seerge/g-helper",
-    "url": "https://github.com/seerge/g-helper/releases/download/v{VERSION}/GHelper.exe"
+    "url": "https://github.com/seerge/g-helper/releases/download/v{VERSION}/GHelper.exe",
+    "minReleaseAgeHours": 48
   },
   {
     "id": "shawnbanasick.kade",
@@ -1418,7 +1424,8 @@
   {
     "id": "sunfish-shogi.shogihome",
     "repo": "sunfish-shogi/shogihome",
-    "url": "https://github.com/sunfish-shogi/shogihome/releases/download/v{VERSION}/release-v{VERSION}-win.zip|x86"
+    "url": "https://github.com/sunfish-shogi/shogihome/releases/download/v{VERSION}/release-v{VERSION}-win.zip|x86",
+    "minReleaseAgeHours": 48
   },
   {
     "id": "SUSE.RancherDesktop",
@@ -1744,11 +1751,6 @@
     "url": "https://github.com/108thecitizen/DesktopTileLauncher/releases/download/v{VERSION}/DesktopTileLauncher-v{VERSION}-onedir-win-x64.zip"
   },
   {
-    "id": "8bit2qubit.OmniConsole",
-    "repo": "8bit2qubit/OmniConsole",
-    "url": "https://github.com/8bit2qubit/OmniConsole/releases/download/v{VERSION}/OmniConsole_{VERSION}_x64.zip"
-  },
-  {
     "id": "AbiruzzamanMolla.DailyPrayerTimer",
     "repo": "AbiruzzamanMolla/DailyPrayerTimeSoftware",
     "url": "https://github.com/AbiruzzamanMolla/DailyPrayerTimeSoftware/releases/download/v{VERSION}/DailyPrayerTimer_Setup_v{VERSION}_x64.exe https://github.com/AbiruzzamanMolla/DailyPrayerTimeSoftware/releases/download/v{VERSION}/DailyPrayerTimer_Setup_v{VERSION}_x86.exe"
@@ -2004,11 +2006,6 @@
     "url": "https://github.com/beagleeditor/editor/releases/download/v{VERSION}/beagleeditor_{VERSION}_x64-setup.exe"
   },
   {
-    "id": "BenModigell.Vibes",
-    "repo": "benmdg/vibes-releases",
-    "url": "https://github.com/benmdg/vibes-releases/releases/download/v{VERSION}/Vibes_{VERSION}_x64-setup.exe"
-  },
-  {
     "id": "bensadeh.tailspin",
     "repo": "bensadeh/tailspin",
     "url": "https://github.com/bensadeh/tailspin/releases/download/{VERSION}/tailspin-x86_64-pc-windows-msvc.zip"
@@ -2137,11 +2134,6 @@
     "id": "C-POPLO.Unreal-GUI",
     "repo": "G-POPLO/unreal-GUI",
     "url": "https://github.com/G-POPLO/unreal-GUI/releases/download/{VERSION}/unreal-gui_setup.exe"
-  },
-  {
-    "id": "Calibrite.PROFILER",
-    "repo": "LUMESCA/calibrite-profiler-releases",
-    "url": "https://github.com/LUMESCA/calibrite-profiler-releases/releases/download/v{VERSION}/calibrite-PROFILER-Setup-{VERSION}.exe"
   },
   {
     "id": "Camunda.Modeler",
@@ -2327,11 +2319,6 @@
     "id": "CylCastillo.AgentConsole",
     "repo": "cyl-castillo/agent-console",
     "url": "https://github.com/cyl-castillo/agent-console/releases/download/v{VERSION}/Agent.Console_{VERSION}_x64-setup.exe"
-  },
-  {
-    "id": "CyrilPeng.VeneraNext",
-    "repo": "CyrilPeng/venera-next",
-    "url": "https://github.com/CyrilPeng/venera-next/releases/download/v{VERSION}/VeneraNext-{VERSION}-windows-installer.exe"
   },
   {
     "id": "D2L.BMX",
@@ -2679,7 +2666,8 @@
   {
     "id": "futrime.lipd",
     "repo": "futrime/lip",
-    "url": "https://github.com/futrime/lip/releases/download/v{VERSION}/lip-{VERSION}-win-arm64.zip https://github.com/futrime/lip/releases/download/v{VERSION}/lip-{VERSION}-win-x64.zip"
+    "url": "https://github.com/futrime/lip/releases/download/v{VERSION}/lip-{VERSION}-win-arm64.zip https://github.com/futrime/lip/releases/download/v{VERSION}/lip-{VERSION}-win-x64.zip",
+    "minReleaseAgeHours": 48
   },
   {
     "id": "fwupd.fwupd",
@@ -2774,7 +2762,8 @@
   {
     "id": "GodotLauncher.Launcher",
     "repo": "godotlauncher/launcher",
-    "url": "https://github.com/godotlauncher/launcher/releases/download/v{VERSION}/Godot_Launcher-{VERSION}-win_arm64.exe https://github.com/godotlauncher/launcher/releases/download/v{VERSION}/Godot_Launcher-{VERSION}-win_x64.exe"
+    "url": "https://github.com/godotlauncher/launcher/releases/download/v{VERSION}/Godot_Launcher-{VERSION}-win_arm64.exe https://github.com/godotlauncher/launcher/releases/download/v{VERSION}/Godot_Launcher-{VERSION}-win_x64.exe",
+    "minReleaseAgeHours": 48
   },
   {
     "id": "GoHarbor.Harbor",
@@ -2915,11 +2904,6 @@
     "id": "hikari-no-yume.touchHLE",
     "repo": "touchHLE/touchHLE",
     "url": "https://github.com/touchHLE/touchHLE/releases/download/v{VERSION}/touchHLE_v{VERSION}_Windows_x86_64.zip"
-  },
-  {
-    "id": "HiroSystems.Clarinet",
-    "repo": "stx-labs/clarinet",
-    "url": "https://github.com/stx-labs/clarinet/releases/download/v{VERSION}/clarinet-windows-x64.zip"
   },
   {
     "id": "HiroyukiFuruno.katana-desktop",
@@ -3332,11 +3316,6 @@
     "url": "https://github.com/lutzroeder/netron/releases/download/v{VERSION}/Netron-Setup-{VERSION}.exe"
   },
   {
-    "id": "Luxview.AgainstMe",
-    "repo": "JohnPitter/againstme-oficial",
-    "url": "https://github.com/JohnPitter/againstme-oficial/releases/download/v{VERSION}/againstme-app.exe"
-  },
-  {
     "id": "machinewrapped.SmartCopy",
     "repo": "machinewrapped/SmartCopy2026",
     "url": "https://github.com/machinewrapped/SmartCopy2026/releases/download/v{VERSION}/SmartCopy-{VERSION}-win-x64.zip"
@@ -3573,11 +3552,6 @@
     "id": "Monghoul.Monghoul",
     "repo": "Kontsedal/monghoul-public",
     "url": "https://github.com/Kontsedal/monghoul-public/releases/download/v{VERSION}/Monghoul_{VERSION}_x64-setup.exe"
-  },
-  {
-    "id": "MonzerOsman.YallaVideo",
-    "repo": "monzer15/yalla-video-releases",
-    "url": "https://github.com/monzer15/yalla-video-releases/releases/download/v{VERSION}/Yalla-Video-Setup-{VERSION}.exe"
   },
   {
     "id": "MorganZWest.HSEmulate",
@@ -3823,11 +3797,6 @@
     "id": "omiq.RGC-BASIC",
     "repo": "omiq/rgc-basic",
     "url": "https://github.com/omiq/rgc-basic/releases/download/v{VERSION}/basic-windows.zip"
-  },
-  {
-    "id": "OmniEdge.OmniEdgeCLI",
-    "repo": "omniedgeio/omniedge",
-    "url": "https://github.com/omniedgeio/omniedge/releases/download/v{VERSION}/omniedge-cli-{VERSION}-windows-x64.zip"
   },
   {
     "id": "omnimistic.pain",
@@ -4233,7 +4202,8 @@
   {
     "id": "rizukirr.apic-gui",
     "repo": "rizukirr/apic",
-    "url": "https://github.com/rizukirr/apic/releases/download/v{VERSION}/apic-gui-v{VERSION}-x86_64.msi"
+    "url": "https://github.com/rizukirr/apic/releases/download/v{VERSION}/apic-gui-v{VERSION}-x86_64.msi",
+    "minReleaseAgeHours": 48
   },
   {
     "id": "Rnwood.Smtp4dev",
@@ -4259,11 +4229,6 @@
     "id": "Rojo.Rojo",
     "repo": "rojo-rbx/rojo",
     "url": "https://github.com/rojo-rbx/rojo/releases/download/v{VERSION}/rojo-{VERSION}-windows-x86_64.zip"
-  },
-  {
-    "id": "RoniLehto.LMath",
-    "repo": "lehtoroni/lmath-issues",
-    "url": "https://github.com/lehtoroni/lmath-issues/releases/download/v{VERSION}/LMath_Windows_r{VERSION}-release.exe"
   },
   {
     "id": "roryok.poe-writer",
@@ -4492,11 +4457,6 @@
     "url": "https://github.com/slowscript/warpinator-windows/releases/download/v{VERSION}/warpinator-setup_{VERSION}.exe"
   },
   {
-    "id": "sluicesync.sluice",
-    "repo": "sluicesync/sluice",
-    "url": "https://github.com/sluicesync/sluice/releases/download/v{VERSION}/sluice_{VERSION}_Windows_arm64.zip https://github.com/sluicesync/sluice/releases/download/v{VERSION}/sluice_{VERSION}_Windows_x86_64.zip"
-  },
-  {
     "id": "Snesnopic.Flacoutcpp",
     "repo": "Snesnopic/flacoutcpp",
     "url": "https://github.com/Snesnopic/flacoutcpp/releases/download/v{VERSION}/flacoutcpp-windows-x64.zip https://github.com/Snesnopic/flacoutcpp/releases/download/v{VERSION}/flacoutcpp-windows-x86.zip https://github.com/Snesnopic/flacoutcpp/releases/download/v{VERSION}/flacoutcpp-windows-arm64.zip"
@@ -4595,11 +4555,6 @@
     "id": "stefanprodan.timoni",
     "repo": "stefanprodan/timoni",
     "url": "https://github.com/stefanprodan/timoni/releases/download/v{VERSION}/timoni_{VERSION}_windows_amd64.zip"
-  },
-  {
-    "id": "Stells.EntraChecks",
-    "repo": "f8l124/AzurePAM",
-    "url": "https://github.com/f8l124/AzurePAM/releases/download/v{VERSION}/EntraChecks_{VERSION}_x64-setup.exe"
   },
   {
     "id": "Stephanvs.hypr",
@@ -5147,16 +5102,6 @@
     "url": "https://github.com/fiw-kakurai/pulsebar/releases/download/v{VERSION}/pulsebar-setup-{VERSION}.exe"
   },
   {
-    "id": "yetone.OpenAITranslator",
-    "repo": "nextai-translator/nextai-translator",
-    "url": "https://github.com/nextai-translator/nextai-translator/releases/download/v{VERSION}/NextAI.Translator_{VERSION}_x64-setup.exe"
-  },
-  {
-    "id": "yhay81.sqrail",
-    "repo": "yhay81/sqrail",
-    "url": "https://github.com/yhay81/sqrail/releases/download/v{VERSION}/sqrail-v{VERSION}-windows-x86_64.zip https://github.com/yhay81/sqrail/releases/download/v{VERSION}/sqrail-v{VERSION}-windows-arm64.zip"
-  },
-  {
     "id": "YongcanYang.GameCheatsManager",
     "repo": "dyang886/Game-Cheats-Manager",
     "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v{VERSION}/Game.Cheats.Manager.Setup.{VERSION}.exe"
@@ -5170,12 +5115,6 @@
     "id": "yoogie27.largecopy",
     "repo": "yoogie27/largecopy",
     "url": "https://github.com/yoogie27/largecopy/releases/download/v{VERSION}/largecopy.exe"
-  },
-  {
-    "id": "yt-dlp.yt-dlp.nightly",
-    "repo": "yt-dlp/yt-dlp-nightly-builds",
-    "url": "https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/download/{VERSION}/yt-dlp_x86.exe https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/download/{VERSION}/yt-dlp.exe https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/download/{VERSION}/yt-dlp_arm64.exe",
-    "tagPattern": "^\\d{4}\\."
   },
   {
     "id": "YuminZhan.WinLinker",
