@@ -491,16 +491,16 @@
     }
   },
   "ArcBox.LinkCode": {
-    "validationCount": 1,
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-29T08:57:32.2912549Z",
-    "manifestHash": "581A50605980D3C9F591214CD91AB0C02D8CD71F6924FCDCFCA679CDBA1F2FD2",
-    "version": "0.28.0",
+    "validationCount": 1,
+    "lastUpdated": "2026-09-03T16:55:38.2599863Z",
+    "version": "0.30.0",
     "installerHashes": [
-      "AC80D81A672E4DFB8C1CCB8FA78C8316FF55046C25D1B591213F70C702635C77",
-      "A5C5434571823E9612976E140DAE72D58595D7DB2860E5540A560D137C83BB2A"
-    ]
+      "4CA88CB35BE686FEB17383BF8D69F4C401472F98B0D9E2B10B5EB02A7A3B8A1C",
+      "ABE3655066C3FE899E99AD8357C5A7694A746F7E06F5655F9534471614050BD0"
+    ],
+    "manifestHash": "59A516B3C8B6AD5D1AD0C4E2819C97B0C1E37AE49F34847A3393A3974F0477EF",
+    "state": "VALIDATION_PASSED"
   },
   "Archeb.OpenTrace": {
     "version": "1.5.2",
@@ -3466,14 +3466,14 @@
     "manifestHash": "423C80406767A6B457D4F90B359A7368A66D86CBBA37E520C851AF1E35914488"
   },
   "Hitalin.NoteDeck": {
-    "validationCount": 1,
-    "version": "1.53.1",
-    "lastUpdated": "2026-08-24T20:51:39.5256168Z",
-    "manifestHash": "E7F5FF55B46FCDAA0A0EC4319A202CAEF8EC522107D063F5FEA68D8076727585",
-    "installerHashes": [
-      "F7045CD0EFB1B394A0560197A369121B414C03F1253CFB2A381FED4D988AE95C"
-    ],
     "description": "",
+    "validationCount": 1,
+    "lastUpdated": "2026-09-03T16:55:38.3294637Z",
+    "version": "1.54.0",
+    "installerHashes": [
+      "399D10AC5A9971FE63BE37770B51A7A8AAD5536F729ACB84139D1F49E75FCB55"
+    ],
+    "manifestHash": "7725F446E5553C6932CBABF184EED0ABC0C95D78090FF0C5C7F5D7FFA5E27CF4",
     "state": "VALIDATION_PASSED"
   },
   "hluk.CopyQ": {
@@ -8759,15 +8759,15 @@
     "validationCount": 1
   },
   "vantoan1511.TableView": {
-    "version": "0.6.7",
-    "installerHashes": [
-      "A029255D9ABD2045DE69F1E01ACD6DF07B5D16799D84A3982D66E984E45FA439"
-    ],
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "149E76022D565F22BB6F0FD3E9944E3508768F187DAED146AC94553EF0E39527",
     "validationCount": 1,
-    "lastUpdated": "2026-08-19T15:56:01.4257805Z"
+    "lastUpdated": "2026-09-03T16:55:38.2986116Z",
+    "version": "0.6.8",
+    "installerHashes": [
+      "0EA303755C8B10CB1564EBE44E92D04C0C18EFE669A7D796F39D36196637FB90"
+    ],
+    "manifestHash": "180CE038EE44416C3A8AD9B16E96FC61FE895411D67CE4BB2050B58232005B47",
+    "state": "VALIDATION_PASSED"
   },
   "Vathivis.paperq": {
     "description": "",
