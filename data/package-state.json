@@ -1949,16 +1949,16 @@
     "version": "1.7.239"
   },
   "Docker.Buildx": {
-    "lastUpdated": "2026-08-17T17:04:34.969162Z",
-    "description": "",
-    "installerHashes": [
-      "CD7D06A00D924B5800D2654B507AFE100378A4685FCEC6585EEADC599A527330",
-      "79522FF962BF3B127C8E9CA56944B1A3FCBE46E1D0B4144D481F356D8C13FA74"
-    ],
+    "lastUpdated": "2026-09-03T05:52:35.6042853Z",
+    "manifestHash": "4740126D0B1CB6429FBEDB4A27448F72253FE750A1B6B104AB733FA01C465A31",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "manifestHash": "D15320DA7141748CD17FAA4E0D9AFF2B32528134E8D32BFEE57908C8F4C471D6",
-    "version": "0.36.1",
-    "state": "VALIDATION_PASSED"
+    "installerHashes": [
+      "F49FA81C676E178EBAC4679CC33C6560F14A56B586F33C9E298A917313CD909B",
+      "822457D04CD6D0685DCE5E6F343CDCA86F6DBEBA6BAE6302D033FF93E95C9D23"
+    ],
+    "description": "",
+    "version": "0.37.0"
   },
   "Docker.docker-credential-wincred": {
     "state": "VALIDATION_PASSED",
@@ -3064,15 +3064,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Google.FirebaseCLI": {
-    "validationCount": 1,
-    "lastUpdated": "2026-08-29T17:06:32.9282695Z",
-    "description": "",
-    "installerHashes": [
-      "2FAA512A8613B93B24560075D1D2936924EE75DB9015B4BAAA6C5A2C4D67575F"
-    ],
-    "manifestHash": "05B31442D2F86C20F3E56586FD7F6B77DF4467AF7B7077349712EF5382171582",
+    "lastUpdated": "2026-09-03T05:52:35.5195359Z",
+    "manifestHash": "21EF2CAAE227ABDC81345B494B8D4D60D1845C056DB38611F7855E264E08D899",
     "state": "VALIDATION_PASSED",
-    "version": "15.28.2"
+    "validationCount": 1,
+    "installerHashes": [
+      "5B0E5841C9170C2DB8557651BA5E86BE2FDB4DFC49CF57DA0DE6C8134A4EF253"
+    ],
+    "description": "",
+    "version": "15.29.0"
   },
   "Google.IAPDesktop": {
     "lastUpdated": "2026-06-30T01:55:05.1221847Z",
