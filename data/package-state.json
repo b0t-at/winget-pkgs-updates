@@ -17,7 +17,11 @@
     "manifestHash": "245DEF5FECA8FD0085E88401021DE830BFF3F47347220636C85FD0FB2C99E5E8",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "4.5.0.0"
+    "version": "4.5.0.0",
+    "openPr": {
+      "checkedAt": "2026-09-03T12:34:59.778129Z",
+      "version": "4.5.0.0"
+    }
   },
   "ABowlOfEleven.hopscout": {
     "manifestHash": "1F3AE2A47F29CCDE4BDE142A406D060AE04B93D9EE44F9F9F28DB6D583CF4D25",
@@ -1451,8 +1455,8 @@
     "validationCount": 1,
     "version": "1.0.48275",
     "openPr": {
-      "version": "1.0.49308",
-      "checkedAt": "2026-09-02T20:23:08.2613835Z"
+      "checkedAt": "2026-09-03T12:33:56.6867009Z",
+      "version": "1.0.49458"
     }
   },
   "ciromattia.KCC": {
@@ -1634,11 +1638,7 @@
     "installerHashes": [
       "4B15542273DE781EF59CE3ABF4994989639CE984E1B340612D1B0DC7F9B9D6F5"
     ],
-    "validationCount": 2,
-    "openPr": {
-      "version": "1.8.0",
-      "checkedAt": "2026-09-02T12:35:16.5635Z"
-    }
+    "validationCount": 2
   },
   "CrowdSecurity.CrowdSecWindowsFirewallBouncer": {
     "version": "0.0.6",
