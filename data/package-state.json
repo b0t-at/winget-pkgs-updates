@@ -434,15 +434,15 @@
     "state": "VALIDATION_PASSED"
   },
   "AppFlowy.AppFlowy": {
-    "version": "0.14.0",
-    "installerHashes": [
-      "48B5E2CFFCBDB1730B6EB78AE15CBC5285C7197F79BF5704BC5D18B49ADE9702"
-    ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "manifestHash": "1BEB29E316644EC524AEA9B9D693460C2E0746B983338DC2F19E618A6721591E",
-    "lastUpdated": "2026-08-28T16:40:58.6069828Z",
-    "description": ""
+    "version": "0.14.1",
+    "installerHashes": [
+      "168569AA33BD072E5F7F171E92B46D7BFDB608E200386133C07388D0DAE0B893"
+    ],
+    "manifestHash": "ECDAC11599F17E2D9BF633A60935BC5D2613B82F1B35F2D5B783A90EA5D4588D",
+    "lastUpdated": "2026-09-04T13:10:02.8230522Z",
+    "description": "",
+    "validationCount": 1
   },
   "AppiumDevelopers.AppiumInspector": {
     "state": "VALIDATION_FAILED",
@@ -4335,15 +4335,15 @@
   },
   "LANCommander.Server": {
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-27T16:27:48.4131895Z",
+    "version": "2.1.12",
     "installerHashes": [
-      "B4002B23B1A60C1F480453C6F1B77B966FB5D0C1521048AE115D1F3FCEE63C86",
-      "7EA0693838F7B0DA22CB5991DBC5F412A15E3E8D3B77EFC614A822C95CFDE8A6"
+      "5438C46DB73B91252436E130AEC24DB736491C30FA6DE5C770A2A7D48D88F0EF",
+      "6A0F42356C176771DB59ADFC76609561B3E38F219C6D222E283BA97D4192609A"
     ],
-    "validationCount": 1,
-    "version": "2.1.11",
+    "manifestHash": "D3CF073464528038F8310B2C6449FBB4A1F017D6204019DC48A29B9B04D31EE8",
+    "lastUpdated": "2026-09-04T13:10:02.9003329Z",
     "description": "",
-    "manifestHash": "02E0C0EDEEB5C7ED06364ED5726B0B47BC1C87598ADD11F38AD742D201C5E35F"
+    "validationCount": 1
   },
   "LaurentPRenedeCotret.pandoc-plot": {
     "description": "",
@@ -5971,15 +5971,15 @@
     "description": ""
   },
   "OpenGeos.GeoLibre": {
-    "validationCount": 2,
-    "version": "2.8.0",
-    "description": "",
     "state": "VALIDATION_PASSED",
+    "version": "2.9.0",
     "installerHashes": [
-      "2FC0D617B0C4A4267890E22AEEEFC11428BF8111150A503372374FF0B1762E12"
+      "8AC2174534A5B065BA08CF68CC531241B727AE658775FE450FD12FFA9B9E2890"
     ],
-    "lastUpdated": "2026-08-29T17:06:32.7736897Z",
-    "manifestHash": "CBC2CF6C55018E1C1E3B5C992171F78490C5CFA064B09ABCFA93A24B719A0ABD"
+    "manifestHash": "18BD920ADB64DBB88B20EC897D979B5FF863DA5B07CFE6CD83BAA09AB73CA499",
+    "lastUpdated": "2026-09-04T13:10:02.9282566Z",
+    "description": "",
+    "validationCount": 1
   },
   "OpenHV.OpenHV": {
     "description": "",
@@ -6062,15 +6062,15 @@
     }
   },
   "OpenTelemetry.Weaver": {
-    "validationCount": 1,
-    "lastUpdated": "2026-09-03T01:18:15.1579215Z",
-    "description": "",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "67BD3BF63A6D243BBF1BC091593FCA8900F8EA7D2BD48DC10D4A874747EB04BF",
-    "version": "0.26.0",
+    "version": "0.26.1",
     "installerHashes": [
-      "450A1509E7CE5049196AEFB842C157F3C3CA1D33D4B89B4F722E5B4AF3A2FE88"
-    ]
+      "BE49D09FE34311D34A55C879D7A5050FC082FF25CD1D18DA799DDD2EC2E21764"
+    ],
+    "manifestHash": "3ADC586089B4880700AE4EB484F18F2A7372E68D4E5765E8F85105AA233E5127",
+    "lastUpdated": "2026-09-04T13:10:02.863432Z",
+    "description": "",
+    "validationCount": 1
   },
   "OpenTofu.Tofu": {
     "manifestHash": "571C3ED5E5775EFCB2225E378FDD973CB373B3D587751A8300B766463D11CB2D",
@@ -9248,14 +9248,14 @@
   },
   "xpipe-io.xpipe.portable": {
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "version": "23.8",
-    "validationCount": 1,
-    "lastUpdated": "2026-07-19T16:49:11.8353667Z",
-    "manifestHash": "A94655CF4C1EF7B3787BBCEA888F5A4179D79B73A3924B08113448C4ABCBDC71",
+    "version": "24.0.2",
     "installerHashes": [
-      "E63E33484CEE30E78EC22AE840FDA8323FCCDBEAFA1FDA8FBB7BD8F025360F7B"
-    ]
+      "4DAF252AE4FD7B825C583A1C7FB9592EF8DFC673601C73CEB6FEC3AA69AB0756"
+    ],
+    "manifestHash": "C1AC301771D1CE25EEB6D7259A73B7767F1FECD55C21A8D4DEADF2ADE9E61556",
+    "lastUpdated": "2026-09-04T13:10:02.9617332Z",
+    "description": "",
+    "validationCount": 1
   },
   "xssnick.TON-Torrent": {
     "state": "VALIDATION_PASSED",
