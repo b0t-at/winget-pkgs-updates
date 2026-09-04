@@ -3356,15 +3356,15 @@
     ]
   },
   "hellobertrand.zxc": {
-    "lastUpdated": "2026-08-20T21:12:49.6254344Z",
-    "manifestHash": "BCC102C0B845CBB8D0EBD1A9161CD7D9A335A77D0A45A99637F64E483CBBC2E0",
-    "version": "0.13.3",
-    "validationCount": 1,
+    "description": "",
     "installerHashes": [
-      "4589E99CF081F844518EA1A6C40D851120C1A8A0EC75A92BE352AF402DF53AF0"
+      "958F3A54E329CA44F904424DE1C8D2DFC931A4CCCA0871C3B0981AEC51E9435D"
     ],
+    "manifestHash": "B6468B074F98AF6718D566BAD26C873D3C9047173686C7085D0D4CA67ADEDF63",
     "state": "VALIDATION_PASSED",
-    "description": ""
+    "version": "0.14.0",
+    "validationCount": 1,
+    "lastUpdated": "2026-09-04T20:59:20.4540547Z"
   },
   "HeroicGamesLauncher.GOGDL": {
     "lastUpdated": "2026-08-17T17:04:34.9817596Z",
@@ -4284,15 +4284,15 @@
     "validationCount": 3
   },
   "Kubernetes.clusterctl": {
-    "lastUpdated": "2026-08-14T10:42:15.0295271Z",
-    "manifestHash": "51A1BF5ED00456B2A573112041CFF8B1F1417C5C276EF40D2284049A37E69297",
-    "version": "1.14.0",
-    "validationCount": 1,
     "description": "",
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "83F7DD9E64D07AAC8845A36AC960B91B5B5A9B295E18CED9FED850C63FDCD1E3"
-    ]
+      "20EE5766324BBA7FDF0F2962AC7A0100828D487EB3505D77C2A8D0B802DB5BDD"
+    ],
+    "manifestHash": "E668CF3076507CC4F5B2ACA5B1A43F0F75B0028C6CFABE2C6DD6AFCA33324D26",
+    "state": "VALIDATION_PASSED",
+    "version": "1.14.1",
+    "validationCount": 1,
+    "lastUpdated": "2026-09-04T20:59:20.5601442Z"
   },
   "KuestenLogik.Bowire": {
     "description": "",
@@ -4520,15 +4520,15 @@
     "version": "4.1.26190"
   },
   "LoxSmoke.OpenLogiNet": {
-    "lastUpdated": "2026-08-26T17:03:52.0704317Z",
-    "version": "0.17.0",
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "5242560E6C488B54947DEA86E31378F86210A3B7F3A6EE48CC6BDAE99A147887",
     "installerHashes": [
-      "DFC3105A75F77F07EB546FDFBE4A29B7445A5039D4D5A27C53BF7EBAE119EC21"
+      "36950BA594EE09533A7D1543F80BCFF8C6B88C9822E0542C337AB544FA59AA46"
     ],
-    "validationCount": 1
+    "manifestHash": "EB7B74DE986189EC49C82F42B41D054865E48E9B297F5DF55B1ABE7B5F499727",
+    "state": "VALIDATION_PASSED",
+    "version": "0.19.0",
+    "validationCount": 1,
+    "lastUpdated": "2026-09-04T20:59:20.5060913Z"
   },
   "LuantiTeam.Luanti": {
     "installerHashes": [
@@ -6436,15 +6436,15 @@
     "description": ""
   },
   "pinokiocomputer.pinokio": {
+    "description": "",
     "installerHashes": [
-      "5D49ED7746E0D0C47A8F5D52716CF4D5989D0FD1BB1517882EB9C5D4BF7C38CF"
+      "3F94D8DC19BD09F966021E01D479C3440BB1D9237F4A4923BCD0D356E04C7246"
     ],
+    "manifestHash": "79245C7C4253841E1CB3F6E45619CB119DBB9EB1E50B61EBC2491D1E5001C94C",
     "state": "VALIDATION_PASSED",
-    "version": "8.0.40",
-    "manifestHash": "821D85244155389B49EECD347BA934133C66CDC109ED4FD8D6291C8A442A9641",
+    "version": "8.2.0",
     "validationCount": 1,
-    "lastUpdated": "2026-08-14T09:49:55.842265Z",
-    "description": ""
+    "lastUpdated": "2026-09-04T20:59:20.481887Z"
   },
   "PiusPP.Celestial": {
     "version": "2.1.0",
@@ -7223,11 +7223,11 @@
   },
   "Scandum.WinTin++": {
     "version": "2.02.61",
-    "lastUpdated": "2026-09-04T17:06:56.713394Z",
+    "lastUpdated": "2026-09-04T20:59:20.5804055Z",
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "2C9A618908F2C08C9E373327E7A15409C25EEB6AE563F45807A611269A686250",
-    "validationCount": 16,
+    "validationCount": 17,
     "installerHashes": [
       "421A1458080413D5135A7490DC05AC0F4B54F1CAADBFC033214536237420E847"
     ]
@@ -7984,16 +7984,16 @@
     "lastUpdated": "2026-08-06T14:13:45.9556005Z"
   },
   "SuperRadCompany.Microsandbox": {
-    "validationCount": 1,
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-29T08:57:32.5270795Z",
-    "manifestHash": "542B8686A99E013C5D1F149404067DB8BB0369A63148250AEFCF57B0B3BE3112",
-    "version": "0.6.16",
     "installerHashes": [
-      "CAA35936D1F0C9169198DC911E888464263DF38E16B723CA507D41C6E1FF531C",
-      "95FF8771DE2A25DB6331FA8DADDEC7843F02B908C2DA068AD15FB9F2005D4B6F"
-    ]
+      "4ACB91374359C9C66952A3DB6205BFF4E474DB1610E321D4F2C9A29CFA27E5F6",
+      "2AD16D6470A8CAD488428EF42FDB9D529066871D6E60BE1BF9593FE25F3B3C61"
+    ],
+    "manifestHash": "44B490CE483FDF370EEB971562DE5317BDF1CEB2902DA1B59F90BA59BEE9B8E6",
+    "state": "VALIDATION_PASSED",
+    "version": "0.6.17",
+    "validationCount": 1,
+    "lastUpdated": "2026-09-04T20:59:20.5267116Z"
   },
   "SUSE.RancherDesktop": {
     "description": "",
@@ -9259,15 +9259,15 @@
     ]
   },
   "xpipe-io.xpipe.portable": {
-    "state": "VALIDATION_PASSED",
-    "version": "24.0.2",
-    "installerHashes": [
-      "4DAF252AE4FD7B825C583A1C7FB9592EF8DFC673601C73CEB6FEC3AA69AB0756"
-    ],
-    "manifestHash": "C1AC301771D1CE25EEB6D7259A73B7767F1FECD55C21A8D4DEADF2ADE9E61556",
-    "lastUpdated": "2026-09-04T13:10:02.9617332Z",
     "description": "",
-    "validationCount": 1
+    "installerHashes": [
+      "F13A65473845B25D1D316EE58E62631E0BA3792E1AB8475D14C56A0813F38414"
+    ],
+    "manifestHash": "4470E39DFC025711FB18A311627478710C07A8AA63E775B234C5DF2777CD5B7D",
+    "state": "VALIDATION_PASSED",
+    "version": "24.0.4",
+    "validationCount": 1,
+    "lastUpdated": "2026-09-04T20:59:20.3800727Z"
   },
   "xssnick.TON-Torrent": {
     "state": "VALIDATION_PASSED",
