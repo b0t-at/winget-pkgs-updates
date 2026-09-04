@@ -194,8 +194,8 @@
     "state": "VALIDATION_PASSED",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-09-03T00:58:46.3777145Z",
-      "version": "0.6.0"
+      "version": "0.7.0",
+      "checkedAt": "2026-09-04T04:26:54.6642708Z"
     }
   },
   "Aiden1020.LocalSubs": {
@@ -383,8 +383,8 @@
       "941ED0C9AFAF9518ADA12EF7DD2C9B8704910D85EF1A577E15D2F2B997BF4B00"
     ],
     "openPr": {
-      "checkedAt": "2026-09-03T00:58:48.1024454Z",
-      "version": "2.6.8"
+      "version": "2.6.8",
+      "checkedAt": "2026-09-04T04:26:56.2897553Z"
     }
   },
   "Anki.Anki": {
@@ -422,8 +422,8 @@
     "lastUpdated": "2026-08-22T08:51:40.3505732Z",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "checkedAt": "2026-09-03T00:58:48.3920554Z",
-      "version": "0.2.2"
+      "version": "0.2.2",
+      "checkedAt": "2026-09-04T04:26:56.5517637Z"
     }
   },
   "AntiMicroX.antimicrox": {
@@ -2883,8 +2883,8 @@
     ],
     "version": "3.9.0",
     "openPr": {
-      "checkedAt": "2026-09-03T00:57:42.8131996Z",
-      "version": "3.9.0"
+      "version": "3.9.0",
+      "checkedAt": "2026-09-04T04:25:52.7690049Z"
     }
   },
   "getzola.zola": {
