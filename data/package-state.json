@@ -138,15 +138,15 @@
     "version": "0.84.1"
   },
   "AES256Afro.VideoKidnapper": {
-    "lastUpdated": "2026-08-18T17:25:13.9659991Z",
-    "description": "",
-    "validationCount": 1,
-    "version": "1.8.1",
-    "installerHashes": [
-      "DE6D214F328CEAAFC9F9448A82807B6B642383B81E006B2023F55A130F68DC4C"
-    ],
     "state": "VALIDATION_PASSED",
-    "manifestHash": "99F6EF739A951C5D35A82933E3EAC7428C7CE10ADF8BBD11876E632B26688323"
+    "lastUpdated": "2026-09-04T01:59:22.7332752Z",
+    "description": "",
+    "version": "1.8.2",
+    "installerHashes": [
+      "51E88BAB6E6F60D83062BA2C54185EC5ECE501CA875A7F7AB2B6065EDB1C4BDD"
+    ],
+    "validationCount": 1,
+    "manifestHash": "E73B614119416B95BADE39C984AFBDD9A20E80B4301E7D24CDEEB1854A082B6A"
   },
   "agent-rt.arc-runner": {
     "manifestHash": "2CC193F9A4A4801C176AA7EEFD46F19FCAD4AE99DC906CD7F1071640805F78A2",
@@ -1967,16 +1967,16 @@
     "lastUpdated": "2026-08-28T22:46:20.618689Z"
   },
   "Docker.DockerCompose": {
-    "lastUpdated": "2026-08-18T17:25:14.124797Z",
-    "description": "",
-    "validationCount": 1,
-    "version": "5.5.0",
-    "installerHashes": [
-      "51E1E61195F3616896265487ED64551095F3BD27AC7FBD5758D3538C3BFA1B19",
-      "673B844868A8EBAE57B81F3CFEFFCA8A00ED256E660A357C057191A40FFC83C2"
-    ],
     "state": "VALIDATION_PASSED",
-    "manifestHash": "D91834AD1C3CE075E108D8AC1CA9310BEBABAFE24E804F09465AEB411C28439D"
+    "lastUpdated": "2026-09-04T01:59:22.8762524Z",
+    "description": "",
+    "version": "5.5.1",
+    "installerHashes": [
+      "A3C0C73033EAEDE90210345D0CC2233EDF4FAB8FE0282A91DAD8FD8436809D2F",
+      "4BBB5D1ECC75BDE1A9CA4AFAC43F5907C0D3BD0F88C7F00BF481EE7C8C1737BE"
+    ],
+    "validationCount": 1,
+    "manifestHash": "469A64523645B47F467F285DCD5C0F41BD7783E25A6E30B3F21D6FB20435D0CE"
   },
   "Docker.ds": {
     "lastUpdated": "2026-08-18T17:25:14.0317211Z",
@@ -5019,8 +5019,8 @@
       "3F1C6EEA738A53EA2B3BC09CDA9814B18C95043C7301A446025D5DA6FEFBD3CA"
     ],
     "version": "0.7.0",
-    "lastUpdated": "2026-08-30T13:08:52.1198519Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-09-04T01:59:22.80618Z",
+    "validationCount": 2,
     "state": "VALIDATION_PASSED"
   },
   "Microsoft.WSL.PreRelease": {
@@ -6606,15 +6606,15 @@
     ]
   },
   "PSerban93.Achievements": {
-    "manifestHash": "0EA33742F10B34426069BF71EE7BCF2ECA1C2F8D1504306090193C1FEC81F2DD",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "lastUpdated": "2026-09-04T01:59:22.9040531Z",
+    "description": "",
+    "version": "1.3.0",
     "installerHashes": [
-      "52706F85D8D12327E451AEF55C5A8E5BADA5F17FFE8F2060888A1C54816FD1C1"
+      "745E7609A13728501C8F5F3C81321826368AFF2E5169F7F4C3C40E66E05D601D"
     ],
-    "version": "1.2.9",
-    "lastUpdated": "2026-08-25T16:48:54.1242045Z",
-    "description": ""
+    "validationCount": 1,
+    "manifestHash": "7B22E69E52BA440B599A39598078E663F7A47B6DBBF3528D6FDEC290B343C10F"
   },
   "Pulsar-Edit.Pulsar": {
     "installerHashes": [
@@ -7478,15 +7478,15 @@
     "manifestHash": "75E10A9CB901681ACC8A13D59749C85021EC8330C149626409E706CCA06950EB"
   },
   "SimpleX.SimpleX-Chat": {
-    "installerHashes": [
-      "BCB227C15189615A3DD67193E1CB5842F4873C24E53D2E33284DBCAE48DBB810"
-    ],
     "state": "VALIDATION_PASSED",
-    "version": "7.0.1",
-    "lastUpdated": "2026-08-21T09:07:38.2395413Z",
+    "lastUpdated": "2026-09-04T01:59:22.8552141Z",
+    "description": "",
+    "version": "7.0.2",
+    "installerHashes": [
+      "D6514E01E95C9F6F8B9E4001F7EB505519F068C77E1EDBA1DABBF3F076BB8CB2"
+    ],
     "validationCount": 1,
-    "manifestHash": "724F5624BCBBA19A68A8BCB0570F6BBDCB180C59261CBAACD0C6A4FFAD8C116B",
-    "description": ""
+    "manifestHash": "61F25053B9F5E27915ADD3BDE1399B6CF170EDE95E61933AA5F931EB97F201EB"
   },
   "simulot.immich-go": {
     "validationCount": 1,
@@ -8358,15 +8358,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "manifestHash": "90844A72359AB94C1BB922F13BA7657CC20ABFFBE9B616073042D420B04EE259",
-    "validationCount": 1,
-    "lastUpdated": "2026-09-02T01:26:31.0894186Z",
     "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-04T01:59:22.8330874Z",
+    "description": "",
+    "version": "2.13.6",
     "installerHashes": [
-      "1A89531C183661777908ACD562CF3160AD900199E39AC442280FCCCCDD6D2BC0"
+      "D2CCBAD56BD469F7CCB066B9BC8E06E91CF78D8BD54938D91333E4957BF71F4D"
     ],
-    "version": "2.11.1",
-    "description": ""
+    "validationCount": 1,
+    "manifestHash": "5AEF4A22E8F0A6C9D66C193257600782EC6015ED94D53A520CA47E72128967D7"
   },
   "timminator.VideOCR.CPU": {
     "manifestHash": "CFC267C26B8EF07672651665F457081878373674AA47203E9C0295E1AC077719",
