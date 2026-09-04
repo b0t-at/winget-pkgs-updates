@@ -131,7 +131,11 @@
       "3D7167F7A64DF96345B052B3FC1F20795B42029853E5F2625294D91163281666",
       "D295E9B272C8ECD0AD84F4DCC361BD6B5C98CC1ABE1E715DF494872EEA55211F",
       "C03035EBBB96FBE89D7793876C59EEFE6E3D03241436273BCEBABD355FADE29B"
-    ]
+    ],
+    "openPr": {
+      "version": "0.84.2",
+      "checkedAt": "2026-09-04T20:21:35.0016573Z"
+    }
   },
   "AES256Afro.VideoKidnapper": {
     "state": "VALIDATION_PASSED",
@@ -3888,7 +3892,7 @@
   "jdx.mise": {
     "openPr": {
       "version": "2026.9.1",
-      "checkedAt": "2026-09-03T20:21:10.4567507Z"
+      "checkedAt": "2026-09-04T20:21:37.0404Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -3957,7 +3961,7 @@
     "manifestHash": "1E843D90602194E32EF0F84E333BE9BC20D09621BCA43AA304BDA7952A621BAB",
     "openPr": {
       "version": "0.45.1",
-      "checkedAt": "2026-09-03T20:21:10.9390664Z"
+      "checkedAt": "2026-09-04T20:21:37.4339908Z"
     }
   },
   "jmrplens.gitlab-mcp-server": {
