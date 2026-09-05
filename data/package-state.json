@@ -2713,15 +2713,15 @@
     "state": "VALIDATION_PASSED"
   },
   "fselect.fselect": {
+    "description": "",
     "installerHashes": [
-      "4C9A240DB7B8F6DC5E976C53D8AAE29F07130666781579048971610489769874"
+      "B96F46A8CDE6C3671DB71D4BE3B82FE6B0C44CD25C4581F0FAD3EC6F07AD9D8A"
     ],
-    "lastUpdated": "2026-06-29T18:10:57.9407222Z",
-    "manifestHash": "96473BF1BAC9FAE0DFB1BFD93791684643F8CAF04BDE15CAA6388AB8145D4432",
-    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "version": "0.10.2",
-    "description": ""
+    "version": "0.10.3",
+    "lastUpdated": "2026-09-05T16:46:09.0466215Z",
+    "validationCount": 1,
+    "manifestHash": "5F60D9D788A634043D497141D028EEFE88F67360694E406BBF05BA0A1313B54F"
   },
   "futrime.lip": {
     "manifestHash": "E8A70772591CC89CCAC8BDAF5E43D9D576B2FB1B8999419735C0989589ACF56C",
@@ -5680,15 +5680,15 @@
     "state": "VALIDATION_PASSED"
   },
   "nu774.qaac": {
-    "version": "3.05",
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
     "description": "",
     "installerHashes": [
-      "8A4A589E49880C921E846110632F499DFECE34864621450C959085DC0BF324B6"
+      "64BE9288055F187B89ACA1F9A7CA5DADF11D4E7AA1376A1F7C7789B87DB66D96"
     ],
-    "manifestHash": "6A9CF1F99906480D081B80D7DAC0D5F6CF81D48F6080D32398B941B2F5929B7E",
-    "lastUpdated": "2026-08-29T12:58:34.1198705Z"
+    "state": "VALIDATION_PASSED",
+    "version": "3.06",
+    "lastUpdated": "2026-09-05T16:46:09.0889184Z",
+    "validationCount": 1,
+    "manifestHash": "ABDEA9DF0A01A4684A3A3454BF769C2F3CA65AE4BA60005AAEF9211E51F0DB7E"
   },
   "nvisionative.nvQuickSite": {
     "version": "2.5.2",
@@ -7239,11 +7239,11 @@
   },
   "Scandum.WinTin++": {
     "version": "2.02.61",
-    "lastUpdated": "2026-09-04T20:59:20.5804055Z",
+    "lastUpdated": "2026-09-05T16:46:09.0070286Z",
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "2C9A618908F2C08C9E373327E7A15409C25EEB6AE563F45807A611269A686250",
-    "validationCount": 17,
+    "validationCount": 18,
     "installerHashes": [
       "421A1458080413D5135A7490DC05AC0F4B54F1CAADBFC033214536237420E847"
     ]
