@@ -7328,14 +7328,14 @@
     }
   },
   "seerge.g-helper.PreRelease": {
-    "description": "",
-    "manifestHash": "4BB8EC0CDD0AB03FFD92C82ED9BA398CC1178A6C1E34DDEF3C733C92557E99DC",
-    "installerHashes": [
-      "26438F43CF1F206DA495509FBDC6DA42E3FB4309C681D65078EF8A100FEE91C2"
-    ],
-    "version": "0.278",
-    "lastUpdated": "2026-08-30T13:08:52.038964Z",
     "validationCount": 1,
+    "description": "",
+    "manifestHash": "8C8B3F703CD8C08D70B8967B4DF6F047D41D9AB5125A8E0901492BF1E02945A8",
+    "installerHashes": [
+      "6CE73773AA3A0D8DB955690FCD89455E0799CAD46C222EB58BDA50A6DD158DD7"
+    ],
+    "lastUpdated": "2026-09-05T01:16:41.3110969Z",
+    "version": "0.280",
     "state": "VALIDATION_PASSED"
   },
   "Sefinek.GenshinStellaMod": {
