@@ -2026,8 +2026,8 @@
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "version": "0.56.1",
-      "checkedAt": "2026-08-21T20:12:59.3088649Z"
+      "version": "0.57.3",
+      "checkedAt": "2026-09-05T20:19:59.3839003Z"
     }
   },
   "dragonflylee.switchfin": {
@@ -2470,8 +2470,8 @@
       "9A0B7352DFEF40C8EBF8733F77CB777565AA4EAEDE4F79FE928C11DA5C35CE40"
     ],
     "openPr": {
-      "checkedAt": "2026-09-04T16:23:55.3873459Z",
-      "version": "19.0.2"
+      "version": "19.0.2",
+      "checkedAt": "2026-09-05T20:20:00.3620233Z"
     }
   },
   "Fangyuan025.Chaty": {
@@ -6092,8 +6092,8 @@
     "description": "",
     "validationCount": 1,
     "openPr": {
-      "checkedAt": "2026-09-04T16:23:59.4174244Z",
-      "version": "0.26.1"
+      "version": "0.26.1",
+      "checkedAt": "2026-09-05T20:20:01.8515728Z"
     }
   },
   "OpenTofu.Tofu": {
@@ -6509,11 +6509,7 @@
     "installerHashes": [
       "2D0203AF85FC6FBB40F786A2671F175E9119A7C6DFCC4F30B1FA17E0F072C301",
       "07244C16AE5C6A38C4C1B24798D4D587F0F5492F603504FD608A5916890EC427"
-    ],
-    "openPr": {
-      "checkedAt": "2026-08-31T08:33:42.0163504Z",
-      "version": "11.25.0"
-    }
+    ]
   },
   "PocketBase.PocketBase": {
     "validationCount": 1,
@@ -8259,8 +8255,8 @@
     "manifestHash": "4B796A972C2DBB5AE75EB8F4F8B332F0CBE77928187E84989680F6AB184F42AA",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "checkedAt": "2026-09-04T16:24:03.4901597Z",
-      "version": "5.7.0"
+      "version": "5.7.0",
+      "checkedAt": "2026-09-05T20:20:06.0136533Z"
     }
   },
   "termio.soft-jp.com.TermioWin": {
