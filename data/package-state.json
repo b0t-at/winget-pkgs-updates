@@ -381,7 +381,11 @@
     "manifestHash": "3448BF00A5100437567B02CA88680550DB8035955EE0A30AF08EF8E23F026E03",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "2.7.0"
+    "version": "2.7.0",
+    "openPr": {
+      "version": "2.7.0",
+      "checkedAt": "2026-09-05T16:22:29.8300006Z"
+    }
   },
   "Anki.Anki": {
     "manifestHash": "0D9714050B0D59E7B030281F9DF9D711AF26AFF8475786C412B799325297275B",
@@ -660,8 +664,8 @@
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-09-01T20:51:44.4219476Z",
     "openPr": {
-      "checkedAt": "2026-09-04T12:33:49.5187368Z",
-      "version": "0.24.0"
+      "version": "0.24.0",
+      "checkedAt": "2026-09-05T16:22:31.6265863Z"
     }
   },
   "Avidemux.Avidemux": {
