@@ -1286,8 +1286,8 @@
     ],
     "description": "",
     "openPr": {
-      "version": "1.9.2",
-      "checkedAt": "2026-09-04T00:54:32.3724017Z"
+      "checkedAt": "2026-09-05T00:54:43.2758436Z",
+      "version": "1.9.2"
     }
   },
   "CarthageSoftware.Mago": {
@@ -2110,8 +2110,8 @@
     ],
     "manifestHash": "31947E74E60A0462F2AAA67D5F8C21F460756C9F606A2E99B5AA0055A2064E78",
     "openPr": {
-      "version": "2.12.4",
-      "checkedAt": "2026-09-04T00:54:33.4303946Z"
+      "checkedAt": "2026-09-05T00:54:44.4366687Z",
+      "version": "2.12.4"
     }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
@@ -3087,8 +3087,8 @@
     ],
     "manifestHash": "8A93D198AD57BF64282A1C20A5B26813247BA8F368CBBC5002B3A2AECCF79CDA",
     "openPr": {
-      "version": "2.5.1",
-      "checkedAt": "2026-09-04T00:54:35.2199625Z"
+      "checkedAt": "2026-09-05T00:54:45.5799784Z",
+      "version": "2.5.1"
     }
   },
   "Google.Protobuf": {
@@ -6092,8 +6092,8 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "openPr": {
-      "version": "1.12.6",
-      "checkedAt": "2026-09-04T00:54:39.2043627Z"
+      "checkedAt": "2026-09-05T00:54:47.4030359Z",
+      "version": "1.12.6"
     }
   },
   "OpenWhispr.OpenWhispr": {
