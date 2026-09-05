@@ -383,8 +383,8 @@
       "941ED0C9AFAF9518ADA12EF7DD2C9B8704910D85EF1A577E15D2F2B997BF4B00"
     ],
     "openPr": {
-      "version": "2.6.8",
-      "checkedAt": "2026-09-04T04:26:56.2897553Z"
+      "checkedAt": "2026-09-05T08:26:19.2156168Z",
+      "version": "2.6.8"
     }
   },
   "Anki.Anki": {
@@ -422,8 +422,8 @@
     "lastUpdated": "2026-08-22T08:51:40.3505732Z",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "version": "0.2.2",
-      "checkedAt": "2026-09-04T04:26:56.5517637Z"
+      "checkedAt": "2026-09-05T08:26:19.5156292Z",
+      "version": "0.2.2"
     }
   },
   "AntiMicroX.antimicrox": {
@@ -2887,8 +2887,8 @@
     ],
     "version": "3.9.0",
     "openPr": {
-      "version": "3.9.0",
-      "checkedAt": "2026-09-04T04:25:52.7690049Z"
+      "checkedAt": "2026-09-05T08:25:15.421879Z",
+      "version": "3.9.0"
     }
   },
   "getzola.zola": {
