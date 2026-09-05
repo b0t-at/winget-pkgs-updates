@@ -1268,16 +1268,16 @@
     ]
   },
   "caomengxuan666.WinuxCmd": {
-    "version": "1.0.1",
-    "lastUpdated": "2026-09-02T08:57:48.1694103Z",
-    "manifestHash": "774FA89A2DAE559133214F4B00D2B4EC9769BD855C6116B778FCBDBC6928981A",
+    "manifestHash": "A25B98F4A6B4F560626EEDC293B3A45F284B2C001ECF3A528697E486D95626F4",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "description": "",
     "installerHashes": [
-      "0BF1E76DB099E0495F6CFF837348074CA3CB578219A47958A3928918BFAAE303",
-      "291FCF6E2166AD2DBCF53152EF341BCF3A6FD2328220529B92D979C77948ABBD"
-    ]
+      "EBD26F2D07D1A234A853CCAC195F9820DA229F8DA7AB1EA702BDDE3757F98F3A",
+      "E81F0AFCDC9308D4F5AB6828817BAC845D5FD15FD1663B059F7FC47E8849D9E2"
+    ],
+    "description": "",
+    "lastUpdated": "2026-09-05T05:00:25.1286316Z",
+    "version": "1.0.3",
+    "state": "VALIDATION_PASSED"
   },
   "CargoLambda.CargoLambda": {
     "manifestHash": "B8DD0B022742F2371ED57474DE9FEE6CB654CD7DD96A113241259E85D6F5ABF3",
@@ -1489,15 +1489,15 @@
     "lastUpdated": "2026-08-30T13:08:51.9324976Z"
   },
   "closeio.Close": {
+    "manifestHash": "4729FF612CB420CCA7E806E7BA1CDDFE92EA9F122EC77A4EFB1D296CDF393393",
+    "validationCount": 1,
     "installerHashes": [
-      "3750C2167392EEF311AA7751A83CFE044A8B4F0F62AEE8CE6D6E7A46A0D4850F"
+      "57371FFE62BD05252B0053B64603D917106756021F23C6651611229932273F4A"
     ],
-    "lastUpdated": "2026-08-28T12:35:05.6387782Z",
-    "version": "9.3.1",
-    "manifestHash": "B481F6625E6341CCCBB1D10888F4B10486AC26479ADFCC4357C4D2A0B4E9B3E6",
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 1
+    "lastUpdated": "2026-09-05T05:00:25.0411749Z",
+    "version": "9.3.2",
+    "state": "VALIDATION_PASSED"
   },
   "Cloudreve.Cloudreve": {
     "description": "",
@@ -4922,6 +4922,18 @@
       "ADBAC1E2255F404CA23F0594F8AC0A455D5F8C27CE5B24E347706E1CEA2A8A7D"
     ]
   },
+  "Microsoft.Azure.TemplateAnalyzer": {
+    "manifestHash": "9839DCB8411645A535E800F194840DEC617BF1159688EF5BB43A79536F8D6A4A",
+    "validationCount": 1,
+    "installerHashes": [
+      "F047DD18DECF93934BF92FA876DB603196D4CC7319505E49ED87020CE2C81FE8",
+      "F374F480821B58C52179F223A5E680806869FA0F7D2D58D1A8D3486B7CDDF7A5"
+    ],
+    "description": "",
+    "lastUpdated": "2026-09-05T05:00:25.0765435Z",
+    "version": "0.8.6",
+    "state": "VALIDATION_PASSED"
+  },
   "Microsoft.bitsmanager": {
     "validationCount": 1,
     "state": "VALIDATION_FAILED",
@@ -5753,15 +5765,15 @@
     "state": "VALIDATION_PASSED"
   },
   "OctopusDeploy.Cli": {
-    "description": "",
-    "validationCount": 2,
+    "manifestHash": "7A8CF2F24D791701346CAA9AE308234561F4496E959A3FD4988E2CC444B0BC3B",
+    "validationCount": 1,
     "installerHashes": [
-      "4C52A23CFBBF7C626A666C3098EAA8D25F36AC658F0A49AAC82F4B1FD0383B08"
+      "9EF90CE3B539F575D51DFD7A251048660232518EE9F498B0532B49E153718E97"
     ],
-    "lastUpdated": "2026-09-01T04:42:47.8866437Z",
-    "version": "2.24.1",
-    "state": "VALIDATION_FAILED",
-    "manifestHash": "0216DF8976F444307CC5163280B847DDA33CCE9046D6043868BA3D358DD96447"
+    "description": "",
+    "lastUpdated": "2026-09-05T05:00:25.1486048Z",
+    "version": "2.25.0",
+    "state": "VALIDATION_PASSED"
   },
   "Odonno.jj-commit": {
     "description": "",
@@ -6112,15 +6124,15 @@
     ]
   },
   "openwong2kim.wmux": {
-    "version": "3.50.0",
-    "lastUpdated": "2026-09-02T08:57:48.1489236Z",
-    "manifestHash": "651C593C98BC328CA30097829CF7517786978250500803C1209EB9857829D3D6",
+    "manifestHash": "37D9AB1B386F5443F5E9EC8D606627919CFA3A730E1CFA250D4A7B4BF2AC7446",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "description": "",
     "installerHashes": [
-      "01F2FBE491FAF1EE01AE95C175EB439F21106FC9506120B0200EED9D4669E559"
-    ]
+      "7C64BE9CF54000EDA8AA608D4FDAD91BE84E69C29E19AB47E7838844D4DEFCD7"
+    ],
+    "description": "",
+    "lastUpdated": "2026-09-05T05:00:25.0024524Z",
+    "version": "3.50.1",
+    "state": "VALIDATION_PASSED"
   },
   "openwong2kim.wsnap": {
     "installerHashes": [
@@ -8468,14 +8480,14 @@
     "manifestHash": "11DAAF2989C26BFB67826BDF503B3BA0553FF91CE696E74C1C6F27DC4AF7BC08"
   },
   "TrellisLab.Trellis": {
+    "manifestHash": "4F85C7FBC55A58B29480DB305C355CF06BEF854E938F2FBC0BCACE97E5606E38",
+    "validationCount": 1,
     "installerHashes": [
-      "9501DEB0D4C4BC12F0DE4F70A05BBD5278EFF87C62F90220183550872442D97B"
+      "6E65E864A0283C9C0CF19BEBD9B0BFAF1FCE3A2A55C0E6D36D5A8805F012270B"
     ],
     "description": "",
-    "manifestHash": "334A588534B56BDA6777D142366B8C9D4CADB52DE460635CA64B979801D6BB2D",
-    "version": "1.6.0",
-    "lastUpdated": "2026-08-23T05:10:59.710205Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-09-05T05:00:25.0976722Z",
+    "version": "1.7.0",
     "state": "VALIDATION_PASSED"
   },
   "TrenchBroom.TrenchBroom": {
