@@ -117,7 +117,7 @@
     "version": "0.107.78",
     "openPr": {
       "version": "0.107.79",
-      "checkedAt": "2026-09-04T08:29:57.7583369Z"
+      "checkedAt": "2026-09-05T12:28:27.1202987Z"
     }
   },
   "AdGuard.dnsproxy": {
@@ -381,11 +381,7 @@
     "installerHashes": [
       "0F933313B79AC338CE2FEC69FCB715B7FF79F02D2DC55EA2A2E650552A201336",
       "941ED0C9AFAF9518ADA12EF7DD2C9B8704910D85EF1A577E15D2F2B997BF4B00"
-    ],
-    "openPr": {
-      "checkedAt": "2026-09-05T08:26:19.2156168Z",
-      "version": "2.6.8"
-    }
+    ]
   },
   "Anki.Anki": {
     "manifestHash": "0D9714050B0D59E7B030281F9DF9D711AF26AFF8475786C412B799325297275B",
@@ -1376,7 +1372,7 @@
   "CharlesMilette.TranslucentTB": {
     "openPr": {
       "version": "2026.2",
-      "checkedAt": "2026-09-04T08:29:59.8443427Z"
+      "checkedAt": "2026-09-05T12:28:27.9558335Z"
     }
   },
   "ChiaNetwork.GUIforChiaBlockchain": {
@@ -3108,7 +3104,7 @@
     "version": "36.1",
     "openPr": {
       "version": "36.1",
-      "checkedAt": "2026-09-04T08:30:01.2484354Z"
+      "checkedAt": "2026-09-05T12:28:29.4674148Z"
     }
   },
   "goplus.xgo": {
@@ -4464,7 +4460,7 @@
     "manifestHash": "57F8800DB719DDF8C26EB31782E8B1406E5F0B43BFE48FE93D4F3061DC1338D2",
     "openPr": {
       "version": "2026.8.0",
-      "checkedAt": "2026-09-04T08:30:03.8228466Z"
+      "checkedAt": "2026-09-05T12:28:30.2062512Z"
     }
   },
   "loft-sh.vcluster": {
@@ -6194,7 +6190,7 @@
     "description": "",
     "openPr": {
       "version": "2.14.1",
-      "checkedAt": "2026-09-04T08:30:05.5260558Z"
+      "checkedAt": "2026-09-05T12:28:31.0042113Z"
     }
   },
   "Orthogonal.APM": {
