@@ -1073,7 +1073,11 @@
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-08-20T01:39:37.5367635Z",
     "validationCount": 1,
-    "version": "0.6.3"
+    "version": "0.6.3",
+    "openPr": {
+      "checkedAt": "2026-09-06T12:29:30.0500052Z",
+      "version": "0.6.3"
+    }
   },
   "BlackwellSystems.agent-lsp": {
     "validationCount": 1,
@@ -3926,7 +3930,11 @@
     "state": "VALIDATION_PASSED",
     "version": "8.1.2-4",
     "manifestHash": "0C926E13803D0BBF5008C8B0D054568100AF418B461FA295C84B710470F2175B",
-    "validationCount": 1
+    "validationCount": 1,
+    "openPr": {
+      "checkedAt": "2026-09-06T12:28:22.360502Z",
+      "version": "8.1.2-4"
+    }
   },
   "JeromeHerrman.VPinCommander": {
     "installerHashes": [
