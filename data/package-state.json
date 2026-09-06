@@ -133,8 +133,8 @@
       "C03035EBBB96FBE89D7793876C59EEFE6E3D03241436273BCEBABD355FADE29B"
     ],
     "openPr": {
-      "version": "0.84.2",
-      "checkedAt": "2026-09-04T20:21:35.0016573Z"
+      "checkedAt": "2026-09-06T01:01:54.3473602Z",
+      "version": "0.84.2"
     }
   },
   "AES256Afro.VideoKidnapper": {
@@ -1290,7 +1290,7 @@
     ],
     "description": "",
     "openPr": {
-      "checkedAt": "2026-09-05T00:54:43.2758436Z",
+      "checkedAt": "2026-09-06T01:01:56.2506607Z",
       "version": "1.9.2"
     }
   },
@@ -2114,7 +2114,7 @@
     ],
     "manifestHash": "31947E74E60A0462F2AAA67D5F8C21F460756C9F606A2E99B5AA0055A2064E78",
     "openPr": {
-      "checkedAt": "2026-09-05T00:54:44.4366687Z",
+      "checkedAt": "2026-09-06T01:01:57.4177501Z",
       "version": "2.12.4"
     }
   },
@@ -3091,7 +3091,7 @@
     ],
     "manifestHash": "8A93D198AD57BF64282A1C20A5B26813247BA8F368CBBC5002B3A2AECCF79CDA",
     "openPr": {
-      "checkedAt": "2026-09-05T00:54:45.5799784Z",
+      "checkedAt": "2026-09-06T01:01:58.6661061Z",
       "version": "2.5.1"
     }
   },
@@ -3895,8 +3895,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.9.1",
-      "checkedAt": "2026-09-04T20:21:37.0404Z"
+      "checkedAt": "2026-09-06T01:01:59.1180548Z",
+      "version": "2026.9.1"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -3964,8 +3964,8 @@
     "lastUpdated": "2026-08-06T14:10:17.3921348Z",
     "manifestHash": "1E843D90602194E32EF0F84E333BE9BC20D09621BCA43AA304BDA7952A621BAB",
     "openPr": {
-      "version": "0.45.1",
-      "checkedAt": "2026-09-04T20:21:37.4339908Z"
+      "checkedAt": "2026-09-06T01:01:59.5697741Z",
+      "version": "0.45.1"
     }
   },
   "jmrplens.gitlab-mcp-server": {
@@ -6108,7 +6108,7 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "openPr": {
-      "checkedAt": "2026-09-05T00:54:47.4030359Z",
+      "checkedAt": "2026-09-06T01:02:00.7024339Z",
       "version": "1.12.6"
     }
   },
@@ -8229,7 +8229,11 @@
     "installerHashes": [
       "634BE2908AB9E8E83809928ACE24B9889391AD36A14074E538FC32A911D02C53"
     ],
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "checkedAt": "2026-09-06T01:02:04.8183344Z",
+      "version": "5.2.4"
+    }
   },
   "TeleCode.TeleCode": {
     "lastUpdated": "2026-08-16T21:14:49.1075467Z",
@@ -9489,6 +9493,12 @@
     "manifestHash": "963F2EC1A3D222E64A1C61F1D5D8842C460A72B8D72D3F1E33B270BFC8ED076D",
     "version": "1.1.0",
     "state": "VALIDATION_PASSED"
+  },
+  "Zagrios.BSManager": {
+    "openPr": {
+      "checkedAt": "2026-09-06T01:03:00.7346878Z",
+      "version": "1.6.0"
+    }
   },
   "ZauJulio.ZeroWhats": {
     "lastUpdated": "2026-08-18T17:25:14.1055256Z",
