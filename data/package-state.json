@@ -660,8 +660,8 @@
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-09-01T20:51:44.4219476Z",
     "openPr": {
-      "version": "0.24.0",
-      "checkedAt": "2026-09-05T16:22:31.6265863Z"
+      "checkedAt": "2026-09-06T20:21:18.8555858Z",
+      "version": "0.24.0"
     }
   },
   "Avidemux.Avidemux": {
@@ -2480,8 +2480,8 @@
       "9A0B7352DFEF40C8EBF8733F77CB777565AA4EAEDE4F79FE928C11DA5C35CE40"
     ],
     "openPr": {
-      "version": "19.0.2",
-      "checkedAt": "2026-09-05T20:20:00.3620233Z"
+      "checkedAt": "2026-09-06T20:20:12.7831571Z",
+      "version": "19.0.2"
     }
   },
   "Fangyuan025.Chaty": {
@@ -6106,8 +6106,8 @@
     "description": "",
     "validationCount": 1,
     "openPr": {
-      "version": "0.26.1",
-      "checkedAt": "2026-09-05T20:20:01.8515728Z"
+      "checkedAt": "2026-09-06T20:20:14.4753053Z",
+      "version": "0.26.1"
     }
   },
   "OpenTofu.Tofu": {
@@ -8273,8 +8273,8 @@
     "manifestHash": "4B796A972C2DBB5AE75EB8F4F8B332F0CBE77928187E84989680F6AB184F42AA",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "version": "5.7.0",
-      "checkedAt": "2026-09-05T20:20:06.0136533Z"
+      "checkedAt": "2026-09-06T20:20:17.9742658Z",
+      "version": "5.7.0"
     }
   },
   "termio.soft-jp.com.TermioWin": {
