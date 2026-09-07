@@ -116,7 +116,7 @@
     "manifestHash": "88FF875B5DEA51BC3B743F06098AADAF42AB87DA966E19E5EFA189C21F4EC081",
     "version": "0.107.78",
     "openPr": {
-      "checkedAt": "2026-09-06T16:21:05.5534149Z",
+      "checkedAt": "2026-09-07T16:23:03.0667488Z",
       "version": "0.107.79"
     }
   },
@@ -1389,7 +1389,7 @@
   },
   "CharlesMilette.TranslucentTB": {
     "openPr": {
-      "checkedAt": "2026-09-06T16:21:06.9629129Z",
+      "checkedAt": "2026-09-07T16:23:04.8540349Z",
       "version": "2026.2"
     }
   },
@@ -3121,7 +3121,7 @@
     "validationCount": 1,
     "version": "36.1",
     "openPr": {
-      "checkedAt": "2026-09-06T16:21:08.0541527Z",
+      "checkedAt": "2026-09-07T16:23:06.7706625Z",
       "version": "36.1"
     }
   },
@@ -4489,7 +4489,7 @@
     "validationCount": 1,
     "manifestHash": "57F8800DB719DDF8C26EB31782E8B1406E5F0B43BFE48FE93D4F3061DC1338D2",
     "openPr": {
-      "checkedAt": "2026-09-06T16:21:08.8892198Z",
+      "checkedAt": "2026-09-07T16:23:07.8627211Z",
       "version": "2026.8.0"
     }
   },
@@ -6219,7 +6219,7 @@
     "version": "2.14.1",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-09-06T16:21:09.9150785Z",
+      "checkedAt": "2026-09-07T16:23:09.9417575Z",
       "version": "2.14.1"
     }
   },
