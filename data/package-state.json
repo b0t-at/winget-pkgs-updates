@@ -1075,7 +1075,7 @@
     "validationCount": 1,
     "version": "0.6.3",
     "openPr": {
-      "checkedAt": "2026-09-06T12:29:30.0500052Z",
+      "checkedAt": "2026-09-07T12:34:22.3889503Z",
       "version": "0.6.3"
     }
   },
@@ -1198,12 +1198,6 @@
     "manifestHash": "2C00E7F2862A439D83420DC7E10E5920857F902EE94C4E329E75E67950368F12",
     "version": "1.72.0",
     "validationCount": 1
-  },
-  "Byron.dua-cli": {
-    "openPr": {
-      "checkedAt": "2026-09-07T01:02:46.589711Z",
-      "version": "2.44.0"
-    }
   },
   "BytecodeAlliance.Wasmtime.Portable": {
     "validationCount": 1,
@@ -3950,7 +3944,7 @@
     "manifestHash": "0C926E13803D0BBF5008C8B0D054568100AF418B461FA295C84B710470F2175B",
     "validationCount": 1,
     "openPr": {
-      "checkedAt": "2026-09-06T12:28:22.360502Z",
+      "checkedAt": "2026-09-07T12:33:17.7508311Z",
       "version": "8.1.2-4"
     }
   },
