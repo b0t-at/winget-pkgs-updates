@@ -1201,8 +1201,8 @@
   },
   "Byron.dua-cli": {
     "openPr": {
-      "version": "2.42.1",
-      "checkedAt": "2026-08-20T16:17:50.7584816Z"
+      "checkedAt": "2026-09-07T01:02:46.589711Z",
+      "version": "2.44.0"
     }
   },
   "BytecodeAlliance.Wasmtime.Portable": {
@@ -1287,7 +1287,11 @@
     "description": "",
     "lastUpdated": "2026-09-05T05:00:25.1286316Z",
     "version": "1.0.3",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "checkedAt": "2026-09-07T01:02:46.9413721Z",
+      "version": "1.0.3"
+    }
   },
   "CargoLambda.CargoLambda": {
     "manifestHash": "B8DD0B022742F2371ED57474DE9FEE6CB654CD7DD96A113241259E85D6F5ABF3",
@@ -1336,6 +1340,12 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "D29B161F36525D38149F3FE7E209E678F16423C8DAC405CF56B6140569FBD2CD",
     "version": "0.7.8"
+  },
+  "ccoors.Valeronoi": {
+    "openPr": {
+      "checkedAt": "2026-09-07T01:02:47.8361018Z",
+      "version": "0.4.2"
+    }
   },
   "Celerp.Celerp": {
     "manifestHash": "F0BAA9E5851A74329CEBC5EAA88415F0F47E5A3B8D1474F4100B1FDC2AC493ED",
