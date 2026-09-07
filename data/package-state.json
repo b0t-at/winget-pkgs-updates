@@ -1651,7 +1651,13 @@
     "version": "4.5.0",
     "lastUpdated": "2026-09-01T01:26:55.7459771Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1
+    "validationCount": 1,
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/crosswire/xiphos/releases/download/4.5.0/xiphos-4.5.0-win32.exe https://github.com/crosswire/xiphos/releases/download/4.5.0/xiphos-4.5.0-win64.exe",
+      "tag": "4.5.0",
+      "checkedAt": "2026-09-07T05:30:26.3249501Z"
+    }
   },
   "CrowdSecurity.CrowdSec": {
     "installerHashes": [
@@ -2141,9 +2147,9 @@
   "EditorConfig-Checker.EditorConfig-Checker": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/editorconfig-checker/editorconfig-checker/releases/download/v3.11.2/ec-windows-armv6.zip",
-      "tag": "v3.11.2",
-      "checkedAt": "2026-08-31T05:29:26.4693539Z"
+      "detail": "No release asset matches: https://github.com/editorconfig-checker/editorconfig-checker/releases/download/v4.0.1/ec-windows-386.zip https://github.com/editorconfig-checker/editorconfig-checker/releases/download/v4.0.1/ec-windows-amd64.zip https://github.com/editorconfig-checker/editorconfig-checker/releases/download/v4.0.1/ec-windows-armv6.zip https://github.com/editorconfig-checker/editorconfig-checker/releases/download/v4.0.1/ec-windows-arm64.zip",
+      "tag": "v4.0.1",
+      "checkedAt": "2026-09-07T05:30:26.3249501Z"
     }
   },
   "EduMIPS64.EduMIPS64": {
@@ -2253,9 +2259,9 @@
     "state": "VALIDATION_PASSED",
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/ente-io/photos-desktop/releases/download/v1.7.27/ente-1.7.27.exe https://github.com/ente-io/photos-desktop/releases/download/v1.7.27/ente-1.7.27-x64.exe https://github.com/ente-io/photos-desktop/releases/download/v1.7.27/ente-1.7.27-arm64.exe",
-      "tag": "v1.7.27",
-      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+      "detail": "No release asset matches: https://github.com/ente-io/photos-desktop/releases/download/v1.7.28/ente-1.7.28.exe https://github.com/ente-io/photos-desktop/releases/download/v1.7.28/ente-1.7.28-x64.exe https://github.com/ente-io/photos-desktop/releases/download/v1.7.28/ente-1.7.28-arm64.exe",
+      "tag": "v1.7.28",
+      "checkedAt": "2026-09-07T05:30:26.3249501Z"
     }
   },
   "Ephraem.InputBar": {
@@ -2315,9 +2321,9 @@
     "validationCount": 4,
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/errata-ai/vale/releases/download/v3.19.0/vale_3.19.0_Windows_64-bit.zip",
-      "tag": "v3.19.0",
-      "checkedAt": "2026-08-31T05:29:26.4693539Z"
+      "detail": "No release asset matches: https://github.com/errata-ai/vale/releases/download/v3.20.0/vale_3.20.0_Windows_64-bit.zip",
+      "tag": "v3.20.0",
+      "checkedAt": "2026-09-07T05:30:26.3249501Z"
     }
   },
   "Essenciary.Githical": {
@@ -2597,9 +2603,9 @@
     },
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/flowscripter/example-cli/releases/download/v1.8.11/example-cli_Windows_x86_64.zip",
-      "tag": "v1.8.11",
-      "checkedAt": "2026-08-31T05:29:26.4693539Z"
+      "detail": "No release asset matches: https://github.com/flowscripter/example-cli/releases/download/v1.8.12/example-cli_Windows_x86_64.zip",
+      "tag": "v1.8.12",
+      "checkedAt": "2026-09-07T05:30:26.3249501Z"
     }
   },
   "Fly-io.flyctl": {
@@ -2667,13 +2673,7 @@
     "validationCount": 1,
     "version": "7.1.1",
     "description": "",
-    "manifestHash": "E1ED487DECD7B1869B29DFA8B853A38D6DF1D5E87F9006EC1FA70E3F6DCE08F1",
-    "configHealth": {
-      "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/forkgram/tdesktop/releases/download/v7.1.3/Telegram.zip",
-      "tag": "v7.1.3",
-      "checkedAt": "2026-08-31T05:29:26.4693539Z"
-    }
+    "manifestHash": "E1ED487DECD7B1869B29DFA8B853A38D6DF1D5E87F9006EC1FA70E3F6DCE08F1"
   },
   "FOSSA.FOSSA-cli": {
     "lastUpdated": "2026-08-31T08:56:17.2425056Z",
@@ -3785,6 +3785,14 @@
     ],
     "lastUpdated": "2026-08-17T21:15:38.1998021Z"
   },
+  "j178.Prek": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/j178/prek/releases/download/v0.5.2/prek-i686-pc-windows-msvc.zip",
+      "tag": "v0.5.2",
+      "checkedAt": "2026-09-07T05:30:26.3249501Z"
+    }
+  },
   "JackTrip.JackTrip": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "77AECFB06B60186A8A787F6C9CA342C05FDB37BA4D23CC88B3D35CCC392EF8CB",
@@ -3960,9 +3968,9 @@
   "JGraph.Draw": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/jgraph/drawio-desktop/releases/download/v31.3.2/draw.io-ia32-31.3.2-windows-32bit-no-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v31.3.2/draw.io-31.3.2-windows-no-installer.exe",
-      "tag": "v31.3.2",
-      "checkedAt": "2026-08-24T05:33:14.2025456Z"
+      "detail": "No release asset matches: https://github.com/jgraph/drawio-desktop/releases/download/v31.4.4/draw.io-ia32-31.4.4-windows-32bit-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v31.4.4/draw.io-ia32-31.4.4-windows-32bit-no-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v31.4.4/draw.io-31.4.4-windows-no-installer.exe",
+      "tag": "v31.4.4",
+      "checkedAt": "2026-09-07T05:30:26.3249501Z"
     }
   },
   "JitzuLang.Jitzu": {
@@ -4029,9 +4037,9 @@
     "manifestHash": "9A4DF16EBDCE59232C54B5DF04D449A66D61F5A11ADD46BF707CB15A166AB223",
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/johannesjo/super-productivity/releases/download/v18.21.1/Super-Productivity-Setup.exe https://github.com/johannesjo/super-productivity/releases/download/v18.21.1/Super-Productivity-Setup-x64.exe https://github.com/johannesjo/super-productivity/releases/download/v18.21.1/Super-Productivity-Setup-arm64.exe",
-      "tag": "v18.21.1",
-      "checkedAt": "2026-08-31T05:29:26.4693539Z"
+      "detail": "No release asset matches: https://github.com/johannesjo/super-productivity/releases/download/v18.21.2/Super-Productivity-Setup.exe https://github.com/johannesjo/super-productivity/releases/download/v18.21.2/Super-Productivity-Setup-x64.exe https://github.com/johannesjo/super-productivity/releases/download/v18.21.2/Super-Productivity-Setup-arm64.exe",
+      "tag": "v18.21.2",
+      "checkedAt": "2026-09-07T05:30:26.3249501Z"
     }
   },
   "JosephFinney.Text-Grab": {
@@ -4348,9 +4356,9 @@
   "Laker.EasyPostman": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/lakernote/EasyPostman/releases/download/v6.0.22/EasyPostman-6.0.22-windows-x64.exe",
-      "tag": "v6.0.22",
-      "checkedAt": "2026-08-31T05:29:26.4693539Z"
+      "detail": "No release asset matches: https://github.com/lakernote/EasyPostman/releases/download/v6.0.23/EasyPostman-6.0.23-windows-x64.exe",
+      "tag": "v6.0.23",
+      "checkedAt": "2026-09-07T05:30:26.3249501Z"
     }
   },
   "LANCommander.Launcher": {
@@ -4863,9 +4871,9 @@
   "Metanorma.Metanorma": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/metanorma/packed-mn/releases/download/v1.16.9-2/metanorma-windows-x86_64.zip",
-      "tag": "v1.16.9-2",
-      "checkedAt": "2026-08-31T05:29:26.4693539Z"
+      "detail": "No release asset matches: https://github.com/metanorma/packed-mn/releases/download/v1.16.9-5/metanorma-windows-x86_64.zip",
+      "tag": "v1.16.9-5",
+      "checkedAt": "2026-09-07T05:30:26.3249501Z"
     }
   },
   "Mew.Wrec": {
@@ -5443,9 +5451,9 @@
   "myrachane.emtypyie-cli": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/myrachane/emtypyie-cli/releases/download/v3.0.2/emtypyie-cli-windows-x64-3.0.2.zip",
-      "tag": "v3.0.2",
-      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+      "detail": "No release asset matches: https://github.com/myrachane/emtypyie-cli/releases/download/v3.0.4/emtypyie-cli-windows-x64-3.0.4.zip",
+      "tag": "v3.0.4",
+      "checkedAt": "2026-09-07T05:30:26.3249501Z"
     }
   },
   "Naeem5877.VibeDownloader": {
@@ -5665,9 +5673,9 @@
   "nomacs.nomacs": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/nomacs/nomacs/releases/download/3.22.2/nomacs-setup-x64.exe https://github.com/nomacs/nomacs/releases/download/3.22.2/nomacs-setup-x64.exe",
-      "tag": "3.22.2",
-      "checkedAt": "2026-08-31T05:29:26.4693539Z"
+      "detail": "No release asset matches: https://github.com/nomacs/nomacs/releases/download/3.22.3/nomacs-setup-x64.exe https://github.com/nomacs/nomacs/releases/download/3.22.3/nomacs-setup-x64.exe",
+      "tag": "3.22.3",
+      "checkedAt": "2026-09-07T05:30:26.3249501Z"
     }
   },
   "NotedeckDev.NoteDeck": {
@@ -6521,6 +6529,12 @@
     "openPr": {
       "version": "0.3.0",
       "checkedAt": "2026-09-03T05:23:17.1348659Z"
+    },
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/pluveto/upgit/releases/download/v0.3.0/upgit_win_386.exe https://github.com/pluveto/upgit/releases/download/v0.3.0/upgit_win_amd64.exe https://github.com/pluveto/upgit/releases/download/v0.3.0/upgit_win_arm.exe https://github.com/pluveto/upgit/releases/download/v0.3.0/upgit_win_arm64.exe",
+      "tag": "v0.3.0",
+      "checkedAt": "2026-09-07T05:30:26.3249501Z"
     }
   },
   "pnpm.pnpm": {
@@ -6712,9 +6726,9 @@
     "validationCount": 1,
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/opengisch/QField/releases/download/v4.3.0/qfield-v4.3.0-windows-x64.exe",
-      "tag": "v4.3.0",
-      "checkedAt": "2026-08-31T05:29:26.4693539Z"
+      "detail": "No release asset matches: https://github.com/opengisch/QField/releases/download/v4.3.1/qfield-v4.3.1-windows-x64.exe",
+      "tag": "v4.3.1",
+      "checkedAt": "2026-09-07T05:30:26.3249501Z"
     }
   },
   "qp888n.Yumedana": {
@@ -6808,9 +6822,9 @@
     "lastUpdated": "2026-08-16T17:10:10.7238483Z",
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/raskell-io/hx/releases/download/v0.9.1/hx-v0.9.1-x86_64-pc-windows-msvc.zip",
-      "tag": "v0.9.1",
-      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+      "detail": "No release asset matches: https://github.com/raskell-io/hx/releases/download/v0.9.2/hx-v0.9.2-x86_64-pc-windows-msvc.zip",
+      "tag": "v0.9.2",
+      "checkedAt": "2026-09-07T05:30:26.3249501Z"
     }
   },
   "ReactOS.RosBE": {
@@ -7283,9 +7297,9 @@
     "lastUpdated": "2026-05-20T22:15:05.5255716Z",
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/schollz/croc/releases/download/v11.3.6/croc_v11.3.6_Windows-ARM.zip",
-      "tag": "v11.3.6",
-      "checkedAt": "2026-08-31T05:29:26.4693539Z"
+      "detail": "No release asset matches: https://github.com/schollz/croc/releases/download/v11.5.0/croc_v11.5.0_Windows-ARM.zip",
+      "tag": "v11.5.0",
+      "checkedAt": "2026-09-07T05:30:26.3249501Z"
     }
   },
   "scimusmn.stele": {
@@ -7377,9 +7391,9 @@
   "Sefinek.GenshinStellaMod": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/sefinek/Genshin-Impact-ReShade/releases/download/v8.11.0.0/Stella-Mod-Setup_8.11.0.0.exe",
-      "tag": "v8.11.0.0",
-      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+      "detail": "No release asset matches: https://github.com/sefinek/Genshin-Impact-ReShade/releases/download/v8.12.0.0/Stella-Mod-Setup_8.12.0.0.exe",
+      "tag": "v8.12.0.0",
+      "checkedAt": "2026-09-07T05:30:26.3249501Z"
     }
   },
   "SERGEYDJUM.dwmEOTFrs": {
@@ -8164,6 +8178,14 @@
     "validationCount": 1,
     "state": "VALIDATION_PASSED"
   },
+  "tanshuai.alphabiz": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/tanshuai/alphabiz/releases/download/0.4.0-beta.1/alphabiz-0.4.0-beta.1.msi",
+      "tag": "0.4.0-beta.1",
+      "checkedAt": "2026-09-07T05:30:26.3249501Z"
+    }
+  },
   "TaoufikJabbari.Tiger": {
     "version": "0.6.0",
     "lastUpdated": "2026-08-21T04:59:57.2138132Z",
@@ -8556,7 +8578,13 @@
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "8E0358290C0701B37CDE2D0C9B243A0C71740124EDC17E50EAA3E6E61ACD43E0"
-    ]
+    ],
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/tsouth89/ceiling/releases/download/v1.5.36/Ceiling-1.5.36-Setup.exe",
+      "tag": "v1.5.36",
+      "checkedAt": "2026-09-07T05:30:26.3249501Z"
+    }
   },
   "tsouth89.CubbyClipboard": {
     "validationCount": 1,
@@ -8568,7 +8596,13 @@
     "installerHashes": [
       "9D45498B6DB70B4F09598194B98A3AC32E707732F3B009C95D5A3F6FFD4BEAE2",
       "719BE256C0B8246C915BE64191A76C0AC7068BBEBC81DAB377F91B08E92BA040"
-    ]
+    ],
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/tsouth89/cubby-clipboard/releases/download/v1.3.3/Cubby.Clipboard_1.3.3_x64-setup.exe https://github.com/tsouth89/cubby-clipboard/releases/download/v1.3.3/Cubby.Clipboard_1.3.3_arm64-setup.exe",
+      "tag": "v1.3.3",
+      "checkedAt": "2026-09-07T05:30:26.3249501Z"
+    }
   },
   "tuna-f1sh.cyme": {
     "version": "3.0.1",
@@ -9233,7 +9267,13 @@
     "manifestHash": "796DA04887EC5EA52527E9200D7172659D60D3EA2918E682AF09693079AE30C0",
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "version": "2.8.1"
+    "version": "2.8.1",
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/wkjarosz/hdrview/releases/download/v3.0.0/HDRView-3.0.0-windows.zip",
+      "tag": "v3.0.0",
+      "checkedAt": "2026-09-07T05:30:26.3249501Z"
+    }
   },
   "WowUp.CF": {
     "description": "",
