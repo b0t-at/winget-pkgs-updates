@@ -2495,15 +2495,15 @@
     }
   },
   "Fangyuan025.Chaty": {
-    "version": "2.1.5",
-    "lastUpdated": "2026-08-31T04:51:00.1819337Z",
-    "description": "",
+    "version": "2.1.7",
     "validationCount": 1,
-    "manifestHash": "EC88C67E431AD0B91C043E00A6504CF9666ADDC27F9878341B81D97D9301FD68",
+    "description": "",
     "installerHashes": [
-      "2A91541078A00B1185891883720957D281F38930D0C9708AAE818AA3041B3998"
+      "C9A8D5F86EC5B4220337B3059F175A4BA951331B76C0B732F4072E6101BDCCAD"
     ],
-    "state": "VALIDATION_PASSED"
+    "manifestHash": "A81686F7AA4A491D0744CCC428A983262B613ED5F54304FB1FB564BFF23E0B11",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-07T16:40:41.3530934Z"
   },
   "Feho.LogNav": {
     "installerHashes": [
@@ -5643,15 +5643,15 @@
     }
   },
   "NoahSabaj.Mermaid": {
-    "version": "0.25.0",
-    "lastUpdated": "2026-08-18T13:04:36.5923858Z",
+    "version": "0.26.0",
     "validationCount": 1,
-    "installerHashes": [
-      "876309CEB6951FAF5EDCC62570D330D132949964C4AB2D10E38F838BFA180986"
-    ],
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "E9DE9EC1C4BA4D4597861D0B0F5257818672DF97E664157434FA5567E47D3DBD"
+    "installerHashes": [
+      "72607AD7D8356A62A75E552B2B63EFB44A88FF44F73B7EEC31A1C3CED54F72E6"
+    ],
+    "manifestHash": "7D6FDF76CE7148F4E172A5289C03A6337A331EFB7D320D414016034DE2638939",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-07T16:40:41.4062274Z"
   },
   "NoirArchitects.Ncored": {
     "description": "",
