@@ -1747,15 +1747,15 @@
     "validationCount": 1
   },
   "CylCastillo.AgentConsole": {
-    "installerHashes": [
-      "A4975327E5FD4D49D42C0A8E526648025ACC7145B9E6AA53B9C0588A83238C66"
-    ],
     "description": "",
-    "version": "0.76.0",
+    "version": "0.77.0",
+    "lastUpdated": "2026-09-07T01:32:21.9900508Z",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-04T05:11:12.3755682Z",
+    "installerHashes": [
+      "3C1652AB567AFAB7D253A045B0EB2654A897D5350119F173762621848AC2BDEF"
+    ],
     "validationCount": 1,
-    "manifestHash": "88CAD4FFD22D38C23827F66983F2474A0B50AC9FB3C1CE43001F4715DCEC778B"
+    "manifestHash": "98F55BC47BC43970B37B5E0098C4EC514B423EA2EDC133048DD33F8316F61E86"
   },
   "CyrilPeng.VeneraNext": {
     "description": "",
@@ -5169,15 +5169,15 @@
     "version": "1.2.0"
   },
   "MochiBullet.orb": {
-    "manifestHash": "6B7018D3FEBAD2FC8144DB386EDD2272559A14FBDC7282987079D4CBBE206AAE",
-    "lastUpdated": "2026-08-18T05:33:46.8939483Z",
-    "state": "VALIDATION_PASSED",
-    "version": "1.7.0",
-    "validationCount": 1,
     "description": "",
+    "version": "1.7.2",
+    "lastUpdated": "2026-09-07T01:32:21.9262962Z",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "E5D81C9F1F5CEA71621C266D44B243892443D57FD0B93C696F7DD981A7C2EA5D"
-    ]
+      "E27245A05247D4498C02600C1AF076FB24B8079F9473C99B9E490ED5DDEE3C93"
+    ],
+    "validationCount": 1,
+    "manifestHash": "00FD78B3600C742FE42B9E6617BC358AA41CF83AD1FA82E9274CD798BFA7447D"
   },
   "MoisesValero.Sideglass": {
     "lastUpdated": "2026-08-17T17:04:35.088558Z",
@@ -6148,15 +6148,15 @@
     ]
   },
   "openwong2kim.wmux": {
-    "manifestHash": "37D9AB1B386F5443F5E9EC8D606627919CFA3A730E1CFA250D4A7B4BF2AC7446",
-    "validationCount": 1,
-    "installerHashes": [
-      "7C64BE9CF54000EDA8AA608D4FDAD91BE84E69C29E19AB47E7838844D4DEFCD7"
-    ],
     "description": "",
-    "lastUpdated": "2026-09-05T05:00:25.0024524Z",
-    "version": "3.50.1",
-    "state": "VALIDATION_PASSED"
+    "version": "3.51.0",
+    "lastUpdated": "2026-09-07T01:32:22.0553699Z",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "AB1F31CC3CD264765AB24AA095A8B70FC22C5D1D4FD3F774F3F654422BF64B20"
+    ],
+    "validationCount": 1,
+    "manifestHash": "927CB0BA568DB955C93943BDBB742F98847A49419450487B2728B3E2F80440A2"
   },
   "openwong2kim.wsnap": {
     "installerHashes": [
@@ -6524,28 +6524,28 @@
     }
   },
   "pnpm.pnpm": {
-    "lastUpdated": "2026-08-30T04:52:51.6017428Z",
-    "version": "11.25.0",
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "716B173CE86DBDC4A0E99FA845C023870816FF7363C69D3012883CD5FE740CA0",
+    "version": "12.3.4",
+    "lastUpdated": "2026-09-07T01:32:21.9596654Z",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "2D0203AF85FC6FBB40F786A2671F175E9119A7C6DFCC4F30B1FA17E0F072C301",
-      "07244C16AE5C6A38C4C1B24798D4D587F0F5492F603504FD608A5916890EC427"
-    ]
+      "ADA0D8B62ADFF9884686D473E27D0F57EF2CA4A044D23A7C6782AF86B9A8A6CF",
+      "410872AACCBE38B36E2C1D648AA8D2964B42C71708CCF38F55652E92675AAD85"
+    ],
+    "validationCount": 1,
+    "manifestHash": "A8ACBF8FF5D70D3B41162C00FF2FD19535263F1A61A1377540918E475E1580FC"
   },
   "PocketBase.PocketBase": {
-    "validationCount": 1,
-    "installerHashes": [
-      "3525B6F8887AE288D0F531431DEAB04D85B56C555B87878B708A6DA7725B8117",
-      "1CEEFADC63473E9788A552DE70471CDE495C3EB5D979E7C236C4CB91B9B2532E"
-    ],
-    "manifestHash": "F2C9255A23FB46C65A1047C596FB963A9B19D700F89BB17FF1510ED48A0E1BFE",
+    "description": "",
+    "version": "0.40.3",
+    "lastUpdated": "2026-09-07T01:32:21.8441749Z",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-05T12:51:19.3602608Z",
-    "version": "0.40.2",
-    "description": ""
+    "installerHashes": [
+      "3C581D77B121632E3A723C24AAE441003876DC546F9B2E1109A29AA178E0F589",
+      "781299E0C77EF7699C6D954E2B9AF803922FE43FFB6B461F9AA1E7E8B58F84F7"
+    ],
+    "validationCount": 1,
+    "manifestHash": "02F287762FAE1F16FE1D2952B351BAD46943F531622275B322DBA4C90F221742"
   },
   "PocketSync.PocketSync": {
     "manifestHash": "CC5E6D6A686E4938DC0AD63CA2FCC692D859C4A68A66A9979CA173AF2C8B7DDC",
@@ -8406,15 +8406,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "validationCount": 1,
-    "installerHashes": [
-      "0F9D51C2B14C66B2ADDC09467BA49081D398BAC086D0C2E40A1911732848ECC9"
-    ],
-    "manifestHash": "3D97526646A8413EA557DC0F1E8DABB2CBC26F01EFC745DA3F4234F17F518718",
+    "description": "",
+    "version": "2.19.1",
+    "lastUpdated": "2026-09-07T01:32:22.0169566Z",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-05T12:51:19.2648875Z",
-    "version": "2.18.0",
-    "description": ""
+    "installerHashes": [
+      "55AABA73F045851E0CDEEC35A2260ECCFDA1B6CDC8F2290A6D07CD31FBC3447C"
+    ],
+    "validationCount": 1,
+    "manifestHash": "AD0DE1EE691AB7C20B350FE4D50D21188CFB2F659E73BE77F60E93759DA5E13F"
   },
   "timminator.VideOCR.CPU": {
     "manifestHash": "CFC267C26B8EF07672651665F457081878373674AA47203E9C0295E1AC077719",
