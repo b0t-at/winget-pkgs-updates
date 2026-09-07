@@ -281,15 +281,15 @@
     }
   },
   "Alochi.Monitoring": {
-    "version": "1.0.112",
-    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "lastUpdated": "2026-09-06T12:59:54.494434Z",
-    "manifestHash": "26C58B4DE98BCACB63EA4556231646EFF5B1217CCCAE0986761D9EF701356FF2",
     "installerHashes": [
-      "76F933E57F29FF4E734BBCF030EC559E70D6BADCC886ACFAEF9F062F937AAD31"
-    ]
+      "9016F402625C19506052E67E2F59D29E8CC9BF9B3158C69E40A50AB3A129C4BD"
+    ],
+    "manifestHash": "166ECA72624EAC1F7FC05E33CA22A8F113BC612CB04C5BFAD9E30DAFE62F5A09",
+    "validationCount": 1,
+    "version": "1.0.113",
+    "lastUpdated": "2026-09-07T08:57:32.9512767Z",
+    "description": ""
   },
   "AloproAgency.WAutoChat": {
     "lastUpdated": "2026-08-18T01:43:26.4458545Z",
@@ -2108,15 +2108,15 @@
     "lastUpdated": "2026-09-03T08:48:05.1011689Z"
   },
   "edde746.Plezy": {
-    "description": "",
-    "manifestHash": "9F69F947B0E24F9D3CA5EBE19E65578ABBC45799316E9DA65794C6CC87EA1DAF",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "0DB29284AA33427F8170C369456C87094AE8CC0B74F155D18D5C9ABA314548D1"
+      "5377E8ED4B8DC023A9F1DC578CD3828609BF954A730139DE2BCAEB46FE8171B9"
     ],
-    "version": "2.18.0",
-    "lastUpdated": "2026-08-30T13:08:52.140304Z",
+    "manifestHash": "285C85D8BC70FDAF3B2B53F2FE57CFE7D5C5FC71DF18597165D9A244E2A16E2C",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "version": "2.19.0",
+    "lastUpdated": "2026-09-07T08:57:32.9722716Z",
+    "description": ""
   },
   "edenian-prince.rust-secrets": {
     "validationCount": 1,
@@ -3911,15 +3911,15 @@
     }
   },
   "jcalado.VoxDMR": {
-    "description": "",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "621745F0E11A8D85981B6F18D75516BCFCB892F700D4ADA26AE897B369CD0BBD",
-    "version": "0.15.0",
-    "lastUpdated": "2026-09-04T17:06:56.73643Z",
-    "validationCount": 1,
     "installerHashes": [
-      "A57526F4D4C986CCF82CB565C3FD8DAE277FAA3A8C87D9C0AB43BD885D2F1982"
-    ]
+      "740C56623E5D514A59E70E263A4C11E63C7E28482A524701E20EF490E4F6A989"
+    ],
+    "manifestHash": "61256A68C5412FC1169DA25B225967E3A5B819E2D91987B90117F12C7F12CA75",
+    "validationCount": 1,
+    "version": "0.15.2",
+    "lastUpdated": "2026-09-07T08:57:32.894533Z",
+    "description": ""
   },
   "jdx.mise": {
     "openPr": {
