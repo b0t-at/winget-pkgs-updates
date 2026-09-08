@@ -1555,15 +1555,15 @@
     ]
   },
   "Containers.PodmanTUI": {
-    "manifestHash": "077CADEDF2DC428696E19410CD40FB2D3E24644C1CC454AA9E6790EF6CB10495",
-    "description": "",
-    "lastUpdated": "2026-08-20T05:16:37.8872453Z",
     "installerHashes": [
-      "17089ACCA3D6B4FBC9F35B51574CDBA41932F5E0F9A60E820A00A1C8F20CBA5A"
+      "5FF23F19EA6ACEFDD5873282389FC02618ACD6C28C527BF41D49B495A0DFB59D"
     ],
+    "manifestHash": "F41553CB74810446AED17798EE4E854F4E41FCF6A3DEF4C395210CA63E0D693B",
+    "description": "",
     "validationCount": 1,
+    "version": "2.0.0",
     "state": "VALIDATION_PASSED",
-    "version": "1.11.3"
+    "lastUpdated": "2026-09-08T16:40:53.3408755Z"
   },
   "CosX.AzurePimTui": {
     "description": "",
@@ -2098,15 +2098,15 @@
     "lastUpdated": "2026-09-03T08:48:05.1011689Z"
   },
   "edde746.Plezy": {
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "5377E8ED4B8DC023A9F1DC578CD3828609BF954A730139DE2BCAEB46FE8171B9"
+      "90E08E9B2659318A3508464EF6E28B9A2A1D177EDB003632A671B2892F94A15A"
     ],
-    "manifestHash": "285C85D8BC70FDAF3B2B53F2FE57CFE7D5C5FC71DF18597165D9A244E2A16E2C",
+    "manifestHash": "AFEBA57156A42F374F18BEF3D7393BEF79FD92F07ECC2B9C4DC4B0C647C7A706",
+    "description": "",
     "validationCount": 1,
-    "version": "2.19.0",
-    "lastUpdated": "2026-09-07T08:57:32.9722716Z",
-    "description": ""
+    "version": "2.19.1",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-08T16:40:53.2591084Z"
   },
   "edenian-prince.rust-secrets": {
     "validationCount": 1,
