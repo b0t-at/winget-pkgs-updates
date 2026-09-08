@@ -282,14 +282,14 @@
   },
   "Alochi.Monitoring": {
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "9016F402625C19506052E67E2F59D29E8CC9BF9B3158C69E40A50AB3A129C4BD"
-    ],
-    "manifestHash": "166ECA72624EAC1F7FC05E33CA22A8F113BC612CB04C5BFAD9E30DAFE62F5A09",
     "validationCount": 1,
-    "version": "1.0.113",
-    "lastUpdated": "2026-09-07T08:57:32.9512767Z",
-    "description": ""
+    "description": "",
+    "manifestHash": "83697759293E871F1CC534FFD3BA64039CC6F1E2470D3A97D7315275ED58B309",
+    "version": "1.0.120",
+    "installerHashes": [
+      "1D9A837B7CDE6F7659B3B099457D9DF7E63F2466970B1C40B4AB96E08AE0CF7F"
+    ],
+    "lastUpdated": "2026-09-08T09:14:42.7122915Z"
   },
   "AloproAgency.WAutoChat": {
     "lastUpdated": "2026-08-18T01:43:26.4458545Z",
@@ -3301,15 +3301,15 @@
     "lastUpdated": "2026-09-05T08:45:13.7631524Z"
   },
   "Happ.Happ": {
-    "version": "4.1.3",
-    "manifestHash": "1631479F9692AE3DFBCD9CDCFE789DD5481F37268747091C8CD64B99A690EC81",
-    "description": "",
-    "installerHashes": [
-      "451A56394D3A79620FFBE494719B73F4BC2AC36F08736A2424BBB2D15B47ABF8"
-    ],
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "lastUpdated": "2026-08-31T12:51:11.4274825Z"
+    "description": "",
+    "manifestHash": "89417216F99ABFE8B038E207B462944D3BB0EB76548EF0700D457D3DF8193A20",
+    "version": "4.2.1",
+    "installerHashes": [
+      "08B7146E0B7C4F0326B2DA894D653A42C98E26235302869595970CE20FA65B27"
+    ],
+    "lastUpdated": "2026-09-08T09:14:42.7466257Z"
   },
   "HarjotSinghRana.Reinstate": {
     "description": "",
@@ -3350,10 +3350,10 @@
   "Hawaii_Beach.TinyNvidiaUpdateChecker": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "AEF9DA0C6F1883DCFD28CF080F6D3B641791835BBEDCC05BB952DEEF39D24941",
-    "lastUpdated": "2026-09-08T01:29:42.5831522Z",
+    "lastUpdated": "2026-09-08T09:14:42.6022208Z",
     "description": "",
     "version": "1.26.1",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "B252854CFC33450BD618C4EF7B4D856FB44C95C11232760B1F1DD38F80647427"
     ]
@@ -5598,15 +5598,15 @@
     "manifestHash": "5EBE8F78A880C1167C195458B3FF9ABDF521346435DFAF5B823B4BBB584E98FD"
   },
   "NimaShafie.OxideSLOC": {
-    "manifestHash": "8D708B7390F4B0EDF7EE9E58436B8908BE42335AE2E4BFB8F01B5336C91E3B14",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "lastUpdated": "2026-09-02T21:00:13.9694555Z",
     "description": "",
+    "manifestHash": "8C8BFD259642638E7688F4B3B3934A71710FB224E4E59ADFDAE59919D10290A4",
+    "version": "1.6.20",
     "installerHashes": [
-      "9DA86B044375694D7A2FD2B4D7C3147EA35BE8AD0290CB624C8CF980FDA446A3"
+      "C1D6096DF17B6A3D84A191D9FE60EF960C0C9DFE15BE14AC543E6CC0B81D8836"
     ],
-    "version": "1.6.19"
+    "lastUpdated": "2026-09-08T09:14:42.6472402Z"
   },
   "Nisonxi.PowerDoze": {
     "manifestHash": "5E5B5D669F1C795D7C92E12BA9F8F1950B7A5E916932F136DD5C4E3AE1D12A26",
@@ -7263,11 +7263,11 @@
   },
   "Scandum.WinTin++": {
     "version": "2.02.61",
-    "lastUpdated": "2026-09-08T04:45:31.088497Z",
+    "lastUpdated": "2026-09-08T09:14:42.6897527Z",
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "2C9A618908F2C08C9E373327E7A15409C25EEB6AE563F45807A611269A686250",
-    "validationCount": 19,
+    "validationCount": 20,
     "installerHashes": [
       "421A1458080413D5135A7490DC05AC0F4B54F1CAADBFC033214536237420E847"
     ]
@@ -7421,15 +7421,15 @@
     "manifestHash": "8EB9B09B3F34BBD62C6214FD2953C00CB9D31C7E105179C4F7BC763B6B0DE45D"
   },
   "shakaran.whatly": {
-    "description": "",
-    "version": "7.3.1",
-    "validationCount": 1,
-    "installerHashes": [
-      "13D0652BD86A161A04A3A72518413A255A8DDC8026A57EE260F3B074F1E231D3"
-    ],
     "state": "VALIDATION_PASSED",
-    "manifestHash": "34B1492D1C5CE8B0D4BDAC673726D4B8B8F55641C59CA18E82E6BB2698C8E6E8",
-    "lastUpdated": "2026-08-24T05:01:37.9989473Z"
+    "validationCount": 1,
+    "description": "",
+    "manifestHash": "00FBDF74B9BEDCF53168D8ED06F7CF10E6D945E50F2BAAB221FA2E9FB0F38C52",
+    "version": "7.6.0",
+    "installerHashes": [
+      "B12DEB7E5503C5D2C2BF180EC52635C790D15A19CE4EAAD2B406E7921E606390"
+    ],
+    "lastUpdated": "2026-09-08T09:14:42.7684205Z"
   },
   "ShatteredChaos.FightPlanner": {
     "installerHashes": [
