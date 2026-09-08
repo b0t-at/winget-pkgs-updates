@@ -133,8 +133,8 @@
       "C03035EBBB96FBE89D7793876C59EEFE6E3D03241436273BCEBABD355FADE29B"
     ],
     "openPr": {
-      "checkedAt": "2026-09-07T04:27:10.9517032Z",
-      "version": "0.84.2"
+      "version": "0.84.2",
+      "checkedAt": "2026-09-08T08:29:52.1704563Z"
     }
   },
   "AES256Afro.VideoKidnapper": {
@@ -1294,8 +1294,8 @@
     ],
     "description": "",
     "openPr": {
-      "checkedAt": "2026-09-07T04:27:12.9164262Z",
-      "version": "1.9.2"
+      "version": "1.9.2",
+      "checkedAt": "2026-09-08T08:29:53.5469198Z"
     }
   },
   "CarthageSoftware.Mago": {
@@ -2130,8 +2130,8 @@
     ],
     "manifestHash": "31947E74E60A0462F2AAA67D5F8C21F460756C9F606A2E99B5AA0055A2064E78",
     "openPr": {
-      "checkedAt": "2026-09-07T04:27:13.4314184Z",
-      "version": "2.12.4"
+      "version": "2.12.4",
+      "checkedAt": "2026-09-08T08:29:54.8246186Z"
     }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
@@ -3101,8 +3101,8 @@
     ],
     "manifestHash": "8A93D198AD57BF64282A1C20A5B26813247BA8F368CBBC5002B3A2AECCF79CDA",
     "openPr": {
-      "checkedAt": "2026-09-07T04:27:14.6478965Z",
-      "version": "2.5.1"
+      "version": "2.5.1",
+      "checkedAt": "2026-09-08T08:29:56.0443569Z"
     }
   },
   "Google.Protobuf": {
@@ -3986,8 +3986,8 @@
     "lastUpdated": "2026-08-06T14:10:17.3921348Z",
     "manifestHash": "1E843D90602194E32EF0F84E333BE9BC20D09621BCA43AA304BDA7952A621BAB",
     "openPr": {
-      "checkedAt": "2026-09-07T04:27:15.5732832Z",
-      "version": "0.45.1"
+      "version": "0.45.1",
+      "checkedAt": "2026-09-08T08:29:56.9816952Z"
     }
   },
   "jmrplens.gitlab-mcp-server": {
@@ -6130,8 +6130,8 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "openPr": {
-      "checkedAt": "2026-09-07T04:27:16.6929009Z",
-      "version": "1.12.6"
+      "version": "1.12.6",
+      "checkedAt": "2026-09-08T08:29:58.2819263Z"
     }
   },
   "OpenWhispr.OpenWhispr": {
@@ -8267,8 +8267,8 @@
     ],
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "checkedAt": "2026-09-07T04:27:19.979496Z",
-      "version": "5.2.4"
+      "version": "5.2.4",
+      "checkedAt": "2026-09-08T08:30:52.3406761Z"
     }
   },
   "TeleCode.TeleCode": {
@@ -9550,8 +9550,8 @@
   },
   "Zagrios.BSManager": {
     "openPr": {
-      "checkedAt": "2026-09-07T04:28:15.156137Z",
-      "version": "1.6.0"
+      "version": "1.6.0",
+      "checkedAt": "2026-09-08T08:30:56.2527335Z"
     }
   },
   "ZauJulio.ZeroWhats": {
