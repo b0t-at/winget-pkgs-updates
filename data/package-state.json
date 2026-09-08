@@ -418,8 +418,8 @@
     "lastUpdated": "2026-08-22T08:51:40.3505732Z",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "version": "0.2.2",
-      "checkedAt": "2026-09-07T08:35:16.6998344Z"
+      "checkedAt": "2026-09-08T12:33:55.6953635Z",
+      "version": "0.2.2"
     }
   },
   "AntiMicroX.antimicrox": {
@@ -770,8 +770,8 @@
   },
   "Barry-ran.QtScrcpy": {
     "openPr": {
-      "version": "4.1.1",
-      "checkedAt": "2026-09-07T08:35:18.4661052Z"
+      "checkedAt": "2026-09-08T12:33:57.9183149Z",
+      "version": "4.1.1"
     }
   },
   "Baulk.Baulk": {
@@ -2897,8 +2897,8 @@
     ],
     "version": "3.9.0",
     "openPr": {
-      "version": "3.9.0",
-      "checkedAt": "2026-09-07T08:34:14.6370374Z"
+      "checkedAt": "2026-09-08T12:32:50.7324232Z",
+      "version": "3.9.0"
     }
   },
   "getzola.zola": {
