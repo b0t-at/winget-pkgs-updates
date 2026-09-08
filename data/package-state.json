@@ -116,8 +116,8 @@
     "manifestHash": "88FF875B5DEA51BC3B743F06098AADAF42AB87DA966E19E5EFA189C21F4EC081",
     "version": "0.107.78",
     "openPr": {
-      "checkedAt": "2026-09-07T16:23:03.0667488Z",
-      "version": "0.107.79"
+      "version": "0.107.79",
+      "checkedAt": "2026-09-08T16:25:49.1436604Z"
     }
   },
   "AdGuard.dnsproxy": {
@@ -1385,8 +1385,8 @@
   },
   "CharlesMilette.TranslucentTB": {
     "openPr": {
-      "checkedAt": "2026-09-07T16:23:04.8540349Z",
-      "version": "2026.2"
+      "version": "2026.2",
+      "checkedAt": "2026-09-08T16:25:50.871063Z"
     }
   },
   "ChiaNetwork.GUIforChiaBlockchain": {
@@ -3117,8 +3117,8 @@
     "validationCount": 1,
     "version": "36.1",
     "openPr": {
-      "checkedAt": "2026-09-07T16:23:06.7706625Z",
-      "version": "36.1"
+      "version": "36.1",
+      "checkedAt": "2026-09-08T16:25:53.1196689Z"
     }
   },
   "goplus.xgo": {
@@ -3913,8 +3913,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-09-08T00:57:49.6635181Z",
-      "version": "2026.9.2"
+      "version": "2026.9.3",
+      "checkedAt": "2026-09-08T16:25:54.3011833Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -3940,8 +3940,8 @@
     "manifestHash": "0C926E13803D0BBF5008C8B0D054568100AF418B461FA295C84B710470F2175B",
     "validationCount": 1,
     "openPr": {
-      "checkedAt": "2026-09-07T12:33:17.7508311Z",
-      "version": "8.1.2-4"
+      "version": "8.1.2-4",
+      "checkedAt": "2026-09-08T16:25:54.697863Z"
     }
   },
   "JeromeHerrman.VPinCommander": {
@@ -4485,8 +4485,8 @@
     "validationCount": 1,
     "manifestHash": "57F8800DB719DDF8C26EB31782E8B1406E5F0B43BFE48FE93D4F3061DC1338D2",
     "openPr": {
-      "checkedAt": "2026-09-07T16:23:07.8627211Z",
-      "version": "2026.8.0"
+      "version": "2026.8.0",
+      "checkedAt": "2026-09-08T16:25:55.8343422Z"
     }
   },
   "loft-sh.vcluster": {
@@ -6215,8 +6215,8 @@
     "version": "2.14.1",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-09-07T16:23:09.9417575Z",
-      "version": "2.14.1"
+      "version": "2.14.1",
+      "checkedAt": "2026-09-08T16:25:58.5755119Z"
     }
   },
   "Orthogonal.APM": {
