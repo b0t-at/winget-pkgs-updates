@@ -2487,7 +2487,7 @@
     ],
     "openPr": {
       "version": "19.0.2",
-      "checkedAt": "2026-09-07T20:21:03.0541456Z"
+      "checkedAt": "2026-09-08T20:21:48.0645452Z"
     }
   },
   "Fangyuan025.Chaty": {
@@ -2674,11 +2674,7 @@
     "installerHashes": [
       "07D2C4F246BE39BC98ADEA35BC46840A1B6BDBB738CD3171CDDACEBA9A4EC909"
     ],
-    "validationCount": 2,
-    "openPr": {
-      "version": "3.18.2",
-      "checkedAt": "2026-08-31T12:33:35.0869719Z"
-    }
+    "validationCount": 2
   },
   "FrancisBanyikwa.MediaDownloader": {
     "installerHashes": [
@@ -6115,7 +6111,7 @@
     "validationCount": 1,
     "openPr": {
       "version": "0.26.1",
-      "checkedAt": "2026-09-07T20:21:06.3881174Z"
+      "checkedAt": "2026-09-08T20:21:52.9022406Z"
     }
   },
   "OpenTofu.Tofu": {
@@ -6265,8 +6261,8 @@
     "manifestHash": "F8847421B933350900A143A19FED15B84506A7D277B0DA75DAA69F2A353D8DDA",
     "lastUpdated": "2026-06-17T19:11:26.6499207Z",
     "openPr": {
-      "version": "2.43.0",
-      "checkedAt": "2026-09-02T16:26:08.4536226Z"
+      "version": "2.43.1",
+      "checkedAt": "2026-09-08T20:21:54.0165581Z"
     }
   },
   "PaddiM8.kalker": {
@@ -7958,11 +7954,7 @@
     "installerHashes": [
       "78E0F3F69CD064D8D0DE340CD51C34286E335BA5347BE580F6EE8E6BD0CAC35C"
     ],
-    "validationCount": 1,
-    "openPr": {
-      "version": "1.162.4",
-      "checkedAt": "2026-08-28T16:23:25.4195314Z"
-    }
+    "validationCount": 1
   },
   "str4d.rage": {
     "state": "VALIDATION_PASSED",
@@ -8296,7 +8288,7 @@
     "state": "VALIDATION_PASSED",
     "openPr": {
       "version": "5.7.0",
-      "checkedAt": "2026-09-07T20:21:09.2218354Z"
+      "checkedAt": "2026-09-08T20:22:48.3455935Z"
     }
   },
   "termio.soft-jp.com.TermioWin": {
