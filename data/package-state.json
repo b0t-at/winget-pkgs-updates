@@ -1279,8 +1279,8 @@
     "version": "1.0.3",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "checkedAt": "2026-09-07T01:02:46.9413721Z",
-      "version": "1.0.3"
+      "version": "1.0.3",
+      "checkedAt": "2026-09-08T04:26:39.4560599Z"
     }
   },
   "CargoLambda.CargoLambda": {
