@@ -2068,15 +2068,15 @@
     }
   },
   "Dystroy.broot": {
+    "validationCount": 1,
     "installerHashes": [
-      "097ED2E86616D8CD5DF10ED6D1FF2C69EFA6667A96E8E8B2C19242CDA950B955"
+      "DE4A054424AC01EF73FB30C3B3FAC0CDA437E7426388085D7467B5E0AAA1CB55"
     ],
-    "version": "1.60.0",
-    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-09T01:17:20.2917668Z",
     "description": "",
-    "manifestHash": "07941531BDE95B088B805F701633C22DA5B4ECDF5913278E64F6B67D5A67F62A",
-    "lastUpdated": "2026-09-05T20:49:32.2071565Z",
-    "validationCount": 1
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "4ABD21FDE82EF99EA84EF63B8AB3B49CFB9BF7FC3547E9B7456C21DCD60362E2",
+    "version": "1.60.1"
   },
   "Easure.HelpMePrint": {
     "configHealth": {
@@ -3897,15 +3897,15 @@
     }
   },
   "jcalado.VoxDMR": {
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "740C56623E5D514A59E70E263A4C11E63C7E28482A524701E20EF490E4F6A989"
-    ],
-    "manifestHash": "61256A68C5412FC1169DA25B225967E3A5B819E2D91987B90117F12C7F12CA75",
     "validationCount": 1,
-    "version": "0.15.2",
-    "lastUpdated": "2026-09-07T08:57:32.894533Z",
-    "description": ""
+    "installerHashes": [
+      "D2737BD99DFB64ABBC12EC9C33E1AF3F459FAD84219A31E48AD2561552809201"
+    ],
+    "lastUpdated": "2026-09-09T01:17:20.2569441Z",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "5804C66B6C415FDA0E1CCEFDC8B3DB1B64F86BA74B0B9B4794AFF0EAF6BDB936",
+    "version": "0.15.3"
   },
   "jdx.mise": {
     "openPr": {
@@ -4348,16 +4348,16 @@
     }
   },
   "LANCommander.Launcher": {
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "277FF14A94A9BBBE9C3783A6D7A661DACF556FA46C6AB662095EE0DC179EF1FD",
-    "lastUpdated": "2026-09-08T01:29:42.689539Z",
-    "description": "",
-    "version": "2.1.14",
     "validationCount": 1,
     "installerHashes": [
-      "DCD3E0D4A623683102C8CF646BBF689B88B368CF0E278EBB02BDA6B8CBEF5472",
-      "452F06474486CB9853DBAA923E59D0C162AD8C47DD35964FA197D6A3368D11D9"
-    ]
+      "8DC8690B22968CB76B4C04859F37C037B66C08DB7AE03170D9F390287D358143",
+      "3685A5329C128A1F15E1D17D2ED1830534FD35CBEED250A0512749567B3535F5"
+    ],
+    "lastUpdated": "2026-09-09T01:17:20.2118887Z",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "BC8203AE4A8282BD247AF34491B3A5D4E3484ACB32AA7CFB2FEA671CF5616C07",
+    "version": "2.1.15"
   },
   "LANCommander.Server": {
     "installerHashes": [
