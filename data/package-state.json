@@ -116,8 +116,8 @@
     "manifestHash": "88FF875B5DEA51BC3B743F06098AADAF42AB87DA966E19E5EFA189C21F4EC081",
     "version": "0.107.78",
     "openPr": {
-      "version": "0.107.79",
-      "checkedAt": "2026-09-08T16:25:49.1436604Z"
+      "checkedAt": "2026-09-09T20:22:07.0672138Z",
+      "version": "0.107.79"
     }
   },
   "AdGuard.dnsproxy": {
@@ -1381,8 +1381,8 @@
   },
   "CharlesMilette.TranslucentTB": {
     "openPr": {
-      "version": "2026.2",
-      "checkedAt": "2026-09-08T16:25:50.871063Z"
+      "checkedAt": "2026-09-09T20:22:09.9865488Z",
+      "version": "2026.2"
     }
   },
   "ChiaNetwork.GUIforChiaBlockchain": {
@@ -1463,7 +1463,11 @@
     "description": "",
     "manifestHash": "452B307A1F4E795FB5198446B88E2B92A70442795275A9151A0FBA1332F6D801",
     "validationCount": 1,
-    "version": "1.0.48275"
+    "version": "1.0.48275",
+    "openPr": {
+      "checkedAt": "2026-09-09T20:22:10.3568151Z",
+      "version": "1.0.49879"
+    }
   },
   "ciromattia.KCC": {
     "manifestHash": "1CBE08551F8C6AD0648016BA94F6BC110B994FF2DC901DD6F8F0C8201FDAF298",
@@ -2482,8 +2486,8 @@
       "9A0B7352DFEF40C8EBF8733F77CB777565AA4EAEDE4F79FE928C11DA5C35CE40"
     ],
     "openPr": {
-      "version": "19.0.2",
-      "checkedAt": "2026-09-08T20:21:48.0645452Z"
+      "checkedAt": "2026-09-09T20:22:10.8163857Z",
+      "version": "19.0.2"
     }
   },
   "Fangyuan025.Chaty": {
@@ -2670,11 +2674,7 @@
     "lastUpdated": "2026-09-09T12:48:50.2464439Z",
     "installerHashes": [
       "6760CCD837DA3407BD3246C1D10F9D0257D42DE3C54268851DEB2EBAABA4DE33"
-    ],
-    "openPr": {
-      "checkedAt": "2026-09-09T16:24:50.6502629Z",
-      "version": "3.18.3"
-    }
+    ]
   },
   "FrancisBanyikwa.MediaDownloader": {
     "manifestHash": "03C1DB537ECDB0566823D94D3B6768E5B97F29295D693658F8DF8898058990A5",
@@ -3113,8 +3113,8 @@
     "validationCount": 1,
     "version": "36.1",
     "openPr": {
-      "version": "36.1",
-      "checkedAt": "2026-09-08T16:25:53.1196689Z"
+      "checkedAt": "2026-09-09T20:22:13.0140568Z",
+      "version": "36.1"
     }
   },
   "goplus.xgo": {
@@ -3909,8 +3909,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.9.3",
-      "checkedAt": "2026-09-08T16:25:54.3011833Z"
+      "checkedAt": "2026-09-09T20:22:14.2466077Z",
+      "version": "2026.9.3"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -3936,8 +3936,8 @@
     "manifestHash": "0C926E13803D0BBF5008C8B0D054568100AF418B461FA295C84B710470F2175B",
     "validationCount": 1,
     "openPr": {
-      "version": "8.1.2-4",
-      "checkedAt": "2026-09-08T16:25:54.697863Z"
+      "checkedAt": "2026-09-09T20:22:14.6339486Z",
+      "version": "8.1.2-4"
     }
   },
   "JeromeHerrman.VPinCommander": {
@@ -4481,8 +4481,8 @@
     "validationCount": 1,
     "manifestHash": "57F8800DB719DDF8C26EB31782E8B1406E5F0B43BFE48FE93D4F3061DC1338D2",
     "openPr": {
-      "version": "2026.8.0",
-      "checkedAt": "2026-09-08T16:25:55.8343422Z"
+      "checkedAt": "2026-09-09T20:22:16.2884883Z",
+      "version": "2026.8.0"
     }
   },
   "loft-sh.vcluster": {
@@ -6211,8 +6211,8 @@
     "version": "2.14.1",
     "description": "",
     "openPr": {
-      "version": "2.14.1",
-      "checkedAt": "2026-09-08T16:25:58.5755119Z"
+      "checkedAt": "2026-09-09T20:23:08.6667555Z",
+      "version": "2.14.1"
     }
   },
   "Orthogonal.APM": {
@@ -8287,8 +8287,8 @@
     "manifestHash": "4B796A972C2DBB5AE75EB8F4F8B332F0CBE77928187E84989680F6AB184F42AA",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "version": "5.7.0",
-      "checkedAt": "2026-09-08T20:22:48.3455935Z"
+      "checkedAt": "2026-09-09T20:23:12.0732951Z",
+      "version": "5.7.0"
     }
   },
   "termio.soft-jp.com.TermioWin": {
