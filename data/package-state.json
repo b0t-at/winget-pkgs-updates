@@ -852,11 +852,7 @@
     ],
     "lastUpdated": "2026-08-06T10:56:40.4271752Z",
     "manifestHash": "4DBF02464A5D6B019F2BFB332B4E4F787AC873A66C275D9C16D27E6DCF49D4D7",
-    "version": "0.32.3.2",
-    "openPr": {
-      "version": "0.32.4.0",
-      "checkedAt": "2026-08-14T13:07:19.8595851Z"
-    }
+    "version": "0.32.3.2"
   },
   "BenModigell.Vibes": {
     "lastUpdated": "2026-08-29T17:06:32.6440726Z",
@@ -1467,11 +1463,7 @@
     "description": "",
     "manifestHash": "452B307A1F4E795FB5198446B88E2B92A70442795275A9151A0FBA1332F6D801",
     "validationCount": 1,
-    "version": "1.0.48275",
-    "openPr": {
-      "version": "1.0.49536",
-      "checkedAt": "2026-09-03T14:32:25.7808693Z"
-    }
+    "version": "1.0.48275"
   },
   "ciromattia.KCC": {
     "manifestHash": "1CBE08551F8C6AD0648016BA94F6BC110B994FF2DC901DD6F8F0C8201FDAF298",
@@ -2678,7 +2670,11 @@
     "lastUpdated": "2026-09-09T12:48:50.2464439Z",
     "installerHashes": [
       "6760CCD837DA3407BD3246C1D10F9D0257D42DE3C54268851DEB2EBAABA4DE33"
-    ]
+    ],
+    "openPr": {
+      "checkedAt": "2026-09-09T16:24:50.6502629Z",
+      "version": "3.18.3"
+    }
   },
   "FrancisBanyikwa.MediaDownloader": {
     "installerHashes": [
