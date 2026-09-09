@@ -2076,7 +2076,11 @@
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "4ABD21FDE82EF99EA84EF63B8AB3B49CFB9BF7FC3547E9B7456C21DCD60362E2",
-    "version": "1.60.1"
+    "version": "1.60.1",
+    "openPr": {
+      "version": "1.60.1",
+      "checkedAt": "2026-09-09T04:25:55.0544335Z"
+    }
   },
   "Easure.HelpMePrint": {
     "configHealth": {
