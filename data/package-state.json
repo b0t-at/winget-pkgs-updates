@@ -134,7 +134,7 @@
     ],
     "openPr": {
       "version": "0.84.2",
-      "checkedAt": "2026-09-08T08:29:52.1704563Z"
+      "checkedAt": "2026-09-09T12:32:51.8272644Z"
     }
   },
   "AES256Afro.VideoKidnapper": {
@@ -1295,7 +1295,7 @@
     "description": "",
     "openPr": {
       "version": "1.9.2",
-      "checkedAt": "2026-09-08T08:29:53.5469198Z"
+      "checkedAt": "2026-09-09T12:32:53.5629762Z"
     }
   },
   "CarthageSoftware.Mago": {
@@ -2135,7 +2135,7 @@
     "manifestHash": "31947E74E60A0462F2AAA67D5F8C21F460756C9F606A2E99B5AA0055A2064E78",
     "openPr": {
       "version": "2.12.4",
-      "checkedAt": "2026-09-08T08:29:54.8246186Z"
+      "checkedAt": "2026-09-09T12:32:53.9390102Z"
     }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
@@ -3102,7 +3102,7 @@
     "manifestHash": "8A93D198AD57BF64282A1C20A5B26813247BA8F368CBBC5002B3A2AECCF79CDA",
     "openPr": {
       "version": "2.5.1",
-      "checkedAt": "2026-09-08T08:29:56.0443569Z"
+      "checkedAt": "2026-09-09T12:32:57.6309939Z"
     }
   },
   "Google.Protobuf": {
@@ -3987,7 +3987,7 @@
     "manifestHash": "1E843D90602194E32EF0F84E333BE9BC20D09621BCA43AA304BDA7952A621BAB",
     "openPr": {
       "version": "0.45.1",
-      "checkedAt": "2026-09-08T08:29:56.9816952Z"
+      "checkedAt": "2026-09-09T12:32:58.7939865Z"
     }
   },
   "jmrplens.gitlab-mcp-server": {
@@ -6131,7 +6131,7 @@
     "state": "VALIDATION_FAILED",
     "openPr": {
       "version": "1.12.6",
-      "checkedAt": "2026-09-08T08:29:58.2819263Z"
+      "checkedAt": "2026-09-09T12:33:01.2479012Z"
     }
   },
   "OpenWhispr.OpenWhispr": {
@@ -8264,7 +8264,7 @@
     "state": "VALIDATION_PASSED",
     "openPr": {
       "version": "5.2.4",
-      "checkedAt": "2026-09-08T08:30:52.3406761Z"
+      "checkedAt": "2026-09-09T12:33:54.9913516Z"
     }
   },
   "TeleCode.TeleCode": {
