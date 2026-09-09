@@ -138,15 +138,15 @@
     }
   },
   "AES256Afro.VideoKidnapper": {
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-04T01:59:22.7332752Z",
     "description": "",
-    "version": "1.8.2",
-    "installerHashes": [
-      "51E88BAB6E6F60D83062BA2C54185EC5ECE501CA875A7F7AB2B6065EDB1C4BDD"
-    ],
     "validationCount": 1,
-    "manifestHash": "E73B614119416B95BADE39C984AFBDD9A20E80B4301E7D24CDEEB1854A082B6A"
+    "manifestHash": "6AF0D5C6580E0DC86E2AEBDCE5BC81D989B0AE69F34CC63C68EB8C8B91358A9E",
+    "state": "VALIDATION_PASSED",
+    "version": "1.8.3",
+    "lastUpdated": "2026-09-09T12:48:50.2818425Z",
+    "installerHashes": [
+      "7D1FCFB413C4F55953D9C660654FA158F9615B09A0D1E930D39D6CC1E58D737A"
+    ]
   },
   "agent-rt.arc-runner": {
     "manifestHash": "2CC193F9A4A4801C176AA7EEFD46F19FCAD4AE99DC906CD7F1071640805F78A2",
@@ -2670,15 +2670,15 @@
     "manifestHash": "E1ED487DECD7B1869B29DFA8B853A38D6DF1D5E87F9006EC1FA70E3F6DCE08F1"
   },
   "FOSSA.FOSSA-cli": {
-    "lastUpdated": "2026-08-31T08:56:17.2425056Z",
-    "version": "3.18.2",
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "4C6CABCC43353B7CE3053810BFD0EEA5CDB0354CF6D13AFF03042DF1677781B4",
+    "validationCount": 1,
+    "manifestHash": "17CD7E690C2A35533DEFE1D4273730325C2ECB140067BA27ABB592DB7E9392CF",
+    "state": "VALIDATION_PASSED",
+    "version": "3.18.3",
+    "lastUpdated": "2026-09-09T12:48:50.2464439Z",
     "installerHashes": [
-      "07D2C4F246BE39BC98ADEA35BC46840A1B6BDBB738CD3171CDDACEBA9A4EC909"
-    ],
-    "validationCount": 2
+      "6760CCD837DA3407BD3246C1D10F9D0257D42DE3C54268851DEB2EBAABA4DE33"
+    ]
   },
   "FrancisBanyikwa.MediaDownloader": {
     "installerHashes": [
@@ -2713,12 +2713,12 @@
   },
   "Frnsys.Half_earth": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "CD47FC89C016730378E00399433045CCDB17E9B8ECC1434413C7531B9EB6AD36"
     ],
     "description": "",
-    "lastUpdated": "2026-09-09T04:48:15.4373539Z",
+    "lastUpdated": "2026-09-09T12:48:50.2003108Z",
     "manifestHash": "162A9CB4478CCE0219E2D18B3BDBA90BBFD1A2D89CCCF6E863728E377240A4A7",
     "version": "1.0.15"
   },
