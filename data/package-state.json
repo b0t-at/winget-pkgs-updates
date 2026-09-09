@@ -1338,15 +1338,15 @@
     }
   },
   "Celerp.Celerp": {
-    "manifestHash": "F0BAA9E5851A74329CEBC5EAA88415F0F47E5A3B8D1474F4100B1FDC2AC493ED",
-    "lastUpdated": "2026-09-03T20:56:43.7603566Z",
-    "installerHashes": [
-      "A99EC9FA9D4322B8B127B6687348719AC235E2FB25762CA6D6155F1004570BC3"
-    ],
-    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "version": "2.3.3",
-    "description": ""
+    "validationCount": 1,
+    "installerHashes": [
+      "BA4E4ABACA0279E6F43E0E80D9A008C13D509333CDFF7906BBA8CA51B8D1F4EF"
+    ],
+    "description": "",
+    "lastUpdated": "2026-09-09T04:48:15.3828132Z",
+    "manifestHash": "C7499B07838187F5875EF9215A1D14AD194E9F88ACCD8476F11580FC260F40D7",
+    "version": "2.3.5"
   },
   "CerberAuth.jwtop": {
     "description": "",
@@ -2712,15 +2712,15 @@
     }
   },
   "Frnsys.Half_earth": {
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
     "installerHashes": [
-      "392F916AF427392AD90CB80E226420CBC4ADB6C48135CE9B9FED61AA1F735452"
+      "CD47FC89C016730378E00399433045CCDB17E9B8ECC1434413C7531B9EB6AD36"
     ],
     "description": "",
-    "manifestHash": "A4B0A2532C22E8509634F1289507E7CE0F5F02F6F5D34B2B8FF796539325C3D6",
-    "version": "1.0.14",
-    "lastUpdated": "2026-09-03T20:56:43.7050714Z",
-    "validationCount": 9,
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-09-09T04:48:15.4373539Z",
+    "manifestHash": "162A9CB4478CCE0219E2D18B3BDBA90BBFD1A2D89CCCF6E863728E377240A4A7",
+    "version": "1.0.15"
   },
   "fselect.fselect": {
     "description": "",
