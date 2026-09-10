@@ -442,7 +442,11 @@
     "version": "0.14.2",
     "installerHashes": [
       "F9B3576625B6E003CE27F1B022913F13CFEA08D212C223D3FB94A0C173C9CDC5"
-    ]
+    ],
+    "openPr": {
+      "checkedAt": "2026-09-10T20:20:22.4243767Z",
+      "version": "0.14.2"
+    }
   },
   "AppiumDevelopers.AppiumInspector": {
     "state": "VALIDATION_FAILED",
@@ -1200,11 +1204,7 @@
       "A9CB78E5F2705B35192052026138EE14EEB6983FE2D2AEFED6B0C797F01D1A0F"
     ],
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "openPr": {
-      "version": "48.0.1",
-      "checkedAt": "2026-08-25T00:25:40.2542902Z"
-    }
+    "state": "VALIDATION_PASSED"
   },
   "ByteNess.AWSVault": {
     "description": "",
@@ -3076,7 +3076,11 @@
     "installerHashes": [
       "7979BAA37776CBEB0C23DACCB4F6CAD284AA41F13B07EA2287B6ED7DF388CABC"
     ],
-    "manifestHash": "ED65F5284972AEC81676471E200FCE929D3B454A5646AAA28FA50AD119455E4F"
+    "manifestHash": "ED65F5284972AEC81676471E200FCE929D3B454A5646AAA28FA50AD119455E4F",
+    "openPr": {
+      "checkedAt": "2026-09-10T20:20:27.5781271Z",
+      "version": "15.30.0"
+    }
   },
   "Google.IAPDesktop": {
     "lastUpdated": "2026-06-30T01:55:05.1221847Z",
@@ -7962,7 +7966,11 @@
     "version": "1.163.4",
     "installerHashes": [
       "0BEDD00C34A6109D90A63AD4D893BAA49B02AC9AB60A540CC9BF151113C65EC7"
-    ]
+    ],
+    "openPr": {
+      "checkedAt": "2026-09-10T20:20:32.9581365Z",
+      "version": "1.163.4"
+    }
   },
   "str4d.rage": {
     "state": "VALIDATION_PASSED",
@@ -7986,8 +7994,8 @@
     "validationCount": 1,
     "manifestHash": "2FC17D10387329E5E73DBDDCBE45541A670D1711C99B916B986BBD747577DEC7",
     "openPr": {
-      "version": "1.50.10",
-      "checkedAt": "2026-09-02T20:24:08.0058746Z"
+      "checkedAt": "2026-09-10T20:20:34.7428868Z",
+      "version": "1.50.11"
     }
   },
   "stuncloud.uwscr": {
