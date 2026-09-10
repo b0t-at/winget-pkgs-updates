@@ -434,15 +434,15 @@
     "state": "VALIDATION_PASSED"
   },
   "AppFlowy.AppFlowy": {
-    "state": "VALIDATION_PASSED",
-    "version": "0.14.1",
-    "installerHashes": [
-      "168569AA33BD072E5F7F171E92B46D7BFDB608E200386133C07388D0DAE0B893"
-    ],
-    "manifestHash": "ECDAC11599F17E2D9BF633A60935BC5D2613B82F1B35F2D5B783A90EA5D4588D",
-    "lastUpdated": "2026-09-04T13:10:02.8230522Z",
+    "manifestHash": "BFDABA7D11442B395A088A3C9BF464A561284C5927F2588E1D4AE81B981F2D41",
+    "validationCount": 1,
     "description": "",
-    "validationCount": 1
+    "lastUpdated": "2026-09-10T16:58:49.3885057Z",
+    "state": "VALIDATION_PASSED",
+    "version": "0.14.2",
+    "installerHashes": [
+      "F9B3576625B6E003CE27F1B022913F13CFEA08D212C223D3FB94A0C173C9CDC5"
+    ]
   },
   "AppiumDevelopers.AppiumInspector": {
     "state": "VALIDATION_FAILED",
@@ -800,15 +800,15 @@
     "version": "1.27.206"
   },
   "bdash-app.bdash": {
+    "manifestHash": "6F2FFD354C54C518D8056FE494003F386438CFEB6FE5A039CB1F66307F18C023",
     "validationCount": 1,
-    "version": "1.35.1",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "B5D05E3367C9F7DC78D3975DA79F945195F22D02FC2431F44BDA33AF3D7FD4AE",
     "description": "",
+    "lastUpdated": "2026-09-10T16:58:49.1963897Z",
+    "state": "VALIDATION_PASSED",
+    "version": "1.35.2",
     "installerHashes": [
-      "25D117CB4658EFED68387B7D8928DDD63982C8807EB2FE363EBBC38227A33FAE"
-    ],
-    "lastUpdated": "2026-08-17T21:15:38.3689994Z"
+      "230C07C7F1938F0CEA9EC6803DF3878E417700DB8C97EE8C3418F6C6480EE5FE"
+    ]
   },
   "BeagleEditor.BeagleEditor": {
     "lastUpdated": "2026-08-19T01:25:20.8029024Z",
@@ -2088,8 +2088,8 @@
   },
   "Echonuit.VigieChiroCompanion": {
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-10T01:18:29.0515074Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-09-10T16:58:49.3542152Z",
+    "validationCount": 2,
     "description": "",
     "version": "2.193.0",
     "installerHashes": [
@@ -3069,8 +3069,8 @@
   },
   "Google.FirebaseCLI": {
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-10T01:18:29.1553484Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-09-10T16:58:49.3000538Z",
+    "validationCount": 2,
     "description": "",
     "version": "15.30.0",
     "installerHashes": [
@@ -4524,14 +4524,14 @@
     "state": "VALIDATION_PASSED"
   },
   "loreste.mako": {
-    "lastUpdated": "2026-09-09T08:52:39.227126Z",
-    "state": "VALIDATION_PASSED",
+    "manifestHash": "AB80F4765555AB9F2DC25488AB493D971D8D4F1EF48F328DC416670464E7B10C",
     "validationCount": 1,
     "description": "",
-    "manifestHash": "620E0BF898572D91E6A7C4BD7BFB94F35A9641E41612D2C65E3E1BD3FAF3DA86",
-    "version": "0.6.31",
+    "lastUpdated": "2026-09-10T16:58:49.3323269Z",
+    "state": "VALIDATION_PASSED",
+    "version": "0.6.32",
     "installerHashes": [
-      "076B3D8EE2FB1CE9B76824E870793F81A7E7A8F844FCB3029E0C971D35AC148E"
+      "62D3B8BAD07E0A425A47843536A1E014DC929C3695F163FB6D8247B9797FD00C"
     ]
   },
   "LowLevelDesign.ProcessGovernor": {
@@ -6049,17 +6049,17 @@
     "state": "VALIDATION_PASSED"
   },
   "OpenJS.Electron.43": {
-    "installerHashes": [
-      "D2CE6996992B18DC2E3A4B3A24FC663E0010B9BD23EC3CA02221D3E7BF288711",
-      "4140545D6ED47B59C35900F266DEA6C02F4A5496069ECE7F6E7BC825E0D959C2",
-      "7B8749FEE290EAA5319918142686DD147F2ADEB9E680AF092BAC02E2B2BC8A1D"
-    ],
-    "description": "",
-    "version": "43.6.0",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-04T05:11:12.2799707Z",
+    "manifestHash": "5DF5982A55761C17EB51A269446E6CF17994061FB987B9CF7064A0B170CB936E",
     "validationCount": 1,
-    "manifestHash": "D2E5CF88FF0255C5CBEA155480124182B2659B3AC4A75F70C2FE8D3088AC54A6"
+    "description": "",
+    "lastUpdated": "2026-09-10T16:58:49.4088497Z",
+    "state": "VALIDATION_PASSED",
+    "version": "43.7.0",
+    "installerHashes": [
+      "E8BC535F8978D1552277438E0C10392C6EA093E8729BF389B57686F2736597D9",
+      "98DD44359D42A91261191E3F55B806D7059B1B9141FB4272FBFF7A1E53C4D5D2",
+      "990723F7D9112D10578BBDE87BB46AD166DBECBA155A43A69776526CEB7F0967"
+    ]
   },
   "OpenOrienteering.Mapper": {
     "state": "VALIDATION_PASSED",
@@ -7954,15 +7954,15 @@
     }
   },
   "Storj.Uplink": {
-    "state": "VALIDATION_PASSED",
+    "manifestHash": "875EADEEE8B38AFE42BA9B1393EE42D8221DFB0337F9CFBC2E701F62C06D374C",
+    "validationCount": 1,
     "description": "",
-    "version": "1.162.4",
-    "manifestHash": "343AE9A146AA96D69AA0572E8EF47E7E84863635C7E260F94B0D8B71164D8FBD",
-    "lastUpdated": "2026-08-27T12:10:02.2867468Z",
+    "lastUpdated": "2026-09-10T16:58:49.2725251Z",
+    "state": "VALIDATION_PASSED",
+    "version": "1.163.4",
     "installerHashes": [
-      "78E0F3F69CD064D8D0DE340CD51C34286E335BA5347BE580F6EE8E6BD0CAC35C"
-    ],
-    "validationCount": 1
+      "0BEDD00C34A6109D90A63AD4D893BAA49B02AC9AB60A540CC9BF151113C65EC7"
+    ]
   },
   "str4d.rage": {
     "state": "VALIDATION_PASSED",
