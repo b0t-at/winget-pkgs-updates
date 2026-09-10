@@ -210,16 +210,16 @@
     ]
   },
   "aimotrens.impulsar": {
-    "description": "",
-    "manifestHash": "3E5D70AE7649012CCBD3B7D05D4150715E02102B22C1CD463D166CBC5D7DE759",
-    "version": "0.19.9",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-07T20:46:36.6942065Z",
+    "validationCount": 1,
+    "manifestHash": "CC631431A2ED01A7B89608A5A3CCF90DCFCED343D346F857D28B29F5852582BB",
     "installerHashes": [
-      "4ED9DEF49592223FAD2599F3A4F39AE0F9323409BECC3B29CAA19B3F1294A59F",
-      "E0605811FE67D80A7947C4E3AC293F276C8BC3613E3C70C139D0303FF7AEF4C1"
+      "569ED14B7C47F19E29D1C343900AE124213A812FB0D3AC8AC9A080832252D60F",
+      "93C3F3DCCCB4E5F2993F5B221DAA2A8C15B8806AB790C4D2D9BBEF42D79FA2CF"
     ],
-    "validationCount": 1
+    "version": "0.19.11",
+    "description": "",
+    "lastUpdated": "2026-09-10T09:04:57.5833905Z",
+    "state": "VALIDATION_PASSED"
   },
   "alegauss.ClaudeCodeTray": {
     "manifestHash": "3A5636944E686BB73252D323C67F9E42F31569C60046EE756B3FA2ABFDAFE5A8",
@@ -1169,14 +1169,14 @@
     }
   },
   "BrunoVolpato.ivygrep": {
-    "lastUpdated": "2026-08-22T04:43:29.0580586Z",
-    "manifestHash": "C11B51D337DBD972B3C2834A868DEDE7D002CF15B51237F418B31416CB63CF32",
-    "installerHashes": [
-      "CA1F0D8A3323EA2E1B1B91DEA0EBC04D851F16E8FBC66A40B9C3F1BF75B82E65"
-    ],
     "validationCount": 1,
+    "manifestHash": "2F01FF6C9BAF915F4EF77E4E81F51B5F645A245974311E3CD31D7FC2F50BCD9A",
+    "installerHashes": [
+      "05FE5E423F4D3F46A123BCF65F1CFFB3F4E61FCD66F226ADA27089849877F92B"
+    ],
+    "version": "1.2.14",
     "description": "",
-    "version": "1.2.12",
+    "lastUpdated": "2026-09-10T09:04:57.4200127Z",
     "state": "VALIDATION_PASSED"
   },
   "bufbuild.buf": {
@@ -2018,14 +2018,14 @@
   },
   "DonutWare.Fladder.Nightly": {
     "validationCount": 1,
-    "lastUpdated": "2026-08-29T17:06:32.8778377Z",
-    "description": "",
+    "manifestHash": "2EBF0F568DD713679D91F46CECDC3894912EF0DA4B6076083AD6180B088ED544",
     "installerHashes": [
-      "9E01669FF787497897BEFCCE3ED4D1280DF6A9D892AF7804B07DB366EF4F7038"
+      "55745DA8A87F4B48A3C81DA737CFB19422AB312374C8F1FDF35FEAA29833FDCB"
     ],
-    "manifestHash": "BEEFE068A3F741A44F06859711FA9388CA500CFAACC7511B677773796CB84898",
-    "state": "VALIDATION_PASSED",
-    "version": "0.11.0"
+    "version": "0.11.1",
+    "description": "",
+    "lastUpdated": "2026-09-10T09:04:57.5634Z",
+    "state": "VALIDATION_PASSED"
   },
   "dprint.dprint": {
     "version": "0.56.0",
@@ -2713,12 +2713,12 @@
   },
   "Frnsys.Half_earth": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "CD47FC89C016730378E00399433045CCDB17E9B8ECC1434413C7531B9EB6AD36"
     ],
     "description": "",
-    "lastUpdated": "2026-09-09T12:48:50.2003108Z",
+    "lastUpdated": "2026-09-10T09:04:57.5365134Z",
     "manifestHash": "162A9CB4478CCE0219E2D18B3BDBA90BBFD1A2D89CCCF6E863728E377240A4A7",
     "version": "1.0.15"
   },
@@ -4934,15 +4934,15 @@
     "manifestHash": "47BCCC9114375CE3B0C4D41B88AFF2251B0B124E0963A56C08B30CDFAA059484"
   },
   "Microsoft.Azure.GuestProxyAgent.AllowListTool": {
-    "lastUpdated": "2026-08-16T21:14:49.0927805Z",
-    "description": "",
-    "manifestHash": "E3203D8890F1349B7F3A430AC9E8BA54D7DF328FDDD83ACC4BCCF430F4C25078",
-    "state": "VALIDATION_PASSED",
-    "version": "1.0.46",
     "validationCount": 1,
+    "manifestHash": "15C585CE9E98F107A672E0A6A82A1905BD6D0C6235350CCB90F7B06377E3613C",
     "installerHashes": [
-      "ADBAC1E2255F404CA23F0594F8AC0A455D5F8C27CE5B24E347706E1CEA2A8A7D"
-    ]
+      "CB412EE4E5D33D1F67FBF52F8C49B9B6A565DB3275A67785958FEC309EB004AB"
+    ],
+    "version": "1.0.48",
+    "description": "",
+    "lastUpdated": "2026-09-10T09:04:57.4949621Z",
+    "state": "VALIDATION_PASSED"
   },
   "Microsoft.Azure.TemplateAnalyzer": {
     "manifestHash": "9839DCB8411645A535E800F194840DEC617BF1159688EF5BB43A79536F8D6A4A",
@@ -5639,15 +5639,15 @@
     }
   },
   "NoahSabaj.Mermaid": {
-    "version": "0.26.0",
     "validationCount": 1,
-    "description": "",
+    "manifestHash": "D0F9C65610F8A92464B814B86DCEBC525E3975578924F546BCC28271241BD247",
     "installerHashes": [
-      "72607AD7D8356A62A75E552B2B63EFB44A88FF44F73B7EEC31A1C3CED54F72E6"
+      "E7028F1F7F7275884A35C55C21CAD8F12248C94DE9068DE93C0B108CC667EC02"
     ],
-    "manifestHash": "7D6FDF76CE7148F4E172A5289C03A6337A331EFB7D320D414016034DE2638939",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-07T16:40:41.4062274Z"
+    "version": "0.27.0",
+    "description": "",
+    "lastUpdated": "2026-09-10T09:04:57.4703387Z",
+    "state": "VALIDATION_PASSED"
   },
   "NoirArchitects.Ncored": {
     "description": "",
@@ -6085,15 +6085,15 @@
     ]
   },
   "OpenScreen.OpenScreen": {
-    "lastUpdated": "2026-08-17T17:04:34.8301327Z",
-    "description": "",
-    "installerHashes": [
-      "E8F6318CE76963727A1C706ED60C7B2A5F6B95196E531333311A826C3928F085"
-    ],
     "validationCount": 1,
-    "manifestHash": "C25C5956C22D6226EF64621EB2C145B133722196236B40B43033B9D444A64EA1",
-    "version": "1.9.5",
-    "state": "VALIDATION_FAILED"
+    "manifestHash": "BF1C6E2743CB7F5B773DE357F9B8EA34F62658E0349376F10C080927ECE2CA78",
+    "installerHashes": [
+      "1BD325BBD7F194C65180506847D2BD6E52858BF5D96FF4876A3598CBBF2465C4"
+    ],
+    "version": "1.11.0",
+    "description": "",
+    "lastUpdated": "2026-09-10T09:04:57.5169057Z",
+    "state": "VALIDATION_PASSED"
   },
   "OpenStenoProject.Plover": {
     "configHealth": {
