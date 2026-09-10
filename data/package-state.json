@@ -2087,15 +2087,15 @@
     }
   },
   "Echonuit.VigieChiroCompanion": {
-    "description": "",
-    "installerHashes": [
-      "35D86837DDCCA74783AA89FBE087AA6E22DBD92B1C3BA2CB4191B2A14916BB17"
-    ],
-    "manifestHash": "7FB0FEB92AC610E49285763AED99010233CB0AE6C9FF62991C9539102ADDE6C1",
-    "version": "2.192.0",
-    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-03T08:48:05.1011689Z"
+    "lastUpdated": "2026-09-10T01:18:29.0515074Z",
+    "validationCount": 1,
+    "description": "",
+    "version": "2.193.0",
+    "installerHashes": [
+      "5DD5D6CFF000088E03DAFD23D5626940BDA523BD80C99214ED2079EC5D5CD3CE"
+    ],
+    "manifestHash": "1D7FF29AFC14AF9249CE7B906ECE45082CEF5AE326B718299ACEDA2B02414ADA"
   },
   "edde746.Plezy": {
     "installerHashes": [
@@ -2532,15 +2532,15 @@
     "lastUpdated": "2026-08-19T15:56:01.4740262Z"
   },
   "Filamental.Filamental": {
-    "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-01T17:21:07.4417851Z",
-    "version": "0.3.40",
-    "manifestHash": "643923ED27525026A589F707D7DD2D7451DD289F3B87170D2CB5DBD2286DB022",
+    "lastUpdated": "2026-09-10T01:18:29.1281052Z",
+    "validationCount": 1,
+    "description": "",
+    "version": "0.3.43",
     "installerHashes": [
-      "730DEB6BA8A56BF5BE26BF7111B1B880731897EF2A932913809A7BA1E8CB8D56"
+      "125871DACCF28E46ECEF36A79125A8911B6CD102621F22B6B62670D745984E0A"
     ],
-    "validationCount": 1
+    "manifestHash": "FCFA296608DAB5B9365990C3C07DE95A21A62F133A826AED57000E0581744D0C"
   },
   "FirenzeLor.gemini-collector": {
     "validationCount": 1,
@@ -3064,15 +3064,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Google.FirebaseCLI": {
-    "lastUpdated": "2026-09-03T05:52:35.5195359Z",
-    "manifestHash": "21EF2CAAE227ABDC81345B494B8D4D60D1845C056DB38611F7855E264E08D899",
     "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-10T01:18:29.1553484Z",
     "validationCount": 1,
-    "installerHashes": [
-      "5B0E5841C9170C2DB8557651BA5E86BE2FDB4DFC49CF57DA0DE6C8134A4EF253"
-    ],
     "description": "",
-    "version": "15.29.0"
+    "version": "15.30.0",
+    "installerHashes": [
+      "7979BAA37776CBEB0C23DACCB4F6CAD284AA41F13B07EA2287B6ED7DF388CABC"
+    ],
+    "manifestHash": "ED65F5284972AEC81676471E200FCE929D3B454A5646AAA28FA50AD119455E4F"
   },
   "Google.IAPDesktop": {
     "lastUpdated": "2026-06-30T01:55:05.1221847Z",
@@ -8497,15 +8497,15 @@
     ]
   },
   "TravisLane.SteamArtManager": {
-    "validationCount": 3,
-    "installerHashes": [
-      "54CA2B72BA985D146992156D62FAA8D5936897C711EE5DBF6C184F87712DC569"
-    ],
-    "description": "",
-    "lastUpdated": "2026-07-04T05:46:19.6949219Z",
     "state": "VALIDATION_PASSED",
-    "version": "3.17.0",
-    "manifestHash": "11DAAF2989C26BFB67826BDF503B3BA0553FF91CE696E74C1C6F27DC4AF7BC08"
+    "lastUpdated": "2026-09-10T01:18:29.0931522Z",
+    "validationCount": 1,
+    "description": "",
+    "version": "3.18.0",
+    "installerHashes": [
+      "7E4993199EE920A3AEE2DCA9108287F14A920F3C2608F0778AB72BB5AC0127E7"
+    ],
+    "manifestHash": "BA3AC599ADF15DBDD81200FFE07F4C2D2B6E2666EDC133ED7328A72973D76F56"
   },
   "TrellisLab.Trellis": {
     "manifestHash": "4F85C7FBC55A58B29480DB305C355CF06BEF854E938F2FBC0BCACE97E5606E38",
