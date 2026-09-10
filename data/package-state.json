@@ -1196,15 +1196,13 @@
     "validationCount": 1
   },
   "BytecodeAlliance.Wasmtime.Portable": {
-    "validationCount": 1,
-    "version": "48.0.1",
-    "lastUpdated": "2026-08-24T20:51:39.5785965Z",
-    "manifestHash": "C30D8817DD2FB41FD733F9858BD1E6EA16A7D3546CDD6372FA7141D040123BF9",
-    "installerHashes": [
-      "A9CB78E5F2705B35192052026138EE14EEB6983FE2D2AEFED6B0C797F01D1A0F"
-    ],
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "installerHashes": "A2E7FADC4F54387C3B0AC371AB984113999F7CE824332EB67201526DFBFF2BFE",
+    "lastUpdated": "2026-09-10T21:15:26.3350519Z",
+    "manifestHash": "D071E63D573EE06680B041C7B9CD6B21076A37D0FB4D8083889ECE04E30EB6F9",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "48.0.2"
   },
   "ByteNess.AWSVault": {
     "description": "",
@@ -1932,8 +1930,8 @@
     ],
     "state": "VALIDATION_PASSED",
     "description": "",
-    "lastUpdated": "2026-09-10T13:14:09.0281818Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-09-10T21:15:26.2897834Z",
+    "validationCount": 2,
     "manifestHash": "A5C5A0E3C22BCEC4B4F4273B56343A55291C9B7C18D1907EE39E9BC0CA91D576"
   },
   "Divaaaan.Tenebra": {
@@ -2491,15 +2489,15 @@
     }
   },
   "Fangyuan025.Chaty": {
-    "version": "2.1.7",
-    "validationCount": 1,
     "description": "",
-    "installerHashes": [
-      "C9A8D5F86EC5B4220337B3059F175A4BA951331B76C0B732F4072E6101BDCCAD"
-    ],
-    "manifestHash": "A81686F7AA4A491D0744CCC428A983262B613ED5F54304FB1FB564BFF23E0B11",
+    "lastUpdated": "2026-09-10T21:15:26.2409498Z",
+    "manifestHash": "315C176B761D944778F242B5D0049B70EAC0E61C8B32A40C15DB8F2422C756E4",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-07T16:40:41.3530934Z"
+    "installerHashes": [
+      "70DC43202A5C6278BD8B2EB59874F40314447EA369AC78E4036159577AF87882"
+    ],
+    "validationCount": 1,
+    "version": "2.1.8"
   },
   "Feho.LogNav": {
     "installerHashes": [
@@ -2713,12 +2711,12 @@
   },
   "Frnsys.Half_earth": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 3,
+    "validationCount": 4,
     "installerHashes": [
       "CD47FC89C016730378E00399433045CCDB17E9B8ECC1434413C7531B9EB6AD36"
     ],
     "description": "",
-    "lastUpdated": "2026-09-10T09:04:57.5365134Z",
+    "lastUpdated": "2026-09-10T21:15:26.3130361Z",
     "manifestHash": "162A9CB4478CCE0219E2D18B3BDBA90BBFD1A2D89CCCF6E863728E377240A4A7",
     "version": "1.0.15"
   },
@@ -4126,17 +4124,17 @@
     "state": "VALIDATION_PASSED"
   },
   "katahiromz.RisohEditor": {
-    "installerHashes": [
-      "C541E8046E311FB7D025B8156BEE70A72AAB7DB21CF78A73945B95542066E13F",
-      "5CCC607463F57CDE53E0C18834E3EA57410EDC8E72A0F48A50412723F353A4D1",
-      "9C8A08D775569FB1A15900DFDC8ACF8E7A009D7298E6811257F5D616439CBC2B"
-    ],
-    "version": "6.1.9",
+    "description": "",
+    "lastUpdated": "2026-09-10T21:15:26.218289Z",
+    "manifestHash": "3EAB16009DCF98113E074BB0394692F2B3C463DB1F58D5DE71970BF5FE86FBBA",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-02T12:55:32.1144864Z",
-    "manifestHash": "01BF06526DE2105AFB294605818D0EC91FA5C626327234785EE4A435E07F6F14",
+    "installerHashes": [
+      "12D3C4CF16212C189EB6A6C08BDE6EF78A747D0FC0DD8D3F3B5C6C9218526225",
+      "CEC076FCA36330ECD9515FACD1589D6F6598388D7F2CD7B2DB0F976784704645",
+      "6460AC962FF58B7783FDF26783290C35E97433FDDCD79CD50C73A9E3107DFA86"
+    ],
     "validationCount": 1,
-    "description": ""
+    "version": "6.2.0"
   },
   "kbrdn1.gwm": {
     "installerHashes": [
@@ -5078,16 +5076,16 @@
     "lastUpdated": "2026-09-09T20:50:07.8069931Z"
   },
   "mikf.gallery-dl.Nightly": {
-    "lastUpdated": "2026-09-06T08:41:59.8125499Z",
     "description": "",
-    "installerHashes": [
-      "37FA21CF03F11856644B1AD5EB689966661487E055ACC6FE1AC42281FC39568C",
-      "030B195A2012F7E0EC0AD7C429A51A27F272F11FE0E0D41D7D163F78375C8550"
-    ],
+    "lastUpdated": "2026-09-10T21:15:26.1689059Z",
+    "manifestHash": "47F96EDF3C664344071B2038EAF4414C452C5BC0E62C68DA8F1097610C76631D",
     "state": "VALIDATION_PASSED",
-    "version": "2026.09.06",
-    "manifestHash": "31D35047604A75E5FE7E4F4945ED4A8B5F446A8CA721A3166AB88314D7953A13",
-    "validationCount": 1
+    "installerHashes": [
+      "7D70E5576209BF0885CEE2FC32160C20A380D601DC6F085A791A57C819064BC5",
+      "1C4A7F897F6CB0D75639A5905D2A0A1F1EE2FC6D881C2AF97F289D7BBA367AC2"
+    ],
+    "validationCount": 1,
+    "version": "2026.09.10"
   },
   "MilkShift.GoofCord": {
     "state": "VALIDATION_PASSED",
@@ -5707,14 +5705,14 @@
   },
   "nu774.qaac": {
     "description": "",
-    "installerHashes": [
-      "64BE9288055F187B89ACA1F9A7CA5DADF11D4E7AA1376A1F7C7789B87DB66D96"
-    ],
+    "lastUpdated": "2026-09-10T21:15:26.2611155Z",
+    "manifestHash": "C7634F3CE4A1046C814184EC95AED52A830220887B5258DE45E7C0D930FEE0A3",
     "state": "VALIDATION_PASSED",
-    "version": "3.06",
-    "lastUpdated": "2026-09-05T16:46:09.0889184Z",
+    "installerHashes": [
+      "1FB3AB4AA81725E2607AC1B31AFA0E13D2617EE6EB5900F5070C092F5271CBB3"
+    ],
     "validationCount": 1,
-    "manifestHash": "ABDEA9DF0A01A4684A3A3454BF769C2F3CA65AE4BA60005AAEF9211E51F0DB7E"
+    "version": "3.07"
   },
   "nvisionative.nvQuickSite": {
     "version": "2.5.2",
