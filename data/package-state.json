@@ -1332,15 +1332,15 @@
     }
   },
   "Celerp.Celerp": {
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "installerHashes": [
-      "BA4E4ABACA0279E6F43E0E80D9A008C13D509333CDFF7906BBA8CA51B8D1F4EF"
-    ],
     "description": "",
-    "lastUpdated": "2026-09-09T04:48:15.3828132Z",
-    "manifestHash": "C7499B07838187F5875EF9215A1D14AD194E9F88ACCD8476F11580FC260F40D7",
-    "version": "2.3.5"
+    "installerHashes": [
+      "C66EC03DA4C3223E9D94F9A6EF255BA64A985FCA8DFFBD7A726EDF20E877CE1B"
+    ],
+    "state": "VALIDATION_PASSED",
+    "version": "2.3.6",
+    "manifestHash": "9EAFF21B649C9B431F6311433B173DCC3DB8320FE17EC8AC1127A49C16225A5B",
+    "lastUpdated": "2026-09-11T01:17:02.0442158Z",
+    "validationCount": 1
   },
   "CerberAuth.jwtop": {
     "description": "",
@@ -1900,6 +1900,17 @@
     ],
     "manifestHash": "65CFBA73C5D707465FDA6ED267DBE85FFEAFFA60583953BAA5EEF5B52903D62C",
     "lastUpdated": "2026-08-29T12:58:34.0694394Z"
+  },
+  "Dimmy.Dimmy": {
+    "description": "",
+    "installerHashes": [
+      "D38352F85C83F1B59FBFCE0E4434126825F0C3ABA5A14C3CE82369ECDE1A9C84"
+    ],
+    "state": "VALIDATION_PASSED",
+    "version": "0.7.1",
+    "manifestHash": "B807AE2EE03309800D3906483F37D4E04FA2FE158B991BE03697AD62906AA7FD",
+    "lastUpdated": "2026-09-11T01:17:02.0897409Z",
+    "validationCount": 1
   },
   "DimonSmart.NugetMcpServer": {
     "version": "1.1.9",
@@ -4683,14 +4694,14 @@
   },
   "MarceloLvCabral.BrightScriptEmulator": {
     "description": "",
-    "validationCount": 1,
-    "version": "2.5.2",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-30T16:51:16.2887273Z",
-    "manifestHash": "EBC4D8EA592E59E518DABB095E370AC904E7D83571EEB818FA3C26DE833FC336",
     "installerHashes": [
-      "B483488522D7F1F54F9BA21D8BF752F192BBBC8B2BCA8E85957B23F62477BA64"
-    ]
+      "64AF662E346679398B120D7EF7F7A7A004A6F6CC9D9AD14156BE9F60B9C6D32B"
+    ],
+    "state": "VALIDATION_PASSED",
+    "version": "2.6.0",
+    "manifestHash": "496F7B7162F6D6408AFB484A57E797C50E7CB9C0B1F339197A3B806EDF59CF83",
+    "lastUpdated": "2026-09-11T01:17:02.1048739Z",
+    "validationCount": 1
   },
   "marcinz606.NegPy": {
     "description": "",
