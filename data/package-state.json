@@ -3325,15 +3325,15 @@
     "lastUpdated": "2026-09-08T09:14:42.7466257Z"
   },
   "HarjotSinghRana.Reinstate": {
-    "description": "",
-    "version": "0.5.1",
-    "validationCount": 1,
-    "installerHashes": [
-      "B724CA3DA4E124004063032D63240C244FB9A59279076F0E87441D327A826E8C"
-    ],
     "state": "VALIDATION_PASSED",
-    "manifestHash": "792B0F83BC7067E12DB2BFA38B480FDDD3C9DD657E59EDBA862B62B4ED8D73F6",
-    "lastUpdated": "2026-08-24T05:01:38.0914227Z"
+    "lastUpdated": "2026-09-11T08:56:13.80528Z",
+    "installerHashes": [
+      "8E7BC4227DA3A87F525B066EEEEA1D44CFCCB92A83C2A897A59C5C931EE0B8E8"
+    ],
+    "description": "",
+    "validationCount": 1,
+    "manifestHash": "54001AF738FFCB973ECDF181806BD1C1CB89D510FA1462FE3FA9F773F34A55D3",
+    "version": "0.6.0"
   },
   "Harmonoid.Harmonoid": {
     "lastUpdated": "2026-08-18T21:24:38.5587134Z",
@@ -4005,15 +4005,15 @@
   },
   "jmrplens.gitlab-mcp-server": {
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-27T16:27:48.3319913Z",
+    "lastUpdated": "2026-09-11T08:56:13.8629211Z",
     "installerHashes": [
-      "0E8B5E5AC1343CB68AC565A56538654EE59541A827BB3F20A25C04AD525B4814",
-      "7EB27DD48CC55911D8E30CC4D633157AE850B1805496EE73648232A645547C2A"
+      "61C512E7E6EB386660DBD546AD47A54C2FA2441040C1D7BBCFAFF605EE548E98",
+      "4B9FC194A780ACBF93D2839CE2D9E82C318F1A81D712C0B359B1E440A9B09CFA"
     ],
-    "validationCount": 1,
-    "version": "2.7.5",
     "description": "",
-    "manifestHash": "EE7AEE565864EDFCD92306BC30D29ACDDC82969BBD995C77CC0E80F8A4B43C77"
+    "validationCount": 1,
+    "manifestHash": "DF7B0692243869E485FA07BA40457CF8A74D5AF7AC192B42217FC4BC03A9E8E9",
+    "version": "3.0.0"
   },
   "JoernBerkefeld.SFMCDataLoader": {
     "manifestHash": "EDFD98846C6B7D5BCF0347B8A7394B05AFD17B00E63F2D01FDABEE6D1718B514",
@@ -4700,8 +4700,8 @@
     "state": "VALIDATION_PASSED",
     "version": "2.6.0",
     "manifestHash": "496F7B7162F6D6408AFB484A57E797C50E7CB9C0B1F339197A3B806EDF59CF83",
-    "lastUpdated": "2026-09-11T01:17:02.1048739Z",
-    "validationCount": 1
+    "lastUpdated": "2026-09-11T08:56:13.8304004Z",
+    "validationCount": 2
   },
   "marcinz606.NegPy": {
     "description": "",
@@ -7865,15 +7865,15 @@
     "validationCount": 1
   },
   "StacksLabs.Clarinet": {
-    "validationCount": 2,
-    "version": "3.23.2",
-    "lastUpdated": "2026-08-27T06:42:25.0012534Z",
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "manifestHash": "6F8E6F89DEC99E0AA8AD505AC87BD1534B6F2E0C0023A2B25323A3A437CED548",
+    "lastUpdated": "2026-09-11T08:56:13.7768481Z",
     "installerHashes": [
-      "1CB9EE0B54E7F0A208B9F7E2160D6671C092F423B301A0EB619DE4B48F075C58"
-    ]
+      "0C98869F0BD3B43A9CDC875F3CF5B53CE2200CA482DE5B567CBBF0B607BED160"
+    ],
+    "description": "",
+    "validationCount": 1,
+    "manifestHash": "4A1042CE3EE51C7CF3164AB2C92E073B427EC06CCAC4B4B607FE6ABA2BD413BD",
+    "version": "3.24.0"
   },
   "stakpak.agent": {
     "description": "",
@@ -8446,15 +8446,15 @@
     ]
   },
   "timminator.VideOCR.CPU": {
-    "manifestHash": "CFC267C26B8EF07672651665F457081878373674AA47203E9C0295E1AC077719",
-    "lastUpdated": "2026-08-18T05:33:46.9674851Z",
     "state": "VALIDATION_PASSED",
-    "version": "1.5.1",
-    "validationCount": 1,
-    "description": "",
+    "lastUpdated": "2026-09-11T08:56:13.7004039Z",
     "installerHashes": [
-      "8092B5B12D501838EF48440372C866FDF1C1E750561A3A484790321AF2802A43"
-    ]
+      "D9C09CBA40C2D084A1B7C4E3EE8F1044FBDAEE2D90AF78F184061D93FFC623E5"
+    ],
+    "description": "",
+    "validationCount": 1,
+    "manifestHash": "D2040345CAAB9D7A51C7843CE96DA3FA5482A53459E1AE7CBEB7CF1A7756A124",
+    "version": "1.6.0"
   },
   "tinyrack.dotweave": {
     "version": "2.4.0",
