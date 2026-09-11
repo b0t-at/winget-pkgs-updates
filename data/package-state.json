@@ -418,8 +418,8 @@
     "lastUpdated": "2026-08-22T08:51:40.3505732Z",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "checkedAt": "2026-09-10T04:26:46.216048Z",
-      "version": "0.2.2"
+      "version": "0.2.2",
+      "checkedAt": "2026-09-11T04:28:13.4399447Z"
     }
   },
   "AntiMicroX.antimicrox": {
@@ -774,8 +774,8 @@
   },
   "Barry-ran.QtScrcpy": {
     "openPr": {
-      "checkedAt": "2026-09-08T12:33:57.9183149Z",
-      "version": "4.1.1"
+      "version": "4.1.1",
+      "checkedAt": "2026-09-11T04:28:15.1683858Z"
     }
   },
   "Baulk.Baulk": {
