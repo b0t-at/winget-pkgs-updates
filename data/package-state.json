@@ -1384,15 +1384,15 @@
     }
   },
   "ChiaNetwork.GUIforChiaBlockchain": {
-    "validationCount": 6,
+    "version": "2.7.4",
+    "lastUpdated": "2026-09-11T16:52:46.6052662Z",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "0291D2658E77AA8ACA8CA72FBE19339A0A1EFAAB0A93AAB4EEB04A1F9C65AA45"
-    ],
+    "manifestHash": "DC6D50BEC022778A3080FDC2C924AFFBEB9241F79225B79F4E87368CE7377689",
     "description": "",
-    "manifestHash": "F379D1B02840F9F951718473A4DBEEA84B9CFD10C36E390148C3FC8A85DCC56A",
-    "lastUpdated": "2026-08-06T14:10:17.5207025Z",
-    "version": "2.7.3"
+    "installerHashes": [
+      "FBF825BBA0EA0B9E8ED688FF5FE8F3EC698641B0C56C8B6B00DFBF8736C68CAC"
+    ]
   },
   "ChristopherHotchkiss.SkylanderPortalController": {
     "lastUpdated": "2026-08-16T21:14:49.0140175Z",
@@ -1678,15 +1678,15 @@
     "manifestHash": "263B33257CF9F27044BE565EA3FDD27E9191C1B809625415F87EA03D36957F63"
   },
   "cubezombies.MidnightAthenaeum": {
-    "lastUpdated": "2026-08-18T01:43:26.3263326Z",
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "ABBAE3EBB71FDF70835C1B999FA7DC018277D084A30ABBC934EB9B1652C3E1E9"
-    ],
-    "description": "",
-    "manifestHash": "880E71EF883407AF55DC6E9693EE5F4FA6EAAFF02AD524185D0C318234781B81",
+    "version": "0.17.0",
+    "lastUpdated": "2026-09-11T16:52:46.6292294Z",
     "validationCount": 1,
-    "version": "0.16.2"
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "5416B21399B5890EC56C02BF3D25A33CA6F7E99176D8B03EC4633904FA5B510C",
+    "description": "",
+    "installerHashes": [
+      "2BAD93C1EACFBDD7CF3CA3B69CA025140DB6B6BC75A8D91D2D01E63E922AC0FB"
+    ]
   },
   "CueLang.Cue": {
     "description": "",
@@ -7385,15 +7385,15 @@
     }
   },
   "seerge.g-helper.PreRelease": {
+    "version": "0.283",
+    "lastUpdated": "2026-09-11T16:52:46.506746Z",
     "validationCount": 1,
-    "lastUpdated": "2026-09-08T12:55:42.7244962Z",
-    "installerHashes": [
-      "7FB203529FAAC085CEC1EB5CA30469B73334DE2CF29E009E0D9750FAAA447D11"
-    ],
     "state": "VALIDATION_PASSED",
-    "version": "0.281",
+    "manifestHash": "530791EC7A114430928B8A6DD72F0C63D860ABEB0CF34EA12A0B9377EAB75E6D",
     "description": "",
-    "manifestHash": "CE2AE27A1F4F0DD732C2B0B6F1F36CEB68173980117B020F8484BD523FFA0728"
+    "installerHashes": [
+      "C66CF0A66E530AD0876789703D6BF92691FB2AF1DA8A4DBA36537BE0CF6BE3F2"
+    ]
   },
   "Sefinek.GenshinStellaMod": {
     "configHealth": {
@@ -8317,15 +8317,15 @@
     }
   },
   "termio.soft-jp.com.TermioWin": {
-    "installerHashes": [
-      "84743457DC8E8DE0E3DE452A6E6723B62B854CFC4C63306BE433BF21F5E78583"
-    ],
-    "version": "1.2.23",
-    "manifestHash": "AB22D0C371122C5EAD77EE65F2DAA605BC3802F53E11737D7ED5A761CEBE2CDB",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-19T17:02:25.84848Z",
+    "version": "1.2.24",
+    "lastUpdated": "2026-09-11T16:52:46.5783307Z",
     "validationCount": 1,
-    "description": ""
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "6502701D6758FD3AEA96A1FE69EBCDEECB8868F68A11B9B717729B2B806CFDBB",
+    "description": "",
+    "installerHashes": [
+      "60665FC7EF2072601832E9C033949B0178E35319836D8B8FD3097A0405207B5C"
+    ]
   },
   "TerraformLinters.tflint": {
     "lastUpdated": "2026-07-17T16:58:17.5554288Z",
