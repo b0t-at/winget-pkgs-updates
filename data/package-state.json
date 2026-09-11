@@ -281,15 +281,15 @@
     }
   },
   "Alochi.Monitoring": {
-    "manifestHash": "A6C66F369BE2A3E628709179499BA79FE605F48389F344AF365A020808EE21F5",
-    "description": "",
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "427449D729C1262C718D83EC777842DC3B9780653108AA3B9974CA3FA34D148E"
+      "F9D3B847CF3391ABAE050DBE8A1539CDD311E9E2DCC05C0E16E28E9EBE26BA82"
     ],
-    "version": "1.0.124",
+    "lastUpdated": "2026-09-11T12:58:28.6775109Z",
     "validationCount": 1,
-    "lastUpdated": "2026-09-09T20:50:07.8829253Z"
+    "version": "1.0.126",
+    "manifestHash": "8E42E20BD4FBD24AB18B45D837B1D6124801CFBAA2D20DF5AEBF9C9ED689E679",
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "AloproAgency.WAutoChat": {
     "lastUpdated": "2026-08-18T01:43:26.4458545Z",
@@ -724,15 +724,15 @@
     ]
   },
   "axodotdev.dist": {
-    "lastUpdated": "2026-08-25T08:46:33.3252842Z",
-    "description": "",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "version": "0.32.0",
-    "manifestHash": "CE74CA415621E851ACCE19C9F803F0776A838EE8C32349107CD0CE681AECBAB4",
     "installerHashes": [
-      "26E845CABFF12A92911CE960AF73A86C8F9B2B2D9072B01DFE5B662ACF044FA3"
-    ]
+      "9A36D70795E14326A5EC4BF17AEE085DF00AB85A322739291EA5D4B1B5F693CD"
+    ],
+    "lastUpdated": "2026-09-11T12:58:28.6558656Z",
+    "validationCount": 1,
+    "version": "0.33.0",
+    "manifestHash": "6485563DEF6C8309010BEB7EC11E61D7AB1FAE4530ECBDBD55A5635336750E40",
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "AyoubTadlaoui.logx": {
     "lastUpdated": "2026-08-18T17:25:13.9116095Z",
@@ -2608,16 +2608,16 @@
     }
   },
   "Fly-io.flyctl": {
-    "description": "",
-    "manifestHash": "E0D7D356402BF096FC103820A352063CAD5CA168F1C8F3D3CE1027112B8335CB",
-    "version": "0.4.100",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-07T20:46:36.6108611Z",
     "installerHashes": [
-      "A7CA53476F9F5ED32C3D2EBCCF86F735443F7D3B4D798997570FAF486F69E081",
-      "C89E348F05DC98B76A13F523AD215511B3585B6603F5F07C8BE3C1B05F29B358"
+      "FF344363AE486274B7E730C23803CCE91470EE83AAFE61FB6439923FEEA287C6",
+      "11076E4B91F4ECF1B3FF093A4F7905A0A903DA74E74F7956BF29AE00621D4C81"
     ],
-    "validationCount": 1
+    "lastUpdated": "2026-09-11T12:58:28.689007Z",
+    "validationCount": 1,
+    "version": "0.4.102",
+    "manifestHash": "7808330753628932C5E8FF83F2FD74BC99D741CFC6FB4D8F408EDA527B668FBE",
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
     "validationCount": 1,
@@ -7280,11 +7280,11 @@
   },
   "Scandum.WinTin++": {
     "version": "2.02.61",
-    "lastUpdated": "2026-09-11T04:53:32.5679083Z",
+    "lastUpdated": "2026-09-11T12:58:28.6281633Z",
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "2C9A618908F2C08C9E373327E7A15409C25EEB6AE563F45807A611269A686250",
-    "validationCount": 22,
+    "validationCount": 23,
     "installerHashes": [
       "421A1458080413D5135A7490DC05AC0F4B54F1CAADBFC033214536237420E847"
     ]
