@@ -848,15 +848,15 @@
     "version": "0.5"
   },
   "BenjaminLSR.HandheldCompanion": {
+    "lastUpdated": "2026-09-11T04:53:32.5438305Z",
     "state": "VALIDATION_PASSED",
+    "manifestHash": "756AB9388FFCA57C1654CF156EE5DCADBE31B5AA14B698FD82B37CA91C0880FB",
+    "validationCount": 1,
     "description": "",
-    "validationCount": 7,
     "installerHashes": [
-      "7DB55D19A7BBFE306AAE0CF8544A904BC64D7760CA8FA6F8A494F69F7D614B3D"
+      "2691082CB2CD4A6578D7EA955568D64BC6DD49C8A35DE1BFAF5CD3F68E3614A4"
     ],
-    "lastUpdated": "2026-08-06T10:56:40.4271752Z",
-    "manifestHash": "4DBF02464A5D6B019F2BFB332B4E4F787AC873A66C275D9C16D27E6DCF49D4D7",
-    "version": "0.32.3.2"
+    "version": "1.2.1.1"
   },
   "BenModigell.Vibes": {
     "lastUpdated": "2026-08-29T17:06:32.6440726Z",
@@ -1909,8 +1909,8 @@
     "state": "VALIDATION_PASSED",
     "version": "0.7.1",
     "manifestHash": "B807AE2EE03309800D3906483F37D4E04FA2FE158B991BE03697AD62906AA7FD",
-    "lastUpdated": "2026-09-11T01:17:02.0897409Z",
-    "validationCount": 1
+    "lastUpdated": "2026-09-11T04:53:32.5946852Z",
+    "validationCount": 2
   },
   "DimonSmart.NugetMcpServer": {
     "version": "1.1.9",
@@ -2360,16 +2360,16 @@
     "version": "3.7.1"
   },
   "Ethersphere.Swarm-Desktop": {
-    "manifestHash": "31D31E44DC607F47460DC614CA73D3C3E5FBD5F8BF0EF3EA3E89E6E6E5D66028",
+    "lastUpdated": "2026-09-11T04:53:32.617713Z",
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "BCD1414F5FE3A58D1DDB5B583B7607A8474E1AA64FFC499BBD71447A78E7DB5C",
-      "DDD8116553B204D2F334421FF238263C6C84B817E91D6C137C8B8531118FB4E3"
-    ],
+    "manifestHash": "FBAFD72F29C6651B8CE2A7CB3F880B59A3AB2FD683B01AC9F3FC396C47630E8C",
     "validationCount": 1,
-    "version": "0.55.2",
-    "lastUpdated": "2026-08-28T04:01:09.8836374Z",
-    "description": ""
+    "description": "",
+    "installerHashes": [
+      "4A4B2E628504A3F27B5247B64008C23E78A90DA55AC2D878C38563494A981DDD",
+      "350226F24EDBCDC7F63408A56AAE1FFB230C187BFC6CEA7C05E67ECAA6D236C7"
+    ],
+    "version": "0.56.0"
   },
   "EtternaProject.EtternaGame": {
     "configHealth": {
@@ -2664,15 +2664,15 @@
     "version": "2.20.1"
   },
   "Forkgram.Forkgram": {
+    "lastUpdated": "2026-09-11T04:53:32.476235Z",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-27T16:27:48.2737381Z",
-    "installerHashes": [
-      "1F1D2892B595BA6A94F9C977A2FB02790DF75510E7E121AF489472ABE2AFCD37"
-    ],
+    "manifestHash": "2F9AC3ADB278B4B8F9CB2A3A2C1960F223A27258C2CD3C84DEC025445AFEE267",
     "validationCount": 1,
-    "version": "7.1.1",
     "description": "",
-    "manifestHash": "E1ED487DECD7B1869B29DFA8B853A38D6DF1D5E87F9006EC1FA70E3F6DCE08F1"
+    "installerHashes": [
+      "B29A306EAF49288FA39FC1116672D7FFE7904CD86C1910A1A32F6F8C3954AA2A"
+    ],
+    "version": "7.2.8"
   },
   "FOSSA.FOSSA-cli": {
     "lastUpdated": "2026-09-10T04:47:40.5892724Z",
@@ -7280,11 +7280,11 @@
   },
   "Scandum.WinTin++": {
     "version": "2.02.61",
-    "lastUpdated": "2026-09-10T13:14:09.0733182Z",
+    "lastUpdated": "2026-09-11T04:53:32.5679083Z",
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "2C9A618908F2C08C9E373327E7A15409C25EEB6AE563F45807A611269A686250",
-    "validationCount": 21,
+    "validationCount": 22,
     "installerHashes": [
       "421A1458080413D5135A7490DC05AC0F4B54F1CAADBFC033214536237420E847"
     ]
