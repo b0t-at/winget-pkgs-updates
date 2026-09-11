@@ -1209,16 +1209,16 @@
     "version": "48.0.2"
   },
   "ByteNess.AWSVault": {
-    "description": "",
-    "installerHashes": [
-      "7B7FBB59063545A2D7CD15399F1DE42812BFDD2A5D671EB0CA3AF0DB4DB0B22F",
-      "66F7691C1625B98D71CC738CF4854B82667710EFCEE4D72A242B78044F951E19"
-    ],
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-30T01:17:09.0266673Z",
-    "manifestHash": "1F354041543D330F8CB1FFAF5351E6B2CE8F4D2F17D3BC61ACEEF528ADF195B9",
-    "version": "7.13.6",
-    "validationCount": 1
+    "installerHashes": [
+      "F13269E21BD4E6AF05A2115C91D32B9B69FC032492495DFE90850A17B04FC153",
+      "58EB44C85FF02BC963C96A0D0ED46BBF8879BFCDA6D8CB546E8C876273D692B8"
+    ],
+    "description": "",
+    "validationCount": 1,
+    "lastUpdated": "2026-09-11T21:04:35.3888899Z",
+    "manifestHash": "B971E4BB2DBF32F05E47455249860B75C4E9DB2D9AA8E00971118A19EE17D751",
+    "version": "7.14.0"
   },
   "C-POPLO.Unreal-GUI": {
     "validationCount": 1,
@@ -1343,8 +1343,8 @@
     "state": "VALIDATION_PASSED",
     "version": "2.3.6",
     "manifestHash": "9EAFF21B649C9B431F6311433B173DCC3DB8320FE17EC8AC1127A49C16225A5B",
-    "lastUpdated": "2026-09-11T01:17:02.0442158Z",
-    "validationCount": 1
+    "lastUpdated": "2026-09-11T21:04:35.2399307Z",
+    "validationCount": 2
   },
   "CerberAuth.jwtop": {
     "description": "",
@@ -2477,16 +2477,16 @@
     }
   },
   "facebook.pyrefly": {
-    "version": "1.2.0",
-    "installerHashes": [
-      "6B5A5FE1C15093CB369BFCAB0651F9E904417D0AF49D2095EA75A91735C0FCE4",
-      "15FA2580EB1D7E2DF672AFB718ABC1C1482F336FE52E3E397FCBC2E29153FD59"
-    ],
     "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "2E37F7A128E59D6740983BD6D14AD5699BD95B04CDA7A116DE70214D91C407FB",
+      "CFA729F6D82AEDD628E15630396597925EEF7BFBB071F068AA0A28A7721B2802"
+    ],
     "description": "",
-    "lastUpdated": "2026-08-18T09:30:09.2413401Z",
     "validationCount": 1,
-    "manifestHash": "2FA3C99A6E935DFE3F000C74CF1FF6E1B82E2F8CBAD67D5AFB6E3C9BDB9FE935"
+    "lastUpdated": "2026-09-11T21:04:35.4896892Z",
+    "manifestHash": "C4C9CAA9C1EC81A1ABB9CA7D376FBB1B9478EF0B72745837BBBB4BDF490D2C40",
+    "version": "1.3.0"
   },
   "fairdataihub.SODA-for-SPARC": {
     "description": "",
@@ -4518,15 +4518,15 @@
     "version": "0.36.1"
   },
   "Longbridge.LongbridgeTerminal": {
-    "validationCount": 1,
-    "lastUpdated": "2026-09-08T12:55:42.7603625Z",
-    "installerHashes": [
-      "E6958F07861FF8F47F816A0B494E982DC2389F8F3E2FCB106E9E3727F0260C38"
-    ],
     "state": "VALIDATION_PASSED",
-    "version": "0.28.5",
+    "installerHashes": [
+      "6283E395186F6B6AD63EA3AB57DA7A41FF6C1279DEF09C56B96D2DBC6DC436F0"
+    ],
     "description": "",
-    "manifestHash": "F2F5A559A46B557442AEA329E393C08D3B524F4A85D8BEDDA6188B93483C9BB9"
+    "validationCount": 1,
+    "lastUpdated": "2026-09-11T21:04:35.418872Z",
+    "manifestHash": "C0099CED80A52FDD8A9B5D3913F229B06B8BD2795D408F270D12210CC913324B",
+    "version": "0.28.6"
   },
   "LookupFoundation.RevitLookup.2021": {
     "manifestHash": "128610B2BC6F960BB40A16C24D3F7CF0F8C87E1B9B978E39601108907C2FEBC3",
@@ -6321,15 +6321,15 @@
     "lastUpdated": "2026-08-21T17:17:40.0995696Z"
   },
   "Parslee.Car": {
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "596E72C776CC4C754DD1E37DC429BDB0167865E29031CCCC3F39B7EA0EBE14A7"
+    ],
     "description": "",
     "validationCount": 1,
-    "version": "0.52.1",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "7992EAD9C186C4385608A7F30F52E576B27347B8BD778A937133F1AEA106000B",
-    "installerHashes": [
-      "84585FDE46BE286819A7C9379B29415B94A026C3CCB6415AA359967B1E3FEB5E"
-    ],
-    "lastUpdated": "2026-09-06T01:22:32.3779986Z"
+    "lastUpdated": "2026-09-11T21:04:35.3247741Z",
+    "manifestHash": "5CFA3750DDC161061E8CCD3BE82B0BB3572011370B328918C3C227B1E252BFBF",
+    "version": "0.53.0"
   },
   "Passportogo.Voio": {
     "lastUpdated": "2026-08-19T21:00:00.1586395Z",
@@ -7284,11 +7284,11 @@
   },
   "Scandum.WinTin++": {
     "version": "2.02.61",
-    "lastUpdated": "2026-09-11T12:58:28.6281633Z",
+    "lastUpdated": "2026-09-11T21:04:35.3577589Z",
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "2C9A618908F2C08C9E373327E7A15409C25EEB6AE563F45807A611269A686250",
-    "validationCount": 23,
+    "validationCount": 24,
     "installerHashes": [
       "421A1458080413D5135A7490DC05AC0F4B54F1CAADBFC033214536237420E847"
     ]
@@ -8616,15 +8616,15 @@
     }
   },
   "tuna-f1sh.cyme": {
-    "version": "3.0.1",
-    "installerHashes": [
-      "71E581CA8A2763965FD0FBA7E21E50719928FD254494984359EDF7DABE8AB1FD"
-    ],
-    "lastUpdated": "2026-06-12T06:54:14.9023418Z",
-    "manifestHash": "3A9E7DFBD86AA3405453E552987B54CF5F981D149535C4FBD45953DC7D4C5E26",
     "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "E40D3D77BEC7C42378ECE627BE832CE0D2FD6B1A571CBAB5317A3FA76C5E7944"
+    ],
+    "description": "",
     "validationCount": 1,
-    "description": ""
+    "lastUpdated": "2026-09-11T21:04:35.4609329Z",
+    "manifestHash": "0599C988F17860456E962C794B5CC4F25F7220EADEFAB4BC51CC0C9CDA439256",
+    "version": "3.0.2"
   },
   "Turin.tmuxw": {
     "validationCount": 1,
