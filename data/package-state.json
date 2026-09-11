@@ -732,7 +732,11 @@
     "version": "0.33.0",
     "manifestHash": "6485563DEF6C8309010BEB7EC11E61D7AB1FAE4530ECBDBD55A5635336750E40",
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "checkedAt": "2026-09-11T20:23:27.5740835Z",
+      "version": "0.33.0"
+    }
   },
   "AyoubTadlaoui.logx": {
     "lastUpdated": "2026-08-18T17:25:13.9116095Z",
