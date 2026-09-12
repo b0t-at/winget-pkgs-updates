@@ -2504,15 +2504,15 @@
     }
   },
   "Fangyuan025.Chaty": {
-    "description": "",
-    "lastUpdated": "2026-09-10T21:15:26.2409498Z",
-    "manifestHash": "315C176B761D944778F242B5D0049B70EAC0E61C8B32A40C15DB8F2422C756E4",
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "70DC43202A5C6278BD8B2EB59874F40314447EA369AC78E4036159577AF87882"
-    ],
     "validationCount": 1,
-    "version": "2.1.8"
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "lastUpdated": "2026-09-12T08:42:15.0723026Z",
+    "manifestHash": "AA724593D20F549C21E5469575AB99D31E55FBDB7D7C8BCF44A5B5D98C600AF7",
+    "version": "2.1.9",
+    "installerHashes": [
+      "5E22B8AC075CE62559CC736BA897DD61EF421C66E6AAAE36A7FCD16D97D52EDC"
+    ]
   },
   "Feho.LogNav": {
     "installerHashes": [
