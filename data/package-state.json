@@ -134,7 +134,7 @@
     ],
     "openPr": {
       "version": "0.84.2",
-      "checkedAt": "2026-09-11T16:23:30.0837358Z"
+      "checkedAt": "2026-09-12T20:19:53.8396638Z"
     }
   },
   "AES256Afro.VideoKidnapper": {
@@ -1203,6 +1203,12 @@
     "version": "1.72.0",
     "validationCount": 1
   },
+  "Byron.dua-cli": {
+    "openPr": {
+      "version": "2.45.0",
+      "checkedAt": "2026-09-12T20:21:01.8744785Z"
+    }
+  },
   "BytecodeAlliance.Wasmtime.Portable": {
     "description": "",
     "installerHashes": "A2E7FADC4F54387C3B0AC371AB984113999F7CE824332EB67201526DFBFF2BFE",
@@ -2144,7 +2150,7 @@
     "manifestHash": "31947E74E60A0462F2AAA67D5F8C21F460756C9F606A2E99B5AA0055A2064E78",
     "openPr": {
       "version": "2.12.4",
-      "checkedAt": "2026-09-11T16:23:33.1418125Z"
+      "checkedAt": "2026-09-12T20:19:56.6105517Z"
     }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
@@ -3119,7 +3125,7 @@
     "manifestHash": "8A93D198AD57BF64282A1C20A5B26813247BA8F368CBBC5002B3A2AECCF79CDA",
     "openPr": {
       "version": "2.5.1",
-      "checkedAt": "2026-09-11T16:23:33.5433652Z"
+      "checkedAt": "2026-09-12T20:19:57.1053085Z"
     }
   },
   "Google.Protobuf": {
