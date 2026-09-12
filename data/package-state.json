@@ -381,7 +381,11 @@
     "lastUpdated": "2026-09-12T04:54:09.4549449Z",
     "validationCount": 1,
     "manifestHash": "4624C38BDFBD423DB7146F24EA3A3EFACB98AD85F486E496A342C234646B7A69",
-    "description": ""
+    "description": "",
+    "openPr": {
+      "version": "2.7.5",
+      "checkedAt": "2026-09-12T08:26:16.3884594Z"
+    }
   },
   "Anki.Anki": {
     "manifestHash": "0D9714050B0D59E7B030281F9DF9D711AF26AFF8475786C412B799325297275B",
@@ -419,7 +423,7 @@
     "state": "VALIDATION_PASSED",
     "openPr": {
       "version": "0.2.2",
-      "checkedAt": "2026-09-11T04:28:13.4399447Z"
+      "checkedAt": "2026-09-12T08:26:16.8606914Z"
     }
   },
   "AntiMicroX.antimicrox": {
@@ -779,7 +783,7 @@
   "Barry-ran.QtScrcpy": {
     "openPr": {
       "version": "4.1.1",
-      "checkedAt": "2026-09-11T04:28:15.1683858Z"
+      "checkedAt": "2026-09-12T08:26:19.3479137Z"
     }
   },
   "Baulk.Baulk": {
@@ -7885,6 +7889,12 @@
     "lastUpdated": "2026-08-20T01:39:37.5577728Z",
     "validationCount": 1,
     "version": "0.3.88"
+  },
+  "Starpine.Screenbox": {
+    "openPr": {
+      "version": "0.22.0",
+      "checkedAt": "2026-09-12T08:25:17.4198007Z"
+    }
   },
   "SteamDatabase.SteamTokenDumper": {
     "version": "2026.08.20",
