@@ -1912,15 +1912,15 @@
     "lastUpdated": "2026-08-29T12:58:34.0694394Z"
   },
   "Dimmy.Dimmy": {
+    "lastUpdated": "2026-09-12T20:37:04.1676438Z",
+    "validationCount": 1,
     "description": "",
-    "installerHashes": [
-      "D38352F85C83F1B59FBFCE0E4434126825F0C3ABA5A14C3CE82369ECDE1A9C84"
-    ],
+    "manifestHash": "E6775CBB86D04CA379C51C3B61E798B425B02EA1EFA4C9BAB4F3C7731B76F0D1",
     "state": "VALIDATION_PASSED",
-    "version": "0.7.1",
-    "manifestHash": "B807AE2EE03309800D3906483F37D4E04FA2FE158B991BE03697AD62906AA7FD",
-    "lastUpdated": "2026-09-11T04:53:32.5946852Z",
-    "validationCount": 2
+    "installerHashes": [
+      "EE0BF55AD2C1BAA6DDB9A3F3ABDEBFB3718F3CE73FCD5099A9A0C6A56BB5BDB7"
+    ],
+    "version": "0.7.2"
   },
   "DimonSmart.NugetMcpServer": {
     "version": "1.1.9",
@@ -7294,11 +7294,11 @@
   },
   "Scandum.WinTin++": {
     "version": "2.02.61",
-    "lastUpdated": "2026-09-12T12:49:22.5480084Z",
+    "lastUpdated": "2026-09-12T20:37:04.1367794Z",
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "2C9A618908F2C08C9E373327E7A15409C25EEB6AE563F45807A611269A686250",
-    "validationCount": 25,
+    "validationCount": 26,
     "installerHashes": [
       "421A1458080413D5135A7490DC05AC0F4B54F1CAADBFC033214536237420E847"
     ]
