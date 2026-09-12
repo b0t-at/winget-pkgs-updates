@@ -6554,7 +6554,11 @@
     "lastUpdated": "2026-09-12T12:49:22.485109Z",
     "manifestHash": "F86E1D40816DDCD9FD528BE94FB551C52F1EE1AF8DC70F59044949DEFBCBF040",
     "state": "VALIDATION_PASSED",
-    "version": "12.4.1"
+    "version": "12.4.1",
+    "openPr": {
+      "version": "12.4.1",
+      "checkedAt": "2026-09-12T16:21:02.9062565Z"
+    }
   },
   "PocketBase.PocketBase": {
     "description": "",
