@@ -1275,11 +1275,7 @@
     "description": "",
     "lastUpdated": "2026-09-05T05:00:25.1286316Z",
     "version": "1.0.3",
-    "state": "VALIDATION_PASSED",
-    "openPr": {
-      "version": "1.0.3",
-      "checkedAt": "2026-09-08T04:26:39.4560599Z"
-    }
+    "state": "VALIDATION_PASSED"
   },
   "CargoLambda.CargoLambda": {
     "manifestHash": "B8DD0B022742F2371ED57474DE9FEE6CB654CD7DD96A113241259E85D6F5ABF3",
@@ -8316,8 +8312,8 @@
     "manifestHash": "4B796A972C2DBB5AE75EB8F4F8B332F0CBE77928187E84989680F6AB184F42AA",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "version": "5.7.0",
-      "checkedAt": "2026-09-11T00:54:56.4054392Z"
+      "checkedAt": "2026-09-12T04:23:51.0659654Z",
+      "version": "5.7.0"
     }
   },
   "termio.soft-jp.com.TermioWin": {
