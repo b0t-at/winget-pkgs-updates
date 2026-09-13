@@ -116,8 +116,8 @@
     "manifestHash": "88FF875B5DEA51BC3B743F06098AADAF42AB87DA966E19E5EFA189C21F4EC081",
     "version": "0.107.78",
     "openPr": {
-      "version": "0.107.79",
-      "checkedAt": "2026-09-12T00:54:24.9096573Z"
+      "checkedAt": "2026-09-13T01:02:03.9620176Z",
+      "version": "0.107.79"
     }
   },
   "AdGuard.dnsproxy": {
@@ -738,7 +738,7 @@
     "description": "",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "checkedAt": "2026-09-11T20:23:27.5740835Z",
+      "checkedAt": "2026-09-13T01:03:10.9068955Z",
       "version": "0.33.0"
     }
   },
@@ -1389,8 +1389,8 @@
   },
   "CharlesMilette.TranslucentTB": {
     "openPr": {
-      "version": "2026.2",
-      "checkedAt": "2026-09-12T00:54:27.6860811Z"
+      "checkedAt": "2026-09-13T01:02:06.0363449Z",
+      "version": "2026.2"
     }
   },
   "ChiaNetwork.GUIforChiaBlockchain": {
@@ -2505,8 +2505,8 @@
       "9A0B7352DFEF40C8EBF8733F77CB777565AA4EAEDE4F79FE928C11DA5C35CE40"
     ],
     "openPr": {
-      "version": "19.0.2",
-      "checkedAt": "2026-09-12T00:54:28.0501447Z"
+      "checkedAt": "2026-09-13T01:02:06.3660153Z",
+      "version": "19.0.2"
     }
   },
   "Fangyuan025.Chaty": {
@@ -3140,8 +3140,8 @@
     "validationCount": 1,
     "version": "36.1",
     "openPr": {
-      "version": "36.1",
-      "checkedAt": "2026-09-12T00:54:28.4588366Z"
+      "checkedAt": "2026-09-13T01:02:06.6530074Z",
+      "version": "36.1"
     }
   },
   "goplus.xgo": {
@@ -3936,8 +3936,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.9.5",
-      "checkedAt": "2026-09-11T00:54:01.3494465Z"
+      "checkedAt": "2026-09-13T01:02:07.4732937Z",
+      "version": "2026.9.6"
     }
   },
   "jeffaristi92.Sweeft": {
