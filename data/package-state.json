@@ -133,8 +133,8 @@
       "C03035EBBB96FBE89D7793876C59EEFE6E3D03241436273BCEBABD355FADE29B"
     ],
     "openPr": {
-      "version": "0.84.2",
-      "checkedAt": "2026-09-12T20:19:53.8396638Z"
+      "checkedAt": "2026-09-13T20:20:27.2112011Z",
+      "version": "0.84.2"
     }
   },
   "AES256Afro.VideoKidnapper": {
@@ -666,11 +666,7 @@
     "manifestHash": "70ABB0B14861BF23822AE9A43DF47E2EF1FFD34AC8C1B8D6C93342864DE1CA1E",
     "version": "0.24.0",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-01T20:51:44.4219476Z",
-    "openPr": {
-      "checkedAt": "2026-09-10T12:33:43.5915854Z",
-      "version": "0.24.0"
-    }
+    "lastUpdated": "2026-09-01T20:51:44.4219476Z"
   },
   "Avidemux.Avidemux": {
     "configHealth": {
@@ -2149,8 +2145,8 @@
     ],
     "manifestHash": "31947E74E60A0462F2AAA67D5F8C21F460756C9F606A2E99B5AA0055A2064E78",
     "openPr": {
-      "version": "2.12.4",
-      "checkedAt": "2026-09-12T20:19:56.6105517Z"
+      "checkedAt": "2026-09-13T20:20:29.8080378Z",
+      "version": "2.12.4"
     }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
@@ -3124,8 +3120,8 @@
     ],
     "manifestHash": "8A93D198AD57BF64282A1C20A5B26813247BA8F368CBBC5002B3A2AECCF79CDA",
     "openPr": {
-      "version": "2.5.1",
-      "checkedAt": "2026-09-12T20:19:57.1053085Z"
+      "checkedAt": "2026-09-13T20:20:30.2368155Z",
+      "version": "2.5.1"
     }
   },
   "Google.Protobuf": {
