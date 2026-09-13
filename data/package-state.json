@@ -7392,11 +7392,7 @@
     ],
     "version": "0.264",
     "state": "VALIDATION_FAILED",
-    "manifestHash": "5C9C2B5C8944C616B955A76C17C4544046FB50FED06CE2831032B7D798380292",
-    "openPr": {
-      "checkedAt": "2026-08-29T04:23:35.4791292Z",
-      "version": "0.279"
-    }
+    "manifestHash": "5C9C2B5C8944C616B955A76C17C4544046FB50FED06CE2831032B7D798380292"
   },
   "seerge.g-helper.PreRelease": {
     "version": "0.283",
