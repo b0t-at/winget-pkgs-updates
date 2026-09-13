@@ -1953,14 +1953,14 @@
   },
   "Divaaaan.Tenebra": {
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-02T04:46:10.3807463Z",
-    "version": "0.5.11",
-    "manifestHash": "EAC83E5FDF01B33FAE66B92D2E0314F0AB76C4824EA448141558012FC121FC91",
+    "validationCount": 1,
     "installerHashes": [
-      "D39A3B0EC1D393F3ECA7DB87F190B50E6F76DC17D2A4E90BD39259BEA0EF527F"
+      "23D4F4B4895810F3948E35143E71F27C219EE7CC83FB73264CBCEA2946955F9D"
     ],
-    "validationCount": 2
+    "version": "0.6.0",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "B65E9BAB9C6268021AA1F1905B214A2D39498B2C01B7BE484EEAF47E082F20BB",
+    "lastUpdated": "2026-09-13T20:44:15.4755282Z"
   },
   "divVerent.AAAAXY": {
     "state": "VALIDATION_FAILED",
@@ -5391,15 +5391,15 @@
     "manifestHash": "77CFED035E8B90FC50F6448291D28F4AE2A0AFCDE8BE619DF4F658DD5710FC58"
   },
   "muimsd.tilefeed": {
-    "manifestHash": "EB630D01A51F27E8EED91E19D911DFA0F65D33A12CF7ED9CF73A35B1F6459B94",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
     "description": "",
+    "validationCount": 1,
     "installerHashes": [
-      "EC838A07ABBB58B5F5652788EE96A4DBF011592698F5711EF431003A304FD8A7"
+      "E1520B9FAF47C76143C60F98860AB6EEB00B138949EBBD6645604E6C520E8207"
     ],
-    "version": "0.8.1",
-    "lastUpdated": "2026-09-12T01:32:43.0806811Z"
+    "version": "0.9.0",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "EB3884A0219F03D06B1DB322C9B5DE6DC153C15689115EF6BB75C037BFC12748",
+    "lastUpdated": "2026-09-13T20:44:15.4338737Z"
   },
   "Mukunku.ParquetViewer": {
     "installerHashes": [
