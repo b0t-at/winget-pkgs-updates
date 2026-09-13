@@ -1193,15 +1193,15 @@
   },
   "bufbuild.buf": {
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "0332D8D1BF062C95A0418081B7E574551032EE72064AF05E304E3A1454F8CF11",
-      "79D7A18BDDDE96C248E5A606BA280708E71887A35939DEE82CD49749740B77DC"
-    ],
-    "lastUpdated": "2026-07-17T21:01:33.4786908Z",
+    "version": "1.73.0",
+    "lastUpdated": "2026-09-13T04:50:56.541429Z",
+    "manifestHash": "2DE8D598CCC2E0C4BD472FA9A74B6B2CD24383B55987AB47B2E6EA32A12B4BED",
+    "validationCount": 1,
     "description": "",
-    "manifestHash": "2C00E7F2862A439D83420DC7E10E5920857F902EE94C4E329E75E67950368F12",
-    "version": "1.72.0",
-    "validationCount": 1
+    "installerHashes": [
+      "19AFC9B22569C7C528C278EB5F3D6706581E1BA9B232F420E0D91AE246762566",
+      "DB3B0DE77DE87CBCCADD7F6754BDF19CD0B0F85670E78D31E46A275DF6FB822A"
+    ]
   },
   "Byron.dua-cli": {
     "openPr": {
@@ -1688,14 +1688,14 @@
     "manifestHash": "263B33257CF9F27044BE565EA3FDD27E9191C1B809625415F87EA03D36957F63"
   },
   "cubezombies.MidnightAthenaeum": {
-    "version": "0.17.0",
-    "lastUpdated": "2026-09-11T16:52:46.6292294Z",
-    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "manifestHash": "5416B21399B5890EC56C02BF3D25A33CA6F7E99176D8B03EC4633904FA5B510C",
+    "version": "0.18.0",
+    "lastUpdated": "2026-09-13T04:50:56.6590826Z",
+    "manifestHash": "D6D02C17DB9694DEC5F98E7B784328C172E2F74D1A4B9896E15505D9523ED342",
+    "validationCount": 1,
     "description": "",
     "installerHashes": [
-      "2BAD93C1EACFBDD7CF3CA3B69CA025140DB6B6BC75A8D91D2D01E63E922AC0FB"
+      "AE91AD7DE0A8581599CB7634638FB58E4AD7732B604DBA6BAA0F1B1170D41815"
     ]
   },
   "CueLang.Cue": {
@@ -4797,15 +4797,15 @@
     ]
   },
   "masaodev.quick-dash-launcher": {
-    "manifestHash": "EE03C07EF9376F45DD9AA5A78F422151831A790E077157A9205D34A512ACDF0D",
     "state": "VALIDATION_PASSED",
+    "version": "0.7.28",
+    "lastUpdated": "2026-09-13T04:50:56.6113344Z",
+    "manifestHash": "3D2C0CFB5A75B99DC0E2CDAC485080F7B5CF6B623C5E4F89F34D8CCB3159D54C",
     "validationCount": 1,
     "description": "",
     "installerHashes": [
-      "B65B962E26667EF1D0B439E9AB4DFD2889D0E4D3DC325A2C2B3EF37C822FB400"
-    ],
-    "version": "0.7.24",
-    "lastUpdated": "2026-09-12T01:32:43.052907Z"
+      "51E55A5D7E010DF60529C4D227F9F399D6E3B7C4FE58B077BDFE21704CCF008E"
+    ]
   },
   "Mateuscruz19.BATorrent": {
     "configHealth": {
@@ -6169,15 +6169,15 @@
     ]
   },
   "openwong2kim.wmux": {
-    "manifestHash": "5329AF03FFE8DFFBD511AC90887CCD0C1A3ABFB6CACD3667CC29A4ACA2E6A568",
-    "description": "",
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "AB0997D65283E2570B6B7661C7316C1ADAC5262955AC13C233DF013772FCEB7B"
-    ],
-    "version": "3.52.0",
+    "version": "3.53.0",
+    "lastUpdated": "2026-09-13T04:50:56.5881397Z",
+    "manifestHash": "AB3455071F1A23B6D1436408DAAA6199557D260380E1BAA2E75F954887F3880E",
     "validationCount": 1,
-    "lastUpdated": "2026-09-09T20:50:07.8585661Z"
+    "description": "",
+    "installerHashes": [
+      "5015D60570040B5BD48771E7757801EACB3F83360A7D63F8F94B67B3329DBA59"
+    ]
   },
   "openwong2kim.wsnap": {
     "installerHashes": [
@@ -7633,14 +7633,14 @@
     "manifestHash": "E4D15C9B9ACA24469BA775750BC0FBDB8CE744F1C8AE63AB01DFF3DDD13895A8"
   },
   "skyhook-io.Radar": {
-    "manifestHash": "634374E38E6B2FA09AEC91D8849E96EC7BA03E599A138F450D96F2E0F39C969F",
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "version": "1.13.0",
+    "version": "1.13.1",
+    "lastUpdated": "2026-09-13T04:50:56.6309303Z",
+    "manifestHash": "72DB17831E41F9B984D1454676042908620A5AF8FF3CE69F4DEDE27D7562A5AB",
     "validationCount": 1,
-    "lastUpdated": "2026-09-08T20:46:42.0609218Z",
+    "description": "",
     "installerHashes": [
-      "A51117068BFCB75FBB43F10072C6CFC6B692248B5B6056BC30882A8F659BB93F"
+      "9FD560037CA959746A385406C789BBF3A85BC47922BA70ECA5124CB1CD8D5AD6"
     ]
   },
   "Skylot.jadx": {
