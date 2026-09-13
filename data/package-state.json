@@ -2219,15 +2219,15 @@
     "manifestHash": "DD19C4F6466DFE8D79750E310CC6D6A372536FF7A9D1803D607590F31E4AA3F4"
   },
   "EmanueleMicheletti.Proxelar": {
+    "lastUpdated": "2026-09-13T16:52:03.595952Z",
     "validationCount": 1,
-    "description": "",
-    "version": "0.5.1",
-    "installerHashes": [
-      "081C5F397E6A8BD937CC6A94A7DBAEFF55A8AA5233349CC383DB8B6EFD453FCA"
-    ],
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-19T05:34:55.9273398Z",
-    "manifestHash": "CF417CC1A7DAF1863F2D844A685BBF9EFFCF6D406C95E6FF0D2D27D685AC4C3B"
+    "installerHashes": [
+      "53A6BAB18F06E3D7075F7E037CF4E387BD4FC9A2A4691BF277F2F7B93E663ACF"
+    ],
+    "manifestHash": "DB98F9E3DBC5AA3AF3E00FAEEFCD6F2FE6E2B3107D27E6320ED7EE294C572497",
+    "description": "",
+    "version": "0.6.0"
   },
   "EndlessSky.EndlessSky": {
     "description": "",
@@ -2732,12 +2732,12 @@
   },
   "Frnsys.Half_earth": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 4,
+    "validationCount": 5,
     "installerHashes": [
       "CD47FC89C016730378E00399433045CCDB17E9B8ECC1434413C7531B9EB6AD36"
     ],
     "description": "",
-    "lastUpdated": "2026-09-10T21:15:26.3130361Z",
+    "lastUpdated": "2026-09-13T16:52:03.6873987Z",
     "manifestHash": "162A9CB4478CCE0219E2D18B3BDBA90BBFD1A2D89CCCF6E863728E377240A4A7",
     "version": "1.0.15"
   },
@@ -3312,16 +3312,16 @@
     "description": ""
   },
   "Hanthor.BluefinCLI": {
-    "version": "0.11.0",
-    "description": "",
-    "lastUpdated": "2026-09-13T08:49:02.7333795Z",
-    "manifestHash": "AC3BBE40A03347CFE9612E2EF59F91D40FDE66970D2A8A1B8620401232B399F9",
-    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-13T16:52:03.6689943Z",
     "validationCount": 1,
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "CB757C7AD439508D10610085E5C78D750BF203ABF1A06627804F22A58A143F27",
-      "B13689ABDD4B4C2A52342627013BF55ADBEF2FC6BBBACC4AE52DA3A970A8D7C7"
-    ]
+      "57F4D9AB9A4ED92D8454D6A48CE1B619A514D64B0D6D7F103344FAE2FB458D62",
+      "4497526EB5EDF76270ADF1895F1C8AFC37BD632A9650D2F9286EC183CC2BFE43"
+    ],
+    "manifestHash": "E76EA5F6879332BC6E2E03FC5B1FFA856F5D7AD35825A741A77767F0EAEB5662",
+    "description": "",
+    "version": "0.11.2"
   },
   "Happ.Happ": {
     "state": "VALIDATION_PASSED",
@@ -4111,15 +4111,15 @@
     "version": "6.3.9.6"
   },
   "k0sproject.k0sctl": {
-    "lastUpdated": "2026-08-18T01:43:26.164037Z",
+    "lastUpdated": "2026-09-13T16:52:03.6479306Z",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "3D06CCA961BA0BD2571836A19F6A67A9C2B44FE0D5684944028393265562B467"
+      "FF799BCAAA9B3DCA1D3A650AC4CF7ABB1F38BC9BE83E26E5B388EA7DA07FC573"
     ],
+    "manifestHash": "AA8F621127E44F06E587CDAEE4840C39AB00EBDF98B5ABC46FF638107C620293",
     "description": "",
-    "manifestHash": "F0F1C54AE5DBAEF3AC314AEAB86566857B1D4A44DC97908148EA1C30BBA40A43",
-    "validationCount": 1,
-    "version": "0.32.2"
+    "version": "0.33.0"
   },
   "kagg886.Pixiv-MultiPlatform": {
     "lastUpdated": "2026-08-16T21:14:48.8151222Z",
@@ -4547,15 +4547,15 @@
     "state": "VALIDATION_PASSED"
   },
   "loreste.mako": {
-    "manifestHash": "AB80F4765555AB9F2DC25488AB493D971D8D4F1EF48F328DC416670464E7B10C",
+    "lastUpdated": "2026-09-13T16:52:03.7820716Z",
     "validationCount": 1,
-    "description": "",
-    "lastUpdated": "2026-09-10T16:58:49.3323269Z",
     "state": "VALIDATION_PASSED",
-    "version": "0.6.32",
     "installerHashes": [
-      "62D3B8BAD07E0A425A47843536A1E014DC929C3695F163FB6D8247B9797FD00C"
-    ]
+      "260058415710480299379384E980EF799BB46906E09E72C73E7F2BE807054426"
+    ],
+    "manifestHash": "275DD45B74307AE6BC9E5ED98A115857B02B6777BF50D8DDB319B471F0355466",
+    "description": "",
+    "version": "0.6.28"
   },
   "LowLevelDesign.ProcessGovernor": {
     "manifestHash": "09E69D0C7C3FCD8235F3E38BE39881FEE7DC968A99C30941A28BED33654E0AA0",
@@ -7448,15 +7448,15 @@
     "manifestHash": "8EB9B09B3F34BBD62C6214FD2953C00CB9D31C7E105179C4F7BC763B6B0DE45D"
   },
   "shakaran.whatly": {
-    "manifestHash": "B5A281A08B06D5908E052CB52DEFFA99989779EEF67C853B429F68E6C0203E96",
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "version": "7.6.1",
+    "lastUpdated": "2026-09-13T16:52:03.7659649Z",
     "validationCount": 1,
-    "lastUpdated": "2026-09-08T20:46:42.0141584Z",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "D2DD7FBDF442136E0B2DA50E3CB8F8EEC0A9F4A9E92093A8826C0047753B33A7"
-    ]
+      "FC4DC640491A53F9A24007604B1B88A7B596F801DDD6BC2682426E11B27CBD16"
+    ],
+    "manifestHash": "E0E249A13314849C53F4A187BAB7FAFB2E16CC41578E8E2B0EB6338D2AB9B63F",
+    "description": "",
+    "version": "7.6.4"
   },
   "ShatteredChaos.FightPlanner": {
     "installerHashes": [
