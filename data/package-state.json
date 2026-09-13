@@ -383,8 +383,8 @@
     "manifestHash": "4624C38BDFBD423DB7146F24EA3A3EFACB98AD85F486E496A342C234646B7A69",
     "description": "",
     "openPr": {
-      "version": "2.7.5",
-      "checkedAt": "2026-09-12T08:26:16.3884594Z"
+      "checkedAt": "2026-09-13T08:27:34.4455003Z",
+      "version": "2.7.5"
     }
   },
   "Anki.Anki": {
@@ -422,8 +422,8 @@
     "lastUpdated": "2026-08-22T08:51:40.3505732Z",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "version": "0.2.2",
-      "checkedAt": "2026-09-12T08:26:16.8606914Z"
+      "checkedAt": "2026-09-13T08:27:34.9093405Z",
+      "version": "0.2.2"
     }
   },
   "AntiMicroX.antimicrox": {
@@ -782,8 +782,8 @@
   },
   "Barry-ran.QtScrcpy": {
     "openPr": {
-      "version": "4.1.1",
-      "checkedAt": "2026-09-12T08:26:19.3479137Z"
+      "checkedAt": "2026-09-13T08:27:37.4365434Z",
+      "version": "4.1.1"
     }
   },
   "Baulk.Baulk": {
