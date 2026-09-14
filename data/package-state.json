@@ -383,8 +383,8 @@
     "manifestHash": "4624C38BDFBD423DB7146F24EA3A3EFACB98AD85F486E496A342C234646B7A69",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-09-13T08:27:34.4455003Z",
-      "version": "2.7.5"
+      "version": "2.7.5",
+      "checkedAt": "2026-09-14T08:35:17.0888597Z"
     }
   },
   "Anki.Anki": {
@@ -422,8 +422,8 @@
     "lastUpdated": "2026-08-22T08:51:40.3505732Z",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "checkedAt": "2026-09-13T08:27:34.9093405Z",
-      "version": "0.2.2"
+      "version": "0.2.2",
+      "checkedAt": "2026-09-14T08:35:17.4432716Z"
     }
   },
   "AntiMicroX.antimicrox": {
@@ -542,11 +542,7 @@
     ],
     "lastUpdated": "2026-08-27T23:45:19.669617Z",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "openPr": {
-      "version": "3.5.2",
-      "checkedAt": "2026-08-28T03:23:15.3117613Z"
-    }
+    "state": "VALIDATION_PASSED"
   },
   "Aries-Sciences-LLC.AI-Chess": {
     "configHealth": {
@@ -784,8 +780,8 @@
   },
   "Barry-ran.QtScrcpy": {
     "openPr": {
-      "checkedAt": "2026-09-13T08:27:37.4365434Z",
-      "version": "4.1.1"
+      "version": "4.1.1",
+      "checkedAt": "2026-09-14T08:35:19.533682Z"
     }
   },
   "Baulk.Baulk": {
@@ -8338,8 +8334,8 @@
     "manifestHash": "4B796A972C2DBB5AE75EB8F4F8B332F0CBE77928187E84989680F6AB184F42AA",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "checkedAt": "2026-09-13T04:28:39.4621194Z",
-      "version": "5.7.0"
+      "version": "5.7.0",
+      "checkedAt": "2026-09-14T08:34:15.0455983Z"
     }
   },
   "termio.soft-jp.com.TermioWin": {
