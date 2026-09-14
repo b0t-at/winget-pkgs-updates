@@ -2514,15 +2514,15 @@
     }
   },
   "Fangyuan025.Chaty": {
+    "version": "2.2.1",
     "state": "VALIDATION_PASSED",
+    "manifestHash": "9DDA88A40C6077B348170236E600654A2C45DE79826FC56257705C39C8FE1437",
+    "lastUpdated": "2026-09-14T21:02:28.5250163Z",
     "installerHashes": [
-      "FBF43D37B015CFCD6164D5E85B6D1BAEE0D1C5610BB43D570BF2BA9CACA4CF2B"
+      "AF1CC797F223657AD367C0CA64C36B27435575626216A2B6DB2085A51F7E2445"
     ],
     "validationCount": 1,
-    "description": "",
-    "version": "2.2.0",
-    "manifestHash": "0C0CC1519DD34EDFDA86C816582901B129DEDC6CE0E1893B040A61318C3AE346",
-    "lastUpdated": "2026-09-14T04:56:07.3854932Z"
+    "description": ""
   },
   "Feho.LogNav": {
     "installerHashes": [
@@ -2736,12 +2736,12 @@
   },
   "Frnsys.Half_earth": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 6,
+    "validationCount": 7,
     "installerHashes": [
       "CD47FC89C016730378E00399433045CCDB17E9B8ECC1434413C7531B9EB6AD36"
     ],
     "description": "",
-    "lastUpdated": "2026-09-14T04:56:07.429829Z",
+    "lastUpdated": "2026-09-14T21:02:28.502266Z",
     "manifestHash": "162A9CB4478CCE0219E2D18B3BDBA90BBFD1A2D89CCCF6E863728E377240A4A7",
     "version": "1.0.15"
   },
@@ -3117,16 +3117,16 @@
     ]
   },
   "Google.OSVScanner": {
-    "lastUpdated": "2026-08-19T17:46:50.172129Z",
-    "version": "2.5.1",
-    "validationCount": 1,
-    "description": "",
+    "version": "2.6.0",
     "state": "VALIDATION_PASSED",
+    "manifestHash": "8763CD6C0B95A6EAE98980EEEC5AC7C54DF1521CDD86DA8B908A290B7EC4A2E3",
+    "lastUpdated": "2026-09-14T21:02:28.5428207Z",
     "installerHashes": [
-      "25E42F5EF6711FD8C0FB45390972205891DD44C6BD02AC93F0F63E8E98D9BFB6",
-      "33FEB0B210A3E5EA7B338C719DEFC899F8833D990CDD297BCAD4FF1A2586EC8B"
+      "E0ED7644118B717B028C249EE9D3515024E55E8510747CA08906EB96765354D6",
+      "CA1379DA0E408279EF2C85CDE0846A903495738A91C7B065A208048437C1686C"
     ],
-    "manifestHash": "8A93D198AD57BF64282A1C20A5B26813247BA8F368CBBC5002B3A2AECCF79CDA"
+    "validationCount": 1,
+    "description": ""
   },
   "Google.Protobuf": {
     "description": "",
@@ -4934,16 +4934,16 @@
     "manifestHash": "E6D5F813D098405E345D20B7BE2E11139E6B0F19FD5FCF398D9D3EEFEBD6DE23"
   },
   "Mickem.NSClient": {
+    "version": "0.21.0",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "6D5FD59E618FD2B9D7CE5F5515BCDEDB15E44EA692801A0D2AD507AA388F2595",
-    "version": "0.18.1",
-    "description": "",
+    "manifestHash": "7E2A975678D08CD4A0F92C2ED288EA3AD0DD5400744FD81778285B226E970EF8",
+    "lastUpdated": "2026-09-14T21:02:28.5807018Z",
     "installerHashes": [
-      "D63AA024841563BED8DE29DF5425FA5A00D1F21D276313468CA40383C9C3D715",
-      "88DC1CB88823A04C13035A1A030A2B8BBF97386965B415C9F35AABB40F8CAC6F"
+      "6F70A0BD72DB3C5FF553E571EA446732A364AA97D6EB10FEB5E546E0D28E083D",
+      "68BB64F59D3B9F87477527F4E2B7BD5344ED4E9F5622EC896F980E2988A23EA1"
     ],
-    "lastUpdated": "2026-08-31T08:56:17.2087938Z",
-    "validationCount": 1
+    "validationCount": 1,
+    "description": ""
   },
   "Micronaut.Launch": {
     "manifestHash": "EB346518F549715A3E8C2AA2EE8F234C1FDE737BBF3F66F3E2BF7705FAF0B2EB",
@@ -6164,15 +6164,15 @@
     }
   },
   "OpenWhispr.OpenWhispr": {
-    "description": "",
+    "version": "1.10.1",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "lastUpdated": "2026-09-01T09:14:40.1698153Z",
-    "manifestHash": "00BFA43EAB007A711EBFD2DC22C54351A14E20A783F24F831CA911B6155C157E",
-    "version": "1.9.2",
+    "manifestHash": "74F27C2F3BC34CFD1BC74BBE5E41BC78A5E48930B0974F524C0A844CA3CF2AC7",
+    "lastUpdated": "2026-09-14T21:02:28.6002483Z",
     "installerHashes": [
-      "96E84935BB68BE2B45AA56B4C85D6CB9C0231EE0536BA365EED1DA9FA345F16B"
-    ]
+      "B7394883CE40C297E4CA57A285A64F05DCF06D4F0134DC178EFE071561530820"
+    ],
+    "validationCount": 1,
+    "description": ""
   },
   "openwong2kim.wmux": {
     "version": "3.55.0",
@@ -7300,11 +7300,11 @@
   },
   "Scandum.WinTin++": {
     "version": "2.02.61",
-    "lastUpdated": "2026-09-12T20:37:04.1367794Z",
+    "lastUpdated": "2026-09-14T21:02:28.5627345Z",
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "2C9A618908F2C08C9E373327E7A15409C25EEB6AE563F45807A611269A686250",
-    "validationCount": 26,
+    "validationCount": 27,
     "installerHashes": [
       "421A1458080413D5135A7490DC05AC0F4B54F1CAADBFC033214536237420E847"
     ]
@@ -7401,15 +7401,15 @@
     "manifestHash": "5C9C2B5C8944C616B955A76C17C4544046FB50FED06CE2831032B7D798380292"
   },
   "seerge.g-helper.PreRelease": {
-    "version": "0.283",
-    "lastUpdated": "2026-09-11T16:52:46.506746Z",
-    "validationCount": 1,
+    "version": "0.282",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "530791EC7A114430928B8A6DD72F0C63D860ABEB0CF34EA12A0B9377EAB75E6D",
-    "description": "",
+    "manifestHash": "87C70739E7FAB3BDEB96202A2579EE15B99DAD2E1FCA00BDEA2ABACBB888FF4A",
+    "lastUpdated": "2026-09-14T21:02:28.4592209Z",
     "installerHashes": [
-      "C66CF0A66E530AD0876789703D6BF92691FB2AF1DA8A4DBA36537BE0CF6BE3F2"
-    ]
+      "EFC632EE90C121BFB9B5DF97AA8E398C2737A374BC4FF149B11B441378BF0D07"
+    ],
+    "validationCount": 1,
+    "description": ""
   },
   "Sefinek.GenshinStellaMod": {
     "configHealth": {
