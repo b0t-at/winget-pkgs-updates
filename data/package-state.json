@@ -2555,15 +2555,15 @@
     "lastUpdated": "2026-09-14T04:56:07.4906273Z"
   },
   "Filamental.Filamental": {
-    "manifestHash": "7DB927E344E10AC0040E6E9A0093EB18888EDD1A8FF0C91A2255146BB48574CE",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "description": "",
+    "lastUpdated": "2026-09-14T08:56:03.5356411Z",
+    "version": "0.3.46",
     "installerHashes": [
-      "C2EEBC7F6CBE487DC6E9642108823AF5837D11E904664708BFB4E2E56EC38983"
+      "B06950B4972E0BD46BA5048781E023F3A9F4C6500949CE164B23B8DA1038BB47"
     ],
-    "version": "0.3.45",
-    "lastUpdated": "2026-09-12T01:32:43.1888413Z"
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "manifestHash": "BE3ACBA4F81A5693B292E3313B511B89CF0406C3BB34DDDBD850721FB5A823C5",
+    "validationCount": 1
   },
   "FirenzeLor.gemini-collector": {
     "validationCount": 1,
@@ -6175,15 +6175,15 @@
     ]
   },
   "openwong2kim.wmux": {
-    "state": "VALIDATION_PASSED",
-    "version": "3.53.0",
-    "lastUpdated": "2026-09-13T04:50:56.5881397Z",
-    "manifestHash": "AB3455071F1A23B6D1436408DAAA6199557D260380E1BAA2E75F954887F3880E",
-    "validationCount": 1,
-    "description": "",
+    "lastUpdated": "2026-09-14T08:56:03.5650337Z",
+    "version": "3.54.0",
     "installerHashes": [
-      "5015D60570040B5BD48771E7757801EACB3F83360A7D63F8F94B67B3329DBA59"
-    ]
+      "F3227A4C8F4C03AAB60CBAE639BB295186C414A89588CD61AE1261181B186C30"
+    ],
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "manifestHash": "FBFE983AB67F673B03E924C05B64FFF92DF733A2F0B283FCA230C0317FFF5098",
+    "validationCount": 1
   },
   "openwong2kim.wsnap": {
     "installerHashes": [
@@ -9374,10 +9374,10 @@
   "xpipe-io.xpipe.portable": {
     "version": "24.2.1",
     "description": "",
-    "lastUpdated": "2026-09-13T08:49:02.7104226Z",
+    "lastUpdated": "2026-09-14T08:56:03.4817519Z",
     "manifestHash": "585E9276536F61533E9FA191DDCA7BDE0B514747E60569F612192FA505CFA304",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "C93C394AB79B44F72A83D6F7C5B979A2BA523B38B08EA173F6AB29D48E3E14D8"
     ]
