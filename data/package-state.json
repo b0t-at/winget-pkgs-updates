@@ -8535,14 +8535,14 @@
   },
   "TravisLane.SteamArtManager": {
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-12T01:32:43.1058923Z",
-    "validationCount": 2,
-    "description": "",
-    "version": "3.18.0",
+    "validationCount": 1,
+    "manifestHash": "BEE0731B539DA3CFC82EDB8A53E6DA0203EAEBE9FCDD7B23FBD537206F52303D",
     "installerHashes": [
-      "7E4993199EE920A3AEE2DCA9108287F14A920F3C2608F0778AB72BB5AC0127E7"
+      "08E9EFBE2378E788D6CA884F5A7950873E698C233E8293C455BF5D5C010DCBA9"
     ],
-    "manifestHash": "BA3AC599ADF15DBDD81200FFE07F4C2D2B6E2666EDC133ED7328A72973D76F56"
+    "description": "",
+    "lastUpdated": "2026-09-14T01:17:52.8397005Z",
+    "version": "3.19.1"
   },
   "TrellisLab.Trellis": {
     "manifestHash": "4F85C7FBC55A58B29480DB305C355CF06BEF854E938F2FBC0BCACE97E5606E38",
@@ -9384,15 +9384,15 @@
     "version": "1.7.2"
   },
   "xssnick.tonutils-storage": {
-    "version": "1.5.3",
-    "description": "",
-    "installerHashes": [
-      "6AB4D722D0317946E6A0CE42AC0B97DBDF3A36F1421B5525979527BC4784B9B8"
-    ],
-    "lastUpdated": "2026-08-23T01:00:02.2918701Z",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "manifestHash": "5DA995BDCDED43689F52FAE4D9A2C47AE2F3E3C009813B3CA5BD81FFDFAEAB3E",
-    "state": "VALIDATION_PASSED"
+    "manifestHash": "D1EDC0BA44F0A72E362C88F1E47DE4C393A70464944DB1B766C4B87FEF7FBE34",
+    "installerHashes": [
+      "1E7A9070ACB1B23580C0B35F615A408BC15ACFF04A56E9E5B4B3EF12591021F7"
+    ],
+    "description": "",
+    "lastUpdated": "2026-09-14T01:17:52.8865232Z",
+    "version": "1.5.4"
   },
   "xushengfeng.eSearch": {
     "state": "VALIDATION_PASSED",
