@@ -2876,16 +2876,16 @@
     }
   },
   "GDQuest.GDScript.Formatter": {
-    "version": "0.25.0",
-    "installerHashes": [
-      "A17E40EF62DB561084C5CC7C3C21C937CC68BBC014A71A50FB1F16519A37AEF6",
-      "4930FE132260BD8ACC12A5B4306CAA6655913C6F22BD0D25D554F6173D0C812B"
-    ],
+    "version": "0.26.0",
+    "manifestHash": "FCD270E9FFBC673BE07AD496AADD24FE7F0EE6C4234AA08EEE24A8110D65AD41",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
     "description": "",
-    "lastUpdated": "2026-09-10T13:14:09.1250553Z",
-    "validationCount": 1,
-    "manifestHash": "2E7F1A5CB12C8AE4C1E31426071D640C9DC1CB1581C176986F7089A0C10D5EE1"
+    "installerHashes": [
+      "8336E7E84CC7067F93E92BF23F4B4822742EB2B35620981078520C8BA39EFF6C",
+      "29BEC1E6BE99696DAC4D2FD359215686F46575C867B2186ED546534F656E79D8"
+    ],
+    "lastUpdated": "2026-09-14T12:57:28.1942061Z"
   },
   "gedejong.AutoRotate": {
     "installerHashes": [
@@ -5103,16 +5103,16 @@
     "lastUpdated": "2026-09-09T20:50:07.8069931Z"
   },
   "mikf.gallery-dl.Nightly": {
-    "description": "",
-    "lastUpdated": "2026-09-10T21:15:26.1689059Z",
-    "manifestHash": "47F96EDF3C664344071B2038EAF4414C452C5BC0E62C68DA8F1097610C76631D",
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "7D70E5576209BF0885CEE2FC32160C20A380D601DC6F085A791A57C819064BC5",
-      "1C4A7F897F6CB0D75639A5905D2A0A1F1EE2FC6D881C2AF97F289D7BBA367AC2"
-    ],
+    "version": "2026.09.14",
+    "manifestHash": "9D8140AB37AB41ADAE46932849D613FD1FB4864ABAFFB83243525B83DA2BA0F8",
     "validationCount": 1,
-    "version": "2026.09.10"
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "installerHashes": [
+      "E7A60C1838E3F6E31C0E88EA2B8C2E669FE01F1D88266D1A417971650A99BB15",
+      "8406787E7000B29B3279503C827BB5036C327CF76A17B501D263D39F69FC833B"
+    ],
+    "lastUpdated": "2026-09-14T12:57:28.2906632Z"
   },
   "MilkShift.GoofCord": {
     "state": "VALIDATION_PASSED",
@@ -6175,15 +6175,15 @@
     ]
   },
   "openwong2kim.wmux": {
-    "lastUpdated": "2026-09-14T08:56:03.5650337Z",
-    "version": "3.54.0",
-    "installerHashes": [
-      "F3227A4C8F4C03AAB60CBAE639BB295186C414A89588CD61AE1261181B186C30"
-    ],
+    "version": "3.55.0",
+    "manifestHash": "1BB8B660B373D2D44BDF0D923BFA50A0A00D57192874BAF1926B6EB254C90028",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "FBFE983AB67F673B03E924C05B64FFF92DF733A2F0B283FCA230C0317FFF5098",
-    "validationCount": 1
+    "installerHashes": [
+      "EA41F2AE8E8DF8460CE43426F83CB869BDC3CF1B05A257B03922AE6188ABA7DC"
+    ],
+    "lastUpdated": "2026-09-14T12:57:28.2682165Z"
   },
   "openwong2kim.wsnap": {
     "installerHashes": [
@@ -9405,15 +9405,15 @@
     "version": "1.5.4"
   },
   "xushengfeng.eSearch": {
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-22T12:51:56.5536873Z",
-    "installerHashes": [
-      "A7428C4D380C1E165AA80B5220E9615A35B33CBA12C45E3EBF0AA4B1367ADBA9"
-    ],
+    "version": "15.5.1",
+    "manifestHash": "9C495F0C0F0850407DE13704BC4F9CCE46513413FEB9A2349A7B9887AA0C09E6",
     "validationCount": 1,
-    "manifestHash": "2573A0457E57D6C1DEA41E55D4C36CF131AADF103B4A81A4D7FBE78BF62BBA01",
-    "version": "15.4.2",
-    "description": ""
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "installerHashes": [
+      "4179CEE20D3A8087CEF6B41669AAC3C983A42C955327A69FD03B0493E1CF994E"
+    ],
+    "lastUpdated": "2026-09-14T12:57:28.2468126Z"
   },
   "Y-ASLant.ElegantClipboard": {
     "state": "VALIDATION_PASSED",
