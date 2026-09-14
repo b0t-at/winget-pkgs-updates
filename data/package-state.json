@@ -2506,15 +2506,15 @@
     }
   },
   "Fangyuan025.Chaty": {
-    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "lastUpdated": "2026-09-12T08:42:15.0723026Z",
-    "manifestHash": "AA724593D20F549C21E5469575AB99D31E55FBDB7D7C8BCF44A5B5D98C600AF7",
-    "version": "2.1.9",
     "installerHashes": [
-      "5E22B8AC075CE62559CC736BA897DD61EF421C66E6AAAE36A7FCD16D97D52EDC"
-    ]
+      "FBF43D37B015CFCD6164D5E85B6D1BAEE0D1C5610BB43D570BF2BA9CACA4CF2B"
+    ],
+    "validationCount": 1,
+    "description": "",
+    "version": "2.2.0",
+    "manifestHash": "0C0CC1519DD34EDFDA86C816582901B129DEDC6CE0E1893B040A61318C3AE346",
+    "lastUpdated": "2026-09-14T04:56:07.3854932Z"
   },
   "Feho.LogNav": {
     "installerHashes": [
@@ -2536,15 +2536,15 @@
     }
   },
   "Fidpa.Hablara": {
-    "version": "1.7.4",
-    "installerHashes": [
-      "F4488FA71BE1E1B203E5A79E0A0F6423115C3BB03D7F677F78F20DA6A2F6883A"
-    ],
-    "description": "",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "7064E30536BB862512B412DB3330FCF80DE428DA18258FEEC2F43133FA8B5BF2",
+    "installerHashes": [
+      "BD2808FE6BAE3F11D22DA8D3BC0760292B98CE9F3EA457DF086492840996F634"
+    ],
     "validationCount": 1,
-    "lastUpdated": "2026-08-19T15:56:01.4740262Z"
+    "description": "",
+    "version": "1.7.7",
+    "manifestHash": "457B5D8E0DD38CA5E13FAA0A9567DA036DF8C843034DEC68CC83A496DCA9F2C9",
+    "lastUpdated": "2026-09-14T04:56:07.4906273Z"
   },
   "Filamental.Filamental": {
     "manifestHash": "7DB927E344E10AC0040E6E9A0093EB18888EDD1A8FF0C91A2255146BB48574CE",
@@ -2728,12 +2728,12 @@
   },
   "Frnsys.Half_earth": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 5,
+    "validationCount": 6,
     "installerHashes": [
       "CD47FC89C016730378E00399433045CCDB17E9B8ECC1434413C7531B9EB6AD36"
     ],
     "description": "",
-    "lastUpdated": "2026-09-13T16:52:03.6873987Z",
+    "lastUpdated": "2026-09-14T04:56:07.429829Z",
     "manifestHash": "162A9CB4478CCE0219E2D18B3BDBA90BBFD1A2D89CCCF6E863728E377240A4A7",
     "version": "1.0.15"
   },
@@ -4303,15 +4303,15 @@
     "description": ""
   },
   "koedame.chordsketch": {
-    "version": "0.5.0",
-    "lastUpdated": "2026-08-22T20:40:59.8402014Z",
-    "description": "",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "9219E2C3439E0DE630F5EE55CBA320B6D1BCF5198D3A9EE4A0E89607E44D6EFA",
-    "validationCount": 1,
     "installerHashes": [
-      "A347C61C24186FAA1571E8C90BD585B1DD8AE8047F46FEAFB58B9315F652B115"
-    ]
+      "33D2F37EEC97C2BA0C3F87F0DBDA9CB8B467596614E35DCD9B217EFF7067CFF1"
+    ],
+    "validationCount": 1,
+    "description": "",
+    "version": "0.6.0",
+    "manifestHash": "52732FB87A3788F2E4CCF280207C29DBA4355993B5C1CE0994BC5FE45284B1FA",
+    "lastUpdated": "2026-09-14T04:56:07.4137112Z"
   },
   "KRTirtho.Spotube": {
     "manifestHash": "48B938BDAA7E2ADCDF3C6E7B71A7214AF24FFD5388F587258C452A189DDE760D",
@@ -6029,14 +6029,14 @@
   },
   "OpenGeos.GeoLibre": {
     "state": "VALIDATION_PASSED",
-    "version": "2.9.0",
     "installerHashes": [
-      "8AC2174534A5B065BA08CF68CC531241B727AE658775FE450FD12FFA9B9E2890"
+      "B68F8D2D3355433394DD7694D8AED8A623BA24BA85BFEEA06DDF8CF70886BD03"
     ],
-    "manifestHash": "18BD920ADB64DBB88B20EC897D979B5FF863DA5B07CFE6CD83BAA09AB73CA499",
-    "lastUpdated": "2026-09-04T13:10:02.9282566Z",
+    "validationCount": 1,
     "description": "",
-    "validationCount": 1
+    "version": "3.0.0",
+    "manifestHash": "DFF4F8DCA48C71E9B60893A5D6AC9C98A5F25DDE206350FEEDE0803810852731",
+    "lastUpdated": "2026-09-14T04:56:07.5036817Z"
   },
   "OpenHV.OpenHV": {
     "description": "",
