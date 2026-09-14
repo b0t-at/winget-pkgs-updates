@@ -133,7 +133,7 @@
       "C03035EBBB96FBE89D7793876C59EEFE6E3D03241436273BCEBABD355FADE29B"
     ],
     "openPr": {
-      "checkedAt": "2026-09-13T20:20:27.2112011Z",
+      "checkedAt": "2026-09-14T20:21:45.9370346Z",
       "version": "0.84.2"
     }
   },
@@ -2147,7 +2147,7 @@
     ],
     "manifestHash": "31947E74E60A0462F2AAA67D5F8C21F460756C9F606A2E99B5AA0055A2064E78",
     "openPr": {
-      "checkedAt": "2026-09-13T20:20:29.8080378Z",
+      "checkedAt": "2026-09-14T20:21:48.7201334Z",
       "version": "2.12.4"
     }
   },
@@ -3936,8 +3936,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.9.7",
-      "checkedAt": "2026-09-14T01:02:06.5132468Z"
+      "checkedAt": "2026-09-14T20:21:51.631455Z",
+      "version": "2026.9.8"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -9676,11 +9676,7 @@
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "901E72797F7C2AF3AE30DB78F4F8D363C9E53879E0EFC308671EE726ADE0A7CA"
-    ],
-    "openPr": {
-      "version": "2.8.2",
-      "checkedAt": "2026-08-31T12:34:36.0102616Z"
-    }
+    ]
   },
   "zoharbabin.web-researcher-mcp": {
     "manifestHash": "BB0C3E3534E21233F0C818F19220F151971FC358484D73971759D2134670E2E3",
