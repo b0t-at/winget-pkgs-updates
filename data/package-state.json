@@ -133,8 +133,8 @@
       "C03035EBBB96FBE89D7793876C59EEFE6E3D03241436273BCEBABD355FADE29B"
     ],
     "openPr": {
-      "checkedAt": "2026-09-14T20:21:45.9370346Z",
-      "version": "0.84.2"
+      "version": "0.84.2",
+      "checkedAt": "2026-09-15T20:21:56.2337949Z"
     }
   },
   "AES256Afro.VideoKidnapper": {
@@ -2143,8 +2143,8 @@
     ],
     "manifestHash": "31947E74E60A0462F2AAA67D5F8C21F460756C9F606A2E99B5AA0055A2064E78",
     "openPr": {
-      "checkedAt": "2026-09-14T20:21:48.7201334Z",
-      "version": "2.12.4"
+      "version": "2.12.4",
+      "checkedAt": "2026-09-15T20:22:00.6678244Z"
     }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
