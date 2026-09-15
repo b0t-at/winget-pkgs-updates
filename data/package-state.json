@@ -654,15 +654,15 @@
     ]
   },
   "AtaraxyLabs.sem": {
-    "description": "",
     "installerHashes": [
-      "570BD648DE8CA497F22D3BC4A1D35CC3C311736C9D25994EF69DBA02EC2FCE4A"
+      "6D6D9CF93A81C3F5318247CB199ECB8E2FBC44D59493E7D8A7FA8AD026D8949F"
     ],
     "validationCount": 1,
-    "manifestHash": "70ABB0B14861BF23822AE9A43DF47E2EF1FFD34AC8C1B8D6C93342864DE1CA1E",
-    "version": "0.24.0",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-01T20:51:44.4219476Z"
+    "description": "",
+    "version": "0.25.0",
+    "manifestHash": "FF95EECEB373712604113B695DB11C6699312673CBEB10F4383AF61455ADA254",
+    "lastUpdated": "2026-09-15T01:20:35.6193453Z"
   },
   "Avidemux.Avidemux": {
     "configHealth": {
@@ -2736,12 +2736,12 @@
   },
   "Frnsys.Half_earth": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 7,
+    "validationCount": 8,
     "installerHashes": [
       "CD47FC89C016730378E00399433045CCDB17E9B8ECC1434413C7531B9EB6AD36"
     ],
     "description": "",
-    "lastUpdated": "2026-09-14T21:02:28.502266Z",
+    "lastUpdated": "2026-09-15T01:20:35.5503313Z",
     "manifestHash": "162A9CB4478CCE0219E2D18B3BDBA90BBFD1A2D89CCCF6E863728E377240A4A7",
     "version": "1.0.15"
   },
@@ -5215,14 +5215,14 @@
   },
   "Moku.Moku": {
     "installerHashes": [
-      "82206AC50048C7BC8E9AABB0BA115FBF7661928F2FCD41472F78145171BC6A0D"
+      "050F7E722786A4736F7DE46AEB1ECE9E5FDDE1C4CDDE10E3CE0DB57F11C26760"
     ],
-    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "0.11.5",
-    "lastUpdated": "2026-09-07T04:41:45.1179204Z",
+    "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "DBB0C50B970259F0DB75FB735D00275FFAA96E0178DA2137CC0198D1B67DC3BC"
+    "version": "0.12.0",
+    "manifestHash": "105BD202311747055AF60C0300605E05C00B818C66414B80951362786AF70BE7",
+    "lastUpdated": "2026-09-15T01:20:35.5974208Z"
   },
   "moneymanagerex.moneymanagerex": {
     "installerHashes": [
