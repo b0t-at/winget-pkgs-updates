@@ -653,12 +653,12 @@
     "installerHashes": [
       "6D6D9CF93A81C3F5318247CB199ECB8E2FBC44D59493E7D8A7FA8AD026D8949F"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_PASSED",
     "description": "",
     "version": "0.25.0",
     "manifestHash": "FF95EECEB373712604113B695DB11C6699312673CBEB10F4383AF61455ADA254",
-    "lastUpdated": "2026-09-15T01:20:35.6193453Z"
+    "lastUpdated": "2026-09-15T12:55:05.324434Z"
   },
   "Avidemux.Avidemux": {
     "configHealth": {
@@ -1410,16 +1410,16 @@
     ]
   },
   "chuccp.win-sshpass": {
-    "validationCount": 1,
-    "lastUpdated": "2026-08-19T01:25:20.7429754Z",
+    "installerHashes": [
+      "47CDC49C4F7D2F0F097B05D4639E2EAF8A34CDA2B23390D4C2B567606C4BFA54",
+      "786F97C3A971C239186067983CC260C698776949CD3D00F15148B5F8E9A4BA16"
+    ],
     "description": "",
     "state": "VALIDATION_PASSED",
-    "version": "0.9.1",
-    "installerHashes": [
-      "A46F29A2E8682BDA05365580ED02DDAF27F26D286D2A28CF5B3557C098C39336",
-      "C6A49FDF8F85D22BC91E09C13D10AAE0405A995ED202779427D3545DD0D5F4BA"
-    ],
-    "manifestHash": "CB0825A096FCC95E520B44198542F6C1553ED3C12FA5C3E4219D7A57A15AECF5"
+    "version": "0.9.4",
+    "lastUpdated": "2026-09-15T12:55:05.2326951Z",
+    "validationCount": 1,
+    "manifestHash": "6D84AD88903A6B5FCE47079694838A9F681E580CC15B566A63F33E3659CDBBC8"
   },
   "chuthree.BrewGuide": {
     "lastUpdated": "2026-08-19T17:46:49.9495234Z",
@@ -2736,12 +2736,12 @@
   },
   "Frnsys.Half_earth": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 9,
+    "validationCount": 10,
     "installerHashes": [
       "CD47FC89C016730378E00399433045CCDB17E9B8ECC1434413C7531B9EB6AD36"
     ],
     "description": "",
-    "lastUpdated": "2026-09-15T08:56:32.8570918Z",
+    "lastUpdated": "2026-09-15T12:55:05.263937Z",
     "manifestHash": "162A9CB4478CCE0219E2D18B3BDBA90BBFD1A2D89CCCF6E863728E377240A4A7",
     "version": "1.0.15"
   },
@@ -4773,16 +4773,16 @@
     }
   },
   "Martchus.syncthingctl": {
-    "lastUpdated": "2026-08-14T10:42:15.1510807Z",
-    "manifestHash": "513CF90AB002092F29AE6E0DEF7ABD0CD04CDD270B805A8E83D0E2C4D3E54CE5",
-    "version": "2.1.4",
-    "validationCount": 1,
+    "installerHashes": [
+      "CD0605DAACAFD604D1693DA2A0610C83C80F1AF9B73D1E33B9752A581FF77EE8",
+      "42252AA6F5B3BF06BCBEDFD8177632E4BF13DC9CF77DB4CAA274B0ED19D502F1"
+    ],
     "description": "",
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "2618C54791497D762FCE61011661636A7EB9E7A4D962767743AE523E2560E88D",
-      "A639CAAA1E1BD065350A56B4C4D608FCE32FF2B49B74101A95C5DE5F7818EF9A"
-    ]
+    "version": "2.1.5",
+    "lastUpdated": "2026-09-15T12:55:05.1593083Z",
+    "validationCount": 1,
+    "manifestHash": "DBBF6DA484C19A070C872608BA8435904FCBCC1521505BAD56A285EDE285225D"
   },
   "masaodev.quick-dash-launcher": {
     "validationCount": 1,
@@ -8441,15 +8441,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "lastUpdated": "2026-09-14T16:49:58.3570041Z",
-    "validationCount": 1,
-    "manifestHash": "BD5656DB7A4FB7EF99BF7F72D4C00ECFEE836BC835A271A37F210675B0DE48EA",
-    "version": "2.23.1",
     "installerHashes": [
-      "0603F3F99A1091620B5D1E53F720AFD2A89F1506C01CDBE8E2FE1D43425F69C0"
-    ]
+      "DAA7D065959C8EFE6197BC9AFBCC263547D6491FDE02A56D3859381092559746"
+    ],
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "version": "2.23.3",
+    "lastUpdated": "2026-09-15T12:55:05.3013557Z",
+    "validationCount": 1,
+    "manifestHash": "602A4E4730233C4B159C16B68F520AB02A732AD8912975B9C177BC7DCE1CCD47"
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
