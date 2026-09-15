@@ -117,7 +117,7 @@
     "version": "0.107.78",
     "openPr": {
       "version": "0.107.79",
-      "checkedAt": "2026-09-14T04:28:07.6554609Z"
+      "checkedAt": "2026-09-15T08:31:13.1334822Z"
     }
   },
   "AdGuard.dnsproxy": {
@@ -1388,7 +1388,7 @@
   "CharlesMilette.TranslucentTB": {
     "openPr": {
       "version": "2026.2",
-      "checkedAt": "2026-09-14T04:28:09.24855Z"
+      "checkedAt": "2026-09-15T08:31:15.011665Z"
     }
   },
   "ChiaNetwork.GUIforChiaBlockchain": {
@@ -2202,7 +2202,11 @@
     ],
     "description": "",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "3EAB1E5A6E607AC40A8D48C149D5E5B2207604A2D465245704CB6FD111942437"
+    "manifestHash": "3EAB1E5A6E607AC40A8D48C149D5E5B2207604A2D465245704CB6FD111942437",
+    "openPr": {
+      "version": "5.5.15",
+      "checkedAt": "2026-09-15T08:31:15.4439752Z"
+    }
   },
   "Ellosoft.AWSCredentialsManager": {
     "lastUpdated": "2026-08-19T17:46:49.9916688Z",
@@ -2510,7 +2514,7 @@
     ],
     "openPr": {
       "version": "19.0.2",
-      "checkedAt": "2026-09-14T04:28:09.5430961Z"
+      "checkedAt": "2026-09-15T08:31:15.8035694Z"
     }
   },
   "Fangyuan025.Chaty": {
@@ -3137,7 +3141,7 @@
     "version": "36.1",
     "openPr": {
       "version": "36.1",
-      "checkedAt": "2026-09-14T04:28:10.3118078Z"
+      "checkedAt": "2026-09-15T08:31:18.099159Z"
     }
   },
   "goplus.xgo": {
@@ -3579,11 +3583,7 @@
       "0FC281BEDA104F944FB0E0AEDA91F36DFC4C25716B18E3DD3376FF913081F7E7"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 4,
-    "openPr": {
-      "checkedAt": "2026-08-29T08:25:51.899761Z",
-      "version": "26.8.0-0"
-    }
+    "validationCount": 4
   },
   "houmain.GPUpad": {
     "manifestHash": "A276F3A5641C4E61E8F321E6120CA7A503832350E2E244B58DB14A8DBC062F4F",
@@ -3932,8 +3932,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-09-14T20:21:51.631455Z",
-      "version": "2026.9.8"
+      "version": "2026.9.9",
+      "checkedAt": "2026-09-15T08:31:20.4183934Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -3957,11 +3957,7 @@
     "state": "VALIDATION_PASSED",
     "version": "8.1.2-4",
     "manifestHash": "0C926E13803D0BBF5008C8B0D054568100AF418B461FA295C84B710470F2175B",
-    "validationCount": 1,
-    "openPr": {
-      "version": "8.1.2-4",
-      "checkedAt": "2026-09-11T00:54:01.7621066Z"
-    }
+    "validationCount": 1
   },
   "JeromeHerrman.VPinCommander": {
     "installerHashes": [
