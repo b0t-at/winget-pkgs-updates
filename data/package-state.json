@@ -1597,15 +1597,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Crate-CI.Typos": {
-    "description": "",
-    "installerHashes": [
-      "8740867A0D9E44A62F0803E37A669EC3C6CD17AB63CD49D00E14A96D3E03CCC3"
-    ],
-    "validationCount": 1,
-    "manifestHash": "D86BF9BE8EDDF76CD2265A3481BD9B1FDD76C4002AC9905BCBB54AC83E6FC7CE",
-    "version": "1.50.1",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-01T20:51:44.6405769Z"
+    "installerHashes": [
+      "8474CA8BD72DF497B7DEE2272345BDEA0D4926B18B708FAEA492FC9BCFD0B0E9"
+    ],
+    "manifestHash": "12BA259EB74339D36634026C06D15947426B775DD0511A6416DC7B1249EC48E3",
+    "validationCount": 1,
+    "version": "1.50.2",
+    "description": "",
+    "lastUpdated": "2026-09-15T16:44:37.6334881Z"
   },
   "CrewHaus.CLI": {
     "manifestHash": "1BE50DB5121F96CD338CD188BE792E7D52C3F9213135E323572091AD0AEA2AA6",
@@ -2555,15 +2555,15 @@
     "lastUpdated": "2026-09-14T04:56:07.4906273Z"
   },
   "Filamental.Filamental": {
-    "lastUpdated": "2026-09-14T08:56:03.5356411Z",
-    "version": "0.3.46",
-    "installerHashes": [
-      "B06950B4972E0BD46BA5048781E023F3A9F4C6500949CE164B23B8DA1038BB47"
-    ],
     "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "EAAFD2769BEFF3F67E57698D29A092E5AAB3F6B2704273BB0D2C7E91F366F10E"
+    ],
+    "manifestHash": "2739CC687761332F39736B73E20D9DDB701C8CE1D53E70D40544CC9C3941718F",
+    "validationCount": 1,
+    "version": "0.3.47",
     "description": "",
-    "manifestHash": "BE3ACBA4F81A5693B292E3313B511B89CF0406C3BB34DDDBD850721FB5A823C5",
-    "validationCount": 1
+    "lastUpdated": "2026-09-15T16:44:37.662907Z"
   },
   "FirenzeLor.gemini-collector": {
     "validationCount": 1,
@@ -6319,13 +6319,13 @@
   "Parslee.Car": {
     "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "596E72C776CC4C754DD1E37DC429BDB0167865E29031CCCC3F39B7EA0EBE14A7"
+      "704672AE91C665D249DA99362A4BA5BA3D6885E0BA1EE3814A801BAD7749B8E1"
     ],
-    "description": "",
+    "manifestHash": "75C129BF74E964FEE8E34282E9C2AC669D618456B42D57F5F2FEB023BE42E5CC",
     "validationCount": 1,
-    "lastUpdated": "2026-09-11T21:04:35.3247741Z",
-    "manifestHash": "5CFA3750DDC161061E8CCD3BE82B0BB3572011370B328918C3C227B1E252BFBF",
-    "version": "0.53.0"
+    "version": "0.54.0",
+    "description": "",
+    "lastUpdated": "2026-09-15T16:44:37.5578863Z"
   },
   "Passportogo.Voio": {
     "lastUpdated": "2026-08-19T21:00:00.1586395Z",
