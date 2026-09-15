@@ -534,14 +534,14 @@
     "state": "VALIDATION_PASSED"
   },
   "argoproj.argocd": {
-    "manifestHash": "7D20EA803B90374BEFEFE0218A9A3D4B7AF79621B425EF3C321E24FED894AF03",
-    "version": "3.5.2",
-    "description": "",
-    "installerHashes": [
-      "B9AE7274C180BDD6F61D7251DCCAD7C5E50B62873F4CB0813BBB482CF7D909F1"
-    ],
-    "lastUpdated": "2026-08-27T23:45:19.669617Z",
     "validationCount": 1,
+    "lastUpdated": "2026-09-15T04:56:52.9534113Z",
+    "installerHashes": [
+      "C7C5A152FE865F2262F4BB19EDA66BAF590CC18E0E125A902BA6942CBEEE92E9"
+    ],
+    "version": "3.5.3",
+    "description": "",
+    "manifestHash": "AA4B74AFEFF04A8339A350FB410570C353F097F913F2994E8B994CDDE77C3649",
     "state": "VALIDATION_PASSED"
   },
   "Aries-Sciences-LLC.AI-Chess": {
@@ -4543,15 +4543,15 @@
     "state": "VALIDATION_PASSED"
   },
   "loreste.mako": {
-    "lastUpdated": "2026-09-13T16:52:03.7820716Z",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-15T04:56:53.0230628Z",
     "installerHashes": [
-      "260058415710480299379384E980EF799BB46906E09E72C73E7F2BE807054426"
+      "D4F70DADB2DB47FE332B6250203677731DE38F1E2FE1AEB50EB46352A794C031"
     ],
-    "manifestHash": "275DD45B74307AE6BC9E5ED98A115857B02B6777BF50D8DDB319B471F0355466",
+    "version": "0.6.34",
     "description": "",
-    "version": "0.6.28"
+    "manifestHash": "5F66A91EE56AB57DCCB9CF490AA4EF7FF0AE10F0F226D484717086029E9090E9",
+    "state": "VALIDATION_PASSED"
   },
   "LowLevelDesign.ProcessGovernor": {
     "manifestHash": "09E69D0C7C3FCD8235F3E38BE39881FEE7DC968A99C30941A28BED33654E0AA0",
@@ -4793,15 +4793,15 @@
     ]
   },
   "masaodev.quick-dash-launcher": {
-    "state": "VALIDATION_PASSED",
-    "version": "0.7.28",
-    "lastUpdated": "2026-09-13T04:50:56.6113344Z",
-    "manifestHash": "3D2C0CFB5A75B99DC0E2CDAC485080F7B5CF6B623C5E4F89F34D8CCB3159D54C",
     "validationCount": 1,
-    "description": "",
+    "lastUpdated": "2026-09-15T04:56:52.9335357Z",
     "installerHashes": [
-      "51E55A5D7E010DF60529C4D227F9F399D6E3B7C4FE58B077BDFE21704CCF008E"
-    ]
+      "379A7A4A617A50243DC92295B7A1D5B648DA5272F136AB23AB8E95E7F4E4E17A"
+    ],
+    "version": "0.7.29",
+    "description": "",
+    "manifestHash": "822459912204AE28803460CBEB1B516574E5A89AF37A125055466B0D451DFD10",
+    "state": "VALIDATION_PASSED"
   },
   "Mateuscruz19.BATorrent": {
     "configHealth": {
@@ -5217,12 +5217,12 @@
     "installerHashes": [
       "050F7E722786A4736F7DE46AEB1ECE9E5FDDE1C4CDDE10E3CE0DB57F11C26760"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_PASSED",
     "description": "",
     "version": "0.12.0",
     "manifestHash": "105BD202311747055AF60C0300605E05C00B818C66414B80951362786AF70BE7",
-    "lastUpdated": "2026-09-15T01:20:35.5974208Z"
+    "lastUpdated": "2026-09-15T04:56:52.9966593Z"
   },
   "moneymanagerex.moneymanagerex": {
     "installerHashes": [
@@ -5408,15 +5408,15 @@
     "lastUpdated": "2026-09-13T20:44:15.4338737Z"
   },
   "Mukunku.ParquetViewer": {
-    "installerHashes": [
-      "DAC1AA6E410ECF1F345A747F1A09D8BFBD321D08AC5C9EA295C20E9210EF3326"
-    ],
-    "version": "4.2.0.0",
-    "manifestHash": "3D6E07B6B25C5B38C8240EB4B6537F68AE97A7AD35B32F1BD9A90D54718482BB",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-19T17:02:25.8150866Z",
     "validationCount": 1,
-    "description": ""
+    "lastUpdated": "2026-09-15T04:56:52.9762007Z",
+    "installerHashes": [
+      "25013D16E1A4715EDF4F5D2A618C414B8528ED2CA727D24337B82D8B2F13B86E"
+    ],
+    "version": "4.2.1.0",
+    "description": "",
+    "manifestHash": "4FCE637C28AE9F4D6452AAECA89F70C6FE2A26924AD348C765005DD8DD3593AE",
+    "state": "VALIDATION_PASSED"
   },
   "MullvadVPN.MullvadVPN": {
     "installerHashes": [
@@ -6160,15 +6160,15 @@
     }
   },
   "OpenWhispr.OpenWhispr": {
-    "version": "1.10.1",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "74F27C2F3BC34CFD1BC74BBE5E41BC78A5E48930B0974F524C0A844CA3CF2AC7",
-    "lastUpdated": "2026-09-14T21:02:28.6002483Z",
-    "installerHashes": [
-      "B7394883CE40C297E4CA57A285A64F05DCF06D4F0134DC178EFE071561530820"
-    ],
     "validationCount": 1,
-    "description": ""
+    "lastUpdated": "2026-09-15T04:56:52.9098556Z",
+    "installerHashes": [
+      "35ECFEA27B1095AA6CB29CBA0E0AF353D8CBCD7917DA54D73CED7868A47F66ED"
+    ],
+    "version": "1.10.2",
+    "description": "",
+    "manifestHash": "6D73710667165695D3C14336301ECA3E271FB446EDC76F79141057F4D170831E",
+    "state": "VALIDATION_PASSED"
   },
   "openwong2kim.wmux": {
     "version": "3.55.0",
@@ -9368,15 +9368,15 @@
     ]
   },
   "xpipe-io.xpipe.portable": {
-    "version": "24.2.1",
-    "description": "",
-    "lastUpdated": "2026-09-14T08:56:03.4817519Z",
-    "manifestHash": "585E9276536F61533E9FA191DDCA7BDE0B514747E60569F612192FA505CFA304",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "validationCount": 1,
+    "lastUpdated": "2026-09-15T04:56:52.8594461Z",
     "installerHashes": [
-      "C93C394AB79B44F72A83D6F7C5B979A2BA523B38B08EA173F6AB29D48E3E14D8"
-    ]
+      "E63AAB94CD39AA993C43C3716A9D809C77CEC595CA0EF695513EAA00CE88AF92"
+    ],
+    "version": "24.3",
+    "description": "",
+    "manifestHash": "8F0EBE34BFFD7A6AD297CFC0A66B0AB00306B278D0FE565704EAB7602009C399",
+    "state": "VALIDATION_PASSED"
   },
   "xssnick.TON-Torrent": {
     "state": "VALIDATION_PASSED",
