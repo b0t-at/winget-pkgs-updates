@@ -3877,11 +3877,7 @@
     "lastUpdated": "2026-09-01T12:59:06.9887974Z",
     "validationCount": 1,
     "manifestHash": "C6AF35C4CB48F9319AEF4E399DC36FCCE7E537C1A9631EDCA2AFE97605E57D9A",
-    "state": "VALIDATION_PASSED",
-    "openPr": {
-      "checkedAt": "2026-09-01T16:42:49.8767478Z",
-      "version": "7.2.6"
-    }
+    "state": "VALIDATION_PASSED"
   },
   "jark006.jarkViewer": {
     "lastUpdated": "2026-08-18T01:43:26.4804154Z",
