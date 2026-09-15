@@ -383,8 +383,8 @@
     "manifestHash": "4624C38BDFBD423DB7146F24EA3A3EFACB98AD85F486E496A342C234646B7A69",
     "description": "",
     "openPr": {
-      "version": "2.7.5",
-      "checkedAt": "2026-09-14T08:35:17.0888597Z"
+      "checkedAt": "2026-09-15T12:33:14.2759217Z",
+      "version": "2.7.5"
     }
   },
   "Anki.Anki": {
@@ -422,8 +422,8 @@
     "lastUpdated": "2026-08-22T08:51:40.3505732Z",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "version": "0.2.2",
-      "checkedAt": "2026-09-14T08:35:17.4432716Z"
+      "checkedAt": "2026-09-15T12:33:14.6941346Z",
+      "version": "0.2.2"
     }
   },
   "AntiMicroX.antimicrox": {
@@ -446,11 +446,7 @@
     "version": "0.14.2",
     "installerHashes": [
       "F9B3576625B6E003CE27F1B022913F13CFEA08D212C223D3FB94A0C173C9CDC5"
-    ],
-    "openPr": {
-      "checkedAt": "2026-09-10T20:20:22.4243767Z",
-      "version": "0.14.2"
-    }
+    ]
   },
   "AppiumDevelopers.AppiumInspector": {
     "state": "VALIDATION_FAILED",
@@ -6558,11 +6554,7 @@
     "lastUpdated": "2026-09-12T12:49:22.485109Z",
     "manifestHash": "F86E1D40816DDCD9FD528BE94FB551C52F1EE1AF8DC70F59044949DEFBCBF040",
     "state": "VALIDATION_PASSED",
-    "version": "12.4.1",
-    "openPr": {
-      "version": "12.4.1",
-      "checkedAt": "2026-09-13T16:21:22.4650957Z"
-    }
+    "version": "12.4.1"
   },
   "PocketBase.PocketBase": {
     "version": "0.40.4",
@@ -8326,8 +8318,8 @@
     "manifestHash": "4B796A972C2DBB5AE75EB8F4F8B332F0CBE77928187E84989680F6AB184F42AA",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "version": "5.7.0",
-      "checkedAt": "2026-09-14T08:34:15.0455983Z"
+      "checkedAt": "2026-09-15T12:33:04.4944202Z",
+      "version": "5.7.0"
     }
   },
   "termio.soft-jp.com.TermioWin": {
