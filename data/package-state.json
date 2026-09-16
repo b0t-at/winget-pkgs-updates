@@ -4695,7 +4695,11 @@
     "version": "2.6.0",
     "manifestHash": "496F7B7162F6D6408AFB484A57E797C50E7CB9C0B1F339197A3B806EDF59CF83",
     "lastUpdated": "2026-09-11T08:56:13.8304004Z",
-    "validationCount": 2
+    "validationCount": 2,
+    "openPr": {
+      "version": "2.6.1",
+      "checkedAt": "2026-09-16T00:55:32.3935404Z"
+    }
   },
   "marcinz606.NegPy": {
     "description": "",
@@ -5841,7 +5845,11 @@
       "526E47DB7C295D017E9514DF5BB20C6F32B3D1170F2C8BB9C59B53185F5BD6FF"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 1
+    "validationCount": 1,
+    "openPr": {
+      "version": "0.34.1",
+      "checkedAt": "2026-09-16T00:55:32.7024875Z"
+    }
   },
   "Ombrelin.PandocGui": {
     "configHealth": {
