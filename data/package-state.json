@@ -1844,15 +1844,15 @@
     "lastUpdated": "2026-08-29T12:58:34.0694394Z"
   },
   "Dimmy.Dimmy": {
-    "lastUpdated": "2026-09-12T20:37:04.1676438Z",
     "validationCount": 1,
-    "description": "",
-    "manifestHash": "E6775CBB86D04CA379C51C3B61E798B425B02EA1EFA4C9BAB4F3C7731B76F0D1",
     "state": "VALIDATION_PASSED",
+    "manifestHash": "9E44399C1280E7591FDB1C9948042CCFC34DB3FA4D3B55CD94D2D798290D12E8",
     "installerHashes": [
-      "EE0BF55AD2C1BAA6DDB9A3F3ABDEBFB3718F3CE73FCD5099A9A0C6A56BB5BDB7"
+      "BAD331AE08F8D397EE7795582F3FFB5E20E64B165F51BB96F8F592C20E72849A"
     ],
-    "version": "0.7.2"
+    "description": "",
+    "lastUpdated": "2026-09-16T20:54:00.2953145Z",
+    "version": "0.7.4"
   },
   "DimonSmart.NugetMcpServer": {
     "version": "1.1.9",
@@ -2624,14 +2624,26 @@
     ],
     "description": ""
   },
+  "FrankZhu.ZManagerCLI": {
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "589D06DEFD1035D1C4CA8C6DA8C83CF204863517BFEDE2F46AB2FE4BB17A71AB",
+    "installerHashes": [
+      "E313540CE40B3565607CCFA6076844E8AEED57D9060808255652B0100B2CA5AB",
+      "3C34A4DEFF209FE4DF4D7F95A55CBF97780A8862630D97CF292705BB513DD77B"
+    ],
+    "description": "",
+    "lastUpdated": "2026-09-16T20:54:00.3162713Z",
+    "version": "2.1.3"
+  },
   "Frnsys.Half_earth": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 11,
+    "validationCount": 12,
     "installerHashes": [
       "CD47FC89C016730378E00399433045CCDB17E9B8ECC1434413C7531B9EB6AD36"
     ],
     "description": "",
-    "lastUpdated": "2026-09-16T08:55:51.8687258Z",
+    "lastUpdated": "2026-09-16T20:54:00.2649753Z",
     "manifestHash": "162A9CB4478CCE0219E2D18B3BDBA90BBFD1A2D89CCCF6E863728E377240A4A7",
     "version": "1.0.15"
   },
@@ -3762,6 +3774,17 @@
     ],
     "state": "VALIDATION_PASSED",
     "version": "0.8.48"
+  },
+  "jawhitti.INTERCAL64": {
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "5B4B30C4E40CBD6EA043B5147D959820F01799B290D8962D76E9B17B4A60050A",
+    "installerHashes": [
+      "B66B4B7E9958948D55D520E3A6E6643FFE6B12F2C6F33923828610144F7BC114"
+    ],
+    "description": "",
+    "lastUpdated": "2026-09-16T20:54:00.3341196Z",
+    "version": "2.0.3"
   },
   "jcalado.VoxDMR": {
     "validationCount": 1,
@@ -5326,17 +5349,17 @@
     "description": ""
   },
   "NATSAuthors.NATSServer": {
-    "description": "",
-    "installerHashes": [
-      "E212979E8D68782A3E6AB2D2EF4B37885B465788B4130C252781B66DD606C0D2",
-      "B47E9C69480E41E668E495E8B980B12DBF226D1CE7ECEB9C44ACDD33640BAFCD",
-      "D7D7A4D22039F265F049591194F592BAB742F33ED36236F4475F670A275946FB"
-    ],
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-29T20:47:20.1166066Z",
-    "version": "2.14.6",
     "validationCount": 1,
-    "manifestHash": "8F35FE0E55D6C2B78FFAC70130421986866B4A067343975BD002CC4F0AA9C523"
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "DAC6C37B9EB9B0AAE196BDEC661389556D233586BB0ECD1B71841E7FCD5880B2",
+    "installerHashes": [
+      "A4FABB6F65991C3EBB68DC6A2C7FA392BE576075F849A00C1006E50EEE951CFE",
+      "EF6B4604CC84CD37192E6407CE1BB975F380A5293DCCFDB126EAF11311C58AC6",
+      "783903719E550953D2993620C2F932FBB00C25CA238A7A19B77A5855374D11C9"
+    ],
+    "description": "",
+    "lastUpdated": "2026-09-16T20:54:00.2027473Z",
+    "version": "2.14.7"
   },
   "NATSAuthors.nsc": {
     "lastUpdated": "2026-08-18T17:25:14.0751Z",
