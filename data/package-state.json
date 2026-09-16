@@ -1175,15 +1175,15 @@
     }
   },
   "BrunoVolpato.ivygrep": {
+    "manifestHash": "8CE3F9624A83A50F0C50BEC353300B058D1C9032E963AE44BDB6B2F7281A8433",
+    "lastUpdated": "2026-09-16T01:14:49.5693658Z",
+    "state": "VALIDATION_PASSED",
+    "version": "1.2.16",
     "validationCount": 1,
-    "manifestHash": "2F01FF6C9BAF915F4EF77E4E81F51B5F645A245974311E3CD31D7FC2F50BCD9A",
-    "installerHashes": [
-      "05FE5E423F4D3F46A123BCF65F1CFFB3F4E61FCD66F226ADA27089849877F92B"
-    ],
-    "version": "1.2.14",
     "description": "",
-    "lastUpdated": "2026-09-10T09:04:57.4200127Z",
-    "state": "VALIDATION_PASSED"
+    "installerHashes": [
+      "1ACE53833F49B49F62BF72DC4BD796BB687E3C0222E87FB0E0CEEB3B75CF2EE0"
+    ]
   },
   "bufbuild.buf": {
     "state": "VALIDATION_PASSED",
@@ -2111,15 +2111,15 @@
     "manifestHash": "1D7FF29AFC14AF9249CE7B906ECE45082CEF5AE326B718299ACEDA2B02414ADA"
   },
   "edde746.Plezy": {
-    "installerHashes": [
-      "90E08E9B2659318A3508464EF6E28B9A2A1D177EDB003632A671B2892F94A15A"
-    ],
-    "manifestHash": "AFEBA57156A42F374F18BEF3D7393BEF79FD92F07ECC2B9C4DC4B0C647C7A706",
-    "description": "",
-    "validationCount": 1,
-    "version": "2.19.1",
+    "manifestHash": "9665F38204729C6B0A51E56E1E137BAA1EA61D24A02C3E8E7A53BAB18B09BA3F",
+    "lastUpdated": "2026-09-16T01:14:49.5885916Z",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-08T16:40:53.2591084Z"
+    "version": "2.20.0",
+    "validationCount": 1,
+    "description": "",
+    "installerHashes": [
+      "6BD848C708F34918160D584CB3BAA9CBE5B248BEC4AAC4B8B55F6FFF42000535"
+    ]
   },
   "edenian-prince.rust-secrets": {
     "validationCount": 1,
@@ -7826,15 +7826,15 @@
     ]
   },
   "sprout2000.LeafView": {
-    "manifestHash": "8FA39289AFBDE3A8A81E2BDD2E2EB2E15D011527A21587E21D2CD2FBD27135E7",
-    "validationCount": 1,
-    "lastUpdated": "2026-09-02T01:26:31.1386455Z",
+    "manifestHash": "C5F48843443AFFCC29B3DC9C32B248F317AF472C24BBEC2DF8F233ABC4208481",
+    "lastUpdated": "2026-09-16T01:14:49.5115351Z",
     "state": "VALIDATION_PASSED",
+    "version": "4.4.3",
+    "validationCount": 1,
+    "description": "",
     "installerHashes": [
-      "2E287F44A44B01F3D4ECA63315D1631B941722A10D9E5775BBBE66DB69BC8FDA"
-    ],
-    "version": "4.4.2",
-    "description": ""
+      "18919C83E66193D85B82900C89534C1270AEA94781D3189AF922333DD4D41891"
+    ]
   },
   "sqlectron.sqlectron-gui": {
     "configHealth": {
