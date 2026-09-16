@@ -117,7 +117,7 @@
     "version": "0.107.78",
     "openPr": {
       "version": "0.107.79",
-      "checkedAt": "2026-09-15T08:31:13.1334822Z"
+      "checkedAt": "2026-09-16T12:33:09.710155Z"
     }
   },
   "AdGuard.dnsproxy": {
@@ -1384,7 +1384,7 @@
   "CharlesMilette.TranslucentTB": {
     "openPr": {
       "version": "2026.2",
-      "checkedAt": "2026-09-15T08:31:15.011665Z"
+      "checkedAt": "2026-09-16T12:33:11.7706213Z"
     }
   },
   "ChiaNetwork.GUIforChiaBlockchain": {
@@ -1467,8 +1467,8 @@
     "validationCount": 1,
     "version": "1.0.48275",
     "openPr": {
-      "checkedAt": "2026-09-14T12:33:36.4033984Z",
-      "version": "1.0.50365"
+      "version": "1.0.50508",
+      "checkedAt": "2026-09-16T12:33:12.6805591Z"
     }
   },
   "ciromattia.KCC": {
@@ -2510,7 +2510,7 @@
     ],
     "openPr": {
       "version": "19.0.2",
-      "checkedAt": "2026-09-15T08:31:15.8035694Z"
+      "checkedAt": "2026-09-16T12:33:13.5812055Z"
     }
   },
   "Fangyuan025.Chaty": {
@@ -3137,7 +3137,7 @@
     "version": "36.1",
     "openPr": {
       "version": "36.1",
-      "checkedAt": "2026-09-15T08:31:18.099159Z"
+      "checkedAt": "2026-09-16T12:33:15.5441009Z"
     }
   },
   "goplus.xgo": {
@@ -3925,7 +3925,7 @@
   "jdx.mise": {
     "openPr": {
       "version": "2026.9.9",
-      "checkedAt": "2026-09-15T08:31:20.4183934Z"
+      "checkedAt": "2026-09-16T12:33:17.8962541Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -8322,8 +8322,8 @@
     "manifestHash": "4B796A972C2DBB5AE75EB8F4F8B332F0CBE77928187E84989680F6AB184F42AA",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "checkedAt": "2026-09-15T12:33:04.4944202Z",
-      "version": "5.7.0"
+      "version": "5.7.0",
+      "checkedAt": "2026-09-16T12:34:14.3657291Z"
     }
   },
   "termio.soft-jp.com.TermioWin": {
