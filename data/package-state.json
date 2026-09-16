@@ -192,11 +192,7 @@
     "version": "0.4.0",
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "openPr": {
-      "version": "0.7.0",
-      "checkedAt": "2026-09-04T04:26:54.6642708Z"
-    }
+    "description": ""
   },
   "Aiden1020.LocalSubs": {
     "manifestHash": "213A97D3D7C6F3B5FE864420C3CEF1C3280D138B6B91B0272DB5230389D73EB2",
@@ -270,8 +266,8 @@
     "lastUpdated": "2026-08-20T16:48:27.9600489Z",
     "version": "3.1",
     "openPr": {
-      "version": "3.1",
-      "checkedAt": "2026-08-30T16:21:53.5467505Z"
+      "checkedAt": "2026-09-16T16:25:19.9609241Z",
+      "version": "3.1"
     }
   },
   "Alochi.Monitoring": {
@@ -2519,8 +2515,8 @@
   },
   "Flowscripter.example-cli": {
     "openPr": {
-      "checkedAt": "2026-08-17T16:13:07.5472602Z",
-      "version": "1.8.9"
+      "checkedAt": "2026-09-16T16:24:07.818777Z",
+      "version": "2.0.0"
     }
   },
   "Fly-io.flyctl": {
