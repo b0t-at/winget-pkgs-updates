@@ -438,15 +438,15 @@
     "state": "VALIDATION_PASSED"
   },
   "AppFlowy.AppFlowy": {
-    "manifestHash": "BFDABA7D11442B395A088A3C9BF464A561284C5927F2588E1D4AE81B981F2D41",
-    "validationCount": 1,
-    "description": "",
-    "lastUpdated": "2026-09-10T16:58:49.3885057Z",
-    "state": "VALIDATION_PASSED",
-    "version": "0.14.2",
+    "manifestHash": "DECBA1E4909CE5828E5AF14ABDC5B7986F1A07F2DB905DC90638F252840F208F",
     "installerHashes": [
-      "F9B3576625B6E003CE27F1B022913F13CFEA08D212C223D3FB94A0C173C9CDC5"
-    ]
+      "32A57B6720E90F53A5D089EF33B2159F30B40081E1249AB083534EF9D571A412"
+    ],
+    "version": "0.14.3",
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "lastUpdated": "2026-09-16T04:45:15.6262545Z",
+    "validationCount": 1
   },
   "AppiumDevelopers.AppiumInspector": {
     "state": "VALIDATION_FAILED",
@@ -1682,15 +1682,15 @@
     "manifestHash": "263B33257CF9F27044BE565EA3FDD27E9191C1B809625415F87EA03D36957F63"
   },
   "cubezombies.MidnightAthenaeum": {
-    "state": "VALIDATION_PASSED",
-    "version": "0.18.0",
-    "lastUpdated": "2026-09-13T04:50:56.6590826Z",
-    "manifestHash": "D6D02C17DB9694DEC5F98E7B784328C172E2F74D1A4B9896E15505D9523ED342",
-    "validationCount": 1,
-    "description": "",
+    "manifestHash": "888A7BADCA52EE5B42F755D91B950DA3D3AA1CFB03A6012120CE16761BA13129",
     "installerHashes": [
-      "AE91AD7DE0A8581599CB7634638FB58E4AD7732B604DBA6BAA0F1B1170D41815"
-    ]
+      "51C7E23D4A1179585E93A6A4F02F6535A12677D65306D0853355A11670B298FE"
+    ],
+    "version": "0.21.1",
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "lastUpdated": "2026-09-16T04:45:15.5584552Z",
+    "validationCount": 1
   },
   "CueLang.Cue": {
     "description": "",
@@ -3571,15 +3571,15 @@
     "version": "0.1.18"
   },
   "hoppscotch.Hoppscotch": {
-    "manifestHash": "1EBD54D359A3579115B142FEDB4E84E2553E85C4C49AB57A11EEBC6C0E6A28CE",
-    "lastUpdated": "2026-08-06T10:56:40.5580617Z",
-    "description": "",
-    "version": "26.7.0-0",
+    "manifestHash": "BA68ABA2B5B338BD0362793EA3DA715483006E9EE00D6A1707119E83B3D9B406",
     "installerHashes": [
-      "0FC281BEDA104F944FB0E0AEDA91F36DFC4C25716B18E3DD3376FF913081F7E7"
+      "BC2B14D9A314F92760DD5C00AECBCE327C729E2AF786B6D5421A2AA02A04CD3D"
     ],
+    "version": "26.8.1-0",
     "state": "VALIDATION_PASSED",
-    "validationCount": 4
+    "description": "",
+    "lastUpdated": "2026-09-16T04:45:15.6518323Z",
+    "validationCount": 1
   },
   "houmain.GPUpad": {
     "manifestHash": "A276F3A5641C4E61E8F321E6120CA7A503832350E2E244B58DB14A8DBC062F4F",
