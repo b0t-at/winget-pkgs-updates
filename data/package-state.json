@@ -1041,15 +1041,15 @@
     }
   },
   "Bitwarden.CLI": {
-    "manifestHash": "C2DE2355F913F6DB6F549DB1C0EF49B4B2E7BDC5DF373F788C33AD6507B140D1",
-    "validationCount": 9,
-    "version": "2026.7.0",
-    "installerHashes": [
-      "B0C22438607B789C6452DBD37FFD6BE0E8A61E7A5C4E9AC57804D7AE5ED01B5B"
-    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-09-16T13:25:28.9383245Z",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-05T03:03:19.2110219Z"
+    "installerHashes": [
+      "26A6BB9A88CA9EEAAD9E59DB1816DCCEB3CE6CC80A30B33E1324B0642F4A0F32"
+    ],
+    "version": "2026.8.0",
+    "manifestHash": "A6DBD6DA1E8E60C2D16D54892AA5FD6582A15938B9D5EBEEA95D288829EA5C1F"
   },
   "Bitwarden.DirectoryConnector.CLI": {
     "version": "2026.6.1",
@@ -1705,16 +1705,16 @@
     "lastUpdated": "2026-07-16T13:03:34.6559943Z"
   },
   "cURL.cURL": {
-    "version": "8.21.0.6",
-    "manifestHash": "19D7EC5917021FDA4CCED435910C2F289922ADC603D5267974E381D4C81BFEBA",
+    "validationCount": 1,
+    "lastUpdated": "2026-09-16T13:25:29.104196Z",
+    "description": "",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "0C119D394BAB91ECD97B64791F24BDDC247D08840431E0045BCB92BBA3275665",
-      "D7F0466177308BBC9AA6DBAEE1081099FB05770D1824036D8F5C8BFD76BA36EF"
+      "7F23B039F6EA4197362D4468E1A0E71428201222E1BEF3B680D5EF7B2AEFB714",
+      "3223726340EAB447170004435BB1941081C9726B59C3A717A563D3287741E0B4"
     ],
-    "description": "",
-    "lastUpdated": "2026-08-05T03:03:19.2401984Z",
-    "validationCount": 8
+    "version": "8.22.0.1",
+    "manifestHash": "58662345D09D48DDD6695BEDF84CF10BA1F34E352397677B5F06DF91C0206E82"
   },
   "CyberSkill.CyberOS": {
     "description": "",
@@ -2992,15 +2992,15 @@
     "version": "4.19.0"
   },
   "GitButler.GitButler": {
-    "manifestHash": "9051A75F0CA8E3F510BC9F556C54411C083935AE326D1379C27E6944C6AB5DED",
-    "validationCount": 9,
-    "version": "0.22.0",
-    "installerHashes": [
-      "CB73D9C66F6785AECCCF22B2603A98C493027E9B7EC3D10A8F5EA1F7185CDD62"
-    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-09-16T13:25:29.0205841Z",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-05T03:03:19.1410721Z"
+    "installerHashes": [
+      "2152C30D907B3BCC2CC7F470ECCB342C0903A5902340F4D7DCB4D8A96A22A68E"
+    ],
+    "version": "0.22.3",
+    "manifestHash": "3E858A45935A5193B1A05411F828B6A9759003E2E29332EBF0D49B0D5FF160A1"
   },
   "GiulioSorrentino.wheelofnumfortune.avalonia": {
     "configHealth": {
@@ -3012,14 +3012,14 @@
   },
   "Glarysoft.GlaryUtilities": {
     "validationCount": 1,
+    "lastUpdated": "2026-09-16T13:25:29.1945524Z",
     "description": "",
-    "version": "6.44.0.48",
-    "lastUpdated": "2026-06-29T12:16:38.7726152Z",
-    "installerHashes": [
-      "D7B6CA542BBB76D092EF44EDC9903FF6780E399F095AE89E4266F983D2B06F1F"
-    ],
     "state": "VALIDATION_PASSED",
-    "manifestHash": "25CED54C8C8CAAEE91CB867A9550995D53A83169751128A6D7B6EFE0A0B66F9A"
+    "installerHashes": [
+      "7C3AB2EE7106C255302EBC493DBE99FA20077C656AE9437DEA3231D8D4B1F57C"
+    ],
+    "version": "6.47.0.51",
+    "manifestHash": "C8CEE8DC31A9FF0FAAE0E1ED9E1B5FFBEE4A8F6AF13D3261DB74FE15226EAA43"
   },
   "Gleam.Gleam": {
     "validationCount": 1,
@@ -5242,37 +5242,37 @@
     "validationCount": 1
   },
   "MongoDB.MongoDBAtlasCLI": {
-    "manifestHash": "3A6D93254BF823C9EA0E26BD1D2CD46D62C122523770FB305369EFEFA02450F0",
-    "validationCount": 9,
-    "version": "1.57.0",
-    "installerHashes": [
-      "E270852ABACE16C5DA11361A5773327E7C5E94D34D9E8ECDDE4977506868A361"
-    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-09-16T13:25:29.1416924Z",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-05T03:03:19.194884Z"
+    "installerHashes": [
+      "84758B617286796525ED3205CAA477748C1C59A65142890C3962CAFA076913D1"
+    ],
+    "version": "1.58.3",
+    "manifestHash": "8D8FBE3E679CEDF4E68CDB73D6A2729AE46EBC6A73A047407EEEB5BC1C444CFC"
   },
   "MongoDB.Server": {
-    "manifestHash": "A9B88045AE828CCBE40230212E28D9D78AF3C6FF57948307E87309CE30F7F670",
-    "validationCount": 9,
-    "version": "8.3.7",
-    "installerHashes": [
-      "3E91C0A69F9CF20BFCEAA7C8BC714D63FFBB8F0834A6E7043A734EFACC97A8DB"
-    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-09-16T13:25:29.0501068Z",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-05T03:03:19.1834858Z"
+    "installerHashes": [
+      "5D00B5ACBCC531374A1CA935FEFD70491AC6ED8F8DD041A00CF540D782B1378D"
+    ],
+    "version": "8.3.11",
+    "manifestHash": "B6BE6AE4050218250FB677E632670A87AAFB1879AD116C6F3D932FFFE2C77A49"
   },
   "MongoDB.Shell": {
-    "manifestHash": "8EFA0392E8582A43775BE0051BE6732A0D6E8C781770BC7A7FAD230E3A55ED61",
-    "installerHashes": [
-      "50994D624D17BDFC73F4E616E66646A03735C0F8E10D064EB55E643EE1F4240B"
-    ],
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-06-29T11:12:51.4110679Z",
-    "version": "2.9.0",
+    "validationCount": 1,
+    "lastUpdated": "2026-09-16T13:25:29.1658366Z",
     "description": "",
-    "validationCount": 1
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "FC34F1242D226A4A578BAA4D122988C692E1CB2F8213C1452CC0E158E1159AB7"
+    ],
+    "version": "2.11.1",
+    "manifestHash": "68DB7488A3D43DDC558B6EAAEA66E655A624B00C0029068352B604218ADCEF34"
   },
   "MonzerOsman.YallaVideo": {
     "lastUpdated": "2026-08-16T21:14:49.0622805Z",
@@ -8001,6 +8001,17 @@
     "version": "0.12.1",
     "manifestHash": "E28FF493A3812E980C7D8378E637D418C87F2CC452040D49B8B6251E218E7BAD",
     "lastUpdated": "2026-08-20T09:17:27.528053Z"
+  },
+  "StrawberryPerl.StrawberryPerl": {
+    "validationCount": 1,
+    "lastUpdated": "2026-09-16T13:25:29.0773485Z",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "B0ADBD4F1B3FC0A91B96CDFF647CABCB6D3DD4BF05D9EE6F4F4FB76913AC57CD"
+    ],
+    "version": "5.42.3.1",
+    "manifestHash": "3DA53032D2103CC13918E7CE041F5A73D24C63ECBFA1A6758B1F27AA465513EE"
   },
   "Stripe.StripeCli": {
     "version": "1.43.5",
