@@ -281,15 +281,15 @@
     }
   },
   "Alochi.Monitoring": {
+    "version": "1.0.130",
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "lastUpdated": "2026-09-14T16:49:58.3840985Z",
-    "validationCount": 1,
-    "manifestHash": "EB5BC4085DD0DB9B6AB29251D1AADCFD79BC158661711DBFFDB11D2C125D7930",
-    "version": "1.0.128",
     "installerHashes": [
-      "278CB919F93C45FAC16C6462B2144CBE0B1DDF45E046911037178216A2FAAD1E"
-    ]
+      "50493DB628139E8764690E12269D12C26FFDAE3CBD2F1AF01F165DDC067F6FCF"
+    ],
+    "description": "",
+    "manifestHash": "742FC05242CF150E0C694D8E95D3BF83028E7614959B41D2422712B7154A68BF",
+    "lastUpdated": "2026-09-16T08:55:51.8440719Z",
+    "validationCount": 1
   },
   "AloproAgency.WAutoChat": {
     "lastUpdated": "2026-08-18T01:43:26.4458545Z",
@@ -2736,12 +2736,12 @@
   },
   "Frnsys.Half_earth": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 10,
+    "validationCount": 11,
     "installerHashes": [
       "CD47FC89C016730378E00399433045CCDB17E9B8ECC1434413C7531B9EB6AD36"
     ],
     "description": "",
-    "lastUpdated": "2026-09-15T12:55:05.263937Z",
+    "lastUpdated": "2026-09-16T08:55:51.8687258Z",
     "manifestHash": "162A9CB4478CCE0219E2D18B3BDBA90BBFD1A2D89CCCF6E863728E377240A4A7",
     "version": "1.0.15"
   },
@@ -4531,15 +4531,15 @@
     "state": "VALIDATION_PASSED"
   },
   "loreste.mako": {
-    "validationCount": 1,
-    "lastUpdated": "2026-09-15T04:56:53.0230628Z",
+    "version": "0.6.35",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "D4F70DADB2DB47FE332B6250203677731DE38F1E2FE1AEB50EB46352A794C031"
+      "18469339FC04C506D38602A803728059C9C650C9909E68BADC8FF91B5B38F8CF"
     ],
-    "version": "0.6.34",
     "description": "",
-    "manifestHash": "5F66A91EE56AB57DCCB9CF490AA4EF7FF0AE10F0F226D484717086029E9090E9",
-    "state": "VALIDATION_PASSED"
+    "manifestHash": "F0E2A9ABFC2E2554D448B041E35E6934382CC017F43C149CF41A90D361CB2D08",
+    "lastUpdated": "2026-09-16T08:55:51.797228Z",
+    "validationCount": 1
   },
   "LowLevelDesign.ProcessGovernor": {
     "manifestHash": "09E69D0C7C3FCD8235F3E38BE39881FEE7DC968A99C30941A28BED33654E0AA0",
@@ -4702,15 +4702,15 @@
     }
   },
   "marcinz606.NegPy": {
-    "description": "",
-    "version": "0.58.0",
-    "installerHashes": [
-      "7EB0B3D39D598BB97EB2091F59FC2CF32E5E9C5F80EF231E7F360E3D2FAB82FD"
-    ],
+    "version": "0.59.0",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-08T04:45:31.0599503Z",
-    "validationCount": 1,
-    "manifestHash": "CD2C17079FAB8DDAA5E5DB3B68EFCE4EE2888C263F2E0AC8CC9EBC2F40D4FE2B"
+    "installerHashes": [
+      "477B9F0062D64506740AAE2EDFA3CDEF29EE1AC90258E56384E592DC2E258B91"
+    ],
+    "description": "",
+    "manifestHash": "B00FEE6EAA1BC5D1B814C05199899A5B9DC8B350ADA31F4129B39BF70FD665EB",
+    "lastUpdated": "2026-09-16T08:55:51.8954461Z",
+    "validationCount": 1
   },
   "MarcoHefti.YTVodManager": {
     "manifestHash": "D6B8CC28C195C1925AC443615826FDE9EB33D111F50144DC9CE7DF76A34B98CB",
