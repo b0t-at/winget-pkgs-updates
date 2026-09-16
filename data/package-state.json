@@ -134,7 +134,7 @@
     ],
     "openPr": {
       "version": "0.84.2",
-      "checkedAt": "2026-09-15T20:21:56.2337949Z"
+      "checkedAt": "2026-09-16T20:23:01.5385848Z"
     }
   },
   "AES256Afro.VideoKidnapper": {
@@ -2074,7 +2074,7 @@
     "manifestHash": "31947E74E60A0462F2AAA67D5F8C21F460756C9F606A2E99B5AA0055A2064E78",
     "openPr": {
       "version": "2.12.4",
-      "checkedAt": "2026-09-15T20:22:00.6678244Z"
+      "checkedAt": "2026-09-16T20:23:04.7500526Z"
     }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
@@ -3776,8 +3776,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.9.9",
-      "checkedAt": "2026-09-16T12:33:17.8962541Z"
+      "version": "2026.9.10",
+      "checkedAt": "2026-09-16T20:23:15.1812088Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -3801,7 +3801,11 @@
     "installerHashes": [
       "4BB79F3D1E4092404EAFE3FB3B0101E196F8EB00355201F60314E5BA21447B82",
       "AEBD5B2C3D2839160722051525134F91E8A30CAE89779E6E0ED8A485B34DBDC7"
-    ]
+    ],
+    "openPr": {
+      "version": "8.1.2-5",
+      "checkedAt": "2026-09-16T20:23:15.4956969Z"
+    }
   },
   "JeromeHerrman.VPinCommander": {
     "installerHashes": [
