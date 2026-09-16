@@ -300,6 +300,15 @@ $sidecarById = @{}
 foreach ($sidecarEntry in ($entrySets.GetEnumerator() | Where-Object { $_.Key -ne 'github-releases-monitored.yml' } | ForEach-Object { @($_.Value) })) {
     $sidecarById[[string]$sidecarEntry.id] = $sidecarEntry
 }
+foreach ($entry in $monitoredEntries) {
+    $id = [string]$entry['id']
+    foreach ($field in $entry.Keys) {
+        $property = $sidecarById[$id].PSObject.Properties[$field]
+        if ($null -eq $property -or [string]$property.Value -cne [string]$entry[$field]) {
+            throw "Sidecar field '$field' for $id differs from github-releases-monitored.yml; regenerate the sidecars."
+        }
+    }
+}
 foreach ($minAgeMatch in [regex]::Matches($monitoredByIdText, '(?m)^\s*-\s*id:\s*"(?<id>[^"]+)"(?:\r?\n(?!\s*-\s*id:)[^\r\n]*)*?\r?\n\s*minReleaseAgeHours:\s*(?<hours>\d+(?:\.\d+)?)\s*$')) {
     $id = $minAgeMatch.Groups['id'].Value
     $hours = $minAgeMatch.Groups['hours'].Value

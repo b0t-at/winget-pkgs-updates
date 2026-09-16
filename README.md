@@ -52,6 +52,16 @@ because the regeneration step was skipped. Retire a package by commenting out
 its entry and adding a `#  <Id> is excluded: <reason>` note above it;
 `scripts/Disable-ReAddedExcludedPackages.ps1` re-applies documented exclusions.
 
+The update precheck's **Config Health submission gate** shows stored findings
+from the weekly Config Health workflow, not fresh download failures.
+After repairing a repository or asset rename, check the affected entries with
+`Test-MonitoredPackageAssets`. Only after every configured asset resolves,
+clear their `configHealth` markers with `Update-PackageStateConfigHealth`
+and include the state change with the configuration repair; otherwise the
+packages stay blocked until Config Health runs again. Preserve validation
+failures and open-PR state. A missing architecture or an installer-type change
+is not a filename rename and needs a separate migration review.
+
 ## Submission policies
 
 Besides the duplicate-PR and published-version checks, manifest generation
