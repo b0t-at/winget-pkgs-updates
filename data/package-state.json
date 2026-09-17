@@ -271,15 +271,15 @@
     }
   },
   "Alochi.Monitoring": {
-    "version": "1.0.130",
+    "manifestHash": "0858CB68EA9F4206C8F66BCFE88017E90BACAC4500553A5BF713C35210B6AB4D",
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "50493DB628139E8764690E12269D12C26FFDAE3CBD2F1AF01F165DDC067F6FCF"
-    ],
+    "lastUpdated": "2026-09-17T01:54:26.822742Z",
     "description": "",
-    "manifestHash": "742FC05242CF150E0C694D8E95D3BF83028E7614959B41D2422712B7154A68BF",
-    "lastUpdated": "2026-09-16T08:55:51.8440719Z",
-    "validationCount": 1
+    "version": "1.0.137",
+    "validationCount": 1,
+    "installerHashes": [
+      "D34809866CEC3F0E26DD9D3CA5B6DE480C0AC343E2A9BE63081A517A5D31A761"
+    ]
   },
   "AloproAgency.WAutoChat": {
     "lastUpdated": "2026-08-18T01:43:26.4458545Z",
@@ -1000,15 +1000,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Bitcraze.cfcli": {
-    "lastUpdated": "2026-08-18T01:43:26.2000007Z",
+    "manifestHash": "96A15335087287BA3DCA28741E9B74EAF906F0CE43293EC7BF4936A8C30DC2C4",
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "40CBB4E31759F384A4E6C32D46F4C225FCE70EF5655A38AFEB58A296823E046C"
-    ],
+    "lastUpdated": "2026-09-17T01:54:26.9672459Z",
     "description": "",
-    "manifestHash": "38B5975C2B0E0CA37426698A77A76DAA5E7A7EEF3387C5077EFE54E2337DB59A",
+    "version": "0.13.0",
     "validationCount": 1,
-    "version": "0.12.0"
+    "installerHashes": [
+      "EE6CA0995992F8E6F3CD5A0A3D0599A9531AAD17C039F6DBC200EDFC97750F7E"
+    ]
   },
   "Bitwarden.CLI": {
     "validationCount": 1,
@@ -1135,6 +1135,17 @@
     "validationCount": 1,
     "manifestHash": "DBDD3B495066BA517593B98C3F2AF2A79E70932F9B225F26A0FAFF63BFD8C196",
     "description": ""
+  },
+  "BrowserStackInc.Requestly": {
+    "manifestHash": "4E59C071C13666D4988DF20F66C9A2D523311D9F5680F4A3AABDDD82FDADDD8B",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-17T01:54:26.848155Z",
+    "description": "",
+    "version": "26.6.29",
+    "validationCount": 1,
+    "installerHashes": [
+      "065EE22B54B6C0363AEBA3ED758C0EB66AB0B25539D320352DE4115EE2889063"
+    ]
   },
   "BrunoVolpato.ivygrep": {
     "manifestHash": "8CE3F9624A83A50F0C50BEC353300B058D1C9032E963AE44BDB6B2F7281A8433",
@@ -1526,15 +1537,15 @@
     "lastUpdated": "2026-09-08T16:40:53.3408755Z"
   },
   "CosX.AzurePimTui": {
-    "description": "",
-    "installerHashes": [
-      "F1697A1311889F516AF7E4E6DB40AA5AB634D9AA06D956DF03CCFC3379590038"
-    ],
-    "lastUpdated": "2026-08-28T07:09:40.3081826Z",
-    "version": "0.0.6",
+    "manifestHash": "3A3B5632ED68CEE304B860589EEBCBE68C4505F2BA877812B8E4BC3F20EA5175",
     "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-17T01:54:26.8967654Z",
+    "description": "",
+    "version": "0.0.7",
     "validationCount": 1,
-    "manifestHash": "CFF2AF32A1BCF085F76ED908C1D6F6187EED81BCCD0AA29D18476696BBFEE5E5"
+    "installerHashes": [
+      "B1BED2BD6617EEE46014D3A12D435A9EE83E1252F3A615FAAE5FE9D39551F8D5"
+    ]
   },
   "CosX.ServiceBusExplorerTui": {
     "manifestHash": "EF8F2D73677A3D7C98748D39C8E8095BC47150F9004ECADD60DE2FAE4AF291E4",
@@ -2135,16 +2146,16 @@
     }
   },
   "Ellosoft.AWSCredentialsManager": {
-    "lastUpdated": "2026-08-19T17:46:49.9916688Z",
-    "version": "1.2.0",
-    "validationCount": 1,
-    "description": "",
+    "manifestHash": "9C11F7C0CDB79C14390377AA5250DFABC411D03D369979BDCD73E09874BFCF12",
     "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-17T01:54:26.9405155Z",
+    "description": "",
+    "version": "1.3.0",
+    "validationCount": 1,
     "installerHashes": [
-      "12C2B24E5B1BEDA3F053043564C9B61199BFDF11B8DFDB383B60A6CAEC72C71F",
-      "6295310005F6FF6F79848BE24BB78B5B1D1CA9DA6B82E67E660E3BDDEB9C5A7C"
-    ],
-    "manifestHash": "DD19C4F6466DFE8D79750E310CC6D6A372536FF7A9D1803D607590F31E4AA3F4"
+      "A6B6E33C8E51AE2DA1AF5CB2F99AA8F8DDCB4B3939BF7D2FDC043ABDE6A55FC0",
+      "398B8F8614D5DB4AC18E836FA8B93EAE2A741A32F12824617C1D997B07BD2D4D"
+    ]
   },
   "EmanueleMicheletti.Proxelar": {
     "lastUpdated": "2026-09-13T16:52:03.595952Z",
@@ -2638,12 +2649,12 @@
   },
   "Frnsys.Half_earth": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 12,
+    "validationCount": 13,
     "installerHashes": [
       "CD47FC89C016730378E00399433045CCDB17E9B8ECC1434413C7531B9EB6AD36"
     ],
     "description": "",
-    "lastUpdated": "2026-09-16T20:54:00.2649753Z",
+    "lastUpdated": "2026-09-17T01:54:26.7515798Z",
     "manifestHash": "162A9CB4478CCE0219E2D18B3BDBA90BBFD1A2D89CCCF6E863728E377240A4A7",
     "version": "1.0.15"
   },
@@ -3077,6 +3088,17 @@
     "lastUpdated": "2026-08-19T05:34:55.9996787Z",
     "manifestHash": "3F337E3014728DE5FB28ADF564356D4A318C1538A493D70643A863B949A2EEB4"
   },
+  "Grandpied33.STH": {
+    "manifestHash": "746A3ACFE2AC6261E4E5CC215912DCDF6C7732583C6E00B8806AA25D3272DD9C",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-17T01:54:26.9897545Z",
+    "description": "",
+    "version": "0.2.43",
+    "validationCount": 1,
+    "installerHashes": [
+      "5DA0FEACE6C20BEF07DFC12F29130BDF1A819C16535845CB59C9CC528C917385"
+    ]
+  },
   "greyishsong.bellit": {
     "manifestHash": "170AC8C7590D43914631A95E0D8AF87025940EB7439716C40D42FBB5D027089E",
     "lastUpdated": "2026-08-16T13:40:51.8551483Z",
@@ -3202,16 +3224,16 @@
     "description": ""
   },
   "Hanthor.BluefinCLI": {
-    "lastUpdated": "2026-09-13T16:52:03.6689943Z",
-    "validationCount": 1,
+    "manifestHash": "CD3F8BE9FBB5D238225B892B8039105DD457E2761BBB15907E52F53572E4ED40",
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "57F4D9AB9A4ED92D8454D6A48CE1B619A514D64B0D6D7F103344FAE2FB458D62",
-      "4497526EB5EDF76270ADF1895F1C8AFC37BD632A9650D2F9286EC183CC2BFE43"
-    ],
-    "manifestHash": "E76EA5F6879332BC6E2E03FC5B1FFA856F5D7AD35825A741A77767F0EAEB5662",
+    "lastUpdated": "2026-09-17T01:54:27.0167304Z",
     "description": "",
-    "version": "0.11.2"
+    "version": "0.11.3",
+    "validationCount": 1,
+    "installerHashes": [
+      "609427EDF507A06D36ED6DA896AAA94C2A22C6B583302F13E9F4D515E1923694",
+      "F3C15929E46028F479AEDF665EAC69723F627232D480D154F7167B2A14D3F118"
+    ]
   },
   "Happ.Happ": {
     "state": "VALIDATION_PASSED",
@@ -7055,11 +7077,11 @@
   },
   "Scandum.WinTin++": {
     "version": "2.02.61",
-    "lastUpdated": "2026-09-14T21:02:28.5627345Z",
+    "lastUpdated": "2026-09-17T01:54:26.8762938Z",
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "2C9A618908F2C08C9E373327E7A15409C25EEB6AE563F45807A611269A686250",
-    "validationCount": 27,
+    "validationCount": 28,
     "installerHashes": [
       "421A1458080413D5135A7490DC05AC0F4B54F1CAADBFC033214536237420E847"
     ]
@@ -7587,6 +7609,17 @@
       "18919C83E66193D85B82900C89534C1270AEA94781D3189AF922333DD4D41891"
     ]
   },
+  "sqlectron.sqlectron-gui": {
+    "manifestHash": "1E8EB925809A8B24F3B6A6B3D717AED88D0A03E7EB57C8CE6B2142D3860A809E",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-17T01:54:26.798059Z",
+    "description": "",
+    "version": "1.39.0",
+    "validationCount": 1,
+    "installerHashes": [
+      "D6110AB37065482FE0736469DA6F86B102D3EA602882C56B9E1131A67EADDAFA"
+    ]
+  },
   "srevinsaju.guiscrcpy.PyQt5": {
     "description": "",
     "manifestHash": "EA56D1FF849500514A79B64854A7EB19A044A8BE5F6D9AC623FD8FEA6779384A",
@@ -7797,16 +7830,16 @@
     "lastUpdated": "2026-08-06T14:13:45.9556005Z"
   },
   "SuperRadCompany.Microsandbox": {
-    "lastUpdated": "2026-09-10T04:47:40.5634895Z",
-    "validationCount": 1,
-    "description": "",
-    "version": "0.6.18",
+    "manifestHash": "17871AF82382FE29985BFA401076B01268F8D71AC76ADC2A21EC34ADE4C0B5E0",
     "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-17T01:54:26.9201929Z",
+    "description": "",
+    "version": "0.7.0",
+    "validationCount": 1,
     "installerHashes": [
-      "7E89516B78911DAC58DF546B24AF4956F3772EA44BA13E13306712FFDDE374E2",
-      "E642537A4A6A8DCD8EA79FB7A3CEF7D8B0FD2FC79B3830474A3D2E8267652AC3"
-    ],
-    "manifestHash": "2B0EC57B06EC4C7C1AB92FA57DB164D3D107F6BF24DF23F5DFB61C89002A685B"
+      "9AAB0C96710FEA6E995BEA0406B5891D072A7932ECF99D90B12EBBE6C5235841",
+      "97D402AB47DFF6A390B9C936934F763CD4CB58F5DA775016D038DA295B4B03DE"
+    ]
   },
   "SUSE.RancherDesktop": {
     "description": "",
