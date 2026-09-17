@@ -1022,15 +1022,15 @@
     "manifestHash": "A6DBD6DA1E8E60C2D16D54892AA5FD6582A15938B9D5EBEEA95D288829EA5C1F"
   },
   "Bitwarden.DirectoryConnector.CLI": {
-    "version": "2026.6.1",
-    "lastUpdated": "2026-08-18T13:04:36.6583685Z",
-    "validationCount": 1,
-    "installerHashes": [
-      "8C1FBBE0DD4922520BD701F1DF1A9BBC289E302C133A0F537809A73D656A3B3F"
-    ],
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "B0C66A0BE433630A5AC8EC55075242F9E928677A1FF7648F8B3F5DBD309AE2D2"
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-17T16:54:51.428563Z",
+    "validationCount": 1,
+    "version": "2026.9.0",
+    "installerHashes": [
+      "40C9AE76615AEC0D8AF4B77D85D58C2120C54804F20052C8DBA19C70788A8EA0"
+    ],
+    "manifestHash": "6EDC4303C1829387E03B18ABB630A22388A721D1E36604FF0C40E5E97F1E5A77"
   },
   "bkryza.clang-uml": {
     "description": "",
@@ -4670,6 +4670,17 @@
     "description": "",
     "manifestHash": "822459912204AE28803460CBEB1B516574E5A89AF37A125055466B0D451DFD10",
     "state": "VALIDATION_PASSED"
+  },
+  "Mateuscruz19.BATorrent": {
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-17T16:54:51.3837393Z",
+    "validationCount": 1,
+    "version": "4.8.0",
+    "installerHashes": [
+      "F1B85614DF3FE28689D3808E9C35BDE7B5FC1516191B45BB7BF23E451ECD118B"
+    ],
+    "manifestHash": "DB2F05DE3799B4CB40ADC59A38F46EF60CC13116FA92792BFE4CE4C679F9CDD7"
   },
   "matkrin.bashd": {
     "description": "",
