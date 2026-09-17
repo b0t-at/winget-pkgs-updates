@@ -725,15 +725,15 @@
     "manifestHash": "C06BDAE1D061B91C49BEC413137D11211BC395CCCD107E51905B933E2FF6CC06"
   },
   "Babashka.Babashka": {
-    "description": "",
-    "manifestHash": "B55A83A54E940E6E326A386F4A83D9E5755FDF15418D7A7A9E420295D1C09574",
-    "version": "1.13.222",
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-15T20:48:40.1046992Z",
     "installerHashes": [
-      "A22E7C20E42E341464A025AF49F0F7BF3E4D4646B160888941C57EE98FAF4B12"
-    ]
+      "68156A1EEC0FE329CE19CBA38D08494C5803CB9D9D63CCA556BEB28AACAF9B77"
+    ],
+    "lastUpdated": "2026-09-17T05:03:14.6981541Z",
+    "manifestHash": "28F86F7BA0566149B3404C864122C3EF44D3CC9796A393545B68822E8F6C45FE",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "1.13.223",
+    "description": ""
   },
   "badboy.mdbook-mermaid": {
     "lastUpdated": "2026-08-14T12:36:40.1220884Z",
@@ -1002,10 +1002,10 @@
   "Bitcraze.cfcli": {
     "manifestHash": "96A15335087287BA3DCA28741E9B74EAF906F0CE43293EC7BF4936A8C30DC2C4",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-17T01:54:26.9672459Z",
+    "lastUpdated": "2026-09-17T05:03:14.7565917Z",
     "description": "",
     "version": "0.13.0",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "EE6CA0995992F8E6F3CD5A0A3D0599A9531AAD17C039F6DBC200EDFC97750F7E"
     ]
@@ -2649,12 +2649,12 @@
   },
   "Frnsys.Half_earth": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 13,
+    "validationCount": 14,
     "installerHashes": [
       "CD47FC89C016730378E00399433045CCDB17E9B8ECC1434413C7531B9EB6AD36"
     ],
     "description": "",
-    "lastUpdated": "2026-09-17T01:54:26.7515798Z",
+    "lastUpdated": "2026-09-17T05:03:14.7252433Z",
     "manifestHash": "162A9CB4478CCE0219E2D18B3BDBA90BBFD1A2D89CCCF6E863728E377240A4A7",
     "version": "1.0.15"
   },
@@ -2694,16 +2694,16 @@
     "state": "VALIDATION_PASSED"
   },
   "GAM-Team.gam.Portable": {
-    "description": "",
-    "manifestHash": "619DE48290FA44F4F8291D796B558A449AD49E0312A1856A020D78A640C20B85",
     "installerHashes": [
-      "584E3E0517E7E3FC7AAADFD12DD534575FB0BCF16F64410EDF06E9D33E1AAA30",
-      "51B8D872876146542F4FB44C122DC18B3263B93663761FC6D50DAA7011E0C36C"
+      "CF3ADEDD486DE1B9F3B287CACE225ED4323CC76A404686E6E45221540F53331A",
+      "519A48B3A727775E253BD440EE8633F5826FD48ABF50A4E85A5DFCD1A413779C"
     ],
+    "lastUpdated": "2026-09-17T05:03:14.670356Z",
+    "manifestHash": "0D3312DFECF1731C7D311C441DA965F52E1163CD4602D623D4D1FFDED9773BF1",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "lastUpdated": "2026-09-15T08:56:32.787353Z",
-    "version": "7.48.08"
+    "version": "7.48.09",
+    "description": ""
   },
   "GAM-Team.GotYourBack": {
     "manifestHash": "5FA8B6D2D4E530BE07C6DD57FE8084020045530DE65F68E8DC47F1F3B96490C9",
@@ -7077,11 +7077,11 @@
   },
   "Scandum.WinTin++": {
     "version": "2.02.61",
-    "lastUpdated": "2026-09-17T01:54:26.8762938Z",
+    "lastUpdated": "2026-09-17T05:03:14.8084424Z",
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "2C9A618908F2C08C9E373327E7A15409C25EEB6AE563F45807A611269A686250",
-    "validationCount": 28,
+    "validationCount": 29,
     "installerHashes": [
       "421A1458080413D5135A7490DC05AC0F4B54F1CAADBFC033214536237420E847"
     ]
@@ -7404,15 +7404,15 @@
     "manifestHash": "E4D15C9B9ACA24469BA775750BC0FBDB8CE744F1C8AE63AB01DFF3DDD13895A8"
   },
   "skyhook-io.Radar": {
-    "state": "VALIDATION_PASSED",
-    "version": "1.13.1",
-    "lastUpdated": "2026-09-13T04:50:56.6309303Z",
-    "manifestHash": "72DB17831E41F9B984D1454676042908620A5AF8FF3CE69F4DEDE27D7562A5AB",
-    "validationCount": 1,
-    "description": "",
     "installerHashes": [
-      "9FD560037CA959746A385406C789BBF3A85BC47922BA70ECA5124CB1CD8D5AD6"
-    ]
+      "80B27D650A5611AACCE14423C6D6133241530FC73746ED6FE67A7696498CB8FD"
+    ],
+    "lastUpdated": "2026-09-17T05:03:14.5964233Z",
+    "manifestHash": "F0D70CCE14B43663E00A77F29A941B63069916750338408A9DDB7B154F209A9B",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "1.14.0",
+    "description": ""
   },
   "Skylot.jadx": {
     "validationCount": 1,
@@ -7830,16 +7830,16 @@
     "lastUpdated": "2026-08-06T14:13:45.9556005Z"
   },
   "SuperRadCompany.Microsandbox": {
-    "manifestHash": "17871AF82382FE29985BFA401076B01268F8D71AC76ADC2A21EC34ADE4C0B5E0",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-17T01:54:26.9201929Z",
-    "description": "",
-    "version": "0.7.0",
-    "validationCount": 1,
     "installerHashes": [
-      "9AAB0C96710FEA6E995BEA0406B5891D072A7932ECF99D90B12EBBE6C5235841",
-      "97D402AB47DFF6A390B9C936934F763CD4CB58F5DA775016D038DA295B4B03DE"
-    ]
+      "068D27807CF0EB10101F519AFA944812693734A31FB61CD922A105F428769F3B",
+      "6AEA34A144533F19F0FCAF76820D8FE2705739D878A6561B519311A0B5009704"
+    ],
+    "lastUpdated": "2026-09-17T05:03:14.7889115Z",
+    "manifestHash": "F34D1F6BE7D592268CE65D67C53153E9F76DCB51DD5D8188686509F247D58B72",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "0.7.1",
+    "description": ""
   },
   "SUSE.RancherDesktop": {
     "description": "",
