@@ -2537,8 +2537,8 @@
   },
   "Flowscripter.example-cli": {
     "openPr": {
-      "checkedAt": "2026-09-16T16:24:07.818777Z",
-      "version": "2.0.0"
+      "version": "2.0.1",
+      "checkedAt": "2026-09-17T12:32:52.7351395Z"
     }
   },
   "Fly-io.flyctl": {
