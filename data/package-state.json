@@ -1310,14 +1310,14 @@
   },
   "Celerp.Celerp": {
     "description": "",
-    "installerHashes": [
-      "C66EC03DA4C3223E9D94F9A6EF255BA64A985FCA8DFFBD7A726EDF20E877CE1B"
-    ],
     "state": "VALIDATION_PASSED",
-    "version": "2.3.6",
-    "manifestHash": "9EAFF21B649C9B431F6311433B173DCC3DB8320FE17EC8AC1127A49C16225A5B",
-    "lastUpdated": "2026-09-11T21:04:35.2399307Z",
-    "validationCount": 2
+    "installerHashes": [
+      "D5893ABB2E685A845E1CABD88F69D8F5BDAA3D2A27DA02B0AE25A18F6707D9EA"
+    ],
+    "lastUpdated": "2026-09-17T09:19:19.7326874Z",
+    "manifestHash": "35D205CCE70EAF9F072503A0557143843C714EF056B573ABFCAEA455AD866309",
+    "version": "2.4.0",
+    "validationCount": 1
   },
   "CerberAuth.jwtop": {
     "description": "",
@@ -1539,10 +1539,10 @@
   "CosX.AzurePimTui": {
     "manifestHash": "3A3B5632ED68CEE304B860589EEBCBE68C4505F2BA877812B8E4BC3F20EA5175",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-17T01:54:26.8967654Z",
+    "lastUpdated": "2026-09-17T09:19:19.7609148Z",
     "description": "",
     "version": "0.0.7",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "B1BED2BD6617EEE46014D3A12D435A9EE83E1252F3A615FAAE5FE9D39551F8D5"
     ]
@@ -1832,16 +1832,16 @@
     "description": ""
   },
   "Devolutions.Jetsocat": {
-    "version": "2026.2.4",
-    "lastUpdated": "2026-08-22T20:40:59.7904022Z",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "F497E82356D6829913C9F379591B18A81D11C505DE63145FD560148D18366FF5",
-    "validationCount": 1,
     "installerHashes": [
-      "C1477B2325ABBE248E617F2E59E809CAC8C1BD91194C31E00F86909171459ECA",
-      "CE0DB7B1236E03DC8C83E42FDF4B9CD0927863E60F0EFF4FC1DD5E23702535B2"
-    ]
+      "75569C6D469B237C914BCD79C226FBDC53D484626137CB06BBD8E2756945474B",
+      "B7AC70E6DB20AFD4B46A9EEF5448587C23044866B961E181D18A6E39A825CC5A"
+    ],
+    "lastUpdated": "2026-09-17T09:19:19.6587703Z",
+    "manifestHash": "6A3640C4F8FA93A339CB45F0C691ACE85BD91113F97F150FF9B684AE4CE6D9DF",
+    "version": "2026.3.0",
+    "validationCount": 1
   },
   "Digimezzo.Dopamine.3": {
     "version": "3.0.10",
@@ -2017,6 +2017,17 @@
     ],
     "version": "0.9.4"
   },
+  "Dweymouth.Supersonic": {
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "CBFC88032FC125BBF29A538C5D35EEC73F736B9BCDF4FC95CC2CC00EB854FBDE"
+    ],
+    "lastUpdated": "2026-09-17T09:19:19.5169126Z",
+    "manifestHash": "3800CDC034B70EF5CF5B7D7E1179786C244EC2D267310EFF3FB858BABC33A823",
+    "version": "0.22.1",
+    "validationCount": 1
+  },
   "Dystroy.broot": {
     "validationCount": 1,
     "installerHashes": [
@@ -2148,10 +2159,10 @@
   "Ellosoft.AWSCredentialsManager": {
     "manifestHash": "9C11F7C0CDB79C14390377AA5250DFABC411D03D369979BDCD73E09874BFCF12",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-17T01:54:26.9405155Z",
+    "lastUpdated": "2026-09-17T09:19:19.5965771Z",
     "description": "",
     "version": "1.3.0",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "A6B6E33C8E51AE2DA1AF5CB2F99AA8F8DDCB4B3939BF7D2FDC043ABDE6A55FC0",
       "398B8F8614D5DB4AC18E836FA8B93EAE2A741A32F12824617C1D997B07BD2D4D"
@@ -2649,12 +2660,12 @@
   },
   "Frnsys.Half_earth": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 14,
+    "validationCount": 15,
     "installerHashes": [
       "CD47FC89C016730378E00399433045CCDB17E9B8ECC1434413C7531B9EB6AD36"
     ],
     "description": "",
-    "lastUpdated": "2026-09-17T05:03:14.7252433Z",
+    "lastUpdated": "2026-09-17T09:19:19.7084242Z",
     "manifestHash": "162A9CB4478CCE0219E2D18B3BDBA90BBFD1A2D89CCCF6E863728E377240A4A7",
     "version": "1.0.15"
   },
@@ -3717,15 +3728,15 @@
     ]
   },
   "jaegertracing.jaeger": {
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "version": "2.20.0",
-    "lastUpdated": "2026-07-20T05:48:15.0839395Z",
     "description": "",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "B36B2CC2A4ED654679048FA6DEE511B2A59D310805FF247EABEF6FC499B29505"
+      "197C4B42ABA6983B3D9CBCA3577A0E14191BCB9431FDE1B6661471B6FECE39FC"
     ],
-    "manifestHash": "FB784A67B80076E60928D7AAB4077C6E94D2E06CA1426B21DCD2E45E34310FB6"
+    "lastUpdated": "2026-09-17T09:19:19.568261Z",
+    "manifestHash": "3AC144314E86BCAE0081C3CD0DA5320E2AA24108A130CE8569028C781B1EEAAC",
+    "version": "2.21.0",
+    "validationCount": 1
   },
   "jaimecartodb.MSXCP": {
     "description": "",
@@ -5311,6 +5322,17 @@
     "installerHashes": [
       "8BD6F75FD8E2703DBD36BB4D289CAA1CB4FB5537BD4B451C4876CC232C60A6B6"
     ]
+  },
+  "myrachane.emtypyie-cli": {
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "1305BB91BEE50453AB92D98D0D1F6AB5A76D1651DBAB3194C079E401F36DAD55"
+    ],
+    "lastUpdated": "2026-09-17T09:19:19.6832847Z",
+    "manifestHash": "0919439BE8CCBA7C861F415FF047186EDC7865B3E4E5ACD86B067DC72FD3055E",
+    "version": "3.0.4",
+    "validationCount": 1
   },
   "Naeem5877.VibeDownloader": {
     "validationCount": 1,
@@ -8566,17 +8588,17 @@
     "version": "1.0.1"
   },
   "Urlscan.urlscan-cli": {
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "version": "2026.8.18",
-    "lastUpdated": "2026-08-24T08:49:14.2691741Z",
-    "manifestHash": "921142ADC565311CABE05BB8C5C4EF67F2BDFDB2760D6AD110AF09D9BF3249AE",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "DC4E70BC28EDF571A9853C9672CA1EF68A797D831510DA63281B7A865630308D",
-      "BD47A8D1E8367BF650AA1EFA58C80FC7C83841A4F45144127DCD64446A504D04",
-      "04F1C6E71961B9B769DEC749CA7C7E76F082F1AC8A05AE4437AEB41D6263862E"
-    ]
+      "27FA14B4B8AC384F14D5CF9288C47C884CE48ED1AD2849B342817FE608C68D88",
+      "0C0F57656C2A21A653AF8448151E0A17770D0F3F394D8CFED05685104E9D9A68",
+      "1CB10F8D3C06208824CC0E79B3B806F4FA62508CF9A74AC6459D9D379DEEE38D"
+    ],
+    "lastUpdated": "2026-09-17T09:19:19.6251496Z",
+    "manifestHash": "ED56244B16147EC9FF1EB78C4D31C27EDAC349DD11265462E58C4022CBE60E4B",
+    "version": "2026.09.17",
+    "validationCount": 1
   },
   "UsamaEjaz.PeekWin": {
     "lastUpdated": "2026-08-18T17:25:14.1152343Z",
