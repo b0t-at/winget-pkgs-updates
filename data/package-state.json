@@ -3670,15 +3670,15 @@
     }
   },
   "IvanIsCoding.celq": {
-    "installerHashes": [
-      "6661C6E14A52599CB217D5989E8CDF794C25A0B7B0E998349AD874517F092B36"
-    ],
-    "lastUpdated": "2026-08-30T20:55:29.416237Z",
-    "description": "",
     "validationCount": 1,
+    "version": "0.7.1",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "25B16B8E6E58A046386E5A12E661662A7919CCE075EA9EB4DBE15B028B9FDD9F",
-    "version": "0.6.0"
+    "description": "",
+    "manifestHash": "B3720EC48B9E7409DE2C4CE27A684D4DD374B91E152AB6C1460D56D1B36FAE99",
+    "installerHashes": [
+      "506CE1B22D48EA6AF2BD421E18DC96285A664DEB7877F39ABC2EF91E7D84C9C9"
+    ],
+    "lastUpdated": "2026-09-18T08:57:15.7907634Z"
   },
   "iWillink.AgentDeck": {
     "validationCount": 1,
@@ -4197,15 +4197,15 @@
     "version": "3.7.0.1"
   },
   "koedame.chordsketch": {
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "33D2F37EEC97C2BA0C3F87F0DBDA9CB8B467596614E35DCD9B217EFF7067CFF1"
-    ],
     "validationCount": 1,
+    "version": "0.7.0",
+    "state": "VALIDATION_PASSED",
     "description": "",
-    "version": "0.6.0",
-    "manifestHash": "52732FB87A3788F2E4CCF280207C29DBA4355993B5C1CE0994BC5FE45284B1FA",
-    "lastUpdated": "2026-09-14T04:56:07.4137112Z"
+    "manifestHash": "678ECC4AF30C134B35DB4DB48CD2ED358F0AC8CEC62F99E4B91F20E157EDB763",
+    "installerHashes": [
+      "A775CCEDE81BFD2C98F9229B2CA83C5E70C17661F0C0806459B80B75654FF760"
+    ],
+    "lastUpdated": "2026-09-18T08:57:15.8649779Z"
   },
   "KRTirtho.Spotube": {
     "manifestHash": "48B938BDAA7E2ADCDF3C6E7B71A7214AF24FFD5388F587258C452A189DDE760D",
@@ -5106,15 +5106,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Monghoul.Monghoul": {
-    "installerHashes": [
-      "40065D0E532D8C3EA832E6F85E223F97627D54B105D94F0D1E125A361C2D0E71"
-    ],
-    "version": "1.11.0",
+    "validationCount": 1,
+    "version": "1.12.2",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "DFD49DF1E101B6A58DE90D3E97825A99B8A2F9DB72C248716531DE6FD7E24E90",
-    "lastUpdated": "2026-09-05T20:49:32.1777662Z",
-    "validationCount": 1
+    "manifestHash": "EE0DA975D09627DD78D776901C8FFB0B6EA205544F1D27BA83A439D26ECFC0F8",
+    "installerHashes": [
+      "4C3FD78D611B217DA95C0796CCB985AA221145AB56660D30B1A10DCB6E4F13CD"
+    ],
+    "lastUpdated": "2026-09-18T08:57:15.8922749Z"
   },
   "MongoDB.MongoDBAtlasCLI": {
     "validationCount": 1,
@@ -7599,14 +7599,14 @@
   },
   "sparrowwallet.sparrow": {
     "validationCount": 1,
-    "description": "",
+    "version": "2.5.5",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-29T08:57:32.5480674Z",
-    "manifestHash": "3F87FC5BA4082D3651F31614A00A5C17011CAEA515CB6BB83250F98C01980BCA",
-    "version": "2.5.4",
+    "description": "",
+    "manifestHash": "9FAC73646B02BD412EC50958582A0825FE5E4196DBF03D56E759EA001602C233",
     "installerHashes": [
-      "251990C40DFEF879201A2E4E407C75699B52CE80B1B46BC3FB03CF086A4815B0"
-    ]
+      "0256EB5C8808157F811D57FBDB9F9153101B02947C2F6788F1E7B9DA5FF6111F"
+    ],
+    "lastUpdated": "2026-09-18T08:57:15.9165783Z"
   },
   "SparshSam.OpenReader": {
     "description": "",
