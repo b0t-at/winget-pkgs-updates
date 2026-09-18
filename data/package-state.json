@@ -134,7 +134,7 @@
     ],
     "openPr": {
       "version": "0.84.2",
-      "checkedAt": "2026-09-16T20:23:01.5385848Z"
+      "checkedAt": "2026-09-18T00:55:18.5771062Z"
     }
   },
   "AES256Afro.VideoKidnapper": {
@@ -2096,7 +2096,7 @@
     "manifestHash": "31947E74E60A0462F2AAA67D5F8C21F460756C9F606A2E99B5AA0055A2064E78",
     "openPr": {
       "version": "2.12.4",
-      "checkedAt": "2026-09-16T20:23:04.7500526Z"
+      "checkedAt": "2026-09-18T00:55:22.2570906Z"
     }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
