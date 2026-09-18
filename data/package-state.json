@@ -116,7 +116,7 @@
     "manifestHash": "88FF875B5DEA51BC3B743F06098AADAF42AB87DA966E19E5EFA189C21F4EC081",
     "version": "0.107.78",
     "openPr": {
-      "checkedAt": "2026-09-17T16:24:54.2731885Z",
+      "checkedAt": "2026-09-18T20:21:30.7689254Z",
       "version": "0.107.79"
     }
   },
@@ -1352,7 +1352,7 @@
   },
   "CharlesMilette.TranslucentTB": {
     "openPr": {
-      "checkedAt": "2026-09-17T16:24:57.3051172Z",
+      "checkedAt": "2026-09-18T20:21:33.7728999Z",
       "version": "2026.2"
     }
   },
@@ -2439,7 +2439,7 @@
       "9A0B7352DFEF40C8EBF8733F77CB777565AA4EAEDE4F79FE928C11DA5C35CE40"
     ],
     "openPr": {
-      "checkedAt": "2026-09-17T16:25:00.3970057Z",
+      "checkedAt": "2026-09-18T20:21:35.3628898Z",
       "version": "19.0.2"
     }
   },
@@ -3054,7 +3054,11 @@
       "031777688173E6414CFAEAD74DA4C16D7CF2DA490BCA4E0D0C2458008587F105",
       "F0C128DC0D8492ECEECE83BB459A4C0E316764B929FFBF1AA416357FD644EDD3"
     ],
-    "description": ""
+    "description": "",
+    "openPr": {
+      "checkedAt": "2026-09-18T20:21:42.3687556Z",
+      "version": "36.2"
+    }
   },
   "goplus.xgo": {
     "manifestHash": "3BFF78AAF18769D1748DE57CF066A27AFDA17E289D83BDC8F984990CDB300F6B",
@@ -8155,7 +8159,7 @@
     "manifestHash": "4B796A972C2DBB5AE75EB8F4F8B332F0CBE77928187E84989680F6AB184F42AA",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "checkedAt": "2026-09-17T16:25:17.5463827Z",
+      "checkedAt": "2026-09-18T20:21:49.579986Z",
       "version": "5.7.0"
     }
   },
