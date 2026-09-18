@@ -371,11 +371,7 @@
     "lastUpdated": "2026-09-12T04:54:09.4549449Z",
     "validationCount": 1,
     "manifestHash": "4624C38BDFBD423DB7146F24EA3A3EFACB98AD85F486E496A342C234646B7A69",
-    "description": "",
-    "openPr": {
-      "checkedAt": "2026-09-15T12:33:14.2759217Z",
-      "version": "2.7.5"
-    }
+    "description": ""
   },
   "Anki.Anki": {
     "lastUpdated": "2026-09-17T13:04:52.029206Z",
