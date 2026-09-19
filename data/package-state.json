@@ -3556,6 +3556,12 @@
     "version": "2.14.0.466",
     "lastUpdated": "2026-08-21T17:17:39.9241582Z"
   },
+  "IanWalton.JellyfinMPVShim": {
+    "openPr": {
+      "checkedAt": "2026-09-19T08:27:05.7360905Z",
+      "version": "3.0.0"
+    }
+  },
   "icsharpcode.ILSpy": {
     "state": "VALIDATION_PASSED",
     "description": "",
@@ -3769,7 +3775,11 @@
     "description": "",
     "state": "VALIDATION_PASSED",
     "version": "5.2.0",
-    "manifestHash": "C9D2C97F1A640AF3DDB3CC1D281E8E8107C91A4F8923FAC6096DECF81C664515"
+    "manifestHash": "C9D2C97F1A640AF3DDB3CC1D281E8E8107C91A4F8923FAC6096DECF81C664515",
+    "openPr": {
+      "checkedAt": "2026-09-19T08:27:06.0067405Z",
+      "version": "5.2.0"
+    }
   },
   "JanProchazka.dbgate": {
     "manifestHash": "ED7918B760A709F9815E11A800C55A3F36972AB1127180267FD75A51C50F3156",
@@ -3832,7 +3842,7 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-09-18T04:26:20.4898242Z",
+      "checkedAt": "2026-09-19T08:27:06.3106195Z",
       "version": "2026.9.11"
     }
   },
@@ -4395,7 +4405,11 @@
     "description": "",
     "state": "VALIDATION_PASSED",
     "version": "0.37.1",
-    "manifestHash": "5B7F5E03E759B9F0FB45454B0559B26300952BC6D6E230A1613823A2E5E7C8A4"
+    "manifestHash": "5B7F5E03E759B9F0FB45454B0559B26300952BC6D6E230A1613823A2E5E7C8A4",
+    "openPr": {
+      "checkedAt": "2026-09-19T08:27:06.9823976Z",
+      "version": "0.37.1"
+    }
   },
   "Longbridge.LongbridgeTerminal": {
     "manifestHash": "92BE75B13D2C2A24C7104B4FD2624CFA9633757A960B7FF86E4887C3CF285477",
@@ -6728,7 +6742,11 @@
     "description": "",
     "state": "VALIDATION_PASSED",
     "version": "3.3.1",
-    "manifestHash": "8A82BF4A5961DFF8FD07045FE44E010C4AF3567D559F746E473CC9F51C401A20"
+    "manifestHash": "8A82BF4A5961DFF8FD07045FE44E010C4AF3567D559F746E473CC9F51C401A20",
+    "openPr": {
+      "checkedAt": "2026-09-19T08:27:09.3348923Z",
+      "version": "3.3.1"
+    }
   },
   "Rela.RelaGit": {
     "version": "0.16.11",
