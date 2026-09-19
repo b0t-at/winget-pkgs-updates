@@ -1486,15 +1486,15 @@
   },
   "Cloudreve.Cloudreve": {
     "installerHashes": [
-      "33DFBF62EB7EB36A44080D5725E031C3C8B2A079C2559344D2A1395C9BFE4643",
-      "6185D83349EAAD6DED379101252280B7672B6326ED80174B6337BA958F2B1C91"
+      "BDFDFCFF0DCA6DCFD800DDC817B505C64ABF7D069DE67E366CB6D4D0B3F8D6AB",
+      "9E3509611882BD8C01FC07EAC13D32230C23E03C00C5C82E41D3F35012929538"
     ],
+    "version": "4.19.1",
+    "lastUpdated": "2026-09-19T16:48:28.758118Z",
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "E6850396A00467E0F7BDF5AE002ADFA1DCB64A6DDE1945D59D1C8C3D69A3B29A",
     "validationCount": 1,
-    "version": "4.19.0",
-    "lastUpdated": "2026-09-17T20:53:14.2761873Z"
+    "manifestHash": "03E17542A1557E2A6D8C4708ABABF4A90A9D1E1F544E541E555F0F23F9FAE9E6",
+    "state": "VALIDATION_PASSED"
   },
   "CoderKinley.Musik": {
     "description": "",
@@ -2668,12 +2668,12 @@
   },
   "Frnsys.Half_earth": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 17,
+    "validationCount": 18,
     "installerHashes": [
       "CD47FC89C016730378E00399433045CCDB17E9B8ECC1434413C7531B9EB6AD36"
     ],
     "description": "",
-    "lastUpdated": "2026-09-19T01:38:39.4739524Z",
+    "lastUpdated": "2026-09-19T16:48:28.6517735Z",
     "manifestHash": "162A9CB4478CCE0219E2D18B3BDBA90BBFD1A2D89CCCF6E863728E377240A4A7",
     "version": "1.0.15"
   },
@@ -3048,12 +3048,12 @@
     "version": "2.6.0",
     "state": "VALIDATION_PASSED",
     "manifestHash": "8763CD6C0B95A6EAE98980EEEC5AC7C54DF1521CDD86DA8B908A290B7EC4A2E3",
-    "lastUpdated": "2026-09-14T21:02:28.5428207Z",
+    "lastUpdated": "2026-09-19T16:48:28.6946025Z",
     "installerHashes": [
       "E0ED7644118B717B028C249EE9D3515024E55E8510747CA08906EB96765354D6",
       "CA1379DA0E408279EF2C85CDE0846A903495738A91C7B065A208048437C1686C"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "description": ""
   },
   "Google.Protobuf": {
@@ -6572,15 +6572,15 @@
     "validationCount": 1
   },
   "purocean.YankNote": {
-    "validationCount": 1,
-    "description": "",
-    "version": "3.92.1",
     "installerHashes": [
-      "18D78D28D43E880656CD661BECCE5E09407C6431806711DDF8E6A622FDF84180"
+      "F74B1BA2C6618402EA791B6702F40772858BA7768C69C1BA18C294A8236352BA"
     ],
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-19T05:34:55.8373473Z",
-    "manifestHash": "502B88B67CA216E27AFD5DAE017F3D3D6E931775886D8026714FFD2E7F061291"
+    "version": "3.93.0",
+    "lastUpdated": "2026-09-19T16:48:28.7316494Z",
+    "description": "",
+    "validationCount": 1,
+    "manifestHash": "F49AED580901B0E3F38907DC7CA7BA500D878BAF1C48F09444C0021B459BF97E",
+    "state": "VALIDATION_PASSED"
   },
   "Pwlot.ChunkyMonkey": {
     "validationCount": 1,
@@ -7696,10 +7696,10 @@
   "sqlectron.sqlectron-gui": {
     "manifestHash": "1E8EB925809A8B24F3B6A6B3D717AED88D0A03E7EB57C8CE6B2142D3860A809E",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-17T01:54:26.798059Z",
+    "lastUpdated": "2026-09-19T16:48:28.7142911Z",
     "description": "",
     "version": "1.39.0",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "D6110AB37065482FE0736469DA6F86B102D3EA602882C56B9E1131A67EADDAFA"
     ]
