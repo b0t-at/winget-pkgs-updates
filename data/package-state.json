@@ -133,8 +133,8 @@
       "C03035EBBB96FBE89D7793876C59EEFE6E3D03241436273BCEBABD355FADE29B"
     ],
     "openPr": {
-      "version": "0.84.2",
-      "checkedAt": "2026-09-18T00:55:18.5771062Z"
+      "checkedAt": "2026-09-19T04:25:08.5030977Z",
+      "version": "0.84.2"
     }
   },
   "AES256Afro.VideoKidnapper": {
@@ -2091,8 +2091,8 @@
     ],
     "manifestHash": "31947E74E60A0462F2AAA67D5F8C21F460756C9F606A2E99B5AA0055A2064E78",
     "openPr": {
-      "version": "2.12.4",
-      "checkedAt": "2026-09-18T00:55:22.2570906Z"
+      "checkedAt": "2026-09-19T04:25:11.1629553Z",
+      "version": "2.12.4"
     }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
@@ -2602,7 +2602,11 @@
     "manifestHash": "0E905E9EE36BAAED83BDE9350A982AF6D8EC40B28A75E911C372DF44D1AF7080",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "lastUpdated": "2026-09-19T01:38:39.5509565Z"
+    "lastUpdated": "2026-09-19T01:38:39.5509565Z",
+    "openPr": {
+      "checkedAt": "2026-09-19T04:25:11.9556626Z",
+      "version": "7.2.9"
+    }
   },
   "FOSSA.FOSSA-cli": {
     "lastUpdated": "2026-09-10T04:47:40.5892724Z",
@@ -7535,7 +7539,11 @@
     "manifestHash": "6F5DA15B9BFB1DBC7CBC8EB1A50B969ADBCDD18A3C19439A8AA1342F63E9EAEF",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "lastUpdated": "2026-09-19T01:38:39.4498687Z"
+    "lastUpdated": "2026-09-19T01:38:39.4498687Z",
+    "openPr": {
+      "checkedAt": "2026-09-19T04:26:10.6254428Z",
+      "version": "1.1307.3"
+    }
   },
   "soldforaloss.DevHUD": {
     "description": "",
