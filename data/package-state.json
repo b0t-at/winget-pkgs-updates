@@ -2541,8 +2541,8 @@
   },
   "Flowscripter.example-cli": {
     "openPr": {
-      "checkedAt": "2026-09-18T16:21:56.2042511Z",
-      "version": "2.0.1"
+      "version": "3.0.0",
+      "checkedAt": "2026-09-19T16:22:01.1519749Z"
     }
   },
   "Fly-io.flyctl": {
@@ -8756,8 +8756,8 @@
     "lastUpdated": "2026-08-06T14:13:45.9696492Z",
     "version": "1.4.0",
     "openPr": {
-      "checkedAt": "2026-09-18T16:22:18.8136855Z",
-      "version": "1.4.2"
+      "version": "1.4.2",
+      "checkedAt": "2026-09-19T16:23:00.181634Z"
     }
   },
   "venipa.ytmdesktop": {
@@ -9192,7 +9192,11 @@
     "version": "24.4",
     "manifestHash": "EC7465D116A6E5293CACE6F190A431ADCDF450777877A30CD650EFAC65421711",
     "validationCount": 1,
-    "description": ""
+    "description": "",
+    "openPr": {
+      "version": "24.4",
+      "checkedAt": "2026-09-19T16:23:02.3179663Z"
+    }
   },
   "xssnick.TON-Torrent": {
     "state": "VALIDATION_PASSED",
