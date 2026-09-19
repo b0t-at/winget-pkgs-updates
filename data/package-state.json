@@ -3054,7 +3054,11 @@
       "CA1379DA0E408279EF2C85CDE0846A903495738A91C7B065A208048437C1686C"
     ],
     "validationCount": 2,
-    "description": ""
+    "description": "",
+    "openPr": {
+      "version": "2.6.0",
+      "checkedAt": "2026-09-19T20:20:16.9999256Z"
+    }
   },
   "Google.Protobuf": {
     "version": "36.2",
