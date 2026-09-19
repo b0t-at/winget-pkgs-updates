@@ -192,7 +192,11 @@
     ],
     "manifestHash": "3FDF3A013BAB5CA656AB234B80171AC771C8F3C1691477476E077C98006C40B7",
     "lastUpdated": "2026-09-19T08:41:43.6037433Z",
-    "version": "0.9.2"
+    "version": "0.9.2",
+    "openPr": {
+      "version": "0.9.2",
+      "checkedAt": "2026-09-19T12:29:14.521407Z"
+    }
   },
   "Aiden1020.LocalSubs": {
     "manifestHash": "213A97D3D7C6F3B5FE864420C3CEF1C3280D138B6B91B0272DB5230389D73EB2",
@@ -266,8 +270,8 @@
     "lastUpdated": "2026-08-20T16:48:27.9600489Z",
     "version": "3.1",
     "openPr": {
-      "checkedAt": "2026-09-18T08:30:25.2926003Z",
-      "version": "3.1"
+      "version": "3.1",
+      "checkedAt": "2026-09-19T12:29:15.5615878Z"
     }
   },
   "Alochi.Monitoring": {
@@ -371,7 +375,11 @@
     "manifestHash": "1FC1366F7999BE7A62B278B0332522A65C8D7C99F3BE32B6D5A2C9ADF3ABB708",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "2.8.0"
+    "version": "2.8.0",
+    "openPr": {
+      "version": "2.8.0",
+      "checkedAt": "2026-09-19T12:30:07.1833123Z"
+    }
   },
   "Anki.Anki": {
     "lastUpdated": "2026-09-17T13:04:52.029206Z",
@@ -6158,11 +6166,7 @@
     "state": "VALIDATION_PASSED",
     "description": "",
     "manifestHash": "F8847421B933350900A143A19FED15B84506A7D277B0DA75DAA69F2A353D8DDA",
-    "lastUpdated": "2026-06-17T19:11:26.6499207Z",
-    "openPr": {
-      "version": "2.43.1",
-      "checkedAt": "2026-09-08T20:21:54.0165581Z"
-    }
+    "lastUpdated": "2026-06-17T19:11:26.6499207Z"
   },
   "PaddiM8.kalker": {
     "manifestHash": "7E2CC72EBF46A0D136A34A5BF7756CF1BB121A146402F085F10982A56E37C41F",
