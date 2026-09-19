@@ -3856,7 +3856,7 @@
     ],
     "openPr": {
       "version": "8.1.2-5",
-      "checkedAt": "2026-09-17T20:23:30.6318508Z"
+      "checkedAt": "2026-09-19T00:55:02.9311826Z"
     }
   },
   "JeromeHerrman.VPinCommander": {
@@ -6094,11 +6094,7 @@
       "6769FF0F5D65D1892FF8A3711AC76B78BF0C13EB124A80BC04147F6CFFC03D0C"
     ],
     "version": "2.14.1",
-    "description": "",
-    "openPr": {
-      "version": "2.14.1",
-      "checkedAt": "2026-09-11T00:54:04.4928728Z"
-    }
+    "description": ""
   },
   "Orthogonal.APM": {
     "lastUpdated": "2026-08-16T21:14:49.1724894Z",
