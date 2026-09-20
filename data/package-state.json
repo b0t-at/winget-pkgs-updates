@@ -2542,7 +2542,7 @@
   "Flowscripter.example-cli": {
     "openPr": {
       "version": "3.0.0",
-      "checkedAt": "2026-09-19T16:22:01.1519749Z"
+      "checkedAt": "2026-09-20T20:20:33.7233566Z"
     }
   },
   "Fly-io.flyctl": {
@@ -3057,7 +3057,7 @@
     "description": "",
     "openPr": {
       "version": "2.6.0",
-      "checkedAt": "2026-09-19T20:20:16.9999256Z"
+      "checkedAt": "2026-09-20T20:20:34.0102315Z"
     }
   },
   "Google.Protobuf": {
@@ -8792,7 +8792,7 @@
     "version": "1.4.0",
     "openPr": {
       "version": "1.4.2",
-      "checkedAt": "2026-09-19T16:23:00.181634Z"
+      "checkedAt": "2026-09-20T20:20:57.0888186Z"
     }
   },
   "venipa.ytmdesktop": {
@@ -9230,7 +9230,7 @@
     "description": "",
     "openPr": {
       "version": "24.4",
-      "checkedAt": "2026-09-19T16:23:02.3179663Z"
+      "checkedAt": "2026-09-20T20:20:58.6553413Z"
     }
   },
   "xssnick.TON-Torrent": {
