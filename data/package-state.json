@@ -275,15 +275,15 @@
     }
   },
   "Alochi.Monitoring": {
-    "installerHashes": [
-      "97D366E5D290AF95C82D0A39265D8C45F763A190B2736FCB8EDE4B0091A4A82C"
-    ],
-    "lastUpdated": "2026-09-20T16:49:23.8900807Z",
-    "version": "1.0.153",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "464B54CE8FE3517344F7A71DE7ED849D0E8037AF6053CAC5AA1A7CEE961A631A",
+    "validationCount": 1,
     "description": "",
-    "validationCount": 1
+    "manifestHash": "5A59CD289A69FE8CDA50D095BBEB3B9ABB015809A5AE86DD30EC3398A2BEAAC9",
+    "version": "1.0.154",
+    "lastUpdated": "2026-09-20T20:52:04.7610513Z",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "C22204E670F5430F4EE70DDDD87C492715E8E89034D61DFFA452261B5CBDA6D1"
+    ]
   },
   "AloproAgency.WAutoChat": {
     "lastUpdated": "2026-08-18T01:43:26.4458545Z",
@@ -1648,15 +1648,15 @@
   },
   "CryptoPro.Chromium-Gost": {
     "validationCount": 1,
-    "lastUpdated": "2026-09-08T12:55:42.7827053Z",
-    "installerHashes": [
-      "3856A86A096073489BCF7359F4F3E689BC81BE2E0D68035E76A4CF0D056EF4DA",
-      "3A968092CF6BF03A649345F36DB742F48D2E600B072638DB03360E470EEE1C48"
-    ],
-    "state": "VALIDATION_PASSED",
-    "version": "152.0.7977.82",
     "description": "",
-    "manifestHash": "263B33257CF9F27044BE565EA3FDD27E9191C1B809625415F87EA03D36957F63"
+    "manifestHash": "284BFF62BCB21AE32CA235CA2C6DF316AF79CB9D1AC2C85442796A13805B9022",
+    "version": "152.0.7977.134",
+    "lastUpdated": "2026-09-20T20:52:04.8077757Z",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "ECE713518326E437D426401C3E8C0CB098F223AA2831CC9D1048CE59670DB67D",
+      "2A5722FBE18761C02223D8454CE3AE103960BD9A98FCDA5BEC057931677D3980"
+    ]
   },
   "cubezombies.MidnightAthenaeum": {
     "manifestHash": "888A7BADCA52EE5B42F755D91B950DA3D3AA1CFB03A6012120CE16761BA13129",
@@ -7395,14 +7395,14 @@
     "version": "10.2.1"
   },
   "Siddharth.VSSProgrammingLanguage": {
-    "lastUpdated": "2026-08-25T08:46:33.2793047Z",
-    "description": "",
-    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "3.0.0",
-    "manifestHash": "F66538E35211CB956CD89B0CBF111FFAB4E8BF30AF443DEFE306FA218F354786",
+    "description": "",
+    "manifestHash": "1968AEE73180F7F326FB34D84F354CCE715B519D618F13CAC295BEB8C0DACD1E",
+    "version": "3.3.3",
+    "lastUpdated": "2026-09-20T20:52:04.8506622Z",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "2EF885620469A4326AC63B5559A389BAED9707E17C51BB496578406D04617476"
+      "4390866C7E8895A648EDB4470CACE0950CC618449C580C6BF8FA83390825920F"
     ]
   },
   "Sigstore.Cosign": {
@@ -7696,15 +7696,15 @@
     ]
   },
   "SpikeHD.Dorion": {
-    "version": "6.13.1",
-    "installerHashes": [
-      "85AB21D790C05CBCB25F5A4F394290255F12F93BAD2F8DFEA069BC250393D29D"
-    ],
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-12T04:54:09.4276976Z",
     "validationCount": 1,
-    "manifestHash": "BEAAA1E5EB68FE726C5A46D210B2F1CD5219244DAE0565DEA9EE6C78B46D9209",
-    "description": ""
+    "description": "",
+    "manifestHash": "89E5D95315E6845E6D40CBC6D5D0A4FC307B78D2E9C320F66D5BD0C8B3E2E6CA",
+    "version": "6.13.2",
+    "lastUpdated": "2026-09-20T20:52:04.8304812Z",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "711F3D1F30D71299AFF681E277C05666F81DB14C88CE05198E0F015F36CB7109"
+    ]
   },
   "sprout2000.Elephicon": {
     "lastUpdated": "2026-08-30T04:52:51.5639562Z",
