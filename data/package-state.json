@@ -3609,8 +3609,8 @@
     "validationCount": 1,
     "version": "1.36.3",
     "openPr": {
-      "checkedAt": "2026-09-20T12:30:10.5770886Z",
-      "version": "1.36.3"
+      "checkedAt": "2026-09-20T16:21:35.9998355Z",
+      "version": "1.36.4"
     }
   },
   "igoogolx.lux": {
@@ -3624,8 +3624,8 @@
     "lastUpdated": "2026-09-19T20:48:57.4328147Z",
     "manifestHash": "12831218DB3FAEB3B637B89A502C0C30A17EEAC816CA3FFF805797A828C1EAE8",
     "openPr": {
-      "checkedAt": "2026-09-20T01:01:41.7820687Z",
-      "version": "1.50.1"
+      "checkedAt": "2026-09-20T16:21:36.3423398Z",
+      "version": "1.50.2"
     }
   },
   "IneedABUFF.BuffMyBar": {
@@ -6147,7 +6147,11 @@
     ],
     "manifestHash": "731D4CB43F2C79FFC9B10C7EBCBFFBCA0A872AA8FA4B9A6F67E0FF7F0A0E755A",
     "lastUpdated": "2026-09-20T12:45:41.8644834Z",
-    "validationCount": 1
+    "validationCount": 1,
+    "openPr": {
+      "checkedAt": "2026-09-20T16:21:54.6900003Z",
+      "version": "2.14.2"
+    }
   },
   "Orthogonal.APM": {
     "lastUpdated": "2026-08-16T21:14:49.1724894Z",
@@ -6781,11 +6785,7 @@
     "description": "",
     "state": "VALIDATION_PASSED",
     "version": "3.3.1",
-    "manifestHash": "8A82BF4A5961DFF8FD07045FE44E010C4AF3567D559F746E473CC9F51C401A20",
-    "openPr": {
-      "checkedAt": "2026-09-20T08:28:55.2167557Z",
-      "version": "3.3.1"
-    }
+    "manifestHash": "8A82BF4A5961DFF8FD07045FE44E010C4AF3567D559F746E473CC9F51C401A20"
   },
   "Rela.RelaGit": {
     "version": "0.16.11",
