@@ -133,7 +133,7 @@
       "C03035EBBB96FBE89D7793876C59EEFE6E3D03241436273BCEBABD355FADE29B"
     ],
     "openPr": {
-      "checkedAt": "2026-09-19T04:25:08.5030977Z",
+      "checkedAt": "2026-09-20T08:27:52.931301Z",
       "version": "0.84.2"
     }
   },
@@ -2099,7 +2099,7 @@
     ],
     "manifestHash": "31947E74E60A0462F2AAA67D5F8C21F460756C9F606A2E99B5AA0055A2064E78",
     "openPr": {
-      "checkedAt": "2026-09-19T04:25:11.1629553Z",
+      "checkedAt": "2026-09-20T08:27:58.4691971Z",
       "version": "2.12.4"
     }
   },
@@ -2612,7 +2612,7 @@
     "description": "",
     "lastUpdated": "2026-09-19T01:38:39.5509565Z",
     "openPr": {
-      "checkedAt": "2026-09-19T04:25:11.9556626Z",
+      "checkedAt": "2026-09-20T08:27:59.711577Z",
       "version": "7.2.9"
     }
   },
@@ -3570,7 +3570,7 @@
   },
   "IanWalton.JellyfinMPVShim": {
     "openPr": {
-      "checkedAt": "2026-09-19T08:27:05.7360905Z",
+      "checkedAt": "2026-09-20T08:28:00.3445476Z",
       "version": "3.0.0"
     }
   },
@@ -3804,7 +3804,7 @@
     "version": "5.2.0",
     "manifestHash": "C9D2C97F1A640AF3DDB3CC1D281E8E8107C91A4F8923FAC6096DECF81C664515",
     "openPr": {
-      "checkedAt": "2026-09-19T08:27:06.0067405Z",
+      "checkedAt": "2026-09-20T08:28:01.4314098Z",
       "version": "5.2.0"
     }
   },
@@ -3869,7 +3869,7 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-09-19T08:27:06.3106195Z",
+      "checkedAt": "2026-09-20T08:28:01.8375788Z",
       "version": "2026.9.11"
     }
   },
@@ -4434,7 +4434,7 @@
     "version": "0.37.1",
     "manifestHash": "5B7F5E03E759B9F0FB45454B0559B26300952BC6D6E230A1613823A2E5E7C8A4",
     "openPr": {
-      "checkedAt": "2026-09-19T08:27:06.9823976Z",
+      "checkedAt": "2026-09-20T08:28:03.5566609Z",
       "version": "0.37.1"
     }
   },
@@ -6464,7 +6464,11 @@
     "description": "",
     "version": "12.5.1",
     "lastUpdated": "2026-09-20T04:47:26.3206743Z",
-    "manifestHash": "D94B4552E41D65A3D8EDBFF22ADAE17C9A9AB9B1345D9D623CF1D2BC6451BBDD"
+    "manifestHash": "D94B4552E41D65A3D8EDBFF22ADAE17C9A9AB9B1345D9D623CF1D2BC6451BBDD",
+    "openPr": {
+      "checkedAt": "2026-09-20T08:28:54.8038933Z",
+      "version": "12.5.1"
+    }
   },
   "PocketBase.PocketBase": {
     "version": "0.40.4",
@@ -6775,7 +6779,7 @@
     "version": "3.3.1",
     "manifestHash": "8A82BF4A5961DFF8FD07045FE44E010C4AF3567D559F746E473CC9F51C401A20",
     "openPr": {
-      "checkedAt": "2026-09-19T08:27:09.3348923Z",
+      "checkedAt": "2026-09-20T08:28:55.2167557Z",
       "version": "3.3.1"
     }
   },
@@ -7590,7 +7594,7 @@
     "description": "",
     "lastUpdated": "2026-09-19T01:38:39.4498687Z",
     "openPr": {
-      "checkedAt": "2026-09-19T04:26:10.6254428Z",
+      "checkedAt": "2026-09-20T08:28:56.2974101Z",
       "version": "1.1307.3"
     }
   },
