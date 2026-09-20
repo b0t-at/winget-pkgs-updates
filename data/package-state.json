@@ -116,7 +116,7 @@
     "manifestHash": "88FF875B5DEA51BC3B743F06098AADAF42AB87DA966E19E5EFA189C21F4EC081",
     "version": "0.107.78",
     "openPr": {
-      "checkedAt": "2026-09-18T20:21:30.7689254Z",
+      "checkedAt": "2026-09-20T01:01:20.8579789Z",
       "version": "0.107.79"
     }
   },
@@ -1360,7 +1360,7 @@
   },
   "CharlesMilette.TranslucentTB": {
     "openPr": {
-      "checkedAt": "2026-09-18T20:21:33.7728999Z",
+      "checkedAt": "2026-09-20T01:01:25.0778187Z",
       "version": "2026.2"
     }
   },
@@ -2447,7 +2447,7 @@
       "9A0B7352DFEF40C8EBF8733F77CB777565AA4EAEDE4F79FE928C11DA5C35CE40"
     ],
     "openPr": {
-      "checkedAt": "2026-09-18T20:21:35.3628898Z",
+      "checkedAt": "2026-09-20T01:01:27.6487724Z",
       "version": "19.0.2"
     }
   },
@@ -3072,7 +3072,7 @@
     ],
     "description": "",
     "openPr": {
-      "checkedAt": "2026-09-18T20:21:42.3687556Z",
+      "checkedAt": "2026-09-20T01:01:28.0921902Z",
       "version": "36.2"
     }
   },
@@ -3618,7 +3618,11 @@
     "description": "",
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-09-19T20:48:57.4328147Z",
-    "manifestHash": "12831218DB3FAEB3B637B89A502C0C30A17EEAC816CA3FFF805797A828C1EAE8"
+    "manifestHash": "12831218DB3FAEB3B637B89A502C0C30A17EEAC816CA3FFF805797A828C1EAE8",
+    "openPr": {
+      "checkedAt": "2026-09-20T01:01:41.7820687Z",
+      "version": "1.50.1"
+    }
   },
   "IneedABUFF.BuffMyBar": {
     "installerHashes": [
@@ -3892,8 +3896,8 @@
       "AEBD5B2C3D2839160722051525134F91E8A30CAE89779E6E0ED8A485B34DBDC7"
     ],
     "openPr": {
-      "version": "8.1.2-5",
-      "checkedAt": "2026-09-19T00:55:02.9311826Z"
+      "checkedAt": "2026-09-20T01:01:42.2331911Z",
+      "version": "8.1.2-5"
     }
   },
   "JeromeHerrman.VPinCommander": {
@@ -5442,7 +5446,11 @@
     "description": "",
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-09-19T20:48:57.4115668Z",
-    "manifestHash": "7CBCA63E7EDC0E501613F0D2F5B2D9FCEBF8C0D14662B91D33302B3C357DB5F0"
+    "manifestHash": "7CBCA63E7EDC0E501613F0D2F5B2D9FCEBF8C0D14662B91D33302B3C357DB5F0",
+    "openPr": {
+      "checkedAt": "2026-09-20T01:01:44.0169383Z",
+      "version": "0.5.0"
+    }
   },
   "NATSAuthors.NATSServer": {
     "manifestHash": "8C739A4AFB1834B6358148CFEA01CFA16D5CBC339E34C31E3D5255C778AB9665",
@@ -6181,7 +6189,11 @@
     "state": "VALIDATION_PASSED",
     "description": "",
     "manifestHash": "F8847421B933350900A143A19FED15B84506A7D277B0DA75DAA69F2A353D8DDA",
-    "lastUpdated": "2026-06-17T19:11:26.6499207Z"
+    "lastUpdated": "2026-06-17T19:11:26.6499207Z",
+    "openPr": {
+      "checkedAt": "2026-09-20T01:01:45.9401842Z",
+      "version": "2.43.2"
+    }
   },
   "PaddiM8.kalker": {
     "manifestHash": "7E2CC72EBF46A0D136A34A5BF7756CF1BB121A146402F085F10982A56E37C41F",
@@ -8200,7 +8212,7 @@
     "manifestHash": "4B796A972C2DBB5AE75EB8F4F8B332F0CBE77928187E84989680F6AB184F42AA",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "checkedAt": "2026-09-18T20:21:49.579986Z",
+      "checkedAt": "2026-09-20T01:01:48.3825839Z",
       "version": "5.7.0"
     }
   },
