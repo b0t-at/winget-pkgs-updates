@@ -7200,11 +7200,11 @@
   },
   "Scandum.WinTin++": {
     "version": "2.02.61",
-    "lastUpdated": "2026-09-20T01:16:37.3010996Z",
+    "lastUpdated": "2026-09-21T01:20:27.0310892Z",
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "2C9A618908F2C08C9E373327E7A15409C25EEB6AE563F45807A611269A686250",
-    "validationCount": 31,
+    "validationCount": 32,
     "installerHashes": [
       "421A1458080413D5135A7490DC05AC0F4B54F1CAADBFC033214536237420E847"
     ]
@@ -8345,15 +8345,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "installerHashes": [
-      "DAA7D065959C8EFE6197BC9AFBCC263547D6491FDE02A56D3859381092559746"
-    ],
-    "description": "",
     "state": "VALIDATION_PASSED",
-    "version": "2.23.3",
-    "lastUpdated": "2026-09-15T12:55:05.3013557Z",
+    "description": "",
+    "installerHashes": [
+      "70053E717BBFC051ED507D0E9751F41F7BC30BBD588256CAB15A43007B512B43"
+    ],
     "validationCount": 1,
-    "manifestHash": "602A4E4730233C4B159C16B68F520AB02A732AD8912975B9C177BC7DCE1CCD47"
+    "manifestHash": "77591FFB2D730F7287361ACC42E3B8A85D45A2886298B174A67EB7F190A27406",
+    "version": "2.29.2",
+    "lastUpdated": "2026-09-21T01:20:26.9811704Z"
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
