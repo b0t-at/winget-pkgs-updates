@@ -436,15 +436,15 @@
     "state": "VALIDATION_PASSED"
   },
   "AppFlowy.AppFlowy": {
-    "manifestHash": "DECBA1E4909CE5828E5AF14ABDC5B7986F1A07F2DB905DC90638F252840F208F",
-    "installerHashes": [
-      "32A57B6720E90F53A5D089EF33B2159F30B40081E1249AB083534EF9D571A412"
-    ],
-    "version": "0.14.3",
-    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "0.14.4",
     "description": "",
-    "lastUpdated": "2026-09-16T04:45:15.6262545Z",
-    "validationCount": 1
+    "lastUpdated": "2026-09-21T05:02:01.0374919Z",
+    "installerHashes": [
+      "7C86EB6723A7D922853A1573DBA7840D791C14214B8486E093AABBDA00BEC72B"
+    ],
+    "manifestHash": "DAF9A5C2A477A03C3F86EAC5C88AD734E296C40C4884C2838CF21DA748B1FD5E",
+    "state": "VALIDATION_PASSED"
   },
   "AppiumDevelopers.AppiumInspector": {
     "state": "VALIDATION_FAILED",
@@ -1453,15 +1453,15 @@
     }
   },
   "ciromattia.KCC": {
-    "manifestHash": "1CBE08551F8C6AD0648016BA94F6BC110B994FF2DC901DD6F8F0C8201FDAF298",
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "version": "11.2.0",
     "validationCount": 1,
-    "lastUpdated": "2026-09-08T20:46:42.0970891Z",
+    "version": "11.3.2",
+    "description": "",
+    "lastUpdated": "2026-09-21T05:02:00.9463083Z",
     "installerHashes": [
-      "A40AC9BD6197B37185BEE4628ABCDB9442509D2FF4AEFF2737F2189DFCBAE242"
-    ]
+      "7788C2EA933F3E15500E502EDAFCD607298181C3323F96FAD0E18E036FB4A828"
+    ],
+    "manifestHash": "DC4F1BA12C7977D9486E20C104914F9D0A4A0D470BAF207DEB45C1389F14811C",
+    "state": "VALIDATION_PASSED"
   },
   "cjpais.Handy": {
     "version": "0.9.7",
@@ -4352,15 +4352,15 @@
     "manifestHash": "E2B20C530E7089F81C211528C6D2DD0F52E524C1D63AD5051E880427A6AB934A"
   },
   "leonsnajdr.sast": {
-    "version": "26.9.65",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "F0F3BA06302F76B1FE0F9EE26D9B1FFADF8EC67FD25D2AD8D0DFB7105B6E3F00",
     "validationCount": 1,
-    "lastUpdated": "2026-09-18T17:02:48.569685Z",
+    "version": "26.9.66",
+    "description": "",
+    "lastUpdated": "2026-09-21T05:02:01.0221482Z",
     "installerHashes": [
-      "28A9031CA5CDB7E44A76AA0E3A307FC33E1314B9CA67B1204B9EAA8822B78109"
+      "AB6C0D54421278173A806BA07E96B7C61EF75FAD704A170E30B4B63D4197A248"
     ],
-    "description": ""
+    "manifestHash": "714DDB3382C2D2BD17C5E55C31C0914A46E8549A245CF4FFAB8BB4EC4B03F1A2",
+    "state": "VALIDATION_PASSED"
   },
   "Levminer.Authme": {
     "lastUpdated": "2026-07-07T21:52:02.4861044Z",
@@ -7301,14 +7301,14 @@
     "manifestHash": "5C9C2B5C8944C616B955A76C17C4544046FB50FED06CE2831032B7D798380292"
   },
   "seerge.g-helper.PreRelease": {
-    "manifestHash": "538C9C58BEBEFAC6A3850E2EF4778720EA7E1B96BFCF60BA6B83F887AFA57EDC",
-    "lastUpdated": "2026-09-18T01:38:16.2420894Z",
-    "description": "",
     "validationCount": 1,
-    "version": "0.284",
+    "version": "0.285",
+    "description": "",
+    "lastUpdated": "2026-09-21T05:02:01.0031446Z",
     "installerHashes": [
-      "36F132C73C0835EF2487E3E7D70CD15AE11901C380C29C74C78DB1E197AA1942"
+      "C4EEE2F0ACD5FA020CCFD850FBFA5616D801E049DDFAE03F58AC9AF94E5D4C3B"
     ],
+    "manifestHash": "F7417F6CBD4EC8AFC88AA47F15B59085ED8E86E74319E4BA0EDCDDAF15220804",
     "state": "VALIDATION_PASSED"
   },
   "SERGEYDJUM.dwmEOTFrs": {
