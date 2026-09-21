@@ -133,7 +133,7 @@
       "C03035EBBB96FBE89D7793876C59EEFE6E3D03241436273BCEBABD355FADE29B"
     ],
     "openPr": {
-      "checkedAt": "2026-09-20T08:27:52.931301Z",
+      "checkedAt": "2026-09-21T08:34:13.5817501Z",
       "version": "0.84.2"
     }
   },
@@ -444,7 +444,11 @@
       "7C86EB6723A7D922853A1573DBA7840D791C14214B8486E093AABBDA00BEC72B"
     ],
     "manifestHash": "DAF9A5C2A477A03C3F86EAC5C88AD734E296C40C4884C2838CF21DA748B1FD5E",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "checkedAt": "2026-09-21T08:34:14.3757398Z",
+      "version": "0.14.4"
+    }
   },
   "AppiumDevelopers.AppiumInspector": {
     "state": "VALIDATION_FAILED",
@@ -455,7 +459,11 @@
     ],
     "lastUpdated": "2026-08-06T10:56:40.2158706Z",
     "manifestHash": "3AC84AA16424EB952BDD6A291E7E19648431D2ADC337AA9ADF88712458B0316C",
-    "version": "2026.7.1"
+    "version": "2026.7.1",
+    "openPr": {
+      "checkedAt": "2026-09-21T08:34:14.7113814Z",
+      "version": "2026.9.2"
+    }
   },
   "Aptivi.BassBoom": {
     "description": "",
@@ -1473,7 +1481,11 @@
       "7788C2EA933F3E15500E502EDAFCD607298181C3323F96FAD0E18E036FB4A828"
     ],
     "manifestHash": "DC4F1BA12C7977D9486E20C104914F9D0A4A0D470BAF207DEB45C1389F14811C",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "checkedAt": "2026-09-21T08:34:16.0897352Z",
+      "version": "11.3.2"
+    }
   },
   "cjpais.Handy": {
     "version": "0.9.7",
@@ -2119,7 +2131,7 @@
     ],
     "manifestHash": "31947E74E60A0462F2AAA67D5F8C21F460756C9F606A2E99B5AA0055A2064E78",
     "openPr": {
-      "checkedAt": "2026-09-20T08:27:58.4691971Z",
+      "checkedAt": "2026-09-21T08:34:16.4269838Z",
       "version": "2.12.4"
     }
   },
@@ -2632,7 +2644,7 @@
     "description": "",
     "lastUpdated": "2026-09-19T01:38:39.5509565Z",
     "openPr": {
-      "checkedAt": "2026-09-20T08:27:59.711577Z",
+      "checkedAt": "2026-09-21T08:34:17.2690811Z",
       "version": "7.2.9"
     }
   },
@@ -3590,7 +3602,7 @@
   },
   "IanWalton.JellyfinMPVShim": {
     "openPr": {
-      "checkedAt": "2026-09-20T08:28:00.3445476Z",
+      "checkedAt": "2026-09-21T08:34:17.5918044Z",
       "version": "3.0.0"
     }
   },
@@ -3828,7 +3840,7 @@
     "version": "5.2.0",
     "manifestHash": "C9D2C97F1A640AF3DDB3CC1D281E8E8107C91A4F8923FAC6096DECF81C664515",
     "openPr": {
-      "checkedAt": "2026-09-20T08:28:01.4314098Z",
+      "checkedAt": "2026-09-21T08:34:17.9026524Z",
       "version": "5.2.0"
     }
   },
@@ -4458,7 +4470,7 @@
     "version": "0.37.1",
     "manifestHash": "5B7F5E03E759B9F0FB45454B0559B26300952BC6D6E230A1613823A2E5E7C8A4",
     "openPr": {
-      "checkedAt": "2026-09-20T08:28:03.5566609Z",
+      "checkedAt": "2026-09-21T08:34:19.0298609Z",
       "version": "0.37.1"
     }
   },
@@ -6506,7 +6518,7 @@
     "lastUpdated": "2026-09-20T04:47:26.3206743Z",
     "manifestHash": "D94B4552E41D65A3D8EDBFF22ADAE17C9A9AB9B1345D9D623CF1D2BC6451BBDD",
     "openPr": {
-      "checkedAt": "2026-09-20T08:28:54.8038933Z",
+      "checkedAt": "2026-09-21T08:34:20.457396Z",
       "version": "12.5.1"
     }
   },
@@ -7630,7 +7642,7 @@
     "description": "",
     "lastUpdated": "2026-09-19T01:38:39.4498687Z",
     "openPr": {
-      "checkedAt": "2026-09-20T08:28:56.2974101Z",
+      "checkedAt": "2026-09-21T08:34:21.5603155Z",
       "version": "1.1307.3"
     }
   },
