@@ -283,7 +283,11 @@
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "C22204E670F5430F4EE70DDDD87C492715E8E89034D61DFFA452261B5CBDA6D1"
-    ]
+    ],
+    "openPr": {
+      "version": "1.0.154",
+      "checkedAt": "2026-09-21T01:01:03.9200257Z"
+    }
   },
   "AloproAgency.WAutoChat": {
     "lastUpdated": "2026-08-18T01:43:26.4458545Z",
@@ -1656,7 +1660,11 @@
     "installerHashes": [
       "ECE713518326E437D426401C3E8C0CB098F223AA2831CC9D1048CE59670DB67D",
       "2A5722FBE18761C02223D8454CE3AE103960BD9A98FCDA5BEC057931677D3980"
-    ]
+    ],
+    "openPr": {
+      "version": "152.0.7977.134",
+      "checkedAt": "2026-09-21T01:00:32.3736544Z"
+    }
   },
   "cubezombies.MidnightAthenaeum": {
     "manifestHash": "888A7BADCA52EE5B42F755D91B950DA3D3AA1CFB03A6012120CE16761BA13129",
