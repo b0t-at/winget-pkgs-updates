@@ -1468,8 +1468,8 @@
     "validationCount": 1,
     "version": "1.0.48275",
     "openPr": {
-      "version": "1.0.50781",
-      "checkedAt": "2026-09-21T12:31:33.6313572Z"
+      "checkedAt": "2026-09-21T16:24:59.3969532Z",
+      "version": "1.0.50849"
     }
   },
   "ciromattia.KCC": {
@@ -2657,11 +2657,7 @@
     "installerHashes": [
       "D0FE00A0C46C109E4150114AD19AE07F0C155EAE785A9F171201C2C8B7B02F62"
     ],
-    "manifestHash": "29AEEE3677A22764D54A7936B4F7FB3A183608F8853D4CB1ED5CED0C486E8FD7",
-    "openPr": {
-      "checkedAt": "2026-09-10T08:30:00.8854653Z",
-      "version": "3.18.4"
-    }
+    "manifestHash": "29AEEE3677A22764D54A7936B4F7FB3A183608F8853D4CB1ED5CED0C486E8FD7"
   },
   "FrancisBanyikwa.MediaDownloader": {
     "manifestHash": "03C1DB537ECDB0566823D94D3B6768E5B97F29295D693658F8DF8898058990A5",
@@ -3641,7 +3637,7 @@
     "validationCount": 1,
     "version": "1.36.3",
     "openPr": {
-      "checkedAt": "2026-09-20T16:21:35.9998355Z",
+      "checkedAt": "2026-09-21T16:25:01.4507627Z",
       "version": "1.36.4"
     }
   },
@@ -3656,7 +3652,7 @@
     "lastUpdated": "2026-09-19T20:48:57.4328147Z",
     "manifestHash": "12831218DB3FAEB3B637B89A502C0C30A17EEAC816CA3FFF805797A828C1EAE8",
     "openPr": {
-      "checkedAt": "2026-09-20T16:21:36.3423398Z",
+      "checkedAt": "2026-09-21T16:25:01.9102774Z",
       "version": "1.50.2"
     }
   },
@@ -3738,8 +3734,8 @@
     "lastUpdated": "2026-06-04T22:15:30.5734589Z",
     "manifestHash": "06EA63CBA95A079A2638DFF25282D03EB7E6B1FD2E589F9F80A37CDBF09C37BB",
     "openPr": {
-      "version": "1.31.0",
-      "checkedAt": "2026-08-31T16:24:07.896675Z"
+      "checkedAt": "2026-09-21T16:25:02.3215571Z",
+      "version": "1.31.1"
     }
   },
   "IvanIsCoding.celq": {
@@ -6189,7 +6185,7 @@
     "lastUpdated": "2026-09-20T12:45:41.8644834Z",
     "validationCount": 1,
     "openPr": {
-      "checkedAt": "2026-09-20T16:21:54.6900003Z",
+      "checkedAt": "2026-09-21T16:25:11.8867718Z",
       "version": "2.14.2"
     }
   },
