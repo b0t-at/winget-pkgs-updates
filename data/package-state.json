@@ -8461,14 +8461,14 @@
   },
   "TravisLane.SteamArtManager": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "manifestHash": "BEE0731B539DA3CFC82EDB8A53E6DA0203EAEBE9FCDD7B23FBD537206F52303D",
-    "installerHashes": [
-      "08E9EFBE2378E788D6CA884F5A7950873E698C233E8293C455BF5D5C010DCBA9"
-    ],
+    "version": "3.19.2",
+    "manifestHash": "362FF8410C14FD82C21E9A9761DACF5162904CE121EAFBE00E1BCFAD45FE5EEC",
     "description": "",
-    "lastUpdated": "2026-09-14T01:17:52.8397005Z",
-    "version": "3.19.1"
+    "installerHashes": [
+      "FF83068AA70C181E48885DB51544D6BC456303200FFC5435A0435B226D711BCA"
+    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-09-21T08:51:40.6261686Z"
   },
   "TrellisLab.Trellis": {
     "manifestHash": "4F85C7FBC55A58B29480DB305C355CF06BEF854E938F2FBC0BCACE97E5606E38",
