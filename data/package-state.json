@@ -275,15 +275,13 @@
     }
   },
   "Alochi.Monitoring": {
-    "validationCount": 1,
     "description": "",
-    "manifestHash": "5A59CD289A69FE8CDA50D095BBEB3B9ABB015809A5AE86DD30EC3398A2BEAAC9",
-    "version": "1.0.154",
-    "lastUpdated": "2026-09-20T20:52:04.7610513Z",
+    "installerHashes": "74721F3980CDAF37F9E5D5B5003AE7EF94050523821D9656CE8AE3BE31618BDD",
+    "lastUpdated": "2026-09-21T21:08:15.0652396Z",
+    "manifestHash": "361D6237EE09BC8A297DB283C325D01314411D17DB93D8CB126DFB5A428EB0A5",
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "C22204E670F5430F4EE70DDDD87C492715E8E89034D61DFFA452261B5CBDA6D1"
-    ]
+    "validationCount": 1,
+    "version": "1.0.155"
   },
   "AloproAgency.WAutoChat": {
     "lastUpdated": "2026-08-18T01:43:26.4458545Z",
@@ -698,16 +696,16 @@
     "manifestHash": "C71A6E160AC6A85572AFA73CCA7A972CAD01C8411B8217390738C684FC69BEF1"
   },
   "axllent.mailpit": {
-    "version": "1.31.1",
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "lastUpdated": "2026-09-06T12:59:54.462691Z",
-    "manifestHash": "32F03467EFC2654AC0CEC8C19E3E94225BC5BDB0551214EB8CEC9D1397FEE05B",
+    "lastUpdated": "2026-09-21T21:08:15.078926Z",
     "installerHashes": [
-      "73FF05204741BD89CC96E6074573C4B22E1EDFADF1B3427536233FF20C751604",
-      "A6475D8E63AC92084D0A2A3CF22FF8A723B508CCC65283B2D4D54F71EF897CA0"
-    ]
+      "42C20E5C3254125EA7489847811F10D70E39DE573FE41D03A61412C87913E995",
+      "721D37A29D57F4886FC848E4B9F524D138EF552651278D1D3FF458C61CB52234"
+    ],
+    "version": "1.31.2",
+    "description": "",
+    "manifestHash": "6242EFCC09C059FAFCDB7BB8B5A2986666C4D823FE4096439D9E685AF684BC91"
   },
   "axodotdev.dist": {
     "installerHashes": [
@@ -1333,15 +1331,15 @@
     }
   },
   "Celerp.Celerp": {
-    "description": "",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-21T21:08:15.0512969Z",
     "installerHashes": [
-      "D5893ABB2E685A845E1CABD88F69D8F5BDAA3D2A27DA02B0AE25A18F6707D9EA"
+      "5A60EE5E99BF9D70456A542656A768F66056CEC529093793B9842C7BA58C6552"
     ],
-    "lastUpdated": "2026-09-17T09:19:19.7326874Z",
-    "manifestHash": "35D205CCE70EAF9F072503A0557143843C714EF056B573ABFCAEA455AD866309",
-    "version": "2.4.0",
-    "validationCount": 1
+    "version": "2.5.0",
+    "description": "",
+    "manifestHash": "A4993D96A7E8E264D3C96EA01D868C6EC21A166D7B580C48A7FE2D05F3399F50"
   },
   "CerberAuth.jwtop": {
     "description": "",
@@ -2692,12 +2690,12 @@
   },
   "Frnsys.Half_earth": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 19,
+    "validationCount": 20,
     "installerHashes": [
       "CD47FC89C016730378E00399433045CCDB17E9B8ECC1434413C7531B9EB6AD36"
     ],
     "description": "",
-    "lastUpdated": "2026-09-20T16:49:23.8566688Z",
+    "lastUpdated": "2026-09-21T21:08:15.0353981Z",
     "manifestHash": "162A9CB4478CCE0219E2D18B3BDBA90BBFD1A2D89CCCF6E863728E377240A4A7",
     "version": "1.0.15"
   },
@@ -8369,15 +8367,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "installerHashes": [
-      "70053E717BBFC051ED507D0E9751F41F7BC30BBD588256CAB15A43007B512B43"
-    ],
     "validationCount": 1,
-    "manifestHash": "77591FFB2D730F7287361ACC42E3B8A85D45A2886298B174A67EB7F190A27406",
-    "version": "2.29.2",
-    "lastUpdated": "2026-09-21T01:20:26.9811704Z"
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-21T21:08:15.0035193Z",
+    "installerHashes": [
+      "D8E7785C9DA04DFA2C2295E4464C2DFC757772D90B511BBBF9A70F88706C1192"
+    ],
+    "version": "2.30.2",
+    "description": "",
+    "manifestHash": "B2AA3FB516783E22A5F755644F6714A95F856EE0DC9E12B7B0EE95825FB5BFF7"
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
