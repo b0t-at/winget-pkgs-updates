@@ -283,11 +283,7 @@
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "C22204E670F5430F4EE70DDDD87C492715E8E89034D61DFFA452261B5CBDA6D1"
-    ],
-    "openPr": {
-      "version": "1.0.154",
-      "checkedAt": "2026-09-21T01:01:03.9200257Z"
-    }
+    ]
   },
   "AloproAgency.WAutoChat": {
     "lastUpdated": "2026-08-18T01:43:26.4458545Z",
@@ -2573,8 +2569,8 @@
   },
   "Flowscripter.example-cli": {
     "openPr": {
-      "version": "3.0.0",
-      "checkedAt": "2026-09-20T20:20:33.7233566Z"
+      "checkedAt": "2026-09-21T20:22:50.4910329Z",
+      "version": "3.0.0"
     }
   },
   "Fly-io.flyctl": {
@@ -3084,8 +3080,8 @@
     "validationCount": 2,
     "description": "",
     "openPr": {
-      "version": "2.6.0",
-      "checkedAt": "2026-09-20T20:20:34.0102315Z"
+      "checkedAt": "2026-09-21T20:22:51.6908323Z",
+      "version": "2.6.0"
     }
   },
   "Google.Protobuf": {
@@ -7947,8 +7943,8 @@
     "validationCount": 1,
     "manifestHash": "2FC17D10387329E5E73DBDDCBE45541A670D1711C99B916B986BBD747577DEC7",
     "openPr": {
-      "checkedAt": "2026-09-10T20:20:34.7428868Z",
-      "version": "1.50.11"
+      "checkedAt": "2026-09-21T20:23:49.288873Z",
+      "version": "1.51.1"
     }
   },
   "stuncloud.uwscr": {
@@ -8837,8 +8833,8 @@
     "lastUpdated": "2026-08-06T14:13:45.9696492Z",
     "version": "1.4.0",
     "openPr": {
-      "version": "1.4.2",
-      "checkedAt": "2026-09-20T20:20:57.0888186Z"
+      "checkedAt": "2026-09-21T20:23:51.7897528Z",
+      "version": "1.4.2"
     }
   },
   "venipa.ytmdesktop": {
