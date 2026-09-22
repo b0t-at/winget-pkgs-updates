@@ -139,14 +139,14 @@
   },
   "AES256Afro.VideoKidnapper": {
     "description": "",
-    "validationCount": 1,
-    "manifestHash": "6AF0D5C6580E0DC86E2AEBDCE5BC81D989B0AE69F34CC63C68EB8C8B91358A9E",
     "state": "VALIDATION_PASSED",
-    "version": "1.8.3",
-    "lastUpdated": "2026-09-09T12:48:50.2818425Z",
     "installerHashes": [
-      "7D1FCFB413C4F55953D9C660654FA158F9615B09A0D1E930D39D6CC1E58D737A"
-    ]
+      "A32F99ECC67E7BB939DD802A96AA0C2A8A43C4CB60EC49CBF46C1E58C6D28FEC"
+    ],
+    "manifestHash": "E66C69555886C5F4B712E6A6C1C94A930E4ACB3195086C65801370A0CBF52D84",
+    "lastUpdated": "2026-09-22T16:49:56.7136484Z",
+    "validationCount": 1,
+    "version": "1.8.4"
   },
   "agent-rt.arc-runner": {
     "manifestHash": "2CC193F9A4A4801C176AA7EEFD46F19FCAD4AE99DC906CD7F1071640805F78A2",
@@ -2518,15 +2518,15 @@
     "lastUpdated": "2026-09-14T04:56:07.4906273Z"
   },
   "Filamental.Filamental": {
-    "manifestHash": "F2C6A875959C1793BE4717E2A4F43E4DC9BF115B33EE10B3301A5F3CD61BCB0A",
-    "version": "0.3.48",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-16T16:50:00.1065271Z",
     "description": "",
-    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "EAEDC04DEBDA1F7D32FFAF70C7703835E43ED15B3ED358D36F28E3A449D55862"
-    ]
+      "C8D444A2E7DA70788C78E3B73FB92416A14970F238285AF4B9F7A7063D5BBAC8"
+    ],
+    "manifestHash": "DEA60E4EB9E4E70A98213E7FB40E4D63C93D1ECF286A549563B620487582A356",
+    "lastUpdated": "2026-09-22T16:49:56.6901995Z",
+    "validationCount": 1,
+    "version": "0.3.49"
   },
   "FirenzeLor.gemini-collector": {
     "validationCount": 1,
@@ -7237,11 +7237,11 @@
   },
   "Scandum.WinTin++": {
     "version": "2.02.61",
-    "lastUpdated": "2026-09-22T12:58:28.6847894Z",
+    "lastUpdated": "2026-09-22T16:49:56.6277467Z",
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "2C9A618908F2C08C9E373327E7A15409C25EEB6AE563F45807A611269A686250",
-    "validationCount": 34,
+    "validationCount": 35,
     "installerHashes": [
       "421A1458080413D5135A7490DC05AC0F4B54F1CAADBFC033214536237420E847"
     ]
