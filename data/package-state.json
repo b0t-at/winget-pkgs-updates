@@ -192,11 +192,7 @@
     ],
     "manifestHash": "3FDF3A013BAB5CA656AB234B80171AC771C8F3C1691477476E077C98006C40B7",
     "lastUpdated": "2026-09-19T08:41:43.6037433Z",
-    "version": "0.9.2",
-    "openPr": {
-      "version": "0.9.2",
-      "checkedAt": "2026-09-21T12:32:37.8809744Z"
-    }
+    "version": "0.9.2"
   },
   "Aiden1020.LocalSubs": {
     "manifestHash": "213A97D3D7C6F3B5FE864420C3CEF1C3280D138B6B91B0272DB5230389D73EB2",
@@ -283,11 +279,7 @@
     "validationCount": 1,
     "version": "1.0.156",
     "description": "",
-    "lastUpdated": "2026-09-22T04:59:22.5816181Z",
-    "openPr": {
-      "version": "1.0.156",
-      "checkedAt": "2026-09-22T12:33:32.5499606Z"
-    }
+    "lastUpdated": "2026-09-22T04:59:22.5816181Z"
   },
   "AloproAgency.WAutoChat": {
     "lastUpdated": "2026-08-18T01:43:26.4458545Z",
@@ -382,7 +374,7 @@
     "version": "2.8.0",
     "openPr": {
       "version": "2.8.0",
-      "checkedAt": "2026-09-21T12:32:40.5009433Z"
+      "checkedAt": "2026-09-22T16:25:51.20414Z"
     }
   },
   "Anki.Anki": {
@@ -444,7 +436,11 @@
     "installerHashes": [
       "B213D2AF0E31D2990E559201682BF67E1EFD9E8E4C5211F44F6796B9BA817118"
     ],
-    "validationCount": 1
+    "validationCount": 1,
+    "openPr": {
+      "version": "0.14.5",
+      "checkedAt": "2026-09-22T16:24:39.117237Z"
+    }
   },
   "AppiumDevelopers.AppiumInspector": {
     "state": "VALIDATION_FAILED",
