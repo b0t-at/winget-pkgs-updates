@@ -116,7 +116,7 @@
     "manifestHash": "88FF875B5DEA51BC3B743F06098AADAF42AB87DA966E19E5EFA189C21F4EC081",
     "version": "0.107.78",
     "openPr": {
-      "checkedAt": "2026-09-21T04:28:31.0931083Z",
+      "checkedAt": "2026-09-22T08:30:08.6938348Z",
       "version": "0.107.79"
     }
   },
@@ -440,11 +440,7 @@
       "7C86EB6723A7D922853A1573DBA7840D791C14214B8486E093AABBDA00BEC72B"
     ],
     "manifestHash": "DAF9A5C2A477A03C3F86EAC5C88AD734E296C40C4884C2838CF21DA748B1FD5E",
-    "state": "VALIDATION_PASSED",
-    "openPr": {
-      "checkedAt": "2026-09-21T08:34:14.3757398Z",
-      "version": "0.14.4"
-    }
+    "state": "VALIDATION_PASSED"
   },
   "AppiumDevelopers.AppiumInspector": {
     "state": "VALIDATION_FAILED",
@@ -1374,7 +1370,7 @@
   },
   "CharlesMilette.TranslucentTB": {
     "openPr": {
-      "checkedAt": "2026-09-21T04:28:34.8315963Z",
+      "checkedAt": "2026-09-22T08:30:12.2269074Z",
       "version": "2026.2"
     }
   },
@@ -1567,7 +1563,11 @@
     "validationCount": 1,
     "version": "1.4.1",
     "description": "",
-    "lastUpdated": "2026-09-22T04:59:22.5483796Z"
+    "lastUpdated": "2026-09-22T04:59:22.5483796Z",
+    "openPr": {
+      "checkedAt": "2026-09-22T08:30:12.5443002Z",
+      "version": "1.4.1"
+    }
   },
   "CosX.AzurePimTui": {
     "manifestHash": "3A3B5632ED68CEE304B860589EEBCBE68C4505F2BA877812B8E4BC3F20EA5175",
@@ -2480,7 +2480,7 @@
       "9A0B7352DFEF40C8EBF8733F77CB777565AA4EAEDE4F79FE928C11DA5C35CE40"
     ],
     "openPr": {
-      "checkedAt": "2026-09-21T04:28:36.3512597Z",
+      "checkedAt": "2026-09-22T08:30:13.3463712Z",
       "version": "19.0.2"
     }
   },
@@ -2588,7 +2588,11 @@
     "validationCount": 1,
     "version": "0.4.105",
     "description": "",
-    "lastUpdated": "2026-09-22T04:59:22.4964458Z"
+    "lastUpdated": "2026-09-22T04:59:22.4964458Z",
+    "openPr": {
+      "checkedAt": "2026-09-22T08:30:13.6824569Z",
+      "version": "0.4.105"
+    }
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
     "validationCount": 1,
@@ -3101,7 +3105,7 @@
     ],
     "description": "",
     "openPr": {
-      "checkedAt": "2026-09-21T04:28:36.7028698Z",
+      "checkedAt": "2026-09-22T08:30:14.4594109Z",
       "version": "36.2"
     }
   },
@@ -3925,7 +3929,7 @@
       "AEBD5B2C3D2839160722051525134F91E8A30CAE89779E6E0ED8A485B34DBDC7"
     ],
     "openPr": {
-      "checkedAt": "2026-09-21T04:28:37.043044Z",
+      "checkedAt": "2026-09-22T08:30:14.7929295Z",
       "version": "8.1.2-5"
     }
   },
@@ -4728,7 +4732,11 @@
     "validationCount": 1,
     "version": "2.1.6",
     "description": "",
-    "lastUpdated": "2026-09-22T04:59:22.526419Z"
+    "lastUpdated": "2026-09-22T04:59:22.526419Z",
+    "openPr": {
+      "checkedAt": "2026-09-22T08:30:38.3813152Z",
+      "version": "2.1.6"
+    }
   },
   "masaodev.quick-dash-launcher": {
     "lastUpdated": "2026-09-22T01:21:24.1089887Z",
@@ -5881,11 +5889,7 @@
     "validationCount": 1,
     "description": "",
     "version": "6.5.2",
-    "state": "VALIDATION_PASSED",
-    "openPr": {
-      "checkedAt": "2026-08-22T08:15:02.7379217Z",
-      "version": "6.5.2"
-    }
+    "state": "VALIDATION_PASSED"
   },
   "OneWare.OneWareStudio": {
     "state": "VALIDATION_PASSED",
@@ -8257,7 +8261,7 @@
     "manifestHash": "4B796A972C2DBB5AE75EB8F4F8B332F0CBE77928187E84989680F6AB184F42AA",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "checkedAt": "2026-09-21T04:28:47.3045432Z",
+      "checkedAt": "2026-09-22T08:30:41.5937431Z",
       "version": "5.7.0"
     }
   },
