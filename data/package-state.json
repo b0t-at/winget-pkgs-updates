@@ -436,15 +436,15 @@
     "state": "VALIDATION_PASSED"
   },
   "AppFlowy.AppFlowy": {
-    "validationCount": 1,
-    "version": "0.14.4",
+    "manifestHash": "D4A5A2D40CE4C9ACD92DA709C75DFC88B3DA8F5ADF5A858EB5848E83B9690FAE",
     "description": "",
-    "lastUpdated": "2026-09-21T05:02:01.0374919Z",
+    "state": "VALIDATION_PASSED",
+    "version": "0.14.5",
+    "lastUpdated": "2026-09-22T12:58:28.7120496Z",
     "installerHashes": [
-      "7C86EB6723A7D922853A1573DBA7840D791C14214B8486E093AABBDA00BEC72B"
+      "B213D2AF0E31D2990E559201682BF67E1EFD9E8E4C5211F44F6796B9BA817118"
     ],
-    "manifestHash": "DAF9A5C2A477A03C3F86EAC5C88AD734E296C40C4884C2838CF21DA748B1FD5E",
-    "state": "VALIDATION_PASSED"
+    "validationCount": 1
   },
   "AppiumDevelopers.AppiumInspector": {
     "state": "VALIDATION_FAILED",
@@ -2104,15 +2104,15 @@
     "manifestHash": "1D7FF29AFC14AF9249CE7B906ECE45082CEF5AE326B718299ACEDA2B02414ADA"
   },
   "edde746.Plezy": {
-    "manifestHash": "9665F38204729C6B0A51E56E1E137BAA1EA61D24A02C3E8E7A53BAB18B09BA3F",
-    "lastUpdated": "2026-09-16T01:14:49.5885916Z",
-    "state": "VALIDATION_PASSED",
-    "version": "2.20.0",
-    "validationCount": 1,
+    "manifestHash": "06AA76BB52289C519CE7049096FB19B94F91926BB5B80AC3287AACE58CDC9657",
     "description": "",
+    "state": "VALIDATION_PASSED",
+    "version": "2.21.0",
+    "lastUpdated": "2026-09-22T12:58:28.6370047Z",
     "installerHashes": [
-      "6BD848C708F34918160D584CB3BAA9CBE5B248BEC4AAC4B8B55F6FFF42000535"
-    ]
+      "E06D2E4001A6F53E70B2609BA5A2586F876CA8FA878E66546D1E43B3E7583FBE"
+    ],
+    "validationCount": 1
   },
   "edenian-prince.rust-secrets": {
     "validationCount": 1,
@@ -7241,11 +7241,11 @@
   },
   "Scandum.WinTin++": {
     "version": "2.02.61",
-    "lastUpdated": "2026-09-21T16:44:28.2868991Z",
+    "lastUpdated": "2026-09-22T12:58:28.6847894Z",
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "2C9A618908F2C08C9E373327E7A15409C25EEB6AE563F45807A611269A686250",
-    "validationCount": 33,
+    "validationCount": 34,
     "installerHashes": [
       "421A1458080413D5135A7490DC05AC0F4B54F1CAADBFC033214536237420E847"
     ]
