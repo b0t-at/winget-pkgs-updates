@@ -133,8 +133,8 @@
       "C03035EBBB96FBE89D7793876C59EEFE6E3D03241436273BCEBABD355FADE29B"
     ],
     "openPr": {
-      "checkedAt": "2026-09-21T08:34:13.5817501Z",
-      "version": "0.84.2"
+      "version": "0.84.2",
+      "checkedAt": "2026-09-22T12:32:24.6014772Z"
     }
   },
   "AES256Afro.VideoKidnapper": {
@@ -271,7 +271,7 @@
     "version": "3.1",
     "openPr": {
       "version": "3.1",
-      "checkedAt": "2026-09-21T12:32:38.8488142Z"
+      "checkedAt": "2026-09-22T12:33:31.5457424Z"
     }
   },
   "Alochi.Monitoring": {
@@ -283,7 +283,11 @@
     "validationCount": 1,
     "version": "1.0.156",
     "description": "",
-    "lastUpdated": "2026-09-22T04:59:22.5816181Z"
+    "lastUpdated": "2026-09-22T04:59:22.5816181Z",
+    "openPr": {
+      "version": "1.0.156",
+      "checkedAt": "2026-09-22T12:33:32.5499606Z"
+    }
   },
   "AloproAgency.WAutoChat": {
     "lastUpdated": "2026-08-18T01:43:26.4458545Z",
@@ -2132,8 +2136,8 @@
     ],
     "manifestHash": "31947E74E60A0462F2AAA67D5F8C21F460756C9F606A2E99B5AA0055A2064E78",
     "openPr": {
-      "checkedAt": "2026-09-21T08:34:16.4269838Z",
-      "version": "2.12.4"
+      "version": "2.12.4",
+      "checkedAt": "2026-09-22T12:32:28.5829656Z"
     }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
@@ -3903,7 +3907,7 @@
   "jdx.mise": {
     "openPr": {
       "version": "2026.9.12",
-      "checkedAt": "2026-09-21T12:31:36.0800015Z"
+      "checkedAt": "2026-09-22T12:32:30.4283906Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -6826,7 +6830,11 @@
     "installerHashes": [
       "9A73CE0DF1B3B775159C2615F70C353EA81BAC5F7AE4CC9101D4F46D77E388C0"
     ],
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "version": "3.3.2",
+      "checkedAt": "2026-09-22T12:32:33.9723003Z"
+    }
   },
   "Rela.RelaGit": {
     "version": "0.16.11",
@@ -7913,11 +7921,7 @@
     "version": "1.163.4",
     "installerHashes": [
       "0BEDD00C34A6109D90A63AD4D893BAA49B02AC9AB60A540CC9BF151113C65EC7"
-    ],
-    "openPr": {
-      "checkedAt": "2026-09-10T20:20:32.9581365Z",
-      "version": "1.163.4"
-    }
+    ]
   },
   "str4d.rage": {
     "state": "VALIDATION_PASSED",
