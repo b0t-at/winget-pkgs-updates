@@ -2701,12 +2701,12 @@
   },
   "Frnsys.Half_earth": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 21,
+    "validationCount": 22,
     "installerHashes": [
       "CD47FC89C016730378E00399433045CCDB17E9B8ECC1434413C7531B9EB6AD36"
     ],
     "description": "",
-    "lastUpdated": "2026-09-22T01:21:24.1483749Z",
+    "lastUpdated": "2026-09-22T08:47:00.1377452Z",
     "manifestHash": "162A9CB4478CCE0219E2D18B3BDBA90BBFD1A2D89CCCF6E863728E377240A4A7",
     "version": "1.0.15"
   },
@@ -6818,15 +6818,15 @@
     "state": "VALIDATION_FAILED"
   },
   "rejetto.hfs": {
-    "lastUpdated": "2026-09-19T05:03:38.5376471Z",
-    "installerHashes": [
-      "7632D1AE14D182336B4FE1E72CD22D672A4CB1BEB0BC32FC7467013BAF31EB90"
-    ],
     "validationCount": 1,
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "version": "3.3.1",
-    "manifestHash": "8A82BF4A5961DFF8FD07045FE44E010C4AF3567D559F746E473CC9F51C401A20"
+    "lastUpdated": "2026-09-22T08:47:00.1856415Z",
+    "version": "3.3.2",
+    "manifestHash": "2D224061D9E99ED7114367E084FDD555D08C7692312533EEC2E81DB884419FED",
+    "installerHashes": [
+      "9A73CE0DF1B3B775159C2615F70C353EA81BAC5F7AE4CC9101D4F46D77E388C0"
+    ],
+    "state": "VALIDATION_PASSED"
   },
   "Rela.RelaGit": {
     "version": "0.16.11",
