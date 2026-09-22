@@ -1784,15 +1784,15 @@
     "manifestHash": "AC4E6E01DCF70E738A5AFF74839A24626E219073B90B09F8CC41D47D066587D8"
   },
   "Datadog.dd-trace-dotnet": {
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "07F3B1491CC346A203CF2D1D8D19AB7A652D08182F7960BEDB0710A6AE4B4C3C",
-    "lastUpdated": "2026-09-08T01:29:42.6671003Z",
-    "description": "",
-    "version": "3.53.0",
+    "lastUpdated": "2026-09-22T01:21:24.201137Z",
+    "version": "3.54.0",
     "validationCount": 1,
+    "description": "",
     "installerHashes": [
-      "4CFAF65EDF080E1EAFFCB25D5FB9030D6C7A0C6EDB2D495F1D0E4ECE70D133FA"
-    ]
+      "B28DAE9574C3CF192E561A87F200E9135F99C1D763F25F181DA6100B7DC47870"
+    ],
+    "manifestHash": "E313D7F3F3D631F98E6E24A66BE0E17A5FBF87211B9E65582C373C35BCFE0CCE",
+    "state": "VALIDATION_PASSED"
   },
   "DDEVFoundation.DDEV": {
     "manifestHash": "67B4DF094E5F74F5C7385EB593AA89C91A79DFDB5B998B1BE17C01117F52EECA",
@@ -2684,12 +2684,12 @@
   },
   "Frnsys.Half_earth": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 20,
+    "validationCount": 21,
     "installerHashes": [
       "CD47FC89C016730378E00399433045CCDB17E9B8ECC1434413C7531B9EB6AD36"
     ],
     "description": "",
-    "lastUpdated": "2026-09-21T21:08:15.0353981Z",
+    "lastUpdated": "2026-09-22T01:21:24.1483749Z",
     "manifestHash": "162A9CB4478CCE0219E2D18B3BDBA90BBFD1A2D89CCCF6E863728E377240A4A7",
     "version": "1.0.15"
   },
@@ -4054,15 +4054,15 @@
     "version": "6.3.9.6"
   },
   "k0sproject.k0sctl": {
-    "lastUpdated": "2026-09-13T16:52:03.6479306Z",
+    "lastUpdated": "2026-09-22T01:21:24.1752574Z",
+    "version": "0.33.1",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "FF799BCAAA9B3DCA1D3A650AC4CF7ABB1F38BC9BE83E26E5B388EA7DA07FC573"
-    ],
-    "manifestHash": "AA8F621127E44F06E587CDAEE4840C39AB00EBDF98B5ABC46FF638107C620293",
     "description": "",
-    "version": "0.33.0"
+    "installerHashes": [
+      "3C9DC070A8AB4080F497785826C4F7459FD5430FA9F57F6EC2C4E19D3E536B2E"
+    ],
+    "manifestHash": "5EAD2951AE041577A773B119CC5A2CC71375826C36BF756411FE3EBC2B49C41A",
+    "state": "VALIDATION_PASSED"
   },
   "kagg886.Pixiv-MultiPlatform": {
     "lastUpdated": "2026-08-16T21:14:48.8151222Z",
@@ -4718,14 +4718,14 @@
     "manifestHash": "DBBF6DA484C19A070C872608BA8435904FCBCC1521505BAD56A285EDE285225D"
   },
   "masaodev.quick-dash-launcher": {
+    "lastUpdated": "2026-09-22T01:21:24.1089887Z",
+    "version": "0.7.30",
     "validationCount": 1,
-    "lastUpdated": "2026-09-15T04:56:52.9335357Z",
-    "installerHashes": [
-      "379A7A4A617A50243DC92295B7A1D5B648DA5272F136AB23AB8E95E7F4E4E17A"
-    ],
-    "version": "0.7.29",
     "description": "",
-    "manifestHash": "822459912204AE28803460CBEB1B516574E5A89AF37A125055466B0D451DFD10",
+    "installerHashes": [
+      "D3C14C8295DC714A54C37A7E269505461BC625D2A120014F6B9BB8E276399EB7"
+    ],
+    "manifestHash": "78FCE07917F9CF3D2B78E2731F1A6C96FD606B480923AA7A432D61FDDCB9DC4E",
     "state": "VALIDATION_PASSED"
   },
   "Mateuscruz19.BATorrent": {
