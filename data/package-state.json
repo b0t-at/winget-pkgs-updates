@@ -2588,11 +2588,7 @@
     "validationCount": 1,
     "version": "0.4.105",
     "description": "",
-    "lastUpdated": "2026-09-22T04:59:22.4964458Z",
-    "openPr": {
-      "checkedAt": "2026-09-22T08:30:13.6824569Z",
-      "version": "0.4.105"
-    }
+    "lastUpdated": "2026-09-22T04:59:22.4964458Z"
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
     "validationCount": 1,
@@ -6190,7 +6186,7 @@
     "lastUpdated": "2026-09-20T12:45:41.8644834Z",
     "validationCount": 1,
     "openPr": {
-      "checkedAt": "2026-09-21T16:25:11.8867718Z",
+      "checkedAt": "2026-09-22T20:21:35.0162644Z",
       "version": "2.14.2"
     }
   },
