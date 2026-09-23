@@ -2097,15 +2097,15 @@
     }
   },
   "Echonuit.VigieChiroCompanion": {
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-10T16:58:49.3542152Z",
-    "validationCount": 2,
-    "description": "",
-    "version": "2.193.0",
     "installerHashes": [
-      "5DD5D6CFF000088E03DAFD23D5626940BDA523BD80C99214ED2079EC5D5CD3CE"
+      "F3F70846B19CDA2EFC41F454110FF15B7D134869F35781953B23CBEC20F4AC30"
     ],
-    "manifestHash": "1D7FF29AFC14AF9249CE7B906ECE45082CEF5AE326B718299ACEDA2B02414ADA"
+    "lastUpdated": "2026-09-23T20:56:40.6244141Z",
+    "manifestHash": "62CE8716BF4961B338DB8678344699E760D242B69153CA3671337124A767F051",
+    "version": "2.194.0",
+    "description": ""
   },
   "edde746.Plezy": {
     "manifestHash": "06AA76BB52289C519CE7049096FB19B94F91926BB5B80AC3287AACE58CDC9657",
@@ -3296,15 +3296,15 @@
     ]
   },
   "Happ.Happ": {
-    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "description": "",
-    "manifestHash": "89417216F99ABFE8B038E207B462944D3BB0EB76548EF0700D457D3DF8193A20",
-    "version": "4.2.1",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "08B7146E0B7C4F0326B2DA894D653A42C98E26235302869595970CE20FA65B27"
+      "CD2016B398D36FA20956CAB083175C1A390B12344D8834F35BD7EFCE9FE2475C"
     ],
-    "lastUpdated": "2026-09-08T09:14:42.7466257Z"
+    "lastUpdated": "2026-09-23T20:56:40.7222526Z",
+    "manifestHash": "DE743CC1000628E48A7315E07F30CBA330212848C10122D33D68FDEB119C6BAD",
+    "version": "4.3.0",
+    "description": ""
   },
   "HarjotSinghRana.Reinstate": {
     "state": "VALIDATION_PASSED",
@@ -4743,15 +4743,15 @@
     }
   },
   "masaodev.quick-dash-launcher": {
-    "lastUpdated": "2026-09-22T01:21:24.1089887Z",
-    "version": "0.7.30",
     "validationCount": 1,
-    "description": "",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "D3C14C8295DC714A54C37A7E269505461BC625D2A120014F6B9BB8E276399EB7"
+      "7E2983BEBFDCED616B0098EE5674DA151BCFB125037E817C2CBC7A0D8817F15C"
     ],
-    "manifestHash": "78FCE07917F9CF3D2B78E2731F1A6C96FD606B480923AA7A432D61FDDCB9DC4E",
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-09-23T20:56:40.6579436Z",
+    "manifestHash": "0E730C57181FD42944DBE28F892C26E383ECE81CAA03CDD3E3DB0360F57D9C5A",
+    "version": "0.7.33",
+    "description": ""
   },
   "Mateuscruz19.BATorrent": {
     "description": "",
@@ -8356,15 +8356,15 @@
     "lastUpdated": "2026-08-05T07:49:49.3068253Z"
   },
   "TheQtCompanyLtd.QtCreator": {
-    "description": "",
-    "manifestHash": "4F04440D9A907344D5BC5280A1A59F8EC35149BBF834AED2D94AA9821C077062",
-    "installerHashes": [
-      "CB2570FD31AC6D2B7E033AE2FD8ABA6052CD30FE90E6A1D07486A75498991458"
-    ],
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-20T01:39:37.2944495Z",
     "validationCount": 1,
-    "version": "20.0.1"
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "FBF7678484ACA3E80D0CD554181E23679D2269EBD567DB3A05498CFDB627B941"
+    ],
+    "lastUpdated": "2026-09-23T20:56:40.6943256Z",
+    "manifestHash": "4F858604C0D483CA43301F17691852D7A038ACD35EF79339A19810A89F2DB2C3",
+    "version": "20.0.2",
+    "description": ""
   },
   "Theta.DeskHatch": {
     "state": "VALIDATION_PASSED",
@@ -9256,15 +9256,15 @@
     ]
   },
   "XeniaManager.XeniaManager": {
-    "version": "4.3.2",
-    "lastUpdated": "2026-08-21T04:59:57.0634001Z",
-    "installerHashes": [
-      "42B2B0D1D50AC5B0F903E161E8BB5FF6B0635F7D7A3F8D0DBA5351216478B1F9"
-    ],
-    "description": "",
-    "manifestHash": "0F731A0FBDDBEE0DC8D03E2590BA85923189AB04203CBE11E529144F54350EB3",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "763EA989FDCC52B2B3C21595F6E568DFA2F5BC8B4EADBBDD418BEFDAD30F4836"
+    ],
+    "lastUpdated": "2026-09-23T20:56:40.5407827Z",
+    "manifestHash": "2B13613646EEE801B6035D6993FA1B661BB36D95A97B3B88DCC71C3E78B28008",
+    "version": "5.0.0",
+    "description": ""
   },
   "xonsh.xonsh-winget": {
     "validationCount": 1,
