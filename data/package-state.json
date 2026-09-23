@@ -836,7 +836,11 @@
     "validationCount": 1,
     "version": "1.2.1.3",
     "manifestHash": "B98B8E0BA8E4B204A5F6484445EADE2FB3366A8BF5C5C1F91CBB6D5D3EED84E1",
-    "lastUpdated": "2026-09-22T20:52:36.2925236Z"
+    "lastUpdated": "2026-09-22T20:52:36.2925236Z",
+    "openPr": {
+      "checkedAt": "2026-09-23T00:53:59.7346174Z",
+      "version": "1.2.1.3"
+    }
   },
   "BenModigell.Vibes": {
     "lastUpdated": "2026-08-29T17:06:32.6440726Z",
@@ -2574,7 +2578,7 @@
   },
   "Flowscripter.example-cli": {
     "openPr": {
-      "checkedAt": "2026-09-21T20:22:50.4910329Z",
+      "checkedAt": "2026-09-23T00:54:01.9134914Z",
       "version": "3.0.0"
     }
   },
@@ -3085,7 +3089,7 @@
     "validationCount": 2,
     "description": "",
     "openPr": {
-      "checkedAt": "2026-09-21T20:22:51.6908323Z",
+      "checkedAt": "2026-09-23T00:54:03.5072727Z",
       "version": "2.6.0"
     }
   },
@@ -8838,7 +8842,7 @@
     "lastUpdated": "2026-08-06T14:13:45.9696492Z",
     "version": "1.4.0",
     "openPr": {
-      "checkedAt": "2026-09-21T20:23:51.7897528Z",
+      "checkedAt": "2026-09-23T00:54:25.6828429Z",
       "version": "1.4.2"
     }
   },
