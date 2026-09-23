@@ -1185,13 +1185,15 @@
     }
   },
   "BytecodeAlliance.Wasmtime.Portable": {
-    "description": "",
-    "installerHashes": "A2E7FADC4F54387C3B0AC371AB984113999F7CE824332EB67201526DFBFF2BFE",
-    "lastUpdated": "2026-09-10T21:15:26.3350519Z",
-    "manifestHash": "D071E63D573EE06680B041C7B9CD6B21076A37D0FB4D8083889ECE04E30EB6F9",
+    "version": "49.0.0",
     "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "7F2A583694AAC3DFEECC43CE51248155E72EAA695733D803C6923EF27103681A"
+    ],
+    "description": "",
     "validationCount": 1,
-    "version": "48.0.2"
+    "manifestHash": "968F67728EA7AD9308F1BE222F28B4F66A1D7099771905A53EB47B415E3F9FCB",
+    "lastUpdated": "2026-09-23T17:01:59.7775529Z"
   },
   "ByteNess.AWSVault": {
     "state": "VALIDATION_PASSED",
@@ -2206,15 +2208,15 @@
     ]
   },
   "EmanueleMicheletti.Proxelar": {
-    "lastUpdated": "2026-09-13T16:52:03.595952Z",
-    "validationCount": 1,
+    "version": "0.6.1",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "53A6BAB18F06E3D7075F7E037CF4E387BD4FC9A2A4691BF277F2F7B93E663ACF"
+      "7614D89B08E38FAE95F2EE1D5961F13DCAADBDC678AA9D6D67C4F3F29770D135"
     ],
-    "manifestHash": "DB98F9E3DBC5AA3AF3E00FAEEFCD6F2FE6E2B3107D27E6320ED7EE294C572497",
     "description": "",
-    "version": "0.6.0"
+    "validationCount": 1,
+    "manifestHash": "301809A609A1F98B640793D69DD548C9C1A72833706437C879BC0A0E510A44DB",
+    "lastUpdated": "2026-09-23T17:01:59.8102396Z"
   },
   "EndlessSky.EndlessSky": {
     "description": "",
@@ -2697,12 +2699,12 @@
   },
   "Frnsys.Half_earth": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 22,
+    "validationCount": 23,
     "installerHashes": [
       "CD47FC89C016730378E00399433045CCDB17E9B8ECC1434413C7531B9EB6AD36"
     ],
     "description": "",
-    "lastUpdated": "2026-09-22T08:47:00.1377452Z",
+    "lastUpdated": "2026-09-23T17:01:59.689481Z",
     "manifestHash": "162A9CB4478CCE0219E2D18B3BDBA90BBFD1A2D89CCCF6E863728E377240A4A7",
     "version": "1.0.15"
   },
@@ -4491,15 +4493,15 @@
     "state": "VALIDATION_PASSED"
   },
   "loreste.mako": {
-    "installerHashes": [
-      "E63DDA8D8C22088D19E11F2EA7F0A1C7D354EE252567142AA30AD2718C608606"
-    ],
+    "version": "0.6.37",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "installerHashes": [
+      "039A2F94C4C15A7893DE17AACC3BF59B8AB8C72A9E7EB40CF32E0C21EC71E12E"
+    ],
     "description": "",
-    "version": "0.6.36",
-    "lastUpdated": "2026-09-20T04:47:26.3018448Z",
-    "manifestHash": "BB313EC03B4A55D5B8C385A2B91B7EA139F0BC28DADEBB243EE2A692E0BA3675"
+    "validationCount": 1,
+    "manifestHash": "AF090728AF5D7280E2EB5CD49B95EE86A37981A295C85076C67A32002305BD68",
+    "lastUpdated": "2026-09-23T17:01:59.825582Z"
   },
   "LowLevelDesign.ProcessGovernor": {
     "manifestHash": "09E69D0C7C3FCD8235F3E38BE39881FEE7DC968A99C30941A28BED33654E0AA0",
@@ -8404,16 +8406,16 @@
     "state": "VALIDATION_PASSED"
   },
   "tldraw.tldraw-offline": {
-    "lastUpdated": "2026-09-20T08:54:21.0665085Z",
+    "version": "1.20.0",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "6DC286652FCC6D2D7CA6FD1B9258D1B9C831F02AFF904AF141F817361CC5B8AA",
     "installerHashes": [
-      "40219148B13D519F53912A1F65FEDF97A9D0D4ECDFDD1AF020636A81594DD309",
-      "B0FA4ED72BA01724B6DC4C881C0F4A23507241C052FBE4F4C233AD2434AD0576"
+      "5D99DB03B740E2006C478BCABD22062CC868984C2B86C4AA37EBF9FC52C528E1",
+      "9FD3B17E303D084BFC791C788FB67F75C7BA0D52750FD100A61BE61246B5A87F"
     ],
     "description": "",
     "validationCount": 1,
-    "version": "1.19.1"
+    "manifestHash": "1A46DF065F7E67BEE8F93A31A518719897E74E5556BBAD98A5CCA82FB14F0944",
+    "lastUpdated": "2026-09-23T17:01:59.7946694Z"
   },
   "tomcoolpxl.CoolWSL": {
     "manifestHash": "2F4B80DD4F9701C4DE41A3BCFEBB220C1F89126471CEDC6D7ED1C37D83C13A20",
