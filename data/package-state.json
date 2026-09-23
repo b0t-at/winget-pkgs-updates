@@ -267,7 +267,7 @@
     "version": "3.1",
     "openPr": {
       "version": "3.1",
-      "checkedAt": "2026-09-22T12:33:31.5457424Z"
+      "checkedAt": "2026-09-23T16:26:39.9607744Z"
     }
   },
   "Alochi.Monitoring": {
@@ -7637,11 +7637,7 @@
     "manifestHash": "6F5DA15B9BFB1DBC7CBC8EB1A50B969ADBCDD18A3C19439A8AA1342F63E9EAEF",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "lastUpdated": "2026-09-19T01:38:39.4498687Z",
-    "openPr": {
-      "checkedAt": "2026-09-21T08:34:21.5603155Z",
-      "version": "1.1307.3"
-    }
+    "lastUpdated": "2026-09-19T01:38:39.4498687Z"
   },
   "soldforaloss.DevHUD": {
     "description": "",
