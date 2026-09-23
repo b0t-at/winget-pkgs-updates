@@ -1290,6 +1290,12 @@
     "lastUpdated": "2026-08-20T16:48:27.9082422Z",
     "version": "1.47.2"
   },
+  "Carvel.ytt": {
+    "openPr": {
+      "checkedAt": "2026-09-23T20:23:24.2097921Z",
+      "version": "0.55.3"
+    }
+  },
   "ccccraz.cogmoteGO": {
     "lastUpdated": "2026-08-20T21:12:49.643883Z",
     "manifestHash": "08B8108641665163B9F95226770A1A31C6983FA07619378FFDAA4C5497966A23",
@@ -6188,7 +6194,7 @@
     "lastUpdated": "2026-09-20T12:45:41.8644834Z",
     "validationCount": 1,
     "openPr": {
-      "checkedAt": "2026-09-22T20:21:35.0162644Z",
+      "checkedAt": "2026-09-23T20:23:28.9844462Z",
       "version": "2.14.2"
     }
   },
