@@ -2528,8 +2528,8 @@
       "C8D444A2E7DA70788C78E3B73FB92416A14970F238285AF4B9F7A7063D5BBAC8"
     ],
     "manifestHash": "DEA60E4EB9E4E70A98213E7FB40E4D63C93D1ECF286A549563B620487582A356",
-    "lastUpdated": "2026-09-22T16:49:56.6901995Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-09-23T01:15:23.2964291Z",
+    "validationCount": 2,
     "version": "0.3.49"
   },
   "FirenzeLor.gemini-collector": {
@@ -2654,15 +2654,15 @@
     }
   },
   "FOSSA.FOSSA-cli": {
-    "lastUpdated": "2026-09-10T04:47:40.5892724Z",
-    "validationCount": 1,
-    "description": "",
-    "version": "3.18.4",
+    "version": "3.19.1",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "D0FE00A0C46C109E4150114AD19AE07F0C155EAE785A9F171201C2C8B7B02F62"
+      "33D52D360288CFE96A6F30EAD23CF2B9248262B229806BF62F5C2A25B5BC2A03"
     ],
-    "manifestHash": "29AEEE3677A22764D54A7936B4F7FB3A183608F8853D4CB1ED5CED0C486E8FD7"
+    "manifestHash": "17C827350F0B0E70B55F820ADC58B07E536DCA30A65B028F2C5D46BF663E287C",
+    "lastUpdated": "2026-09-23T01:15:23.3684223Z",
+    "validationCount": 1,
+    "description": ""
   },
   "FrancisBanyikwa.MediaDownloader": {
     "manifestHash": "03C1DB537ECDB0566823D94D3B6768E5B97F29295D693658F8DF8898058990A5",
@@ -5881,15 +5881,15 @@
     "version": "1.13.0"
   },
   "OneKey.OneKey": {
-    "lastUpdated": "2026-08-22T04:43:28.7927967Z",
-    "manifestHash": "916A90E248F99F945C98E4AA00C9E2548CEB1F0E0E735B7E7D2F120F4A716C61",
+    "version": "6.6.0",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "E51CAC36F44A09C4746A71151DCDD6B08FF710ADC7B161328EDB67605582AB3E"
+      "65D967E3235B7A71CE89AB4B9529B2D93C6AD065B8D3ACA51B53564655A8E7AF"
     ],
+    "manifestHash": "97C28D9942BE570B58F7F83F7F22FB12E90117353C3D16385F40207E79FEBEB4",
+    "lastUpdated": "2026-09-23T01:15:23.3959219Z",
     "validationCount": 1,
-    "description": "",
-    "version": "6.5.2",
-    "state": "VALIDATION_PASSED"
+    "description": ""
   },
   "OneWare.OneWareStudio": {
     "state": "VALIDATION_PASSED",
