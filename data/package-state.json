@@ -116,7 +116,7 @@
     "manifestHash": "88FF875B5DEA51BC3B743F06098AADAF42AB87DA966E19E5EFA189C21F4EC081",
     "version": "0.107.78",
     "openPr": {
-      "checkedAt": "2026-09-22T08:30:08.6938348Z",
+      "checkedAt": "2026-09-23T08:30:27.309016Z",
       "version": "0.107.79"
     }
   },
@@ -371,11 +371,7 @@
     "manifestHash": "1FC1366F7999BE7A62B278B0332522A65C8D7C99F3BE32B6D5A2C9ADF3ABB708",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "2.8.0",
-    "openPr": {
-      "version": "2.8.0",
-      "checkedAt": "2026-09-22T16:25:51.20414Z"
-    }
+    "version": "2.8.0"
   },
   "Anki.Anki": {
     "lastUpdated": "2026-09-17T13:04:52.029206Z",
@@ -1374,7 +1370,7 @@
   },
   "CharlesMilette.TranslucentTB": {
     "openPr": {
-      "checkedAt": "2026-09-22T08:30:12.2269074Z",
+      "checkedAt": "2026-09-23T08:30:31.0968249Z",
       "version": "2026.2"
     }
   },
@@ -2484,7 +2480,7 @@
       "9A0B7352DFEF40C8EBF8733F77CB777565AA4EAEDE4F79FE928C11DA5C35CE40"
     ],
     "openPr": {
-      "checkedAt": "2026-09-22T08:30:13.3463712Z",
+      "checkedAt": "2026-09-23T08:30:33.1794676Z",
       "version": "19.0.2"
     }
   },
@@ -3105,7 +3101,7 @@
     ],
     "description": "",
     "openPr": {
-      "checkedAt": "2026-09-22T08:30:14.4594109Z",
+      "checkedAt": "2026-09-23T08:30:34.3709276Z",
       "version": "36.2"
     }
   },
@@ -3929,7 +3925,7 @@
       "AEBD5B2C3D2839160722051525134F91E8A30CAE89779E6E0ED8A485B34DBDC7"
     ],
     "openPr": {
-      "checkedAt": "2026-09-22T08:30:14.7929295Z",
+      "checkedAt": "2026-09-23T08:30:34.9005966Z",
       "version": "8.1.2-5"
     }
   },
@@ -8261,7 +8257,7 @@
     "manifestHash": "4B796A972C2DBB5AE75EB8F4F8B332F0CBE77928187E84989680F6AB184F42AA",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "checkedAt": "2026-09-22T08:30:41.5937431Z",
+      "checkedAt": "2026-09-23T08:31:29.23961Z",
       "version": "5.7.0"
     }
   },
