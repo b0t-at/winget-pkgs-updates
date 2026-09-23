@@ -271,15 +271,15 @@
     }
   },
   "Alochi.Monitoring": {
-    "installerHashes": [
-      "427431A4639EBC0732BF55FD34CD91B3DABA21AF1F1F48C13EA2F04FA053412E"
-    ],
-    "manifestHash": "EC0722ADACA0F32C9B7E0BFA79DA83E9FC3C71BBD7DC1F90AF4EB62D8A26471A",
-    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "1.0.156",
+    "manifestHash": "4702EB2DDC2B6EB0A65E6431675B8694F1C6CD51D22CCCFC5BDE838A4756B79D",
+    "installerHashes": [
+      "0282ABB007C2E599713C65A9F69FF74195BD47E4045FE4C3DB4534B011332505"
+    ],
+    "version": "1.0.158",
+    "state": "VALIDATION_PASSED",
     "description": "",
-    "lastUpdated": "2026-09-22T04:59:22.5816181Z"
+    "lastUpdated": "2026-09-23T04:49:51.7558975Z"
   },
   "AloproAgency.WAutoChat": {
     "lastUpdated": "2026-08-18T01:43:26.4458545Z",
@@ -2769,15 +2769,15 @@
     "state": "VALIDATION_PASSED"
   },
   "GameshowPro.BgRaster": {
-    "validationCount": 2,
-    "version": "1.1.9",
-    "lastUpdated": "2026-08-28T22:46:20.5532054Z",
+    "validationCount": 1,
+    "manifestHash": "AAD9CE0A8F19FB6436D88140A6E357202AE98667A96114F6791FEC3A8D226053",
+    "installerHashes": [
+      "2676D7B9E2F87D9820855B8E3A53099F8D0F3AE266FD0C988007048A98841ED7"
+    ],
+    "version": "1.1.11",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "AF971048E88E2070C88B84768A502A3604D0DAD9A1D0CB33F11175B12EEE22B6",
-    "installerHashes": [
-      "3CC09196C11EB878CD7C927C2CBE2BD78E03A1CF85728D83DAC634CF1D03506D"
-    ]
+    "lastUpdated": "2026-09-23T04:49:51.8017613Z"
   },
   "Gardener.gardenctl": {
     "state": "VALIDATION_FAILED",
