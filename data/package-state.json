@@ -1910,15 +1910,15 @@
     "lastUpdated": "2026-08-29T12:58:34.0694394Z"
   },
   "Dimmy.Dimmy": {
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "9E44399C1280E7591FDB1C9948042CCFC34DB3FA4D3B55CD94D2D798290D12E8",
+    "lastUpdated": "2026-09-24T04:48:16.9636055Z",
     "installerHashes": [
-      "BAD331AE08F8D397EE7795582F3FFB5E20E64B165F51BB96F8F592C20E72849A"
+      "97AABD4448C58D55A020C79918B33FF0F0225B574C7B02B1CA77C8A2DA5274ED"
     ],
+    "manifestHash": "E265386B30482F5079D33F7A84338AF8D3B082C724FAEC1B1EC4FC64BF2B46A8",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
     "description": "",
-    "lastUpdated": "2026-09-16T20:54:00.2953145Z",
-    "version": "0.7.4"
+    "version": "0.7.6"
   },
   "DimonSmart.NugetMcpServer": {
     "version": "1.1.9",
@@ -8436,6 +8436,17 @@
     "validationCount": 1,
     "manifestHash": "1A46DF065F7E67BEE8F93A31A518719897E74E5556BBAD98A5CCA82FB14F0944",
     "lastUpdated": "2026-09-23T17:01:59.7946694Z"
+  },
+  "Tomclanc.GestureSignV2": {
+    "lastUpdated": "2026-09-24T04:48:17.0027086Z",
+    "installerHashes": [
+      "298CCB71A535593DD2BE510C87400497435BB3EA0B1E793C796760BF00337A5F"
+    ],
+    "manifestHash": "5817D469142792E66EE13E5BC8D3C8302E7A7507C99E6797960E247FC48A5CE1",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "description": "",
+    "version": "18.2.9"
   },
   "tomcoolpxl.CoolWSL": {
     "manifestHash": "2F4B80DD4F9701C4DE41A3BCFEBB220C1F89126471CEDC6D7ED1C37D83C13A20",
