@@ -1622,15 +1622,15 @@
     "lastUpdated": "2026-09-15T16:44:37.6334881Z"
   },
   "CrewHaus.CLI": {
-    "manifestHash": "1BE50DB5121F96CD338CD188BE792E7D52C3F9213135E323572091AD0AEA2AA6",
-    "description": "",
-    "version": "0.6.0",
-    "validationCount": 1,
-    "lastUpdated": "2026-09-09T16:53:53.6303276Z",
     "installerHashes": [
-      "A3B9A68B7ED356F0571880F595A483D9EA0AE4035C070B472DEA5880AC6AE5BC"
+      "EA87F338E3C2C3648D56396BFA60C57AD6E949D41A4FC552EC16E6BE73225407"
     ],
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-09-24T01:25:09.0377311Z",
+    "description": "",
+    "version": "0.7.0",
+    "manifestHash": "3C48D26B125D36D88E821C47B74DB090476ACB47D38AFEF3F5EA50CB0A580E35"
   },
   "CrossTech.ClipboardPro": {
     "manifestHash": "7AC779B69A9C87546A953B360DC9BE6A41D3394D155D63F72059B2D2CBB045FE",
@@ -4226,14 +4226,14 @@
   },
   "KinichiAnjuMakino.unifocl": {
     "installerHashes": [
-      "471C0AA3BD32398361ED69E0EBAB7A1F2FBF0435BD87C960C7D42A2AFDBE5023"
+      "C4D421CFEC078B0D262426AF06DD667DB53C2B8CDC7DFBB3498A129DA4F5FF36"
     ],
-    "lastUpdated": "2026-09-20T16:49:23.7593889Z",
-    "version": "3.17.3",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "E7617814A53E069CF65089722146D829BD45663C2492EC7757679BEDE1EE1AD4",
+    "validationCount": 1,
+    "lastUpdated": "2026-09-24T01:25:08.8779873Z",
     "description": "",
-    "validationCount": 1
+    "version": "3.18.0",
+    "manifestHash": "051A3910987DB4A8C16F85D306E11DF644AAB8E2D3AA36139459F008A69270FB"
   },
   "Kitware.CMake": {
     "installerHashes": [
@@ -5798,14 +5798,14 @@
   },
   "Odonno.jj-commit": {
     "installerHashes": [
-      "3FFBE26C5A9D707A09B3A9341CEA35B1EA2EC955A3AE649D8260553A35ED3889"
+      "683CA490E420AC25D5D4E112B4C4F73AFB4CD4C359B2A403A995849AD4212456"
     ],
-    "version": "0.45.1",
     "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-09-24T01:25:09.0816505Z",
     "description": "",
-    "manifestHash": "3C94591D24B2D5EA7119240FCD9241E04D829CC29F5C4FB7448967BE34A59357",
-    "lastUpdated": "2026-09-05T20:49:32.1552073Z",
-    "validationCount": 1
+    "version": "0.45.2",
+    "manifestHash": "03C8F4E867C92B6C3AC58030EF6C5197093476360644A033A934677BCBF1FEBF"
   },
   "OliverSchwendener.ueli": {
     "validationCount": 1,
@@ -7641,15 +7641,15 @@
     "manifestHash": "3DA345E8DF51ACA66C4D2669555AF7026448CEDCC448A90C53BE39DE701E36EC"
   },
   "Snyk.Snyk": {
-    "version": "1.1307.3",
-    "validationCount": 1,
     "installerHashes": [
-      "7E5602955725DB59E91B0CD947DBDF6566DE7640700E307E2D150110F7EEBF14"
+      "4E3C383D5644B48442AF2F74F0D9BE4397ED5FED5F72ADE86655CF4CF64CE3FB"
     ],
-    "manifestHash": "6F5DA15B9BFB1DBC7CBC8EB1A50B969ADBCDD18A3C19439A8AA1342F63E9EAEF",
     "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-09-24T01:25:08.9682971Z",
     "description": "",
-    "lastUpdated": "2026-09-19T01:38:39.4498687Z"
+    "version": "1.1307.4",
+    "manifestHash": "3AEE9C70BEDA59301FB92D0661AF7C1E12D3BD5512BE3F786BF75A5CF74F926F"
   },
   "soldforaloss.DevHUD": {
     "description": "",
@@ -9342,15 +9342,15 @@
     "validationCount": 1
   },
   "Yaak.app": {
-    "lastUpdated": "2026-09-18T05:00:20.4103401Z",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "1B6ECCFE4F564553710DB71CA65EC0C8734091CED47A4C1F36AE19DB881B9E42",
-    "version": "2026.8.0",
-    "validationCount": 1,
-    "description": "",
     "installerHashes": [
-      "3EC6636D14D4DF7A50F4D8B11962C17A74FB94E2AA192FB618404FBFE98FF26F"
-    ]
+      "7A242D083B3E85EB45AE4E5C954CF0D253EBE7EC46544FC03EAFEA2540C03DF1"
+    ],
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-09-24T01:25:08.9488651Z",
+    "description": "",
+    "version": "2026.8.1",
+    "manifestHash": "745F807106F1ABA449893EE045A79BB05F3D8C97E723F4C2C665C87FF522C674"
   },
   "yang991178.fluent-reader": {
     "state": "VALIDATION_PASSED",
