@@ -133,8 +133,8 @@
       "C03035EBBB96FBE89D7793876C59EEFE6E3D03241436273BCEBABD355FADE29B"
     ],
     "openPr": {
-      "checkedAt": "2026-09-23T12:32:49.9910112Z",
-      "version": "0.84.2"
+      "version": "0.84.2",
+      "checkedAt": "2026-09-24T12:33:27.788856Z"
     }
   },
   "AES256Afro.VideoKidnapper": {
@@ -1472,8 +1472,8 @@
     "validationCount": 1,
     "version": "1.0.48275",
     "openPr": {
-      "checkedAt": "2026-09-21T16:24:59.3969532Z",
-      "version": "1.0.50849"
+      "version": "1.0.51336",
+      "checkedAt": "2026-09-24T12:33:30.645092Z"
     }
   },
   "ciromattia.KCC": {
@@ -2150,8 +2150,8 @@
     ],
     "manifestHash": "31947E74E60A0462F2AAA67D5F8C21F460756C9F606A2E99B5AA0055A2064E78",
     "openPr": {
-      "checkedAt": "2026-09-23T12:32:53.0693373Z",
-      "version": "2.12.4"
+      "version": "2.12.4",
+      "checkedAt": "2026-09-24T12:33:30.9829339Z"
     }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
@@ -3916,8 +3916,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-09-23T12:32:55.418108Z",
-      "version": "2026.9.12"
+      "version": "2026.9.12",
+      "checkedAt": "2026-09-24T12:33:47.3870128Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -6840,11 +6840,7 @@
     "installerHashes": [
       "9A73CE0DF1B3B775159C2615F70C353EA81BAC5F7AE4CC9101D4F46D77E388C0"
     ],
-    "state": "VALIDATION_PASSED",
-    "openPr": {
-      "version": "3.3.2",
-      "checkedAt": "2026-09-22T12:32:33.9723003Z"
-    }
+    "state": "VALIDATION_PASSED"
   },
   "Rela.RelaGit": {
     "version": "0.16.11",
