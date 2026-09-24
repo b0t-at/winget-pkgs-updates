@@ -116,7 +116,7 @@
     "manifestHash": "88FF875B5DEA51BC3B743F06098AADAF42AB87DA966E19E5EFA189C21F4EC081",
     "version": "0.107.78",
     "openPr": {
-      "checkedAt": "2026-09-23T08:30:27.309016Z",
+      "checkedAt": "2026-09-24T08:31:20.6413154Z",
       "version": "0.107.79"
     }
   },
@@ -1388,7 +1388,7 @@
   },
   "CharlesMilette.TranslucentTB": {
     "openPr": {
-      "checkedAt": "2026-09-23T08:30:31.0968249Z",
+      "checkedAt": "2026-09-24T08:31:23.5775723Z",
       "version": "2026.2"
     }
   },
@@ -3119,7 +3119,7 @@
     ],
     "description": "",
     "openPr": {
-      "checkedAt": "2026-09-23T08:30:34.3709276Z",
+      "checkedAt": "2026-09-24T08:31:27.0384531Z",
       "version": "36.2"
     }
   },
@@ -3943,7 +3943,7 @@
       "AEBD5B2C3D2839160722051525134F91E8A30CAE89779E6E0ED8A485B34DBDC7"
     ],
     "openPr": {
-      "checkedAt": "2026-09-23T08:30:34.9005966Z",
+      "checkedAt": "2026-09-24T08:31:27.4438071Z",
       "version": "8.1.2-5"
     }
   },
@@ -6531,11 +6531,7 @@
     "description": "",
     "version": "12.5.1",
     "lastUpdated": "2026-09-20T04:47:26.3206743Z",
-    "manifestHash": "D94B4552E41D65A3D8EDBFF22ADAE17C9A9AB9B1345D9D623CF1D2BC6451BBDD",
-    "openPr": {
-      "checkedAt": "2026-09-21T08:34:20.457396Z",
-      "version": "12.5.1"
-    }
+    "manifestHash": "D94B4552E41D65A3D8EDBFF22ADAE17C9A9AB9B1345D9D623CF1D2BC6451BBDD"
   },
   "PocketBase.PocketBase": {
     "version": "0.40.4",
@@ -8275,7 +8271,7 @@
     "manifestHash": "4B796A972C2DBB5AE75EB8F4F8B332F0CBE77928187E84989680F6AB184F42AA",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "checkedAt": "2026-09-23T08:31:29.23961Z",
+      "checkedAt": "2026-09-24T08:32:00.1463764Z",
       "version": "5.7.0"
     }
   },
