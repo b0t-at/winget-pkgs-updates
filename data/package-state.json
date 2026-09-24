@@ -131,7 +131,11 @@
     "manifestHash": "569AB9D4B6054391488861541E9E038F81AEAA60B4CB3201682B3D15993E2410",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "0.85.0"
+    "version": "0.85.0",
+    "openPr": {
+      "version": "0.85.0",
+      "checkedAt": "2026-09-24T20:24:25.2610053Z"
+    }
   },
   "AES256Afro.VideoKidnapper": {
     "description": "",
@@ -267,7 +271,7 @@
     "version": "3.1",
     "openPr": {
       "version": "3.1",
-      "checkedAt": "2026-09-23T16:26:39.9607744Z"
+      "checkedAt": "2026-09-24T20:25:34.5548093Z"
     }
   },
   "Alochi.Monitoring": {
@@ -3912,8 +3916,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.9.12",
-      "checkedAt": "2026-09-24T12:33:47.3870128Z"
+      "version": "2026.9.13",
+      "checkedAt": "2026-09-24T20:24:31.1791827Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -6200,8 +6204,8 @@
     "lastUpdated": "2026-09-20T12:45:41.8644834Z",
     "validationCount": 1,
     "openPr": {
-      "checkedAt": "2026-09-23T20:23:28.9844462Z",
-      "version": "2.14.2"
+      "version": "2.14.2",
+      "checkedAt": "2026-09-24T20:25:27.1630373Z"
     }
   },
   "Orthogonal.APM": {
