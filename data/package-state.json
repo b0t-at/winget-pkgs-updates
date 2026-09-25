@@ -378,15 +378,19 @@
     "version": "2.8.0"
   },
   "Anki.Anki": {
-    "validationCount": 1,
+    "description": "",
     "installerHashes": [
       "8A45823D1C31017CEBB7D3AF4493D69B6AE3C185345FCB2390EDE4AF01E0A950",
       "445D5973EC92E8ED4FB09D606AED084E2AAEEABA853B53B5608A6F6CAE66EE2A"
     ],
     "lastUpdated": "2026-09-25T07:00:55.6530671Z",
     "manifestHash": "47A54973E4834BA631C2139719B96A8915A457B394EEBD6991DF711477EDFD76",
-    "description": "",
+    "openPr": {
+      "checkedAt": "2026-09-25T07:04:12.2118709Z",
+      "version": "26.09.3"
+    },
     "state": "VALIDATION_PASSED",
+    "validationCount": 1,
     "version": "26.09.3"
   },
   "ankitshuxe.Neko": {
@@ -844,7 +848,7 @@
     "manifestHash": "B98B8E0BA8E4B204A5F6484445EADE2FB3366A8BF5C5C1F91CBB6D5D3EED84E1",
     "lastUpdated": "2026-09-22T20:52:36.2925236Z",
     "openPr": {
-      "checkedAt": "2026-09-24T00:54:55.7005048Z",
+      "checkedAt": "2026-09-25T07:04:13.6174801Z",
       "version": "1.2.1.3"
     }
   },
@@ -2207,8 +2211,8 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "3EAB1E5A6E607AC40A8D48C149D5E5B2207604A2D465245704CB6FD111942437",
     "openPr": {
-      "version": "5.5.25",
-      "checkedAt": "2026-09-21T12:31:34.1585491Z"
+      "checkedAt": "2026-09-25T07:04:14.4006747Z",
+      "version": "5.5.35"
     }
   },
   "Ellosoft.AWSCredentialsManager": {
@@ -2592,7 +2596,7 @@
   },
   "Flowscripter.example-cli": {
     "openPr": {
-      "checkedAt": "2026-09-24T00:54:57.3206876Z",
+      "checkedAt": "2026-09-25T07:04:15.6789331Z",
       "version": "3.0.0"
     }
   },
@@ -3103,7 +3107,7 @@
     "validationCount": 2,
     "description": "",
     "openPr": {
-      "checkedAt": "2026-09-24T00:54:58.7689558Z",
+      "checkedAt": "2026-09-25T07:04:16.8668428Z",
       "version": "2.6.0"
     }
   },
@@ -4029,7 +4033,7 @@
     "description": "",
     "manifestHash": "9A4DF16EBDCE59232C54B5DF04D449A66D61F5A11ADD46BF707CB15A166AB223",
     "openPr": {
-      "checkedAt": "2026-09-24T00:54:59.1494182Z",
+      "checkedAt": "2026-09-25T07:04:18.1766772Z",
       "version": "19.1.0"
     }
   },
@@ -8855,7 +8859,7 @@
     "lastUpdated": "2026-08-06T14:13:45.9696492Z",
     "version": "1.4.0",
     "openPr": {
-      "checkedAt": "2026-09-24T00:55:50.9500825Z",
+      "checkedAt": "2026-09-25T07:05:20.537286Z",
       "version": "1.4.2"
     }
   },
