@@ -2719,12 +2719,12 @@
   },
   "Frnsys.Half_earth": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 23,
+    "validationCount": 24,
     "installerHashes": [
       "CD47FC89C016730378E00399433045CCDB17E9B8ECC1434413C7531B9EB6AD36"
     ],
     "description": "",
-    "lastUpdated": "2026-09-23T17:01:59.689481Z",
+    "lastUpdated": "2026-09-25T09:00:41.0494759Z",
     "manifestHash": "162A9CB4478CCE0219E2D18B3BDBA90BBFD1A2D89CCCF6E863728E377240A4A7",
     "version": "1.0.15"
   },
@@ -8000,16 +8000,16 @@
     "lastUpdated": "2026-08-06T14:13:45.9556005Z"
   },
   "SuperRadCompany.Microsandbox": {
-    "lastUpdated": "2026-09-20T08:54:21.0481491Z",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "F208CDFF379E27D174D23E2DAE0DB2F5B49456667AEA9D58B5C9E831E6544397",
-    "installerHashes": [
-      "5A67A23EB8007BB98E6B5FF0579534D3122FE8FAA413952B200CA8C3752D8498",
-      "65BE14D39623C4BB85726876553FA8E5B622091A5208A75174F81C10A47B4DB9"
-    ],
     "description": "",
+    "version": "0.7.3",
+    "installerHashes": [
+      "98DDD9E7909877B7A5F65B2214921534D0AF115F850459852F7A1B4F0C848876",
+      "0E09FB9EAA25AE40AEA8F06697F297BD06BD149FA19757D599F7D0FDF0DBBC31"
+    ],
     "validationCount": 1,
-    "version": "0.7.2"
+    "manifestHash": "BCC2D0B67D154E3571AE098F3AB669829BCE9FA176A938703DB6D24C50C9B59B",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-25T09:00:41.150553Z"
   },
   "SUSE.RancherDesktop": {
     "description": "",
@@ -8388,15 +8388,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "manifestHash": "81E4CA9BF537E405EBBAB7F4A728E3A54C2705C0F05CAC03F0D23D28BEE6A365",
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "lastUpdated": "2026-09-24T08:56:08.4418193Z",
+    "version": "2.35.3",
     "installerHashes": [
-      "A61122D535309D041DDD9D0C07D8640BC6699CE4FCF5D6AA091AED9DC44986F5"
+      "6CD24C69638266C3C473332CED73D21C7329E623F8E5604E0D4158CAECE2BF22"
     ],
-    "version": "2.35.2",
-    "validationCount": 1
+    "validationCount": 1,
+    "manifestHash": "9DBE9AF718DD2149B05169A6FF2466E8A7B6724098779C48FFD80256B39535B1",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-25T09:00:41.1225146Z"
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
