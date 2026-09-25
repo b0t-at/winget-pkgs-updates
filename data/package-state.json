@@ -194,8 +194,8 @@
     "lastUpdated": "2026-09-19T08:41:43.6037433Z",
     "version": "0.9.2",
     "openPr": {
-      "version": "0.9.9",
-      "checkedAt": "2026-09-24T04:28:21.1805679Z"
+      "checkedAt": "2026-09-25T08:31:23.6259474Z",
+      "version": "0.9.10"
     }
   },
   "Aiden1020.LocalSubs": {
@@ -4487,7 +4487,11 @@
     "manifestHash": "B7E9E627462674E05B11BE049A230318B0F39D9F043BB3FDC5488612A4F2E8E7",
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-09-25T07:28:25.8925883Z",
-    "description": ""
+    "description": "",
+    "openPr": {
+      "checkedAt": "2026-09-25T08:31:00.3593472Z",
+      "version": "0.37.2"
+    }
   },
   "Longbridge.LongbridgeTerminal": {
     "manifestHash": "92BE75B13D2C2A24C7104B4FD2624CFA9633757A960B7FF86E4887C3CF285477",
