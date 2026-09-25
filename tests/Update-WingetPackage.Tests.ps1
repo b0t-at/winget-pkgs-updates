@@ -685,6 +685,35 @@ finally {
     Remove-Item -LiteralPath $releaseNotesScratch -Recurse -Force -ErrorAction SilentlyContinue
 }
 
+Write-Host 'TEST: release notes insertion treats regex replacement tokens literally'
+$releaseNotesScratch = Join-Path $repositoryRoot "tests\scratch-release-notes-$([guid]::NewGuid().ToString('N'))"
+try {
+    New-Item -ItemType Directory -Path $releaseNotesScratch -Force | Out-Null
+    $localePath = Join-Path $releaseNotesScratch 'Test.Package.locale.en-US.yaml'
+    @"
+PackageIdentifier: Test.Package
+PackageVersion: 1.0.0
+PackageLocale: en-US
+Publisher: Test Publisher
+PackageName: Test Package
+ShortDescription: Test package
+ManifestType: defaultLocale
+ManifestVersion: 1.12.0
+"@ | Set-Content -LiteralPath $localePath -NoNewline
+    $notes = 'literal tokens: $_ $0 $$HOME $&'
+    & $module { param($Path, $Notes) Set-WingetGeneratedReleaseNotes -ManifestOutPath $Path -ReleaseNotes $Notes -Generator 'WinMatsch' } $releaseNotesScratch $notes
+    $content = Get-Content -LiteralPath $localePath -Raw
+    if ($content -notmatch [regex]::Escape($notes)) {
+        throw "Release notes replacement tokens were not inserted literally: $content"
+    }
+    if (([regex]::Matches($content, 'PackageIdentifier: Test\.Package')).Count -ne 1) {
+        throw "Release notes insertion expanded a regex replacement token into manifest content: $content"
+    }
+}
+finally {
+    Remove-Item -LiteralPath $releaseNotesScratch -Recurse -Force -ErrorAction SilentlyContinue
+}
+
 Write-Host 'TEST: WinMatsch release notes post-processing skips when default locale already has ReleaseNotes'
 $releaseNotesScratch = Join-Path $repositoryRoot "tests\scratch-release-notes-$([guid]::NewGuid().ToString('N'))"
 try {

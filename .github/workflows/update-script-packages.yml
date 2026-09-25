@@ -95,7 +95,6 @@ jobs:
           WINGET_UPSTREAM_READ_TOKEN: ${{ secrets.WINGET_PAT }}
           WINGET_UPSTREAM_READ_FALLBACK_TOKEN: ${{ steps.upstream-read-probe.outputs.available == 'true' && github.token || secrets.WINGET_PUBLIC_READ_TOKEN }}
           WINGET_PKGS_FORK_REPO: ${{ vars.WINGET_PKGS_FORK_REPO }}
-          WINMATSCH_FEEDBACK_DIRECTORY: ${{ github.workspace }}/data/winmatsch-feedback
           WebsiteURL: ${{ matrix.WebsiteURL }}
           PackageName: ${{ matrix.PackageName }}
           With: ${{ matrix.With }}

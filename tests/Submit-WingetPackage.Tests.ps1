@@ -324,3 +324,73 @@ ManifestVersion: 1.12.0
             }
         }
     }
+
+
+Describe 'Duplicate identifier guard real GitHub path' {
+    BeforeEach {
+        $global:DuplicateGuardManifestPath = Join-Path ([IO.Path]::GetTempPath()) "winget-duplicate-guard-$([guid]::NewGuid().ToString('N'))"
+        New-Item -ItemType Directory -Path $global:DuplicateGuardManifestPath -Force | Out-Null
+        @"
+PackageIdentifier: PatrickHener.Goshs
+PackageVersion: 2.1.6
+Installers:
+- Architecture: x64
+  InstallerUrl: https://example.invalid/goshs.zip
+  InstallerSha256: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+ManifestType: installer
+ManifestVersion: 1.12.0
+"@ | Set-Content -LiteralPath (Join-Path $global:DuplicateGuardManifestPath 'PatrickHener.Goshs.installer.yaml')
+    }
+
+    AfterEach {
+        Remove-Item -LiteralPath $global:DuplicateGuardManifestPath -Recurse -Force -ErrorAction SilentlyContinue
+        Remove-Variable -Name DuplicateGuardManifestPath -Scope Global -ErrorAction SilentlyContinue
+    }
+
+    It 'uses the default search and manifest reader inside module scope' {
+        InModuleScope WingetMaintainerModule {
+            $script:DuplicateGuardGhCalls = [System.Collections.Generic.List[object]]::new()
+            function gh {
+                param([Parameter(ValueFromRemainingArguments = $true)] [object[]] $Arguments)
+
+                $script:DuplicateGuardGhCalls.Add(@($Arguments))
+                $global:LASTEXITCODE = 0
+                $argumentText = @($Arguments) -join ' '
+                if ($argumentText -match 'search/issues') {
+                    if ($Arguments -contains '--paginate') {
+                        throw 'duplicate guard search must not paginate'
+                    }
+                    if ($Arguments -notcontains 'per_page=30') {
+                        throw "duplicate guard search must cap at 30 results: $argumentText"
+                    }
+                    $queryArgument = @($Arguments | Where-Object { $_ -like 'q=*' } | Select-Object -First 1)
+                    if ($queryArgument.Count -ne 1 -or $queryArgument[0] -notmatch 'in:title' -or $queryArgument[0] -notmatch 'Goshs' -or $queryArgument[0] -notmatch '2\.1\.6') {
+                        throw "duplicate guard search query is not constrained to title/segment/version: $argumentText"
+                    }
+                    return '[{"number":436891,"title":"Update version: GoshsLabs.Goshs version 2.1.6","body":"","html_url":"https://github.com/microsoft/winget-pkgs/pull/436891"}]'
+                }
+                if ($argumentText -match 'contents/manifests/g/GoshsLabs/Goshs/2\.1\.6/GoshsLabs\.Goshs\.installer\.yaml') {
+                    return [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes('InstallerSha256: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'))
+                }
+                throw "Unexpected gh call: $argumentText"
+            }
+            Mock Invoke-GhCliWithRetry {
+                param($ScriptBlock, $OperationName)
+                & $ScriptBlock
+            }
+
+            $result = Find-WingetDuplicateIdentifierByInstallerHash `
+                -PackageIdentifier 'PatrickHener.Goshs' `
+                -Version '2.1.6' `
+                -ManifestPath $global:DuplicateGuardManifestPath
+
+            if (-not $result.Duplicate -or $result.MatchingIdentifier -cne 'GoshsLabs.Goshs') {
+                throw "The default duplicate guard path did not detect the other identifier: $($result | ConvertTo-Json -Compress)"
+            }
+            if ($script:DuplicateGuardGhCalls.Count -ne 2) {
+                throw "Expected search and manifest gh calls, got $($script:DuplicateGuardGhCalls.Count)."
+            }
+            Assert-MockCalled Invoke-GhCliWithRetry -Times 2 -Exactly -Scope It
+        }
+    }
+}

@@ -37,35 +37,6 @@ if (-not [string]::IsNullOrWhiteSpace($env:MAX_CLOSES) -and [int]::TryParse($env
 
 Write-Host "Sweeping open PRs by $botLogin in $repository (dry run: $dryRun, close cap: $maxCloses)."
 
-$feedbackDirectory = "$env:WINMATSCH_FEEDBACK_DIRECTORY".Trim()
-if ([string]::IsNullOrWhiteSpace($feedbackDirectory)) {
-    $feedbackDirectory = Join-Path (Split-Path -Parent $PSScriptRoot) 'data/winmatsch-feedback'
-}
-New-Item -ItemType Directory -Path $feedbackDirectory -Force | Out-Null
-$env:WINMATSCH_FEEDBACK_DIRECTORY = (Resolve-Path -LiteralPath $feedbackDirectory).Path
-
-try {
-    Install-WinMatsch
-    $completeArgs = @('complete', '--fork', "$env:WINGET_PKGS_FORK_REPO", '--interaction', 'never')
-    if ([string]::IsNullOrWhiteSpace($completeArgs[2])) {
-        $completeArgs[2] = 'damn-good-b0t/winget-pkgs'
-    }
-    if (-not [string]::IsNullOrWhiteSpace($env:GH_TOKEN)) {
-        $completeArgs += @('--token', $env:GH_TOKEN)
-    }
-    $displayArgs = $completeArgs | ForEach-Object { if ($_ -eq $env:GH_TOKEN) { '***' } else { $_ } }
-    Write-Host "Running: winmatsch $($displayArgs -join ' ')"
-    & winmatsch @completeArgs 2>&1 | Tee-Object -Variable completeOutput | Out-Host
-    if ($LASTEXITCODE -ne 0) {
-        Write-Warning "winmatsch complete failed with exit code $LASTEXITCODE; continuing PR hygiene without refreshed feedback. Output: $completeOutput"
-        $global:LASTEXITCODE = 0
-    }
-}
-catch {
-    Write-Warning "winmatsch complete failed: $($_.Exception.Message). Continuing PR hygiene without refreshed feedback."
-    $global:LASTEXITCODE = 0
-}
-
 $openPrsJson = gh pr list --repo $repository --author $botLogin --state open --limit 200 --json number,title,url,labels,createdAt
 if ($LASTEXITCODE -ne 0) {
     throw "gh pr list failed with exit code $LASTEXITCODE."
@@ -78,8 +49,6 @@ Write-Host "Found $($openPrs.Count) open PR(s)."
 $actions = @(& $module {
         param($OpenPrs, $Repository)
 
-        # GetNewClosure pins $Repository for the resolver regardless of the
-        # dynamic scope it is eventually invoked from.
         $resolver = {
             param([string] $PackageIdentifier)
             try {
@@ -90,7 +59,7 @@ $actions = @(& $module {
                 Write-Warning "Published-version lookup failed for ${PackageIdentifier}: $($_.Exception.Message); treating as not published."
                 @()
             }
-        }.GetNewClosure()
+        }
 
         Select-WingetHygienePrActions -OpenPrs $OpenPrs -PublishedVersionsResolver $resolver
     } $openPrs $repository)

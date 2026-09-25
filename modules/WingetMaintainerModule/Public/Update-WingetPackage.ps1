@@ -25,8 +25,9 @@ function Set-WingetLocaleManifestReleaseNotes {
     $cleaned = [regex]::Replace($cleaned, '(?m)^ReleaseNotes:\s*.*(?:\r?\n)?', '')
     $block = New-WingetReleaseNotesYamlBlock -ReleaseNotes $ReleaseNotes
 
-    if ($cleaned -match '(?m)^ManifestType:') {
-        $updated = [regex]::Replace($cleaned, '(?m)^ManifestType:', "$block`nManifestType:", 1)
+    $manifestTypeIndex = $cleaned.IndexOf("ManifestType:", [System.StringComparison]::Ordinal)
+    if ($manifestTypeIndex -ge 0) {
+        $updated = $cleaned.Insert($manifestTypeIndex, "$block`n")
     }
     else {
         if (-not $cleaned.EndsWith("`n")) { $cleaned += "`n" }

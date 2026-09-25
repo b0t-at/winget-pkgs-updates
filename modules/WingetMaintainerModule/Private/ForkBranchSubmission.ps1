@@ -99,6 +99,18 @@ function Invoke-WingetPkgsUpstreamReadApi {
     }
 }
 
+function Get-WingetPkgsSubmissionManifestDirectory {
+    [CmdletBinding()]
+    [OutputType([string])]
+    param(
+        [Parameter(Mandatory = $true)] [string] $PackageId,
+        [Parameter(Mandatory = $true)] [string] $Version
+    )
+
+    Assert-WingetPkgsSubmissionIdentity -PackageId $PackageId -Version $Version
+    return "manifests/$($PackageId[0].ToString().ToLowerInvariant())/$($PackageId.Replace('.', '/'))/$Version"
+}
+
 function Get-ForkBranchSubmissionFiles {
     [CmdletBinding()]
     param(
@@ -125,7 +137,7 @@ function Get-ForkBranchSubmissionFiles {
         throw "Manifest path '$ManifestPath' contains non-manifest files: $unexpectedNames"
     }
 
-    $manifestDirectory = "manifests/$($PackageId[0].ToString().ToLowerInvariant())/$($PackageId.Replace('.', '/'))/$Version"
+    $manifestDirectory = Get-WingetPkgsSubmissionManifestDirectory -PackageId $PackageId -Version $Version
     return @(
         $files | ForEach-Object {
             [pscustomobject]@{
@@ -287,6 +299,57 @@ function Get-WingetPkgsForkBranchCommitTreeSha {
         -Path "repos/$ForkRepository/git/commits/$commitSha" `
         -Token $Token
     return "$($commit.tree.sha)"
+}
+
+function Get-WingetPkgsTreeEntrySha {
+    [CmdletBinding()]
+    [OutputType([string])]
+    param(
+        [Parameter(Mandatory = $true)] [string] $Repository,
+        [Parameter(Mandatory = $true)] [string] $TreeSha,
+        [Parameter(Mandatory = $true)] [string] $Path,
+        [Parameter(Mandatory = $true)] [string] $Token
+    )
+
+    $currentTreeSha = $TreeSha
+    foreach ($segment in @($Path -split '/' | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })) {
+        $tree = Invoke-WingetPkgsGitHubApi `
+            -Method Get `
+            -Path "repos/$Repository/git/trees/$currentTreeSha" `
+            -Token $Token
+        $entry = @($tree.tree | Where-Object { $_.type -eq 'tree' -and $_.path -ceq $segment } | Select-Object -First 1)
+        if ($entry.Count -eq 0 -or [string]::IsNullOrWhiteSpace("$($entry[0].sha)")) {
+            throw "Tree '$currentTreeSha' in '$Repository' does not contain directory '$segment' while resolving '$Path'."
+        }
+        $currentTreeSha = "$($entry[0].sha)"
+    }
+
+    return $currentTreeSha
+}
+
+function Test-WingetPkgsSubmissionVersionSubtreeMatch {
+    [CmdletBinding()]
+    [OutputType([bool])]
+    param(
+        [Parameter(Mandatory = $true)] [string] $ForkRepository,
+        [Parameter(Mandatory = $true)] [string] $ExistingRootTreeSha,
+        [Parameter(Mandatory = $true)] [string] $NewRootTreeSha,
+        [Parameter(Mandatory = $true)] [string] $ManifestDirectory,
+        [Parameter(Mandatory = $true)] [string] $Token
+    )
+
+    $existingSubtreeSha = Get-WingetPkgsTreeEntrySha `
+        -Repository $ForkRepository `
+        -TreeSha $ExistingRootTreeSha `
+        -Path $ManifestDirectory `
+        -Token $Token
+    $newSubtreeSha = Get-WingetPkgsTreeEntrySha `
+        -Repository $ForkRepository `
+        -TreeSha $NewRootTreeSha `
+        -Path $ManifestDirectory `
+        -Token $Token
+
+    return $existingSubtreeSha -ceq $newSubtreeSha
 }
 
 function Assert-SafeWingetPkgsForkRepository {
@@ -477,18 +540,25 @@ function Invoke-ForkBranchSubmission {
             -ForkRepository $ForkRepository `
             -BranchName $branchName `
             -Token $Token
-        if ($existingTreeSha -cne "$($tree.sha)") {
+        $manifestDirectory = Get-WingetPkgsSubmissionManifestDirectory -PackageId $PackageId -Version $Version
+        $versionSubtreeMatches = Test-WingetPkgsSubmissionVersionSubtreeMatch `
+            -ForkRepository $ForkRepository `
+            -ExistingRootTreeSha $existingTreeSha `
+            -NewRootTreeSha "$($tree.sha)" `
+            -ManifestDirectory $manifestDirectory `
+            -Token $Token
+        if (-not $versionSubtreeMatches) {
             return [pscustomobject]@{
                 Created             = $false
                 DuplicateDetected   = $false
                 SubmissionClaimed   = $true
                 BranchName          = $branchName
                 PullRequest         = $null
-                Error               = "The deterministic submission branch '$branchName' already exists with different content and no matching target PR is searchable. Refusing to create another PR; reconcile the existing branch before retrying."
+                Error               = "The deterministic submission branch '$branchName' already exists with different content under '$manifestDirectory' and no matching target PR is searchable. Refusing to create another PR; reconcile the existing branch before retrying."
             }
         }
 
-        Write-Host "ForkBranch: reusing existing branch $branchName because its tree already matches this submission." -ForegroundColor DarkGray
+        Write-Host "ForkBranch: reusing existing branch $branchName because its submitted package-version subtree already matches this submission." -ForegroundColor DarkGray
     }
 
     # Recheck immediately before the target PR write. The branch claim closes

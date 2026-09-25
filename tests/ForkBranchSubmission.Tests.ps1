@@ -31,7 +31,24 @@ Describe 'Submit-WingetPackage ForkBranch' {
         $global:ForkBranchTreeFailuresRemaining = 0
         $global:ForkBranchRefNotFoundFailuresRemaining = 0
         $global:ForkBranchRefConflictStatus = 0
-        $global:ForkBranchExistingBranchTreeSha = 'tree-sha'
+        $global:ForkBranchExistingBranchTreeSha = 'older-root-tree-sha'
+        $global:ForkBranchTreeObjects = @{
+            'tree-sha' = @([pscustomobject]@{ path = 'manifests'; type = 'tree'; sha = 'new-manifests-tree' })
+            'new-manifests-tree' = @([pscustomobject]@{ path = 't'; type = 'tree'; sha = 'new-t-tree' })
+            'new-t-tree' = @([pscustomobject]@{ path = 'Test'; type = 'tree'; sha = 'new-test-tree' })
+            'new-test-tree' = @([pscustomobject]@{ path = 'Package'; type = 'tree'; sha = 'new-package-tree' })
+            'new-package-tree' = @([pscustomobject]@{ path = '1.0.0'; type = 'tree'; sha = 'matching-version-tree' })
+            'older-root-tree-sha' = @([pscustomobject]@{ path = 'manifests'; type = 'tree'; sha = 'old-manifests-tree' })
+            'old-manifests-tree' = @([pscustomobject]@{ path = 't'; type = 'tree'; sha = 'old-t-tree' })
+            'old-t-tree' = @([pscustomobject]@{ path = 'Test'; type = 'tree'; sha = 'old-test-tree' })
+            'old-test-tree' = @([pscustomobject]@{ path = 'Package'; type = 'tree'; sha = 'old-package-tree' })
+            'old-package-tree' = @([pscustomobject]@{ path = '1.0.0'; type = 'tree'; sha = 'matching-version-tree' })
+            'different-root-tree-sha' = @([pscustomobject]@{ path = 'manifests'; type = 'tree'; sha = 'different-manifests-tree' })
+            'different-manifests-tree' = @([pscustomobject]@{ path = 't'; type = 'tree'; sha = 'different-t-tree' })
+            'different-t-tree' = @([pscustomobject]@{ path = 'Test'; type = 'tree'; sha = 'different-test-tree' })
+            'different-test-tree' = @([pscustomobject]@{ path = 'Package'; type = 'tree'; sha = 'different-package-tree' })
+            'different-package-tree' = @([pscustomobject]@{ path = '1.0.0'; type = 'tree'; sha = 'different-version-tree' })
+        }
         $global:ForkBranchHeadPullRequests = @()
         $global:ForkBranchSleeps = [System.Collections.Generic.List[int]]::new()
         $global:OriginalForkRepository = $env:WINGET_PKGS_FORK_REPO
@@ -96,6 +113,13 @@ Describe 'Submit-WingetPackage ForkBranch' {
                     '/pulls\?state=open&head=' {
                         return @($global:ForkBranchHeadPullRequests)
                     }
+                    '/git/trees/(?<TreeSha>[^/?]+)$' {
+                        $treeSha = $Matches['TreeSha']
+                        if (-not $global:ForkBranchTreeObjects.ContainsKey($treeSha)) {
+                            throw "Unexpected tree read: $treeSha"
+                        }
+                        return [pscustomobject]@{ tree = @($global:ForkBranchTreeObjects[$treeSha]) }
+                    }
                     '/git/trees$' {
                         if ($global:ForkBranchTreeFailuresRemaining -gt 0) {
                             $global:ForkBranchTreeFailuresRemaining--
@@ -146,6 +170,7 @@ Describe 'Submit-WingetPackage ForkBranch' {
         Remove-Variable -Name ForkBranchRefNotFoundFailuresRemaining -Scope Global -ErrorAction SilentlyContinue
         Remove-Variable -Name ForkBranchRefConflictStatus -Scope Global -ErrorAction SilentlyContinue
         Remove-Variable -Name ForkBranchExistingBranchTreeSha -Scope Global -ErrorAction SilentlyContinue
+        Remove-Variable -Name ForkBranchTreeObjects -Scope Global -ErrorAction SilentlyContinue
         Remove-Variable -Name ForkBranchHeadPullRequests -Scope Global -ErrorAction SilentlyContinue
         Remove-Variable -Name ForkBranchSleeps -Scope Global -ErrorAction SilentlyContinue
         Remove-Variable -Name OriginalForkRepository -Scope Global -ErrorAction SilentlyContinue
@@ -248,9 +273,9 @@ Describe 'Submit-WingetPackage ForkBranch' {
         }
     }
 
-    It 'opens a PR from an existing deterministic branch when its tree matches' {
+    It 'opens a PR from an existing deterministic branch when its submitted version subtree matches' {
         $global:ForkBranchRefConflictStatus = 422
-        $global:ForkBranchExistingBranchTreeSha = 'tree-sha'
+        $global:ForkBranchExistingBranchTreeSha = 'older-root-tree-sha'
         InModuleScope WingetMaintainerModule {
             $result = Invoke-ForkBranchSubmission `
                 -ManifestPath $global:ForkBranchSubmissionManifestPath `
@@ -270,14 +295,14 @@ Describe 'Submit-WingetPackage ForkBranch' {
         if (@($global:ForkBranchSubmissionRequests | Where-Object { $_.Path -match '/pulls\?state=open&head=' }).Count -ne 1) {
             throw 'The existing branch path did not check for an already-open head PR.'
         }
-        if (@($global:ForkBranchSubmissionRequests | Where-Object { $_.Path -match '/git/commits/existing-commit-sha$' }).Count -ne 1) {
-            throw 'The existing branch tree was not compared.'
+        if (@($global:ForkBranchSubmissionRequests | Where-Object { $_.Path -match '/git/trees/' }).Count -lt 10) {
+            throw 'The existing and new version subtrees were not compared segment-by-segment.'
         }
     }
 
-    It 'fails closed when an existing deterministic branch has different content' {
+    It 'fails closed when an existing deterministic branch has a different submitted version subtree' {
         $global:ForkBranchRefConflictStatus = 409
-        $global:ForkBranchExistingBranchTreeSha = 'different-tree-sha'
+        $global:ForkBranchExistingBranchTreeSha = 'different-root-tree-sha'
         InModuleScope WingetMaintainerModule {
             $result = Invoke-ForkBranchSubmission `
                 -ManifestPath $global:ForkBranchSubmissionManifestPath `
@@ -289,7 +314,7 @@ Describe 'Submit-WingetPackage ForkBranch' {
                 -RetryDelaySeconds @() `
                 -Sleep { param($seconds) throw 'must not sleep' }
 
-            if ($result.Created -or $result.Error -notmatch 'different content') {
+            if ($result.Created -or $result.Error -notmatch 'different content under') {
                 throw "Existing different branch did not fail closed: $($result | ConvertTo-Json -Compress)"
             }
         }

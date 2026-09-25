@@ -115,30 +115,25 @@ function Find-WingetDuplicateIdentifierByInstallerHash {
     }
 
     $lastSegment = ($PackageIdentifier -split '\.')[-1]
-    if ($null -eq $SearchInvoker) {
-        $SearchInvoker = {
-            $query = "repo:$Repository is:pr `"$lastSegment`" `"$Version`""
+
+    $items = @()
+    try {
+        if ($null -ne $SearchInvoker) {
+            $items = @(& $SearchInvoker)
+        }
+        else {
+            $query = "repo:$Repository is:pr in:title `"$lastSegment`" `"$Version`""
             $raw = Invoke-GhCliWithRetry -OperationName "duplicate identifier search for $PackageIdentifier $Version" -ScriptBlock {
-                gh api --paginate -X GET 'search/issues' -f q=$query --jq '[.items[] | {number: .number, title: .title, body: .body, html_url: .html_url}]'
+                gh api -X GET 'search/issues' -f q=$query -f per_page=30 --jq '[.items[] | {number: .number, title: .title, body: .body, html_url: .html_url}]'
             }
             if ($LASTEXITCODE -ne 0) {
                 throw "gh duplicate identifier search failed with exit code $LASTEXITCODE."
             }
             $json = (@($raw) -join "`n").Trim()
-            if ([string]::IsNullOrWhiteSpace($json)) { return @() }
-            return @($json -split "(?<=\])\s*(?=\[)" | ForEach-Object { $_ | ConvertFrom-Json } | ForEach-Object { $_ })
-        }.GetNewClosure()
-    }
-    if ($null -eq $ManifestReader) {
-        $ManifestReader = {
-            param([string] $Identifier)
-            Get-WingetPkgsInstallerManifestContent -Repository $Repository -PackageIdentifier $Identifier -Version $Version
-        }.GetNewClosure()
-    }
-
-    $items = @()
-    try {
-        $items = @(& $SearchInvoker)
+            if (-not [string]::IsNullOrWhiteSpace($json)) {
+                $items = @($json | ConvertFrom-Json)
+            }
+        }
     }
     catch {
         $warnings.Add("Duplicate identifier search failed for ${PackageIdentifier}: $($_.Exception.Message)")
@@ -149,7 +144,12 @@ function Find-WingetDuplicateIdentifierByInstallerHash {
     $candidateIdentifiers = @(Get-WingetDuplicateIdentifierCandidatesFromSearchItems -Items $items -PackageIdentifier $PackageIdentifier -Version $Version)
     foreach ($candidateIdentifier in $candidateIdentifiers) {
         try {
-            $remoteContent = & $ManifestReader $candidateIdentifier
+            if ($null -ne $ManifestReader) {
+                $remoteContent = & $ManifestReader $candidateIdentifier
+            }
+            else {
+                $remoteContent = Get-WingetPkgsInstallerManifestContent -Repository $Repository -PackageIdentifier $candidateIdentifier -Version $Version
+            }
             $remoteHashes = @(Get-WingetManifestInstallerSha256Values -Content $remoteContent)
         }
         catch {
