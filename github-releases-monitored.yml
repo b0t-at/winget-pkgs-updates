@@ -104,6 +104,7 @@
           - id: "BenjaminLSR.HandheldCompanion"
             repo: "Valkirie/HandheldCompanion"
             url: "https://github.com/Valkirie/HandheldCompanion/releases/download/{VERSION}/HandheldCompanion-{VERSION}.exe"
+            minReleaseAgeHours: 24
 #          - id: "Betaflight.Betaflight-Configurator" # Is now a PWA - no installer available for Windows
 #            repo: "betaflight/betaflight-configurator"
 #            url: "https://github.com/betaflight/betaflight-configurator/releases/download/{VERSION}/betaflight-configurator_{VERSION}_win64-installer.exe"
@@ -170,9 +171,10 @@
           - id: "Concourse.Fly"
             repo: "concourse/concourse"
             url: "https://github.com/concourse/concourse/releases/download/v{VERSION}/fly-{VERSION}-windows-amd64.zip"
-          - id: "CoolPlayLin.Installer.LANDrop"
-            repo: "CoolPlayLin/Windows-Setups"
-            url: "https://github.com/CoolPlayLin/Windows-Setups/releases/download/v{VERSION}/LANDrop.Setup.ia32.exe https://github.com/CoolPlayLin/Windows-Setups/releases/download/v{VERSION}/LANDrop.Setup.ia32.exe"
+#  CoolPlayLin.Installer.LANDrop is excluded: removed upstream as deprecated (winget-pkgs #411167)
+#          - id: "CoolPlayLin.Installer.LANDrop"
+#            repo: "CoolPlayLin/Windows-Setups"
+#            url: "https://github.com/CoolPlayLin/Windows-Setups/releases/download/v{VERSION}/LANDrop.Setup.ia32.exe https://github.com/CoolPlayLin/Windows-Setups/releases/download/v{VERSION}/LANDrop.Setup.ia32.exe"
           - id: "CorporateClashCrew.ToontownCorporateClash"
             repo: "CorporateClash/pyside2-releases"
             url: "https://github.com/CorporateClash/pyside2-releases/releases/download/v{VERSION}/installer.exe"
@@ -1205,6 +1207,7 @@
           - id: "Alochi.Monitoring"
             repo: "rusthype/alochi-monitoring"
             url: "https://github.com/rusthype/alochi-monitoring/releases/download/v{VERSION}/alochi-monitoring-windows.zip"
+            minReleaseAgeHours: 24
           - id: "AloproAgency.WAutoChat"
             repo: "AloproAgency/wautochat-releases"
             url: "https://github.com/AloproAgency/wautochat-releases/releases/download/v{VERSION}/WAutoChat-Setup-{VERSION}.exe"
@@ -1384,6 +1387,7 @@
           - id: "Byron.dua-cli"
             repo: "Byron/dua-cli"
             url: "https://github.com/Byron/dua-cli/releases/download/v{VERSION}/dua-v{VERSION}-x86_64-pc-windows-msvc.zip"
+            tagPattern: '^v\d+\.\d+\.\d+$'
           - id: "ByteNess.AWSVault"
             repo: "ByteNess/aws-vault"
             url: "https://github.com/ByteNess/aws-vault/releases/download/v{VERSION}/aws-vault-windows-amd64.exe https://github.com/ByteNess/aws-vault/releases/download/v{VERSION}/aws-vault-windows-arm64.exe"
@@ -1575,11 +1579,12 @@
             url: "https://github.com/doitintl/dci-cli/releases/download/v{VERSION}/dci_{VERSION}_windows_amd64.zip"
           # Nightly channel: a rolling prerelease tagged "nightly"; the asset name carries
           # the version, so {ARPVERSION} derives it from the asset instead of the tag.
-          - id: "DonutWare.Fladder.Nightly"
-            repo: "DonutWare/Fladder"
-            url: "https://github.com/DonutWare/Fladder/releases/download/{TAG}/Fladder-Windows-{ARPVERSION}-nightly-Setup.exe"
-            tagPattern: '^nightly$'
-            pre-release: "true"
+#  DonutWare.Fladder.Nightly is excluded: rolling nightly tag re-uploads assets, causing repeated hash-mismatch repairs
+#          - id: "DonutWare.Fladder.Nightly"
+#            repo: "DonutWare/Fladder"
+#            url: "https://github.com/DonutWare/Fladder/releases/download/{TAG}/Fladder-Windows-{ARPVERSION}-nightly-Setup.exe"
+#            tagPattern: '^nightly$'
+#            pre-release: "true"
           - id: "dragonflylee.switchfin"
             repo: "dragonflylee/switchfin"
             url: "https://github.com/dragonflylee/switchfin/releases/download/{VERSION}/Switchfin-windows-x86.zip https://github.com/dragonflylee/switchfin/releases/download/{VERSION}/Switchfin-windows-x64.zip https://github.com/dragonflylee/switchfin/releases/download/{VERSION}/Switchfin-windows-arm64.zip"
@@ -1688,6 +1693,7 @@
           - id: "Fangyuan025.Chaty"
             repo: "Fangyuan025/Chaty"
             url: "https://github.com/Fangyuan025/Chaty/releases/download/v{VERSION}/Chaty_{VERSION}_x64-setup.exe"
+            minReleaseAgeHours: 24
           - id: "Faster3ck.Converseen"
             repo: "Faster3ck/Converseen"
             url: "https://github.com/Faster3ck/Converseen/releases/download/v{VERSION}/converseen-{VERSION}-1-win32-portable.zip https://github.com/Faster3ck/Converseen/releases/download/v{VERSION}/converseen-{VERSION}-1-win64-portable.zip https://github.com/Faster3ck/Converseen/releases/download/v{VERSION}/Converseen-{VERSION}-1-win64-setup.msi"
@@ -1808,9 +1814,10 @@
           - id: "Gramps.Gramps"
             repo: "gramps-project/gramps"
             url: "https://github.com/gramps-project/gramps/releases/download/v{VERSION}/GrampsAIO-{VERSION}--1_win64.exe"
-          - id: "Grandpied33.STH"
-            repo: "Skills-transfer-hub/sth-releases"
-            url: "https://github.com/Skills-transfer-hub/sth-releases/releases/download/v{VERSION}/sth-windows-amd64.zip"
+#  Grandpied33.STH is excluded: moved to STH.STH, maintained by the publisher; STH.STH 0.2.43 exists
+#          - id: "Grandpied33.STH"
+#            repo: "Skills-transfer-hub/sth-releases"
+#            url: "https://github.com/Skills-transfer-hub/sth-releases/releases/download/v{VERSION}/sth-windows-amd64.zip"
           - id: "greyishsong.bellit"
             repo: "greyishsong/bellit"
             url: "https://github.com/greyishsong/bellit/releases/download/v{VERSION}/bellit-windows-x64.zip"
@@ -1899,9 +1906,10 @@
           - id: "HishamMedhat.PortPeek"
             repo: "HishamM1/portpeek"
             url: "https://github.com/HishamM1/portpeek/releases/download/v{VERSION}/PortPeek_{VERSION}_x64-setup.exe"
-          - id: "Hitalin.NoteDeck"
-            repo: "notedeck-dev/notedeck"
-            url: "https://github.com/notedeck-dev/notedeck/releases/download/v{VERSION}/NoteDeck-{VERSION}-windows-x64-setup.exe"
+#  Hitalin.NoteDeck is excluded: moved to NotedeckDev.NoteDeck (winget-pkgs #420994); NotedeckDev.NoteDeck is already monitored
+#          - id: "Hitalin.NoteDeck"
+#            repo: "notedeck-dev/notedeck"
+#            url: "https://github.com/notedeck-dev/notedeck/releases/download/v{VERSION}/NoteDeck-{VERSION}-windows-x64-setup.exe"
           - id: "hoijun-kim.flip"
             repo: "HoijunKim/flip"
             url: "https://github.com/HoijunKim/flip/releases/download/v{VERSION}/flip-v{VERSION}-windows-amd64.zip"
@@ -2083,6 +2091,7 @@
           - id: "Laker.EasyPostman"
             repo: "lakernote/easy-postman"
             url: "https://github.com/lakernote/easy-postman/releases/download/v{VERSION}/EasyPostman-{VERSION}-windows-x64.exe"
+            tagPattern: '^v\d+\.\d+\.\d+$'
           - id: "LANCommander.Launcher"
             repo: "LANCommander/LANCommander"
             url: "https://github.com/LANCommander/LANCommander/releases/download/v{VERSION}/LANCommander.Launcher-{VERSION}-x64-Setup.exe https://github.com/LANCommander/LANCommander/releases/download/v{VERSION}/LANCommander.Launcher-{VERSION}-arm64-Setup.exe"
@@ -2516,9 +2525,10 @@
           - id: "OpenCLICollective.google-readonly"
             repo: "open-cli-collective/google-readonly"
             url: "https://github.com/open-cli-collective/google-readonly/releases/download/v{VERSION}/gro_v{VERSION}_windows_amd64.zip https://github.com/open-cli-collective/google-readonly/releases/download/v{VERSION}/gro_v{VERSION}_windows_arm64.zip"
-          - id: "OpenCLICollective.gro"
-            repo: "open-cli-collective/google-readonly"
-            url: "https://github.com/open-cli-collective/google-readonly/releases/download/v{VERSION}/gro_v{VERSION}_windows_amd64.zip https://github.com/open-cli-collective/google-readonly/releases/download/v{VERSION}/gro_v{VERSION}_windows_arm64.zip"
+#  OpenCLICollective.gro is excluded: merged into OpenCLICollective.google-readonly (winget-pkgs #420054)
+#          - id: "OpenCLICollective.gro"
+#            repo: "open-cli-collective/google-readonly"
+#            url: "https://github.com/open-cli-collective/google-readonly/releases/download/v{VERSION}/gro_v{VERSION}_windows_amd64.zip https://github.com/open-cli-collective/google-readonly/releases/download/v{VERSION}/gro_v{VERSION}_windows_arm64.zip"
           - id: "OpenCoworkAI.OpenCoDesign"
             repo: "OpenCoworkAI/open-codesign"
             url: "https://github.com/OpenCoworkAI/open-codesign/releases/download/v{VERSION}/open-codesign-{VERSION}-x64-setup.exe https://github.com/OpenCoworkAI/open-codesign/releases/download/v{VERSION}/open-codesign-{VERSION}-arm64-setup.exe"
@@ -2598,7 +2608,7 @@
             url: "https://github.com/opensteno/plover/releases/download/v{VERSION}/plover-{VERSION}-win64.setup.exe"
           - id: "OpenWhispr.OpenWhispr"
             repo: "OpenWhispr/openwhispr"
-            url: "https://github.com/OpenWhispr/openwhispr/releases/latest/download/OpenWhispr-Setup-{VERSION}.exe"
+            url: "https://github.com/OpenWhispr/openwhispr/releases/download/v{VERSION}/OpenWhispr-Setup-{VERSION}.exe"
           - id: "openwong2kim.wmux"
             repo: "openwong2kim/wmux"
             url: "https://github.com/openwong2kim/wmux/releases/download/v{VERSION}/wmux-{VERSION}.Setup.exe"
@@ -2646,9 +2656,10 @@
           - id: "PathofBuildingCommunity.PathofBuildingCommunity"
             repo: "PathOfBuildingCommunity/PathOfBuilding"
             url: "https://github.com/PathOfBuildingCommunity/PathOfBuilding/releases/download/v{VERSION}/PathOfBuildingCommunity-Setup.exe"
-          - id: "PatrickHener.Goshs"
-            repo: "goshs-labs/goshs"
-            url: "https://github.com/goshs-labs/goshs/releases/download/v{VERSION}/goshs_v{VERSION}_windows_x86_64.zip https://github.com/goshs-labs/goshs/releases/download/v{VERSION}/goshs_v{VERSION}_windows_386.zip https://github.com/goshs-labs/goshs/releases/download/v{VERSION}/goshs_v{VERSION}_windows_arm64.zip"
+#  PatrickHener.Goshs is excluded: moved to GoshsLabs.Goshs, maintained by the publisher
+#          - id: "PatrickHener.Goshs"
+#            repo: "goshs-labs/goshs"
+#            url: "https://github.com/goshs-labs/goshs/releases/download/v{VERSION}/goshs_v{VERSION}_windows_x86_64.zip https://github.com/goshs-labs/goshs/releases/download/v{VERSION}/goshs_v{VERSION}_windows_386.zip https://github.com/goshs-labs/goshs/releases/download/v{VERSION}/goshs_v{VERSION}_windows_arm64.zip"
           - id: "PatrickMatthiesen.oh-my-dot"
             repo: "PatrickMatthiesen/oh-my-dot"
             url: "https://github.com/PatrickMatthiesen/oh-my-dot/releases/download/v{VERSION}/oh-my-dot_windows_x86_64.zip https://github.com/PatrickMatthiesen/oh-my-dot/releases/download/v{VERSION}/oh-my-dot_windows_arm64.zip"

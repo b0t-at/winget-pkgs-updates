@@ -48,6 +48,22 @@ $noExecPr = [PSCustomObject]@{ number = 1; title = 'Update version: Foo.Bar vers
 $hold = & $module { param($prs, $now) Select-WingetPatchSupersessionHold -OpenPrs $prs -PackageIdentifier 'Foo.Bar' -NewVersion '1.0.1' -Now $now } @($noExecPr) $now
 Assert-True ($null -ne $hold) 'Validation-No-Executables did not hold the patch release.'
 
+Write-Host 'TEST: waived validation label holds minor and patch supersession for 30 days'
+$waivedPr = [PSCustomObject]@{
+    number     = 429889
+    title      = 'Update version: caomengxuan666.WinuxCmd version 1.0.3'
+    labels     = @('Azure-Pipeline-Passed', 'Validation-No-Executables', 'Waived-Validation-No-Executables')
+    created_at = $now.AddDays(-10).ToString('o')
+    html_url   = 'https://github.com/microsoft/winget-pkgs/pull/429889'
+}
+$waivedHold = & $module { param($items, $now) Find-WingetPkgsWaivedValidationHold -PackageIdentifier 'caomengxuan666.WinuxCmd' -Version '1.1.0' -BotLogin 'damn-good-b0t' -Now $now -SearchInvoker { $items } } @($waivedPr) $now
+Assert-True ($null -ne $waivedHold -and $waivedHold.Number -eq 429889 -and $waivedHold.Reason -match 'Waived-Validation-No-Executables') "Expected waived PR to hold a minor release, got: $($waivedHold | ConvertTo-Json -Compress)"
+
+Write-Host 'TEST: waived validation hold expires after 30 days'
+$oldWaivedPr = $waivedPr.PSObject.Copy(); $oldWaivedPr.created_at = $now.AddDays(-31).ToString('o')
+$waivedHold = & $module { param($items, $now) Find-WingetPkgsWaivedValidationHold -PackageIdentifier 'caomengxuan666.WinuxCmd' -Version '1.1.0' -BotLogin 'damn-good-b0t' -Now $now -SearchInvoker { $items } } @($oldWaivedPr) $now
+Assert-True ($null -eq $waivedHold) "31-day-old waived PR must not hold: $($waivedHold | ConvertTo-Json -Compress)"
+
 Write-Host 'TEST: non-patch release supersedes a queued PR'
 $hold = & $module { param($prs, $now) Select-WingetPatchSupersessionHold -OpenPrs $prs -PackageIdentifier 'AnInsomniacy.Aria2Next' -NewVersion '2.7.0' -Now $now } @($queuedPr) $now
 Assert-True ($null -eq $hold) "Minor release must not be held: $($hold | ConvertTo-Json -Compress)"
@@ -114,6 +130,66 @@ foreach ($label in @('Validation-Defender-Error', 'Binary-Validation-Error', 'Va
     $pr = $closedBlocked.PSObject.Copy(); $pr.labels = @($label)
     $blocked = & $module { param($items) Find-WingetPkgsBlockedBotPr -PackageIdentifier 'yhay81.sqrail' -Version '0.3.4' -BotLogin 'damn-good-b0t' -SearchInvoker { $items } } @($pr)
     Assert-True ($null -ne $blocked) "Label $label did not block."
+}
+
+# ---------------------------------------------------------------------------
+Write-Host 'TEST: duplicate identifier guard compares installer hashes'
+$duplicateScratch = Join-Path $repositoryRoot "tests\scratch-duplicate-$([guid]::NewGuid().ToString('N'))"
+try {
+    New-Item -ItemType Directory -Path $duplicateScratch -Force | Out-Null
+    @"
+PackageIdentifier: PatrickHener.Goshs
+PackageVersion: 2.1.6
+Installers:
+- Architecture: x64
+  InstallerUrl: https://example.invalid/goshs.zip
+  InstallerSha256: 1111111111111111111111111111111111111111111111111111111111111111
+ManifestType: installer
+ManifestVersion: 1.12.0
+"@ | Set-Content -LiteralPath (Join-Path $duplicateScratch 'PatrickHener.Goshs.installer.yaml')
+
+    $searchItems = @(
+        [PSCustomObject]@{
+            number   = 436891
+            title    = 'Update version: GoshsLabs.Goshs version 2.1.6'
+            body     = 'same app'
+            html_url = 'https://github.com/microsoft/winget-pkgs/pull/436891'
+        }
+    )
+    $duplicate = & $module {
+        param($Path, $Items)
+        $searchInvoker = { $Items }.GetNewClosure()
+        Find-WingetDuplicateIdentifierByInstallerHash `
+            -PackageIdentifier 'PatrickHener.Goshs' `
+            -Version '2.1.6' `
+            -ManifestPath $Path `
+            -SearchInvoker $searchInvoker `
+            -ManifestReader { param($Identifier) 'InstallerSha256: 1111111111111111111111111111111111111111111111111111111111111111' }
+    } $duplicateScratch $searchItems
+    Assert-True ($duplicate.Duplicate -and $duplicate.MatchingIdentifier -ceq 'GoshsLabs.Goshs') "Expected duplicate GoshsLabs.Goshs, got: $($duplicate | ConvertTo-Json -Compress)"
+}
+finally {
+    Remove-Item -LiteralPath $duplicateScratch -Recurse -Force -ErrorAction SilentlyContinue
+}
+
+Write-Host 'TEST: duplicate identifier guard fails open on search errors'
+$duplicateScratch = Join-Path $repositoryRoot "tests\scratch-duplicate-$([guid]::NewGuid().ToString('N'))"
+try {
+    New-Item -ItemType Directory -Path $duplicateScratch -Force | Out-Null
+    'InstallerSha256: 2222222222222222222222222222222222222222222222222222222222222222' | Set-Content -LiteralPath (Join-Path $duplicateScratch 'Grandpied33.STH.installer.yaml')
+    $duplicate = & $module {
+        param($Path)
+        Find-WingetDuplicateIdentifierByInstallerHash `
+            -PackageIdentifier 'Grandpied33.STH' `
+            -Version '0.2.43' `
+            -ManifestPath $Path `
+            -SearchInvoker { throw 'search API unavailable' } `
+            -ManifestReader { throw 'must not read manifests' }
+    } $duplicateScratch
+    Assert-True (-not $duplicate.Duplicate -and @($duplicate.Warnings).Count -eq 1 -and $duplicate.Warnings[0] -match 'search API unavailable') "Expected fail-open warning, got: $($duplicate | ConvertTo-Json -Compress)"
+}
+finally {
+    Remove-Item -LiteralPath $duplicateScratch -Recurse -Force -ErrorAction SilentlyContinue
 }
 
 # ---------------------------------------------------------------------------

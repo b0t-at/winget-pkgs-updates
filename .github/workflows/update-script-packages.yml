@@ -73,7 +73,8 @@ jobs:
           - PackageName: "glueckkanja.KONNEKT"
           - PackageName: "Ghisler.TotalCommander"
           - PackageName: "Jellyfin.Server"
-          - PackageName: "Amazon.Kindle"
+          # Amazon.Kindle is excluded: Amazon's legacy KindleForPC S3 installer now returns HTTP 403 and the official desktop app moved to the Microsoft Store.
+#          - PackageName: "Amazon.Kindle"
 
     steps:
       - name: Checkout
