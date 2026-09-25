@@ -116,8 +116,8 @@
     "manifestHash": "88FF875B5DEA51BC3B743F06098AADAF42AB87DA966E19E5EFA189C21F4EC081",
     "version": "0.107.78",
     "openPr": {
-      "checkedAt": "2026-09-24T08:31:20.6413154Z",
-      "version": "0.107.79"
+      "version": "0.107.79",
+      "checkedAt": "2026-09-25T12:32:53.8476432Z"
     }
   },
   "AdGuard.dnsproxy": {
@@ -194,8 +194,8 @@
     "lastUpdated": "2026-09-19T08:41:43.6037433Z",
     "version": "0.9.2",
     "openPr": {
-      "checkedAt": "2026-09-25T08:31:23.6259474Z",
-      "version": "0.9.10"
+      "version": "0.9.11",
+      "checkedAt": "2026-09-25T12:33:32.9124359Z"
     }
   },
   "Aiden1020.LocalSubs": {
@@ -1392,8 +1392,8 @@
   },
   "CharlesMilette.TranslucentTB": {
     "openPr": {
-      "checkedAt": "2026-09-24T08:31:23.5775723Z",
-      "version": "2026.2"
+      "version": "2026.2",
+      "checkedAt": "2026-09-25T12:32:56.6434071Z"
     }
   },
   "ChiaNetwork.GUIforChiaBlockchain": {
@@ -1476,8 +1476,8 @@
     "validationCount": 1,
     "version": "1.0.48275",
     "openPr": {
-      "version": "1.0.51336",
-      "checkedAt": "2026-09-24T12:33:30.645092Z"
+      "version": "1.0.51453",
+      "checkedAt": "2026-09-25T12:32:57.0302788Z"
     }
   },
   "ciromattia.KCC": {
@@ -3123,8 +3123,8 @@
     ],
     "description": "",
     "openPr": {
-      "checkedAt": "2026-09-24T08:31:27.0384531Z",
-      "version": "36.2"
+      "version": "36.2",
+      "checkedAt": "2026-09-25T12:32:59.9796543Z"
     }
   },
   "goplus.xgo": {
@@ -3947,8 +3947,8 @@
       "AEBD5B2C3D2839160722051525134F91E8A30CAE89779E6E0ED8A485B34DBDC7"
     ],
     "openPr": {
-      "checkedAt": "2026-09-24T08:31:27.4438071Z",
-      "version": "8.1.2-5"
+      "version": "8.1.2-5",
+      "checkedAt": "2026-09-25T12:33:01.7229242Z"
     }
   },
   "JeromeHerrman.VPinCommander": {
@@ -8271,8 +8271,8 @@
     "manifestHash": "4B796A972C2DBB5AE75EB8F4F8B332F0CBE77928187E84989680F6AB184F42AA",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "checkedAt": "2026-09-24T08:32:00.1463764Z",
-      "version": "5.7.0"
+      "version": "5.7.0",
+      "checkedAt": "2026-09-25T12:33:27.0415453Z"
     }
   },
   "termio.soft-jp.com.TermioWin": {
