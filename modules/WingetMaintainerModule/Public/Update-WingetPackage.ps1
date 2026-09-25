@@ -1,3 +1,74 @@
+function New-WingetReleaseNotesYamlBlock {
+    [CmdletBinding()]
+    [OutputType([string])]
+    param(
+        [Parameter(Mandatory = $true)]
+        [AllowEmptyString()]
+        [string] $ReleaseNotes
+    )
+
+    $lines = @($ReleaseNotes -split "`r`n|`r|`n")
+    if ($lines.Count -eq 0) { $lines = @('') }
+    $indented = ($lines | ForEach-Object { "  $_" }) -join "`n"
+    return "ReleaseNotes: |-`n$indented"
+}
+
+function Set-WingetLocaleManifestReleaseNotes {
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory = $true)] [string] $Path,
+        [Parameter(Mandatory = $true)] [AllowEmptyString()] [string] $ReleaseNotes
+    )
+
+    $existing = Get-Content -LiteralPath $Path -Raw -ErrorAction Stop
+    $cleaned = [regex]::Replace($existing, '(?ms)^ReleaseNotes:\s*\|[-+]?.*?(?=^\S|\z)', '')
+    $cleaned = [regex]::Replace($cleaned, '(?m)^ReleaseNotes:\s*.*(?:\r?\n)?', '')
+    $block = New-WingetReleaseNotesYamlBlock -ReleaseNotes $ReleaseNotes
+
+    if ($cleaned -match '(?m)^ManifestType:') {
+        $updated = [regex]::Replace($cleaned, '(?m)^ManifestType:', "$block`nManifestType:", 1)
+    }
+    else {
+        if (-not $cleaned.EndsWith("`n")) { $cleaned += "`n" }
+        $updated = $cleaned + $block + "`n"
+    }
+
+    Set-Content -LiteralPath $Path -Value $updated -NoNewline
+}
+
+function Set-WingetGeneratedReleaseNotes {
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory = $true)] [string] $ManifestOutPath,
+        [Parameter(Mandatory = $true)] [AllowEmptyString()] [string] $ReleaseNotes,
+        [Parameter(Mandatory = $true)] [string] $Generator
+    )
+
+    $localFiles = @(Get-ChildItem -Recurse -Path $ManifestOutPath -Filter '*.locale.*.yaml' -File)
+    if ($localFiles.Count -eq 0) { return }
+
+    if ($Generator -eq 'WinMatsch') {
+        $defaultLocaleFiles = @($localFiles | Where-Object {
+                (Get-Content -LiteralPath $_.FullName -Raw -ErrorAction Stop) -match '(?m)^ManifestType:\s*defaultLocale\s*$'
+            })
+        $target = @($defaultLocaleFiles | Select-Object -First 1)
+        if ($target.Count -eq 0) { return }
+
+        $defaultContent = Get-Content -LiteralPath $target[0].FullName -Raw -ErrorAction Stop
+        if ($defaultContent -match '(?m)^ReleaseNotes\s*:') {
+            Write-Host 'WinMatsch already produced ReleaseNotes in the default locale; leaving locale manifests unchanged.'
+            return
+        }
+
+        Set-WingetLocaleManifestReleaseNotes -Path $target[0].FullName -ReleaseNotes $ReleaseNotes
+        return
+    }
+
+    foreach ($file in $localFiles) {
+        Set-WingetLocaleManifestReleaseNotes -Path $file.FullName -ReleaseNotes $ReleaseNotes
+    }
+}
+
 function Update-WingetPackage {
     <#
     .SYNOPSIS
@@ -394,21 +465,14 @@ function Update-WingetPackage {
 
             Test-GeneratedInstallerArchitecture -PackageIdentifier $wingetPackage -CurrentVersion $Latest.Version -ManifestOutPath $ManifestOutPath -RequestedInstallerValues $RequestedInstallerValues -PreviousVersion $latestPublishedVersion
 
-            # If release notes are provided, add them to the manifest
+            # If release notes are provided, add them to the manifest without
+            # bypassing WinMatsch's own default-locale output.
             if ($Latest.releaseNotes) {
                 Write-Host "Adding release notes to the manifest in $ManifestOutPath"
-                $localFiles = Get-ChildItem -Recurse -Path $ManifestOutPath -Filter "*.locale.*.yaml"
-                # Format release notes as a YAML literal block to keep the file valid.
-                $rnLines = ($Latest.ReleaseNotes -split "(`r`n|`r|`n)") | Where-Object { $_ -notmatch '^(\r?\n|\r)$' }
-                $indented = ($rnLines | ForEach-Object { "  $_" }) -join "`n"
-                $releaseNotesBlock = "ReleaseNotes: |-`n$indented"
-                foreach ($file in $localFiles) {
-                    $existing = Get-Content -Path $file.FullName -Raw
-                    # Strip any existing ReleaseNotes section (in case komac/wingetcreate already added one)
-                    $cleaned = [regex]::Replace($existing, '(?ms)^ReleaseNotes:.*?(?=^\S|\Z)', '')
-                    if (-not $cleaned.EndsWith("`n")) { $cleaned += "`n" }
-                    Set-Content -Path $file.FullName -Value ($cleaned + $releaseNotesBlock + "`n") -NoNewline
-                }
+                Set-WingetGeneratedReleaseNotes `
+                    -ManifestOutPath $ManifestOutPath `
+                    -ReleaseNotes $Latest.ReleaseNotes `
+                    -Generator $EffectiveWith
             }
 
             # Calculate full manifest path

@@ -11,7 +11,8 @@ on:
   schedule:
     - cron: "41 6 * * *" # daily, 06:41 UTC
 
-permissions: {}
+permissions:
+  contents: write
 
 concurrency:
   group: upstream-pr-hygiene
@@ -21,11 +22,14 @@ jobs:
   sweep:
     name: Sweep superseded upstream PRs
     runs-on: ubuntu-latest
+    concurrency:
+      group: package-state-write
+      cancel-in-progress: false
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          persist-credentials: false
+          persist-credentials: true
 
       # Closes this bot's own open upstream PRs that are superseded by a newer
       # open PR or whose version is already published; everything else is only
@@ -36,5 +40,32 @@ jobs:
           GH_TOKEN: ${{ secrets.WINGET_PAT }}
           WINGET_UPSTREAM_READ_TOKEN: ${{ secrets.WINGET_PAT }}
           WINGET_PKGS_FORK_REPO: ${{ vars.WINGET_PKGS_FORK_REPO }}
+          WINMATSCH_FEEDBACK_DIRECTORY: ${{ github.workspace }}/data/winmatsch-feedback
           DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run || 'false' }}
         run: ./scripts/Invoke-UpstreamPrHygiene.ps1
+
+      - name: Persist WinMatsch feedback
+        if: always()
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $feedbackDirectory = Join-Path $env:GITHUB_WORKSPACE 'data/winmatsch-feedback'
+          if (-not (Test-Path -LiteralPath $feedbackDirectory)) {
+            Write-Host 'No WinMatsch feedback directory to persist.'
+            return
+          }
+
+          gh auth setup-git
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -- data/winmatsch-feedback
+          git diff --cached --quiet -- data/winmatsch-feedback
+          if ($LASTEXITCODE -eq 0) {
+            Write-Host 'WinMatsch feedback did not change.'
+            return
+          }
+
+          git commit -m "Update WinMatsch feedback [skip ci]"
+          git pull --rebase
+          git push

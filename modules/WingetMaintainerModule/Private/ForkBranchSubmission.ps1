@@ -146,7 +146,8 @@ function Assert-WingetPkgsSubmissionIdentity {
         [string] $Version
     )
 
-    if ($PackageId -notmatch '^[A-Za-z0-9][A-Za-z0-9.-]*$') {
+    $packageIdentifierPattern = '^[^\.\s\\/:\*\?"<>\|\x01-\x1f]{1,32}(\.[^\.\s\\/:\*\?"<>\|\x01-\x1f]{1,32}){1,7}$'
+    if ($PackageId -notmatch $packageIdentifierPattern) {
         throw "Package ID '$PackageId' is not safe for a winget manifest path."
     }
     if ($Version -match '[\\/]' -or $Version -match '^\.+$') {
@@ -179,12 +180,113 @@ function Get-WingetPkgsSubmissionBranchName {
     }
     $identityHash = ([BitConverter]::ToString($hashBytes)).Replace('-', '').ToLowerInvariant().Substring(0, 16)
 
-    $readableSuffix = "$normalizedPackageId-$normalizedVersion" -replace '[^A-Za-z0-9._-]', '-'
+    $readableSuffix = "$normalizedPackageId-$normalizedVersion" -replace '[^A-Za-z0-9._+-]', '-'
     if ($readableSuffix.Length -gt 96) {
         $readableSuffix = $readableSuffix.Substring(0, 96)
     }
 
     return "winget-autosubmit/$readableSuffix-$identityHash"
+}
+
+
+function Invoke-WingetPkgsForkWriteWithObjectStoreRetry {
+    <#
+    .SYNOPSIS
+        Retries fork writes that can briefly fail while upstream git objects
+        propagate into the fork's object store.
+    #>
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory = $true)]
+        [ValidateSet('Post')]
+        [string] $Method,
+
+        [Parameter(Mandatory = $true)]
+        [string] $Path,
+
+        [Parameter(Mandatory = $true)]
+        [string] $Token,
+
+        [Parameter(Mandatory = $true)]
+        [object] $Body,
+
+        [Parameter(Mandatory = $true)]
+        [int[]] $RetryStatusCodes,
+
+        [Parameter()]
+        [string] $RetryResponsePattern,
+
+        [Parameter(Mandatory = $true)]
+        [string] $OperationName,
+
+        [Parameter()]
+        [AllowEmptyCollection()]
+        [int[]] $RetryDelaySeconds = @(15, 45),
+
+        [Parameter()]
+        [scriptblock] $Sleep = { param([int] $Seconds) Start-Sleep -Seconds $Seconds }
+    )
+
+    $attempts = @($RetryDelaySeconds).Count + 1
+    for ($attempt = 1; $attempt -le $attempts; $attempt++) {
+        try {
+            return Invoke-WingetPkgsGitHubApi -Method $Method -Path $Path -Token $Token -Body $Body
+        }
+        catch {
+            $statusCode = Get-WingetPkgsGitHubApiFailureStatusCode -ErrorRecord $_
+            $responseBody = Get-WingetPkgsGitHubApiFailureResponseBody -ErrorRecord $_
+            $matchesStatus = $statusCode -in $RetryStatusCodes
+            $matchesBody = [string]::IsNullOrWhiteSpace($RetryResponsePattern) -or ($responseBody -match $RetryResponsePattern) -or ($_.Exception.Message -match $RetryResponsePattern)
+            if (-not $matchesStatus -or -not $matchesBody -or $attempt -ge $attempts) {
+                throw
+            }
+
+            $delaySeconds = @($RetryDelaySeconds)[$attempt - 1]
+            Write-Warning "$OperationName returned transient HTTP $statusCode on attempt $attempt of $attempts; retrying in $delaySeconds second(s)."
+            & $Sleep $delaySeconds
+        }
+    }
+}
+
+function Get-WingetPkgsOpenPullRequestForHead {
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory = $true)] [string] $TargetRepository,
+        [Parameter(Mandatory = $true)] [string] $ForkOwner,
+        [Parameter(Mandatory = $true)] [string] $BranchName,
+        [Parameter(Mandatory = $true)] [string] $Token
+    )
+
+    $encodedHead = [uri]::EscapeDataString("${ForkOwner}:$BranchName")
+    $pullRequests = @(Invoke-WingetPkgsGitHubApi `
+            -Method Get `
+            -Path "repos/$TargetRepository/pulls?state=open&head=$encodedHead" `
+            -Token $Token)
+    return @($pullRequests | Select-Object -First 1)
+}
+
+function Get-WingetPkgsForkBranchCommitTreeSha {
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory = $true)] [string] $ForkRepository,
+        [Parameter(Mandatory = $true)] [string] $BranchName,
+        [Parameter(Mandatory = $true)] [string] $Token
+    )
+
+    $reference = Invoke-WingetPkgsGitHubApi `
+        -Method Get `
+        -Path "repos/$ForkRepository/git/ref/heads/$BranchName" `
+        -Token $Token
+    $commitSha = "$($reference.object.sha)"
+    if ([string]::IsNullOrWhiteSpace($commitSha)) {
+        throw "Could not resolve the existing fork branch '$BranchName' commit SHA."
+    }
+
+    $commit = Invoke-WingetPkgsGitHubApi `
+        -Method Get `
+        -Path "repos/$ForkRepository/git/commits/$commitSha" `
+        -Token $Token
+    return "$($commit.tree.sha)"
 }
 
 function Assert-SafeWingetPkgsForkRepository {
@@ -232,7 +334,14 @@ function Invoke-ForkBranchSubmission {
         [string] $TargetRepository = 'microsoft/winget-pkgs',
 
         [Parameter(Mandatory = $false)]
-        [string] $Resolves
+        [string] $Resolves,
+
+        [Parameter(Mandatory = $false)]
+        [AllowEmptyCollection()]
+        [int[]] $RetryDelaySeconds = @(15, 45),
+
+        [Parameter(Mandatory = $false)]
+        [scriptblock] $Sleep = { param([int] $Seconds) Start-Sleep -Seconds $Seconds }
     )
 
     $upstreamRepository = 'microsoft/winget-pkgs'
@@ -286,14 +395,19 @@ function Invoke-ForkBranchSubmission {
 
     # The fork default branch remains read-only. The manifest commit is rooted
     # at the selected target base commit before its ref is atomically claimed.
-    $tree = Invoke-WingetPkgsGitHubApi `
+    $tree = Invoke-WingetPkgsForkWriteWithObjectStoreRetry `
         -Method Post `
         -Path "repos/$ForkRepository/git/trees" `
         -Token $Token `
         -Body @{
             base_tree = $baseTreeSha
             tree      = @($treeItems)
-        }
+        } `
+        -RetryStatusCodes @(422) `
+        -RetryResponsePattern 'base_tree.*valid tree oid' `
+        -OperationName 'ForkBranch tree creation' `
+        -RetryDelaySeconds $RetryDelaySeconds `
+        -Sleep $Sleep
     Write-Host "ForkBranch: creating commit in $ForkRepository" -ForegroundColor DarkGray
     $commit = Invoke-WingetPkgsGitHubApi `
         -Method Post `
@@ -311,14 +425,18 @@ function Invoke-ForkBranchSubmission {
     $branchName = Get-WingetPkgsSubmissionBranchName -PackageId $PackageId -Version $Version
     Write-Host "ForkBranch: claiming branch $branchName in $ForkRepository" -ForegroundColor DarkGray
     try {
-        Invoke-WingetPkgsGitHubApi `
+        Invoke-WingetPkgsForkWriteWithObjectStoreRetry `
             -Method Post `
             -Path "repos/$ForkRepository/git/refs" `
             -Token $Token `
             -Body @{
                 ref = "refs/heads/$branchName"
                 sha = "$($commit.sha)"
-            } | Out-Null
+            } `
+            -RetryStatusCodes @(404) `
+            -OperationName 'ForkBranch ref creation' `
+            -RetryDelaySeconds $RetryDelaySeconds `
+            -Sleep $Sleep | Out-Null
     }
     catch {
         $statusCode = Get-WingetPkgsGitHubApiFailureStatusCode -ErrorRecord $_
@@ -338,14 +456,39 @@ function Invoke-ForkBranchSubmission {
             }
         }
 
-        return [pscustomobject]@{
-            Created             = $false
-            DuplicateDetected   = $false
-            SubmissionClaimed   = $true
-            BranchName          = $branchName
-            PullRequest         = $null
-            Error               = "The deterministic submission branch '$branchName' already exists, but no matching target PR is searchable. Refusing to create another PR; reconcile the existing branch before retrying."
+        $forkOwner = $ForkRepository.Split('/')[0]
+        $headPullRequest = Get-WingetPkgsOpenPullRequestForHead `
+            -TargetRepository $targetRepository `
+            -ForkOwner $forkOwner `
+            -BranchName $branchName `
+            -Token $Token
+        if ($null -ne $headPullRequest) {
+            return [pscustomobject]@{
+                Created             = $false
+                DuplicateDetected   = $true
+                SubmissionClaimed   = $true
+                BranchName          = $branchName
+                PullRequest         = $headPullRequest
+                Error               = $null
+            }
         }
+
+        $existingTreeSha = Get-WingetPkgsForkBranchCommitTreeSha `
+            -ForkRepository $ForkRepository `
+            -BranchName $branchName `
+            -Token $Token
+        if ($existingTreeSha -cne "$($tree.sha)") {
+            return [pscustomobject]@{
+                Created             = $false
+                DuplicateDetected   = $false
+                SubmissionClaimed   = $true
+                BranchName          = $branchName
+                PullRequest         = $null
+                Error               = "The deterministic submission branch '$branchName' already exists with different content and no matching target PR is searchable. Refusing to create another PR; reconcile the existing branch before retrying."
+            }
+        }
+
+        Write-Host "ForkBranch: reusing existing branch $branchName because its tree already matches this submission." -ForegroundColor DarkGray
     }
 
     # Recheck immediately before the target PR write. The branch claim closes

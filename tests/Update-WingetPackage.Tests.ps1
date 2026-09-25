@@ -652,4 +652,62 @@ if ($earlyValidationResult.OutputContent -notmatch '(?m)^package-id=Test\.Packag
     throw "The early failure payload is missing the package id: $($earlyValidationResult.OutputContent)"
 }
 
+Write-Host 'TEST: WinMatsch release notes fallback inserts before ManifestType without duplicating keys'
+$releaseNotesScratch = Join-Path $repositoryRoot "tests\scratch-release-notes-$([guid]::NewGuid().ToString('N'))"
+try {
+    New-Item -ItemType Directory -Path $releaseNotesScratch -Force | Out-Null
+    $localePath = Join-Path $releaseNotesScratch 'Test.Package.locale.en-US.yaml'
+    @"
+PackageIdentifier: Test.Package
+PackageVersion: 1.0.0
+PackageLocale: en-US
+Publisher: Test Publisher
+PackageName: Test Package
+ShortDescription: Test package
+ReleaseNotesUrl: https://example.invalid/releases/1.0.0
+ManifestType: defaultLocale
+ManifestVersion: 1.12.0
+"@ | Set-Content -LiteralPath $localePath -NoNewline
+
+    & $module { param($Path) Set-WingetGeneratedReleaseNotes -ManifestOutPath $Path -ReleaseNotes "Fixed one`nFixed two" -Generator 'WinMatsch' } $releaseNotesScratch
+    $content = Get-Content -LiteralPath $localePath -Raw
+    if (([regex]::Matches($content, '(?m)^ReleaseNotes:')).Count -ne 1) {
+        throw "ReleaseNotes key was not inserted exactly once: $content"
+    }
+    if (([regex]::Matches($content, '(?m)^ReleaseNotesUrl:')).Count -ne 1) {
+        throw "ReleaseNotesUrl was changed or duplicated: $content"
+    }
+    if ($content.IndexOf('ReleaseNotes:') -gt $content.IndexOf('ManifestType:')) {
+        throw "ReleaseNotes was not inserted before ManifestType: $content"
+    }
+}
+finally {
+    Remove-Item -LiteralPath $releaseNotesScratch -Recurse -Force -ErrorAction SilentlyContinue
+}
+
+Write-Host 'TEST: WinMatsch release notes post-processing skips when default locale already has ReleaseNotes'
+$releaseNotesScratch = Join-Path $repositoryRoot "tests\scratch-release-notes-$([guid]::NewGuid().ToString('N'))"
+try {
+    New-Item -ItemType Directory -Path $releaseNotesScratch -Force | Out-Null
+    $localePath = Join-Path $releaseNotesScratch 'Test.Package.locale.en-US.yaml'
+    @"
+PackageIdentifier: Test.Package
+PackageVersion: 1.0.0
+PackageLocale: en-US
+ReleaseNotes: |-
+  Existing sanitized notes
+ManifestType: defaultLocale
+ManifestVersion: 1.12.0
+"@ | Set-Content -LiteralPath $localePath -NoNewline
+    $before = Get-Content -LiteralPath $localePath -Raw
+    & $module { param($Path) Set-WingetGeneratedReleaseNotes -ManifestOutPath $Path -ReleaseNotes 'replacement' -Generator 'WinMatsch' } $releaseNotesScratch
+    $after = Get-Content -LiteralPath $localePath -Raw
+    if ($after -cne $before) {
+        throw "WinMatsch ReleaseNotes output should have been left untouched: $after"
+    }
+}
+finally {
+    Remove-Item -LiteralPath $releaseNotesScratch -Recurse -Force -ErrorAction SilentlyContinue
+}
+
 Write-Host 'All Update-WingetPackage regression tests passed.' -ForegroundColor Green

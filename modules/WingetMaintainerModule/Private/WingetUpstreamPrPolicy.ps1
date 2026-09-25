@@ -50,6 +50,77 @@ function Get-WingetManualValidationQueueLabels {
     }
 }
 
+
+function Get-WingetWaivedValidationLabelNames {
+    <#
+    .SYNOPSIS
+        Returns waiver labels that should hold supersession for a bounded time.
+    #>
+    [CmdletBinding()]
+    [OutputType([string[]])]
+    param(
+        [Parameter()] [AllowNull()] $Pr
+    )
+
+    return @(Get-WingetPrLabelNames -Pr $Pr | Where-Object { $_ -like 'Waived-*' })
+}
+
+function Get-WingetPrTimestamp {
+    [CmdletBinding()]
+
+    param(
+        [Parameter()] [AllowNull()] $Pr,
+        [Parameter(Mandatory = $true)] [string[]] $PropertyNames
+    )
+
+    if ($null -eq $Pr) { return $null }
+    foreach ($propertyName in $PropertyNames) {
+        $property = $Pr.PSObject.Properties[$propertyName]
+        if ($null -eq $property -or [string]::IsNullOrWhiteSpace("$($property.Value)")) { continue }
+        $timestamp = [datetime]::MinValue
+        if ([datetime]::TryParse(
+                "$($property.Value)",
+                [cultureinfo]::InvariantCulture,
+                [System.Globalization.DateTimeStyles]::AdjustToUniversal -bor [System.Globalization.DateTimeStyles]::AssumeUniversal,
+                [ref] $timestamp)) {
+            return $timestamp.ToUniversalTime()
+        }
+    }
+
+    return $null
+}
+
+function Get-WingetWaivedValidationHold {
+    <#
+    .SYNOPSIS
+        Returns hold metadata when an open PR has an active Waived-* label.
+    #>
+    [CmdletBinding()]
+    param(
+        [Parameter()] [AllowNull()] $Pr,
+        [Parameter()] [ValidateRange(1, 365)] [int] $MaxAgeDays = 30,
+        [Parameter()] [datetime] $Now = [datetime]::UtcNow
+    )
+
+    $waivedLabels = @(Get-WingetWaivedValidationLabelNames -Pr $Pr)
+    if ($waivedLabels.Count -eq 0) { return $null }
+
+    # Search results do not carry label-event timestamps. Prefer an injected
+    # waiver timestamp when available (tests/future callers), otherwise use the
+    # PR creation time as the conservative start of the 30-day hold window.
+    $anchor = Get-WingetPrTimestamp -Pr $Pr -PropertyNames @('waived_at', 'waivedAt', 'created_at', 'createdAt')
+    if ($null -eq $anchor) { return $null }
+
+    $ageDays = ($Now.ToUniversalTime() - $anchor.ToUniversalTime()).TotalDays
+    if ($ageDays -ge $MaxAgeDays) { return $null }
+
+    return [PSCustomObject]@{
+        Labels     = $waivedLabels
+        AgeDays    = [Math]::Round($ageDays, 1)
+        MaxAgeDays = $MaxAgeDays
+    }
+}
+
 function Get-WingetPrLabelNames {
     <#
     .SYNOPSIS
@@ -348,6 +419,64 @@ function Find-WingetPkgsBlockedBotPr {
             Url    = if ($null -ne $urlProperty) { "$($urlProperty.Value)" } else { '' }
             Labels = $matched
             Reason = "upstream closed the bot's PR #$number for $PackageIdentifier $Version with $($matched -join ', '); the unchanged version is not resubmitted"
+        }
+    }
+
+    return $null
+}
+
+
+function Find-WingetPkgsWaivedValidationHold {
+    <#
+    .SYNOPSIS
+        Searches open bot PRs for a Waived-* validation label that should stop
+        superseding the package for up to 30 days.
+    #>
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory = $true)] [string] $PackageIdentifier,
+        [Parameter(Mandatory = $true)] [string] $Version,
+        [Parameter(Mandatory = $true)] [string] $BotLogin,
+        [Parameter()] [ValidatePattern('^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$')] [string] $Repository = 'microsoft/winget-pkgs',
+        [Parameter()] [ValidateRange(1, 365)] [int] $MaxAgeDays = 30,
+        [Parameter()] [datetime] $Now = [datetime]::UtcNow,
+        [Parameter()] [scriptblock] $SearchInvoker
+    )
+
+    if ($null -eq $SearchInvoker) {
+        $SearchInvoker = {
+            Find-WingetPkgsBotPrSearchItems -Repository $Repository -PackageIdentifier $PackageIdentifier -BotLogin $BotLogin -State 'open'
+        }
+    }
+
+    $newVersionKey = Get-WingetSortableVersionKey -Version $Version
+    $openPrs = @(& $SearchInvoker)
+    foreach ($pr in $openPrs) {
+        if ($null -eq $pr) { continue }
+        $number = 0
+        if (-not [int]::TryParse("$($pr.number)", [ref] $number) -or $number -le 0) { continue }
+
+        $parsed = Get-WingetPrTitlePackageVersion -Title "$($pr.title)"
+        if ($null -eq $parsed -or $parsed.PackageIdentifier -ine $PackageIdentifier) { continue }
+
+        $prVersionKey = Get-WingetSortableVersionKey -Version $parsed.Version
+        if ([string]::IsNullOrWhiteSpace($prVersionKey) -or $prVersionKey -ge $newVersionKey) { continue }
+
+        $waived = Get-WingetWaivedValidationHold -Pr $pr -MaxAgeDays $MaxAgeDays -Now $Now
+        if ($null -eq $waived) { continue }
+
+        $urlProperty = $pr.PSObject.Properties['html_url']
+        if ($null -eq $urlProperty) { $urlProperty = $pr.PSObject.Properties['url'] }
+
+        return [PSCustomObject]@{
+            Number     = $number
+            Title      = "$($pr.title)"
+            Version    = $parsed.Version
+            Url        = if ($null -ne $urlProperty) { "$($urlProperty.Value)" } else { '' }
+            Labels     = $waived.Labels
+            AgeDays    = $waived.AgeDays
+            MaxAgeDays = $waived.MaxAgeDays
+            Reason     = "open PR #$number ($PackageIdentifier $($parsed.Version)) carries waived validation label(s) $($waived.Labels -join ', ') and is only $($waived.AgeDays) day(s) into the waiver hold; release $Version waits for moderator-waived validation (supersedes after $MaxAgeDays days)"
         }
     }
 

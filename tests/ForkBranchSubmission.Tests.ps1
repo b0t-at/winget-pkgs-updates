@@ -4,6 +4,17 @@ Set-StrictMode -Version Latest
 $repositoryRoot = Split-Path -Parent $PSScriptRoot
 Import-Module (Join-Path $repositoryRoot 'modules/WingetMaintainerModule/WingetMaintainerModule.psd1') -Force
 
+function global:New-TestGitHubHttpException {
+    param(
+        [System.Net.HttpStatusCode] $StatusCode,
+        [string] $Message
+    )
+
+    $response = [System.Net.Http.HttpResponseMessage]::new($StatusCode)
+    $response.Content = [System.Net.Http.StringContent]::new("{`"message`":`"$Message`"}")
+    return [Microsoft.PowerShell.Commands.HttpResponseException]::new($Message, $response)
+}
+
 Describe 'Submit-WingetPackage ForkBranch' {
     BeforeEach {
         $global:ForkBranchSubmissionManifestPath = Join-Path ([IO.Path]::GetTempPath()) "winget-fork-submit-tests-$([guid]::NewGuid().ToString('N'))"
@@ -17,6 +28,12 @@ Describe 'Submit-WingetPackage ForkBranch' {
         $global:ForkBranchDuplicateRepositories = [System.Collections.Generic.List[string]]::new()
         $global:ForkBranchPrUrlRepositories = [System.Collections.Generic.List[string]]::new()
         $global:ForkBranchUpstreamReadFailTokens = @()
+        $global:ForkBranchTreeFailuresRemaining = 0
+        $global:ForkBranchRefNotFoundFailuresRemaining = 0
+        $global:ForkBranchRefConflictStatus = 0
+        $global:ForkBranchExistingBranchTreeSha = 'tree-sha'
+        $global:ForkBranchHeadPullRequests = @()
+        $global:ForkBranchSleeps = [System.Collections.Generic.List[int]]::new()
         $global:OriginalForkRepository = $env:WINGET_PKGS_FORK_REPO
         $global:OriginalUpstreamReadToken = $env:WINGET_UPSTREAM_READ_TOKEN
         $global:OriginalUpstreamReadFallbackToken = $env:WINGET_UPSTREAM_READ_FALLBACK_TOKEN
@@ -70,13 +87,34 @@ Describe 'Submit-WingetPackage ForkBranch' {
                     '/git/commits/base-sha$' {
                         return [pscustomobject]@{ tree = [pscustomobject]@{ sha = 'base-tree-sha' } }
                     }
+                    '/git/ref/heads/winget-autosubmit/' {
+                        return [pscustomobject]@{ object = [pscustomobject]@{ sha = 'existing-commit-sha' } }
+                    }
+                    '/git/commits/existing-commit-sha$' {
+                        return [pscustomobject]@{ tree = [pscustomobject]@{ sha = $global:ForkBranchExistingBranchTreeSha } }
+                    }
+                    '/pulls\?state=open&head=' {
+                        return @($global:ForkBranchHeadPullRequests)
+                    }
                     '/git/trees$' {
+                        if ($global:ForkBranchTreeFailuresRemaining -gt 0) {
+                            $global:ForkBranchTreeFailuresRemaining--
+                            throw (New-TestGitHubHttpException -StatusCode UnprocessableEntity -Message 'base_tree is not a valid tree oid')
+                        }
                         return [pscustomobject]@{ sha = 'tree-sha' }
                     }
                     '/git/commits$' {
                         return [pscustomobject]@{ sha = 'commit-sha' }
                     }
                     '/git/refs$' {
+                        if ($global:ForkBranchRefNotFoundFailuresRemaining -gt 0) {
+                            $global:ForkBranchRefNotFoundFailuresRemaining--
+                            throw (New-TestGitHubHttpException -StatusCode NotFound -Message 'Not Found')
+                        }
+                        if ($global:ForkBranchRefConflictStatus -ne 0) {
+                            $status = [System.Net.HttpStatusCode]$global:ForkBranchRefConflictStatus
+                            throw (New-TestGitHubHttpException -StatusCode $status -Message 'Reference already exists')
+                        }
                         return [pscustomobject]@{ ref = 'refs/heads/winget-autosubmit/test' }
                     }
                     '/pulls$' {
@@ -104,9 +142,162 @@ Describe 'Submit-WingetPackage ForkBranch' {
         Remove-Variable -Name ForkBranchDuplicateRepositories -Scope Global -ErrorAction SilentlyContinue
         Remove-Variable -Name ForkBranchPrUrlRepositories -Scope Global -ErrorAction SilentlyContinue
         Remove-Variable -Name ForkBranchUpstreamReadFailTokens -Scope Global -ErrorAction SilentlyContinue
+        Remove-Variable -Name ForkBranchTreeFailuresRemaining -Scope Global -ErrorAction SilentlyContinue
+        Remove-Variable -Name ForkBranchRefNotFoundFailuresRemaining -Scope Global -ErrorAction SilentlyContinue
+        Remove-Variable -Name ForkBranchRefConflictStatus -Scope Global -ErrorAction SilentlyContinue
+        Remove-Variable -Name ForkBranchExistingBranchTreeSha -Scope Global -ErrorAction SilentlyContinue
+        Remove-Variable -Name ForkBranchHeadPullRequests -Scope Global -ErrorAction SilentlyContinue
+        Remove-Variable -Name ForkBranchSleeps -Scope Global -ErrorAction SilentlyContinue
         Remove-Variable -Name OriginalForkRepository -Scope Global -ErrorAction SilentlyContinue
         Remove-Variable -Name OriginalUpstreamReadToken -Scope Global -ErrorAction SilentlyContinue
         Remove-Variable -Name OriginalUpstreamReadFallbackToken -Scope Global -ErrorAction SilentlyContinue
+    }
+
+    It 'accepts winget schema package identifiers with plus and underscore segments' {
+        InModuleScope WingetMaintainerModule {
+            $files = @(Get-ForkBranchSubmissionFiles `
+                    -ManifestPath $global:ForkBranchSubmissionManifestPath `
+                    -PackageId 'Scandum.WinTin++' `
+                    -Version '1.0.0')
+            if ($files[0].Path -notmatch 'manifests/s/Scandum/WinTin\+\+/1\.0\.0/') {
+                throw "Manifest path did not preserve plus signs safely: $($files[0].Path)"
+            }
+
+            $branch = Get-WingetPkgsSubmissionBranchName -PackageId 'Frnsys.Half_earth' -Version '1.0.0'
+            if ($branch -notmatch '^winget-autosubmit/frnsys\.half_earth-1\.0\.0-[a-f0-9]{16}$') {
+                throw "Branch name did not preserve underscore safely: $branch"
+            }
+
+            $plusBranch = Get-WingetPkgsSubmissionBranchName -PackageId 'Scandum.WinTin++' -Version '1.0.0'
+            if ($plusBranch -notmatch 'wintin\+\+') {
+                throw "Branch name did not preserve plus signs safely: $plusBranch"
+            }
+        }
+    }
+
+    It 'rejects package identifiers outside the winget schema rule' {
+        InModuleScope WingetMaintainerModule {
+            foreach ($badId in @('SingleSegment', 'Vendor..App', '.Vendor.App', 'Vendor.App.', 'Vendor/Path.App', 'Vendor.App\Path', ('Vendor.' + ('a' * 33)))) {
+                $threw = $false
+                try {
+                    Assert-WingetPkgsSubmissionIdentity -PackageId $badId -Version '1.0.0'
+                }
+                catch {
+                    $threw = $true
+                }
+                if (-not $threw) {
+                    throw "Identifier '$badId' was accepted unexpectedly."
+                }
+            }
+        }
+    }
+
+    It 'retries transient fork tree creation races without changing the PR outcome' {
+        $global:ForkBranchTreeFailuresRemaining = 2
+        InModuleScope WingetMaintainerModule {
+            $result = Invoke-ForkBranchSubmission `
+                -ManifestPath $global:ForkBranchSubmissionManifestPath `
+                -PackageId 'Test.Package' `
+                -Version '1.0.0' `
+                -PrTitle 'Update version: Test.Package version 1.0.0' `
+                -Token 'test-token' `
+                -ForkRepository 'damn-good-b0t/winget-pkgs' `
+                -RetryDelaySeconds @(0, 0) `
+                -Sleep { param($seconds) $global:ForkBranchSleeps.Add($seconds) }
+
+            if (-not $result.Created -or $result.PullRequest.number -ne 12345) {
+                throw "Retrying tree creation did not submit exactly one PR: $($result | ConvertTo-Json -Compress)"
+            }
+        }
+
+        $treeWrites = @($global:ForkBranchSubmissionRequests | Where-Object { $_.Path -eq 'repos/damn-good-b0t/winget-pkgs/git/trees' })
+        if ($treeWrites.Count -ne 3 -or $global:ForkBranchSleeps.Count -ne 2) {
+            throw "Tree creation was not retried twice: requests=$($treeWrites.Count), sleeps=$($global:ForkBranchSleeps.Count)"
+        }
+        $pullWrites = @($global:ForkBranchSubmissionRequests | Where-Object { $_.Path -eq 'repos/microsoft/winget-pkgs/pulls' })
+        if ($pullWrites.Count -ne 1) {
+            throw "Unexpected PR creation count after tree retry: $($pullWrites.Count)"
+        }
+    }
+
+    It 'retries transient fork ref creation 404s before opening one PR' {
+        $global:ForkBranchRefNotFoundFailuresRemaining = 2
+        InModuleScope WingetMaintainerModule {
+            $result = Invoke-ForkBranchSubmission `
+                -ManifestPath $global:ForkBranchSubmissionManifestPath `
+                -PackageId 'Test.Package' `
+                -Version '1.0.0' `
+                -PrTitle 'Update version: Test.Package version 1.0.0' `
+                -Token 'test-token' `
+                -ForkRepository 'damn-good-b0t/winget-pkgs' `
+                -RetryDelaySeconds @(0, 0) `
+                -Sleep { param($seconds) $global:ForkBranchSleeps.Add($seconds) }
+
+            if (-not $result.Created -or $result.PullRequest.number -ne 12345) {
+                throw "Retrying ref creation did not submit exactly one PR: $($result | ConvertTo-Json -Compress)"
+            }
+        }
+
+        $refWrites = @($global:ForkBranchSubmissionRequests | Where-Object { $_.Path -eq 'repos/damn-good-b0t/winget-pkgs/git/refs' -and $_.Method -eq 'Post' })
+        if ($refWrites.Count -ne 3 -or $global:ForkBranchSleeps.Count -ne 2) {
+            throw "Ref creation was not retried twice: requests=$($refWrites.Count), sleeps=$($global:ForkBranchSleeps.Count)"
+        }
+        $pullWrites = @($global:ForkBranchSubmissionRequests | Where-Object { $_.Path -eq 'repos/microsoft/winget-pkgs/pulls' })
+        if ($pullWrites.Count -ne 1) {
+            throw "Unexpected PR creation count after ref retry: $($pullWrites.Count)"
+        }
+    }
+
+    It 'opens a PR from an existing deterministic branch when its tree matches' {
+        $global:ForkBranchRefConflictStatus = 422
+        $global:ForkBranchExistingBranchTreeSha = 'tree-sha'
+        InModuleScope WingetMaintainerModule {
+            $result = Invoke-ForkBranchSubmission `
+                -ManifestPath $global:ForkBranchSubmissionManifestPath `
+                -PackageId 'Test.Package' `
+                -Version '1.0.0' `
+                -PrTitle 'Update version: Test.Package version 1.0.0' `
+                -Token 'test-token' `
+                -ForkRepository 'damn-good-b0t/winget-pkgs' `
+                -RetryDelaySeconds @() `
+                -Sleep { param($seconds) throw 'must not sleep' }
+
+            if (-not $result.Created -or $result.PullRequest.number -ne 12345) {
+                throw "Existing matching branch was not reused for PR creation: $($result | ConvertTo-Json -Compress)"
+            }
+        }
+
+        if (@($global:ForkBranchSubmissionRequests | Where-Object { $_.Path -match '/pulls\?state=open&head=' }).Count -ne 1) {
+            throw 'The existing branch path did not check for an already-open head PR.'
+        }
+        if (@($global:ForkBranchSubmissionRequests | Where-Object { $_.Path -match '/git/commits/existing-commit-sha$' }).Count -ne 1) {
+            throw 'The existing branch tree was not compared.'
+        }
+    }
+
+    It 'fails closed when an existing deterministic branch has different content' {
+        $global:ForkBranchRefConflictStatus = 409
+        $global:ForkBranchExistingBranchTreeSha = 'different-tree-sha'
+        InModuleScope WingetMaintainerModule {
+            $result = Invoke-ForkBranchSubmission `
+                -ManifestPath $global:ForkBranchSubmissionManifestPath `
+                -PackageId 'Test.Package' `
+                -Version '1.0.0' `
+                -PrTitle 'Update version: Test.Package version 1.0.0' `
+                -Token 'test-token' `
+                -ForkRepository 'damn-good-b0t/winget-pkgs' `
+                -RetryDelaySeconds @() `
+                -Sleep { param($seconds) throw 'must not sleep' }
+
+            if ($result.Created -or $result.Error -notmatch 'different content') {
+                throw "Existing different branch did not fail closed: $($result | ConvertTo-Json -Compress)"
+            }
+        }
+
+        $pullWrites = @($global:ForkBranchSubmissionRequests | Where-Object { $_.Path -eq 'repos/microsoft/winget-pkgs/pulls' })
+        if ($pullWrites.Count -ne 0) {
+            throw 'A PR was opened despite different existing branch content.'
+        }
     }
 
     It 'fails closed when manifest artifacts change during ForkBranch submission' {
@@ -463,6 +654,18 @@ Describe 'Submit-WingetPackage ForkBranch' {
                     '/git/commits/base-sha$' {
                         return [pscustomobject]@{ tree = [pscustomobject]@{ sha = 'base-tree-sha' } }
                     }
+                    '/pulls\?state=open&head=' {
+                        if ($script:DeterministicClaimCreated) {
+                            return @([pscustomobject]@{ html_url = 'https://github.com/microsoft/winget-pkgs/pull/12345'; number = 12345 })
+                        }
+                        return @()
+                    }
+                    '/git/ref/heads/winget-autosubmit/' {
+                        return [pscustomobject]@{ object = [pscustomobject]@{ sha = 'existing-commit-sha' } }
+                    }
+                    '/git/commits/existing-commit-sha$' {
+                        return [pscustomobject]@{ tree = [pscustomobject]@{ sha = 'tree-sha' } }
+                    }
                     '/git/trees$' {
                         return [pscustomobject]@{ sha = 'tree-sha' }
                     }
@@ -516,8 +719,8 @@ Describe 'Submit-WingetPackage ForkBranch' {
         if (-not $first.Created) {
             throw "The claim owner did not create the PR: $($first | ConvertTo-Json -Compress)"
         }
-        if ($second.Created -or $second.DuplicateDetected -or $second.Error -notmatch 'already exists') {
-            throw "The competing submission was not fail-closed by the existing claim: $($second | ConvertTo-Json -Compress)"
+        if ($second.Created -or -not $second.DuplicateDetected -or $second.PullRequest.number -ne 12345) {
+            throw "The competing worker did not reuse the existing head PR: $($second | ConvertTo-Json -Compress)"
         }
 
         $claimRequests = @(

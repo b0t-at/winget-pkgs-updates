@@ -79,6 +79,9 @@ ManifestVersion: 1.12.0
             Mock Test-WingetInstallerUrlsAlive {
                 [PSCustomObject]@{ Valid = $true; DeadUrls = @(); Warnings = @(); CheckedCount = 1 }
             }
+            Mock Find-WingetDuplicateIdentifierByInstallerHash {
+                [PSCustomObject]@{ Duplicate = $false; Reason = $null; MatchingIdentifier = $null; MatchingHash = $null; MatchingUrl = $null; Warnings = @() }
+            }
         }
     }
 
@@ -263,6 +266,33 @@ ManifestVersion: 1.12.0
                 }
                 Assert-MockCalled Invoke-WinMatschSubmitAttempt -Times 1 -Exactly -Scope It
                 Assert-MockCalled Test-ExistingPRs -Times 2 -Exactly -Scope It
+            }
+        }
+
+        It 'blocks submission when generated hashes match another identifier' {
+            InModuleScope WingetMaintainerModule {
+                Mock Find-WingetDuplicateIdentifierByInstallerHash {
+                    [PSCustomObject]@{
+                        Duplicate          = $true
+                        Reason             = 'DuplicateOfOtherIdentifier'
+                        MatchingIdentifier = 'GoshsLabs.Goshs'
+                        MatchingHash       = '1111111111111111111111111111111111111111111111111111111111111111'
+                        MatchingUrl        = 'https://github.com/microsoft/winget-pkgs/pull/436891'
+                        Warnings           = @()
+                    }
+                }
+                Mock Invoke-WinMatschSubmitAttempt {}
+
+                $result = Submit-WingetPackage `
+                    -ManifestPath $global:SubmitWingetPackageTestManifestPath `
+                    -PackageId 'PatrickHener.Goshs' `
+                    -Version '2.1.6' `
+                    -Token 'test-token'
+
+                if ($result.Success -ne $false -or $result.Error -notmatch 'DuplicateOfOtherIdentifier' -or $result.Error -notmatch 'GoshsLabs\.Goshs') {
+                    throw "The duplicate identifier guard did not stop submission clearly: $($result | ConvertTo-Json -Compress)"
+                }
+                Assert-MockCalled Invoke-WinMatschSubmitAttempt -Times 0 -Exactly -Scope It
             }
         }
 
