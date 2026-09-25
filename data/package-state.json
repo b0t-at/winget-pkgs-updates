@@ -762,12 +762,6 @@
       "checkedAt": "2026-08-14T13:07:19.4414237Z"
     }
   },
-  "Barry-ran.QtScrcpy": {
-    "openPr": {
-      "version": "4.1.1",
-      "checkedAt": "2026-09-24T04:28:25.2911725Z"
-    }
-  },
   "Baulk.Baulk": {
     "lastUpdated": "2026-05-23T06:59:27.4952257Z",
     "installerHashes": [
@@ -3924,8 +3918,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.9.13",
-      "checkedAt": "2026-09-24T20:24:31.1791827Z"
+      "checkedAt": "2026-09-25T20:21:02.3559186Z",
+      "version": "2026.9.14"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -6543,7 +6537,11 @@
       "BA6DF1E929EF5B2A8C683D7E9177978D2B63AED9BDFAF0A8935C96876C79B0B7"
     ],
     "version": "12.6.0",
-    "lastUpdated": "2026-09-25T16:53:52.6075135Z"
+    "lastUpdated": "2026-09-25T16:53:52.6075135Z",
+    "openPr": {
+      "checkedAt": "2026-09-25T20:21:03.8252421Z",
+      "version": "12.6.0"
+    }
   },
   "PocketBase.PocketBase": {
     "version": "0.40.4",
