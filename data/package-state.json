@@ -4396,14 +4396,14 @@
   },
   "leonsnajdr.sast": {
     "validationCount": 1,
-    "version": "26.9.66",
-    "description": "",
-    "lastUpdated": "2026-09-21T05:02:01.0221482Z",
     "installerHashes": [
-      "AB6C0D54421278173A806BA07E96B7C61EF75FAD704A170E30B4B63D4197A248"
+      "CD4F5AFE911765D16226F4E3CE494180737931426274FDD6AD0BCC7D47EB13C5"
     ],
-    "manifestHash": "714DDB3382C2D2BD17C5E55C31C0914A46E8549A245CF4FFAB8BB4EC4B03F1A2",
-    "state": "VALIDATION_PASSED"
+    "version": "26.9.67",
+    "manifestHash": "CE5D275032FEA9A39F191DA59259455A822365649DC0328292E4D3E58F86A32A",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-25T07:28:25.8022366Z",
+    "description": ""
   },
   "Levminer.Authme": {
     "lastUpdated": "2026-07-07T21:52:02.4861044Z",
@@ -4479,15 +4479,15 @@
     }
   },
   "loft-sh.vcluster": {
-    "lastUpdated": "2026-09-19T05:03:38.6096684Z",
-    "installerHashes": [
-      "BBF87A5B0C3679B4A062F3606B9A849623A1A3B604D5FE76A3F37DD560A00BBE"
-    ],
     "validationCount": 1,
-    "description": "",
+    "installerHashes": [
+      "02DB43E5859D274AE7491A404F5F6F81D17677742925BDB0BDB1AD594DD1F987"
+    ],
+    "version": "0.37.2",
+    "manifestHash": "B7E9E627462674E05B11BE049A230318B0F39D9F043BB3FDC5488612A4F2E8E7",
     "state": "VALIDATION_PASSED",
-    "version": "0.37.1",
-    "manifestHash": "5B7F5E03E759B9F0FB45454B0559B26300952BC6D6E230A1613823A2E5E7C8A4"
+    "lastUpdated": "2026-09-25T07:28:25.8925883Z",
+    "description": ""
   },
   "Longbridge.LongbridgeTerminal": {
     "manifestHash": "92BE75B13D2C2A24C7104B4FD2624CFA9633757A960B7FF86E4887C3CF285477",
@@ -7815,15 +7815,15 @@
     "validationCount": 1
   },
   "StacksLabs.Clarinet": {
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-11T08:56:13.7768481Z",
-    "installerHashes": [
-      "0C98869F0BD3B43A9CDC875F3CF5B53CE2200CA482DE5B567CBBF0B607BED160"
-    ],
-    "description": "",
     "validationCount": 1,
-    "manifestHash": "4A1042CE3EE51C7CF3164AB2C92E073B427EC06CCAC4B4B607FE6ABA2BD413BD",
-    "version": "3.24.0"
+    "installerHashes": [
+      "24E47FAE3BF24FF5ACC498E7A8563E20960622F13C0A11A291BBC9DD3F11678B"
+    ],
+    "version": "3.24.1",
+    "manifestHash": "F0F74100A761BCDCC7BA86CF23B35D2642721B16574615D92F3788B7E0C3A34F",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-25T07:28:25.8674143Z",
+    "description": ""
   },
   "stakpak.agent": {
     "description": "",
