@@ -1476,8 +1476,8 @@
     "validationCount": 1,
     "version": "1.0.48275",
     "openPr": {
-      "version": "1.0.51453",
-      "checkedAt": "2026-09-25T12:32:57.0302788Z"
+      "version": "1.0.51515",
+      "checkedAt": "2026-09-25T16:25:49.9433647Z"
     }
   },
   "ciromattia.KCC": {
@@ -2155,7 +2155,7 @@
     "manifestHash": "31947E74E60A0462F2AAA67D5F8C21F460756C9F606A2E99B5AA0055A2064E78",
     "openPr": {
       "version": "2.12.4",
-      "checkedAt": "2026-09-24T12:33:30.9829339Z"
+      "checkedAt": "2026-09-25T16:25:50.3405404Z"
     }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
@@ -2364,7 +2364,11 @@
     "installerHashes": [
       "76989536A5F333642687FBD85603087C3DEB4D316FD86FDFB63897B05F851CF4"
     ],
-    "version": "3.7.2"
+    "version": "3.7.2",
+    "openPr": {
+      "version": "3.7.2",
+      "checkedAt": "2026-09-25T16:25:51.3203582Z"
+    }
   },
   "Ethersphere.Swarm-Desktop": {
     "lastUpdated": "2026-09-11T04:53:32.617713Z",
@@ -4461,7 +4465,11 @@
       "BCD059B5BE584C2A09A8BCB2C0E091983B0734C89575AA7A14DAB8E405D08825",
       "73766E207396B2716091047C2124B46FB79D3838F39D2B6BDB60CBBC2621FAA3"
     ],
-    "version": "2.18.8"
+    "version": "2.18.8",
+    "openPr": {
+      "version": "2.18.8",
+      "checkedAt": "2026-09-25T16:25:55.0337144Z"
+    }
   },
   "LocalStack.localstack-cli": {
     "description": "",
