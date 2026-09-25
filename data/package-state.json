@@ -1614,15 +1614,15 @@
     "version": "0.0.22"
   },
   "cpvalente.ontime": {
-    "manifestHash": "D7B22CAB3EAC0D812F8EE5A9B446A84D363C06716E946D42BB99E753870B862E",
-    "lastUpdated": "2026-08-16T13:40:51.9079826Z",
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "manifestHash": "A17B89772E485944139A45C3A863500FD0710FD895C244C1E03487111A0DD190",
+    "lastUpdated": "2026-09-25T13:04:51.7849043Z",
     "validationCount": 1,
     "installerHashes": [
-      "60CF8C82F70155E2205A7ADCE3EF7D3D7EAB928DC8FA0D077A184CE7AF8BFF6A"
+      "7BC734483F42AF6465A53535558594D924C75CA7B2162AF96D18327EA87832A3"
     ],
-    "description": "",
-    "version": "4.12.0",
-    "state": "VALIDATION_PASSED"
+    "version": "4.14.0"
   },
   "Crate-CI.Typos": {
     "state": "VALIDATION_PASSED",
@@ -2358,13 +2358,13 @@
   "etcd-io.etcd": {
     "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 8,
+    "manifestHash": "8E14F27765C1FF11A2E1012702087A07ED84BD66B64F06B77113C01DE2E0F0DC",
+    "lastUpdated": "2026-09-25T13:04:51.9210137Z",
+    "validationCount": 1,
     "installerHashes": [
-      "228D600D103E0F48715687C768DE8DCAEACB19EEF2006261160A9A677E36CC59"
+      "76989536A5F333642687FBD85603087C3DEB4D316FD86FDFB63897B05F851CF4"
     ],
-    "lastUpdated": "2026-08-06T14:10:17.1948268Z",
-    "manifestHash": "E2F908491FB8FB63701502F5CDEABDEDE014F91F9D83BFBCAEE65FE0E5046167",
-    "version": "3.7.1"
+    "version": "3.7.2"
   },
   "Ethersphere.Swarm-Desktop": {
     "lastUpdated": "2026-09-11T04:53:32.617713Z",
@@ -4452,16 +4452,16 @@
     "description": ""
   },
   "LiveKit.LiveKitCLI": {
-    "lastUpdated": "2026-09-18T05:00:20.4243422Z",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "A6A25AF00ED928D54FF6C0F7F00B42205D71B51299F6013F4CA7EFAE33F0BBFA",
-    "version": "2.18.7",
-    "validationCount": 1,
     "description": "",
+    "manifestHash": "F710A5302ADCE2DC3C491599F6F16762DE196CF76ED54BBF2952AC7076D05592",
+    "lastUpdated": "2026-09-25T13:04:51.8785621Z",
+    "validationCount": 1,
     "installerHashes": [
-      "44F56794B0D3D0AE8CB56E56B2A768FC0BC14EEC41BBDC77BA57FEE31070E33D",
-      "0D69A75C7B44610013A4563CD944FD2F96887CDB9D444B534E0EA95EE2FEDB82"
-    ]
+      "BCD059B5BE584C2A09A8BCB2C0E091983B0734C89575AA7A14DAB8E405D08825",
+      "73766E207396B2716091047C2124B46FB79D3838F39D2B6BDB60CBBC2621FAA3"
+    ],
+    "version": "2.18.8"
   },
   "LocalStack.localstack-cli": {
     "description": "",
@@ -5062,16 +5062,16 @@
     "manifestHash": "45E63D4573EE78C6E041E6BDFDE2104B38FBDB15742BC2B50D138DCDCE26C137"
   },
   "Microsoft.WSL.PreRelease": {
-    "manifestHash": "EF5ADFF7D50831EBF3D5E8F8121CF3F4322D8E12F797F7C75DBDCDC457CFC362",
-    "installerHashes": [
-      "580B8B990062F647F2C6A02FB30FC6AC10350EE5E144A56BAB03D419D59F37D6",
-      "7C8580E6406D8B1ECA3714385C89CEF0EBE82B9E2DDCCAF2C3FEC84F362A9526"
-    ],
-    "validationCount": 1,
-    "lastUpdated": "2026-09-18T13:04:18.950502Z",
-    "description": "",
     "state": "VALIDATION_PASSED",
-    "version": "2.9.12"
+    "description": "",
+    "manifestHash": "E3BF871DE597E764A84D9CEDE4363AA6772CADC05BD1C254572C0F82EDF591F3",
+    "lastUpdated": "2026-09-25T13:04:51.8178271Z",
+    "validationCount": 1,
+    "installerHashes": [
+      "A00B0010F802AC461AAF44374B6ECBEAE4B620453A77565F31EADE5737E8AF55",
+      "D3272141F0747652E947D98D9AC45ED845E7122A42639091D28C82C87F70CE16"
+    ],
+    "version": "2.9.13"
   },
   "mikf.gallery-dl.Nightly": {
     "manifestHash": "9B47423EC01029C6FE18E4B98369D80C4ECDF83854A750B2F9E6CC591FA4A1E7",
@@ -6143,15 +6143,15 @@
     "state": "VALIDATION_PASSED"
   },
   "openwong2kim.wmux": {
-    "installerHashes": [
-      "5F2CBC45643C0E304AAC5E46A5F56FAF9FAC757D9800D78F56B14B6BCE5990C6"
-    ],
-    "manifestHash": "300B1A8906015E7C86C13E280C3B865DA6A47AB50A5EAF4FF800FAEB65B5AD5C",
-    "version": "3.60.0",
-    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-24T12:59:07.4412136Z",
-    "description": ""
+    "description": "",
+    "manifestHash": "DD9E63CC7E881DFF2346D8AB38549189C4EF8067F87C1374ACC393A3C19336BD",
+    "lastUpdated": "2026-09-25T13:04:51.9060981Z",
+    "validationCount": 1,
+    "installerHashes": [
+      "FF30F809540B1A05D7248FE3E31DAA029816F6FACCD34903D1B5506C092FA500"
+    ],
+    "version": "3.61.0"
   },
   "openwong2kim.wsnap": {
     "installerHashes": [
