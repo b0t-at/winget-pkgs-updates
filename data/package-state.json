@@ -117,7 +117,7 @@
     "version": "0.107.78",
     "openPr": {
       "version": "0.107.79",
-      "checkedAt": "2026-09-25T12:32:53.8476432Z"
+      "checkedAt": "2026-09-26T16:22:56.1138864Z"
     }
   },
   "AdGuard.dnsproxy": {
@@ -1383,7 +1383,7 @@
   "CharlesMilette.TranslucentTB": {
     "openPr": {
       "version": "2026.2",
-      "checkedAt": "2026-09-25T12:32:56.6434071Z"
+      "checkedAt": "2026-09-26T16:22:58.0033669Z"
     }
   },
   "ChiaNetwork.GUIforChiaBlockchain": {
@@ -2086,11 +2086,7 @@
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "4ABD21FDE82EF99EA84EF63B8AB3B49CFB9BF7FC3547E9B7456C21DCD60362E2",
-    "version": "1.60.1",
-    "openPr": {
-      "version": "1.60.1",
-      "checkedAt": "2026-09-09T04:25:55.0544335Z"
-    }
+    "version": "1.60.1"
   },
   "Easure.HelpMePrint": {
     "configHealth": {
@@ -3118,7 +3114,7 @@
     "description": "",
     "openPr": {
       "version": "36.2",
-      "checkedAt": "2026-09-25T12:32:59.9796543Z"
+      "checkedAt": "2026-09-26T16:22:58.9160323Z"
     }
   },
   "goplus.xgo": {
@@ -3942,7 +3938,7 @@
     ],
     "openPr": {
       "version": "8.1.2-5",
-      "checkedAt": "2026-09-25T12:33:01.7229242Z"
+      "checkedAt": "2026-09-26T16:23:00.7172295Z"
     }
   },
   "JeromeHerrman.VPinCommander": {
@@ -8274,7 +8270,7 @@
     "state": "VALIDATION_PASSED",
     "openPr": {
       "version": "5.7.0",
-      "checkedAt": "2026-09-25T12:33:27.0415453Z"
+      "checkedAt": "2026-09-26T16:23:19.5212465Z"
     }
   },
   "termio.soft-jp.com.TermioWin": {
