@@ -1189,15 +1189,15 @@
     }
   },
   "BytecodeAlliance.Wasmtime.Portable": {
-    "version": "49.0.0",
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "7F2A583694AAC3DFEECC43CE51248155E72EAA695733D803C6923EF27103681A"
-    ],
+    "lastUpdated": "2026-09-26T08:54:16.7764702Z",
     "description": "",
-    "validationCount": 1,
-    "manifestHash": "968F67728EA7AD9308F1BE222F28B4F66A1D7099771905A53EB47B415E3F9FCB",
-    "lastUpdated": "2026-09-23T17:01:59.7775529Z"
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "CC1DBB407E3A6BB58E7FB2B56348DB868D24C356D9E7547F8F6945E3B7BBD4D8",
+    "version": "49.0.1",
+    "installerHashes": [
+      "DB0DD3DD77696FA189B08E256A50DDBE46D10A4D1E6C862D8D268AD0ABC8C2C1"
+    ],
+    "validationCount": 1
   },
   "ByteNess.AWSVault": {
     "state": "VALIDATION_PASSED",
@@ -2595,16 +2595,16 @@
     }
   },
   "Fly-io.flyctl": {
-    "lastUpdated": "2026-09-24T16:47:48.7307628Z",
-    "manifestHash": "C4243A1D69D00264B71FE941A36A8F824483B10499FAC6C5220D608E3A295B39",
-    "validationCount": 1,
+    "lastUpdated": "2026-09-26T08:54:16.6468239Z",
     "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "54915187227CF8BE7D11F74735C9F9B478490A692CF0970BDDB7E6AA97A5058D",
+    "version": "0.4.108",
     "installerHashes": [
-      "05F8A5C8405A6E8392F76B6E2D4E73E56CA29D5F730AB09268E47C0A9E3AEEDF",
-      "B325F197628E9F61EC5C36A705497CE7AF41DFC2A7A9D585DFA4363C526AC9B8"
+      "18E66B7D162D0F5083311408C9DE55381805CBB79ECA81EDB9ED1150ED725CFD",
+      "6E31F266092EFEB7A5E72BE207411A224EDDCE79D4ACF305F85AE0688F838327"
     ],
-    "version": "0.4.107",
-    "state": "VALIDATION_PASSED"
+    "validationCount": 1
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
     "validationCount": 1,
@@ -6838,15 +6838,15 @@
     "state": "VALIDATION_FAILED"
   },
   "rejetto.hfs": {
-    "validationCount": 1,
+    "lastUpdated": "2026-09-26T08:54:16.7464529Z",
     "description": "",
-    "lastUpdated": "2026-09-22T08:47:00.1856415Z",
-    "version": "3.3.2",
-    "manifestHash": "2D224061D9E99ED7114367E084FDD555D08C7692312533EEC2E81DB884419FED",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "2382279A521693D7484CC198C4081D7989AF2B6C7E658582FB1F1EDE4A483080",
+    "version": "3.3.3",
     "installerHashes": [
-      "9A73CE0DF1B3B775159C2615F70C353EA81BAC5F7AE4CC9101D4F46D77E388C0"
+      "9172965DA16B19BFC794BE48B373FD70B37B17F3D0EED20CFE7604382A9F912D"
     ],
-    "state": "VALIDATION_PASSED"
+    "validationCount": 1
   },
   "Rela.RelaGit": {
     "version": "0.16.11",
@@ -8390,15 +8390,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
+    "lastUpdated": "2026-09-26T08:54:16.7197213Z",
     "description": "",
-    "version": "2.35.3",
-    "installerHashes": [
-      "6CD24C69638266C3C473332CED73D21C7329E623F8E5604E0D4158CAECE2BF22"
-    ],
-    "validationCount": 1,
-    "manifestHash": "9DBE9AF718DD2149B05169A6FF2466E8A7B6724098779C48FFD80256B39535B1",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-25T09:00:41.1225146Z"
+    "manifestHash": "EF264A469ECCD8CEC0100A4B2E1E6BF4E53631D98CFDC2BCC79BF7FF088066C0",
+    "version": "2.35.6",
+    "installerHashes": [
+      "7ADCE29546562E592BE1558B65BE79EE1089CACAC800A9336CD43868933F48D7"
+    ],
+    "validationCount": 1
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
