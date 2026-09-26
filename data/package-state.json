@@ -2316,15 +2316,15 @@
     "lastUpdated": "2026-08-20T09:17:27.7041213Z"
   },
   "errata-ai.Vale": {
+    "version": "3.23.0",
+    "validationCount": 1,
     "installerHashes": [
-      "7E55B39881F48CED8CF27406129C065A20247800E82E816A9E79D06C4B1A199E"
+      "EA9A8048498B869BE8475A01488CD056F60B769F2D450311B9C24F07D11EDD57"
     ],
     "description": "",
+    "manifestHash": "B272712651E863A5778A50A746E7E91A7BC18D6AF2159E55C1E889B5EC4EB9B0",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "E7B1E6DDF0EB867155FB0EC1A9A18D03E8F220B32752A26734587DF3F7F34659",
-    "validationCount": 1,
-    "version": "3.22.0",
-    "lastUpdated": "2026-09-17T20:53:14.3258646Z"
+    "lastUpdated": "2026-09-26T01:27:42.6318167Z"
   },
   "Essenciary.Githical": {
     "version": "0.1.5",
@@ -2505,15 +2505,15 @@
     }
   },
   "Fangyuan025.Chaty": {
-    "lastUpdated": "2026-09-19T05:03:38.4895569Z",
-    "installerHashes": [
-      "C1425CCF02CBB70F28D02C2D7E4F740DFBFE9E4F8C09CCA2719B08091E76388E"
-    ],
+    "version": "2.3.0",
     "validationCount": 1,
+    "installerHashes": [
+      "3699EE1D912440EF56AB345F14EEE84CD537527AB18B33BCF9641A8B3AA9B70C"
+    ],
     "description": "",
+    "manifestHash": "E7846A76D84EFB12F3297518EAB10B404774F36F974656BB2112D663A3D41677",
     "state": "VALIDATION_PASSED",
-    "version": "2.2.2",
-    "manifestHash": "20478F1522646827A4FD2B7C50DD7C7B11EE49B4A7567A576B71ADB0DD09992A"
+    "lastUpdated": "2026-09-26T01:27:42.7819959Z"
   },
   "Feho.LogNav": {
     "installerHashes": [
@@ -3499,15 +3499,15 @@
     "state": "VALIDATION_PASSED"
   },
   "holland-built.Bloxsmith": {
+    "version": "3.78.0",
     "validationCount": 1,
     "installerHashes": [
-      "7C7728618C68E9B393C59E93D82A43AA5CC15307C8AA6C0E47ADF0266902B820"
+      "83D4C4ACEA437550F40E500B631108391669DFA44AFDFA8CF428AA610A0B608C"
     ],
-    "lastUpdated": "2026-09-25T07:00:55.5767333Z",
-    "manifestHash": "686ADC413DF1B087D0B10167A7AD903C7CF89DC5D8F2270D5FA23EB20BBBF72A",
     "description": "",
+    "manifestHash": "1A589961D3673D949E7FDF15995D11BA0C483C8DBC5ED91F6B1B63B4F149862A",
     "state": "VALIDATION_PASSED",
-    "version": "3.71.0"
+    "lastUpdated": "2026-09-26T01:27:42.6851581Z"
   },
   "HongMinhee.Gukhanmun": {
     "manifestHash": "089D5FCFFB565DBC52073976471BB7BB53E1FA33EA888133D45A589919D3AE52",
@@ -6760,15 +6760,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Radius.Radius": {
+    "version": "0.61.0",
     "validationCount": 1,
-    "description": "",
-    "lastUpdated": "2026-09-03T14:47:21.9312976Z",
     "installerHashes": [
-      "5918E3B93A7C47FEBB3B9C29FFAEF86420C143A32CC91CE9A2ECCB3D0DCCB1AA"
+      "083A09E428DB827AD2F347DE6EF12A1B788BE49FA69F61E78F6980A773EF0BAE"
     ],
-    "manifestHash": "3057F548FC3F374D9BB728B059D5B30BA637579B05248B83B255BC2CDFF53541",
-    "version": "0.60.2",
-    "state": "VALIDATION_PASSED"
+    "description": "",
+    "manifestHash": "D282A2CD664522DABF2DAF156C563DEBF371CD87A260FB71014092E8011DA374",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-26T01:27:42.7018518Z"
   },
   "ramdor.Thetis": {
     "version": "2.10.3.15",
@@ -7573,15 +7573,15 @@
     "validationCount": 3
   },
   "Skvetter.DevPod": {
-    "description": "",
-    "version": "0.26.1",
-    "state": "VALIDATION_PASSED",
+    "version": "0.26.2",
     "validationCount": 1,
     "installerHashes": [
-      "0F70A668FFA805737B5BA01D069E2CD315B743BE158366882501A266A04DB3C7"
+      "BFE01E44126E66FDC86E8565BBF5BD96ECFDECB76FC36D09F5706D1706779E42"
     ],
-    "lastUpdated": "2026-08-23T08:49:22.8251094Z",
-    "manifestHash": "E4D15C9B9ACA24469BA775750BC0FBDB8CE744F1C8AE63AB01DFF3DDD13895A8"
+    "description": "",
+    "manifestHash": "B0DF1D97116A446CFB3DE881E788464FD0AC0A69F973C659B5E22DA3CCF03473",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-26T01:27:42.7558218Z"
   },
   "skyhook-io.Radar": {
     "installerHashes": [
