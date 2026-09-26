@@ -1184,8 +1184,8 @@
   },
   "Byron.dua-cli": {
     "openPr": {
-      "version": "2.45.0",
-      "checkedAt": "2026-09-24T04:28:26.5935625Z"
+      "checkedAt": "2026-09-26T12:31:00.612631Z",
+      "version": "2.45.0"
     }
   },
   "BytecodeAlliance.Wasmtime.Portable": {
