@@ -6856,15 +6856,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Reloaded-Project.Reloaded-II": {
-    "version": "1.30.3",
-    "lastUpdated": "2026-08-21T20:47:48.3949839Z",
+    "version": "1.31.0",
+    "validationCount": 1,
+    "state": "VALIDATION_FAILED",
+    "description": "",
+    "lastUpdated": "2026-09-26T16:43:13.8333431Z",
     "installerHashes": [
       "FB5EDE9F15686BA4A001082A75A77EDB5F9F181EDE6C31A80FF578257C5B7D4E"
     ],
-    "description": "",
-    "manifestHash": "599EE4D6F93BC174C9DFF02C66D4F224DF6FF9F3D72539E79C49C2BCFD588043",
-    "validationCount": 3,
-    "state": "VALIDATION_FAILED"
+    "manifestHash": "8D5AFB4CA27F802EB76D0729A859F80A247C42CD804EDBDF95FA4482080ADE71"
   },
   "restic.restic": {
     "manifestHash": "93FE5612F3EC7F999E752B415F0748CA7862F92CFCC586E36C8CA9B1B3D7D45F",
@@ -7249,11 +7249,11 @@
   },
   "Scandum.WinTin++": {
     "version": "2.02.61",
-    "lastUpdated": "2026-09-24T16:47:48.5744095Z",
+    "lastUpdated": "2026-09-26T16:43:13.9326546Z",
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "2C9A618908F2C08C9E373327E7A15409C25EEB6AE563F45807A611269A686250",
-    "validationCount": 36,
+    "validationCount": 37,
     "installerHashes": [
       "421A1458080413D5135A7490DC05AC0F4B54F1CAADBFC033214536237420E847"
     ]
@@ -7372,16 +7372,16 @@
     "version": "0.14.1"
   },
   "ServersCom.srvctl": {
-    "version": "1.4.0",
+    "version": "1.5.0",
     "validationCount": 1,
+    "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "3AB61D538562FA1A3C6B4C6DFB0AC29864A8C3D8355EBFD4F9B78BB812EF8D3A",
-    "lastUpdated": "2026-08-19T09:31:51.2352154Z",
+    "lastUpdated": "2026-09-26T16:43:13.918279Z",
     "installerHashes": [
-      "864A250F6EB43F642E15F8A9D04C5803418D6210F4F74914E0F8D01E0B447299",
-      "D7CA3405664F5B92226B04A67267BAD6A3C76C7CBE5BAB82DF70EEBBD6FA77AA"
+      "4C859C27868CE6B10F386EB088A899ED453995D0CF977E7D50BECB5B188FEAE5",
+      "B7F8A062A859B0862A69908A4A642094559CCDC94F8191502B49A723527854C8"
     ],
-    "state": "VALIDATION_PASSED"
+    "manifestHash": "D947D2E681B79078E471EFDDC4305348CCE1FE18A89F0A3F47011A5878885488"
   },
   "SevenTV.Chatterino7": {
     "lastUpdated": "2026-08-18T17:25:14.0125442Z",
