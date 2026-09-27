@@ -116,8 +116,8 @@
     "manifestHash": "88FF875B5DEA51BC3B743F06098AADAF42AB87DA966E19E5EFA189C21F4EC081",
     "version": "0.107.78",
     "openPr": {
-      "version": "0.107.79",
-      "checkedAt": "2026-09-26T16:22:56.1138864Z"
+      "checkedAt": "2026-09-27T20:22:32.1003945Z",
+      "version": "0.107.79"
     }
   },
   "AdGuard.dnsproxy": {
@@ -1378,8 +1378,8 @@
   },
   "CharlesMilette.TranslucentTB": {
     "openPr": {
-      "version": "2026.2",
-      "checkedAt": "2026-09-26T16:22:58.0033669Z"
+      "checkedAt": "2026-09-27T20:22:33.9318215Z",
+      "version": "2026.2"
     }
   },
   "ChiaNetwork.GUIforChiaBlockchain": {
@@ -2132,8 +2132,8 @@
     ],
     "manifestHash": "31947E74E60A0462F2AAA67D5F8C21F460756C9F606A2E99B5AA0055A2064E78",
     "openPr": {
-      "version": "2.12.4",
-      "checkedAt": "2026-09-26T20:20:46.4788994Z"
+      "checkedAt": "2026-09-27T20:22:34.6945856Z",
+      "version": "2.12.4"
     }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
@@ -4736,11 +4736,7 @@
     "validationCount": 1,
     "version": "2.1.6",
     "description": "",
-    "lastUpdated": "2026-09-22T04:59:22.526419Z",
-    "openPr": {
-      "checkedAt": "2026-09-22T08:30:38.3813152Z",
-      "version": "2.1.6"
-    }
+    "lastUpdated": "2026-09-22T04:59:22.526419Z"
   },
   "masaodev.quick-dash-launcher": {
     "validationCount": 1,
