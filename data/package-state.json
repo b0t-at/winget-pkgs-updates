@@ -2466,16 +2466,16 @@
     }
   },
   "facebook.pyrefly": {
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-18T20:49:11.4838448Z",
-    "description": "",
-    "manifestHash": "E1DC278168C3ACF65B323A522CFDE358975D4998EEACAEC43FD2E257F1C38F57",
+    "version": "1.3.1",
     "installerHashes": [
-      "A175CBBAC6A00D42E1CF24DDA18EEC29C865D6B1A3540B8B9F5C76F77467A1E6",
-      "68AEDA9ED1C3EBB11E42AE2172039D55225D44BDB656D30B642C28EEA2D9A7A0"
+      "D10BB909B9007D076FE7CB1F7164E26AB4287CA08E4DF624FFFAEE7360F44BAA",
+      "E92C6EE9078D7BBCDB3A22D6BE44E0335DDCE1E0F9EA9B0EEA8FCDD9CE07010E"
     ],
-    "version": "1.2.1"
+    "validationCount": 1,
+    "manifestHash": "6E23B2F7A6F8BA04E23CBD014A4A55ADA5EBE62884C5E6E2DB4B54CAEB8713F6",
+    "lastUpdated": "2026-09-27T01:22:33.4508626Z",
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "fairdataihub.SODA-for-SPARC": {
     "description": "",
@@ -2705,12 +2705,12 @@
   },
   "Frnsys.Half_earth": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 24,
+    "validationCount": 25,
     "installerHashes": [
       "CD47FC89C016730378E00399433045CCDB17E9B8ECC1434413C7531B9EB6AD36"
     ],
     "description": "",
-    "lastUpdated": "2026-09-25T09:00:41.0494759Z",
+    "lastUpdated": "2026-09-27T01:22:33.3727183Z",
     "manifestHash": "162A9CB4478CCE0219E2D18B3BDBA90BBFD1A2D89CCCF6E863728E377240A4A7",
     "version": "1.0.15"
   },
