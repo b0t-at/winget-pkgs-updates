@@ -134,7 +134,7 @@
     "version": "0.85.0",
     "openPr": {
       "version": "0.85.0",
-      "checkedAt": "2026-09-26T00:55:57.3921571Z"
+      "checkedAt": "2026-09-27T01:05:03.075571Z"
     }
   },
   "AES256Afro.VideoKidnapper": {
@@ -267,7 +267,7 @@
     "version": "3.1",
     "openPr": {
       "version": "3.1",
-      "checkedAt": "2026-09-26T00:57:04.1698478Z"
+      "checkedAt": "2026-09-27T01:06:09.558037Z"
     }
   },
   "Alochi.Monitoring": {
@@ -1479,11 +1479,7 @@
       "7788C2EA933F3E15500E502EDAFCD607298181C3323F96FAD0E18E036FB4A828"
     ],
     "manifestHash": "DC4F1BA12C7977D9486E20C104914F9D0A4A0D470BAF207DEB45C1389F14811C",
-    "state": "VALIDATION_PASSED",
-    "openPr": {
-      "checkedAt": "2026-09-21T08:34:16.0897352Z",
-      "version": "11.3.2"
-    }
+    "state": "VALIDATION_PASSED"
   },
   "cjpais.Handy": {
     "version": "0.9.7",
@@ -3910,8 +3906,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-09-25T20:21:02.3559186Z",
-      "version": "2026.9.14"
+      "version": "2026.9.14",
+      "checkedAt": "2026-09-27T01:05:09.2720394Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -6207,7 +6203,7 @@
     "validationCount": 1,
     "openPr": {
       "version": "2.14.2",
-      "checkedAt": "2026-09-26T00:56:02.6106451Z"
+      "checkedAt": "2026-09-27T01:05:11.1844106Z"
     }
   },
   "Orthogonal.APM": {
