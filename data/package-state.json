@@ -930,17 +930,17 @@
     }
   },
   "binbat.liveman": {
-    "lastUpdated": "2026-08-16T21:14:48.9130718Z",
-    "description": "",
-    "manifestHash": "CC773A85FD199395908012072D79F6958F9207E3709BD064FE65CCA10336AB35",
+    "lastUpdated": "2026-09-28T09:02:17.402706Z",
     "state": "VALIDATION_PASSED",
-    "version": "0.9.0",
-    "validationCount": 1,
+    "description": "",
+    "manifestHash": "584AD697EE2277DB4CDD822E7623D9A3233B2679E9DAEBA6A46E9182397CCF1B",
     "installerHashes": [
-      "3DF2959A28C307A9CA5D9C9EB8646AF13CDDE2E5CDC602DCCA94F082E8EAAB56",
-      "0BB979B0A9CCCF2BCDCBF57B1BD5641D33866130C21C3F960C6FC831F3B50E5C",
-      "759A8692272F8F8EB82E839B3C4900512620D04DC7CBE0575F2B66D7C75BC7F3"
-    ]
+      "63360ECACBB1D48BF398BFE3A7A674240635D17CB7A36AA8641D0249AF9C3902",
+      "43D7DF82B7CD865B86AD6A7EC668F37ECDA17FBD9EA72ABDE2D1507BD00C2B35",
+      "906EF82D1FE07B1F3447928666E0D45D14F10A456C7087751EE946661F01EA82"
+    ],
+    "version": "0.10.1",
+    "validationCount": 1
   },
   "binbat.net4mqtt": {
     "lastUpdated": "2026-09-27T17:09:13.9229649Z",
@@ -3492,6 +3492,17 @@
     ],
     "state": "VALIDATION_PASSED"
   },
+  "hoijun-kim.flip": {
+    "lastUpdated": "2026-09-28T09:02:17.3339657Z",
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "manifestHash": "FAB34DDDCDBFAD3E3748C076FB0D6313903D5F3128468FB98BFA4C4B632D7230",
+    "installerHashes": [
+      "C0A107984036BD15B07AF4F1C3EF5F6DC6BDD875C65925BD996A94717905084F"
+    ],
+    "version": "0.1.1",
+    "validationCount": 1
+  },
   "holland-built.Bloxsmith": {
     "manifestHash": "46C4990D81551ACAA093C2D1E348A69CD7F3CF2D013496EF5AA3E78885BAC5BA",
     "lastUpdated": "2026-09-26T20:43:41.0081138Z",
@@ -3728,15 +3739,15 @@
     "version": "2.6.12"
   },
   "InTheLoop.LoopEmail": {
+    "lastUpdated": "2026-09-28T09:02:17.431759Z",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 4,
+    "manifestHash": "41106222B8C529327ED4BDD6C9428BBE9AC837938F20AEF6C1407ECAA9523722",
     "installerHashes": [
-      "754A071041469FE0A868177D8B3C9CDB0A31DEAE93FBBAB3E9CA7183751BCB14"
+      "369477031CB872112533EF3F7693633ACB9B6CC8F53DFA54F8ED8DF0A02AE2DA"
     ],
-    "lastUpdated": "2026-08-06T14:10:17.4892889Z",
-    "manifestHash": "5081EFCE167B24740E8F0F4E0EB4897DA0100C030977D31025F89E2C214F45E9",
-    "version": "8.0.5"
+    "version": "8.0.13",
+    "validationCount": 1
   },
   "Istio.Istio": {
     "version": "1.30.1",
@@ -6109,6 +6120,17 @@
     ],
     "version": "1.13.0",
     "lastUpdated": "2026-09-25T16:53:52.6738769Z"
+  },
+  "OpenStenoProject.Plover": {
+    "lastUpdated": "2026-09-28T09:02:17.4590218Z",
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "manifestHash": "F45F3D6CF3F3BFB83DEB4ECFE11735E8F4B1248E15BA9FD3CC91A7BD4E52E7E9",
+    "installerHashes": [
+      "C0C19839CE2FAE96EE9903CE901A556A74436A46951144D9961ED918A04CD266"
+    ],
+    "version": "5.4.1",
+    "validationCount": 1
   },
   "OpenTelemetry.Weaver": {
     "state": "VALIDATION_PASSED",
