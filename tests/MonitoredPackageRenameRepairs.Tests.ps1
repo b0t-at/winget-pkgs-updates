@@ -5,8 +5,25 @@ $repositoryRoot = Split-Path -Parent $PSScriptRoot
 $module = Import-Module (Join-Path $repositoryRoot 'modules/WingetMaintainerModule/WingetMaintainerModule.psd1') -Force -PassThru -WarningAction SilentlyContinue
 $packages = @(Get-Content (Join-Path $repositoryRoot '.github/workflows-data/update-github-packages-1-z.packages.json') -Raw | ConvertFrom-Json)
 $fixtures = @(Get-Content (Join-Path $PSScriptRoot 'fixtures/MonitoredPackageRenameRepairs.json') -Raw | ConvertFrom-Json)
-if ($fixtures.Count -ne 47 -or @($fixtures.id | Sort-Object -Unique).Count -ne 47) {
-    throw 'Expected fixtures for all 47 distinct Config Health recoveries.'
+if ($fixtures.Count -ne 45 -or @($fixtures.id | Sort-Object -Unique).Count -ne 45) {
+    throw 'Expected fixtures for all 45 active Config Health recoveries.'
+}
+
+$retiredRepairFixtures = @(
+    [PSCustomObject]@{ Id = 'Grandpied33.STH'; ReasonPattern = 'moved to STH\.STH' },
+    [PSCustomObject]@{ Id = 'PatrickHener.Goshs'; ReasonPattern = 'moved to GoshsLabs\.Goshs' }
+)
+$monitoredText = Get-Content (Join-Path $repositoryRoot 'github-releases-monitored.yml') -Raw
+foreach ($retired in $retiredRepairFixtures) {
+    if ($fixtures.id -contains $retired.Id) {
+        throw "$($retired.Id) must not stay in active rename-repair fixtures after being retired."
+    }
+    if (@($packages | Where-Object { $_.id -ceq $retired.Id }).Count -ne 0) {
+        throw "$($retired.Id) must not be active in the generated monitored package sidecar."
+    }
+    if ($monitoredText -notmatch "(?m)^#\s+$([regex]::Escape($retired.Id)) is excluded: .*($($retired.ReasonPattern))") {
+        throw "$($retired.Id) must stay documented as an excluded rename repair in github-releases-monitored.yml."
+    }
 }
 
 foreach ($fixture in $fixtures) {

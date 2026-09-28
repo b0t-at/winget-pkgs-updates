@@ -41,6 +41,34 @@ if ((@($selected | ForEach-Object { $_.Number }) -join ',') -ne '100') {
     throw "Expected only PR 100 selected, got: $($selected | ConvertTo-Json -Compress)"
 }
 
+Write-Host 'TEST: superseded selection does not close recently waived validation PRs'
+$now = [datetime]::new(2026, 9, 25, 12, 0, 0, [DateTimeKind]::Utc)
+$openPrs = @(
+    [PSCustomObject]@{ number = 250; title = 'Update version: Foo.Bar version 1.0.0'; labels = @('Waived-Validation-No-Executables'); created_at = $now.AddDays(-5).ToString('o') },
+    [PSCustomObject]@{ number = 251; title = 'Update version: Foo.Bar version 1.0.1'; labels = @(); created_at = $now.AddDays(-5).ToString('o') }
+)
+$selected = @(& $module {
+        param($OpenPrs, $Now)
+        Select-WingetSupersededOpenPrs -OpenPrs $OpenPrs -PackageIdentifier 'Foo.Bar' -NewVersion '2.0.0' -Now $Now
+    } $openPrs $now)
+if ((@($selected | ForEach-Object { $_.Number }) -join ',') -ne '251') {
+    throw "Expected only unwaived PR 251 selected, got: $($selected | ConvertTo-Json -Compress)"
+}
+
+Write-Host 'TEST: hygiene keeps recently waived older PRs instead of closing as superseded'
+$actions = @(& $module {
+        param($OpenPrs, $Now)
+        Select-WingetHygienePrActions -OpenPrs $OpenPrs -Now $Now
+    } $openPrs $now)
+$byNumber = @{}
+foreach ($action in $actions) { $byNumber[$action.Number] = $action }
+if ($byNumber[250].Action -ne 'keep' -or $byNumber[250].Reason -notmatch 'waived validation') {
+    throw "Expected waived PR 250 kept, got: $($byNumber[250] | ConvertTo-Json -Compress)"
+}
+if ($byNumber[251].Action -ne 'keep') {
+    throw "Newest PR 251 should be kept as current, got: $($byNumber[251] | ConvertTo-Json -Compress)"
+}
+
 Write-Host 'TEST: version comparison is numeric, not lexicographic'
 $openPrs = @([PSCustomObject]@{ number = 200; title = 'Update version: Foo.Bar version 9.0.0' })
 $selected = @(& $module {
@@ -153,6 +181,20 @@ $closeResult = & $module {
 }
 if (@($closeResult.ClosedPrNumbers).Count -ne 1 -or $closeResult.SkippedCount -ne 1 -or @($closeResult.Warnings).Count -ne 1) {
     throw "Expected the cap to close one and skip one, got: $($closeResult | ConvertTo-Json -Compress)"
+}
+
+Write-Host 'TEST: Close-SupersededWingetPrs resets non-fatal gh failure exit codes'
+$global:LASTEXITCODE = 1
+$closeResult = & $module {
+    Close-SupersededWingetPrs `
+        -PackageId 'Foo.Bar' `
+        -Version '2.0.0' `
+        -BotLogin 'test-bot' `
+        -SearchInvoker { $global:LASTEXITCODE = 1; throw 'TLS handshake timeout' } `
+        -CloseInvoker { throw 'must not be called' }
+}
+if (@($closeResult.Warnings).Count -ne 1 -or $global:LASTEXITCODE -ne 0) {
+    throw "Expected fail-open warning and LASTEXITCODE reset, got result=$($closeResult | ConvertTo-Json -Compress), LASTEXITCODE=$global:LASTEXITCODE"
 }
 
 Write-Host 'All WingetPrSupersession tests passed.'

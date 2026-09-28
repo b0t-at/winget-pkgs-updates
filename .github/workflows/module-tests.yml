@@ -102,6 +102,8 @@ jobs:
         shell: pwsh
         run: |
           ./tests/Save-PackageState.Tests.ps1
+          ./tests/Save-WinMatschFeedbackState.Tests.ps1
+          ./tests/Remove-StaleWinMatschFeedback.Tests.ps1
           ./tests/PackageStateOpenPr.Tests.ps1
           ./tests/PackageStateConfigHealth.Tests.ps1
           ./tests/SelectGitHubPackagesNeedingUpdate.Tests.ps1
@@ -123,6 +125,7 @@ jobs:
           $pesterConfig = New-PesterConfiguration
           $pesterConfig.Run.Path = @(
             './tests/Submit-WingetPackage.Tests.ps1',
+            './tests/Install-WinMatsch.Tests.ps1',
             './tests/Test-SubmitFinalValidation.Tests.ps1',
             './tests/ForkBranchSubmission.Tests.ps1',
             './tests/Test-ExistingPRs.Tests.ps1',

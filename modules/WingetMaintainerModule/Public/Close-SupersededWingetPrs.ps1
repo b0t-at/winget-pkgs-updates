@@ -72,7 +72,10 @@ function Close-SupersededWingetPrs {
         $SearchInvoker = {
             $query = "repo:$Repository is:pr is:open author:$BotLogin in:title `"$PackageId`""
             $raw = Invoke-GhCliWithRetry -OperationName "superseded-PR search for $PackageId" -ScriptBlock {
-                gh api --paginate -X GET 'search/issues' -f q=$query --jq '[.items[] | {number: .number, title: .title}]'
+                gh api --paginate -X GET 'search/issues' -f q=$query --jq '[.items[] | {number: .number, title: .title, labels: .labels, created_at: .created_at, html_url: .html_url}]'
+            }
+            if ($LASTEXITCODE -ne 0) {
+                throw "gh superseded-PR search failed with exit code $LASTEXITCODE."
             }
             $json = (@($raw) -join "`n").Trim()
             if ([string]::IsNullOrWhiteSpace($json)) { return @() }
@@ -87,6 +90,9 @@ function Close-SupersededWingetPrs {
             Invoke-GhCliWithRetry -OperationName "close superseded PR #$Number" -ScriptBlock {
                 gh pr close $Number --repo $Repository --comment $Comment
             } | Out-Null
+            if ($LASTEXITCODE -ne 0) {
+                throw "gh pr close failed with exit code $LASTEXITCODE."
+            }
         }
     }
 
@@ -95,6 +101,7 @@ function Close-SupersededWingetPrs {
     }
     catch {
         $warnings.Add("Superseded-PR search failed for ${PackageId}: $($_.Exception.Message)")
+        $global:LASTEXITCODE = 0
         return [PSCustomObject]@{
             ClosedPrNumbers = @()
             SkippedCount    = 0
@@ -124,11 +131,16 @@ function Close-SupersededWingetPrs {
         }
         catch {
             $warnings.Add("Could not close superseded PR #$($candidate.Number): $($_.Exception.Message)")
+            $global:LASTEXITCODE = 0
         }
     }
 
     if ($skipped -gt 0) {
         $warnings.Add("Skipped $skipped superseded candidate(s) beyond the MaxCloses=$MaxCloses safety cap.")
+    }
+
+    if ($warnings.Count -gt 0) {
+        $global:LASTEXITCODE = 0
     }
 
     return [PSCustomObject]@{

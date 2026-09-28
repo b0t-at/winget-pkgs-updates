@@ -2,34 +2,40 @@ $WebsiteURL = "https://loupedeck.com/get-started/"
 
 $websiteData = Invoke-WebRequest -Method Get -Uri $WebsiteURL -UserAgent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 
-$installerLink = ($websiteData.Links | Where-Object { $_.href -like "*support.loupedeck.com/hubfs/*LD%20Software%20Downloads/*.exe*" } | Select-Object -ExpandProperty href -Unique).ToString()
+$installerLinks = @(
+    $websiteData.Links |
+        Where-Object { $_.href -match '(?i)/hubfs/.*/LD%20Software%20Downloads/.*/LoupedeckInstaller_(?<Version>\d+(?:\.\d+)+)\.exe(?:\?|$)' } |
+        ForEach-Object {
+            $href = $_.href.Split('?')[0]
+            $versionMatch = [regex]::Match($href, 'LoupedeckInstaller_(?<Version>\d+(?:\.\d+)+)\.exe$', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+            if ($versionMatch.Success) {
+                [PSCustomObject]@{
+                    Url     = $href
+                    Version = [version]$versionMatch.Groups['Version'].Value
+                }
+            }
+        } |
+        Sort-Object -Property Version -Descending |
+        Select-Object -Unique -Property Url, Version
+)
 
-if($installerLink.Count -eq 0 -or $installerLink.Count -gt 1) {
-    Write-Host "No installer links or too much installer links found"
-    exit 1
+if ($installerLinks.Count -eq 0) {
+    throw "No Loupedeck Windows installer links found on $WebsiteURL."
 }
 
-# get substring position "SoftwareDownloads and replace everything until there with prefix url"
-#$installerLink = $installerLink.Substring($installerLink.IndexOf("LD%20Software%20Downloads"))
-#$fullDownloadURL = "https://support.loupedeck.com/hubfs/Knowledge%20Base/$installerLink"
-$fullDownloadURL = $installerLink.Split('?')[0]
-# check if full download URL is valid
+$latest = $installerLinks | Select-Object -First 1
+$fullDownloadURL = $latest.Url
+$latestVersion = $latest.Version.ToString()
+
 Write-Host "Full download URL: $fullDownloadURL"
+Write-Host "Found latest version: $latestVersion"
 
-# download latest version from loupedeck.com and get version by filename
-$versionInfo = Get-ProductVersionFromFile -WebsiteURL $fullDownloadURL -VersionInfoProperty "ProductVersion"
-
-Write-Host "Found latest version: $versionInfo"
-$latestversion = $versionInfo
-
-# check if full download URL is valid
-$fullDownloadURLResponse = Invoke-WebRequest -Uri $fullDownloadURL -UseBasicParsing -Method Head
+$fullDownloadURLResponse = Invoke-WebRequest -Uri $fullDownloadURL -UseBasicParsing -Method Head -SkipHttpErrorCheck
 if ($fullDownloadURLResponse.StatusCode -ne 200) {
-    Write-Host "Full download URL is not valid"
-    exit 1
+    throw "Loupedeck installer URL is not valid: HTTP $($fullDownloadURLResponse.StatusCode) $fullDownloadURL"
 }
 
 return [PSCustomObject]@{
     Version = $latestVersion
-    URLs = $fullDownloadURL
-  }
+    URLs    = $fullDownloadURL
+}

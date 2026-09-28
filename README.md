@@ -34,6 +34,13 @@ For a reviewed installer architecture, type, or scope transition, set
 disabled by default and maps only to WinMatsch's `--allow-structural-rewrite`
 option.
 
+If the published winget manifest declares the wrong installer architecture and
+the new generated manifest intentionally corrects it for the same installer URL
+pattern, also set `allowArchitectureMigration: true` on that package's matrix
+entry. Use this narrowly after verifying the payload's PE machine type; it only
+approves the repository guard that compares generated installer architectures
+with the previously published manifest.
+
 ## Editing the monitored list
 
 `github-releases-monitored.yml` is the source of truth, but the workflows read
@@ -55,12 +62,15 @@ its entry and adding a `#  <Id> is excluded: <reason>` note above it;
 The update precheck's **Config Health submission gate** shows stored findings
 from the weekly Config Health workflow, not fresh download failures.
 After repairing a repository or asset rename, check the affected entries with
-`Test-MonitoredPackageAssets`. Only after every configured asset resolves,
-clear their `configHealth` markers with `Update-PackageStateConfigHealth`
-and include the state change with the configuration repair; otherwise the
-packages stay blocked until Config Health runs again. Preserve validation
-failures and open-PR state. A missing architecture or an installer-type change
-is not a filename rename and needs a separate migration review.
+`Test-MonitoredPackageAssets`. Also verify whether the publisher already
+maintains the moved project under a new winget identifier before re-enabling an
+old one; if so, retire the old identifier instead of submitting duplicate
+installer hashes. Only after every configured asset resolves, clear their
+`configHealth` markers with `Update-PackageStateConfigHealth` and include the
+state change with the configuration repair; otherwise the packages stay blocked
+until Config Health runs again. Preserve validation failures and open-PR state.
+A missing architecture or an installer-type change is not a filename rename and
+needs a separate migration review.
 
 ## Submission policies
 
@@ -71,6 +81,8 @@ stops (reason in the job output) when one of these holds applies:
 | --- | --- |
 | `ReleaseTooFresh` | The GitHub release is younger than the minimum age, measured from the newest of the release's publish time and the upload time of the assets the package uses. Disabled by default (`0`); set globally via `WINGET_MIN_RELEASE_AGE_HOURS` or per package via `minReleaseAgeHours` on the matrix entry, e.g. `48` for packages whose publisher files their own PR within a day. |
 | `BlockedByUpstreamValidation` | The bot's previous PR for the identical version was closed unmerged with a blocking label (`Validation-Defender-Error`, `Binary-Validation-Error`, `Validation-Certificate-Root`, `URL-Validation-Error`, `Validation-Unattended-Failed`, `Validation-Installation-Error`, `Validation-Shell-Execute`, `Blocking-Issue`, `DriverInstall`). A new upstream version is submitted normally. |
+| `BlockedByUpstreamVerdict` | WinMatsch's committed upstream verdict store blocks repeats of a rejected version, unchanged installer traits after an installation failure, rejected URLs that are still present, and certificate rejections. Verdicts expire after 30 days and are pruned when the associated winget-pkgs PR merges. Set `ignoreUpstreamVerdict: true` on a reviewed matrix entry to pass `--ignore-upstream-verdict` and bypass the hold. |
+| `HeldForWaivedValidation` | The bot's open PR for an older version carries a moderator `Waived-*` label. Newer versions wait up to 30 days from the waiver/PR creation so a granted validation waiver is not lost by superseding the PR. |
 | `HeldForManualValidation` | The bot's open PR for an older version carries `Azure-Pipeline-Passed` plus `Validation-Executable-Error`/`Validation-No-Executables` (moderators' manual-validation queue), is younger than 14 days, and the new version is only a patch bump. Superseding would reset the package's place in that queue. Non-patch releases and PRs older than 14 days supersede as before. |
 
 The update precheck additionally skips `ChannelCooldown` packages: identifiers

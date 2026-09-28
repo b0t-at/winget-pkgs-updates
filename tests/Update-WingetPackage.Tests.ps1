@@ -43,13 +43,17 @@ function Invoke-TestUpdateWingetPackage {
         [string]$InstallerValue,
 
         [Parameter(Mandatory = $false)]
-        [bool]$AllowStructuralRewrite = $false
+        [bool]$AllowStructuralRewrite = $false,
+
+        [Parameter(Mandatory = $false)]
+        [bool]$IgnoreUpstreamVerdict = $false
     )
 
     return @(& $module {
             param(
                 [string]$Value,
-                [bool]$AllowRewrite
+                [bool]$AllowRewrite,
+                [bool]$IgnoreVerdict
             )
 
             function Test-GitHubToken { 'test-token' }
@@ -77,10 +81,11 @@ function Invoke-TestUpdateWingetPackage {
                 -With 'WinMatsch' `
                 -latestVersion '1.0.0' `
                 -latestVersionURL $Value `
-                -AllowStructuralRewrite $AllowRewrite | Out-Null
+                -AllowStructuralRewrite $AllowRewrite `
+                -IgnoreUpstreamVerdict $IgnoreVerdict | Out-Null
 
             $script:CapturedWinMatschArguments
-        } $InstallerValue $AllowStructuralRewrite)
+        } $InstallerValue $AllowStructuralRewrite $IgnoreUpstreamVerdict)
 }
 
 Write-Host 'TEST: plain URL is passed only through --urls'
@@ -202,6 +207,15 @@ if ($defaultUpdateArguments -contains '--allow-structural-rewrite') {
 $rewriteUpdateArguments = Invoke-TestUpdateWingetPackage -InstallerValue $plainUrl -AllowStructuralRewrite $true
 if (@($rewriteUpdateArguments | Where-Object { $_ -eq '--allow-structural-rewrite' }).Count -ne 1) {
     throw 'Update-WingetPackage did not pass structural rewrite approval exactly once.'
+}
+
+Write-Host 'TEST: upstream verdict ignore is opt-in'
+if ($defaultUpdateArguments -contains '--ignore-upstream-verdict') {
+    throw 'Update-WingetPackage ignored upstream verdicts by default.'
+}
+$ignoreVerdictUpdateArguments = Invoke-TestUpdateWingetPackage -InstallerValue $plainUrl -IgnoreUpstreamVerdict $true
+if (@($ignoreVerdictUpdateArguments | Where-Object { $_ -eq '--ignore-upstream-verdict' }).Count -ne 1) {
+    throw 'Update-WingetPackage did not pass upstream verdict opt-out exactly once.'
 }
 
 Write-Host 'TEST: existing PR guard stops generation before the manifest generator starts'
@@ -488,6 +502,66 @@ if ($questionsRequiredResult.ExitCodeAfterUpdate -ne 0) {
     throw "QuestionsRequired left LASTEXITCODE=$($questionsRequiredResult.ExitCodeAfterUpdate); the GitHub runner pwsh epilogue (exit `$LASTEXITCODE) would fail the step."
 }
 
+Write-Host 'TEST: WinMatsch upstream verdicts soft-fail with BlockedByUpstreamVerdict'
+$upstreamVerdictResult = & $module {
+    function Test-GitHubToken { 'test-token' }
+    function Test-PackageAndVersionInGithub {
+        [PSCustomObject]@{
+            PackageExists          = $true
+            ShouldGenerate         = $true
+            VersionExists          = $false
+            CanonicalVersion       = '1.0.0'
+            PublishedVersion       = $null
+            LatestPublishedVersion = $null
+        }
+    }
+    function Test-ExistingPRs { $false }
+    function Install-WinMatsch {}
+    function Test-GeneratedInstallerArchitecture { throw 'Architecture validation must not run after an upstream verdict block.' }
+    function winmatsch {
+        if ($args -contains '--help') {
+            $global:LASTEXITCODE = 0
+            return
+        }
+        Write-Output 'WF_UPSTREAM_VERDICT : Upstream rejected this installer trait set.'
+        $global:LASTEXITCODE = 5
+    }
+
+    $originalGitHubOutput = $env:GITHUB_OUTPUT
+    $outputFile = Join-Path ([IO.Path]::GetTempPath()) "winget-upstream-verdict-$([guid]::NewGuid().ToString('N')).txt"
+    $env:GITHUB_OUTPUT = $outputFile
+    try {
+        $result = Update-WingetPackage `
+            -WingetPackage 'Test.Package' `
+            -With 'WinMatsch' `
+            -latestVersion '1.0.0' `
+            -latestVersionURL 'https://example.invalid/app.zip'
+        $exitCodeAfterUpdate = $LASTEXITCODE
+
+        [PSCustomObject]@{
+            Result              = $result
+            ExitCodeAfterUpdate = $exitCodeAfterUpdate
+            OutputContent       = (Get-Content -LiteralPath $outputFile -Raw)
+        }
+    }
+    finally {
+        $env:GITHUB_OUTPUT = $originalGitHubOutput
+        Remove-Item -LiteralPath $outputFile -Force -ErrorAction SilentlyContinue
+    }
+}
+if ($upstreamVerdictResult.Result.Generated -or $upstreamVerdictResult.Result.Reason -cne 'BlockedByUpstreamVerdict') {
+    throw "A WinMatsch upstream verdict did not soft-fail with BlockedByUpstreamVerdict: $($upstreamVerdictResult.Result | ConvertTo-Json -Compress)"
+}
+if ($upstreamVerdictResult.OutputContent -notmatch '(?m)^reason=BlockedByUpstreamVerdict\s*$') {
+    throw "The BlockedByUpstreamVerdict reason was not written to GITHUB_OUTPUT: $($upstreamVerdictResult.OutputContent)"
+}
+if ($upstreamVerdictResult.OutputContent -notmatch '(?m)^error-code=WF_UPSTREAM_VERDICT\s*$') {
+    throw "The upstream verdict error code was not written to GITHUB_OUTPUT: $($upstreamVerdictResult.OutputContent)"
+}
+if ($upstreamVerdictResult.ExitCodeAfterUpdate -ne 0) {
+    throw "BlockedByUpstreamVerdict left LASTEXITCODE=$($upstreamVerdictResult.ExitCodeAfterUpdate); the GitHub runner pwsh epilogue (exit `$LASTEXITCODE) would fail the step."
+}
+
 Write-Host 'TEST: non-question WinMatsch failures still throw as GeneratorFailed'
 $generatorFailedResult = & $module {
     function Test-GitHubToken { 'test-token' }
@@ -650,6 +724,93 @@ if ($earlyValidationResult.OutputContent -notmatch '(?m)^reason=UnhandledError\s
 }
 if ($earlyValidationResult.OutputContent -notmatch '(?m)^package-id=Test\.Package\s*$') {
     throw "The early failure payload is missing the package id: $($earlyValidationResult.OutputContent)"
+}
+
+Write-Host 'TEST: WinMatsch release notes fallback inserts before ManifestType without duplicating keys'
+$releaseNotesScratch = Join-Path $repositoryRoot "tests\scratch-release-notes-$([guid]::NewGuid().ToString('N'))"
+try {
+    New-Item -ItemType Directory -Path $releaseNotesScratch -Force | Out-Null
+    $localePath = Join-Path $releaseNotesScratch 'Test.Package.locale.en-US.yaml'
+    @"
+PackageIdentifier: Test.Package
+PackageVersion: 1.0.0
+PackageLocale: en-US
+Publisher: Test Publisher
+PackageName: Test Package
+ShortDescription: Test package
+ReleaseNotesUrl: https://example.invalid/releases/1.0.0
+ManifestType: defaultLocale
+ManifestVersion: 1.12.0
+"@ | Set-Content -LiteralPath $localePath -NoNewline
+
+    & $module { param($Path) Set-WingetGeneratedReleaseNotes -ManifestOutPath $Path -ReleaseNotes "Fixed one`nFixed two" -Generator 'WinMatsch' } $releaseNotesScratch
+    $content = Get-Content -LiteralPath $localePath -Raw
+    if (([regex]::Matches($content, '(?m)^ReleaseNotes:')).Count -ne 1) {
+        throw "ReleaseNotes key was not inserted exactly once: $content"
+    }
+    if (([regex]::Matches($content, '(?m)^ReleaseNotesUrl:')).Count -ne 1) {
+        throw "ReleaseNotesUrl was changed or duplicated: $content"
+    }
+    if ($content.IndexOf('ReleaseNotes:') -gt $content.IndexOf('ManifestType:')) {
+        throw "ReleaseNotes was not inserted before ManifestType: $content"
+    }
+}
+finally {
+    Remove-Item -LiteralPath $releaseNotesScratch -Recurse -Force -ErrorAction SilentlyContinue
+}
+
+Write-Host 'TEST: release notes insertion treats regex replacement tokens literally'
+$releaseNotesScratch = Join-Path $repositoryRoot "tests\scratch-release-notes-$([guid]::NewGuid().ToString('N'))"
+try {
+    New-Item -ItemType Directory -Path $releaseNotesScratch -Force | Out-Null
+    $localePath = Join-Path $releaseNotesScratch 'Test.Package.locale.en-US.yaml'
+    @"
+PackageIdentifier: Test.Package
+PackageVersion: 1.0.0
+PackageLocale: en-US
+Publisher: Test Publisher
+PackageName: Test Package
+ShortDescription: Test package
+ManifestType: defaultLocale
+ManifestVersion: 1.12.0
+"@ | Set-Content -LiteralPath $localePath -NoNewline
+    $notes = 'literal tokens: $_ $0 $$HOME $&'
+    & $module { param($Path, $Notes) Set-WingetGeneratedReleaseNotes -ManifestOutPath $Path -ReleaseNotes $Notes -Generator 'WinMatsch' } $releaseNotesScratch $notes
+    $content = Get-Content -LiteralPath $localePath -Raw
+    if ($content -notmatch [regex]::Escape($notes)) {
+        throw "Release notes replacement tokens were not inserted literally: $content"
+    }
+    if (([regex]::Matches($content, 'PackageIdentifier: Test\.Package')).Count -ne 1) {
+        throw "Release notes insertion expanded a regex replacement token into manifest content: $content"
+    }
+}
+finally {
+    Remove-Item -LiteralPath $releaseNotesScratch -Recurse -Force -ErrorAction SilentlyContinue
+}
+
+Write-Host 'TEST: WinMatsch release notes post-processing skips when default locale already has ReleaseNotes'
+$releaseNotesScratch = Join-Path $repositoryRoot "tests\scratch-release-notes-$([guid]::NewGuid().ToString('N'))"
+try {
+    New-Item -ItemType Directory -Path $releaseNotesScratch -Force | Out-Null
+    $localePath = Join-Path $releaseNotesScratch 'Test.Package.locale.en-US.yaml'
+    @"
+PackageIdentifier: Test.Package
+PackageVersion: 1.0.0
+PackageLocale: en-US
+ReleaseNotes: |-
+  Existing sanitized notes
+ManifestType: defaultLocale
+ManifestVersion: 1.12.0
+"@ | Set-Content -LiteralPath $localePath -NoNewline
+    $before = Get-Content -LiteralPath $localePath -Raw
+    & $module { param($Path) Set-WingetGeneratedReleaseNotes -ManifestOutPath $Path -ReleaseNotes 'replacement' -Generator 'WinMatsch' } $releaseNotesScratch
+    $after = Get-Content -LiteralPath $localePath -Raw
+    if ($after -cne $before) {
+        throw "WinMatsch ReleaseNotes output should have been left untouched: $after"
+    }
+}
+finally {
+    Remove-Item -LiteralPath $releaseNotesScratch -Recurse -Force -ErrorAction SilentlyContinue
 }
 
 Write-Host 'All Update-WingetPackage regression tests passed.' -ForegroundColor Green

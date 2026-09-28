@@ -13,7 +13,9 @@ function Get-WingetPreSubmissionHold {
           2. BlockedByUpstreamValidation - the bot's previous PR for this exact
              version was closed unmerged with a blocking validation label
              (Defender, dead URL, certificate, driver, installer crash ...).
-          3. HeldForManualValidation - the bot's open PR for an older version of
+          3. HeldForWaivedValidation - the bot's open PR for an older version
+             carries a moderator Waived-* label and is younger than 30 days.
+          4. HeldForManualValidation - the bot's open PR for an older version of
              the package sits in the moderators' manual-validation queue
              (Azure-Pipeline-Passed + Validation-Executable-Error /
              Validation-No-Executables), is younger than 14 days and the new
@@ -66,6 +68,18 @@ function Get-WingetPreSubmissionHold {
     }
     catch {
         Write-Warning "Upstream failure-memory check for $PackageId $Version failed: $($_.Exception.Message). Continuing."
+    }
+
+    try {
+        $waived = Find-WingetPkgsWaivedValidationHold -PackageIdentifier $PackageId -Version $Version -BotLogin $botLogin -Repository $Repository
+        if ($null -ne $waived) {
+            $detail = $waived.Reason
+            if (-not [string]::IsNullOrWhiteSpace($waived.Url)) { $detail += " ($($waived.Url))" }
+            return [PSCustomObject]@{ Reason = 'HeldForWaivedValidation'; Detail = $detail }
+        }
+    }
+    catch {
+        Write-Warning "Waived-validation hold check for $PackageId $Version failed: $($_.Exception.Message). Continuing."
     }
 
     try {

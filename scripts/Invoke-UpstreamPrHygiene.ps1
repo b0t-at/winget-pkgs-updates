@@ -37,7 +37,7 @@ if (-not [string]::IsNullOrWhiteSpace($env:MAX_CLOSES) -and [int]::TryParse($env
 
 Write-Host "Sweeping open PRs by $botLogin in $repository (dry run: $dryRun, close cap: $maxCloses)."
 
-$openPrsJson = gh pr list --repo $repository --author $botLogin --state open --limit 200 --json number,title,url,labels
+$openPrsJson = gh pr list --repo $repository --author $botLogin --state open --limit 200 --json number,title,url,labels,createdAt
 if ($LASTEXITCODE -ne 0) {
     throw "gh pr list failed with exit code $LASTEXITCODE."
 }
@@ -49,8 +49,6 @@ Write-Host "Found $($openPrs.Count) open PR(s)."
 $actions = @(& $module {
         param($OpenPrs, $Repository)
 
-        # GetNewClosure pins $Repository for the resolver regardless of the
-        # dynamic scope it is eventually invoked from.
         $resolver = {
             param([string] $PackageIdentifier)
             try {
@@ -61,7 +59,7 @@ $actions = @(& $module {
                 Write-Warning "Published-version lookup failed for ${PackageIdentifier}: $($_.Exception.Message); treating as not published."
                 @()
             }
-        }.GetNewClosure()
+        }
 
         Select-WingetHygienePrActions -OpenPrs $OpenPrs -PublishedVersionsResolver $resolver
     } $openPrs $repository)

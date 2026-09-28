@@ -291,16 +291,6 @@
     ]
   },
   {
-    "id": "Grandpied33.STH",
-    "repo": "Skills-transfer-hub/sth-releases",
-    "tag": "v0.2.43",
-    "releaseName": "Alpha v0.2.43",
-    "version": "0.2.43",
-    "assets": [
-      "https://github.com/Skills-transfer-hub/sth-releases/releases/download/v0.2.43/sth-windows-amd64.zip"
-    ]
-  },
-  {
     "id": "Hiddify.Next",
     "repo": "hiddify/hiddify-app",
     "tag": "v4.1.1",
@@ -378,18 +368,6 @@
     "version": "5.4.1",
     "assets": [
       "https://github.com/opensteno/plover/releases/download/v5.4.1/plover-5.4.1-win64.setup.exe"
-    ]
-  },
-  {
-    "id": "PatrickHener.Goshs",
-    "repo": "goshs-labs/goshs",
-    "tag": "v2.1.6",
-    "releaseName": "v2.1.6",
-    "version": "2.1.6",
-    "assets": [
-      "https://github.com/goshs-labs/goshs/releases/download/v2.1.6/goshs_v2.1.6_windows_x86_64.zip",
-      "https://github.com/goshs-labs/goshs/releases/download/v2.1.6/goshs_v2.1.6_windows_386.zip",
-      "https://github.com/goshs-labs/goshs/releases/download/v2.1.6/goshs_v2.1.6_windows_arm64.zip"
     ]
   },
   {

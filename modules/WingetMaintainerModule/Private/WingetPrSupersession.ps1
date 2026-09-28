@@ -66,7 +66,14 @@ function Select-WingetSupersededOpenPrs {
         [string] $NewVersion,
 
         [Parameter()]
-        [int] $NewPrNumber = 0
+        [int] $NewPrNumber = 0,
+
+        [Parameter()]
+        [ValidateRange(1, 365)]
+        [int] $WaivedMaxAgeDays = 30,
+
+        [Parameter()]
+        [datetime] $Now = [datetime]::UtcNow
     )
 
     $newVersionKey = Get-WingetSortableVersionKey -Version $NewVersion
@@ -85,6 +92,8 @@ function Select-WingetSupersededOpenPrs {
 
         $versionKey = Get-WingetSortableVersionKey -Version $parsed.Version
         if ([string]::IsNullOrWhiteSpace($versionKey) -or $versionKey -ge $newVersionKey) { continue }
+
+        if ($null -ne (Get-WingetWaivedValidationHold -Pr $pr -MaxAgeDays $WaivedMaxAgeDays -Now $Now)) { continue }
 
         $selected.Add([PSCustomObject]@{
                 Number  = $number
@@ -130,7 +139,14 @@ function Select-WingetHygienePrActions {
         # for that package (empty array when the package does not exist).
         # Optional: when omitted, the published check is skipped entirely.
         [Parameter()]
-        [scriptblock] $PublishedVersionsResolver
+        [scriptblock] $PublishedVersionsResolver,
+
+        [Parameter()]
+        [ValidateRange(1, 365)]
+        [int] $WaivedMaxAgeDays = 30,
+
+        [Parameter()]
+        [datetime] $Now = [datetime]::UtcNow
     )
 
     $actions = [System.Collections.Generic.List[object]]::new()
@@ -171,6 +187,7 @@ function Select-WingetHygienePrActions {
                 Version           = $parsed.Version
                 VersionKey        = Get-WingetSortableVersionKey -Version $parsed.Version
                 Labels            = $labels
+                WaivedHold        = Get-WingetWaivedValidationHold -Pr $pr -MaxAgeDays $WaivedMaxAgeDays -Now $Now
             })
     }
 
@@ -184,6 +201,19 @@ function Select-WingetHygienePrActions {
 
         foreach ($pr in $ordered) {
             if ($pr.Number -ne $newest.Number -and $pr.VersionKey -lt $newest.VersionKey) {
+                if ($null -ne $pr.WaivedHold) {
+                    $actions.Add([PSCustomObject]@{
+                            Action            = 'keep'
+                            Number            = $pr.Number
+                            Title             = $pr.Title
+                            PackageIdentifier = $pr.PackageIdentifier
+                            Version           = $pr.Version
+                            Reason            = "held by waived validation label(s) $($pr.WaivedHold.Labels -join ', ') for $($pr.WaivedHold.MaxAgeDays) days; not closing as superseded yet"
+                            Labels            = $pr.Labels
+                        })
+                    continue
+                }
+
                 $actions.Add([PSCustomObject]@{
                         Action            = 'close-superseded'
                         Number            = $pr.Number

@@ -233,6 +233,26 @@ function Submit-WingetPackage {
             Write-Host "Installer URL preflight passed for $($urlPreflight.CheckedCount) URL(s)." -ForegroundColor Gray
         }
 
+        $duplicateIdentifier = Find-WingetDuplicateIdentifierByInstallerHash `
+            -PackageIdentifier $PackageId `
+            -Version $Version `
+            -ManifestPath $fullManifestPath
+        foreach ($duplicateWarning in @($duplicateIdentifier.Warnings)) {
+            Write-Warning $duplicateWarning
+        }
+        if ($duplicateIdentifier.Duplicate) {
+            $duplicateDetail = "Generated installer hash $($duplicateIdentifier.MatchingHash) already appears under $($duplicateIdentifier.MatchingIdentifier) $Version"
+            if (-not [string]::IsNullOrWhiteSpace($duplicateIdentifier.MatchingUrl)) {
+                $duplicateDetail += " ($($duplicateIdentifier.MatchingUrl))"
+            }
+            return @{
+                Success  = $false
+                Error    = "DuplicateOfOtherIdentifier: $duplicateDetail. Retire or remap $PackageId instead of submitting a duplicate manifest."
+                PrUrl    = $null
+                PrNumber = $null
+            }
+        }
+
         switch ($With) {
             "WinMatsch" {
                 # Ensure WinMatsch is installed
@@ -394,6 +414,11 @@ function Submit-WingetPackage {
                     }
                     else {
                         $null
+                    }
+
+                    if ($forkSubmission.PullRequest) {
+                        $existingPrUrl = "$($forkSubmission.PullRequest.html_url)".Trim()
+                        $existingPrNumber = "$($forkSubmission.PullRequest.number)".Trim()
                     }
 
                     return @{

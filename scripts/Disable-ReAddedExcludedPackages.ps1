@@ -103,7 +103,7 @@ for ($i = 0; $i -lt $lines.Count; $i++) {
     # Commented-out YAML keys from the preceding entry are not reasons.
     if ([string]::IsNullOrWhiteSpace($reason) -and $i -gt 0) {
         $previous = $lines[$i - 1]
-        $isCommentedYamlKey = $previous -match '^\s*#\s*-?\s*(id|repo|url|with|tagPattern|versionSource|allowStructuralRewrite|overridePack|pre-release)\s*:'
+        $isCommentedYamlKey = $previous -match '^\s*#\s*-?\s*(id|repo|url|with|tagPattern|versionSource|allowStructuralRewrite|allowArchitectureMigration|ignoreUpstreamVerdict|overridePack|pre-release)\s*:'
         if (-not $isCommentedYamlKey -and $previous -match '^\s*#\s*(?<text>[^-#\s][^:]*)\s*$') {
             $reason = $Matches['text'].Trim()
         }
