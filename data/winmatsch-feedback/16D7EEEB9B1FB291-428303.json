@@ -1,0 +1,14 @@
+{
+  "repository": "microsoft/winget-pkgs",
+  "pullRequestNumber": 428303,
+  "classification": "InstallationFailure",
+  "state": "Escalated",
+  "recordedAt": "2026-09-28T09:08:41.7949174+00:00",
+  "retryAfter": null,
+  "learnedOverrideSignal": null,
+  "reason": "The installer failed upstream installation testing (unattended, shell-execute, driver or dependency); human-verified switches are required before resubmitting.",
+  "packageIdentifier": "EdgeTX.Companion",
+  "packageVersion": "2.12.4",
+  "evidence": [],
+  "installerTraits": "type=Zip;nested=Nullsoft;scope=Machine;elevation=;silent=;silentWithProgress=;interactive=;custom=;upgrade=;log=;installLocation=;repair="
+}

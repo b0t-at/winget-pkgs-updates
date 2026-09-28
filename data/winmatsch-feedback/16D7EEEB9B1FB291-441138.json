@@ -1,0 +1,14 @@
+{
+  "repository": "microsoft/winget-pkgs",
+  "pullRequestNumber": 441138,
+  "classification": "ScannerBlocked",
+  "state": "Escalated",
+  "recordedAt": "2026-09-28T09:08:41.2675512+00:00",
+  "retryAfter": null,
+  "learnedOverrideSignal": null,
+  "reason": "Defender or the ESRP installer scan blocked the binaries; resubmitting the same files fails again. Quarantine the package until the scanner verdict changes or upstream ships new binaries.",
+  "packageIdentifier": "Microsoft.WSL.PreRelease",
+  "packageVersion": "2.9.13",
+  "evidence": [],
+  "installerTraits": null
+}

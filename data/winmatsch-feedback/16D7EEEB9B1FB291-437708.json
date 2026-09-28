@@ -1,0 +1,14 @@
+{
+  "repository": "microsoft/winget-pkgs",
+  "pullRequestNumber": 437708,
+  "classification": "ScannerBlocked",
+  "state": "Escalated",
+  "recordedAt": "2026-09-28T09:08:41.466297+00:00",
+  "retryAfter": null,
+  "learnedOverrideSignal": null,
+  "reason": "Defender or the ESRP installer scan blocked the binaries; resubmitting the same files fails again. Quarantine the package until the scanner verdict changes or upstream ships new binaries.",
+  "packageIdentifier": "ZacharyL2.KeyEcho",
+  "packageVersion": "1.1.1",
+  "evidence": [],
+  "installerTraits": null
+}

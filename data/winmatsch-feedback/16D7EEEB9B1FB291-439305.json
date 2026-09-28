@@ -1,0 +1,14 @@
+{
+  "repository": "microsoft/winget-pkgs",
+  "pullRequestNumber": 439305,
+  "classification": "InstallationFailure",
+  "state": "Escalated",
+  "recordedAt": "2026-09-28T09:08:41.4636815+00:00",
+  "retryAfter": null,
+  "learnedOverrideSignal": null,
+  "reason": "The installer failed upstream installation testing (unattended, shell-execute, driver or dependency); human-verified switches are required before resubmitting.",
+  "packageIdentifier": "BenjaminLSR.HandheldCompanion",
+  "packageVersion": "1.2.1.3",
+  "evidence": [],
+  "installerTraits": "type=Inno;nested=;scope=Machine;elevation=ElevatesSelf;silent=/SILENT;silentWithProgress=;interactive=;custom=/NORESTART /SUPPRESSMSGBOXES;upgrade=;log=;installLocation=;repair="
+}

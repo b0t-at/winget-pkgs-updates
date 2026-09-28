@@ -1,0 +1,14 @@
+{
+  "repository": "microsoft/winget-pkgs",
+  "pullRequestNumber": 421521,
+  "classification": "TransientInternalError",
+  "state": "RetryScheduled",
+  "recordedAt": "2026-09-28T09:08:41.827356+00:00",
+  "retryAfter": "2026-09-28T10:08:41.827345+00:00",
+  "learnedOverrideSignal": null,
+  "reason": "Infrastructure failure does not justify manifest mutation.",
+  "packageIdentifier": "alirezagsm.trayy",
+  "packageVersion": "3.1",
+  "evidence": [],
+  "installerTraits": null
+}
