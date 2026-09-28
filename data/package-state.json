@@ -1539,15 +1539,15 @@
     "lastUpdated": "2026-06-13T21:57:50.2974106Z"
   },
   "Concourse.Fly": {
-    "lastUpdated": "2026-08-14T10:42:15.0924889Z",
-    "manifestHash": "3055F72D6C8A47545CDB82D7EB911FA8DA47173996E2D3852E83AD202E86C508",
-    "version": "8.3.0",
+    "lastUpdated": "2026-09-28T20:30:38.1613708Z",
+    "installerHashes": [
+      "570486B75CE5BB8499C4A47B2983C9C09E839AD0DFB452D367DE2D40F58425E8"
+    ],
+    "version": "8.3.1",
     "validationCount": 1,
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "46F75164FB6B76AADA43AE82AB155922F84557988F21BEDD401F86D456D10B67"
-    ]
+    "manifestHash": "F02FBA9AFAC3B4ED3B1F605B466F0FD9EC0D0E933F3C0A926850070CA7563573",
+    "state": "VALIDATION_PASSED"
   },
   "Containers.PodmanTUI": {
     "installerHashes": [
@@ -2596,16 +2596,16 @@
     }
   },
   "Fly-io.flyctl": {
-    "lastUpdated": "2026-09-26T08:54:16.6468239Z",
-    "description": "",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "54915187227CF8BE7D11F74735C9F9B478490A692CF0970BDDB7E6AA97A5058D",
-    "version": "0.4.108",
+    "lastUpdated": "2026-09-28T20:30:38.2183998Z",
     "installerHashes": [
-      "18E66B7D162D0F5083311408C9DE55381805CBB79ECA81EDB9ED1150ED725CFD",
-      "6E31F266092EFEB7A5E72BE207411A224EDDCE79D4ACF305F85AE0688F838327"
+      "6ECDC7D7DD8DECC2A8BBB433C839351D5CB0911666217F06077007E7372CF80D",
+      "CD91EDDC06E7FD7358B45823D135501908F04600CE2F024017180056D5CC0EC8"
     ],
-    "validationCount": 1
+    "version": "0.4.109",
+    "validationCount": 1,
+    "description": "",
+    "manifestHash": "D50729BC0235B9C7309B9BB2F943C36A96AB4CB1C289E6F02EC0A06FEF87E64B",
+    "state": "VALIDATION_PASSED"
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
     "validationCount": 1,
