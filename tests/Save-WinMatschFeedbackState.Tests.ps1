@@ -85,7 +85,7 @@ try {
     New-Item -ItemType Directory -Path $artifact -Force | Out-Null
     Set-Content -LiteralPath (Join-Path $artifact 'verdict-432850.json') -Value '{"package":"DiRoots.ProSheets"}' -Encoding utf8
     Set-Content -LiteralPath (Join-Path $artifact 'verdict-432850.json.lock') -Value '' -NoNewline
-    Set-Content -LiteralPath (Join-Path $artifact '.artifact-ready') -Value 'true' -NoNewline
+    Set-Content -LiteralPath (Join-Path $artifact 'artifact-ready.txt') -Value 'true' -NoNewline
 
     Save-WinMatschFeedbackState -FeedbackSourcePath $artifact -RepoPath $repos.Writer
 
@@ -121,7 +121,7 @@ try {
     $retryArtifact = Join-Path $testRoot 'retry-artifact'
     New-Item -ItemType Directory -Path $retryArtifact -Force | Out-Null
     Set-Content -LiteralPath (Join-Path $retryArtifact 'retry-1.json') -Value '{"retry":true}' -Encoding utf8
-    Set-Content -LiteralPath (Join-Path $retryArtifact '.artifact-ready') -Value 'true' -NoNewline
+    Set-Content -LiteralPath (Join-Path $retryArtifact 'artifact-ready.txt') -Value 'true' -NoNewline
 
     $counterPath = Join-Path $testRoot 'push-attempts.txt'
     $counterShellPath = $counterPath.Replace('\', '/')

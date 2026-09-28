@@ -117,8 +117,8 @@ function Save-WinMatschFeedbackState {
         if (-not (Test-Path -LiteralPath $sourceFullPath -PathType Container)) {
             throw "WinMatsch feedback artifact directory not found: $sourceFullPath"
         }
-        if (-not (Test-Path -LiteralPath (Join-Path $sourceFullPath '.artifact-ready') -PathType Leaf)) {
-            Write-Warning "WinMatsch feedback artifact '$sourceFullPath' is missing the .artifact-ready marker; leaving committed feedback state unchanged."
+        if (-not (Test-Path -LiteralPath (Join-Path $sourceFullPath 'artifact-ready.txt') -PathType Leaf)) {
+            Write-Warning "WinMatsch feedback artifact '$sourceFullPath' is missing the artifact-ready.txt marker; leaving committed feedback state unchanged."
             return
         }
 
