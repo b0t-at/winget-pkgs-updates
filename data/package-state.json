@@ -930,17 +930,21 @@
     }
   },
   "binbat.liveman": {
-    "lastUpdated": "2026-09-28T09:02:17.402706Z",
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "584AD697EE2277DB4CDD822E7623D9A3233B2679E9DAEBA6A46E9182397CCF1B",
     "installerHashes": [
       "63360ECACBB1D48BF398BFE3A7A674240635D17CB7A36AA8641D0249AF9C3902",
       "43D7DF82B7CD865B86AD6A7EC668F37ECDA17FBD9EA72ABDE2D1507BD00C2B35",
       "906EF82D1FE07B1F3447928666E0D45D14F10A456C7087751EE946661F01EA82"
     ],
-    "version": "0.10.1",
-    "validationCount": 1
+    "lastUpdated": "2026-09-28T09:02:17.402706Z",
+    "manifestHash": "584AD697EE2277DB4CDD822E7623D9A3233B2679E9DAEBA6A46E9182397CCF1B",
+    "openPr": {
+      "checkedAt": "2026-09-28T09:06:36.6145Z",
+      "version": "0.10.1"
+    },
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "0.10.1"
   },
   "binbat.net4mqtt": {
     "lastUpdated": "2026-09-27T17:09:13.9229649Z",
@@ -3739,15 +3743,17 @@
     "version": "2.6.12"
   },
   "InTheLoop.LoopEmail": {
-    "lastUpdated": "2026-09-28T09:02:17.431759Z",
-    "state": "VALIDATION_PASSED",
     "description": "",
+    "installerHashes": "369477031CB872112533EF3F7693633ACB9B6CC8F53DFA54F8ED8DF0A02AE2DA",
+    "lastUpdated": "2026-09-28T09:02:17.431759Z",
     "manifestHash": "41106222B8C529327ED4BDD6C9428BBE9AC837938F20AEF6C1407ECAA9523722",
-    "installerHashes": [
-      "369477031CB872112533EF3F7693633ACB9B6CC8F53DFA54F8ED8DF0A02AE2DA"
-    ],
-    "version": "8.0.13",
-    "validationCount": 1
+    "openPr": {
+      "checkedAt": "2026-09-28T09:05:55.5692965Z",
+      "version": "8.0.13"
+    },
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "8.0.13"
   },
   "Istio.Istio": {
     "version": "1.30.1",
