@@ -12,3 +12,5 @@ scripts/package-cleanup/cleaned_packages.csv
 *.msixbundle
 
 data/e2e-analysis/
+data/winmatsch-feedback/*.lock
+.test-output/

@@ -102,6 +102,7 @@ jobs:
         shell: pwsh
         run: |
           ./tests/Save-PackageState.Tests.ps1
+          ./tests/Save-WinMatschFeedbackState.Tests.ps1
           ./tests/PackageStateOpenPr.Tests.ps1
           ./tests/PackageStateConfigHealth.Tests.ps1
           ./tests/SelectGitHubPackagesNeedingUpdate.Tests.ps1

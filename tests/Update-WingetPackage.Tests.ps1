@@ -488,6 +488,66 @@ if ($questionsRequiredResult.ExitCodeAfterUpdate -ne 0) {
     throw "QuestionsRequired left LASTEXITCODE=$($questionsRequiredResult.ExitCodeAfterUpdate); the GitHub runner pwsh epilogue (exit `$LASTEXITCODE) would fail the step."
 }
 
+Write-Host 'TEST: WinMatsch upstream verdicts soft-fail with BlockedByUpstreamVerdict'
+$upstreamVerdictResult = & $module {
+    function Test-GitHubToken { 'test-token' }
+    function Test-PackageAndVersionInGithub {
+        [PSCustomObject]@{
+            PackageExists          = $true
+            ShouldGenerate         = $true
+            VersionExists          = $false
+            CanonicalVersion       = '1.0.0'
+            PublishedVersion       = $null
+            LatestPublishedVersion = $null
+        }
+    }
+    function Test-ExistingPRs { $false }
+    function Install-WinMatsch {}
+    function Test-GeneratedInstallerArchitecture { throw 'Architecture validation must not run after an upstream verdict block.' }
+    function winmatsch {
+        if ($args -contains '--help') {
+            $global:LASTEXITCODE = 0
+            return
+        }
+        Write-Output 'WF_UPSTREAM_VERDICT : Upstream rejected this installer trait set.'
+        $global:LASTEXITCODE = 5
+    }
+
+    $originalGitHubOutput = $env:GITHUB_OUTPUT
+    $outputFile = Join-Path ([IO.Path]::GetTempPath()) "winget-upstream-verdict-$([guid]::NewGuid().ToString('N')).txt"
+    $env:GITHUB_OUTPUT = $outputFile
+    try {
+        $result = Update-WingetPackage `
+            -WingetPackage 'Test.Package' `
+            -With 'WinMatsch' `
+            -latestVersion '1.0.0' `
+            -latestVersionURL 'https://example.invalid/app.zip'
+        $exitCodeAfterUpdate = $LASTEXITCODE
+
+        [PSCustomObject]@{
+            Result              = $result
+            ExitCodeAfterUpdate = $exitCodeAfterUpdate
+            OutputContent       = (Get-Content -LiteralPath $outputFile -Raw)
+        }
+    }
+    finally {
+        $env:GITHUB_OUTPUT = $originalGitHubOutput
+        Remove-Item -LiteralPath $outputFile -Force -ErrorAction SilentlyContinue
+    }
+}
+if ($upstreamVerdictResult.Result.Generated -or $upstreamVerdictResult.Result.Reason -cne 'BlockedByUpstreamVerdict') {
+    throw "A WinMatsch upstream verdict did not soft-fail with BlockedByUpstreamVerdict: $($upstreamVerdictResult.Result | ConvertTo-Json -Compress)"
+}
+if ($upstreamVerdictResult.OutputContent -notmatch '(?m)^reason=BlockedByUpstreamVerdict\s*$') {
+    throw "The BlockedByUpstreamVerdict reason was not written to GITHUB_OUTPUT: $($upstreamVerdictResult.OutputContent)"
+}
+if ($upstreamVerdictResult.OutputContent -notmatch '(?m)^error-code=WF_UPSTREAM_VERDICT\s*$') {
+    throw "The upstream verdict error code was not written to GITHUB_OUTPUT: $($upstreamVerdictResult.OutputContent)"
+}
+if ($upstreamVerdictResult.ExitCodeAfterUpdate -ne 0) {
+    throw "BlockedByUpstreamVerdict left LASTEXITCODE=$($upstreamVerdictResult.ExitCodeAfterUpdate); the GitHub runner pwsh epilogue (exit `$LASTEXITCODE) would fail the step."
+}
+
 Write-Host 'TEST: non-question WinMatsch failures still throw as GeneratorFailed'
 $generatorFailedResult = & $module {
     function Test-GitHubToken { 'test-token' }

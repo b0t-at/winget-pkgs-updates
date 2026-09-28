@@ -415,6 +415,28 @@ function Update-WingetPackage {
                 }
                 else {
                     $generatorError = Get-GeneratorFailureMessage -GeneratorOutput $generatorOutput
+                    if ($generatorError -match '^\s*(?<Code>WF_UPSTREAM_VERDICT)\b') {
+                        $generatorErrorCode = $Matches['Code']
+                    }
+                }
+
+                if ($EffectiveWith -eq 'WinMatsch' -and $generatorErrorCode -eq 'WF_UPSTREAM_VERDICT') {
+                    $result.Reason = "BlockedByUpstreamVerdict"
+                    Write-Warning "$EffectiveWith blocked $wingetPackage $($Latest.Version) on stored upstream verdict feedback: $generatorError"
+
+                    if ($env:GITHUB_OUTPUT) {
+                        "generated=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                        "reason=BlockedByUpstreamVerdict" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                        "package-id=$wingetPackage" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                        "version=$($Latest.Version)" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                        "generator=$EffectiveWith" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                        "generator-exit-code=$generatorExitCode" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                        "error-code=$generatorErrorCode" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                        "error=$generatorError" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+                    }
+
+                    $global:LASTEXITCODE = 0
+                    return $result
                 }
 
                 # WinMatsch exit code 4 means the run stopped at a fail-closed

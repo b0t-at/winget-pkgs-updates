@@ -129,6 +129,10 @@ foreach ($workflowRelativePath in $workflowPaths) {
         -Message "$workflowRelativePath must pass architecture migration approvals into manifest generation."
     Assert-Match `
         -Actual $workflow `
+        -Pattern ([regex]::Escape('WINMATSCH_FEEDBACK_DIRECTORY: ${{ github.workspace }}/data/winmatsch-feedback')) `
+        -Message "$workflowRelativePath must expose the committed WinMatsch feedback store to manifest generation."
+    Assert-Match `
+        -Actual $workflow `
         -Pattern ([regex]::Escape('-AllowStructuralRewrite:$allowStructuralRewrite')) `
         -Message "$workflowRelativePath must explicitly bind the structural rewrite approval switch."
 

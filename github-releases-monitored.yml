@@ -1612,7 +1612,10 @@
             url: "https://github.com/EinsVier/blitztext-windows/releases/download/v{VERSION}/BlitzText-Windows-{VERSION}-win-x64.msi"
           - id: "elfpie.TizenAppInstaller"
             repo: "elfpie/tizen-app-installer-cli"
+            # WinMatsch 0.9.0 recognizes TizenAppInstallerCli.exe as the portable CLI;
+            # approve the resulting nested-installer structural rewrite.
             url: "https://github.com/elfpie/tizen-app-installer-cli/releases/download/{VERSION}/TizenAppInstallerCli-win-x64.zip"
+            allowStructuralRewrite: true
           - id: "Ellosoft.AWSCredentialsManager"
             repo: "ellosoft/aws-cred-mgr"
             url: "https://github.com/ellosoft/aws-cred-mgr/releases/download/{VERSION}/aws-cred-mgr-win-x64.zip https://github.com/ellosoft/aws-cred-mgr/releases/download/{VERSION}/aws-cred-mgr-win-x64.exe"
@@ -3654,5 +3657,4 @@
 #          - id: "Jellyfin.Server"
 #            repo: "jellyfin/jellyfin-server-windows"
 #            url: "https://github.com/jellyfin/jellyfin-server-windows/releases/download/{VERSION}/jellyfin_{VERSION}_windows-x64.exe"
-
 

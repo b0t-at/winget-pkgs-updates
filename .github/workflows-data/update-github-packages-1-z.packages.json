@@ -2447,7 +2447,8 @@
   {
     "id": "elfpie.TizenAppInstaller",
     "repo": "elfpie/tizen-app-installer-cli",
-    "url": "https://github.com/elfpie/tizen-app-installer-cli/releases/download/{VERSION}/TizenAppInstallerCli-win-x64.zip"
+    "url": "https://github.com/elfpie/tizen-app-installer-cli/releases/download/{VERSION}/TizenAppInstallerCli-win-x64.zip",
+    "allowStructuralRewrite": true
   },
   {
     "id": "Ellosoft.AWSCredentialsManager",
