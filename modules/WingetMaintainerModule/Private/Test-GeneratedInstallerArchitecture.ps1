@@ -169,7 +169,10 @@ function Test-GeneratedInstallerArchitecture {
         [string[]]$RequestedInstallerValues,
 
         [Parameter(Mandatory = $false)]
-        [string]$PreviousVersion
+        [string]$PreviousVersion,
+
+        [Parameter(Mandatory = $false)]
+        [bool]$AllowArchitectureMigration = $false
     )
 
     $requestedEntries = @(Get-InstallerUrlEntries -InstallerValues $RequestedInstallerValues)
@@ -260,7 +263,12 @@ function Test-GeneratedInstallerArchitecture {
                     $generatedArchitectures = @($generatedGroup.Architectures | Sort-Object -Unique)
                     $missingArchitectures = @($previousArchitectures | Where-Object { $generatedArchitectures -notcontains $_ })
                     if ($missingArchitectures.Count -gt 0) {
-                        [void]$validationErrors.Add("Generated architecture drift detected for $($generatedGroup.InstallerUrl): previously published architecture(s) [$($missingArchitectures -join ', ')] missing from generated entries (previous winget manifest: [$($previousArchitectures -join ', ')]; generated: [$($generatedArchitectures -join ', ')])")
+                        if ($AllowArchitectureMigration) {
+                            Write-Warning "Approved architecture migration for $($generatedGroup.InstallerUrl): previously published architecture(s) [$($missingArchitectures -join ', ')] missing from generated entries (previous winget manifest: [$($previousArchitectures -join ', ')]; generated: [$($generatedArchitectures -join ', ')])"
+                        }
+                        else {
+                            [void]$validationErrors.Add("Generated architecture drift detected for $($generatedGroup.InstallerUrl): previously published architecture(s) [$($missingArchitectures -join ', ')] missing from generated entries (previous winget manifest: [$($previousArchitectures -join ', ')]; generated: [$($generatedArchitectures -join ', ')])")
+                        }
                     }
                 }
             }

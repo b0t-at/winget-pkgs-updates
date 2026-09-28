@@ -34,6 +34,13 @@ For a reviewed installer architecture, type, or scope transition, set
 disabled by default and maps only to WinMatsch's `--allow-structural-rewrite`
 option.
 
+If the published winget manifest declares the wrong installer architecture and
+the new generated manifest intentionally corrects it for the same installer URL
+pattern, also set `allowArchitectureMigration: true` on that package's matrix
+entry. Use this narrowly after verifying the payload's PE machine type; it only
+approves the repository guard that compares generated installer architectures
+with the previously published manifest.
+
 ## Editing the monitored list
 
 `github-releases-monitored.yml` is the source of truth, but the workflows read

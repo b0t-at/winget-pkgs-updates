@@ -125,6 +125,10 @@ foreach ($workflowRelativePath in $workflowPaths) {
         -Message "$workflowRelativePath must pass dynamic approval metadata to content validation."
     Assert-Match `
         -Actual $workflow `
+        -Pattern ([regex]::Escape('AllowArchitectureMigration: ${{ fromJSON(toJSON(matrix)).allowArchitectureMigration }}')) `
+        -Message "$workflowRelativePath must pass architecture migration approvals into manifest generation."
+    Assert-Match `
+        -Actual $workflow `
         -Pattern ([regex]::Escape('-AllowStructuralRewrite:$allowStructuralRewrite')) `
         -Message "$workflowRelativePath must explicitly bind the structural rewrite approval switch."
 

@@ -174,7 +174,7 @@
   {
     "id": "bootandy.dust",
     "repo": "bootandy/dust",
-    "url": "https://github.com/bootandy/dust/releases/download/v{VERSION}/dust-v{VERSION}-i686-pc-windows-gnu.zip https://github.com/bootandy/dust/releases/download/v{VERSION}/dust-v{VERSION}-x86_64-pc-windows-gnu.zip"
+    "url": "https://github.com/bootandy/dust/releases/download/v{VERSION}/dust-v{VERSION}-i686-pc-windows-msvc.zip https://github.com/bootandy/dust/releases/download/v{VERSION}/dust-v{VERSION}-x86_64-pc-windows-gnu.zip"
   },
   {
     "id": "bornova.numara",
@@ -1654,7 +1654,7 @@
   {
     "id": "Wilfred.difftastic",
     "repo": "Wilfred/difftastic",
-    "url": "https://github.com/Wilfred/difftastic/releases/download/{VERSION}/difft-x86_64-pc-windows-msvc.zip"
+    "url": "https://github.com/Wilfred/difftastic/releases/download/{VERSION}/difft-{VERSION}-x86_64-pc-windows-msvc.zip"
   },
   {
     "id": "WillyJL.F95Checker",
@@ -2383,11 +2383,6 @@
     "id": "DiRoots.One",
     "repo": "DiRoots-Limited/DiRoots.One.Releases",
     "url": "https://github.com/DiRoots-Limited/DiRoots.One.Releases/releases/download/v{VERSION}/DiRoots.One-{VERSION}.exe"
-  },
-  {
-    "id": "DiRoots.ProSheets",
-    "repo": "DiRoots-Limited/DiRoots.ProSheets.Releases",
-    "url": "https://github.com/DiRoots-Limited/DiRoots.ProSheets.Releases/releases/download/v{VERSION}/ProSheets-{VERSION}.exe"
   },
   {
     "id": "Divaaaan.Tenebra",
@@ -3392,7 +3387,8 @@
     "id": "melon-masou.MonMouse",
     "repo": "melon-masou/MonMouse",
     "url": "https://github.com/melon-masou/MonMouse/releases/download/v{VERSION}/monmouse-v{VERSION}-windows.zip",
-    "allowStructuralRewrite": true
+    "allowStructuralRewrite": true,
+    "allowArchitectureMigration": true
   },
   {
     "id": "mentebinaria.dz6",
@@ -3433,16 +3429,6 @@
     "id": "Microsoft.Azure.TemplateAnalyzer",
     "repo": "Azure/template-analyzer",
     "url": "https://github.com/Azure/template-analyzer/releases/download/v{VERSION}/TemplateAnalyzer-win-x64.zip https://github.com/Azure/template-analyzer/releases/download/v{VERSION}/TemplateAnalyzer-win-arm64.zip"
-  },
-  {
-    "id": "Microsoft.DSC",
-    "repo": "PowerShell/DSC",
-    "url": "https://github.com/PowerShell/DSC/releases/download/v{VERSION}/DSC-{VERSION}-Win.msixbundle https://github.com/PowerShell/DSC/releases/download/v{VERSION}/DSC-{VERSION}-x86_64-pc-windows-msvc.zip https://github.com/PowerShell/DSC/releases/download/v{VERSION}/DSC-{VERSION}-aarch64-pc-windows-msvc.zip"
-  },
-  {
-    "id": "Microsoft.Gaming.GDK.XboxGamePackageManager",
-    "repo": "microsoft/PackageUploader",
-    "url": "https://github.com/microsoft/PackageUploader/releases/download/v{VERSION}/PackageUploader.{VERSION}.win-x64.zip"
   },
   {
     "id": "Microsoft.Garnet.DN8",
@@ -4792,7 +4778,7 @@
   {
     "id": "ulyssa.iamb",
     "repo": "ulyssa/iamb",
-    "url": "https://github.com/ulyssa/iamb/releases/download/v{VERSION}/iamb-x86_64-pc-windows-msvc.zip"
+    "url": "https://github.com/ulyssa/iamb/releases/download/v{VERSION}/iamb-x86_64-pc-windows-msvc-binary.zip"
   },
   {
     "id": "ungive.MusicPresence",
@@ -4857,7 +4843,7 @@
   {
     "id": "Vathivis.paperq",
     "repo": "Vathivis/paperq",
-    "url": "https://github.com/Vathivis/paperq/releases/download/v{VERSION}/paperq-{VERSION}-win-x64.zip https://github.com/Vathivis/paperq/releases/download/v{VERSION}/paperq-{VERSION}-win-arm64.zip"
+    "url": "https://github.com/Vathivis/paperq/releases/download/v{VERSION}/paperq-{VERSION}-win-x64-v3.zip https://github.com/Vathivis/paperq/releases/download/v{VERSION}/paperq-{VERSION}-win-arm64.zip"
   },
   {
     "id": "vcsjones.AzureSignTool",

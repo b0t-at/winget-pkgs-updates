@@ -63,6 +63,9 @@ if ($Env:WinMatschOverridePack) {
 if ($Env:AllowStructuralRewrite -eq $true) {
     $params.Add("AllowStructuralRewrite", $true)
 }
+if ($Env:AllowArchitectureMigration -eq $true) {
+    $params.Add("AllowArchitectureMigration", $true)
+}
 if ($Env:GHMinReleaseAgeHours) {
     $params.Add("GHMinReleaseAgeHours", $Env:GHMinReleaseAgeHours)
 }

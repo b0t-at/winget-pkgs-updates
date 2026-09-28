@@ -51,11 +51,12 @@ function Invoke-ArchitectureValidation {
         [Parameter(Mandatory = $true)] [string] $CurrentVersion,
         [Parameter(Mandatory = $true)] [string[]] $RequestedInstallerValues,
         [Parameter()] [string] $PreviousVersion = '',
-        [Parameter()] [string] $PreviousManifestContent = ''
+        [Parameter()] [string] $PreviousManifestContent = '',
+        [Parameter()] [bool] $AllowArchitectureMigration = $false
     )
 
     return & $module {
-        param($OutPath, $Id, $Current, $Requested, $Previous, $PreviousContent)
+        param($OutPath, $Id, $Current, $Requested, $Previous, $PreviousContent, $AllowMigration)
 
         $script:StubPreviousManifestContent = $PreviousContent
         function Invoke-WebRequest {
@@ -73,7 +74,8 @@ function Invoke-ArchitectureValidation {
                     -PackageIdentifier $Id `
                     -CurrentVersion $Current `
                     -ManifestOutPath $OutPath `
-                    -RequestedInstallerValues $Requested | Out-Null
+                    -RequestedInstallerValues $Requested `
+                    -AllowArchitectureMigration $AllowMigration | Out-Null
             }
             else {
                 Test-GeneratedInstallerArchitecture `
@@ -81,14 +83,15 @@ function Invoke-ArchitectureValidation {
                     -CurrentVersion $Current `
                     -ManifestOutPath $OutPath `
                     -RequestedInstallerValues $Requested `
-                    -PreviousVersion $Previous | Out-Null
+                    -PreviousVersion $Previous `
+                    -AllowArchitectureMigration $AllowMigration | Out-Null
             }
             [pscustomobject]@{ Threw = $false; Message = $null }
         }
         catch {
             [pscustomobject]@{ Threw = $true; Message = "$($_.Exception.Message)" }
         }
-    } $ManifestOutPath $PackageIdentifier $CurrentVersion $RequestedInstallerValues $PreviousVersion $PreviousManifestContent
+    } $ManifestOutPath $PackageIdentifier $CurrentVersion $RequestedInstallerValues $PreviousVersion $PreviousManifestContent $AllowArchitectureMigration
 }
 
 $testRoot = Join-Path ([System.IO.Path]::GetTempPath()) "winget-arch-tests-$([Guid]::NewGuid().ToString('N'))"
@@ -158,6 +161,26 @@ try {
         -PreviousManifestContent $previousContent
     if (-not $outcome.Threw -or $outcome.Message -notmatch 'x86') {
         throw "Narrowing x86+x64 to x64 was not flagged as drift: $($outcome | ConvertTo-Json -Compress)"
+    }
+
+    Write-Host 'TEST: explicit architecture migration approval permits a corrected architecture'
+    $root = Join-Path $testRoot 'approved-migration'
+    New-GeneratedInstallerManifest -Root $root -PackageIdentifier 'Test.Package' -Version '2.0.0' -Entries @(
+        [pscustomobject]@{ Architecture = 'x64'; InstallerUrl = 'https://example.com/download/2.0.0/setup.exe' }
+    )
+    $previousContent = New-PreviousInstallerManifestContent -Entries @(
+        [pscustomobject]@{ Architecture = 'x86'; InstallerUrl = 'https://example.com/download/1.9.0/setup.exe' }
+    )
+    $outcome = Invoke-ArchitectureValidation `
+        -ManifestOutPath $root `
+        -PackageIdentifier 'Test.Package' `
+        -CurrentVersion '2.0.0' `
+        -RequestedInstallerValues @('https://example.com/download/2.0.0/setup.exe') `
+        -PreviousVersion '1.9.0' `
+        -PreviousManifestContent $previousContent `
+        -AllowArchitectureMigration $true
+    if ($outcome.Threw) {
+        throw "An approved architecture migration was rejected: $($outcome.Message)"
     }
 
     Write-Host 'TEST: matching multi-architecture sets with an extra architecture pass'

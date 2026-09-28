@@ -113,7 +113,7 @@
 #            url: "https://github.com/BlueMystical/EDHM_UI/releases/download/v{VERSION}/EDHM_UI_Setup.msi"
           - id: "bootandy.dust"
             repo: "bootandy/dust"
-            url: "https://github.com/bootandy/dust/releases/download/v{VERSION}/dust-v{VERSION}-i686-pc-windows-gnu.zip https://github.com/bootandy/dust/releases/download/v{VERSION}/dust-v{VERSION}-x86_64-pc-windows-gnu.zip"
+            url: "https://github.com/bootandy/dust/releases/download/v{VERSION}/dust-v{VERSION}-i686-pc-windows-msvc.zip https://github.com/bootandy/dust/releases/download/v{VERSION}/dust-v{VERSION}-x86_64-pc-windows-gnu.zip"
           - id: "bornova.numara"
             repo: "bornova/numara-calculator"
             url: "https://github.com/bornova/numara-calculator/releases/download/v{VERSION}/Numara-{VERSION}-x64.exe"
@@ -1090,7 +1090,7 @@
             with: "wingetcreate"
           - id: "Wilfred.difftastic"
             repo: "Wilfred/difftastic"
-            url: "https://github.com/Wilfred/difftastic/releases/download/{VERSION}/difft-x86_64-pc-windows-msvc.zip"
+            url: "https://github.com/Wilfred/difftastic/releases/download/{VERSION}/difft-{VERSION}-x86_64-pc-windows-msvc.zip"
           - id: "WillyJL.F95Checker"
             repo: "WillyJL/F95Checker"
             url: "https://github.com/WillyJL/F95Checker/releases/download/{VERSION}/F95Checker-Windows.zip|neutral"
@@ -1558,9 +1558,10 @@
           - id: "DiRoots.One"
             repo: "DiRoots-Limited/DiRoots.One.Releases"
             url: "https://github.com/DiRoots-Limited/DiRoots.One.Releases/releases/download/v{VERSION}/DiRoots.One-{VERSION}.exe"
-          - id: "DiRoots.ProSheets"
-            repo: "DiRoots-Limited/DiRoots.ProSheets.Releases"
-            url: "https://github.com/DiRoots-Limited/DiRoots.ProSheets.Releases/releases/download/v{VERSION}/ProSheets-{VERSION}.exe"
+          # DiRoots.ProSheets is excluded: retired 2026-09-28 because bot PRs #420154 (2.4.1) and #432850 (2.4.2) fail Validation-Unattended-Failed with switches /i // /qn accept_eula=1; the installer needs manual investigation.
+          # - id: "DiRoots.ProSheets"
+          #   repo: "DiRoots-Limited/DiRoots.ProSheets.Releases"
+          #   url: "https://github.com/DiRoots-Limited/DiRoots.ProSheets.Releases/releases/download/v{VERSION}/ProSheets-{VERSION}.exe"
           - id: "Divaaaan.Tenebra"
             repo: "Divaaaan/tenebra"
             url: "https://github.com/Divaaaan/tenebra/releases/download/v{VERSION}/Tenebra_{VERSION}_x64-setup.exe"
@@ -2238,10 +2239,11 @@
             repo: "melon-masou/MonMouse"
             # The published 0.2.0 manifest declares x86 for an x64 payload; the
             # approved rewrite emits x64 plus the VCRedist dependency detected from
-            # the binaries (reviewed 2026-08; drop the approval once a corrected
+            # the binaries (rechecked against 0.2.1 PE headers 2026-09; drop the approval once a corrected
             # version is published).
             url: "https://github.com/melon-masou/MonMouse/releases/download/v{VERSION}/monmouse-v{VERSION}-windows.zip"
             allowStructuralRewrite: true
+            allowArchitectureMigration: true
           - id: "mentebinaria.dz6"
             repo: "mentebinaria/dz6"
             url: "https://github.com/mentebinaria/dz6/releases/download/v{VERSION}/dz6-x86_64-pc-windows-msvc.zip"
@@ -2270,12 +2272,14 @@
           - id: "Microsoft.Azure.TemplateAnalyzer"
             repo: "Azure/template-analyzer"
             url: "https://github.com/Azure/template-analyzer/releases/download/v{VERSION}/TemplateAnalyzer-win-x64.zip https://github.com/Azure/template-analyzer/releases/download/v{VERSION}/TemplateAnalyzer-win-arm64.zip"
-          - id: "Microsoft.DSC"
-            repo: "PowerShell/DSC"
-            url: "https://github.com/PowerShell/DSC/releases/download/v{VERSION}/DSC-{VERSION}-Win.msixbundle https://github.com/PowerShell/DSC/releases/download/v{VERSION}/DSC-{VERSION}-x86_64-pc-windows-msvc.zip https://github.com/PowerShell/DSC/releases/download/v{VERSION}/DSC-{VERSION}-aarch64-pc-windows-msvc.zip"
-          - id: "Microsoft.Gaming.GDK.XboxGamePackageManager"
-            repo: "microsoft/PackageUploader"
-            url: "https://github.com/microsoft/PackageUploader/releases/download/v{VERSION}/PackageUploader.{VERSION}.win-x64.zip"
+          # Microsoft.DSC is excluded: retired 2026-09-28 because every damn-good-b0t PR in the last four months (#420305, #436793) is blocked by Validation-Defender-Error and none merged.
+          # - id: "Microsoft.DSC"
+          #   repo: "PowerShell/DSC"
+          #   url: "https://github.com/PowerShell/DSC/releases/download/v{VERSION}/DSC-{VERSION}-Win.msixbundle https://github.com/PowerShell/DSC/releases/download/v{VERSION}/DSC-{VERSION}-x86_64-pc-windows-msvc.zip https://github.com/PowerShell/DSC/releases/download/v{VERSION}/DSC-{VERSION}-aarch64-pc-windows-msvc.zip"
+          # Microsoft.Gaming.GDK.XboxGamePackageManager is excluded: winget-pkgs PR #437599 is blocked by Author-Not-Verified for this Microsoft-owned package; only a verified author can submit it.
+          # - id: "Microsoft.Gaming.GDK.XboxGamePackageManager"
+          #   repo: "microsoft/PackageUploader"
+          #   url: "https://github.com/microsoft/PackageUploader/releases/download/v{VERSION}/PackageUploader.{VERSION}.win-x64.zip"
           - id: "Microsoft.Garnet.DN8"
             repo: "microsoft/garnet"
             url: "https://github.com/microsoft/garnet/releases/download/v{VERSION}/win-x64-based-readytorun.zip https://github.com/microsoft/garnet/releases/download/v{VERSION}/win-arm64-based-readytorun.zip"
@@ -3192,7 +3196,7 @@
             url: "https://github.com/Tyrrrz/LightBulb/releases/download/{VERSION}/LightBulb-Installer.win-arm64.exe https://github.com/Tyrrrz/LightBulb/releases/download/{VERSION}/LightBulb-Installer.win-x64.exe https://github.com/Tyrrrz/LightBulb/releases/download/{VERSION}/LightBulb-Installer.win-x86.exe"
           - id: "ulyssa.iamb"
             repo: "ulyssa/iamb"
-            url: "https://github.com/ulyssa/iamb/releases/download/v{VERSION}/iamb-x86_64-pc-windows-msvc.zip"
+            url: "https://github.com/ulyssa/iamb/releases/download/v{VERSION}/iamb-x86_64-pc-windows-msvc-binary.zip"
           - id: "ungive.MusicPresence"
             repo: "ungive/discord-music-presence"
             url: "https://github.com/ungive/discord-music-presence/releases/download/v{VERSION}/musicpresence-{VERSION}-windows-x64-installer.exe"
@@ -3231,7 +3235,7 @@
             url: "https://github.com/vassalengine/vassal/releases/download/{VERSION}/VASSAL-{VERSION}-windows-x86_32.exe https://github.com/vassalengine/vassal/releases/download/{VERSION}/VASSAL-{VERSION}-windows-x86_64.exe https://github.com/vassalengine/vassal/releases/download/{VERSION}/VASSAL-{VERSION}-windows-aarch64.exe"
           - id: "Vathivis.paperq"
             repo: "Vathivis/paperq"
-            url: "https://github.com/Vathivis/paperq/releases/download/v{VERSION}/paperq-{VERSION}-win-x64.zip https://github.com/Vathivis/paperq/releases/download/v{VERSION}/paperq-{VERSION}-win-arm64.zip"
+            url: "https://github.com/Vathivis/paperq/releases/download/v{VERSION}/paperq-{VERSION}-win-x64-v3.zip https://github.com/Vathivis/paperq/releases/download/v{VERSION}/paperq-{VERSION}-win-arm64.zip"
           - id: "vcsjones.AzureSignTool"
             repo: "vcsjones/AzureSignTool"
             url: "https://github.com/vcsjones/AzureSignTool/releases/download/v{VERSION}/AzureSignTool-arm64.exe https://github.com/vcsjones/AzureSignTool/releases/download/v{VERSION}/AzureSignTool-x64.exe"
@@ -3650,7 +3654,5 @@
 #          - id: "Jellyfin.Server"
 #            repo: "jellyfin/jellyfin-server-windows"
 #            url: "https://github.com/jellyfin/jellyfin-server-windows/releases/download/{VERSION}/jellyfin_{VERSION}_windows-x64.exe"
-
-
 
 

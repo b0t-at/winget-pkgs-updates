@@ -107,6 +107,7 @@ function Update-WingetPackage {
         [Parameter(Mandatory = $false)] [bool] $GHPreRelease = $false,
         [Parameter(Mandatory = $false)] [string] $WinMatschOverridePack,
         [Parameter(Mandatory = $false)] [bool] $AllowStructuralRewrite = $false,
+        [Parameter(Mandatory = $false)] [bool] $AllowArchitectureMigration = $false,
         # Minimum age of the GitHub release (newest asset upload) before it is
         # submitted; blank resolves via WINGET_MIN_RELEASE_AGE_HOURS, else 0 (off).
         [Parameter(Mandatory = $false)] [string] $GHMinReleaseAgeHours,
@@ -464,7 +465,7 @@ function Update-WingetPackage {
                 throw "$EffectiveWith update failed for $wingetPackage $($Latest.Version) with exit code $generatorExitCode. $generatorError"
             }
 
-            Test-GeneratedInstallerArchitecture -PackageIdentifier $wingetPackage -CurrentVersion $Latest.Version -ManifestOutPath $ManifestOutPath -RequestedInstallerValues $RequestedInstallerValues -PreviousVersion $latestPublishedVersion
+            Test-GeneratedInstallerArchitecture -PackageIdentifier $wingetPackage -CurrentVersion $Latest.Version -ManifestOutPath $ManifestOutPath -RequestedInstallerValues $RequestedInstallerValues -PreviousVersion $latestPublishedVersion -AllowArchitectureMigration $AllowArchitectureMigration
 
             # If release notes are provided, add them to the manifest without
             # bypassing WinMatsch's own default-locale output.
