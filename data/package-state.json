@@ -4134,15 +4134,15 @@
   },
   "kcl-lang.kcl": {
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "A122AAD4C0026E42B5B6A3406D13626065097A3510A4796EC7ABA9B76EC31C4E",
-    "version": "0.12.10",
-    "lastUpdated": "2026-09-04T17:06:56.6304204Z",
+    "lastUpdated": "2026-09-28T04:47:36.2933312Z",
     "validationCount": 1,
     "installerHashes": [
-      "D10A186EB63B7113ED355A269398D2919B78311B949BD925761AFB9158259097",
-      "D62DB62F8CFB2C6F2C76B978BDFDCBD3B4B5417593ED87F01D309EFC23427CDE"
-    ]
+      "5D9F1AE5536511C98DB4F5DAA83BE9DE7005D05B694270A4209A2BB8D9B883EB",
+      "7909DC9CC139F12F566531E0350A5555D862264602CEB55D245F1EE9C17A329D"
+    ],
+    "manifestHash": "3C6FE350662F2A1563CC93E4CCDFCDCB6935D87B45D5274CA7FB5770B63A7A47",
+    "version": "0.13.0",
+    "state": "VALIDATION_PASSED"
   },
   "KeeperSecurity.Commander": {
     "description": "",
@@ -4899,15 +4899,15 @@
     "description": ""
   },
   "Micronaut.Launch": {
-    "manifestHash": "EB346518F549715A3E8C2AA2EE8F234C1FDE737BBF3F66F3E2BF7705FAF0B2EB",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
     "description": "",
+    "lastUpdated": "2026-09-28T04:47:36.2350615Z",
+    "validationCount": 1,
     "installerHashes": [
-      "99082458CDEDA7E8352E2993B4EFB529FC9B27E7F9FF13711EE34402FFF6B31C"
+      "29E97F62A68D43E7724CB2B29B718406DFE45ECD52B5DC25AC21ED69980242AC"
     ],
-    "version": "5.1.5",
-    "lastUpdated": "2026-09-12T01:32:43.1682148Z"
+    "manifestHash": "3990201F71395011C237D7B1217D8B47C2308EE212F0ACB370E60791B7263FDF",
+    "version": "5.2.0",
+    "state": "VALIDATION_PASSED"
   },
   "Microsoft.Azure.GuestProxyAgent.AllowListTool": {
     "validationCount": 1,
