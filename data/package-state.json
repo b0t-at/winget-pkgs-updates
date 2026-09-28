@@ -923,11 +923,7 @@
       "93303D458CE2CE7842F1060B77335E0DB7A702A68BD86AC79B23CF9B99069EBF",
       "C41A481A1F23C4F97C058B49BA55EE527848327D00C025536EFDFB528166B617",
       "8550C4A86903DA9FB7E6B4D9C949FBF59AB7449338A5CD03E20A1BD6B655B0FC"
-    ],
-    "openPr": {
-      "checkedAt": "2026-09-28T01:04:37.6777711Z",
-      "version": "0.10.1"
-    }
+    ]
   },
   "binbat.liveman": {
     "description": "",
@@ -938,10 +934,6 @@
     ],
     "lastUpdated": "2026-09-28T09:02:17.402706Z",
     "manifestHash": "584AD697EE2277DB4CDD822E7623D9A3233B2679E9DAEBA6A46E9182397CCF1B",
-    "openPr": {
-      "checkedAt": "2026-09-28T09:06:36.6145Z",
-      "version": "0.10.1"
-    },
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
     "version": "0.10.1"
@@ -957,11 +949,7 @@
       "A498D69A510FF9BF363809CA403B934DDD8F720676168C8E5C5D83EF6520D15C",
       "453E39EF9F28DCB8A29CFD0549F1F73E7D06470CC7B3E795ACF49CE02D111BBE",
       "5718508DD961CCDD6FB96266AFAA15FBA6481DA880CCEBF4387BD4BD6BB51032"
-    ],
-    "openPr": {
-      "checkedAt": "2026-09-28T01:05:31.5599778Z",
-      "version": "0.10.1"
-    }
+    ]
   },
   "binbat.whepfrom": {
     "lastUpdated": "2026-08-18T17:25:13.9468251Z",
@@ -1476,8 +1464,8 @@
     "validationCount": 1,
     "version": "1.0.48275",
     "openPr": {
-      "version": "1.0.51515",
-      "checkedAt": "2026-09-25T16:25:49.9433647Z"
+      "checkedAt": "2026-09-28T16:28:07.9282104Z",
+      "version": "1.0.51648"
     }
   },
   "ciromattia.KCC": {
@@ -3130,8 +3118,8 @@
     ],
     "description": "",
     "openPr": {
-      "version": "36.2",
-      "checkedAt": "2026-09-27T16:22:59.0787983Z"
+      "checkedAt": "2026-09-28T16:28:08.804708Z",
+      "version": "36.2"
     }
   },
   "goplus.xgo": {
@@ -8318,8 +8306,8 @@
     "manifestHash": "4B796A972C2DBB5AE75EB8F4F8B332F0CBE77928187E84989680F6AB184F42AA",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "version": "5.7.0",
-      "checkedAt": "2026-09-27T16:23:19.6356889Z"
+      "checkedAt": "2026-09-28T16:28:20.5722898Z",
+      "version": "5.7.0"
     }
   },
   "termio.soft-jp.com.TermioWin": {
