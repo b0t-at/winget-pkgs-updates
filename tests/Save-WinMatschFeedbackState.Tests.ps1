@@ -76,7 +76,7 @@ function New-FeedbackTestRepositories {
     }
 }
 
-$testRoot = Join-Path $repositoryRoot ".test-output/Save-WinMatschFeedbackState-$([guid]::NewGuid().ToString('N'))"
+$testRoot = Join-Path ([IO.Path]::GetTempPath()) "Save-WinMatschFeedbackState-$([guid]::NewGuid().ToString('N'))"
 
 try {
     Write-Host 'TEST: feedback state replacement commits JSON and ignores lock files'
@@ -85,6 +85,7 @@ try {
     New-Item -ItemType Directory -Path $artifact -Force | Out-Null
     Set-Content -LiteralPath (Join-Path $artifact 'verdict-432850.json') -Value '{"package":"DiRoots.ProSheets"}' -Encoding utf8
     Set-Content -LiteralPath (Join-Path $artifact 'verdict-432850.json.lock') -Value '' -NoNewline
+    Set-Content -LiteralPath (Join-Path $artifact '.artifact-ready') -Value 'true' -NoNewline
 
     Save-WinMatschFeedbackState -FeedbackSourcePath $artifact -RepoPath $repos.Writer
 
@@ -99,11 +100,28 @@ try {
     $lastMessage = (Invoke-TestGit -Repository $verification -Arguments @('log', '-1', '--pretty=%s')).Output
     Assert-True -Condition ($lastMessage -ceq 'Update winmatsch feedback state [skip ci]') -Message "Unexpected feedback commit message: $lastMessage"
 
+    Write-Host 'TEST: feedback state replacement is refused without the artifact-ready marker'
+    $missingMarkerRepos = New-FeedbackTestRepositories -Root (Join-Path $testRoot 'missing-marker')
+    $missingMarkerArtifact = Join-Path $testRoot 'missing-marker-artifact'
+    New-Item -ItemType Directory -Path $missingMarkerArtifact -Force | Out-Null
+    Set-Content -LiteralPath (Join-Path $missingMarkerArtifact 'verdict-999999.json') -Value '{"package":"Should.NotPersist"}' -Encoding utf8
+
+    Save-WinMatschFeedbackState -FeedbackSourcePath $missingMarkerArtifact -RepoPath $missingMarkerRepos.Writer
+
+    $missingMarkerVerification = Join-Path $testRoot 'missing-marker-verification'
+    Invoke-TestGit -Repository $testRoot -Arguments @('clone', '--branch', 'main', $missingMarkerRepos.Remote, $missingMarkerVerification) | Out-Null
+    $missingMarkerFeedbackPath = Join-Path $missingMarkerVerification 'data/winmatsch-feedback'
+    Assert-True -Condition (Test-Path -LiteralPath (Join-Path $missingMarkerFeedbackPath 'stale-1.json') -PathType Leaf) -Message 'Existing feedback JSON was removed despite missing artifact-ready marker.'
+    Assert-True -Condition (-not (Test-Path -LiteralPath (Join-Path $missingMarkerFeedbackPath 'verdict-999999.json'))) -Message 'Unready feedback artifact was committed.'
+    $missingMarkerLastMessage = (Invoke-TestGit -Repository $missingMarkerVerification -Arguments @('log', '-1', '--pretty=%s')).Output
+    Assert-True -Condition ($missingMarkerLastMessage -ceq 'Initial feedback state') -Message "A missing-marker artifact should not create a commit: $missingMarkerLastMessage"
+
     Write-Host 'TEST: retry exhaustion fails loudly and leaves a clean repository'
     $retryRepos = New-FeedbackTestRepositories -Root (Join-Path $testRoot 'retry')
     $retryArtifact = Join-Path $testRoot 'retry-artifact'
     New-Item -ItemType Directory -Path $retryArtifact -Force | Out-Null
     Set-Content -LiteralPath (Join-Path $retryArtifact 'retry-1.json') -Value '{"retry":true}' -Encoding utf8
+    Set-Content -LiteralPath (Join-Path $retryArtifact '.artifact-ready') -Value 'true' -NoNewline
 
     $counterPath = Join-Path $testRoot 'push-attempts.txt'
     $counterShellPath = $counterPath.Replace('\', '/')
