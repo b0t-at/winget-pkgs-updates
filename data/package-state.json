@@ -2415,15 +2415,15 @@
     "manifestHash": "B172B25C22B46415561AD8ECBA7F302155A4BB5FE816B09DE382AE91C974F27D"
   },
   "Excelano.xshape": {
-    "installerHashes": [
-      "FF9D9F5BC56F3D3F333A27FEC2CEF7BC1C05456B9DBD09C2E55A61D26CD3BE19"
-    ],
-    "version": "0.5.2",
-    "manifestHash": "F0F22317AF422E4908007664BB24460F63DAE2B5513091AECF5251F871869A08",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-19T17:02:25.9363729Z",
     "validationCount": 1,
-    "description": ""
+    "manifestHash": "8B9F23D9361B12CAE31A6099A671E1949701F3CD7E7D735BB8FF95B3BE733A43",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-28T17:00:45.5946602Z",
+    "installerHashes": [
+      "0FBA4FD46D2EB6B71B154C07B4307E7786525FEE4BDDA0248D43BA7008E6F964"
+    ],
+    "description": "",
+    "version": "0.5.3"
   },
   "Execode.exeQuote": {
     "manifestHash": "48A4211A4ED6F16CEF79F03907F79E45787B2F63AD956548C17C323AE98E5D57",
@@ -4382,6 +4382,18 @@
     ],
     "state": "VALIDATION_PASSED"
   },
+  "Lando.Lando": {
+    "validationCount": 1,
+    "manifestHash": "100D8EA7FA351D95EBC03D881A11D74DA3CAB382EBB6F61EB99E35A019A00F21",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-28T17:00:45.7011669Z",
+    "installerHashes": [
+      "65F1A30AB45F3D814D84552FE648526F7BC49135BDD205FF62A11A075F074FDB",
+      "48F0435CBAA607BE12A5A20F3BA1EDF71AD2C5E03A9533AA5E1B0262D7B9FC9F"
+    ],
+    "description": "",
+    "version": "3.26.9"
+  },
   "LaurentPRenedeCotret.pandoc-plot": {
     "description": "",
     "validationCount": 1,
@@ -4624,14 +4636,14 @@
   },
   "Lunasans.MovieShelf": {
     "validationCount": 1,
+    "manifestHash": "AC29B4F1BBF684B4237B852781844F3676BCC8638C6399BD7D5BBA40DC1D7FA6",
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "version": "1.2.1",
-    "lastUpdated": "2026-08-24T08:49:14.2485351Z",
-    "manifestHash": "5D275057965D10B5A846078DFCB0B0E0720B17A3AB7E41FBD7BEDF17EA633723",
+    "lastUpdated": "2026-09-28T17:00:45.6386332Z",
     "installerHashes": [
-      "8C490E8E4FA0DAE35A9A2D53922DD374C32A76C0A3DD867A5F3009FCBA3E1D4F"
-    ]
+      "8B279927F0188458844B9A150CAB952413B77E8182C96EB8C3AD6A3D507FFA26"
+    ],
+    "description": "",
+    "version": "1.2.2"
   },
   "Luxview.AgainstMe": {
     "installerHashes": [
@@ -6961,15 +6973,15 @@
     "version": "0.3.1"
   },
   "RimSort.RimSort": {
+    "validationCount": 1,
+    "manifestHash": "2D73930CA1DE0D49A95572395AA2586BDB65A38DE994B5186028935FA6402C56",
     "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-28T17:00:45.618002Z",
     "installerHashes": [
-      "C2DE7818E271A77F387D1CFC8EE419127C18CB999A1391044EA79365BD650D71"
+      "917DB2016C34A25C0667C5D0671DB8458BC1EA0C1EC6456E7E303702FF94C57B"
     ],
-    "lastUpdated": "2026-08-25T00:57:29.8215719Z",
     "description": "",
-    "manifestHash": "7CA1FE2E1CF8DACB5D55BC4DBA6823D92288532B4DF1817D30FA1C0B58C0E0F7",
-    "version": "1.12.0",
-    "validationCount": 1
+    "version": "1.14.1"
   },
   "Ripose.Memento": {
     "description": "",
@@ -7105,6 +7117,17 @@
     ],
     "validationCount": 1,
     "state": "VALIDATION_PASSED"
+  },
+  "roryok.poe-writer": {
+    "validationCount": 1,
+    "manifestHash": "F855F7F34DCD89AEA9F24860C0204FA8DF33D640C72A46058DB0BF0C2E486CF5",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-28T17:00:45.5084739Z",
+    "installerHashes": [
+      "3F6A53C68390868D6227B7C84DA14B81CB6238DC8F77D768E4A43C66F3EDD197"
+    ],
+    "description": "",
+    "version": "2.7.3"
   },
   "roshad.RosChronoTrace": {
     "version": "1.9.0",
@@ -8467,6 +8490,17 @@
     "validationCount": 1,
     "manifestHash": "1A46DF065F7E67BEE8F93A31A518719897E74E5556BBAD98A5CCA82FB14F0944",
     "lastUpdated": "2026-09-23T17:01:59.7946694Z"
+  },
+  "tobylai-toby.qmcli": {
+    "validationCount": 1,
+    "manifestHash": "37E22D1BB616A620F63FF7E0A216D54F00B17C07DC488ADA1DA300EE251DD5A4",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-28T17:00:45.6817463Z",
+    "installerHashes": [
+      "574AED98DC205F372CC0DCF6272FA3D567568B5C7FC2C6A38C634CECDFE63C7B"
+    ],
+    "description": "",
+    "version": "0.2.2"
   },
   "Tomclanc.GestureSignV2": {
     "lastUpdated": "2026-09-24T04:48:17.0027086Z",
