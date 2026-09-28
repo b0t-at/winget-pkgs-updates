@@ -2726,12 +2726,12 @@
   },
   "Frnsys.Half_earth": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 25,
+    "validationCount": 26,
     "installerHashes": [
       "CD47FC89C016730378E00399433045CCDB17E9B8ECC1434413C7531B9EB6AD36"
     ],
     "description": "",
-    "lastUpdated": "2026-09-27T01:22:33.3727183Z",
+    "lastUpdated": "2026-09-28T13:17:56.9283705Z",
     "manifestHash": "162A9CB4478CCE0219E2D18B3BDBA90BBFD1A2D89CCCF6E863728E377240A4A7",
     "version": "1.0.15"
   },
@@ -4499,14 +4499,12 @@
   },
   "LocalStack.localstack-cli": {
     "description": "",
-    "installerHashes": [
-      "9C964F7CF8DCC6D14B67AE8F5F8CA6BCA4D30392B7F42A2BAF1D5754C43507B8"
-    ],
+    "installerHashes": "43C491EFB938D96F6D5D7554B222A491AB4256AB309AE763252DBEE1ADC23699",
+    "lastUpdated": "2026-09-28T13:17:56.9884699Z",
+    "manifestHash": "FFE5DF87C52C9A7B6285BDC56D2FFD3556B2039307B6ECFEBF3238ECE2C1E23A",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-29T20:47:20.136064Z",
-    "version": "2026.8.0",
     "validationCount": 1,
-    "manifestHash": "57F8800DB719DDF8C26EB31782E8B1406E5F0B43BFE48FE93D4F3061DC1338D2"
+    "version": "2026.8.2"
   },
   "loft-sh.vcluster": {
     "validationCount": 1,
@@ -6636,16 +6634,16 @@
     ]
   },
   "Primecount.Primecount": {
-    "version": "8.7",
-    "lastUpdated": "2026-08-18T13:04:36.4318172Z",
     "validationCount": 1,
-    "installerHashes": [
-      "17849F1048300D47359BA0DCC698C5EB667B7644BE3FA1CA9B86CCA761E5F988",
-      "8B2A8D04A01FF3B1694D7EE38D3A526C792447F4093ED125FB6A8E47D123044D"
-    ],
+    "version": "8.8",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "204DB854AFDD00DAFFD3C2FB93508B8A12AA22644D2FF03FD81056BE2A47D8C3"
+    "lastUpdated": "2026-09-28T13:17:57.0299216Z",
+    "installerHashes": [
+      "316EAB38A0813B4BA98DBD117B7D736651C61A48D30EA2551DDE2FE2DF5EC76D",
+      "447B976F50908DB479B97EAFC56764A53F7CB17F7157B11270DCBD4415CCE065"
+    ],
+    "manifestHash": "063537DA93A516A085B58A38F2CA6D7BBDBAAB70F3F979F5A2B47FB4A9B1CAA9"
   },
   "Primesieve.Primesieve": {
     "lastUpdated": "2026-08-22T04:43:28.8891672Z",
@@ -7242,15 +7240,15 @@
     "lastUpdated": "2026-08-16T17:10:10.8626644Z"
   },
   "SanthoshReddy352.NammaAgent": {
+    "validationCount": 1,
     "version": "2.3.2",
-    "lastUpdated": "2026-08-24T16:43:31.7390471Z",
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "lastUpdated": "2026-09-28T13:17:56.8534887Z",
     "installerHashes": [
       "38C3BA3855821505842E7E2C7C809C9BB3BA88391251690CA3FF9A4F3AFAF5AD"
     ],
-    "description": "",
-    "manifestHash": "5B9292BBED2221554F3FF7C31D4C56B0134DA21BD4BD36665643694FDB73581D",
-    "validationCount": 3,
-    "state": "VALIDATION_FAILED"
+    "manifestHash": "38B360090BD22E5190374E12DFA9A779996178340AC851578D52FAE701C5CB86"
   },
   "Saturneric.GpgFrontend": {
     "validationCount": 1,
@@ -7300,11 +7298,11 @@
   },
   "Scandum.WinTin++": {
     "version": "2.02.61",
-    "lastUpdated": "2026-09-26T16:43:13.9326546Z",
+    "lastUpdated": "2026-09-28T13:17:57.0507013Z",
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "2C9A618908F2C08C9E373327E7A15409C25EEB6AE563F45807A611269A686250",
-    "validationCount": 37,
+    "validationCount": 38,
     "installerHashes": [
       "421A1458080413D5135A7490DC05AC0F4B54F1CAADBFC033214536237420E847"
     ]
@@ -7547,15 +7545,15 @@
     "manifestHash": "75E10A9CB901681ACC8A13D59749C85021EC8330C149626409E706CCA06950EB"
   },
   "SimpleX.SimpleX-Chat": {
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-04T01:59:22.8552141Z",
-    "description": "",
-    "version": "7.0.2",
-    "installerHashes": [
-      "D6514E01E95C9F6F8B9E4001F7EB505519F068C77E1EDBA1DABBF3F076BB8CB2"
-    ],
     "validationCount": 1,
-    "manifestHash": "61F25053B9F5E27915ADD3BDE1399B6CF170EDE95E61933AA5F931EB97F201EB"
+    "version": "7.0.3",
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "lastUpdated": "2026-09-28T13:17:56.9680458Z",
+    "installerHashes": [
+      "0162D8EB42917B59962203B74527512C6D05EB032CF6E8189B62EB39587FBC79"
+    ],
+    "manifestHash": "E5F47C3A70246CB88AB0711F49B520A8FA040E68E2607147B3FBCDFC8FB85B45"
   },
   "simulot.immich-go": {
     "validationCount": 1,
