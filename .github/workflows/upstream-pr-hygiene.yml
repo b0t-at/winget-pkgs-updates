@@ -78,7 +78,8 @@ jobs:
 
             Get-ChildItem -LiteralPath $feedbackDirectory -Filter '*.lock' -File -ErrorAction SilentlyContinue |
               Remove-Item -Force
-            Set-Content -LiteralPath (Join-Path $feedbackDirectory '.artifact-ready') -Value 'true' -NoNewline
+            # Not a dotfile: upload-artifact skips hidden files by default.
+            Set-Content -LiteralPath (Join-Path $feedbackDirectory 'artifact-ready.txt') -Value 'true' -NoNewline
             "artifact=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
           }
           catch {
