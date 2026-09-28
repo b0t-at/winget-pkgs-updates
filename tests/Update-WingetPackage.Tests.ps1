@@ -43,13 +43,17 @@ function Invoke-TestUpdateWingetPackage {
         [string]$InstallerValue,
 
         [Parameter(Mandatory = $false)]
-        [bool]$AllowStructuralRewrite = $false
+        [bool]$AllowStructuralRewrite = $false,
+
+        [Parameter(Mandatory = $false)]
+        [bool]$IgnoreUpstreamVerdict = $false
     )
 
     return @(& $module {
             param(
                 [string]$Value,
-                [bool]$AllowRewrite
+                [bool]$AllowRewrite,
+                [bool]$IgnoreVerdict
             )
 
             function Test-GitHubToken { 'test-token' }
@@ -77,10 +81,11 @@ function Invoke-TestUpdateWingetPackage {
                 -With 'WinMatsch' `
                 -latestVersion '1.0.0' `
                 -latestVersionURL $Value `
-                -AllowStructuralRewrite $AllowRewrite | Out-Null
+                -AllowStructuralRewrite $AllowRewrite `
+                -IgnoreUpstreamVerdict $IgnoreVerdict | Out-Null
 
             $script:CapturedWinMatschArguments
-        } $InstallerValue $AllowStructuralRewrite)
+        } $InstallerValue $AllowStructuralRewrite $IgnoreUpstreamVerdict)
 }
 
 Write-Host 'TEST: plain URL is passed only through --urls'
@@ -202,6 +207,15 @@ if ($defaultUpdateArguments -contains '--allow-structural-rewrite') {
 $rewriteUpdateArguments = Invoke-TestUpdateWingetPackage -InstallerValue $plainUrl -AllowStructuralRewrite $true
 if (@($rewriteUpdateArguments | Where-Object { $_ -eq '--allow-structural-rewrite' }).Count -ne 1) {
     throw 'Update-WingetPackage did not pass structural rewrite approval exactly once.'
+}
+
+Write-Host 'TEST: upstream verdict ignore is opt-in'
+if ($defaultUpdateArguments -contains '--ignore-upstream-verdict') {
+    throw 'Update-WingetPackage ignored upstream verdicts by default.'
+}
+$ignoreVerdictUpdateArguments = Invoke-TestUpdateWingetPackage -InstallerValue $plainUrl -IgnoreUpstreamVerdict $true
+if (@($ignoreVerdictUpdateArguments | Where-Object { $_ -eq '--ignore-upstream-verdict' }).Count -ne 1) {
+    throw 'Update-WingetPackage did not pass upstream verdict opt-out exactly once.'
 }
 
 Write-Host 'TEST: existing PR guard stops generation before the manifest generator starts'

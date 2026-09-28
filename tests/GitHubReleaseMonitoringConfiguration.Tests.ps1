@@ -133,6 +133,10 @@ foreach ($workflowRelativePath in $workflowPaths) {
         -Message "$workflowRelativePath must expose the committed WinMatsch feedback store to manifest generation."
     Assert-Match `
         -Actual $workflow `
+        -Pattern ([regex]::Escape('IgnoreUpstreamVerdict: ${{ fromJSON(toJSON(matrix)).ignoreUpstreamVerdict }}')) `
+        -Message "$workflowRelativePath must pass per-package upstream verdict opt-outs into manifest generation."
+    Assert-Match `
+        -Actual $workflow `
         -Pattern ([regex]::Escape('-AllowStructuralRewrite:$allowStructuralRewrite')) `
         -Message "$workflowRelativePath must explicitly bind the structural rewrite approval switch."
 

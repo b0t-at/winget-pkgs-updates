@@ -108,6 +108,7 @@ function Update-WingetPackage {
         [Parameter(Mandatory = $false)] [string] $WinMatschOverridePack,
         [Parameter(Mandatory = $false)] [bool] $AllowStructuralRewrite = $false,
         [Parameter(Mandatory = $false)] [bool] $AllowArchitectureMigration = $false,
+        [Parameter(Mandatory = $false)] [bool] $IgnoreUpstreamVerdict = $false,
         # Minimum age of the GitHub release (newest asset upload) before it is
         # submitted; blank resolves via WINGET_MIN_RELEASE_AGE_HOURS, else 0 (off).
         [Parameter(Mandatory = $false)] [string] $GHMinReleaseAgeHours,
@@ -335,6 +336,9 @@ function Update-WingetPackage {
                     $winmatschArgs += Get-WinMatschInstallerUrlArguments -InstallerEntries $RequestedInstallerEntries
                     if ($AllowStructuralRewrite) {
                         $winmatschArgs += "--allow-structural-rewrite"
+                    }
+                    if ($IgnoreUpstreamVerdict) {
+                        $winmatschArgs += "--ignore-upstream-verdict"
                     }
                     if ($resolves -match '^\d+$') {
                         $winmatschArgs += "--resolves"

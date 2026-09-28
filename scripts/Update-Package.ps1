@@ -66,6 +66,9 @@ if ($Env:AllowStructuralRewrite -eq $true) {
 if ($Env:AllowArchitectureMigration -eq $true) {
     $params.Add("AllowArchitectureMigration", $true)
 }
+if ($Env:IgnoreUpstreamVerdict -eq $true) {
+    $params.Add("IgnoreUpstreamVerdict", $true)
+}
 if ($Env:GHMinReleaseAgeHours) {
     $params.Add("GHMinReleaseAgeHours", $Env:GHMinReleaseAgeHours)
 }

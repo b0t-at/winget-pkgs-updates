@@ -35,7 +35,9 @@ jobs:
         id: record
         shell: pwsh
         env:
+          GH_TOKEN: ${{ secrets.WINGET_PAT }}
           WINMATSCH_TOKEN: ${{ secrets.WINGET_PAT }}
+          WINMATSCH_FEEDBACK_RETENTION_DAYS: 30
         run: |
           try {
             Import-Module ./modules/WingetMaintainerModule/WingetMaintainerModule.psd1 -Force
@@ -49,6 +51,14 @@ jobs:
             if (Test-Path -LiteralPath $committedFeedbackDirectory -PathType Container) {
               Get-ChildItem -LiteralPath $committedFeedbackDirectory -Force |
                 Copy-Item -Destination $feedbackDirectory -Recurse -Force
+            }
+
+            try {
+              $retentionDays = [int]$env:WINMATSCH_FEEDBACK_RETENTION_DAYS
+              Remove-StaleWinMatschFeedback -FeedbackDirectory $feedbackDirectory -RetentionDays $retentionDays | Format-Table -AutoSize
+            }
+            catch {
+              Write-Warning "WinMatsch feedback pruning failed; keeping existing feedback fail-safe: $($_.Exception.Message)"
             }
 
             $env:WINMATSCH_FEEDBACK_DIRECTORY = $feedbackDirectory
