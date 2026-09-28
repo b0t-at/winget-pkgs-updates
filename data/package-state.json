@@ -970,11 +970,7 @@
       "98DACAB5708B05F59D5A1951E19429DB3760AA775437E1B989C917BF9C55A9E0"
     ],
     "state": "VALIDATION_PASSED",
-    "manifestHash": "EFDDDB2BBCC61B5CF2E57DD55106C86D65A8A3A736EAAF8F0D8F2C8A2A2C47BA",
-    "openPr": {
-      "version": "0.9.0",
-      "checkedAt": "2026-09-07T08:35:19.6657693Z"
-    }
+    "manifestHash": "EFDDDB2BBCC61B5CF2E57DD55106C86D65A8A3A736EAAF8F0D8F2C8A2A2C47BA"
   },
   "binbat.whipinto": {
     "installerHashes": [
@@ -987,7 +983,11 @@
     "lastUpdated": "2026-09-28T01:42:43.4903752Z",
     "state": "VALIDATION_PASSED",
     "manifestHash": "8F7D872DD5CE4E727E63A0C7E1938695819B379B37F2EEDE16ED6F82A36234C2",
-    "version": "0.10.1"
+    "version": "0.10.1",
+    "openPr": {
+      "checkedAt": "2026-09-28T08:39:54.0993274Z",
+      "version": "0.10.1"
+    }
   },
   "biondi53.QuickExplorer": {
     "version": "0.1.34",
