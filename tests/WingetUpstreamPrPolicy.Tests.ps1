@@ -12,42 +12,6 @@ function Assert-True {
 $now = [datetime]::new(2026, 9, 3, 12, 0, 0, [DateTimeKind]::Utc)
 
 # ---------------------------------------------------------------------------
-Write-Host 'TEST: patch bump detection'
-$patchCases = @(
-    @{ Base = '2.6.5'; New = '2.6.6'; Expected = $true },
-    @{ Base = '2.6.5'; New = '2.6.10'; Expected = $true },
-    @{ Base = '2.6.5'; New = '2.7.0'; Expected = $false },
-    @{ Base = '2.6.5'; New = '3.0.0'; Expected = $false },
-    @{ Base = '2.47.3'; New = '2.48'; Expected = $false },
-    @{ Base = '2.6.6'; New = '2.6.5'; Expected = $false },
-    @{ Base = '2.6.5'; New = '2.6.5'; Expected = $false },
-    @{ Base = '1.2'; New = '1.3'; Expected = $false },
-    @{ Base = 'v2026.08.20'; New = '2026.08.21'; Expected = $true },
-    @{ Base = ''; New = '1.0.1'; Expected = $false }
-)
-foreach ($case in $patchCases) {
-    $actual = & $module { param($b, $n) Test-WingetVersionIsPatchBump -BaseVersion $b -NewVersion $n } $case.Base $case.New
-    Assert-True ($actual -eq $case.Expected) "Test-WingetVersionIsPatchBump('$($case.Base)' -> '$($case.New)') returned $actual, expected $($case.Expected)."
-}
-
-# ---------------------------------------------------------------------------
-Write-Host 'TEST: manual-validation queue PR holds a patch release'
-$queuedPr = [PSCustomObject]@{
-    number     = 426373
-    title      = 'Update version: AnInsomniacy.Aria2Next version 2.6.8'
-    labels     = @([PSCustomObject]@{ name = 'Azure-Pipeline-Passed' }, [PSCustomObject]@{ name = 'Validation-Executable-Error' })
-    created_at = $now.AddDays(-5).ToString('o')
-    html_url   = 'https://github.com/microsoft/winget-pkgs/pull/426373'
-}
-$hold = & $module { param($prs, $now) Select-WingetPatchSupersessionHold -OpenPrs $prs -PackageIdentifier 'AnInsomniacy.Aria2Next' -NewVersion '2.6.9' -Now $now } @($queuedPr) $now
-Assert-True ($null -ne $hold -and $hold.Number -eq 426373) "Expected PR 426373 to hold the patch release, got: $($hold | ConvertTo-Json -Compress)"
-Assert-True ($hold.Reason -match 'Validation-Executable-Error') 'Hold reason must name the queue label.'
-
-Write-Host 'TEST: Validation-No-Executables also counts as the queue label'
-$noExecPr = [PSCustomObject]@{ number = 1; title = 'Update version: Foo.Bar version 1.0.0'; labels = @('Azure-Pipeline-Passed', 'Validation-No-Executables'); created_at = $now.AddDays(-1).ToString('o') }
-$hold = & $module { param($prs, $now) Select-WingetPatchSupersessionHold -OpenPrs $prs -PackageIdentifier 'Foo.Bar' -NewVersion '1.0.1' -Now $now } @($noExecPr) $now
-Assert-True ($null -ne $hold) 'Validation-No-Executables did not hold the patch release.'
-
 Write-Host 'TEST: waived validation label holds minor and patch supersession for 30 days'
 $waivedPr = [PSCustomObject]@{
     number     = 429889
@@ -63,39 +27,6 @@ Write-Host 'TEST: waived validation hold expires after 30 days'
 $oldWaivedPr = $waivedPr.PSObject.Copy(); $oldWaivedPr.created_at = $now.AddDays(-31).ToString('o')
 $waivedHold = & $module { param($items, $now) Find-WingetPkgsWaivedValidationHold -PackageIdentifier 'caomengxuan666.WinuxCmd' -Version '1.1.0' -BotLogin 'damn-good-b0t' -Now $now -SearchInvoker { $items } } @($oldWaivedPr) $now
 Assert-True ($null -eq $waivedHold) "31-day-old waived PR must not hold: $($waivedHold | ConvertTo-Json -Compress)"
-
-Write-Host 'TEST: non-patch release supersedes a queued PR'
-$hold = & $module { param($prs, $now) Select-WingetPatchSupersessionHold -OpenPrs $prs -PackageIdentifier 'AnInsomniacy.Aria2Next' -NewVersion '2.7.0' -Now $now } @($queuedPr) $now
-Assert-True ($null -eq $hold) "Minor release must not be held: $($hold | ConvertTo-Json -Compress)"
-
-Write-Host 'TEST: queued PR older than 14 days no longer holds'
-$oldPr = $queuedPr.PSObject.Copy(); $oldPr.created_at = $now.AddDays(-15).ToString('o')
-$hold = & $module { param($prs, $now) Select-WingetPatchSupersessionHold -OpenPrs $prs -PackageIdentifier 'AnInsomniacy.Aria2Next' -NewVersion '2.6.9' -Now $now } @($oldPr) $now
-Assert-True ($null -eq $hold) "15-day-old PR must not hold: $($hold | ConvertTo-Json -Compress)"
-
-Write-Host 'TEST: PR without Azure-Pipeline-Passed does not hold'
-$failedPr = $queuedPr.PSObject.Copy(); $failedPr.labels = @('Validation-Executable-Error')
-$hold = & $module { param($prs, $now) Select-WingetPatchSupersessionHold -OpenPrs $prs -PackageIdentifier 'AnInsomniacy.Aria2Next' -NewVersion '2.6.9' -Now $now } @($failedPr) $now
-Assert-True ($null -eq $hold) "PR without pipeline pass must not hold: $($hold | ConvertTo-Json -Compress)"
-
-Write-Host 'TEST: PR with only Azure-Pipeline-Passed does not hold'
-$passedPr = $queuedPr.PSObject.Copy(); $passedPr.labels = @('Azure-Pipeline-Passed')
-$hold = & $module { param($prs, $now) Select-WingetPatchSupersessionHold -OpenPrs $prs -PackageIdentifier 'AnInsomniacy.Aria2Next' -NewVersion '2.6.9' -Now $now } @($passedPr) $now
-Assert-True ($null -eq $hold) "Plain pipeline-passed PR must not hold: $($hold | ConvertTo-Json -Compress)"
-
-Write-Host 'TEST: PR without a parsable age never holds'
-$agelessPr = [PSCustomObject]@{ number = 2; title = 'Update version: Foo.Bar version 1.0.0'; labels = @('Azure-Pipeline-Passed', 'Validation-Executable-Error') }
-$hold = & $module { param($prs, $now) Select-WingetPatchSupersessionHold -OpenPrs $prs -PackageIdentifier 'Foo.Bar' -NewVersion '1.0.1' -Now $now } @($agelessPr) $now
-Assert-True ($null -eq $hold) 'PR without created_at must not hold.'
-
-Write-Host 'TEST: other packages and same/newer versions are ignored'
-$otherPrs = @(
-    [PSCustomObject]@{ number = 3; title = 'Update version: Foo.Baz version 1.0.0'; labels = @('Azure-Pipeline-Passed', 'Validation-Executable-Error'); created_at = $now.ToString('o') },
-    [PSCustomObject]@{ number = 4; title = 'Update version: Foo.Bar version 1.0.1'; labels = @('Azure-Pipeline-Passed', 'Validation-Executable-Error'); created_at = $now.ToString('o') },
-    [PSCustomObject]@{ number = 5; title = 'Update version: Foo.Bar version 1.0.2'; labels = @('Azure-Pipeline-Passed', 'Validation-Executable-Error'); created_at = $now.ToString('o') }
-)
-$hold = & $module { param($prs, $now) Select-WingetPatchSupersessionHold -OpenPrs $prs -PackageIdentifier 'Foo.Bar' -NewVersion '1.0.1' -Now $now } $otherPrs $now
-Assert-True ($null -eq $hold) "Unrelated PRs must not hold: $($hold | ConvertTo-Json -Compress)"
 
 # ---------------------------------------------------------------------------
 Write-Host 'TEST: failure memory blocks a closed unmerged PR with a blocking label'

@@ -15,11 +15,6 @@ function Get-WingetPreSubmissionHold {
              (Defender, dead URL, certificate, driver, installer crash ...).
           3. HeldForWaivedValidation - the bot's open PR for an older version
              carries a moderator Waived-* label and is younger than 30 days.
-          4. HeldForManualValidation - the bot's open PR for an older version of
-             the package sits in the moderators' manual-validation queue
-             (Azure-Pipeline-Passed + Validation-Executable-Error /
-             Validation-No-Executables), is younger than 14 days and the new
-             version is only a patch bump.
         Every lookup is fail-open: an API failure is reported as a warning and
         never suppresses an update. Bot-scoped checks are skipped when the bot
         login cannot be resolved (see Get-WingetBotLogin).
@@ -80,18 +75,6 @@ function Get-WingetPreSubmissionHold {
     }
     catch {
         Write-Warning "Waived-validation hold check for $PackageId $Version failed: $($_.Exception.Message). Continuing."
-    }
-
-    try {
-        $held = Find-WingetPkgsPatchSupersessionHold -PackageIdentifier $PackageId -Version $Version -BotLogin $botLogin -Repository $Repository
-        if ($null -ne $held) {
-            $detail = $held.Reason
-            if (-not [string]::IsNullOrWhiteSpace($held.Url)) { $detail += " ($($held.Url))" }
-            return [PSCustomObject]@{ Reason = 'HeldForManualValidation'; Detail = $detail }
-        }
-    }
-    catch {
-        Write-Warning "Manual-validation queue check for $PackageId $Version failed: $($_.Exception.Message). Continuing."
     }
 
     return $null
