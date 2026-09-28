@@ -673,7 +673,13 @@
     "description": "",
     "manifestHash": "97705F857E8540A1C2B5A7A28F910984B11D56C53A461555E3FFB1B2390E9D87",
     "version": "8.2",
-    "lastUpdated": "2026-07-11T12:53:25.9025673Z"
+    "lastUpdated": "2026-07-11T12:53:25.9025673Z",
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/avrdudes/avrdude/releases/download/v8.3/avrdude--v8.3-windows-x86.zip",
+      "tag": "v8.3",
+      "checkedAt": "2026-09-28T05:34:06.1313156Z"
+    }
   },
   "axcore.tartube": {
     "description": "",
@@ -2974,9 +2980,9 @@
   "GiulioSorrentino.wheelofnumfortune.avalonia": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/GiulianoSpaghetti/WheelOfNumFortune.Material/releases/download/0.4/wheelofnumfortune.avalonia-1.1.0.7-material-amd64.msi https://github.com/GiulianoSpaghetti/WheelOfNumFortune.Material/releases/download/0.4/wheelofnumfortune.avalonia-1.1.0.7-material-arm64.msi",
-      "tag": "1.1.0.7",
-      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+      "detail": "No release asset matches: https://github.com/GiulianoSpaghetti/WheelOfNumFortune.Material/releases/download/0.4/wheelofnumfortune.avalonia-1.2-material-amd64.msi https://github.com/GiulianoSpaghetti/WheelOfNumFortune.Material/releases/download/0.4/wheelofnumfortune.avalonia-1.2-material-arm64.msi",
+      "tag": "1.2",
+      "checkedAt": "2026-09-28T05:34:06.1313156Z"
     }
   },
   "Glarysoft.GlaryUtilities": {
@@ -3772,9 +3778,9 @@
   "j178.Prek": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/j178/prek/releases/download/v0.5.3/prek-i686-pc-windows-msvc.zip",
-      "tag": "v0.5.3",
-      "checkedAt": "2026-09-14T05:31:06.7693921Z"
+      "detail": "No release asset matches: https://github.com/j178/prek/releases/download/v0.5.4/prek-i686-pc-windows-msvc.zip",
+      "tag": "v0.5.4",
+      "checkedAt": "2026-09-28T05:34:06.1313156Z"
     }
   },
   "JackTrip.JackTrip": {
@@ -3947,9 +3953,9 @@
   "JGraph.Draw": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/jgraph/drawio-desktop/releases/download/v31.4.5/draw.io-ia32-31.4.5-windows-32bit-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v31.4.5/draw.io-ia32-31.4.5-windows-32bit-no-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v31.4.5/draw.io-31.4.5-windows-no-installer.exe",
-      "tag": "v31.4.5",
-      "checkedAt": "2026-09-14T05:31:06.7693921Z"
+      "detail": "No release asset matches: https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/draw.io-ia32-31.5.3-windows-32bit-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/draw.io-ia32-31.5.3-windows-32bit-no-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/draw.io-31.5.3-windows-no-installer.exe",
+      "tag": "v31.5.3",
+      "checkedAt": "2026-09-28T05:34:06.1313156Z"
     }
   },
   "JitzuLang.Jitzu": {
@@ -4294,7 +4300,13 @@
       "E5641F3841EC724FCB5E00A22D980F410EE507FDD00669B86DB0C29F9B741162"
     ],
     "state": "VALIDATION_FAILED",
-    "validationCount": 3
+    "validationCount": 3,
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/KRTirtho/spotube/releases/download/v5.1.2/Spotube-windows-x86_64-setup.exe https://github.com/KRTirtho/spotube/releases/download/v5.1.2/Spotube-windows-x86_64-setup.exe",
+      "tag": "v5.1.2",
+      "checkedAt": "2026-09-28T05:34:06.1313156Z"
+    }
   },
   "Kubernetes.clusterctl": {
     "version": "1.14.2",
@@ -4415,6 +4427,14 @@
       "detail": "No release asset matches: https://github.com/LibreHardwareMonitor/LibreHardwareMonitor/releases/download/v0.9.6/LibreHardwareMonitor-net472.zip",
       "tag": "v0.9.6",
       "checkedAt": "2026-08-18T08:42:19.3437599Z"
+    }
+  },
+  "Litenova.Fuse": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/Litenova-Solutions/Fuse/releases/download/v5.0.0/fuse-5.0.0-setup.exe",
+      "tag": "v5.0.0",
+      "checkedAt": "2026-09-28T05:34:06.1313156Z"
     }
   },
   "LittleTijn.SpookyView": {
@@ -4921,9 +4941,9 @@
     "state": "VALIDATION_PASSED",
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/Azure/GuestProxyAgent/releases/download/1.0.50/allowListTool.exe",
-      "tag": "1.0.50",
-      "checkedAt": "2026-09-21T05:31:43.6745585Z"
+      "detail": "No release asset matches: https://github.com/Azure/GuestProxyAgent/releases/download/1.0.52/allowListTool.exe",
+      "tag": "1.0.52",
+      "checkedAt": "2026-09-28T05:34:06.1313156Z"
     }
   },
   "Microsoft.Azure.TemplateAnalyzer": {
@@ -5466,9 +5486,9 @@
     },
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/nao1215/gup/releases/download/v1.9.3/gup_1.9.3_windows_386.zip",
-      "tag": "v1.9.3",
-      "checkedAt": "2026-09-21T05:31:43.6745585Z"
+      "detail": "No release asset matches: https://github.com/nao1215/gup/releases/download/v1.10.2/gup_1.10.2_windows_386.zip",
+      "tag": "v1.10.2",
+      "checkedAt": "2026-09-28T05:34:06.1313156Z"
     }
   },
   "NASS.AvUpload": {
@@ -5653,13 +5673,7 @@
       "8437748AEF1D8DBB24BD74D5E9B58CBC6C10DE9EAC8453FF2BF9368F63DF3C4E"
     ],
     "state": "VALIDATION_PASSED",
-    "version": "2026.2.5",
-    "configHealth": {
-      "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/NoirArchitects/ncored-app/releases/download/v2026.2.7/Ncored-Setup-2026.2.7.exe",
-      "tag": "v2026.2.7",
-      "checkedAt": "2026-09-21T05:31:43.6745585Z"
-    }
+    "version": "2026.2.5"
   },
   "nomacs.nomacs": {
     "configHealth": {
@@ -5829,6 +5843,14 @@
       "checkedAt": "2026-09-16T00:55:32.7024875Z"
     }
   },
+  "Ombrelin.PandocGui": {
+    "configHealth": {
+      "status": "RepoMissing",
+      "detail": "The GitHub repository does not exist or is not readable.",
+      "tag": "",
+      "checkedAt": "2026-09-28T05:34:06.1313156Z"
+    }
+  },
   "Omibranch.Gitty": {
     "manifestHash": "19939DE2BFC232ABEE1C716C35FC828BD9178161BBCB7E54CCC32294FC1EC2E3",
     "installerHashes": [
@@ -5905,7 +5927,13 @@
     "description": "",
     "manifestHash": "D92913821350C2D7E191A39C199033BD314F80DA2447ED659A38F567F17E0EEC",
     "version": "1.0.28",
-    "validationCount": 1
+    "validationCount": 1,
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/one-ware/OneWare/releases/download/1.0.32/OneWareStudio-1.0.32-win-x64.msi https://github.com/one-ware/OneWare/releases/download/1.0.32/OneWareStudio-1.0.32-win-arm64.msi",
+      "tag": "1.0.32",
+      "checkedAt": "2026-09-28T05:34:06.1313156Z"
+    }
   },
   "OnionShare.OnionShare": {
     "version": "2.6.5",
@@ -6704,9 +6732,9 @@
     "validationCount": 1,
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/opengisch/QField/releases/download/v4.3.3/qfield-v4.3.3-windows-x64.exe",
-      "tag": "v4.3.3",
-      "checkedAt": "2026-09-21T05:31:43.6745585Z"
+      "detail": "No release asset matches: https://github.com/opengisch/QField/releases/download/v4.3.4/qfield-v4.3.4-windows-x64.exe",
+      "tag": "v4.3.4",
+      "checkedAt": "2026-09-28T05:34:06.1313156Z"
     }
   },
   "qp888n.Yumedana": {
@@ -7261,9 +7289,9 @@
     "lastUpdated": "2026-05-20T22:15:05.5255716Z",
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/schollz/croc/releases/download/v11.5.3/croc_v11.5.3_Windows-ARM.zip",
-      "tag": "v11.5.3",
-      "checkedAt": "2026-09-14T05:31:06.7693921Z"
+      "detail": "No release asset matches: https://github.com/schollz/croc/releases/download/v11.5.4/croc_v11.5.4_Windows-ARM.zip",
+      "tag": "v11.5.4",
+      "checkedAt": "2026-09-28T05:34:06.1313156Z"
     }
   },
   "scimusmn.stele": {
@@ -7899,9 +7927,9 @@
   "StirlingTools.StirlingPDF": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v2.14.3/Stirling-PDF-win-installer.exe",
-      "tag": "v2.14.3",
-      "checkedAt": "2026-08-18T08:42:19.3437599Z"
+      "detail": "No release asset matches: https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v3.0.1/Stirling-PDF-win-installer.exe",
+      "tag": "v3.0.1",
+      "checkedAt": "2026-09-28T05:34:06.1313156Z"
     }
   },
   "Storj.Uplink": {
@@ -8811,7 +8839,13 @@
     ],
     "validationCount": 1,
     "lastUpdated": "2026-08-22T08:51:40.3660225Z",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/Vathivis/paperq/releases/download/v1.0.2/paperq-1.0.2-win-x64.zip",
+      "tag": "v1.0.2",
+      "checkedAt": "2026-09-28T05:34:06.1313156Z"
+    }
   },
   "vcmi.vcmi": {
     "validationCount": 4,
