@@ -116,7 +116,7 @@
     "manifestHash": "88FF875B5DEA51BC3B743F06098AADAF42AB87DA966E19E5EFA189C21F4EC081",
     "version": "0.107.78",
     "openPr": {
-      "checkedAt": "2026-09-27T20:22:32.1003945Z",
+      "checkedAt": "2026-09-28T20:33:56.4291598Z",
       "version": "0.107.79"
     }
   },
@@ -1380,7 +1380,7 @@
   },
   "CharlesMilette.TranslucentTB": {
     "openPr": {
-      "checkedAt": "2026-09-27T20:22:33.9318215Z",
+      "checkedAt": "2026-09-28T20:33:58.6025637Z",
       "version": "2026.2"
     }
   },
@@ -1539,15 +1539,17 @@
     "lastUpdated": "2026-06-13T21:57:50.2974106Z"
   },
   "Concourse.Fly": {
-    "lastUpdated": "2026-09-28T20:30:38.1613708Z",
-    "installerHashes": [
-      "570486B75CE5BB8499C4A47B2983C9C09E839AD0DFB452D367DE2D40F58425E8"
-    ],
-    "version": "8.3.1",
-    "validationCount": 1,
     "description": "",
+    "installerHashes": "570486B75CE5BB8499C4A47B2983C9C09E839AD0DFB452D367DE2D40F58425E8",
+    "lastUpdated": "2026-09-28T20:30:38.1613708Z",
     "manifestHash": "F02FBA9AFAC3B4ED3B1F605B466F0FD9EC0D0E933F3C0A926850070CA7563573",
-    "state": "VALIDATION_PASSED"
+    "openPr": {
+      "checkedAt": "2026-09-28T20:33:58.9821561Z",
+      "version": "8.3.1"
+    },
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "8.3.1"
   },
   "Containers.PodmanTUI": {
     "installerHashes": [
@@ -2132,11 +2134,7 @@
     "installerHashes": [
       "A2250FD6FF2500204599D0522592CAE1D982178E6B9C2F0DE1386B702F42C79E"
     ],
-    "manifestHash": "31947E74E60A0462F2AAA67D5F8C21F460756C9F606A2E99B5AA0055A2064E78",
-    "openPr": {
-      "checkedAt": "2026-09-27T20:22:34.6945856Z",
-      "version": "2.12.4"
-    }
+    "manifestHash": "31947E74E60A0462F2AAA67D5F8C21F460756C9F606A2E99B5AA0055A2064E78"
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
     "configHealth": {
@@ -2596,16 +2594,20 @@
     }
   },
   "Fly-io.flyctl": {
-    "lastUpdated": "2026-09-28T20:30:38.2183998Z",
+    "description": "",
     "installerHashes": [
       "6ECDC7D7DD8DECC2A8BBB433C839351D5CB0911666217F06077007E7372CF80D",
       "CD91EDDC06E7FD7358B45823D135501908F04600CE2F024017180056D5CC0EC8"
     ],
-    "version": "0.4.109",
-    "validationCount": 1,
-    "description": "",
+    "lastUpdated": "2026-09-28T20:30:38.2183998Z",
     "manifestHash": "D50729BC0235B9C7309B9BB2F943C36A96AB4CB1C289E6F02EC0A06FEF87E64B",
-    "state": "VALIDATION_PASSED"
+    "openPr": {
+      "checkedAt": "2026-09-28T20:33:59.8059345Z",
+      "version": "0.4.109"
+    },
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "0.4.109"
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
     "validationCount": 1,
