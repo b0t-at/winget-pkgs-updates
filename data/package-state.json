@@ -658,6 +658,17 @@
     "manifestHash": "FF95EECEB373712604113B695DB11C6699312673CBEB10F4383AF61455ADA254",
     "lastUpdated": "2026-09-15T12:55:05.324434Z"
   },
+  "Automattic.Wordpress": {
+    "installerHashes": [
+      "750F097AC3D76F6E6394650501E0F6CC5DCEB571F7E061AD7644D9DBB36E03FD"
+    ],
+    "version": "8.2.4",
+    "lastUpdated": "2026-09-29T01:32:39.3718215Z",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "CCA285516338B214DE0C02C6583B5BBBE57B9B7709B4FC3BF336CA3F77FB9028",
+    "validationCount": 1
+  },
   "Avidemux.Avidemux": {
     "configHealth": {
       "status": "AssetMissing",
@@ -747,14 +758,14 @@
     "manifestHash": "C06BDAE1D061B91C49BEC413137D11211BC395CCCD107E51905B933E2FF6CC06"
   },
   "Babashka.Babashka": {
-    "manifestHash": "08690664033649FF06FF80ED070F8C1BE3A7CCE53616093E165F70BCF6BDBE32",
     "installerHashes": [
-      "EC6C39B6D08BB2C0F0B56DC8E5318DC71625F3F8EA6A7EB57763AAC8051EC87E"
+      "B321D7FAA560CF7A034D0633D7D0004FF6A4B8831A92F14C82F41362B81A4FCB"
     ],
+    "version": "1.13.225",
+    "lastUpdated": "2026-09-29T01:32:39.2244413Z",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "version": "1.13.224",
-    "lastUpdated": "2026-09-23T13:01:04.841454Z",
+    "manifestHash": "54A04A15FB6AF7E33B02558BCD1225A32BD1F469A62DDC2C8547185463218AA9",
     "validationCount": 1
   },
   "badboy.mdbook-mermaid": {
@@ -2529,6 +2540,18 @@
     "version": "0.2.2",
     "lastUpdated": "2026-08-21T17:17:39.8073292Z"
   },
+  "feliperbroering.eai": {
+    "installerHashes": [
+      "3D31C52697C19815007963F96649E65B4087034B73AC68E261002F85F4B90126",
+      "7FAD7488FA34D75A33B6D73EE9A596DFFBD8D87942F84FD6ECF818FF263E8DAA"
+    ],
+    "version": "0.14.0",
+    "lastUpdated": "2026-09-29T01:32:39.2965268Z",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "B577513D9E83C0EAB5286A90B054AF4F0B94AA7EC83BE4AA056AB0C18B9520A1",
+    "validationCount": 1
+  },
   "Fidpa.Hablara": {
     "state": "VALIDATION_PASSED",
     "installerHashes": [
@@ -3517,15 +3540,15 @@
     "validationCount": 1
   },
   "holland-built.Bloxsmith": {
-    "manifestHash": "46C4990D81551ACAA093C2D1E348A69CD7F3CF2D013496EF5AA3E78885BAC5BA",
-    "lastUpdated": "2026-09-26T20:43:41.0081138Z",
-    "version": "3.78.2",
     "installerHashes": [
-      "A60F282766DC23A288FD95B723668B9303A4C234E8150BEABBD9C6B6F5D1C635"
+      "387F195E175C98185B618A62C9A443708ED66F1058C3F74B5535B2950558B086"
     ],
+    "version": "3.80.1",
+    "lastUpdated": "2026-09-29T01:32:39.3514997Z",
     "description": "",
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "4272250EC895683B4B0BB4104F5AA15AA6ED040EC7EA951D2D02679E9C41E9F5",
+    "validationCount": 1
   },
   "HongMinhee.Gukhanmun": {
     "manifestHash": "089D5FCFFB565DBC52073976471BB7BB53E1FA33EA888133D45A589919D3AE52",
@@ -9310,15 +9333,15 @@
     "state": "VALIDATION_FAILED"
   },
   "wkjarosz.hdrview": {
-    "lastUpdated": "2026-09-18T05:00:20.4391631Z",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "0C0CE5FD387EC7E329E27EAD500780DB79B83C6D2BF9461C8BD5D13CC1E9B78E",
-    "version": "3.0.0",
-    "validationCount": 1,
-    "description": "",
     "installerHashes": [
-      "A589653866E9E55C30B17A8B20DB63537305A968BA0C3A6A8D7F379ECF0EA4EA"
-    ]
+      "030CD4BFF3704028C94080E0AC4EADBD3F2FF64F4859F5BFE35B3B920A1C9645"
+    ],
+    "version": "3.0.1",
+    "lastUpdated": "2026-09-29T01:32:39.3308497Z",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "FA7644A4A42A01ADAAC91DFC3C57EC08D5C282FD8356C98761431A7A267EC0B6",
+    "validationCount": 1
   },
   "WowUp.CF": {
     "description": "",
