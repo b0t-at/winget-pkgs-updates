@@ -1,0 +1,14 @@
+{
+  "repository": "microsoft/winget-pkgs",
+  "pullRequestNumber": 442650,
+  "classification": "InstallationFailure",
+  "state": "Escalated",
+  "recordedAt": "2026-09-29T07:04:35.0641513+00:00",
+  "retryAfter": null,
+  "learnedOverrideSignal": null,
+  "reason": "The installer failed upstream installation testing (unattended, shell-execute, driver or dependency); human-verified switches are required before resubmitting.",
+  "packageIdentifier": "SanthoshReddy352.NammaAgent",
+  "packageVersion": "2.3.2",
+  "evidence": [],
+  "installerTraits": "type=Exe;nested=;scope=User;elevation=;silent=--cli;silentWithProgress=--cli;interactive=;custom=;upgrade=;log=;installLocation=;repair="
+}
