@@ -3965,8 +3965,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.9.16",
-      "checkedAt": "2026-09-28T12:38:15.4565296Z"
+      "checkedAt": "2026-09-29T12:36:33.1144031Z",
+      "version": "2026.9.17"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -9043,11 +9043,7 @@
     ],
     "manifestHash": "96AF3299C2275A4EEAD22995191692CF329A2389AC39D8862E3EFAAA08C154C3",
     "version": "1.20.0",
-    "state": "VALIDATION_PASSED",
-    "openPr": {
-      "checkedAt": "2026-08-27T02:00:15.0993146Z",
-      "version": "1.20.0"
-    }
+    "state": "VALIDATION_PASSED"
   },
   "VoiceWave.LocalCore": {
     "installerHashes": [
