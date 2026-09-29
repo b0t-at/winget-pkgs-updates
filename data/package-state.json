@@ -2636,10 +2636,6 @@
     ],
     "lastUpdated": "2026-09-28T20:30:38.2183998Z",
     "manifestHash": "D50729BC0235B9C7309B9BB2F943C36A96AB4CB1C289E6F02EC0A06FEF87E64B",
-    "openPr": {
-      "checkedAt": "2026-09-28T20:33:59.8059345Z",
-      "version": "0.4.109"
-    },
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
     "version": "0.4.109"
@@ -3990,7 +3986,11 @@
     ],
     "state": "VALIDATION_PASSED",
     "manifestHash": "793CCD32719DDF14167412616FC7BC4105B1F2BD895D4FFD219B9DB73C448BE0",
-    "validationCount": 1
+    "validationCount": 1,
+    "openPr": {
+      "version": "8.1.3-1",
+      "checkedAt": "2026-09-29T20:25:55.9978945Z"
+    }
   },
   "JeromeHerrman.VPinCommander": {
     "installerHashes": [
