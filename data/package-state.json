@@ -2568,15 +2568,15 @@
     "lastUpdated": "2026-09-14T04:56:07.4906273Z"
   },
   "Filamental.Filamental": {
+    "validationCount": 1,
+    "lastUpdated": "2026-09-29T08:53:48.8263732Z",
     "description": "",
-    "state": "VALIDATION_PASSED",
+    "version": "0.3.50",
+    "manifestHash": "37D055481913310275CA6857E59BA137A5BDAFD3BDE168A96CFE874333518F50",
     "installerHashes": [
-      "C8D444A2E7DA70788C78E3B73FB92416A14970F238285AF4B9F7A7063D5BBAC8"
+      "2C3961914430E1762B1B436B804E0C6DE1198AFDEE6F0FF026B791792B19C104"
     ],
-    "manifestHash": "DEA60E4EB9E4E70A98213E7FB40E4D63C93D1ECF286A549563B620487582A356",
-    "lastUpdated": "2026-09-23T01:15:23.2964291Z",
-    "validationCount": 2,
-    "version": "0.3.49"
+    "state": "VALIDATION_PASSED"
   },
   "FirenzeLor.gemini-collector": {
     "validationCount": 1,
@@ -3106,15 +3106,15 @@
     "lastUpdated": "2026-09-17T20:53:14.2050338Z"
   },
   "Google.FirebaseCLI": {
-    "manifestHash": "C3DF394470295FB51371CC8B9099BCAAC615CC74B99AE1A9CFDC9412945D4DAF",
-    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-09-29T08:53:48.6941125Z",
     "description": "",
-    "lastUpdated": "2026-09-24T08:56:08.4956798Z",
+    "version": "15.32.0",
+    "manifestHash": "DD9A42062D5DFFC66BCEF8F7A7AE5CE5B56BF48BE4ABB04972C2396FE680669A",
     "installerHashes": [
-      "298E5CE4E01D6B12A27AF952E4E71AFF63DBA685DDF3D5351BBF1D03E03ADAA3"
+      "75575044323476575A3E770577F28A0D2E6AC5613A55E8967FD68A3488C03C33"
     ],
-    "version": "15.31.0",
-    "validationCount": 1
+    "state": "VALIDATION_PASSED"
   },
   "Google.IAPDesktop": {
     "lastUpdated": "2026-06-30T01:55:05.1221847Z",
@@ -8106,16 +8106,16 @@
     "lastUpdated": "2026-08-06T14:13:45.9556005Z"
   },
   "SuperRadCompany.Microsandbox": {
-    "description": "",
-    "version": "0.7.3",
-    "installerHashes": [
-      "98DDD9E7909877B7A5F65B2214921534D0AF115F850459852F7A1B4F0C848876",
-      "0E09FB9EAA25AE40AEA8F06697F297BD06BD149FA19757D599F7D0FDF0DBBC31"
-    ],
     "validationCount": 1,
-    "manifestHash": "BCC2D0B67D154E3571AE098F3AB669829BCE9FA176A938703DB6D24C50C9B59B",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-25T09:00:41.150553Z"
+    "lastUpdated": "2026-09-29T08:53:48.7806487Z",
+    "description": "",
+    "version": "0.7.4",
+    "manifestHash": "FE4BF92C319BBC00803A6A82736F5F837F4F39CE0A2AA62C60FBBD6B99BB9981",
+    "installerHashes": [
+      "89559AE4E5AA1D44B2DFFBA67D96DE4D5E3C9BD880DF080F0B1CDBFB5E9827FC",
+      "BFC2B35F22B3BB742FC4DA782CC33F22A0AF62C44BBC14F884922C9549327B0C"
+    ],
+    "state": "VALIDATION_PASSED"
   },
   "SUSE.RancherDesktop": {
     "description": "",
