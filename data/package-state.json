@@ -375,7 +375,11 @@
       "A0CC2F243E8CBD97417392E2021E593F9851C84A0C32736DDD1CFB33CAD9250C"
     ],
     "version": "2.8.3",
-    "validationCount": 1
+    "validationCount": 1,
+    "openPr": {
+      "checkedAt": "2026-09-29T01:01:20.4475371Z",
+      "version": "2.8.3"
+    }
   },
   "Anki.Anki": {
     "description": "",
@@ -936,7 +940,11 @@
       "2B610479139FCF18C0DAFA03AF79E4899ED7C0B30F34DD43E4B3842916EED8DE"
     ],
     "version": "0.10.2",
-    "validationCount": 1
+    "validationCount": 1,
+    "openPr": {
+      "checkedAt": "2026-09-29T01:02:13.1469587Z",
+      "version": "0.10.2"
+    }
   },
   "binbat.net4mqtt": {
     "lastUpdated": "2026-09-27T17:09:13.9229649Z",
