@@ -2123,15 +2123,15 @@
     "description": ""
   },
   "edde746.Plezy": {
-    "manifestHash": "06AA76BB52289C519CE7049096FB19B94F91926BB5B80AC3287AACE58CDC9657",
+    "validationCount": 1,
+    "manifestHash": "6A813F36BF60EF852CD360E688733EE9BDE9E3B46AA9C4BA5F610D6E38C8FFDE",
+    "version": "2.22.0",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "version": "2.21.0",
-    "lastUpdated": "2026-09-22T12:58:28.6370047Z",
+    "lastUpdated": "2026-09-30T01:45:49.5625513Z",
     "installerHashes": [
-      "E06D2E4001A6F53E70B2609BA5A2586F876CA8FA878E66546D1E43B3E7583FBE"
-    ],
-    "validationCount": 1
+      "614C5ADCA2DF59AD21F37D9338A712F5DDBE461B350426CB5C1E36B3861E723C"
+    ]
   },
   "edenian-prince.rust-secrets": {
     "validationCount": 1,
@@ -2530,15 +2530,15 @@
     }
   },
   "Fangyuan025.Chaty": {
-    "version": "2.3.0",
     "validationCount": 1,
-    "installerHashes": [
-      "3699EE1D912440EF56AB345F14EEE84CD537527AB18B33BCF9641A8B3AA9B70C"
-    ],
+    "manifestHash": "B7184EE358C5E8929F099C27197DF5AB0A7D4B0CD8B50C2C39E7A340D7091CBE",
+    "version": "2.3.5",
     "description": "",
-    "manifestHash": "E7846A76D84EFB12F3297518EAB10B404774F36F974656BB2112D663A3D41677",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-26T01:27:42.7819959Z"
+    "lastUpdated": "2026-09-30T01:45:49.6395353Z",
+    "installerHashes": [
+      "DA06978C8D13E847915400BF68398F48DBFE0B844289579F9029E1E2D586D4B3"
+    ]
   },
   "Feho.LogNav": {
     "installerHashes": [
@@ -3333,15 +3333,15 @@
     "description": ""
   },
   "Hanthor.BluefinCLI": {
-    "manifestHash": "CD3F8BE9FBB5D238225B892B8039105DD457E2761BBB15907E52F53572E4ED40",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-17T13:04:52.0032181Z",
+    "validationCount": 1,
+    "manifestHash": "D930B1944F52C3DEB0E75FC606D3F172877D555CF2EFC14740797D0428D44C1B",
+    "version": "0.11.4",
     "description": "",
-    "version": "0.11.3",
-    "validationCount": 2,
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-30T01:45:49.5290969Z",
     "installerHashes": [
-      "609427EDF507A06D36ED6DA896AAA94C2A22C6B583302F13E9F4D515E1923694",
-      "F3C15929E46028F479AEDF665EAC69723F627232D480D154F7167B2A14D3F118"
+      "B79DB0BAAF15DACC0AC455D9B54401B89440393EA67CACFC61D6E66784DE8031",
+      "D6F970720ECEDB160DE2274D6ED649262086015243E04D138A9A37A88887B493"
     ]
   },
   "Happ.Happ": {
@@ -4019,15 +4019,15 @@
     }
   },
   "JitzuLang.Jitzu": {
-    "lastUpdated": "2026-09-19T05:03:38.5898127Z",
-    "installerHashes": [
-      "738341B4D7BAF84D188ADA744C6895C7842D3DDC12AC0C2D09F7B33D82E96C86"
-    ],
     "validationCount": 1,
+    "manifestHash": "C8564A3F4DBC385D2DF24C1920F63133F2A92ABFFCF14ABDF6C133A4ACC42B33",
+    "version": "0.1.48",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "version": "0.1.47",
-    "manifestHash": "EFCDC0B734BBC1508CEE565769D89ABA3A79BB02EAB73CF5FF9E92851B926199"
+    "lastUpdated": "2026-09-30T01:45:49.5839532Z",
+    "installerHashes": [
+      "16665DE6534924B54742822712F136DC32A8455EC17300BB8D82706A1AE7E01C"
+    ]
   },
   "jj-vcs.jj": {
     "validationCount": 3,
@@ -5095,15 +5095,15 @@
     "manifestHash": "9335EE3851620488D53FC153F63AB184A5B25A20076D1999C098FDB4C8E4EAC7"
   },
   "Microsoft.PerfView": {
-    "version": "3.2.6",
-    "description": "",
-    "installerHashes": [
-      "84B8523F7FB4783FD0BAAE6B080ADB1B5AAC388192145AD713E504C69954556D"
-    ],
-    "lastUpdated": "2026-08-23T01:00:02.2458331Z",
     "validationCount": 1,
-    "manifestHash": "E18F495D78F1E701640257C7647434CC9C93D806BFAF0AF9A3B96AFD78DCC300",
-    "state": "VALIDATION_PASSED"
+    "manifestHash": "4B00EADB422BA4992CFAC85A6E4369A31D7EB38D423EC3A241EEC56CA0F0C618",
+    "version": "3.2.8",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-30T01:45:49.4552061Z",
+    "installerHashes": [
+      "E6B89A6DA0FE7DA5F64302306153C6AAC7A4BE67C800426A91AE014093E4DF2D"
+    ]
   },
   "Microsoft.Sqlcmd": {
     "validationCount": 2,
@@ -5610,15 +5610,15 @@
     "manifestHash": "85502270291C2C4A8C54D59EAA1A2B25A5C6238CB6F62DD184B996184841C970"
   },
   "Nbauma109.JDGUIDuo": {
-    "manifestHash": "F4BF407230688CCB25C5DD569FD0D8F1A1FD722A1173ED55D0703CDAB1A2A722",
-    "description": "",
-    "lastUpdated": "2026-08-20T05:16:37.9636886Z",
-    "installerHashes": [
-      "4D35E7367B5D8BB5E52BB25E77E8DF22D69B43E893C13DFF97F73808343E35A7"
-    ],
     "validationCount": 1,
+    "manifestHash": "399999C1B7D74E54FD514AF0E0A7D8DCAFE9C2D59199EA303A322D2B957B673B",
+    "version": "2.0.115",
+    "description": "",
     "state": "VALIDATION_PASSED",
-    "version": "2.0.114"
+    "lastUpdated": "2026-09-30T01:45:49.6048835Z",
+    "installerHashes": [
+      "268EF11500A91EDCE898BDA9100762394B97962F0DBA1042BA2CCA282A757A9A"
+    ]
   },
   "Neovim.Neovim": {
     "installerHashes": [
@@ -6237,14 +6237,14 @@
     "state": "VALIDATION_PASSED"
   },
   "openwong2kim.wmux": {
-    "lastUpdated": "2026-09-27T17:09:13.9679996Z",
-    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "manifestHash": "D02402A3329488514A76495BDE7D52C0FAE47364E079DB0727BC6CA577556B3D",
-    "version": "3.62.1",
+    "manifestHash": "922A81526E43C2485927D31851B71A240D6A92D72AD0E2F6DFBA672678F6B755",
+    "version": "3.63.0",
     "description": "",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-30T01:45:49.6602416Z",
     "installerHashes": [
-      "CDC7088FB7ABDABCDD968761968E3B8890C08E95C168029D7D60F641D8EBBAF9"
+      "843363B617D0BF635A12F5D0FB55683D8B73E1644DA191FDCE2A265C8AE814CF"
     ]
   },
   "openwong2kim.wsnap": {
@@ -9031,14 +9031,14 @@
   },
   "VirusTotal.YARA-X": {
     "validationCount": 1,
-    "lastUpdated": "2026-08-26T21:23:48.2960742Z",
+    "manifestHash": "0A6056429B9A65445EC2F1DD687DA906FC7BC824B3696B2FA7C1139046C6DA5B",
+    "version": "1.21.0",
     "description": "",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-09-30T01:45:49.683696Z",
     "installerHashes": [
-      "B1E2840BAC593AEA353D2B2B341F5A862C9D61C0C406D9ABBBAD9E1FA35163A1"
-    ],
-    "manifestHash": "96AF3299C2275A4EEAD22995191692CF329A2389AC39D8862E3EFAAA08C154C3",
-    "version": "1.20.0",
-    "state": "VALIDATION_PASSED"
+      "0E2FC4D2F64DF3EAA22129AD5BD074C968A5D80766DDEC6183B73175E5C9DA25"
+    ]
   },
   "VoiceWave.LocalCore": {
     "installerHashes": [
