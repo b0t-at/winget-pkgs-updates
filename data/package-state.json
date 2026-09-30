@@ -949,7 +949,7 @@
     "version": "0.10.2",
     "validationCount": 1,
     "openPr": {
-      "checkedAt": "2026-09-29T01:02:13.1469587Z",
+      "checkedAt": "2026-09-30T04:30:06.5016981Z",
       "version": "0.10.2"
     }
   },
@@ -964,7 +964,11 @@
     ],
     "state": "VALIDATION_PASSED",
     "manifestHash": "5A37EFB70BBC7568681C44B8CD6AD5F298435D45F16C212D95C64C93F0EF75F5",
-    "validationCount": 1
+    "validationCount": 1,
+    "openPr": {
+      "checkedAt": "2026-09-30T04:30:06.7863086Z",
+      "version": "0.10.2"
+    }
   },
   "binbat.whepfrom": {
     "state": "VALIDATION_PASSED",
