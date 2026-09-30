@@ -2633,12 +2633,6 @@
     "version": "0.25.0",
     "lastUpdated": "2026-08-21T17:17:39.8915915Z"
   },
-  "Flowscripter.example-cli": {
-    "openPr": {
-      "checkedAt": "2026-09-30T16:28:38.5130947Z",
-      "version": "3.0.2"
-    }
-  },
   "Fly-io.flyctl": {
     "description": "",
     "installerHashes": [
@@ -8071,8 +8065,8 @@
     "validationCount": 1,
     "manifestHash": "2FC17D10387329E5E73DBDDCBE45541A670D1711C99B916B986BBD747577DEC7",
     "openPr": {
-      "checkedAt": "2026-09-21T20:23:49.288873Z",
-      "version": "1.51.1"
+      "checkedAt": "2026-09-30T20:25:40.1341128Z",
+      "version": "1.52.2"
     }
   },
   "stuncloud.uwscr": {
