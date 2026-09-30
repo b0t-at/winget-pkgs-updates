@@ -133,8 +133,8 @@
     "validationCount": 1,
     "version": "0.85.0",
     "openPr": {
-      "checkedAt": "2026-09-29T08:32:42.0048684Z",
-      "version": "0.85.0"
+      "version": "0.85.0",
+      "checkedAt": "2026-09-30T08:33:26.9115275Z"
     }
   },
   "AES256Afro.VideoKidnapper": {
@@ -266,8 +266,8 @@
     "lastUpdated": "2026-08-20T16:48:27.9600489Z",
     "version": "3.1",
     "openPr": {
-      "checkedAt": "2026-09-29T08:33:15.5711465Z",
-      "version": "3.1"
+      "version": "3.1",
+      "checkedAt": "2026-09-30T08:34:02.4823504Z"
     }
   },
   "Alochi.Monitoring": {
@@ -983,8 +983,8 @@
     "version": "0.10.2",
     "validationCount": 1,
     "openPr": {
-      "checkedAt": "2026-09-29T04:28:24.4999594Z",
-      "version": "0.10.2"
+      "version": "0.10.2",
+      "checkedAt": "2026-09-30T08:34:55.1258826Z"
     }
   },
   "binbat.whipinto": {
@@ -1000,8 +1000,8 @@
     "validationCount": 1,
     "version": "0.10.2",
     "openPr": {
-      "checkedAt": "2026-09-29T08:34:09.1342637Z",
-      "version": "0.10.2"
+      "version": "0.10.2",
+      "checkedAt": "2026-09-30T08:34:55.4924683Z"
     }
   },
   "biondi53.QuickExplorer": {
@@ -6310,8 +6310,8 @@
     "lastUpdated": "2026-09-20T12:45:41.8644834Z",
     "validationCount": 1,
     "openPr": {
-      "checkedAt": "2026-09-29T08:32:49.4949173Z",
-      "version": "2.14.2"
+      "version": "2.14.2",
+      "checkedAt": "2026-09-30T08:33:32.5539026Z"
     }
   },
   "Orthogonal.APM": {
