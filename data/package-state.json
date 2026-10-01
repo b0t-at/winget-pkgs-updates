@@ -1908,15 +1908,15 @@
     "validationCount": 1
   },
   "Digimezzo.Dopamine.3": {
-    "version": "3.0.10",
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
+    "version": "3.0.11",
     "description": "",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "560956E1A04597FEDDCB90908A341227D536177866B35A432F15EC30BECCA009"
+      "EA34581A39C07DF3DDAEAACB646E668AD5DA05684AAA3FAC602B69D80DB5DA6D"
     ],
-    "manifestHash": "65CFBA73C5D707465FDA6ED267DBE85FFEAFFA60583953BAA5EEF5B52903D62C",
-    "lastUpdated": "2026-08-29T12:58:34.0694394Z"
+    "lastUpdated": "2026-10-01T05:00:17.320586Z",
+    "validationCount": 1,
+    "manifestHash": "4BCDA9528A4C4CF8DD8454A6A6DBBDBB26A257166D089149D944ED8C579D9B8C"
   },
   "Dimmy.Dimmy": {
     "lastUpdated": "2026-09-24T04:48:16.9636055Z",
@@ -2735,16 +2735,16 @@
     "description": ""
   },
   "FrankZhu.ZManagerCLI": {
-    "version": "2.1.5",
-    "installerHashes": [
-      "691BBFB7DD3FC14CF4EB3075A073F0E37A0B31A2127051130A3D442447C29164",
-      "ECE2E0B3EC10EF3BD71C4AB815D33756E185C295F3250FEBC55D7BAC589878EF"
-    ],
+    "version": "2.1.7",
     "description": "",
-    "lastUpdated": "2026-09-27T12:58:41.9451392Z",
-    "manifestHash": "4C897115CF58F2B6F929B7BC755577785C2F05F78AD56AD2C28CB84FC40893D7",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "988387DB40B1B3A3B0801BDA0D012F02E69930A3F8CD10B962FDC6223301587D",
+      "D9FECF7DD498B4A66891EB683C154CD2A5D52020946A5A252825F30343F7D18D"
+    ],
+    "lastUpdated": "2026-10-01T05:00:17.3641779Z",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "manifestHash": "F1E2C96C702C14E73C8FC660B7163DA0B78056118F609BF0857AD86565C9182F"
   },
   "Frnsys.Half_earth": {
     "state": "VALIDATION_PASSED",
@@ -3103,15 +3103,15 @@
     "lastUpdated": "2026-09-17T20:53:14.2050338Z"
   },
   "Google.FirebaseCLI": {
-    "validationCount": 1,
-    "lastUpdated": "2026-09-29T08:53:48.6941125Z",
+    "version": "15.32.1",
     "description": "",
-    "version": "15.32.0",
-    "manifestHash": "DD9A42062D5DFFC66BCEF8F7A7AE5CE5B56BF48BE4ABB04972C2396FE680669A",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "75575044323476575A3E770577F28A0D2E6AC5613A55E8967FD68A3488C03C33"
+      "18DFAC42A0110C8E7CF6A84A12320CE2913EF8B7B7AFED9C860E3C78C41A5373"
     ],
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-10-01T05:00:17.476961Z",
+    "validationCount": 1,
+    "manifestHash": "C2A2045272369D3E01543788515FE2A262A0EB70B0925DEDDF6A72D8B68F52C0"
   },
   "Google.IAPDesktop": {
     "lastUpdated": "2026-06-30T01:55:05.1221847Z",
@@ -5706,15 +5706,15 @@
     ]
   },
   "NitrokeyGmbH.Nitropy": {
-    "installerHashes": [
-      "0FCCB23DA9352F498812688A081E2014AA62ACCA3FD8CA92D514771AD029698B"
-    ],
+    "version": "0.14.0",
     "description": "",
-    "version": "0.13.0",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-04T05:11:12.3541503Z",
+    "installerHashes": [
+      "E2C1F2CA175436B341C3B969E3F1E36D177D626F1467D3582353D348998A5B40"
+    ],
+    "lastUpdated": "2026-10-01T05:00:17.4486864Z",
     "validationCount": 1,
-    "manifestHash": "0B43534CE282F722E3FD8C9F84DD1EA9CE5CBE7B2056E3E024FB2CB408CFC867"
+    "manifestHash": "332CFDB63780FF2F04529473C25E035DAE6ADEF9FB77C7390F818D069D6586E9"
   },
   "NixieTechLLC.Lait": {
     "configHealth": {
@@ -6231,15 +6231,15 @@
     "state": "VALIDATION_PASSED"
   },
   "openwong2kim.wmux": {
-    "validationCount": 1,
-    "manifestHash": "922A81526E43C2485927D31851B71A240D6A92D72AD0E2F6DFBA672678F6B755",
-    "version": "3.63.0",
+    "version": "3.64.0",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-30T01:45:49.6602416Z",
     "installerHashes": [
-      "843363B617D0BF635A12F5D0FB55683D8B73E1644DA191FDCE2A265C8AE814CF"
-    ]
+      "31730ED2C2000062A892238DBF7C826A014C59D4982F7A780FC52C38F605E840"
+    ],
+    "lastUpdated": "2026-10-01T05:00:17.4216912Z",
+    "validationCount": 1,
+    "manifestHash": "A9B7CF84F729C2FB44A9DC6E858AD62A73724BBA4FFE4ACD20B655709F457E44"
   },
   "openwong2kim.wsnap": {
     "installerHashes": [
@@ -6946,11 +6946,11 @@
     "state": "VALIDATION_PASSED"
   },
   "Reloaded-Project.Reloaded-II": {
-    "validationCount": 2,
+    "validationCount": 3,
     "state": "VALIDATION_FAILED",
     "description": "",
     "manifestHash": "929D7BAAE8C9766CD1062704AFADB268E84568C5004DB9E3D0104E42F7E99FFD",
-    "lastUpdated": "2026-09-30T05:00:00.6056679Z",
+    "lastUpdated": "2026-10-01T05:00:17.2702968Z",
     "installerHashes": [
       "FB5EDE9F15686BA4A001082A75A77EDB5F9F181EDE6C31A80FF578257C5B7D4E"
     ],
@@ -8654,16 +8654,16 @@
     ]
   },
   "tsouth89.CubbyClipboard": {
-    "version": "1.3.5",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-28T09:38:38.4120654Z",
-    "validationCount": 1,
+    "version": "1.3.7",
     "description": "",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "9D71A744EE5500B11D95274EB56CA81B2D2444A1BA74D6D4474479AB2C47C929",
-      "DA02C657AE986EB8034E29CA869AAEEE54C448D064F74182CBA2BAD9AECEF4E0"
+      "0DC015EAAD83981E2DC4EDFCBCBAF0D9E750AFFB86FE6111B18C330F72F43EC9",
+      "739B14EA51798DEDC0B8F4115915EFF97139079DE72334496ECBAFE74A6D16F9"
     ],
-    "manifestHash": "570F48F90188405B60BB1C9F3090F46105278D14E6DE93452FADCC5B6CE9D34A"
+    "lastUpdated": "2026-10-01T05:00:17.3881736Z",
+    "validationCount": 1,
+    "manifestHash": "59C59E3B4EBEB428D5F06DF1FAB822CD38130C209A22253CEDF0E465A1798DB1"
   },
   "tuna-f1sh.cyme": {
     "state": "VALIDATION_PASSED",
