@@ -131,11 +131,7 @@
     "manifestHash": "569AB9D4B6054391488861541E9E038F81AEAA60B4CB3201682B3D15993E2410",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "0.85.0",
-    "openPr": {
-      "version": "0.85.0",
-      "checkedAt": "2026-09-30T08:33:26.9115275Z"
-    }
+    "version": "0.85.0"
   },
   "AES256Afro.VideoKidnapper": {
     "description": "",
@@ -482,11 +478,7 @@
     "description": "",
     "state": "VALIDATION_PASSED",
     "version": "0.74.0",
-    "validationCount": 1,
-    "openPr": {
-      "version": "0.74.0",
-      "checkedAt": "2026-08-14T13:07:18.6096072Z"
-    }
+    "validationCount": 1
   },
   "ArcBox.LinkCode": {
     "description": "",
@@ -8080,7 +8072,11 @@
     ],
     "version": "1.1.9",
     "lastUpdated": "2026-05-11T15:42:46.9311925Z",
-    "validationCount": 3
+    "validationCount": 3,
+    "openPr": {
+      "checkedAt": "2026-10-01T16:26:40.3269283Z",
+      "version": "1.1.11"
+    }
   },
   "SubstrateSystems.EndstateCLI": {
     "manifestHash": "4DF985455D6331ECF2676B77D6817BF150999EE424E3413E53939AA4551E8A74",
