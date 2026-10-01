@@ -1,0 +1,16 @@
+{
+  "repository": "microsoft/winget-pkgs",
+  "pullRequestNumber": 444206,
+  "classification": "UrlValidationError",
+  "state": "Escalated",
+  "recordedAt": "2026-10-01T07:04:18.8609671+00:00",
+  "retryAfter": null,
+  "learnedOverrideSignal": null,
+  "reason": "One or more manifest URLs failed upstream validation; drop or replace the URLs named in the validator comment before resubmitting.",
+  "packageIdentifier": "Microsoft.Wassette",
+  "packageVersion": "0.8.0",
+  "evidence": [
+    "https://microsoft.github.io/wassette/latest/"
+  ],
+  "installerTraits": null
+}

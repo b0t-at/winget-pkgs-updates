@@ -1,0 +1,14 @@
+{
+  "repository": "microsoft/winget-pkgs",
+  "pullRequestNumber": 444781,
+  "classification": "ScannerBlocked",
+  "state": "Escalated",
+  "recordedAt": "2026-10-01T07:04:18.8239149+00:00",
+  "retryAfter": null,
+  "learnedOverrideSignal": null,
+  "reason": "Defender or the ESRP installer scan blocked the binaries; resubmitting the same files fails again. Quarantine the package until the scanner verdict changes or upstream ships new binaries.",
+  "packageIdentifier": "openwong2kim.wmux",
+  "packageVersion": "3.64.0",
+  "evidence": [],
+  "installerTraits": null
+}
