@@ -440,11 +440,7 @@
     "installerHashes": [
       "B213D2AF0E31D2990E559201682BF67E1EFD9E8E4C5211F44F6796B9BA817118"
     ],
-    "validationCount": 1,
-    "openPr": {
-      "version": "0.14.5",
-      "checkedAt": "2026-09-22T16:24:39.117237Z"
-    }
+    "validationCount": 1
   },
   "AppiumDevelopers.AppiumInspector": {
     "state": "VALIDATION_FAILED",
