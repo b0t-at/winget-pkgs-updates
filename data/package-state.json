@@ -1483,8 +1483,8 @@
     "validationCount": 1,
     "version": "1.0.48275",
     "openPr": {
-      "checkedAt": "2026-09-28T16:28:07.9282104Z",
-      "version": "1.0.51648"
+      "checkedAt": "2026-10-01T12:36:14.2089356Z",
+      "version": "1.0.51753"
     }
   },
   "ciromattia.KCC": {
@@ -2628,6 +2628,12 @@
     "validationCount": 1,
     "version": "0.25.0",
     "lastUpdated": "2026-08-21T17:17:39.8915915Z"
+  },
+  "Flowscripter.example-cli": {
+    "openPr": {
+      "checkedAt": "2026-10-01T12:36:15.9361943Z",
+      "version": "3.0.5"
+    }
   },
   "Fly-io.flyctl": {
     "description": "",
