@@ -117,7 +117,7 @@
     "version": "0.107.78",
     "openPr": {
       "version": "0.107.79",
-      "checkedAt": "2026-09-30T01:02:11.778241Z"
+      "checkedAt": "2026-10-01T01:09:14.3311017Z"
     }
   },
   "AdGuard.dnsproxy": {
@@ -1404,7 +1404,7 @@
   "CharlesMilette.TranslucentTB": {
     "openPr": {
       "version": "2026.2",
-      "checkedAt": "2026-09-30T01:02:13.8719765Z"
+      "checkedAt": "2026-10-01T01:09:15.6564835Z"
     }
   },
   "ChiaNetwork.GUIforChiaBlockchain": {
@@ -2212,8 +2212,8 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "3EAB1E5A6E607AC40A8D48C149D5E5B2207604A2D465245704CB6FD111942437",
     "openPr": {
-      "checkedAt": "2026-09-25T07:04:14.4006747Z",
-      "version": "5.5.35"
+      "version": "5.5.56",
+      "checkedAt": "2026-10-01T01:09:16.4537248Z"
     }
   },
   "elfpie.TizenAppInstaller": {
