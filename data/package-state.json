@@ -194,8 +194,8 @@
     "lastUpdated": "2026-09-19T08:41:43.6037433Z",
     "version": "0.9.2",
     "openPr": {
-      "checkedAt": "2026-10-01T20:27:50.5797401Z",
-      "version": "0.9.17"
+      "version": "0.9.19",
+      "checkedAt": "2026-10-02T16:26:53.8384346Z"
     }
   },
   "Aiden1020.LocalSubs": {
@@ -1483,8 +1483,8 @@
     "validationCount": 1,
     "version": "1.0.48275",
     "openPr": {
-      "checkedAt": "2026-10-02T12:35:11.9560541Z",
-      "version": "1.0.51883"
+      "version": "1.0.51932",
+      "checkedAt": "2026-10-02T16:25:48.0958952Z"
     }
   },
   "ciromattia.KCC": {
@@ -2627,8 +2627,8 @@
   },
   "Flowscripter.example-cli": {
     "openPr": {
-      "checkedAt": "2026-10-01T12:36:15.9361943Z",
-      "version": "3.0.5"
+      "version": "3.0.6",
+      "checkedAt": "2026-10-02T16:25:50.8034367Z"
     }
   },
   "Fly-io.flyctl": {
@@ -4308,11 +4308,7 @@
     "version": "4.4.3",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D",
-    "openPr": {
-      "checkedAt": "2026-08-27T01:59:14.2751256Z",
-      "version": "4.4.3"
-    }
+    "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D"
   },
   "kmiya-culti.RLogin": {
     "lastUpdated": "2026-09-25T20:53:18.3452811Z",
