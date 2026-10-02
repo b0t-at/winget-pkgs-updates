@@ -131,7 +131,11 @@
     "state": "VALIDATION_PASSED",
     "version": "0.86.0",
     "lastUpdated": "2026-10-01T20:58:58.1925282Z",
-    "description": ""
+    "description": "",
+    "openPr": {
+      "version": "0.86.0",
+      "checkedAt": "2026-10-02T01:00:15.686707Z"
+    }
   },
   "AES256Afro.VideoKidnapper": {
     "description": "",
@@ -1708,11 +1712,7 @@
     "installerHashes": [
       "ECE713518326E437D426401C3E8C0CB098F223AA2831CC9D1048CE59670DB67D",
       "2A5722FBE18761C02223D8454CE3AE103960BD9A98FCDA5BEC057931677D3980"
-    ],
-    "openPr": {
-      "version": "152.0.7977.134",
-      "checkedAt": "2026-09-21T01:00:32.3736544Z"
-    }
+    ]
   },
   "cubezombies.MidnightAthenaeum": {
     "manifestHash": "888A7BADCA52EE5B42F755D91B950DA3D3AA1CFB03A6012120CE16761BA13129",
