@@ -98,7 +98,7 @@ jobs:
 
       - name: Probe upstream read access
         id: upstream-read-probe
-        uses: ./.github/actions/probe-winget-upstream-read
+        uses: $/.github/actions/probe-winget-upstream-read
         with:
           github-token: ${{ github.token }}
 
@@ -976,7 +976,7 @@ jobs:
       - name: Probe upstream read access
         if: steps.check-submit.outputs.skip != 'true'
         id: upstream-read-probe-submit
-        uses: ./.github/actions/probe-winget-upstream-read
+        uses: $/.github/actions/probe-winget-upstream-read
         with:
           github-token: ${{ github.token }}
 
