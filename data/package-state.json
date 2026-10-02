@@ -3617,15 +3617,15 @@
     }
   },
   "hrkfdn.ncspot": {
-    "description": "",
-    "state": "VALIDATION_PASSED",
+    "version": "1.5.0",
     "installerHashes": [
-      "0A7F99E5F59FB6C553AD81E3E65DC816CC087DA8CD7B3B809B058FB79443042C"
+      "547E5BAE5293D89144E27968C49071D5B36DA8DC7200193C0214EA2180F7C4ED"
     ],
-    "version": "1.4.0",
-    "lastUpdated": "2026-08-21T20:47:48.5223419Z",
     "validationCount": 1,
-    "manifestHash": "0E67D289685CA32A7682745388CD26F782C1317B16986349A057DFC291AB2625"
+    "lastUpdated": "2026-10-02T16:50:56.7971654Z",
+    "manifestHash": "4D81CD2B3593A6B060AD9E2CBA3F8F539C6161D8D1E78A795D5EAC206B5405BD",
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "Humanity.DJV2": {
     "lastUpdated": "2026-10-02T01:20:46.5057266Z",
@@ -6230,15 +6230,15 @@
     "state": "VALIDATION_PASSED"
   },
   "openwong2kim.wmux": {
-    "validationCount": 1,
-    "version": "3.65.0",
-    "state": "VALIDATION_PASSED",
-    "description": "",
+    "version": "3.66.0",
     "installerHashes": [
-      "95B3F31E0C1A0C140839EF958FBF2F4FCE78882BDDE8B4AEE140012DAF8E4CF0"
+      "ABB68EE8F2C304E1F145664E4B74138BD162D034BE39F46EC21ECD3896B37435"
     ],
-    "manifestHash": "CCEBBF63EA16AED41212512DD457A915FA24A50156D7F21EE462E4FC55CDE041",
-    "lastUpdated": "2026-10-01T16:55:22.8288572Z"
+    "validationCount": 1,
+    "lastUpdated": "2026-10-02T16:50:56.8208506Z",
+    "manifestHash": "F5AAB6C33AAF59BC078DBD51F900A95DCAA1CA0FAFFC368CE76C7D6F29E8F82F",
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "openwong2kim.wsnap": {
     "installerHashes": [
@@ -6458,16 +6458,16 @@
     ]
   },
   "PatrickMatthiesen.oh-my-dot": {
-    "manifestHash": "1835A55A76DDF1112C03A4258564A83C07DBE7FE99D645E8467DAA3F891CEEF6",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "description": "",
+    "version": "0.0.66",
     "installerHashes": [
-      "E2286D66778102189C945C37890DDE105CA1D2257C7D1CDB99A25F18FD67524B",
-      "55F9C12C47FD81C605AE3297A3BF486307DA51BAE3AE38A02069FD0D0291C8E6"
+      "2004DDCC369192BC43A004C9E34DB46546204CFB0A33EC125DA903F9F29C19C7",
+      "CF2551F05038936413E005E53528D1B80B3710F391D0303980AB2FD78F93913E"
     ],
-    "version": "0.0.64",
-    "lastUpdated": "2026-09-12T01:32:43.2147925Z"
+    "validationCount": 1,
+    "lastUpdated": "2026-10-02T16:50:56.7424601Z",
+    "manifestHash": "BD636E38FF55ED45FC03C42FDCC5631963364C5354EC03AD92CB760B0E432D4E",
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "pay-skill.pay": {
     "lastUpdated": "2026-08-18T17:25:13.9564259Z",
@@ -9464,16 +9464,16 @@
     "lastUpdated": "2026-09-14T12:57:28.2468126Z"
   },
   "Y-ASLant.ElegantClipboard": {
-    "state": "VALIDATION_PASSED",
-    "version": "1.2.7",
-    "lastUpdated": "2026-08-19T12:47:12.801054Z",
-    "description": "",
+    "version": "1.2.8",
     "installerHashes": [
-      "86FB9B5FFE87496E705E081F81FB4C1E35AA3BB6D08B9CCBFED21820EF31E9FD",
-      "D8C00A0669E4913EE74F2DFD812A254E1F6A3F9232736E9784E478A993FA5635"
+      "FD6404B4C93414C94991390EB7572FB01D37A80EC7B72103BAD4CD44EB0FC6B6",
+      "44CE8D4C4B8472AD765109AFA01A10C9ECC0D5963736A3CAD56595BB33098EF4"
     ],
-    "manifestHash": "44491F2187A87A2FE42D76D44DFF39417191428FEF7FDBF3F6E4ABDCCDD54E47",
-    "validationCount": 1
+    "validationCount": 1,
+    "lastUpdated": "2026-10-02T16:50:56.784595Z",
+    "manifestHash": "41332A132CDAD3A1D48C1E24312705997A9B4EAA61431804A6900064D7150393",
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "Yaak.app": {
     "installerHashes": [
