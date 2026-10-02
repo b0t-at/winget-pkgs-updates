@@ -3544,14 +3544,14 @@
   },
   "holland-built.Bloxsmith": {
     "installerHashes": [
-      "BD84E3358A1945CD864584EB8E96C9C98D1EDAFE5E57B5578588F7463E81A52C"
+      "2C510F9BCE28DE2F730F9CDE705275814730F75D6C893004E4FE091E8D569358"
     ],
-    "manifestHash": "F71D2BC2F45734F2D71D850D0773399082B06EBCF8A5837C4132AA403ECD2053",
-    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "version": "3.80.4",
-    "lastUpdated": "2026-10-01T20:58:58.1105852Z",
-    "description": ""
+    "manifestHash": "B727A97C00744C8127E40B917E8B0D69C311464F9A6D2F6452549FCE505BD026",
+    "validationCount": 1,
+    "description": "",
+    "lastUpdated": "2026-10-02T09:03:16.3489928Z",
+    "version": "3.80.8"
   },
   "HongMinhee.Gukhanmun": {
     "manifestHash": "089D5FCFFB565DBC52073976471BB7BB53E1FA33EA888133D45A589919D3AE52",
@@ -6904,15 +6904,15 @@
     ]
   },
   "ReactOS.RosBE": {
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "A787240ADEDA9F91BF409E0DBB4B2046D48C77B523B22C70DC1D1071AB44CF88",
-    "version": "20260829",
-    "description": "",
     "installerHashes": [
-      "3FC36EDFE95C0851214A7398168D7C3A326FE63FA7E9BE8F219AF2319E9313A1"
+      "67DEE9F91E87DB8FA4D4A9204FB953C2FEE6E9A4273EE62330AE152200437E4C"
     ],
-    "lastUpdated": "2026-08-31T08:56:17.2745831Z",
-    "validationCount": 1
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "035928D7BC5275D0F21E1E0D23CAB3B974A1CD6C016716C6FD9780A1E1E94641",
+    "validationCount": 1,
+    "description": "",
+    "lastUpdated": "2026-10-02T09:03:16.4022422Z",
+    "version": "20261001"
   },
   "RedisInsight.RedisInsight": {
     "version": "3.8.0",
@@ -7129,15 +7129,15 @@
     "lastUpdated": "2026-08-17T21:15:38.3289848Z"
   },
   "Rojo.Rojo": {
-    "lastUpdated": "2026-08-16T21:14:48.9813983Z",
-    "description": "",
-    "manifestHash": "57CFDD215DF1F90F28DD15514BCB9330F3B53AF41243D13C21DFE4BC21679059",
-    "state": "VALIDATION_PASSED",
-    "version": "7.7.0",
-    "validationCount": 1,
     "installerHashes": [
-      "2179C44862A10ECBD725BDFEB4ABC64E16DC4AAD9B6C8F3E1A7C46A87280B949"
-    ]
+      "D4DFA3493A1613A43FC87312D6DAC660D7C8BF38E6A99AA5DCD0D26154BA0B82"
+    ],
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "BAB8E57826D348C3555ABBB0F14F9D2C1ECF4412FF4582866B5B24C03EE88FFC",
+    "validationCount": 1,
+    "description": "",
+    "lastUpdated": "2026-10-02T09:03:16.2740655Z",
+    "version": "7.7.1"
   },
   "Romanitho.Winget-AutoUpdate": {
     "version": "2.12.0",
@@ -8020,15 +8020,15 @@
     }
   },
   "Storj.Uplink": {
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "327E13F6FBC331035B461E67FA1BDC2A7984C2F5D005F2480959B66D1DF0F2EA"
+      "2BE5A5550666EBE2E9249320077939A674ABA0B0DA277896EF4B762D8CE387C5"
     ],
-    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "6711D280E5CE98FC6079B13CE9C50C811C5BEA114604447688358CE3D26A37EB",
     "validationCount": 1,
-    "version": "1.163.6",
-    "manifestHash": "D7205FA313612FFF788F75E1A226B357A98E810D2599583BE871C67931AE8D60",
-    "lastUpdated": "2026-09-22T20:52:36.3173662Z"
+    "description": "",
+    "lastUpdated": "2026-10-02T09:03:16.2948097Z",
+    "version": "1.164.1"
   },
   "str4d.rage": {
     "state": "VALIDATION_PASSED",
@@ -8493,15 +8493,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "lastUpdated": "2026-10-02T04:44:45.8496324Z",
     "installerHashes": [
-      "19AEB88A80522051B2CA3EB50F29867A69618208CF975B792236E8DAE40CB065"
+      "94D61C3C31D30E0D6ADB984C88F618786BD540F60B0F23AA4F3F71801150A1C1"
     ],
-    "manifestHash": "7AD222C217EEA85B7CD6B1EA2E34B0C05D0A15CD969B5CAA8898F6453FB1F369",
-    "version": "2.41.6",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "C98B111A5EEC11AD30D0FDA3E6F631FAA06FB59E70FB99017ED7F1A4C3A2B2BE",
     "validationCount": 1,
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-10-02T09:03:16.2239015Z",
+    "version": "2.41.7"
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
@@ -8702,15 +8702,15 @@
     "manifestHash": "5B6E51931179AA4ACE54703773107C133AD4539DE186FA48C478D72EB72A8031"
   },
   "Tweag.Topiary": {
-    "manifestHash": "3A2E113F217DBCEE5440489F844B6DE2A339EC08C5886DCB4445161B82CE2E84",
-    "version": "0.7.3",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-16T16:50:00.1545523Z",
-    "description": "",
-    "validationCount": 1,
     "installerHashes": [
-      "1580DA0ACA0A3B6A71D28FEF97FF2D5B012186F54C396CB9105A537C7F6D0EB9"
-    ]
+      "FD2411037A0CC85715225E5968038DB067F3833965041CBCF1BABEDFEF7FD8E1"
+    ],
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "C50F70F5EC675ACF85822E1B18EC9822E78C2411C4052C2494B89E3C41932FBD",
+    "validationCount": 1,
+    "description": "",
+    "lastUpdated": "2026-10-02T09:03:16.3289496Z",
+    "version": "0.8.0"
   },
   "Tylergibbs1.Substrate": {
     "lastUpdated": "2026-08-18T01:43:26.1871724Z",
