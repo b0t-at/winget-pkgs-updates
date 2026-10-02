@@ -6097,14 +6097,14 @@
     "lastUpdated": "2026-09-20T01:16:37.3804748Z"
   },
   "OpenGeos.GeoLibre": {
-    "manifestHash": "817FF23D164659865C46ECA1A26F2551600CB99E2245269303A269AD0088B2B6",
-    "lastUpdated": "2026-09-26T20:43:41.0393321Z",
-    "version": "3.1.0",
+    "lastUpdated": "2026-10-02T04:44:45.9248862Z",
     "installerHashes": [
-      "150C5E544B8A185C2B88904F7C3881018CEBD9501B02F689613D0B66B9EE0E6F"
+      "8F613FFAEFB353EED8B1439B288223209C6A84A7E463A8363C541335E6DDC700"
     ],
-    "description": "",
+    "manifestHash": "40A328A4890A4AD169090DE8460CBB862E144EF02F68FAA0774AC2C60DAA14A2",
+    "version": "3.2.0",
     "validationCount": 1,
+    "description": "",
     "state": "VALIDATION_PASSED"
   },
   "OpenHV.OpenHV": {
@@ -8493,15 +8493,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
+    "lastUpdated": "2026-10-02T04:44:45.8496324Z",
     "installerHashes": [
-      "9FE81D5ED3A60C1ACC16975239BDAC31EE12CC8186FE3C2F477D4BDA885E6887"
+      "19AEB88A80522051B2CA3EB50F29867A69618208CF975B792236E8DAE40CB065"
     ],
-    "manifestHash": "C4FF22E078C52069DA6A76E1C3EE39993AE19D48E3D401CBE4E29B670F8C3F85",
+    "manifestHash": "7AD222C217EEA85B7CD6B1EA2E34B0C05D0A15CD969B5CAA8898F6453FB1F369",
+    "version": "2.41.6",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "version": "2.41.4",
-    "lastUpdated": "2026-10-01T20:58:58.0554242Z",
-    "description": ""
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
