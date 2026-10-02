@@ -1,0 +1,14 @@
+{
+  "repository": "microsoft/winget-pkgs",
+  "pullRequestNumber": 445078,
+  "classification": "InstallationFailure",
+  "state": "Escalated",
+  "recordedAt": "2026-10-02T07:03:19.820682+00:00",
+  "retryAfter": null,
+  "learnedOverrideSignal": null,
+  "reason": "The installer failed upstream installation testing (unattended, shell-execute, driver or dependency); human-verified switches are required before resubmitting.",
+  "packageIdentifier": "TeraTermProject.teraterm5",
+  "packageVersion": "5.7.0",
+  "evidence": [],
+  "installerTraits": "type=Inno;nested=;scope=Machine;elevation=;silent=/Silent;silentWithProgress=/Silent;interactive=;custom=;upgrade=;log=;installLocation=;repair=\ntype=Inno;nested=;scope=Machine;elevation=;silent=/Silent;silentWithProgress=/Silent;interactive=;custom=;upgrade=;log=;installLocation=;repair=\ntype=Inno;nested=;scope=Machine;elevation=;silent=/Silent;silentWithProgress=/Silent;interactive=;custom=;upgrade=;log=;installLocation=;repair="
+}
