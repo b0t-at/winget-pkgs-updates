@@ -3995,6 +3995,12 @@
       "checkedAt": "2026-09-29T20:25:55.9978945Z"
     }
   },
+  "jendrikseipp.RedNotebook": {
+    "openPr": {
+      "checkedAt": "2026-10-02T20:23:00.5483859Z",
+      "version": "2.43"
+    }
+  },
   "JeromeHerrman.VPinCommander": {
     "installerHashes": [
       "9948933AB6441C2463B0FFE069291CF4729BCB70CE3EAFAEF534975EC15C37AA"
@@ -4214,7 +4220,11 @@
     "manifestHash": "1B7D562145110A2AB4483E50909945476B8ED7491B1F57E8408A373E465946E7",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "18.1.1"
+    "version": "18.1.1",
+    "openPr": {
+      "checkedAt": "2026-10-02T20:23:01.7214481Z",
+      "version": "18.1.5"
+    }
   },
   "KellyBrazil.jc": {
     "installerHashes": [
@@ -4308,7 +4318,11 @@
     "version": "4.4.3",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D"
+    "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D",
+    "openPr": {
+      "checkedAt": "2026-10-02T20:23:02.1982106Z",
+      "version": "4.4.4"
+    }
   },
   "kmiya-culti.RLogin": {
     "lastUpdated": "2026-09-25T20:53:18.3452811Z",
@@ -5907,7 +5921,11 @@
       "526E47DB7C295D017E9514DF5BB20C6F32B3D1170F2C8BB9C59B53185F5BD6FF"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 1
+    "validationCount": 1,
+    "openPr": {
+      "checkedAt": "2026-10-02T20:23:04.2991276Z",
+      "version": "0.35.1"
+    }
   },
   "Ombrelin.PandocGui": {
     "configHealth": {
