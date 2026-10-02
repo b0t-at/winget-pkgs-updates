@@ -3543,15 +3543,15 @@
     "validationCount": 1
   },
   "holland-built.Bloxsmith": {
-    "installerHashes": [
-      "2C510F9BCE28DE2F730F9CDE705275814730F75D6C893004E4FE091E8D569358"
-    ],
     "state": "VALIDATION_PASSED",
-    "manifestHash": "B727A97C00744C8127E40B917E8B0D69C311464F9A6D2F6452549FCE505BD026",
-    "validationCount": 1,
+    "installerHashes": [
+      "2F09D6663CF262B9544E63F6A614F4F68ED90C84BB95192E8237615E5F9DFC2D"
+    ],
     "description": "",
-    "lastUpdated": "2026-10-02T09:03:16.3489928Z",
-    "version": "3.80.8"
+    "validationCount": 1,
+    "manifestHash": "C073B65B66D189DB93CC40D7C7A511B687B87E24547848359CBC9A945BEA95A4",
+    "version": "3.82.0",
+    "lastUpdated": "2026-10-02T13:01:27.8871052Z"
   },
   "HongMinhee.Gukhanmun": {
     "manifestHash": "089D5FCFFB565DBC52073976471BB7BB53E1FA33EA888133D45A589919D3AE52",
@@ -4126,15 +4126,16 @@
     "state": "VALIDATION_PASSED"
   },
   "JustArchiNET.ArchiSteamFarm": {
-    "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-04T08:57:19.1957015Z",
     "installerHashes": [
-      "3050EC9CC5330EED0ED6D0AE22239850F006C800515B518E8A3CAE9FC4184B01"
+      "BB995268B9DD47E75A837EE0AE603C0632426D33BFF3D67C8FED645FA8767662",
+      "F297D5BABE392E5C3F79F39D26B72EC441C3CFDA65B573539AB914F98CF95C59"
     ],
+    "description": "",
     "validationCount": 1,
-    "manifestHash": "B5143A8F2C2AA4E9264CE1B0F68C0CEB09B256ACB975811663D552DCE6C84690",
-    "version": "6.3.9.6"
+    "manifestHash": "863CFAB91E29518D9FAB011D3816261E2E4D88488132B189E6A36B117EC985A9",
+    "version": "6.3.10.3",
+    "lastUpdated": "2026-10-02T13:01:27.9122299Z"
   },
   "k0sproject.k0sctl": {
     "lastUpdated": "2026-09-22T01:21:24.1752574Z",
@@ -8495,15 +8496,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "installerHashes": [
-      "94D61C3C31D30E0D6ADB984C88F618786BD540F60B0F23AA4F3F71801150A1C1"
-    ],
     "state": "VALIDATION_PASSED",
-    "manifestHash": "C98B111A5EEC11AD30D0FDA3E6F631FAA06FB59E70FB99017ED7F1A4C3A2B2BE",
-    "validationCount": 1,
+    "installerHashes": [
+      "0A000FA682821853DA0154EFAB71F17C01BA0E154D79DA8F16E263AA16339A55"
+    ],
     "description": "",
-    "lastUpdated": "2026-10-02T09:03:16.2239015Z",
-    "version": "2.41.7"
+    "validationCount": 1,
+    "manifestHash": "0081FFAA0C63DCA5D4C977698BB34D0774B40F7DF1F92DA9D9A91337805991C2",
+    "version": "2.41.10",
+    "lastUpdated": "2026-10-02T13:01:27.9565219Z"
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
@@ -9115,15 +9116,15 @@
     "description": ""
   },
   "WasmEdge.WasmEdge": {
-    "validationCount": 1,
-    "version": "0.17.1",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "6055238E94892939777EA95A33377EDDDDC00CC92E6C17A60ECCC42B3495C0C3",
-    "description": "",
     "installerHashes": [
-      "0B2EAEDD59B744DA6F4548C7498454D34E2D8A71DF75AB9C05084FAE16E89568"
+      "0FADBA9DEAEDBEFCD5C5A3E650E8509ADCE59525330DC59E97FAD2D07DE915DE"
     ],
-    "lastUpdated": "2026-08-17T21:15:38.2673616Z"
+    "description": "",
+    "validationCount": 1,
+    "manifestHash": "7147814417723EAB53D30C70A4209B9089ADCBF45CAF51A06C87B181F4AF1FDA",
+    "version": "0.17.2",
+    "lastUpdated": "2026-10-02T13:01:27.814568Z"
   },
   "Wawtor.Aperio": {
     "version": "0.2.2",
