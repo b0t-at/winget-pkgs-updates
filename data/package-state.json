@@ -635,9 +635,9 @@
       "C654218E6551E29F3F3A55CBFECDEEDC246E709BB9A83A223246908C9461EB79"
     ],
     "description": "",
-    "lastUpdated": "2026-09-29T20:48:57.6650197Z",
+    "lastUpdated": "2026-10-02T20:53:11.0701082Z",
     "manifestHash": "6823BC01540B0683000427E19170509624ABD9857D9C5261A0513E4A7476245F",
-    "validationCount": 1
+    "validationCount": 2
   },
   "AtaraxyLabs.sem": {
     "installerHashes": [
@@ -1023,15 +1023,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Bitcraze.cfcli": {
-    "version": "0.14.0",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "82606CE085B420544B6AD810203EEE99E33ACA985FFDE3F5F50A7D672C5921F9",
-    "validationCount": 1,
-    "lastUpdated": "2026-09-18T17:02:48.720469Z",
     "installerHashes": [
-      "3110471F45646FEB1BCDB454213143EEEDB9D3756570829125C4157578133102"
+      "73875DC02018BC30D872C447F79794830A9DAE4A13230023784F058D83ECEDCB"
     ],
-    "description": ""
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "98C56E835EB262905804F2BFF6DD18F093069B9C3E8D328EBE74944C90A8686D",
+    "lastUpdated": "2026-10-02T20:53:10.980073Z",
+    "description": "",
+    "validationCount": 1,
+    "version": "0.15.0"
   },
   "Bitwarden.CLI": {
     "validationCount": 1,
@@ -1206,15 +1206,15 @@
     }
   },
   "BytecodeAlliance.Wasmtime.Portable": {
-    "lastUpdated": "2026-09-26T08:54:16.7764702Z",
-    "description": "",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "CC1DBB407E3A6BB58E7FB2B56348DB868D24C356D9E7547F8F6945E3B7BBD4D8",
-    "version": "49.0.1",
     "installerHashes": [
-      "DB0DD3DD77696FA189B08E256A50DDBE46D10A4D1E6C862D8D268AD0ABC8C2C1"
+      "C95A3925ACDE6398808BAABE5AD13D0B1DF02B004BC256C00CF8E2A36DACCEA8"
     ],
-    "validationCount": 1
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "B68FD4A1E12A546BD9F75D224047D57B4C73C65C4FAC6ABB4866E95E90A6DEC3",
+    "lastUpdated": "2026-10-02T20:53:11.0034793Z",
+    "description": "",
+    "validationCount": 1,
+    "version": "49.0.2"
   },
   "ByteNess.AWSVault": {
     "description": "",
@@ -3543,15 +3543,15 @@
     "validationCount": 1
   },
   "holland-built.Bloxsmith": {
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "2F09D6663CF262B9544E63F6A614F4F68ED90C84BB95192E8237615E5F9DFC2D"
+      "2AC888FF91343967DFD674022F6D5B894AAE2FA46D7525BD22BE67793F979D93"
     ],
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "D13A4609377E686635B35FCBD553B24FCDF39A8DCE4047221D97C2469FB5F800",
+    "lastUpdated": "2026-10-02T20:53:11.0468413Z",
     "description": "",
     "validationCount": 1,
-    "manifestHash": "C073B65B66D189DB93CC40D7C7A511B687B87E24547848359CBC9A945BEA95A4",
-    "version": "3.82.0",
-    "lastUpdated": "2026-10-02T13:01:27.8871052Z"
+    "version": "3.83.1"
   },
   "HongMinhee.Gukhanmun": {
     "manifestHash": "089D5FCFFB565DBC52073976471BB7BB53E1FA33EA888133D45A589919D3AE52",
@@ -8122,16 +8122,16 @@
     "lastUpdated": "2026-08-06T14:13:45.9556005Z"
   },
   "SuperRadCompany.Microsandbox": {
-    "validationCount": 1,
-    "lastUpdated": "2026-09-29T08:53:48.7806487Z",
-    "description": "",
-    "version": "0.7.4",
-    "manifestHash": "FE4BF92C319BBC00803A6A82736F5F837F4F39CE0A2AA62C60FBBD6B99BB9981",
     "installerHashes": [
-      "89559AE4E5AA1D44B2DFFBA67D96DE4D5E3C9BD880DF080F0B1CDBFB5E9827FC",
-      "BFC2B35F22B3BB742FC4DA782CC33F22A0AF62C44BBC14F884922C9549327B0C"
+      "78FE36CF700D9C888E041373E2826BCA7D553DA2374B4D8172D12EDAE333EF4C",
+      "072A25F8D609839A1BCE89434AE83A632EB6CDC16E72061C9B579946050AD60A"
     ],
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "DA0A2925477648EF703B2753504A370332075DDF843BB6F179F562FA1DF424F5",
+    "lastUpdated": "2026-10-02T20:53:10.917577Z",
+    "description": "",
+    "validationCount": 1,
+    "version": "0.7.6"
   },
   "SUSE.RancherDesktop": {
     "description": "",
