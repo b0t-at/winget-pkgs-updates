@@ -116,7 +116,7 @@
     "manifestHash": "88FF875B5DEA51BC3B743F06098AADAF42AB87DA966E19E5EFA189C21F4EC081",
     "version": "0.107.78",
     "openPr": {
-      "checkedAt": "2026-10-02T04:27:46.9196167Z",
+      "checkedAt": "2026-10-03T04:28:51.0938141Z",
       "version": "0.107.79"
     }
   },
@@ -133,8 +133,8 @@
     "lastUpdated": "2026-10-01T20:58:58.1925282Z",
     "description": "",
     "openPr": {
-      "version": "0.86.0",
-      "checkedAt": "2026-10-02T01:00:15.686707Z"
+      "checkedAt": "2026-10-03T04:28:51.4532704Z",
+      "version": "0.86.0"
     }
   },
   "AES256Afro.VideoKidnapper": {
@@ -1399,7 +1399,7 @@
   },
   "CharlesMilette.TranslucentTB": {
     "openPr": {
-      "checkedAt": "2026-10-02T04:27:48.5768979Z",
+      "checkedAt": "2026-10-03T04:28:53.6745792Z",
       "version": "2026.2"
     }
   },
@@ -3964,7 +3964,7 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-10-02T04:27:49.7724783Z",
+      "checkedAt": "2026-10-03T04:28:56.3937017Z",
       "version": "2026.10.0"
     }
   },
