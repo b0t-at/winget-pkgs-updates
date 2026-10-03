@@ -4177,6 +4177,17 @@
     "version": "3.3.5",
     "state": "VALIDATION_PASSED"
   },
+  "kangyu-california.PersistentWindows": {
+    "manifestHash": "9B807D3780399B7860D43A32961AE89729C000B72F30A57B0F8D292AE7FA607E",
+    "validationCount": 1,
+    "description": "",
+    "installerHashes": [
+      "09096A4028880909802CF364B9BE47A82AA19BB0D5045B24E61D3F70283BC36C"
+    ],
+    "version": "5.77",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-03T01:14:10.8205302Z"
+  },
   "katahiromz.RisohEditor": {
     "installerHashes": [
       "AAFC5FE6E1BC1552AF7BB1E365AB87CE78789EB32A8F0A17B3EDA5B9C0FA3288",
@@ -8510,15 +8521,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "0A000FA682821853DA0154EFAB71F17C01BA0E154D79DA8F16E263AA16339A55"
-    ],
-    "description": "",
+    "manifestHash": "99F2EB816E5CD991211A1B1E7E6DFF1014A896B726D19BF0C32FBA8D35132D89",
     "validationCount": 1,
-    "manifestHash": "0081FFAA0C63DCA5D4C977698BB34D0774B40F7DF1F92DA9D9A91337805991C2",
-    "version": "2.41.10",
-    "lastUpdated": "2026-10-02T13:01:27.9565219Z"
+    "description": "",
+    "installerHashes": [
+      "8B7BADC18D40CAAB96705393A6E879012BCFF9443FEA2D3D414ED88E2A153805"
+    ],
+    "version": "2.45.0",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-03T01:14:10.784151Z"
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
