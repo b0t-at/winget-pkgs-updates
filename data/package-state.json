@@ -436,14 +436,14 @@
     "state": "VALIDATION_PASSED"
   },
   "AppFlowy.AppFlowy": {
-    "manifestHash": "D4A5A2D40CE4C9ACD92DA709C75DFC88B3DA8F5ADF5A858EB5848E83B9690FAE",
+    "version": "0.14.6",
+    "lastUpdated": "2026-10-03T08:47:20.8232586Z",
+    "installerHashes": [
+      "2726C34B511BAAD27D94BE9ED0718F9C6EDF3CC732124DC71CE28C06D12CEF93"
+    ],
     "description": "",
     "state": "VALIDATION_PASSED",
-    "version": "0.14.5",
-    "lastUpdated": "2026-09-22T12:58:28.7120496Z",
-    "installerHashes": [
-      "B213D2AF0E31D2990E559201682BF67E1EFD9E8E4C5211F44F6796B9BA817118"
-    ],
+    "manifestHash": "8CB3FB0CD918EDD6AB9BF8F41BE516860282BB58CAEFD4449A111411B69B68D3",
     "validationCount": 1
   },
   "AppiumDevelopers.AppiumInspector": {
@@ -8521,15 +8521,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "manifestHash": "99F2EB816E5CD991211A1B1E7E6DFF1014A896B726D19BF0C32FBA8D35132D89",
-    "validationCount": 1,
-    "description": "",
+    "version": "2.47.0",
+    "lastUpdated": "2026-10-03T08:47:20.7733502Z",
     "installerHashes": [
-      "8B7BADC18D40CAAB96705393A6E879012BCFF9443FEA2D3D414ED88E2A153805"
+      "986704D70D6B3252E93FDE9499410EC4D5229B45980702F6AE1646BE5A82E18D"
     ],
-    "version": "2.45.0",
+    "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-03T01:14:10.784151Z"
+    "manifestHash": "C02C3BC2D4EB3213D94AD044E429B48CA1A138A905436F5CEF50F5D0EEEE90C4",
+    "validationCount": 1
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
