@@ -275,15 +275,15 @@
     }
   },
   "Alochi.Monitoring": {
-    "installerHashes": [
-      "03B57511C33E2CF7E31977F498C8EA1890C445B51CA81F0D71A2B4AC16792DB3"
-    ],
-    "description": "",
     "validationCount": 1,
-    "lastUpdated": "2026-09-28T01:42:43.4325823Z",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "DFBEE6FC3914D4C92A94B07A4F27FEB4E43F8716A43B4145C5EAA4DE447603DC",
-    "version": "1.0.162"
+    "installerHashes": [
+      "A110ACF0BD21DD31C8BAC15BD65F18392ACDEFE47F7181390B5040C53EFF9A51"
+    ],
+    "lastUpdated": "2026-10-03T04:47:38.8801143Z",
+    "manifestHash": "FEB0F860DCCB5E595BAF9D4C4319FE5C7F962CAF61170801F1754AE80A00EADC",
+    "version": "1.0.163",
+    "description": ""
   },
   "AloproAgency.WAutoChat": {
     "lastUpdated": "2026-08-18T01:43:26.4458545Z",
@@ -3543,15 +3543,15 @@
     "validationCount": 1
   },
   "holland-built.Bloxsmith": {
-    "installerHashes": [
-      "2AC888FF91343967DFD674022F6D5B894AAE2FA46D7525BD22BE67793F979D93"
-    ],
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "D13A4609377E686635B35FCBD553B24FCDF39A8DCE4047221D97C2469FB5F800",
-    "lastUpdated": "2026-10-02T20:53:11.0468413Z",
-    "description": "",
     "validationCount": 1,
-    "version": "3.83.1"
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "2D60E7415A1FBA380FE8091131720E2D942F946147689E9E76E5E49085B68D70"
+    ],
+    "lastUpdated": "2026-10-03T04:47:38.9388574Z",
+    "manifestHash": "1F43F41828AB2E34ED8A993B30BE04AD3286081A5A51EF4AD0FC23D70C54E7C7",
+    "version": "3.83.2",
+    "description": ""
   },
   "HongMinhee.Gukhanmun": {
     "manifestHash": "089D5FCFFB565DBC52073976471BB7BB53E1FA33EA888133D45A589919D3AE52",
