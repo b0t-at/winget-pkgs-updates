@@ -1302,14 +1302,14 @@
   },
   "CarthageSoftware.Mago": {
     "state": "VALIDATION_PASSED",
-    "manifestHash": "F0108F5F151586DE784E4386123F3D61F4AA32C0340309BCB4A47BCF4C7659E6",
-    "description": "",
-    "lastUpdated": "2026-09-28T21:23:26.7210612Z",
+    "validationCount": 1,
     "installerHashes": [
-      "DBFF448EF9EF52A8ABEF6B1F2F9E58A376F62846AF9074AC6EED0EA19846C769"
+      "6A0FF55AB50A6FF8C4174C3457D8EEA31AE23C5FBB5D74A578EF3628511356D6"
     ],
-    "version": "1.50.0",
-    "validationCount": 1
+    "version": "1.51.2",
+    "description": "",
+    "lastUpdated": "2026-10-03T14:30:18.5644384Z",
+    "manifestHash": "5C08F5758E371CFF8B609CFC6302C6DA1E3A96B9F97F19D53D1FFC3CBC6BA44F"
   },
   "Carvel.ytt": {
     "openPr": {
@@ -3521,15 +3521,15 @@
     "version": "1.55.0"
   },
   "hluk.CopyQ": {
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "description": "",
-    "manifestHash": "996FE15EEB31E6FAD2CEB218E49903B570A4F698C60BA65F9E97DCCE1C7D4A72",
-    "lastUpdated": "2026-05-30T10:25:31.6789085Z",
-    "version": "16.0.0",
     "installerHashes": [
-      "F271A1467589CA55CD56D1FAF727A4BC34E686B4965AC742854A93BE4B186F82"
+      "33585174067273B391DF13C0332ADB60A3797EC47BFFF9C26FF7C26E7DCD85D8"
     ],
-    "state": "VALIDATION_PASSED"
+    "version": "17.0.0",
+    "description": "",
+    "lastUpdated": "2026-10-03T14:30:18.6421643Z",
+    "manifestHash": "1515766D65DB497E99DC14F3594A7490DE182E63B0EDEB311859B7DF148F234C"
   },
   "hoijun-kim.flip": {
     "lastUpdated": "2026-09-28T09:02:17.3339657Z",
@@ -4178,15 +4178,15 @@
     "state": "VALIDATION_PASSED"
   },
   "kangyu-california.PersistentWindows": {
-    "manifestHash": "9B807D3780399B7860D43A32961AE89729C000B72F30A57B0F8D292AE7FA607E",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "description": "",
     "installerHashes": [
       "09096A4028880909802CF364B9BE47A82AA19BB0D5045B24E61D3F70283BC36C"
     ],
     "version": "5.77",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-03T01:14:10.8205302Z"
+    "description": "",
+    "lastUpdated": "2026-10-03T14:30:18.5976505Z",
+    "manifestHash": "6F15F19E04B9E61973368F0D344FB7977101D832E92DFE823FB82758E7EE7299"
   },
   "katahiromz.RisohEditor": {
     "installerHashes": [
@@ -4697,15 +4697,15 @@
     "description": ""
   },
   "Lunasans.MovieShelf": {
-    "validationCount": 1,
-    "manifestHash": "AC29B4F1BBF684B4237B852781844F3676BCC8638C6399BD7D5BBA40DC1D7FA6",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-28T17:00:45.6386332Z",
+    "validationCount": 1,
     "installerHashes": [
-      "8B279927F0188458844B9A150CAB952413B77E8182C96EB8C3AD6A3D507FFA26"
+      "FE84684C8A244D923DFDC77B6CAF01CA686308A4B35E0502F1FAE3086188B8C0"
     ],
+    "version": "1.2.3",
     "description": "",
-    "version": "1.2.2"
+    "lastUpdated": "2026-10-03T14:30:18.666546Z",
+    "manifestHash": "8883C8F0E261AB09E0E4BC7199A58A414CF82AEEE377F8D192C5458979CD667C"
   },
   "Luxview.AgainstMe": {
     "installerHashes": [
@@ -5003,15 +5003,15 @@
     "description": ""
   },
   "Micronaut.Launch": {
-    "description": "",
-    "lastUpdated": "2026-09-28T04:47:36.2350615Z",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
     "installerHashes": [
-      "29E97F62A68D43E7724CB2B29B718406DFE45ECD52B5DC25AC21ED69980242AC"
+      "FD0D86C80D0E68581C692EE847D522C1744D01FAE0329C68F9B446149AB437EE"
     ],
-    "manifestHash": "3990201F71395011C237D7B1217D8B47C2308EE212F0ACB370E60791B7263FDF",
-    "version": "5.2.0",
-    "state": "VALIDATION_PASSED"
+    "version": "5.2.1",
+    "description": "",
+    "lastUpdated": "2026-10-03T14:30:18.6171435Z",
+    "manifestHash": "A263F94F9A11A9CE4BE2964441C584D5354207E27FAF863B1DBFB1DDB1F69387"
   },
   "Microsoft.Azure.GuestProxyAgent.AllowListTool": {
     "validationCount": 1,
@@ -5542,15 +5542,15 @@
     "validationCount": 1
   },
   "Naeem5877.VibeDownloader": {
+    "state": "VALIDATION_FAILED",
     "validationCount": 1,
-    "lastUpdated": "2026-09-03T01:18:15.1871829Z",
-    "description": "",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "60C61D8551E0583F33461014176BB7CB306C20193F67DA8798CC8C140BBB80F4",
-    "version": "2.0.0",
     "installerHashes": [
-      "FEBDDAC7FBE084C0AD9AFE0CBBD9A4781B4EEC039FC9E1E262A12D00EEB3E0F3"
-    ]
+      "07186636A8AC4C3CA60C04C942F60A40475565D0885A5EFC0967967C2BDF2945"
+    ],
+    "version": "2.1.0",
+    "description": "",
+    "lastUpdated": "2026-10-03T14:30:18.5239377Z",
+    "manifestHash": "0369816DC78FE43ABB704F7A7C32EFFC9BEA1439D8502F88D3954DDDADA0E021"
   },
   "nao1215.gup": {
     "lastUpdated": "2026-08-14T10:42:15.0129361Z",
