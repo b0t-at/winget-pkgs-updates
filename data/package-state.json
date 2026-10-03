@@ -3997,8 +3997,8 @@
   },
   "jendrikseipp.RedNotebook": {
     "openPr": {
-      "checkedAt": "2026-10-02T20:23:00.5483859Z",
-      "version": "2.43"
+      "version": "2.43",
+      "checkedAt": "2026-10-03T21:08:52.2848129Z"
     }
   },
   "JeromeHerrman.VPinCommander": {
@@ -4233,8 +4233,8 @@
     "validationCount": 1,
     "version": "18.1.1",
     "openPr": {
-      "checkedAt": "2026-10-02T20:23:01.7214481Z",
-      "version": "18.1.5"
+      "version": "18.1.5",
+      "checkedAt": "2026-10-03T21:08:53.1027072Z"
     }
   },
   "KellyBrazil.jc": {
@@ -4331,8 +4331,8 @@
     "description": "",
     "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D",
     "openPr": {
-      "checkedAt": "2026-10-02T20:23:02.1982106Z",
-      "version": "4.4.4"
+      "version": "4.4.4",
+      "checkedAt": "2026-10-03T21:08:53.4783917Z"
     }
   },
   "kmiya-culti.RLogin": {
