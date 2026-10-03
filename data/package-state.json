@@ -920,17 +920,17 @@
     ]
   },
   "binbat.live777": {
-    "lastUpdated": "2026-09-27T17:09:13.9888955Z",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "manifestHash": "34657E54AF31E68FA99838DEC7DB11FADEA669DC8AC49C6AB81FF59656AD78D4",
-    "version": "0.10.1",
+    "manifestHash": "98FFDD4C414D546FB983918D15EFA74EF00C793FA640522CFF7ADB787A862CD2",
     "description": "",
     "installerHashes": [
-      "93303D458CE2CE7842F1060B77335E0DB7A702A68BD86AC79B23CF9B99069EBF",
-      "C41A481A1F23C4F97C058B49BA55EE527848327D00C025536EFDFB528166B617",
-      "8550C4A86903DA9FB7E6B4D9C949FBF59AB7449338A5CD03E20A1BD6B655B0FC"
-    ]
+      "659F9E5B4C7425CCA51C437A5697CAD259AF37407DB7E7619DEE980A8D470EDE",
+      "32DA1ED456B132D2E10D284F8D7CF05123D84D7B124759A38BF9C19E04FD378D",
+      "EF13DC3758CC38E3DA1C1D8C69B2E95CF83240611B8154B6D97336965DC71FF1"
+    ],
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "0.10.2",
+    "lastUpdated": "2026-10-03T21:48:32.4604454Z"
   },
   "binbat.liveman": {
     "state": "VALIDATION_PASSED",
@@ -1619,15 +1619,15 @@
     "version": "0.0.22"
   },
   "cpvalente.ontime": {
-    "state": "VALIDATION_PASSED",
+    "manifestHash": "552CE462E050768BB4586FF7119939B716FB683F2AF5CE264D8721B3E3AAFB48",
     "description": "",
-    "manifestHash": "A17B89772E485944139A45C3A863500FD0710FD895C244C1E03487111A0DD190",
-    "lastUpdated": "2026-09-25T13:04:51.7849043Z",
-    "validationCount": 1,
     "installerHashes": [
-      "7BC734483F42AF6465A53535558594D924C75CA7B2162AF96D18327EA87832A3"
+      "051A9CF81373536E05E56B4AD597EC1EB6453C9262F98797F5AC78725BC0639B"
     ],
-    "version": "4.14.0"
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "4.14.1",
+    "lastUpdated": "2026-10-03T21:48:32.5395174Z"
   },
   "Crate-CI.Typos": {
     "lastUpdated": "2026-09-25T20:53:18.2733972Z",
@@ -3329,16 +3329,16 @@
     "description": ""
   },
   "Hanthor.BluefinCLI": {
-    "validationCount": 1,
-    "manifestHash": "D930B1944F52C3DEB0E75FC606D3F172877D555CF2EFC14740797D0428D44C1B",
-    "version": "0.11.4",
+    "manifestHash": "FC0366F456B830E1F72C8D93B692F678C230B2FCB09B6C9F5338CC8AD8CBE0C6",
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-30T01:45:49.5290969Z",
     "installerHashes": [
-      "B79DB0BAAF15DACC0AC455D9B54401B89440393EA67CACFC61D6E66784DE8031",
-      "D6F970720ECEDB160DE2274D6ED649262086015243E04D138A9A37A88887B493"
-    ]
+      "CD522E4921FAC6E0FBF8EE9FC1853591E56176C3F09F5EF9B96133158A143823",
+      "CDD3CB27421A7111F22EA33B30115552F02ECF4BDC8496A1A1F34D8D4528553E"
+    ],
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "0.11.5",
+    "lastUpdated": "2026-10-03T21:48:32.5548214Z"
   },
   "Happ.Happ": {
     "validationCount": 1,
@@ -4697,15 +4697,15 @@
     "description": ""
   },
   "Lunasans.MovieShelf": {
+    "manifestHash": "04D79ACAF76FEFB2D928B6ED2A297C3833EF705F57893CA3EB9E6C2591D1F71E",
+    "description": "",
+    "installerHashes": [
+      "B54B1B397920D8CA80509580CE29E4BDEAA7A3A229F2A25972808042279B0D9C"
+    ],
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "installerHashes": [
-      "FE84684C8A244D923DFDC77B6CAF01CA686308A4B35E0502F1FAE3086188B8C0"
-    ],
-    "version": "1.2.3",
-    "description": "",
-    "lastUpdated": "2026-10-03T14:30:18.666546Z",
-    "manifestHash": "8883C8F0E261AB09E0E4BC7199A58A414CF82AEEE377F8D192C5458979CD667C"
+    "version": "1.2.4",
+    "lastUpdated": "2026-10-03T21:48:32.6094529Z"
   },
   "Luxview.AgainstMe": {
     "installerHashes": [
@@ -5004,13 +5004,13 @@
   },
   "Micronaut.Launch": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "FD0D86C80D0E68581C692EE847D522C1744D01FAE0329C68F9B446149AB437EE"
     ],
     "version": "5.2.1",
     "description": "",
-    "lastUpdated": "2026-10-03T14:30:18.6171435Z",
+    "lastUpdated": "2026-10-03T21:48:32.5952853Z",
     "manifestHash": "A263F94F9A11A9CE4BE2964441C584D5354207E27FAF863B1DBFB1DDB1F69387"
   },
   "Microsoft.Azure.GuestProxyAgent.AllowListTool": {
@@ -8524,8 +8524,8 @@
     "installerHashes": [
       "03C2641B411DC772AEBEF651029FD1F0315C6719515BAA2C904545F965E9D05D"
     ],
-    "lastUpdated": "2026-10-03T18:08:10.9767292Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-10-03T21:48:32.5790126Z",
+    "validationCount": 2,
     "description": "",
     "state": "VALIDATION_PASSED",
     "version": "2.49.0",
