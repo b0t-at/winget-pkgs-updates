@@ -1217,16 +1217,16 @@
     "version": "49.0.2"
   },
   "ByteNess.AWSVault": {
-    "description": "",
-    "manifestHash": "E74530ACFDCA989B633CA4A581104A374F4FE1AA3876EFAE9DA4F0DDF727C0C7",
-    "validationCount": 1,
-    "version": "7.15.1",
-    "lastUpdated": "2026-10-01T01:43:50.1896949Z",
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "2A42A15880FDC1F286431938B3F3B329F36009AD65ECD63B2CEEE75F6E0B5E92",
-      "FC625972872767EF1ABD766049AA4E607ECD87EB63802916CFA027662B4C4D63"
-    ]
+      "3FDDD0095FF00D86D589C4722FC966888A022CDF43B69A0A209BCCC30B93452D",
+      "02A4B40DB261BC4B02D1C53B5124F9714D6B6741C1BE755A03AEE83D7033A7F4"
+    ],
+    "lastUpdated": "2026-10-03T18:08:10.8651649Z",
+    "validationCount": 1,
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "version": "7.15.3",
+    "manifestHash": "AF7646B6C2C14136698652481715C515D58783B2C7FADEE470EA197DCC4A36E7"
   },
   "C-POPLO.Unreal-GUI": {
     "validationCount": 1,
@@ -1302,13 +1302,13 @@
   },
   "CarthageSoftware.Mago": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "6A0FF55AB50A6FF8C4174C3457D8EEA31AE23C5FBB5D74A578EF3628511356D6"
     ],
     "version": "1.51.2",
     "description": "",
-    "lastUpdated": "2026-10-03T14:30:18.5644384Z",
+    "lastUpdated": "2026-10-03T18:08:10.7402392Z",
     "manifestHash": "5C08F5758E371CFF8B609CFC6302C6DA1E3A96B9F97F19D53D1FFC3CBC6BA44F"
   },
   "Carvel.ytt": {
@@ -2005,16 +2005,16 @@
     "lastUpdated": "2026-08-28T22:46:20.618689Z"
   },
   "Docker.DockerCompose": {
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-04T01:59:22.8762524Z",
-    "description": "",
-    "version": "5.5.1",
     "installerHashes": [
-      "A3C0C73033EAEDE90210345D0CC2233EDF4FAB8FE0282A91DAD8FD8436809D2F",
-      "4BBB5D1ECC75BDE1A9CA4AFAC43F5907C0D3BD0F88C7F00BF481EE7C8C1737BE"
+      "8AEAA0055E660E12CF07CD70680DC8333957FE6718528B91EC3DA084EAB62483",
+      "73CDC73A03443CBA37C7AE91AEC12C7B86C0EB75A8F40F296AAA5159E66B29BC"
     ],
+    "lastUpdated": "2026-10-03T18:08:10.8025155Z",
     "validationCount": 1,
-    "manifestHash": "469A64523645B47F467F285DCD5C0F41BD7783E25A6E30B3F21D6FB20435D0CE"
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "version": "5.6.0",
+    "manifestHash": "648DCFDA3F46CA6C7EE5C8643C8A48C5417EB321B9043B2175119B09B91CB81D"
   },
   "Docker.ds": {
     "lastUpdated": "2026-08-18T17:25:14.0317211Z",
@@ -3543,15 +3543,15 @@
     "validationCount": 1
   },
   "holland-built.Bloxsmith": {
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "2D60E7415A1FBA380FE8091131720E2D942F946147689E9E76E5E49085B68D70"
+      "29C7586CEAD01EF20393190DCDF861AC50B0E81A7A06EA0CB85347FBD5EC6670"
     ],
-    "lastUpdated": "2026-10-03T04:47:38.9388574Z",
-    "manifestHash": "1F43F41828AB2E34ED8A993B30BE04AD3286081A5A51EF4AD0FC23D70C54E7C7",
-    "version": "3.83.2",
-    "description": ""
+    "lastUpdated": "2026-10-03T18:08:10.8903404Z",
+    "validationCount": 1,
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "version": "3.84.4",
+    "manifestHash": "A607B9660BEE360ED6FE83AC3DEA9EDC0DC08B877197C2B6E8E1ACA876421557"
   },
   "HongMinhee.Gukhanmun": {
     "manifestHash": "089D5FCFFB565DBC52073976471BB7BB53E1FA33EA888133D45A589919D3AE52",
@@ -6681,15 +6681,15 @@
     }
   },
   "PolyMC.PolyMC": {
-    "description": "",
-    "lastUpdated": "2026-09-30T20:55:58.692966Z",
-    "validationCount": 1,
-    "version": "8.0",
-    "manifestHash": "2490E8E7E96C50B68AC1EB100863CC889C1E383058CFACCD145A1F1DA7450E07",
     "installerHashes": [
-      "1064DBFEFD3E1569BFADB0FDC8C2344649797BB51050B6E9FF00D7ED39094504"
+      "51C2E3D69A446111D356F2E2953D3BAA8B9563D3F4E7F630C1524ECF1735ED63"
     ],
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-10-03T18:08:10.8261107Z",
+    "validationCount": 1,
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "version": "8.1",
+    "manifestHash": "F0F9DB32F630B64B06BD5A7090398F49F0F13E15E7DAAEDA87B9B633A80B3F4B"
   },
   "PowCal.PowCal": {
     "validationCount": 1,
@@ -7694,15 +7694,15 @@
     "validationCount": 3
   },
   "Skvetter.DevPod": {
-    "version": "0.26.2",
-    "validationCount": 1,
     "installerHashes": [
-      "BFE01E44126E66FDC86E8565BBF5BD96ECFDECB76FC36D09F5706D1706779E42"
+      "95AD03C46D56D37923798308C59C8E3DCAF242ABA5F09C98A80E82DF0B0D11A3"
     ],
+    "lastUpdated": "2026-10-03T18:08:10.9267994Z",
+    "validationCount": 1,
     "description": "",
-    "manifestHash": "B0DF1D97116A446CFB3DE881E788464FD0AC0A69F973C659B5E22DA3CCF03473",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-26T01:27:42.7558218Z"
+    "version": "0.26.3",
+    "manifestHash": "E287E5EFDF457EB47DC8F18007B1E361CAE20763BDA63DD266E50CCF3C4BAC3A"
   },
   "skyhook-io.Radar": {
     "lastUpdated": "2026-09-27T17:09:13.7985625Z",
@@ -8286,15 +8286,15 @@
     }
   },
   "TaoufikJabbari.Tiger": {
-    "description": "",
-    "manifestHash": "010C06B8C6ABBBBB48B986B6E6394189FCBAD4E6460E53D3223E7CF440DED4C0",
-    "validationCount": 1,
-    "version": "0.8.0",
-    "lastUpdated": "2026-10-01T01:43:50.3027361Z",
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "7F9EE2B35690122C0D3D7EF6BA6417D0533F982604FE4FC1E9C4EF38D55B0702"
-    ]
+      "7F39FB455C24D7A03569459947359C8434C9F390386EE54FF28A443E62CFCDBB"
+    ],
+    "lastUpdated": "2026-10-03T18:08:10.9477335Z",
+    "validationCount": 1,
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "version": "0.8.1",
+    "manifestHash": "47932EC4DF17F01D96BA364A5482CD5CA63888F502E3472F6D10BADEF74C5E8C"
   },
   "Taraflex.Voltglean": {
     "lastUpdated": "2026-08-16T21:14:49.1874058Z",
@@ -8521,15 +8521,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "version": "2.47.0",
-    "lastUpdated": "2026-10-03T08:47:20.7733502Z",
     "installerHashes": [
-      "986704D70D6B3252E93FDE9499410EC4D5229B45980702F6AE1646BE5A82E18D"
+      "03C2641B411DC772AEBEF651029FD1F0315C6719515BAA2C904545F965E9D05D"
     ],
+    "lastUpdated": "2026-10-03T18:08:10.9767292Z",
+    "validationCount": 1,
     "description": "",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "C02C3BC2D4EB3213D94AD044E429B48CA1A138A905436F5CEF50F5D0EEEE90C4",
-    "validationCount": 1
+    "version": "2.49.0",
+    "manifestHash": "C60F9C2AC5E944D275889A58A1958D2306D91C596B9EDE1639B80018893E24F4"
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
