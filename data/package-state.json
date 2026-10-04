@@ -3336,9 +3336,9 @@
       "CDD3CB27421A7111F22EA33B30115552F02ECF4BDC8496A1A1F34D8D4528553E"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "0.11.5",
-    "lastUpdated": "2026-10-03T21:48:32.5548214Z"
+    "lastUpdated": "2026-10-04T02:00:49.9573412Z"
   },
   "Happ.Happ": {
     "validationCount": 1,
@@ -4175,13 +4175,13 @@
   },
   "kangyu-california.PersistentWindows": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "09096A4028880909802CF364B9BE47A82AA19BB0D5045B24E61D3F70283BC36C"
     ],
     "version": "5.77",
     "description": "",
-    "lastUpdated": "2026-10-03T14:30:18.5976505Z",
+    "lastUpdated": "2026-10-04T02:00:50.0204904Z",
     "manifestHash": "6F15F19E04B9E61973368F0D344FB7977101D832E92DFE823FB82758E7EE7299"
   },
   "katahiromz.RisohEditor": {
@@ -5745,15 +5745,15 @@
     }
   },
   "NoahSabaj.Mermaid": {
-    "validationCount": 2,
-    "manifestHash": "D0F9C65610F8A92464B814B86DCEBC525E3975578924F546BCC28271241BD247",
-    "installerHashes": [
-      "E7028F1F7F7275884A35C55C21CAD8F12248C94DE9068DE93C0B108CC667EC02"
-    ],
-    "version": "0.27.0",
+    "manifestHash": "4DF68ADEE3FEB25571CDEE49025021DE44432A54784945E8618B30D0D5223608",
+    "lastUpdated": "2026-10-04T02:00:50.0494497Z",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
     "description": "",
-    "lastUpdated": "2026-09-12T04:54:09.3217643Z",
-    "state": "VALIDATION_PASSED"
+    "installerHashes": [
+      "CC88DD6B15E15F81B18E22B9FEFE8D7E2F9494FF58AA561D8737DD7D059E9170"
+    ],
+    "version": "0.29.0"
   },
   "NoirArchitects.Ncored": {
     "description": "",
@@ -8516,8 +8516,8 @@
     "installerHashes": [
       "03C2641B411DC772AEBEF651029FD1F0315C6719515BAA2C904545F965E9D05D"
     ],
-    "lastUpdated": "2026-10-03T21:48:32.5790126Z",
-    "validationCount": 2,
+    "lastUpdated": "2026-10-04T02:00:49.9174007Z",
+    "validationCount": 3,
     "description": "",
     "state": "VALIDATION_PASSED",
     "version": "2.49.0",
@@ -8995,15 +8995,13 @@
     "state": "VALIDATION_PASSED"
   },
   "Vendicated.Vencord.Canary": {
-    "manifestHash": "658608EF50D6FF994C3CEC971BA317B4E2E9220B47F8382E6ECB1F51A2817CE1",
-    "validationCount": 2,
     "description": "",
-    "installerHashes": [
-      "466D2A0BE1F380DDFFED052DF3CC132125FA34DC1AF29312E14F13F358C8D2A2"
-    ],
+    "installerHashes": "15268ABA25625797BF562187DD87DDADF42882E079C7B6192880AD3E83353EF5",
+    "lastUpdated": "2026-10-04T02:00:49.9971464Z",
+    "manifestHash": "9C1A9264D3F4DFA85145B5BD5455B6CCC8EC3BA82BE36C9E6B2940CAAFCB4D0E",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-06T14:13:45.9696492Z",
-    "version": "1.4.0"
+    "validationCount": 1,
+    "version": "1.4.2"
   },
   "venipa.ytmdesktop": {
     "manifestHash": "9C31EFFCEF2AF712A4B32DAA0E72A077F3E71B6104B0ECAF75DACCF760718B20",
