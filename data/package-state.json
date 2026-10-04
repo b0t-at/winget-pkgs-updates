@@ -366,20 +366,16 @@
     "version": "0.2.0"
   },
   "AnInsomniacy.Aria2Next": {
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "2B455D1B85FDFFC801F99929F3764133C5135885897A99309691936D0AC21001",
-    "description": "",
-    "lastUpdated": "2026-09-28T21:23:26.6128709Z",
-    "installerHashes": [
-      "08AFAF2A44811D38E7CE538DA719AB06D6925BCAAD1231EE7B92C497F58E5AAC",
-      "A0CC2F243E8CBD97417392E2021E593F9851C84A0C32736DDD1CFB33CAD9250C"
-    ],
-    "version": "2.8.3",
+    "manifestHash": "C416E960C87ADF37D6D2099E4EAACB6EF8D4887E6D9955B48D6CDED9D333DC45",
     "validationCount": 1,
-    "openPr": {
-      "version": "2.8.3",
-      "checkedAt": "2026-09-30T01:02:47.3971895Z"
-    }
+    "description": "",
+    "version": "2.8.6",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-04T21:56:07.0285481Z",
+    "installerHashes": [
+      "CF339466CA3763FE89F27F9E325B50058FFB8B97CD93B9AC71FE81D9455EC82C",
+      "6B4E3137AFEF78FD8EBDCA455BCB8EE058692C79EABEDCF15CEA28206B422260"
+    ]
   },
   "Anki.Anki": {
     "description": "",
@@ -640,15 +636,15 @@
     "validationCount": 2
   },
   "AtaraxyLabs.sem": {
-    "installerHashes": [
-      "6D6D9CF93A81C3F5318247CB199ECB8E2FBC44D59493E7D8A7FA8AD026D8949F"
-    ],
-    "validationCount": 2,
-    "state": "VALIDATION_PASSED",
+    "manifestHash": "43514CBBFE7D6C1B48D2F168AE20C1C99CAC2866D2A129F82748F0927FE76AB2",
+    "validationCount": 1,
     "description": "",
-    "version": "0.25.0",
-    "manifestHash": "FF95EECEB373712604113B695DB11C6699312673CBEB10F4383AF61455ADA254",
-    "lastUpdated": "2026-09-15T12:55:05.324434Z"
+    "version": "0.27.0",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-04T21:56:07.1653043Z",
+    "installerHashes": [
+      "FC5AAD509AD271090A169C165E0C5A2D20D046D218012B17A796268E2BCCC7D0"
+    ]
   },
   "Automattic.Wordpress": {
     "installerHashes": [
@@ -1217,8 +1213,8 @@
       "3FDDD0095FF00D86D589C4722FC966888A022CDF43B69A0A209BCCC30B93452D",
       "02A4B40DB261BC4B02D1C53B5124F9714D6B6741C1BE755A03AEE83D7033A7F4"
     ],
-    "lastUpdated": "2026-10-03T18:08:10.8651649Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-10-04T21:56:07.0585925Z",
+    "validationCount": 2,
     "description": "",
     "state": "VALIDATION_PASSED",
     "version": "7.15.3",
@@ -1274,11 +1270,11 @@
       "E16E94929BC7FF94953B2A8CB5F216E36E89DB1B801D5BDE3EC44CE004ED043C",
       "6237D54B75BF6A98F0C88BF89A51FBD4E779F652F89D55501CF671E836A94AF1"
     ],
-    "lastUpdated": "2026-10-04T10:35:19.5849187Z",
+    "lastUpdated": "2026-10-04T21:56:07.2236677Z",
     "version": "1.1.5",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "8E645FF28679E97AD71400806E23B280C929C60DCF327B26B03994C85640FD47"
   },
   "CargoLambda.CargoLambda": {
@@ -2791,16 +2787,16 @@
     "state": "VALIDATION_PASSED"
   },
   "GAM-Team.gam.Portable": {
-    "installerHashes": [
-      "93D5E09B2286E664C41248E8D4EE828623CD83ED92B32B48154B80489D4C7198",
-      "C753FBD5E9BD4CA0831476BECDE657AB5599041BD957DA7305963E41E5805A8E"
-    ],
-    "description": "",
-    "lastUpdated": "2026-09-26T04:59:05.7334381Z",
+    "manifestHash": "967113DB3FC480C3EAC2324063732A3FCE04FC688CEE30C6ECBC275A8AB35B69",
     "validationCount": 1,
+    "description": "",
+    "version": "7.48.17",
     "state": "VALIDATION_PASSED",
-    "version": "7.48.14",
-    "manifestHash": "06F2BCB67E7F407BE3FDEAB2241607BCA7B103455B410C263D9C046E9A9631E8"
+    "lastUpdated": "2026-10-04T21:56:06.9494108Z",
+    "installerHashes": [
+      "E0D70583828A915901988C5D62E5C13BCDCBCCE43FBC7A2A5787C411509FB67A",
+      "3861DC0411BACE17D929172EECF42B4C179935385238DC5C1BC49084E909794C"
+    ]
   },
   "GAM-Team.GotYourBack": {
     "description": "",
@@ -3624,15 +3620,15 @@
     "description": ""
   },
   "Humanity.DJV2": {
-    "lastUpdated": "2026-10-02T01:20:46.5057266Z",
-    "version": "3.7.1",
+    "manifestHash": "D99B513D331A2EBC63D7686AA3245DB8161713A4CF7FDCCB139D684F940DB154",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "2AF6B50F948BC2DB863CE7C4D3182483C1C86E91C09B045BCE3BF1AAE20B877F",
     "description": "",
+    "version": "3.7.4",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-04T21:56:07.1034746Z",
     "installerHashes": [
-      "A184156911136384F8FB6CB62F726ED64D1D269D375C55C55637B916DB9E423A",
-      "818B08BB7B66459833F0908A6BB8A28C9DFFF6E0CB20A1B1C98A9360D118F49F"
+      "8434C2AD58F6DECF2CAC1EF35A7E4B25FF863D95BC43EDEA724F13AA7D0535BD",
+      "B40A4F5DBC1CD5FF458DF5D6AB96B6AA5002643438C66E5BDACAE60293FFC218"
     ]
   },
   "humbinal.ParqForge": {
@@ -4171,13 +4167,13 @@
   },
   "kangyu-california.PersistentWindows": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 3,
+    "validationCount": 4,
     "installerHashes": [
       "09096A4028880909802CF364B9BE47A82AA19BB0D5045B24E61D3F70283BC36C"
     ],
     "version": "5.77",
     "description": "",
-    "lastUpdated": "2026-10-04T18:21:03.9738516Z",
+    "lastUpdated": "2026-10-04T21:56:06.977283Z",
     "manifestHash": "6F15F19E04B9E61973368F0D344FB7977101D832E92DFE823FB82758E7EE7299"
   },
   "katahiromz.RisohEditor": {
@@ -4695,9 +4691,9 @@
       "B54B1B397920D8CA80509580CE29E4BDEAA7A3A229F2A25972808042279B0D9C"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "1.2.4",
-    "lastUpdated": "2026-10-03T21:48:32.6094529Z"
+    "lastUpdated": "2026-10-04T21:56:07.1911592Z"
   },
   "Luxview.AgainstMe": {
     "installerHashes": [
@@ -4996,13 +4992,13 @@
   },
   "Micronaut.Launch": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 3,
+    "validationCount": 4,
     "installerHashes": [
       "FD0D86C80D0E68581C692EE847D522C1744D01FAE0329C68F9B446149AB437EE"
     ],
     "version": "5.2.1",
     "description": "",
-    "lastUpdated": "2026-10-04T15:04:40.8570292Z",
+    "lastUpdated": "2026-10-04T21:56:07.1297363Z",
     "manifestHash": "A263F94F9A11A9CE4BE2964441C584D5354207E27FAF863B1DBFB1DDB1F69387"
   },
   "Microsoft.Azure.GuestProxyAgent.AllowListTool": {
@@ -6209,15 +6205,15 @@
     "validationCount": 1
   },
   "OpenTelemetry.Weaver": {
-    "state": "VALIDATION_PASSED",
-    "version": "0.26.1",
-    "installerHashes": [
-      "BE49D09FE34311D34A55C879D7A5050FC082FF25CD1D18DA799DDD2EC2E21764"
-    ],
-    "manifestHash": "3ADC586089B4880700AE4EB484F18F2A7372E68D4E5765E8F85105AA233E5127",
-    "lastUpdated": "2026-09-04T13:10:02.863432Z",
+    "manifestHash": "7EBEAA075132FAF8652444A7A4E79B5545323C8D3C53B2C2EE2399B538BA6D0B",
+    "validationCount": 1,
     "description": "",
-    "validationCount": 1
+    "version": "0.27.0",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-04T21:56:06.8797928Z",
+    "installerHashes": [
+      "CDF6E5D70A1F6B99456E260AE3EC7891C91AAA951C8359CCFFB8FD9A418452AF"
+    ]
   },
   "OpenTofu.Tofu": {
     "manifestHash": "571C3ED5E5775EFCB2225E378FDD973CB373B3D587751A8300B766463D11CB2D",
@@ -6672,8 +6668,8 @@
     "installerHashes": [
       "51C2E3D69A446111D356F2E2953D3BAA8B9563D3F4E7F630C1524ECF1735ED63"
     ],
-    "lastUpdated": "2026-10-03T18:08:10.8261107Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-10-04T21:56:07.2514104Z",
+    "validationCount": 2,
     "description": "",
     "state": "VALIDATION_PASSED",
     "version": "8.1",
