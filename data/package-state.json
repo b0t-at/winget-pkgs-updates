@@ -277,13 +277,13 @@
   "Alochi.Monitoring": {
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
+    "version": "1.0.164",
+    "manifestHash": "F209A658BADBDC763F5D30B00CEAE1F57A8AD00273646DBA55177A8090364498",
     "installerHashes": [
-      "A110ACF0BD21DD31C8BAC15BD65F18392ACDEFE47F7181390B5040C53EFF9A51"
+      "2B835BA5DB589D60F1B5173D986796665A4121D75EF110D4AC0426EE492EB0E8"
     ],
-    "lastUpdated": "2026-10-03T04:47:38.8801143Z",
-    "manifestHash": "FEB0F860DCCB5E595BAF9D4C4319FE5C7F962CAF61170801F1754AE80A00EADC",
-    "version": "1.0.163",
-    "description": ""
+    "description": "",
+    "lastUpdated": "2026-10-04T15:04:40.9082813Z"
   },
   "AloproAgency.WAutoChat": {
     "lastUpdated": "2026-08-18T01:43:26.4458545Z",
@@ -437,14 +437,14 @@
   },
   "AppFlowy.AppFlowy": {
     "version": "0.14.6",
-    "lastUpdated": "2026-10-03T08:47:20.8232586Z",
+    "lastUpdated": "2026-10-04T15:04:40.7975252Z",
     "installerHashes": [
       "2726C34B511BAAD27D94BE9ED0718F9C6EDF3CC732124DC71CE28C06D12CEF93"
     ],
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "8CB3FB0CD918EDD6AB9BF8F41BE516860282BB58CAEFD4449A111411B69B68D3",
-    "validationCount": 1
+    "validationCount": 2
   },
   "AppiumDevelopers.AppiumInspector": {
     "state": "VALIDATION_FAILED",
@@ -2662,15 +2662,15 @@
     "state": "VALIDATION_PASSED"
   },
   "ForgeLabsSoft.DriveForge": {
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "version": "4.4.1",
+    "manifestHash": "76EA6EEECF5774DC151491575B6A2D20C8522F98A546682A2EB32352CD113F6A",
     "installerHashes": [
-      "95D568EA35E613C2FD8E47326C8FA3415BD9AFDC492D65234FEA55F3DD8F923A"
+      "6AE6E7C29122D74D909009C06DE4622FAA7CD13854CDB89F46E1AFD3013EC5D3"
     ],
     "description": "",
-    "validationCount": 1,
-    "lastUpdated": "2026-09-28T01:42:43.5147204Z",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "B59D7307DFCF2E674BCDFA6C779025478E53AA5E3B6460465F52D83E04604BB0",
-    "version": "4.3.3"
+    "lastUpdated": "2026-10-04T15:04:40.8873399Z"
   },
   "Fork.Fork": {
     "description": "",
@@ -4340,15 +4340,15 @@
     "state": "VALIDATION_PASSED"
   },
   "KoalaBear84.OpenDirectoryDownloader": {
-    "description": "",
-    "manifestHash": "1BF45CB5B051EBEDF9D38C93276E145DDCFA768A45AB918DC9D99D52117D50DC",
-    "installerHashes": [
-      "949324A9F790F9D3D274921917DF2FD8F128734DCA67D0F60A775ED517B4B5EA"
-    ],
-    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "lastUpdated": "2026-09-15T08:56:32.8905743Z",
-    "version": "3.7.0.1"
+    "state": "VALIDATION_PASSED",
+    "version": "4.0.0.0",
+    "manifestHash": "46377D37F40FC7E110F389997DF364F03469439D7A8E623444323C031B805D7C",
+    "installerHashes": [
+      "E774643DE2FA474A98760C7D201B36E6D005C14D3B284256B1BA8A538C43CE15"
+    ],
+    "description": "",
+    "lastUpdated": "2026-10-04T15:04:40.7313107Z"
   },
   "koedame.chordsketch": {
     "validationCount": 1,
@@ -4996,13 +4996,13 @@
   },
   "Micronaut.Launch": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "FD0D86C80D0E68581C692EE847D522C1744D01FAE0329C68F9B446149AB437EE"
     ],
     "version": "5.2.1",
     "description": "",
-    "lastUpdated": "2026-10-03T21:48:32.5952853Z",
+    "lastUpdated": "2026-10-04T15:04:40.8570292Z",
     "manifestHash": "A263F94F9A11A9CE4BE2964441C584D5354207E27FAF863B1DBFB1DDB1F69387"
   },
   "Microsoft.Azure.GuestProxyAgent.AllowListTool": {
@@ -5152,16 +5152,16 @@
     "version": "2.9.13"
   },
   "mikf.gallery-dl.Nightly": {
-    "version": "2026.09.30",
-    "description": "",
-    "lastUpdated": "2026-09-30T13:13:56.2987778Z",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "99F398CB53ACA7197D97A96854C24FA1BB1C65628BC840ACE73D39DEC6FC4EE9",
     "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "version": "2026.10.04",
+    "manifestHash": "5F6E997CA5E6DB349C36C1631E87FB6BF783B82B699575BBC5549F1C1EFCFB2E",
     "installerHashes": [
-      "A6CDCBE5E71BD5962EF8D31A175123349145588175AB69CED9C7120701D91709",
-      "D2251CFD365EC828FA0EE0DBA1CBF64B11ACE7060EFC141EDE178DEEB3D625BF"
-    ]
+      "C3B9791665CAB63C2A93923BE58A4E99D9D947959D3EEAD6337E0E75BA4597FE",
+      "5DFCF4B3CDA8DF2EC3E0BD18A6B9187F37A8C9288A3DCE3788388ACB435E3022"
+    ],
+    "description": "",
+    "lastUpdated": "2026-10-04T15:04:40.7095033Z"
   },
   "MilkShift.GoofCord": {
     "state": "VALIDATION_PASSED",
@@ -5299,14 +5299,14 @@
   },
   "Monghoul.Monghoul": {
     "validationCount": 1,
-    "version": "1.12.2",
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "manifestHash": "EE0DA975D09627DD78D776901C8FFB0B6EA205544F1D27BA83A439D26ECFC0F8",
+    "version": "1.14.1",
+    "manifestHash": "63D13E1A3858FC28CAAD40AE7ED2DFFE8109B34335693320F6AF4F99A0BA86E5",
     "installerHashes": [
-      "4C3FD78D611B217DA95C0796CCB985AA221145AB56660D30B1A10DCB6E4F13CD"
+      "2A0C154CB1875695AD8EA49C5891D44A826DC70C396AAC2F60F033838792277E"
     ],
-    "lastUpdated": "2026-09-18T08:57:15.8922749Z"
+    "description": "",
+    "lastUpdated": "2026-10-04T15:04:40.8358037Z"
   },
   "MongoDB.MongoDBAtlasCLI": {
     "validationCount": 1,
@@ -5534,14 +5534,14 @@
     "validationCount": 1
   },
   "Naeem5877.VibeDownloader": {
-    "state": "VALIDATION_FAILED",
-    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "validationCount": 2,
     "installerHashes": [
       "07186636A8AC4C3CA60C04C942F60A40475565D0885A5EFC0967967C2BDF2945"
     ],
     "version": "2.1.0",
     "description": "",
-    "lastUpdated": "2026-10-03T14:30:18.5239377Z",
+    "lastUpdated": "2026-10-04T15:04:40.7677933Z",
     "manifestHash": "0369816DC78FE43ABB704F7A7C32EFFC9BEA1439D8502F88D3954DDDADA0E021"
   },
   "nao1215.gup": {
@@ -5742,8 +5742,8 @@
   },
   "NoahSabaj.Mermaid": {
     "manifestHash": "4DF68ADEE3FEB25571CDEE49025021DE44432A54784945E8618B30D0D5223608",
-    "lastUpdated": "2026-10-04T02:00:50.0494497Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-10-04T15:04:40.9339265Z",
+    "validationCount": 2,
     "state": "VALIDATION_PASSED",
     "description": "",
     "installerHashes": [
@@ -8189,15 +8189,15 @@
     "version": "1.7.6"
   },
   "T-Troll.AlienFXTools": {
-    "manifestHash": "EEA8C838A9D3AB5FB403E40190328C596C18D6300B5539EB08A21B676DB63623",
-    "version": "9.6.1.2",
     "validationCount": 1,
-    "description": "",
+    "state": "VALIDATION_PASSED",
+    "version": "9.6.2",
+    "manifestHash": "E378035BC47942F2C47004ACB55CF6692B088199FF55E359374612711CE0E057",
     "installerHashes": [
-      "970153004648A7B8A7D304FCDBBB72C07EC74B1C64E4A3BBA8ED21BF1EA2D13C"
+      "E952996F9703DEA0E57901B15DCC04132273342405DB32466AEAA7A3809DB766"
     ],
-    "lastUpdated": "2026-07-05T09:27:40.0357659Z",
-    "state": "VALIDATION_PASSED"
+    "description": "",
+    "lastUpdated": "2026-10-04T15:04:40.6494979Z"
   },
   "TacitDynamics.FolderSync": {
     "validationCount": 1,
