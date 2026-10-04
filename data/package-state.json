@@ -3154,8 +3154,8 @@
     ],
     "description": "",
     "openPr": {
-      "checkedAt": "2026-10-03T00:56:36.9765642Z",
-      "version": "36.2"
+      "version": "36.2",
+      "checkedAt": "2026-10-04T01:30:05.6640592Z"
     }
   },
   "goplus.xgo": {
@@ -4081,11 +4081,7 @@
     ],
     "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "9A4DF16EBDCE59232C54B5DF04D449A66D61F5A11ADD46BF707CB15A166AB223",
-    "openPr": {
-      "checkedAt": "2026-10-03T00:56:37.3610948Z",
-      "version": "19.1.0"
-    }
+    "manifestHash": "9A4DF16EBDCE59232C54B5DF04D449A66D61F5A11ADD46BF707CB15A166AB223"
   },
   "JosephFinney.Text-Grab": {
     "state": "VALIDATION_PASSED",
@@ -6225,11 +6221,7 @@
     "manifestHash": "3ADC586089B4880700AE4EB484F18F2A7372E68D4E5765E8F85105AA233E5127",
     "lastUpdated": "2026-09-04T13:10:02.863432Z",
     "description": "",
-    "validationCount": 1,
-    "openPr": {
-      "version": "0.26.1",
-      "checkedAt": "2026-09-08T20:21:52.9022406Z"
-    }
+    "validationCount": 1
   },
   "OpenTofu.Tofu": {
     "manifestHash": "571C3ED5E5775EFCB2225E378FDD973CB373B3D587751A8300B766463D11CB2D",
@@ -6243,8 +6235,8 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "openPr": {
-      "checkedAt": "2026-10-03T00:56:39.3974219Z",
-      "version": "1.13.1"
+      "version": "1.13.1",
+      "checkedAt": "2026-10-04T01:30:13.9648619Z"
     }
   },
   "OpenWhispr.OpenWhispr": {
@@ -8404,8 +8396,8 @@
     "manifestHash": "101A50462A6E2BE19AFB17A21278EA44597559D970949753840897CFC30A7566",
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
-      "checkedAt": "2026-10-03T00:57:03.8636253Z",
-      "version": "5.7.0"
+      "version": "5.7.0",
+      "checkedAt": "2026-10-04T01:30:16.7339034Z"
     }
   },
   "termio.soft-jp.com.TermioWin": {
@@ -9011,11 +9003,7 @@
     ],
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-08-06T14:13:45.9696492Z",
-    "version": "1.4.0",
-    "openPr": {
-      "checkedAt": "2026-10-03T00:57:06.6868137Z",
-      "version": "1.4.2"
-    }
+    "version": "1.4.0"
   },
   "venipa.ytmdesktop": {
     "manifestHash": "9C31EFFCEF2AF712A4B32DAA0E72A077F3E71B6104B0ECAF75DACCF760718B20",
