@@ -275,7 +275,7 @@
     }
   },
   "Alochi.Monitoring": {
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_PASSED",
     "version": "1.0.164",
     "manifestHash": "F209A658BADBDC763F5D30B00CEAE1F57A8AD00273646DBA55177A8090364498",
@@ -283,7 +283,7 @@
       "2B835BA5DB589D60F1B5173D986796665A4121D75EF110D4AC0426EE492EB0E8"
     ],
     "description": "",
-    "lastUpdated": "2026-10-04T15:04:40.9082813Z"
+    "lastUpdated": "2026-10-04T18:21:03.9410814Z"
   },
   "AloproAgency.WAutoChat": {
     "lastUpdated": "2026-08-18T01:43:26.4458545Z",
@@ -1621,9 +1621,9 @@
       "051A9CF81373536E05E56B4AD597EC1EB6453C9262F98797F5AC78725BC0639B"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "4.14.1",
-    "lastUpdated": "2026-10-03T21:48:32.5395174Z"
+    "lastUpdated": "2026-10-04T18:21:04.0248286Z"
   },
   "Crate-CI.Typos": {
     "lastUpdated": "2026-09-25T20:53:18.2733972Z",
@@ -2085,15 +2085,15 @@
     "validationCount": 1
   },
   "Dystroy.broot": {
-    "installerHashes": [
-      "E238E610EE1FA2CD52353EFEB60B43ECE470D047529E9B9071C0714C46CED545"
-    ],
-    "description": "",
+    "version": "1.61.0",
     "validationCount": 1,
-    "lastUpdated": "2026-09-28T01:42:43.4764046Z",
+    "installerHashes": [
+      "6CAFE8E993FB8E5684EB25549703A4FB9DEC61AC6A8F1947CBED6566CB4E58E5"
+    ],
+    "lastUpdated": "2026-10-04T18:21:04.1964716Z",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "D13E595130F97176393E8218593FE95744C942BF504E50CDAF40298F166BA18D",
-    "version": "1.60.2"
+    "description": "",
+    "manifestHash": "9A6872FAEC3899B1C18645128F20192E940B12B4BC315366374D5A048997E77C"
   },
   "Easure.HelpMePrint": {
     "configHealth": {
@@ -2182,11 +2182,11 @@
       "AB46806ECAB964E1B383C411CEA51199CEC07FBE28074BF1F099A2E1A24C99E3",
       "1CDBA24089625B2DC2ADB34DBE5C5B9EA57799BE24365D98A54B6A563F0F02E6"
     ],
-    "lastUpdated": "2026-10-04T10:35:19.6376198Z",
+    "lastUpdated": "2026-10-04T18:21:04.1554824Z",
     "version": "0.231.0",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "80BF2E5B9B8B37AD211D411D73C12B944A5083A80A9410F0A0D841FE7EF11E47"
   },
   "electerm.electerm": {
@@ -3539,15 +3539,15 @@
     "validationCount": 1
   },
   "holland-built.Bloxsmith": {
-    "installerHashes": [
-      "29C7586CEAD01EF20393190DCDF861AC50B0E81A7A06EA0CB85347FBD5EC6670"
-    ],
-    "lastUpdated": "2026-10-03T18:08:10.8903404Z",
+    "version": "3.87.3",
     "validationCount": 1,
-    "description": "",
+    "installerHashes": [
+      "761A2B1640BC4CAFCD9F3BFDDAB6BA49ACF1EA22D26EAE8D072118ADFC12A09B"
+    ],
+    "lastUpdated": "2026-10-04T18:21:04.1139834Z",
     "state": "VALIDATION_PASSED",
-    "version": "3.84.4",
-    "manifestHash": "A607B9660BEE360ED6FE83AC3DEA9EDC0DC08B877197C2B6E8E1ACA876421557"
+    "description": "",
+    "manifestHash": "B00E6A9CD47743611F02EDE07C40647189E2E674119CB213BE8CA07E00776F2C"
   },
   "HongMinhee.Gukhanmun": {
     "manifestHash": "089D5FCFFB565DBC52073976471BB7BB53E1FA33EA888133D45A589919D3AE52",
@@ -4171,13 +4171,13 @@
   },
   "kangyu-california.PersistentWindows": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "09096A4028880909802CF364B9BE47A82AA19BB0D5045B24E61D3F70283BC36C"
     ],
     "version": "5.77",
     "description": "",
-    "lastUpdated": "2026-10-04T02:00:50.0204904Z",
+    "lastUpdated": "2026-10-04T18:21:03.9738516Z",
     "manifestHash": "6F15F19E04B9E61973368F0D344FB7977101D832E92DFE823FB82758E7EE7299"
   },
   "katahiromz.RisohEditor": {
@@ -5298,7 +5298,7 @@
     "state": "VALIDATION_PASSED"
   },
   "Monghoul.Monghoul": {
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_PASSED",
     "version": "1.14.1",
     "manifestHash": "63D13E1A3858FC28CAAD40AE7ED2DFFE8109B34335693320F6AF4F99A0BA86E5",
@@ -5306,7 +5306,7 @@
       "2A0C154CB1875695AD8EA49C5891D44A826DC70C396AAC2F60F033838792277E"
     ],
     "description": "",
-    "lastUpdated": "2026-10-04T15:04:40.8358037Z"
+    "lastUpdated": "2026-10-04T18:21:03.8742808Z"
   },
   "MongoDB.MongoDBAtlasCLI": {
     "validationCount": 1,
@@ -7523,15 +7523,15 @@
     "manifestHash": "37B0A6BD551434EAA1C0B16AE501F5B3CC4DF2305259653025D1690E0BF38E40"
   },
   "ShatteredChaos.FightPlanner": {
-    "installerHashes": [
-      "878213D8CB5E449CCA8C3FECFB7308BB825597330D5DD31C1933F62503F9705E"
-    ],
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-21T01:21:03.7540624Z",
-    "version": "3.3.33",
+    "version": "3.3.34",
     "validationCount": 1,
-    "manifestHash": "1F5F54940F843C45110C9077F8F9BB6BEC84A2D360031EC72AC9B71726A7A68C",
-    "description": ""
+    "installerHashes": [
+      "A6DBF209B8E65F39B153FDE4D0131E9DB0ADBBDA75A7350421B89A79FE7380AE"
+    ],
+    "lastUpdated": "2026-10-04T18:21:04.0505258Z",
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "manifestHash": "3AAC778A30BB261914E8D24F401524EF3C7B94BB334611875BBFCB09ED28C047"
   },
   "Shinokada.Gitstart": {
     "installerHashes": [
@@ -7855,14 +7855,14 @@
     "state": "VALIDATION_PASSED"
   },
   "SpectrumQT.XXMILauncher": {
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "486368F30FDD8C55B6A12000CD977DBABCA591A6B1D448993808EB46F8F46D99"
     ],
     "state": "VALIDATION_PASSED",
     "manifestHash": "2BCCCD5E314F3B0494EB008C28A9EB5BCE7906702ABB9AE085B63E61DAC41AED",
     "version": "2.4.1",
-    "lastUpdated": "2026-10-04T06:33:48.177659Z",
+    "lastUpdated": "2026-10-04T18:21:04.0922577Z",
     "description": ""
   },
   "SpikeHD.Dorion": {
