@@ -1213,8 +1213,8 @@
       "3FDDD0095FF00D86D589C4722FC966888A022CDF43B69A0A209BCCC30B93452D",
       "02A4B40DB261BC4B02D1C53B5124F9714D6B6741C1BE755A03AEE83D7033A7F4"
     ],
-    "lastUpdated": "2026-10-04T21:56:07.0585925Z",
-    "validationCount": 2,
+    "lastUpdated": "2026-10-05T05:19:44.4568106Z",
+    "validationCount": 3,
     "description": "",
     "state": "VALIDATION_PASSED",
     "version": "7.15.3",
@@ -1617,9 +1617,9 @@
       "051A9CF81373536E05E56B4AD597EC1EB6453C9262F98797F5AC78725BC0639B"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "4.14.1",
-    "lastUpdated": "2026-10-04T18:21:04.0248286Z"
+    "lastUpdated": "2026-10-05T05:19:44.4350755Z"
   },
   "Crate-CI.Typos": {
     "lastUpdated": "2026-09-25T20:53:18.2733972Z",
@@ -2788,11 +2788,11 @@
   },
   "GAM-Team.gam.Portable": {
     "manifestHash": "967113DB3FC480C3EAC2324063732A3FCE04FC688CEE30C6ECBC275A8AB35B69",
-    "validationCount": 2,
+    "validationCount": 3,
     "description": "",
     "version": "7.48.17",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-05T01:40:08.3980295Z",
+    "lastUpdated": "2026-10-05T05:19:44.3778424Z",
     "installerHashes": [
       "E0D70583828A915901988C5D62E5C13BCDCBCCE43FBC7A2A5787C411509FB67A",
       "3861DC0411BACE17D929172EECF42B4C179935385238DC5C1BC49084E909794C"
@@ -3514,13 +3514,13 @@
   },
   "hluk.CopyQ": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "33585174067273B391DF13C0332ADB60A3797EC47BFFF9C26FF7C26E7DCD85D8"
     ],
     "version": "17.0.0",
     "description": "",
-    "lastUpdated": "2026-10-05T01:40:08.5278843Z",
+    "lastUpdated": "2026-10-05T05:19:44.4937849Z",
     "manifestHash": "1515766D65DB497E99DC14F3594A7490DE182E63B0EDEB311859B7DF148F234C"
   },
   "hoijun-kim.flip": {
@@ -4341,15 +4341,15 @@
     "lastUpdated": "2026-10-04T15:04:40.7313107Z"
   },
   "koedame.chordsketch": {
-    "validationCount": 1,
-    "version": "0.7.0",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "678ECC4AF30C134B35DB4DB48CD2ED358F0AC8CEC62F99E4B91F20E157EDB763",
+    "version": "0.8.0",
+    "lastUpdated": "2026-10-05T05:19:44.5437236Z",
+    "validationCount": 1,
+    "manifestHash": "8DE6D1DDF0D710D9E34635707FBAF86466F87A5B5735922F2622C1F545A83417",
     "installerHashes": [
-      "A775CCEDE81BFD2C98F9229B2CA83C5E70C17661F0C0806459B80B75654FF760"
-    ],
-    "lastUpdated": "2026-09-18T08:57:15.8649779Z"
+      "C8E884E502F42F9D35D2E2F0F3CEEE9EBDC7DFE71D5059186B77A79B24A95403"
+    ]
   },
   "KRTirtho.Spotube": {
     "manifestHash": "48B938BDAA7E2ADCDF3C6E7B71A7214AF24FFD5388F587258C452A189DDE760D",
@@ -6200,11 +6200,11 @@
   },
   "OpenTelemetry.Weaver": {
     "manifestHash": "7EBEAA075132FAF8652444A7A4E79B5545323C8D3C53B2C2EE2399B538BA6D0B",
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
     "version": "0.27.0",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-04T21:56:06.8797928Z",
+    "lastUpdated": "2026-10-05T05:19:44.3164296Z",
     "installerHashes": [
       "CDF6E5D70A1F6B99456E260AE3EC7891C91AAA951C8359CCFFB8FD9A418452AF"
     ]
@@ -6510,10 +6510,10 @@
       "BC796772A32B7CD8B532B18DA268E65F67344A3DABF466C5C940B73D81F3E815"
     ],
     "manifestHash": "90A4481193729A1EBB0FC86D40D34A8E8DD5E2A61CFBA712831D8D91FCBB8AD5",
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-05T01:40:08.4259487Z"
+    "lastUpdated": "2026-10-05T05:19:44.3992764Z"
   },
   "Pencil.Desktop": {
     "manifestHash": "C4EE87B0CC9764C0F5737AC23FED643FDCF66A0CF3152C79A8770CA186C6674E",
@@ -6620,7 +6620,7 @@
     }
   },
   "pnpm.pnpm": {
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "2B30F6BC53228187881AEAE604CC6CEDF092641DF30D3BE1CF4CD3D17BF630F5",
       "BD6FE6E6B2CB5EFD0E7F7C47F11DE7AEA3247EA78D382F9AE91B22F10B3AE0C6"
@@ -6628,7 +6628,7 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "63B6BA8BE64D515663FD574620371B3FDFDB5CD8056EF084B1F19919CD88C1CD",
     "version": "12.9.1",
-    "lastUpdated": "2026-10-04T06:33:48.1398987Z",
+    "lastUpdated": "2026-10-05T05:19:44.5144107Z",
     "description": ""
   },
   "PocketBase.PocketBase": {
@@ -8179,7 +8179,7 @@
     "version": "1.7.6"
   },
   "T-Troll.AlienFXTools": {
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_PASSED",
     "version": "9.6.2",
     "manifestHash": "E378035BC47942F2C47004ACB55CF6692B088199FF55E359374612711CE0E057",
@@ -8187,7 +8187,7 @@
       "E952996F9703DEA0E57901B15DCC04132273342405DB32466AEAA7A3809DB766"
     ],
     "description": "",
-    "lastUpdated": "2026-10-04T15:04:40.6494979Z"
+    "lastUpdated": "2026-10-05T05:19:44.5661757Z"
   },
   "TacitDynamics.FolderSync": {
     "validationCount": 1,
