@@ -3146,8 +3146,8 @@
     ],
     "description": "",
     "openPr": {
-      "version": "36.2",
-      "checkedAt": "2026-10-04T01:30:05.6640592Z"
+      "checkedAt": "2026-10-05T04:33:10.6886898Z",
+      "version": "36.2"
     }
   },
   "goplus.xgo": {
@@ -3652,12 +3652,6 @@
     "validationCount": 1,
     "version": "2.14.0.466",
     "lastUpdated": "2026-08-21T17:17:39.9241582Z"
-  },
-  "IanWalton.JellyfinMPVShim": {
-    "openPr": {
-      "checkedAt": "2026-09-21T08:34:17.5918044Z",
-      "version": "3.0.0"
-    }
   },
   "icsharpcode.ILSpy": {
     "state": "VALIDATION_PASSED",
@@ -6227,8 +6221,8 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "openPr": {
-      "version": "1.13.1",
-      "checkedAt": "2026-10-04T01:30:13.9648619Z"
+      "checkedAt": "2026-10-05T04:33:33.938802Z",
+      "version": "1.13.1"
     }
   },
   "OpenWhispr.OpenWhispr": {
@@ -8388,8 +8382,8 @@
     "manifestHash": "101A50462A6E2BE19AFB17A21278EA44597559D970949753840897CFC30A7566",
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
-      "version": "5.7.0",
-      "checkedAt": "2026-10-04T01:30:16.7339034Z"
+      "checkedAt": "2026-10-05T04:34:30.8429982Z",
+      "version": "5.7.0"
     }
   },
   "termio.soft-jp.com.TermioWin": {
