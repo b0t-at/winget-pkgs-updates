@@ -841,14 +841,14 @@
     "version": "0.5"
   },
   "BenjaminLSR.HandheldCompanion": {
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "1.3.3.1",
     "description": "",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "C212332DF3914E06555ED35B1520E24300661AE968F03642304AC3784F8F9F6F"
     ],
-    "lastUpdated": "2026-10-05T17:48:41.353834Z",
+    "lastUpdated": "2026-10-05T22:13:12.3125398Z",
     "manifestHash": "1893BCA41A722D8FC2DBF7C5F5F87E232C5D1BAF0720C1F7AF72EC42D870D762"
   },
   "BenModigell.Vibes": {
@@ -2005,8 +2005,8 @@
       "8AEAA0055E660E12CF07CD70680DC8333957FE6718528B91EC3DA084EAB62483",
       "73CDC73A03443CBA37C7AE91AEC12C7B86C0EB75A8F40F296AAA5159E66B29BC"
     ],
-    "lastUpdated": "2026-10-05T13:52:12.7852233Z",
-    "validationCount": 3,
+    "lastUpdated": "2026-10-05T22:13:12.3617728Z",
+    "validationCount": 4,
     "description": "",
     "state": "VALIDATION_PASSED",
     "version": "5.6.0",
@@ -3524,13 +3524,13 @@
   },
   "hluk.CopyQ": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 4,
+    "validationCount": 5,
     "installerHashes": [
       "33585174067273B391DF13C0332ADB60A3797EC47BFFF9C26FF7C26E7DCD85D8"
     ],
     "version": "17.0.0",
     "description": "",
-    "lastUpdated": "2026-10-05T09:43:58.8395743Z",
+    "lastUpdated": "2026-10-05T22:13:12.4849978Z",
     "manifestHash": "1515766D65DB497E99DC14F3594A7490DE182E63B0EDEB311859B7DF148F234C"
   },
   "hoijun-kim.flip": {
@@ -3662,6 +3662,17 @@
     "validationCount": 1,
     "version": "2.14.0.466",
     "lastUpdated": "2026-08-21T17:17:39.9241582Z"
+  },
+  "IanWalton.JellyfinMPVShim": {
+    "lastUpdated": "2026-10-05T22:13:12.2692981Z",
+    "validationCount": 1,
+    "manifestHash": "675AEF627B4CC56E6ABA67B65310B3A79C2D1BE64E45261656508D89D741DD2A",
+    "installerHashes": [
+      "4FBDFADCF028BCBB67375F808F5C8FE557635F4377A46E84550DE32B9E002B5E"
+    ],
+    "version": "3.1.0",
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "icsharpcode.ILSpy": {
     "state": "VALIDATION_PASSED",
@@ -4346,7 +4357,7 @@
     "state": "VALIDATION_PASSED"
   },
   "KoalaBear84.OpenDirectoryDownloader": {
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_PASSED",
     "version": "4.0.0.0",
     "manifestHash": "46377D37F40FC7E110F389997DF364F03469439D7A8E623444323C031B805D7C",
@@ -4354,7 +4365,7 @@
       "E774643DE2FA474A98760C7D201B36E6D005C14D3B284256B1BA8A538C43CE15"
     ],
     "description": "",
-    "lastUpdated": "2026-10-04T15:04:40.7313107Z"
+    "lastUpdated": "2026-10-05T22:13:12.334106Z"
   },
   "koedame.chordsketch": {
     "state": "VALIDATION_PASSED",
@@ -5012,15 +5023,15 @@
     "manifestHash": "A263F94F9A11A9CE4BE2964441C584D5354207E27FAF863B1DBFB1DDB1F69387"
   },
   "Microsoft.Azure.GuestProxyAgent.AllowListTool": {
+    "lastUpdated": "2026-10-05T22:13:12.4645944Z",
     "validationCount": 1,
-    "manifestHash": "15C585CE9E98F107A672E0A6A82A1905BD6D0C6235350CCB90F7B06377E3613C",
+    "manifestHash": "22A145911C542B1EC96FCA3634903B9F8C3FEAF9EC429E6214469C4B47D83E08",
     "installerHashes": [
-      "CB412EE4E5D33D1F67FBF52F8C49B9B6A565DB3275A67785958FEC309EB004AB"
+      "3D3A3512A0759034EF8AF670A40F2D9F301671E37354C67847D6554DA6553747"
     ],
-    "version": "1.0.48",
-    "description": "",
-    "lastUpdated": "2026-09-10T09:04:57.4949621Z",
-    "state": "VALIDATION_PASSED"
+    "version": "1.0.52",
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "Microsoft.Azure.TemplateAnalyzer": {
     "manifestHash": "9839DCB8411645A535E800F194840DEC617BF1159688EF5BB43A79536F8D6A4A",
@@ -6128,9 +6139,9 @@
   },
   "OpenGeos.GeoLibre": {
     "manifestHash": "E8BB582AD15AEF3CA19431E16601A61E6F1F1971FB30D008602C8899EAA065E5",
-    "lastUpdated": "2026-10-05T09:43:58.7462251Z",
+    "lastUpdated": "2026-10-05T22:13:12.4385186Z",
     "version": "3.3.0",
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "D286DF26A31C37FED32BF0486723A33092CCF7A957B1AAF86346990F1EB5A20F"
@@ -6562,9 +6573,9 @@
   },
   "PicGo.PicGo": {
     "description": "",
-    "lastUpdated": "2026-10-05T17:48:41.2995127Z",
+    "lastUpdated": "2026-10-05T22:13:12.2178625Z",
     "manifestHash": "78A72BF5A2E9025FD82DC0B6194D194B7D079BAD8F4E819F1F33DA97592034A8",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "4206DCD4A931886C6D6669FCE1072DD158B5762CE30B6A8446EE85E2BE724C63",
       "BF1D22A13693790AB87293AD56F711215F2D0A248C63AB838EC03D7FBD92C303",
@@ -7043,15 +7054,15 @@
     "version": "0.3.1"
   },
   "RimSort.RimSort": {
+    "lastUpdated": "2026-10-05T22:13:12.4169621Z",
     "validationCount": 1,
-    "manifestHash": "2D73930CA1DE0D49A95572395AA2586BDB65A38DE994B5186028935FA6402C56",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-28T17:00:45.618002Z",
+    "manifestHash": "D615224FE11F13CA0AA210D004D952945CAB19EE0D4AA9C352A12F4303B701E4",
     "installerHashes": [
-      "917DB2016C34A25C0667C5D0671DB8458BC1EA0C1EC6456E7E303702FF94C57B"
+      "A5D1226734AA24DBD1D107013C31786CCFBAA65C31F518540F4A9060A2F2FB30"
     ],
-    "description": "",
-    "version": "1.14.1"
+    "version": "1.15.0",
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "Ripose.Memento": {
     "description": "",
@@ -7698,8 +7709,8 @@
     "installerHashes": [
       "95AD03C46D56D37923798308C59C8E3DCAF242ABA5F09C98A80E82DF0B0D11A3"
     ],
-    "lastUpdated": "2026-10-05T09:43:58.4943637Z",
-    "validationCount": 2,
+    "lastUpdated": "2026-10-05T22:13:12.3881608Z",
+    "validationCount": 3,
     "description": "",
     "state": "VALIDATION_PASSED",
     "version": "0.26.3",
