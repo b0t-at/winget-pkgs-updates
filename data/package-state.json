@@ -1126,13 +1126,7 @@
     "validationCount": 1,
     "version": "1.2.5",
     "manifestHash": "81787CB8A4D71FFE5AF7458238621F26813929C3CAB58F9E6A6BCF0762A5E95E",
-    "lastUpdated": "2026-08-20T09:17:27.4984446Z",
-    "configHealth": {
-      "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/bootandy/dust/releases/download/v1.2.6/dust-v1.2.6-i686-pc-windows-gnu.zip",
-      "tag": "v1.2.6",
-      "checkedAt": "2026-09-21T05:31:43.6745585Z"
-    }
+    "lastUpdated": "2026-08-20T09:17:27.4984446Z"
   },
   "bornova.numara": {
     "description": "",
@@ -1750,7 +1744,13 @@
     ],
     "validationCount": 1,
     "lastUpdated": "2026-08-22T08:51:40.4255232Z",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "configHealth": {
+      "status": "RepoMissing",
+      "detail": "The GitHub repository does not exist or is not readable.",
+      "tag": "",
+      "checkedAt": "2026-10-05T05:43:26.8532582Z"
+    }
   },
   "CycloneDX.CLI": {
     "state": "VALIDATION_PASSED",
@@ -3466,7 +3466,13 @@
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-08-20T01:39:37.4532013Z",
     "validationCount": 1,
-    "version": "0.2.3"
+    "version": "0.2.3",
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/touchHLE/touchHLE/releases/download/v0.3.0/touchHLE_v0.3.0_Windows_x86_64.zip",
+      "tag": "v0.3.0",
+      "checkedAt": "2026-10-05T05:43:26.8532582Z"
+    }
   },
   "HiroSystems.Clarinet": {
     "validationCount": 1,
@@ -3716,7 +3722,13 @@
     "version": "0.9.2",
     "lastUpdated": "2026-08-23T05:10:59.6738815Z",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/ineedabuff/BuffMyBar-W26/releases/download/v0.9.2/Buffmybar-W26.exe",
+      "tag": "v0.9.2",
+      "checkedAt": "2026-10-05T05:43:26.8532582Z"
+    }
   },
   "Infracost.Infracost": {
     "installerHashes": [
@@ -4001,9 +4013,9 @@
   "JGraph.Draw": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/draw.io-ia32-31.5.3-windows-32bit-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/draw.io-ia32-31.5.3-windows-32bit-no-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v31.5.3/draw.io-31.5.3-windows-no-installer.exe",
-      "tag": "v31.5.3",
-      "checkedAt": "2026-09-28T05:34:06.1313156Z"
+      "detail": "No release asset matches: https://github.com/jgraph/drawio-desktop/releases/download/v31.7.0/draw.io-ia32-31.7.0-windows-32bit-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v31.7.0/draw.io-ia32-31.7.0-windows-32bit-no-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v31.7.0/draw.io-31.7.0-windows-no-installer.exe",
+      "tag": "v31.7.0",
+      "checkedAt": "2026-10-05T05:43:26.8532582Z"
     }
   },
   "JitzuLang.Jitzu": {
@@ -4504,9 +4516,9 @@
   "Litenova.Fuse": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/Litenova-Solutions/Fuse/releases/download/v5.0.0/fuse-5.0.0-setup.exe",
-      "tag": "v5.0.0",
-      "checkedAt": "2026-09-28T05:34:06.1313156Z"
+      "detail": "No release asset matches: https://github.com/Litenova-Solutions/Fuse/releases/download/v5.2.4/fuse-5.2.4-setup.exe",
+      "tag": "v5.2.4",
+      "checkedAt": "2026-10-05T05:43:26.8532582Z"
     }
   },
   "LittleTijn.SpookyView": {
@@ -4919,9 +4931,9 @@
   "Metanorma.Metanorma": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/metanorma/packed-mn/releases/download/v1.16.9-5/metanorma-windows-x86_64.zip",
-      "tag": "v1.16.9-5",
-      "checkedAt": "2026-09-07T05:30:26.3249501Z"
+      "detail": "No release asset matches: https://github.com/metanorma/packed-mn/releases/download/v1.17.0-1/metanorma-windows-x86_64.zip",
+      "tag": "v1.17.0-1",
+      "checkedAt": "2026-10-05T05:43:26.8532582Z"
     }
   },
   "Mew.Wrec": {
@@ -5004,13 +5016,7 @@
     "version": "1.0.48",
     "description": "",
     "lastUpdated": "2026-09-10T09:04:57.4949621Z",
-    "state": "VALIDATION_PASSED",
-    "configHealth": {
-      "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/Azure/GuestProxyAgent/releases/download/1.0.52/allowListTool.exe",
-      "tag": "1.0.52",
-      "checkedAt": "2026-09-28T05:34:06.1313156Z"
-    }
+    "state": "VALIDATION_PASSED"
   },
   "Microsoft.Azure.TemplateAnalyzer": {
     "manifestHash": "9839DCB8411645A535E800F194840DEC617BF1159688EF5BB43A79536F8D6A4A",
@@ -5164,7 +5170,13 @@
     ],
     "lastUpdated": "2026-08-06T14:10:17.4172097Z",
     "manifestHash": "5614AC57165FFCF59691032A73D89BCE1DF739C120A9FD77E85C4C80E9D5ABDA",
-    "version": "2.3.0"
+    "version": "2.3.0",
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/Milkshiift/GoofCord/releases/download/v2.3.1/GoofCord-Setup-ia32.exe",
+      "tag": "v2.3.1",
+      "checkedAt": "2026-10-05T05:43:26.8532582Z"
+    }
   },
   "Miller.Miller": {
     "version": "6.22.0",
@@ -5362,7 +5374,13 @@
     "version": "7.3.0",
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-08-23T20:39:20.3802427Z",
-    "manifestHash": "51F52455744DD09BD074A27F4E8AA509F1D25FCC931AC6A7D761426C529F3C13"
+    "manifestHash": "51F52455744DD09BD074A27F4E8AA509F1D25FCC931AC6A7D761426C529F3C13",
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/mozilla/mozregression/releases/download/7.4.0/mozregression-gui-signed.exe",
+      "tag": "7.4.0",
+      "checkedAt": "2026-10-05T05:43:26.8532582Z"
+    }
   },
   "mpc-qt.mpc-qt": {
     "lastUpdated": "2026-08-18T21:24:38.7912751Z",
@@ -5552,9 +5570,9 @@
     },
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/nao1215/gup/releases/download/v1.10.2/gup_1.10.2_windows_386.zip",
-      "tag": "v1.10.2",
-      "checkedAt": "2026-09-28T05:34:06.1313156Z"
+      "detail": "No release asset matches: https://github.com/nao1215/gup/releases/download/v1.10.3/gup_1.10.3_windows_386.zip",
+      "tag": "v1.10.3",
+      "checkedAt": "2026-10-05T05:43:26.8532582Z"
     }
   },
   "NASS.AvUpload": {
@@ -5755,9 +5773,9 @@
   "nomacs.nomacs": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/nomacs/nomacs/releases/download/3.22.3/nomacs-setup-x64.exe https://github.com/nomacs/nomacs/releases/download/3.22.3/nomacs-setup-x64.exe",
-      "tag": "3.22.3",
-      "checkedAt": "2026-09-07T05:30:26.3249501Z"
+      "detail": "No release asset matches: https://github.com/nomacs/nomacs/releases/download/3.22.4/nomacs-setup-x64.exe https://github.com/nomacs/nomacs/releases/download/3.22.4/nomacs-setup-x64.exe",
+      "tag": "3.22.4",
+      "checkedAt": "2026-10-05T05:43:26.8532582Z"
     }
   },
   "NotedeckDev.NoteDeck": {
@@ -6812,9 +6830,9 @@
     "validationCount": 1,
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/opengisch/QField/releases/download/v4.3.4/qfield-v4.3.4-windows-x64.exe",
-      "tag": "v4.3.4",
-      "checkedAt": "2026-09-28T05:34:06.1313156Z"
+      "detail": "No release asset matches: https://github.com/opengisch/QField/releases/download/v4.3.5/qfield-v4.3.5-windows-x64.exe",
+      "tag": "v4.3.5",
+      "checkedAt": "2026-10-05T05:43:26.8532582Z"
     }
   },
   "qp888n.Yumedana": {
@@ -8018,9 +8036,9 @@
   "StirlingTools.StirlingPDF": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v3.0.1/Stirling-PDF-win-installer.exe",
-      "tag": "v3.0.1",
-      "checkedAt": "2026-09-28T05:34:06.1313156Z"
+      "detail": "No release asset matches: https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v3.0.2/Stirling-PDF-win-installer.exe",
+      "tag": "v3.0.2",
+      "checkedAt": "2026-10-05T05:43:26.8532582Z"
     }
   },
   "Storj.Uplink": {
@@ -8793,13 +8811,7 @@
     "installerHashes": [
       "E3B03084ABF9FB1BF7B2B1E8B27F01B9701D76B1AAA5EB82102181043A76211E"
     ],
-    "manifestHash": "FB70380E9348261DF9D1DFF3F8DBCF7C76A8288DE9C9D88BC4BAC1BDAA5EBD3D",
-    "configHealth": {
-      "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/ulyssa/iamb/releases/download/v0.0.12/iamb-x86_64-pc-windows-msvc.zip",
-      "tag": "v0.0.12",
-      "checkedAt": "2026-09-21T05:31:43.6745585Z"
-    }
+    "manifestHash": "FB70380E9348261DF9D1DFF3F8DBCF7C76A8288DE9C9D88BC4BAC1BDAA5EBD3D"
   },
   "ungive.MusicPresence": {
     "lastUpdated": "2026-08-16T21:14:48.9639019Z",
@@ -8947,13 +8959,7 @@
     ],
     "validationCount": 1,
     "lastUpdated": "2026-08-22T08:51:40.3660225Z",
-    "state": "VALIDATION_PASSED",
-    "configHealth": {
-      "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/Vathivis/paperq/releases/download/v1.0.2/paperq-1.0.2-win-x64.zip",
-      "tag": "v1.0.2",
-      "checkedAt": "2026-09-28T05:34:06.1313156Z"
-    }
+    "state": "VALIDATION_PASSED"
   },
   "vcmi.vcmi": {
     "validationCount": 4,
@@ -9201,14 +9207,6 @@
       "7D74E2A09D9205156D98BB01968FE1BB72AB35743687A1A710427CD0B0D5B002"
     ],
     "manifestHash": "E765AA019AE4E6C19DD4D567B2492C389CBFF4EB1DDC84E7BFCE19C3F8DB7ED3"
-  },
-  "Wilfred.difftastic": {
-    "configHealth": {
-      "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/Wilfred/difftastic/releases/download/0.71.0/difft-x86_64-pc-windows-msvc.zip",
-      "tag": "0.71.0",
-      "checkedAt": "2026-09-21T05:31:43.6745585Z"
-    }
   },
   "WillyJL.F95Checker": {
     "validationCount": 4,
