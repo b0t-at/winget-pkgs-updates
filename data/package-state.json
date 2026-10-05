@@ -433,14 +433,14 @@
   },
   "AppFlowy.AppFlowy": {
     "version": "0.14.6",
-    "lastUpdated": "2026-10-05T13:52:12.6777338Z",
+    "lastUpdated": "2026-10-05T17:48:41.4513911Z",
     "installerHashes": [
       "2726C34B511BAAD27D94BE9ED0718F9C6EDF3CC732124DC71CE28C06D12CEF93"
     ],
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "8CB3FB0CD918EDD6AB9BF8F41BE516860282BB58CAEFD4449A111411B69B68D3",
-    "validationCount": 3
+    "validationCount": 4
   },
   "AppiumDevelopers.AppiumInspector": {
     "state": "VALIDATION_FAILED",
@@ -707,16 +707,16 @@
     "manifestHash": "C71A6E160AC6A85572AFA73CCA7A972CAD01C8411B8217390738C684FC69BEF1"
   },
   "axllent.mailpit": {
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "863E9502D4E0F14A78C0F91C5091797B1C7B7B7E3FC7E5EAB62E5770CE44B76E",
-      "B97D373441F56564A081F8BB0BD23CCCA2368FE2067704FD94C529CC31DBFB19"
-    ],
     "description": "",
+    "lastUpdated": "2026-10-05T17:48:41.4259506Z",
+    "manifestHash": "FE00333139A2C4988AC9B0738559CF1E3B8F87C93D0BC2DB6DD93934E6ADBDBB",
     "validationCount": 1,
-    "manifestHash": "98F3B344B9104E5E4D2BD9CEB818058C4DCC335D7B9DB8A0ACA028264FEC5604",
-    "version": "1.31.3",
-    "lastUpdated": "2026-09-30T05:00:00.7849051Z"
+    "installerHashes": [
+      "0DD6EC909A6F5B2B66682B22D82ABCE97AB793E30766BF2F642B691E70A4A16B",
+      "DB337B96ACE79E7A8D837B31023159062F87DB35A12F8CB67304C32A09959056"
+    ],
+    "version": "1.31.4",
+    "state": "VALIDATION_PASSED"
   },
   "axodotdev.dist": {
     "installerHashes": [
@@ -841,14 +841,14 @@
     "version": "0.5"
   },
   "BenjaminLSR.HandheldCompanion": {
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "1.3.3.1",
     "description": "",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "C212332DF3914E06555ED35B1520E24300661AE968F03642304AC3784F8F9F6F"
     ],
-    "lastUpdated": "2026-10-05T13:52:12.6130585Z",
+    "lastUpdated": "2026-10-05T17:48:41.353834Z",
     "manifestHash": "1893BCA41A722D8FC2DBF7C5F5F87E232C5D1BAF0720C1F7AF72EC42D870D762"
   },
   "BenModigell.Vibes": {
@@ -1292,13 +1292,13 @@
   },
   "CarthageSoftware.Mago": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 3,
+    "validationCount": 4,
     "installerHashes": [
       "6A0FF55AB50A6FF8C4174C3457D8EEA31AE23C5FBB5D74A578EF3628511356D6"
     ],
     "version": "1.51.2",
     "description": "",
-    "lastUpdated": "2026-10-05T13:52:12.5793292Z",
+    "lastUpdated": "2026-10-05T17:48:41.365514Z",
     "manifestHash": "5C08F5758E371CFF8B609CFC6302C6DA1E3A96B9F97F19D53D1FFC3CBC6BA44F"
   },
   "Carvel.ytt": {
@@ -1615,9 +1615,9 @@
       "051A9CF81373536E05E56B4AD597EC1EB6453C9262F98797F5AC78725BC0639B"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 3,
+    "validationCount": 4,
     "version": "4.14.1",
-    "lastUpdated": "2026-10-05T05:19:44.4350755Z"
+    "lastUpdated": "2026-10-05T17:48:41.4402547Z"
   },
   "Crate-CI.Typos": {
     "lastUpdated": "2026-09-25T20:53:18.2733972Z",
@@ -3332,9 +3332,9 @@
       "CDD3CB27421A7111F22EA33B30115552F02ECF4BDC8496A1A1F34D8D4528553E"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 3,
+    "validationCount": 4,
     "version": "0.11.5",
-    "lastUpdated": "2026-10-05T09:43:58.5672171Z"
+    "lastUpdated": "2026-10-05T17:48:41.3988298Z"
   },
   "Happ.Happ": {
     "validationCount": 1,
@@ -6222,11 +6222,11 @@
   },
   "OpenTelemetry.Weaver": {
     "manifestHash": "7EBEAA075132FAF8652444A7A4E79B5545323C8D3C53B2C2EE2399B538BA6D0B",
-    "validationCount": 3,
+    "validationCount": 4,
     "description": "",
     "version": "0.27.0",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-05T09:43:58.9051675Z",
+    "lastUpdated": "2026-10-05T17:48:41.3259609Z",
     "installerHashes": [
       "CDF6E5D70A1F6B99456E260AE3EC7891C91AAA951C8359CCFFB8FD9A418452AF"
     ]
@@ -6561,16 +6561,17 @@
     "manifestHash": "255B0240A7F8B265E45DDEE1981987678D6A3DCBEA85690C0268BC592AA10F90"
   },
   "PicGo.PicGo": {
-    "validationCount": 1,
-    "version": "3.0.2",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "15A1F8CF73CA6A9AEA10345F78B26DC2EE8FEB2A45BD8D3F696B8B7CEC599E20",
     "description": "",
+    "lastUpdated": "2026-10-05T17:48:41.2995127Z",
+    "manifestHash": "78A72BF5A2E9025FD82DC0B6194D194B7D079BAD8F4E819F1F33DA97592034A8",
+    "validationCount": 1,
     "installerHashes": [
-      "D9C3464D89EC05DA85CD5B1BECB059F386332F415BB6649CF59A667670E200F8",
-      "6324CA9ACBD034A48986432E18EA4521A7FE970F06F9F6C97466389574501281"
+      "4206DCD4A931886C6D6669FCE1072DD158B5762CE30B6A8446EE85E2BE724C63",
+      "BF1D22A13693790AB87293AD56F711215F2D0A248C63AB838EC03D7FBD92C303",
+      "276464FEAF0658773B04954893D57721B78ADFF38F82700DB97FA6F17CA439A4"
     ],
-    "lastUpdated": "2026-08-17T21:15:38.1612245Z"
+    "version": "3.0.3",
+    "state": "VALIDATION_FAILED"
   },
   "Picocrypt-NG.Picocrypt-NG": {
     "installerHashes": [
@@ -7536,11 +7537,11 @@
   },
   "ShatteredChaos.FightPlanner": {
     "version": "3.3.34",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "A6DBF209B8E65F39B153FDE4D0131E9DB0ADBBDA75A7350421B89A79FE7380AE"
     ],
-    "lastUpdated": "2026-10-04T18:21:04.0505258Z",
+    "lastUpdated": "2026-10-05T17:48:41.4716236Z",
     "state": "VALIDATION_PASSED",
     "description": "",
     "manifestHash": "3AAC778A30BB261914E8D24F401524EF3C7B94BB334611875BBFCB09ED28C047"
@@ -8521,15 +8522,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "version": "2.51.1",
-    "installerHashes": [
-      "F6FAE9A375018B4D1425FAD519DC8DE79ADF81E4F4E6D6428DD83E63FAC22A43"
-    ],
-    "manifestHash": "6F03BB9DD476DE9349DE2EBB6EEEA7C2A96EFA2BC6106DB8E52BB76E0B082865",
-    "validationCount": 1,
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-05T01:40:08.3392912Z"
+    "lastUpdated": "2026-10-05T17:48:41.4888726Z",
+    "manifestHash": "8987AB80B894E281B3DF83135FF717B527BAEFA39828B1595A368F21338DAB21",
+    "validationCount": 1,
+    "installerHashes": [
+      "4118EEEA54A6FED30B228AA1C6565322E2965A5B1279B088D685DFA586CC625C"
+    ],
+    "version": "2.51.5",
+    "state": "VALIDATION_PASSED"
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
@@ -8807,15 +8808,15 @@
     "state": "VALIDATION_PASSED"
   },
   "ulyssa.iamb": {
-    "lastUpdated": "2026-08-19T17:46:50.0947991Z",
-    "version": "0.0.11",
-    "validationCount": 1,
     "description": "",
-    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-05T17:48:41.5048409Z",
+    "manifestHash": "3BAEC33F37C3E3422354BD079B5F3192D1F5ACCF3F92E8CBBDDE85BF3E2A2CB9",
+    "validationCount": 1,
     "installerHashes": [
-      "E3B03084ABF9FB1BF7B2B1E8B27F01B9701D76B1AAA5EB82102181043A76211E"
+      "84F8F8F70B8784EDABF6B624EE6950DA7A861D7E54741DCF3B4C85E4E25C4482"
     ],
-    "manifestHash": "FB70380E9348261DF9D1DFF3F8DBCF7C76A8288DE9C9D88BC4BAC1BDAA5EBD3D"
+    "version": "0.0.12",
+    "state": "VALIDATION_PASSED"
   },
   "ungive.MusicPresence": {
     "lastUpdated": "2026-08-16T21:14:48.9639019Z",
@@ -9419,15 +9420,15 @@
     ]
   },
   "xpipe-io.xpipe.portable": {
-    "lastUpdated": "2026-09-19T13:08:47.2520345Z",
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "DB9D02B62BF5939921ED083010395B1B1EF7EE55616825209E291D91CDEE3AAD"
-    ],
-    "version": "24.4",
-    "manifestHash": "EC7465D116A6E5293CACE6F190A431ADCDF450777877A30CD650EFAC65421711",
+    "description": "",
+    "lastUpdated": "2026-10-05T17:48:41.3871125Z",
+    "manifestHash": "D715C5BEB2E340A42529C7C28EAB250BEBC0589590304249C1F89ABD1A6895E6",
     "validationCount": 1,
-    "description": ""
+    "installerHashes": [
+      "E43E9DDB716160C4C5598A901C52FB014FE53910EDF2652AA71C80B5592B2A6E"
+    ],
+    "version": "24.5",
+    "state": "VALIDATION_PASSED"
   },
   "xssnick.TON-Torrent": {
     "state": "VALIDATION_PASSED",
@@ -9463,16 +9464,16 @@
     "lastUpdated": "2026-09-14T12:57:28.2468126Z"
   },
   "Y-ASLant.ElegantClipboard": {
-    "version": "1.2.8",
-    "installerHashes": [
-      "FD6404B4C93414C94991390EB7572FB01D37A80EC7B72103BAD4CD44EB0FC6B6",
-      "44CE8D4C4B8472AD765109AFA01A10C9ECC0D5963736A3CAD56595BB33098EF4"
-    ],
+    "description": "",
+    "lastUpdated": "2026-10-05T17:48:41.4147048Z",
+    "manifestHash": "4F2BA62E17A9041D0D41487705C267544A7338F62622B07CEA4768203D7F7078",
     "validationCount": 1,
-    "lastUpdated": "2026-10-02T16:50:56.784595Z",
-    "manifestHash": "41332A132CDAD3A1D48C1E24312705997A9B4EAA61431804A6900064D7150393",
-    "state": "VALIDATION_PASSED",
-    "description": ""
+    "installerHashes": [
+      "454A235269D5085C43B721AFB710F69F65A6FC670F50D85956B256425EF7033A",
+      "B9CFE22D0EBDEE55BEE7EE5F376D78D772C8249E8C2A8391E77DE2EBE1C6615D"
+    ],
+    "version": "1.2.9",
+    "state": "VALIDATION_PASSED"
   },
   "Yaak.app": {
     "installerHashes": [
