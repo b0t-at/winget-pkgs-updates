@@ -275,7 +275,7 @@
     }
   },
   "Alochi.Monitoring": {
-    "validationCount": 3,
+    "validationCount": 4,
     "state": "VALIDATION_PASSED",
     "version": "1.0.164",
     "manifestHash": "F209A658BADBDC763F5D30B00CEAE1F57A8AD00273646DBA55177A8090364498",
@@ -283,7 +283,7 @@
       "2B835BA5DB589D60F1B5173D986796665A4121D75EF110D4AC0426EE492EB0E8"
     ],
     "description": "",
-    "lastUpdated": "2026-10-05T01:40:08.4912447Z"
+    "lastUpdated": "2026-10-05T13:52:12.6572049Z"
   },
   "AloproAgency.WAutoChat": {
     "lastUpdated": "2026-08-18T01:43:26.4458545Z",
@@ -433,14 +433,14 @@
   },
   "AppFlowy.AppFlowy": {
     "version": "0.14.6",
-    "lastUpdated": "2026-10-04T15:04:40.7975252Z",
+    "lastUpdated": "2026-10-05T13:52:12.6777338Z",
     "installerHashes": [
       "2726C34B511BAAD27D94BE9ED0718F9C6EDF3CC732124DC71CE28C06D12CEF93"
     ],
     "description": "",
     "state": "VALIDATION_PASSED",
     "manifestHash": "8CB3FB0CD918EDD6AB9BF8F41BE516860282BB58CAEFD4449A111411B69B68D3",
-    "validationCount": 2
+    "validationCount": 3
   },
   "AppiumDevelopers.AppiumInspector": {
     "state": "VALIDATION_FAILED",
@@ -637,11 +637,11 @@
   },
   "AtaraxyLabs.sem": {
     "manifestHash": "43514CBBFE7D6C1B48D2F168AE20C1C99CAC2866D2A129F82748F0927FE76AB2",
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
     "version": "0.27.0",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-04T21:56:07.1653043Z",
+    "lastUpdated": "2026-10-05T13:52:12.5477837Z",
     "installerHashes": [
       "FC5AAD509AD271090A169C165E0C5A2D20D046D218012B17A796268E2BCCC7D0"
     ]
@@ -841,15 +841,15 @@
     "version": "0.5"
   },
   "BenjaminLSR.HandheldCompanion": {
+    "validationCount": 1,
+    "version": "1.3.3.1",
+    "description": "",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "8AB1FEB8CBE7CFD10EB50D8C39D4B944C0A9A5022B44A8447967C3DE5A613BC8"
+      "C212332DF3914E06555ED35B1520E24300661AE968F03642304AC3784F8F9F6F"
     ],
-    "description": "",
-    "validationCount": 1,
-    "version": "1.2.1.3",
-    "manifestHash": "B98B8E0BA8E4B204A5F6484445EADE2FB3366A8BF5C5C1F91CBB6D5D3EED84E1",
-    "lastUpdated": "2026-09-22T20:52:36.2925236Z"
+    "lastUpdated": "2026-10-05T13:52:12.6130585Z",
+    "manifestHash": "1893BCA41A722D8FC2DBF7C5F5F87E232C5D1BAF0720C1F7AF72EC42D870D762"
   },
   "BenModigell.Vibes": {
     "lastUpdated": "2026-08-29T17:06:32.6440726Z",
@@ -1292,13 +1292,13 @@
   },
   "CarthageSoftware.Mago": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "6A0FF55AB50A6FF8C4174C3457D8EEA31AE23C5FBB5D74A578EF3628511356D6"
     ],
     "version": "1.51.2",
     "description": "",
-    "lastUpdated": "2026-10-03T18:08:10.7402392Z",
+    "lastUpdated": "2026-10-05T13:52:12.5793292Z",
     "manifestHash": "5C08F5758E371CFF8B609CFC6302C6DA1E3A96B9F97F19D53D1FFC3CBC6BA44F"
   },
   "Carvel.ytt": {
@@ -2005,8 +2005,8 @@
       "8AEAA0055E660E12CF07CD70680DC8333957FE6718528B91EC3DA084EAB62483",
       "73CDC73A03443CBA37C7AE91AEC12C7B86C0EB75A8F40F296AAA5159E66B29BC"
     ],
-    "lastUpdated": "2026-10-04T10:35:19.6190401Z",
-    "validationCount": 2,
+    "lastUpdated": "2026-10-05T13:52:12.7852233Z",
+    "validationCount": 3,
     "description": "",
     "state": "VALIDATION_PASSED",
     "version": "5.6.0",
@@ -2325,11 +2325,11 @@
     "installerHashes": [
       "3A8884774973B6F2826877E1C6388A5FEAE4704EF88A9A9C912C77CE186990F3"
     ],
-    "lastUpdated": "2026-10-04T10:35:19.5530398Z",
+    "lastUpdated": "2026-10-05T13:52:12.6326061Z",
     "version": "3.24.0",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "C459D121AF144F7CA3B8C0D93F600D746F7B00E9CA3F29CE24135C2F3DE6A245"
   },
   "Essenciary.Githical": {
@@ -5399,9 +5399,9 @@
   },
   "mq1.TinyWiiBackupManager": {
     "manifestHash": "06047D86BB4C1EBAC50241DF5582B3CAD2CCBAFB092252B43F2276A5FC292E68",
-    "lastUpdated": "2026-10-05T09:43:58.8758226Z",
+    "lastUpdated": "2026-10-05T13:52:12.7488485Z",
     "version": "6.1.3",
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "EDA11D4A82678DE09A780B8316FDA8FBD287C8F7C44B67E76625455E8D7699F8",
@@ -6532,10 +6532,10 @@
       "BC796772A32B7CD8B532B18DA268E65F67344A3DABF466C5C940B73D81F3E815"
     ],
     "manifestHash": "90A4481193729A1EBB0FC86D40D34A8E8DD5E2A61CFBA712831D8D91FCBB8AD5",
-    "validationCount": 2,
+    "validationCount": 3,
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-05T05:19:44.3992764Z"
+    "lastUpdated": "2026-10-05T13:52:12.733142Z"
   },
   "Pencil.Desktop": {
     "manifestHash": "C4EE87B0CC9764C0F5737AC23FED643FDCF66A0CF3152C79A8770CA186C6674E",
@@ -6642,7 +6642,7 @@
     }
   },
   "pnpm.pnpm": {
-    "validationCount": 3,
+    "validationCount": 4,
     "installerHashes": [
       "2B30F6BC53228187881AEAE604CC6CEDF092641DF30D3BE1CF4CD3D17BF630F5",
       "BD6FE6E6B2CB5EFD0E7F7C47F11DE7AEA3247EA78D382F9AE91B22F10B3AE0C6"
@@ -6650,7 +6650,7 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "63B6BA8BE64D515663FD574620371B3FDFDB5CD8056EF084B1F19919CD88C1CD",
     "version": "12.9.1",
-    "lastUpdated": "2026-10-05T09:43:58.5954912Z",
+    "lastUpdated": "2026-10-05T13:52:12.6996466Z",
     "description": ""
   },
   "PocketBase.PocketBase": {
@@ -7867,14 +7867,14 @@
     "state": "VALIDATION_PASSED"
   },
   "SpectrumQT.XXMILauncher": {
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "486368F30FDD8C55B6A12000CD977DBABCA591A6B1D448993808EB46F8F46D99"
     ],
     "state": "VALIDATION_PASSED",
     "manifestHash": "2BCCCD5E314F3B0494EB008C28A9EB5BCE7906702ABB9AE085B63E61DAC41AED",
     "version": "2.4.1",
-    "lastUpdated": "2026-10-04T18:21:04.0922577Z",
+    "lastUpdated": "2026-10-05T13:52:12.7148377Z",
     "description": ""
   },
   "SpikeHD.Dorion": {
@@ -8289,8 +8289,8 @@
     "installerHashes": [
       "7F39FB455C24D7A03569459947359C8434C9F390386EE54FF28A443E62CFCDBB"
     ],
-    "lastUpdated": "2026-10-05T09:43:58.6414234Z",
-    "validationCount": 3,
+    "lastUpdated": "2026-10-05T13:52:12.769251Z",
+    "validationCount": 4,
     "description": "",
     "state": "VALIDATION_PASSED",
     "version": "0.8.1",
