@@ -275,7 +275,7 @@
     }
   },
   "Alochi.Monitoring": {
-    "validationCount": 2,
+    "validationCount": 3,
     "state": "VALIDATION_PASSED",
     "version": "1.0.164",
     "manifestHash": "F209A658BADBDC763F5D30B00CEAE1F57A8AD00273646DBA55177A8090364498",
@@ -283,7 +283,7 @@
       "2B835BA5DB589D60F1B5173D986796665A4121D75EF110D4AC0426EE492EB0E8"
     ],
     "description": "",
-    "lastUpdated": "2026-10-04T18:21:03.9410814Z"
+    "lastUpdated": "2026-10-05T01:40:08.4912447Z"
   },
   "AloproAgency.WAutoChat": {
     "lastUpdated": "2026-08-18T01:43:26.4458545Z",
@@ -2788,11 +2788,11 @@
   },
   "GAM-Team.gam.Portable": {
     "manifestHash": "967113DB3FC480C3EAC2324063732A3FCE04FC688CEE30C6ECBC275A8AB35B69",
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
     "version": "7.48.17",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-04T21:56:06.9494108Z",
+    "lastUpdated": "2026-10-05T01:40:08.3980295Z",
     "installerHashes": [
       "E0D70583828A915901988C5D62E5C13BCDCBCCE43FBC7A2A5787C411509FB67A",
       "3861DC0411BACE17D929172EECF42B4C179935385238DC5C1BC49084E909794C"
@@ -3514,13 +3514,13 @@
   },
   "hluk.CopyQ": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "33585174067273B391DF13C0332ADB60A3797EC47BFFF9C26FF7C26E7DCD85D8"
     ],
     "version": "17.0.0",
     "description": "",
-    "lastUpdated": "2026-10-03T14:30:18.6421643Z",
+    "lastUpdated": "2026-10-05T01:40:08.5278843Z",
     "manifestHash": "1515766D65DB497E99DC14F3594A7490DE182E63B0EDEB311859B7DF148F234C"
   },
   "hoijun-kim.flip": {
@@ -6510,16 +6510,16 @@
     }
   },
   "pdfcpu.pdfcpu": {
-    "lastUpdated": "2026-09-29T17:01:10.2956372Z",
-    "version": "0.16.0",
-    "description": "",
+    "version": "0.16.1",
     "installerHashes": [
-      "DA6061AB90241CBACEBAD9D7369ABB5ACA422FE8516EBB94EEE246E9825DC8AE",
-      "10EEC0629E2472FD7D6DF8CA5A4B0C5C3EF47BC3DA7003583143AD85C31EEAB7"
+      "1BF915324E5E31B61A5C19814AFEAB90B6DE923EA102FE55EE79E26D86302133",
+      "BC796772A32B7CD8B532B18DA268E65F67344A3DABF466C5C940B73D81F3E815"
     ],
+    "manifestHash": "90A4481193729A1EBB0FC86D40D34A8E8DD5E2A61CFBA712831D8D91FCBB8AD5",
+    "validationCount": 1,
+    "description": "",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "B50F191513196D40ADA385E0EF08FBC5040D9B03DB2C389916859BF1F6B20380",
-    "validationCount": 1
+    "lastUpdated": "2026-10-05T01:40:08.4259487Z"
   },
   "Pencil.Desktop": {
     "manifestHash": "C4EE87B0CC9764C0F5737AC23FED643FDCF66A0CF3152C79A8770CA186C6674E",
@@ -8273,8 +8273,8 @@
     "installerHashes": [
       "7F39FB455C24D7A03569459947359C8434C9F390386EE54FF28A443E62CFCDBB"
     ],
-    "lastUpdated": "2026-10-03T18:08:10.9477335Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-10-05T01:40:08.4646752Z",
+    "validationCount": 2,
     "description": "",
     "state": "VALIDATION_PASSED",
     "version": "0.8.1",
@@ -8505,15 +8505,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
+    "version": "2.51.1",
     "installerHashes": [
-      "03C2641B411DC772AEBEF651029FD1F0315C6719515BAA2C904545F965E9D05D"
+      "F6FAE9A375018B4D1425FAD519DC8DE79ADF81E4F4E6D6428DD83E63FAC22A43"
     ],
-    "lastUpdated": "2026-10-04T06:33:48.0540665Z",
-    "validationCount": 4,
+    "manifestHash": "6F03BB9DD476DE9349DE2EBB6EEEA7C2A96EFA2BC6106DB8E52BB76E0B082865",
+    "validationCount": 1,
     "description": "",
     "state": "VALIDATION_PASSED",
-    "version": "2.49.0",
-    "manifestHash": "C60F9C2AC5E944D275889A58A1958D2306D91C596B9EDE1639B80018893E24F4"
+    "lastUpdated": "2026-10-05T01:40:08.3392912Z"
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
