@@ -275,7 +275,7 @@
     }
   },
   "Alochi.Monitoring": {
-    "validationCount": 4,
+    "validationCount": 5,
     "state": "VALIDATION_PASSED",
     "version": "1.0.164",
     "manifestHash": "F209A658BADBDC763F5D30B00CEAE1F57A8AD00273646DBA55177A8090364498",
@@ -283,7 +283,7 @@
       "2B835BA5DB589D60F1B5173D986796665A4121D75EF110D4AC0426EE492EB0E8"
     ],
     "description": "",
-    "lastUpdated": "2026-10-05T13:52:12.6572049Z"
+    "lastUpdated": "2026-10-06T02:07:27.4529972Z"
   },
   "AloproAgency.WAutoChat": {
     "lastUpdated": "2026-08-18T01:43:26.4458545Z",
@@ -367,11 +367,11 @@
   },
   "AnInsomniacy.Aria2Next": {
     "manifestHash": "C416E960C87ADF37D6D2099E4EAACB6EF8D4887E6D9955B48D6CDED9D333DC45",
-    "validationCount": 2,
+    "validationCount": 3,
     "description": "",
     "version": "2.8.6",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-05T09:43:58.9314267Z",
+    "lastUpdated": "2026-10-06T02:07:27.6283767Z",
     "installerHashes": [
       "CF339466CA3763FE89F27F9E325B50058FFB8B97CD93B9AC71FE81D9455EC82C",
       "6B4E3137AFEF78FD8EBDCA455BCB8EE058692C79EABEDCF15CEA28206B422260"
@@ -2622,16 +2622,16 @@
     "lastUpdated": "2026-08-21T17:17:39.8915915Z"
   },
   "Fly-io.flyctl": {
-    "lastUpdated": "2026-10-02T01:20:46.4834749Z",
-    "version": "0.4.111",
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "7FB606D8EF0E96630D79E2F122239E3BFDAF5F5117B9EB8F522B36E0FB975B5A",
+    "lastUpdated": "2026-10-06T02:07:27.3968362Z",
     "description": "",
     "installerHashes": [
-      "0F685F67D235E1136B034A066C526AC30E19C27755281B87AB02799AB4E11BF0",
-      "23F61237B7A4EFC17F87A3557CD32C162CA0DF6F5E452F36E4AC335A11667AC0"
-    ]
+      "08A565D9C9C42C2CDD1DD0DCC6CBD9FAE600F7BE931873AAC7558998AA3278E6",
+      "EE0CF32CD9C16D0FD7ADB89C5623B536208FD3FFE11E80BDB2A083121D1E7110"
+    ],
+    "version": "0.4.112",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "manifestHash": "A3D4F67FEEE8B51A60D0A7B26D7CD7C2988887BF51243F352B0B5B7254580984"
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
     "validationCount": 1,
@@ -2656,7 +2656,7 @@
     "state": "VALIDATION_PASSED"
   },
   "ForgeLabsSoft.DriveForge": {
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_PASSED",
     "version": "4.4.1",
     "manifestHash": "76EA6EEECF5774DC151491575B6A2D20C8522F98A546682A2EB32352CD113F6A",
@@ -2664,7 +2664,7 @@
       "6AE6E7C29122D74D909009C06DE4622FAA7CD13854CDB89F46E1AFD3013EC5D3"
     ],
     "description": "",
-    "lastUpdated": "2026-10-04T15:04:40.8873399Z"
+    "lastUpdated": "2026-10-06T02:07:27.696896Z"
   },
   "Fork.Fork": {
     "description": "",
@@ -3518,13 +3518,13 @@
   },
   "hluk.CopyQ": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 5,
+    "validationCount": 6,
     "installerHashes": [
       "33585174067273B391DF13C0332ADB60A3797EC47BFFF9C26FF7C26E7DCD85D8"
     ],
     "version": "17.0.0",
     "description": "",
-    "lastUpdated": "2026-10-05T22:13:12.4849978Z",
+    "lastUpdated": "2026-10-06T02:07:27.5981213Z",
     "manifestHash": "1515766D65DB497E99DC14F3594A7490DE182E63B0EDEB311859B7DF148F234C"
   },
   "hoijun-kim.flip": {
@@ -4193,13 +4193,13 @@
   },
   "kangyu-california.PersistentWindows": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 4,
+    "validationCount": 5,
     "installerHashes": [
       "09096A4028880909802CF364B9BE47A82AA19BB0D5045B24E61D3F70283BC36C"
     ],
     "version": "5.77",
     "description": "",
-    "lastUpdated": "2026-10-04T21:56:06.977283Z",
+    "lastUpdated": "2026-10-06T02:07:27.3448521Z",
     "manifestHash": "6F15F19E04B9E61973368F0D344FB7977101D832E92DFE823FB82758E7EE7299"
   },
   "katahiromz.RisohEditor": {
@@ -4373,15 +4373,15 @@
     "lastUpdated": "2026-10-05T22:13:12.334106Z"
   },
   "koedame.chordsketch": {
-    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-06T02:07:27.6689078Z",
     "description": "",
-    "version": "0.8.0",
-    "lastUpdated": "2026-10-05T05:19:44.5437236Z",
-    "validationCount": 1,
-    "manifestHash": "8DE6D1DDF0D710D9E34635707FBAF86466F87A5B5735922F2622C1F545A83417",
     "installerHashes": [
       "C8E884E502F42F9D35D2E2F0F3CEEE9EBDC7DFE71D5059186B77A79B24A95403"
-    ]
+    ],
+    "version": "0.8.0",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "manifestHash": "4ED7684360DCE3F0EC9D0BF0EE083AA3ED65A0E8EF32E50658BB3BB060A10DBA"
   },
   "KRTirtho.Spotube": {
     "manifestHash": "48B938BDAA7E2ADCDF3C6E7B71A7214AF24FFD5388F587258C452A189DDE760D",
@@ -6275,15 +6275,15 @@
     "state": "VALIDATION_PASSED"
   },
   "openwong2kim.wmux": {
-    "version": "3.66.0",
+    "lastUpdated": "2026-10-06T02:07:27.7587856Z",
+    "description": "",
     "installerHashes": [
-      "ABB68EE8F2C304E1F145664E4B74138BD162D034BE39F46EC21ECD3896B37435"
+      "2FAA30E3E8D29088A38C8F3EA38577A1D05438E5D1911EA6C8B441FBBDE4B621"
     ],
-    "validationCount": 1,
-    "lastUpdated": "2026-10-02T16:50:56.8208506Z",
-    "manifestHash": "F5AAB6C33AAF59BC078DBD51F900A95DCAA1CA0FAFFC368CE76C7D6F29E8F82F",
+    "version": "4.0.0",
     "state": "VALIDATION_PASSED",
-    "description": ""
+    "validationCount": 1,
+    "manifestHash": "3BB8AE3536071EF4E62DDE71980BCA80D8118AA22E1E0938AE6F85CA9452E3AE"
   },
   "openwong2kim.wsnap": {
     "installerHashes": [
@@ -6701,8 +6701,8 @@
     "installerHashes": [
       "51C2E3D69A446111D356F2E2953D3BAA8B9563D3F4E7F630C1524ECF1735ED63"
     ],
-    "lastUpdated": "2026-10-04T21:56:07.2514104Z",
-    "validationCount": 2,
+    "lastUpdated": "2026-10-06T02:07:27.560095Z",
+    "validationCount": 3,
     "description": "",
     "state": "VALIDATION_PASSED",
     "version": "8.1",
@@ -7059,8 +7059,8 @@
     "version": "0.3.1"
   },
   "RimSort.RimSort": {
-    "lastUpdated": "2026-10-05T22:13:12.4169621Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-10-06T02:07:27.52654Z",
+    "validationCount": 2,
     "manifestHash": "D615224FE11F13CA0AA210D004D952945CAB19EE0D4AA9C352A12F4303B701E4",
     "installerHashes": [
       "A5D1226734AA24DBD1D107013C31786CCFBAA65C31F518540F4A9060A2F2FB30"
@@ -8825,9 +8825,9 @@
   },
   "ulyssa.iamb": {
     "description": "",
-    "lastUpdated": "2026-10-05T17:48:41.5048409Z",
+    "lastUpdated": "2026-10-06T02:07:27.4845467Z",
     "manifestHash": "3BAEC33F37C3E3422354BD079B5F3192D1F5ACCF3F92E8CBBDDE85BF3E2A2CB9",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "84F8F8F70B8784EDABF6B624EE6950DA7A861D7E54741DCF3B4C85E4E25C4482"
     ],
@@ -9437,9 +9437,9 @@
   },
   "xpipe-io.xpipe.portable": {
     "description": "",
-    "lastUpdated": "2026-10-05T17:48:41.3871125Z",
+    "lastUpdated": "2026-10-06T02:07:27.7305455Z",
     "manifestHash": "D715C5BEB2E340A42529C7C28EAB250BEBC0589590304249C1F89ABD1A6895E6",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "E43E9DDB716160C4C5598A901C52FB014FE53910EDF2652AA71C80B5592B2A6E"
     ],
