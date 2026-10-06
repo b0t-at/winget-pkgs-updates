@@ -625,15 +625,15 @@
     }
   },
   "AsterPrivacy.AsterMail": {
-    "version": "1.4.68",
-    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-06T13:35:51.1561884Z",
+    "manifestHash": "41C5EB1053E2CC231C748DB77AEBF708E0DAF3833E0E3ECE6BB5D5CC4C16722C",
+    "validationCount": 1,
     "installerHashes": [
-      "C654218E6551E29F3F3A55CBFECDEEDC246E709BB9A83A223246908C9461EB79"
+      "CF38CBDDCA4FF3B691A827DF95324C3339F55A19EFA6BB79FE47D215D74E0025"
     ],
     "description": "",
-    "lastUpdated": "2026-10-02T20:53:11.0701082Z",
-    "manifestHash": "6823BC01540B0683000427E19170509624ABD9857D9C5261A0513E4A7476245F",
-    "validationCount": 2
+    "version": "1.4.71",
+    "state": "VALIDATION_PASSED"
   },
   "AtaraxyLabs.sem": {
     "manifestHash": "43514CBBFE7D6C1B48D2F168AE20C1C99CAC2866D2A129F82748F0927FE76AB2",
@@ -920,9 +920,9 @@
       "EF13DC3758CC38E3DA1C1D8C69B2E95CF83240611B8154B6D97336965DC71FF1"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "0.10.2",
-    "lastUpdated": "2026-10-04T06:33:48.204332Z"
+    "lastUpdated": "2026-10-06T13:35:51.0258718Z"
   },
   "binbat.liveman": {
     "state": "VALIDATION_PASSED",
@@ -1268,11 +1268,11 @@
       "E16E94929BC7FF94953B2A8CB5F216E36E89DB1B801D5BDE3EC44CE004ED043C",
       "6237D54B75BF6A98F0C88BF89A51FBD4E779F652F89D55501CF671E836A94AF1"
     ],
-    "lastUpdated": "2026-10-04T21:56:07.2236677Z",
+    "lastUpdated": "2026-10-06T13:35:51.2002479Z",
     "version": "1.1.5",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "validationCount": 3,
     "manifestHash": "8E645FF28679E97AD71400806E23B280C929C60DCF327B26B03994C85640FD47"
   },
   "CargoLambda.CargoLambda": {
@@ -2560,8 +2560,8 @@
     "validationCount": 1
   },
   "Fidpa.Hablara": {
-    "lastUpdated": "2026-10-06T09:52:58.2043872Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-10-06T13:35:51.1055654Z",
+    "validationCount": 2,
     "manifestHash": "E688AFDD2CF454E819254EE6D66B02AC7B69B06B9E9A4B42CB926264E240D604",
     "state": "VALIDATION_PASSED",
     "version": "1.7.9",
@@ -2626,8 +2626,8 @@
     "lastUpdated": "2026-08-21T17:17:39.8915915Z"
   },
   "Flowscripter.example-cli": {
-    "lastUpdated": "2026-10-06T09:52:58.3025573Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-10-06T13:35:51.047555Z",
+    "validationCount": 2,
     "manifestHash": "9DE6543A8D476691721C23F5872BF471CD7AACD527EC9D34ECEA594318B73FEE",
     "state": "VALIDATION_PASSED",
     "version": "3.0.7",
@@ -2672,7 +2672,7 @@
     "state": "VALIDATION_PASSED"
   },
   "ForgeLabsSoft.DriveForge": {
-    "validationCount": 2,
+    "validationCount": 3,
     "state": "VALIDATION_PASSED",
     "version": "4.4.1",
     "manifestHash": "76EA6EEECF5774DC151491575B6A2D20C8522F98A546682A2EB32352CD113F6A",
@@ -2680,7 +2680,7 @@
       "6AE6E7C29122D74D909009C06DE4622FAA7CD13854CDB89F46E1AFD3013EC5D3"
     ],
     "description": "",
-    "lastUpdated": "2026-10-06T02:07:27.696896Z"
+    "lastUpdated": "2026-10-06T13:35:50.9610434Z"
   },
   "Fork.Fork": {
     "description": "",
@@ -6254,11 +6254,11 @@
   },
   "OpenTelemetry.Weaver": {
     "manifestHash": "7EBEAA075132FAF8652444A7A4E79B5545323C8D3C53B2C2EE2399B538BA6D0B",
-    "validationCount": 5,
+    "validationCount": 6,
     "description": "",
     "version": "0.27.0",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-06T09:52:58.2676867Z",
+    "lastUpdated": "2026-10-06T13:35:51.0844372Z",
     "installerHashes": [
       "CDF6E5D70A1F6B99456E260AE3EC7891C91AAA951C8359CCFFB8FD9A418452AF"
     ]
@@ -6717,8 +6717,8 @@
     "installerHashes": [
       "51C2E3D69A446111D356F2E2953D3BAA8B9563D3F4E7F630C1524ECF1735ED63"
     ],
-    "lastUpdated": "2026-10-06T02:07:27.560095Z",
-    "validationCount": 3,
+    "lastUpdated": "2026-10-06T13:35:50.9891982Z",
+    "validationCount": 4,
     "description": "",
     "state": "VALIDATION_PASSED",
     "version": "8.1",
@@ -8155,15 +8155,15 @@
     "state": "VALIDATION_PASSED"
   },
   "sunfish-shogi.shogihome": {
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "519E52474245367516903186882A004B4DB0EF62EA689BDDFC6E1C89C6A504DB",
+    "lastUpdated": "2026-10-06T13:35:51.135359Z",
+    "manifestHash": "C69447C9F9E687BB27C8C4EBFD42A0705088880AE6F650A1BBDC12D16A336557",
+    "validationCount": 1,
     "installerHashes": [
-      "9B7155D416A18F2D400A12AEBB641F13F6023A798B77B4954BBC663F9A81F67A"
+      "DA7A0D5332736F5D7F94DB28899728783AF87576C184D81A38C0B8201691E7E2"
     ],
     "description": "",
-    "validationCount": 6,
-    "version": "1.29.0",
-    "lastUpdated": "2026-08-06T14:13:45.9556005Z"
+    "version": "1.29.1",
+    "state": "VALIDATION_PASSED"
   },
   "SuperRadCompany.Microsandbox": {
     "description": "",
@@ -8987,15 +8987,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Vathivis.paperq": {
-    "description": "",
-    "version": "1.0.1",
-    "manifestHash": "F1FE0E8C5BC0E1247575064D51A24693180182667D5D5958BED566ADDE463834",
-    "installerHashes": [
-      "29BF4430C5FA48796A84D759937861EF497E1499FCBF09F4D568E35073734BFB",
-      "70E3FC97E51D61EA5D91CED6B345832B9DCBF5D30D5A0A82E56364056313397B"
-    ],
+    "lastUpdated": "2026-10-06T13:35:50.8966197Z",
+    "manifestHash": "5C96F319BB6252605B1CD9ACDC6BE3ADA7412D0B40A5E84AC2A76963A2D3E2F6",
     "validationCount": 1,
-    "lastUpdated": "2026-08-22T08:51:40.3660225Z",
+    "installerHashes": [
+      "6F58FAE64670D127204EE852462C35D4917B1BE1D5220617F48972AC9090D920",
+      "BDDC46806F1D566447229B343474E34C4330A22A6A418A8D22A390F39CE3433C"
+    ],
+    "description": "",
+    "version": "1.0.2",
     "state": "VALIDATION_PASSED"
   },
   "vcmi.vcmi": {
@@ -9156,15 +9156,15 @@
     "description": ""
   },
   "WasmEdge.WasmEdge": {
-    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-06T13:35:51.179467Z",
+    "manifestHash": "3637F5944510CB77560F52915538A21C047F92890B33DAA6863773362F9AEC28",
+    "validationCount": 1,
     "installerHashes": [
-      "0FADBA9DEAEDBEFCD5C5A3E650E8509ADCE59525330DC59E97FAD2D07DE915DE"
+      "475C4D27D1834C78B7EC1322357E9756F1F41142E3957CA1A27B10C03029D15F"
     ],
     "description": "",
-    "validationCount": 1,
-    "manifestHash": "7147814417723EAB53D30C70A4209B9089ADCBF45CAF51A06C87B181F4AF1FDA",
-    "version": "0.17.2",
-    "lastUpdated": "2026-10-02T13:01:27.814568Z"
+    "version": "0.18.0",
+    "state": "VALIDATION_PASSED"
   },
   "Wawtor.Aperio": {
     "version": "0.2.2",
