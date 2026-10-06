@@ -5970,8 +5970,8 @@
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
     "openPr": {
-      "checkedAt": "2026-10-02T20:23:04.2991276Z",
-      "version": "0.35.1"
+      "version": "0.40.0",
+      "checkedAt": "2026-10-06T20:27:31.1475357Z"
     }
   },
   "Ombrelin.PandocGui": {
