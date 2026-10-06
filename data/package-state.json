@@ -1473,8 +1473,8 @@
     "validationCount": 1,
     "version": "1.0.48275",
     "openPr": {
-      "version": "1.0.52041",
-      "checkedAt": "2026-10-05T16:27:29.4265193Z"
+      "checkedAt": "2026-10-06T16:28:53.7201273Z",
+      "version": "1.2.0"
     }
   },
   "ciromattia.KCC": {
@@ -3987,7 +3987,7 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-10-05T12:37:22.9232459Z",
+      "checkedAt": "2026-10-06T16:29:52.9188388Z",
       "version": "2026.10.3"
     }
   },
