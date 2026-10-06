@@ -841,14 +841,14 @@
     "version": "0.5"
   },
   "BenjaminLSR.HandheldCompanion": {
-    "validationCount": 3,
+    "validationCount": 4,
     "version": "1.3.3.1",
     "description": "",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "C212332DF3914E06555ED35B1520E24300661AE968F03642304AC3784F8F9F6F"
     ],
-    "lastUpdated": "2026-10-05T22:13:12.3125398Z",
+    "lastUpdated": "2026-10-06T05:41:37.9915197Z",
     "manifestHash": "1893BCA41A722D8FC2DBF7C5F5F87E232C5D1BAF0720C1F7AF72EC42D870D762"
   },
   "BenModigell.Vibes": {
@@ -2567,15 +2567,15 @@
     "lastUpdated": "2026-09-14T04:56:07.4906273Z"
   },
   "Filamental.Filamental": {
-    "validationCount": 1,
-    "lastUpdated": "2026-09-29T08:53:48.8263732Z",
     "description": "",
-    "version": "0.3.50",
-    "manifestHash": "37D055481913310275CA6857E59BA137A5BDAFD3BDE168A96CFE874333518F50",
+    "version": "0.4.0",
     "installerHashes": [
-      "2C3961914430E1762B1B436B804E0C6DE1198AFDEE6F0FF026B791792B19C104"
+      "5EB28E289AD861343E7AF5CB8179D755006C763FB3709CD973A34E78E52E0CB8"
     ],
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-10-06T05:41:38.0416047Z",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "manifestHash": "1718067DE1496B04BC557C32350EDFD9B781635C294178670E09E1C902C455E4"
   },
   "FirenzeLor.gemini-collector": {
     "validationCount": 1,
@@ -2785,16 +2785,16 @@
     "state": "VALIDATION_PASSED"
   },
   "GAM-Team.gam.Portable": {
-    "manifestHash": "967113DB3FC480C3EAC2324063732A3FCE04FC688CEE30C6ECBC275A8AB35B69",
-    "validationCount": 3,
     "description": "",
-    "version": "7.48.17",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-05T05:19:44.3778424Z",
+    "version": "7.48.19",
     "installerHashes": [
-      "E0D70583828A915901988C5D62E5C13BCDCBCCE43FBC7A2A5787C411509FB67A",
-      "3861DC0411BACE17D929172EECF42B4C179935385238DC5C1BC49084E909794C"
-    ]
+      "D94CC66F710B2D934F568276D6788025901EB27270238B41A76532C6CC83A574",
+      "475BD53663B06AA5668B8BABED20F56F7B6C706B31D5C1BCC47B027B58FE8E75"
+    ],
+    "lastUpdated": "2026-10-06T05:41:38.0639051Z",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "manifestHash": "B4D146EADBD8A9475D8AC654433AE0BA0B73D2667683A48C8ADD54394AE0CADF"
   },
   "GAM-Team.GotYourBack": {
     "description": "",
@@ -3326,9 +3326,9 @@
       "CDD3CB27421A7111F22EA33B30115552F02ECF4BDC8496A1A1F34D8D4528553E"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 4,
+    "validationCount": 5,
     "version": "0.11.5",
-    "lastUpdated": "2026-10-05T17:48:41.3988298Z"
+    "lastUpdated": "2026-10-06T05:41:38.0197899Z"
   },
   "Happ.Happ": {
     "validationCount": 1,
@@ -4362,15 +4362,15 @@
     "state": "VALIDATION_PASSED"
   },
   "KoalaBear84.OpenDirectoryDownloader": {
-    "validationCount": 2,
-    "state": "VALIDATION_PASSED",
-    "version": "4.0.0.0",
-    "manifestHash": "46377D37F40FC7E110F389997DF364F03469439D7A8E623444323C031B805D7C",
-    "installerHashes": [
-      "E774643DE2FA474A98760C7D201B36E6D005C14D3B284256B1BA8A538C43CE15"
-    ],
     "description": "",
-    "lastUpdated": "2026-10-05T22:13:12.334106Z"
+    "version": "4.1.0.0",
+    "installerHashes": [
+      "CCE0C9D0A52B5E022EE3B9FAAF51CF015555A38CF09292CA5E9B1D3F80EDF0F3"
+    ],
+    "lastUpdated": "2026-10-06T05:41:37.8790376Z",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "manifestHash": "72878195FFBE904ED5C230BB1A3200BC0BCB42A873380769CF2F2016B2736EF3"
   },
   "koedame.chordsketch": {
     "lastUpdated": "2026-10-06T02:07:27.6689078Z",
@@ -4793,9 +4793,9 @@
   },
   "marcinz606.NegPy": {
     "manifestHash": "A1CD5C41BC55C766F0CB65D6C63AB84AEF793782865BAA06BA58BC4543100267",
-    "lastUpdated": "2026-10-05T09:43:58.8103169Z",
+    "lastUpdated": "2026-10-06T05:41:38.0839548Z",
     "version": "0.63.0",
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "1AB263FC3D8ADA27E89DC7257B04A77D116BF0DF898B48BB79B8F132D8DA9E69"
@@ -6275,14 +6275,14 @@
     "state": "VALIDATION_PASSED"
   },
   "openwong2kim.wmux": {
-    "lastUpdated": "2026-10-06T02:07:27.7587856Z",
+    "lastUpdated": "2026-10-06T05:41:37.9712791Z",
     "description": "",
     "installerHashes": [
       "2FAA30E3E8D29088A38C8F3EA38577A1D05438E5D1911EA6C8B441FBBDE4B621"
     ],
     "version": "4.0.0",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "3BB8AE3536071EF4E62DDE71980BCA80D8118AA22E1E0938AE6F85CA9452E3AE"
   },
   "openwong2kim.wsnap": {
@@ -6659,7 +6659,7 @@
     }
   },
   "pnpm.pnpm": {
-    "validationCount": 4,
+    "validationCount": 5,
     "installerHashes": [
       "2B30F6BC53228187881AEAE604CC6CEDF092641DF30D3BE1CF4CD3D17BF630F5",
       "BD6FE6E6B2CB5EFD0E7F7C47F11DE7AEA3247EA78D382F9AE91B22F10B3AE0C6"
@@ -6667,7 +6667,7 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "63B6BA8BE64D515663FD574620371B3FDFDB5CD8056EF084B1F19919CD88C1CD",
     "version": "12.9.1",
-    "lastUpdated": "2026-10-05T13:52:12.6996466Z",
+    "lastUpdated": "2026-10-06T05:41:37.9136446Z",
     "description": ""
   },
   "PocketBase.PocketBase": {
@@ -7059,8 +7059,8 @@
     "version": "0.3.1"
   },
   "RimSort.RimSort": {
-    "lastUpdated": "2026-10-06T02:07:27.52654Z",
-    "validationCount": 2,
+    "lastUpdated": "2026-10-06T05:41:37.934907Z",
+    "validationCount": 3,
     "manifestHash": "D615224FE11F13CA0AA210D004D952945CAB19EE0D4AA9C352A12F4303B701E4",
     "installerHashes": [
       "A5D1226734AA24DBD1D107013C31786CCFBAA65C31F518540F4A9060A2F2FB30"
@@ -8150,16 +8150,16 @@
     "lastUpdated": "2026-08-06T14:13:45.9556005Z"
   },
   "SuperRadCompany.Microsandbox": {
-    "installerHashes": [
-      "78FE36CF700D9C888E041373E2826BCA7D553DA2374B4D8172D12EDAE333EF4C",
-      "072A25F8D609839A1BCE89434AE83A632EB6CDC16E72061C9B579946050AD60A"
-    ],
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "DA0A2925477648EF703B2753504A370332075DDF843BB6F179F562FA1DF424F5",
-    "lastUpdated": "2026-10-02T20:53:10.917577Z",
     "description": "",
+    "version": "0.7.7",
+    "installerHashes": [
+      "AE526AA2D7BFC230A6E9149D2B7483AC0992462C221A8ADD85D1429A005575E0",
+      "A99DDDC202AAF2ECB971D2D2D747A9DB2CDBE2A65022DFA53FA7CC8DFA7BA388"
+    ],
+    "lastUpdated": "2026-10-06T05:41:37.7957627Z",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "0.7.6"
+    "manifestHash": "D169C2F44F03FDD4C432D89E4E6A2A96911A39AED1D1679380AAE7E761B0EE62"
   },
   "SUSE.RancherDesktop": {
     "description": "",
@@ -9481,9 +9481,9 @@
   },
   "Y-ASLant.ElegantClipboard": {
     "description": "",
-    "lastUpdated": "2026-10-05T17:48:41.4147048Z",
+    "lastUpdated": "2026-10-06T05:41:37.8519648Z",
     "manifestHash": "4F2BA62E17A9041D0D41487705C267544A7338F62622B07CEA4768203D7F7078",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "454A235269D5085C43B721AFB710F69F65A6FC670F50D85956B256425EF7033A",
       "B9CFE22D0EBDEE55BEE7EE5F376D78D772C8249E8C2A8391E77DE2EBE1C6615D"
