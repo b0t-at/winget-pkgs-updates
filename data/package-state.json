@@ -708,9 +708,9 @@
   },
   "axllent.mailpit": {
     "description": "",
-    "lastUpdated": "2026-10-05T17:48:41.4259506Z",
+    "lastUpdated": "2026-10-06T09:52:58.1560912Z",
     "manifestHash": "FE00333139A2C4988AC9B0738559CF1E3B8F87C93D0BC2DB6DD93934E6ADBDBB",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "0DD6EC909A6F5B2B66682B22D82ABCE97AB793E30766BF2F642B691E70A4A16B",
       "DB337B96ACE79E7A8D837B31023159062F87DB35A12F8CB67304C32A09959056"
@@ -841,14 +841,14 @@
     "version": "0.5"
   },
   "BenjaminLSR.HandheldCompanion": {
-    "validationCount": 4,
+    "validationCount": 5,
     "version": "1.3.3.1",
     "description": "",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "C212332DF3914E06555ED35B1520E24300661AE968F03642304AC3784F8F9F6F"
     ],
-    "lastUpdated": "2026-10-06T05:41:37.9915197Z",
+    "lastUpdated": "2026-10-06T09:52:58.1901306Z",
     "manifestHash": "1893BCA41A722D8FC2DBF7C5F5F87E232C5D1BAF0720C1F7AF72EC42D870D762"
   },
   "BenModigell.Vibes": {
@@ -2560,15 +2560,15 @@
     "validationCount": 1
   },
   "Fidpa.Hablara": {
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "BD2808FE6BAE3F11D22DA8D3BC0760292B98CE9F3EA457DF086492840996F634"
-    ],
+    "lastUpdated": "2026-10-06T09:52:58.2043872Z",
     "validationCount": 1,
-    "description": "",
-    "version": "1.7.7",
-    "manifestHash": "457B5D8E0DD38CA5E13FAA0A9567DA036DF8C843034DEC68CC83A496DCA9F2C9",
-    "lastUpdated": "2026-09-14T04:56:07.4906273Z"
+    "manifestHash": "E688AFDD2CF454E819254EE6D66B02AC7B69B06B9E9A4B42CB926264E240D604",
+    "state": "VALIDATION_PASSED",
+    "version": "1.7.9",
+    "installerHashes": [
+      "CCC021431002FAE90994EAD6075B0E487BA33B5AC3351E67B8519167E3E9043F"
+    ],
+    "description": ""
   },
   "Filamental.Filamental": {
     "description": "",
@@ -2624,6 +2624,18 @@
     "validationCount": 1,
     "version": "0.25.0",
     "lastUpdated": "2026-08-21T17:17:39.8915915Z"
+  },
+  "Flowscripter.example-cli": {
+    "lastUpdated": "2026-10-06T09:52:58.3025573Z",
+    "validationCount": 1,
+    "manifestHash": "9DE6543A8D476691721C23F5872BF471CD7AACD527EC9D34ECEA594318B73FEE",
+    "state": "VALIDATION_PASSED",
+    "version": "3.0.7",
+    "installerHashes": [
+      "10FECAB45AB7408021F1A10C0ED089D8B85179D5F726738385314004458B438E",
+      "7BBCD8C1D6848678CDB53E34EE186EB8D4329DB8FACF99A8D4399F0DB46E40A5"
+    ],
+    "description": ""
   },
   "Fly-io.flyctl": {
     "lastUpdated": "2026-10-06T02:07:27.3968362Z",
@@ -3662,8 +3674,8 @@
     "lastUpdated": "2026-08-21T17:17:39.9241582Z"
   },
   "IanWalton.JellyfinMPVShim": {
-    "lastUpdated": "2026-10-05T22:13:12.2692981Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-10-06T09:52:58.3146813Z",
+    "validationCount": 2,
     "manifestHash": "675AEF627B4CC56E6ABA67B65310B3A79C2D1BE64E45261656508D89D741DD2A",
     "installerHashes": [
       "4FBDFADCF028BCBB67375F808F5C8FE557635F4377A46E84550DE32B9E002B5E"
@@ -4377,14 +4389,14 @@
     "manifestHash": "72878195FFBE904ED5C230BB1A3200BC0BCB42A873380769CF2F2016B2736EF3"
   },
   "koedame.chordsketch": {
-    "lastUpdated": "2026-10-06T02:07:27.6689078Z",
+    "lastUpdated": "2026-10-06T09:52:58.167282Z",
     "description": "",
     "installerHashes": [
       "C8E884E502F42F9D35D2E2F0F3CEEE9EBDC7DFE71D5059186B77A79B24A95403"
     ],
     "version": "0.8.0",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "4ED7684360DCE3F0EC9D0BF0EE083AA3ED65A0E8EF32E50658BB3BB060A10DBA"
   },
   "KRTirtho.Spotube": {
@@ -4721,9 +4733,9 @@
       "B54B1B397920D8CA80509580CE29E4BDEAA7A3A229F2A25972808042279B0D9C"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "1.2.4",
-    "lastUpdated": "2026-10-04T21:56:07.1911592Z"
+    "lastUpdated": "2026-10-06T09:52:58.2298832Z"
   },
   "Luxview.AgainstMe": {
     "installerHashes": [
@@ -4797,9 +4809,9 @@
   },
   "marcinz606.NegPy": {
     "manifestHash": "A1CD5C41BC55C766F0CB65D6C63AB84AEF793782865BAA06BA58BC4543100267",
-    "lastUpdated": "2026-10-06T05:41:38.0839548Z",
+    "lastUpdated": "2026-10-06T09:52:58.2572934Z",
     "version": "0.63.0",
-    "validationCount": 2,
+    "validationCount": 3,
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "1AB263FC3D8ADA27E89DC7257B04A77D116BF0DF898B48BB79B8F132D8DA9E69"
@@ -5022,13 +5034,13 @@
   },
   "Micronaut.Launch": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 4,
+    "validationCount": 5,
     "installerHashes": [
       "FD0D86C80D0E68581C692EE847D522C1744D01FAE0329C68F9B446149AB437EE"
     ],
     "version": "5.2.1",
     "description": "",
-    "lastUpdated": "2026-10-04T21:56:07.1297363Z",
+    "lastUpdated": "2026-10-06T09:52:58.2407751Z",
     "manifestHash": "A263F94F9A11A9CE4BE2964441C584D5354207E27FAF863B1DBFB1DDB1F69387"
   },
   "Microsoft.Azure.GuestProxyAgent.AllowListTool": {
@@ -5566,15 +5578,15 @@
     "validationCount": 1
   },
   "Naeem5877.VibeDownloader": {
+    "lastUpdated": "2026-10-06T09:52:58.279573Z",
+    "validationCount": 1,
+    "manifestHash": "604B62E887ECB2978445C694605F6A687E70076887A5FBCF4B9A7C8AD833FAD7",
     "state": "VALIDATION_PASSED",
-    "validationCount": 3,
+    "version": "2.2.0",
     "installerHashes": [
-      "07186636A8AC4C3CA60C04C942F60A40475565D0885A5EFC0967967C2BDF2945"
+      "F267A6C2512E23542A810E33AE73D6B1CFC8E018F6A51CAEF79001839507FFC0"
     ],
-    "version": "2.1.0",
-    "description": "",
-    "lastUpdated": "2026-10-05T09:43:58.719425Z",
-    "manifestHash": "0369816DC78FE43ABB704F7A7C32EFFC9BEA1439D8502F88D3954DDDADA0E021"
+    "description": ""
   },
   "nao1215.gup": {
     "lastUpdated": "2026-08-14T10:42:15.0129361Z",
@@ -6242,11 +6254,11 @@
   },
   "OpenTelemetry.Weaver": {
     "manifestHash": "7EBEAA075132FAF8652444A7A4E79B5545323C8D3C53B2C2EE2399B538BA6D0B",
-    "validationCount": 4,
+    "validationCount": 5,
     "description": "",
     "version": "0.27.0",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-05T17:48:41.3259609Z",
+    "lastUpdated": "2026-10-06T09:52:58.2676867Z",
     "installerHashes": [
       "CDF6E5D70A1F6B99456E260AE3EC7891C91AAA951C8359CCFFB8FD9A418452AF"
     ]
@@ -8244,14 +8256,14 @@
     ]
   },
   "tagspaces.tagspaces": {
-    "installerHashes": [
-      "4D15CE668C705065CB5CD9E95541A4B5035118DFB8BE5CF791DB917BC62799B1"
-    ],
-    "manifestHash": "64AF918D0EEA49A343D473753368838972E710F7FF3A428F630FCE52B658D464",
-    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-06T09:52:58.2899753Z",
     "validationCount": 1,
-    "version": "6.13.12",
-    "lastUpdated": "2026-07-20T13:22:02.6287143Z",
+    "manifestHash": "E4CFA9D593D1CE5172B314479748A47F9A235A6E7AADA458B355454910F18B1D",
+    "state": "VALIDATION_PASSED",
+    "version": "6.14.0",
+    "installerHashes": [
+      "E031101418F41539A8933B5B199138F107F1939ACDD599533764F09F2D42FC94"
+    ],
     "description": ""
   },
   "taiki-e.parse-changelog": {
@@ -8829,9 +8841,9 @@
   },
   "ulyssa.iamb": {
     "description": "",
-    "lastUpdated": "2026-10-06T02:07:27.4845467Z",
+    "lastUpdated": "2026-10-06T09:52:58.1173617Z",
     "manifestHash": "3BAEC33F37C3E3422354BD079B5F3192D1F5ACCF3F92E8CBBDDE85BF3E2A2CB9",
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "84F8F8F70B8784EDABF6B624EE6950DA7A861D7E54741DCF3B4C85E4E25C4482"
     ],
