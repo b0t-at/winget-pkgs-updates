@@ -920,9 +920,9 @@
       "EF13DC3758CC38E3DA1C1D8C69B2E95CF83240611B8154B6D97336965DC71FF1"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 3,
+    "validationCount": 4,
     "version": "0.10.2",
-    "lastUpdated": "2026-10-06T13:35:51.0258718Z"
+    "lastUpdated": "2026-10-06T21:36:54.3261081Z"
   },
   "binbat.liveman": {
     "state": "VALIDATION_PASSED",
@@ -1268,11 +1268,11 @@
       "E16E94929BC7FF94953B2A8CB5F216E36E89DB1B801D5BDE3EC44CE004ED043C",
       "6237D54B75BF6A98F0C88BF89A51FBD4E779F652F89D55501CF671E836A94AF1"
     ],
-    "lastUpdated": "2026-10-06T13:35:51.2002479Z",
+    "lastUpdated": "2026-10-06T21:36:54.3406645Z",
     "version": "1.1.5",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "validationCount": 3,
+    "validationCount": 4,
     "manifestHash": "8E645FF28679E97AD71400806E23B280C929C60DCF327B26B03994C85640FD47"
   },
   "CargoLambda.CargoLambda": {
@@ -1620,14 +1620,14 @@
     "lastUpdated": "2026-10-05T17:48:41.4402547Z"
   },
   "Crate-CI.Typos": {
-    "lastUpdated": "2026-09-25T20:53:18.2733972Z",
-    "installerHashes": [
-      "B59F149D84E86AAB535D52DB029FA8D3AC5ECBA9AE5C7F19CF07ACB5AA0CAAAF"
-    ],
-    "manifestHash": "A03880DFFB2FEED9839B13D8BFCBD019D890978019796C75801D6C7F45B54B65",
     "validationCount": 1,
-    "version": "1.50.3",
+    "installerHashes": [
+      "6B9A2084E508CF90553430FFE920C5B186BB87B66F5D6E75400E446C1D9EA494"
+    ],
+    "manifestHash": "DDD46F13A679C5F8D50B467000338F0A770F57071056891439A92C24B4D42129",
+    "version": "1.51.0",
     "description": "",
+    "lastUpdated": "2026-10-06T21:36:54.1913119Z",
     "state": "VALIDATION_PASSED"
   },
   "CrewHaus.CLI": {
@@ -3335,16 +3335,16 @@
     "description": ""
   },
   "Hanthor.BluefinCLI": {
-    "manifestHash": "FC0366F456B830E1F72C8D93B692F678C230B2FCB09B6C9F5338CC8AD8CBE0C6",
-    "description": "",
+    "validationCount": 1,
     "installerHashes": [
-      "CD522E4921FAC6E0FBF8EE9FC1853591E56176C3F09F5EF9B96133158A143823",
-      "CDD3CB27421A7111F22EA33B30115552F02ECF4BDC8496A1A1F34D8D4528553E"
+      "00AE6185D007EAA1A598776B30072EDED26BF9DBAC7944CB106544910D48C51F",
+      "B157837E972D97DFB2A34917B1CEABFE3C3F107B465D14A52EAE0C3E4DF624CD"
     ],
-    "state": "VALIDATION_PASSED",
-    "validationCount": 5,
-    "version": "0.11.5",
-    "lastUpdated": "2026-10-06T05:41:38.0197899Z"
+    "manifestHash": "BAF922178F0C75B4AEA660808A36C1D41635203F7400FE46BE54AD7C1224023F",
+    "version": "0.11.6",
+    "description": "",
+    "lastUpdated": "2026-10-06T21:36:54.3538234Z",
+    "state": "VALIDATION_PASSED"
   },
   "Happ.Happ": {
     "validationCount": 1,
@@ -3883,15 +3883,15 @@
     ]
   },
   "jaegertracing.jaeger": {
-    "description": "",
-    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
     "installerHashes": [
-      "197C4B42ABA6983B3D9CBCA3577A0E14191BCB9431FDE1B6661471B6FECE39FC"
+      "0FE3343C49E44E3C1E86846767286A3D7D16C8F89FFF6E285E7E5A8BD34442C8"
     ],
-    "lastUpdated": "2026-09-17T09:19:19.568261Z",
-    "manifestHash": "3AC144314E86BCAE0081C3CD0DA5320E2AA24108A130CE8569028C781B1EEAAC",
-    "version": "2.21.0",
-    "validationCount": 1
+    "manifestHash": "1C92E8A9480E7B939DC254898760FE35C34135EC5CF06D581836871CEC63CA6C",
+    "version": "2.22.0",
+    "description": "",
+    "lastUpdated": "2026-10-06T21:36:54.1764008Z",
+    "state": "VALIDATION_PASSED"
   },
   "jaimecartodb.MSXCP": {
     "description": "",
@@ -4389,14 +4389,14 @@
     "manifestHash": "72878195FFBE904ED5C230BB1A3200BC0BCB42A873380769CF2F2016B2736EF3"
   },
   "koedame.chordsketch": {
-    "lastUpdated": "2026-10-06T09:52:58.167282Z",
+    "lastUpdated": "2026-10-06T21:36:54.3007757Z",
     "description": "",
     "installerHashes": [
       "C8E884E502F42F9D35D2E2F0F3CEEE9EBDC7DFE71D5059186B77A79B24A95403"
     ],
     "version": "0.8.0",
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "validationCount": 3,
     "manifestHash": "4ED7684360DCE3F0EC9D0BF0EE083AA3ED65A0E8EF32E50658BB3BB060A10DBA"
   },
   "KRTirtho.Spotube": {
@@ -5786,8 +5786,8 @@
   },
   "NoahSabaj.Mermaid": {
     "manifestHash": "4DF68ADEE3FEB25571CDEE49025021DE44432A54784945E8618B30D0D5223608",
-    "lastUpdated": "2026-10-04T15:04:40.9339265Z",
-    "validationCount": 2,
+    "lastUpdated": "2026-10-06T21:36:54.1312112Z",
+    "validationCount": 3,
     "state": "VALIDATION_PASSED",
     "description": "",
     "installerHashes": [
@@ -6220,15 +6220,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6311244Z"
   },
   "openpubkey.opkssh": {
-    "lastUpdated": "2026-07-14T21:06:34.8590003Z",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "0DA4E25942B9B0811C49AE809578EAF7BB66667EE1E1F1AB8711641DD49A4985",
-    "description": "",
     "validationCount": 1,
-    "version": "0.16.0",
     "installerHashes": [
-      "DB8991CEAAC7AC224B704510CA6FBA2114998291D4283DE4BC2D3B8EFA66AD07"
-    ]
+      "E638B85A26039FDBBF4E8D3AB52095AEE5CBD70D1C256330517F03B00C8C7F0A"
+    ],
+    "manifestHash": "26CA7D84A91A9B97C99F7AD7B1E3D2D1D92F2AB0D4035F0F155F923304A463F4",
+    "version": "0.17.0",
+    "description": "",
+    "lastUpdated": "2026-10-06T21:36:54.2701411Z",
+    "state": "VALIDATION_PASSED"
   },
   "OpenScreen.OpenScreen": {
     "description": "",
@@ -6564,10 +6564,10 @@
       "BC796772A32B7CD8B532B18DA268E65F67344A3DABF466C5C940B73D81F3E815"
     ],
     "manifestHash": "90A4481193729A1EBB0FC86D40D34A8E8DD5E2A61CFBA712831D8D91FCBB8AD5",
-    "validationCount": 3,
+    "validationCount": 4,
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-05T13:52:12.733142Z"
+    "lastUpdated": "2026-10-06T21:36:54.2308595Z"
   },
   "Pencil.Desktop": {
     "manifestHash": "C4EE87B0CC9764C0F5737AC23FED643FDCF66A0CF3152C79A8770CA186C6674E",
@@ -6717,8 +6717,8 @@
     "installerHashes": [
       "51C2E3D69A446111D356F2E2953D3BAA8B9563D3F4E7F630C1524ECF1735ED63"
     ],
-    "lastUpdated": "2026-10-06T13:35:50.9891982Z",
-    "validationCount": 4,
+    "lastUpdated": "2026-10-06T21:36:54.3141142Z",
+    "validationCount": 5,
     "description": "",
     "state": "VALIDATION_PASSED",
     "version": "8.1",
@@ -7569,11 +7569,11 @@
   },
   "ShatteredChaos.FightPlanner": {
     "version": "3.3.34",
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "A6DBF209B8E65F39B153FDE4D0131E9DB0ADBBDA75A7350421B89A79FE7380AE"
     ],
-    "lastUpdated": "2026-10-05T17:48:41.4716236Z",
+    "lastUpdated": "2026-10-06T21:36:54.2150374Z",
     "state": "VALIDATION_PASSED",
     "description": "",
     "manifestHash": "3AAC778A30BB261914E8D24F401524EF3C7B94BB334611875BBFCB09ED28C047"
@@ -7900,15 +7900,15 @@
     "state": "VALIDATION_PASSED"
   },
   "SpectrumQT.XXMILauncher": {
-    "validationCount": 3,
+    "validationCount": 1,
     "installerHashes": [
       "486368F30FDD8C55B6A12000CD977DBABCA591A6B1D448993808EB46F8F46D99"
     ],
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "2BCCCD5E314F3B0494EB008C28A9EB5BCE7906702ABB9AE085B63E61DAC41AED",
+    "manifestHash": "B769F9D12F0AA65414748AC34A0ABBEFE39E81BCB314FD23BF3D1E84A0774D42",
     "version": "2.4.1",
-    "lastUpdated": "2026-10-05T13:52:12.7148377Z",
-    "description": ""
+    "description": "",
+    "lastUpdated": "2026-10-06T21:36:54.2576191Z",
+    "state": "VALIDATION_PASSED"
   },
   "SpikeHD.Dorion": {
     "validationCount": 1,
@@ -8079,17 +8079,15 @@
     }
   },
   "Storj.Uplink": {
-    "description": "",
-    "installerHashes": "2BE5A5550666EBE2E9249320077939A674ABA0B0DA277896EF4B762D8CE387C5",
-    "lastUpdated": "2026-10-02T09:03:16.2948097Z",
-    "manifestHash": "6711D280E5CE98FC6079B13CE9C50C811C5BEA114604447688358CE3D26A37EB",
-    "openPr": {
-      "version": "1.164.1",
-      "checkedAt": "2026-10-02T09:06:51.2447248Z"
-    },
-    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "1.164.1"
+    "installerHashes": [
+      "D568FD2ABD98E1D396DF3C924750534BDF2E8BE68873617366AC3D411D2CAB42"
+    ],
+    "manifestHash": "1191F2FBC58356804A9902BDE862055E266DE73FAC7ABF16E72B9848FC447406",
+    "version": "1.164.2",
+    "description": "",
+    "lastUpdated": "2026-10-06T21:36:54.3691634Z",
+    "state": "VALIDATION_PASSED"
   },
   "str4d.rage": {
     "state": "VALIDATION_PASSED",
@@ -9252,9 +9250,9 @@
     "installerHashes": [
       "9A979F9D96D739625A0FE69317F3197CC7BCEF663A6D7195197D6C9BF96ED6F5"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "0.71.0",
-    "lastUpdated": "2026-10-06T17:18:58.7168841Z"
+    "lastUpdated": "2026-10-06T21:36:54.2885741Z"
   },
   "WillyJL.F95Checker": {
     "validationCount": 4,
