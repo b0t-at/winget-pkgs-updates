@@ -2621,12 +2621,6 @@
     "version": "0.25.0",
     "lastUpdated": "2026-08-21T17:17:39.8915915Z"
   },
-  "Flowscripter.example-cli": {
-    "openPr": {
-      "checkedAt": "2026-10-05T20:37:32.1947929Z",
-      "version": "3.0.6"
-    }
-  },
   "Fly-io.flyctl": {
     "lastUpdated": "2026-10-02T01:20:46.4834749Z",
     "version": "0.4.111",
