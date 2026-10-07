@@ -3993,6 +3993,12 @@
     "manifestHash": "5804C66B6C415FDA0E1CCEFDC8B3DB1B64F86BA74B0B9B4794AFF0EAF6BDB936",
     "version": "0.15.3"
   },
+  "jdx.mise": {
+    "openPr": {
+      "checkedAt": "2026-10-07T20:26:51.7804184Z",
+      "version": "2026.10.4"
+    }
+  },
   "jeffaristi92.Sweeft": {
     "description": "",
     "version": "1.1.0",
@@ -4263,11 +4269,7 @@
     "manifestHash": "1B7D562145110A2AB4483E50909945476B8ED7491B1F57E8408A373E465946E7",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "18.1.1",
-    "openPr": {
-      "version": "18.1.5",
-      "checkedAt": "2026-10-07T04:31:00.0745897Z"
-    }
+    "version": "18.1.1"
   },
   "KellyBrazil.jc": {
     "installerHashes": [
