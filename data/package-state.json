@@ -625,9 +625,9 @@
     }
   },
   "AsterPrivacy.AsterMail": {
-    "lastUpdated": "2026-10-07T02:17:50.952057Z",
+    "lastUpdated": "2026-10-07T09:46:20.0657313Z",
     "manifestHash": "41C5EB1053E2CC231C748DB77AEBF708E0DAF3833E0E3ECE6BB5D5CC4C16722C",
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "CF38CBDDCA4FF3B691A827DF95324C3339F55A19EFA6BB79FE47D215D74E0025"
     ],
@@ -920,9 +920,9 @@
       "EF13DC3758CC38E3DA1C1D8C69B2E95CF83240611B8154B6D97336965DC71FF1"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 4,
+    "validationCount": 5,
     "version": "0.10.2",
-    "lastUpdated": "2026-10-06T21:36:54.3261081Z"
+    "lastUpdated": "2026-10-07T09:46:19.8757059Z"
   },
   "binbat.liveman": {
     "state": "VALIDATION_PASSED",
@@ -2104,15 +2104,15 @@
     }
   },
   "Echonuit.VigieChiroCompanion": {
-    "version": "2.197.0",
-    "validationCount": 1,
-    "manifestHash": "7AE8C8AC411D238055D946D17B41AFD534AEAD628905A3AF2E4E309E9E5E76A2",
-    "lastUpdated": "2026-10-07T05:33:49.825178Z",
     "installerHashes": [
-      "1CC959F710E018DA6240A4C9B3FC7F5A03967A59F8E58119F64178C9DD053CC5"
+      "EDF529A621C602C2ABEEBB618F36FB3F81D6A69E6183AFC641682E81CBD3FFED"
     ],
-    "state": "VALIDATION_PASSED",
-    "description": ""
+    "version": "2.198.0",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-07T09:46:20.0095687Z",
+    "description": "",
+    "manifestHash": "E13DDC5E871CA32A48895854D001D24FA7AF57BE3DB74A1417420CEDE5B73CA6",
+    "state": "VALIDATION_PASSED"
   },
   "edde746.Plezy": {
     "validationCount": 1,
@@ -2806,8 +2806,8 @@
       "D73D57A6A310276A68E48B25C716562CAF681CC39AEF327BA96429DE5A34E5C7",
       "3E12B1B8AF751A9163DA06101316B990FA127D66248CA3EBAE493E11D576E9F8"
     ],
-    "lastUpdated": "2026-10-07T05:33:49.8716937Z",
-    "validationCount": 2,
+    "lastUpdated": "2026-10-07T09:46:20.0445457Z",
+    "validationCount": 3,
     "description": "",
     "manifestHash": "3A432097D2C69F7DB7B3A226A32803009EFBDEE35B429AC945860C9BDDDE1659",
     "state": "VALIDATION_PASSED"
@@ -3674,8 +3674,8 @@
     "lastUpdated": "2026-08-21T17:17:39.9241582Z"
   },
   "IanWalton.JellyfinMPVShim": {
-    "lastUpdated": "2026-10-06T09:52:58.3146813Z",
-    "validationCount": 2,
+    "lastUpdated": "2026-10-07T09:46:19.7349589Z",
+    "validationCount": 3,
     "manifestHash": "675AEF627B4CC56E6ABA67B65310B3A79C2D1BE64E45261656508D89D741DD2A",
     "installerHashes": [
       "4FBDFADCF028BCBB67375F808F5C8FE557635F4377A46E84550DE32B9E002B5E"
@@ -4389,14 +4389,14 @@
     "manifestHash": "72878195FFBE904ED5C230BB1A3200BC0BCB42A873380769CF2F2016B2736EF3"
   },
   "koedame.chordsketch": {
-    "lastUpdated": "2026-10-07T02:17:50.7627338Z",
+    "lastUpdated": "2026-10-07T09:46:20.0898866Z",
     "description": "",
     "installerHashes": [
       "C8E884E502F42F9D35D2E2F0F3CEEE9EBDC7DFE71D5059186B77A79B24A95403"
     ],
     "version": "0.8.0",
     "state": "VALIDATION_PASSED",
-    "validationCount": 4,
+    "validationCount": 5,
     "manifestHash": "4ED7684360DCE3F0EC9D0BF0EE083AA3ED65A0E8EF32E50658BB3BB060A10DBA"
   },
   "KRTirtho.Spotube": {
@@ -5336,7 +5336,7 @@
     "state": "VALIDATION_PASSED"
   },
   "Monghoul.Monghoul": {
-    "validationCount": 3,
+    "validationCount": 4,
     "state": "VALIDATION_PASSED",
     "version": "1.14.1",
     "manifestHash": "63D13E1A3858FC28CAAD40AE7ED2DFFE8109B34335693320F6AF4F99A0BA86E5",
@@ -5344,7 +5344,7 @@
       "2A0C154CB1875695AD8EA49C5891D44A826DC70C396AAC2F60F033838792277E"
     ],
     "description": "",
-    "lastUpdated": "2026-10-07T02:17:50.6115426Z"
+    "lastUpdated": "2026-10-07T09:46:19.9197259Z"
   },
   "MongoDB.MongoDBAtlasCLI": {
     "validationCount": 1,
@@ -6675,7 +6675,7 @@
     }
   },
   "pnpm.pnpm": {
-    "validationCount": 5,
+    "validationCount": 6,
     "installerHashes": [
       "2B30F6BC53228187881AEAE604CC6CEDF092641DF30D3BE1CF4CD3D17BF630F5",
       "BD6FE6E6B2CB5EFD0E7F7C47F11DE7AEA3247EA78D382F9AE91B22F10B3AE0C6"
@@ -6683,7 +6683,7 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "63B6BA8BE64D515663FD574620371B3FDFDB5CD8056EF084B1F19919CD88C1CD",
     "version": "12.9.1",
-    "lastUpdated": "2026-10-06T05:41:37.9136446Z",
+    "lastUpdated": "2026-10-07T09:46:19.9882744Z",
     "description": ""
   },
   "PocketBase.PocketBase": {
@@ -7569,11 +7569,11 @@
   },
   "ShatteredChaos.FightPlanner": {
     "version": "3.3.34",
-    "validationCount": 4,
+    "validationCount": 5,
     "installerHashes": [
       "A6DBF209B8E65F39B153FDE4D0131E9DB0ADBBDA75A7350421B89A79FE7380AE"
     ],
-    "lastUpdated": "2026-10-07T02:17:50.9179732Z",
+    "lastUpdated": "2026-10-07T09:46:19.9636209Z",
     "state": "VALIDATION_PASSED",
     "description": "",
     "manifestHash": "3AAC778A30BB261914E8D24F401524EF3C7B94BB334611875BBFCB09ED28C047"
@@ -8556,8 +8556,8 @@
     "installerHashes": [
       "DF0A9FCE26A1A5FB06BC46D6C5017D6F1A675C6A780907EFD5DAFB4AA333F94C"
     ],
-    "lastUpdated": "2026-10-07T02:17:50.675954Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-10-07T09:46:19.9420954Z",
+    "validationCount": 2,
     "description": "",
     "manifestHash": "574D4649432FBC1103CA20E7FEBD9B0CF38B13A2DBC1995ED02943B766AF433E",
     "state": "VALIDATION_PASSED"
@@ -8985,9 +8985,9 @@
     "state": "VALIDATION_PASSED"
   },
   "Vathivis.paperq": {
-    "lastUpdated": "2026-10-06T17:18:58.9069368Z",
+    "lastUpdated": "2026-10-07T09:46:19.8511333Z",
     "manifestHash": "5C96F319BB6252605B1CD9ACDC6BE3ADA7412D0B40A5E84AC2A76963A2D3E2F6",
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "6F58FAE64670D127204EE852462C35D4917B1BE1D5220617F48972AC9090D920",
       "BDDC46806F1D566447229B343474E34C4330A22A6A418A8D22A390F39CE3433C"
@@ -9250,9 +9250,9 @@
     "installerHashes": [
       "9A979F9D96D739625A0FE69317F3197CC7BCEF663A6D7195197D6C9BF96ED6F5"
     ],
-    "validationCount": 3,
+    "validationCount": 4,
     "version": "0.71.0",
-    "lastUpdated": "2026-10-07T02:17:50.875094Z"
+    "lastUpdated": "2026-10-07T09:46:19.8165066Z"
   },
   "WillyJL.F95Checker": {
     "validationCount": 4,
