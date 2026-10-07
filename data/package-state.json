@@ -3981,12 +3981,6 @@
     "manifestHash": "5804C66B6C415FDA0E1CCEFDC8B3DB1B64F86BA74B0B9B4794AFF0EAF6BDB936",
     "version": "0.15.3"
   },
-  "jdx.mise": {
-    "openPr": {
-      "checkedAt": "2026-10-06T16:29:52.9188388Z",
-      "version": "2026.10.3"
-    }
-  },
   "jeffaristi92.Sweeft": {
     "description": "",
     "version": "1.1.0",
@@ -5010,11 +5004,7 @@
     ],
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-08-14T16:34:46.1775536Z",
-    "manifestHash": "E6D5F813D098405E345D20B7BE2E11139E6B0F19FD5FCF398D9D3EEFEBD6DE23",
-    "openPr": {
-      "checkedAt": "2026-09-18T16:22:11.5341668Z",
-      "version": "3.1.75"
-    }
+    "manifestHash": "E6D5F813D098405E345D20B7BE2E11139E6B0F19FD5FCF398D9D3EEFEBD6DE23"
   },
   "Mickem.NSClient": {
     "version": "0.21.0",
