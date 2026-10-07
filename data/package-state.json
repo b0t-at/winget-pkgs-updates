@@ -841,14 +841,14 @@
     "version": "0.5"
   },
   "BenjaminLSR.HandheldCompanion": {
-    "validationCount": 5,
+    "validationCount": 6,
     "version": "1.3.3.1",
     "description": "",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "C212332DF3914E06555ED35B1520E24300661AE968F03642304AC3784F8F9F6F"
     ],
-    "lastUpdated": "2026-10-06T09:52:58.1901306Z",
+    "lastUpdated": "2026-10-07T05:33:49.9483437Z",
     "manifestHash": "1893BCA41A722D8FC2DBF7C5F5F87E232C5D1BAF0720C1F7AF72EC42D870D762"
   },
   "BenModigell.Vibes": {
@@ -2104,15 +2104,15 @@
     }
   },
   "Echonuit.VigieChiroCompanion": {
+    "version": "2.197.0",
     "validationCount": 1,
-    "version": "2.196.0",
-    "state": "VALIDATION_PASSED",
-    "description": "",
+    "manifestHash": "7AE8C8AC411D238055D946D17B41AFD534AEAD628905A3AF2E4E309E9E5E76A2",
+    "lastUpdated": "2026-10-07T05:33:49.825178Z",
     "installerHashes": [
-      "8B7784EC90E262174D8FA2ABC2620FF581558FE57583866184FF1D28A2DF5FCF"
+      "1CC959F710E018DA6240A4C9B3FC7F5A03967A59F8E58119F64178C9DD053CC5"
     ],
-    "manifestHash": "839D407B203850F0A7A0A08EEA42772B00788C651EEA1F6C22ACAA78FABA9ABE",
-    "lastUpdated": "2026-10-01T16:55:22.7693189Z"
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "edde746.Plezy": {
     "validationCount": 1,
@@ -2806,8 +2806,8 @@
       "D73D57A6A310276A68E48B25C716562CAF681CC39AEF327BA96429DE5A34E5C7",
       "3E12B1B8AF751A9163DA06101316B990FA127D66248CA3EBAE493E11D576E9F8"
     ],
-    "lastUpdated": "2026-10-07T02:17:50.8546215Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-10-07T05:33:49.8716937Z",
+    "validationCount": 2,
     "description": "",
     "manifestHash": "3A432097D2C69F7DB7B3A226A32803009EFBDEE35B429AC945860C9BDDDE1659",
     "state": "VALIDATION_PASSED"
@@ -3641,11 +3641,11 @@
   },
   "Humanity.DJV2": {
     "manifestHash": "D99B513D331A2EBC63D7686AA3245DB8161713A4CF7FDCCB139D684F940DB154",
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
     "version": "3.7.4",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-04T21:56:07.1034746Z",
+    "lastUpdated": "2026-10-07T05:33:49.9719071Z",
     "installerHashes": [
       "8434C2AD58F6DECF2CAC1EF35A7E4B25FF863D95BC43EDEA724F13AA7D0535BD",
       "B40A4F5DBC1CD5FF458DF5D6AB96B6AA5002643438C66E5BDACAE60293FFC218"
@@ -5044,13 +5044,13 @@
     "manifestHash": "A263F94F9A11A9CE4BE2964441C584D5354207E27FAF863B1DBFB1DDB1F69387"
   },
   "Microsoft.Azure.GuestProxyAgent.AllowListTool": {
-    "lastUpdated": "2026-10-05T22:13:12.4645944Z",
+    "version": "1.0.52",
     "validationCount": 1,
-    "manifestHash": "22A145911C542B1EC96FCA3634903B9F8C3FEAF9EC429E6214469C4B47D83E08",
+    "manifestHash": "911E611D226665BC1B6EB9C306418B4151756249CE062968ACA1D0DA898689F1",
+    "lastUpdated": "2026-10-07T05:33:49.8884455Z",
     "installerHashes": [
       "3D3A3512A0759034EF8AF670A40F2D9F301671E37354C67847D6554DA6553747"
     ],
-    "version": "1.0.52",
     "state": "VALIDATION_PASSED",
     "description": ""
   },
@@ -5578,8 +5578,8 @@
     "validationCount": 1
   },
   "Naeem5877.VibeDownloader": {
-    "lastUpdated": "2026-10-07T02:17:50.8977474Z",
-    "validationCount": 3,
+    "lastUpdated": "2026-10-07T05:33:49.8415708Z",
+    "validationCount": 4,
     "manifestHash": "604B62E887ECB2978445C694605F6A687E70076887A5FBCF4B9A7C8AD833FAD7",
     "state": "VALIDATION_PASSED",
     "version": "2.2.0",
@@ -6078,16 +6078,16 @@
     "lastUpdated": "2026-08-18T21:24:38.7338502Z"
   },
   "Open-Component-Model.ocm-cli": {
+    "version": "0.52.0",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "version": "0.51.0",
-    "lastUpdated": "2026-09-23T08:50:26.0461594Z",
-    "manifestHash": "04B392CB2E80C1A64EC63E611D974F68153472860D22D914ED15A2DBE04CB869",
-    "description": "",
+    "manifestHash": "257CEE39D09A2629C9E4C3589299AB47A3475630C73BCFF9284C069321EA3966",
+    "lastUpdated": "2026-10-07T05:33:49.9271379Z",
     "installerHashes": [
-      "5418C759DE27F7511BDDE1D85EEFBAE85B236ED2C228E754A35D8068E7F04756",
-      "11EA7A4058708B994AD2289C6B7E2ECA5C7EA09ACFB2E88ABBA23AF6E855E314"
-    ]
+      "651704B000A5D0A5F8287A45FB90E59A5CE22581F3EB79CE47C017DAFA242A83",
+      "72758A8BF7A7BC376B558F5336E61464EE1C5FF32F9266B8F5368431486F7445"
+    ],
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "open-policy-agent.opa": {
     "lastUpdated": "2026-09-30T09:06:39.756906Z",
@@ -6254,11 +6254,11 @@
   },
   "OpenTelemetry.Weaver": {
     "manifestHash": "7EBEAA075132FAF8652444A7A4E79B5545323C8D3C53B2C2EE2399B538BA6D0B",
-    "validationCount": 6,
+    "validationCount": 7,
     "description": "",
     "version": "0.27.0",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-06T13:35:51.0844372Z",
+    "lastUpdated": "2026-10-07T05:33:49.7328352Z",
     "installerHashes": [
       "CDF6E5D70A1F6B99456E260AE3EC7891C91AAA951C8359CCFFB8FD9A418452AF"
     ]
@@ -8170,9 +8170,9 @@
       "AE526AA2D7BFC230A6E9149D2B7483AC0992462C221A8ADD85D1429A005575E0",
       "A99DDDC202AAF2ECB971D2D2D747A9DB2CDBE2A65022DFA53FA7CC8DFA7BA388"
     ],
-    "lastUpdated": "2026-10-06T17:18:58.8748514Z",
+    "lastUpdated": "2026-10-07T05:33:49.9922155Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "validationCount": 3,
     "manifestHash": "D169C2F44F03FDD4C432D89E4E6A2A96911A39AED1D1679380AAE7E761B0EE62"
   },
   "SUSE.RancherDesktop": {
@@ -8232,7 +8232,7 @@
     "version": "1.7.6"
   },
   "T-Troll.AlienFXTools": {
-    "validationCount": 2,
+    "validationCount": 3,
     "state": "VALIDATION_PASSED",
     "version": "9.6.2",
     "manifestHash": "E378035BC47942F2C47004ACB55CF6692B088199FF55E359374612711CE0E057",
@@ -8240,7 +8240,7 @@
       "E952996F9703DEA0E57901B15DCC04132273342405DB32466AEAA7A3809DB766"
     ],
     "description": "",
-    "lastUpdated": "2026-10-05T05:19:44.5661757Z"
+    "lastUpdated": "2026-10-07T05:33:49.9105832Z"
   },
   "TacitDynamics.FolderSync": {
     "validationCount": 1,
@@ -8254,14 +8254,14 @@
     ]
   },
   "tagspaces.tagspaces": {
-    "lastUpdated": "2026-10-06T09:52:58.2899753Z",
+    "version": "6.14.1",
     "validationCount": 1,
-    "manifestHash": "E4CFA9D593D1CE5172B314479748A47F9A235A6E7AADA458B355454910F18B1D",
-    "state": "VALIDATION_PASSED",
-    "version": "6.14.0",
+    "manifestHash": "7D837A171D36547AFD1D5ACF06C7455C99A63F1CAB2251B401E3EA0C92B8D6B6",
+    "lastUpdated": "2026-10-07T05:33:49.797199Z",
     "installerHashes": [
-      "E031101418F41539A8933B5B199138F107F1939ACDD599533764F09F2D42FC94"
+      "000C23EB2831005E90299C17B1D5434A9BD08209C360F8E9744F13BC1A0892DF"
     ],
+    "state": "VALIDATION_PASSED",
     "description": ""
   },
   "taiki-e.parse-changelog": {
