@@ -4031,8 +4031,8 @@
   },
   "jendrikseipp.RedNotebook": {
     "openPr": {
-      "checkedAt": "2026-10-06T04:29:13.5231436Z",
-      "version": "2.43"
+      "version": "2.43",
+      "checkedAt": "2026-10-07T04:30:58.1125466Z"
     }
   },
   "JeromeHerrman.VPinCommander": {
@@ -4263,8 +4263,8 @@
     "validationCount": 1,
     "version": "18.1.1",
     "openPr": {
-      "checkedAt": "2026-10-06T04:29:15.5884546Z",
-      "version": "18.1.5"
+      "version": "18.1.5",
+      "checkedAt": "2026-10-07T04:31:00.0745897Z"
     }
   },
   "KellyBrazil.jc": {
