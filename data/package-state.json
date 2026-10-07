@@ -367,11 +367,11 @@
   },
   "AnInsomniacy.Aria2Next": {
     "manifestHash": "C416E960C87ADF37D6D2099E4EAACB6EF8D4887E6D9955B48D6CDED9D333DC45",
-    "validationCount": 4,
+    "validationCount": 5,
     "description": "",
     "version": "2.8.6",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-07T02:17:50.8238099Z",
+    "lastUpdated": "2026-10-07T21:22:33.5408671Z",
     "installerHashes": [
       "CF339466CA3763FE89F27F9E325B50058FFB8B97CD93B9AC71FE81D9455EC82C",
       "6B4E3137AFEF78FD8EBDCA455BCB8EE058692C79EABEDCF15CEA28206B422260"
@@ -432,15 +432,15 @@
     "state": "VALIDATION_PASSED"
   },
   "AppFlowy.AppFlowy": {
-    "version": "0.14.6",
-    "lastUpdated": "2026-10-05T17:48:41.4513911Z",
+    "manifestHash": "8802417B97B4CF42455EF6EDEC453190785F56A084410A68C47B450968709D77",
     "installerHashes": [
-      "2726C34B511BAAD27D94BE9ED0718F9C6EDF3CC732124DC71CE28C06D12CEF93"
+      "A56C1B5F6A2EF22BE9AEF2D037C3C1858242A98F09DCE41C2290F559FECC9E2E"
     ],
-    "description": "",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "8CB3FB0CD918EDD6AB9BF8F41BE516860282BB58CAEFD4449A111411B69B68D3",
-    "validationCount": 4
+    "version": "0.14.7",
+    "lastUpdated": "2026-10-07T21:22:33.3090043Z",
+    "validationCount": 1,
+    "state": "VALIDATION_FAILED",
+    "description": ""
   },
   "AppiumDevelopers.AppiumInspector": {
     "state": "VALIDATION_FAILED",
@@ -920,9 +920,9 @@
       "EF13DC3758CC38E3DA1C1D8C69B2E95CF83240611B8154B6D97336965DC71FF1"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 5,
+    "validationCount": 6,
     "version": "0.10.2",
-    "lastUpdated": "2026-10-07T09:46:19.8757059Z"
+    "lastUpdated": "2026-10-07T21:22:33.343097Z"
   },
   "binbat.liveman": {
     "state": "VALIDATION_PASSED",
@@ -2626,8 +2626,8 @@
     "lastUpdated": "2026-08-21T17:17:39.8915915Z"
   },
   "Flowscripter.example-cli": {
-    "lastUpdated": "2026-10-07T02:17:50.9812211Z",
-    "validationCount": 3,
+    "lastUpdated": "2026-10-07T21:22:33.4059128Z",
+    "validationCount": 4,
     "manifestHash": "9DE6543A8D476691721C23F5872BF471CD7AACD527EC9D34ECEA594318B73FEE",
     "state": "VALIDATION_PASSED",
     "version": "3.0.7",
@@ -2638,16 +2638,16 @@
     "description": ""
   },
   "Fly-io.flyctl": {
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "manifestHash": "25F1EF5DDA67A908BFCADC48A64494214DBB035FB90953692C25A485CEA92CD8",
-    "lastUpdated": "2026-10-07T17:42:16.1246254Z",
+    "manifestHash": "75A5316E07E0D094E07CAA5AD88851B0434A1552ACAB868F1DAAA41530F22FD7",
     "installerHashes": [
-      "86FEFB71C0B22BF5F27EF9F211C5F6B94A5D3C790123FA2FA70BF939199119BE",
-      "18B72FFEF40177C716C05729A811DE36DDFE190C363375588C059B1E725BB8E3"
+      "78F3178AAED1E212DE476211DD6B90809AD83B91089B15151E007916A9A40F9A",
+      "2514B779758DBFDAD7B90B0030D1FE8CE080EC81896725A520901ABDA8B7D112"
     ],
+    "version": "0.4.114",
+    "lastUpdated": "2026-10-07T21:22:33.5025135Z",
     "validationCount": 1,
-    "version": "0.4.113"
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
     "validationCount": 1,
@@ -3361,12 +3361,12 @@
     "state": "VALIDATION_PASSED",
     "description": "",
     "manifestHash": "303231F8E125367977EC74533AB8C11152465C2A23BDA43D406A9BB43E25F9F4",
-    "lastUpdated": "2026-10-07T17:42:16.0044011Z",
+    "lastUpdated": "2026-10-07T21:22:33.5181543Z",
     "installerHashes": [
       "DFF7D21AAF5A78FA79D17874AAC430E37E2B26E0DC8BF06394E4779576EEB03E",
       "345808CDBAAF06EA71B4573461A33119FD7DAAFFA0A06FB6C0C9D8D0784832F3"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "4.4"
   },
   "HarjotSinghRana.Reinstate": {
@@ -4387,21 +4387,21 @@
     "installerHashes": [
       "CCE0C9D0A52B5E022EE3B9FAAF51CF015555A38CF09292CA5E9B1D3F80EDF0F3"
     ],
-    "lastUpdated": "2026-10-07T17:42:15.8069244Z",
+    "lastUpdated": "2026-10-07T21:22:33.4869488Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "validationCount": 3,
     "manifestHash": "72878195FFBE904ED5C230BB1A3200BC0BCB42A873380769CF2F2016B2736EF3"
   },
   "koedame.chordsketch": {
-    "lastUpdated": "2026-10-07T09:46:20.0898866Z",
-    "description": "",
+    "manifestHash": "432FF486702B7657D6A089ED1818E2E302882938A5D20AB4AA526DCE9ADA6E40",
     "installerHashes": [
       "C8E884E502F42F9D35D2E2F0F3CEEE9EBDC7DFE71D5059186B77A79B24A95403"
     ],
     "version": "0.8.0",
+    "lastUpdated": "2026-10-07T21:22:33.4478782Z",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "validationCount": 5,
-    "manifestHash": "4ED7684360DCE3F0EC9D0BF0EE083AA3ED65A0E8EF32E50658BB3BB060A10DBA"
+    "description": ""
   },
   "KRTirtho.Spotube": {
     "manifestHash": "48B938BDAA7E2ADCDF3C6E7B71A7214AF24FFD5388F587258C452A189DDE760D",
@@ -4421,15 +4421,15 @@
     }
   },
   "Kubernetes.clusterctl": {
-    "version": "1.14.2",
+    "manifestHash": "1CC4518EF2CC3821C3408D04DCE3B1F27CED085850A5CD72577D0BAD7821126C",
     "installerHashes": [
-      "30AFBB0F7AAA796F485D0413B626470EDB17702618AEFB2F450785BCEB885B7D"
+      "F37F9CCD9A9AB8F5EDA0B3FBEB57A4A461DBC254426818B9995ADCE6A076A722"
     ],
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "lastUpdated": "2026-09-10T13:14:09.1003702Z",
+    "version": "1.14.3",
+    "lastUpdated": "2026-10-07T21:22:33.5554311Z",
     "validationCount": 1,
-    "manifestHash": "264B24298566BEC0BA90AD219EFD3109D6A4FC2E001A6A656FE7E6F5EA0AC44D"
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "KuestenLogik.Bowire": {
     "description": "",
@@ -7738,15 +7738,15 @@
     "manifestHash": "E287E5EFDF457EB47DC8F18007B1E361CAE20763BDA63DD266E50CCF3C4BAC3A"
   },
   "skyhook-io.Radar": {
-    "lastUpdated": "2026-09-27T17:09:13.7985625Z",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "manifestHash": "AF9018F2DF984230A2321937F825A0A53592D1BB8D7AF36B830907494DA9C96B",
-    "version": "1.15.0",
-    "description": "",
+    "manifestHash": "F7FB9D7C440573AAA45A14AE6885245A01DBAB477E2EB53535027B39CA31EF39",
     "installerHashes": [
-      "59DF9469B7066D6114EB76C680054CB1FDFEABD47B26C085FB8341C3AF657EE8"
-    ]
+      "51818CDBFE6B2E6B6233EB60CF691D772A9C776FBF1C6C1A2230102547F1BC25"
+    ],
+    "version": "1.16.0",
+    "lastUpdated": "2026-10-07T21:22:33.4624474Z",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "Skylot.jadx": {
     "validationCount": 1,
@@ -8320,8 +8320,8 @@
     "installerHashes": [
       "7F39FB455C24D7A03569459947359C8434C9F390386EE54FF28A443E62CFCDBB"
     ],
-    "lastUpdated": "2026-10-07T14:06:08.8196299Z",
-    "validationCount": 5,
+    "lastUpdated": "2026-10-07T21:22:33.4292028Z",
+    "validationCount": 6,
     "description": "",
     "state": "VALIDATION_PASSED",
     "version": "0.8.1",
