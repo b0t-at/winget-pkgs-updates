@@ -367,11 +367,11 @@
   },
   "AnInsomniacy.Aria2Next": {
     "manifestHash": "C416E960C87ADF37D6D2099E4EAACB6EF8D4887E6D9955B48D6CDED9D333DC45",
-    "validationCount": 3,
+    "validationCount": 4,
     "description": "",
     "version": "2.8.6",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-06T02:07:27.6283767Z",
+    "lastUpdated": "2026-10-07T02:17:50.8238099Z",
     "installerHashes": [
       "CF339466CA3763FE89F27F9E325B50058FFB8B97CD93B9AC71FE81D9455EC82C",
       "6B4E3137AFEF78FD8EBDCA455BCB8EE058692C79EABEDCF15CEA28206B422260"
@@ -625,9 +625,9 @@
     }
   },
   "AsterPrivacy.AsterMail": {
-    "lastUpdated": "2026-10-06T13:35:51.1561884Z",
+    "lastUpdated": "2026-10-07T02:17:50.952057Z",
     "manifestHash": "41C5EB1053E2CC231C748DB77AEBF708E0DAF3833E0E3ECE6BB5D5CC4C16722C",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "CF38CBDDCA4FF3B691A827DF95324C3339F55A19EFA6BB79FE47D215D74E0025"
     ],
@@ -2626,8 +2626,8 @@
     "lastUpdated": "2026-08-21T17:17:39.8915915Z"
   },
   "Flowscripter.example-cli": {
-    "lastUpdated": "2026-10-06T13:35:51.047555Z",
-    "validationCount": 2,
+    "lastUpdated": "2026-10-07T02:17:50.9812211Z",
+    "validationCount": 3,
     "manifestHash": "9DE6543A8D476691721C23F5872BF471CD7AACD527EC9D34ECEA594318B73FEE",
     "state": "VALIDATION_PASSED",
     "version": "3.0.7",
@@ -2801,16 +2801,16 @@
     "state": "VALIDATION_PASSED"
   },
   "GAM-Team.gam.Portable": {
-    "description": "",
-    "version": "7.48.19",
+    "version": "7.48.22",
     "installerHashes": [
-      "D94CC66F710B2D934F568276D6788025901EB27270238B41A76532C6CC83A574",
-      "475BD53663B06AA5668B8BABED20F56F7B6C706B31D5C1BCC47B027B58FE8E75"
+      "D73D57A6A310276A68E48B25C716562CAF681CC39AEF327BA96429DE5A34E5C7",
+      "3E12B1B8AF751A9163DA06101316B990FA127D66248CA3EBAE493E11D576E9F8"
     ],
-    "lastUpdated": "2026-10-06T05:41:38.0639051Z",
-    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-07T02:17:50.8546215Z",
     "validationCount": 1,
-    "manifestHash": "B4D146EADBD8A9475D8AC654433AE0BA0B73D2667683A48C8ADD54394AE0CADF"
+    "description": "",
+    "manifestHash": "3A432097D2C69F7DB7B3A226A32803009EFBDEE35B429AC945860C9BDDDE1659",
+    "state": "VALIDATION_PASSED"
   },
   "GAM-Team.GotYourBack": {
     "description": "",
@@ -4389,14 +4389,14 @@
     "manifestHash": "72878195FFBE904ED5C230BB1A3200BC0BCB42A873380769CF2F2016B2736EF3"
   },
   "koedame.chordsketch": {
-    "lastUpdated": "2026-10-06T21:36:54.3007757Z",
+    "lastUpdated": "2026-10-07T02:17:50.7627338Z",
     "description": "",
     "installerHashes": [
       "C8E884E502F42F9D35D2E2F0F3CEEE9EBDC7DFE71D5059186B77A79B24A95403"
     ],
     "version": "0.8.0",
     "state": "VALIDATION_PASSED",
-    "validationCount": 3,
+    "validationCount": 4,
     "manifestHash": "4ED7684360DCE3F0EC9D0BF0EE083AA3ED65A0E8EF32E50658BB3BB060A10DBA"
   },
   "KRTirtho.Spotube": {
@@ -5336,7 +5336,7 @@
     "state": "VALIDATION_PASSED"
   },
   "Monghoul.Monghoul": {
-    "validationCount": 2,
+    "validationCount": 3,
     "state": "VALIDATION_PASSED",
     "version": "1.14.1",
     "manifestHash": "63D13E1A3858FC28CAAD40AE7ED2DFFE8109B34335693320F6AF4F99A0BA86E5",
@@ -5344,7 +5344,7 @@
       "2A0C154CB1875695AD8EA49C5891D44A826DC70C396AAC2F60F033838792277E"
     ],
     "description": "",
-    "lastUpdated": "2026-10-04T18:21:03.8742808Z"
+    "lastUpdated": "2026-10-07T02:17:50.6115426Z"
   },
   "MongoDB.MongoDBAtlasCLI": {
     "validationCount": 1,
@@ -5578,8 +5578,8 @@
     "validationCount": 1
   },
   "Naeem5877.VibeDownloader": {
-    "lastUpdated": "2026-10-06T17:18:58.7622075Z",
-    "validationCount": 2,
+    "lastUpdated": "2026-10-07T02:17:50.8977474Z",
+    "validationCount": 3,
     "manifestHash": "604B62E887ECB2978445C694605F6A687E70076887A5FBCF4B9A7C8AD833FAD7",
     "state": "VALIDATION_PASSED",
     "version": "2.2.0",
@@ -6564,10 +6564,10 @@
       "BC796772A32B7CD8B532B18DA268E65F67344A3DABF466C5C940B73D81F3E815"
     ],
     "manifestHash": "90A4481193729A1EBB0FC86D40D34A8E8DD5E2A61CFBA712831D8D91FCBB8AD5",
-    "validationCount": 4,
+    "validationCount": 5,
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-06T21:36:54.2308595Z"
+    "lastUpdated": "2026-10-07T02:17:51.0139515Z"
   },
   "Pencil.Desktop": {
     "manifestHash": "C4EE87B0CC9764C0F5737AC23FED643FDCF66A0CF3152C79A8770CA186C6674E",
@@ -7569,11 +7569,11 @@
   },
   "ShatteredChaos.FightPlanner": {
     "version": "3.3.34",
-    "validationCount": 3,
+    "validationCount": 4,
     "installerHashes": [
       "A6DBF209B8E65F39B153FDE4D0131E9DB0ADBBDA75A7350421B89A79FE7380AE"
     ],
-    "lastUpdated": "2026-10-06T21:36:54.2150374Z",
+    "lastUpdated": "2026-10-07T02:17:50.9179732Z",
     "state": "VALIDATION_PASSED",
     "description": "",
     "manifestHash": "3AAC778A30BB261914E8D24F401524EF3C7B94BB334611875BBFCB09ED28C047"
@@ -8142,14 +8142,14 @@
     }
   },
   "SubstrateSystems.EndstateCLI": {
-    "manifestHash": "4DF985455D6331ECF2676B77D6817BF150999EE424E3413E53939AA4551E8A74",
+    "version": "2.31.0",
     "installerHashes": [
-      "B33D9960D6108A29A45C796515259DA7F5371000D461D2C56FBB6CAA222688F5"
+      "4879860E67E0F38F7D44F5C5DB5E6DFAA46A232E89DF2675225FA55417F01999"
     ],
+    "lastUpdated": "2026-10-07T02:17:50.8017142Z",
     "validationCount": 1,
-    "version": "2.30.0",
     "description": "",
-    "lastUpdated": "2026-08-16T12:25:11.5096561Z",
+    "manifestHash": "8CB1CBFF3015D2E4093E056ECDDF36D54EBAE469323B9569F93576532004338B",
     "state": "VALIDATION_PASSED"
   },
   "sunfish-shogi.shogihome": {
@@ -8552,14 +8552,14 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "description": "",
-    "lastUpdated": "2026-10-05T17:48:41.4888726Z",
-    "manifestHash": "8987AB80B894E281B3DF83135FF717B527BAEFA39828B1595A368F21338DAB21",
-    "validationCount": 1,
+    "version": "2.51.7",
     "installerHashes": [
-      "4118EEEA54A6FED30B228AA1C6565322E2965A5B1279B088D685DFA586CC625C"
+      "DF0A9FCE26A1A5FB06BC46D6C5017D6F1A675C6A780907EFD5DAFB4AA333F94C"
     ],
-    "version": "2.51.5",
+    "lastUpdated": "2026-10-07T02:17:50.675954Z",
+    "validationCount": 1,
+    "description": "",
+    "manifestHash": "574D4649432FBC1103CA20E7FEBD9B0CF38B13A2DBC1995ED02943B766AF433E",
     "state": "VALIDATION_PASSED"
   },
   "timminator.VideOCR.CPU": {
@@ -8839,9 +8839,9 @@
   },
   "ulyssa.iamb": {
     "description": "",
-    "lastUpdated": "2026-10-06T09:52:58.1173617Z",
+    "lastUpdated": "2026-10-07T02:17:50.7002237Z",
     "manifestHash": "3BAEC33F37C3E3422354BD079B5F3192D1F5ACCF3F92E8CBBDDE85BF3E2A2CB9",
-    "validationCount": 3,
+    "validationCount": 4,
     "installerHashes": [
       "84F8F8F70B8784EDABF6B624EE6950DA7A861D7E54741DCF3B4C85E4E25C4482"
     ],
@@ -9250,9 +9250,9 @@
     "installerHashes": [
       "9A979F9D96D739625A0FE69317F3197CC7BCEF663A6D7195197D6C9BF96ED6F5"
     ],
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "0.71.0",
-    "lastUpdated": "2026-10-06T21:36:54.2885741Z"
+    "lastUpdated": "2026-10-07T02:17:50.875094Z"
   },
   "WillyJL.F95Checker": {
     "validationCount": 4,
@@ -9494,15 +9494,15 @@
     "version": "1.5.4"
   },
   "xushengfeng.eSearch": {
-    "version": "15.5.1",
-    "manifestHash": "9C495F0C0F0850407DE13704BC4F9CCE46513413FEB9A2349A7B9887AA0C09E6",
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "description": "",
+    "version": "15.6.0",
     "installerHashes": [
-      "4179CEE20D3A8087CEF6B41669AAC3C983A42C955327A69FD03B0493E1CF994E"
+      "CAA4748D22D9EF7B7CEBC7065F89CFF306A54CE8258C9092436FD01F522846B3"
     ],
-    "lastUpdated": "2026-09-14T12:57:28.2468126Z"
+    "lastUpdated": "2026-10-07T02:17:50.7391934Z",
+    "validationCount": 1,
+    "description": "",
+    "manifestHash": "9C200A5FB79D2BF20B96E72D498238AD98635BBD19FE44C5F04F86FD5572AB60",
+    "state": "VALIDATION_PASSED"
   },
   "Y-ASLant.ElegantClipboard": {
     "description": "",
