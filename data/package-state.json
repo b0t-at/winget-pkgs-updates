@@ -625,9 +625,9 @@
     }
   },
   "AsterPrivacy.AsterMail": {
-    "lastUpdated": "2026-10-08T01:44:23.2969658Z",
+    "lastUpdated": "2026-10-08T17:31:06.1882365Z",
     "manifestHash": "41C5EB1053E2CC231C748DB77AEBF708E0DAF3833E0E3ECE6BB5D5CC4C16722C",
-    "validationCount": 4,
+    "validationCount": 5,
     "installerHashes": [
       "CF38CBDDCA4FF3B691A827DF95324C3339F55A19EFA6BB79FE47D215D74E0025"
     ],
@@ -1063,16 +1063,16 @@
     }
   },
   "BlackwellSystems.agent-lsp": {
+    "description": "",
+    "lastUpdated": "2026-10-08T17:31:06.0469083Z",
+    "manifestHash": "E37787EA8EA22F060EE718AEA27A38AECCDF3269DC7EA5D8F76AD3C14CDC7760",
     "installerHashes": [
-      "18ADE98D2B16FA74DB8BE1C2C616C7D50DB7B9A4322F1CB5436C96FE1FD526A4",
-      "058AC857B3C9913CD64D2E324C49405AFC4F93E4CB687C8F4EB72CCE50E7E378"
+      "5073C399AA85BC3278F97DB9D04257C19E30EF0D1EF7717F00CC5774B124A279",
+      "74BEE804BAB6856A0AE9C416DFC99332BE138CBFBD853B084D4E2F442A7C6E1E"
     ],
     "validationCount": 1,
-    "version": "0.22.0",
-    "description": "",
-    "lastUpdated": "2026-10-08T05:48:50.9965561Z",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "757B1ADEB1924D14BEE37E6061D0896A085276644D17D5AA0817B4BB3CAFBDDF"
+    "version": "0.23.0"
   },
   "BlackwellSystems.shelfctl": {
     "manifestHash": "E6A5C090C621B9CC81504F055C837993516333A4A4A711B48325CF67BB128651",
@@ -2182,11 +2182,11 @@
       "AB46806ECAB964E1B383C411CEA51199CEC07FBE28074BF1F099A2E1A24C99E3",
       "1CDBA24089625B2DC2ADB34DBE5C5B9EA57799BE24365D98A54B6A563F0F02E6"
     ],
-    "lastUpdated": "2026-10-07T17:42:15.9550057Z",
+    "lastUpdated": "2026-10-08T17:31:06.0871086Z",
     "version": "0.231.0",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "validationCount": 4,
+    "validationCount": 5,
     "manifestHash": "80BF2E5B9B8B37AD211D411D73C12B944A5083A80A9410F0A0D841FE7EF11E47"
   },
   "electerm.electerm": {
@@ -2648,8 +2648,8 @@
       "2514B779758DBFDAD7B90B0030D1FE8CE080EC81896725A520901ABDA8B7D112"
     ],
     "version": "0.4.114",
-    "lastUpdated": "2026-10-07T21:22:33.5025135Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-10-08T17:31:06.2383516Z",
+    "validationCount": 2,
     "state": "VALIDATION_PASSED",
     "description": ""
   },
@@ -3339,7 +3339,7 @@
     "description": ""
   },
   "Hanthor.BluefinCLI": {
-    "validationCount": 3,
+    "validationCount": 4,
     "installerHashes": [
       "00AE6185D007EAA1A598776B30072EDED26BF9DBAC7944CB106544910D48C51F",
       "B157837E972D97DFB2A34917B1CEABFE3C3F107B465D14A52EAE0C3E4DF624CD"
@@ -3347,7 +3347,7 @@
     "manifestHash": "BAF922178F0C75B4AEA660808A36C1D41635203F7400FE46BE54AD7C1224023F",
     "version": "0.11.6",
     "description": "",
-    "lastUpdated": "2026-10-08T05:48:50.7438898Z",
+    "lastUpdated": "2026-10-08T17:31:06.1375479Z",
     "state": "VALIDATION_PASSED"
   },
   "Happ.Happ": {
@@ -3899,14 +3899,14 @@
     ]
   },
   "jaegertracing.jaeger": {
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "0FE3343C49E44E3C1E86846767286A3D7D16C8F89FFF6E285E7E5A8BD34442C8"
     ],
     "manifestHash": "1C92E8A9480E7B939DC254898760FE35C34135EC5CF06D581836871CEC63CA6C",
     "version": "2.22.0",
     "description": "",
-    "lastUpdated": "2026-10-06T21:36:54.1764008Z",
+    "lastUpdated": "2026-10-08T17:31:06.3370425Z",
     "state": "VALIDATION_PASSED"
   },
   "jaimecartodb.MSXCP": {
@@ -4225,13 +4225,13 @@
   },
   "kangyu-california.PersistentWindows": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 5,
+    "validationCount": 6,
     "installerHashes": [
       "09096A4028880909802CF364B9BE47A82AA19BB0D5045B24E61D3F70283BC36C"
     ],
     "version": "5.77",
     "description": "",
-    "lastUpdated": "2026-10-06T02:07:27.3448521Z",
+    "lastUpdated": "2026-10-08T17:31:06.1094763Z",
     "manifestHash": "6F15F19E04B9E61973368F0D344FB7977101D832E92DFE823FB82758E7EE7299"
   },
   "katahiromz.RisohEditor": {
@@ -4438,8 +4438,8 @@
       "F37F9CCD9A9AB8F5EDA0B3FBEB57A4A461DBC254426818B9995ADCE6A076A722"
     ],
     "version": "1.14.3",
-    "lastUpdated": "2026-10-07T21:22:33.5554311Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-10-08T17:31:06.2753615Z",
+    "validationCount": 2,
     "state": "VALIDATION_PASSED",
     "description": ""
   },
@@ -6576,10 +6576,10 @@
       "BC796772A32B7CD8B532B18DA268E65F67344A3DABF466C5C940B73D81F3E815"
     ],
     "manifestHash": "90A4481193729A1EBB0FC86D40D34A8E8DD5E2A61CFBA712831D8D91FCBB8AD5",
-    "validationCount": 5,
+    "validationCount": 6,
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-07T02:17:51.0139515Z"
+    "lastUpdated": "2026-10-08T17:31:05.9916519Z"
   },
   "Pencil.Desktop": {
     "manifestHash": "C4EE87B0CC9764C0F5737AC23FED643FDCF66A0CF3152C79A8770CA186C6674E",
@@ -7875,19 +7875,15 @@
     "version": "2.4.0"
   },
   "SparkLabs.openvpn-configuration-generator": {
-    "manifestHash": "6E0DD9662A379DE4317FA6E7F4A4CBC93A8E1EED8B98A7A90F7BE0AD8FF1725B",
-    "version": "2.0.3",
     "description": "",
+    "lastUpdated": "2026-10-08T17:31:06.1598693Z",
+    "manifestHash": "3A0D1CA9ADEDA39C8956C997E48A53DC71BD34F93BD28E79C75B5D90F9B528A3",
     "installerHashes": [
-      "A03B0214FCB5360C37DD80D271C3B663DB5CB4D03D819BA4F98FE2A1173AEF5C"
+      "266601F047F83BEE4CB3B9F591BE661CF96D3298882A0B76E02350EEF2B3618C"
     ],
-    "lastUpdated": "2026-08-27T23:45:19.6190776Z",
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "openPr": {
-      "version": "2.0.3",
-      "checkedAt": "2026-09-03T14:32:31.5588423Z"
-    }
+    "version": "2.0.4"
   },
   "sparrowwallet.sparrow": {
     "validationCount": 1,
@@ -7912,14 +7908,14 @@
     "state": "VALIDATION_PASSED"
   },
   "SpectrumQT.XXMILauncher": {
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "486368F30FDD8C55B6A12000CD977DBABCA591A6B1D448993808EB46F8F46D99"
     ],
     "manifestHash": "B769F9D12F0AA65414748AC34A0ABBEFE39E81BCB314FD23BF3D1E84A0774D42",
     "version": "2.4.1",
     "description": "",
-    "lastUpdated": "2026-10-06T21:36:54.2576191Z",
+    "lastUpdated": "2026-10-08T17:31:06.3064264Z",
     "state": "VALIDATION_PASSED"
   },
   "SpikeHD.Dorion": {
@@ -8244,7 +8240,7 @@
     "version": "1.7.6"
   },
   "T-Troll.AlienFXTools": {
-    "validationCount": 3,
+    "validationCount": 4,
     "state": "VALIDATION_PASSED",
     "version": "9.6.2",
     "manifestHash": "E378035BC47942F2C47004ACB55CF6692B088199FF55E359374612711CE0E057",
@@ -8252,7 +8248,7 @@
       "E952996F9703DEA0E57901B15DCC04132273342405DB32466AEAA7A3809DB766"
     ],
     "description": "",
-    "lastUpdated": "2026-10-07T05:33:49.9105832Z"
+    "lastUpdated": "2026-10-08T17:31:06.024942Z"
   },
   "TacitDynamics.FolderSync": {
     "validationCount": 1,
@@ -9474,9 +9470,9 @@
   },
   "xpipe-io.xpipe.portable": {
     "description": "",
-    "lastUpdated": "2026-10-08T09:36:29.2735103Z",
+    "lastUpdated": "2026-10-08T17:31:05.9139034Z",
     "manifestHash": "D715C5BEB2E340A42529C7C28EAB250BEBC0589590304249C1F89ABD1A6895E6",
-    "validationCount": 3,
+    "validationCount": 4,
     "installerHashes": [
       "E43E9DDB716160C4C5598A901C52FB014FE53910EDF2652AA71C80B5592B2A6E"
     ],
