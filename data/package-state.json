@@ -625,9 +625,9 @@
     }
   },
   "AsterPrivacy.AsterMail": {
-    "lastUpdated": "2026-10-07T09:46:20.0657313Z",
+    "lastUpdated": "2026-10-08T01:44:23.2969658Z",
     "manifestHash": "41C5EB1053E2CC231C748DB77AEBF708E0DAF3833E0E3ECE6BB5D5CC4C16722C",
-    "validationCount": 3,
+    "validationCount": 4,
     "installerHashes": [
       "CF38CBDDCA4FF3B691A827DF95324C3339F55A19EFA6BB79FE47D215D74E0025"
     ],
@@ -920,9 +920,9 @@
       "EF13DC3758CC38E3DA1C1D8C69B2E95CF83240611B8154B6D97336965DC71FF1"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 6,
+    "validationCount": 7,
     "version": "0.10.2",
-    "lastUpdated": "2026-10-07T21:22:33.343097Z"
+    "lastUpdated": "2026-10-08T01:44:23.355935Z"
   },
   "binbat.liveman": {
     "state": "VALIDATION_PASSED",
@@ -1268,11 +1268,11 @@
       "E16E94929BC7FF94953B2A8CB5F216E36E89DB1B801D5BDE3EC44CE004ED043C",
       "6237D54B75BF6A98F0C88BF89A51FBD4E779F652F89D55501CF671E836A94AF1"
     ],
-    "lastUpdated": "2026-10-07T17:42:15.8648727Z",
+    "lastUpdated": "2026-10-08T01:44:23.414851Z",
     "version": "1.1.5",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "validationCount": 5,
+    "validationCount": 6,
     "manifestHash": "8E645FF28679E97AD71400806E23B280C929C60DCF327B26B03994C85640FD47"
   },
   "CargoLambda.CargoLambda": {
@@ -2626,8 +2626,8 @@
     "lastUpdated": "2026-08-21T17:17:39.8915915Z"
   },
   "Flowscripter.example-cli": {
-    "lastUpdated": "2026-10-07T21:22:33.4059128Z",
-    "validationCount": 4,
+    "lastUpdated": "2026-10-08T01:44:23.4356087Z",
+    "validationCount": 5,
     "manifestHash": "9DE6543A8D476691721C23F5872BF471CD7AACD527EC9D34ECEA594318B73FEE",
     "state": "VALIDATION_PASSED",
     "version": "3.0.7",
@@ -3361,12 +3361,12 @@
     "state": "VALIDATION_PASSED",
     "description": "",
     "manifestHash": "303231F8E125367977EC74533AB8C11152465C2A23BDA43D406A9BB43E25F9F4",
-    "lastUpdated": "2026-10-07T21:22:33.5181543Z",
+    "lastUpdated": "2026-10-08T01:44:23.3780505Z",
     "installerHashes": [
       "DFF7D21AAF5A78FA79D17874AAC430E37E2B26E0DC8BF06394E4779576EEB03E",
       "345808CDBAAF06EA71B4573461A33119FD7DAAFFA0A06FB6C0C9D8D0784832F3"
     ],
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "4.4"
   },
   "HarjotSinghRana.Reinstate": {
@@ -4387,9 +4387,9 @@
     "installerHashes": [
       "CCE0C9D0A52B5E022EE3B9FAAF51CF015555A38CF09292CA5E9B1D3F80EDF0F3"
     ],
-    "lastUpdated": "2026-10-07T21:22:33.4869488Z",
+    "lastUpdated": "2026-10-08T01:44:23.2336546Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 3,
+    "validationCount": 4,
     "manifestHash": "72878195FFBE904ED5C230BB1A3200BC0BCB42A873380769CF2F2016B2736EF3"
   },
   "koedame.chordsketch": {
@@ -6160,9 +6160,9 @@
   },
   "OpenGeos.GeoLibre": {
     "manifestHash": "E8BB582AD15AEF3CA19431E16601A61E6F1F1971FB30D008602C8899EAA065E5",
-    "lastUpdated": "2026-10-07T14:06:08.8548301Z",
+    "lastUpdated": "2026-10-08T01:44:23.3195199Z",
     "version": "3.3.0",
-    "validationCount": 3,
+    "validationCount": 4,
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "D286DF26A31C37FED32BF0486723A33092CCF7A957B1AAF86346990F1EB5A20F"
