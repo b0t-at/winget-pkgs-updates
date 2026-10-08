@@ -708,9 +708,9 @@
   },
   "axllent.mailpit": {
     "description": "",
-    "lastUpdated": "2026-10-07T14:06:08.6398249Z",
+    "lastUpdated": "2026-10-08T21:28:05.520373Z",
     "manifestHash": "FE00333139A2C4988AC9B0738559CF1E3B8F87C93D0BC2DB6DD93934E6ADBDBB",
-    "validationCount": 3,
+    "validationCount": 4,
     "installerHashes": [
       "0DD6EC909A6F5B2B66682B22D82ABCE97AB793E30766BF2F642B691E70A4A16B",
       "DB337B96ACE79E7A8D837B31023159062F87DB35A12F8CB67304C32A09959056"
@@ -1291,15 +1291,15 @@
     }
   },
   "CarthageSoftware.Mago": {
-    "state": "VALIDATION_PASSED",
-    "validationCount": 5,
-    "installerHashes": [
-      "6A0FF55AB50A6FF8C4174C3457D8EEA31AE23C5FBB5D74A578EF3628511356D6"
-    ],
-    "version": "1.51.2",
     "description": "",
-    "lastUpdated": "2026-10-06T17:18:58.8388022Z",
-    "manifestHash": "5C08F5758E371CFF8B609CFC6302C6DA1E3A96B9F97F19D53D1FFC3CBC6BA44F"
+    "manifestHash": "228148313C0C80A2B5833D4431BDFF823C55899F387BBD62AC872D9E35CCBA9D",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "643649190F7AEA27997245923EA4E7E2F298AB974BD593FCDCA2C0278273FF6D"
+    ],
+    "lastUpdated": "2026-10-08T21:28:05.3028108Z",
+    "validationCount": 1,
+    "version": "1.54.0"
   },
   "Carvel.ytt": {
     "openPr": {
@@ -1981,10 +1981,10 @@
       "B39784AED5B3F9B24D1971BBCBAD8C8206033FA63ED4FEA82C9141728FE0EA26",
       "1BE8E6D8FFE0ECA91CF91A1AD020034A4D53358B5DFFE5E3662C859C9BE1745A"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "0.38.0",
     "description": "",
-    "lastUpdated": "2026-10-08T05:48:50.7757893Z",
+    "lastUpdated": "2026-10-08T21:28:05.1940457Z",
     "state": "VALIDATION_PASSED",
     "manifestHash": "390D1C1964A5583222B55C9775095667E70AB19A8B734614542AAFDBA57947DC"
   },
@@ -2642,16 +2642,16 @@
     }
   },
   "Fly-io.flyctl": {
-    "manifestHash": "75A5316E07E0D094E07CAA5AD88851B0434A1552ACAB868F1DAAA41530F22FD7",
-    "installerHashes": [
-      "78F3178AAED1E212DE476211DD6B90809AD83B91089B15151E007916A9A40F9A",
-      "2514B779758DBFDAD7B90B0030D1FE8CE080EC81896725A520901ABDA8B7D112"
-    ],
-    "version": "0.4.114",
-    "lastUpdated": "2026-10-08T17:31:06.2383516Z",
-    "validationCount": 2,
+    "description": "",
+    "manifestHash": "4062FCE0B13F54909C3E3085C8130818B3C67ABCDDF14B33C191026B9E2D0E52",
     "state": "VALIDATION_PASSED",
-    "description": ""
+    "installerHashes": [
+      "26AFD84DC75AD36A4FDCB9DBF37582FEB77D28F7C2D18A4BD6BE4DC04D570495",
+      "E655A4514B142C57CB525720990ABAA2CED1252E5F46201C49681748A35F8083"
+    ],
+    "lastUpdated": "2026-10-08T21:28:05.3831128Z",
+    "validationCount": 1,
+    "version": "0.4.115"
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
     "validationCount": 1,
@@ -2713,15 +2713,15 @@
     }
   },
   "FOSSA.FOSSA-cli": {
+    "description": "",
+    "manifestHash": "3F97847467C366FAA3F954BA87F071365853945C35B30157FBC8AD90A3ADC7B5",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "C760B76EAC424A8FD185389A0907C12F24469949D98C525EAE3798026C3ABE86"
+      "AF1337EBE6BBD3D26FD1CAEA6D9C41F994B61C840492F92589085CD6525F2915"
     ],
-    "description": "",
+    "lastUpdated": "2026-10-08T21:28:05.4103925Z",
     "validationCount": 1,
-    "manifestHash": "3CCD55D98DF7E0A6B09B3B2BB3BAB2C5DA85B0E2981B6CEC4404EB6B89F42988",
-    "version": "3.20.0",
-    "lastUpdated": "2026-09-30T05:00:00.7400391Z"
+    "version": "3.20.1"
   },
   "FrancisBanyikwa.MediaDownloader": {
     "manifestHash": "03C1DB537ECDB0566823D94D3B6768E5B97F29295D693658F8DF8898058990A5",
@@ -5196,16 +5196,16 @@
     "validationCount": 1
   },
   "mikf.gallery-dl.Nightly": {
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "version": "2026.10.04",
-    "manifestHash": "5F6E997CA5E6DB349C36C1631E87FB6BF783B82B699575BBC5549F1C1EFCFB2E",
-    "installerHashes": [
-      "C3B9791665CAB63C2A93923BE58A4E99D9D947959D3EEAD6337E0E75BA4597FE",
-      "5DFCF4B3CDA8DF2EC3E0BD18A6B9187F37A8C9288A3DCE3788388ACB435E3022"
-    ],
     "description": "",
-    "lastUpdated": "2026-10-04T15:04:40.7095033Z"
+    "manifestHash": "9E68EF8E899296677EC91C895C42D7CAD42007590AE9D4CB7578D450A305C933",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "7040DC696A7D5D3432BEB9538E0F5FB895A460D5505C30C70A868FBFD30E9F19",
+      "21E3A911DBA33B6B08EE795A6E39F93FF78D8723554B710AB9C918DC4ECA1200"
+    ],
+    "lastUpdated": "2026-10-08T21:28:05.4586389Z",
+    "validationCount": 1,
+    "version": "2026.10.08"
   },
   "MilkShift.GoofCord": {
     "state": "VALIDATION_PASSED",
@@ -5590,8 +5590,8 @@
     ]
   },
   "Naeem5877.VibeDownloader": {
-    "lastUpdated": "2026-10-08T09:36:29.3384324Z",
-    "validationCount": 5,
+    "lastUpdated": "2026-10-08T21:28:05.4859061Z",
+    "validationCount": 6,
     "manifestHash": "604B62E887ECB2978445C694605F6A687E70076887A5FBCF4B9A7C8AD833FAD7",
     "state": "VALIDATION_PASSED",
     "version": "2.2.0",
@@ -6691,10 +6691,10 @@
       "299009317554B82905927F8E9782EC5F0AFB08EB7B5CC5EB2B15A923CB1A56EF",
       "67C0980C2223D2F89B46CEEDB09CAAA37BFAB075D8319D0E651EB659D00C66E9"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "12.10.1",
     "description": "",
-    "lastUpdated": "2026-10-08T05:48:51.1083853Z",
+    "lastUpdated": "2026-10-08T21:28:05.4316647Z",
     "state": "VALIDATION_PASSED",
     "manifestHash": "8A7B558963F1B9B9350DDB8BDFECA6F0442B0463C69F9DCAA6F8A0CDBEEEF2EA"
   },
@@ -8154,16 +8154,16 @@
     "installerHashes": [
       "4879860E67E0F38F7D44F5C5DB5E6DFAA46A232E89DF2675225FA55417F01999"
     ],
-    "lastUpdated": "2026-10-07T02:17:50.8017142Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-10-08T21:28:05.361541Z",
+    "validationCount": 2,
     "description": "",
     "manifestHash": "8CB1CBFF3015D2E4093E056ECDDF36D54EBAE469323B9569F93576532004338B",
     "state": "VALIDATION_PASSED"
   },
   "sunfish-shogi.shogihome": {
-    "lastUpdated": "2026-10-06T13:35:51.135359Z",
+    "lastUpdated": "2026-10-08T21:28:05.3258229Z",
     "manifestHash": "C69447C9F9E687BB27C8C4EBFD42A0705088880AE6F650A1BBDC12D16A336557",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "DA7A0D5332736F5D7F94DB28899728783AF87576C184D81A38C0B8201691E7E2"
     ],
@@ -8178,9 +8178,9 @@
       "AE526AA2D7BFC230A6E9149D2B7483AC0992462C221A8ADD85D1429A005575E0",
       "A99DDDC202AAF2ECB971D2D2D747A9DB2CDBE2A65022DFA53FA7CC8DFA7BA388"
     ],
-    "lastUpdated": "2026-10-07T05:33:49.9922155Z",
+    "lastUpdated": "2026-10-08T21:28:05.5604063Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 3,
+    "validationCount": 4,
     "manifestHash": "D169C2F44F03FDD4C432D89E4E6A2A96911A39AED1D1679380AAE7E761B0EE62"
   },
   "SUSE.RancherDesktop": {
@@ -8847,9 +8847,9 @@
   },
   "ulyssa.iamb": {
     "description": "",
-    "lastUpdated": "2026-10-07T14:06:08.6742171Z",
+    "lastUpdated": "2026-10-08T21:28:05.2699541Z",
     "manifestHash": "3BAEC33F37C3E3422354BD079B5F3192D1F5ACCF3F92E8CBBDDE85BF3E2A2CB9",
-    "validationCount": 5,
+    "validationCount": 6,
     "installerHashes": [
       "84F8F8F70B8784EDABF6B624EE6950DA7A861D7E54741DCF3B4C85E4E25C4482"
     ],
