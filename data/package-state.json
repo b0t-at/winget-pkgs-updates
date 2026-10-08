@@ -133,8 +133,8 @@
     "lastUpdated": "2026-10-01T20:58:58.1925282Z",
     "description": "",
     "openPr": {
-      "version": "0.86.0",
-      "checkedAt": "2026-10-07T12:36:26.2682518Z"
+      "checkedAt": "2026-10-08T12:37:15.3110543Z",
+      "version": "0.86.0"
     }
   },
   "AES256Afro.VideoKidnapper": {
@@ -1128,8 +1128,8 @@
     "manifestHash": "81787CB8A4D71FFE5AF7458238621F26813929C3CAB58F9E6A6BCF0762A5E95E",
     "lastUpdated": "2026-08-20T09:17:27.4984446Z",
     "openPr": {
-      "version": "1.2.6",
-      "checkedAt": "2026-10-07T12:36:30.0959498Z"
+      "checkedAt": "2026-10-08T12:37:19.2705418Z",
+      "version": "1.2.6"
     }
   },
   "bornova.numara": {
@@ -3160,7 +3160,7 @@
     ],
     "description": "",
     "openPr": {
-      "checkedAt": "2026-10-07T08:34:24.9829343Z",
+      "checkedAt": "2026-10-08T12:38:16.7201786Z",
       "version": "36.2"
     }
   },
