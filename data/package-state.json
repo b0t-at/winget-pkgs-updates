@@ -841,14 +841,14 @@
     "version": "0.5"
   },
   "BenjaminLSR.HandheldCompanion": {
-    "validationCount": 6,
+    "validationCount": 7,
     "version": "1.3.3.1",
     "description": "",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "C212332DF3914E06555ED35B1520E24300661AE968F03642304AC3784F8F9F6F"
     ],
-    "lastUpdated": "2026-10-07T05:33:49.9483437Z",
+    "lastUpdated": "2026-10-08T09:36:29.3582309Z",
     "manifestHash": "1893BCA41A722D8FC2DBF7C5F5F87E232C5D1BAF0720C1F7AF72EC42D870D762"
   },
   "BenModigell.Vibes": {
@@ -1211,10 +1211,10 @@
       "224C801A4DD1052E651EFC71E318EB14C700A1665E191A331774CD27DD41990E",
       "96DD689D0D3DD710D224D3E39BEF805564B710B52D27CD3C1826BB407D6BC41E"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "7.15.4",
     "description": "",
-    "lastUpdated": "2026-10-08T05:48:50.804713Z",
+    "lastUpdated": "2026-10-08T09:36:29.2882485Z",
     "state": "VALIDATION_PASSED",
     "manifestHash": "6D037B5A910A954AB36B664766884AC54DF75AE1C6A857D1AC4501F78B834E93"
   },
@@ -2329,11 +2329,11 @@
     "installerHashes": [
       "3A8884774973B6F2826877E1C6388A5FEAE4704EF88A9A9C912C77CE186990F3"
     ],
-    "lastUpdated": "2026-10-08T05:48:50.6975815Z",
+    "lastUpdated": "2026-10-08T09:36:29.3726083Z",
     "version": "3.24.0",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "validationCount": 3,
+    "validationCount": 4,
     "manifestHash": "C459D121AF144F7CA3B8C0D93F600D746F7B00E9CA3F29CE24135C2F3DE6A245"
   },
   "Essenciary.Githical": {
@@ -3111,15 +3111,15 @@
     "lastUpdated": "2026-09-17T20:53:14.2050338Z"
   },
   "Google.FirebaseCLI": {
-    "version": "15.32.1",
-    "description": "",
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "18DFAC42A0110C8E7CF6A84A12320CE2913EF8B7B7AFED9C860E3C78C41A5373"
-    ],
-    "lastUpdated": "2026-10-01T05:00:17.476961Z",
+    "lastUpdated": "2026-10-08T09:36:29.3243801Z",
+    "version": "15.33.0",
+    "manifestHash": "D16080B95F351F25CA10AACBA0FC3766E180D6FC99581E24D5504B0EF50C390E",
     "validationCount": 1,
-    "manifestHash": "C2A2045272369D3E01543788515FE2A262A0EB70B0925DEDDF6A72D8B68F52C0"
+    "description": "",
+    "installerHashes": [
+      "611B869701923C15CE479FB55A452F947C35900B942702ECE15ED60ED6F35C2C"
+    ]
   },
   "Google.IAPDesktop": {
     "lastUpdated": "2026-06-30T01:55:05.1221847Z",
@@ -3653,11 +3653,11 @@
   },
   "Humanity.DJV2": {
     "manifestHash": "D99B513D331A2EBC63D7686AA3245DB8161713A4CF7FDCCB139D684F940DB154",
-    "validationCount": 3,
+    "validationCount": 4,
     "description": "",
     "version": "3.7.4",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-07T17:42:16.0384664Z",
+    "lastUpdated": "2026-10-08T09:36:29.4044684Z",
     "installerHashes": [
       "8434C2AD58F6DECF2CAC1EF35A7E4B25FF863D95BC43EDEA724F13AA7D0535BD",
       "B40A4F5DBC1CD5FF458DF5D6AB96B6AA5002643438C66E5BDACAE60293FFC218"
@@ -5340,7 +5340,7 @@
     "state": "VALIDATION_PASSED"
   },
   "Monghoul.Monghoul": {
-    "validationCount": 5,
+    "validationCount": 6,
     "state": "VALIDATION_PASSED",
     "version": "1.14.1",
     "manifestHash": "63D13E1A3858FC28CAAD40AE7ED2DFFE8109B34335693320F6AF4F99A0BA86E5",
@@ -5348,7 +5348,7 @@
       "2A0C154CB1875695AD8EA49C5891D44A826DC70C396AAC2F60F033838792277E"
     ],
     "description": "",
-    "lastUpdated": "2026-10-07T14:06:08.9390886Z"
+    "lastUpdated": "2026-10-08T09:36:29.3098408Z"
   },
   "MongoDB.MongoDBAtlasCLI": {
     "validationCount": 1,
@@ -5571,19 +5571,19 @@
     ]
   },
   "myrachane.emtypyie-cli": {
-    "description": "",
     "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-08T09:36:29.421359Z",
+    "version": "3.5.0",
+    "manifestHash": "E97C39ED5D785934D2BE3B6AE2B7F28E19FAD921D0FE78B08DAD52E9997F4BAC",
+    "validationCount": 1,
+    "description": "",
     "installerHashes": [
-      "1305BB91BEE50453AB92D98D0D1F6AB5A76D1651DBAB3194C079E401F36DAD55"
-    ],
-    "lastUpdated": "2026-09-17T09:19:19.6832847Z",
-    "manifestHash": "0919439BE8CCBA7C861F415FF047186EDC7865B3E4E5ACD86B067DC72FD3055E",
-    "version": "3.0.4",
-    "validationCount": 1
+      "A990B2BEFF9406FC6133FF9B974428AFF48B30D16D62802A540C6E10D4119B8C"
+    ]
   },
   "Naeem5877.VibeDownloader": {
-    "lastUpdated": "2026-10-07T05:33:49.8415708Z",
-    "validationCount": 4,
+    "lastUpdated": "2026-10-08T09:36:29.3384324Z",
+    "validationCount": 5,
     "manifestHash": "604B62E887ECB2978445C694605F6A687E70076887A5FBCF4B9A7C8AD833FAD7",
     "state": "VALIDATION_PASSED",
     "version": "2.2.0",
@@ -6258,11 +6258,11 @@
   },
   "OpenTelemetry.Weaver": {
     "manifestHash": "7EBEAA075132FAF8652444A7A4E79B5545323C8D3C53B2C2EE2399B538BA6D0B",
-    "validationCount": 7,
+    "validationCount": 8,
     "description": "",
     "version": "0.27.0",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-07T05:33:49.7328352Z",
+    "lastUpdated": "2026-10-08T09:36:29.1571126Z",
     "installerHashes": [
       "CDF6E5D70A1F6B99456E260AE3EC7891C91AAA951C8359CCFFB8FD9A418452AF"
     ]
@@ -8083,14 +8083,14 @@
     }
   },
   "Storj.Uplink": {
-    "validationCount": 3,
+    "validationCount": 4,
     "installerHashes": [
       "D568FD2ABD98E1D396DF3C924750534BDF2E8BE68873617366AC3D411D2CAB42"
     ],
     "manifestHash": "1191F2FBC58356804A9902BDE862055E266DE73FAC7ABF16E72B9848FC447406",
     "version": "1.164.2",
     "description": "",
-    "lastUpdated": "2026-10-07T17:42:16.1438416Z",
+    "lastUpdated": "2026-10-08T09:36:29.384621Z",
     "state": "VALIDATION_PASSED"
   },
   "str4d.rage": {
@@ -9466,9 +9466,9 @@
   },
   "xpipe-io.xpipe.portable": {
     "description": "",
-    "lastUpdated": "2026-10-06T02:07:27.7305455Z",
+    "lastUpdated": "2026-10-08T09:36:29.2735103Z",
     "manifestHash": "D715C5BEB2E340A42529C7C28EAB250BEBC0589590304249C1F89ABD1A6895E6",
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "E43E9DDB716160C4C5598A901C52FB014FE53910EDF2652AA71C80B5592B2A6E"
     ],
@@ -9510,9 +9510,9 @@
   },
   "Y-ASLant.ElegantClipboard": {
     "description": "",
-    "lastUpdated": "2026-10-06T05:41:37.8519648Z",
+    "lastUpdated": "2026-10-08T09:36:29.214561Z",
     "manifestHash": "4F2BA62E17A9041D0D41487705C267544A7338F62622B07CEA4768203D7F7078",
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "454A235269D5085C43B721AFB710F69F65A6FC670F50D85956B256425EF7033A",
       "B9CFE22D0EBDEE55BEE7EE5F376D78D772C8249E8C2A8391E77DE2EBE1C6615D"
