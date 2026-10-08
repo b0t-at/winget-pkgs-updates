@@ -4085,8 +4085,8 @@
     "lastUpdated": "2026-08-06T14:10:17.3921348Z",
     "manifestHash": "1E843D90602194E32EF0F84E333BE9BC20D09621BCA43AA304BDA7952A621BAB",
     "openPr": {
-      "checkedAt": "2026-09-10T16:22:38.9488478Z",
-      "version": "0.45.1"
+      "checkedAt": "2026-10-08T01:02:04.5461012Z",
+      "version": "0.46.0"
     }
   },
   "jmrplens.gitlab-mcp-server": {
