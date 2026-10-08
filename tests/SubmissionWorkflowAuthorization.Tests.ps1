@@ -171,7 +171,7 @@ foreach ($workflowRelativePath in $workflowPaths) {
 
     $probeSteps = [regex]::Matches(
         $workflow,
-        '(?ms)^      - name: Probe upstream read access\r?\n.*?^        uses: \./\.github/actions/probe-winget-upstream-read\r?\n.*?^        with:\r?\n.*?^          github-token: \$\{\{\s*github\.token\s*\}\}\s*$'
+        '(?ms)^      - name: Probe upstream read access\r?\n.*?^        uses: \$/\.github/actions/probe-winget-upstream-read\r?\n.*?^        with:\r?\n.*?^          github-token: \$\{\{\s*github\.token\s*\}\}\s*$'
     )
     if ($probeSteps.Count -ne 2) {
         throw "$workflowName must probe the Actions token separately before generation and submission."
