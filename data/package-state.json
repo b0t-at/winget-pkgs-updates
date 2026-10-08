@@ -1729,14 +1729,14 @@
   },
   "cURL.cURL": {
     "manifestHash": "18EE764B0F170296236863A8E08791ABF8C02A88FB26D38872EF65F29687AB47",
-    "lastUpdated": "2026-10-08T01:11:29.7857054Z",
+    "lastUpdated": "2026-10-08T04:40:08.4465113Z",
     "description": "",
     "installerHashes": [
       "F38B0AC2E3A280FD414B607C874A21E6DD4D1ED0E2AE622AFBF0020917446561",
       "A5E241AB0D48FAABF5FA650884D8FA058B10AA6491F7B083874699602BA90ED3"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 15,
+    "validationCount": 16,
     "version": "8.22.0.3"
   },
   "CyberSkill.CyberOS": {
@@ -5370,13 +5370,13 @@
   },
   "MongoDB.Shell": {
     "manifestHash": "3726B39A81C12E17C640246A575233BEB4FDFD48BD25A40C0311B218D02009B0",
-    "lastUpdated": "2026-10-08T01:11:29.8725797Z",
+    "lastUpdated": "2026-10-08T04:40:08.3766335Z",
     "description": "",
     "installerHashes": [
       "55F6D5AAA89DB192147DA7E9478BF48564459F117546731D3B175E32939D3BE9"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 14,
+    "validationCount": 15,
     "version": "2.13.0"
   },
   "MonzerOsman.YallaVideo": {
