@@ -1066,7 +1066,8 @@
   {
     "id": "orhun.git-cliff",
     "repo": "orhun/git-cliff",
-    "url": "https://github.com/orhun/git-cliff/releases/download/v{VERSION}/git-cliff-{VERSION}-i686-pc-windows-msvc.zip https://github.com/orhun/git-cliff/releases/download/v{VERSION}/git-cliff-{VERSION}-x86_64-pc-windows-gnu.zip https://github.com/orhun/git-cliff/releases/download/v{VERSION}/git-cliff-{VERSION}-aarch64-pc-windows-msvc.zip"
+    "url": "https://github.com/orhun/git-cliff/releases/download/v{VERSION}/git-cliff-{VERSION}-i686-pc-windows-msvc.zip https://github.com/orhun/git-cliff/releases/download/v{VERSION}/git-cliff-{VERSION}-x86_64-pc-windows-gnu.zip https://github.com/orhun/git-cliff/releases/download/v{VERSION}/git-cliff-{VERSION}-aarch64-pc-windows-msvc.zip",
+    "overridePack": "overrides/orhun.git-cliff.yaml"
   },
   {
     "id": "ossia.score",

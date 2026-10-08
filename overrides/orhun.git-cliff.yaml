@@ -1,0 +1,5 @@
+# ARM64 manifests selected git-cliff-mangen.exe instead of git-cliff.exe since the first
+# manifest (microsoft/winget-pkgs#140905). Fixed upstream in #436938 and #448698.
+formatVersion: 1
+packageIdentifier: "orhun.git-cliff"
+portableExecutableFileName: "git-cliff.exe"
