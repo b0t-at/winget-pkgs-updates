@@ -4039,8 +4039,8 @@
   },
   "jendrikseipp.RedNotebook": {
     "openPr": {
-      "version": "2.43",
-      "checkedAt": "2026-10-07T04:30:58.1125466Z"
+      "checkedAt": "2026-10-08T08:34:57.8395899Z",
+      "version": "2.43"
     }
   },
   "JeromeHerrman.VPinCommander": {
@@ -4269,7 +4269,11 @@
     "manifestHash": "1B7D562145110A2AB4483E50909945476B8ED7491B1F57E8408A373E465946E7",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "18.1.1"
+    "version": "18.1.1",
+    "openPr": {
+      "checkedAt": "2026-10-08T08:34:59.7764945Z",
+      "version": "18.1.7"
+    }
   },
   "KellyBrazil.jc": {
     "installerHashes": [
