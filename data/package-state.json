@@ -2637,8 +2637,8 @@
     ],
     "description": "",
     "openPr": {
-      "version": "3.0.9",
-      "checkedAt": "2026-10-08T16:28:52.5948022Z"
+      "version": "3.0.11",
+      "checkedAt": "2026-10-08T20:25:54.769755Z"
     }
   },
   "Fly-io.flyctl": {
@@ -6287,8 +6287,8 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "openPr": {
-      "checkedAt": "2026-10-07T08:35:23.8508449Z",
-      "version": "1.13.1"
+      "version": "1.13.1",
+      "checkedAt": "2026-10-08T20:26:10.9335322Z"
     }
   },
   "OpenWhispr.OpenWhispr": {
