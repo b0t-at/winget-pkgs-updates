@@ -1473,8 +1473,8 @@
     "validationCount": 1,
     "version": "1.0.48275",
     "openPr": {
-      "checkedAt": "2026-10-06T16:28:53.7201273Z",
-      "version": "1.2.0"
+      "version": "1.4.0",
+      "checkedAt": "2026-10-08T16:28:50.0168441Z"
     }
   },
   "ciromattia.KCC": {
@@ -2635,7 +2635,11 @@
       "10FECAB45AB7408021F1A10C0ED089D8B85179D5F726738385314004458B438E",
       "7BBCD8C1D6848678CDB53E34EE186EB8D4329DB8FACF99A8D4399F0DB46E40A5"
     ],
-    "description": ""
+    "description": "",
+    "openPr": {
+      "version": "3.0.9",
+      "checkedAt": "2026-10-08T16:28:52.5948022Z"
+    }
   },
   "Fly-io.flyctl": {
     "manifestHash": "75A5316E07E0D094E07CAA5AD88851B0434A1552ACAB868F1DAAA41530F22FD7",
@@ -3744,7 +3748,11 @@
     "description": "",
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-09-19T20:48:57.4328147Z",
-    "manifestHash": "12831218DB3FAEB3B637B89A502C0C30A17EEAC816CA3FFF805797A828C1EAE8"
+    "manifestHash": "12831218DB3FAEB3B637B89A502C0C30A17EEAC816CA3FFF805797A828C1EAE8",
+    "openPr": {
+      "version": "1.50.3",
+      "checkedAt": "2026-10-08T16:29:11.5273176Z"
+    }
   },
   "IneedABUFF.BuffMyBar": {
     "installerHashes": [
