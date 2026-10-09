@@ -432,15 +432,15 @@
     "state": "VALIDATION_PASSED"
   },
   "AppFlowy.AppFlowy": {
-    "manifestHash": "8802417B97B4CF42455EF6EDEC453190785F56A084410A68C47B450968709D77",
+    "description": "",
+    "version": "0.14.8",
+    "validationCount": 1,
     "installerHashes": [
-      "A56C1B5F6A2EF22BE9AEF2D037C3C1858242A98F09DCE41C2290F559FECC9E2E"
+      "AD8BE9C4636CDE2DAAF562BDB1EA0799D4381358319B7348754B98143DE874C4"
     ],
-    "version": "0.14.7",
-    "lastUpdated": "2026-10-08T05:48:51.0503939Z",
-    "validationCount": 2,
     "state": "VALIDATION_PASSED",
-    "description": ""
+    "lastUpdated": "2026-10-09T17:09:08.4843188Z",
+    "manifestHash": "0B8051B2782F30791AA3EB213BA82E6D5391AAA9C8D73FE3CD19922DD36BC037"
   },
   "AppiumDevelopers.AppiumInspector": {
     "state": "VALIDATION_FAILED",
@@ -1989,16 +1989,16 @@
     "manifestHash": "390D1C1964A5583222B55C9775095667E70AB19A8B734614542AAFDBA57947DC"
   },
   "Docker.docker-credential-wincred": {
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "15BE86BEBE043EC9C0B38A44DDCE573CE5F659D5A4E10A4C14A386020D4DFE58",
     "description": "",
+    "version": "0.9.10",
     "validationCount": 1,
-    "version": "0.9.9",
     "installerHashes": [
-      "ED50B9767EAC0BA42782DC4F550CEAB2F4354BACAAD05C54CAA9DEC98A032C48",
-      "F7A3C6F78FDEC5699F0021595989CF1C9EA58270866E7DD3DC3E2E4F4621E84B"
+      "04833862D29A06A6F9353EF0619B7385F37EE3CE1650DE5AD3EBE9C3F2EBE233",
+      "8E7D988B0CACA4E0BBF75E2F683DCA02067C93D3C0BF2F1E421FFC6748E6B3D9"
     ],
-    "lastUpdated": "2026-08-28T22:46:20.618689Z"
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-09T17:09:08.4578946Z",
+    "manifestHash": "1B834DB977850F921AC8668270E8B624E101810389E901A0F2CAFBF4DB355DF2"
   },
   "Docker.DockerCompose": {
     "installerHashes": [
@@ -3272,7 +3272,7 @@
     "description": ""
   },
   "h3poteto.fedistar": {
-    "lastUpdated": "2026-10-07T14:06:08.4651109Z",
+    "lastUpdated": "2026-10-09T17:09:08.5222604Z",
     "manifestHash": "D25784CAF7A566CFB98C0536FCDB96F098A0B55ABAE0FBA6547FBF50B4EAE189",
     "installerHashes": [
       "3EFD445C4FB631A2F7B94ABA2FD6F917DE62B129594479AFBC0F95620644F28C"
@@ -3280,7 +3280,7 @@
     "state": "VALIDATION_PASSED",
     "version": "1.13.3",
     "description": "",
-    "validationCount": 1
+    "validationCount": 2
   },
   "haberwooki.LiveCaptions": {
     "installerHashes": [
@@ -3690,8 +3690,8 @@
     "lastUpdated": "2026-08-21T17:17:39.9241582Z"
   },
   "IanWalton.JellyfinMPVShim": {
-    "lastUpdated": "2026-10-07T17:42:15.8410191Z",
-    "validationCount": 4,
+    "lastUpdated": "2026-10-09T17:09:08.5480937Z",
+    "validationCount": 5,
     "manifestHash": "675AEF627B4CC56E6ABA67B65310B3A79C2D1BE64E45261656508D89D741DD2A",
     "installerHashes": [
       "4FBDFADCF028BCBB67375F808F5C8FE557635F4377A46E84550DE32B9E002B5E"
@@ -4071,15 +4071,15 @@
     }
   },
   "JitzuLang.Jitzu": {
-    "validationCount": 1,
-    "manifestHash": "C8564A3F4DBC385D2DF24C1920F63133F2A92ABFFCF14ABDF6C133A4ACC42B33",
-    "version": "0.1.48",
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-30T01:45:49.5839532Z",
+    "version": "0.1.49",
+    "validationCount": 1,
     "installerHashes": [
-      "16665DE6534924B54742822712F136DC32A8455EC17300BB8D82706A1AE7E01C"
-    ]
+      "C2DAC771F46D0E784FDE75C66A330FDF4DF688919B58312345B9E6A98D631106"
+    ],
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-09T17:09:08.4181648Z",
+    "manifestHash": "8DCC74F68B395F026E47656E52354CFE618D3AC57ED82DD22FCE82459881404F"
   },
   "jj-vcs.jj": {
     "validationCount": 3,
@@ -4399,9 +4399,9 @@
     "installerHashes": [
       "CCE0C9D0A52B5E022EE3B9FAAF51CF015555A38CF09292CA5E9B1D3F80EDF0F3"
     ],
-    "lastUpdated": "2026-10-08T05:48:51.0254898Z",
+    "lastUpdated": "2026-10-09T17:09:08.3919046Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 5,
+    "validationCount": 6,
     "manifestHash": "72878195FFBE904ED5C230BB1A3200BC0BCB42A873380769CF2F2016B2736EF3"
   },
   "koedame.chordsketch": {
@@ -4955,15 +4955,15 @@
     ]
   },
   "mentebinaria.dz6": {
-    "manifestHash": "76D27682D0C1DEB21DA180F782973FDA60DA9E582F001A9ACEB4CED44E77B3CF",
+    "description": "",
+    "version": "0.8.0",
     "validationCount": 1,
-    "lastUpdated": "2026-08-22T01:07:19.6734334Z",
-    "version": "0.7.1",
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "D7E9AE24ADCF056C2CC0431A5763427A504508C14E3ACC0EDDD3F54892BD253E"
+      "4C5D3D2D41A3C4C60CF6A7D04CC7362A359096F68366973885E7F458CCD59BD4"
     ],
-    "description": ""
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-09T17:09:08.5806395Z",
+    "manifestHash": "C7FB06B2495344BE86E761CFA3BBC8838A97B3DBD7F5486788B1E3C4334FF9E5"
   },
   "mesonbuild.meson": {
     "description": "",
@@ -8979,14 +8979,14 @@
   },
   "vantoan1511.TableView": {
     "description": "",
-    "lastUpdated": "2026-10-09T01:47:25.3497698Z",
+    "lastUpdated": "2026-10-09T17:09:08.313868Z",
     "version": "0.7.1",
     "installerHashes": [
       "E9CCD9EFB339F8FE0457646D509E2FCD1E754099DDF38C97D784FF669418183E"
     ],
     "state": "VALIDATION_FAILED",
     "manifestHash": "5078CCFDC2A2C685FFB1494D66F36437926C5E61959E437F8A980C9409660D8E",
-    "validationCount": 1
+    "validationCount": 2
   },
   "Vathivis.paperq": {
     "lastUpdated": "2026-10-09T05:25:50.6831459Z",
