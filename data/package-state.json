@@ -271,7 +271,7 @@
     "version": "3.1",
     "openPr": {
       "version": "3.1",
-      "checkedAt": "2026-10-03T13:53:47.2497306Z"
+      "checkedAt": "2026-10-09T20:25:10.863645Z"
     }
   },
   "Alochi.Monitoring": {
@@ -2706,11 +2706,7 @@
     "manifestHash": "0E905E9EE36BAAED83BDE9350A982AF6D8EC40B28A75E911C372DF44D1AF7080",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "lastUpdated": "2026-09-19T01:38:39.5509565Z",
-    "openPr": {
-      "checkedAt": "2026-09-21T08:34:17.2690811Z",
-      "version": "7.2.9"
-    }
+    "lastUpdated": "2026-09-19T01:38:39.5509565Z"
   },
   "FOSSA.FOSSA-cli": {
     "description": "",
