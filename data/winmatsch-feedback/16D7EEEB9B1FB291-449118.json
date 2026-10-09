@@ -1,0 +1,14 @@
+{
+  "repository": "microsoft/winget-pkgs",
+  "pullRequestNumber": 449118,
+  "classification": "InstallationFailure",
+  "state": "Escalated",
+  "recordedAt": "2026-10-09T07:06:12.8716055+00:00",
+  "retryAfter": null,
+  "learnedOverrideSignal": null,
+  "reason": "The installer failed upstream installation testing (unattended, shell-execute, driver or dependency); human-verified switches are required before resubmitting.",
+  "packageIdentifier": "sunfish-shogi.shogihome",
+  "packageVersion": "1.29.1",
+  "evidence": [],
+  "installerTraits": "type=Zip;nested=Nullsoft;scope=;elevation=;silent=;silentWithProgress=;interactive=;custom=;upgrade=;log=;installLocation=;repair="
+}
