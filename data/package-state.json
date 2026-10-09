@@ -527,10 +527,10 @@
     "installerHashes": [
       "F5C7E60F30328821DFE66CA74733F924581C8656752A0480A616E56CB1F4F98C"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "3.5.4",
     "description": "",
-    "lastUpdated": "2026-10-08T05:48:50.9369298Z",
+    "lastUpdated": "2026-10-09T13:11:43.6307712Z",
     "state": "VALIDATION_PASSED",
     "manifestHash": "7E8DC64C8CDAF90ED4E173E3D523CB0D169A4C4288CC6017CFDCDD4AA4CAE6A5"
   },
@@ -3932,14 +3932,14 @@
     "manifestHash": "269EE4CBCF87819AAC23D6F33BFAC0DCEE8B0B48A2FE4B5AF637BF0E7130B058"
   },
   "JannisX11.Blockbench": {
-    "manifestHash": "3F35A6C482C896FBCC07C32BADAE316AA88F2E1523DD5E1D1FF97798A1C49D8E",
-    "installerHashes": [
-      "D86966AB863E4F067A3A17C5D2D686762CB532034A3CFAF78589A01B62D43FA1"
-    ],
-    "validationCount": 1,
-    "version": "5.2.1",
-    "lastUpdated": "2026-09-21T16:44:28.2125901Z",
+    "manifestHash": "A3081DD2FEE35BB1C1C1B4063A77029CE0D72978033E4FCAF9BAA443A3920C18",
     "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-09T13:11:43.6048907Z",
+    "installerHashes": [
+      "DE14D72E27A6598AD5595CA5E66C15EA0E360DE5218207F934572265245A2BC1"
+    ],
+    "version": "5.2.2",
     "description": ""
   },
   "JanProchazka.dbgate": {
@@ -4259,16 +4259,16 @@
     "state": "VALIDATION_PASSED"
   },
   "kcl-lang.kcl": {
-    "description": "",
-    "lastUpdated": "2026-09-28T04:47:36.2933312Z",
+    "manifestHash": "84594F8BF4F7828179218E7EACA3856376F00DD2F075F5FD86D3C6F16C129B64",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
+    "lastUpdated": "2026-10-09T13:11:43.651702Z",
     "installerHashes": [
-      "5D9F1AE5536511C98DB4F5DAA83BE9DE7005D05B694270A4209A2BB8D9B883EB",
-      "7909DC9CC139F12F566531E0350A5555D862264602CEB55D245F1EE9C17A329D"
+      "F4DD8E0B57BB22012FED3B282087D645747032788F83ED05BB8CE793D0F22171",
+      "745F22C88C0003C49930BD7765990A92E12BBDD11994E0306EB0113F44F89255"
     ],
-    "manifestHash": "3C6FE350662F2A1563CC93E4CCDFCDCB6935D87B45D5274CA7FB5770B63A7A47",
-    "version": "0.13.0",
-    "state": "VALIDATION_PASSED"
+    "version": "0.13.1",
+    "description": ""
   },
   "KeeperSecurity.Commander": {
     "description": "",
@@ -4745,9 +4745,9 @@
       "B54B1B397920D8CA80509580CE29E4BDEAA7A3A229F2A25972808042279B0D9C"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 4,
+    "validationCount": 5,
     "version": "1.2.4",
-    "lastUpdated": "2026-10-07T14:06:08.6993886Z"
+    "lastUpdated": "2026-10-09T13:11:43.6835655Z"
   },
   "Luxview.AgainstMe": {
     "installerHashes": [
@@ -6224,14 +6224,14 @@
     "lastUpdated": "2026-08-20T09:17:27.6311244Z"
   },
   "openpubkey.opkssh": {
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "E638B85A26039FDBBF4E8D3AB52095AEE5CBD70D1C256330517F03B00C8C7F0A"
     ],
     "manifestHash": "26CA7D84A91A9B97C99F7AD7B1E3D2D1D92F2AB0D4035F0F155F923304A463F4",
     "version": "0.17.0",
     "description": "",
-    "lastUpdated": "2026-10-06T21:36:54.2701411Z",
+    "lastUpdated": "2026-10-09T13:11:43.7168382Z",
     "state": "VALIDATION_PASSED"
   },
   "OpenScreen.OpenScreen": {
@@ -6721,8 +6721,8 @@
     "installerHashes": [
       "51C2E3D69A446111D356F2E2953D3BAA8B9563D3F4E7F630C1524ECF1735ED63"
     ],
-    "lastUpdated": "2026-10-06T21:36:54.3141142Z",
-    "validationCount": 5,
+    "lastUpdated": "2026-10-09T13:11:43.7287934Z",
+    "validationCount": 6,
     "description": "",
     "state": "VALIDATION_PASSED",
     "version": "8.1",
@@ -9027,11 +9027,13 @@
   },
   "Vendicated.Vencord.Canary": {
     "description": "",
-    "installerHashes": "15268ABA25625797BF562187DD87DDADF42882E079C7B6192880AD3E83353EF5",
-    "lastUpdated": "2026-10-04T02:00:49.9971464Z",
+    "installerHashes": [
+      "15268ABA25625797BF562187DD87DDADF42882E079C7B6192880AD3E83353EF5"
+    ],
+    "lastUpdated": "2026-10-09T13:11:43.667706Z",
     "manifestHash": "9C1A9264D3F4DFA85145B5BD5455B6CCC8EC3BA82BE36C9E6B2940CAAFCB4D0E",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "1.4.2"
   },
   "venipa.ytmdesktop": {
@@ -9509,16 +9511,16 @@
     "state": "VALIDATION_PASSED"
   },
   "Y-ASLant.ElegantClipboard": {
-    "description": "",
-    "lastUpdated": "2026-10-08T09:36:29.214561Z",
-    "manifestHash": "4F2BA62E17A9041D0D41487705C267544A7338F62622B07CEA4768203D7F7078",
-    "validationCount": 3,
+    "manifestHash": "F3E140B0A6D6E9FFC8713FB818AFA81DC8F4CBAC22233BFCB8ACB5B54317C4A1",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-09T13:11:43.6964135Z",
     "installerHashes": [
-      "454A235269D5085C43B721AFB710F69F65A6FC670F50D85956B256425EF7033A",
-      "B9CFE22D0EBDEE55BEE7EE5F376D78D772C8249E8C2A8391E77DE2EBE1C6615D"
+      "C9CCBC6A63FBDAF4239679C22D4BA97E41CECEE4F9F5B4BE980B29A30466B74F",
+      "6D55EE7F06D8FB38E656DBF26DD9C7E7C6BF889D55F0E9D97A709AAB403DE5A1"
     ],
-    "version": "1.2.9",
-    "state": "VALIDATION_PASSED"
+    "version": "1.2.10",
+    "description": ""
   },
   "Yaak.app": {
     "installerHashes": [
