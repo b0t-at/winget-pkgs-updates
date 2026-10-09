@@ -367,11 +367,11 @@
   },
   "AnInsomniacy.Aria2Next": {
     "manifestHash": "C416E960C87ADF37D6D2099E4EAACB6EF8D4887E6D9955B48D6CDED9D333DC45",
-    "validationCount": 5,
+    "validationCount": 6,
     "description": "",
     "version": "2.8.6",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-07T21:22:33.5408671Z",
+    "lastUpdated": "2026-10-09T21:05:27.4701679Z",
     "installerHashes": [
       "CF339466CA3763FE89F27F9E325B50058FFB8B97CD93B9AC71FE81D9455EC82C",
       "6B4E3137AFEF78FD8EBDCA455BCB8EE058692C79EABEDCF15CEA28206B422260"
@@ -1615,9 +1615,9 @@
       "051A9CF81373536E05E56B4AD597EC1EB6453C9262F98797F5AC78725BC0639B"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 4,
+    "validationCount": 5,
     "version": "4.14.1",
-    "lastUpdated": "2026-10-05T17:48:41.4402547Z"
+    "lastUpdated": "2026-10-09T21:05:27.5421768Z"
   },
   "Crate-CI.Typos": {
     "installerHashes": [
@@ -1816,14 +1816,14 @@
     "manifestHash": "AC4E6E01DCF70E738A5AFF74839A24626E219073B90B09F8CC41D47D066587D8"
   },
   "Datadog.dd-trace-dotnet": {
-    "lastUpdated": "2026-09-22T01:21:24.201137Z",
-    "version": "3.54.0",
-    "validationCount": 1,
     "description": "",
+    "lastUpdated": "2026-10-09T21:05:27.4922867Z",
+    "manifestHash": "8F48904D431D9D8EC001432603368CEA9C38327EC2FE99AE00658F851C7C609A",
+    "validationCount": 1,
     "installerHashes": [
-      "B28DAE9574C3CF192E561A87F200E9135F99C1D763F25F181DA6100B7DC47870"
+      "F06770FBDDD4148E62E6357AF2F0C05A102C679470A19A3FF217FA0AC17FF0AC"
     ],
-    "manifestHash": "E313D7F3F3D631F98E6E24A66BE0E17A5FBF87211B9E65582C373C35BCFE0CCE",
+    "version": "3.55.1",
     "state": "VALIDATION_PASSED"
   },
   "DDEVFoundation.DDEV": {
@@ -2086,11 +2086,11 @@
   },
   "Dystroy.broot": {
     "version": "1.61.0",
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "6CAFE8E993FB8E5684EB25549703A4FB9DEC61AC6A8F1947CBED6566CB4E58E5"
     ],
-    "lastUpdated": "2026-10-05T09:43:58.7838844Z",
+    "lastUpdated": "2026-10-09T21:05:27.5204213Z",
     "state": "VALIDATION_PASSED",
     "description": "",
     "manifestHash": "9A6872FAEC3899B1C18645128F20192E940B12B4BC315366374D5A048997E77C"
@@ -3361,12 +3361,12 @@
     "state": "VALIDATION_PASSED",
     "description": "",
     "manifestHash": "303231F8E125367977EC74533AB8C11152465C2A23BDA43D406A9BB43E25F9F4",
-    "lastUpdated": "2026-10-08T01:44:23.3780505Z",
+    "lastUpdated": "2026-10-09T21:05:27.4073083Z",
     "installerHashes": [
       "DFF7D21AAF5A78FA79D17874AAC430E37E2B26E0DC8BF06394E4779576EEB03E",
       "345808CDBAAF06EA71B4573461A33119FD7DAAFFA0A06FB6C0C9D8D0784832F3"
     ],
-    "validationCount": 3,
+    "validationCount": 4,
     "version": "4.4"
   },
   "HarjotSinghRana.Reinstate": {
@@ -5823,15 +5823,15 @@
     }
   },
   "NotedeckDev.NoteDeck": {
-    "installerHashes": [
-      "504BFA1FF30830DB2574FE887CBEE2CF24C6925FFFA8C4535899E812E4707C9C"
-    ],
-    "manifestHash": "1DB205825EB6C6E831A7879017E178E962BB0375556AF6AC920D3AA629240006",
     "description": "",
-    "lastUpdated": "2026-10-01T13:09:14.5899256Z",
+    "lastUpdated": "2026-10-09T21:05:27.4322977Z",
+    "manifestHash": "50C04202DE9353E65235D37E3E246F61D6251B945FCF2304A52E871E40E52ABC",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "version": "1.76.1"
+    "installerHashes": [
+      "573313BEB1C404F53969AFA63CF9A93921D9FAE3F64353CAEF5527790A11583D"
+    ],
+    "version": "1.83.0",
+    "state": "VALIDATION_PASSED"
   },
   "NovaeMX.gitflow-helper": {
     "description": "",
@@ -7056,16 +7056,16 @@
     ]
   },
   "RicardoCabral.icuvisor": {
-    "installerHashes": [
-      "C900672AF15DC9A37BB021512B597E269C19F0ADA0249E9CFC6279811EEDFEC5",
-      "8CC46D9F7AD33A0395FD5C59E212C1E2F12CDE228C2EFBE8AB426BEAAA1BD9A0"
-    ],
-    "manifestHash": "4775145D4B1585290DDB1B426A937F5944F9803D723D45B3F515C5D7565287B2",
     "description": "",
-    "lastUpdated": "2026-10-01T13:09:14.6291338Z",
+    "lastUpdated": "2026-10-09T21:05:27.3709537Z",
+    "manifestHash": "F5B4A8D4236000A40A769015BAAC32DF757E3F84FCEDF26AB03E9C2E8F4F5A55",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "version": "1.7.2"
+    "installerHashes": [
+      "EAF17F69C87E36110940B86DB1CE1429B8789E5F7DD44E67BE608CCC113AF57D",
+      "C9F7A127DAA69E6018086339A6028A2111DA57A464403AEAFCB45AB60F9DA67E"
+    ],
+    "version": "1.7.3",
+    "state": "VALIDATION_PASSED"
   },
   "RikkiGibson.DreamPotato": {
     "lastUpdated": "2026-08-18T01:43:26.5566063Z",
@@ -7734,8 +7734,8 @@
     "installerHashes": [
       "95AD03C46D56D37923798308C59C8E3DCAF242ABA5F09C98A80E82DF0B0D11A3"
     ],
-    "lastUpdated": "2026-10-06T17:18:58.9628721Z",
-    "validationCount": 4,
+    "lastUpdated": "2026-10-09T21:05:27.293689Z",
+    "validationCount": 5,
     "description": "",
     "state": "VALIDATION_PASSED",
     "version": "0.26.3",
