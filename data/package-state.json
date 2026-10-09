@@ -1473,8 +1473,8 @@
     "validationCount": 1,
     "version": "1.0.48275",
     "openPr": {
-      "version": "1.4.0",
-      "checkedAt": "2026-10-08T16:28:50.0168441Z"
+      "version": "1.5.0",
+      "checkedAt": "2026-10-09T12:33:39.4731157Z"
     }
   },
   "ciromattia.KCC": {
@@ -4003,8 +4003,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.10.5",
-      "checkedAt": "2026-10-09T01:04:09.7918768Z"
+      "version": "2026.10.6",
+      "checkedAt": "2026-10-09T12:33:51.5190777Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -4047,8 +4047,8 @@
   },
   "jendrikseipp.RedNotebook": {
     "openPr": {
-      "checkedAt": "2026-10-08T08:34:57.8395899Z",
-      "version": "2.43"
+      "version": "2.43",
+      "checkedAt": "2026-10-09T12:33:52.0607679Z"
     }
   },
   "JeromeHerrman.VPinCommander": {
