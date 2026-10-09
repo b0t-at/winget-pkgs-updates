@@ -139,14 +139,14 @@
   },
   "AES256Afro.VideoKidnapper": {
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "manifestHash": "04CF8B000059AC7B62A4390D1C9705E1670897AAF0D3A5E0702E058B4C1B84A7",
-    "lastUpdated": "2026-10-08T14:05:34.4206726Z",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-09T09:14:36.5241749Z",
+    "version": "1.9.1",
+    "manifestHash": "FA28B64C878B7CD753CCE2FDCF78B253109E9E44A123521FF7FEF0D6C0306269",
     "installerHashes": [
-      "412C331997068D5DBEC701DC13B2397BC95B3B82A9554BA496F779EA2BE47F3F"
+      "D7E0F59910232F7399EB7CAB1DF05DD006A5910E58C17EB8F46379EFCD09BE4D"
     ],
-    "validationCount": 2,
-    "version": "1.9.0"
+    "description": ""
   },
   "agent-rt.arc-runner": {
     "manifestHash": "2CC193F9A4A4801C176AA7EEFD46F19FCAD4AE99DC906CD7F1071640805F78A2",
@@ -1207,16 +1207,16 @@
     "version": "49.0.2"
   },
   "ByteNess.AWSVault": {
-    "installerHashes": [
-      "224C801A4DD1052E651EFC71E318EB14C700A1665E191A331774CD27DD41990E",
-      "96DD689D0D3DD710D224D3E39BEF805564B710B52D27CD3C1826BB407D6BC41E"
-    ],
-    "validationCount": 2,
-    "version": "7.15.4",
-    "description": "",
-    "lastUpdated": "2026-10-08T09:36:29.2882485Z",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "6D037B5A910A954AB36B664766884AC54DF75AE1C6A857D1AC4501F78B834E93"
+    "validationCount": 1,
+    "lastUpdated": "2026-10-09T09:14:36.5046024Z",
+    "version": "7.16.2",
+    "manifestHash": "A53025236DA09F9B0C815AF3CB65FF10BEDC9C44C597C0A680D4813D656BFD0C",
+    "installerHashes": [
+      "764BA4979AB494383C01F45EB349197DAA548213B8F7F3828392E44837BD21E2",
+      "4A6682E9E3F20BC24095861AB69330C63CC9F180D00793181BDC7D3C7156C7B8"
+    ],
+    "description": ""
   },
   "C-POPLO.Unreal-GUI": {
     "validationCount": 1,
@@ -1623,10 +1623,10 @@
     "installerHashes": [
       "518F759FBA43205F17A717656054C1D25BC883455A6296989E9D021C6EDB7C59"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "1.51.1",
     "description": "",
-    "lastUpdated": "2026-10-08T05:48:50.8978168Z",
+    "lastUpdated": "2026-10-09T09:14:36.5868461Z",
     "state": "VALIDATION_PASSED",
     "manifestHash": "6FC8C09B2B63482576EEE2B5BD413A5A1DD76E8FA6792E981A3D993847DE0BF7"
   },
@@ -4877,16 +4877,16 @@
     "state": "VALIDATION_PASSED"
   },
   "Martchus.syncthingctl": {
-    "installerHashes": [
-      "E80ED8617C2650FCF7697EE34AC183B9A322930D6BAE8CA2041CD20E0C8F93DE",
-      "DA8490E85A1BBD679906ED8F27662015752ED26227E3664B5CE1EF91E6E6456F"
-    ],
-    "manifestHash": "EB9E8516BD012CA2490528A2993161161593A08724EB14B8A01DE4A80672DBB1",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "2.1.6",
-    "description": "",
-    "lastUpdated": "2026-09-22T04:59:22.526419Z"
+    "lastUpdated": "2026-10-09T09:14:36.5413496Z",
+    "version": "2.1.8",
+    "manifestHash": "C539BA5BA184986B30DC64E56976AF1BF6F6C72CA035AC871A10E6BD1A842D2F",
+    "installerHashes": [
+      "CCC7CE12B978CBC577851B63A208585E337F821E4DEEC46B93D79620D5922EF9",
+      "88E27E88DB67F00042205F1111B14DC18CB5D4ECE2A927546084461BEC4F9417"
+    ],
+    "description": ""
   },
   "masaodev.quick-dash-launcher": {
     "version": "0.7.39",
@@ -6295,15 +6295,15 @@
     "state": "VALIDATION_PASSED"
   },
   "openwong2kim.wmux": {
-    "lastUpdated": "2026-10-06T05:41:37.9712791Z",
-    "description": "",
-    "installerHashes": [
-      "2FAA30E3E8D29088A38C8F3EA38577A1D05438E5D1911EA6C8B441FBBDE4B621"
-    ],
-    "version": "4.0.0",
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
-    "manifestHash": "3BB8AE3536071EF4E62DDE71980BCA80D8118AA22E1E0938AE6F85CA9452E3AE"
+    "validationCount": 1,
+    "lastUpdated": "2026-10-09T09:14:36.3576637Z",
+    "version": "4.2.0",
+    "manifestHash": "D391E0A216FDBF249AF30EA9D37A80CF68D94492DF55823B4430685C0612938D",
+    "installerHashes": [
+      "03E0A40213680EB36EA51B9B65191D78F9E4DA1AFCE2EB104EF0932A8D530C0D"
+    ],
+    "description": ""
   },
   "openwong2kim.wsnap": {
     "installerHashes": [
@@ -7079,8 +7079,8 @@
     "version": "0.3.1"
   },
   "RimSort.RimSort": {
-    "lastUpdated": "2026-10-06T05:41:37.934907Z",
-    "validationCount": 3,
+    "lastUpdated": "2026-10-09T09:14:36.5674089Z",
+    "validationCount": 4,
     "manifestHash": "D615224FE11F13CA0AA210D004D952945CAB19EE0D4AA9C352A12F4303B701E4",
     "installerHashes": [
       "A5D1226734AA24DBD1D107013C31786CCFBAA65C31F518540F4A9060A2F2FB30"
@@ -7527,15 +7527,15 @@
     "description": ""
   },
   "SERGEYDJUM.dwmEOTFrs": {
-    "lastUpdated": "2026-08-18T01:43:26.2634123Z",
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "126672C419283FD93C7CC3826CA2B58C010A2421DA22A01A22EFA253844CA852"
-    ],
-    "description": "",
-    "manifestHash": "EE9B6B423A57CC73742E0B40B41CD924E73575F5D1B6224A4D7865586775BB5F",
     "validationCount": 1,
-    "version": "0.14.1"
+    "lastUpdated": "2026-10-09T09:14:36.4730833Z",
+    "version": "0.17.0",
+    "manifestHash": "352A4C61726E66EEC861A6F6AF25CD8F7AD81BF8FB3CE7D1F5BAD464315F3425",
+    "installerHashes": [
+      "1439F11E871ADD092991FAFACDB88AE474D99C78A37502D10BE95265436A151C"
+    ],
+    "description": ""
   },
   "ServersCom.srvctl": {
     "version": "1.5.0",
@@ -9254,9 +9254,9 @@
     "installerHashes": [
       "9A979F9D96D739625A0FE69317F3197CC7BCEF663A6D7195197D6C9BF96ED6F5"
     ],
-    "validationCount": 5,
+    "validationCount": 6,
     "version": "0.71.0",
-    "lastUpdated": "2026-10-08T05:48:51.1377703Z"
+    "lastUpdated": "2026-10-09T09:14:36.3948217Z"
   },
   "WillyJL.F95Checker": {
     "validationCount": 4,
