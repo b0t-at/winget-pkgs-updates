@@ -4277,7 +4277,11 @@
     "manifestHash": "1B7D562145110A2AB4483E50909945476B8ED7491B1F57E8408A373E465946E7",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "18.1.1"
+    "version": "18.1.1",
+    "openPr": {
+      "checkedAt": "2026-10-09T08:33:59.3118206Z",
+      "version": "18.1.8"
+    }
   },
   "KellyBrazil.jc": {
     "installerHashes": [
@@ -8435,7 +8439,7 @@
     "manifestHash": "101A50462A6E2BE19AFB17A21278EA44597559D970949753840897CFC30A7566",
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
-      "checkedAt": "2026-10-05T04:34:30.8429982Z",
+      "checkedAt": "2026-10-09T08:34:59.0803282Z",
       "version": "5.7.0"
     }
   },
