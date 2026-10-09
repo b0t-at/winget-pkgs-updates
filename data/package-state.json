@@ -4003,8 +4003,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-10-07T20:26:51.7804184Z",
-      "version": "2026.10.4"
+      "version": "2026.10.5",
+      "checkedAt": "2026-10-09T01:04:09.7918768Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -4093,8 +4093,8 @@
     "lastUpdated": "2026-08-06T14:10:17.3921348Z",
     "manifestHash": "1E843D90602194E32EF0F84E333BE9BC20D09621BCA43AA304BDA7952A621BAB",
     "openPr": {
-      "checkedAt": "2026-10-08T01:02:04.5461012Z",
-      "version": "0.46.0"
+      "version": "0.46.0",
+      "checkedAt": "2026-10-09T01:04:10.15012Z"
     }
   },
   "jmrplens.gitlab-mcp-server": {
@@ -4277,11 +4277,7 @@
     "manifestHash": "1B7D562145110A2AB4483E50909945476B8ED7491B1F57E8408A373E465946E7",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "18.1.1",
-    "openPr": {
-      "checkedAt": "2026-10-08T08:34:59.7764945Z",
-      "version": "18.1.7"
-    }
+    "version": "18.1.1"
   },
   "KellyBrazil.jc": {
     "installerHashes": [
@@ -4599,11 +4595,7 @@
       "BCD059B5BE584C2A09A8BCB2C0E091983B0734C89575AA7A14DAB8E405D08825",
       "73766E207396B2716091047C2124B46FB79D3838F39D2B6BDB60CBBC2621FAA3"
     ],
-    "version": "2.18.8",
-    "openPr": {
-      "version": "2.18.8",
-      "checkedAt": "2026-09-25T16:25:55.0337144Z"
-    }
+    "version": "2.18.8"
   },
   "LocalStack.localstack-cli": {
     "description": "",
