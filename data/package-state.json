@@ -841,14 +841,14 @@
     "version": "0.5"
   },
   "BenjaminLSR.HandheldCompanion": {
-    "validationCount": 7,
+    "validationCount": 8,
     "version": "1.3.3.1",
     "description": "",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "C212332DF3914E06555ED35B1520E24300661AE968F03642304AC3784F8F9F6F"
     ],
-    "lastUpdated": "2026-10-08T09:36:29.3582309Z",
+    "lastUpdated": "2026-10-09T01:47:25.4171694Z",
     "manifestHash": "1893BCA41A722D8FC2DBF7C5F5F87E232C5D1BAF0720C1F7AF72EC42D870D762"
   },
   "BenModigell.Vibes": {
@@ -2329,11 +2329,11 @@
     "installerHashes": [
       "3A8884774973B6F2826877E1C6388A5FEAE4704EF88A9A9C912C77CE186990F3"
     ],
-    "lastUpdated": "2026-10-08T09:36:29.3726083Z",
+    "lastUpdated": "2026-10-09T01:47:25.3936382Z",
     "version": "3.24.0",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "validationCount": 4,
+    "validationCount": 5,
     "manifestHash": "C459D121AF144F7CA3B8C0D93F600D746F7B00E9CA3F29CE24135C2F3DE6A245"
   },
   "Essenciary.Githical": {
@@ -3046,15 +3046,15 @@
     "manifestHash": "C8CEE8DC31A9FF0FAAE0E1ED9E1B5FFBEE4A8F6AF13D3261DB74FE15226EAA43"
   },
   "Gleam.Gleam": {
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "version": "1.17.0",
-    "lastUpdated": "2026-06-02T23:08:37.2403576Z",
+    "description": "",
+    "lastUpdated": "2026-10-09T01:47:25.5333774Z",
+    "version": "1.19.1",
     "installerHashes": [
-      "4790B0E35C6ACF441EAC0746130417913EB4B099D7D10D0C843792C69886BBBE"
+      "B55D187912FE1E6938990343171F31318635DCA52772679CBEC438775E01DF65"
     ],
-    "manifestHash": "5C7DE56CD1246394FC186E98332975BE422AFDA8AA628450FDC023C2608C870F",
-    "description": ""
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "31C8206AA6F9E8A60B84D988A66684B89E300946B92F8BE09BC81E9772AA208B",
+    "validationCount": 1
   },
   "Gluon.SceneBuilder": {
     "version": "26.0.0",
@@ -3116,10 +3116,10 @@
   },
   "Google.FirebaseCLI": {
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-08T09:36:29.3243801Z",
+    "lastUpdated": "2026-10-09T01:47:25.4898628Z",
     "version": "15.33.0",
     "manifestHash": "D16080B95F351F25CA10AACBA0FC3766E180D6FC99581E24D5504B0EF50C390E",
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
     "installerHashes": [
       "611B869701923C15CE479FB55A452F947C35900B942702ECE15ED60ED6F35C2C"
@@ -3571,15 +3571,15 @@
     "validationCount": 1
   },
   "holland-built.Bloxsmith": {
-    "version": "3.87.3",
-    "validationCount": 1,
-    "installerHashes": [
-      "761A2B1640BC4CAFCD9F3BFDDAB6BA49ACF1EA22D26EAE8D072118ADFC12A09B"
-    ],
-    "lastUpdated": "2026-10-04T18:21:04.1139834Z",
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "B00E6A9CD47743611F02EDE07C40647189E2E674119CB213BE8CA07E00776F2C"
+    "lastUpdated": "2026-10-09T01:47:25.4461259Z",
+    "version": "3.92.10",
+    "installerHashes": [
+      "58B8FE9A7EC0A93DE558C4EF961C416EEED8248517DDFAA6C4A76647865F9CDC"
+    ],
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "3A41B136E20BC40242EF30C7ED0CA0460FAB5073E3F287CF255BE96F79242266",
+    "validationCount": 1
   },
   "HongMinhee.Gukhanmun": {
     "manifestHash": "089D5FCFFB565DBC52073976471BB7BB53E1FA33EA888133D45A589919D3AE52",
@@ -3657,11 +3657,11 @@
   },
   "Humanity.DJV2": {
     "manifestHash": "D99B513D331A2EBC63D7686AA3245DB8161713A4CF7FDCCB139D684F940DB154",
-    "validationCount": 4,
+    "validationCount": 5,
     "description": "",
     "version": "3.7.4",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-08T09:36:29.4044684Z",
+    "lastUpdated": "2026-10-09T01:47:25.4673462Z",
     "installerHashes": [
       "8434C2AD58F6DECF2CAC1EF35A7E4B25FF863D95BC43EDEA724F13AA7D0535BD",
       "B40A4F5DBC1CD5FF458DF5D6AB96B6AA5002643438C66E5BDACAE60293FFC218"
@@ -6164,9 +6164,9 @@
   },
   "OpenGeos.GeoLibre": {
     "manifestHash": "E8BB582AD15AEF3CA19431E16601A61E6F1F1971FB30D008602C8899EAA065E5",
-    "lastUpdated": "2026-10-08T01:44:23.3195199Z",
+    "lastUpdated": "2026-10-09T01:47:25.5107034Z",
     "version": "3.3.0",
-    "validationCount": 4,
+    "validationCount": 5,
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "D286DF26A31C37FED32BF0486723A33092CCF7A957B1AAF86346990F1EB5A20F"
@@ -8975,14 +8975,14 @@
   },
   "vantoan1511.TableView": {
     "description": "",
-    "validationCount": 1,
-    "lastUpdated": "2026-09-03T16:55:38.2986116Z",
-    "version": "0.6.8",
+    "lastUpdated": "2026-10-09T01:47:25.3497698Z",
+    "version": "0.7.1",
     "installerHashes": [
-      "0EA303755C8B10CB1564EBE44E92D04C0C18EFE669A7D796F39D36196637FB90"
+      "E9CCD9EFB339F8FE0457646D509E2FCD1E754099DDF38C97D784FF669418183E"
     ],
-    "manifestHash": "180CE038EE44416C3A8AD9B16E96FC61FE895411D67CE4BB2050B58232005B47",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_FAILED",
+    "manifestHash": "5078CCFDC2A2C685FFB1494D66F36437926C5E61959E437F8A980C9409660D8E",
+    "validationCount": 1
   },
   "Vathivis.paperq": {
     "lastUpdated": "2026-10-07T14:06:08.5343779Z",
