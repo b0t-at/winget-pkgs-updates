@@ -5972,11 +5972,7 @@
       "526E47DB7C295D017E9514DF5BB20C6F32B3D1170F2C8BB9C59B53185F5BD6FF"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "openPr": {
-      "version": "0.40.0",
-      "checkedAt": "2026-10-06T20:27:31.1475357Z"
-    }
+    "validationCount": 1
   },
   "Ombrelin.PandocGui": {
     "configHealth": {
@@ -8161,7 +8157,11 @@
     ],
     "description": "",
     "version": "1.29.1",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "checkedAt": "2026-10-09T04:31:54.4636806Z",
+      "version": "1.29.1"
+    }
   },
   "SuperRadCompany.Microsandbox": {
     "description": "",
