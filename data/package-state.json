@@ -210,16 +210,16 @@
     ]
   },
   "aimotrens.impulsar": {
-    "validationCount": 1,
-    "manifestHash": "CC631431A2ED01A7B89608A5A3CCF90DCFCED343D346F857D28B29F5852582BB",
-    "installerHashes": [
-      "569ED14B7C47F19E29D1C343900AE124213A812FB0D3AC8AC9A080832252D60F",
-      "93C3F3DCCCB4E5F2993F5B221DAA2A8C15B8806AB790C4D2D9BBEF42D79FA2CF"
-    ],
-    "version": "0.19.11",
+    "manifestHash": "AA009D46DB74BA57ED34A17512FBEDC12ECB295E32071F5326854CEED8944102",
+    "version": "0.19.12",
     "description": "",
-    "lastUpdated": "2026-09-10T09:04:57.5833905Z",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "FF7622DD52E6AAA2A267F783EC8C06C63DED033A9CB1CF78FBA12974C3881CE5",
+      "772BC0B0290BABE3C62668184198643BF32C1AAC86968B84E2BC5E4FC808318B"
+    ],
+    "lastUpdated": "2026-10-09T05:25:50.6938872Z",
+    "validationCount": 1
   },
   "alegauss.ClaudeCodeTray": {
     "manifestHash": "3A5636944E686BB73252D323C67F9E42F31569C60046EE756B3FA2ABFDAFE5A8",
@@ -1268,11 +1268,11 @@
       "E16E94929BC7FF94953B2A8CB5F216E36E89DB1B801D5BDE3EC44CE004ED043C",
       "6237D54B75BF6A98F0C88BF89A51FBD4E779F652F89D55501CF671E836A94AF1"
     ],
-    "lastUpdated": "2026-10-08T01:44:23.414851Z",
+    "lastUpdated": "2026-10-09T05:25:50.5935145Z",
     "version": "1.1.5",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "validationCount": 6,
+    "validationCount": 7,
     "manifestHash": "8E645FF28679E97AD71400806E23B280C929C60DCF327B26B03994C85640FD47"
   },
   "CargoLambda.CargoLambda": {
@@ -2005,8 +2005,8 @@
       "8AEAA0055E660E12CF07CD70680DC8333957FE6718528B91EC3DA084EAB62483",
       "73CDC73A03443CBA37C7AE91AEC12C7B86C0EB75A8F40F296AAA5159E66B29BC"
     ],
-    "lastUpdated": "2026-10-05T22:13:12.3617728Z",
-    "validationCount": 4,
+    "lastUpdated": "2026-10-09T05:25:50.5580184Z",
+    "validationCount": 5,
     "description": "",
     "state": "VALIDATION_PASSED",
     "version": "5.6.0",
@@ -2560,8 +2560,8 @@
     "validationCount": 1
   },
   "Fidpa.Hablara": {
-    "lastUpdated": "2026-10-06T13:35:51.1055654Z",
-    "validationCount": 2,
+    "lastUpdated": "2026-10-09T05:25:50.4730895Z",
+    "validationCount": 3,
     "manifestHash": "E688AFDD2CF454E819254EE6D66B02AC7B69B06B9E9A4B42CB926264E240D604",
     "state": "VALIDATION_PASSED",
     "version": "1.7.9",
@@ -4586,16 +4586,16 @@
     "description": ""
   },
   "LiveKit.LiveKitCLI": {
-    "state": "VALIDATION_PASSED",
+    "manifestHash": "FEDB7F03E8DBB8E1501C3D8F6C531A7DF3BF6BA0BA4B10C4D30C31BC41BCD29C",
+    "version": "2.19.0",
     "description": "",
-    "manifestHash": "F710A5302ADCE2DC3C491599F6F16762DE196CF76ED54BBF2952AC7076D05592",
-    "lastUpdated": "2026-09-25T13:04:51.8785621Z",
-    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "BCD059B5BE584C2A09A8BCB2C0E091983B0734C89575AA7A14DAB8E405D08825",
-      "73766E207396B2716091047C2124B46FB79D3838F39D2B6BDB60CBBC2621FAA3"
+      "544C3CB752341BDBABA3FAB2FB9A5A096925559AADD4699FB15031358F9C0870",
+      "90B562768CBA684E8FC31CF95C49B9BCECA17305D41F0B3961E2AE166B1BFEBB"
     ],
-    "version": "2.18.8"
+    "lastUpdated": "2026-10-09T05:25:50.6486285Z",
+    "validationCount": 1
   },
   "LocalStack.localstack-cli": {
     "description": "",
@@ -5014,15 +5014,15 @@
     "version": "1.0.1"
   },
   "MichaelDiCarlo.PostyBirb+": {
-    "version": "3.1.74",
-    "validationCount": 1,
+    "manifestHash": "685A5DCC7E349B7DA3E2926264BB8DB18F29D937457DC5AF81C5EE7E4851CF6B",
+    "version": "3.1.76",
     "description": "",
-    "installerHashes": [
-      "1B2421DB752669783ED25D4B011761A7ECEA52E7AE93F4AD8992D148F7985660"
-    ],
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-14T16:34:46.1775536Z",
-    "manifestHash": "E6D5F813D098405E345D20B7BE2E11139E6B0F19FD5FCF398D9D3EEFEBD6DE23"
+    "installerHashes": [
+      "42F775AE36BAC8C0AE6B1813679B39B39BBEC685A09B9DEBEB73538A54CD7762"
+    ],
+    "lastUpdated": "2026-10-09T05:25:50.6334428Z",
+    "validationCount": 1
   },
   "Mickem.NSClient": {
     "version": "0.21.0",
@@ -5049,9 +5049,9 @@
   },
   "Microsoft.Azure.GuestProxyAgent.AllowListTool": {
     "version": "1.0.52",
-    "validationCount": 2,
+    "validationCount": 3,
     "manifestHash": "911E611D226665BC1B6EB9C306418B4151756249CE062968ACA1D0DA898689F1",
-    "lastUpdated": "2026-10-07T14:06:08.8821721Z",
+    "lastUpdated": "2026-10-09T05:25:50.6222621Z",
     "installerHashes": [
       "3D3A3512A0759034EF8AF670A40F2D9F301671E37354C67847D6554DA6553747"
     ],
@@ -6038,15 +6038,15 @@
     "version": "1.13.0"
   },
   "OneKey.OneKey": {
-    "version": "6.6.0",
+    "manifestHash": "20658DB53FA2566D3041D3921A53449E6E4806F63D634D39317D75E7A979C762",
+    "version": "6.6.1",
+    "description": "",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "65D967E3235B7A71CE89AB4B9529B2D93C6AD065B8D3ACA51B53564655A8E7AF"
+      "78AA89EDFF7EF060905711C758BBBE19CB910C09D5D189AD81E27D3441B5F780"
     ],
-    "manifestHash": "97C28D9942BE570B58F7F83F7F22FB12E90117353C3D16385F40207E79FEBEB4",
-    "lastUpdated": "2026-09-23T01:15:23.3959219Z",
-    "validationCount": 1,
-    "description": ""
+    "lastUpdated": "2026-10-09T05:25:50.605283Z",
+    "validationCount": 1
   },
   "OneWare.OneWareStudio": {
     "state": "VALIDATION_PASSED",
@@ -8075,14 +8075,14 @@
     }
   },
   "Storj.Uplink": {
-    "validationCount": 4,
+    "validationCount": 5,
     "installerHashes": [
       "D568FD2ABD98E1D396DF3C924750534BDF2E8BE68873617366AC3D411D2CAB42"
     ],
     "manifestHash": "1191F2FBC58356804A9902BDE862055E266DE73FAC7ABF16E72B9848FC447406",
     "version": "1.164.2",
     "description": "",
-    "lastUpdated": "2026-10-08T09:36:29.384621Z",
+    "lastUpdated": "2026-10-09T05:25:50.5373243Z",
     "state": "VALIDATION_PASSED"
   },
   "str4d.rage": {
@@ -8826,16 +8826,16 @@
     "description": ""
   },
   "UltimateGadgetLaboratories.UHKAgent": {
-    "validationCount": 1,
-    "lastUpdated": "2026-06-29T14:16:32.1819701Z",
-    "version": "10.1.0",
+    "manifestHash": "BE7B1418DB77ECF013CF57028E33F7F8554CA6293AC1E549295B420FEA816843",
+    "version": "11.0.0",
     "description": "",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "A7E01FFF1B97B9509D9A913F99D08BBC6EC50A9C7E115AAE4B22EC1AB3D380E1",
-      "9618FE44231E304974398024A9B2C9340493125BBDE62B15FF9CB43AE4BCD075"
+      "E2C920521F747CB4A301F9BFD68B90A2030584E1DF96EEA4365B3F4D47571BC4",
+      "58BE28AA24601EC95D4048B7F460F6D77C1E773FBF547D052BFBFEB070F40E02"
     ],
-    "manifestHash": "F79CB6AE5B2EA822011E5858038ACA43647AC0422147951DB9DD63138B02F65D",
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-10-09T05:25:50.6686423Z",
+    "validationCount": 1
   },
   "ulyssa.iamb": {
     "description": "",
@@ -8985,9 +8985,9 @@
     "validationCount": 1
   },
   "Vathivis.paperq": {
-    "lastUpdated": "2026-10-07T14:06:08.5343779Z",
+    "lastUpdated": "2026-10-09T05:25:50.6831459Z",
     "manifestHash": "5C96F319BB6252605B1CD9ACDC6BE3ADA7412D0B40A5E84AC2A76963A2D3E2F6",
-    "validationCount": 4,
+    "validationCount": 5,
     "installerHashes": [
       "6F58FAE64670D127204EE852462C35D4917B1BE1D5220617F48972AC9090D920",
       "BDDC46806F1D566447229B343474E34C4330A22A6A418A8D22A390F39CE3433C"
@@ -9154,9 +9154,9 @@
     "description": ""
   },
   "WasmEdge.WasmEdge": {
-    "lastUpdated": "2026-10-06T13:35:51.179467Z",
+    "lastUpdated": "2026-10-09T05:25:50.5701205Z",
     "manifestHash": "3637F5944510CB77560F52915538A21C047F92890B33DAA6863773362F9AEC28",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "475C4D27D1834C78B7EC1322357E9756F1F41142E3957CA1A27B10C03029D15F"
     ],
