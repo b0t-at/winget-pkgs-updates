@@ -1278,7 +1278,11 @@
     "description": "",
     "state": "VALIDATION_PASSED",
     "validationCount": 7,
-    "manifestHash": "8E645FF28679E97AD71400806E23B280C929C60DCF327B26B03994C85640FD47"
+    "manifestHash": "8E645FF28679E97AD71400806E23B280C929C60DCF327B26B03994C85640FD47",
+    "openPr": {
+      "version": "1.1.5",
+      "checkedAt": "2026-10-10T08:30:18.3166101Z"
+    }
   },
   "CargoLambda.CargoLambda": {
     "manifestHash": "B8DD0B022742F2371ED57474DE9FEE6CB654CD7DD96A113241259E85D6F5ABF3",
@@ -8164,8 +8168,8 @@
     "version": "1.29.1",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "checkedAt": "2026-10-09T04:31:54.4636806Z",
-      "version": "1.29.1"
+      "version": "1.29.1",
+      "checkedAt": "2026-10-10T08:28:50.7585613Z"
     }
   },
   "SuperRadCompany.Microsandbox": {
