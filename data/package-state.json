@@ -4095,7 +4095,7 @@
     "manifestHash": "1E843D90602194E32EF0F84E333BE9BC20D09621BCA43AA304BDA7952A621BAB",
     "openPr": {
       "version": "0.46.0",
-      "checkedAt": "2026-10-09T01:04:10.15012Z"
+      "checkedAt": "2026-10-10T04:27:10.1525096Z"
     }
   },
   "jmrplens.gitlab-mcp-server": {
@@ -6716,11 +6716,7 @@
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "B021946E80AF89780B45264FC60AE6EA1C7E35CCD21706C3B3CDBC5C2B1CAA5D"
-    ],
-    "openPr": {
-      "version": "6.4.0",
-      "checkedAt": "2026-08-31T12:33:38.6784618Z"
-    }
+    ]
   },
   "PolyMC.PolyMC": {
     "installerHashes": [
