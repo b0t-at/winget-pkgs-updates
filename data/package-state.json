@@ -275,15 +275,15 @@
     }
   },
   "Alochi.Monitoring": {
-    "validationCount": 5,
     "state": "VALIDATION_PASSED",
-    "version": "1.0.164",
-    "manifestHash": "F209A658BADBDC763F5D30B00CEAE1F57A8AD00273646DBA55177A8090364498",
     "installerHashes": [
-      "2B835BA5DB589D60F1B5173D986796665A4121D75EF110D4AC0426EE492EB0E8"
+      "BACA6BA15D32BAABF528CFC74186DA710B88C3D0EDFF68EA5FB1D57279FEEB1A"
     ],
-    "description": "",
-    "lastUpdated": "2026-10-06T02:07:27.4529972Z"
+    "lastUpdated": "2026-10-10T09:00:45.3071869Z",
+    "manifestHash": "B9DA4C5E3F35CDA4E6F19D04D048675BC26EBADBEC8F935F28FEA566862176FE",
+    "validationCount": 1,
+    "version": "1.0.166",
+    "description": ""
   },
   "AloproAgency.WAutoChat": {
     "lastUpdated": "2026-08-18T01:43:26.4458545Z",
@@ -2810,16 +2810,16 @@
     "state": "VALIDATION_PASSED"
   },
   "GAM-Team.gam.Portable": {
-    "description": "",
-    "validationCount": 1,
-    "manifestHash": "2C5BB71525D8A7AC63A74741E1DE1DBADC3D8F773C30B0BA2446453618D607FF",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-08T14:05:34.1348249Z",
-    "version": "7.48.23",
     "installerHashes": [
-      "6309960D956F22A4A679E14D96A188954179D1042AEB50A2389892AA45BCF783",
-      "8486D788145DD583E178549424CCAFA10F5609608093650C9D71F3B6FD75C41C"
-    ]
+      "D70E15D106668A15736BD24AAF11EA480D41E84271DF056AFC6FDD47056CCD43",
+      "73F0F637BEA3A1EB62ED04116ACEFDFD50939BC20C2D7E2156C78F56130A70A4"
+    ],
+    "lastUpdated": "2026-10-10T09:00:45.3352534Z",
+    "manifestHash": "6E6AF39C4E0C20E394BC91D68E93CD8B48F9DD86339110135C491D68C9C4117B",
+    "validationCount": 1,
+    "version": "7.48.24",
+    "description": ""
   },
   "GAM-Team.GotYourBack": {
     "description": "",
@@ -5803,8 +5803,8 @@
   },
   "NoahSabaj.Mermaid": {
     "manifestHash": "4DF68ADEE3FEB25571CDEE49025021DE44432A54784945E8618B30D0D5223608",
-    "lastUpdated": "2026-10-06T21:36:54.1312112Z",
-    "validationCount": 3,
+    "lastUpdated": "2026-10-10T09:00:45.357198Z",
+    "validationCount": 4,
     "state": "VALIDATION_PASSED",
     "description": "",
     "installerHashes": [
@@ -6607,9 +6607,9 @@
   },
   "PicGo.PicGo": {
     "description": "",
-    "lastUpdated": "2026-10-05T22:13:12.2178625Z",
+    "lastUpdated": "2026-10-10T09:00:45.264629Z",
     "manifestHash": "78A72BF5A2E9025FD82DC0B6194D194B7D079BAD8F4E819F1F33DA97592034A8",
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "4206DCD4A931886C6D6669FCE1072DD158B5762CE30B6A8446EE85E2BE724C63",
       "BF1D22A13693790AB87293AD56F711215F2D0A248C63AB838EC03D7FBD92C303",
@@ -7905,15 +7905,15 @@
     "state": "VALIDATION_PASSED"
   },
   "SpectrumQT.XXMILauncher": {
-    "validationCount": 2,
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "486368F30FDD8C55B6A12000CD977DBABCA591A6B1D448993808EB46F8F46D99"
+      "05774132C9E3D1453C4C39E38BA5C41D2C659DD966888C7EDB7B04BE52EA7996"
     ],
-    "manifestHash": "B769F9D12F0AA65414748AC34A0ABBEFE39E81BCB314FD23BF3D1E84A0774D42",
-    "version": "2.4.1",
-    "description": "",
-    "lastUpdated": "2026-10-08T17:31:06.3064264Z",
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-10-10T09:00:45.3809566Z",
+    "manifestHash": "13E9BC63E21187523163443D2361B3D715BE4107EDFAF0FF4C7917B2D2513193",
+    "validationCount": 1,
+    "version": "2.4.6",
+    "description": ""
   },
   "SpikeHD.Dorion": {
     "validationCount": 1,
