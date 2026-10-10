@@ -60,6 +60,17 @@
     ],
     "version": "5.3.0"
   },
+  "ActivityWatch.ActivityWatch": {
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-10T20:50:15.9256157Z",
+    "installerHashes": [
+      "190BC1FB82194E20D52619DBF884751D7B6AE044477623A384069BC3EA85A64D"
+    ],
+    "description": "",
+    "version": "0.14.1",
+    "validationCount": 1,
+    "manifestHash": "1B99770D7D29E14A9FE34B228908C8104ED5AA12A2128A6804BB239902FC31F8"
+  },
   "AdaLang.Alire.Portable": {
     "manifestHash": "9AF0A473771E6C6F30C85974415BE98484C1164911A86ED12FF3A234B2CA7645",
     "lastUpdated": "2026-05-29T11:56:28.9109777Z",
@@ -5345,7 +5356,7 @@
     "state": "VALIDATION_PASSED"
   },
   "Monghoul.Monghoul": {
-    "validationCount": 6,
+    "validationCount": 7,
     "state": "VALIDATION_PASSED",
     "version": "1.14.1",
     "manifestHash": "63D13E1A3858FC28CAAD40AE7ED2DFFE8109B34335693320F6AF4F99A0BA86E5",
@@ -5353,7 +5364,7 @@
       "2A0C154CB1875695AD8EA49C5891D44A826DC70C396AAC2F60F033838792277E"
     ],
     "description": "",
-    "lastUpdated": "2026-10-08T09:36:29.3098408Z"
+    "lastUpdated": "2026-10-10T20:50:15.9620025Z"
   },
   "MongoDB.MongoDBAtlasCLI": {
     "validationCount": 1,
@@ -6684,16 +6695,16 @@
     }
   },
   "pnpm.pnpm": {
-    "installerHashes": [
-      "299009317554B82905927F8E9782EC5F0AFB08EB7B5CC5EB2B15A923CB1A56EF",
-      "67C0980C2223D2F89B46CEEDB09CAAA37BFAB075D8319D0E651EB659D00C66E9"
-    ],
-    "validationCount": 2,
-    "version": "12.10.1",
-    "description": "",
-    "lastUpdated": "2026-10-08T21:28:05.4316647Z",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "8A7B558963F1B9B9350DDB8BDFECA6F0442B0463C69F9DCAA6F8A0CDBEEEF2EA"
+    "lastUpdated": "2026-10-10T20:50:15.8511087Z",
+    "installerHashes": [
+      "66CAC6B725BFC75FADAC959FC435821048558ADB50B89C82D0D2D5E57465A1DD",
+      "550C8167A14C7F25E156C6FD14196CB440C0F05210CCB618AD904DC42DC90F6C"
+    ],
+    "description": "",
+    "version": "12.11.2",
+    "validationCount": 1,
+    "manifestHash": "76C9EC0C349E24BC22764F8BA8B55514DC04C2E9E315F90D95BE50EAB7B7F98D"
   },
   "PocketBase.PocketBase": {
     "version": "0.40.4",
@@ -7057,16 +7068,16 @@
     ]
   },
   "RicardoCabral.icuvisor": {
-    "description": "",
-    "lastUpdated": "2026-10-09T21:05:27.3709537Z",
-    "manifestHash": "F5B4A8D4236000A40A769015BAAC32DF757E3F84FCEDF26AB03E9C2E8F4F5A55",
-    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-10T20:50:15.9912411Z",
     "installerHashes": [
-      "EAF17F69C87E36110940B86DB1CE1429B8789E5F7DD44E67BE608CCC113AF57D",
-      "C9F7A127DAA69E6018086339A6028A2111DA57A464403AEAFCB45AB60F9DA67E"
+      "3AB4534F18DCE6FB7DA7DD9CE4ABCF1E3A23ECA75C857C1B91ED9A535169F457",
+      "53C748E963DB05445D32726AE6B46FA8F46EC25129BC63AD2A2A55670D94457D"
     ],
-    "version": "1.7.3",
-    "state": "VALIDATION_PASSED"
+    "description": "",
+    "version": "1.7.4",
+    "validationCount": 1,
+    "manifestHash": "76805C212E28EC8F1653F38A06C43849EC5F83CE987EECF0F5FB4A06F662CEA3"
   },
   "RikkiGibson.DreamPotato": {
     "lastUpdated": "2026-08-18T01:43:26.5566063Z",
