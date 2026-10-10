@@ -375,7 +375,11 @@
     "installerHashes": [
       "CF339466CA3763FE89F27F9E325B50058FFB8B97CD93B9AC71FE81D9455EC82C",
       "6B4E3137AFEF78FD8EBDCA455BCB8EE058692C79EABEDCF15CEA28206B422260"
-    ]
+    ],
+    "openPr": {
+      "version": "2.8.6",
+      "checkedAt": "2026-10-10T01:03:29.0435918Z"
+    }
   },
   "Anki.Anki": {
     "description": "",
@@ -2637,8 +2641,8 @@
     ],
     "description": "",
     "openPr": {
-      "version": "3.0.11",
-      "checkedAt": "2026-10-08T20:25:54.769755Z"
+      "version": "3.1.0",
+      "checkedAt": "2026-10-10T01:02:22.0187794Z"
     }
   },
   "Fly-io.flyctl": {
@@ -3999,8 +4003,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.10.6",
-      "checkedAt": "2026-10-09T12:33:51.5190777Z"
+      "version": "2026.10.7",
+      "checkedAt": "2026-10-10T01:02:23.39077Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -6280,7 +6284,7 @@
     "state": "VALIDATION_FAILED",
     "openPr": {
       "version": "1.13.1",
-      "checkedAt": "2026-10-08T20:26:10.9335322Z"
+      "checkedAt": "2026-10-10T01:02:25.3129071Z"
     }
   },
   "OpenWhispr.OpenWhispr": {
@@ -8437,7 +8441,11 @@
       "A105F1D46E2E064EF77328F6E071A2A328F2C83654F9D96A604AEAB576941FF5"
     ],
     "manifestHash": "101A50462A6E2BE19AFB17A21278EA44597559D970949753840897CFC30A7566",
-    "lastUpdated": "2026-10-01T16:55:22.8903554Z"
+    "lastUpdated": "2026-10-01T16:55:22.8903554Z",
+    "openPr": {
+      "version": "5.7.1",
+      "checkedAt": "2026-10-10T01:03:20.8919911Z"
+    }
   },
   "termio.soft-jp.com.TermioWin": {
     "version": "1.2.24",
