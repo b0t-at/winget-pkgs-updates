@@ -4672,15 +4672,15 @@
     "version": "4.1.26190"
   },
   "LoxSmoke.OpenLogiNet": {
+    "manifestHash": "CCB42B91AFC7081DD42695AAB2434A63DFF3FC03D15BB28D001C923541CE6FC8",
+    "version": "0.21.0",
     "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-10T16:47:41.8153334Z",
     "description": "",
-    "version": "0.20.0",
-    "validationCount": 1,
     "installerHashes": [
-      "96FDC81E907187A18D68A28A4F52CCB326FA6AE063CFBBA1351817ED57435E82"
+      "A055424815762DB3A35FB13401B16AD04DFE64A6A340DEB69CF4B5575F866AD9"
     ],
-    "manifestHash": "0A30AC489F655131BA26BC9577094DB2BA21116C0E6011CA99C65BB0AD86FBF7",
-    "lastUpdated": "2026-09-06T04:50:50.2717029Z"
+    "validationCount": 1
   },
   "LuantiTeam.Luanti": {
     "installerHashes": [
@@ -7517,15 +7517,15 @@
     "manifestHash": "5C9C2B5C8944C616B955A76C17C4544046FB50FED06CE2831032B7D798380292"
   },
   "seerge.g-helper.PreRelease": {
-    "validationCount": 2,
-    "installerHashes": [
-      "C7370FE5DA54C6BE636C5B5F008FD7EA31C42A2547BA17BCADE689F13B3914E4"
-    ],
+    "manifestHash": "B94106DFC41555CA57B586A837559E0EE83593211C7D2BE9A76ECFA47191EBD9",
+    "version": "0.287",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "F58433A2D4F87E97CB4026B759ED83ACD5EDF793293A8CCC12C8A4645BF448C8",
-    "version": "0.286",
-    "lastUpdated": "2026-10-07T14:06:08.7332161Z",
-    "description": ""
+    "lastUpdated": "2026-10-10T16:47:41.7174142Z",
+    "description": "",
+    "installerHashes": [
+      "CA5DD20EF3EBA862A3F6294C95FC40324C4742A08B5708494B22F42385872362"
+    ],
+    "validationCount": 1
   },
   "SERGEYDJUM.dwmEOTFrs": {
     "state": "VALIDATION_PASSED",
@@ -7574,11 +7574,11 @@
   },
   "ShatteredChaos.FightPlanner": {
     "version": "3.3.34",
-    "validationCount": 7,
+    "validationCount": 8,
     "installerHashes": [
       "A6DBF209B8E65F39B153FDE4D0131E9DB0ADBBDA75A7350421B89A79FE7380AE"
     ],
-    "lastUpdated": "2026-10-07T17:42:15.9027611Z",
+    "lastUpdated": "2026-10-10T16:47:41.7509958Z",
     "state": "VALIDATION_PASSED",
     "description": "",
     "manifestHash": "3AAC778A30BB261914E8D24F401524EF3C7B94BB334611875BBFCB09ED28C047"
