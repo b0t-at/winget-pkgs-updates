@@ -8580,15 +8580,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "version": "2.56.5",
+    "version": "2.58.0",
+    "manifestHash": "9132DCEBFCCE19F00026FD5E89243BAD679EF6DC133E9D7F9CD03453B325E4BB",
     "description": "",
-    "lastUpdated": "2026-10-11T04:56:11.0251077Z",
-    "installerHashes": [
-      "05334248E1AAAA8D2BFE720AD748FD5852636F56ED2B5D88F8EC473FCD428656"
-    ],
+    "lastUpdated": "2026-10-11T12:49:53.9280347Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "manifestHash": "709B73653389DCDA2E41766DC6D3C990E9B02873D8184CC1FE5AB59D1A7E3732"
+    "installerHashes": [
+      "3051156F63E6B21C99B2D5399FC7D0A7D53521C572846B33E372E89A907BF5CD"
+    ],
+    "validationCount": 1
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
