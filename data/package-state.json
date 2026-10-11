@@ -1030,15 +1030,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Bitcraze.cfcli": {
+    "version": "0.16.0",
+    "description": "",
+    "lastUpdated": "2026-10-11T04:56:11.0988436Z",
     "installerHashes": [
-      "73875DC02018BC30D872C447F79794830A9DAE4A13230023784F058D83ECEDCB"
+      "C403008A8E75B167813DE87A8E1C46974DF97AE0A5D8D5D51F76803355504AC8"
     ],
     "state": "VALIDATION_PASSED",
-    "manifestHash": "98C56E835EB262905804F2BFF6DD18F093069B9C3E8D328EBE74944C90A8686D",
-    "lastUpdated": "2026-10-02T20:53:10.980073Z",
-    "description": "",
     "validationCount": 1,
-    "version": "0.15.0"
+    "manifestHash": "DB5AC30243D1CB002559CF36F9D5DF231284F11149B2068D11C64CEEDE92EE3C"
   },
   "Bitwarden.CLI": {
     "validationCount": 1,
@@ -3347,16 +3347,16 @@
     "description": ""
   },
   "Hanthor.BluefinCLI": {
-    "validationCount": 4,
-    "installerHashes": [
-      "00AE6185D007EAA1A598776B30072EDED26BF9DBAC7944CB106544910D48C51F",
-      "B157837E972D97DFB2A34917B1CEABFE3C3F107B465D14A52EAE0C3E4DF624CD"
-    ],
-    "manifestHash": "BAF922178F0C75B4AEA660808A36C1D41635203F7400FE46BE54AD7C1224023F",
-    "version": "0.11.6",
+    "version": "0.11.8",
     "description": "",
-    "lastUpdated": "2026-10-08T17:31:06.1375479Z",
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-10-11T04:56:11.0769112Z",
+    "installerHashes": [
+      "33751CDCE120C0E3EB52850BBA5864EC181791C85FB0D6E0852CACDCF5BABF2C",
+      "5143AC0FB8D44E37E0BA4B300C2E30ADBE1C18588A05D0C03AD5D05C26516A84"
+    ],
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "manifestHash": "2576BD65B45DFAFF21A897CCCB298168BD4795F971D238C6F5D7783C2F48AFF3"
   },
   "Happ.Happ": {
     "validationCount": 1,
@@ -6715,15 +6715,15 @@
     ]
   },
   "PocketSync.PocketSync": {
-    "lastUpdated": "2026-10-10T12:55:49.6923353Z",
-    "validationCount": 1,
+    "version": "7.0.1",
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "version": "7.0.0",
-    "manifestHash": "95583C76240D99CAECDE9761A1535872B82831859F0B03824E36C2589EDF4144",
+    "lastUpdated": "2026-10-11T04:56:11.1111799Z",
     "installerHashes": [
-      "D7E8A1B75484B584A1FD002A3278B9E243FD9EFCDD86E4E120854BBEAA60FC57"
-    ]
+      "423CFE27A32B53F043A0183E744A0309D74E1598FCF642507C520FCC08FE0CED"
+    ],
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "manifestHash": "A148ABD5B2D550335C4C5F62245E030C6926F12E7ACCB3F2B600220CF9C3F78B"
   },
   "PolyMC.PolyMC": {
     "installerHashes": [
@@ -8568,15 +8568,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "version": "2.56.3",
-    "lastUpdated": "2026-10-10T04:50:19.3804715Z",
-    "manifestHash": "AC98783B60C78FB7407F3D8AE6E949AFA789FA5211CF72A194397C76023B0AF2",
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "D8EEFF36E75973B85B91D96B60150F8BADA83B2CE41013CF2144851AB04AC19D"
-    ],
+    "version": "2.56.5",
     "description": "",
-    "validationCount": 1
+    "lastUpdated": "2026-10-11T04:56:11.0251077Z",
+    "installerHashes": [
+      "05334248E1AAAA8D2BFE720AD748FD5852636F56ED2B5D88F8EC473FCD428656"
+    ],
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "manifestHash": "709B73653389DCDA2E41766DC6D3C990E9B02873D8184CC1FE5AB59D1A7E3732"
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
