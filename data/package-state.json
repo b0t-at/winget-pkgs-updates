@@ -1038,7 +1038,11 @@
     ],
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "manifestHash": "DB5AC30243D1CB002559CF36F9D5DF231284F11149B2068D11C64CEEDE92EE3C"
+    "manifestHash": "DB5AC30243D1CB002559CF36F9D5DF231284F11149B2068D11C64CEEDE92EE3C",
+    "openPr": {
+      "version": "0.16.0",
+      "checkedAt": "2026-10-11T08:30:51.7035549Z"
+    }
   },
   "Bitwarden.CLI": {
     "validationCount": 1,
@@ -8176,7 +8180,7 @@
     "state": "VALIDATION_PASSED",
     "openPr": {
       "version": "1.29.1",
-      "checkedAt": "2026-10-10T08:28:50.7585613Z"
+      "checkedAt": "2026-10-11T08:30:40.0510804Z"
     }
   },
   "SuperRadCompany.Microsandbox": {
