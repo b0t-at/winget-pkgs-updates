@@ -3725,16 +3725,16 @@
     "version": "11.0.0.9335-rc"
   },
   "idleberg.ardent": {
-    "installerHashes": [
-      "13AACFABBE700C4A34F722DA1FFD36E5713A7390B71E17768BFB2D60FC7D497B",
-      "CEBC61A2D915D658A31A3F900A0B5A8710C65FA4810D862277929D46EBC65172"
-    ],
     "validationCount": 1,
-    "manifestHash": "993C694594294606423AC774C7260F88666E5D78C216652A5FBD4C20E587D8B6",
-    "state": "VALIDATION_PASSED",
-    "version": "0.16.0",
+    "lastUpdated": "2026-10-11T08:56:47.1676671Z",
+    "version": "0.17.0",
     "description": "",
-    "lastUpdated": "2026-10-10T01:55:11.9748295Z"
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "84D45E1423CE75861CF6827D2C0B2CA0C7FFC649E501C3A086026891680DB5D5",
+      "B353CCA3E12CCB77242A1964538E74F316DEF16FE72BBC8BA379DD1FE7F08740"
+    ],
+    "manifestHash": "83BA4AA4EA5EB27A3295C28F6057AEF3130409868C8F89AC5797720707220368"
   },
   "igoogolx.itun2socks": {
     "lastUpdated": "2026-09-20T08:54:20.986605Z",
@@ -5053,15 +5053,15 @@
     "description": ""
   },
   "Micronaut.Launch": {
-    "state": "VALIDATION_PASSED",
-    "validationCount": 5,
-    "installerHashes": [
-      "FD0D86C80D0E68581C692EE847D522C1744D01FAE0329C68F9B446149AB437EE"
-    ],
-    "version": "5.2.1",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-11T08:56:47.0949061Z",
+    "version": "5.2.2",
     "description": "",
-    "lastUpdated": "2026-10-06T09:52:58.2407751Z",
-    "manifestHash": "A263F94F9A11A9CE4BE2964441C584D5354207E27FAF863B1DBFB1DDB1F69387"
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "13FA0341358320E5A2CA4BD50DC5EA4E6AC87240A448AA86D91468CA3C2FBA64"
+    ],
+    "manifestHash": "D189FFDB783B04E9B5D8643E9E3ED5382A817C1A56D490985A746B730152C38F"
   },
   "Microsoft.Azure.GuestProxyAgent.AllowListTool": {
     "version": "1.0.52",
@@ -5962,15 +5962,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Odonno.jj-commit": {
-    "installerHashes": [
-      "683CA490E420AC25D5D4E112B4C4F73AFB4CD4C359B2A403A995849AD4212456"
-    ],
-    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "lastUpdated": "2026-09-24T01:25:09.0816505Z",
+    "lastUpdated": "2026-10-11T08:56:47.1937857Z",
+    "version": "0.46.0",
     "description": "",
-    "version": "0.45.2",
-    "manifestHash": "03C8F4E867C92B6C3AC58030EF6C5197093476360644A033A934677BCBF1FEBF"
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "EA94A20B59C6BE3BEE64C49A570BEBF33BDA4924B9A22B8CD0E2A4B60A3698B8"
+    ],
+    "manifestHash": "7D5D8082016FB1A407907D0126EED4A1C115564EE58906F735279FFDA07FFEC2"
   },
   "OliverSchwendener.ueli": {
     "validationCount": 1,
