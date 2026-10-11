@@ -722,16 +722,16 @@
     "manifestHash": "C71A6E160AC6A85572AFA73CCA7A972CAD01C8411B8217390738C684FC69BEF1"
   },
   "axllent.mailpit": {
+    "version": "1.31.5",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "E7E4DFB4C94E709AFD071F44852A1699F89C8D6363D43E3990CD5C3CD94D74FC",
     "description": "",
-    "lastUpdated": "2026-10-08T21:28:05.520373Z",
-    "manifestHash": "FE00333139A2C4988AC9B0738559CF1E3B8F87C93D0BC2DB6DD93934E6ADBDBB",
-    "validationCount": 4,
+    "lastUpdated": "2026-10-11T17:26:31.8126988Z",
     "installerHashes": [
-      "0DD6EC909A6F5B2B66682B22D82ABCE97AB793E30766BF2F642B691E70A4A16B",
-      "DB337B96ACE79E7A8D837B31023159062F87DB35A12F8CB67304C32A09959056"
-    ],
-    "version": "1.31.4",
-    "state": "VALIDATION_PASSED"
+      "9637E21C02B33185FE69268BA05317152A5D8AC7877115E8A70E29B7E199E8DC",
+      "020B64305FFD585CEB4704AFAE1C4B37154D19046D98A3F5DA6DDD4C24A9AF95"
+    ]
   },
   "axodotdev.dist": {
     "installerHashes": [
@@ -1946,15 +1946,15 @@
     "lastUpdated": "2026-10-10T01:55:11.8587798Z"
   },
   "DimonSmart.NugetMcpServer": {
-    "version": "1.1.9",
-    "installerHashes": [
-      "68DA53074404FB3557BBA32A81D843BEA795CD6864BC97CEE65C12FB53EFDDE7"
-    ],
-    "manifestHash": "F8796B46C9E072F95EE347F272BC4D7599F443544E68C143AE2601FFC394E2F3",
-    "state": "VALIDATION_PASSED",
-    "description": "",
+    "version": "1.1.10",
     "validationCount": 1,
-    "lastUpdated": "2026-08-16T17:10:10.733276Z"
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "3BACC8A26F5B7DABA6DE07E7B1361BD1B6E5E2FAC825E56473C60A7179F6E06F",
+    "description": "",
+    "lastUpdated": "2026-10-11T17:26:31.7779548Z",
+    "installerHashes": [
+      "593D17411686EEED7CB7D1B8B232867A96E437E9CF77773587F6E2C4F41A6B24"
+    ]
   },
   "DimonSmart.PdfCropper": {
     "state": "VALIDATION_PASSED",
@@ -2718,15 +2718,15 @@
     "version": "2.20.1"
   },
   "Forkgram.Forkgram": {
-    "version": "7.2.9",
+    "version": "7.3.1",
     "validationCount": 1,
-    "installerHashes": [
-      "3D919DE028750A82A42639E6277A23B39DC3FEB40D49C8D8610ED02058ED889B"
-    ],
-    "manifestHash": "0E905E9EE36BAAED83BDE9350A982AF6D8EC40B28A75E911C372DF44D1AF7080",
     "state": "VALIDATION_PASSED",
+    "manifestHash": "4E473B8DD84A80C2268DBAB081EE5F3446C8334802C3F22AA5922E3F2616A0E9",
     "description": "",
-    "lastUpdated": "2026-09-19T01:38:39.5509565Z"
+    "lastUpdated": "2026-10-11T17:26:31.6880286Z",
+    "installerHashes": [
+      "E5BB1B4E9E7F0C3FA4F4F130C3FDFAF4E6971A92B4C11C79261ACCB19CC8214B"
+    ]
   },
   "FOSSA.FOSSA-cli": {
     "description": "",
@@ -2809,16 +2809,16 @@
     "version": "0.34.8"
   },
   "futrime.lipd": {
-    "manifestHash": "6F92816044CD4048B8FAAE844FA658523B61D2B4608B2FACF95D8AED145C54F2",
-    "installerHashes": [
-      "958571CC5E483ECE7C78D2BEEFF11F13DE1CD0908231EECFD74C2FDD2AA1FBAD",
-      "31158E7A177676BD13335A85EA18698D463A9A86378D264E8742D84F7FC19BC1"
-    ],
+    "version": "0.34.9",
     "validationCount": 1,
-    "version": "0.34.8",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "2ABCB15CEAAF9F02A499F51FA12C6BFC496AA0DDB3DEFBFC4671F1AF8FF568DA",
     "description": "",
-    "lastUpdated": "2026-08-16T12:25:11.6875515Z",
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-10-11T17:26:31.6341002Z",
+    "installerHashes": [
+      "090B69A5F0F9CA03049E7A78D0C486B6D2BDB35002CD8DD77BEBE5C8C6072D3D",
+      "A38F0ECE59648EAC471F29F576181299F84289123FAF054D3E50C5C984A87833"
+    ]
   },
   "GAM-Team.gam.Portable": {
     "state": "VALIDATION_PASSED",
@@ -4836,15 +4836,15 @@
     }
   },
   "marcinz606.NegPy": {
-    "manifestHash": "A1CD5C41BC55C766F0CB65D6C63AB84AEF793782865BAA06BA58BC4543100267",
-    "lastUpdated": "2026-10-08T14:05:34.255823Z",
-    "version": "0.63.0",
-    "validationCount": 4,
+    "version": "0.64.0",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
+    "manifestHash": "83A9DC737948B975458A0E78322C85389CDCC187F165DF147F2B4A165C782B9E",
+    "description": "",
+    "lastUpdated": "2026-10-11T17:26:31.8981005Z",
     "installerHashes": [
-      "1AB263FC3D8ADA27E89DC7257B04A77D116BF0DF898B48BB79B8F132D8DA9E69"
-    ],
-    "description": ""
+      "DE9047B795C8BBD276607E16121EEE575D9EC0B6985470785C8B3C9E08CA3109"
+    ]
   },
   "MarcoHefti.YTVodManager": {
     "manifestHash": "D6B8CC28C195C1925AC443615826FDE9EB33D111F50144DC9CE7DF76A34B98CB",
@@ -5200,16 +5200,16 @@
     ]
   },
   "Microsoft.WSL.PreRelease": {
-    "lastUpdated": "2026-10-07T14:06:08.791722Z",
-    "manifestHash": "ABCFD10F4EAADDAB039180DB8BD95215C63F68BAE569974C65E8BE37246E5A9F",
-    "installerHashes": [
-      "2F4B7017479C54B29185E5A0E03B6598A5817C34E99F8ADD93ACECAEB3AB3570",
-      "47C4578277F1D7FF3BD9CF76A0EFA673707A9A38ED05B4EABD81134CEC4579AC"
-    ],
+    "version": "3.0.3",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "version": "3.0.2",
+    "manifestHash": "9EE7C7DEFAEF7A327446ECA65C9B66C8CE6D38C297C7F6257A0C7EC240583C32",
     "description": "",
-    "validationCount": 1
+    "lastUpdated": "2026-10-11T17:26:31.594069Z",
+    "installerHashes": [
+      "AE977286974255BD26BF925F00F40F5692C6B2084155CBC0563C09AEA091F211",
+      "2937C7CE840BB35EC6E97F052189BDFFF27F8C3463BFDD231DF9A958212787A3"
+    ]
   },
   "mikf.gallery-dl.Nightly": {
     "description": "",
@@ -5817,15 +5817,15 @@
     }
   },
   "NoahSabaj.Mermaid": {
-    "manifestHash": "4DF68ADEE3FEB25571CDEE49025021DE44432A54784945E8618B30D0D5223608",
-    "lastUpdated": "2026-10-10T09:00:45.357198Z",
-    "validationCount": 4,
+    "version": "0.30.0",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
+    "manifestHash": "C6CFFF052D56F18C6EC0A6BA36D716E27DD3857F90F832ADFCAD6529DD0A37EE",
     "description": "",
+    "lastUpdated": "2026-10-11T17:26:31.7131556Z",
     "installerHashes": [
-      "CC88DD6B15E15F81B18E22B9FEFE8D7E2F9494FF58AA561D8737DD7D059E9170"
-    ],
-    "version": "0.29.0"
+      "77422D4766CD66B69D34AAC7EFAF02A3D2ECE5E9DD00D0BA7B1908D78D3DA7F3"
+    ]
   },
   "NoirArchitects.Ncored": {
     "description": "",
@@ -6319,15 +6319,15 @@
     "state": "VALIDATION_PASSED"
   },
   "openwong2kim.wmux": {
-    "state": "VALIDATION_PASSED",
+    "version": "4.3.0",
     "validationCount": 1,
-    "lastUpdated": "2026-10-09T09:14:36.3576637Z",
-    "version": "4.2.0",
-    "manifestHash": "D391E0A216FDBF249AF30EA9D37A80CF68D94492DF55823B4430685C0612938D",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "0C2483F117D1172A3FE9CA6D15675D194472223DBEC97BAB4A31C64AC4EFD9FE",
+    "description": "",
+    "lastUpdated": "2026-10-11T17:26:31.8521557Z",
     "installerHashes": [
-      "03E0A40213680EB36EA51B9B65191D78F9E4DA1AFCE2EB104EF0932A8D530C0D"
-    ],
-    "description": ""
+      "91EDC190E11DC37D3992F33B7D09BCF21099C3F34DB34BD326E2500811103C23"
+    ]
   },
   "openwong2kim.wsnap": {
     "installerHashes": [
@@ -8192,16 +8192,16 @@
     }
   },
   "SuperRadCompany.Microsandbox": {
-    "description": "",
-    "version": "0.7.7",
-    "installerHashes": [
-      "AE526AA2D7BFC230A6E9149D2B7483AC0992462C221A8ADD85D1429A005575E0",
-      "A99DDDC202AAF2ECB971D2D2D747A9DB2CDBE2A65022DFA53FA7CC8DFA7BA388"
-    ],
-    "lastUpdated": "2026-10-08T21:28:05.5604063Z",
+    "version": "0.7.8",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "validationCount": 4,
-    "manifestHash": "D169C2F44F03FDD4C432D89E4E6A2A96911A39AED1D1679380AAE7E761B0EE62"
+    "manifestHash": "E2B22CD2EA03886128F72918342FE8C21D510910802D974C0FE901BA0148B299",
+    "description": "",
+    "lastUpdated": "2026-10-11T17:26:31.6643905Z",
+    "installerHashes": [
+      "606824FD91B8F1C6EC6F14B0FF435A83528177052BF4ECA5A29B4CF703CDEEDF",
+      "6C7368A6676A1462F84A7DA2B4E58AFB5FEAAA6583C82EA86AB417B17D19153F"
+    ]
   },
   "SUSE.RancherDesktop": {
     "description": "",
@@ -9435,14 +9435,14 @@
     "lastUpdated": "2026-09-01T20:51:44.4720608Z"
   },
   "WowUp.Wowup": {
-    "description": "",
-    "state": "VALIDATION_PASSED",
+    "version": "2.24.0",
     "validationCount": 1,
-    "lastUpdated": "2026-09-01T09:14:40.1543594Z",
-    "manifestHash": "9308EBD166407A010951731CC724AED0C5CBAB99DE8895CD8A2A19A5F93D9A23",
-    "version": "2.23.1",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "9590F0990E19488666446F74E8496782CBDB2B72855E23FE722E5FB81F39C3D4",
+    "description": "",
+    "lastUpdated": "2026-10-11T17:26:31.7338829Z",
     "installerHashes": [
-      "245EA9F17B95B41A2668CE557BBBE86E89322EE4D9E35D41EA461DC41C15566B"
+      "41E4EA6DD760AA9EC2EC746DD625074DEEE696CEAD2B1EED58D7DA88FB4FD200"
     ]
   },
   "XaoSProject.XaoS": {
