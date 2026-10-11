@@ -1293,7 +1293,11 @@
     "manifestHash": "B98DD28E3A0C4F2FE5AF41644E722F734F9AD3C98ED9D1B1D6BC59EC04F01C16",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "1.1.6"
+    "version": "1.1.6",
+    "openPr": {
+      "version": "1.1.6",
+      "checkedAt": "2026-10-11T12:34:18.15519Z"
+    }
   },
   "CargoLambda.CargoLambda": {
     "manifestHash": "B8DD0B022742F2371ED57474DE9FEE6CB654CD7DD96A113241259E85D6F5ABF3",
@@ -4015,8 +4019,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.10.7",
-      "checkedAt": "2026-10-11T01:06:42.0671552Z"
+      "version": "2026.10.8",
+      "checkedAt": "2026-10-11T12:32:46.6835087Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -4292,7 +4296,7 @@
     "version": "18.1.1",
     "openPr": {
       "version": "18.1.8",
-      "checkedAt": "2026-10-10T12:31:06.9647486Z"
+      "checkedAt": "2026-10-11T12:32:47.5581519Z"
     }
   },
   "KellyBrazil.jc": {
@@ -5061,7 +5065,11 @@
     "installerHashes": [
       "13FA0341358320E5A2CA4BD50DC5EA4E6AC87240A448AA86D91468CA3C2FBA64"
     ],
-    "manifestHash": "D189FFDB783B04E9B5D8643E9E3ED5382A817C1A56D490985A746B730152C38F"
+    "manifestHash": "D189FFDB783B04E9B5D8643E9E3ED5382A817C1A56D490985A746B730152C38F",
+    "openPr": {
+      "version": "5.2.2",
+      "checkedAt": "2026-10-11T12:32:47.9152414Z"
+    }
   },
   "Microsoft.Azure.GuestProxyAgent.AllowListTool": {
     "version": "1.0.52",
