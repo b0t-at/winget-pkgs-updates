@@ -541,15 +541,15 @@
     "state": "VALIDATION_PASSED"
   },
   "argoproj.argocd": {
-    "installerHashes": [
-      "F5C7E60F30328821DFE66CA74733F924581C8656752A0480A616E56CB1F4F98C"
-    ],
-    "validationCount": 2,
-    "version": "3.5.4",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-12T13:14:44.0066227Z",
     "description": "",
-    "lastUpdated": "2026-10-09T13:11:43.6307712Z",
+    "manifestHash": "B3EF343E13A2D220C2EAAC745029C80EB3B6F7174F92FA189F34CF407ABE3A58",
+    "version": "3.5.5",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "7E8DC64C8CDAF90ED4E173E3D523CB0D169A4C4288CC6017CFDCDD4AA4CAE6A5"
+    "installerHashes": [
+      "4B441AEA390FF8526D69CCAFA4E8B22D8B4701AE6612FBBED9A8095D6A914A2C"
+    ]
   },
   "Arihant25.Chargle": {
     "description": "",
@@ -5222,16 +5222,16 @@
     ]
   },
   "mikf.gallery-dl.Nightly": {
+    "validationCount": 1,
+    "lastUpdated": "2026-10-12T13:14:44.0285721Z",
     "description": "",
-    "manifestHash": "9E68EF8E899296677EC91C895C42D7CAD42007590AE9D4CB7578D450A305C933",
+    "manifestHash": "73AC9F1E29A98D909CE11E216B26B5584BC5FD51FE7F82237F9B4CCE96656CCF",
+    "version": "2026.10.12",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "7040DC696A7D5D3432BEB9538E0F5FB895A460D5505C30C70A868FBFD30E9F19",
-      "21E3A911DBA33B6B08EE795A6E39F93FF78D8723554B710AB9C918DC4ECA1200"
-    ],
-    "lastUpdated": "2026-10-08T21:28:05.4586389Z",
-    "validationCount": 1,
-    "version": "2026.10.08"
+      "1BE069A49F498937B77D99A808AF9D2ECA788649236E17E70B244CFB2349DA1C",
+      "93D96E778621DE8FFEDE9F5355A9724AC1904B1A59687E870981B66CCE013601"
+    ]
   },
   "MilkShift.GoofCord": {
     "state": "VALIDATION_PASSED",
@@ -6731,15 +6731,15 @@
     ]
   },
   "PocketSync.PocketSync": {
-    "version": "7.0.1",
-    "description": "",
-    "lastUpdated": "2026-10-11T04:56:11.1111799Z",
-    "installerHashes": [
-      "423CFE27A32B53F043A0183E744A0309D74E1598FCF642507C520FCC08FE0CED"
-    ],
-    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "manifestHash": "A148ABD5B2D550335C4C5F62245E030C6926F12E7ACCB3F2B600220CF9C3F78B"
+    "lastUpdated": "2026-10-12T13:14:43.9747313Z",
+    "description": "",
+    "manifestHash": "25FB696B26A8706705D8D28F35D55E28CBD3E0866959538C3E513BD26CCD83D5",
+    "version": "7.0.2",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "AEA8FE649408B5030B03F71DC69335A77BBD5174D9BB4884E19C07EE4D532D2C"
+    ]
   },
   "PolyMC.PolyMC": {
     "installerHashes": [
