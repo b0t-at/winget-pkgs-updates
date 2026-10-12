@@ -281,8 +281,8 @@
     "lastUpdated": "2026-08-20T16:48:27.9600489Z",
     "version": "3.1",
     "openPr": {
-      "version": "3.1",
-      "checkedAt": "2026-10-11T01:07:26.2393835Z"
+      "checkedAt": "2026-10-12T01:09:38.4972561Z",
+      "version": "3.1"
     }
   },
   "Alochi.Monitoring": {
@@ -388,8 +388,8 @@
       "6B4E3137AFEF78FD8EBDCA455BCB8EE058692C79EABEDCF15CEA28206B422260"
     ],
     "openPr": {
-      "version": "2.8.6",
-      "checkedAt": "2026-10-11T01:07:27.5559407Z"
+      "checkedAt": "2026-10-12T01:09:40.0218815Z",
+      "version": "2.8.6"
     }
   },
   "Anki.Anki": {
@@ -2080,8 +2080,8 @@
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "version": "0.62.0",
-      "checkedAt": "2026-10-11T01:06:39.566748Z"
+      "checkedAt": "2026-10-12T01:08:51.86576Z",
+      "version": "0.63.0"
     }
   },
   "dragonflylee.switchfin": {
@@ -4827,7 +4827,11 @@
     "manifestHash": "A93F3476AAC542691BD3A7E2F9BF662FE6B9B0AB1D28B1B7028E06D3FC1575BA",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "2.6.2"
+    "version": "2.6.2",
+    "openPr": {
+      "checkedAt": "2026-10-12T01:08:54.8575759Z",
+      "version": "2.6.2"
+    }
   },
   "marcinz606.NegPy": {
     "version": "0.64.0",
@@ -6297,8 +6301,8 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "openPr": {
-      "version": "1.13.1",
-      "checkedAt": "2026-10-11T01:06:43.3913197Z"
+      "checkedAt": "2026-10-12T01:08:55.2912658Z",
+      "version": "1.13.1"
     }
   },
   "OpenWhispr.OpenWhispr": {
@@ -8457,8 +8461,8 @@
     "manifestHash": "101A50462A6E2BE19AFB17A21278EA44597559D970949753840897CFC30A7566",
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
-      "version": "5.7.1",
-      "checkedAt": "2026-10-11T01:07:18.6413721Z"
+      "checkedAt": "2026-10-12T01:08:58.1912583Z",
+      "version": "5.7.1"
     }
   },
   "termio.soft-jp.com.TermioWin": {
