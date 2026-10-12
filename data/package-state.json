@@ -268,7 +268,13 @@
       "6A5A91AD9B056CA507D107BF0110DD4D6EE60CD548C341EEA27025878A026705"
     ],
     "lastUpdated": "2026-08-24T05:01:37.954533Z",
-    "manifestHash": "F6134453913F7B82D68C8604DAA54282A9000BB9E6FB1FB820D0DF1C81D69D02"
+    "manifestHash": "F6134453913F7B82D68C8604DAA54282A9000BB9E6FB1FB820D0DF1C81D69D02",
+    "configHealth": {
+      "status": "RepoMissing",
+      "detail": "The GitHub repository does not exist or is not readable.",
+      "tag": "",
+      "checkedAt": "2026-10-12T05:41:42.3291496Z"
+    }
   },
   "alirezagsm.trayy": {
     "state": "VALIDATION_PASSED",
@@ -1281,7 +1287,13 @@
     "installerHashes": [
       "BCC4A89F36ACC7A2ABA992E377DE764365DB05B7D8E18181983AB96276850705",
       "21787FF78BB14E1217DCCFEF15F2AA238C547F940E05C06D87366F1EA6EF7202"
-    ]
+    ],
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/camunda/camunda-modeler/releases/download/v5.52.0/camunda-modeler-5.52.0-win-ia32.zip",
+      "tag": "v5.52.0",
+      "checkedAt": "2026-10-12T05:41:42.3291496Z"
+    }
   },
   "caomengxuan666.WinuxCmd": {
     "description": "",
@@ -3885,9 +3897,9 @@
   "j178.Prek": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/j178/prek/releases/download/v0.5.4/prek-i686-pc-windows-msvc.zip",
-      "tag": "v0.5.4",
-      "checkedAt": "2026-09-28T05:34:06.1313156Z"
+      "detail": "No release asset matches: https://github.com/j178/prek/releases/download/v0.5.5/prek-i686-pc-windows-msvc.zip",
+      "tag": "v0.5.5",
+      "checkedAt": "2026-10-12T05:41:42.3291496Z"
     }
   },
   "JackTrip.JackTrip": {
@@ -4081,9 +4093,9 @@
   "JGraph.Draw": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/jgraph/drawio-desktop/releases/download/v31.7.0/draw.io-ia32-31.7.0-windows-32bit-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v31.7.0/draw.io-ia32-31.7.0-windows-32bit-no-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v31.7.0/draw.io-31.7.0-windows-no-installer.exe",
-      "tag": "v31.7.0",
-      "checkedAt": "2026-10-05T05:43:26.8532582Z"
+      "detail": "No release asset matches: https://github.com/jgraph/drawio-desktop/releases/download/v32.4.1/draw.io-ia32-32.4.1-windows-32bit-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v32.4.1/draw.io-ia32-32.4.1-windows-32bit-no-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v32.4.1/draw.io-32.4.1-windows-no-installer.exe",
+      "tag": "v32.4.1",
+      "checkedAt": "2026-10-12T05:41:42.3291496Z"
     }
   },
   "JitzuLang.Jitzu": {
@@ -4584,9 +4596,9 @@
   "Litenova.Fuse": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/Litenova-Solutions/Fuse/releases/download/v5.2.4/fuse-5.2.4-setup.exe",
-      "tag": "v5.2.4",
-      "checkedAt": "2026-10-05T05:43:26.8532582Z"
+      "detail": "No release asset matches: https://github.com/Litenova-Solutions/Fuse/releases/download/v5.3.0/fuse-5.3.0-setup.exe",
+      "tag": "v5.3.0",
+      "checkedAt": "2026-10-12T05:41:42.3291496Z"
     }
   },
   "LittleTijn.SpookyView": {
@@ -5436,13 +5448,7 @@
     "version": "7.3.0",
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-08-23T20:39:20.3802427Z",
-    "manifestHash": "51F52455744DD09BD074A27F4E8AA509F1D25FCC931AC6A7D761426C529F3C13",
-    "configHealth": {
-      "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/mozilla/mozregression/releases/download/7.4.0/mozregression-gui-signed.exe",
-      "tag": "7.4.0",
-      "checkedAt": "2026-10-05T05:43:26.8532582Z"
-    }
+    "manifestHash": "51F52455744DD09BD074A27F4E8AA509F1D25FCC931AC6A7D761426C529F3C13"
   },
   "mpc-qt.mpc-qt": {
     "lastUpdated": "2026-08-18T21:24:38.7912751Z",
@@ -6084,13 +6090,7 @@
     "description": "",
     "manifestHash": "D92913821350C2D7E191A39C199033BD314F80DA2447ED659A38F567F17E0EEC",
     "version": "1.0.28",
-    "validationCount": 1,
-    "configHealth": {
-      "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/one-ware/OneWare/releases/download/1.0.32/OneWareStudio-1.0.32-win-x64.msi https://github.com/one-ware/OneWare/releases/download/1.0.32/OneWareStudio-1.0.32-win-arm64.msi",
-      "tag": "1.0.32",
-      "checkedAt": "2026-09-28T05:34:06.1313156Z"
-    }
+    "validationCount": 1
   },
   "OnionShare.OnionShare": {
     "version": "2.6.5",
@@ -6674,7 +6674,13 @@
     "installerHashes": [
       "3E19326A6C540E7BE4CA91DBDB6C6459C45F72B744BE1EC7D3E050AE8D4F0F70",
       "EA13D58643F99646F4AFEF7B0D7DA863B22F6F6B271A12592B1B3EAF927D0A49"
-    ]
+    ],
+    "configHealth": {
+      "status": "RepoMissing",
+      "detail": "The GitHub repository does not exist or is not readable.",
+      "tag": "",
+      "checkedAt": "2026-10-12T05:41:42.3291496Z"
+    }
   },
   "pluveto.Upgit": {
     "state": "VALIDATION_FAILED",
@@ -7524,7 +7530,13 @@
       "BB555D890DD27851CC74710FC60A502D4940E00E34C245906FF5B2E99199E74E",
       "6EFA4A83100B51D98C32FACF4D615D0A479B3B273FD61F50C469BE42C8C5C918"
     ],
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/eythaann/Seelen-UI/releases/download/v2.8.9/Seelen.UI_2.8.9.0_x64.Msix https://github.com/eythaann/Seelen-UI/releases/download/v2.8.9/Seelen.UI_2.8.9.0_arm64.Msix",
+      "tag": "v2.8.9",
+      "checkedAt": "2026-10-12T05:41:42.3291496Z"
+    }
   },
   "seerge.g-helper": {
     "description": "",
@@ -8095,9 +8107,9 @@
   "StirlingTools.StirlingPDF": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v3.0.2/Stirling-PDF-win-installer.exe",
-      "tag": "v3.0.2",
-      "checkedAt": "2026-10-05T05:43:26.8532582Z"
+      "detail": "No release asset matches: https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v3.1.0/Stirling-PDF-win-installer.exe",
+      "tag": "v3.1.0",
+      "checkedAt": "2026-10-12T05:41:42.3291496Z"
     }
   },
   "Storj.Uplink": {
