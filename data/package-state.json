@@ -392,11 +392,7 @@
     "installerHashes": [
       "CF339466CA3763FE89F27F9E325B50058FFB8B97CD93B9AC71FE81D9455EC82C",
       "6B4E3137AFEF78FD8EBDCA455BCB8EE058692C79EABEDCF15CEA28206B422260"
-    ],
-    "openPr": {
-      "checkedAt": "2026-10-12T01:09:40.0218815Z",
-      "version": "2.8.6"
-    }
+    ]
   },
   "Anki.Anki": {
     "description": "",
@@ -3178,7 +3174,11 @@
     "installerHashes": [
       "9964ED64EC9A387391EB4CC006AD5C531154821AEF29B793E02C448DE4686438",
       "3E630381C1F1FD3C9C4D447E6FF2EF6C737083371722773DB8337EEAD0F97962"
-    ]
+    ],
+    "openPr": {
+      "checkedAt": "2026-10-12T12:49:55.010945Z",
+      "version": "2.7.0"
+    }
   },
   "Google.Protobuf": {
     "version": "36.2",
@@ -4031,8 +4031,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.10.8",
-      "checkedAt": "2026-10-11T12:32:46.6835087Z"
+      "checkedAt": "2026-10-12T12:49:55.455167Z",
+      "version": "2026.10.8"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -4307,8 +4307,8 @@
     "validationCount": 1,
     "version": "18.1.1",
     "openPr": {
-      "version": "18.1.8",
-      "checkedAt": "2026-10-11T12:32:47.5581519Z"
+      "checkedAt": "2026-10-12T12:49:56.9001484Z",
+      "version": "18.1.8"
     }
   },
   "KellyBrazil.jc": {
@@ -5077,8 +5077,8 @@
     ],
     "manifestHash": "D189FFDB783B04E9B5D8643E9E3ED5382A817C1A56D490985A746B730152C38F",
     "openPr": {
-      "version": "5.2.2",
-      "checkedAt": "2026-10-11T12:32:47.9152414Z"
+      "checkedAt": "2026-10-12T12:49:57.2769124Z",
+      "version": "5.2.2"
     }
   },
   "Microsoft.Azure.GuestProxyAgent.AllowListTool": {
