@@ -1304,7 +1304,7 @@
     "version": "1.1.6",
     "openPr": {
       "version": "1.1.6",
-      "checkedAt": "2026-10-11T12:34:18.15519Z"
+      "checkedAt": "2026-10-12T16:27:09.2918701Z"
     }
   },
   "CargoLambda.CargoLambda": {
@@ -4076,7 +4076,7 @@
   "jendrikseipp.RedNotebook": {
     "openPr": {
       "version": "2.43",
-      "checkedAt": "2026-10-11T16:24:25.880227Z"
+      "checkedAt": "2026-10-12T16:26:18.9129589Z"
     }
   },
   "JeromeHerrman.VPinCommander": {
@@ -9064,7 +9064,11 @@
     "manifestHash": "9C1A9264D3F4DFA85145B5BD5455B6CCC8EC3BA82BE36C9E6B2940CAAFCB4D0E",
     "state": "VALIDATION_PASSED",
     "validationCount": 2,
-    "version": "1.4.2"
+    "version": "1.4.2",
+    "openPr": {
+      "version": "1.4.2",
+      "checkedAt": "2026-10-12T16:26:57.1331528Z"
+    }
   },
   "venipa.ytmdesktop": {
     "manifestHash": "9C31EFFCEF2AF712A4B32DAA0E72A077F3E71B6104B0ECAF75DACCF760718B20",
