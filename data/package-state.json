@@ -1327,15 +1327,15 @@
     }
   },
   "CarthageSoftware.Mago": {
-    "description": "",
-    "manifestHash": "228148313C0C80A2B5833D4431BDFF823C55899F387BBD62AC872D9E35CCBA9D",
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "643649190F7AEA27997245923EA4E7E2F298AB974BD593FCDCA2C0278273FF6D"
-    ],
-    "lastUpdated": "2026-10-08T21:28:05.3028108Z",
+    "lastUpdated": "2026-10-12T09:23:24.2183836Z",
+    "description": "",
+    "version": "1.56.3",
     "validationCount": 1,
-    "version": "1.54.0"
+    "manifestHash": "A7C6D82EA1F3A143BC7A08FBAE1AAA8C5DFABBFE90C4D3F628CAE5E19683AFE1",
+    "installerHashes": [
+      "684EF952DA6723EDFC646FECE1D46898219BE81DD5812231F56EA276F5E8AAD5"
+    ]
   },
   "Carvel.ytt": {
     "openPr": {
@@ -1378,14 +1378,14 @@
     }
   },
   "Celerp.Celerp": {
-    "version": "2.5.4",
-    "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-11T20:57:14.6108182Z",
+    "lastUpdated": "2026-10-12T09:23:24.2471254Z",
+    "description": "",
+    "version": "2.5.5",
     "validationCount": 1,
-    "manifestHash": "D96752820EB83B6D808ADCFB18CCA9504EBA708C44AF4C287833EEA49E535EB7",
+    "manifestHash": "28F461CF216D5D6D9D0EB44F33F849CC8D8ABE40E75987425E860D2CED47AFE5",
     "installerHashes": [
-      "70C5170B3FDE0E5F12E45E06DDD774C490C285A4B1ED6BB266073CBDEC8FC356"
+      "18BD02AF07BDC445F422EB51EF6F2F7C7C761BFD19BE7CC5323C780121C36454"
     ]
   },
   "CerberAuth.jwtop": {
@@ -2611,15 +2611,15 @@
     "description": ""
   },
   "Filamental.Filamental": {
-    "description": "",
-    "version": "0.4.0",
-    "installerHashes": [
-      "5EB28E289AD861343E7AF5CB8179D755006C763FB3709CD973A34E78E52E0CB8"
-    ],
-    "lastUpdated": "2026-10-08T14:05:34.4778048Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 3,
-    "manifestHash": "1718067DE1496B04BC557C32350EDFD9B781635C294178670E09E1C902C455E4"
+    "lastUpdated": "2026-10-12T09:23:24.2989959Z",
+    "description": "",
+    "version": "0.5.0",
+    "validationCount": 1,
+    "manifestHash": "8F305CBC2A707D666D64319329406AD5447149C191D2A78F396CD945786D4E38",
+    "installerHashes": [
+      "3177C7EDEF964E71258701793C154E8662FA751E7B4FAE9CD37DF448A0B47C4A"
+    ]
   },
   "FirenzeLor.gemini-collector": {
     "validationCount": 1,
@@ -3169,16 +3169,16 @@
     ]
   },
   "Google.OSVScanner": {
-    "version": "2.6.0",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "8763CD6C0B95A6EAE98980EEEC5AC7C54DF1521CDD86DA8B908A290B7EC4A2E3",
-    "lastUpdated": "2026-09-19T16:48:28.6946025Z",
+    "lastUpdated": "2026-10-12T09:23:24.2590181Z",
+    "description": "",
+    "version": "2.7.0",
+    "validationCount": 1,
+    "manifestHash": "83E55BE47FC6C08B60301C3B47131BBFA273CC5A7AA8850246B3D31E37D6B7E0",
     "installerHashes": [
-      "E0ED7644118B717B028C249EE9D3515024E55E8510747CA08906EB96765354D6",
-      "CA1379DA0E408279EF2C85CDE0846A903495738A91C7B065A208048437C1686C"
-    ],
-    "validationCount": 2,
-    "description": ""
+      "9964ED64EC9A387391EB4CC006AD5C531154821AEF29B793E02C448DE4686438",
+      "3E630381C1F1FD3C9C4D447E6FF2EF6C737083371722773DB8337EEAD0F97962"
+    ]
   },
   "Google.Protobuf": {
     "version": "36.2",
@@ -4099,15 +4099,15 @@
     }
   },
   "JitzuLang.Jitzu": {
-    "description": "",
-    "version": "0.1.49",
-    "validationCount": 1,
-    "installerHashes": [
-      "C2DAC771F46D0E784FDE75C66A330FDF4DF688919B58312345B9E6A98D631106"
-    ],
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-09T17:09:08.4181648Z",
-    "manifestHash": "8DCC74F68B395F026E47656E52354CFE618D3AC57ED82DD22FCE82459881404F"
+    "lastUpdated": "2026-10-12T09:23:24.2734318Z",
+    "description": "",
+    "version": "0.1.50",
+    "validationCount": 1,
+    "manifestHash": "197392D8133BBEE4CABB816DA1CAF269E55042C6CE8A6A48B6D0015BC3C5C5E3",
+    "installerHashes": [
+      "A0263C97E2C076D0802922A0EEB32D4BA7F318E480BDC0E806929F5F09DB627E"
+    ]
   },
   "jj-vcs.jj": {
     "validationCount": 3,
@@ -6584,16 +6584,16 @@
     }
   },
   "pdfcpu.pdfcpu": {
-    "version": "0.16.1",
-    "installerHashes": [
-      "1BF915324E5E31B61A5C19814AFEAB90B6DE923EA102FE55EE79E26D86302133",
-      "BC796772A32B7CD8B532B18DA268E65F67344A3DABF466C5C940B73D81F3E815"
-    ],
-    "manifestHash": "90A4481193729A1EBB0FC86D40D34A8E8DD5E2A61CFBA712831D8D91FCBB8AD5",
-    "validationCount": 6,
-    "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-08T17:31:05.9916519Z"
+    "lastUpdated": "2026-10-12T09:23:24.2855637Z",
+    "description": "",
+    "version": "0.16.2",
+    "validationCount": 1,
+    "manifestHash": "C7553A01D27540CE32F9BD1FBDFCF97707D03A97F9D512A63F706EBB78212A43",
+    "installerHashes": [
+      "C12AFFEC1C1312B9E95DF308F9A7AC020BF1ABB37FC870803D6B01984EFCF66F",
+      "941EF71EA3B8B5385734627A8D60C199486042B66A4A675BD0074695AE11C26D"
+    ]
   },
   "Pencil.Desktop": {
     "manifestHash": "C4EE87B0CC9764C0F5737AC23FED643FDCF66A0CF3152C79A8770CA186C6674E",
