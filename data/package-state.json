@@ -1449,7 +1449,11 @@
     "version": "0.9.4",
     "lastUpdated": "2026-09-15T12:55:05.2326951Z",
     "validationCount": 1,
-    "manifestHash": "6D84AD88903A6B5FCE47079694838A9F681E580CC15B566A63F33E3659CDBBC8"
+    "manifestHash": "6D84AD88903A6B5FCE47079694838A9F681E580CC15B566A63F33E3659CDBBC8",
+    "openPr": {
+      "checkedAt": "2026-10-12T04:36:38.0269772Z",
+      "version": "1.0.0"
+    }
   },
   "chuthree.BrewGuide": {
     "lastUpdated": "2026-08-19T17:46:49.9495234Z",
@@ -3162,11 +3166,7 @@
       "CA1379DA0E408279EF2C85CDE0846A903495738A91C7B065A208048437C1686C"
     ],
     "validationCount": 2,
-    "description": "",
-    "openPr": {
-      "checkedAt": "2026-09-30T16:28:38.9656538Z",
-      "version": "2.6.0"
-    }
+    "description": ""
   },
   "Google.Protobuf": {
     "version": "36.2",
@@ -4109,8 +4109,8 @@
     "lastUpdated": "2026-08-06T14:10:17.3921348Z",
     "manifestHash": "1E843D90602194E32EF0F84E333BE9BC20D09621BCA43AA304BDA7952A621BAB",
     "openPr": {
-      "version": "0.46.0",
-      "checkedAt": "2026-10-11T04:28:38.6673598Z"
+      "checkedAt": "2026-10-12T04:34:46.2711942Z",
+      "version": "0.46.0"
     }
   },
   "jmrplens.gitlab-mcp-server": {
@@ -6806,8 +6806,8 @@
       "ED3F9A5F55764C1FEC5086F70310209C860519F74F12F57E55574C8E46B58D34"
     ],
     "openPr": {
-      "version": "0.31.9",
-      "checkedAt": "2026-10-11T04:28:41.1487714Z"
+      "checkedAt": "2026-10-12T04:34:49.3175781Z",
+      "version": "0.31.9"
     }
   },
   "prsyahmi.WicHeic": {
