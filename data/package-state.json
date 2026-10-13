@@ -287,7 +287,7 @@
     "lastUpdated": "2026-08-20T16:48:27.9600489Z",
     "version": "3.1",
     "openPr": {
-      "checkedAt": "2026-10-12T01:09:38.4972561Z",
+      "checkedAt": "2026-10-13T04:33:10.4809253Z",
       "version": "3.1"
     }
   },
@@ -2236,8 +2236,8 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "3EAB1E5A6E607AC40A8D48C149D5E5B2207604A2D465245704CB6FD111942437",
     "openPr": {
-      "version": "5.5.56",
-      "checkedAt": "2026-10-01T01:09:16.4537248Z"
+      "checkedAt": "2026-10-13T04:32:19.2594734Z",
+      "version": "5.6.0"
     }
   },
   "elfpie.TizenAppInstaller": {
@@ -6301,7 +6301,7 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "openPr": {
-      "checkedAt": "2026-10-12T01:08:55.2912658Z",
+      "checkedAt": "2026-10-13T04:32:23.1401824Z",
       "version": "1.13.1"
     }
   },
@@ -8473,7 +8473,7 @@
     "manifestHash": "101A50462A6E2BE19AFB17A21278EA44597559D970949753840897CFC30A7566",
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
-      "checkedAt": "2026-10-12T01:08:58.1912583Z",
+      "checkedAt": "2026-10-13T04:32:25.671708Z",
       "version": "5.7.1"
     }
   },
