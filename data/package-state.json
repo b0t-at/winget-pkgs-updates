@@ -1459,8 +1459,8 @@
     "validationCount": 1,
     "manifestHash": "6D84AD88903A6B5FCE47079694838A9F681E580CC15B566A63F33E3659CDBBC8",
     "openPr": {
-      "checkedAt": "2026-10-12T04:36:38.0269772Z",
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "checkedAt": "2026-10-13T08:37:57.6113887Z"
     }
   },
   "chuthree.BrewGuide": {
@@ -2671,7 +2671,11 @@
       "10FECAB45AB7408021F1A10C0ED089D8B85179D5F726738385314004458B438E",
       "7BBCD8C1D6848678CDB53E34EE186EB8D4329DB8FACF99A8D4399F0DB46E40A5"
     ],
-    "description": ""
+    "description": "",
+    "openPr": {
+      "version": "3.2.0",
+      "checkedAt": "2026-10-13T08:36:25.9588902Z"
+    }
   },
   "Fly-io.flyctl": {
     "installerHashes": [
@@ -4121,8 +4125,8 @@
     "lastUpdated": "2026-08-06T14:10:17.3921348Z",
     "manifestHash": "1E843D90602194E32EF0F84E333BE9BC20D09621BCA43AA304BDA7952A621BAB",
     "openPr": {
-      "checkedAt": "2026-10-12T04:34:46.2711942Z",
-      "version": "0.46.0"
+      "version": "0.46.0",
+      "checkedAt": "2026-10-13T08:36:27.1542659Z"
     }
   },
   "jmrplens.gitlab-mcp-server": {
@@ -6812,8 +6816,8 @@
       "ED3F9A5F55764C1FEC5086F70310209C860519F74F12F57E55574C8E46B58D34"
     ],
     "openPr": {
-      "checkedAt": "2026-10-12T04:34:49.3175781Z",
-      "version": "0.31.9"
+      "version": "0.31.9",
+      "checkedAt": "2026-10-13T08:36:29.6814937Z"
     }
   },
   "prsyahmi.WicHeic": {
