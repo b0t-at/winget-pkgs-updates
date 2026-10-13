@@ -3371,16 +3371,16 @@
     "description": ""
   },
   "Hanthor.BluefinCLI": {
-    "version": "0.11.8",
-    "description": "",
-    "lastUpdated": "2026-10-11T04:56:11.0769112Z",
-    "installerHashes": [
-      "33751CDCE120C0E3EB52850BBA5864EC181791C85FB0D6E0852CACDCF5BABF2C",
-      "5143AC0FB8D44E37E0BA4B300C2E30ADBE1C18588A05D0C03AD5D05C26516A84"
-    ],
-    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "manifestHash": "2576BD65B45DFAFF21A897CCCB298168BD4795F971D238C6F5D7783C2F48AFF3"
+    "installerHashes": [
+      "A4F10BF5E11796B799E0EB0A008BD42D28F73AEB6395E14DCB9714317FBE7F72",
+      "C28CF003FD7DF613C7949415E588982D24752EFC95B781A5D473EE5318FA6F2E"
+    ],
+    "version": "0.11.9",
+    "manifestHash": "040E3EAA27B5EFE1D077990032F2E7F7091BBB63606C45EF7DB0E7305FBA0D70",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-13T09:01:13.3154772Z",
+    "description": ""
   },
   "Happ.Happ": {
     "description": "",
@@ -3828,14 +3828,14 @@
   },
   "instaloader.instaloader": {
     "validationCount": 1,
-    "version": "4.15.3",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "C66746C42F584AEED18592643D465C19EE43FBF5BBC0E035A55929BEFDE4322B",
-    "description": "",
     "installerHashes": [
-      "F91EE705F04C2C679B43E7E2EA90ED279AF2CEF83A84EF733CBD958564C06FB4"
+      "4ECD864154FD32941E8838FD9147EC6C4AA0531C6D4E6013ECED64609E7987FA"
     ],
-    "lastUpdated": "2026-08-17T21:15:38.3094778Z"
+    "version": "4.15.4",
+    "manifestHash": "E5503A78F09CB1DB78C549F95BBBAA5F88263FA06BB79FB975105BEC8E58474F",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-13T09:01:13.3439923Z",
+    "description": ""
   },
   "Internxt.Drive": {
     "lastUpdated": "2026-10-12T01:58:15.6635652Z",
@@ -5353,15 +5353,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Moku.Moku": {
+    "validationCount": 1,
     "installerHashes": [
-      "050F7E722786A4736F7DE46AEB1ECE9E5FDDE1C4CDDE10E3CE0DB57F11C26760"
+      "C9554A297231F4DD258E20382F4F13C5000E7C80BF56D119784DADE38D066AA9"
     ],
-    "validationCount": 2,
+    "version": "0.14.0",
+    "manifestHash": "EAEDE8F7DE859ACD3EB0BF7F76653A4CFDD1E6A0676EA9CFC4FDEDADEFA2BD95",
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "version": "0.12.0",
-    "manifestHash": "105BD202311747055AF60C0300605E05C00B818C66414B80951362786AF70BE7",
-    "lastUpdated": "2026-09-15T04:56:52.9966593Z"
+    "lastUpdated": "2026-10-13T09:01:13.245386Z",
+    "description": ""
   },
   "moneymanagerex.moneymanagerex": {
     "installerHashes": [
@@ -5479,16 +5479,16 @@
     "lastUpdated": "2026-10-12T16:45:50.1720387Z"
   },
   "MrKaran.Doggo": {
-    "version": "1.4.0",
-    "lastUpdated": "2026-09-02T08:57:48.0978911Z",
-    "manifestHash": "C65D726F7C650FB947AC1A0E3EF9B2CF6541BBBBED8A1DBC41F6065FEDCE6CB5",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "description": "",
     "installerHashes": [
-      "ACD23AF014BB375FA6BFCC93B6FD0B8CCBBAB0EE63C16E86330863CEE00255CC",
-      "24FF6FE2BE4BAFF39574CCC50C50C467A344804998D1773B9B76B838A26ACD67"
-    ]
+      "F008222D02A67720882BBC60F7DAE1555B4ACFCCBF30B0E65A891B86F05705AF",
+      "93472211F07EF69E1A57349F29D9EBC988DED191B1F1DF191A2D23E081D8C2AC"
+    ],
+    "version": "1.4.1",
+    "manifestHash": "BA8A945D13E2505E8FF84644F0FBCA11F5EDCF029B3A6D21AF695C956391FB82",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-13T09:01:13.2874667Z",
+    "description": ""
   },
   "MrMYHuang.cbetar2": {
     "validationCount": 1,
