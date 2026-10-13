@@ -392,7 +392,11 @@
     "installerHashes": [
       "453FD6D4FA13D9EBA7BAC05B8B5EECA80FC81D7904304DA912D215A87EC4C047",
       "1A68F912BCE906AC774B684C523A18038C37128ADC8119E7B5456F6E1A3E4BD9"
-    ]
+    ],
+    "openPr": {
+      "version": "3.0.1",
+      "checkedAt": "2026-10-13T16:28:13.7071613Z"
+    }
   },
   "Anki.Anki": {
     "description": "",
@@ -3176,8 +3180,8 @@
       "3E630381C1F1FD3C9C4D447E6FF2EF6C737083371722773DB8337EEAD0F97962"
     ],
     "openPr": {
-      "checkedAt": "2026-10-12T12:49:55.010945Z",
-      "version": "2.7.0"
+      "version": "2.7.0",
+      "checkedAt": "2026-10-13T16:27:35.996852Z"
     }
   },
   "Google.Protobuf": {
@@ -4031,8 +4035,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-10-12T12:49:55.455167Z",
-      "version": "2026.10.8"
+      "version": "2026.10.9",
+      "checkedAt": "2026-10-13T16:27:36.5539909Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -4076,7 +4080,7 @@
   "jendrikseipp.RedNotebook": {
     "openPr": {
       "version": "2.43",
-      "checkedAt": "2026-10-12T16:26:18.9129589Z"
+      "checkedAt": "2026-10-13T16:27:37.0380405Z"
     }
   },
   "JeromeHerrman.VPinCommander": {
@@ -4311,8 +4315,8 @@
     "validationCount": 1,
     "version": "18.1.1",
     "openPr": {
-      "checkedAt": "2026-10-12T12:49:56.9001484Z",
-      "version": "18.1.8"
+      "version": "18.1.8",
+      "checkedAt": "2026-10-13T16:27:38.3365329Z"
     }
   },
   "KellyBrazil.jc": {
@@ -5081,8 +5085,8 @@
     ],
     "manifestHash": "D189FFDB783B04E9B5D8643E9E3ED5382A817C1A56D490985A746B730152C38F",
     "openPr": {
-      "checkedAt": "2026-10-12T12:49:57.2769124Z",
-      "version": "5.2.2"
+      "version": "5.2.2",
+      "checkedAt": "2026-10-13T16:27:38.8585174Z"
     }
   },
   "Microsoft.Azure.GuestProxyAgent.AllowListTool": {
