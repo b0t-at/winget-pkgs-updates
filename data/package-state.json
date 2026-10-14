@@ -491,15 +491,15 @@
     }
   },
   "AquaSecurity.Trivy": {
-    "installerHashes": [
-      "4E43BD71A30F51AEE39525F60F2B47043AF77EB8DF8FE082AAE4372B69C6660F"
-    ],
-    "manifestHash": "C209527F8280BD37E625ED674C8479E6CFAF67789234FFF8F198C84A9F9DAB9D",
-    "validationCount": 1,
+    "description": "",
     "state": "VALIDATION_PASSED",
-    "version": "0.75.0",
-    "lastUpdated": "2026-10-01T20:58:58.1662538Z",
-    "description": ""
+    "validationCount": 1,
+    "lastUpdated": "2026-10-14T17:07:14.0700407Z",
+    "version": "0.76.0",
+    "installerHashes": [
+      "7B4762A5A5326CB4B83DFD2BB5D9AAF15A1ED867C75CAD7DD8B38840A28E7BE6"
+    ],
+    "manifestHash": "DE420B359F3236BEA5A8F54A4C7DEF57EDD2E2D06A1AB8C3D25E04C531EF5634"
   },
   "ArcBox.LinkCode": {
     "description": "",
@@ -1218,15 +1218,15 @@
     }
   },
   "BytecodeAlliance.Wasmtime.Portable": {
-    "installerHashes": [
-      "C95A3925ACDE6398808BAABE5AD13D0B1DF02B004BC256C00CF8E2A36DACCEA8"
-    ],
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "B68FD4A1E12A546BD9F75D224047D57B4C73C65C4FAC6ABB4866E95E90A6DEC3",
-    "lastUpdated": "2026-10-02T20:53:11.0034793Z",
     "description": "",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "49.0.2"
+    "lastUpdated": "2026-10-14T17:07:14.1528652Z",
+    "version": "36.0.18",
+    "installerHashes": [
+      "9DF82F5A7D6F52B6C1EB00B920B2DD3DDD255EEE0D744F75002F4FAD4C71E967"
+    ],
+    "manifestHash": "60D209E8383E9497C094D591060543C283CB959EC572726BD5D3144E1B823CED"
   },
   "ByteNess.AWSVault": {
     "state": "VALIDATION_PASSED",
@@ -1875,15 +1875,15 @@
     }
   },
   "Decred.Decrediton": {
-    "installerHashes": [
-      "9D29AC8AB020AEF7AF9F538658D55038AF58FDBCFB43817933408FCB878E7709"
-    ],
+    "description": "",
     "state": "VALIDATION_PASSED",
-    "version": "2.1.6",
-    "lastUpdated": "2026-08-21T09:07:38.2587139Z",
     "validationCount": 1,
-    "manifestHash": "9DB0493CAB82C2873E8921A2CDFC5FD6383E93814C149C42F9821704A93336BB",
-    "description": ""
+    "lastUpdated": "2026-10-14T17:07:14.3521915Z",
+    "version": "2.1.7",
+    "installerHashes": [
+      "FD67AFC9F29E18D50AEEA5E92B1E7C55835D88BC1AB6D12E41D2F7EBF6887BFC"
+    ],
+    "manifestHash": "6A308AC22DC39EA67A918044C7524D7B224425455AFF26406723A87DA8CCCFF1"
   },
   "DeliveryStation.ds": {
     "validationCount": 1,
@@ -2136,15 +2136,15 @@
     }
   },
   "Echonuit.VigieChiroCompanion": {
-    "installerHashes": [
-      "EDF529A621C602C2ABEEBB618F36FB3F81D6A69E6183AFC641682E81CBD3FFED"
-    ],
-    "version": "2.198.0",
-    "validationCount": 2,
-    "lastUpdated": "2026-10-08T14:05:34.5336892Z",
     "description": "",
-    "manifestHash": "E13DDC5E871CA32A48895854D001D24FA7AF57BE3DB74A1417420CEDE5B73CA6",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-14T17:07:14.3228845Z",
+    "version": "2.199.1",
+    "installerHashes": [
+      "23AA6F7F4E3CB307A053D2C1E1D2055526D04E696E46E03DD3E75EB732465117"
+    ],
+    "manifestHash": "53416F24C3EDC3E8B7D9D03D867BC7DC32ACFDDEB2E0144D8F180791565C19D5"
   },
   "edde746.Plezy": {
     "lastUpdated": "2026-10-12T01:58:15.6027957Z",
@@ -6272,15 +6272,15 @@
     "lastUpdated": "2026-09-25T16:53:52.6738769Z"
   },
   "OpenStenoProject.Plover": {
-    "lastUpdated": "2026-09-28T09:02:17.4590218Z",
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "F45F3D6CF3F3BFB83DEB4ECFE11735E8F4B1248E15BA9FD3CC91A7BD4E52E7E9",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-14T17:07:14.2099901Z",
+    "version": "5.4.2",
     "installerHashes": [
-      "C0C19839CE2FAE96EE9903CE901A556A74436A46951144D9961ED918A04CD266"
+      "D6524BE52468288CC6BFA51DC62049A244E1D271EBB69F892E13621309B86F75"
     ],
-    "version": "5.4.1",
-    "validationCount": 1
+    "manifestHash": "74D0D4B2494780FE736A25A57D8F65A74038AEBB4916107E80C1B6558F702485"
   },
   "OpenTelemetry.Weaver": {
     "manifestHash": "7EBEAA075132FAF8652444A7A4E79B5545323C8D3C53B2C2EE2399B538BA6D0B",
@@ -6321,15 +6321,15 @@
     "state": "VALIDATION_PASSED"
   },
   "openwong2kim.wmux": {
-    "manifestHash": "61C0FD82878E13CF05E5506C29FFDF826190B110E28F15969A400A30E645D44B",
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "version": "4.3.1",
-    "installerHashes": [
-      "1D977603D5C8788B083324682528ECF9907F300FE9EEEFB690ADB7E3BFA80CC0"
-    ],
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "lastUpdated": "2026-10-14T04:42:10.7067769Z"
+    "lastUpdated": "2026-10-14T17:07:14.1871505Z",
+    "version": "4.4.0",
+    "installerHashes": [
+      "AFBEE8940755FE4AAC726C3B75942D1A4A91F3FFEBA730848F381058B2042978"
+    ],
+    "manifestHash": "4073E4F8BA52B931A34846EF9AF33AD26F1CA8BB80C30A3415491A1DBEEEC765"
   },
   "openwong2kim.wsnap": {
     "installerHashes": [
@@ -7849,15 +7849,15 @@
     "manifestHash": "3DA345E8DF51ACA66C4D2669555AF7026448CEDCC448A90C53BE39DE701E36EC"
   },
   "Snyk.Snyk": {
-    "version": "1.1308.0",
-    "lastUpdated": "2026-10-10T04:50:19.4103911Z",
-    "manifestHash": "595C81B4E9E95DE1E2FD009E3815D8D958C7D5EDCBA7FD7C77309F5D143245B0",
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "25604B23BE3B07E629FF5D6DC100FF3A315E2D992852420939C09970CD0095F8"
-    ],
     "description": "",
-    "validationCount": 1
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-14T17:07:14.3001849Z",
+    "version": "1.1308.1",
+    "installerHashes": [
+      "17279C121EFBF34681DB15082346D9C8D0DD5E6E140686036356C1E74D711DFD"
+    ],
+    "manifestHash": "7E3159055DC947969623748CC86E5E982067DF47F0B744B2817AC2910ED475EA"
   },
   "soldforaloss.DevHUD": {
     "description": "",
@@ -7938,15 +7938,15 @@
     "state": "VALIDATION_PASSED"
   },
   "SpectrumQT.XXMILauncher": {
+    "description": "",
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "05774132C9E3D1453C4C39E38BA5C41D2C659DD966888C7EDB7B04BE52EA7996"
-    ],
-    "lastUpdated": "2026-10-10T09:00:45.3809566Z",
-    "manifestHash": "13E9BC63E21187523163443D2361B3D715BE4107EDFAF0FF4C7917B2D2513193",
     "validationCount": 1,
-    "version": "2.4.6",
-    "description": ""
+    "lastUpdated": "2026-10-14T17:07:14.2716187Z",
+    "version": "2.4.7",
+    "installerHashes": [
+      "83759D018DD63E1FDBF218BDDF30F3C3B572C33EE4C91B181D2CC47846BC332F"
+    ],
+    "manifestHash": "1E891249B4C179B29FF42734996897C8B185EE911F5FACAECA066707D4618E0F"
   },
   "SpikeHD.Dorion": {
     "validationCount": 1,
@@ -9023,16 +9023,16 @@
     "validationCount": 3
   },
   "Vathivis.paperq": {
-    "lastUpdated": "2026-10-09T05:25:50.6831459Z",
-    "manifestHash": "5C96F319BB6252605B1CD9ACDC6BE3ADA7412D0B40A5E84AC2A76963A2D3E2F6",
-    "validationCount": 5,
-    "installerHashes": [
-      "6F58FAE64670D127204EE852462C35D4917B1BE1D5220617F48972AC9090D920",
-      "BDDC46806F1D566447229B343474E34C4330A22A6A418A8D22A390F39CE3433C"
-    ],
     "description": "",
-    "version": "1.0.2",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-14T17:07:14.249076Z",
+    "version": "1.1.1",
+    "installerHashes": [
+      "55C6C40CF649031BEB3A2B2C3F3BC082E8CDCC4B3577F5DD94A0253394E19845",
+      "E6DEC7E1DA3AB315130FED1D029C079A2310DD9E1D243D24004D668F609240C4"
+    ],
+    "manifestHash": "E571B1182299658AAF384ACBF76BDCE2AA186C0E1F57E166EA92C948980ADF50"
   },
   "vcmi.vcmi": {
     "validationCount": 4,
