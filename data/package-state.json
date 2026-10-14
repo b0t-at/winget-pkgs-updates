@@ -4658,15 +4658,15 @@
     }
   },
   "Longbridge.LongbridgeTerminal": {
-    "description": "",
-    "validationCount": 1,
-    "manifestHash": "F3122E7144E4AAADEE75F6014DB212D08411F1CBEF56DB6CC9FE9CBC5D749F0C",
+    "manifestHash": "48100AE830DE1099822AB9C15865DD3386ED9A7552CB0A3C5C00F1BE64D4352D",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-08T14:05:34.4505692Z",
-    "version": "0.29.0",
+    "description": "",
+    "version": "0.30.0",
     "installerHashes": [
-      "F6C14F247330574ACD3D931519A5FFF058C05CE90844C74167CCB3DF4F510F90"
-    ]
+      "7F07AAA62C930173707114E0C1EF2750508B1954DE3401E80483C99AFB5684E5"
+    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-10-14T04:42:10.6588333Z"
   },
   "LookupFoundation.RevitLookup.2021": {
     "manifestHash": "128610B2BC6F960BB40A16C24D3F7CF0F8C87E1B9B978E39601108907C2FEBC3",
@@ -6321,15 +6321,15 @@
     "state": "VALIDATION_PASSED"
   },
   "openwong2kim.wmux": {
-    "version": "4.3.0",
-    "validationCount": 1,
+    "manifestHash": "61C0FD82878E13CF05E5506C29FFDF826190B110E28F15969A400A30E645D44B",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "0C2483F117D1172A3FE9CA6D15675D194472223DBEC97BAB4A31C64AC4EFD9FE",
     "description": "",
-    "lastUpdated": "2026-10-11T17:26:31.8521557Z",
+    "version": "4.3.1",
     "installerHashes": [
-      "91EDC190E11DC37D3992F33B7D09BCF21099C3F34DB34BD326E2500811103C23"
-    ]
+      "1D977603D5C8788B083324682528ECF9907F300FE9EEEFB690ADB7E3BFA80CC0"
+    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-10-14T04:42:10.7067769Z"
   },
   "openwong2kim.wsnap": {
     "installerHashes": [
