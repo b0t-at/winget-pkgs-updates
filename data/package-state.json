@@ -392,11 +392,7 @@
     "installerHashes": [
       "453FD6D4FA13D9EBA7BAC05B8B5EECA80FC81D7904304DA912D215A87EC4C047",
       "1A68F912BCE906AC774B684C523A18038C37128ADC8119E7B5456F6E1A3E4BD9"
-    ],
-    "openPr": {
-      "version": "3.0.1",
-      "checkedAt": "2026-10-13T16:28:13.7071613Z"
-    }
+    ]
   },
   "Anki.Anki": {
     "description": "",
