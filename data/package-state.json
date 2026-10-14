@@ -1924,16 +1924,16 @@
     "description": ""
   },
   "Devolutions.Jetsocat": {
-    "description": "",
+    "version": "2026.3.2",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
+    "description": "",
     "installerHashes": [
-      "75569C6D469B237C914BCD79C226FBDC53D484626137CB06BBD8E2756945474B",
-      "B7AC70E6DB20AFD4B46A9EEF5448587C23044866B961E181D18A6E39A825CC5A"
+      "FE9DF5ECA4C53BEC7823F1100D157CC10A9B0F30A3CE3A04CE4D762C2084B6CD",
+      "EF76337F76A893CC9FE4941DF2AE9C9292ADABAB40A518975674E412F5104A3A"
     ],
-    "lastUpdated": "2026-09-17T09:19:19.6587703Z",
-    "manifestHash": "6A3640C4F8FA93A339CB45F0C691ACE85BD91113F97F150FF9B684AE4CE6D9DF",
-    "version": "2026.3.0",
-    "validationCount": 1
+    "manifestHash": "B6AF69C63E11119EC94DB9E564F04DEFA83BD4FFFED7556D8371488DD4949B44",
+    "lastUpdated": "2026-10-14T01:15:28.4872438Z"
   },
   "Digimezzo.Dopamine.3": {
     "version": "3.0.11",
@@ -8598,15 +8598,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "version": "2.58.13",
-    "installerHashes": [
-      "317575A25ED39E2F9380187D1790514C2669699A3903CA18DFFD4B852C2493BE"
-    ],
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "02536D47AEF4996D62DD7A85F50C32A20DA20A67E77CA1C5D72F62BFAC09CBD8",
+    "version": "2.58.15",
     "validationCount": 1,
-    "lastUpdated": "2026-10-13T17:11:40.9803886Z",
-    "description": ""
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "installerHashes": [
+      "61D38534AF64A5CE5F78D2C7608B4ADCBA8CB07C24A821E06BDD332AA7F1E3BB"
+    ],
+    "manifestHash": "D7A1C480BF1787A29EDC9D64C24EF71BCB83F1B93D9EAB2259FD6684ACEE3FC5",
+    "lastUpdated": "2026-10-14T01:15:28.513606Z"
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
@@ -9446,15 +9446,15 @@
     "lastUpdated": "2026-09-30T05:00:00.7551296Z"
   },
   "WowUp.CF": {
+    "version": "2.24.0",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
     "description": "",
     "installerHashes": [
-      "B617FB8B16A631A1593A5258FA0E71DD4BD4FD4E515F52A25643A28261A881D3"
+      "AC753BAC2541B8B8BA0E1828F8844203FCBB87D2AF1DC690ACEF9F6384382403"
     ],
-    "validationCount": 1,
-    "manifestHash": "5F625AEF4909CBED3A9BD0FA2D98438C94A968C95C73E77D9A9A807940DA2961",
-    "version": "2.23.1",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-01T20:51:44.4720608Z"
+    "manifestHash": "D84BD7F51FBEC4493B67B859B53F92FAD2D55143E40A446B5912379965A2FC15",
+    "lastUpdated": "2026-10-14T01:15:28.5309444Z"
   },
   "WowUp.Wowup": {
     "version": "2.24.0",
