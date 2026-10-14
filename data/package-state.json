@@ -3074,15 +3074,15 @@
     "manifestHash": "C8CEE8DC31A9FF0FAAE0E1ED9E1B5FFBEE4A8F6AF13D3261DB74FE15226EAA43"
   },
   "Gleam.Gleam": {
-    "description": "",
-    "lastUpdated": "2026-10-09T01:47:25.5333774Z",
-    "version": "1.19.1",
-    "installerHashes": [
-      "B55D187912FE1E6938990343171F31318635DCA52772679CBEC438775E01DF65"
-    ],
     "state": "VALIDATION_PASSED",
-    "manifestHash": "31C8206AA6F9E8A60B84D988A66684B89E300946B92F8BE09BC81E9772AA208B",
-    "validationCount": 1
+    "manifestHash": "6F47467EC239B4517ABB1AAC140638BB400E57C10D3E673C339FFED2C453A7E1",
+    "version": "1.19.2",
+    "description": "",
+    "installerHashes": [
+      "21744A7FB040F64142C1B45B7A0149BF2C46B4AA46B435ABD35848F9821CE729"
+    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-10-14T20:43:46.7518059Z"
   },
   "Gluon.SceneBuilder": {
     "version": "26.0.0",
@@ -8628,16 +8628,16 @@
     "state": "VALIDATION_PASSED"
   },
   "tldraw.tldraw-offline": {
-    "installerHashes": [
-      "01B1F8E78E521AC4562ED523DF18A7FDCC237BA254E2AFF04818588504888E43",
-      "F5B9B37CC4D37A8299ECA16AD974DBCB7D45C5B4A2A7FE7220EA127514D7A6C6"
-    ],
-    "manifestHash": "9CF8A6A6FFAAE03AA647A9E8C3BD95F40042B22F8A5D169E0B7D01CC2E50DB26",
-    "description": "",
-    "lastUpdated": "2026-10-01T13:09:14.6581289Z",
-    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "version": "1.21.0"
+    "manifestHash": "D38BEC52934EEEDE44278A7F1A64600BF8D9A5ACA4E553B78EB02FE36614CE40",
+    "version": "1.22.0",
+    "description": "",
+    "installerHashes": [
+      "348170429F89291367A437A74CFACE9A06803EFA3E7A20016E615BB9DF55FCAB",
+      "FEE0AD1FF31BE285B5903467F492D5F152FF1E2E12BDD4E786D336993C277C51"
+    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-10-14T20:43:46.7198755Z"
   },
   "tobylai-toby.qmcli": {
     "validationCount": 1,
