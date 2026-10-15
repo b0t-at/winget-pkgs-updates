@@ -2669,8 +2669,8 @@
     ],
     "description": "",
     "openPr": {
-      "checkedAt": "2026-10-15T16:25:07.3770928Z",
-      "version": "3.2.2"
+      "checkedAt": "2026-10-15T20:21:00.1235365Z",
+      "version": "3.2.3"
     }
   },
   "Fly-io.flyctl": {
@@ -8201,7 +8201,7 @@
     "version": "1.29.1",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "checkedAt": "2026-10-14T16:25:33.2732427Z",
+      "checkedAt": "2026-10-15T20:21:05.2668074Z",
       "version": "1.29.1"
     }
   },
