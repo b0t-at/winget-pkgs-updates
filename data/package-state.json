@@ -5048,14 +5048,14 @@
     "version": "1.0.1"
   },
   "MichaelDiCarlo.PostyBirb+": {
-    "manifestHash": "685A5DCC7E349B7DA3E2926264BB8DB18F29D937457DC5AF81C5EE7E4851CF6B",
-    "version": "3.1.76",
-    "description": "",
+    "lastUpdated": "2026-10-15T12:59:17.2254514Z",
+    "version": "3.1.77",
     "state": "VALIDATION_PASSED",
+    "manifestHash": "AD3BCA7C3641990613CA8A21F7B5FD19A4892CBB2D66D36B8F9A756AB13210B1",
+    "description": "",
     "installerHashes": [
-      "42F775AE36BAC8C0AE6B1813679B39B39BBEC685A09B9DEBEB73538A54CD7762"
+      "2AD065D8230F054F86789CBC1487DC5AB034174014AEE142DC4929C9CF290124"
     ],
-    "lastUpdated": "2026-10-09T05:25:50.6334428Z",
     "validationCount": 1
   },
   "Mickem.NSClient": {
@@ -8572,15 +8572,15 @@
     "lastUpdated": "2026-08-05T07:49:49.3068253Z"
   },
   "TheQtCompanyLtd.QtCreator": {
-    "validationCount": 1,
+    "lastUpdated": "2026-10-15T12:59:17.1663157Z",
+    "version": "21.0.0-beta2",
     "state": "VALIDATION_PASSED",
+    "manifestHash": "B72B61B474F30C0EA1F27F3CEA15AA5CA25613A99BFE48BFA90254D6C3F58234",
+    "description": "",
     "installerHashes": [
-      "FBF7678484ACA3E80D0CD554181E23679D2269EBD567DB3A05498CFDB627B941"
+      "B9C5657436505B0AE49D73D974F70FBED19A08E4C095A44B42227954B04CB589"
     ],
-    "lastUpdated": "2026-09-23T20:56:40.6943256Z",
-    "manifestHash": "4F858604C0D483CA43301F17691852D7A038ACD35EF79339A19810A89F2DB2C3",
-    "version": "20.0.2",
-    "description": ""
+    "validationCount": 1
   },
   "Theta.DeskHatch": {
     "state": "VALIDATION_PASSED",
@@ -8594,15 +8594,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "version": "2.58.15",
-    "validationCount": 1,
+    "lastUpdated": "2026-10-15T12:59:17.1958653Z",
+    "version": "2.59.3",
     "state": "VALIDATION_PASSED",
+    "manifestHash": "4FC7399923952572B75802365FDF77DC0CD3742BCD103380A1B63AE5B32CD07F",
     "description": "",
     "installerHashes": [
-      "61D38534AF64A5CE5F78D2C7608B4ADCBA8CB07C24A821E06BDD332AA7F1E3BB"
+      "C3CF025804AFB6A58DB7060150C58C49E1E59B9A0412C813BC1AEB5FB2F44837"
     ],
-    "manifestHash": "D7A1C480BF1787A29EDC9D64C24EF71BCB83F1B93D9EAB2259FD6684ACEE3FC5",
-    "lastUpdated": "2026-10-14T01:15:28.513606Z"
+    "validationCount": 1
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
