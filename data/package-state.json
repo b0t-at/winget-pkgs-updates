@@ -388,7 +388,11 @@
     "manifestHash": "BD9DDE0685361016EAE60B547A9A05E1AEB34FD97A3486394616359A8FBDE819",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "3.0.4"
+    "version": "3.0.4",
+    "openPr": {
+      "checkedAt": "2026-10-15T12:33:25.5109462Z",
+      "version": "3.0.4"
+    }
   },
   "Anki.Anki": {
     "description": "",
@@ -4031,8 +4035,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.10.10",
-      "checkedAt": "2026-10-14T12:32:55.9661994Z"
+      "checkedAt": "2026-10-15T12:32:45.011043Z",
+      "version": "2026.10.11"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -4651,11 +4655,7 @@
     "manifestHash": "B7E9E627462674E05B11BE049A230318B0F39D9F043BB3FDC5488612A4F2E8E7",
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-09-25T07:28:25.8925883Z",
-    "description": "",
-    "openPr": {
-      "checkedAt": "2026-09-25T08:31:00.3593472Z",
-      "version": "0.37.2"
-    }
+    "description": ""
   },
   "Longbridge.LongbridgeTerminal": {
     "manifestHash": "48100AE830DE1099822AB9C15865DD3386ED9A7552CB0A3C5C00F1BE64D4352D",
