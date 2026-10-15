@@ -1505,8 +1505,8 @@
     "validationCount": 1,
     "version": "1.0.48275",
     "openPr": {
-      "version": "1.5.0",
-      "checkedAt": "2026-10-09T12:33:39.4731157Z"
+      "checkedAt": "2026-10-15T16:25:06.195429Z",
+      "version": "1.6.0"
     }
   },
   "ciromattia.KCC": {
@@ -2669,8 +2669,8 @@
     ],
     "description": "",
     "openPr": {
-      "version": "3.2.1",
-      "checkedAt": "2026-10-15T04:24:49.70796Z"
+      "checkedAt": "2026-10-15T16:25:07.3770928Z",
+      "version": "3.2.2"
     }
   },
   "Fly-io.flyctl": {
@@ -4125,8 +4125,8 @@
     "lastUpdated": "2026-08-06T14:10:17.3921348Z",
     "manifestHash": "1E843D90602194E32EF0F84E333BE9BC20D09621BCA43AA304BDA7952A621BAB",
     "openPr": {
-      "version": "0.46.0",
-      "checkedAt": "2026-10-14T12:32:56.4754472Z"
+      "checkedAt": "2026-10-15T16:25:08.7210111Z",
+      "version": "0.46.0"
     }
   },
   "jmrplens.gitlab-mcp-server": {
@@ -6816,8 +6816,8 @@
       "ED3F9A5F55764C1FEC5086F70310209C860519F74F12F57E55574C8E46B58D34"
     ],
     "openPr": {
-      "version": "0.31.9",
-      "checkedAt": "2026-10-14T12:32:58.01328Z"
+      "checkedAt": "2026-10-15T16:25:12.1193994Z",
+      "version": "0.31.9"
     }
   },
   "prsyahmi.WicHeic": {
