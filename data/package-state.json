@@ -3082,7 +3082,11 @@
       "21744A7FB040F64142C1B45B7A0149BF2C46B4AA46B435ABD35848F9821CE729"
     ],
     "validationCount": 1,
-    "lastUpdated": "2026-10-14T20:43:46.7518059Z"
+    "lastUpdated": "2026-10-14T20:43:46.7518059Z",
+    "openPr": {
+      "checkedAt": "2026-10-15T00:51:52.3295826Z",
+      "version": "1.19.2"
+    }
   },
   "Gluon.SceneBuilder": {
     "version": "26.0.0",
