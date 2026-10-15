@@ -3383,15 +3383,15 @@
     "description": ""
   },
   "Happ.Happ": {
-    "description": "",
-    "manifestHash": "FE108A566904E9D15EFA3C3A772B105505ADDC6678E1639CC00F5204FAA73211",
-    "version": "4.5.2",
     "installerHashes": [
-      "9CEEE216A85AE6130C422ACC3FD6D785BF7D7326E87EE4FF5F9F77D9BF4BF25E"
+      "DE5674B27C3CB196690F1A9D4B268A03AB15F99FB858E6B76B9020561805B3CB"
     ],
-    "validationCount": 1,
+    "version": "4.5.4",
+    "manifestHash": "2019407F71BB39E215590F0C2460BEF15F03ED3A1522FB7FDCB599F1B2433E72",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-12T16:45:50.1220809Z"
+    "validationCount": 1,
+    "lastUpdated": "2026-10-15T01:15:59.6622948Z",
+    "description": ""
   },
   "happycola233.tchMaterial-parser": {
     "state": "VALIDATION_PASSED",
@@ -6089,16 +6089,16 @@
     "validationCount": 1
   },
   "OneWare.OneWareStudio": {
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "5443D00B1A8691AA0D2916EE62301013D078F3DFAA78C43C077F917658B23E61",
-      "6E361862F31CC8A7ECB9236E0CE5202AA4D835456FBD0ED476AC29E8DE8B86CA"
+      "B113F5696AAA461A42D0BFF60F66A74DF26C2C35961577C8C93C00634AD2BAD8",
+      "48FAAF6F00823A076D5E06F27359993131A9328B1C6B19ABF623BD575B203003"
     ],
-    "lastUpdated": "2026-08-25T00:57:29.7867135Z",
-    "description": "",
-    "manifestHash": "D92913821350C2D7E191A39C199033BD314F80DA2447ED659A38F567F17E0EEC",
-    "version": "1.0.28",
-    "validationCount": 1
+    "version": "1.0.45",
+    "manifestHash": "9FF9866545A284CEF367B6CFC6670DED8E4252B4C522940F5B47C54DCE2B8994",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-15T01:15:59.6320413Z",
+    "description": ""
   },
   "OnionShare.OnionShare": {
     "version": "2.6.5",
@@ -8278,15 +8278,15 @@
     "version": "1.7.6"
   },
   "T-Troll.AlienFXTools": {
-    "validationCount": 4,
-    "state": "VALIDATION_PASSED",
-    "version": "9.6.2",
-    "manifestHash": "E378035BC47942F2C47004ACB55CF6692B088199FF55E359374612711CE0E057",
     "installerHashes": [
-      "E952996F9703DEA0E57901B15DCC04132273342405DB32466AEAA7A3809DB766"
+      "E57FBB7E1DCDA3793669BF7DAB9E95AAAD935370E9EAFDA9041AEADC56F49E44"
     ],
-    "description": "",
-    "lastUpdated": "2026-10-08T17:31:06.024942Z"
+    "version": "9.6.2.1",
+    "manifestHash": "C4C350E3F387ACC4C6BC13878E9AB0094400A5EF327173D2E97947C7641A6B85",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-15T01:15:59.5067843Z",
+    "description": ""
   },
   "TacitDynamics.FolderSync": {
     "validationCount": 1,
@@ -9535,15 +9535,15 @@
     "version": "1.7.2"
   },
   "xssnick.tonutils-storage": {
+    "installerHashes": [
+      "18DC9F79422ADDD0B8BCF4F1D57B9DB58C2840C8B286D8365F3E4562FC48B378"
+    ],
+    "version": "1.5.5",
+    "manifestHash": "D394DE528E49FC16C5C5EA85E6BF4D5B3B9D3D4AD465B3245590709C023F9BA1",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "manifestHash": "D1EDC0BA44F0A72E362C88F1E47DE4C393A70464944DB1B766C4B87FEF7FBE34",
-    "installerHashes": [
-      "1E7A9070ACB1B23580C0B35F615A408BC15ACFF04A56E9E5B4B3EF12591021F7"
-    ],
-    "description": "",
-    "lastUpdated": "2026-09-14T01:17:52.8865232Z",
-    "version": "1.5.4"
+    "lastUpdated": "2026-10-15T01:15:59.5921359Z",
+    "description": ""
   },
   "xushengfeng.eSearch": {
     "version": "15.6.0",
