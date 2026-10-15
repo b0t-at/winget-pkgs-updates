@@ -283,8 +283,8 @@
     "lastUpdated": "2026-08-20T16:48:27.9600489Z",
     "version": "3.1",
     "openPr": {
-      "version": "3.1",
-      "checkedAt": "2026-10-14T08:31:19.6936349Z"
+      "checkedAt": "2026-10-15T08:32:21.0208387Z",
+      "version": "3.1"
     }
   },
   "Alochi.Monitoring": {
@@ -388,11 +388,7 @@
       "B2F2F7A9D6F120A1DCCD2D632DF60E4D2D54B3C67AC822BD3FBFEB98D2BE9465",
       "EC0C5133C8CA33F4E6841D7945A0EF88E78F466358E6AE26C236B86F2F06A484"
     ],
-    "state": "VALIDATION_PASSED",
-    "openPr": {
-      "checkedAt": "2026-10-14T16:26:35.5760148Z",
-      "version": "3.0.3"
-    }
+    "state": "VALIDATION_PASSED"
   },
   "Anki.Anki": {
     "description": "",
@@ -8481,8 +8477,8 @@
     "manifestHash": "101A50462A6E2BE19AFB17A21278EA44597559D970949753840897CFC30A7566",
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
-      "version": "5.7.1",
-      "checkedAt": "2026-10-14T08:31:09.1292601Z"
+      "checkedAt": "2026-10-15T08:31:23.372482Z",
+      "version": "5.7.1"
     }
   },
   "termio.soft-jp.com.TermioWin": {
