@@ -3147,15 +3147,15 @@
     "lastUpdated": "2026-09-17T20:53:14.2050338Z"
   },
   "Google.FirebaseCLI": {
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-09T01:47:25.4898628Z",
-    "version": "15.33.0",
-    "manifestHash": "D16080B95F351F25CA10AACBA0FC3766E180D6FC99581E24D5504B0EF50C390E",
-    "validationCount": 2,
-    "description": "",
     "installerHashes": [
-      "611B869701923C15CE479FB55A452F947C35900B942702ECE15ED60ED6F35C2C"
-    ]
+      "919C874A22FABD89EEF769A527E6CDCDEF9A5015B7403D765BA1B4C18BEEA495"
+    ],
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "B736FEB5FECF33E3A9CF5791946404EDD5801E77E5394FAA1134480E3E4CF19F",
+    "version": "15.34.0",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-15T04:38:02.6166554Z",
+    "description": ""
   },
   "Google.IAPDesktop": {
     "lastUpdated": "2026-06-30T01:55:05.1221847Z",
@@ -6325,15 +6325,15 @@
     "state": "VALIDATION_PASSED"
   },
   "openwong2kim.wmux": {
-    "description": "",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "lastUpdated": "2026-10-14T17:07:14.1871505Z",
-    "version": "4.4.0",
     "installerHashes": [
-      "AFBEE8940755FE4AAC726C3B75942D1A4A91F3FFEBA730848F381058B2042978"
+      "2C719C66A3F6C6C28771D52317D062F4215E2A4AC78DF784FDF8EE3BD213B3B2"
     ],
-    "manifestHash": "4073E4F8BA52B931A34846EF9AF33AD26F1CA8BB80C30A3415491A1DBEEEC765"
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "F57F3BCFE04E8C81DF055EF1F23A672E6AB0F45CF517E11A8F82F602A485E707",
+    "version": "4.5.0",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-15T04:38:02.5696542Z",
+    "description": ""
   },
   "openwong2kim.wsnap": {
     "installerHashes": [
