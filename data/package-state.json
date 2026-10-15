@@ -379,16 +379,16 @@
     "version": "0.2.0"
   },
   "AnInsomniacy.Aria2Next": {
-    "lastUpdated": "2026-10-14T13:01:46.6055223Z",
-    "manifestHash": "99E41F1147821C711D06A09294C8FA6BD5218FC8802C2945CAC137F583F51532",
-    "validationCount": 1,
     "description": "",
-    "version": "3.0.3",
     "installerHashes": [
-      "B2F2F7A9D6F120A1DCCD2D632DF60E4D2D54B3C67AC822BD3FBFEB98D2BE9465",
-      "EC0C5133C8CA33F4E6841D7945A0EF88E78F466358E6AE26C236B86F2F06A484"
+      "07F585424ECF4BEF12A68C477AEFEEB1C3FEAF89A7F101DE240E9DD4CF9E6905",
+      "4DC41720F5B3D657960F87B9583C966F65D01638386E71471F9261950A2F1BDE"
     ],
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-10-15T08:58:38.1796767Z",
+    "manifestHash": "BD9DDE0685361016EAE60B547A9A05E1AEB34FD97A3486394616359A8FBDE819",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "3.0.4"
   },
   "Anki.Anki": {
     "description": "",
@@ -1214,15 +1214,15 @@
     }
   },
   "BytecodeAlliance.Wasmtime.Portable": {
+    "manifestHash": "837F80B1E735678CBEAB79BED211371BE90476E29529CB5B684A4928B128DAD4",
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "lastUpdated": "2026-10-14T17:07:14.1528652Z",
-    "version": "36.0.18",
+    "lastUpdated": "2026-10-15T08:58:38.3015625Z",
     "installerHashes": [
-      "9DF82F5A7D6F52B6C1EB00B920B2DD3DDD255EEE0D744F75002F4FAD4C71E967"
+      "BEE8F02158458A5F360412B232543D4FEA379B71B94380B806E7980050596C18"
     ],
-    "manifestHash": "60D209E8383E9497C094D591060543C283CB959EC572726BD5D3144E1B823CED"
+    "version": "49.0.3",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
   },
   "ByteNess.AWSVault": {
     "state": "VALIDATION_PASSED",
@@ -1894,15 +1894,15 @@
     "lastUpdated": "2026-08-17T21:15:38.3875985Z"
   },
   "DeskRipple.DeskRipple": {
-    "manifestHash": "F637399C2046D2184BD98AD0E02FD04E274A7F4BFB5891A509DFA0BD159D24AB",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "manifestHash": "87AF1D8D8B972CB99CA5873D7D33AF2E84623F13C2E445028CC62BA3EA001EC4",
     "description": "",
+    "lastUpdated": "2026-10-15T08:58:38.2698675Z",
     "installerHashes": [
-      "5BAC65CD5BC1490243BE0A35929F9DFDA87BD4DF0DBAE85A9822AE0814B5F7B3"
+      "994910BE8EEF24DB5A622E8CF7EE36278652A56A2740B1D4FD453EBF3307C92F"
     ],
-    "version": "1.1.0",
-    "lastUpdated": "2026-09-12T01:32:43.1357502Z"
+    "version": "1.1.1",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
   },
   "DeutLab.HandyVoice": {
     "installerHashes": [
@@ -8695,15 +8695,15 @@
     ]
   },
   "TravisLane.SteamArtManager": {
-    "installerHashes": [
-      "2227738D145502EBA6430E39381A4CA9A85C2819879A0AC4ACF470D7408519F0"
-    ],
+    "manifestHash": "90C1F6430B45C482E10BC372D24BA67C4A492E60D9ACCD9A4F63EE64408EBCC6",
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "BC657E57CD1CB7D5D63033C016518D36CDDCB3906561F7EBD3274892E1C44B88",
+    "lastUpdated": "2026-10-15T08:58:38.2455779Z",
+    "installerHashes": [
+      "2B007EE0B2598FE84B0A7076054928B6DC922B0D8F76B31263320546ECD90C04"
+    ],
+    "version": "3.23.2",
     "validationCount": 1,
-    "version": "3.23.1",
-    "lastUpdated": "2026-10-13T04:59:35.7263989Z"
+    "state": "VALIDATION_PASSED"
   },
   "TrellisLab.Trellis": {
     "validationCount": 1,
