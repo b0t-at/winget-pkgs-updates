@@ -2741,15 +2741,15 @@
     ]
   },
   "FOSSA.FOSSA-cli": {
-    "description": "",
-    "manifestHash": "3F97847467C366FAA3F954BA87F071365853945C35B30157FBC8AD90A3ADC7B5",
-    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-16T01:16:49.8328009Z",
     "installerHashes": [
-      "AF1337EBE6BBD3D26FD1CAEA6D9C41F994B61C840492F92589085CD6525F2915"
+      "46663F3C1044252013B9F420D54BFF687A659A4C7D32D49BD675F6A4D565643A"
     ],
-    "lastUpdated": "2026-10-08T21:28:05.4103925Z",
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "version": "3.20.2",
     "validationCount": 1,
-    "version": "3.20.1"
+    "manifestHash": "DD6747548DEDCAAEDF84589B948503D42E5EA4D7192B337B1AFA734E616341D9"
   },
   "FrancisBanyikwa.MediaDownloader": {
     "manifestHash": "03C1DB537ECDB0566823D94D3B6768E5B97F29295D693658F8DF8898058990A5",
@@ -3688,16 +3688,16 @@
     "description": ""
   },
   "Humanity.DJV2": {
-    "manifestHash": "D99B513D331A2EBC63D7686AA3245DB8161713A4CF7FDCCB139D684F940DB154",
-    "validationCount": 5,
-    "description": "",
-    "version": "3.7.4",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-09T01:47:25.4673462Z",
+    "lastUpdated": "2026-10-16T01:16:49.8564448Z",
     "installerHashes": [
-      "8434C2AD58F6DECF2CAC1EF35A7E4B25FF863D95BC43EDEA724F13AA7D0535BD",
-      "B40A4F5DBC1CD5FF458DF5D6AB96B6AA5002643438C66E5BDACAE60293FFC218"
-    ]
+      "64D3E0E431D0C62E00AFAFD6CDF64CBCDF149EB40D9E7818C4E537513EAD2912",
+      "C50FF85EF2C050A811D6BD60A75F32DF08F7574AB8A31F3D1CB79F0A82D9FCB8"
+    ],
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "version": "3.7.5",
+    "validationCount": 1,
+    "manifestHash": "E7A070DF644273AC138E3A2B5F92817BE09DADF3136A1BE4384E5FAB666C170E"
   },
   "humbinal.ParqForge": {
     "lastUpdated": "2026-08-20T21:12:49.3909731Z",
@@ -4699,15 +4699,15 @@
     "version": "4.1.26190"
   },
   "LoxSmoke.OpenLogiNet": {
-    "manifestHash": "CCB42B91AFC7081DD42695AAB2434A63DFF3FC03D15BB28D001C923541CE6FC8",
-    "version": "0.21.0",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-10T16:47:41.8153334Z",
-    "description": "",
+    "lastUpdated": "2026-10-16T01:16:49.8861456Z",
     "installerHashes": [
-      "A055424815762DB3A35FB13401B16AD04DFE64A6A340DEB69CF4B5575F866AD9"
+      "E26B1010983AE6F219FB6FF476AEC4A4A22556411F195F2EB400F2268279C779"
     ],
-    "validationCount": 1
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "version": "0.22.0",
+    "validationCount": 1,
+    "manifestHash": "EC5EF04AB9326F9E61BAE729304AD552A852560B5E27424031C1212483E93726"
   },
   "LuantiTeam.Luanti": {
     "installerHashes": [
@@ -7780,15 +7780,15 @@
     "manifestHash": "E287E5EFDF457EB47DC8F18007B1E361CAE20763BDA63DD266E50CCF3C4BAC3A"
   },
   "skyhook-io.Radar": {
-    "manifestHash": "F7FB9D7C440573AAA45A14AE6885245A01DBAB477E2EB53535027B39CA31EF39",
+    "lastUpdated": "2026-10-16T01:16:49.7930077Z",
     "installerHashes": [
-      "51818CDBFE6B2E6B6233EB60CF691D772A9C776FBF1C6C1A2230102547F1BC25"
+      "679BF3070D53D19A8E8CBDAAB614FF65DB88B701F5F378F835904DD81DDA5E7B"
     ],
-    "version": "1.16.0",
-    "lastUpdated": "2026-10-12T04:53:47.5398589Z",
-    "validationCount": 2,
     "state": "VALIDATION_PASSED",
-    "description": ""
+    "description": "",
+    "version": "1.17.0",
+    "validationCount": 1,
+    "manifestHash": "AC24C02C40BA0DE0AA7770636FA1F69E9C8E3129FEC97A1086C2E38C326B9DB1"
   },
   "Skylot.jadx": {
     "validationCount": 1,
@@ -8594,15 +8594,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "lastUpdated": "2026-10-15T12:59:17.1958653Z",
-    "version": "2.59.3",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "4FC7399923952572B75802365FDF77DC0CD3742BCD103380A1B63AE5B32CD07F",
-    "description": "",
+    "lastUpdated": "2026-10-16T01:16:49.7549282Z",
     "installerHashes": [
-      "C3CF025804AFB6A58DB7060150C58C49E1E59B9A0412C813BC1AEB5FB2F44837"
+      "F0C9A12E5C743000ACD1893EED3A5DFC2925107AFD9D25C0AD08C5BC259C8A50"
     ],
-    "validationCount": 1
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "version": "2.59.4",
+    "validationCount": 1,
+    "manifestHash": "21A11BACE8870009E91B4E19BB5253BD6EF098339A07E83400A6F7CCAC492949"
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
