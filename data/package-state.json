@@ -283,7 +283,11 @@
     "manifestHash": "4422B5A532781C0D03581A3881EB8600A199A2B3D33AD1FD2A4DB71A36996E6E",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "3.1"
+    "version": "3.1",
+    "openPr": {
+      "version": "3.1",
+      "checkedAt": "2026-10-16T16:24:40.1905775Z"
+    }
   },
   "Alochi.Monitoring": {
     "state": "VALIDATION_PASSED",
@@ -1495,8 +1499,8 @@
     "validationCount": 1,
     "version": "1.0.48275",
     "openPr": {
-      "checkedAt": "2026-10-15T16:25:06.195429Z",
-      "version": "1.6.0"
+      "version": "1.7.0",
+      "checkedAt": "2026-10-16T16:23:32.3620464Z"
     }
   },
   "ciromattia.KCC": {
@@ -4025,8 +4029,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-10-15T12:32:45.011043Z",
-      "version": "2026.10.11"
+      "version": "2026.10.11",
+      "checkedAt": "2026-10-16T16:23:35.2774714Z"
     }
   },
   "jeffaristi92.Sweeft": {
