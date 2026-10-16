@@ -3180,7 +3180,7 @@
       "3E630381C1F1FD3C9C4D447E6FF2EF6C737083371722773DB8337EEAD0F97962"
     ],
     "openPr": {
-      "checkedAt": "2026-10-14T20:21:56.3175555Z",
+      "checkedAt": "2026-10-16T00:50:52.012397Z",
       "version": "2.7.0"
     }
   },
@@ -3870,11 +3870,7 @@
     "validationCount": 1,
     "description": "",
     "lastUpdated": "2026-06-04T22:15:30.5734589Z",
-    "manifestHash": "06EA63CBA95A079A2638DFF25282D03EB7E6B1FD2E589F9F80A37CDBF09C37BB",
-    "openPr": {
-      "checkedAt": "2026-09-21T16:25:02.3215571Z",
-      "version": "1.31.1"
-    }
+    "manifestHash": "06EA63CBA95A079A2638DFF25282D03EB7E6B1FD2E589F9F80A37CDBF09C37BB"
   },
   "IvanIsCoding.celq": {
     "validationCount": 1,
@@ -4079,7 +4075,7 @@
   },
   "jendrikseipp.RedNotebook": {
     "openPr": {
-      "checkedAt": "2026-10-14T20:21:56.8997428Z",
+      "checkedAt": "2026-10-16T00:50:53.3707562Z",
       "version": "2.43"
     }
   },
@@ -5081,7 +5077,7 @@
     ],
     "manifestHash": "D189FFDB783B04E9B5D8643E9E3ED5382A817C1A56D490985A746B730152C38F",
     "openPr": {
-      "checkedAt": "2026-10-14T20:21:58.1849023Z",
+      "checkedAt": "2026-10-16T00:50:54.6258631Z",
       "version": "5.2.2"
     }
   },
@@ -6291,7 +6287,11 @@
     "description": "",
     "lastUpdated": "2026-10-15T20:57:38.017868Z",
     "state": "VALIDATION_PASSED",
-    "version": "0.28.0"
+    "version": "0.28.0",
+    "openPr": {
+      "checkedAt": "2026-10-16T00:50:56.7483934Z",
+      "version": "0.28.0"
+    }
   },
   "OpenTofu.Tofu": {
     "manifestHash": "571C3ED5E5775EFCB2225E378FDD973CB373B3D587751A8300B766463D11CB2D",
