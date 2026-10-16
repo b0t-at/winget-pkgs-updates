@@ -392,11 +392,7 @@
     "manifestHash": "BD9DDE0685361016EAE60B547A9A05E1AEB34FD97A3486394616359A8FBDE819",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "3.0.4",
-    "openPr": {
-      "checkedAt": "2026-10-15T12:33:25.5109462Z",
-      "version": "3.0.4"
-    }
+    "version": "3.0.4"
   },
   "Anki.Anki": {
     "description": "",
