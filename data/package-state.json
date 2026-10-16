@@ -1054,15 +1054,15 @@
     "manifestHash": "A6DBD6DA1E8E60C2D16D54892AA5FD6582A15938B9D5EBEEA95D288829EA5C1F"
   },
   "Bitwarden.DirectoryConnector.CLI": {
-    "description": "",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-17T16:54:51.428563Z",
-    "validationCount": 1,
-    "version": "2026.9.0",
+    "lastUpdated": "2026-10-16T08:52:36.9869069Z",
     "installerHashes": [
-      "40C9AE76615AEC0D8AF4B77D85D58C2120C54804F20052C8DBA19C70788A8EA0"
+      "2970AA08B7F3C89484F662CF9BBE59080615D6A2A057DBD533C33330C78F5510"
     ],
-    "manifestHash": "6EDC4303C1829387E03B18ABB630A22388A721D1E36604FF0C40E5E97F1E5A77"
+    "manifestHash": "6DA15F6867160BA8B6626B3990113E797E1F09D9E78DFF631014691CB8AA04F8",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "version": "2026.10.0",
+    "description": ""
   },
   "bkryza.clang-uml": {
     "description": "",
@@ -2670,16 +2670,16 @@
     }
   },
   "Fly-io.flyctl": {
-    "lastUpdated": "2026-10-14T13:01:46.6954214Z",
-    "manifestHash": "24E3C6CF746E051DDF609AE7FF193DC09CA47E7D24D5BC8B9C1BED1FECCEF070",
-    "validationCount": 1,
-    "description": "",
-    "version": "0.4.117",
+    "lastUpdated": "2026-10-16T08:52:36.931253Z",
     "installerHashes": [
-      "FA092ED734BB36A3DF0CE606F071A7F14CCBFAC312A32535E76CF0FF3EDA889E",
-      "F8C97C1887C2E905DFE3B70BCFC3EDD000AA74B6295E91D95EDBC4B0D750A1F9"
+      "A630DCE804B7A2B9DCEE2BDF150B01792AB381982ED3C9820F1E1FFEB481BAE2",
+      "1E48AAD81DD877BC2ED920C0F64ED44BB28364F0B60E011DD49695AC13602724"
     ],
-    "state": "VALIDATION_PASSED"
+    "manifestHash": "32B4B11DB806141DC625B5B870725C385F82E0D01EA9F0D27A6493F2AD72AEBA",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "version": "0.4.118",
+    "description": ""
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
     "validationCount": 1,
@@ -6321,14 +6321,14 @@
     "state": "VALIDATION_PASSED"
   },
   "openwong2kim.wmux": {
+    "lastUpdated": "2026-10-16T08:52:36.8803468Z",
     "installerHashes": [
-      "2C719C66A3F6C6C28771D52317D062F4215E2A4AC78DF784FDF8EE3BD213B3B2"
+      "A97A63C8CC42A07519E51C5349BC5D54E8745791F61DE46D4A44C2BF57F068AE"
     ],
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "F57F3BCFE04E8C81DF055EF1F23A672E6AB0F45CF517E11A8F82F602A485E707",
-    "version": "4.5.0",
+    "manifestHash": "EB17CDB3ADD2DCB9C7784B4436D67C57125B0D789011E325D2B9B6D71B4C3A74",
     "validationCount": 1,
-    "lastUpdated": "2026-10-15T04:38:02.5696542Z",
+    "state": "VALIDATION_PASSED",
+    "version": "4.6.0",
     "description": ""
   },
   "openwong2kim.wsnap": {
@@ -9163,6 +9163,17 @@
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-08-19T05:34:55.9081214Z",
     "manifestHash": "97587D8F86D48255BEB64B6E2C563568900B25B83E054DF0764861567826D3BF"
+  },
+  "WabbajackTools.Wabbajack": {
+    "lastUpdated": "2026-10-16T08:52:37.0159137Z",
+    "installerHashes": [
+      "56FBE55821894A3E6D70D37DC3BC776C40B3F044F58B904235BA0B463554126B"
+    ],
+    "manifestHash": "B86D50BE48512E70D6DA56B626874527693C7C8CC0C9DF1DB8953DE29CF9F024",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "version": "4.3.0.1",
+    "description": ""
   },
   "WalkingWiFi.LocalMCPTunnel": {
     "state": "VALIDATION_PASSED",
