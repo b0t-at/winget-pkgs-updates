@@ -1,14 +1,14 @@
 {
   "repository": "microsoft/winget-pkgs",
-  "pullRequestNumber": 452900,
+  "pullRequestNumber": 453679,
   "classification": "ScannerBlocked",
   "state": "Escalated",
-  "recordedAt": "2026-10-15T07:02:58.416861+00:00",
+  "recordedAt": "2026-10-16T07:02:37.5444481+00:00",
   "retryAfter": null,
   "learnedOverrideSignal": null,
   "reason": "Defender or the ESRP installer scan blocked the binaries; resubmitting the same files fails again. Quarantine the package until the scanner verdict changes or upstream ships new binaries.",
-  "packageIdentifier": "Gleam.Gleam",
-  "packageVersion": "1.19.2",
+  "packageIdentifier": "FOSSA.FOSSA-cli",
+  "packageVersion": "3.20.2",
   "evidence": [],
   "installerTraits": null
 }
