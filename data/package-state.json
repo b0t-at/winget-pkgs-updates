@@ -277,14 +277,12 @@
     }
   },
   "alirezagsm.trayy": {
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "B04275BF962529D22C9D0D730838F7E7F519535B742C43885945053B504A68F1",
-    "validationCount": 1,
     "description": "",
-    "installerHashes": [
-      "AB4B8E96A0526F640A483722726C13D613988441106A602DAF0B88CA5FAD15AC"
-    ],
-    "lastUpdated": "2026-08-20T16:48:27.9600489Z",
+    "installerHashes": "AB4B8E96A0526F640A483722726C13D613988441106A602DAF0B88CA5FAD15AC",
+    "lastUpdated": "2026-10-16T13:03:36.0430027Z",
+    "manifestHash": "4422B5A532781C0D03581A3881EB8600A199A2B3D33AD1FD2A4DB71A36996E6E",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
     "version": "3.1"
   },
   "Alochi.Monitoring": {
@@ -1028,15 +1026,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Bitcraze.cfcli": {
-    "version": "0.16.0",
     "description": "",
-    "lastUpdated": "2026-10-11T04:56:11.0988436Z",
-    "installerHashes": [
-      "C403008A8E75B167813DE87A8E1C46974DF97AE0A5D8D5D51F76803355504AC8"
-    ],
     "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "DC0BABCCB7A67337D4659E35BA41C75823DE8A44E92FF2C6ECA724691AC6D50B"
+    ],
     "validationCount": 1,
-    "manifestHash": "DB5AC30243D1CB002559CF36F9D5DF231284F11149B2068D11C64CEEDE92EE3C"
+    "lastUpdated": "2026-10-16T13:03:36.002724Z",
+    "version": "0.18.0",
+    "manifestHash": "F734A49AFB0FE0067DB9D02FA47A073BD4798F43713402F7A5D97BC15EB3F0EC"
   },
   "Bitwarden.CLI": {
     "validationCount": 1,
@@ -2523,16 +2521,16 @@
     }
   },
   "facebook.pyrefly": {
-    "version": "1.3.2",
     "description": "",
-    "lastUpdated": "2026-09-30T13:13:56.3559586Z",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "B261CE2FB002185F091E321673EF9F7370020ACE618AF9B04D28A2744C650BBF",
-    "validationCount": 1,
     "installerHashes": [
-      "3F23B1807033AFF34C96F65EAD4958D1493FBCBB087CC5BA3AB3CE9EBBD95911",
-      "46E7A5EEEF2EB4A11E88AEBFF2A49F5D45F31250221BCEF1EF1B9CBA08513BB1"
-    ]
+      "90CB8C7D92051D274C48DD1CAACBC20E795B3F5248DDC55D6D22ADF53424225F",
+      "76725412D1A799CA4015D0E99A76D24AE26F42BB53379F8330F5F4CE5CD35EE6"
+    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-10-16T13:03:35.9766256Z",
+    "version": "1.4.0",
+    "manifestHash": "B71804EBD6739D98C6E34F0D3613216C18D387E56278378D0033B1DC3D56B99D"
   },
   "fairdataihub.SODA-for-SPARC": {
     "description": "",
@@ -3834,15 +3832,15 @@
     "description": ""
   },
   "Internxt.Drive": {
-    "lastUpdated": "2026-10-12T01:58:15.6635652Z",
-    "validationCount": 1,
-    "installerHashes": [
-      "917D23BB1BBA5D3F6D7AD4ED771C833CFDA6F4CCBEC2CF8392C32098E5AD78BA"
-    ],
-    "manifestHash": "ED6FD9371AE3C64E57884C950989F9BB660EF8CFAB7A5B41348B43EF1AF587D3",
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "version": "2.7.0"
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "C4746ED34ABE5BC84D5741B7E181D8093F7D9C0937DA9723943C647DD1F1D6EA"
+    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-10-16T13:03:36.0297891Z",
+    "version": "2.7.1",
+    "manifestHash": "C5472171E226E194087954A818930CBFEFA4F0C4C232050348F65D11DC63AD85"
   },
   "InTheLoop.LoopEmail": {
     "description": "",
@@ -6089,15 +6087,15 @@
     "description": ""
   },
   "OnionShare.OnionShare": {
-    "version": "2.6.5",
-    "installerHashes": [
-      "A33A29AE7BFEA1B3633303272F42177F7FC9808DBBD21270EA48BEFECB69F67B"
-    ],
-    "manifestHash": "DE2ADF61793FA798E2E42DF6A49627DDA0A490FCAF92CF258631DC7B1BD1FD19",
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 2,
-    "lastUpdated": "2026-08-18T21:24:38.7338502Z"
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "86146718C646F5652B83C7B43B8D4614020B48AC6FD1E43F6A357351BA11B5C5"
+    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-10-16T13:03:36.0797089Z",
+    "version": "2.7",
+    "manifestHash": "1182833317E58222E0AF4E08BC571004CC385F4723080F72278621F6F043CF64"
   },
   "Open-Component-Model.ocm-cli": {
     "version": "0.52.0",
@@ -8292,15 +8290,15 @@
     ]
   },
   "tagspaces.tagspaces": {
-    "version": "6.14.1",
-    "validationCount": 2,
-    "manifestHash": "7D837A171D36547AFD1D5ACF06C7455C99A63F1CAB2251B401E3EA0C92B8D6B6",
-    "lastUpdated": "2026-10-08T14:05:34.0133929Z",
-    "installerHashes": [
-      "000C23EB2831005E90299C17B1D5434A9BD08209C360F8E9744F13BC1A0892DF"
-    ],
+    "description": "",
     "state": "VALIDATION_PASSED",
-    "description": ""
+    "installerHashes": [
+      "A1641A13F086CB32BAD40DAA03CDC282034FD112CE763BA940AF2CE7DE102603"
+    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-10-16T13:03:36.06265Z",
+    "version": "6.14.3",
+    "manifestHash": "4A060B761C0712AAD910B0C31D098D1316642FFAA3D324D3C968755DCDE39F41"
   },
   "taiki-e.parse-changelog": {
     "lastUpdated": "2026-08-18T21:24:38.573567Z",
