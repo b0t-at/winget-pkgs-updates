@@ -203,7 +203,11 @@
     ],
     "manifestHash": "3FDF3A013BAB5CA656AB234B80171AC771C8F3C1691477476E077C98006C40B7",
     "lastUpdated": "2026-09-19T08:41:43.6037433Z",
-    "version": "0.9.2"
+    "version": "0.9.2",
+    "openPr": {
+      "version": "0.9.25",
+      "checkedAt": "2026-10-16T04:25:39.4576363Z"
+    }
   },
   "Aiden1020.LocalSubs": {
     "manifestHash": "213A97D3D7C6F3B5FE864420C3CEF1C3280D138B6B91B0272DB5230389D73EB2",
@@ -1040,11 +1044,7 @@
     ],
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "manifestHash": "DB5AC30243D1CB002559CF36F9D5DF231284F11149B2068D11C64CEEDE92EE3C",
-    "openPr": {
-      "version": "0.16.0",
-      "checkedAt": "2026-10-11T08:30:51.7035549Z"
-    }
+    "manifestHash": "DB5AC30243D1CB002559CF36F9D5DF231284F11149B2068D11C64CEEDE92EE3C"
   },
   "Bitwarden.CLI": {
     "validationCount": 1,
@@ -1150,7 +1150,7 @@
     "lastUpdated": "2026-08-20T09:17:27.4984446Z",
     "openPr": {
       "version": "1.2.6",
-      "checkedAt": "2026-10-15T04:24:46.5632712Z"
+      "checkedAt": "2026-10-16T04:24:53.7868761Z"
     }
   },
   "bornova.numara": {
@@ -2749,7 +2749,11 @@
     "description": "",
     "version": "3.20.2",
     "validationCount": 1,
-    "manifestHash": "DD6747548DEDCAAEDF84589B948503D42E5EA4D7192B337B1AFA734E616341D9"
+    "manifestHash": "DD6747548DEDCAAEDF84589B948503D42E5EA4D7192B337B1AFA734E616341D9",
+    "openPr": {
+      "version": "3.20.2",
+      "checkedAt": "2026-10-16T04:24:56.9333821Z"
+    }
   },
   "FrancisBanyikwa.MediaDownloader": {
     "manifestHash": "03C1DB537ECDB0566823D94D3B6768E5B97F29295D693658F8DF8898058990A5",
@@ -3197,7 +3201,7 @@
     "description": "",
     "openPr": {
       "version": "36.2",
-      "checkedAt": "2026-10-15T04:24:51.6210054Z"
+      "checkedAt": "2026-10-16T04:24:57.4283731Z"
     }
   },
   "goplus.xgo": {
