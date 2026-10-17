@@ -2861,15 +2861,15 @@
     "lastUpdated": "2026-09-23T04:49:51.8017613Z"
   },
   "Gardener.gardenctl": {
-    "state": "VALIDATION_FAILED",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "C066F7116F2457936EB29D7D3A7BCF84058AFCF318F349C78193EECAF66206E3",
+    "installerHashes": [
+      "644B33BC809B5C2AA4D06B0EF885ED665D8F6D069D3959D92CB1EA4F7E22A6D4"
+    ],
     "description": "",
     "validationCount": 1,
-    "installerHashes": [
-      "BE4A6A3BF37BEFACC124FE136056CF239CD83CAF69C4F79704D6A9AEA2F92FC2"
-    ],
-    "lastUpdated": "2026-08-05T12:38:58.9422284Z",
-    "manifestHash": "FAC05CC98BF3D66BBABE533BEC5841733108A0610E2432F673C4F6EBACF9F79F",
-    "version": "2.16.0"
+    "lastUpdated": "2026-10-17T20:34:10.5250474Z",
+    "version": "2.17.0"
   },
   "Gardener.gardenlogin": {
     "lastUpdated": "2026-05-19T11:46:35.3075526Z",
@@ -6363,15 +6363,15 @@
     "state": "VALIDATION_PASSED"
   },
   "openwong2kim.wmux": {
-    "lastUpdated": "2026-10-16T08:52:36.8803468Z",
-    "installerHashes": [
-      "A97A63C8CC42A07519E51C5349BC5D54E8745791F61DE46D4A44C2BF57F068AE"
-    ],
-    "manifestHash": "EB17CDB3ADD2DCB9C7784B4436D67C57125B0D789011E325D2B9B6D71B4C3A74",
-    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "version": "4.6.0",
-    "description": ""
+    "manifestHash": "06C569030E4E1FF9EF588F6C8DD3639260D5A66E1B425AE7E894849544E2ABE6",
+    "installerHashes": [
+      "9187F1BAE9D9D3A8F72C0A1FDB4CA7E1FD51F1FC1C6DEC85165E73CC26F13433"
+    ],
+    "description": "",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-17T20:34:10.5826773Z",
+    "version": "4.6.1"
   },
   "openwong2kim.wsnap": {
     "installerHashes": [
