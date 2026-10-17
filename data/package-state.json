@@ -2698,15 +2698,15 @@
     "state": "VALIDATION_PASSED"
   },
   "ForgeLabsSoft.DriveForge": {
-    "validationCount": 4,
-    "state": "VALIDATION_PASSED",
-    "version": "4.4.1",
-    "manifestHash": "76EA6EEECF5774DC151491575B6A2D20C8522F98A546682A2EB32352CD113F6A",
+    "manifestHash": "73FD1AA4B99C22650D917F568566F72A63B97C50AE8711BFDBFF3C5C051E6FDD",
     "installerHashes": [
-      "6AE6E7C29122D74D909009C06DE4622FAA7CD13854CDB89F46E1AFD3013EC5D3"
+      "46E9318B229CDE2560C44C0A13E9BACF7E5E12DA21C8D2DC416663A4A807FD07"
     ],
     "description": "",
-    "lastUpdated": "2026-10-06T17:18:58.9927045Z"
+    "state": "VALIDATION_PASSED",
+    "version": "4.5.1",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-17T12:45:08.4381436Z"
   },
   "Fork.Fork": {
     "description": "",
@@ -7976,15 +7976,15 @@
     "state": "VALIDATION_PASSED"
   },
   "SpectrumQT.XXMILauncher": {
-    "validationCount": 1,
-    "manifestHash": "712F41C30946EE81479A0AECE8E0FFB19824BF3749EF420B2011854C13BDDB18",
+    "manifestHash": "DAF0EE2C47E50D110F819A82391221D2219371F41416887461257E9BE73AFA90",
     "installerHashes": [
-      "5BEA4CAC94A2AB1D4301E802AD1F2D99C70F56F090183966C2078E94F89D9BAC"
+      "8E64015BB7B4ECBB08CBD22C0DA9D64E66908BD4B77BD21B948A479015F7AEEB"
     ],
     "description": "",
-    "lastUpdated": "2026-10-15T20:57:37.9175027Z",
     "state": "VALIDATION_PASSED",
-    "version": "2.4.8"
+    "version": "2.4.9",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-17T12:45:08.4828138Z"
   },
   "SpikeHD.Dorion": {
     "validationCount": 1,
