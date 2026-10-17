@@ -2832,15 +2832,15 @@
   },
   "GAM-Team.gam.Portable": {
     "validationCount": 1,
-    "version": "7.48.26",
+    "installerHashes": [
+      "A8E7C145BA3B45424AF6FA7E809E894189617EEC51966280153CBEAA175D7243",
+      "78468701C525A9C3350EA48E33C2844715FE68416AC98807B2F4B9834EF6ADAF"
+    ],
+    "manifestHash": "755314991D3C9718B3299E0080C4BCD2D8BE833EAA488618F19CEAB7DA867E87",
+    "lastUpdated": "2026-10-17T08:49:39.3721944Z",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-12T20:45:05.1853892Z",
-    "installerHashes": [
-      "4DB314ADD45ED656C44931E36A0ADEF2AC5975DC00EB7C79BFF551050DCF6F44",
-      "7FA966B5B8EBA7D4294F0BBA8C41047D0807A671C8D233D0E222ED963F114AC7"
-    ],
-    "manifestHash": "85279F15CDE7A7EF60E48A6DF66D520B127A7689A56B6F0D902FC813AA56947F"
+    "version": "7.48.30"
   },
   "GAM-Team.GotYourBack": {
     "description": "",
@@ -4587,6 +4587,18 @@
     "version": "1.6.4",
     "state": "VALIDATION_PASSED"
   },
+  "LibreCAD.LibreCAD": {
+    "validationCount": 1,
+    "installerHashes": [
+      "D55588F6BBE59E2512EF0F1681246CFFF302B0EE78D9DC69B709F51FC917C207",
+      "0CD876D0E3FBFCDCDB85E5019080ACA243908F4AD5C3B3C93A55EE9BA154F95B"
+    ],
+    "manifestHash": "E8104C2BDCDD657BAB584ECA84FF7F6F5F6F51EF96E7A1C687B0268C36860D3E",
+    "lastUpdated": "2026-10-17T08:49:39.3062746Z",
+    "description": "",
+    "state": "VALIDATION_FAILED",
+    "version": "2.2.1.6"
+  },
   "LibreHardwareMonitor.LibreHardwareMonitor": {
     "configHealth": {
       "status": "AssetMissing",
@@ -4697,15 +4709,15 @@
     "version": "4.1.26190"
   },
   "LoxSmoke.OpenLogiNet": {
-    "lastUpdated": "2026-10-16T01:16:49.8861456Z",
-    "installerHashes": [
-      "E26B1010983AE6F219FB6FF476AEC4A4A22556411F195F2EB400F2268279C779"
-    ],
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "version": "0.22.0",
     "validationCount": 1,
-    "manifestHash": "EC5EF04AB9326F9E61BAE729304AD552A852560B5E27424031C1212483E93726"
+    "installerHashes": [
+      "9EA8E80B4D71A2E2E299A206AB7BA9699A0456A87E175E83A12B7470F2CFD919"
+    ],
+    "manifestHash": "0A37A85A2AD34361708402A27A79762B613F4E34B675781A7F2A1FC05BCB891C",
+    "lastUpdated": "2026-10-17T08:49:39.3394466Z",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "version": "0.23.0"
   },
   "LuantiTeam.Luanti": {
     "installerHashes": [
@@ -5148,6 +5160,18 @@
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
     "description": ""
+  },
+  "Microsoft.Garnet.DN9": {
+    "validationCount": 1,
+    "installerHashes": [
+      "5CD130686AB415B13C59D36D048A6FADED81E707FFE6DA5953F98BEEB79F9F16",
+      "7378803ED6858FFA91977C0FB42F8D5CB26652C5D18A5BD9FBE301C91FBA1B7A"
+    ],
+    "manifestHash": "3F4C9A1C05FB0A9E8A2797D3858873D2725B2CF352C44F637CEF0D764CCE825D",
+    "lastUpdated": "2026-10-17T08:49:39.3882094Z",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "version": "2.2.3"
   },
   "Microsoft.LightGBM": {
     "lastUpdated": "2026-08-20T21:12:49.5072525Z",
