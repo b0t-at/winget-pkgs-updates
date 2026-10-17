@@ -282,7 +282,7 @@
     "version": "3.1",
     "openPr": {
       "version": "3.1",
-      "checkedAt": "2026-10-16T16:24:40.1905775Z"
+      "checkedAt": "2026-10-17T20:22:00.3317596Z"
     }
   },
   "Alochi.Monitoring": {
@@ -3127,7 +3127,11 @@
       "1266AD2E315FA11297C67D65093C7B8DE83C29DDBD192221878D8EEAEF4F5FE8",
       "CD7EA6063C95DE245E17E5246E42BDC14BB221792C429DBD239AB3A6ADE6CA6A",
       "4FB8988ABF186158E30AF1B8A0FB3671CF2CB02BC91D7E6CE6996F4C1E922E9A"
-    ]
+    ],
+    "openPr": {
+      "version": "2.15.0",
+      "checkedAt": "2026-10-17T20:20:57.96501Z"
+    }
   },
   "Google.ContainerTools.Skaffold": {
     "installerHashes": [
@@ -4025,8 +4029,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-10-16T20:21:18.1658803Z",
-      "version": "2026.10.12"
+      "version": "2026.10.13",
+      "checkedAt": "2026-10-17T20:20:58.3656332Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -6034,7 +6038,11 @@
     "version": "0.40.6",
     "installerHashes": [
       "933794EE1D670137F5116C9DE7FC7DB092FA97C6B823ABA848DDB8A7EA030828"
-    ]
+    ],
+    "openPr": {
+      "version": "0.40.6",
+      "checkedAt": "2026-10-17T20:21:00.3310293Z"
+    }
   },
   "Ombrelin.PandocGui": {
     "configHealth": {
