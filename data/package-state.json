@@ -386,11 +386,7 @@
       "388D00B122E399E36C408089037879F58E80900D281ED8153EB5CA1CFDFB0165",
       "4810B9CA0F0F4716ADF4DE00F5A395D28998BFE03B028B45C7B526D9969FEAB1"
     ],
-    "version": "3.0.5",
-    "openPr": {
-      "version": "3.0.5",
-      "checkedAt": "2026-10-17T00:52:24.9638518Z"
-    }
+    "version": "3.0.5"
   },
   "Anki.Anki": {
     "description": "",
@@ -6390,7 +6386,11 @@
     ],
     "lastUpdated": "2026-08-05T12:38:58.6145802Z",
     "manifestHash": "B32B56B715A2A1035333EA8937441CAA341AEF0A3799FCEF68D270E5C9FF170F",
-    "version": "1.2"
+    "version": "1.2",
+    "openPr": {
+      "version": "1.2.3",
+      "checkedAt": "2026-10-17T12:27:10.2155489Z"
+    }
   },
   "ORASProject.ORAS": {
     "installerHashes": [
