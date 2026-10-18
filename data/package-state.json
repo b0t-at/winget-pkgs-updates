@@ -6401,7 +6401,7 @@
     "version": "1.2",
     "openPr": {
       "version": "1.2.3",
-      "checkedAt": "2026-10-17T12:27:10.2155489Z"
+      "checkedAt": "2026-10-18T12:27:42.2072493Z"
     }
   },
   "ORASProject.ORAS": {
@@ -8179,7 +8179,11 @@
     "version": "1.165.1",
     "manifestHash": "2578BCB2CAA37AB48BFEE0BE091C1090A80827C22822B6E92FCC718093016843",
     "description": "",
-    "lastUpdated": "2026-10-18T08:38:12.1632482Z"
+    "lastUpdated": "2026-10-18T08:38:12.1632482Z",
+    "openPr": {
+      "version": "1.165.1",
+      "checkedAt": "2026-10-18T12:28:16.994391Z"
+    }
   },
   "str4d.rage": {
     "state": "VALIDATION_PASSED",
