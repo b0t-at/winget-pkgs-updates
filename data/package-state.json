@@ -1139,7 +1139,7 @@
     "manifestHash": "81787CB8A4D71FFE5AF7458238621F26813929C3CAB58F9E6A6BCF0762A5E95E",
     "lastUpdated": "2026-08-20T09:17:27.4984446Z",
     "openPr": {
-      "checkedAt": "2026-10-17T08:24:49.1957515Z",
+      "checkedAt": "2026-10-18T08:25:34.4929715Z",
       "version": "1.2.6"
     }
   },
@@ -2741,7 +2741,7 @@
     "description": "",
     "validationCount": 1,
     "openPr": {
-      "checkedAt": "2026-10-17T08:24:52.059351Z",
+      "checkedAt": "2026-10-18T08:25:36.3761111Z",
       "version": "3.20.4"
     }
   },
@@ -3198,7 +3198,7 @@
     ],
     "description": "",
     "openPr": {
-      "checkedAt": "2026-10-17T08:24:54.1575561Z",
+      "checkedAt": "2026-10-18T08:25:36.7211556Z",
       "version": "36.2"
     }
   },
@@ -6298,7 +6298,7 @@
     "description": "",
     "validationCount": 1,
     "openPr": {
-      "checkedAt": "2026-10-17T08:24:56.3494697Z",
+      "checkedAt": "2026-10-18T08:25:39.7337149Z",
       "version": "0.18.0"
     }
   },
@@ -6770,7 +6770,11 @@
       "97F707CE677B7591BAD9D95C1F74635B5B2B9468DA92EF94D426DB4453524357"
     ],
     "validationCount": 1,
-    "version": "12.14.0"
+    "version": "12.14.0",
+    "openPr": {
+      "checkedAt": "2026-10-18T08:26:13.1554275Z",
+      "version": "12.14.0"
+    }
   },
   "PocketBase.PocketBase": {
     "validationCount": 1,
