@@ -644,7 +644,11 @@
     ],
     "description": "",
     "version": "1.4.71",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "version": "1.4.75",
+      "checkedAt": "2026-10-18T20:20:54.795889Z"
+    }
   },
   "AtaraxyLabs.sem": {
     "manifestHash": "43514CBBFE7D6C1B48D2F168AE20C1C99CAC2866D2A129F82748F0927FE76AB2",
@@ -1228,7 +1232,11 @@
       "4D7C18FF7885F45948F1FBEFB1EB256EA62FFE1D536258E55DA94C189F2D13CE",
       "FB535D94EAE66169FF4739B6792717E95E379BAB267AF8B4200A76C8A1EBB487"
     ],
-    "manifestHash": "ABCCF41C1C8A52A96BDE5AB7B0070F6F4C2CA6C2825D9F45D8CA7B11912C5D2C"
+    "manifestHash": "ABCCF41C1C8A52A96BDE5AB7B0070F6F4C2CA6C2825D9F45D8CA7B11912C5D2C",
+    "openPr": {
+      "version": "7.17.0",
+      "checkedAt": "2026-10-18T20:21:43.585967Z"
+    }
   },
   "C-POPLO.Unreal-GUI": {
     "validationCount": 1,
@@ -4041,8 +4049,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.10.13",
-      "checkedAt": "2026-10-17T20:20:58.3656332Z"
+      "version": "2026.10.14",
+      "checkedAt": "2026-10-18T20:20:17.3480676Z"
     }
   },
   "jeffaristi92.Sweeft": {
