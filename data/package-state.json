@@ -1996,7 +1996,11 @@
     "version": "1.8.34",
     "installerHashes": [
       "1184DB5A0962B40110CBE9A6DC7887166CA2022ECACD96B425A3C36E5197486B"
-    ]
+    ],
+    "openPr": {
+      "version": "1.8.34",
+      "checkedAt": "2026-10-18T16:21:00.2291182Z"
+    }
   },
   "Docker.Buildx": {
     "installerHashes": [
@@ -3732,7 +3736,11 @@
     "version": "3.2.0",
     "installerHashes": [
       "2F69B2CB67170602294D93221C4C892626279CF0C64CCC0870062F6EAF556721"
-    ]
+    ],
+    "openPr": {
+      "version": "3.2.0",
+      "checkedAt": "2026-10-18T16:21:01.1230838Z"
+    }
   },
   "icsharpcode.ILSpy": {
     "state": "VALIDATION_PASSED",
@@ -6797,7 +6805,11 @@
     "version": "7.1.0",
     "installerHashes": [
       "28FDAC5089A17D6742E771FA48FAE6F72FFA3AFA35C0286F3D840DFC6618A016"
-    ]
+    ],
+    "openPr": {
+      "version": "7.1.0",
+      "checkedAt": "2026-10-18T16:21:04.4133787Z"
+    }
   },
   "PolyMC.PolyMC": {
     "installerHashes": [
@@ -8536,7 +8548,7 @@
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
       "version": "5.7.1",
-      "checkedAt": "2026-10-17T16:21:32.2030937Z"
+      "checkedAt": "2026-10-18T16:21:50.3001795Z"
     }
   },
   "termio.soft-jp.com.TermioWin": {
