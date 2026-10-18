@@ -1988,15 +1988,15 @@
     "version": "0.6.1"
   },
   "divVerent.AAAAXY": {
-    "state": "VALIDATION_FAILED",
     "description": "",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-18T12:54:13.4724343Z",
+    "manifestHash": "4F14F56E068845761F27377A3AFF07C2867241CDADDF2A7251CD05A5F1ABB45B",
     "validationCount": 1,
+    "version": "1.8.34",
     "installerHashes": [
-      "75E9C7A07392941BDFA101A95370EDDEAE402E5B21755C4DB0CFCE84031C100E"
-    ],
-    "lastUpdated": "2026-08-05T12:38:59.045593Z",
-    "manifestHash": "7AAB95DF751472D3AB027CB197A32AFAC53D84AF2957CEE85DE6FED31D6869B0",
-    "version": "1.7.239"
+      "1184DB5A0962B40110CBE9A6DC7887166CA2022ECACD96B425A3C36E5197486B"
+    ]
   },
   "Docker.Buildx": {
     "installerHashes": [
@@ -3724,15 +3724,15 @@
     "lastUpdated": "2026-08-21T17:17:39.9241582Z"
   },
   "IanWalton.JellyfinMPVShim": {
-    "lastUpdated": "2026-10-09T17:09:08.5480937Z",
-    "validationCount": 5,
-    "manifestHash": "675AEF627B4CC56E6ABA67B65310B3A79C2D1BE64E45261656508D89D741DD2A",
-    "installerHashes": [
-      "4FBDFADCF028BCBB67375F808F5C8FE557635F4377A46E84550DE32B9E002B5E"
-    ],
-    "version": "3.1.0",
+    "description": "",
     "state": "VALIDATION_PASSED",
-    "description": ""
+    "lastUpdated": "2026-10-18T12:54:13.3012254Z",
+    "manifestHash": "362CAE69CC237901F9BEF39E615FE71D5C3D9877C4CDF168421DF61D6AB6A7C6",
+    "validationCount": 1,
+    "version": "3.2.0",
+    "installerHashes": [
+      "2F69B2CB67170602294D93221C4C892626279CF0C64CCC0870062F6EAF556721"
+    ]
   },
   "icsharpcode.ILSpy": {
     "state": "VALIDATION_PASSED",
@@ -4490,15 +4490,15 @@
     "version": "2.6.0"
   },
   "kukuruzka165.materialgram": {
-    "state": "VALIDATION_PASSED",
     "description": "",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-18T12:54:13.3702136Z",
+    "manifestHash": "463CBB0DBE90047E74B7B478580AF85E9A6B683264340E66B218D0B1BE233B46",
     "validationCount": 1,
+    "version": "7.3.1.1",
     "installerHashes": [
-      "44DC8082319A0571DCF934B2623D7C2CAE6BCBB2DAA5BAFB74D28B5A41E941B2"
-    ],
-    "lastUpdated": "2026-08-05T12:38:59.4895453Z",
-    "manifestHash": "F877FA5F3CB7023E0385FDD3E255431708BBDC70BE8B69096F1D1D38C5ADB660",
-    "version": "7.0.5.1"
+      "820A0EA3593CF66309520F67B0248E3DEAC784D5D5A405E093866A0AA49F16FF"
+    ]
   },
   "LANCommander.Launcher": {
     "lastUpdated": "2026-09-19T05:03:38.558662Z",
@@ -6789,14 +6789,14 @@
     ]
   },
   "PocketSync.PocketSync": {
-    "validationCount": 1,
-    "lastUpdated": "2026-10-12T13:14:43.9747313Z",
     "description": "",
-    "manifestHash": "25FB696B26A8706705D8D28F35D55E28CBD3E0866959538C3E513BD26CCD83D5",
-    "version": "7.0.2",
     "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-18T12:54:13.3973923Z",
+    "manifestHash": "C49CF1DADC9BA9E4444461C86A007C2F5D681F26DB10E937E52F2F395F4A4616",
+    "validationCount": 1,
+    "version": "7.1.0",
     "installerHashes": [
-      "AEA8FE649408B5030B03F71DC69335A77BBD5174D9BB4884E19C07EE4D532D2C"
+      "28FDAC5089A17D6742E771FA48FAE6F72FFA3AFA35C0286F3D840DFC6618A016"
     ]
   },
   "PolyMC.PolyMC": {
@@ -9223,15 +9223,15 @@
     "manifestHash": "97587D8F86D48255BEB64B6E2C563568900B25B83E054DF0764861567826D3BF"
   },
   "WabbajackTools.Wabbajack": {
-    "lastUpdated": "2026-10-16T08:52:37.0159137Z",
-    "installerHashes": [
-      "56FBE55821894A3E6D70D37DC3BC776C40B3F044F58B904235BA0B463554126B"
-    ],
-    "manifestHash": "B86D50BE48512E70D6DA56B626874527693C7C8CC0C9DF1DB8953DE29CF9F024",
-    "validationCount": 1,
+    "description": "",
     "state": "VALIDATION_PASSED",
-    "version": "4.3.0.1",
-    "description": ""
+    "lastUpdated": "2026-10-18T12:54:13.4414266Z",
+    "manifestHash": "64D160E2DE3B7D8FE2CBFC1F30BCE3C1B8818627A390E76419B478ED0C1B3DD0",
+    "validationCount": 1,
+    "version": "4.3.2.0",
+    "installerHashes": [
+      "7F2D86584106637938E06A9E574FDDAD1123F33620C87373FF610269114289E0"
+    ]
   },
   "WalkingWiFi.LocalMCPTunnel": {
     "state": "VALIDATION_PASSED",
