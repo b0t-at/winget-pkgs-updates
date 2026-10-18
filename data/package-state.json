@@ -4592,13 +4592,13 @@
     "state": "VALIDATION_PASSED"
   },
   "LibreCAD.LibreCAD": {
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "D55588F6BBE59E2512EF0F1681246CFFF302B0EE78D9DC69B709F51FC917C207",
       "0CD876D0E3FBFCDCDB85E5019080ACA243908F4AD5C3B3C93A55EE9BA154F95B"
     ],
     "manifestHash": "E8104C2BDCDD657BAB584ECA84FF7F6F5F6F51EF96E7A1C687B0268C36860D3E",
-    "lastUpdated": "2026-10-18T01:08:38.1748327Z",
+    "lastUpdated": "2026-10-18T08:38:12.0722069Z",
     "description": "",
     "state": "VALIDATION_FAILED",
     "version": "2.2.1.6"
@@ -8171,15 +8171,15 @@
     }
   },
   "Storj.Uplink": {
-    "validationCount": 5,
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "D568FD2ABD98E1D396DF3C924750534BDF2E8BE68873617366AC3D411D2CAB42"
+      "125F74D9DB314ED586854AEDCE8F10C35C7968889E642E1DE96B4BCFB3A124EC"
     ],
-    "manifestHash": "1191F2FBC58356804A9902BDE862055E266DE73FAC7ABF16E72B9848FC447406",
-    "version": "1.164.2",
+    "validationCount": 1,
+    "version": "1.165.1",
+    "manifestHash": "2578BCB2CAA37AB48BFEE0BE091C1090A80827C22822B6E92FCC718093016843",
     "description": "",
-    "lastUpdated": "2026-10-09T05:25:50.5373243Z",
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-10-18T08:38:12.1632482Z"
   },
   "str4d.rage": {
     "state": "VALIDATION_PASSED",
@@ -9184,15 +9184,15 @@
     ]
   },
   "VoiceWave.LocalCore": {
-    "validationCount": 1,
-    "manifestHash": "EA1B1F671F11C5A6B3434A34D129FA9A553EF5C21D6EE7FA3CA490C03071D64D",
-    "installerHashes": [
-      "2F572E0CEB22A36A1298B10ADAB66D4E5E53DC1A8F71B5BAAB20548CF105DFB4"
-    ],
-    "description": "",
-    "lastUpdated": "2026-10-15T20:57:37.9977356Z",
     "state": "VALIDATION_PASSED",
-    "version": "0.6.1"
+    "installerHashes": [
+      "2159D5D1C960F62E98D60E4210B780D634250079650259366EE41E342694905E"
+    ],
+    "validationCount": 1,
+    "version": "0.7.0",
+    "manifestHash": "339659381E1205D7645B5FCBE5D89E83BC4FFDA2941727948BB53C686F605FD0",
+    "description": "",
+    "lastUpdated": "2026-10-18T08:38:12.1217353Z"
   },
   "Vortenia.Overwatch": {
     "version": "2.0.2",
