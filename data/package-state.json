@@ -2671,8 +2671,8 @@
     ],
     "description": "",
     "openPr": {
-      "version": "3.2.4",
-      "checkedAt": "2026-10-18T00:58:04.5143652Z"
+      "checkedAt": "2026-10-19T04:26:58.8976807Z",
+      "version": "3.2.4"
     }
   },
   "Fly-io.flyctl": {
@@ -2883,8 +2883,8 @@
     "lastUpdated": "2026-10-17T20:34:10.5250474Z",
     "version": "2.17.0",
     "openPr": {
-      "version": "2.17.0",
-      "checkedAt": "2026-10-18T00:58:05.0579858Z"
+      "checkedAt": "2026-10-19T04:26:59.3660303Z",
+      "version": "2.17.0"
     }
   },
   "Gardener.gardenlogin": {
@@ -3686,8 +3686,8 @@
   },
   "houmain.keymapper": {
     "openPr": {
-      "version": "5.7.3",
-      "checkedAt": "2026-10-18T00:58:05.5863537Z"
+      "checkedAt": "2026-10-19T04:26:59.862181Z",
+      "version": "5.7.3"
     }
   },
   "hrkfdn.ncspot": {
@@ -5107,8 +5107,8 @@
     ],
     "manifestHash": "D189FFDB783B04E9B5D8643E9E3ED5382A817C1A56D490985A746B730152C38F",
     "openPr": {
-      "version": "5.2.2",
-      "checkedAt": "2026-10-18T00:58:09.5304024Z"
+      "checkedAt": "2026-10-19T04:27:02.7170694Z",
+      "version": "5.2.2"
     }
   },
   "Microsoft.Azure.GuestProxyAgent.AllowListTool": {
@@ -6312,11 +6312,7 @@
     "version": "0.18.0",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 1,
-    "openPr": {
-      "checkedAt": "2026-10-18T08:25:39.7337149Z",
-      "version": "0.18.0"
-    }
+    "validationCount": 1
   },
   "OpenScreen.OpenScreen": {
     "description": "",
@@ -8275,8 +8271,8 @@
     "version": "1.29.1",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "version": "1.29.1",
-      "checkedAt": "2026-10-18T00:59:03.0168444Z"
+      "checkedAt": "2026-10-19T04:27:59.8846405Z",
+      "version": "1.29.1"
     }
   },
   "SuperRadCompany.Microsandbox": {
@@ -9598,7 +9594,11 @@
     "installerHashes": [
       "1BF61EA69F8D483CCD73031B40FEC34F462E4A94EA6AE932433EB2E7C304F573"
     ],
-    "lastUpdated": "2026-10-19T01:14:08.5430842Z"
+    "lastUpdated": "2026-10-19T01:14:08.5430842Z",
+    "openPr": {
+      "checkedAt": "2026-10-19T04:28:06.3905285Z",
+      "version": "24.7"
+    }
   },
   "xssnick.TON-Torrent": {
     "state": "VALIDATION_PASSED",
