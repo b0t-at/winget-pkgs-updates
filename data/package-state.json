@@ -1368,15 +1368,15 @@
     }
   },
   "Celerp.Celerp": {
-    "installerHashes": [
-      "FDDF7E6FCA9265CFBF4E6D2D7D6CB4793620B9E9D1BAD81E78150E2246442DF4"
-    ],
-    "lastUpdated": "2026-10-17T01:39:43.1640135Z",
-    "version": "2.5.6",
-    "manifestHash": "9B2B9B1A0D69A88165292211174A9397773245F3A7F816441018E5544B56D15C",
-    "validationCount": 1,
+    "description": "",
     "state": "VALIDATION_PASSED",
-    "description": ""
+    "lastUpdated": "2026-10-19T05:05:38.4403482Z",
+    "installerHashes": [
+      "E2FAC8FA0EC37A9316018923E54599330D60AA5DC2F6D08889297E2A82E64992"
+    ],
+    "manifestHash": "F921E240A2BDB69CDFA6C5E68407D5575883AC1B857BD7A3531FAFF804ED99E6",
+    "validationCount": 1,
+    "version": "2.6.0"
   },
   "CerberAuth.jwtop": {
     "description": "",
@@ -2605,15 +2605,15 @@
     "description": ""
   },
   "Filamental.Filamental": {
-    "lastUpdated": "2026-10-16T16:40:46.6131619Z",
-    "validationCount": 1,
-    "version": "0.5.2",
     "description": "",
     "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-19T05:05:38.4622444Z",
     "installerHashes": [
-      "B38ACCCB09F86F8AF837655CE03B1E5FCB4CC9B9764D06BD4FEB06C2F24F7328"
+      "54581BCE312122B69A3E20F36EBBC7EBC0474119C09954E67A34EE77C90B3A48"
     ],
-    "manifestHash": "9ABB22E14846E8F24288B56E06FE78ED66356DD093258491CB637CFEF5B970B0"
+    "manifestHash": "95CAF2C02F58796A129912EB54A5DE72560F15041F9B91C00E9E32CC4D04408B",
+    "validationCount": 1,
+    "version": "0.5.3"
   },
   "FirenzeLor.gemini-collector": {
     "validationCount": 1,
@@ -4729,15 +4729,15 @@
     "version": "4.1.26190"
   },
   "LoxSmoke.OpenLogiNet": {
-    "validationCount": 1,
-    "installerHashes": [
-      "9EA8E80B4D71A2E2E299A206AB7BA9699A0456A87E175E83A12B7470F2CFD919"
-    ],
-    "manifestHash": "0A37A85A2AD34361708402A27A79762B613F4E34B675781A7F2A1FC05BCB891C",
-    "lastUpdated": "2026-10-17T08:49:39.3394466Z",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "version": "0.23.0"
+    "lastUpdated": "2026-10-19T05:05:38.5215186Z",
+    "installerHashes": [
+      "71AF992A37B7182CA597C0E64E94E0893FBFAC01002865750DB5E1461CA2B219"
+    ],
+    "manifestHash": "D89367F5EB3A327D03434DA71A4D5A1294FFD133A611D4FADCDC8E487AC5037F",
+    "validationCount": 1,
+    "version": "0.24.0"
   },
   "LuantiTeam.Luanti": {
     "installerHashes": [
@@ -5834,15 +5834,15 @@
     "manifestHash": "5EBE8F78A880C1167C195458B3FF9ABDF521346435DFAF5B823B4BBB584E98FD"
   },
   "NimaShafie.OxideSLOC": {
-    "installerHashes": [
-      "3C9BC79CB48151609106B18EBE2AB396896F8AD4943D45C2DD6294CE44E826FB"
-    ],
-    "validationCount": 1,
-    "lastUpdated": "2026-10-13T01:22:02.66635Z",
     "description": "",
-    "manifestHash": "6844B486BDB30C8E03B8AA236292F2473F41BEAE4517DC2C4A9FFB3FD0421472",
     "state": "VALIDATION_PASSED",
-    "version": "1.6.23"
+    "lastUpdated": "2026-10-19T05:05:38.5507882Z",
+    "installerHashes": [
+      "BC9346793065AC6BE4FE810A16D1CD53C4DD06623514EDE37273A879FCAAB1F0"
+    ],
+    "manifestHash": "4C11149DBE13CB80844399B3115B37624E2A5D087723BE5EC8A5EA095CE1BD56",
+    "validationCount": 1,
+    "version": "1.6.24"
   },
   "Nisonxi.PowerDoze": {
     "manifestHash": "5E5B5D669F1C795D7C92E12BA9F8F1950B7A5E916932F136DD5C4E3AE1D12A26",
@@ -6304,15 +6304,13 @@
     "lastUpdated": "2026-08-20T09:17:27.6311244Z"
   },
   "openpubkey.opkssh": {
-    "installerHashes": [
-      "CEC390055771E42DEE471CCDEBD922A248C52E2811538553C92FA5596B8949A8"
-    ],
-    "lastUpdated": "2026-10-17T04:44:32.3374469Z",
-    "manifestHash": "8032948C02C49BC325412078B1C4AB08D7443BD4CF6989A3490295F41D1B6B02",
-    "version": "0.18.0",
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 1
+    "installerHashes": "101F6775A943079C9347AE4C0DEF0DB1A706317D058A36784ED3111A55E275F2",
+    "lastUpdated": "2026-10-19T05:05:38.4050572Z",
+    "manifestHash": "D3A24B4FE13D270F7938B8B3D81E0C22F2745C1A375BA27C5B525912CCABCB87",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "0.19.0"
   },
   "OpenScreen.OpenScreen": {
     "description": "",
@@ -7177,15 +7175,15 @@
     "version": "0.3.1"
   },
   "RimSort.RimSort": {
-    "manifestHash": "4AAF801073A53FF99D1443D031A68E157BC8546641277702267A717C6206DEF6",
-    "lastUpdated": "2026-10-17T17:04:08.3496985Z",
-    "validationCount": 1,
     "description": "",
     "state": "VALIDATION_PASSED",
-    "version": "1.16.0",
+    "lastUpdated": "2026-10-19T05:05:38.3835312Z",
     "installerHashes": [
-      "334DCEF6B98E2A4FE79BF9EBD809288DA3B67500AA7F60F6EAC9FAC14289D221"
-    ]
+      "7D0F2689A95784EC96F7EAEE7DBD1C08EBC0B575D74506D7C30C57F243F42789"
+    ],
+    "manifestHash": "68B54D6A5D23E9629FDA0E7C99ED6FA1BD7CF91437102AF6F3590819BA0C2DDF",
+    "validationCount": 1,
+    "version": "1.17.0"
   },
   "Ripose.Memento": {
     "description": "",
@@ -8015,15 +8013,15 @@
     "lastUpdated": "2026-10-17T12:45:08.4828138Z"
   },
   "SpikeHD.Dorion": {
-    "validationCount": 1,
     "description": "",
-    "manifestHash": "89E5D95315E6845E6D40CBC6D5D0A4FC307B78D2E9C320F66D5BD0C8B3E2E6CA",
-    "version": "6.13.2",
-    "lastUpdated": "2026-09-20T20:52:04.8304812Z",
     "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-19T05:05:38.3247132Z",
     "installerHashes": [
-      "711F3D1F30D71299AFF681E277C05666F81DB14C88CE05198E0F015F36CB7109"
-    ]
+      "88CEF5DC0DEE6890EB1753D2C2CCA729E49F9D43E6267FF3BEC006AD7606745A"
+    ],
+    "manifestHash": "23BBD12457A1B7F9C374A8590A48F3F964F999592B8A7AA752B3DC6BA50E7A83",
+    "validationCount": 1,
+    "version": "6.14.0"
   },
   "sprout2000.Elephicon": {
     "lastUpdated": "2026-08-30T04:52:51.5639562Z",
@@ -9145,15 +9143,15 @@
     }
   },
   "venipa.ytmdesktop": {
-    "manifestHash": "9C31EFFCEF2AF712A4B32DAA0E72A077F3E71B6104B0ECAF75DACCF760718B20",
     "description": "",
-    "version": "1.8.1",
-    "validationCount": 1,
-    "lastUpdated": "2026-09-09T16:53:53.5655629Z",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-19T05:05:38.5007714Z",
     "installerHashes": [
-      "27C674D296B9A1D81A546029C985074CC0FE0CD91CB48CBDC6A85605D00F5D5A"
+      "16640459555543D652FAB6674FE2F7D6A57376D2999ECD780C387BF4BCA07D52"
     ],
-    "state": "VALIDATION_PASSED"
+    "manifestHash": "34C384031D616ADD7FCFF411C058D6A2D0D7A539B4D42E2517B401B52F73D786",
+    "validationCount": 1,
+    "version": "1.8.3"
   },
   "Victor141516.Voolime": {
     "installerHashes": [
