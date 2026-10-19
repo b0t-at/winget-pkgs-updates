@@ -1380,15 +1380,15 @@
     }
   },
   "Celerp.Celerp": {
+    "lastUpdated": "2026-10-19T20:57:17.6262277Z",
     "description": "",
+    "version": "2.7.0",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-19T05:05:38.4403482Z",
-    "installerHashes": [
-      "E2FAC8FA0EC37A9316018923E54599330D60AA5DC2F6D08889297E2A82E64992"
-    ],
-    "manifestHash": "F921E240A2BDB69CDFA6C5E68407D5575883AC1B857BD7A3531FAFF804ED99E6",
     "validationCount": 1,
-    "version": "2.6.0"
+    "installerHashes": [
+      "D22D2E9FB082FA21478E820D3C4C90D4B22D0DB38B228452F7801453E1CA1E53"
+    ],
+    "manifestHash": "61E5BCD7835BE37074083064D0130FDEBAECE699C55711EC5540E11008F9C493"
   },
   "CerberAuth.jwtop": {
     "description": "",
@@ -2617,15 +2617,15 @@
     "description": ""
   },
   "Filamental.Filamental": {
+    "lastUpdated": "2026-10-19T20:57:17.5770195Z",
     "description": "",
+    "version": "0.5.4",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-19T05:05:38.4622444Z",
-    "installerHashes": [
-      "54581BCE312122B69A3E20F36EBBC7EBC0474119C09954E67A34EE77C90B3A48"
-    ],
-    "manifestHash": "95CAF2C02F58796A129912EB54A5DE72560F15041F9B91C00E9E32CC4D04408B",
     "validationCount": 1,
-    "version": "0.5.3"
+    "installerHashes": [
+      "E222641FE9B350776840958467FA84ADBE5402D6C0204AD7D93DBC80B46ED45E"
+    ],
+    "manifestHash": "306C4AE42883003300CA2D26862A13AF399FF9E20F5A8BB33EC41AF948F96D9D"
   },
   "FirenzeLor.gemini-collector": {
     "validationCount": 1,
@@ -3027,16 +3027,16 @@
     "state": "VALIDATION_PASSED"
   },
   "Gildas.Bitbucket-CLI": {
-    "version": "0.18.6",
+    "lastUpdated": "2026-10-19T20:57:17.5215376Z",
+    "description": "",
+    "version": "0.18.7",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
     "installerHashes": [
-      "77DD90D3FA93C0EF79B68528277388D8B5AFAE4C016C603BBA8B43FE24CFCD97",
-      "EEA603DF36FC21C32C4A123BD0F361EEF595407344CE14011F8CAB2959CF79E6"
+      "1F562F5C74676F536D77010062D6274AA6CAEB1E01D2F394A712554BBAEE42D6",
+      "CF8FB96449270D9E9059CE61BD0F48608B8B3D5DE68004B7F3D3D77885D39994"
     ],
-    "manifestHash": "C69A34702FC2FBE1B8ED607C8B81C8DBC178613C8B9799438F19BFC35EF338C6",
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "lastUpdated": "2026-09-19T01:38:39.4235838Z"
+    "manifestHash": "2C2FB91B888446DC84FA07024F495E17DC0FB532477F13674F542A99F7AE47CA"
   },
   "GioPalusa.SRTDownloader": {
     "installerHashes": [
@@ -4352,15 +4352,15 @@
     }
   },
   "KellyBrazil.jc": {
-    "installerHashes": [
-      "1BC6070771DEA217B78B8D1B36C1E32CB92F66100243211E35CCF6061FF1F8A7"
-    ],
-    "manifestHash": "B69B0894CC80D8B068325A1904D6878597DBC4401467D2BB3B6E1CF8F046B48E",
+    "lastUpdated": "2026-10-19T20:57:17.6529754Z",
+    "description": "",
+    "version": "1.26.1",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "1.26.0",
-    "description": "",
-    "lastUpdated": "2026-09-22T04:59:22.4687665Z"
+    "installerHashes": [
+      "86465A332FFF0FC6676C1AA94674ADD4BA2C6D6BF56CB3294465958906EAE0FC"
+    ],
+    "manifestHash": "264F317D7A9821CAD8FB036B8CB10A72FA7D2DFD5A7365536DA82411682D7208"
   },
   "KellyElton.Max.Backup": {
     "state": "VALIDATION_PASSED",
@@ -6708,16 +6708,16 @@
     }
   },
   "pdfcpu.pdfcpu": {
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-12T09:23:24.2855637Z",
+    "lastUpdated": "2026-10-19T20:57:17.7182307Z",
     "description": "",
-    "version": "0.16.2",
+    "version": "0.16.3",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "manifestHash": "C7553A01D27540CE32F9BD1FBDFCF97707D03A97F9D512A63F706EBB78212A43",
     "installerHashes": [
-      "C12AFFEC1C1312B9E95DF308F9A7AC020BF1ABB37FC870803D6B01984EFCF66F",
-      "941EF71EA3B8B5385734627A8D60C199486042B66A4A675BD0074695AE11C26D"
-    ]
+      "F6019B942408E61BBB9C49C6BAAE84618DA102239C58E7965792E2DC67981DD7",
+      "282CB436B6904895FE17CF13E10E8397FCF3BA222084986AC1382340761D3D55"
+    ],
+    "manifestHash": "D9B8E3514C59C66F4C7996DBC835F90B0032675E402205545410B44DE644C8BD"
   },
   "Pencil.Desktop": {
     "manifestHash": "C4EE87B0CC9764C0F5737AC23FED643FDCF66A0CF3152C79A8770CA186C6674E",
@@ -8084,15 +8084,15 @@
     "version": "6.14.0"
   },
   "sprout2000.Elephicon": {
-    "lastUpdated": "2026-08-30T04:52:51.5639562Z",
-    "version": "4.2.0",
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-19T20:57:17.6923608Z",
     "description": "",
-    "manifestHash": "29777BA332C6AAA0CA51EB9A7FFCA0C1EBCD33C805247F426E3710FED22F7AE0",
+    "version": "4.2.1",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
     "installerHashes": [
-      "46A5487579829B8A3D51A7D38BC3393058426BC2239383423A2585C00DEAB395"
-    ]
+      "D1F7AA0C56F2E11881661EE8A1C5B9EDB3B9DBB4E0B2FD9D1B968338CCB34413"
+    ],
+    "manifestHash": "B11EE29787152C159128F0B4A482B3D7C9F2FD1865954C21263197702ABADDF3"
   },
   "sprout2000.LeafView": {
     "validationCount": 1,
