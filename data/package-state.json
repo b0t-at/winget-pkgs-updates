@@ -1161,7 +1161,7 @@
     "manifestHash": "81787CB8A4D71FFE5AF7458238621F26813929C3CAB58F9E6A6BCF0762A5E95E",
     "lastUpdated": "2026-08-20T09:17:27.4984446Z",
     "openPr": {
-      "checkedAt": "2026-10-18T08:25:34.4929715Z",
+      "checkedAt": "2026-10-19T08:35:22.7953549Z",
       "version": "1.2.6"
     }
   },
@@ -2771,7 +2771,7 @@
     "description": "",
     "validationCount": 1,
     "openPr": {
-      "checkedAt": "2026-10-18T08:25:36.3761111Z",
+      "checkedAt": "2026-10-19T08:35:24.5513892Z",
       "version": "3.20.4"
     }
   },
@@ -3234,7 +3234,7 @@
     ],
     "description": "",
     "openPr": {
-      "checkedAt": "2026-10-18T08:25:36.7211556Z",
+      "checkedAt": "2026-10-19T08:35:24.9864437Z",
       "version": "36.2"
     }
   },
@@ -5269,7 +5269,11 @@
     "lastUpdated": "2026-09-30T01:45:49.4552061Z",
     "installerHashes": [
       "E6B89A6DA0FE7DA5F64302306153C6AAC7A4BE67C800426A91AE014093E4DF2D"
-    ]
+    ],
+    "openPr": {
+      "checkedAt": "2026-10-19T08:35:27.3036428Z",
+      "version": "4.0.0"
+    }
   },
   "Microsoft.Sqlcmd": {
     "validationCount": 2,
@@ -6348,7 +6352,11 @@
     "manifestHash": "D3A24B4FE13D270F7938B8B3D81E0C22F2745C1A375BA27C5B525912CCABCB87",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "0.19.0"
+    "version": "0.19.0",
+    "openPr": {
+      "checkedAt": "2026-10-19T08:35:27.7697235Z",
+      "version": "0.19.0"
+    }
   },
   "OpenScreen.OpenScreen": {
     "description": "",
@@ -6840,7 +6848,7 @@
     "validationCount": 1,
     "version": "12.14.0",
     "openPr": {
-      "checkedAt": "2026-10-18T08:26:13.1554275Z",
+      "checkedAt": "2026-10-19T08:35:28.1587129Z",
       "version": "12.14.0"
     }
   },
