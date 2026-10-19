@@ -392,11 +392,7 @@
       "DDAC33F65ABF09B8AB6C7B2A15099B6F5CCAF4074CBAA815EE11035A9B08DDFE",
       "93FA008D7B565BBDFC7F972E83055C25E03F4B07545749E195A553D37022F336"
     ],
-    "description": "",
-    "openPr": {
-      "version": "3.0.6",
-      "checkedAt": "2026-10-19T12:34:51.3992054Z"
-    }
+    "description": ""
   },
   "Anki.Anki": {
     "description": "",
@@ -1349,12 +1345,6 @@
     "state": "VALIDATION_PASSED",
     "description": ""
   },
-  "Carvel.ytt": {
-    "openPr": {
-      "checkedAt": "2026-09-23T20:23:24.2097921Z",
-      "version": "0.55.3"
-    }
-  },
   "ccccraz.cogmoteGO": {
     "lastUpdated": "2026-08-20T21:12:49.643883Z",
     "manifestHash": "08B8108641665163B9F95226770A1A31C6983FA07619378FFDAA4C5497966A23",
@@ -2028,8 +2018,8 @@
       "1184DB5A0962B40110CBE9A6DC7887166CA2022ECACD96B425A3C36E5197486B"
     ],
     "openPr": {
-      "version": "1.8.34",
-      "checkedAt": "2026-10-18T16:21:00.2291182Z"
+      "checkedAt": "2026-10-19T16:44:12.3853244Z",
+      "version": "1.8.34"
     }
   },
   "Docker.Buildx": {
@@ -3774,8 +3764,8 @@
       "2F69B2CB67170602294D93221C4C892626279CF0C64CCC0870062F6EAF556721"
     ],
     "openPr": {
-      "version": "3.2.0",
-      "checkedAt": "2026-10-18T16:21:01.1230838Z"
+      "checkedAt": "2026-10-19T16:44:13.7172017Z",
+      "version": "3.2.0"
     }
   },
   "icsharpcode.ILSpy": {
@@ -8259,11 +8249,7 @@
     "version": "1.165.1",
     "manifestHash": "2578BCB2CAA37AB48BFEE0BE091C1090A80827C22822B6E92FCC718093016843",
     "description": "",
-    "lastUpdated": "2026-10-18T08:38:12.1632482Z",
-    "openPr": {
-      "version": "1.165.1",
-      "checkedAt": "2026-10-19T12:34:40.0982665Z"
-    }
+    "lastUpdated": "2026-10-18T08:38:12.1632482Z"
   },
   "str4d.rage": {
     "state": "VALIDATION_PASSED",
@@ -8615,8 +8601,8 @@
     "manifestHash": "101A50462A6E2BE19AFB17A21278EA44597559D970949753840897CFC30A7566",
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
-      "version": "5.7.1",
-      "checkedAt": "2026-10-18T16:21:50.3001795Z"
+      "checkedAt": "2026-10-19T16:44:19.8032256Z",
+      "version": "5.7.1"
     }
   },
   "termio.soft-jp.com.TermioWin": {
