@@ -1,0 +1,14 @@
+{
+  "repository": "microsoft/winget-pkgs",
+  "pullRequestNumber": 455547,
+  "classification": "ScannerBlocked",
+  "state": "Escalated",
+  "recordedAt": "2026-10-19T07:15:25.5941048+00:00",
+  "retryAfter": null,
+  "learnedOverrideSignal": null,
+  "reason": "Defender or the ESRP installer scan blocked the binaries; resubmitting the same files fails again. Quarantine the package until the scanner verdict changes or upstream ships new binaries.",
+  "packageIdentifier": "mikf.gallery-dl.Nightly",
+  "packageVersion": "2026.10.18",
+  "evidence": [],
+  "installerTraits": null
+}
