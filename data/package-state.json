@@ -392,7 +392,11 @@
       "DDAC33F65ABF09B8AB6C7B2A15099B6F5CCAF4074CBAA815EE11035A9B08DDFE",
       "93FA008D7B565BBDFC7F972E83055C25E03F4B07545749E195A553D37022F336"
     ],
-    "description": ""
+    "description": "",
+    "openPr": {
+      "version": "3.0.6",
+      "checkedAt": "2026-10-19T12:34:51.3992054Z"
+    }
   },
   "Anki.Anki": {
     "description": "",
@@ -4073,8 +4077,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.10.14",
-      "checkedAt": "2026-10-18T20:20:17.3480676Z"
+      "version": "2026.10.15",
+      "checkedAt": "2026-10-19T12:34:11.4681238Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -6463,7 +6467,7 @@
     "version": "1.2",
     "openPr": {
       "version": "1.2.3",
-      "checkedAt": "2026-10-18T12:27:42.2072493Z"
+      "checkedAt": "2026-10-19T12:34:13.8903993Z"
     }
   },
   "ORASProject.ORAS": {
@@ -8258,7 +8262,7 @@
     "lastUpdated": "2026-10-18T08:38:12.1632482Z",
     "openPr": {
       "version": "1.165.1",
-      "checkedAt": "2026-10-18T12:28:16.994391Z"
+      "checkedAt": "2026-10-19T12:34:40.0982665Z"
     }
   },
   "str4d.rage": {
@@ -9664,11 +9668,7 @@
     "installerHashes": [
       "1BF61EA69F8D483CCD73031B40FEC34F462E4A94EA6AE932433EB2E7C304F573"
     ],
-    "lastUpdated": "2026-10-19T01:14:08.5430842Z",
-    "openPr": {
-      "checkedAt": "2026-10-19T04:28:06.3905285Z",
-      "version": "24.7"
-    }
+    "lastUpdated": "2026-10-19T01:14:08.5430842Z"
   },
   "xssnick.TON-Torrent": {
     "state": "VALIDATION_PASSED",
