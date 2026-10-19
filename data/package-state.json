@@ -282,7 +282,7 @@
     "version": "3.1",
     "openPr": {
       "version": "3.1",
-      "checkedAt": "2026-10-17T20:22:00.3317596Z"
+      "checkedAt": "2026-10-19T00:57:36.5146671Z"
     }
   },
   "Alochi.Monitoring": {
@@ -2090,8 +2090,8 @@
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "checkedAt": "2026-10-12T01:08:51.86576Z",
-      "version": "0.63.0"
+      "version": "0.64.0",
+      "checkedAt": "2026-10-19T00:56:39.5126027Z"
     }
   },
   "dragonflylee.switchfin": {
@@ -3146,7 +3146,7 @@
     ],
     "openPr": {
       "version": "2.15.0",
-      "checkedAt": "2026-10-17T20:20:57.96501Z"
+      "checkedAt": "2026-10-19T00:56:40.3764273Z"
     }
   },
   "Google.ContainerTools.Skaffold": {
@@ -6061,7 +6061,7 @@
     ],
     "openPr": {
       "version": "0.40.6",
-      "checkedAt": "2026-10-17T20:21:00.3310293Z"
+      "checkedAt": "2026-10-19T00:56:42.9092886Z"
     }
   },
   "Ombrelin.PandocGui": {
@@ -6813,11 +6813,7 @@
     "version": "7.1.0",
     "installerHashes": [
       "28FDAC5089A17D6742E771FA48FAE6F72FFA3AFA35C0286F3D840DFC6618A016"
-    ],
-    "openPr": {
-      "version": "7.1.0",
-      "checkedAt": "2026-10-18T16:21:04.4133787Z"
-    }
+    ]
   },
   "PolyMC.PolyMC": {
     "installerHashes": [
