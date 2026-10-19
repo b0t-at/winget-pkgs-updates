@@ -1639,15 +1639,15 @@
     "version": "0.0.22"
   },
   "cpvalente.ontime": {
-    "manifestHash": "552CE462E050768BB4586FF7119939B716FB683F2AF5CE264D8721B3E3AAFB48",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "1C30C31C4E543ECC39749BB532E536425839F70D28233D6C99F99909CA19F16F",
+    "version": "4.15.0",
+    "validationCount": 1,
     "description": "",
     "installerHashes": [
-      "051A9CF81373536E05E56B4AD597EC1EB6453C9262F98797F5AC78725BC0639B"
+      "1EF73C5028ADD3B20AE5FA13BE45F6E30AE9E3F9A9C89ACDC4680F6E398F1FDD"
     ],
-    "state": "VALIDATION_PASSED",
-    "validationCount": 5,
-    "version": "4.14.1",
-    "lastUpdated": "2026-10-09T21:05:27.5421768Z"
+    "lastUpdated": "2026-10-19T01:14:08.4742697Z"
   },
   "Crate-CI.Typos": {
     "installerHashes": [
@@ -3617,15 +3617,15 @@
     "validationCount": 1
   },
   "holland-built.Bloxsmith": {
-    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-11T01:38:55.3130501Z",
-    "version": "3.92.12",
-    "manifestHash": "8A612865D19C500B3B0E71BAB4038C02117C185BF2E392747297EE910BC89DF1",
+    "manifestHash": "52F2B9555300D80DA89BCF580B3D0C17D8E2CBF0F44DC55694AFC4E2F8DA4986",
+    "version": "3.92.16",
+    "validationCount": 1,
     "description": "",
     "installerHashes": [
-      "5D8FDEBD8287C4875BAB1FDE927F88D3D6836C437E4EFE2609FA2F29FCC3D9F5"
-    ]
+      "507EDBF26CC6F3F3A58ACF77EF97EBCB846AE8554A6D547E7E21CB649CDE8E8C"
+    ],
+    "lastUpdated": "2026-10-19T01:14:08.5705018Z"
   },
   "HongMinhee.Gukhanmun": {
     "manifestHash": "089D5FCFFB565DBC52073976471BB7BB53E1FA33EA888133D45A589919D3AE52",
@@ -9590,15 +9590,15 @@
     ]
   },
   "xpipe-io.xpipe.portable": {
-    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-11T01:38:55.3750195Z",
-    "version": "24.6",
-    "manifestHash": "F0540B5E9B90319E55C0183BC298ACEA2F78C7A180FC65A780FD0075DF5D7D2D",
+    "manifestHash": "065FDCD86BFEC52DB189EF4DAC65E4F3D07072FB46640A127E78DB0D5C733ED7",
+    "version": "24.7",
+    "validationCount": 1,
     "description": "",
     "installerHashes": [
-      "1E76F9D211F80EB42772B0CDFEDD8E171DFB816BABB45AF27C7856B155479A47"
-    ]
+      "1BF61EA69F8D483CCD73031B40FEC34F462E4A94EA6AE932433EB2E7C304F573"
+    ],
+    "lastUpdated": "2026-10-19T01:14:08.5430842Z"
   },
   "xssnick.TON-Torrent": {
     "state": "VALIDATION_PASSED",
