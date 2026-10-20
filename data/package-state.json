@@ -1230,15 +1230,15 @@
     }
   },
   "BytecodeAlliance.Wasmtime.Portable": {
-    "manifestHash": "837F80B1E735678CBEAB79BED211371BE90476E29529CB5B684A4928B128DAD4",
-    "description": "",
-    "lastUpdated": "2026-10-15T08:58:38.3015625Z",
-    "installerHashes": [
-      "BEE8F02158458A5F360412B232543D4FEA379B71B94380B806E7980050596C18"
-    ],
-    "version": "49.0.3",
+    "version": "49.0.4",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "description": "",
+    "manifestHash": "898D40787023DB22C0A6B8556146DEF6C7E8D8F0B24C4D8E324D0D0259FEDA9E",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "00D14880DAD5B490FE5F547785A9D6C02D40F24BAA289DAAF110F35FC0193885"
+    ],
+    "lastUpdated": "2026-10-20T01:14:16.5398312Z"
   },
   "ByteNess.AWSVault": {
     "version": "7.17.0",
@@ -1438,15 +1438,15 @@
     }
   },
   "ChiaNetwork.GUIforChiaBlockchain": {
-    "version": "2.7.4",
-    "lastUpdated": "2026-09-11T16:52:46.6052662Z",
+    "version": "2.7.5",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "DC6D50BEC022778A3080FDC2C924AFFBEB9241F79225B79F4E87368CE7377689",
     "description": "",
+    "manifestHash": "51FF6E7905A67306A6DAFBC803C8896AD5BFB94D9F45484BBBC6829B6925BEC6",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "FBF825BBA0EA0B9E8ED688FF5FE8F3EC698641B0C56C8B6B00DFBF8736C68CAC"
-    ]
+      "E4B3AF4375CDA715B66B46DFA5C3D0EDF1FF0E24F2B40E981C96393E5E0FABB3"
+    ],
+    "lastUpdated": "2026-10-20T01:14:16.4716659Z"
   },
   "ChristopherHotchkiss.SkylanderPortalController": {
     "lastUpdated": "2026-08-16T21:14:49.0140175Z",
@@ -4141,15 +4141,15 @@
     }
   },
   "JitzuLang.Jitzu": {
+    "version": "0.1.54",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "9EED30E6B0B41CF543214D0909F432A0347BD61D4914BBC088692295E6D516F0",
-    "lastUpdated": "2026-10-16T20:41:38.7963167Z",
+    "manifestHash": "7ECC267DD8621E50DDEAFD88A9D59B06ABD5DF48505BEABA91DB9916F2B2F6B1",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "D0D893506F144C43CF996E6E513B793A0077B35D603F48FF2790D0B3E5D0EBDA"
+      "FEB0B176D6C4C58A507EA954F63C445602ED981704F9D6207480F7976DE73458"
     ],
-    "version": "0.1.53"
+    "lastUpdated": "2026-10-20T01:14:16.5688229Z"
   },
   "jj-vcs.jj": {
     "validationCount": 3,
