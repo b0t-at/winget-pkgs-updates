@@ -1238,7 +1238,11 @@
     "manifestHash": "7E2BB4C232FAFC5601E5AF6D2AE1752C48ABD3EA92D8362ECAF5146E6BA17C98",
     "installerHashes": [
       "CEA9CCC700AACCB2B5507E96AC990BA60104BD7AB39284FB2E67CB64D58EFCC4"
-    ]
+    ],
+    "openPr": {
+      "version": "50.0.0",
+      "checkedAt": "2026-10-20T20:23:57.3257102Z"
+    }
   },
   "ByteNess.AWSVault": {
     "version": "7.17.0",
@@ -1519,11 +1523,7 @@
     "description": "",
     "manifestHash": "452B307A1F4E795FB5198446B88E2B92A70442795275A9151A0FBA1332F6D801",
     "validationCount": 1,
-    "version": "1.0.48275",
-    "openPr": {
-      "version": "1.7.0",
-      "checkedAt": "2026-10-16T16:23:32.3620464Z"
-    }
+    "version": "1.0.48275"
   },
   "ciromattia.KCC": {
     "lastUpdated": "2026-09-27T17:09:13.8678106Z",
@@ -2108,8 +2108,8 @@
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "version": "0.64.0",
-      "checkedAt": "2026-10-19T00:56:39.5126027Z"
+      "version": "0.64.1",
+      "checkedAt": "2026-10-20T20:23:59.351705Z"
     }
   },
   "dragonflylee.switchfin": {
@@ -2769,11 +2769,7 @@
     "version": "3.20.4",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 1,
-    "openPr": {
-      "checkedAt": "2026-10-19T08:35:24.5513892Z",
-      "version": "3.20.4"
-    }
+    "validationCount": 1
   },
   "FrancisBanyikwa.MediaDownloader": {
     "manifestHash": "03C1DB537ECDB0566823D94D3B6768E5B97F29295D693658F8DF8898058990A5",
@@ -8607,8 +8603,8 @@
     "manifestHash": "101A50462A6E2BE19AFB17A21278EA44597559D970949753840897CFC30A7566",
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
-      "checkedAt": "2026-10-19T16:44:19.8032256Z",
-      "version": "5.7.1"
+      "version": "5.7.1",
+      "checkedAt": "2026-10-20T20:24:58.6065281Z"
     }
   },
   "termio.soft-jp.com.TermioWin": {
@@ -9263,7 +9259,11 @@
     "manifestHash": "03CE3521CBDE5F0ABABC2577B51D9810C721D4A53F9F79E860B160CA7CC69C86",
     "installerHashes": [
       "EAC36A58699B94D3732A7FE1D8453FE89E0077BB18AC2C99B4C2EE102A431F2E"
-    ]
+    ],
+    "openPr": {
+      "version": "1.22.0",
+      "checkedAt": "2026-10-20T20:25:02.9924591Z"
+    }
   },
   "VoiceWave.LocalCore": {
     "state": "VALIDATION_PASSED",
