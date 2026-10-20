@@ -293,14 +293,14 @@
   },
   "Alochi.Monitoring": {
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "BACA6BA15D32BAABF528CFC74186DA710B88C3D0EDFF68EA5FB1D57279FEEB1A"
-    ],
-    "lastUpdated": "2026-10-10T09:00:45.3071869Z",
-    "manifestHash": "B9DA4C5E3F35CDA4E6F19D04D048675BC26EBADBEC8F935F28FEA566862176FE",
     "validationCount": 1,
-    "version": "1.0.166",
-    "description": ""
+    "description": "",
+    "version": "1.0.167",
+    "lastUpdated": "2026-10-20T16:50:57.6839998Z",
+    "manifestHash": "6E5892FFC0A9F3C1A43535BA26AAEC201D8C6FC73DA15088925476EEF3493860",
+    "installerHashes": [
+      "3FE1E1201C2842B8EE23A92B6C27DD84CD768F00E997310B451921113A8FD297"
+    ]
   },
   "AloproAgency.WAutoChat": {
     "lastUpdated": "2026-08-18T01:43:26.4458545Z",
@@ -1230,15 +1230,15 @@
     }
   },
   "BytecodeAlliance.Wasmtime.Portable": {
-    "version": "49.0.4",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
     "description": "",
-    "manifestHash": "898D40787023DB22C0A6B8556146DEF6C7E8D8F0B24C4D8E324D0D0259FEDA9E",
-    "state": "VALIDATION_PASSED",
+    "version": "50.0.0",
+    "lastUpdated": "2026-10-20T16:50:57.7319655Z",
+    "manifestHash": "7E2BB4C232FAFC5601E5AF6D2AE1752C48ABD3EA92D8362ECAF5146E6BA17C98",
     "installerHashes": [
-      "00D14880DAD5B490FE5F547785A9D6C02D40F24BAA289DAAF110F35FC0193885"
-    ],
-    "lastUpdated": "2026-10-20T01:14:16.5398312Z"
+      "CEA9CCC700AACCB2B5507E96AC990BA60104BD7AB39284FB2E67CB64D58EFCC4"
+    ]
   },
   "ByteNess.AWSVault": {
     "version": "7.17.0",
@@ -7819,15 +7819,15 @@
     "state": "VALIDATION_PASSED"
   },
   "sikalabs.slu": {
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
     "description": "",
-    "version": "0.102.0",
+    "version": "0.103.0",
+    "lastUpdated": "2026-10-20T16:50:57.7641528Z",
+    "manifestHash": "432CE7369BB661B0FE048F537247646D9510D2A2BDA15C4E2BC63A5E26B1B49F",
     "installerHashes": [
-      "A6F0301DDCDD3D29515B1982496E6AA6A0AB94DC531DF8D461773141CC9FA7DE"
-    ],
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-19T05:34:55.7794911Z",
-    "manifestHash": "75E10A9CB901681ACC8A13D59749C85021EC8330C149626409E706CCA06950EB"
+      "9B41AD05F1DE78C64879EF3EA5BE03550F64BC652E06E9F07E226E5627D021E2"
+    ]
   },
   "SimpleX.SimpleX-Chat": {
     "validationCount": 1,
@@ -8310,15 +8310,15 @@
     }
   },
   "SubstrateSystems.EndstateCLI": {
-    "version": "2.31.0",
-    "installerHashes": [
-      "4879860E67E0F38F7D44F5C5DB5E6DFAA46A232E89DF2675225FA55417F01999"
-    ],
-    "lastUpdated": "2026-10-08T21:28:05.361541Z",
-    "validationCount": 2,
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
     "description": "",
-    "manifestHash": "8CB1CBFF3015D2E4093E056ECDDF36D54EBAE469323B9569F93576532004338B",
-    "state": "VALIDATION_PASSED"
+    "version": "2.32.0",
+    "lastUpdated": "2026-10-20T16:50:57.707311Z",
+    "manifestHash": "061004C373B946F57C36ECA1BE2C9FE3342C5991888B90E56A918D9E4152CD74",
+    "installerHashes": [
+      "BAFF0CB17173E6383AC7047B5763FF95B30CB93814ED9D2CE2B7ED5E917F8767"
+    ]
   },
   "sunfish-shogi.shogihome": {
     "lastUpdated": "2026-10-08T21:28:05.3258229Z",
@@ -9255,14 +9255,14 @@
     "manifestHash": "34578A81C664A5A7F6CE8892ABB8AF558356A16F0C044C900604413CA201D8C0"
   },
   "VirusTotal.YARA-X": {
-    "validationCount": 1,
-    "manifestHash": "0A6056429B9A65445EC2F1DD687DA906FC7BC824B3696B2FA7C1139046C6DA5B",
-    "version": "1.21.0",
-    "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-30T01:45:49.683696Z",
+    "validationCount": 1,
+    "description": "",
+    "version": "1.22.0",
+    "lastUpdated": "2026-10-20T16:50:57.7439987Z",
+    "manifestHash": "03CE3521CBDE5F0ABABC2577B51D9810C721D4A53F9F79E860B160CA7CC69C86",
     "installerHashes": [
-      "0E2FC4D2F64DF3EAA22129AD5BD074C968A5D80766DDEC6183B73175E5C9DA25"
+      "EAC36A58699B94D3732A7FE1D8453FE89E0077BB18AC2C99B4C2EE102A431F2E"
     ]
   },
   "VoiceWave.LocalCore": {
