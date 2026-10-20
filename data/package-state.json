@@ -1308,16 +1308,16 @@
     }
   },
   "caomengxuan666.WinuxCmd": {
-    "manifestHash": "557F2D36647A2203FBBB071194D985DA432C337544272B6AB12C8BB65A28214C",
-    "validationCount": 1,
-    "lastUpdated": "2026-10-19T08:52:28.880045Z",
-    "version": "1.1.16",
-    "state": "VALIDATION_PASSED",
+    "version": "1.1.18",
+    "lastUpdated": "2026-10-20T13:07:10.7638321Z",
+    "manifestHash": "9C010DD06678FC625B0ACAD99FD4AEF7FC0AE6E2B37BC0F5F383E63710E1EA5B",
     "installerHashes": [
-      "D37D0FDA49F78D53E4961A34CC2D0347099AA0B15792000F964FF5A3A121528F",
-      "61E82A9B2522B306F3DDCCE4234E44FA692D072C0A273753A3F42025FEECF23D"
+      "67573051C6EB0FF6A2A9E4811B46ED52D3F6433287489E6808F2EBEB1AF70294",
+      "03874244D5B78F559BDFF12FA30AFE32EA65E6C080D4290118AF41B400AF0821"
     ],
-    "description": ""
+    "validationCount": 1,
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "CargoLambda.CargoLambda": {
     "manifestHash": "B8DD0B022742F2371ED57474DE9FEE6CB654CD7DD96A113241259E85D6F5ABF3",
@@ -2811,15 +2811,15 @@
     "manifestHash": "F1E2C96C702C14E73C8FC660B7163DA0B78056118F609BF0857AD86565C9182F"
   },
   "Frnsys.Half_earth": {
-    "state": "VALIDATION_PASSED",
-    "validationCount": 26,
+    "version": "1.0.16",
+    "lastUpdated": "2026-10-20T13:07:10.6138182Z",
+    "manifestHash": "0ECB4A19DBD0E6CD50B7499B7AC584492A3D2A5F04CA7B3BA39339BE6614AC52",
     "installerHashes": [
-      "CD47FC89C016730378E00399433045CCDB17E9B8ECC1434413C7531B9EB6AD36"
+      "6997B6463797101789D51798DA57B66A1322422287020EEB1AD56439FAB65BB0"
     ],
+    "validationCount": 1,
     "description": "",
-    "lastUpdated": "2026-09-28T13:17:56.9283705Z",
-    "manifestHash": "162A9CB4478CCE0219E2D18B3BDBA90BBFD1A2D89CCCF6E863728E377240A4A7",
-    "version": "1.0.15"
+    "state": "VALIDATION_PASSED"
   },
   "fselect.fselect": {
     "description": "",
@@ -4468,15 +4468,15 @@
     "state": "VALIDATION_PASSED"
   },
   "KoalaBear84.OpenDirectoryDownloader": {
-    "description": "",
-    "version": "4.1.0.0",
+    "version": "5.0.0.0",
+    "lastUpdated": "2026-10-20T13:07:10.5669041Z",
+    "manifestHash": "ED027421DF84250979C0CFCEDD378AE0371B79A2E699DC67EEBBFED7AD569F09",
     "installerHashes": [
-      "CCE0C9D0A52B5E022EE3B9FAAF51CF015555A38CF09292CA5E9B1D3F80EDF0F3"
+      "EE378234CCC8393433F51B008E6AC9A2F5145863E422EEDB1D744A958AF59AB3"
     ],
-    "lastUpdated": "2026-10-09T17:09:08.3919046Z",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 6,
-    "manifestHash": "72878195FFBE904ED5C230BB1A3200BC0BCB42A873380769CF2F2016B2736EF3"
+    "validationCount": 1,
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "koedame.chordsketch": {
     "manifestHash": "432FF486702B7657D6A089ED1818E2E302882938A5D20AB4AA526DCE9ADA6E40",
@@ -4761,15 +4761,15 @@
     "version": "4.1.26190"
   },
   "LoxSmoke.OpenLogiNet": {
-    "description": "",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-19T05:05:38.5215186Z",
+    "version": "0.25.0",
+    "lastUpdated": "2026-10-20T13:07:10.7352729Z",
+    "manifestHash": "82CAAE307080A972CC7702E1C4E9E37C3A4FF83E5373F85CA4EEEDBF4B48818B",
     "installerHashes": [
-      "71AF992A37B7182CA597C0E64E94E0893FBFAC01002865750DB5E1461CA2B219"
+      "A68157DE4CD430E5D6F5419E8A506214E91A243EE8664900D6C4F37B96468171"
     ],
-    "manifestHash": "D89367F5EB3A327D03434DA71A4D5A1294FFD133A611D4FADCDC8E487AC5037F",
     "validationCount": 1,
-    "version": "0.24.0"
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "LuantiTeam.Luanti": {
     "installerHashes": [
@@ -6216,15 +6216,15 @@
     "description": ""
   },
   "open-policy-agent.opa": {
-    "validationCount": 1,
-    "version": "1.21.2",
-    "description": "",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-12T20:45:05.1153076Z",
+    "version": "1.21.3",
+    "lastUpdated": "2026-10-20T13:07:10.6620871Z",
+    "manifestHash": "033C4952D1BED6F8678A9F1FE66FA1DBDA5833A3B09F20F370A734E710D763BB",
     "installerHashes": [
-      "0089FA7AD8CDEA7FF9E56FF86FA9202462AFB63EF74506E2B547A24B4A987CCB"
+      "C8F08EE67544BE8CA47B063F6656091C1DCB4ABA6434C2CD4C5B498B0DCFA115"
     ],
-    "manifestHash": "DD9E9A17CAE3BBC65C90A33371E86E707EF24C95BA2F7209D1E3C9F18091CFA4"
+    "validationCount": 1,
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "OpenChemistry.Avogadro2": {
     "manifestHash": "7D2685F8F4E8098CC9571A05FB55D20FB6C609B6195525B3D483D5AAC28140EF",
@@ -6963,15 +6963,15 @@
     ]
   },
   "PSerban93.Achievements": {
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-04T01:59:22.9040531Z",
-    "description": "",
-    "version": "1.3.0",
+    "version": "1.3.1",
+    "lastUpdated": "2026-10-20T13:07:10.6912776Z",
+    "manifestHash": "A4A63AE875751E70691EB0D14DBDC0C648FBE89C1A01F102DFEC04132C279823",
     "installerHashes": [
-      "745E7609A13728501C8F5F3C81321826368AFF2E5169F7F4C3C40E66E05D601D"
+      "B39B58626C57EC8DD16A4614CEF1390BB49F58AB7DB379590FD1E0AB472FEFDC"
     ],
     "validationCount": 1,
-    "manifestHash": "7B22E69E52BA440B599A39598078E663F7A47B6DBBF3528D6FDEC290B343C10F"
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "Pulsar-Edit.Pulsar": {
     "installerHashes": [
