@@ -2689,8 +2689,8 @@
     ],
     "description": "",
     "openPr": {
-      "checkedAt": "2026-10-19T04:26:58.8976807Z",
-      "version": "3.2.4"
+      "version": "3.2.4",
+      "checkedAt": "2026-10-20T08:30:02.6650657Z"
     }
   },
   "Fly-io.flyctl": {
@@ -3710,8 +3710,8 @@
   },
   "houmain.keymapper": {
     "openPr": {
-      "checkedAt": "2026-10-19T04:26:59.862181Z",
-      "version": "5.7.3"
+      "version": "5.7.3",
+      "checkedAt": "2026-10-20T08:30:04.2357823Z"
     }
   },
   "hrkfdn.ncspot": {
@@ -5139,8 +5139,8 @@
     ],
     "manifestHash": "D189FFDB783B04E9B5D8643E9E3ED5382A817C1A56D490985A746B730152C38F",
     "openPr": {
-      "checkedAt": "2026-10-19T04:27:02.7170694Z",
-      "version": "5.2.2"
+      "version": "5.2.2",
+      "checkedAt": "2026-10-20T08:30:07.2680726Z"
     }
   },
   "Microsoft.Azure.GuestProxyAgent.AllowListTool": {
@@ -8331,8 +8331,8 @@
     "version": "1.29.1",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "checkedAt": "2026-10-19T04:27:59.8846405Z",
-      "version": "1.29.1"
+      "version": "1.29.1",
+      "checkedAt": "2026-10-20T08:30:12.0092837Z"
     }
   },
   "SuperRadCompany.Microsandbox": {
