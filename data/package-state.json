@@ -4532,9 +4532,9 @@
   "kukuruzka165.materialgram": {
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-18T12:54:13.3702136Z",
+    "lastUpdated": "2026-10-20T04:51:03.3975372Z",
     "manifestHash": "463CBB0DBE90047E74B7B478580AF85E9A6B683264340E66B218D0B1BE233B46",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "7.3.1.1",
     "installerHashes": [
       "820A0EA3593CF66309520F67B0248E3DEAC784D5D5A405E093866A0AA49F16FF"
@@ -6865,15 +6865,15 @@
     ]
   },
   "PocketSync.PocketSync": {
-    "description": "",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-18T12:54:13.3973923Z",
-    "manifestHash": "C49CF1DADC9BA9E4444461C86A007C2F5D681F26DB10E937E52F2F395F4A4616",
-    "validationCount": 1,
-    "version": "7.1.0",
     "installerHashes": [
-      "28FDAC5089A17D6742E771FA48FAE6F72FFA3AFA35C0286F3D840DFC6618A016"
-    ]
+      "C773DEE020055BD637AFA4BABF320A751CBBF4FF1953C104875F6453974C16FC"
+    ],
+    "lastUpdated": "2026-10-20T04:51:03.4469851Z",
+    "description": "",
+    "version": "7.1.1",
+    "validationCount": 1,
+    "manifestHash": "ADB2E9FB1599B4D9CEB3D707B75871F44B739583B8D27C887DF3C4BBD7F1C83F",
+    "state": "VALIDATION_PASSED"
   },
   "PolyMC.PolyMC": {
     "installerHashes": [
@@ -7808,15 +7808,15 @@
     "validationCount": 1
   },
   "sikalabs.slr": {
-    "version": "0.47.1",
-    "description": "",
-    "lastUpdated": "2026-09-30T13:13:56.3919228Z",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "64B347540DA75E75D3737C319A03A93B1100842C5862E1649D70F04C791B2AA8",
-    "validationCount": 1,
     "installerHashes": [
-      "1BE58EAB4E6C623FB7A13FF1E8308DE0ED221DFD2A39711BA8D5C31242780BD0"
-    ]
+      "3E9AB5C3CA41EC227E8CD30B2E0F162E956C6264F09E60AA012D144DF87331AA"
+    ],
+    "lastUpdated": "2026-10-20T04:51:03.4179609Z",
+    "description": "",
+    "version": "0.48.0",
+    "validationCount": 1,
+    "manifestHash": "B5660CA30F14836A0C29D81399BBBFBB7FA2E98D0B8F237ADCFCCCB6069FDA47",
+    "state": "VALIDATION_PASSED"
   },
   "sikalabs.slu": {
     "validationCount": 1,
@@ -9391,14 +9391,14 @@
     ]
   },
   "WeeNote.WeeNote": {
-    "lastUpdated": "2026-10-14T13:01:46.5253656Z",
-    "manifestHash": "4CA14FF24EBF1EB16D4668E6EDE92A24F6AED48B25B4524B718A2E8A9FE9DD70",
-    "validationCount": 1,
-    "description": "",
-    "version": "2.9.24",
     "installerHashes": [
-      "E40C6948C6FC77106F408C1A308C2DDACE35CC5DE56D8252D6831864AF38739B"
+      "9233D5EAE9176F82ECF5635E4EBADCFF5B3AFE626403F5CA5ED64D28E33CA9E6"
     ],
+    "lastUpdated": "2026-10-20T04:51:03.3764985Z",
+    "description": "",
+    "version": "2.9.25",
+    "validationCount": 1,
+    "manifestHash": "E268CA81F294CBE4CBDB19C241688135CC0844588C097BA812528EE2F1977D95",
     "state": "VALIDATION_PASSED"
   },
   "weselow.beads-web": {
@@ -9926,15 +9926,15 @@
     "description": ""
   },
   "zevnda.SteamGameIdler": {
-    "manifestHash": "591C8B5D8DE2CFD41299C3AC8CC2318464ECA211659D37445841F68472320F1F",
-    "lastUpdated": "2026-10-17T17:04:08.3861628Z",
-    "validationCount": 1,
-    "description": "",
-    "state": "VALIDATION_PASSED",
-    "version": "6.2.10",
     "installerHashes": [
-      "8FA804A8F5C115A7762B67DD5199EFE25C11ED44ECB7BD711A2E5126CAE916F7"
-    ]
+      "C942E2E54A5ECEBE282152C12B524D62FFFB056ACDD097A3A8DD8C1725C683FC"
+    ],
+    "lastUpdated": "2026-10-20T04:51:03.3393754Z",
+    "description": "",
+    "version": "6.2.12",
+    "validationCount": 1,
+    "manifestHash": "A6918B937B828B3C0158008BE7BCB978DEB834E84E61260318D008E744706008",
+    "state": "VALIDATION_PASSED"
   },
   "Zidoro.Pomatez": {
     "lastUpdated": "2026-08-18T17:25:13.8681281Z",
