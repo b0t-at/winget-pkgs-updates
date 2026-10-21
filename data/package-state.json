@@ -2635,15 +2635,15 @@
     "description": ""
   },
   "Filamental.Filamental": {
-    "lastUpdated": "2026-10-19T20:57:17.5770195Z",
-    "description": "",
-    "version": "0.5.4",
+    "version": "0.5.5",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "lastUpdated": "2026-10-21T17:15:01.4611145Z",
+    "manifestHash": "B12566520C7A508F83B871B0D5639CBCBB0B8F97986AD82A60E7B97A434A3A70",
+    "description": "",
     "installerHashes": [
-      "E222641FE9B350776840958467FA84ADBE5402D6C0204AD7D93DBC80B46ED45E"
+      "D7147145B54CF5BC7AD8A929D78F09F1E3630C77A972D9FB3DE226C5200DB405"
     ],
-    "manifestHash": "306C4AE42883003300CA2D26862A13AF399FF9E20F5A8BB33EC41AF948F96D9D"
+    "validationCount": 1
   },
   "FirenzeLor.gemini-collector": {
     "validationCount": 1,
@@ -2877,16 +2877,16 @@
     }
   },
   "GAM-Team.gam.Portable": {
-    "validationCount": 1,
-    "installerHashes": [
-      "A8E7C145BA3B45424AF6FA7E809E894189617EEC51966280153CBEAA175D7243",
-      "78468701C525A9C3350EA48E33C2844715FE68416AC98807B2F4B9834EF6ADAF"
-    ],
-    "manifestHash": "755314991D3C9718B3299E0080C4BCD2D8BE833EAA488618F19CEAB7DA867E87",
-    "lastUpdated": "2026-10-17T08:49:39.3721944Z",
-    "description": "",
+    "version": "7.48.32",
     "state": "VALIDATION_PASSED",
-    "version": "7.48.30"
+    "lastUpdated": "2026-10-21T17:15:01.4859998Z",
+    "manifestHash": "EBD2D8CDFD264C826263B449FD27B8B5E9280E6DD44C2B6169D844D59B2F6EF5",
+    "description": "",
+    "installerHashes": [
+      "2A1840D16466C3152838DE310D01958C7547F6AD5632EE5F02F76C1BA35D661C",
+      "E31328B922B547CE4522196C8B5077499C42C714858DBF684600CEFF87FDF61B"
+    ],
+    "validationCount": 1
   },
   "GAM-Team.GotYourBack": {
     "description": "",
@@ -4723,15 +4723,15 @@
     "version": "2026.8.2"
   },
   "loft-sh.vcluster": {
-    "validationCount": 1,
+    "version": "0.37.4",
     "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-21T17:15:01.5212987Z",
+    "manifestHash": "481722C73979D2CF1459024D92DBB45CB235285C5C83FF44F47FECF95B108D81",
     "description": "",
-    "manifestHash": "5537D5B39B906F6463C20A8A9211D9B32CD86F121F37C52BDBCA44BD738443F9",
-    "lastUpdated": "2026-10-16T20:41:38.8967402Z",
     "installerHashes": [
-      "2757C33EBE4E4B9F089C814AFA64D30957B741DE04A5EC0D8488230946DF1805"
+      "60D966DB254FA833107512FA9CCA6F6B85B1E0EBAA24BF16309C9766F9131A5A"
     ],
-    "version": "0.37.3"
+    "validationCount": 1
   },
   "Longbridge.LongbridgeTerminal": {
     "manifestHash": "48100AE830DE1099822AB9C15865DD3386ED9A7552CB0A3C5C00F1BE64D4352D",
@@ -5906,15 +5906,15 @@
     ]
   },
   "NitrokeyGmbH.Nitropy": {
-    "version": "0.14.0",
-    "description": "",
+    "version": "0.14.1",
     "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-21T17:15:01.5431757Z",
+    "manifestHash": "D77DFE034D882A8612271513B9C115A39EC5E81B57FA1F19B0DA111D6147E07D",
+    "description": "",
     "installerHashes": [
-      "E2C1F2CA175436B341C3B969E3F1E36D177D626F1467D3582353D348998A5B40"
+      "21F1F005EDE3FCE29CC0B7316178447DBA7E9389F6DE7A096C2A3C7874EBF243"
     ],
-    "lastUpdated": "2026-10-01T05:00:17.4486864Z",
-    "validationCount": 1,
-    "manifestHash": "332CFDB63780FF2F04529473C25E035DAE6ADEF9FB77C7390F818D069D6586E9"
+    "validationCount": 1
   },
   "NixieTechLLC.Lait": {
     "configHealth": {
@@ -7654,6 +7654,18 @@
     "description": "",
     "lastUpdated": "2026-08-16T12:25:11.6352838Z",
     "state": "VALIDATION_PASSED"
+  },
+  "sebescudie.GammaLauncher": {
+    "version": "5.5.1",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-21T17:15:01.4041331Z",
+    "manifestHash": "8ED1F4FA4FD5440877610AEF5B78C870B86365AE8A99933E59617748AA69DBE5",
+    "description": "",
+    "installerHashes": [
+      "EF698C75056B8846906F7C17004A5ED00D08E0ABC27FAC849222BF18054E8B99",
+      "27DD3BF19F009768EB70970DBC388D0560F3F1DE0703AB5C058700A390A6A5CC"
+    ],
+    "validationCount": 1
   },
   "SecretsOPerationS.SOPS": {
     "manifestHash": "C589D8039B544CD86CAFC1336A40F5EB0D7AA0C3242AB5D5DFDF315FCD5AC77A",
