@@ -235,15 +235,15 @@
     "state": "VALIDATION_PASSED"
   },
   "alegauss.ClaudeCodeTray": {
-    "manifestHash": "3A5636944E686BB73252D323C67F9E42F31569C60046EE756B3FA2ABFDAFE5A8",
-    "version": "1.7.2",
-    "lastUpdated": "2026-08-30T08:52:12.3523842Z",
-    "description": "",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-21T01:13:37.634946Z",
+    "version": "1.8.0",
     "installerHashes": [
-      "4ECF103CC13CAEA72B79D0C4ED59B12B89E7AEB91FC0CD80CA90730FB3E9BAC3"
-    ]
+      "AC1A3E66E6582FAD1F3D2C6673DA7AEE39097541FE5F4804A780D61236475D5D"
+    ],
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "manifestHash": "EC47F274BF6AC0F4521E6D0EB817D544008B8912A5BB121E0BB3728C9A5B4DB6"
   },
   "AlekseyHoffman.Sigma-File-Manager": {
     "lastUpdated": "2026-08-18T21:24:38.6686757Z",
@@ -1339,15 +1339,15 @@
     }
   },
   "CarthageSoftware.Mago": {
-    "installerHashes": [
-      "B82A975220409330E1B6FE4B08FCF09FF97AC25F15A9AF183F7625FDDDAC394A"
-    ],
-    "lastUpdated": "2026-10-17T01:39:43.0959332Z",
-    "version": "1.57.0",
-    "manifestHash": "B1D93895D36800D7DB2A59BAFE9BA81553369CAECB5E63C0DBE1B11AE111665D",
     "validationCount": 1,
+    "lastUpdated": "2026-10-21T01:13:37.7029793Z",
+    "version": "1.58.2",
+    "installerHashes": [
+      "CEE1D749B5AABEB64515B3F6682084DA8DE4AE6C76DBDE6F54ECEF99396C02EA"
+    ],
     "state": "VALIDATION_PASSED",
-    "description": ""
+    "description": "",
+    "manifestHash": "EFBEB9F9291505DE42C5E1131882ED93D845A5BA47442B5AA0DB9BE725F5BE68"
   },
   "Carvel.ytt": {
     "openPr": {
@@ -2893,14 +2893,14 @@
   },
   "GameshowPro.BgRaster": {
     "validationCount": 1,
-    "manifestHash": "AAD9CE0A8F19FB6436D88140A6E357202AE98667A96114F6791FEC3A8D226053",
+    "lastUpdated": "2026-10-21T01:13:37.6633392Z",
+    "version": "1.2.6",
     "installerHashes": [
-      "2676D7B9E2F87D9820855B8E3A53099F8D0F3AE266FD0C988007048A98841ED7"
+      "8B8CBB1BC044A261C4DB7EC21C0BBEF4D0EDCCCBD142E82DB33E2D8A5213D9B6"
     ],
-    "version": "1.1.11",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "lastUpdated": "2026-09-23T04:49:51.8017613Z"
+    "manifestHash": "EFB8FAEAFB225E96D1924106515C4DDAFA8CD75EA456012FADD2A624ADA7D96B"
   },
   "Gardener.gardenctl": {
     "state": "VALIDATION_PASSED",
@@ -7251,15 +7251,15 @@
     "version": "0.3.1"
   },
   "RimSort.RimSort": {
-    "description": "",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-19T05:05:38.3835312Z",
-    "installerHashes": [
-      "7D0F2689A95784EC96F7EAEE7DBD1C08EBC0B575D74506D7C30C57F243F42789"
-    ],
-    "manifestHash": "68B54D6A5D23E9629FDA0E7C99ED6FA1BD7CF91437102AF6F3590819BA0C2DDF",
     "validationCount": 1,
-    "version": "1.17.0"
+    "lastUpdated": "2026-10-21T01:13:37.5848045Z",
+    "version": "1.17.2",
+    "installerHashes": [
+      "AC23CE1BA1D837D23A364A019F7BEBC65CC3D4F87CF1563EE7CC616EA559BF72"
+    ],
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "manifestHash": "C5847C7406E4E9884A57FFE8EED63EFD3421F805866843FFF9A1E7E98E5686FF"
   },
   "Ripose.Memento": {
     "description": "",
