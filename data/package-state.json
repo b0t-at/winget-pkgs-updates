@@ -762,11 +762,7 @@
     "version": "0.33.0",
     "manifestHash": "6485563DEF6C8309010BEB7EC11E61D7AB1FAE4530ECBDBD55A5635336750E40",
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "openPr": {
-      "version": "0.33.0",
-      "checkedAt": "2026-09-14T01:03:14.7633286Z"
-    }
+    "state": "VALIDATION_PASSED"
   },
   "AyoubTadlaoui.logx": {
     "lastUpdated": "2026-08-18T17:25:13.9116095Z",
@@ -1533,8 +1529,8 @@
     "validationCount": 1,
     "version": "1.0.48275",
     "openPr": {
-      "version": "1.9.0",
-      "checkedAt": "2026-10-21T00:52:15.6359651Z"
+      "checkedAt": "2026-10-21T20:22:05.8820658Z",
+      "version": "1.11.0"
     }
   },
   "ciromattia.KCC": {
@@ -4731,7 +4727,11 @@
     "installerHashes": [
       "60D966DB254FA833107512FA9CCA6F6B85B1E0EBAA24BF16309C9766F9131A5A"
     ],
-    "validationCount": 1
+    "validationCount": 1,
+    "openPr": {
+      "checkedAt": "2026-10-21T20:22:11.1041684Z",
+      "version": "0.37.4"
+    }
   },
   "Longbridge.LongbridgeTerminal": {
     "manifestHash": "48100AE830DE1099822AB9C15865DD3386ED9A7552CB0A3C5C00F1BE64D4352D",
@@ -5914,7 +5914,11 @@
     "installerHashes": [
       "21F1F005EDE3FCE29CC0B7316178447DBA7E9389F6DE7A096C2A3C7874EBF243"
     ],
-    "validationCount": 1
+    "validationCount": 1,
+    "openPr": {
+      "checkedAt": "2026-10-21T20:22:12.2951801Z",
+      "version": "0.14.1"
+    }
   },
   "NixieTechLLC.Lait": {
     "configHealth": {
@@ -7665,7 +7669,11 @@
       "EF698C75056B8846906F7C17004A5ED00D08E0ABC27FAC849222BF18054E8B99",
       "27DD3BF19F009768EB70970DBC388D0560F3F1DE0703AB5C058700A390A6A5CC"
     ],
-    "validationCount": 1
+    "validationCount": 1,
+    "openPr": {
+      "checkedAt": "2026-10-21T20:22:12.8401115Z",
+      "version": "5.5.1"
+    }
   },
   "SecretsOPerationS.SOPS": {
     "manifestHash": "C589D8039B544CD86CAFC1336A40F5EB0D7AA0C3242AB5D5DFDF315FCD5AC77A",
