@@ -1,0 +1,14 @@
+{
+  "repository": "microsoft/winget-pkgs",
+  "pullRequestNumber": 456794,
+  "classification": "ScannerBlocked",
+  "state": "Escalated",
+  "recordedAt": "2026-10-21T07:04:47.7833929+00:00",
+  "retryAfter": null,
+  "learnedOverrideSignal": null,
+  "reason": "Defender or the ESRP installer scan blocked the binaries; resubmitting the same files fails again. Quarantine the package until the scanner verdict changes or upstream ships new binaries.",
+  "packageIdentifier": "PSerban93.Achievements",
+  "packageVersion": "1.3.1",
+  "evidence": [],
+  "installerTraits": null
+}
