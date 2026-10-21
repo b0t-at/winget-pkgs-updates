@@ -1523,7 +1523,11 @@
     "description": "",
     "manifestHash": "452B307A1F4E795FB5198446B88E2B92A70442795275A9151A0FBA1332F6D801",
     "validationCount": 1,
-    "version": "1.0.48275"
+    "version": "1.0.48275",
+    "openPr": {
+      "version": "1.9.0",
+      "checkedAt": "2026-10-21T00:52:15.6359651Z"
+    }
   },
   "ciromattia.KCC": {
     "lastUpdated": "2026-09-27T17:09:13.8678106Z",
@@ -2689,8 +2693,8 @@
     ],
     "description": "",
     "openPr": {
-      "version": "3.2.4",
-      "checkedAt": "2026-10-20T08:30:02.6650657Z"
+      "version": "3.2.5",
+      "checkedAt": "2026-10-21T00:52:17.9306849Z"
     }
   },
   "Fly-io.flyctl": {
@@ -2703,7 +2707,11 @@
     "description": "",
     "version": "0.4.120",
     "lastUpdated": "2026-10-20T20:52:59.2272654Z",
-    "manifestHash": "12C6F488B954799944428FA1450686E18C27800D78F12D9D7FF668BB7D9CECFE"
+    "manifestHash": "12C6F488B954799944428FA1450686E18C27800D78F12D9D7FF668BB7D9CECFE",
+    "openPr": {
+      "version": "0.4.120",
+      "checkedAt": "2026-10-21T00:52:18.3254313Z"
+    }
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
     "validationCount": 1,
@@ -2767,7 +2775,11 @@
     "manifestHash": "11F2E128CBDFB3BB7257051D95B4DC1EE51F9395CD31165050181F491756B5B0",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "3.20.5"
+    "version": "3.20.5",
+    "openPr": {
+      "version": "3.20.5",
+      "checkedAt": "2026-10-21T00:52:18.7563732Z"
+    }
   },
   "FrancisBanyikwa.MediaDownloader": {
     "manifestHash": "03C1DB537ECDB0566823D94D3B6768E5B97F29295D693658F8DF8898058990A5",
@@ -3299,7 +3311,11 @@
     "description": "",
     "version": "0.53.0",
     "lastUpdated": "2026-10-20T20:52:59.2641194Z",
-    "manifestHash": "33ED39EF71EEDC5195904D6AEE4C52DDA3A6FB0F8D79CC155AD58B23F10E50BB"
+    "manifestHash": "33ED39EF71EEDC5195904D6AEE4C52DDA3A6FB0F8D79CC155AD58B23F10E50BB",
+    "openPr": {
+      "version": "0.53.0",
+      "checkedAt": "2026-10-21T00:52:19.1360149Z"
+    }
   },
   "Gruntwork.Terragrunt": {
     "state": "VALIDATION_FAILED",
@@ -8249,7 +8265,11 @@
     "description": "",
     "version": "1.165.3",
     "lastUpdated": "2026-10-20T20:52:59.3040364Z",
-    "manifestHash": "F128AF5433A8D08BA291471BB7A7A529C8421A85667737F58FADC4A16BA381BC"
+    "manifestHash": "F128AF5433A8D08BA291471BB7A7A529C8421A85667737F58FADC4A16BA381BC",
+    "openPr": {
+      "version": "1.165.3",
+      "checkedAt": "2026-10-21T00:52:36.3849839Z"
+    }
   },
   "str4d.rage": {
     "state": "VALIDATION_PASSED",
