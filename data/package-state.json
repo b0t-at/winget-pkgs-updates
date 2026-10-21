@@ -3249,7 +3249,7 @@
     "description": "",
     "openPr": {
       "version": "36.2",
-      "checkedAt": "2026-10-20T12:32:35.6625128Z"
+      "checkedAt": "2026-10-21T16:24:14.6474722Z"
     }
   },
   "goplus.xgo": {
@@ -6427,8 +6427,8 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "openPr": {
-      "version": "1.13.1",
-      "checkedAt": "2026-10-14T08:30:45.682631Z"
+      "version": "1.13.2",
+      "checkedAt": "2026-10-21T16:24:17.624141Z"
     }
   },
   "OpenWhispr.OpenWhispr": {
