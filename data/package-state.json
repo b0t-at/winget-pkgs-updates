@@ -396,7 +396,11 @@
     "installerHashes": [
       "3E8763F67A7CE6D14F35239BBE88E3B0EE40C7A123424C0FE0B2F2232541C3A1",
       "61DE72AF3E9CD8555425EBA765E58BB1A42568DCC01847BE45CCE6BEEECFA00E"
-    ]
+    ],
+    "openPr": {
+      "checkedAt": "2026-10-21T08:30:46.5778583Z",
+      "version": "3.0.8"
+    }
   },
   "Anki.Anki": {
     "description": "",
@@ -3724,8 +3728,8 @@
   },
   "houmain.keymapper": {
     "openPr": {
-      "version": "5.7.3",
-      "checkedAt": "2026-10-20T08:30:04.2357823Z"
+      "checkedAt": "2026-10-21T08:30:18.3430301Z",
+      "version": "5.7.3"
     }
   },
   "hrkfdn.ncspot": {
@@ -5151,11 +5155,7 @@
     "installerHashes": [
       "13FA0341358320E5A2CA4BD50DC5EA4E6AC87240A448AA86D91468CA3C2FBA64"
     ],
-    "manifestHash": "D189FFDB783B04E9B5D8643E9E3ED5382A817C1A56D490985A746B730152C38F",
-    "openPr": {
-      "version": "5.2.2",
-      "checkedAt": "2026-10-20T08:30:07.2680726Z"
-    }
+    "manifestHash": "D189FFDB783B04E9B5D8643E9E3ED5382A817C1A56D490985A746B730152C38F"
   },
   "Microsoft.Azure.GuestProxyAgent.AllowListTool": {
     "version": "1.0.52",
@@ -8349,8 +8349,8 @@
     "version": "1.29.1",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "version": "1.29.1",
-      "checkedAt": "2026-10-20T08:30:12.0092837Z"
+      "checkedAt": "2026-10-21T08:30:34.9066031Z",
+      "version": "1.29.1"
     }
   },
   "SuperRadCompany.Microsandbox": {
