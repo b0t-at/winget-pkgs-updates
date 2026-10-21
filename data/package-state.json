@@ -499,15 +499,15 @@
     }
   },
   "AquaSecurity.Trivy": {
-    "description": "",
+    "installerHashes": [
+      "1051F49CB22D5284F43425F72AAD9CDA63CA12CEB92E7CAA06903490C82DC9BF"
+    ],
+    "version": "0.76.1",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "lastUpdated": "2026-10-14T17:07:14.0700407Z",
-    "version": "0.76.0",
-    "installerHashes": [
-      "7B4762A5A5326CB4B83DFD2BB5D9AAF15A1ED867C75CAD7DD8B38840A28E7BE6"
-    ],
-    "manifestHash": "DE420B359F3236BEA5A8F54A4C7DEF57EDD2E2D06A1AB8C3D25E04C531EF5634"
+    "description": "",
+    "lastUpdated": "2026-10-21T20:45:00.276952Z",
+    "manifestHash": "31D38B291395D97F7987D63AE5E37758408316CF39D950E952AE7DEA905B7301"
   },
   "ArcBox.LinkCode": {
     "description": "",
@@ -8025,15 +8025,15 @@
     "manifestHash": "3DA345E8DF51ACA66C4D2669555AF7026448CEDCC448A90C53BE39DE701E36EC"
   },
   "Snyk.Snyk": {
-    "description": "",
+    "installerHashes": [
+      "22FF7486DC003C4DD7E532F10C7DE27599E1B95A35CE91511D3463C1757F1841"
+    ],
+    "version": "1.1308.2",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "lastUpdated": "2026-10-14T17:07:14.3001849Z",
-    "version": "1.1308.1",
-    "installerHashes": [
-      "17279C121EFBF34681DB15082346D9C8D0DD5E6E140686036356C1E74D711DFD"
-    ],
-    "manifestHash": "7E3159055DC947969623748CC86E5E982067DF47F0B744B2817AC2910ED475EA"
+    "description": "",
+    "lastUpdated": "2026-10-21T20:45:00.2484444Z",
+    "manifestHash": "9A03DC480DF29D8FBDABC6A9D2AA53015E1E3AE74F93B1224B1506505CAF3CC2"
   },
   "soldforaloss.DevHUD": {
     "description": "",
@@ -8136,15 +8136,15 @@
     "version": "6.14.0"
   },
   "sprout2000.Elephicon": {
-    "lastUpdated": "2026-10-19T20:57:17.6923608Z",
-    "description": "",
-    "version": "4.2.1",
+    "installerHashes": [
+      "3864A6506615906E70A49305691EB4549D4D8E500A923D0C46E4768244BACF19"
+    ],
+    "version": "4.3.0",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "installerHashes": [
-      "D1F7AA0C56F2E11881661EE8A1C5B9EDB3B9DBB4E0B2FD9D1B968338CCB34413"
-    ],
-    "manifestHash": "B11EE29787152C159128F0B4A482B3D7C9F2FD1865954C21263197702ABADDF3"
+    "description": "",
+    "lastUpdated": "2026-10-21T20:45:00.2090563Z",
+    "manifestHash": "CD44BD687D5EB9ED08A3B9F8B8E148F74E17EAC0387BB822AB9E2645938875FB"
   },
   "sprout2000.LeafView": {
     "state": "VALIDATION_PASSED",
