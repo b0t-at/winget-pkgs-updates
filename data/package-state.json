@@ -243,7 +243,11 @@
     ],
     "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "EC47F274BF6AC0F4521E6D0EB817D544008B8912A5BB121E0BB3728C9A5B4DB6"
+    "manifestHash": "EC47F274BF6AC0F4521E6D0EB817D544008B8912A5BB121E0BB3728C9A5B4DB6",
+    "openPr": {
+      "version": "1.8.0",
+      "checkedAt": "2026-10-21T04:26:47.1946053Z"
+    }
   },
   "AlekseyHoffman.Sigma-File-Manager": {
     "lastUpdated": "2026-08-18T21:24:38.6686757Z",
@@ -1351,8 +1355,8 @@
   },
   "Carvel.ytt": {
     "openPr": {
-      "checkedAt": "2026-10-20T00:52:29.5064263Z",
-      "version": "0.55.4"
+      "version": "0.55.4",
+      "checkedAt": "2026-10-21T04:26:07.3727687Z"
     }
   },
   "ccccraz.cogmoteGO": {
@@ -4083,8 +4087,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.10.15",
-      "checkedAt": "2026-10-20T16:25:26.4799676Z"
+      "version": "2026.10.17",
+      "checkedAt": "2026-10-21T04:26:09.5133592Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -6106,8 +6110,8 @@
       "933794EE1D670137F5116C9DE7FC7DB092FA97C6B823ABA848DDB8A7EA030828"
     ],
     "openPr": {
-      "version": "0.40.6",
-      "checkedAt": "2026-10-19T00:56:42.9092886Z"
+      "version": "0.40.7",
+      "checkedAt": "2026-10-21T04:26:12.2981583Z"
     }
   },
   "Ombrelin.PandocGui": {
