@@ -1132,11 +1132,7 @@
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-08-20T01:39:37.5821562Z",
     "validationCount": 1,
-    "version": "27.1",
-    "openPr": {
-      "version": "27.1",
-      "checkedAt": "2026-08-20T16:17:46.7287823Z"
-    }
+    "version": "27.1"
   },
   "BogdanCalapod.pdq-cli": {
     "manifestHash": "C5AF44C23D4A45ED54FC7392BAAE6B072B62F99365A4095B03BCCFDF3C12AA71",
@@ -6114,8 +6110,8 @@
       "933794EE1D670137F5116C9DE7FC7DB092FA97C6B823ABA848DDB8A7EA030828"
     ],
     "openPr": {
-      "version": "0.40.7",
-      "checkedAt": "2026-10-21T04:26:12.2981583Z"
+      "version": "0.40.8",
+      "checkedAt": "2026-10-22T00:52:12.0557982Z"
     }
   },
   "Ombrelin.PandocGui": {
@@ -8658,7 +8654,7 @@
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
       "version": "5.7.1",
-      "checkedAt": "2026-10-20T20:24:58.6065281Z"
+      "checkedAt": "2026-10-22T00:52:14.2910955Z"
     }
   },
   "termio.soft-jp.com.TermioWin": {
