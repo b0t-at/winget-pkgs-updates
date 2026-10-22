@@ -2175,15 +2175,15 @@
     "description": ""
   },
   "edde746.Plezy": {
-    "lastUpdated": "2026-10-12T01:58:15.6027957Z",
     "validationCount": 1,
+    "version": "2.24.0",
     "installerHashes": [
-      "1AB46ECB573F5FBFC9530E8825135B27A66A5B115B45188B5F18CB5C8925687D"
+      "9CD5D4C3E1D088C19FEF4AEEA881ECC108F7BC4D2C22AC38E9296FEB34FB7664"
     ],
-    "manifestHash": "8824549DC4387DA87BFB146FBC7D72AFCC256306AB317E6B303628988D55EF53",
-    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-22T05:01:11.4802966Z",
     "description": "",
-    "version": "2.23.0"
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "769E87D6D10F26FCD802FC006532A0042887D9F8AF09A62702558E0E28A2CA67"
   },
   "edenian-prince.rust-secrets": {
     "validationCount": 1,
@@ -3655,15 +3655,15 @@
     "validationCount": 1
   },
   "holland-built.Bloxsmith": {
-    "version": "3.92.22",
-    "lastUpdated": "2026-10-21T13:25:53.7465509Z",
-    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "description": "",
+    "version": "3.92.24",
     "installerHashes": [
-      "9BAEA51D85FD32656346E1277E8760C0557136B525214D4AB147AF2EB71B9F6E"
+      "7BEC7EF719A73CC4AEA34259396109A4CFC0EDC2059D51C8EF2C5BB037539C50"
     ],
-    "manifestHash": "449C87FDC2FACA05E8B6605C5D1F9743A245EE1F6BFE36A1FDB1A5FE45628015"
+    "lastUpdated": "2026-10-22T05:01:11.4081606Z",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "AEC22DD6EC8C9C17C63BFE38D55F627C816AE1980262F0205CD0F62B51B40192"
   },
   "HongMinhee.Gukhanmun": {
     "manifestHash": "089D5FCFFB565DBC52073976471BB7BB53E1FA33EA888133D45A589919D3AE52",
@@ -8774,15 +8774,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "manifestHash": "890326F3A13C32761C06BB155D122710DA0769939990E6D805D86F7597152496",
-    "lastUpdated": "2026-10-17T17:04:08.3991022Z",
     "validationCount": 1,
+    "version": "2.67.5",
+    "installerHashes": [
+      "67F6D33D923F7B4AAC52A91F84CA0E5FFF001DA43493EE784F058182072CFAD6"
+    ],
+    "lastUpdated": "2026-10-22T05:01:11.4401136Z",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "version": "2.59.19",
-    "installerHashes": [
-      "C048691CDDCD03F2FC44B3430D7E053AE3A8A5F87F98AD0FFE1601151F5E15F3"
-    ]
+    "manifestHash": "136586D7C5879E0241E4CECDE96ED267A0187BC0B9224903409AD96F62086110"
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
@@ -9643,15 +9643,15 @@
     "lastUpdated": "2026-09-30T05:00:00.7551296Z"
   },
   "WowUp.CF": {
-    "version": "2.24.0",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "description": "",
+    "version": "2.24.1",
     "installerHashes": [
-      "AC753BAC2541B8B8BA0E1828F8844203FCBB87D2AF1DC690ACEF9F6384382403"
+      "27987CFAB18E773E891B224BD08CCEE5156E6CC7D638C5FAD6D6990121078356"
     ],
-    "manifestHash": "D84BD7F51FBEC4493B67B859B53F92FAD2D55143E40A446B5912379965A2FC15",
-    "lastUpdated": "2026-10-14T01:15:28.5309444Z"
+    "lastUpdated": "2026-10-22T05:01:11.4554654Z",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "3AE3BA88929C4472086735C546BF7CA4CAF4D64FB74E9A64C9A394C12E214E73"
   },
   "WowUp.Wowup": {
     "validationCount": 1,
