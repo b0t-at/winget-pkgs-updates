@@ -762,7 +762,11 @@
     "validationCount": 1,
     "description": "",
     "state": "VALIDATION_PASSED",
-    "version": "0.33.1"
+    "version": "0.33.1",
+    "openPr": {
+      "checkedAt": "2026-10-22T04:25:52.924929Z",
+      "version": "0.33.1"
+    }
   },
   "AyoubTadlaoui.logx": {
     "lastUpdated": "2026-08-18T17:25:13.9116095Z",
@@ -2693,8 +2697,8 @@
     ],
     "description": "",
     "openPr": {
-      "version": "3.2.5",
-      "checkedAt": "2026-10-21T00:52:17.9306849Z"
+      "checkedAt": "2026-10-22T04:25:07.8181336Z",
+      "version": "3.2.5"
     }
   },
   "Fly-io.flyctl": {
@@ -8299,8 +8303,8 @@
     "lastUpdated": "2026-10-20T20:52:59.3040364Z",
     "manifestHash": "F128AF5433A8D08BA291471BB7A7A529C8421A85667737F58FADC4A16BA381BC",
     "openPr": {
-      "version": "1.165.3",
-      "checkedAt": "2026-10-21T00:52:36.3849839Z"
+      "checkedAt": "2026-10-22T04:25:40.6639135Z",
+      "version": "1.165.3"
     }
   },
   "str4d.rage": {
