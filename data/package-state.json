@@ -832,15 +832,15 @@
     "version": "1.27.206"
   },
   "bdash-app.bdash": {
-    "manifestHash": "6F2FFD354C54C518D8056FE494003F386438CFEB6FE5A039CB1F66307F18C023",
-    "validationCount": 1,
-    "description": "",
-    "lastUpdated": "2026-09-10T16:58:49.1963897Z",
-    "state": "VALIDATION_PASSED",
-    "version": "1.35.2",
     "installerHashes": [
-      "230C07C7F1938F0CEA9EC6803DF3878E417700DB8C97EE8C3418F6C6480EE5FE"
-    ]
+      "026E5A43F63C8D70ABB6DAA8548AF4CA92261300DDF1BC933546B9578DF59CC7"
+    ],
+    "lastUpdated": "2026-10-22T08:51:25.1954338Z",
+    "version": "1.35.4",
+    "description": "",
+    "manifestHash": "F9BD175B54E72240EF418ACAD0DC3E32D5362DBD0EE85F727B614C8945830468",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1
   },
   "BeagleEditor.BeagleEditor": {
     "lastUpdated": "2026-08-19T01:25:20.8029024Z",
@@ -5396,15 +5396,15 @@
     "state": "VALIDATION_PASSED"
   },
   "mitmproxy.mitmproxy": {
-    "lastUpdated": "2026-05-12T15:05:19.4011587Z",
     "installerHashes": [
-      "844D0D40C4B9D7E68A8FCDB66354255C4480EA43C4CEB783D7E41C7A98FA8CE9"
+      "641C0B8F88643C2F6CC8387F1CBB720AFCF82E3B72878C24D693DDA78DA7D5B1"
     ],
-    "manifestHash": "CEB4F2071231DB502B129EED0BB8A7BBF638705813A035B740A8664479DAF5F2",
-    "version": "12.2.3",
+    "lastUpdated": "2026-10-22T08:51:25.1508026Z",
+    "version": "12.3.0",
+    "description": "",
+    "manifestHash": "F6892674EDF6E3905C108156EE5FF23E253DBE7A2D5CCF790F2D393E8B54E2FD",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "description": ""
+    "validationCount": 1
   },
   "MLMGames.Imagot": {
     "lastUpdated": "2026-08-18T17:25:13.9371653Z",
