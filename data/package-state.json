@@ -398,8 +398,8 @@
       "61DE72AF3E9CD8555425EBA765E58BB1A42568DCC01847BE45CCE6BEEECFA00E"
     ],
     "openPr": {
-      "checkedAt": "2026-10-21T08:30:46.5778583Z",
-      "version": "3.0.8"
+      "version": "3.0.8",
+      "checkedAt": "2026-10-22T08:31:58.3553617Z"
     }
   },
   "Anki.Anki": {
@@ -1356,7 +1356,7 @@
   "Carvel.ytt": {
     "openPr": {
       "version": "0.55.4",
-      "checkedAt": "2026-10-21T04:26:07.3727687Z"
+      "checkedAt": "2026-10-22T08:31:27.8827123Z"
     }
   },
   "ccccraz.cogmoteGO": {
@@ -3724,8 +3724,8 @@
   },
   "houmain.keymapper": {
     "openPr": {
-      "checkedAt": "2026-10-21T08:30:18.3430301Z",
-      "version": "5.7.3"
+      "version": "5.7.3",
+      "checkedAt": "2026-10-22T08:31:32.8480388Z"
     }
   },
   "hrkfdn.ncspot": {
@@ -4088,7 +4088,7 @@
   "jdx.mise": {
     "openPr": {
       "version": "2026.10.17",
-      "checkedAt": "2026-10-21T04:26:09.5133592Z"
+      "checkedAt": "2026-10-22T08:31:33.2635205Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -4663,7 +4663,11 @@
     "lastUpdated": "2026-10-18T08:38:12.0722069Z",
     "description": "",
     "state": "VALIDATION_FAILED",
-    "version": "2.2.1.6"
+    "version": "2.2.1.6",
+    "openPr": {
+      "version": "2.2.1.6",
+      "checkedAt": "2026-10-22T08:31:33.6873368Z"
+    }
   },
   "LibreHardwareMonitor.LibreHardwareMonitor": {
     "configHealth": {
@@ -8381,8 +8385,8 @@
     "version": "1.29.1",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "checkedAt": "2026-10-21T08:30:34.9066031Z",
-      "version": "1.29.1"
+      "version": "1.29.1",
+      "checkedAt": "2026-10-22T08:31:46.4628822Z"
     }
   },
   "SuperRadCompany.Microsandbox": {
