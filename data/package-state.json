@@ -3238,11 +3238,7 @@
       "031777688173E6414CFAEAD74DA4C16D7CF2DA490BCA4E0D0C2458008587F105",
       "F0C128DC0D8492ECEECE83BB459A4C0E316764B929FFBF1AA416357FD644EDD3"
     ],
-    "description": "",
-    "openPr": {
-      "version": "36.2",
-      "checkedAt": "2026-10-21T16:24:14.6474722Z"
-    }
+    "description": ""
   },
   "goplus.xgo": {
     "manifestHash": "3BFF78AAF18769D1748DE57CF066A27AFDA17E289D83BDC8F984990CDB300F6B",
@@ -6432,7 +6428,7 @@
     "state": "VALIDATION_FAILED",
     "openPr": {
       "version": "1.13.2",
-      "checkedAt": "2026-10-21T16:24:17.624141Z"
+      "checkedAt": "2026-10-22T16:26:52.297057Z"
     }
   },
   "OpenWhispr.OpenWhispr": {
