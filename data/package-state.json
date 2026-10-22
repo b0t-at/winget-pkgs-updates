@@ -2707,11 +2707,7 @@
     "description": "",
     "version": "0.4.120",
     "lastUpdated": "2026-10-20T20:52:59.2272654Z",
-    "manifestHash": "12C6F488B954799944428FA1450686E18C27800D78F12D9D7FF668BB7D9CECFE",
-    "openPr": {
-      "version": "0.4.120",
-      "checkedAt": "2026-10-21T00:52:18.3254313Z"
-    }
+    "manifestHash": "12C6F488B954799944428FA1450686E18C27800D78F12D9D7FF668BB7D9CECFE"
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
     "validationCount": 1,
@@ -2775,11 +2771,7 @@
     "manifestHash": "11F2E128CBDFB3BB7257051D95B4DC1EE51F9395CD31165050181F491756B5B0",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "3.20.5",
-    "openPr": {
-      "version": "3.20.5",
-      "checkedAt": "2026-10-21T00:52:18.7563732Z"
-    }
+    "version": "3.20.5"
   },
   "FrancisBanyikwa.MediaDownloader": {
     "manifestHash": "03C1DB537ECDB0566823D94D3B6768E5B97F29295D693658F8DF8898058990A5",
@@ -3716,8 +3708,8 @@
   },
   "houmain.keymapper": {
     "openPr": {
-      "version": "5.7.3",
-      "checkedAt": "2026-10-22T08:31:32.8480388Z"
+      "checkedAt": "2026-10-22T20:22:13.1819561Z",
+      "version": "5.8.0"
     }
   },
   "hrkfdn.ncspot": {
@@ -6366,11 +6358,7 @@
     "manifestHash": "D3A24B4FE13D270F7938B8B3D81E0C22F2745C1A375BA27C5B525912CCABCB87",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "0.19.0",
-    "openPr": {
-      "checkedAt": "2026-10-19T08:35:27.7697235Z",
-      "version": "0.19.0"
-    }
+    "version": "0.19.0"
   },
   "OpenScreen.OpenScreen": {
     "description": "",
@@ -8328,8 +8316,8 @@
     "validationCount": 1,
     "manifestHash": "2FC17D10387329E5E73DBDDCBE45541A670D1711C99B916B986BBD747577DEC7",
     "openPr": {
-      "checkedAt": "2026-10-20T00:53:13.7372768Z",
-      "version": "1.54.1"
+      "checkedAt": "2026-10-22T20:22:22.124284Z",
+      "version": "1.55.1"
     }
   },
   "stuncloud.uwscr": {
