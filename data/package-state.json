@@ -5217,14 +5217,14 @@
   },
   "Microsoft.Garnet.DN8": {
     "installerHashes": [
-      "5CD130686AB415B13C59D36D048A6FADED81E707FFE6DA5953F98BEEB79F9F16",
-      "7378803ED6858FFA91977C0FB42F8D5CB26652C5D18A5BD9FBE301C91FBA1B7A"
+      "5DEA38089679FDF41D7CB37B08193376BD8A9188A87307349BAC7BBB8D1255B3",
+      "00015B8A0ED1704DB18BC3A3E2F555594B107CC5EC9286A676B780D9FFC3004D"
     ],
-    "lastUpdated": "2026-10-17T01:39:43.0550005Z",
-    "version": "2.2.3",
-    "manifestHash": "FF8B120C301293414BCEA25196FFA91D824D799E93432825AE1DAB074386BDE7",
     "validationCount": 1,
+    "version": "2.2.4",
+    "manifestHash": "E4FBB54BFE963A29C22F025A743D8032F2CCA2C8CF49D5405913773F67887BA4",
     "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-22T13:27:03.6018948Z",
     "description": ""
   },
   "Microsoft.Garnet.DN9": {
@@ -5326,16 +5326,16 @@
     "validationCount": 1
   },
   "mikf.gallery-dl.Nightly": {
-    "manifestHash": "539B83F2EB4FE0514A09D5FB5D1A25A24B49620FD7A565F9DCD35A2843575277",
-    "validationCount": 1,
-    "description": "",
-    "lastUpdated": "2026-10-18T20:37:52.2080886Z",
-    "version": "2026.10.18",
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "7BC8B46A75ED4E0F53C45F61561A0846C05EE340164B4AAB148208BF301DCB03",
-      "9603C9DA62FB9A3BCD66723F02933A908A89CCCFDDD1E741FF9EED63E466F63B"
-    ]
+      "C01D361FA703BE32B5A64CB57D45527B9ECA8E1B73F7CD76D2A676628886F7FE",
+      "15E5594B75791862689DCEE14E49DD233790F150C263C322B4DE780582113B6F"
+    ],
+    "validationCount": 1,
+    "version": "2026.10.22",
+    "manifestHash": "912514085466DA86B809A421E3029A869B42C4971AE7976E159A5934D1520683",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-22T13:27:03.580076Z",
+    "description": ""
   },
   "MilkShift.GoofCord": {
     "state": "VALIDATION_PASSED",
@@ -6447,15 +6447,15 @@
     "state": "VALIDATION_PASSED"
   },
   "openwong2kim.wmux": {
-    "lastUpdated": "2026-10-19T12:54:40.29981Z",
     "installerHashes": [
-      "1EBFFA9C8752988704A7868C2E66A0519F291DED62687EFB8AA5A654DCFDF483"
+      "D76887D9A588EBBF1931A5132E8514D406A08BF1914331CE40D290A82D5C32C9"
     ],
     "validationCount": 1,
-    "manifestHash": "14A5D1E6F201EE5414AF811E71B0ACFED7A37771F765090553DA2D3372182126",
-    "version": "4.7.0",
-    "description": "",
-    "state": "VALIDATION_PASSED"
+    "version": "4.9.0",
+    "manifestHash": "7533754588A13BFEF986E2953E184CB6754BD3599EB0A6003AE4D987150F09A2",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-22T13:27:03.5019495Z",
+    "description": ""
   },
   "openwong2kim.wsnap": {
     "installerHashes": [
@@ -7263,15 +7263,15 @@
     "version": "0.3.1"
   },
   "RimSort.RimSort": {
-    "validationCount": 1,
-    "lastUpdated": "2026-10-21T01:13:37.5848045Z",
-    "version": "1.17.2",
     "installerHashes": [
-      "AC23CE1BA1D837D23A364A019F7BEBC65CC3D4F87CF1563EE7CC616EA559BF72"
+      "9BD34B09C7591E0084908185F2AB45DA456D0A1583654CC6960041340BDD183C"
     ],
+    "validationCount": 1,
+    "version": "1.17.3",
+    "manifestHash": "D301460DC0EA99396AFBD31BFD2465739A32A071C89A2C3887BE620839C4CB7C",
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "manifestHash": "C5847C7406E4E9884A57FFE8EED63EFD3421F805866843FFF9A1E7E98E5686FF"
+    "lastUpdated": "2026-10-22T13:27:03.634492Z",
+    "description": ""
   },
   "Ripose.Memento": {
     "description": "",
@@ -8766,15 +8766,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "validationCount": 1,
-    "version": "2.67.5",
     "installerHashes": [
-      "67F6D33D923F7B4AAC52A91F84CA0E5FFF001DA43493EE784F058182072CFAD6"
+      "EF90DF364F64D4BEC45B9FDD81A064358AE5E687E52CCBE1D99DD3A24D19B8E7"
     ],
-    "lastUpdated": "2026-10-22T05:01:11.4401136Z",
-    "description": "",
+    "validationCount": 1,
+    "version": "2.67.6",
+    "manifestHash": "D675C0A9B0CA120B79D514A2F54D271AC55AC1D6B6CD44EB68237E756A050E4B",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "136586D7C5879E0241E4CECDE96ED267A0187BC0B9224903409AD96F62086110"
+    "lastUpdated": "2026-10-22T13:27:03.5406381Z",
+    "description": ""
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
