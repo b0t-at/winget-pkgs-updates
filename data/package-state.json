@@ -398,8 +398,8 @@
       "61DE72AF3E9CD8555425EBA765E58BB1A42568DCC01847BE45CCE6BEEECFA00E"
     ],
     "openPr": {
-      "version": "3.0.8",
-      "checkedAt": "2026-10-22T08:31:58.3553617Z"
+      "checkedAt": "2026-10-23T16:27:39.1780929Z",
+      "version": "3.0.8"
     }
   },
   "Anki.Anki": {
@@ -3555,7 +3555,11 @@
     "validationCount": 1,
     "manifestHash": "7C5306AC2E240519073AF2C308BF5D5C396C0CF4815CE01D478A94B69FAAF728",
     "lastUpdated": "2026-10-23T13:49:06.4312107Z",
-    "description": ""
+    "description": "",
+    "openPr": {
+      "checkedAt": "2026-10-23T16:26:29.9743478Z",
+      "version": "0.18.0"
+    }
   },
   "Hiddify.Next": {
     "lastUpdated": "2026-08-18T01:43:26.2890175Z",
@@ -9282,12 +9286,6 @@
     "version": "0.7.0",
     "description": "",
     "lastUpdated": "2026-10-10T01:55:12.0052846Z"
-  },
-  "VictorIX.BlenderLauncher": {
-    "openPr": {
-      "checkedAt": "2026-10-23T04:27:17.9100777Z",
-      "version": "2.8.0"
-    }
   },
   "Vipre.IPVTest": {
     "description": "",
