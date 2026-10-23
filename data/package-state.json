@@ -1780,16 +1780,16 @@
     "lastUpdated": "2026-07-16T13:03:34.6559943Z"
   },
   "cURL.cURL": {
-    "manifestHash": "18EE764B0F170296236863A8E08791ABF8C02A88FB26D38872EF65F29687AB47",
-    "lastUpdated": "2026-10-08T12:47:32.9047124Z",
-    "description": "",
-    "installerHashes": [
-      "F38B0AC2E3A280FD414B607C874A21E6DD4D1ED0E2AE622AFBF0020917446561",
-      "A5E241AB0D48FAABF5FA650884D8FA058B10AA6491F7B083874699602BA90ED3"
-    ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 18,
-    "version": "8.22.0.3"
+    "validationCount": 1,
+    "installerHashes": [
+      "B0AF3896433242213F6D1388A104115E6DFDD3B16727E5B00C2AB0F48FBC904A",
+      "92F29F4B038C03EEA1A8A04A94F1C95C8C6C86C20B18B9320C891433D8A6E952"
+    ],
+    "description": "",
+    "lastUpdated": "2026-10-23T01:29:43.5663885Z",
+    "version": "8.23.0.5",
+    "manifestHash": "A076EEDFBAE7FFD43AE6C660F6180B870961C49798B53ADE1454BD51E3E11AB9"
   },
   "CyberSkill.CyberOS": {
     "description": "",
@@ -4103,15 +4103,15 @@
     }
   },
   "Jellyfin.Server": {
-    "version": "12.2",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "777CEDDFFF1B4AE0CD129F213B73C964C421AEFD1EFAF4FA01FFA8FBA19DFF98",
+    "validationCount": 1,
     "installerHashes": [
-      "0E6781D214FE384DB7325B70E6A499A830F0E3DBBAD9C5A4A8E722DCA5AE48FC"
+      "A3721C57E00F2C03C9ADDC325290991D6236D981927D284ACDEF1EFCA282B3B1"
     ],
-    "validationCount": 7,
-    "lastUpdated": "2026-10-07T20:43:39.0425657Z",
-    "description": ""
+    "description": "",
+    "lastUpdated": "2026-10-23T01:29:43.6152169Z",
+    "version": "12.3",
+    "manifestHash": "92F1ADC84CD82D4706C50A6D16C8F2D407D12FE00C9DE40FE71B77B297659865"
   },
   "jendrikseipp.RedNotebook": {
     "openPr": {
