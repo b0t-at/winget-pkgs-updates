@@ -1,0 +1,14 @@
+{
+  "repository": "microsoft/winget-pkgs",
+  "pullRequestNumber": 459814,
+  "classification": "InstallationFailure",
+  "state": "Escalated",
+  "recordedAt": "2026-10-23T07:03:48.3700036+00:00",
+  "retryAfter": null,
+  "learnedOverrideSignal": null,
+  "reason": "The installer failed upstream installation testing (unattended, shell-execute, driver or dependency); human-verified switches are required before resubmitting.",
+  "packageIdentifier": "Jellyfin.Server",
+  "packageVersion": "12.3",
+  "evidence": [],
+  "installerTraits": "type=Nullsoft;nested=;scope=Machine;elevation=ElevationRequired;silent=;silentWithProgress=;interactive=;custom=;upgrade=;log=;installLocation=;repair="
+}
