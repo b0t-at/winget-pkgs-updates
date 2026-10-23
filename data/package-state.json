@@ -1170,16 +1170,16 @@
     }
   },
   "bornova.numara": {
-    "installerHashes": [
-      "9C7CAD18B1D0E3D84EED959FE167AEC60991270478FD1E08D439E0982D3A9D79",
-      "BD96726EBC0F301DBEFD230E1A8660003136341C0BEFCC0D6D36762302DB3C42"
-    ],
-    "validationCount": 1,
-    "manifestHash": "D375DD7BFB4A239DB91FF8DD69CCB8BB9E79B8EE575E1688A0C2E7DA6E04D275",
-    "state": "VALIDATION_PASSED",
-    "version": "7.6.0",
+    "version": "7.6.2",
+    "lastUpdated": "2026-10-23T09:01:35.0653082Z",
+    "manifestHash": "D1891C5B4CADBFA164C8A059402D591C7856717BB1B85DD9F6C4A21C216A04E5",
     "description": "",
-    "lastUpdated": "2026-10-10T01:55:12.0634295Z"
+    "validationCount": 1,
+    "installerHashes": [
+      "5B59A067E149754E427EF2A90705B84808B8DEB4DCF214C59C34CD93564D9031",
+      "DA46FBD3AD83DC14BE34BC9E6B1A8A720276202936E4DA2972F5EB74B1E5B370"
+    ],
+    "state": "VALIDATION_PASSED"
   },
   "brandonyoungdev.tldx": {
     "installerHashes": [
@@ -1600,13 +1600,15 @@
     "lastUpdated": "2026-06-13T21:57:50.2974106Z"
   },
   "Concourse.Fly": {
+    "version": "8.3.2",
+    "lastUpdated": "2026-10-23T09:01:35.0803396Z",
+    "manifestHash": "C3A9F116EBB91A0BA97467B1BD583B241E439D2E137C6C22A555AAF68B38C6FC",
     "description": "",
-    "installerHashes": "570486B75CE5BB8499C4A47B2983C9C09E839AD0DFB452D367DE2D40F58425E8",
-    "lastUpdated": "2026-09-28T20:30:38.1613708Z",
-    "manifestHash": "F02FBA9AFAC3B4ED3B1F605B466F0FD9EC0D0E933F3C0A926850070CA7563573",
-    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "8.3.1"
+    "installerHashes": [
+      "C351FDBF98809C85DD4CB975E222890B8E7D7E74CCBA3891FCD3F21EA95A30BF"
+    ],
+    "state": "VALIDATION_PASSED"
   },
   "Containers.PodmanTUI": {
     "installerHashes": [
@@ -4323,16 +4325,16 @@
     "state": "VALIDATION_PASSED"
   },
   "kcl-lang.kcl": {
-    "manifestHash": "84594F8BF4F7828179218E7EACA3856376F00DD2F075F5FD86D3C6F16C129B64",
-    "state": "VALIDATION_PASSED",
+    "version": "0.13.2",
+    "lastUpdated": "2026-10-23T09:01:35.0102994Z",
+    "manifestHash": "4B287A9CB782601D98EA9835C9A739CC133D522F8B56C4CEFD36F68AE287463A",
+    "description": "",
     "validationCount": 1,
-    "lastUpdated": "2026-10-09T13:11:43.651702Z",
     "installerHashes": [
-      "F4DD8E0B57BB22012FED3B282087D645747032788F83ED05BB8CE793D0F22171",
-      "745F22C88C0003C49930BD7765990A92E12BBDD11994E0306EB0113F44F89255"
+      "CC8A2BEF930285B743E8107E024407375ADE0B8FFC4C4B20ECB438FAB16AF231",
+      "ED7CDACA9DF209A1CB9BD41DCCAB0F90E60231BBE2F05F23D6AE9E5E2C132B01"
     ],
-    "version": "0.13.1",
-    "description": ""
+    "state": "VALIDATION_PASSED"
   },
   "KeeperSecurity.Commander": {
     "description": "",
@@ -6348,13 +6350,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6311244Z"
   },
   "openpubkey.opkssh": {
+    "version": "0.19.1",
+    "lastUpdated": "2026-10-23T09:01:34.9607489Z",
+    "manifestHash": "990B5A97A29F7C75C80B0A2E542FCF2AE5B81A94187E3A4EBB34C578EB1DDBF4",
     "description": "",
-    "installerHashes": "101F6775A943079C9347AE4C0DEF0DB1A706317D058A36784ED3111A55E275F2",
-    "lastUpdated": "2026-10-19T05:05:38.4050572Z",
-    "manifestHash": "D3A24B4FE13D270F7938B8B3D81E0C22F2745C1A375BA27C5B525912CCABCB87",
-    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "0.19.0"
+    "installerHashes": [
+      "9A7B22E80BF7D92ABC930CDA39EFBDFF150AFF42CCC3D440E23058EC216AB29B"
+    ],
+    "state": "VALIDATION_PASSED"
   },
   "OpenScreen.OpenScreen": {
     "description": "",
@@ -7932,15 +7936,15 @@
     "manifestHash": "E287E5EFDF457EB47DC8F18007B1E361CAE20763BDA63DD266E50CCF3C4BAC3A"
   },
   "skyhook-io.Radar": {
-    "lastUpdated": "2026-10-16T01:16:49.7930077Z",
-    "installerHashes": [
-      "679BF3070D53D19A8E8CBDAAB614FF65DB88B701F5F378F835904DD81DDA5E7B"
-    ],
-    "state": "VALIDATION_PASSED",
+    "version": "1.18.0",
+    "lastUpdated": "2026-10-23T09:01:35.103352Z",
+    "manifestHash": "FC2E7C59D0920962D568664CD529D4BB2AEE1BA03EE29729CF309279CC43C9E1",
     "description": "",
-    "version": "1.17.0",
     "validationCount": 1,
-    "manifestHash": "AC24C02C40BA0DE0AA7770636FA1F69E9C8E3129FEC97A1086C2E38C326B9DB1"
+    "installerHashes": [
+      "3EDB80CF43322B8CEB605B7B2611C5C4133A74E92743AB660F66D1AA3E14B9DF"
+    ],
+    "state": "VALIDATION_PASSED"
   },
   "Skylot.jadx": {
     "validationCount": 1,
