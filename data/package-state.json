@@ -4218,11 +4218,7 @@
     ],
     "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "9A4DF16EBDCE59232C54B5DF04D449A66D61F5A11ADD46BF707CB15A166AB223",
-    "openPr": {
-      "version": "19.2.0",
-      "checkedAt": "2026-10-13T12:37:24.2065386Z"
-    }
+    "manifestHash": "9A4DF16EBDCE59232C54B5DF04D449A66D61F5A11ADD46BF707CB15A166AB223"
   },
   "JosephFinney.Text-Grab": {
     "state": "VALIDATION_PASSED",
@@ -6125,8 +6121,8 @@
       "933794EE1D670137F5116C9DE7FC7DB092FA97C6B823ABA848DDB8A7EA030828"
     ],
     "openPr": {
-      "checkedAt": "2026-10-23T04:26:21.1593006Z",
-      "version": "0.40.9"
+      "version": "0.40.10",
+      "checkedAt": "2026-10-23T20:22:44.7915885Z"
     }
   },
   "Ombrelin.PandocGui": {
@@ -6441,7 +6437,7 @@
     "state": "VALIDATION_FAILED",
     "openPr": {
       "version": "1.13.2",
-      "checkedAt": "2026-10-22T16:26:52.297057Z"
+      "checkedAt": "2026-10-23T20:22:45.69244Z"
     }
   },
   "OpenWhispr.OpenWhispr": {
