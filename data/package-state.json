@@ -1352,7 +1352,7 @@
   "Carvel.ytt": {
     "openPr": {
       "version": "0.55.4",
-      "checkedAt": "2026-10-22T08:31:27.8827123Z"
+      "checkedAt": "2026-10-23T12:30:56.3843174Z"
     }
   },
   "ccccraz.cogmoteGO": {
@@ -3570,6 +3570,12 @@
       "checkedAt": "2026-10-05T05:43:26.8532582Z"
     }
   },
+  "HiroshibaKazuyuki.VOICEVOX.CPU": {
+    "openPr": {
+      "version": "0.26.1",
+      "checkedAt": "2026-10-23T12:31:13.7539213Z"
+    }
+  },
   "HiroSystems.Clarinet": {
     "validationCount": 1,
     "lastUpdated": "2026-08-26T21:23:48.1514445Z",
@@ -4065,8 +4071,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.10.17",
-      "checkedAt": "2026-10-22T08:31:33.2635205Z"
+      "version": "2026.10.18",
+      "checkedAt": "2026-10-23T12:31:15.2794943Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -8362,7 +8368,7 @@
     "state": "VALIDATION_PASSED",
     "openPr": {
       "version": "1.29.1",
-      "checkedAt": "2026-10-22T08:31:46.4628822Z"
+      "checkedAt": "2026-10-23T12:31:21.7724979Z"
     }
   },
   "SuperRadCompany.Microsandbox": {
