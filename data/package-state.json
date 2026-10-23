@@ -3183,15 +3183,15 @@
     "lastUpdated": "2026-09-17T20:53:14.2050338Z"
   },
   "Google.FirebaseCLI": {
-    "installerHashes": [
-      "919C874A22FABD89EEF769A527E6CDCDEF9A5015B7403D765BA1B4C18BEEA495"
-    ],
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "B736FEB5FECF33E3A9CF5791946404EDD5801E77E5394FAA1134480E3E4CF19F",
-    "version": "15.34.0",
+    "manifestHash": "83CB8989F02CC1E42D05440B7F45833C8975A6C48970F19D47498201C976554B",
+    "description": "",
     "validationCount": 1,
-    "lastUpdated": "2026-10-15T04:38:02.6166554Z",
-    "description": ""
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "BD7D07B38335A5498A32000D7BC5C47D2525793AD9F14E42420AFA66C51D8384"
+    ],
+    "lastUpdated": "2026-10-23T21:04:28.750198Z",
+    "version": "15.34.1"
   },
   "Google.IAPDesktop": {
     "lastUpdated": "2026-06-30T01:55:05.1221847Z",
@@ -3662,15 +3662,15 @@
     "validationCount": 1
   },
   "holland-built.Bloxsmith": {
-    "validationCount": 1,
-    "version": "3.92.24",
-    "installerHashes": [
-      "7BEC7EF719A73CC4AEA34259396109A4CFC0EDC2059D51C8EF2C5BB037539C50"
-    ],
-    "lastUpdated": "2026-10-22T05:01:11.4081606Z",
+    "manifestHash": "A058D1F15C9031BD637275A6EF66D91D7065C698A170F5B7EAA724B7C8049771",
     "description": "",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "manifestHash": "AEC22DD6EC8C9C17C63BFE38D55F627C816AE1980262F0205CD0F62B51B40192"
+    "installerHashes": [
+      "B41C51AEA5EA346B767A7697ED6C03BBD5DE952297EE4F434DBF7A0270BD383B"
+    ],
+    "lastUpdated": "2026-10-23T21:04:28.6322394Z",
+    "version": "3.97.0"
   },
   "HongMinhee.Gukhanmun": {
     "manifestHash": "089D5FCFFB565DBC52073976471BB7BB53E1FA33EA888133D45A589919D3AE52",
@@ -5024,15 +5024,15 @@
     "lastUpdated": "2026-10-10T01:55:11.7767822Z"
   },
   "matkrin.bashd": {
-    "lastUpdated": "2026-10-19T12:54:40.2156323Z",
-    "installerHashes": [
-      "941EF18EA8660EFFDBB6086825C8F278B1DF295F678D0E5F59AB90C52E7CF524"
-    ],
-    "validationCount": 1,
-    "manifestHash": "6B9A5D59D75D3D267EEE7006956192E0B2E7169A97929E3D2C06F977207229E2",
-    "version": "0.3.0",
+    "manifestHash": "CA11C750D1565B6D4BB217FF678D55DCB059944310F2EDC6D187FAC1020403AB",
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "86904E6508A4B8CB2A671AA36EFF912FA302B4FFABA59D39D12DF787E69BCB0D"
+    ],
+    "lastUpdated": "2026-10-23T21:04:28.5761298Z",
+    "version": "0.3.1"
   },
   "MaximumADHD.RobloxStudioModManager": {
     "version": "2026.09.02",
@@ -7249,16 +7249,16 @@
     ]
   },
   "RicardoCabral.icuvisor": {
-    "version": "1.8.0",
-    "installerHashes": [
-      "292EAAC697A5A81FDDA35E08357923C572418DCBFF339E7884D2627262BB05B4",
-      "B40E553448B2B6418BDBF6B0E43AF7F9B98EEECEE8D9C5E35197C3060E1E5856"
-    ],
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "BB81037B4D3FD1D985A15D1708FC54A171D0BA224C98ED7D1B76C37385DB52AB",
+    "manifestHash": "EE2C64F79161148F654E45B042B8C0649CB7E1EA2E9D0A47E0FD3C795821BE01",
+    "description": "",
     "validationCount": 1,
-    "lastUpdated": "2026-10-13T17:11:40.9540423Z",
-    "description": ""
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "910874AC75C8AD66BB1EBE01A16B9E72AD3F3087B8DB7C43F8880C4A32FFD932",
+      "FDCD4CE10BCB6A0837671E83A9054D32AFB0BB529D8FC1E1E409F95A33E57EED"
+    ],
+    "lastUpdated": "2026-10-23T21:04:28.7695806Z",
+    "version": "1.8.2"
   },
   "RikkiGibson.DreamPotato": {
     "lastUpdated": "2026-08-18T01:43:26.5566063Z",
@@ -8871,15 +8871,15 @@
     }
   },
   "tosuapp.tosu": {
+    "manifestHash": "80941B6FFA1C6A730D29ABE6F309B56ABEEF687B1A6EFAD260BF456C488EB594",
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "59784FE8D66F1EF932816E58521E6D82AE6CA5DEB659F8D43DDFC323D485E49C",
-    "version": "4.26.2",
-    "lastUpdated": "2026-09-04T17:06:56.5864628Z",
     "validationCount": 1,
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "D34C2BFC495959FCC79FF01F10B7DC9AEA77EB508ED23C8F0D0FB8342773FAA3"
-    ]
+      "700063DA6377C5F69985E09B0D30D575D27653519D7A3B1154BC11F1F9BD5752"
+    ],
+    "lastUpdated": "2026-10-23T21:04:28.7238219Z",
+    "version": "4.26.3"
   },
   "TravisLane.SteamArtManager": {
     "manifestHash": "90C1F6430B45C482E10BC372D24BA67C4A492E60D9ACCD9A4F63EE64408EBCC6",
@@ -9696,15 +9696,15 @@
     "description": ""
   },
   "xonsh.xonsh-winget": {
+    "manifestHash": "540CDC276DAE58058CC0E26A63F976C1BB957C86BEF156CE1F6A94A29B9A1E4A",
+    "description": "",
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "version": "0.24.2",
-    "lastUpdated": "2026-08-24T08:49:14.1822779Z",
-    "manifestHash": "4136E15BF8CB2CE1E62F827FEB593CB06211418CE79DE918AE0410D22DF60203",
     "installerHashes": [
-      "8AD9EC390F5BA05A57FEB5D53208951E92AA3268D434BCD0A22CEFDAF6FDB2BA"
-    ]
+      "7612DE6B4D210F6EB3C79CA8D24F667BE5B86C276F82B9997B00248634448768"
+    ],
+    "lastUpdated": "2026-10-23T21:04:28.7010607Z",
+    "version": "0.25.0"
   },
   "xpipe-io.xpipe.portable": {
     "validationCount": 1,
