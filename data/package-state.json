@@ -2112,8 +2112,8 @@
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "version": "0.64.1",
-      "checkedAt": "2026-10-20T20:23:59.351705Z"
+      "checkedAt": "2026-10-23T00:53:54.7752608Z",
+      "version": "0.64.2"
     }
   },
   "dragonflylee.switchfin": {
@@ -2424,11 +2424,7 @@
     "installerHashes": [
       "76989536A5F333642687FBD85603087C3DEB4D316FD86FDFB63897B05F851CF4"
     ],
-    "version": "3.7.2",
-    "openPr": {
-      "version": "3.7.2",
-      "checkedAt": "2026-09-25T16:25:51.3203582Z"
-    }
+    "version": "3.7.2"
   },
   "Ethersphere.Swarm-Desktop": {
     "validationCount": 1,
@@ -2762,7 +2758,11 @@
     "lastUpdated": "2026-10-22T21:30:34.3297631Z",
     "installerHashes": [
       "A369B9E8C89C0C23FC268B3A865DC79313CBFF59FEEE5DFD28A2985AB3B00670"
-    ]
+    ],
+    "openPr": {
+      "checkedAt": "2026-10-23T00:54:23.9831279Z",
+      "version": "7.3.3"
+    }
   },
   "FOSSA.FOSSA-cli": {
     "description": "",
@@ -6954,7 +6954,11 @@
       "EB6CA0CBF86048D919937F2D2B0C9C6BFC231F511FB2460C16CB574F1FA9ECEE",
       "D48EBAD7999AAC5603FE01007016A0DDBCECBC1AA0ECBC51867A2416B6C60A7D",
       "30E3639F33C5674A61C94B4C57375D999592173576765D3918C75B806FE25297"
-    ]
+    ],
+    "openPr": {
+      "checkedAt": "2026-10-23T00:54:30.6674452Z",
+      "version": "0.32.0"
+    }
   },
   "prsyahmi.WicHeic": {
     "manifestHash": "78CB170D9C1D781E9EDBC2274618750A1B91B86E41C20D0AAF02BDA005BD56FF",
@@ -8633,8 +8637,8 @@
     "manifestHash": "101A50462A6E2BE19AFB17A21278EA44597559D970949753840897CFC30A7566",
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
-      "version": "5.7.1",
-      "checkedAt": "2026-10-22T00:52:14.2910955Z"
+      "checkedAt": "2026-10-23T00:55:22.7000978Z",
+      "version": "5.7.1"
     }
   },
   "termio.soft-jp.com.TermioWin": {
