@@ -1604,10 +1604,6 @@
     "installerHashes": "570486B75CE5BB8499C4A47B2983C9C09E839AD0DFB452D367DE2D40F58425E8",
     "lastUpdated": "2026-09-28T20:30:38.1613708Z",
     "manifestHash": "F02FBA9AFAC3B4ED3B1F605B466F0FD9EC0D0E933F3C0A926850070CA7563573",
-    "openPr": {
-      "checkedAt": "2026-09-28T20:33:58.9821561Z",
-      "version": "8.3.1"
-    },
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
     "version": "8.3.1"
@@ -2689,7 +2685,7 @@
     ],
     "description": "",
     "openPr": {
-      "checkedAt": "2026-10-22T04:25:07.8181336Z",
+      "checkedAt": "2026-10-23T04:25:50.3574417Z",
       "version": "3.2.5"
     }
   },
@@ -3766,11 +3762,7 @@
     "version": "3.2.0",
     "installerHashes": [
       "2F69B2CB67170602294D93221C4C892626279CF0C64CCC0870062F6EAF556721"
-    ],
-    "openPr": {
-      "checkedAt": "2026-10-19T16:44:13.7172017Z",
-      "version": "3.2.0"
-    }
+    ]
   },
   "icsharpcode.ILSpy": {
     "state": "VALIDATION_PASSED",
@@ -4695,7 +4687,11 @@
     "version": "2.19.2",
     "lastUpdated": "2026-10-23T02:01:31.7314286Z",
     "manifestHash": "1DBCAC40D3D60AB00C4A84B7177B4D753D071CB4D242080D12AB923751177158",
-    "description": ""
+    "description": "",
+    "openPr": {
+      "checkedAt": "2026-10-23T04:26:18.5821848Z",
+      "version": "2.19.2"
+    }
   },
   "LocalStack.localstack-cli": {
     "description": "",
@@ -6102,8 +6098,8 @@
       "933794EE1D670137F5116C9DE7FC7DB092FA97C6B823ABA848DDB8A7EA030828"
     ],
     "openPr": {
-      "version": "0.40.8",
-      "checkedAt": "2026-10-22T00:52:12.0557982Z"
+      "checkedAt": "2026-10-23T04:26:21.1593006Z",
+      "version": "0.40.9"
     }
   },
   "Ombrelin.PandocGui": {
@@ -8283,7 +8279,7 @@
     "lastUpdated": "2026-10-20T20:52:59.3040364Z",
     "manifestHash": "F128AF5433A8D08BA291471BB7A7A529C8421A85667737F58FADC4A16BA381BC",
     "openPr": {
-      "checkedAt": "2026-10-22T04:25:40.6639135Z",
+      "checkedAt": "2026-10-23T04:26:25.6375508Z",
       "version": "1.165.3"
     }
   },
@@ -9261,6 +9257,12 @@
     "version": "0.7.0",
     "description": "",
     "lastUpdated": "2026-10-10T01:55:12.0052846Z"
+  },
+  "VictorIX.BlenderLauncher": {
+    "openPr": {
+      "checkedAt": "2026-10-23T04:27:17.9100777Z",
+      "version": "2.8.0"
+    }
   },
   "Vipre.IPVTest": {
     "description": "",
