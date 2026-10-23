@@ -9731,7 +9731,11 @@
       "FC58C39EE2F2717B4C54D28D374362389E5319B20AE44AEA76EA45A5243EC827",
       "BB44AF3380C9975F951CE7645C04D56AB600040E68F23974A2806E08E0A3F872"
     ],
-    "version": "26.10.21"
+    "version": "26.10.21",
+    "openPr": {
+      "version": "26.10.21",
+      "checkedAt": "2026-10-23T08:30:31.23416Z"
+    }
   },
   "xushengfeng.eSearch": {
     "version": "15.6.0",
