@@ -2380,15 +2380,15 @@
     "lastUpdated": "2026-08-20T09:17:27.7041213Z"
   },
   "errata-ai.Vale": {
-    "installerHashes": [
-      "3A8884774973B6F2826877E1C6388A5FEAE4704EF88A9A9C912C77CE186990F3"
-    ],
-    "lastUpdated": "2026-10-09T01:47:25.3936382Z",
-    "version": "3.24.0",
-    "description": "",
+    "version": "3.25.1",
     "state": "VALIDATION_PASSED",
-    "validationCount": 5,
-    "manifestHash": "C459D121AF144F7CA3B8C0D93F600D746F7B00E9CA3F29CE24135C2F3DE6A245"
+    "installerHashes": [
+      "5F4B5CEFEE5D0F7EE0621D7CC035886515888FD732C4E8ADD36D3C922F2ADC68"
+    ],
+    "validationCount": 1,
+    "manifestHash": "42391BB4F2CA7C0540438AC727676389FDC33D876B20C64192E13905AB131995",
+    "lastUpdated": "2026-10-23T13:49:06.517862Z",
+    "description": ""
   },
   "Essenciary.Githical": {
     "version": "0.1.5",
@@ -2576,15 +2576,15 @@
     }
   },
   "Fangyuan025.Chaty": {
-    "validationCount": 1,
-    "manifestHash": "B7184EE358C5E8929F099C27197DF5AB0A7D4B0CD8B50C2C39E7A340D7091CBE",
-    "version": "2.3.5",
-    "description": "",
+    "version": "2.3.6",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-30T01:45:49.6395353Z",
     "installerHashes": [
-      "DA06978C8D13E847915400BF68398F48DBFE0B844289579F9029E1E2D586D4B3"
-    ]
+      "998DE5DA36637B3950C4AE190B077C6F616ABDBDF78AF44DCCC6C277B6BC16DE"
+    ],
+    "validationCount": 1,
+    "manifestHash": "BDA24B94EC437908F721F4B1C4C5CECF9202AE17B58C25E361C3122CD3BF8DA9",
+    "lastUpdated": "2026-10-23T13:49:06.4605758Z",
+    "description": ""
   },
   "Feho.LogNav": {
     "installerHashes": [
@@ -2763,13 +2763,15 @@
     }
   },
   "FOSSA.FOSSA-cli": {
-    "description": "",
-    "installerHashes": "12AED1EC922209EBC8DEA3366CCA3966330BEF7895FFBE6708CB30B5B5D9583B",
-    "lastUpdated": "2026-10-20T20:52:59.3469567Z",
-    "manifestHash": "11F2E128CBDFB3BB7257051D95B4DC1EE51F9395CD31165050181F491756B5B0",
+    "version": "3.20.7",
     "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "3D2E4248486ED0FC37C794278134CF565DB234569529056F4A2A75238AB20508"
+    ],
     "validationCount": 1,
-    "version": "3.20.5"
+    "manifestHash": "D66F018E5FFEDE1F4FC2B2931EE13DDEF541191B82BC1BCCBC3B25E119A3D7A9",
+    "lastUpdated": "2026-10-23T13:49:06.2864238Z",
+    "description": ""
   },
   "FrancisBanyikwa.MediaDownloader": {
     "manifestHash": "03C1DB537ECDB0566823D94D3B6768E5B97F29295D693658F8DF8898058990A5",
@@ -2818,15 +2820,15 @@
     "state": "VALIDATION_PASSED"
   },
   "fselect.fselect": {
-    "description": "",
-    "installerHashes": [
-      "B96F46A8CDE6C3671DB71D4BE3B82FE6B0C44CD25C4581F0FAD3EC6F07AD9D8A"
-    ],
+    "version": "0.10.4",
     "state": "VALIDATION_PASSED",
-    "version": "0.10.3",
-    "lastUpdated": "2026-09-05T16:46:09.0466215Z",
+    "installerHashes": [
+      "A6EEFF2B7D55D44CB6974D387FB925AA16DA0DB1A4A280888640200EC7CDA364"
+    ],
     "validationCount": 1,
-    "manifestHash": "5F60D9D788A634043D497141D028EEFE88F67360694E406BBF05BA0A1313B54F"
+    "manifestHash": "DE70F802A1C0B522EA2F349BC3A962A4C29941439AC996011CA33F48716D8D84",
+    "lastUpdated": "2026-10-23T13:49:06.5499804Z",
+    "description": ""
   },
   "futrime.lip": {
     "manifestHash": "E8A70772591CC89CCAC8BDAF5E43D9D576B2FB1B8999419735C0989589ACF56C",
@@ -3542,6 +3544,19 @@
     "lastUpdated": "2026-09-20T04:47:26.2491082Z",
     "manifestHash": "516F8506804CE791AEE024C4CAA171724FD88E060502FDBFFB1A1A874061A284"
   },
+  "hickford.git-credential-oauth": {
+    "version": "0.18.0",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "BFDCDA80C393592CBD8A319A3177CE421BE45AD54DFB89A9A1BF5D2E4DD0585D",
+      "2F79D374F2DA04DB358632A552AEB4E21ADF10D8AD5F8F9EEA62A2AE7FD1CA7A",
+      "3C646829508A44091272124D1B457294276F68BE796F32C162ADEF449F940383"
+    ],
+    "validationCount": 1,
+    "manifestHash": "7C5306AC2E240519073AF2C308BF5D5C396C0CF4815CE01D478A94B69FAAF728",
+    "lastUpdated": "2026-10-23T13:49:06.4312107Z",
+    "description": ""
+  },
   "Hiddify.Next": {
     "lastUpdated": "2026-08-18T01:43:26.2890175Z",
     "state": "VALIDATION_PASSED",
@@ -3762,15 +3777,15 @@
     "lastUpdated": "2026-08-21T17:17:39.9241582Z"
   },
   "IanWalton.JellyfinMPVShim": {
-    "description": "",
+    "version": "3.3.0",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-18T12:54:13.3012254Z",
-    "manifestHash": "362CAE69CC237901F9BEF39E615FE71D5C3D9877C4CDF168421DF61D6AB6A7C6",
-    "validationCount": 1,
-    "version": "3.2.0",
     "installerHashes": [
-      "2F69B2CB67170602294D93221C4C892626279CF0C64CCC0870062F6EAF556721"
-    ]
+      "F0530120004468B45668CD226E4AE254348F496046BE2F7B84829F4877BFA014"
+    ],
+    "validationCount": 1,
+    "manifestHash": "958C945318047E6281CD236F9ABB078839FE3CC1A58FB635368156DF7E10AD79",
+    "lastUpdated": "2026-10-23T13:49:06.5001146Z",
+    "description": ""
   },
   "icsharpcode.ILSpy": {
     "state": "VALIDATION_PASSED",
@@ -4559,16 +4574,16 @@
     "manifestHash": "0EAD8CD70D3E1FD25ED5FFAC9D7746FECCEF9A3507F55DCAC602C3DA6647BC1D"
   },
   "LANCommander.Server": {
-    "manifestHash": "16265C93D0D95DA96E41EDADE1C2EC84BD6DB9B75A72F0A396265B730672953E",
-    "lastUpdated": "2026-09-18T01:38:16.2219951Z",
-    "description": "",
-    "validationCount": 1,
-    "version": "2.1.16",
+    "version": "2.1.17",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "0C2A58240B6A954F8883E7DDF31D24787A86E50D456D58E3C9113318EF7029C2",
-      "A9B3BE6346A9C0CCF21E53811FBA762614A4F3A87E53C716C9978629AB0B83AD"
+      "CC458CC857E8F37B3F7E82ED182A108A3287B44EB0B98A296212C21304CE5144",
+      "026B617A9C76285837455D07CECCDF35F056C1CC8FC81A3627D4745F6395A8E6"
     ],
-    "state": "VALIDATION_PASSED"
+    "validationCount": 1,
+    "manifestHash": "19104FE0BE6C435A3962FD19A1AB98F19F630EC35242865E3DB1763338C714ED",
+    "lastUpdated": "2026-10-23T13:49:06.4824071Z",
+    "description": ""
   },
   "Lando.Lando": {
     "validationCount": 1,
@@ -4975,15 +4990,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Martchus.syncthingctl": {
+    "version": "2.1.9",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "lastUpdated": "2026-10-09T09:14:36.5413496Z",
-    "version": "2.1.8",
-    "manifestHash": "C539BA5BA184986B30DC64E56976AF1BF6F6C72CA035AC871A10E6BD1A842D2F",
     "installerHashes": [
-      "CCC7CE12B978CBC577851B63A208585E337F821E4DEEC46B93D79620D5922EF9",
-      "88E27E88DB67F00042205F1111B14DC18CB5D4ECE2A927546084461BEC4F9417"
+      "BB288702BDDB6030E0186CB59C26464BE891EEA8BF0086793FF77BCF66AFC990",
+      "C5BDD7E284D91642D61E0B4B3022759DFC63E33F5737EB7CBDDCC40E334AA201"
     ],
+    "validationCount": 1,
+    "manifestHash": "E1E475B09D3680FD1F1F9EEFD8CA6FD7C14E930F1E29825152A1C9038A20127D",
+    "lastUpdated": "2026-10-23T13:49:06.596827Z",
     "description": ""
   },
   "masaodev.quick-dash-launcher": {
@@ -6857,16 +6872,16 @@
     "version": "12.14.0"
   },
   "PocketBase.PocketBase": {
-    "validationCount": 1,
+    "version": "0.40.6",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-11T01:38:55.345294Z",
-    "version": "0.40.5",
-    "manifestHash": "4ECC719C58DCFB69FF7C86E582C5761076F9B679EEB8982BE11D718C57B8A1F2",
-    "description": "",
     "installerHashes": [
-      "D0980D1F3A8097FF4C03A876E8C98F3008A83C0D42CC03B636BC92B2D4788D1C",
-      "7DD0D7C500812CAC571E450525595B93556527161B1EB86493DABDFC31974EF5"
-    ]
+      "33A2A1D255CADDED77346FC7F5DE37DCA21BA4BAD0D9CAE0235A50B3B703D6D9",
+      "7CA50A72B768965F0DA194B907D2A1E8865E614CDBEBB27FA64CA7FF1D7F5182"
+    ],
+    "validationCount": 1,
+    "manifestHash": "69D10ED66AF495C6797CE8C737904BEB3838B82C595DAC5C517B1FB96DD7FB02",
+    "lastUpdated": "2026-10-23T13:49:06.4108164Z",
+    "description": ""
   },
   "PocketSync.PocketSync": {
     "installerHashes": [
@@ -8659,16 +8674,16 @@
     ]
   },
   "TerraformLinters.tflint": {
-    "lastUpdated": "2026-07-17T16:58:17.5554288Z",
-    "installerHashes": [
-      "06F0210A69B87D6DDFD78611030D7B5C62D42B88FD121E71000B93138F732167",
-      "FB42FB859D844B156A8EA9D3363078C4D8B85CA78782E60876B08C9B8E59F303"
-    ],
-    "manifestHash": "1D6A659AEDBA78D5785F45B4A40B0CE34244AE711668597276B41D771102C55E",
-    "description": "",
+    "version": "0.65.0",
     "state": "VALIDATION_PASSED",
-    "version": "0.64.0",
-    "validationCount": 1
+    "installerHashes": [
+      "7FA68D755DE67547016A6A04EE9FEF8D2AAEA66EC434A0140A59A1A419E5269E",
+      "292E760ADF0E9C7E0F10DDEB0F6ADD67FD6D2C68B5449FDF766FF6FFDDCE465C"
+    ],
+    "validationCount": 1,
+    "manifestHash": "9F9B1679472D879F2070C5D831EEF5FD671C717A1B220880683AE08B09F80FAF",
+    "lastUpdated": "2026-10-23T13:49:06.3435264Z",
+    "description": ""
   },
   "Tetrate.wazero": {
     "installerHashes": [
@@ -9391,15 +9406,15 @@
     "description": ""
   },
   "WasmEdge.WasmEdge": {
-    "lastUpdated": "2026-10-09T05:25:50.5701205Z",
-    "manifestHash": "3637F5944510CB77560F52915538A21C047F92890B33DAA6863773362F9AEC28",
-    "validationCount": 2,
+    "version": "0.18.1",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "475C4D27D1834C78B7EC1322357E9756F1F41142E3957CA1A27B10C03029D15F"
+      "DA051FFBA12F1B3CC1E6DB7539E6FE960AA4BB0D85D229EAC2C65E88733C62DB"
     ],
-    "description": "",
-    "version": "0.18.0",
-    "state": "VALIDATION_PASSED"
+    "validationCount": 1,
+    "manifestHash": "AE102553C1EECD8B12AC14133902C6F3938663DC5DB68539DA8E59B9D202DEE8",
+    "lastUpdated": "2026-10-23T13:49:06.5708105Z",
+    "description": ""
   },
   "Wawtor.Aperio": {
     "version": "0.2.2",
