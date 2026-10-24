@@ -2542,11 +2542,7 @@
       "96E4D6C83AD554A78173310F78302162FD52463D6A890DA58211021DABF74DC2"
     ],
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "openPr": {
-      "version": "7.27.2",
-      "checkedAt": "2026-08-20T00:25:19.2671154Z"
-    }
+    "state": "VALIDATION_PASSED"
   },
   "facebook.pyrefly": {
     "description": "",
@@ -3561,8 +3557,8 @@
     "lastUpdated": "2026-10-23T13:49:06.4312107Z",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-10-23T16:26:29.9743478Z",
-      "version": "0.18.0"
+      "version": "0.18.0",
+      "checkedAt": "2026-10-24T20:19:56.7244433Z"
     }
   },
   "Hiddify.Next": {
@@ -3735,8 +3731,8 @@
   },
   "houmain.keymapper": {
     "openPr": {
-      "checkedAt": "2026-10-22T20:22:13.1819561Z",
-      "version": "5.8.0"
+      "version": "5.8.1",
+      "checkedAt": "2026-10-24T20:19:57.0647859Z"
     }
   },
   "hrkfdn.ncspot": {
@@ -4094,8 +4090,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.10.18",
-      "checkedAt": "2026-10-24T16:20:56.9419002Z"
+      "version": "2026.10.19",
+      "checkedAt": "2026-10-24T20:20:27.7988047Z"
     }
   },
   "jeffaristi92.Sweeft": {
