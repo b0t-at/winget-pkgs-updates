@@ -2254,8 +2254,8 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "3EAB1E5A6E607AC40A8D48C149D5E5B2207604A2D465245704CB6FD111942437",
     "openPr": {
-      "checkedAt": "2026-10-13T04:32:19.2594734Z",
-      "version": "5.6.0"
+      "checkedAt": "2026-10-24T00:50:43.5708622Z",
+      "version": "5.7.5"
     }
   },
   "elfpie.TizenAppInstaller": {
@@ -2687,8 +2687,8 @@
     ],
     "description": "",
     "openPr": {
-      "checkedAt": "2026-10-23T04:25:50.3574417Z",
-      "version": "3.2.5"
+      "checkedAt": "2026-10-24T00:51:07.6706722Z",
+      "version": "3.2.6"
     }
   },
   "Fly-io.flyctl": {
@@ -3191,7 +3191,11 @@
       "BD7D07B38335A5498A32000D7BC5C47D2525793AD9F14E42420AFA66C51D8384"
     ],
     "lastUpdated": "2026-10-23T21:04:28.750198Z",
-    "version": "15.34.1"
+    "version": "15.34.1",
+    "openPr": {
+      "checkedAt": "2026-10-24T00:51:08.6316484Z",
+      "version": "15.34.1"
+    }
   },
   "Google.IAPDesktop": {
     "lastUpdated": "2026-06-30T01:55:05.1221847Z",
