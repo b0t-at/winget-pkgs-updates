@@ -1128,15 +1128,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Bloret.Launcher": {
-    "description": "",
-    "manifestHash": "AAC9B4EB1C0A00618CDD8348395352B6A1F5375CA17D02B5AE82C8971F13545F",
-    "installerHashes": [
-      "855E01B00EB5EEB717AD29BFD9B47AED7A899FB9AA315FF7D8469298C4BDC2FE"
-    ],
+    "version": "27.2.2",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-20T01:39:37.5821562Z",
-    "validationCount": 1,
-    "version": "27.1"
+    "lastUpdated": "2026-10-24T12:59:25.9740381Z",
+    "description": "",
+    "manifestHash": "00802EA01F14BF64B61BD223DD88DB7F8CF5936493F478E2762168A0745B4469",
+    "installerHashes": [
+      "2A18C088835B4FDD33BD1B0A873A9D9EEBCC40E80C94D38E769F123A7A2E219A"
+    ],
+    "validationCount": 1
   },
   "BogdanCalapod.pdq-cli": {
     "manifestHash": "C5AF44C23D4A45ED54FC7392BAAE6B072B62F99365A4095B03BCCFDF3C12AA71",
@@ -6199,14 +6199,14 @@
     "version": "1.13.0"
   },
   "OneKey.OneKey": {
-    "manifestHash": "20658DB53FA2566D3041D3921A53449E6E4806F63D634D39317D75E7A979C762",
-    "version": "6.6.1",
-    "description": "",
+    "version": "6.6.3",
     "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-24T12:59:26.1694491Z",
+    "description": "",
+    "manifestHash": "12499E6A7ED9E2F75252A6F84BAB9BF36A287EA1CBE2C4AA27219928BBCC844C",
     "installerHashes": [
-      "78AA89EDFF7EF060905711C758BBBE19CB910C09D5D189AD81E27D3441B5F780"
+      "C15176CBC9EC512900BBD3CDE35AAE8CD4F4E57B5375C9AD49831BF0FF5B7954"
     ],
-    "lastUpdated": "2026-10-09T05:25:50.605283Z",
     "validationCount": 1
   },
   "OneWare.OneWareStudio": {
@@ -7276,15 +7276,15 @@
     "version": "0.3.1"
   },
   "RimSort.RimSort": {
-    "installerHashes": [
-      "9BD34B09C7591E0084908185F2AB45DA456D0A1583654CC6960041340BDD183C"
-    ],
-    "validationCount": 1,
-    "version": "1.17.3",
-    "manifestHash": "D301460DC0EA99396AFBD31BFD2465739A32A071C89A2C3887BE620839C4CB7C",
+    "version": "1.17.4",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-22T13:27:03.634492Z",
-    "description": ""
+    "lastUpdated": "2026-10-24T12:59:26.0925471Z",
+    "description": "",
+    "manifestHash": "E45D1D25535C2A47A0CD05B935B5788E1EBA110C308BFD2673E0D2327679EBA3",
+    "installerHashes": [
+      "35EBB1903BFEDBAC20ED450648BFB7C67E3C7DAB3B450313EFC5A3D14D2657DA"
+    ],
+    "validationCount": 1
   },
   "Ripose.Memento": {
     "description": "",
@@ -8783,15 +8783,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "installerHashes": [
-      "181CE82E2660F785C6916EB56DC23EA60D1A08E061AF5B1701EE42BB7BF2119E"
-    ],
+    "version": "2.72.2",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "lastUpdated": "2026-10-24T12:59:26.0656206Z",
     "description": "",
-    "lastUpdated": "2026-10-24T01:34:46.148219Z",
-    "version": "2.71.4",
-    "manifestHash": "25084468648BD1DE4D18A2E2762E73C770EE240CA424802D960D36334E12EBFD"
+    "manifestHash": "2A3D92CA47BC5C41D3D04A66D23EF78C9EB5BFA091407EE7C7480F8F5F441201",
+    "installerHashes": [
+      "3ECAFBF1599C604A50FB2AF5C984B796C74D5DB95B9A015F9A5296631402A7B6"
+    ],
+    "validationCount": 1
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
