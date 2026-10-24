@@ -6981,8 +6981,8 @@
       "30E3639F33C5674A61C94B4C57375D999592173576765D3918C75B806FE25297"
     ],
     "openPr": {
-      "checkedAt": "2026-10-23T00:54:30.6674452Z",
-      "version": "0.32.0"
+      "version": "0.32.0",
+      "checkedAt": "2026-10-24T04:23:52.3241463Z"
     }
   },
   "prsyahmi.WicHeic": {
@@ -8662,8 +8662,8 @@
     "manifestHash": "101A50462A6E2BE19AFB17A21278EA44597559D970949753840897CFC30A7566",
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
-      "checkedAt": "2026-10-23T00:55:22.7000978Z",
-      "version": "5.7.1"
+      "version": "5.7.1",
+      "checkedAt": "2026-10-24T04:23:55.2880515Z"
     }
   },
   "termio.soft-jp.com.TermioWin": {
