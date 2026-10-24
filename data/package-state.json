@@ -1352,7 +1352,7 @@
   "Carvel.ytt": {
     "openPr": {
       "version": "0.55.4",
-      "checkedAt": "2026-10-23T12:30:56.3843174Z"
+      "checkedAt": "2026-10-24T16:20:51.5293854Z"
     }
   },
   "ccccraz.cogmoteGO": {
@@ -3596,7 +3596,7 @@
   "HiroshibaKazuyuki.VOICEVOX.CPU": {
     "openPr": {
       "version": "0.26.1",
-      "checkedAt": "2026-10-23T12:31:13.7539213Z"
+      "checkedAt": "2026-10-24T16:20:56.5162832Z"
     }
   },
   "HiroSystems.Clarinet": {
@@ -4095,7 +4095,7 @@
   "jdx.mise": {
     "openPr": {
       "version": "2026.10.18",
-      "checkedAt": "2026-10-23T12:31:15.2794943Z"
+      "checkedAt": "2026-10-24T16:20:56.9419002Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -8384,11 +8384,7 @@
     ],
     "description": "",
     "version": "1.29.1",
-    "state": "VALIDATION_PASSED",
-    "openPr": {
-      "version": "1.29.1",
-      "checkedAt": "2026-10-23T12:31:21.7724979Z"
-    }
+    "state": "VALIDATION_PASSED"
   },
   "SuperRadCompany.Microsandbox": {
     "installerHashes": [
