@@ -387,20 +387,16 @@
     "version": "0.2.0"
   },
   "AnInsomniacy.Aria2Next": {
-    "manifestHash": "476FECC6C8C02637DAE478BD47A3454C02481AA9B4AAC78C6B280B474653C2F3",
-    "lastUpdated": "2026-10-21T04:51:29.8394176Z",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "description": "",
-    "version": "3.0.8",
     "installerHashes": [
-      "3E8763F67A7CE6D14F35239BBE88E3B0EE40C7A123424C0FE0B2F2232541C3A1",
-      "61DE72AF3E9CD8555425EBA765E58BB1A42568DCC01847BE45CCE6BEEECFA00E"
+      "E74899CE4A39815A509BC663D29ACA5028F9BDD6B390FE33141EB11D478D1C13",
+      "8A43C1FF759A32619D3A0E85952E9CDC0732C3FA98063EB2C84EF485A542507F"
     ],
-    "openPr": {
-      "checkedAt": "2026-10-23T16:27:39.1780929Z",
-      "version": "3.0.8"
-    }
+    "state": "VALIDATION_PASSED",
+    "version": "3.0.9",
+    "validationCount": 1,
+    "manifestHash": "430D61BDF24D6BB0C52F43651EAFBDF5C0BF09FB6DEF7E2F2F654F6992C804C6",
+    "lastUpdated": "2026-10-24T04:59:32.5470403Z",
+    "description": ""
   },
   "Anki.Anki": {
     "description": "",
@@ -619,14 +615,14 @@
   },
   "ASGARDEXMaintainers.ASGARDEX": {
     "installerHashes": [
-      "998A60EE7FD9027C254E8A2AB81C5A2C18BCF3D30A524A1717F10FD34D392C64"
+      "88E5696E0D985FB09C83F786E5AA8DF02918F99DFD45D1EF4321C483A0B4CFDA"
     ],
-    "validationCount": 1,
-    "manifestHash": "177DE7E311FA3FE3DD83932F2C7C85439F1803A9616E56CF2D496982F20C9C44",
     "state": "VALIDATION_PASSED",
-    "version": "1.46.1",
-    "description": "",
-    "lastUpdated": "2026-10-10T01:55:11.9240229Z"
+    "version": "1.47.0",
+    "validationCount": 1,
+    "manifestHash": "7303CBEE2067B6984155908F5385D96C596193B303D1AD640C50EDF7A0F2C2B5",
+    "lastUpdated": "2026-10-24T04:59:32.4765374Z",
+    "description": ""
   },
   "asheroto.MessagesforWeb": {
     "state": "VALIDATION_PASSED",
@@ -781,15 +777,15 @@
     "manifestHash": "C06BDAE1D061B91C49BEC413137D11211BC395CCCD107E51905B933E2FF6CC06"
   },
   "Babashka.Babashka": {
-    "lastUpdated": "2026-10-12T01:58:15.5813827Z",
-    "validationCount": 1,
     "installerHashes": [
-      "851D132B627AFCFB83B6FC682521C65F5B2495C84C00CF56EF076820FB1FA411"
+      "2AFAC33A27845C1E072ADC879ECE6732D1B5D86333B9F74D16B3120A26843AD7"
     ],
-    "manifestHash": "AACDC86C02E77B783CF938C38E573B77FA94BF591B73FC503DAA55F86F07D378",
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "version": "1.13.226"
+    "version": "1.13.227",
+    "validationCount": 1,
+    "manifestHash": "31F0C035060C2233AEA70E9403ED34AFC4EDE326A9C1E1A6CCA101FABE69E021",
+    "lastUpdated": "2026-10-24T04:59:32.5773433Z",
+    "description": ""
   },
   "badboy.mdbook-mermaid": {
     "lastUpdated": "2026-08-14T12:36:40.1220884Z",
@@ -6457,13 +6453,13 @@
   },
   "openwong2kim.wmux": {
     "installerHashes": [
-      "D76887D9A588EBBF1931A5132E8514D406A08BF1914331CE40D290A82D5C32C9"
+      "7EED64ED73754FD88030D253704C551D34874D47BD52A74A06DB11DE7E406380"
     ],
-    "validationCount": 1,
-    "version": "4.9.0",
-    "manifestHash": "7533754588A13BFEF986E2953E184CB6754BD3599EB0A6003AE4D987150F09A2",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-22T13:27:03.5019495Z",
+    "version": "4.10.0",
+    "validationCount": 1,
+    "manifestHash": "A64D92E4943295F8FDAECFB86895D4D4665BD07D288B8E9FFE6AC1E655B014EE",
+    "lastUpdated": "2026-10-24T04:59:32.594973Z",
     "description": ""
   },
   "openwong2kim.wsnap": {
@@ -8391,16 +8387,16 @@
     }
   },
   "SuperRadCompany.Microsandbox": {
-    "version": "0.7.8",
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "E2B22CD2EA03886128F72918342FE8C21D510910802D974C0FE901BA0148B299",
-    "description": "",
-    "lastUpdated": "2026-10-11T17:26:31.6643905Z",
     "installerHashes": [
-      "606824FD91B8F1C6EC6F14B0FF435A83528177052BF4ECA5A29B4CF703CDEEDF",
-      "6C7368A6676A1462F84A7DA2B4E58AFB5FEAAA6583C82EA86AB417B17D19153F"
-    ]
+      "CED2B3D7E562A99CC69B7FAAAB9BFED74C2F781D4C60507FD558C25215549354",
+      "EBE3955DB95303A90903D00ED24412E09EF8AE79D2307F02607C9B6C3D6D7BEF"
+    ],
+    "state": "VALIDATION_PASSED",
+    "version": "0.7.10",
+    "validationCount": 1,
+    "manifestHash": "20C7254E27391978B7CF19C218D1BE09AB2C0CE1A06FA355C1C83691BE251754",
+    "lastUpdated": "2026-10-24T04:59:32.5289304Z",
+    "description": ""
   },
   "SUSE.RancherDesktop": {
     "description": "",
