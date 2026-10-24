@@ -1170,16 +1170,16 @@
     }
   },
   "bornova.numara": {
-    "version": "7.6.2",
-    "lastUpdated": "2026-10-23T09:01:35.0653082Z",
-    "manifestHash": "D1891C5B4CADBFA164C8A059402D591C7856717BB1B85DD9F6C4A21C216A04E5",
-    "description": "",
-    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-24T21:07:48.8750683Z",
+    "version": "7.6.3",
+    "manifestHash": "6ABE70C74044F1E4098099D0D991937A5FC83F2DCF0C59E2AC95EE518058640F",
     "installerHashes": [
-      "5B59A067E149754E427EF2A90705B84808B8DEB4DCF214C59C34CD93564D9031",
-      "DA46FBD3AD83DC14BE34BC9E6B1A8A720276202936E4DA2972F5EB74B1E5B370"
+      "D93B5DBCE53D52CB39E15A1A606CA8BE32B2EC4BEBCB437B0BB1A63339EB83B7",
+      "238579E28F9D956A4EE71E3B0D15B1656A92740C65518ED82D173DFCBB64B54C"
     ],
-    "state": "VALIDATION_PASSED"
+    "validationCount": 1,
+    "description": ""
   },
   "brandonyoungdev.tldx": {
     "installerHashes": [
@@ -2346,15 +2346,15 @@
     "manifestHash": "0BAEA679595B651BC924A286A95D7D12F69DEA5227F3733B4CB356452E446FD2"
   },
   "Equicord.Equibop": {
-    "description": "",
-    "validationCount": 1,
-    "manifestHash": "0581958DE5E00473CF696910CB0FD0B4FB04F949ED1D5EC7ACDB99514AEEAA08",
     "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-24T21:07:48.9263947Z",
+    "version": "3.3.2",
+    "manifestHash": "42AE9E020F05459ACEE0476140CC7DBDBC4D5A083DB1A91B4DD3B322BF93C3B0",
     "installerHashes": [
-      "59D6DE605336E3B96A636AF58FE9298456135770D7A2A4B6EEC57594A7ED9CAB"
+      "935A3568FD81AB944954ED9742DC0F312239BF6CE1C8A7E30B57D60E3FFCDC99"
     ],
-    "version": "3.3.1",
-    "lastUpdated": "2026-09-25T16:53:52.6223674Z"
+    "validationCount": 1,
+    "description": ""
   },
   "ErichDonahue.SpinnerforDiscogs": {
     "state": "VALIDATION_PASSED",
@@ -2805,15 +2805,15 @@
     "manifestHash": "F1E2C96C702C14E73C8FC660B7163DA0B78056118F609BF0857AD86565C9182F"
   },
   "Frnsys.Half_earth": {
-    "version": "1.0.16",
-    "lastUpdated": "2026-10-20T13:07:10.6138182Z",
-    "manifestHash": "0ECB4A19DBD0E6CD50B7499B7AC584492A3D2A5F04CA7B3BA39339BE6614AC52",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-24T21:07:48.8980832Z",
+    "version": "1.0.17",
+    "manifestHash": "41C640CFDB3392DD6EF4B3FEDE56AE0E6CBFAC04ED7EC0F9A6C2CF1B0B367E83",
     "installerHashes": [
-      "6997B6463797101789D51798DA57B66A1322422287020EEB1AD56439FAB65BB0"
+      "7279733B6B0122770363D8B55D6EDCF8894FE01075559759438CC0768E03A9D1"
     ],
     "validationCount": 1,
-    "description": "",
-    "state": "VALIDATION_PASSED"
+    "description": ""
   },
   "fselect.fselect": {
     "version": "0.10.4",
@@ -3886,14 +3886,14 @@
     "version": "0.15.2"
   },
   "instaloader.instaloader": {
-    "validationCount": 1,
-    "installerHashes": [
-      "4ECD864154FD32941E8838FD9147EC6C4AA0531C6D4E6013ECED64609E7987FA"
-    ],
-    "version": "4.15.4",
-    "manifestHash": "E5503A78F09CB1DB78C549F95BBBAA5F88263FA06BB79FB975105BEC8E58474F",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-13T09:01:13.3439923Z",
+    "lastUpdated": "2026-10-24T21:07:48.9469046Z",
+    "version": "4.15.5",
+    "manifestHash": "5F8A09284530678325154D2280E29DBD574FF4AA9DE06B29A979FAA488A73CCE",
+    "installerHashes": [
+      "F42118A30A641E3D1474FA0A1B7BA806774418CF37DA2F9631F17CEB9F0A59B4"
+    ],
+    "validationCount": 1,
     "description": ""
   },
   "Internxt.Drive": {
@@ -6241,26 +6241,26 @@
     "manifestHash": "7750BB839F68D9110ECB3D2F161C4A237B79341CFE486223F8BC28D489847C32"
   },
   "open-policy-agent.opa": {
-    "version": "1.21.3",
-    "lastUpdated": "2026-10-20T13:07:10.6620871Z",
-    "manifestHash": "033C4952D1BED6F8678A9F1FE66FA1DBDA5833A3B09F20F370A734E710D763BB",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-24T21:07:48.8122932Z",
+    "version": "1.21.4",
+    "manifestHash": "BE6AABF44CE8A8FED412EEB086D7E3E90C6D501FA07F043C00EA85972959AC92",
     "installerHashes": [
-      "C8F08EE67544BE8CA47B063F6656091C1DCB4ABA6434C2CD4C5B498B0DCFA115"
+      "EFAD1C0EE4E3150D213F7BABDAFF3440B18B93C7368B465FCA42CDA392947F7C"
     ],
     "validationCount": 1,
-    "description": "",
-    "state": "VALIDATION_PASSED"
+    "description": ""
   },
   "OpenChemistry.Avogadro2": {
-    "manifestHash": "7D2685F8F4E8098CC9571A05FB55D20FB6C609B6195525B3D483D5AAC28140EF",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-21T13:09:59.4494913Z",
-    "validationCount": 1,
-    "version": "2.0.0",
-    "description": "",
+    "lastUpdated": "2026-10-24T21:07:48.7520889Z",
+    "version": "2.1.0",
+    "manifestHash": "D4519BA45CFFBD32D72C70C308ABADB2E42BFA018A123E7CADAE232B10D542C6",
     "installerHashes": [
-      "6B2748D55A6E95674BEC00BAF8C2AD48ECC8DAD28C8D25252F68B39BDD9B1BFF"
-    ]
+      "B75884AB13412B7C936D99546BA1A5FCB2037DD432895F41CB6CFA0FA5B4D564"
+    ],
+    "validationCount": 1,
+    "description": ""
   },
   "OpenCLICollective.gmail-ro": {
     "installerHashes": [
@@ -8776,14 +8776,14 @@
   },
   "Thurbeen.thurbox": {
     "state": "VALIDATION_PASSED",
-    "version": "2.72.3",
+    "lastUpdated": "2026-10-24T21:07:48.8356274Z",
+    "version": "2.72.5",
+    "manifestHash": "41731621F4D211B6607A3C50DB1346C4E9076A1C0AE6C5FC610E948B12FDB363",
     "installerHashes": [
-      "F7DD8E81F76C69E81828DE66D11DE53FDB2BE6839385DF7785A656F4877D05CB"
+      "0F0AE529FE24EE8BD5681E51FA7D92640A1FF5B21F99FB42C8211CE658FD036D"
     ],
-    "manifestHash": "93757CD48EDB51A1A6B53F90BE5C2A2CF0F588DF89CF7A2E6BF579F7CB544139",
-    "description": "",
     "validationCount": 1,
-    "lastUpdated": "2026-10-24T16:56:00.8896817Z"
+    "description": ""
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
