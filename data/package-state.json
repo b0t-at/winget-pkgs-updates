@@ -4442,15 +4442,15 @@
     "manifestHash": "7AEA1749B04A7B74880E37E7C7DBCB5E84AEE0404CD563E04D4FA167CAF5B589"
   },
   "KinichiAnjuMakino.unifocl": {
-    "installerHashes": [
-      "CB6DC9F3049C1A892A6B80D55358DACC5F34701B359FB963AFDBC9D901E8D6BE"
-    ],
-    "lastUpdated": "2026-10-17T04:44:32.2970664Z",
-    "manifestHash": "9E5900C341E8D2ED7DC5B60019304B9995189C7A3AD1D236C4DE6A9AB70A1504",
-    "version": "3.18.1",
     "state": "VALIDATION_PASSED",
+    "version": "3.18.2",
+    "installerHashes": [
+      "2B0605AFD691D5BF5DFF757191FB539118082A5BBCCD198505CB53DBF410ED7E"
+    ],
+    "manifestHash": "A82F9882D61C35CDEFFA4E63C301CD32484AB9E3A64317C39098E04F94609ACC",
     "description": "",
-    "validationCount": 1
+    "validationCount": 1,
+    "lastUpdated": "2026-10-24T16:56:00.822397Z"
   },
   "Kitware.CMake": {
     "installerHashes": [
@@ -5725,15 +5725,15 @@
     ]
   },
   "Naeem5877.VibeDownloader": {
-    "lastUpdated": "2026-10-08T21:28:05.4859061Z",
-    "validationCount": 6,
-    "manifestHash": "604B62E887ECB2978445C694605F6A687E70076887A5FBCF4B9A7C8AD833FAD7",
     "state": "VALIDATION_PASSED",
-    "version": "2.2.0",
+    "version": "2.3.0",
     "installerHashes": [
-      "F267A6C2512E23542A810E33AE73D6B1CFC8E018F6A51CAEF79001839507FFC0"
+      "AE2CB0CD715E1F0B2C68397AB325546AE544B1F318B7679A0D80CA8DE3A02E84"
     ],
-    "description": ""
+    "manifestHash": "DB07FABEF3558373C3F40DFF65CACDAC5E834C093ACE72A58D1ACF5A10824D7E",
+    "description": "",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-24T16:56:00.8556995Z"
   },
   "nao1215.gup": {
     "lastUpdated": "2026-08-14T10:42:15.0129361Z",
@@ -8779,15 +8779,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "version": "2.72.2",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-24T12:59:26.0656206Z",
-    "description": "",
-    "manifestHash": "2A3D92CA47BC5C41D3D04A66D23EF78C9EB5BFA091407EE7C7480F8F5F441201",
+    "version": "2.72.3",
     "installerHashes": [
-      "3ECAFBF1599C604A50FB2AF5C984B796C74D5DB95B9A015F9A5296631402A7B6"
+      "F7DD8E81F76C69E81828DE66D11DE53FDB2BE6839385DF7785A656F4877D05CB"
     ],
-    "validationCount": 1
+    "manifestHash": "93757CD48EDB51A1A6B53F90BE5C2A2CF0F588DF89CF7A2E6BF579F7CB544139",
+    "description": "",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-24T16:56:00.8896817Z"
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
@@ -9505,15 +9505,15 @@
     "lastUpdated": "2026-10-09T09:14:36.3948217Z"
   },
   "WillyJL.F95Checker": {
-    "validationCount": 4,
-    "description": "",
-    "version": "11.1.3",
-    "lastUpdated": "2026-08-06T05:14:19.7304818Z",
     "state": "VALIDATION_PASSED",
+    "version": "11.2",
     "installerHashes": [
-      "639FC81249E20EC01F0362E4E765B93DBBAB56AAA1F9F8DABA5E61DC08AE71E9"
+      "71A8D3F48609341451AD2CD36B4359D6DE237D142B045D9617195B917AFDF349"
     ],
-    "manifestHash": "90FC8D80ED92A44B5300A1EDDEF27872EDF1BED31601A73C95982209A79C06C3"
+    "manifestHash": "7B940BFA2415A5EA54F282E53AE7882337784500C0F54EE864EBC10AFD475829",
+    "description": "",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-24T16:56:00.9101815Z"
   },
   "Winix.Man": {
     "validationCount": 1,
