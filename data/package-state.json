@@ -8304,8 +8304,8 @@
     "lastUpdated": "2026-10-20T20:52:59.3040364Z",
     "manifestHash": "F128AF5433A8D08BA291471BB7A7A529C8421A85667737F58FADC4A16BA381BC",
     "openPr": {
-      "checkedAt": "2026-10-23T04:26:25.6375508Z",
-      "version": "1.165.3"
+      "version": "1.165.3",
+      "checkedAt": "2026-10-24T08:26:25.5000465Z"
     }
   },
   "str4d.rage": {
@@ -8705,7 +8705,11 @@
       "243D64E65BBEFFF706C92B58FB1A56B6E024FBB1FB11DFFC623E59C18B0AB397"
     ],
     "version": "4.9.8",
-    "lastUpdated": "2026-09-12T01:32:42.9753228Z"
+    "lastUpdated": "2026-09-12T01:32:42.9753228Z",
+    "openPr": {
+      "version": "4.9.9",
+      "checkedAt": "2026-10-24T08:26:25.993341Z"
+    }
   },
   "tg123.oci-to-wsl": {
     "description": "",
