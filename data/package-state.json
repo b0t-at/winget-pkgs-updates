@@ -1339,15 +1339,15 @@
     }
   },
   "CarthageSoftware.Mago": {
-    "validationCount": 1,
-    "lastUpdated": "2026-10-21T01:13:37.7029793Z",
-    "version": "1.58.2",
-    "installerHashes": [
-      "CEE1D749B5AABEB64515B3F6682084DA8DE4AE6C76DBDE6F54ECEF99396C02EA"
-    ],
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "EFBEB9F9291505DE42C5E1131882ED93D845A5BA47442B5AA0DB9BE725F5BE68"
+    "validationCount": 1,
+    "manifestHash": "CD165515CD0D24510EF56CEB0A3720380DE0CAF5117A2A80A4B2B17286AA2832",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "ECDF756F45308E11BA23A37A4AA449394673C45031D29B9034257E48AF2EFA07"
+    ],
+    "lastUpdated": "2026-10-25T21:11:26.4142226Z",
+    "version": "1.59.0"
   },
   "Carvel.ytt": {
     "openPr": {
@@ -1503,15 +1503,15 @@
     "validationCount": 1
   },
   "cinnyapp.cinny-desktop": {
-    "lastUpdated": "2026-09-18T05:00:20.5118329Z",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "72FAAEF20D90784079FC7BED8DCFD9A4F03FC4EFC7997B96A77A396268B293B4",
-    "version": "4.12.7",
-    "validationCount": 1,
     "description": "",
+    "validationCount": 1,
+    "manifestHash": "4D8F0E5BE90C2C7E734BD445D7441367822B19C798E2C509751D91DD4D1D6F0D",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "5D3C0B00206A1C541F03AEF0B192FD748E3B0DE9F881B9BF891618313E16822D"
-    ]
+      "AAA9A2AD8193618F6D381EABCF54B580BD242B00C71075E6B8E8AE1F85350175"
+    ],
+    "lastUpdated": "2026-10-25T21:11:26.2486086Z",
+    "version": "4.12.8"
   },
   "CircleCI.CLI": {
     "lastUpdated": "2026-08-18T01:43:26.5735973Z",
@@ -2857,16 +2857,16 @@
     }
   },
   "GAM-Team.gam.Portable": {
-    "state": "VALIDATION_PASSED",
-    "version": "7.48.34",
-    "installerHashes": [
-      "497D6139AF171707813A16FA14E9E65925109CCCBF65CBFAB64CF3ABC8721389",
-      "338528A94B21995446B697B6932FBD60BA39E9115C21C60D35E4355D49F97D76"
-    ],
-    "validationCount": 1,
     "description": "",
-    "lastUpdated": "2026-10-25T16:48:53.5267281Z",
-    "manifestHash": "49784DE4C2A8551A4EE36FDC418AC4D4AAF3F2A7C7DF19EEB3942F635955C25C"
+    "validationCount": 1,
+    "manifestHash": "3FAA164F66AE839324D1B274C777A90E9108D797E61A8B0DB5A858FDA55AB910",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "2AA6924878082A88ABE0957D624C5561210C5847D6BBE0D2331EFC607CA1B3BD",
+      "88DFEF73B3E0489960C5F434EC161C95B691EBE1EA5F92D3C6513E83C4E093AC"
+    ],
+    "lastUpdated": "2026-10-25T21:11:26.3168193Z",
+    "version": "7.49.00"
   },
   "GAM-Team.GotYourBack": {
     "description": "",
@@ -8473,15 +8473,15 @@
     "description": ""
   },
   "TacitDynamics.FolderSync": {
-    "validationCount": 1,
     "description": "",
+    "validationCount": 1,
+    "manifestHash": "DAB6D84AF471BA5098CBC902F88A5E9657817C48027E96544EB46C7685F7E846",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-29T08:57:32.4996046Z",
-    "manifestHash": "1BEC7CDCCDFA0C127B11716C76EBBF8C830EBA15115FE8C5A7D2AE02E44D9997",
-    "version": "2.13.0",
     "installerHashes": [
-      "AAEAD2DEB4F310A77EF733B034A8A5EFA29B25F4037003E659BC03B36D43BE38"
-    ]
+      "753973166DEB55E0593DA9D433F3D32EF886B8AA9F8F9E9FE0DA64B7E35BED25"
+    ],
+    "lastUpdated": "2026-10-25T21:11:26.3864963Z",
+    "version": "2.14.0"
   },
   "tagspaces.tagspaces": {
     "description": "",
@@ -9512,15 +9512,15 @@
     "lastUpdated": "2026-10-09T09:14:36.3948217Z"
   },
   "WillyJL.F95Checker": {
-    "state": "VALIDATION_PASSED",
-    "version": "11.2",
-    "installerHashes": [
-      "71A8D3F48609341451AD2CD36B4359D6DE237D142B045D9617195B917AFDF349"
-    ],
-    "manifestHash": "7B940BFA2415A5EA54F282E53AE7882337784500C0F54EE864EBC10AFD475829",
     "description": "",
     "validationCount": 1,
-    "lastUpdated": "2026-10-24T16:56:00.9101815Z"
+    "manifestHash": "F50A978ED31E02AB8A5D42A69F177CADC9653996D37769F4E57F8D21639461E2",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "F573DF0B53388442B568E7284CCF3FDE99A0A7993A853BE96FCFAF8DDD2AFB9E"
+    ],
+    "lastUpdated": "2026-10-25T21:11:26.3447457Z",
+    "version": "11.2.1"
   },
   "Winix.Man": {
     "validationCount": 1,
