@@ -1216,16 +1216,16 @@
     "state": "VALIDATION_PASSED"
   },
   "bufbuild.buf": {
-    "version": "1.74.0",
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "B0E26AF2A4BEF62724F6A58114A6027E3A19BDF98033B2107995BC243D7C8C97",
-      "A4F5E21168F5B16130AC35ABD6E1A38587568FFC723D349E52093A03D6206309"
-    ],
     "description": "",
-    "manifestHash": "0C0DF3D43A22D8C95F3B44FBB26ECE40DE8564390CE41A1FCD4509EFF0197874",
-    "lastUpdated": "2026-10-15T16:54:27.190269Z",
-    "validationCount": 1
+    "installerHashes": [
+      "3D580339622823A2EA48EC1F0A401B8C5686144EF51F88D19CE17AF7C54588FC",
+      "925E977A031C6FF389CFAC21C0363F0C0D3D6B0E81A5D6CF17691694BC68857B"
+    ],
+    "manifestHash": "8F4E9234D8406738F3BBB67FC17F93AC8AB12B43C230286F9A044289A2FB614D",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-25T01:46:36.2057843Z",
+    "version": "1.75.0"
   },
   "Byron.dua-cli": {
     "openPr": {
@@ -5460,15 +5460,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Moku.Moku": {
-    "validationCount": 1,
+    "description": "",
     "installerHashes": [
-      "C9554A297231F4DD258E20382F4F13C5000E7C80BF56D119784DADE38D066AA9"
+      "96457F1AEFD2A954D647308B74E665A901CF57943937DF25636157B4E2A5EF5F"
     ],
-    "version": "0.14.0",
-    "manifestHash": "EAEDE8F7DE859ACD3EB0BF7F76653A4CFDD1E6A0676EA9CFC4FDEDADEFA2BD95",
+    "manifestHash": "3F86EDFD400E0219D2F213FA66E2D9679897C8011ADD6769971B56906CD378E2",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-13T09:01:13.245386Z",
-    "description": ""
+    "lastUpdated": "2026-10-25T01:46:36.1532342Z",
+    "version": "0.14.1"
   },
   "moneymanagerex.moneymanagerex": {
     "installerHashes": [
@@ -5549,6 +5549,17 @@
     "manifestHash": "BFE088BA3CA62A6312C620AD504D8F1BAF7C1E3B04624C1FDA6C24C42BEDC770",
     "validationCount": 1,
     "lastUpdated": "2026-08-19T15:56:01.5348059Z"
+  },
+  "mortenn.BrowserPicker": {
+    "description": "",
+    "installerHashes": [
+      "7CDD03A423DFB76B099F0B20C7337C777CDF1CB4FD549B59B193EEF4E31A82A6"
+    ],
+    "manifestHash": "A5E77C0F1177195A9023A865246E921CEB09282444B3A9D93749B417D3FF73DA",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-25T01:46:36.1664558Z",
+    "version": "3.2.5"
   },
   "Mozilla.mozregression": {
     "installerHashes": [
@@ -7957,15 +7968,15 @@
     "manifestHash": "E287E5EFDF457EB47DC8F18007B1E361CAE20763BDA63DD266E50CCF3C4BAC3A"
   },
   "skyhook-io.Radar": {
-    "version": "1.18.0",
-    "lastUpdated": "2026-10-23T09:01:35.103352Z",
-    "manifestHash": "FC2E7C59D0920962D568664CD529D4BB2AEE1BA03EE29729CF309279CC43C9E1",
     "description": "",
-    "validationCount": 1,
     "installerHashes": [
-      "3EDB80CF43322B8CEB605B7B2611C5C4133A74E92743AB660F66D1AA3E14B9DF"
+      "D28EDF12579FF60651772A9A08EBFB7761DADBB0BAD763089B3C8825C66DE27E"
     ],
-    "state": "VALIDATION_PASSED"
+    "manifestHash": "EA2C69DD8F0D2131B48690EDA352D3DE7259ABF73D6CCCC04534D0908D77F46A",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-25T01:46:36.2283904Z",
+    "version": "1.18.1"
   },
   "Skylot.jadx": {
     "validationCount": 1,
@@ -8148,15 +8159,15 @@
     "manifestHash": "CD44BD687D5EB9ED08A3B9F8B8E148F74E17EAC0387BB822AB9E2645938875FB"
   },
   "sprout2000.LeafView": {
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "268FF862B811F1F0CAF150013DD64FF7437BA049E20152B1803069B0A823B3F8",
-    "validationCount": 1,
     "description": "",
-    "version": "4.4.10",
-    "lastUpdated": "2026-10-20T08:52:37.2601882Z",
     "installerHashes": [
-      "63C86226FDF56CDF076E62B6A5218E571CA52ECF8D2F51CEBA94634AADE9BBCA"
-    ]
+      "E94DCA927E271BC5E5B9E1555A9F8618653419E06E4661DC4A7918D576C2CEEC"
+    ],
+    "manifestHash": "3D5D1FE68315750909FAEF8D1DA3F8D5B4AD5DE4BB1A3859000582E523FCBF09",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-25T01:46:36.1918154Z",
+    "version": "4.5.1"
   },
   "sqlectron.sqlectron-gui": {
     "manifestHash": "1E8EB925809A8B24F3B6A6B3D717AED88D0A03E7EB57C8CE6B2142D3860A809E",
@@ -8775,15 +8786,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-24T21:07:48.8356274Z",
-    "version": "2.72.5",
-    "manifestHash": "41731621F4D211B6607A3C50DB1346C4E9076A1C0AE6C5FC610E948B12FDB363",
+    "description": "",
     "installerHashes": [
-      "0F0AE529FE24EE8BD5681E51FA7D92640A1FF5B21F99FB42C8211CE658FD036D"
+      "6527DA4D3C72D4017A4B2F7F69FB79257785520C7806A97F9A83BBCE3A832840"
     ],
+    "manifestHash": "6E22DF3D59ADA346D589B5AE6BEB8FBFA55FB0A579B442B684E709BB933A8CF8",
     "validationCount": 1,
-    "description": ""
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-25T01:46:36.1123263Z",
+    "version": "2.72.6"
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
