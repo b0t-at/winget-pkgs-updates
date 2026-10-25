@@ -2414,15 +2414,15 @@
     ]
   },
   "etcd-io.etcd": {
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "8E14F27765C1FF11A2E1012702087A07ED84BD66B64F06B77113C01DE2E0F0DC",
-    "lastUpdated": "2026-09-25T13:04:51.9210137Z",
     "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-25T12:55:45.2110058Z",
+    "version": "3.7.3",
+    "manifestHash": "E13ADB5689AB97EA2611D98CDCF8051AC82B8BFAA9280187D249B1F209CEF07A",
     "installerHashes": [
-      "76989536A5F333642687FBD85603087C3DEB4D316FD86FDFB63897B05F851CF4"
-    ],
-    "version": "3.7.2"
+      "BF5F9C92E862CE776699166EC9AC003A1609E06EA7CC4D8B11B3F9E836A86101"
+    ]
   },
   "Ethersphere.Swarm-Desktop": {
     "validationCount": 1,
@@ -4933,14 +4933,14 @@
     }
   },
   "marcinz606.NegPy": {
-    "manifestHash": "7D9C86B87A752C4A642E6522A864B5AD6E7CD75242D5C43CFFA0FC476244E6D9",
-    "validationCount": 1,
     "description": "",
-    "lastUpdated": "2026-10-18T20:37:52.1586593Z",
-    "version": "0.65.0",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-25T12:55:45.1330083Z",
+    "version": "0.66.0",
+    "manifestHash": "5143191C8B2F9AE7518900B56AB42F58C25BD1AFAE7AF54BFDBA61F58FF7606D",
     "installerHashes": [
-      "854C4DD59B35077D86DCCE214AC9440DB5E9B1494752CD97F697CB730B6838AC"
+      "1547A3355B0A5644D312A03B96D3B701A3F49D875AB04BEB857D93DACF25E447"
     ]
   },
   "MarcoHefti.YTVodManager": {
@@ -7736,15 +7736,15 @@
     "manifestHash": "5C9C2B5C8944C616B955A76C17C4544046FB50FED06CE2831032B7D798380292"
   },
   "seerge.g-helper.PreRelease": {
-    "version": "0.289",
-    "lastUpdated": "2026-10-21T13:25:53.5313034Z",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
     "description": "",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-25T12:55:45.1895253Z",
+    "version": "0.290",
+    "manifestHash": "330C0D59B1B17297B3A712512C804BDBE38D6B6CA301FB1A4E0C9D553C1176AF",
     "installerHashes": [
-      "EFC4A6C0497A91F62B09F5E6E5B1CA838B5BB76E1330BA3A990FAAE841319081"
-    ],
-    "manifestHash": "3B53E22C694A50472A15AB42562E8012D50F6BAD97A5E65200F05D1B91FAC4FB"
+      "E00B966373631D8BA1AB9D06CC524D8357EAC96D884B6CDB70DF73BD4A31C15C"
+    ]
   },
   "SERGEYDJUM.dwmEOTFrs": {
     "state": "VALIDATION_PASSED",
