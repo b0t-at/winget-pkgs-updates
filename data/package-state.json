@@ -4481,15 +4481,15 @@
     "state": "VALIDATION_PASSED"
   },
   "KoalaBear84.OpenDirectoryDownloader": {
-    "version": "5.0.0.0",
-    "lastUpdated": "2026-10-20T13:07:10.5669041Z",
-    "manifestHash": "ED027421DF84250979C0CFCEDD378AE0371B79A2E699DC67EEBBFED7AD569F09",
-    "installerHashes": [
-      "EE378234CCC8393433F51B008E6AC9A2F5145863E422EEDB1D744A958AF59AB3"
-    ],
     "validationCount": 1,
+    "manifestHash": "D62A45BA03BFF302E593A81725864CA712D42133FF43E4FF11B9DA1165E3F019",
+    "installerHashes": [
+      "87F3737A4125CFED12EE55E30E6540FE47C4E3FDEC958028F3C768E0A4344222"
+    ],
+    "lastUpdated": "2026-10-25T08:58:49.7782412Z",
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "version": "5.0.1.0"
   },
   "koedame.chordsketch": {
     "manifestHash": "432FF486702B7657D6A089ED1818E2E302882938A5D20AB4AA526DCE9ADA6E40",
@@ -7573,14 +7573,14 @@
   },
   "Saturneric.GpgFrontend": {
     "validationCount": 1,
-    "lastUpdated": "2026-08-19T01:25:20.5256265Z",
+    "manifestHash": "07C5656DF48C12FDA228E32D735545A7EFAECD0FF5C8CA13AE9556CD7B2F58E6",
+    "installerHashes": [
+      "7E2760E0222765F8C87B60A6A5C8D6D71732E4E8F72BFD6EBB13300791BE60CD"
+    ],
+    "lastUpdated": "2026-10-25T08:58:49.7364702Z",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "version": "2.2.2",
-    "installerHashes": [
-      "8D20EDEE6A22425D27892AF16B4E52543E0078CB706E67038CA8D0F9EE75833A"
-    ],
-    "manifestHash": "83333C81E260723761A5C6679487E72C5F0FCD868CF139AF8EDE7D5208CAA325"
+    "version": "2.2.3"
   },
   "SauceLabs.forwarder": {
     "validationCount": 1,
@@ -8372,15 +8372,15 @@
     }
   },
   "SubstrateSystems.EndstateCLI": {
-    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "description": "",
-    "version": "2.32.0",
-    "lastUpdated": "2026-10-20T16:50:57.707311Z",
-    "manifestHash": "061004C373B946F57C36ECA1BE2C9FE3342C5991888B90E56A918D9E4152CD74",
+    "manifestHash": "6FF9C590E7C8EF5872D0524E54DEA8735448E83C37AA1F997B16A792197C0796",
     "installerHashes": [
-      "BAFF0CB17173E6383AC7047B5763FF95B30CB93814ED9D2CE2B7ED5E917F8767"
-    ]
+      "5C28C53417F03C2C199F06924D1C99E36A04F7BFADAE61FEB7919D288260B8F4"
+    ],
+    "lastUpdated": "2026-10-25T08:58:49.6419181Z",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "version": "2.32.1"
   },
   "sunfish-shogi.shogihome": {
     "lastUpdated": "2026-10-08T21:28:05.3258229Z",
@@ -10009,15 +10009,15 @@
     "description": ""
   },
   "zevnda.SteamGameIdler": {
-    "version": "6.2.13",
-    "lastUpdated": "2026-10-21T13:25:53.7241808Z",
-    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "description": "",
+    "manifestHash": "5FB136356FEF03F2DD3A0547F3D184ADC8B62443E2ACB402DC4A8DB35EE03A64",
     "installerHashes": [
-      "24A79B1765B71B9F922BD53072AAB09904A26A8E4DE85A1C6B876A2C2D5A256A"
+      "AEDE6FC49576D1004904BFAB3C7B8532EA61231EBA38DCE826F3F15D0E160300"
     ],
-    "manifestHash": "8BC948EB68E46477037D02832825373ED3415ADA3147BDBDFF2116A5C109215C"
+    "lastUpdated": "2026-10-25T08:58:49.7094281Z",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "version": "6.3.0"
   },
   "Zidoro.Pomatez": {
     "lastUpdated": "2026-08-18T17:25:13.8681281Z",
