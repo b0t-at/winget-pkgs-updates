@@ -398,7 +398,7 @@
     "lastUpdated": "2026-10-24T04:59:32.5470403Z",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-10-24T12:28:55.3969185Z",
+      "checkedAt": "2026-10-25T16:22:07.454478Z",
       "version": "3.0.9"
     }
   },
@@ -1351,8 +1351,8 @@
   },
   "Carvel.ytt": {
     "openPr": {
-      "version": "0.55.4",
-      "checkedAt": "2026-10-24T16:20:51.5293854Z"
+      "checkedAt": "2026-10-25T16:21:07.1269016Z",
+      "version": "0.55.4"
     }
   },
   "ccccraz.cogmoteGO": {
@@ -3591,8 +3591,8 @@
   },
   "HiroshibaKazuyuki.VOICEVOX.CPU": {
     "openPr": {
-      "version": "0.26.1",
-      "checkedAt": "2026-10-24T16:20:56.5162832Z"
+      "checkedAt": "2026-10-25T16:21:12.1860044Z",
+      "version": "0.26.1"
     }
   },
   "HiroSystems.Clarinet": {
