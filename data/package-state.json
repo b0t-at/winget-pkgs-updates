@@ -2445,15 +2445,15 @@
     }
   },
   "Excelano.paxc": {
-    "manifestHash": "41FA516FAE4AD796F69DAB0238A81310DD70C27070D3D5CC67351CA74A5343AD",
-    "lastUpdated": "2026-08-18T05:33:46.8046208Z",
-    "state": "VALIDATION_PASSED",
-    "version": "3.9.0",
     "validationCount": 1,
-    "description": "",
+    "lastUpdated": "2026-10-25T05:02:06.1564227Z",
+    "version": "4.0.1",
     "installerHashes": [
-      "0EFA2CC7F20C5BDCB1E5129E8FC21E04D019D9EFA83B98494E3CD207FB8103A9"
-    ]
+      "6EE90F7D7A0FB13E1D9FB69AD3AE1D2090321DDC2CCBA6D3AB91C17E5039653B"
+    ],
+    "manifestHash": "D608B72F7F3682B45822EA7DF9F31BE31118716197A6749E7323CA4BEC34176B",
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "Excelano.xled": {
     "installerHashes": [
@@ -4562,16 +4562,16 @@
     }
   },
   "LANCommander.Launcher": {
-    "lastUpdated": "2026-09-19T05:03:38.558662Z",
-    "installerHashes": [
-      "1207B7A4C3FC557AC3B8DD66244DF771382E124D3BABEF78641211BD5F12718E",
-      "BE8864736056F678716E7012C5883D405B3D55190A59DAAAEF6A6F731039C5EE"
-    ],
     "validationCount": 1,
+    "lastUpdated": "2026-10-25T05:02:06.1283306Z",
+    "version": "2.1.17",
+    "installerHashes": [
+      "A4AC28CB3D1A381F157FD86464466951CC998F41D3E0C83833AC5857943C208E",
+      "87054F3CCB746F257682C17B7D04B49B6F2CF93E6688ACF59A61448F41F16A8C"
+    ],
+    "manifestHash": "178279AA8D229C4E5755A743CB65EB8B2931132214D401BCA4D802818729CEFF",
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "version": "2.1.16",
-    "manifestHash": "0EAD8CD70D3E1FD25ED5FFAC9D7746FECCEF9A3507F55DCAC602C3DA6647BC1D"
+    "state": "VALIDATION_PASSED"
   },
   "LANCommander.Server": {
     "version": "2.1.17",
@@ -6502,14 +6502,14 @@
   },
   "ORASProject.ORAS": {
     "validationCount": 1,
+    "lastUpdated": "2026-10-25T05:02:06.1746368Z",
+    "version": "1.3.6",
     "installerHashes": [
-      "3E72BF9F4361625D68DC96A10F485C4BF9973F9F9B170652AB78220A0BC7092C"
+      "EC3D19F386D5D2F0892288772D7B242475A05332AAFA64B6773378CA771D76D3"
     ],
-    "state": "VALIDATION_PASSED",
+    "manifestHash": "5AA559FE53214E28EE27A7F147E3AEF8F02A586D8DB8BDA44DEC9C5C0DB0CB53",
     "description": "",
-    "version": "1.3.5",
-    "lastUpdated": "2026-10-20T20:52:59.2865111Z",
-    "manifestHash": "0FFF18DE951E786832BC8341429128474F756398E734B80B4163CBADC75895EF"
+    "state": "VALIDATION_PASSED"
   },
   "orbatschow.kontext": {
     "lastUpdated": "2026-08-18T17:25:14.061431Z",
@@ -9719,14 +9719,14 @@
   },
   "xpipe-io.xpipe.portable": {
     "validationCount": 1,
-    "version": "24.7.1",
-    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-25T05:02:06.1408433Z",
+    "version": "24.8",
     "installerHashes": [
-      "C56C4744CEB1ABF9B252B99EE0E1EEA1BDB2289FF5DE0314DD7F4DDF1E242A1C"
+      "790CAC2C7566A5362552DD73B548FCBE05C0437F67967F093ACA093CF72E20F8"
     ],
-    "lastUpdated": "2026-10-21T08:56:12.3650965Z",
-    "manifestHash": "2F14062D8C2C86BBC32295BED79E37E7FF42BF2C0290DEC261A3D8793D08687C",
-    "description": ""
+    "manifestHash": "7BD4BBC1509DEEDA6CAFE04753F82EF48D6045BD55E5B4B27AFB81220096EB44",
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "xssnick.TON-Torrent": {
     "state": "VALIDATION_PASSED",
@@ -9768,14 +9768,14 @@
     }
   },
   "xushengfeng.eSearch": {
-    "version": "15.6.0",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-25T05:02:06.0876875Z",
+    "version": "15.6.1",
     "installerHashes": [
-      "CAA4748D22D9EF7B7CEBC7065F89CFF306A54CE8258C9092436FD01F522846B3"
+      "8108936507A38F5740B11C484BEA39AE40897229EE517B146E421C10697F5736"
     ],
-    "lastUpdated": "2026-10-08T14:05:34.311098Z",
-    "validationCount": 2,
+    "manifestHash": "A102CBAB29B2B7DB7998A2BE381DD5DBD903C4409EAFAFC7398C5A6B44EA2332",
     "description": "",
-    "manifestHash": "9C200A5FB79D2BF20B96E72D498238AD98635BBD19FE44C5F04F86FD5572AB60",
     "state": "VALIDATION_PASSED"
   },
   "Y-ASLant.ElegantClipboard": {
