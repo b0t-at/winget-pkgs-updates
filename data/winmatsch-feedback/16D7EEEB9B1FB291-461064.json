@@ -1,0 +1,14 @@
+{
+  "repository": "microsoft/winget-pkgs",
+  "pullRequestNumber": 461064,
+  "classification": "DuplicateEntry",
+  "state": "AwaitingApprovedRepair",
+  "recordedAt": "2026-10-25T06:59:20.8741336+00:00",
+  "retryAfter": "2026-10-25T06:59:20.8719842+00:00",
+  "learnedOverrideSignal": "duplicate-entry",
+  "reason": "Queued for an allowlisted approved repair; no arbitrary mutation was attempted.",
+  "packageIdentifier": "OpenChemistry.Avogadro2",
+  "packageVersion": "2.1.0",
+  "evidence": [],
+  "installerTraits": null
+}
