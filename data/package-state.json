@@ -2683,7 +2683,7 @@
     ],
     "description": "",
     "openPr": {
-      "checkedAt": "2026-10-24T00:51:07.6706722Z",
+      "checkedAt": "2026-10-25T00:56:55.1522017Z",
       "version": "3.2.6"
     }
   },
@@ -6436,8 +6436,8 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "openPr": {
-      "version": "1.13.2",
-      "checkedAt": "2026-10-23T20:22:45.69244Z"
+      "checkedAt": "2026-10-25T00:57:11.6636414Z",
+      "version": "1.13.2"
     }
   },
   "OpenWhispr.OpenWhispr": {
