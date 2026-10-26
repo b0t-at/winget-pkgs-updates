@@ -181,7 +181,7 @@ jobs:
 
       - name: Upload manifest artifact
         if: steps.generate.outputs.generated == 'true'
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: manifest__${{ matrix.id }}__${{ steps.generate.outputs.version }}
           path: ${{ steps.generate.outputs.manifest-path }}
@@ -197,7 +197,7 @@ jobs:
 
       - name: Upload structural rewrite approval marker
         if: steps.generate.outputs.generated == 'true' && fromJSON(toJSON(matrix)).allowStructuralRewrite == true
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: structural-rewrite__${{ matrix.id }}__${{ steps.generate.outputs.version }}
           path: ./structural-rewrite-approval
@@ -232,7 +232,7 @@ jobs:
 
       - name: Upload needs-decision marker
         if: ${{ !cancelled() && steps.generate.outputs.reason == 'QuestionsRequired' }}
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         continue-on-error: true
         with:
           name: needs-decision__${{ matrix.id }}
@@ -268,7 +268,7 @@ jobs:
 
       - name: Upload upstream-verdict marker
         if: ${{ !cancelled() && steps.generate.outputs.reason == 'BlockedByUpstreamVerdict' }}
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         continue-on-error: true
         with:
           name: upstream-verdict__${{ matrix.id }}
@@ -309,7 +309,7 @@ jobs:
 
       - name: Upload generation failure marker
         if: ${{ failure() && steps.generate.outputs.reason != 'QuestionsRequired' && steps.generate.outputs.reason != 'BlockedByUpstreamVerdict' }}
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         continue-on-error: true
         with:
           name: generate-failure__${{ matrix.id }}
@@ -378,7 +378,7 @@ jobs:
       - name: Download generation failure markers
         if: always()
         continue-on-error: true
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           pattern: generate-failure__*
           path: ./generate-failures
@@ -386,7 +386,7 @@ jobs:
       - name: Download needs-decision markers
         if: always()
         continue-on-error: true
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           pattern: needs-decision__*
           path: ./needs-decisions
@@ -394,7 +394,7 @@ jobs:
       - name: Download upstream-verdict markers
         if: always()
         continue-on-error: true
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           pattern: upstream-verdict__*
           path: ./upstream-verdicts
@@ -555,7 +555,7 @@ jobs:
           "sandbox_logs=$logsRoot" >> $env:GITHUB_OUTPUT
 
       - name: Download manifest artifact
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           name: manifest__${{ matrix.PackageName }}__${{ matrix.version }}
           path: ./downloaded-manifests
@@ -670,7 +670,7 @@ jobs:
 
       - name: Upload sandbox logs
         if: always() && steps.state-check.outputs.skip != 'true'
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         continue-on-error: true
         with:
           name: sandbox-logs-${{ matrix.PackageName }}
@@ -701,7 +701,7 @@ jobs:
 
       - name: Upload validation result marker
         if: always() && steps.state-check.outputs.skip != 'true' && steps.validation.outputs.passed == 'true'
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: validated__${{ matrix.PackageName }}__${{ matrix.version }}
           path: ${{ steps.manifest.outputs.path }}
@@ -811,7 +811,7 @@ jobs:
 
       - name: Download all manifest artifacts for state update
         if: vars.SKIP_VALIDATION != 'true'
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           pattern: manifest__*
           path: ./state-manifests
@@ -990,7 +990,7 @@ jobs:
 
       - name: Download manifest artifact
         if: steps.check-submit.outputs.skip != 'true'
-        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           name: ${{ steps.artifact.outputs.name }}
           path: ./downloaded-manifests
