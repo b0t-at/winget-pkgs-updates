@@ -398,8 +398,8 @@
     "lastUpdated": "2026-10-24T04:59:32.5470403Z",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-10-25T16:22:07.454478Z",
-      "version": "3.0.9"
+      "version": "3.0.9",
+      "checkedAt": "2026-10-26T16:28:49.6865059Z"
     }
   },
   "Anki.Anki": {
@@ -1351,8 +1351,8 @@
   },
   "Carvel.ytt": {
     "openPr": {
-      "checkedAt": "2026-10-25T16:21:07.1269016Z",
-      "version": "0.55.4"
+      "version": "0.55.4",
+      "checkedAt": "2026-10-26T16:27:39.503675Z"
     }
   },
   "ccccraz.cogmoteGO": {
@@ -1892,11 +1892,7 @@
       "A0BCA7D8F97612D2AAFAA627FF941AA3EB427D4D6014F0395CC01AC612ABE9AE",
       "5793174B1C8D6B0CDE4E372F245071890BB9DAB1FD8C5F979B8FA1727A3B23B4"
     ],
-    "version": "1.25.4",
-    "openPr": {
-      "checkedAt": "2026-09-03T00:57:41.9400714Z",
-      "version": "1.25.4"
-    }
+    "version": "1.25.4"
   },
   "Decred.Decrediton": {
     "description": "",
@@ -3603,8 +3599,8 @@
   },
   "HiroshibaKazuyuki.VOICEVOX.CPU": {
     "openPr": {
-      "checkedAt": "2026-10-25T16:21:12.1860044Z",
-      "version": "0.26.1"
+      "version": "0.26.1",
+      "checkedAt": "2026-10-26T16:27:44.9891546Z"
     }
   },
   "HiroSystems.Clarinet": {
