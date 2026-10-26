@@ -8244,8 +8244,8 @@
   },
   "Starpine.Screenbox": {
     "openPr": {
-      "version": "0.22.0",
-      "checkedAt": "2026-09-12T08:25:17.4198007Z"
+      "checkedAt": "2026-10-26T08:36:53.5383289Z",
+      "version": "0.24.0"
     }
   },
   "SteamDatabase.SteamTokenDumper": {
@@ -8331,8 +8331,8 @@
     "lastUpdated": "2026-10-20T20:52:59.3040364Z",
     "manifestHash": "F128AF5433A8D08BA291471BB7A7A529C8421A85667737F58FADC4A16BA381BC",
     "openPr": {
-      "version": "1.165.3",
-      "checkedAt": "2026-10-25T08:26:39.9107814Z"
+      "checkedAt": "2026-10-26T08:37:22.8053653Z",
+      "version": "1.165.3"
     }
   },
   "str4d.rage": {
@@ -8730,8 +8730,8 @@
     "version": "4.9.8",
     "lastUpdated": "2026-09-12T01:32:42.9753228Z",
     "openPr": {
-      "version": "4.9.9",
-      "checkedAt": "2026-10-25T08:26:41.0151441Z"
+      "checkedAt": "2026-10-26T08:37:24.6016652Z",
+      "version": "4.9.9"
     }
   },
   "tg123.oci-to-wsl": {
