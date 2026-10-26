@@ -3674,15 +3674,15 @@
     "validationCount": 1
   },
   "holland-built.Bloxsmith": {
-    "manifestHash": "A058D1F15C9031BD637275A6EF66D91D7065C698A170F5B7EAA724B7C8049771",
-    "description": "",
     "validationCount": 1,
+    "description": "",
+    "version": "3.100.0",
     "state": "VALIDATION_PASSED",
+    "manifestHash": "1574C08B9075D80D007CB01B6386FF7CA8463676537E394035F39265D39F81F4",
     "installerHashes": [
-      "B41C51AEA5EA346B767A7697ED6C03BBD5DE952297EE4F434DBF7A0270BD383B"
+      "C548FF5B6C0830467F062393BD9ED540B86DB2C8E132454C8526C6DC85687D63"
     ],
-    "lastUpdated": "2026-10-23T21:04:28.6322394Z",
-    "version": "3.97.0"
+    "lastUpdated": "2026-10-26T14:27:18.7724291Z"
   },
   "HongMinhee.Gukhanmun": {
     "installerHashes": [
@@ -4745,15 +4745,15 @@
     }
   },
   "Longbridge.LongbridgeTerminal": {
-    "manifestHash": "48100AE830DE1099822AB9C15865DD3386ED9A7552CB0A3C5C00F1BE64D4352D",
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "version": "0.30.0",
-    "installerHashes": [
-      "7F07AAA62C930173707114E0C1EF2750508B1954DE3401E80483C99AFB5684E5"
-    ],
     "validationCount": 1,
-    "lastUpdated": "2026-10-14T04:42:10.6588333Z"
+    "description": "",
+    "version": "0.31.0",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "BA0FB4A39D94C889148B1C37DF3C2558B5CFD8CF22B85272B910E4D5CC96ABB2",
+    "installerHashes": [
+      "48D056C11DD073DF0A8C45E9A42CA1EADF9BF5229EFA1347D844991B5F75F9EB"
+    ],
+    "lastUpdated": "2026-10-26T14:27:18.7505006Z"
   },
   "LookupFoundation.RevitLookup.2021": {
     "manifestHash": "128610B2BC6F960BB40A16C24D3F7CF0F8C87E1B9B978E39601108907C2FEBC3",
@@ -5829,14 +5829,14 @@
   },
   "Nbauma109.JDGUIDuo": {
     "validationCount": 1,
-    "manifestHash": "399999C1B7D74E54FD514AF0E0A7D8DCAFE9C2D59199EA303A322D2B957B673B",
-    "version": "2.0.115",
     "description": "",
+    "version": "2.0.116",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-30T01:45:49.6048835Z",
+    "manifestHash": "4EBE3CF54E2488C140EF6F1AF97AF033462E4F3F9357532C22AFC56438C2A426",
     "installerHashes": [
-      "268EF11500A91EDCE898BDA9100762394B97962F0DBA1042BA2CCA282A757A9A"
-    ]
+      "E098B47D11C3DC68D4DA3C3FE3764E37F3ECA781241DFCEC475A157267A7A434"
+    ],
+    "lastUpdated": "2026-10-26T14:27:18.6937155Z"
   },
   "Neovim.Neovim": {
     "installerHashes": [
