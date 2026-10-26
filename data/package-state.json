@@ -5793,11 +5793,7 @@
     "description": "",
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-09-19T20:48:57.4115668Z",
-    "manifestHash": "7CBCA63E7EDC0E501613F0D2F5B2D9FCEBF8C0D14662B91D33302B3C357DB5F0",
-    "openPr": {
-      "checkedAt": "2026-09-21T04:28:44.3005471Z",
-      "version": "0.5.0"
-    }
+    "manifestHash": "7CBCA63E7EDC0E501613F0D2F5B2D9FCEBF8C0D14662B91D33302B3C357DB5F0"
   },
   "NATSAuthors.NATSServer": {
     "lastUpdated": "2026-10-10T12:55:49.6718814Z",
@@ -8360,8 +8356,8 @@
     "validationCount": 1,
     "manifestHash": "2FC17D10387329E5E73DBDDCBE45541A670D1711C99B916B986BBD747577DEC7",
     "openPr": {
-      "checkedAt": "2026-10-22T20:22:22.124284Z",
-      "version": "1.55.1"
+      "checkedAt": "2026-10-26T20:23:53.2386905Z",
+      "version": "1.55.2"
     }
   },
   "stuncloud.uwscr": {
