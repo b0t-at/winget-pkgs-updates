@@ -2695,7 +2695,7 @@
     ],
     "description": "",
     "openPr": {
-      "checkedAt": "2026-10-25T12:27:56.8038925Z",
+      "checkedAt": "2026-10-26T13:56:55.017837Z",
       "version": "3.3.0"
     }
   },
@@ -8329,11 +8329,7 @@
     "description": "",
     "version": "1.165.3",
     "lastUpdated": "2026-10-20T20:52:59.3040364Z",
-    "manifestHash": "F128AF5433A8D08BA291471BB7A7A529C8421A85667737F58FADC4A16BA381BC",
-    "openPr": {
-      "checkedAt": "2026-10-26T08:37:22.8053653Z",
-      "version": "1.165.3"
-    }
+    "manifestHash": "F128AF5433A8D08BA291471BB7A7A529C8421A85667737F58FADC4A16BA381BC"
   },
   "str4d.rage": {
     "state": "VALIDATION_PASSED",
@@ -9355,11 +9351,7 @@
     "manifestHash": "03CE3521CBDE5F0ABABC2577B51D9810C721D4A53F9F79E860B160CA7CC69C86",
     "installerHashes": [
       "EAC36A58699B94D3732A7FE1D8453FE89E0077BB18AC2C99B4C2EE102A431F2E"
-    ],
-    "openPr": {
-      "version": "1.22.0",
-      "checkedAt": "2026-10-20T20:25:02.9924591Z"
-    }
+    ]
   },
   "VoiceWave.LocalCore": {
     "state": "VALIDATION_PASSED",
@@ -9793,7 +9785,7 @@
     ],
     "version": "26.10.21",
     "openPr": {
-      "checkedAt": "2026-10-25T12:28:42.8768162Z",
+      "checkedAt": "2026-10-26T13:57:28.5408391Z",
       "version": "26.10.21"
     }
   },
