@@ -457,15 +457,15 @@
     "state": "VALIDATION_PASSED"
   },
   "AppFlowy.AppFlowy": {
-    "lastUpdated": "2026-10-22T01:30:46.6630127Z",
-    "installerHashes": [
-      "B3C457EBA83DE5352C4BC75C2119EAEFDB8727579190D29D29C1854792930607"
-    ],
-    "manifestHash": "35E0E2C283E676DE0AA5F653D2E29D0B668CA41C13724C1560B4C267741F76B3",
-    "validationCount": 1,
+    "version": "0.14.11",
+    "manifestHash": "1367759921FBC4D79D97A448DDC6E1AD9C98708275ADE230283DFF7E7AFC16F1",
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "version": "0.14.10"
+    "validationCount": 1,
+    "lastUpdated": "2026-10-26T04:59:58.7976218Z",
+    "installerHashes": [
+      "ED68D452BD35D030968F9E00BA99DDECD78D286C93596089761011552C07AA15"
+    ],
+    "state": "VALIDATION_PASSED"
   },
   "AppiumDevelopers.AppiumInspector": {
     "state": "VALIDATION_FAILED",
@@ -5333,16 +5333,16 @@
     "description": ""
   },
   "mikf.gallery-dl.Nightly": {
-    "installerHashes": [
-      "C01D361FA703BE32B5A64CB57D45527B9ECA8E1B73F7CD76D2A676628886F7FE",
-      "15E5594B75791862689DCEE14E49DD233790F150C263C322B4DE780582113B6F"
-    ],
+    "version": "2026.10.26",
+    "manifestHash": "774C24ED219F821AE60223982B6505472EAFBE0CB31853126F6EC96DBDB7FD79",
+    "description": "",
     "validationCount": 1,
-    "version": "2026.10.22",
-    "manifestHash": "912514085466DA86B809A421E3029A869B42C4971AE7976E159A5934D1520683",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-22T13:27:03.580076Z",
-    "description": ""
+    "lastUpdated": "2026-10-26T04:59:58.8736048Z",
+    "installerHashes": [
+      "DC95D3983335DE2E794776742C65E4DB0765936D8091C6DEFCFF647A05FDF5E1",
+      "73AB3F3D09A9B0E65F73D843FAE75CDAF7928D069A219AE360B636E0803119D0"
+    ],
+    "state": "VALIDATION_PASSED"
   },
   "MilkShift.GoofCord": {
     "state": "VALIDATION_PASSED",
@@ -8742,15 +8742,15 @@
     "lastUpdated": "2026-08-17T21:15:38.1861418Z"
   },
   "ThePandemoniumInstitute.BloodontheClocktowerOnline": {
-    "version": "3.57.3",
-    "state": "VALIDATION_PASSED",
+    "version": "3.58.0",
+    "manifestHash": "E384DC37F7412186F880D72A5D604FA919A9DF23355C4025610CE5A3FA4A0266",
     "description": "",
-    "lastUpdated": "2026-09-21T12:47:32.9758759Z",
-    "manifestHash": "0BD2F2967756DF70D80F5B44C4F66BD7EDFA028780CBD228F4325CAA5CE5965B",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-26T04:59:58.8519509Z",
     "installerHashes": [
-      "4FD88E6050D61888EEFB54B6D024A63996A09454433837CA925320A255B577B2"
+      "FF96CFF43D1433E1C63E4FA94DF4DA5DC9E54EF3D24312F640CB6CD1C490C811"
     ],
-    "validationCount": 1
+    "state": "VALIDATION_PASSED"
   },
   "ThePyzoteam.pyzo": {
     "state": "VALIDATION_PASSED",
