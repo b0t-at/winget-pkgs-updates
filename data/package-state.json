@@ -2254,8 +2254,8 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "3EAB1E5A6E607AC40A8D48C149D5E5B2207604A2D465245704CB6FD111942437",
     "openPr": {
-      "checkedAt": "2026-10-24T00:50:43.5708622Z",
-      "version": "5.7.5"
+      "checkedAt": "2026-10-26T04:28:04.0108206Z",
+      "version": "5.7.15"
     }
   },
   "elfpie.TizenAppInstaller": {
@@ -6447,7 +6447,7 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "openPr": {
-      "checkedAt": "2026-10-25T00:57:11.6636414Z",
+      "checkedAt": "2026-10-26T04:28:08.4331828Z",
       "version": "1.13.2"
     }
   },
@@ -6988,8 +6988,8 @@
       "30E3639F33C5674A61C94B4C57375D999592173576765D3918C75B806FE25297"
     ],
     "openPr": {
-      "version": "0.32.0",
-      "checkedAt": "2026-10-25T04:24:33.6710821Z"
+      "checkedAt": "2026-10-26T04:29:01.8632025Z",
+      "version": "0.32.0"
     }
   },
   "prsyahmi.WicHeic": {
@@ -8665,8 +8665,8 @@
     "manifestHash": "101A50462A6E2BE19AFB17A21278EA44597559D970949753840897CFC30A7566",
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
-      "version": "5.7.1",
-      "checkedAt": "2026-10-25T04:25:11.3716156Z"
+      "checkedAt": "2026-10-26T04:29:05.2559664Z",
+      "version": "5.7.1"
     }
   },
   "termio.soft-jp.com.TermioWin": {
