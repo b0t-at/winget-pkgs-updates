@@ -786,13 +786,13 @@
   },
   "Babashka.Babashka": {
     "installerHashes": [
-      "22DB0B004AA218D45F386DC3465D704EA2A3578CD05F8D68F821ED9045C5F6B2"
+      "EDA55EF005E99503F6BE97966F9A956F348F29AFFC7B2DF9142D3FC6D239C855"
     ],
-    "lastUpdated": "2026-10-26T20:49:18.5823519Z",
-    "validationCount": 1,
     "description": "",
-    "manifestHash": "F07EBB8F2D0D4E08CA028EB8C883A2213FBE8345E9AA75568495E66F30B86EE4",
-    "version": "1.13.228",
+    "validationCount": 1,
+    "manifestHash": "3A8CC7F1E5886B82F59958109F37D07717C3F2CA1979A49517D712EF457351BA",
+    "lastUpdated": "2026-10-27T13:10:06.786394Z",
+    "version": "1.13.229",
     "state": "VALIDATION_PASSED"
   },
   "badboy.mdbook-mermaid": {
@@ -1534,15 +1534,15 @@
     }
   },
   "ciromattia.KCC": {
-    "lastUpdated": "2026-09-27T17:09:13.8678106Z",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "manifestHash": "98C89C20DFD9B21526D3A23406B498D4B53BB7525019734A4FEA7ADFD71D7A6C",
-    "version": "12.0.0",
-    "description": "",
     "installerHashes": [
-      "493E6F5B0DFE6A2D4415583CF1A1D1159D98BCE1495DF1A4D446AD7916966B5A"
-    ]
+      "9168063F2B9D1379FD418676319216DCAF0670E098E312FACEC921BA8268D1F8"
+    ],
+    "description": "",
+    "validationCount": 1,
+    "manifestHash": "4346BD5F371D47B2E6825D57D1F0F58F4EA13BCE1D222A0D6FC411A5D8B0CC19",
+    "lastUpdated": "2026-10-27T13:10:06.6895759Z",
+    "version": "12.1.2",
+    "state": "VALIDATION_PASSED"
   },
   "cjpais.Handy": {
     "version": "0.9.7",
@@ -4745,7 +4745,7 @@
     }
   },
   "Longbridge.LongbridgeTerminal": {
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
     "version": "0.31.0",
     "state": "VALIDATION_PASSED",
@@ -4753,7 +4753,7 @@
     "installerHashes": [
       "48D056C11DD073DF0A8C45E9A42CA1EADF9BF5229EFA1347D844991B5F75F9EB"
     ],
-    "lastUpdated": "2026-10-26T14:27:18.7505006Z"
+    "lastUpdated": "2026-10-27T13:10:06.7563188Z"
   },
   "LookupFoundation.RevitLookup.2021": {
     "manifestHash": "128610B2BC6F960BB40A16C24D3F7CF0F8C87E1B9B978E39601108907C2FEBC3",
@@ -7879,13 +7879,13 @@
   },
   "sikalabs.slr": {
     "installerHashes": [
-      "3E9AB5C3CA41EC227E8CD30B2E0F162E956C6264F09E60AA012D144DF87331AA"
+      "5616DD10C8A23207B3DDB6DE75967B0E0464209A8AD40601928BD12C46AB39A8"
     ],
-    "lastUpdated": "2026-10-20T04:51:03.4179609Z",
     "description": "",
-    "version": "0.48.0",
     "validationCount": 1,
-    "manifestHash": "B5660CA30F14836A0C29D81399BBBFBB7FA2E98D0B8F237ADCFCCCB6069FDA47",
+    "manifestHash": "345F5557631F9373D6D7901F378A6ADE8B396B2E2D2C530E39121E4D80D0F3E8",
+    "lastUpdated": "2026-10-27T13:10:06.818763Z",
+    "version": "0.49.1",
     "state": "VALIDATION_PASSED"
   },
   "sikalabs.slu": {
