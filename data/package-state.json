@@ -149,15 +149,15 @@
     }
   },
   "AES256Afro.VideoKidnapper": {
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "lastUpdated": "2026-10-09T09:14:36.5241749Z",
-    "version": "1.9.1",
-    "manifestHash": "FA28B64C878B7CD753CCE2FDCF78B253109E9E44A123521FF7FEF0D6C0306269",
+    "description": "",
     "installerHashes": [
-      "D7E0F59910232F7399EB7CAB1DF05DD006A5910E58C17EB8F46379EFCD09BE4D"
+      "CC7B8CBE3DFDDD0F80AA3AD8253563156B51A52FA18271C6DD23DE7D9FF0756B"
     ],
-    "description": ""
+    "manifestHash": "AC84424C0B39483A1032B19B9D3354B0317995D3961B9F6BBE23251A43D60E0D",
+    "validationCount": 1,
+    "version": "1.9.2",
+    "lastUpdated": "2026-10-27T09:28:33.6611875Z",
+    "state": "VALIDATION_PASSED"
   },
   "agent-rt.arc-runner": {
     "manifestHash": "2CC193F9A4A4801C176AA7EEFD46F19FCAD4AE99DC906CD7F1071640805F78A2",
@@ -2543,13 +2543,13 @@
   },
   "f4exb.sdrangel": {
     "description": "",
-    "manifestHash": "7D6168B0A7F55F89FBA39A8CE1CC318BF2345C47712DF4752054810669E1231C",
-    "lastUpdated": "2026-08-19T21:00:00.1840355Z",
-    "version": "7.27.2",
     "installerHashes": [
-      "96E4D6C83AD554A78173310F78302162FD52463D6A890DA58211021DABF74DC2"
+      "17E1CB158D0E263ED713E76930BABCE5458B7954A53ED0213770F6F37C66D7C2"
     ],
+    "manifestHash": "EBBFD3AB2F9F30A79EC759CCE90A3D63BB6DCF85FFDC65AE8B74D616AD38B8AC",
     "validationCount": 1,
+    "version": "8.0.0",
+    "lastUpdated": "2026-10-27T09:28:33.5567418Z",
     "state": "VALIDATION_PASSED"
   },
   "facebook.pyrefly": {
@@ -2625,15 +2625,15 @@
     "description": ""
   },
   "Filamental.Filamental": {
-    "validationCount": 1,
-    "lastUpdated": "2026-10-24T08:48:59.5349554Z",
-    "version": "0.5.6",
-    "state": "VALIDATION_PASSED",
     "description": "",
     "installerHashes": [
-      "CDCC1A45A6096C4E06C6FE213BD78E6409F78CAC14F007ED20CB9FA33411D879"
+      "535FC04656C5E8D56DFC795CB470A66D5A69A52A86707FBD6E6F01A323CC4D56"
     ],
-    "manifestHash": "9F13599165ACD8ECDDD952C1C637B051EEAE12F3F6A9D11BF86756205237459E"
+    "manifestHash": "CE5FB6F7B09FB143E4754A939A96A7418CC1798AC55B8B4B0027DF73ED7C99C8",
+    "validationCount": 1,
+    "version": "0.5.8",
+    "lastUpdated": "2026-10-27T09:28:33.6330802Z",
+    "state": "VALIDATION_PASSED"
   },
   "FirenzeLor.gemini-collector": {
     "validationCount": 1,
@@ -3670,7 +3670,7 @@
     "validationCount": 1
   },
   "holland-built.Bloxsmith": {
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
     "version": "3.100.0",
     "state": "VALIDATION_PASSED",
@@ -3678,7 +3678,7 @@
     "installerHashes": [
       "C548FF5B6C0830467F062393BD9ED540B86DB2C8E132454C8526C6DC85687D63"
     ],
-    "lastUpdated": "2026-10-26T14:27:18.7724291Z"
+    "lastUpdated": "2026-10-27T09:28:33.5136769Z"
   },
   "HongMinhee.Gukhanmun": {
     "installerHashes": [
@@ -4205,15 +4205,15 @@
     ]
   },
   "JoernBerkefeld.SFMCDataLoader": {
-    "state": "VALIDATION_PASSED",
-    "version": "0.6.0",
-    "installerHashes": [
-      "A899A49001617C73740D852AA4C820A54D0E84646F7A4B96832D0E2328458168"
-    ],
-    "validationCount": 1,
     "description": "",
-    "lastUpdated": "2026-10-25T16:48:53.4684539Z",
-    "manifestHash": "4212E56ECD38197B8B579F098D21B47FECEF611EDF7EF1348BC157F0C6F13DAD"
+    "installerHashes": [
+      "D2DFC4921F49611C848F012C765C93483AF05EB2D181823B114196A02AF7D12B"
+    ],
+    "manifestHash": "FE2707A1E6391202CEDD5E32B307383940A06C41D9F449440BE5A48C0D8498A7",
+    "validationCount": 1,
+    "version": "0.6.1",
+    "lastUpdated": "2026-10-27T09:28:33.6107924Z",
+    "state": "VALIDATION_PASSED"
   },
   "JohannesMillan.superProductivity": {
     "validationCount": 2,
@@ -6323,15 +6323,15 @@
     "lastUpdated": "2026-09-20T01:16:37.3804748Z"
   },
   "OpenGeos.GeoLibre": {
-    "lastUpdated": "2026-10-12T01:58:15.6422021Z",
-    "validationCount": 1,
-    "installerHashes": [
-      "0DB59D4B8E4FC6EFBC8D5BAB950B99AE8543336E57A3C34C44E88FEAC9AAAC07"
-    ],
-    "manifestHash": "5C87CBAA9C02462B0EF4340384928C783640054F2FD59F403CF366B5F0C5DFA6",
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "version": "3.4.0"
+    "installerHashes": [
+      "C80EB6F9A311503811E15CA0DC3B38E89496D88D85E65E467CAC9F788A82F273"
+    ],
+    "manifestHash": "AF74C35DD21366EDDE6C9FFE29AF13EFF6CF7CEF052ECF0C21753493DD8A136F",
+    "validationCount": 1,
+    "version": "3.5.1",
+    "lastUpdated": "2026-10-27T09:28:33.5798259Z",
+    "state": "VALIDATION_PASSED"
   },
   "OpenHV.OpenHV": {
     "description": "",
@@ -7280,15 +7280,15 @@
     "version": "1.8.2"
   },
   "RikkiGibson.DreamPotato": {
-    "lastUpdated": "2026-08-18T01:43:26.5566063Z",
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "56AC13B851B64C24FCA4D707178FA3232731F17EE189CB2F5404C92BDBC41059"
-    ],
     "description": "",
-    "manifestHash": "AF194ADA512FDB7D801610D1B361D9AD6A9681F8B931D364B6CCF1BA7C1B120A",
+    "installerHashes": [
+      "29605771346EADC7AB7AE0BFDF3E4E2FC0BF3A1533FB12FD39990FA6367385EA"
+    ],
+    "manifestHash": "CA37E3BA40B05C8D7E501F66EFE5B6D814425949F675E97A388C23DFA0E1FDF1",
     "validationCount": 1,
-    "version": "0.3.1"
+    "version": "1.0.0",
+    "lastUpdated": "2026-10-27T09:28:33.4745556Z",
+    "state": "VALIDATION_PASSED"
   },
   "RimSort.RimSort": {
     "version": "1.17.4",
@@ -9658,15 +9658,15 @@
     "state": "VALIDATION_FAILED"
   },
   "wkjarosz.hdrview": {
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "391F914275149CB2BE6FAD45F94D83C87F597E204EF11436C63BA06C28876DD1"
-    ],
     "description": "",
+    "installerHashes": [
+      "CB750D0899095B9C339259B1272D25F13B59C41FBAB38BC36E72BC5A02C7F575"
+    ],
+    "manifestHash": "597215A20DEFD0B58EB5FDC314E4F16F54AA4BC41B94BE53B716BA9362F0CCEC",
     "validationCount": 1,
-    "manifestHash": "A4AE065FCAEB0F647F27C12EC54A1AA37C4FB5BF06D39013554F3B392A986642",
-    "version": "3.0.2",
-    "lastUpdated": "2026-09-30T05:00:00.7551296Z"
+    "version": "3.1.0",
+    "lastUpdated": "2026-10-27T09:28:33.6868288Z",
+    "state": "VALIDATION_PASSED"
   },
   "WowUp.CF": {
     "validationCount": 1,
