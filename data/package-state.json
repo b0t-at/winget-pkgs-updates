@@ -724,15 +724,15 @@
     }
   },
   "axcore.tartube": {
-    "description": "",
-    "version": "2.5.231",
-    "manifestHash": "272BB2940959EBB1288F4C48F5DAF2DB897779CF813258B30AEA5D1A8D03A14A",
-    "installerHashes": [
-      "202E8D00E307A8305AD8F856BD728E39115881AB66BA5AEA42F7E0CEAA24AB67"
-    ],
     "validationCount": 1,
-    "lastUpdated": "2026-08-22T08:51:40.2799072Z",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-27T21:44:30.8304996Z",
+    "installerHashes": [
+      "518606DEDF5425216FC9F1FEF545932C10739F4045BCD8C54CDC469B49B4B6DF"
+    ],
+    "manifestHash": "6E05B1F7048365936A30F54209ECCD0B638C88BC0DF49D89ABBC119F1F2F671C",
+    "description": "",
+    "version": "2.5.253"
   },
   "axeprpr.lscpu-win": {
     "version": "0.1.3",
@@ -1725,15 +1725,15 @@
     }
   },
   "CrowdSecurity.CrowdSec": {
-    "installerHashes": [
-      "014E15D97AC015D9E75D151150AF08C5661901DC14904D44CA7240DA1CDB70E6"
-    ],
-    "description": "",
-    "version": "1.8.1",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-04T05:11:12.4010921Z",
     "validationCount": 1,
-    "manifestHash": "E059B311F86F950DD2AC688DFF6DD36BF1F772659EE160C88F1887CEBEB19F0D"
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-27T21:44:31.0118624Z",
+    "installerHashes": [
+      "07AE716FF38C3EAE60B79824E12A5CB9301FDB00158CC9339C6A3B491ADE9200"
+    ],
+    "manifestHash": "BAD0DEA91AE99BC67E1E0C0F38F864F30DA4BCEF7CF24D050E095E6375AB1085",
+    "description": "",
+    "version": "1.8.2"
   },
   "CrowdSecurity.CrowdSecWindowsFirewallBouncer": {
     "version": "0.0.6",
@@ -2182,14 +2182,14 @@
   },
   "edde746.Plezy": {
     "validationCount": 1,
-    "version": "2.24.0",
-    "installerHashes": [
-      "9CD5D4C3E1D088C19FEF4AEEA881ECC108F7BC4D2C22AC38E9296FEB34FB7664"
-    ],
-    "lastUpdated": "2026-10-22T05:01:11.4802966Z",
-    "description": "",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "769E87D6D10F26FCD802FC006532A0042887D9F8AF09A62702558E0E28A2CA67"
+    "lastUpdated": "2026-10-27T21:44:30.9719601Z",
+    "installerHashes": [
+      "CBB64647F590FC4967B56D1A882755335F7C2BE99DBDFF0477FF0A312BA9A45A"
+    ],
+    "manifestHash": "490FE7AC469316D94FD308C922F737660D7D59EB160AA2F6FFCFF9A5E1DBF9B4",
+    "description": "",
+    "version": "2.25.0"
   },
   "edenian-prince.rust-secrets": {
     "validationCount": 1,
@@ -2535,15 +2535,15 @@
     "version": "1.1.0"
   },
   "ExpressLRS.ExpressLRS-Configurator": {
-    "version": "1.8.3",
     "validationCount": 1,
-    "description": "",
-    "manifestHash": "1F5675A43338185C6694AEEB3CBF4A29D15B56EA24EC80860094437BF1A13E80",
-    "lastUpdated": "2026-08-19T09:31:51.5158126Z",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-27T21:44:31.0856851Z",
     "installerHashes": [
-      "C48371D6A7A8A0911C17C17DDE489A0409F13ADC7359521A01916CC26AED02C5"
+      "EED573884FB2EC12C8002134FF4F92E217B930F2609F3129704CF04397092162"
     ],
-    "state": "VALIDATION_PASSED"
+    "manifestHash": "90E5FB3CED933790D6001ECF5342D4B77FCB6B7C48E35AFA485992B46A423397",
+    "description": "",
+    "version": "1.8.4"
   },
   "f4exb.sdrangel": {
     "description": "",
@@ -2918,15 +2918,15 @@
     "version": "2.17.0"
   },
   "Gardener.gardenlogin": {
-    "lastUpdated": "2026-05-19T11:46:35.3075526Z",
-    "state": "VALIDATION_PASSED",
-    "version": "0.10.0",
     "validationCount": 1,
-    "manifestHash": "8133760C62EAB08CA52A89BC236B5C1279B73EBA70A8084BF546326FB1088726",
-    "description": "",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-27T21:44:31.1295638Z",
     "installerHashes": [
-      "8977CD7F21AE85C8588B33C3196B3E59A3086432656CB5F4D87E5C0002002AC5"
-    ]
+      "60CEA3179712F7600BB44179FC4A414D55A6A8B320929068BD26D5171D065DA8"
+    ],
+    "manifestHash": "41EB31D43E807C1FF63C804D66670C415DC54F34AB64BB975F67990ADEFE9685",
+    "description": "",
+    "version": "0.11.0"
   },
   "garyttierney.me3": {
     "installerHashes": [
@@ -3431,15 +3431,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Happ.Happ": {
-    "installerHashes": [
-      "DE5674B27C3CB196690F1A9D4B268A03AB15F99FB858E6B76B9020561805B3CB"
-    ],
-    "version": "4.5.4",
-    "manifestHash": "2019407F71BB39E215590F0C2460BEF15F03ED3A1522FB7FDCB599F1B2433E72",
-    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "lastUpdated": "2026-10-15T01:15:59.6622948Z",
-    "description": ""
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-27T21:44:30.910842Z",
+    "installerHashes": [
+      "7201295FB0685EF789103CC7212757D5EDA0017A7DB2E5E52A835A6FF9A67A92"
+    ],
+    "manifestHash": "3076A9575A3F42FBB943A1BD0C63697142DE998918AD78013BBC5FA5A39F576C",
+    "description": "",
+    "version": "4.6.1"
   },
   "happycola233.tchMaterial-parser": {
     "state": "VALIDATION_PASSED",
@@ -6328,9 +6328,9 @@
       "C80EB6F9A311503811E15CA0DC3B38E89496D88D85E65E467CAC9F788A82F273"
     ],
     "manifestHash": "AF74C35DD21366EDDE6C9FFE29AF13EFF6CF7CEF052ECF0C21753493DD8A136F",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "3.5.1",
-    "lastUpdated": "2026-10-27T09:28:33.5798259Z",
+    "lastUpdated": "2026-10-27T21:44:31.0332739Z",
     "state": "VALIDATION_PASSED"
   },
   "OpenHV.OpenHV": {
@@ -7007,15 +7007,15 @@
     ]
   },
   "PSerban93.Achievements": {
-    "version": "1.3.1",
-    "lastUpdated": "2026-10-20T13:07:10.6912776Z",
-    "manifestHash": "A4A63AE875751E70691EB0D14DBDC0C648FBE89C1A01F102DFEC04132C279823",
-    "installerHashes": [
-      "B39B58626C57EC8DD16A4614CEF1390BB49F58AB7DB379590FD1E0AB472FEFDC"
-    ],
     "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-27T21:44:30.8887836Z",
+    "installerHashes": [
+      "4F6FD0860ABD544EF62947035DCF427DD48491B3D88E3D5F7804C950ACFB4A71"
+    ],
+    "manifestHash": "9C145C195C57D1F3D42BDCCB6C025EB04D40A95C184A66B9DA55CB7923C8095E",
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "version": "1.3.2"
   },
   "Pulsar-Edit.Pulsar": {
     "installerHashes": [
@@ -7268,16 +7268,16 @@
     ]
   },
   "RicardoCabral.icuvisor": {
-    "manifestHash": "EE2C64F79161148F654E45B042B8C0649CB7E1EA2E9D0A47E0FD3C795821BE01",
-    "description": "",
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-27T21:44:31.108041Z",
     "installerHashes": [
-      "910874AC75C8AD66BB1EBE01A16B9E72AD3F3087B8DB7C43F8880C4A32FFD932",
-      "FDCD4CE10BCB6A0837671E83A9054D32AFB0BB529D8FC1E1E409F95A33E57EED"
+      "5154E1CD1CCDAE712A2FF7CD4BEC6C4C342B03488286CFDA2000B1A004C59FB3",
+      "858C220D32B91FF58C10A992EEDBA588D9AF8EF008DFB839D3B5B2CDD8928B70"
     ],
-    "lastUpdated": "2026-10-23T21:04:28.7695806Z",
-    "version": "1.8.2"
+    "manifestHash": "9AEDD44DE695447AB2D302DB35A63D5B5BDE95DB2647B4E0659FF2067EA3D3F3",
+    "description": "",
+    "version": "1.9.0"
   },
   "RikkiGibson.DreamPotato": {
     "description": "",
@@ -8477,15 +8477,15 @@
     "description": ""
   },
   "TacitDynamics.FolderSync": {
-    "description": "",
     "validationCount": 1,
-    "manifestHash": "DAB6D84AF471BA5098CBC902F88A5E9657817C48027E96544EB46C7685F7E846",
     "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-27T21:44:30.9472242Z",
     "installerHashes": [
-      "753973166DEB55E0593DA9D433F3D32EF886B8AA9F8F9E9FE0DA64B7E35BED25"
+      "11ED70DB843F6FFC1C59F835448404A4DB38053943FE6496F71EF1D29CE3F51C"
     ],
-    "lastUpdated": "2026-10-25T21:11:26.3864963Z",
-    "version": "2.14.0"
+    "manifestHash": "17C550AA82D0FBFF0EB450E048471E16DFAA9EF1480D9BE3562C25846F61F400",
+    "description": "",
+    "version": "2.15.0"
   },
   "tagspaces.tagspaces": {
     "description": "",
@@ -9341,9 +9341,9 @@
       "DBE8C1EC5D59D8A81C777D949C518FB5E75F1026D3419BCA7817727C5D47B327"
     ],
     "manifestHash": "C4D139004CE92097CF7E6471B9AF0B28288911D0341BD423C261279BF18EB415",
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
-    "lastUpdated": "2026-10-27T05:11:21.4387955Z"
+    "lastUpdated": "2026-10-27T21:44:31.0641306Z"
   },
   "VoiceWave.LocalCore": {
     "state": "VALIDATION_PASSED",
