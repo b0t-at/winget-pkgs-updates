@@ -1,0 +1,14 @@
+{
+  "repository": "microsoft/winget-pkgs",
+  "pullRequestNumber": 462325,
+  "classification": "ScannerBlocked",
+  "state": "Escalated",
+  "recordedAt": "2026-10-27T07:05:24.5640489+00:00",
+  "retryAfter": null,
+  "learnedOverrideSignal": null,
+  "reason": "Defender or the ESRP installer scan blocked the binaries; resubmitting the same files fails again. Quarantine the package until the scanner verdict changes or upstream ships new binaries.",
+  "packageIdentifier": "CrewHaus.CLI",
+  "packageVersion": "0.8.0",
+  "evidence": [],
+  "installerTraits": null
+}
