@@ -157,7 +157,11 @@
     "validationCount": 1,
     "version": "1.9.2",
     "lastUpdated": "2026-10-27T09:28:33.6611875Z",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "version": "1.9.2",
+      "checkedAt": "2026-10-27T12:34:54.7580993Z"
+    }
   },
   "agent-rt.arc-runner": {
     "manifestHash": "2CC193F9A4A4801C176AA7EEFD46F19FCAD4AE99DC906CD7F1071640805F78A2",
@@ -2338,8 +2342,8 @@
     ],
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "checkedAt": "2026-10-06T08:32:14.9993645Z",
-      "version": "1.7.30"
+      "version": "1.7.31",
+      "checkedAt": "2026-10-27T12:33:45.9211629Z"
     }
   },
   "Ephraem.InputBar": {
@@ -4098,8 +4102,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-10-27T00:53:55.297746Z",
-      "version": "2026.10.20"
+      "version": "2026.10.21",
+      "checkedAt": "2026-10-27T12:33:49.2300703Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -8718,8 +8722,8 @@
     "version": "4.9.8",
     "lastUpdated": "2026-09-12T01:32:42.9753228Z",
     "openPr": {
-      "checkedAt": "2026-10-26T08:37:24.6016652Z",
-      "version": "4.9.9"
+      "version": "4.9.9",
+      "checkedAt": "2026-10-27T12:34:44.7925912Z"
     }
   },
   "tg123.oci-to-wsl": {
