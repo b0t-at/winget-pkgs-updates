@@ -4343,15 +4343,15 @@
     "version": "6.2.2"
   },
   "kbrdn1.gwm": {
+    "version": "1.11.0",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "DBBB349E2E3F787C7C5EE3CFB4BD42175BD52A89ECA89C7CFB213B743EDE5174"
+      "07DAC4515218109E16B778E8F77E1A8888DEF7BAA5E00A8E848F2B73EFADE7AB"
     ],
-    "description": "",
-    "version": "1.10.0",
-    "lastUpdated": "2026-09-01T12:59:06.90611Z",
+    "manifestHash": "724004C10FB555FB85251B14E91BBAA1BFA84636F625A2BA73D13D41BC6D7BC0",
     "validationCount": 1,
-    "manifestHash": "F081C95D10C4BBB35BFF4B2B8D8695CA866CA0AF164AD525C1497CE1FF37F631",
-    "state": "VALIDATION_PASSED"
+    "description": "",
+    "lastUpdated": "2026-10-27T05:11:21.4605708Z"
   },
   "kcl-lang.kcl": {
     "version": "0.13.2",
@@ -6465,15 +6465,15 @@
     "state": "VALIDATION_PASSED"
   },
   "openwong2kim.wmux": {
-    "installerHashes": [
-      "7EED64ED73754FD88030D253704C551D34874D47BD52A74A06DB11DE7E406380"
-    ],
+    "version": "4.11.0",
     "state": "VALIDATION_PASSED",
-    "version": "4.10.0",
+    "installerHashes": [
+      "9E2B782FB9C9AEB26991BFE867AC68141DEEF4870E10A644BE03D80BB0B90990"
+    ],
+    "manifestHash": "6FB20E459147D1779F7087ECD5BCEB9FBE3F2AE6C5B0A9A2A7F74C1990A86ABE",
     "validationCount": 1,
-    "manifestHash": "A64D92E4943295F8FDAECFB86895D4D4665BD07D288B8E9FFE6AC1E655B014EE",
-    "lastUpdated": "2026-10-24T04:59:32.594973Z",
-    "description": ""
+    "description": "",
+    "lastUpdated": "2026-10-27T05:11:21.4213354Z"
   },
   "openwong2kim.wsnap": {
     "installerHashes": [
@@ -8398,16 +8398,16 @@
     "state": "VALIDATION_PASSED"
   },
   "SuperRadCompany.Microsandbox": {
-    "installerHashes": [
-      "CED2B3D7E562A99CC69B7FAAAB9BFED74C2F781D4C60507FD558C25215549354",
-      "EBE3955DB95303A90903D00ED24412E09EF8AE79D2307F02607C9B6C3D6D7BEF"
-    ],
+    "version": "0.7.11",
     "state": "VALIDATION_PASSED",
-    "version": "0.7.10",
+    "installerHashes": [
+      "029C26F9B938A753E085040D5E8CE49CA4EE6E4EF7B9A66BF2DF169B9495232C",
+      "DC8A4594F801EBC1CBCC95A1A0927D1DD67E915CF617DA39576547F251E1FE13"
+    ],
+    "manifestHash": "AB5E78A2EADAD36F524DF7BB6F65FA7945D6157F21EF19AE956D9361D87284DC",
     "validationCount": 1,
-    "manifestHash": "20C7254E27391978B7CF19C218D1BE09AB2C0CE1A06FA355C1C83691BE251754",
-    "lastUpdated": "2026-10-24T04:59:32.5289304Z",
-    "description": ""
+    "description": "",
+    "lastUpdated": "2026-10-27T05:11:21.4841893Z"
   },
   "SUSE.RancherDesktop": {
     "description": "",
@@ -9335,15 +9335,15 @@
     "manifestHash": "34578A81C664A5A7F6CE8892ABB8AF558356A16F0C044C900604413CA201D8C0"
   },
   "VirusTotal.YARA-X": {
+    "version": "1.22.1",
     "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "DBE8C1EC5D59D8A81C777D949C518FB5E75F1026D3419BCA7817727C5D47B327"
+    ],
+    "manifestHash": "C4D139004CE92097CF7E6471B9AF0B28288911D0341BD423C261279BF18EB415",
     "validationCount": 1,
     "description": "",
-    "version": "1.22.0",
-    "lastUpdated": "2026-10-20T16:50:57.7439987Z",
-    "manifestHash": "03CE3521CBDE5F0ABABC2577B51D9810C721D4A53F9F79E860B160CA7CC69C86",
-    "installerHashes": [
-      "EAC36A58699B94D3732A7FE1D8453FE89E0077BB18AC2C99B4C2EE102A431F2E"
-    ]
+    "lastUpdated": "2026-10-27T05:11:21.4387955Z"
   },
   "VoiceWave.LocalCore": {
     "state": "VALIDATION_PASSED",
@@ -10047,15 +10047,15 @@
     "manifestHash": "BFB9E61856B0AD3E65544E2625E483505D95FB935F61E601D9D1FF0834B9147B"
   },
   "zkSNACKs.WasabiWallet": {
-    "version": "2.8.4",
-    "lastUpdated": "2026-10-13T20:54:16.8143391Z",
-    "validationCount": 1,
+    "version": "2.8.5",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "FCA2249F81EEBDCDBE1E80587C22A679C43FCB80A729514531C30D1B1526290F"
+      "6070D58601A27411026AFA488F67E4912F54EB97C73E935AFE2A28722D6A89E9"
     ],
+    "manifestHash": "0440FE2CC829E4FB9FE71D544CC74B837378EAA2B63039B4FA15C0ADF2A1055A",
+    "validationCount": 1,
     "description": "",
-    "manifestHash": "D07634A6F9566521F0DC0C4498CE9F1B3212876D89BFF3B3A62CD104912361F8"
+    "lastUpdated": "2026-10-27T05:11:21.369435Z"
   },
   "zoharbabin.web-researcher-mcp": {
     "state": "VALIDATION_PASSED",
