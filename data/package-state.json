@@ -4244,7 +4244,11 @@
     ],
     "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "9A4DF16EBDCE59232C54B5DF04D449A66D61F5A11ADD46BF707CB15A166AB223"
+    "manifestHash": "9A4DF16EBDCE59232C54B5DF04D449A66D61F5A11ADD46BF707CB15A166AB223",
+    "openPr": {
+      "version": "19.3.1",
+      "checkedAt": "2026-10-28T12:26:00.082122Z"
+    }
   },
   "JosephFinney.Text-Grab": {
     "state": "VALIDATION_PASSED",
@@ -6467,8 +6471,8 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "openPr": {
-      "checkedAt": "2026-10-27T08:30:48.1617073Z",
-      "version": "1.13.2"
+      "version": "1.13.2",
+      "checkedAt": "2026-10-28T12:26:02.7711516Z"
     }
   },
   "OpenWhispr.OpenWhispr": {
@@ -6763,8 +6767,8 @@
     "description": "",
     "validationCount": 1,
     "openPr": {
-      "checkedAt": "2026-09-01T16:42:55.4576526Z",
-      "version": "9.5.1"
+      "version": "9.5.2",
+      "checkedAt": "2026-10-28T12:26:03.2352748Z"
     }
   },
   "pdfcpu.pdfcpu": {
@@ -7008,8 +7012,8 @@
       "30E3639F33C5674A61C94B4C57375D999592173576765D3918C75B806FE25297"
     ],
     "openPr": {
-      "checkedAt": "2026-10-27T08:31:16.9182919Z",
-      "version": "0.32.0"
+      "version": "0.32.0",
+      "checkedAt": "2026-10-28T12:26:03.639731Z"
     }
   },
   "prsyahmi.WicHeic": {
@@ -8687,8 +8691,8 @@
     "manifestHash": "101A50462A6E2BE19AFB17A21278EA44597559D970949753840897CFC30A7566",
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
-      "checkedAt": "2026-10-27T08:31:20.3962801Z",
-      "version": "5.7.1"
+      "version": "5.7.1",
+      "checkedAt": "2026-10-28T12:26:56.671345Z"
     }
   },
   "termio.soft-jp.com.TermioWin": {
