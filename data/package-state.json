@@ -1535,8 +1535,8 @@
     "validationCount": 1,
     "version": "1.0.48275",
     "openPr": {
-      "checkedAt": "2026-10-21T20:22:05.8820658Z",
-      "version": "1.11.0"
+      "checkedAt": "2026-10-28T16:23:26.1459464Z",
+      "version": "1.12.0"
     }
   },
   "ciromattia.KCC": {
@@ -2705,8 +2705,8 @@
     ],
     "description": "",
     "openPr": {
-      "version": "3.3.0",
-      "checkedAt": "2026-10-27T16:20:53.9733004Z"
+      "checkedAt": "2026-10-28T16:23:29.2157707Z",
+      "version": "3.3.0"
     }
   },
   "Fly-io.flyctl": {
@@ -4116,8 +4116,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.10.21",
-      "checkedAt": "2026-10-27T12:33:49.2300703Z"
+      "checkedAt": "2026-10-28T16:23:32.3182666Z",
+      "version": "2026.10.21"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -6767,8 +6767,8 @@
     "description": "",
     "validationCount": 1,
     "openPr": {
-      "version": "9.5.2",
-      "checkedAt": "2026-10-28T12:26:03.2352748Z"
+      "checkedAt": "2026-10-28T16:23:35.5560686Z",
+      "version": "9.5.3"
     }
   },
   "pdfcpu.pdfcpu": {
@@ -8752,8 +8752,8 @@
     "version": "4.9.8",
     "lastUpdated": "2026-09-12T01:32:42.9753228Z",
     "openPr": {
-      "version": "4.9.9",
-      "checkedAt": "2026-10-27T12:34:44.7925912Z"
+      "checkedAt": "2026-10-28T16:24:26.3216197Z",
+      "version": "4.9.9"
     }
   },
   "tg123.oci-to-wsl": {
@@ -9811,8 +9811,8 @@
     ],
     "version": "26.10.21",
     "openPr": {
-      "version": "26.10.21",
-      "checkedAt": "2026-10-27T16:22:01.1088974Z"
+      "checkedAt": "2026-10-28T16:24:32.5972211Z",
+      "version": "26.10.21"
     }
   },
   "xushengfeng.eSearch": {
