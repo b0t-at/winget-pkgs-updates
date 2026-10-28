@@ -1733,7 +1733,11 @@
     ],
     "manifestHash": "BAD0DEA91AE99BC67E1E0C0F38F864F30DA4BCEF7CF24D050E095E6375AB1085",
     "description": "",
-    "version": "1.8.2"
+    "version": "1.8.2",
+    "openPr": {
+      "checkedAt": "2026-10-28T00:43:22.0006198Z",
+      "version": "1.8.2"
+    }
   },
   "CrowdSecurity.CrowdSecWindowsFirewallBouncer": {
     "version": "0.0.6",
@@ -2926,7 +2930,11 @@
     ],
     "manifestHash": "41EB31D43E807C1FF63C804D66670C415DC54F34AB64BB975F67990ADEFE9685",
     "description": "",
-    "version": "0.11.0"
+    "version": "0.11.0",
+    "openPr": {
+      "checkedAt": "2026-10-28T00:42:16.6951187Z",
+      "version": "0.11.0"
+    }
   },
   "garyttierney.me3": {
     "installerHashes": [
@@ -6134,8 +6142,8 @@
       "933794EE1D670137F5116C9DE7FC7DB092FA97C6B823ABA848DDB8A7EA030828"
     ],
     "openPr": {
-      "version": "0.40.10",
-      "checkedAt": "2026-10-23T20:22:44.7915885Z"
+      "checkedAt": "2026-10-28T00:42:21.1206474Z",
+      "version": "0.40.12"
     }
   },
   "Ombrelin.PandocGui": {
@@ -8356,8 +8364,8 @@
     "validationCount": 1,
     "manifestHash": "2FC17D10387329E5E73DBDDCBE45541A670D1711C99B916B986BBD747577DEC7",
     "openPr": {
-      "checkedAt": "2026-10-26T20:23:53.2386905Z",
-      "version": "1.55.2"
+      "checkedAt": "2026-10-28T00:43:14.8915278Z",
+      "version": "1.55.3"
     }
   },
   "stuncloud.uwscr": {
