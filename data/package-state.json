@@ -2779,15 +2779,15 @@
     }
   },
   "FOSSA.FOSSA-cli": {
-    "version": "3.20.7",
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "3D2E4248486ED0FC37C794278134CF565DB234569529056F4A2A75238AB20508"
+      "B1A4D63CF886682ACBEEE17FE6B44FCBF668E81B8D2A9687EA1654F15E714BEE"
     ],
+    "version": "3.20.8",
+    "manifestHash": "0709BE42B736E322546D6C1729CD874B573F71107FF46CA1916BF0C082954B85",
     "validationCount": 1,
-    "manifestHash": "D66F018E5FFEDE1F4FC2B2931EE13DDEF541191B82BC1BCCBC3B25E119A3D7A9",
-    "lastUpdated": "2026-10-23T13:49:06.2864238Z",
-    "description": ""
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-28T01:25:41.7722434Z"
   },
   "FrancisBanyikwa.MediaDownloader": {
     "manifestHash": "03C1DB537ECDB0566823D94D3B6768E5B97F29295D693658F8DF8898058990A5",
@@ -2877,16 +2877,16 @@
     }
   },
   "GAM-Team.gam.Portable": {
-    "description": "",
-    "validationCount": 1,
-    "manifestHash": "3FAA164F66AE839324D1B274C777A90E9108D797E61A8B0DB5A858FDA55AB910",
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "2AA6924878082A88ABE0957D624C5561210C5847D6BBE0D2331EFC607CA1B3BD",
-      "88DFEF73B3E0489960C5F434EC161C95B691EBE1EA5F92D3C6513E83C4E093AC"
+      "4BFF0A9A6F0C3632DCED95B76E063BA9E5C6B6FA3A4CFE01A7D44820DB7B1723",
+      "D45B6A9137B565EC444B1432FD537C364629E235B72BC34DE3DF597F2AB0E879"
     ],
-    "lastUpdated": "2026-10-25T21:11:26.3168193Z",
-    "version": "7.49.00"
+    "version": "7.49.01",
+    "manifestHash": "77A034E7DBD67D1A2F72AADA10B0AE40E760C7B775ACEC9847D314D645A002AC",
+    "validationCount": 1,
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-28T01:25:41.7422779Z"
   },
   "GAM-Team.GotYourBack": {
     "description": "",
@@ -4749,7 +4749,7 @@
     }
   },
   "Longbridge.LongbridgeTerminal": {
-    "validationCount": 2,
+    "validationCount": 3,
     "description": "",
     "version": "0.31.0",
     "state": "VALIDATION_PASSED",
@@ -4757,7 +4757,7 @@
     "installerHashes": [
       "48D056C11DD073DF0A8C45E9A42CA1EADF9BF5229EFA1347D844991B5F75F9EB"
     ],
-    "lastUpdated": "2026-10-27T13:10:06.7563188Z"
+    "lastUpdated": "2026-10-28T01:25:41.7143112Z"
   },
   "LookupFoundation.RevitLookup.2021": {
     "manifestHash": "128610B2BC6F960BB40A16C24D3F7CF0F8C87E1B9B978E39601108907C2FEBC3",
@@ -8153,15 +8153,15 @@
     "lastUpdated": "2026-10-17T12:45:08.4828138Z"
   },
   "SpikeHD.Dorion": {
+    "installerHashes": [
+      "69177808072584B80943BE340964B17E5D40B2BE68C106A8AFB42CFF7BD22014"
+    ],
+    "version": "7.0.1",
+    "manifestHash": "76EB05A3FE3665E711891555D5779A86EF43E6B691042A986C78B25D0ACDA594",
+    "validationCount": 1,
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-19T05:05:38.3247132Z",
-    "installerHashes": [
-      "88CEF5DC0DEE6890EB1753D2C2CCA729E49F9D43E6267FF3BEC006AD7606745A"
-    ],
-    "manifestHash": "23BBD12457A1B7F9C374A8590A48F3F964F999592B8A7AA752B3DC6BA50E7A83",
-    "validationCount": 1,
-    "version": "6.14.0"
+    "lastUpdated": "2026-10-28T01:25:41.8089044Z"
   },
   "sprout2000.Elephicon": {
     "installerHashes": [
@@ -8321,15 +8321,15 @@
     }
   },
   "Storj.Uplink": {
-    "validationCount": 1,
     "installerHashes": [
-      "B2136C9539C8108E67ED5151EDAC38C881045007827D1215C48099F45CFE8EDF"
+      "7733FD2750A48954D0045AA3E0AD93B73C70F947B3CA9E240408429E6ABB14CE"
     ],
-    "state": "VALIDATION_PASSED",
+    "version": "1.165.6",
+    "manifestHash": "6DB12A51E8BCC3946052853CEC383CF1578B77416D1EB73BE18536B7ADDDEBE6",
+    "validationCount": 1,
     "description": "",
-    "version": "1.165.3",
-    "lastUpdated": "2026-10-20T20:52:59.3040364Z",
-    "manifestHash": "F128AF5433A8D08BA291471BB7A7A529C8421A85667737F58FADC4A16BA381BC"
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-28T01:25:41.7853573Z"
   },
   "str4d.rage": {
     "state": "VALIDATION_PASSED",
