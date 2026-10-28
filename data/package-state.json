@@ -1540,15 +1540,15 @@
     }
   },
   "ciromattia.KCC": {
-    "installerHashes": [
-      "9168063F2B9D1379FD418676319216DCAF0670E098E312FACEC921BA8268D1F8"
-    ],
     "description": "",
     "validationCount": 1,
-    "manifestHash": "4346BD5F371D47B2E6825D57D1F0F58F4EA13BCE1D222A0D6FC411A5D8B0CC19",
-    "lastUpdated": "2026-10-27T13:10:06.6895759Z",
-    "version": "12.1.2",
-    "state": "VALIDATION_PASSED"
+    "version": "12.1.3",
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "F2FA27A270A1B715B55C6567A64B9D64C4A71FE44E5705010381F350DC2B971D"
+    ],
+    "manifestHash": "32E2B9272ABB23FD66167957B0D5C09D37E1164E172D1AC31AC1D049A6C71EDF",
+    "lastUpdated": "2026-10-28T09:00:41.4976993Z"
   },
   "cjpais.Handy": {
     "version": "0.9.7",
@@ -2796,15 +2796,15 @@
     "lastUpdated": "2026-10-28T01:25:41.7722434Z"
   },
   "FrancisBanyikwa.MediaDownloader": {
-    "manifestHash": "03C1DB537ECDB0566823D94D3B6768E5B97F29295D693658F8DF8898058990A5",
     "description": "",
-    "version": "5.6.6",
     "validationCount": 1,
-    "lastUpdated": "2026-09-09T16:53:53.598364Z",
+    "version": "5.6.7",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "D8AF063A138F96609C6A8DD106FBCA744851CCF0A169BF5D17DC01D852412C7A"
+      "C3A83C6357B96EEE5592AA1E1F90B839FDBCFF8515F427F6D83ECD82C9CAD28F"
     ],
-    "state": "VALIDATION_PASSED"
+    "manifestHash": "1215341FB1C85845AA5EFAC5D6324491CC987CB6A40AFE5BDBA9FAF8A1B67C0E",
+    "lastUpdated": "2026-10-28T09:00:41.5634147Z"
   },
   "FrankBijnen.ExifToolGUI": {
     "validationCount": 1,
@@ -4759,7 +4759,7 @@
     }
   },
   "Longbridge.LongbridgeTerminal": {
-    "validationCount": 4,
+    "validationCount": 5,
     "description": "",
     "version": "0.31.0",
     "state": "VALIDATION_PASSED",
@@ -4767,7 +4767,7 @@
     "installerHashes": [
       "48D056C11DD073DF0A8C45E9A42CA1EADF9BF5229EFA1347D844991B5F75F9EB"
     ],
-    "lastUpdated": "2026-10-28T05:05:30.0266334Z"
+    "lastUpdated": "2026-10-28T09:00:41.5926797Z"
   },
   "LookupFoundation.RevitLookup.2021": {
     "manifestHash": "128610B2BC6F960BB40A16C24D3F7CF0F8C87E1B9B978E39601108907C2FEBC3",
@@ -6768,16 +6768,16 @@
     }
   },
   "pdfcpu.pdfcpu": {
-    "lastUpdated": "2026-10-19T20:57:17.7182307Z",
     "description": "",
-    "version": "0.16.3",
-    "state": "VALIDATION_PASSED",
     "validationCount": 1,
+    "version": "0.16.4",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "F6019B942408E61BBB9C49C6BAAE84618DA102239C58E7965792E2DC67981DD7",
-      "282CB436B6904895FE17CF13E10E8397FCF3BA222084986AC1382340761D3D55"
+      "65C6881D7A03978D15BA9321ECE8CB4114784D30C1A3CE3627A1670C7BA5AEF0",
+      "FAF6C51D6F54D96A8C1AD5BEEE02143460B8AE97BD9630CBAB1A253ADAA43558"
     ],
-    "manifestHash": "D9B8E3514C59C66F4C7996DBC835F90B0032675E402205545410B44DE644C8BD"
+    "manifestHash": "E2194649BFE7230891C5833B7ACD95B63E25A16B512A4D2F725151D66BF5DDD2",
+    "lastUpdated": "2026-10-28T09:00:41.546313Z"
   },
   "Pencil.Desktop": {
     "manifestHash": "C4EE87B0CC9764C0F5737AC23FED643FDCF66A0CF3152C79A8770CA186C6674E",
