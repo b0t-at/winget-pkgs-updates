@@ -4755,7 +4755,7 @@
     }
   },
   "Longbridge.LongbridgeTerminal": {
-    "validationCount": 3,
+    "validationCount": 4,
     "description": "",
     "version": "0.31.0",
     "state": "VALIDATION_PASSED",
@@ -4763,7 +4763,7 @@
     "installerHashes": [
       "48D056C11DD073DF0A8C45E9A42CA1EADF9BF5229EFA1347D844991B5F75F9EB"
     ],
-    "lastUpdated": "2026-10-28T01:25:41.7143112Z"
+    "lastUpdated": "2026-10-28T05:05:30.0266334Z"
   },
   "LookupFoundation.RevitLookup.2021": {
     "manifestHash": "128610B2BC6F960BB40A16C24D3F7CF0F8C87E1B9B978E39601108907C2FEBC3",
@@ -5071,15 +5071,15 @@
     "version": "0.8.10"
   },
   "mdreadercontributors.mdreader": {
-    "validationCount": 1,
-    "lastUpdated": "2026-10-13T13:01:58.0228311Z",
-    "manifestHash": "77BA88640DD916B6AE5F7179311EE8FC498B3969FBD288C236A7420D79B1EFB1",
-    "version": "0.6.0",
-    "description": "",
-    "state": "VALIDATION_PASSED",
+    "version": "0.6.1",
     "installerHashes": [
-      "9BCC033DFCBC89516D542868470575643540B6ABC3E3FF366C47E19D58DD65C2"
-    ]
+      "B2335FE309EFFE415A2D9D1CF3EA7F8EEBF0EFCC2A9EE1F236162E3CC32C2F85"
+    ],
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "manifestHash": "CED8E7BB0E30DA3411E979F56E4E198D65B928CFD47FC967D9686461DDABCED1",
+    "lastUpdated": "2026-10-28T05:05:30.1974234Z"
   },
   "mentebinaria.dz6": {
     "description": "",
@@ -8170,26 +8170,26 @@
     "lastUpdated": "2026-10-28T01:25:41.8089044Z"
   },
   "sprout2000.Elephicon": {
+    "version": "4.3.1",
     "installerHashes": [
-      "3864A6506615906E70A49305691EB4549D4D8E500A923D0C46E4768244BACF19"
+      "2EB4EE140ECB812ECB10073E24192615BA0CE4CB895722640E6D20177814E250"
     ],
-    "version": "4.3.0",
-    "state": "VALIDATION_PASSED",
     "validationCount": 1,
+    "state": "VALIDATION_PASSED",
     "description": "",
-    "lastUpdated": "2026-10-21T20:45:00.2090563Z",
-    "manifestHash": "CD44BD687D5EB9ED08A3B9F8B8E148F74E17EAC0387BB822AB9E2645938875FB"
+    "manifestHash": "866D2DD98265D14B77109518E9A5DD5B88828E01F71B985E655A555AFFD5D8D4",
+    "lastUpdated": "2026-10-28T05:05:30.1273085Z"
   },
   "sprout2000.LeafView": {
-    "description": "",
+    "version": "4.5.2",
     "installerHashes": [
-      "E94DCA927E271BC5E5B9E1555A9F8618653419E06E4661DC4A7918D576C2CEEC"
+      "E0E1C6BB2ED3D8631E9919EAF9B4A8DD1DFDEF9F21D92F04D55886C97BD43719"
     ],
-    "manifestHash": "3D5D1FE68315750909FAEF8D1DA3F8D5B4AD5DE4BB1A3859000582E523FCBF09",
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-25T01:46:36.1918154Z",
-    "version": "4.5.1"
+    "description": "",
+    "manifestHash": "7F8AFFB13E7B606BDC954D10158EE91147BCD261C1D59E0FE49EC86751C11011",
+    "lastUpdated": "2026-10-28T05:05:30.2295148Z"
   },
   "sqlectron.sqlectron-gui": {
     "manifestHash": "1E8EB925809A8B24F3B6A6B3D717AED88D0A03E7EB57C8CE6B2142D3860A809E",
@@ -8804,15 +8804,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "description": "",
+    "version": "2.76.1",
     "installerHashes": [
-      "6527DA4D3C72D4017A4B2F7F69FB79257785520C7806A97F9A83BBCE3A832840"
+      "6E60144B0372C1C9134696D06C034B7294873CDFB99E43F95A591164EC9E5323"
     ],
-    "manifestHash": "6E22DF3D59ADA346D589B5AE6BEB8FBFA55FB0A579B442B684E709BB933A8CF8",
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-25T01:46:36.1123263Z",
-    "version": "2.72.6"
+    "description": "",
+    "manifestHash": "B3B526FD7D7E836BC373F1BFE46F048FAEDA72743F2B5BD71C50546F9381A4EC",
+    "lastUpdated": "2026-10-28T05:05:30.0954097Z"
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
