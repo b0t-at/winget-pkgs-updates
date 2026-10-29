@@ -3575,8 +3575,8 @@
     "lastUpdated": "2026-10-23T13:49:06.4312107Z",
     "description": "",
     "openPr": {
-      "version": "0.18.0",
-      "checkedAt": "2026-10-28T08:22:35.8711626Z"
+      "checkedAt": "2026-10-29T08:23:50.093265Z",
+      "version": "0.18.0"
     }
   },
   "Hiddify.Next": {
@@ -3749,8 +3749,8 @@
   },
   "houmain.keymapper": {
     "openPr": {
-      "version": "5.8.1",
-      "checkedAt": "2026-10-28T08:22:36.3107458Z"
+      "checkedAt": "2026-10-29T08:23:50.5017251Z",
+      "version": "5.8.1"
     }
   },
   "hrkfdn.ncspot": {
@@ -4486,8 +4486,8 @@
     "description": "",
     "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D",
     "openPr": {
-      "version": "4.4.5",
-      "checkedAt": "2026-10-28T08:22:44.3667194Z"
+      "checkedAt": "2026-10-29T08:23:52.1847258Z",
+      "version": "4.4.5"
     }
   },
   "kmiya-culti.RLogin": {
