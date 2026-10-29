@@ -2221,7 +2221,11 @@
       "0F8FF717B7EB88DCAED6D6F78A91A2294C0550F4B0F99741996EE7161917DF5E"
     ],
     "lastUpdated": "2026-10-29T09:22:10.7111402Z",
-    "description": ""
+    "description": "",
+    "openPr": {
+      "checkedAt": "2026-10-29T12:25:42.1117256Z",
+      "version": "2.12.5"
+    }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
     "configHealth": {
@@ -4108,8 +4112,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.10.22",
-      "checkedAt": "2026-10-29T00:42:41.778133Z"
+      "checkedAt": "2026-10-29T12:25:48.5742361Z",
+      "version": "2026.10.23"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -9801,11 +9805,7 @@
       "FC58C39EE2F2717B4C54D28D374362389E5319B20AE44AEA76EA45A5243EC827",
       "BB44AF3380C9975F951CE7645C04D56AB600040E68F23974A2806E08E0A3F872"
     ],
-    "version": "26.10.21",
-    "openPr": {
-      "checkedAt": "2026-10-28T16:24:32.5972211Z",
-      "version": "26.10.21"
-    }
+    "version": "26.10.21"
   },
   "xushengfeng.eSearch": {
     "validationCount": 1,
