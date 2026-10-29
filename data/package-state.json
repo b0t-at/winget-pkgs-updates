@@ -3209,11 +3209,7 @@
       "BD7D07B38335A5498A32000D7BC5C47D2525793AD9F14E42420AFA66C51D8384"
     ],
     "lastUpdated": "2026-10-23T21:04:28.750198Z",
-    "version": "15.34.1",
-    "openPr": {
-      "checkedAt": "2026-10-24T00:51:08.6316484Z",
-      "version": "15.34.1"
-    }
+    "version": "15.34.1"
   },
   "Google.IAPDesktop": {
     "lastUpdated": "2026-06-30T01:55:05.1221847Z",
@@ -4112,8 +4108,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-10-28T16:23:32.3182666Z",
-      "version": "2026.10.21"
+      "version": "2026.10.22",
+      "checkedAt": "2026-10-29T00:42:41.778133Z"
     }
   },
   "jeffaristi92.Sweeft": {
