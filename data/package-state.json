@@ -1252,11 +1252,7 @@
     "manifestHash": "7E2BB4C232FAFC5601E5AF6D2AE1752C48ABD3EA92D8362ECAF5146E6BA17C98",
     "installerHashes": [
       "CEA9CCC700AACCB2B5507E96AC990BA60104BD7AB39284FB2E67CB64D58EFCC4"
-    ],
-    "openPr": {
-      "version": "50.0.0",
-      "checkedAt": "2026-10-20T20:23:57.3257102Z"
-    }
+    ]
   },
   "ByteNess.AWSVault": {
     "installerHashes": [
@@ -2709,7 +2705,7 @@
     ],
     "description": "",
     "openPr": {
-      "checkedAt": "2026-10-28T16:23:29.2157707Z",
+      "checkedAt": "2026-10-29T20:19:01.275251Z",
       "version": "3.3.0"
     }
   },
@@ -6763,7 +6759,7 @@
     "description": "",
     "validationCount": 1,
     "openPr": {
-      "checkedAt": "2026-10-28T16:23:35.5560686Z",
+      "checkedAt": "2026-10-29T20:19:08.8337086Z",
       "version": "9.5.3"
     }
   },
@@ -8748,7 +8744,7 @@
     "version": "4.9.8",
     "lastUpdated": "2026-09-12T01:32:42.9753228Z",
     "openPr": {
-      "checkedAt": "2026-10-28T16:24:26.3216197Z",
+      "checkedAt": "2026-10-29T20:20:00.3498493Z",
       "version": "4.9.9"
     }
   },
