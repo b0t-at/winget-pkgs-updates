@@ -1215,15 +1215,15 @@
     ]
   },
   "BrunoVolpato.ivygrep": {
-    "manifestHash": "F74534ECA7691FCAE34FE23AB8BBFCE465FC8502C163274A26AC1EDEEFD28B34",
-    "lastUpdated": "2026-09-26T20:43:40.9814223Z",
-    "version": "1.3.0",
-    "installerHashes": [
-      "9305FAAC55ADCC36425C6351A56E29BB3919FEB80A69DBC3B42E443D536D15EA"
-    ],
     "description": "",
+    "manifestHash": "1911C2CD641BA53E896CE5F2E8E01A8935D3D38FC3A43CE231007AF7B752D07E",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-29T21:04:57.2319039Z",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "version": "1.3.1",
+    "installerHashes": [
+      "AB44285F63D511618AA1E0F2F0E91376AEAEDE0BA16D760374B6327BFA1461B1"
+    ]
   },
   "bufbuild.buf": {
     "description": "",
@@ -4216,14 +4216,14 @@
   },
   "JoernBerkefeld.SFMCDataLoader": {
     "description": "",
-    "installerHashes": [
-      "D2DFC4921F49611C848F012C765C93483AF05EB2D181823B114196A02AF7D12B"
-    ],
-    "manifestHash": "FE2707A1E6391202CEDD5E32B307383940A06C41D9F449440BE5A48C0D8498A7",
+    "manifestHash": "E6171F2E5800D4DCAECBED89763D1A45CEED667CE16A9411A84689E516882EFF",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-29T21:04:57.1585574Z",
     "validationCount": 1,
-    "version": "0.6.1",
-    "lastUpdated": "2026-10-27T09:28:33.6107924Z",
-    "state": "VALIDATION_PASSED"
+    "version": "0.8.1",
+    "installerHashes": [
+      "F2CC71F341C66888735697EA9E4BD29D21BCC78F04BD94D6EA61FF9D22EA7E41"
+    ]
   },
   "JohannesMillan.superProductivity": {
     "validationCount": 2,
@@ -4368,16 +4368,16 @@
     "lastUpdated": "2026-10-27T05:11:21.4605708Z"
   },
   "kcl-lang.kcl": {
-    "version": "0.13.2",
-    "lastUpdated": "2026-10-23T09:01:35.0102994Z",
-    "manifestHash": "4B287A9CB782601D98EA9835C9A739CC133D522F8B56C4CEFD36F68AE287463A",
     "description": "",
+    "manifestHash": "0E034E738A3BB1A6E8B716973ED4FE6EA78D6B03395019746CFB1D0F35CADB90",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-29T21:04:57.1197273Z",
     "validationCount": 1,
+    "version": "0.13.3",
     "installerHashes": [
-      "CC8A2BEF930285B743E8107E024407375ADE0B8FFC4C4B20ECB438FAB16AF231",
-      "ED7CDACA9DF209A1CB9BD41DCCAB0F90E60231BBE2F05F23D6AE9E5E2C132B01"
-    ],
-    "state": "VALIDATION_PASSED"
+      "A88BE63F2E18CA75423436D9AB6AD0BFE3F6F10708B646230976C2B677D55892",
+      "EB1B3884FBB4462C78C893045C65CCA957973CF3D9B72E7F3E75C578403F6CB8"
+    ]
   },
   "KeeperSecurity.Commander": {
     "description": "",
@@ -4778,15 +4778,15 @@
     "state": "VALIDATION_PASSED"
   },
   "loreste.mako": {
-    "version": "0.6.37",
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "039A2F94C4C15A7893DE17AACC3BF59B8AB8C72A9E7EB40CF32E0C21EC71E12E"
-    ],
     "description": "",
+    "manifestHash": "37A573F38992564233BEBDDFCECC7EF99ADC92AB660BE8C8C48905014196D2B3",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-29T21:04:57.0972233Z",
     "validationCount": 1,
-    "manifestHash": "AF090728AF5D7280E2EB5CD49B95EE86A37981A295C85076C67A32002305BD68",
-    "lastUpdated": "2026-09-23T17:01:59.825582Z"
+    "version": "0.7.0",
+    "installerHashes": [
+      "AA46F7D8C7DD63B4D922B4E995A12402E47C11E0AD664C786A06B0F1A02E6A74"
+    ]
   },
   "LowLevelDesign.ProcessGovernor": {
     "manifestHash": "09E69D0C7C3FCD8235F3E38BE39881FEE7DC968A99C30941A28BED33654E0AA0",
@@ -5422,8 +5422,8 @@
     "installerHashes": [
       "1A51F81C256D1F4403DE73EE7516E135C538B17F445C870A68ACF280A98BADD7"
     ],
-    "lastUpdated": "2026-10-26T20:49:18.5241368Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-10-29T21:04:57.1871411Z",
+    "validationCount": 2,
     "description": "",
     "manifestHash": "C9CB83CFBA573E90A18C214369717C73DAC9DBAC7E0444D18422AE4D8B3D444F",
     "version": "12.3.1",
@@ -6268,15 +6268,15 @@
     "manifestHash": "7750BB839F68D9110ECB3D2F161C4A237B79341CFE486223F8BC28D489847C32"
   },
   "open-policy-agent.opa": {
+    "description": "",
+    "manifestHash": "B1D7A16D1A86EBC74AB32109385F409E8844B5D650C548110AFC7525827A41F7",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-24T21:07:48.8122932Z",
-    "version": "1.21.4",
-    "manifestHash": "BE6AABF44CE8A8FED412EEB086D7E3E90C6D501FA07F043C00EA85972959AC92",
-    "installerHashes": [
-      "EFAD1C0EE4E3150D213F7BABDAFF3440B18B93C7368B465FCA42CDA392947F7C"
-    ],
+    "lastUpdated": "2026-10-29T21:04:57.2534101Z",
     "validationCount": 1,
-    "description": ""
+    "version": "1.22.0",
+    "installerHashes": [
+      "0C5972EF7B7042B595F92DB690FBB8BD8CF0F9A2782AB802C95C4AA58C1F05E5"
+    ]
   },
   "OpenChemistry.Avogadro2": {
     "state": "VALIDATION_PASSED",
@@ -6398,15 +6398,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6311244Z"
   },
   "openpubkey.opkssh": {
-    "version": "0.19.1",
-    "lastUpdated": "2026-10-23T09:01:34.9607489Z",
-    "manifestHash": "990B5A97A29F7C75C80B0A2E542FCF2AE5B81A94187E3A4EBB34C578EB1DDBF4",
     "description": "",
+    "manifestHash": "A15CBBE88469EF6899C2AFC0DD513676669A79DC119987BA830DA97AC253AFF7",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-29T21:04:57.0372145Z",
     "validationCount": 1,
+    "version": "0.19.2",
     "installerHashes": [
-      "9A7B22E80BF7D92ABC930CDA39EFBDFF150AFF42CCC3D440E23058EC216AB29B"
-    ],
-    "state": "VALIDATION_PASSED"
+      "A409D493957ECEE78636F384F869317CDA5093C41437DDB8713664D49C357158"
+    ]
   },
   "OpenScreen.OpenScreen": {
     "description": "",
