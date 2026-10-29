@@ -402,8 +402,8 @@
     "lastUpdated": "2026-10-24T04:59:32.5470403Z",
     "description": "",
     "openPr": {
-      "version": "3.0.9",
-      "checkedAt": "2026-10-28T04:20:21.4712952Z"
+      "checkedAt": "2026-10-29T04:20:38.6217195Z",
+      "version": "3.0.9"
     }
   },
   "Anki.Anki": {
@@ -812,8 +812,8 @@
   },
   "Barry-ran.QtScrcpy": {
     "openPr": {
-      "version": "4.2.1",
-      "checkedAt": "2026-10-28T04:20:23.615837Z"
+      "checkedAt": "2026-10-29T04:21:24.7816987Z",
+      "version": "4.2.1"
     }
   },
   "Baulk.Baulk": {
@@ -6148,8 +6148,8 @@
       "933794EE1D670137F5116C9DE7FC7DB092FA97C6B823ABA848DDB8A7EA030828"
     ],
     "openPr": {
-      "checkedAt": "2026-10-28T00:42:21.1206474Z",
-      "version": "0.40.12"
+      "checkedAt": "2026-10-29T04:20:23.6147799Z",
+      "version": "0.40.13"
     }
   },
   "Ombrelin.PandocGui": {
