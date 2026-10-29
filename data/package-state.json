@@ -1114,16 +1114,16 @@
     }
   },
   "BlackwellSystems.agent-lsp": {
-    "version": "0.23.2",
-    "description": "",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "lastUpdated": "2026-10-26T09:31:41.331051Z",
+    "description": "",
+    "manifestHash": "A853966D975417B626493D544A2045E401F2CF9F60DD77EA626683E0CE73F28B",
+    "lastUpdated": "2026-10-29T04:54:48.4679553Z",
+    "version": "0.23.5",
     "installerHashes": [
-      "003A9E0CEA02A1E068A8E13B4CD73B3D5C632A3A282AE962CF125CF3A1469E09",
-      "32EDA0E99D895AFF8F9CE4E72FC61129F4F599D5699E03BA3E7300492127DD36"
-    ],
-    "manifestHash": "F30E7F09E66D133B680E10EE4C81D47CE0E2C837C179AC9EB60565993AD5EBF7",
-    "state": "VALIDATION_PASSED"
+      "F603DF0BCC757DBA374C64147A60152D09CE2F936F123C5F333B8486F4471328",
+      "012129137371928031DBE92201E0315A3135E85FAAFA4E015C65B44470FA1972"
+    ]
   },
   "BlackwellSystems.shelfctl": {
     "manifestHash": "E6A5C090C621B9CC81504F055C837993516333A4A4A711B48325CF67BB128651",
@@ -4755,7 +4755,7 @@
     }
   },
   "Longbridge.LongbridgeTerminal": {
-    "validationCount": 5,
+    "validationCount": 6,
     "description": "",
     "version": "0.31.0",
     "state": "VALIDATION_PASSED",
@@ -4763,7 +4763,7 @@
     "installerHashes": [
       "48D056C11DD073DF0A8C45E9A42CA1EADF9BF5229EFA1347D844991B5F75F9EB"
     ],
-    "lastUpdated": "2026-10-28T09:00:41.5926797Z"
+    "lastUpdated": "2026-10-29T04:54:48.3921778Z"
   },
   "LookupFoundation.RevitLookup.2021": {
     "manifestHash": "128610B2BC6F960BB40A16C24D3F7CF0F8C87E1B9B978E39601108907C2FEBC3",
@@ -6933,15 +6933,15 @@
     "manifestHash": "F0F9DB32F630B64B06BD5A7090398F49F0F13E15E7DAAEDA87B9B633A80B3F4B"
   },
   "PowCal.PowCal": {
-    "lastUpdated": "2026-10-12T01:58:15.5487482Z",
-    "validationCount": 1,
-    "installerHashes": [
-      "E31EDA38F2F13C4EABADA619E296809ED0A9054C3012C7953E0FA52C2F6BC675"
-    ],
-    "manifestHash": "54469A0E6C1414A2FA60DFC2C3D6AD505B6AAA190B5D99C54D4C9ABFFAEE0568",
     "state": "VALIDATION_PASSED",
+    "validationCount": 1,
     "description": "",
-    "version": "2.1.0"
+    "manifestHash": "8F338D73E4A38CC670EB79C30A94CEF0F73B5BF6B2A91F52A8B890A3713E9D06",
+    "lastUpdated": "2026-10-29T04:54:48.4469136Z",
+    "version": "2.2.0",
+    "installerHashes": [
+      "69A1548295A373FEB0E5432BF550E13C18860B33DA71D3526836A46B2A16DC48"
+    ]
   },
   "Primecount.Primecount": {
     "validationCount": 1,
@@ -7990,15 +7990,15 @@
     "manifestHash": "E287E5EFDF457EB47DC8F18007B1E361CAE20763BDA63DD266E50CCF3C4BAC3A"
   },
   "skyhook-io.Radar": {
-    "installerHashes": [
-      "B70493E93022C42FDE4DB0A037CD5CCEE6025602972AF46851438D3D718F8E13"
-    ],
-    "version": "1.18.2",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-26T16:53:31.5118979Z",
-    "manifestHash": "291265E322FDEA55D9405B59404E0B23CCD9908F64A4C128AEFC7682F221EA17"
+    "manifestHash": "CEC3DCBE2F8A3935A6276179F41F63970AEA8925E46AEEAA8BF5DE246CF1943B",
+    "lastUpdated": "2026-10-29T04:54:48.416549Z",
+    "version": "1.18.3",
+    "installerHashes": [
+      "7439F3430890B7210E5823B48C749A210B038A333F00E0582D74FEF74488C9EC"
+    ]
   },
   "Skylot.jadx": {
     "validationCount": 1,
@@ -9143,15 +9143,15 @@
     "version": "0.10.2"
   },
   "Unibo.Alchemist": {
+    "state": "VALIDATION_FAILED",
     "validationCount": 1,
-    "version": "43.1.5",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "5022975B05D673E339438ECBCE51869A3420B856E73ABA22C1F0E139FA2F9C8A",
     "description": "",
+    "manifestHash": "A62F325C1526790309D04D95FD8878D06C88D13D060532658BA96F93D7078B67",
+    "lastUpdated": "2026-10-29T04:54:48.3333928Z",
+    "version": "49.1.0",
     "installerHashes": [
-      "B1A37334BC55F5138B51B7DD8B3DE26ED0B98BB8CCF453A3582F13CF5D64F574"
-    ],
-    "lastUpdated": "2026-08-17T21:15:38.2286715Z"
+      "A6C8C9B5860F0188BF1FA68CE946839CBE2616F908D26B1A338A2C5D9218570D"
+    ]
   },
   "Unipro.UGENE": {
     "state": "VALIDATION_PASSED",
