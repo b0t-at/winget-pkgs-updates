@@ -1,0 +1,14 @@
+{
+  "repository": "microsoft/winget-pkgs",
+  "pullRequestNumber": 464481,
+  "classification": "TransientInternalError",
+  "state": "RetryScheduled",
+  "recordedAt": "2026-10-29T06:51:56.2773736+00:00",
+  "retryAfter": "2026-10-29T07:51:56.2762213+00:00",
+  "learnedOverrideSignal": null,
+  "reason": "Infrastructure failure does not justify manifest mutation.",
+  "packageIdentifier": "skyhook-io.Radar",
+  "packageVersion": "1.18.3",
+  "evidence": [],
+  "installerTraits": null
+}

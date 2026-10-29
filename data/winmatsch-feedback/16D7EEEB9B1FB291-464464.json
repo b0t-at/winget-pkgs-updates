@@ -1,0 +1,16 @@
+{
+  "repository": "microsoft/winget-pkgs",
+  "pullRequestNumber": 464464,
+  "classification": "UrlValidationError",
+  "state": "Escalated",
+  "recordedAt": "2026-10-29T06:51:56.2991613+00:00",
+  "retryAfter": null,
+  "learnedOverrideSignal": null,
+  "reason": "One or more manifest URLs failed upstream validation; drop or replace the URLs named in the validator comment before resubmitting.",
+  "packageIdentifier": "GitButler.GitButler",
+  "packageVersion": "0.23.1",
+  "evidence": [
+    "https://gitbutler.com/"
+  ],
+  "installerTraits": null
+}

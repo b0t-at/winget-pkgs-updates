@@ -1,0 +1,20 @@
+{
+  "repository": "microsoft/winget-pkgs",
+  "pullRequestNumber": 453443,
+  "classification": "UrlValidationError",
+  "state": "Escalated",
+  "recordedAt": "2026-10-29T06:51:56.3164424+00:00",
+  "retryAfter": null,
+  "learnedOverrideSignal": null,
+  "reason": "One or more manifest URLs failed upstream validation; drop or replace the URLs named in the validator comment before resubmitting.",
+  "packageIdentifier": "ReactOS.RosBE",
+  "packageVersion": "20261015",
+  "evidence": [
+    "https://github.com/ahmedarif193/winget-rosbe",
+    "https://github.com/ahmedarif193/winget-rosbe/blob/main/LICENSE",
+    "https://github.com/ahmedarif193/winget-rosbe/issues",
+    "https://github.com/ahmedarif193/winget-rosbe/releases/download/v20261015/rosbe-bootstrapper-20261015-win-x64.zip",
+    "https://github.com/ahmedarif193/winget-rosbe/releases/tag/v20261015"
+  ],
+  "installerTraits": null
+}

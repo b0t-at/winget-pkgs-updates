@@ -1,0 +1,14 @@
+{
+  "repository": "microsoft/winget-pkgs",
+  "pullRequestNumber": 464480,
+  "classification": "TransientInternalError",
+  "state": "RetryScheduled",
+  "recordedAt": "2026-10-29T06:51:56.2974599+00:00",
+  "retryAfter": "2026-10-29T07:51:56.2974548+00:00",
+  "learnedOverrideSignal": null,
+  "reason": "Infrastructure failure does not justify manifest mutation.",
+  "packageIdentifier": "PowCal.PowCal",
+  "packageVersion": "2.2.0",
+  "evidence": [],
+  "installerTraits": null
+}
