@@ -2213,15 +2213,15 @@
     "lastUpdated": "2026-08-17T21:15:38.4244206Z"
   },
   "EdgeTX.Companion": {
-    "version": "2.12.4",
+    "manifestHash": "AEC2D030A0EB4E8F5EAB6A25924008F47289EFA4060AFE627C482FED8D01B7CA",
     "validationCount": 1,
-    "description": "",
+    "version": "2.12.5",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-02T16:53:47.9556041Z",
     "installerHashes": [
-      "A2250FD6FF2500204599D0522592CAE1D982178E6B9C2F0DE1386B702F42C79E"
+      "0F8FF717B7EB88DCAED6D6F78A91A2294C0550F4B0F99741996EE7161917DF5E"
     ],
-    "manifestHash": "31947E74E60A0462F2AAA67D5F8C21F460756C9F606A2E99B5AA0055A2064E78"
+    "lastUpdated": "2026-10-29T09:22:10.7111402Z",
+    "description": ""
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
     "configHealth": {
@@ -3264,14 +3264,14 @@
     "version": "1.7.5"
   },
   "Governikus.AusweisApp": {
-    "state": "VALIDATION_FAILED",
+    "state": "VALIDATION_PASSED",
     "description": "",
     "manifestHash": "2CEC6AAADFBAF472B5E75234C0FA8BA082F4787B107392C3C3DFFA76DADF6D4C",
-    "lastUpdated": "2026-10-29T01:22:47.6213533Z",
+    "lastUpdated": "2026-10-29T09:22:10.684579Z",
     "installerHashes": [
       "F106595577516164F6C6CC339839CB314CD53D93B36F78067EE3C135A78F4E53"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "2.6.2"
   },
   "Gramps.Gramps": {
@@ -8794,15 +8794,15 @@
     "lastUpdated": "2026-08-05T07:49:49.3068253Z"
   },
   "TheQtCompanyLtd.QtCreator": {
-    "lastUpdated": "2026-10-15T12:59:17.1663157Z",
-    "version": "21.0.0-beta2",
+    "manifestHash": "42C55D56E77180F2FE0A2446A371960006DA5A851FD929470841B0D98AD451CF",
+    "validationCount": 1,
+    "version": "21.0.0-rc1",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "B72B61B474F30C0EA1F27F3CEA15AA5CA25613A99BFE48BFA90254D6C3F58234",
-    "description": "",
     "installerHashes": [
-      "B9C5657436505B0AE49D73D974F70FBED19A08E4C095A44B42227954B04CB589"
+      "4F4F77FA75F369E7E4209B3B6C15D5C7F8743D0CDEBBEA134180C676309DC401"
     ],
-    "validationCount": 1
+    "lastUpdated": "2026-10-29T09:22:10.7248518Z",
+    "description": ""
   },
   "Theta.DeskHatch": {
     "state": "VALIDATION_PASSED",
