@@ -6468,7 +6468,7 @@
     "state": "VALIDATION_FAILED",
     "openPr": {
       "version": "1.13.2",
-      "checkedAt": "2026-10-28T12:26:02.7711516Z"
+      "checkedAt": "2026-10-29T16:22:36.0919381Z"
     }
   },
   "OpenWhispr.OpenWhispr": {
@@ -7009,7 +7009,7 @@
     ],
     "openPr": {
       "version": "0.32.0",
-      "checkedAt": "2026-10-28T12:26:03.639731Z"
+      "checkedAt": "2026-10-29T16:22:37.4505704Z"
     }
   },
   "prsyahmi.WicHeic": {
@@ -8700,7 +8700,7 @@
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
       "version": "5.7.1",
-      "checkedAt": "2026-10-28T12:26:56.671345Z"
+      "checkedAt": "2026-10-29T16:23:29.9444192Z"
     }
   },
   "termio.soft-jp.com.TermioWin": {
