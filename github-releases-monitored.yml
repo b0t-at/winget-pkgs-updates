@@ -1091,7 +1091,7 @@
             with: "wingetcreate"
           - id: "Wilfred.difftastic"
             repo: "Wilfred/difftastic"
-            url: "https://github.com/Wilfred/difftastic/releases/download/{VERSION}/difft-{VERSION}-x86_64-pc-windows-msvc.zip"
+            url: "https://github.com/Wilfred/difftastic/releases/download/{VERSION}/difft-{VERSION}-x86_64-pc-windows-msvc.zip https://github.com/Wilfred/difftastic/releases/download/{VERSION}/difft-{VERSION}-aarch64-pc-windows-msvc.zip"
           - id: "WillyJL.F95Checker"
             repo: "WillyJL/F95Checker"
             url: "https://github.com/WillyJL/F95Checker/releases/download/{VERSION}/F95Checker-Windows.zip|neutral"
