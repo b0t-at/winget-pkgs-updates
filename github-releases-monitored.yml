@@ -2017,9 +2017,10 @@
           - id: "jmrplens.gitlab-mcp-server"
             repo: "jmrplens/gitlab-mcp-server"
             url: "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v{VERSION}/gitlab-mcp-server-windows-amd64.exe https://github.com/jmrplens/gitlab-mcp-server/releases/download/v{VERSION}/gitlab-mcp-server-windows-arm64.exe"
-          - id: "JoernBerkefeld.SFMCDataLoader"
-            repo: "JoernBerkefeld/sfmc-dataloader-app"
-            url: "https://github.com/JoernBerkefeld/sfmc-dataloader-app/releases/download/v{VERSION}/sfmc-dataloader-app-{VERSION}-win-x64.exe"
+#          Repo owner implemented release automation
+#          - id: "JoernBerkefeld.SFMCDataLoader"
+#            repo: "JoernBerkefeld/sfmc-dataloader-app"
+#            url: "https://github.com/JoernBerkefeld/sfmc-dataloader-app/releases/download/v{VERSION}/sfmc-dataloader-app-{VERSION}-win-x64.exe"
           - id: "JohanChane.ClashTui"
             repo: "JohanChane/clashtui"
             url: "https://github.com/JohanChane/clashtui/releases/download/v{VERSION}/clashtui-windows-amd64-v{VERSION}.zip"
