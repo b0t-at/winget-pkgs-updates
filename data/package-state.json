@@ -1244,15 +1244,15 @@
     }
   },
   "BytecodeAlliance.Wasmtime.Portable": {
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "description": "",
-    "version": "50.0.0",
-    "lastUpdated": "2026-10-20T16:50:57.7319655Z",
-    "manifestHash": "7E2BB4C232FAFC5601E5AF6D2AE1752C48ABD3EA92D8362ECAF5146E6BA17C98",
     "installerHashes": [
-      "CEA9CCC700AACCB2B5507E96AC990BA60104BD7AB39284FB2E67CB64D58EFCC4"
-    ]
+      "C3646EE2DE8CFCEFE532E75852E1FD2728D78C3FCC43251794803A698D1C30CA"
+    ],
+    "version": "50.0.1",
+    "description": "",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-30T01:47:57.3943235Z",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "E1E1F1678EB7C71D8E572BCF076CB9061F3514757546EA0E909A1DBCB5E95399"
   },
   "ByteNess.AWSVault": {
     "installerHashes": [
@@ -1497,16 +1497,16 @@
     "manifestHash": "82351274A9E01E7CFD70287374193F07DDA2D0C8B813622DCC78D1394FA4972E"
   },
   "Cilium.CiliumCLI": {
-    "manifestHash": "3A8AE211429F70EDF101EF2C41FAE63EF117BBF100667D1C2B0CB0699B0FA58D",
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "lastUpdated": "2026-09-24T08:56:08.5327633Z",
     "installerHashes": [
-      "869BC322C880DB7C566995F8E251DD3270E15814F26E4C7C8C13922319A939E3",
-      "C93A7B855FB36D6101C2036BFB1DB45D65EEDCCE0766AF3CCA19DDBE697D6847"
+      "B72FE6BBEF143D2AB5C308A3384C0E97A5E82242B209626721EE0A1E72DDDD5D",
+      "F702DB1DAA48F41ED30059B26D9C49B4C0F8650CF6FCD0424E8FD52674F07231"
     ],
-    "version": "0.20.1",
-    "validationCount": 1
+    "version": "0.20.2",
+    "description": "",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-30T01:47:57.3619629Z",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "AA90D565F47E54172F77769E3996AD38AB8C589264DD5DA31B8CC47E6244CF2B"
   },
   "cinnyapp.cinny-desktop": {
     "description": "",
@@ -2639,15 +2639,15 @@
     "description": ""
   },
   "Filamental.Filamental": {
-    "description": "",
     "installerHashes": [
-      "535FC04656C5E8D56DFC795CB470A66D5A69A52A86707FBD6E6F01A323CC4D56"
+      "71D206E2C0BC41999F69DEA714E0886F91BFF302FD5A62A81C8BC17DCF6F96D1"
     ],
-    "manifestHash": "CE5FB6F7B09FB143E4754A939A96A7418CC1798AC55B8B4B0027DF73ED7C99C8",
+    "version": "0.5.9",
+    "description": "",
     "validationCount": 1,
-    "version": "0.5.8",
-    "lastUpdated": "2026-10-27T09:28:33.6330802Z",
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-10-30T01:47:57.2887453Z",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "809096A959C5AD6BA00E16B35969DBE47F305F8AECE0EAE4F512A556CBF77DAA"
   },
   "FirenzeLor.gemini-collector": {
     "validationCount": 1,
@@ -2710,16 +2710,16 @@
     }
   },
   "Fly-io.flyctl": {
-    "version": "0.4.123",
-    "manifestHash": "10E9D51C67E518FDB28A9B66BAC3E22FE52539C69544AB1C3038A52DB4F6C40E",
-    "lastUpdated": "2026-10-27T17:07:09.1268559Z",
-    "validationCount": 1,
     "installerHashes": [
-      "A44FAF993A3F5AD5C834A59D9D94F2F903EE40066F307DBE8E7784C5BCBEFF99",
-      "3FB2B0BE07D4BED5542E6011FF20C7CC4BB7F5590D47C3135B6DC72827BA5986"
+      "691B77A4D4FE5572194942E97FF77ACB3358AB705B27692E881A3D0694ECBAD2",
+      "176EC084B0F7C188F8640648278FAFF67813881525229C8BCBB4322F4F0BFB8A"
     ],
+    "version": "0.5.1",
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "validationCount": 1,
+    "lastUpdated": "2026-10-30T01:47:57.2319881Z",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "D1339E4782238405717587C916B83F242BE1F73E6F703B3134D3E2FC617B6EB7"
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
     "validationCount": 1,
@@ -6245,15 +6245,15 @@
     "description": ""
   },
   "OnionShare.OnionShare": {
-    "description": "",
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "86146718C646F5652B83C7B43B8D4614020B48AC6FD1E43F6A357351BA11B5C5"
+      "229D56430268163D59F799027DB85D16EFF83C4CC0ABF0C2C19A64288578A914"
     ],
+    "version": "2.7.1",
+    "description": "",
     "validationCount": 1,
-    "lastUpdated": "2026-10-16T13:03:36.0797089Z",
-    "version": "2.7",
-    "manifestHash": "1182833317E58222E0AF4E08BC571004CC385F4723080F72278621F6F043CF64"
+    "lastUpdated": "2026-10-30T01:47:57.3126195Z",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "7D346D0728B34CA544C1C9DB0F6BF535BDB2FB5C8B009632C8199998329A57FB"
   },
   "Open-Component-Model.ocm-cli": {
     "version": "0.53.0",
@@ -8108,15 +8108,15 @@
     "state": "VALIDATION_PASSED"
   },
   "soymadip.quikrun": {
-    "manifestHash": "FB51A0B31ECC052082767B11F3A4412E2999DCFFF21D0A8CB0D0CACC1369E58D",
-    "description": "",
-    "lastUpdated": "2026-08-20T05:16:37.9510546Z",
     "installerHashes": [
-      "437ECCE52DA01C5357B44064667E47130346E5B2A80EBB4D35C5D7E9B6FDB5A3"
+      "8F8BCC6791E6C7E1A01FA09922C8F7ECB26A5F9C433A0A8C0CE94A5CCEBBB20A"
     ],
+    "version": "3.1.0",
+    "description": "",
     "validationCount": 1,
+    "lastUpdated": "2026-10-30T01:47:57.2657255Z",
     "state": "VALIDATION_PASSED",
-    "version": "2.4.0"
+    "manifestHash": "EB02EDF5EB1DEE4E959453EFEC73AA4A937D8865E0AEBE58D7277E264AD93794"
   },
   "SparkLabs.openvpn-configuration-generator": {
     "description": "",
@@ -9147,11 +9147,11 @@
     "version": "0.10.2"
   },
   "Unibo.Alchemist": {
-    "state": "VALIDATION_FAILED",
-    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "validationCount": 2,
     "description": "",
     "manifestHash": "A62F325C1526790309D04D95FD8878D06C88D13D060532658BA96F93D7078B67",
-    "lastUpdated": "2026-10-29T04:54:48.3333928Z",
+    "lastUpdated": "2026-10-30T01:47:57.335896Z",
     "version": "49.1.0",
     "installerHashes": [
       "A6C8C9B5860F0188BF1FA68CE946839CBE2616F908D26B1A338A2C5D9218570D"
@@ -9795,17 +9795,17 @@
     "description": ""
   },
   "XTLS.Xray-core": {
-    "validationCount": 1,
-    "lastUpdated": "2026-10-23T04:56:53.5045102Z",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "D4F4FBB36F04E4D9564FF9CA0B10D5F8C5765400452AA988031536C922A36F81",
-    "description": "",
     "installerHashes": [
-      "83F81C0AE86BB515C04F52E79383F4BB59C62797F17E26CB1FDCCD742450C235",
-      "FC58C39EE2F2717B4C54D28D374362389E5319B20AE44AEA76EA45A5243EC827",
-      "BB44AF3380C9975F951CE7645C04D56AB600040E68F23974A2806E08E0A3F872"
+      "C316C36A06D2A0EBBF4CF95BFE02F0BEC9C2EF51835E4389F3F31E3576C62C19",
+      "FCE33E81CCCF50E7AAB572B175519A50B5E0F9D2F5C8D1ED73012EA5C9AD4D58",
+      "B5314598249B2DA55135E0D875ADB653AADF926FA1BCA73D34FDCE78600F4204"
     ],
-    "version": "26.10.21"
+    "version": "26.10.29",
+    "description": "",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-30T01:47:57.1559825Z",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "04211909EEBC03CF12BAE95F2AFF51D6DC26E2B73AE9309E5A9E1BB76EA7CCB9"
   },
   "xushengfeng.eSearch": {
     "validationCount": 1,
