@@ -2651,15 +2651,15 @@
     "description": ""
   },
   "Filamental.Filamental": {
-    "installerHashes": [
-      "71D206E2C0BC41999F69DEA714E0886F91BFF302FD5A62A81C8BC17DCF6F96D1"
-    ],
-    "version": "0.5.9",
+    "manifestHash": "C052B61DCC4E9401B83A5A4E92D8C968C35D4CD80A6360946721CD1600C78245",
     "description": "",
-    "validationCount": 1,
-    "lastUpdated": "2026-10-30T01:47:57.2887453Z",
+    "version": "0.5.10",
+    "installerHashes": [
+      "EF7EAD3833CE9F6087FE268B05BF1BE4EDDF03A69C71ADA14AA7A01F3FC9B03F"
+    ],
     "state": "VALIDATION_PASSED",
-    "manifestHash": "809096A959C5AD6BA00E16B35969DBE47F305F8AECE0EAE4F512A556CBF77DAA"
+    "validationCount": 1,
+    "lastUpdated": "2026-10-30T17:01:05.6214499Z"
   },
   "FirenzeLor.gemini-collector": {
     "validationCount": 1,
@@ -3700,15 +3700,15 @@
     "validationCount": 1
   },
   "holland-built.Bloxsmith": {
-    "version": "3.108.0",
-    "installerHashes": [
-      "9F648DD1D570F68DDC911EE8CBC30E55806BEDB47DA5A4C97B90877F9F592E84"
-    ],
-    "lastUpdated": "2026-10-30T05:28:56.9157536Z",
-    "validationCount": 1,
-    "manifestHash": "36F37031B710EB21E8ECEA15FAB8CF2A670B39FF61B3844F09D3B31D2390A6A9",
+    "manifestHash": "1A651E0F168E725CC86D2FEFA52F61802E0067453416BBB8E781AD045393DDE4",
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "version": "3.111.0",
+    "installerHashes": [
+      "A757823D5B3EACC4488BD0F725077FA4EC932F208F425C2F1BEB7718DC8650B3"
+    ],
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-30T17:01:05.7658111Z"
   },
   "HongMinhee.Gukhanmun": {
     "installerHashes": [
@@ -4673,15 +4673,15 @@
     "description": ""
   },
   "Levminer.Authme": {
-    "lastUpdated": "2026-07-07T21:52:02.4861044Z",
-    "installerHashes": [
-      "701EF4A2108E1CA77CDF9288224F6C2BB6A1BAAC789218E7BA04E3D57A47102C"
-    ],
+    "manifestHash": "7C475B5BD3A25930651FBEBCDF96448534F1B5324A279682C697D5DEE2AAFBEC",
     "description": "",
-    "validationCount": 2,
+    "version": "7.1.2",
+    "installerHashes": [
+      "85083B1E14FD9ADA6CF7A023DD45FECFA015D4CE9044C5603C44DB18FFE977F9"
+    ],
     "state": "VALIDATION_PASSED",
-    "manifestHash": "B01A7F6D42D4772231F4AB586C5A0F18B1B98703F7DBF47E550ADD12FE3DB42D",
-    "version": "7.1.1"
+    "validationCount": 1,
+    "lastUpdated": "2026-10-30T17:01:05.7045023Z"
   },
   "lhvy.pipes-rs": {
     "manifestHash": "68D210582C098D094AB96BAA030D3EBF605666B200733ABD5E7158DCC5BAEC5B",
@@ -8022,15 +8022,15 @@
     "manifestHash": "E287E5EFDF457EB47DC8F18007B1E361CAE20763BDA63DD266E50CCF3C4BAC3A"
   },
   "skyhook-io.Radar": {
+    "manifestHash": "165415A3A6C08A52ADAC8CEF269C97210B5D2260BDE2CDBA91B334A7321D20B6",
+    "description": "",
+    "version": "1.19.0",
+    "installerHashes": [
+      "101B7F27404CA7487C6E08DCE49B30C8D39671BC1DE8516D67B704ACA28805B2"
+    ],
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "description": "",
-    "manifestHash": "CEC3DCBE2F8A3935A6276179F41F63970AEA8925E46AEEAA8BF5DE246CF1943B",
-    "lastUpdated": "2026-10-29T04:54:48.416549Z",
-    "version": "1.18.3",
-    "installerHashes": [
-      "7439F3430890B7210E5823B48C749A210B038A333F00E0582D74FEF74488C9EC"
-    ]
+    "lastUpdated": "2026-10-30T17:01:05.7406631Z"
   },
   "Skylot.jadx": {
     "validationCount": 1,
@@ -9573,15 +9573,15 @@
     "manifestHash": "E765AA019AE4E6C19DD4D567B2492C389CBFF4EB1DDC84E7BFCE19C3F8DB7ED3"
   },
   "Wilfred.difftastic": {
-    "state": "VALIDATION_PASSED",
+    "manifestHash": "D42376C5A9786A0B7FF3C464C3AE03DAA803F6CA3BA2F9974F6B1F2CC3886C48",
     "description": "",
-    "manifestHash": "51FBD37D5866AE920AF5295070A7514DF0F1CBF72387EAADDA22FBF2C61DF57D",
+    "version": "0.72.0",
     "installerHashes": [
-      "9A979F9D96D739625A0FE69317F3197CC7BCEF663A6D7195197D6C9BF96ED6F5"
+      "7B6295A9A433BA79978B02AD4B4B27F955423B8EB379927409B9FF4E5156379E"
     ],
-    "validationCount": 6,
-    "version": "0.71.0",
-    "lastUpdated": "2026-10-09T09:14:36.3948217Z"
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-30T17:01:05.681997Z"
   },
   "WillyJL.F95Checker": {
     "description": "",
