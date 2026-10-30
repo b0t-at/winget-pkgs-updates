@@ -107,7 +107,7 @@ jobs:
           Copy-Item modules/WingetMaintainerModule staging/sandboxrunner/modules/WingetMaintainerModule -Recurse -Force
 
       - name: Upload CLI bundle
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: winget-maintainer-cli-${{ steps.version.outputs.version }}
           path: staging/cli
@@ -115,7 +115,7 @@ jobs:
           retention-days: 14
 
       - name: Upload Worker bundle
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: winget-maintainer-worker-${{ steps.version.outputs.version }}
           path: staging/worker
@@ -123,7 +123,7 @@ jobs:
           retention-days: 14
 
       - name: Upload SandboxRunner bundle
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: winget-maintainer-sandboxrunner-${{ steps.version.outputs.version }}
           path: staging/sandboxrunner
@@ -131,7 +131,7 @@ jobs:
           retention-days: 14
 
       - name: Upload Dashboard bundle
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: winget-maintainer-dashboard-${{ steps.version.outputs.version }}
           path: staging/dashboard
