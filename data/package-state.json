@@ -402,8 +402,8 @@
     "lastUpdated": "2026-10-24T04:59:32.5470403Z",
     "description": "",
     "openPr": {
-      "version": "3.0.9",
-      "checkedAt": "2026-10-28T04:20:21.4712952Z"
+      "checkedAt": "2026-10-30T08:23:21.9244652Z",
+      "version": "3.0.9"
     }
   },
   "Anki.Anki": {
@@ -586,18 +586,18 @@
     }
   },
   "armbian.imager": {
-    "installerHashes": [
-      "91DFF7719F85BC0DE12E9D5F23B7E84704BBD3D972BAAF47B8E394CCF7D0411B",
-      "E33608BD58D4AB7B7D0DE21C0884E09982ACA8579B7844355E662F16029188CD",
-      "07EA980B9C2EA1E8E4D7E7EF9ECD77C9859626B6063E626225B7BEF4352ECAEB",
-      "91242F0BAF7D99224E745772B89EADA567A0B0D75025A791FB8EFB8AE614615A"
-    ],
-    "lastUpdated": "2026-08-30T08:52:12.3058481Z",
-    "validationCount": 2,
-    "version": "2.0.4",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "F68BD9053B978756DA8E366DB74A8531232680145E357688AAFE272FAF3784C1"
+    "manifestHash": "C5A22A9280D36B7CF60CD3D439B40EE8127A133B40380D72E01806C553037E2D",
+    "lastUpdated": "2026-10-29T01:22:47.7589272Z",
+    "installerHashes": [
+      "18E510BD224B8B6383145A05A66D86025A3A12957E358CE6FE7FE4190BDEE087",
+      "4DCE9759663AB51B33852F4BF6D8FAE24F3C512888322C3EA19F417659F72E09",
+      "95DC941C6821BD3B4B09977B832CAC8B23DB835A8202C73DED2B09D32C865044",
+      "B711CA8B945AD623BD43E7075E533C143513FB22F9E19F79B408AC4A939A3685"
+    ],
+    "validationCount": 1,
+    "version": "2.5.0"
   },
   "Arnica.DepsGuard": {
     "lastUpdated": "2026-08-18T21:24:38.4020506Z",
@@ -812,8 +812,8 @@
   },
   "Barry-ran.QtScrcpy": {
     "openPr": {
-      "version": "4.2.1",
-      "checkedAt": "2026-10-28T04:20:23.615837Z"
+      "checkedAt": "2026-10-29T04:21:24.7816987Z",
+      "version": "4.2.1"
     }
   },
   "Baulk.Baulk": {
@@ -1114,16 +1114,16 @@
     }
   },
   "BlackwellSystems.agent-lsp": {
-    "version": "0.23.2",
-    "description": "",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "lastUpdated": "2026-10-26T09:31:41.331051Z",
+    "description": "",
+    "manifestHash": "A853966D975417B626493D544A2045E401F2CF9F60DD77EA626683E0CE73F28B",
+    "lastUpdated": "2026-10-29T04:54:48.4679553Z",
+    "version": "0.23.5",
     "installerHashes": [
-      "003A9E0CEA02A1E068A8E13B4CD73B3D5C632A3A282AE962CF125CF3A1469E09",
-      "32EDA0E99D895AFF8F9CE4E72FC61129F4F599D5699E03BA3E7300492127DD36"
-    ],
-    "manifestHash": "F30E7F09E66D133B680E10EE4C81D47CE0E2C837C179AC9EB60565993AD5EBF7",
-    "state": "VALIDATION_PASSED"
+      "F603DF0BCC757DBA374C64147A60152D09CE2F936F123C5F333B8486F4471328",
+      "012129137371928031DBE92201E0315A3135E85FAAFA4E015C65B44470FA1972"
+    ]
   },
   "BlackwellSystems.shelfctl": {
     "manifestHash": "E6A5C090C621B9CC81504F055C837993516333A4A4A711B48325CF67BB128651",
@@ -1215,15 +1215,15 @@
     ]
   },
   "BrunoVolpato.ivygrep": {
-    "manifestHash": "F74534ECA7691FCAE34FE23AB8BBFCE465FC8502C163274A26AC1EDEEFD28B34",
-    "lastUpdated": "2026-09-26T20:43:40.9814223Z",
-    "version": "1.3.0",
-    "installerHashes": [
-      "9305FAAC55ADCC36425C6351A56E29BB3919FEB80A69DBC3B42E443D536D15EA"
-    ],
     "description": "",
+    "manifestHash": "1911C2CD641BA53E896CE5F2E8E01A8935D3D38FC3A43CE231007AF7B752D07E",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-29T21:04:57.2319039Z",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "version": "1.3.1",
+    "installerHashes": [
+      "AB44285F63D511618AA1E0F2F0E91376AEAEDE0BA16D760374B6327BFA1461B1"
+    ]
   },
   "bufbuild.buf": {
     "description": "",
@@ -1244,31 +1244,31 @@
     }
   },
   "BytecodeAlliance.Wasmtime.Portable": {
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "description": "",
-    "version": "50.0.0",
-    "lastUpdated": "2026-10-20T16:50:57.7319655Z",
-    "manifestHash": "7E2BB4C232FAFC5601E5AF6D2AE1752C48ABD3EA92D8362ECAF5146E6BA17C98",
     "installerHashes": [
-      "CEA9CCC700AACCB2B5507E96AC990BA60104BD7AB39284FB2E67CB64D58EFCC4"
+      "C3646EE2DE8CFCEFE532E75852E1FD2728D78C3FCC43251794803A698D1C30CA"
     ],
+    "version": "50.0.1",
+    "description": "",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-30T01:47:57.3943235Z",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "E1E1F1678EB7C71D8E572BCF076CB9061F3514757546EA0E909A1DBCB5E95399",
     "openPr": {
-      "version": "50.0.0",
-      "checkedAt": "2026-10-20T20:23:57.3257102Z"
+      "checkedAt": "2026-10-30T04:19:11.6418963Z",
+      "version": "50.0.1"
     }
   },
   "ByteNess.AWSVault": {
-    "installerHashes": [
-      "45607D8A337117B58568C148E6AB3EE358BA437C2BDE5C272876F6D5CE88E8F2",
-      "428E81C7AAA49E5CDE896B986E6FA92C997E161D8498E241A45FA68EF64BBA1F"
-    ],
-    "state": "VALIDATION_PASSED",
+    "version": "7.17.3",
+    "manifestHash": "84FE9053B68E1E5898B8215E178FF2993D0B80D4366E8315052BAC9C5341F510",
     "validationCount": 1,
     "description": "",
-    "lastUpdated": "2026-10-24T01:34:46.0067239Z",
-    "version": "7.17.2",
-    "manifestHash": "492601E42BDEAFD01D063ABD7AF77704A50BB2F63BA1C8154064A34EFC1F042D"
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "C1C499464ECB97C91C08000D940994F86FA13BAEF0775D454C13A9DF7D1676C5",
+      "979AF6875959465505F8B8CCC917B43450287D55DCA9224C4957A5628E005EAB"
+    ],
+    "lastUpdated": "2026-10-30T08:39:25.5031938Z"
   },
   "C-POPLO.Unreal-GUI": {
     "validationCount": 1,
@@ -1361,8 +1361,8 @@
   },
   "Carvel.ytt": {
     "openPr": {
-      "version": "0.55.4",
-      "checkedAt": "2026-10-28T20:19:16.0360924Z"
+      "checkedAt": "2026-10-30T00:42:29.1272991Z",
+      "version": "0.55.4"
     }
   },
   "ccccraz.cogmoteGO": {
@@ -1501,16 +1501,20 @@
     "manifestHash": "82351274A9E01E7CFD70287374193F07DDA2D0C8B813622DCC78D1394FA4972E"
   },
   "Cilium.CiliumCLI": {
-    "manifestHash": "3A8AE211429F70EDF101EF2C41FAE63EF117BBF100667D1C2B0CB0699B0FA58D",
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "lastUpdated": "2026-09-24T08:56:08.5327633Z",
     "installerHashes": [
-      "869BC322C880DB7C566995F8E251DD3270E15814F26E4C7C8C13922319A939E3",
-      "C93A7B855FB36D6101C2036BFB1DB45D65EEDCCE0766AF3CCA19DDBE697D6847"
+      "B72FE6BBEF143D2AB5C308A3384C0E97A5E82242B209626721EE0A1E72DDDD5D",
+      "F702DB1DAA48F41ED30059B26D9C49B4C0F8650CF6FCD0424E8FD52674F07231"
     ],
-    "version": "0.20.1",
-    "validationCount": 1
+    "version": "0.20.2",
+    "description": "",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-30T01:47:57.3619629Z",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "AA90D565F47E54172F77769E3996AD38AB8C589264DD5DA31B8CC47E6244CF2B",
+    "openPr": {
+      "checkedAt": "2026-10-30T04:19:12.0423294Z",
+      "version": "0.20.2"
+    }
   },
   "cinnyapp.cinny-desktop": {
     "description": "",
@@ -1588,14 +1592,14 @@
     "state": "VALIDATION_PASSED"
   },
   "CoderKinley.Musik": {
-    "version": "1.5.0",
-    "description": "",
-    "validationCount": 1,
-    "lastUpdated": "2026-10-26T09:31:41.4107408Z",
+    "version": "2.1.1",
     "installerHashes": [
-      "DC651F2D98C2D62E4448C6130B72FBBF773DBFB8D020E4654EC19586FDBFBA7B"
+      "A00E01A4F06308113B964114D8E8AD8DCA1FDF955A44B1A27AF95606AE04DE88"
     ],
-    "manifestHash": "43CC75E756BC3EA40FE9FD0FA0B5E5946A276AEF9C4960A7C6314843469116DF",
+    "lastUpdated": "2026-10-30T05:28:56.9296326Z",
+    "validationCount": 1,
+    "manifestHash": "B3FB1004F130A60E53F38E8FB68355F6784520D85E3882E65F31820BB223806E",
+    "description": "",
     "state": "VALIDATION_PASSED"
   },
   "commercialhaskell.stack": {
@@ -2213,15 +2217,19 @@
     "lastUpdated": "2026-08-17T21:15:38.4244206Z"
   },
   "EdgeTX.Companion": {
-    "version": "2.12.4",
+    "manifestHash": "AEC2D030A0EB4E8F5EAB6A25924008F47289EFA4060AFE627C482FED8D01B7CA",
     "validationCount": 1,
-    "description": "",
+    "version": "2.12.5",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-02T16:53:47.9556041Z",
     "installerHashes": [
-      "A2250FD6FF2500204599D0522592CAE1D982178E6B9C2F0DE1386B702F42C79E"
+      "0F8FF717B7EB88DCAED6D6F78A91A2294C0550F4B0F99741996EE7161917DF5E"
     ],
-    "manifestHash": "31947E74E60A0462F2AAA67D5F8C21F460756C9F606A2E99B5AA0055A2064E78"
+    "lastUpdated": "2026-10-29T09:22:10.7111402Z",
+    "description": "",
+    "openPr": {
+      "checkedAt": "2026-10-29T12:25:42.1117256Z",
+      "version": "2.12.5"
+    }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
     "configHealth": {
@@ -2276,8 +2284,8 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "3EAB1E5A6E607AC40A8D48C149D5E5B2207604A2D465245704CB6FD111942437",
     "openPr": {
-      "checkedAt": "2026-10-26T04:28:04.0108206Z",
-      "version": "5.7.15"
+      "checkedAt": "2026-10-30T04:19:12.5071925Z",
+      "version": "5.8.0"
     }
   },
   "elfpie.TizenAppInstaller": {
@@ -2639,15 +2647,15 @@
     "description": ""
   },
   "Filamental.Filamental": {
-    "description": "",
     "installerHashes": [
-      "535FC04656C5E8D56DFC795CB470A66D5A69A52A86707FBD6E6F01A323CC4D56"
+      "71D206E2C0BC41999F69DEA714E0886F91BFF302FD5A62A81C8BC17DCF6F96D1"
     ],
-    "manifestHash": "CE5FB6F7B09FB143E4754A939A96A7418CC1798AC55B8B4B0027DF73ED7C99C8",
+    "version": "0.5.9",
+    "description": "",
     "validationCount": 1,
-    "version": "0.5.8",
-    "lastUpdated": "2026-10-27T09:28:33.6330802Z",
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-10-30T01:47:57.2887453Z",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "809096A959C5AD6BA00E16B35969DBE47F305F8AECE0EAE4F512A556CBF77DAA"
   },
   "FirenzeLor.gemini-collector": {
     "validationCount": 1,
@@ -2705,21 +2713,25 @@
     ],
     "description": "",
     "openPr": {
-      "checkedAt": "2026-10-28T16:23:29.2157707Z",
+      "checkedAt": "2026-10-29T20:19:01.275251Z",
       "version": "3.3.0"
     }
   },
   "Fly-io.flyctl": {
-    "version": "0.4.123",
-    "manifestHash": "10E9D51C67E518FDB28A9B66BAC3E22FE52539C69544AB1C3038A52DB4F6C40E",
-    "lastUpdated": "2026-10-27T17:07:09.1268559Z",
-    "validationCount": 1,
     "installerHashes": [
-      "A44FAF993A3F5AD5C834A59D9D94F2F903EE40066F307DBE8E7784C5BCBEFF99",
-      "3FB2B0BE07D4BED5542E6011FF20C7CC4BB7F5590D47C3135B6DC72827BA5986"
+      "691B77A4D4FE5572194942E97FF77ACB3358AB705B27692E881A3D0694ECBAD2",
+      "176EC084B0F7C188F8640648278FAFF67813881525229C8BCBB4322F4F0BFB8A"
     ],
+    "version": "0.5.1",
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "validationCount": 1,
+    "lastUpdated": "2026-10-30T01:47:57.2319881Z",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "D1339E4782238405717587C916B83F242BE1F73E6F703B3134D3E2FC617B6EB7",
+    "openPr": {
+      "checkedAt": "2026-10-30T04:19:14.4645146Z",
+      "version": "0.5.1"
+    }
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
     "validationCount": 1,
@@ -2879,16 +2891,16 @@
     }
   },
   "GAM-Team.gam.Portable": {
-    "installerHashes": [
-      "4BFF0A9A6F0C3632DCED95B76E063BA9E5C6B6FA3A4CFE01A7D44820DB7B1723",
-      "D45B6A9137B565EC444B1432FD537C364629E235B72BC34DE3DF597F2AB0E879"
-    ],
-    "version": "7.49.01",
-    "manifestHash": "77A034E7DBD67D1A2F72AADA10B0AE40E760C7B775ACEC9847D314D645A002AC",
-    "validationCount": 1,
-    "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-28T01:25:41.7422779Z"
+    "description": "",
+    "manifestHash": "BBBB8F9D8EAE4269D815175F75D1406B9649A1D9D50AEB3CEDCBF48D5214B47C",
+    "lastUpdated": "2026-10-29T01:22:47.7033251Z",
+    "installerHashes": [
+      "0C0B357C356C6BD0357585621F0CCF3A97691CAB796AE2325EC44E32194CA65E",
+      "4DD90C2C899DF40B6C9D1EA295EB0311F695CE8459142E62CE415CDB35E3B2B8"
+    ],
+    "validationCount": 1,
+    "version": "7.49.03"
   },
   "GAM-Team.GotYourBack": {
     "description": "",
@@ -3201,18 +3213,18 @@
     "lastUpdated": "2026-09-17T20:53:14.2050338Z"
   },
   "Google.FirebaseCLI": {
-    "manifestHash": "83CB8989F02CC1E42D05440B7F45833C8975A6C48970F19D47498201C976554B",
-    "description": "",
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
+    "version": "15.34.2",
     "installerHashes": [
-      "BD7D07B38335A5498A32000D7BC5C47D2525793AD9F14E42420AFA66C51D8384"
+      "CE94C49ACFB6349BDDB6A79F3730E187D25CCC59DAAC42906D1C2C63243BEEBC"
     ],
-    "lastUpdated": "2026-10-23T21:04:28.750198Z",
-    "version": "15.34.1",
+    "lastUpdated": "2026-10-30T05:28:56.8428903Z",
+    "validationCount": 1,
+    "manifestHash": "BE4CD452DD4B7CCFF00CF2DBC2F824AD4018894F3869D523080B3123DC30FA17",
+    "description": "",
+    "state": "VALIDATION_PASSED",
     "openPr": {
-      "checkedAt": "2026-10-24T00:51:08.6316484Z",
-      "version": "15.34.1"
+      "checkedAt": "2026-10-30T08:22:13.8434289Z",
+      "version": "15.34.2"
     }
   },
   "Google.IAPDesktop": {
@@ -3268,15 +3280,15 @@
     "version": "1.7.5"
   },
   "Governikus.AusweisApp": {
-    "installerHashes": [
-      "5795694EE178ECBBFAB28031099E1BC23D27AAA3EB937D14B548129C0587F51F"
-    ],
     "state": "VALIDATION_PASSED",
-    "version": "2.5.5",
-    "manifestHash": "90D67FA89B09C7A6ABE30C4472BC8495A0D0CA97C83318BFCA393D249735171D",
-    "validationCount": 1,
-    "lastUpdated": "2026-08-14T09:49:55.9786837Z",
-    "description": ""
+    "description": "",
+    "manifestHash": "2CEC6AAADFBAF472B5E75234C0FA8BA082F4787B107392C3C3DFFA76DADF6D4C",
+    "lastUpdated": "2026-10-29T09:22:10.684579Z",
+    "installerHashes": [
+      "F106595577516164F6C6CC339839CB314CD53D93B36F78067EE3C135A78F4E53"
+    ],
+    "validationCount": 2,
+    "version": "2.6.2"
   },
   "Gramps.Gramps": {
     "validationCount": 1,
@@ -3533,16 +3545,16 @@
     ]
   },
   "HeroicGamesLauncher.GOGDL": {
+    "version": "1.4.0",
     "installerHashes": [
-      "1866E0EAD43A4F5A02F1D750C79A69A1D285C09DC05B6FDCE3B28C84BB2A4C5F",
-      "0AF2DE59E92C249ED550B5335AA65988B4CEA4374973F6B6140A58CEEDD2E2A0"
+      "291B653E6DBF7A394A3342ED0EBCEA2CBC83E5F66D030777D65CCDD60D18AB02",
+      "F3885D51C823D2FAAF3B49647C63E799339AFDC51FDBD0515E399CA08954630C"
     ],
-    "lastUpdated": "2026-10-17T04:44:32.2711781Z",
-    "manifestHash": "7323DDAD36332CF0764BEEA93FC185CB1E62BA6F0EBC5F3BC5E24C4DA8B59919",
-    "version": "1.3.1",
-    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-30T05:28:56.8866933Z",
+    "validationCount": 1,
+    "manifestHash": "36F7895CDBB2DE44A42EE458B25A20D8466FAEA0D09F768245E5585AF083C3DB",
     "description": "",
-    "validationCount": 1
+    "state": "VALIDATION_PASSED"
   },
   "HexmosTech.IPM": {
     "manifestHash": "8249606B3416464BF33927774347CA9870382EB4A56BE0CF9E4619F7BF635B5D",
@@ -3579,8 +3591,8 @@
     "lastUpdated": "2026-10-23T13:49:06.4312107Z",
     "description": "",
     "openPr": {
-      "version": "0.18.0",
-      "checkedAt": "2026-10-28T08:22:35.8711626Z"
+      "checkedAt": "2026-10-29T08:23:50.093265Z",
+      "version": "0.18.0"
     }
   },
   "Hiddify.Next": {
@@ -3613,8 +3625,8 @@
   },
   "HiroshibaKazuyuki.VOICEVOX.CPU": {
     "openPr": {
-      "version": "0.26.1",
-      "checkedAt": "2026-10-28T20:19:20.7400928Z"
+      "checkedAt": "2026-10-30T00:42:34.1088263Z",
+      "version": "0.26.1"
     }
   },
   "HiroSystems.Clarinet": {
@@ -3684,13 +3696,13 @@
     "validationCount": 1
   },
   "holland-built.Bloxsmith": {
-    "version": "3.105.0",
-    "manifestHash": "3AF35B1802DC474F0E1D120F61184482F628AEBB078F9249B143A2C5E6BA0955",
-    "lastUpdated": "2026-10-27T17:07:09.2874813Z",
-    "validationCount": 1,
+    "version": "3.108.0",
     "installerHashes": [
-      "B7EF65AC72A754474EE64889E6468ED4B234EAB85E09AA9FC0230ED4B17CDE87"
+      "9F648DD1D570F68DDC911EE8CBC30E55806BEDB47DA5A4C97B90877F9F592E84"
     ],
+    "lastUpdated": "2026-10-30T05:28:56.9157536Z",
+    "validationCount": 1,
+    "manifestHash": "36F37031B710EB21E8ECEA15FAB8CF2A670B39FF61B3844F09D3B31D2390A6A9",
     "description": "",
     "state": "VALIDATION_PASSED"
   },
@@ -3753,8 +3765,8 @@
   },
   "houmain.keymapper": {
     "openPr": {
-      "version": "5.8.1",
-      "checkedAt": "2026-10-28T08:22:36.3107458Z"
+      "checkedAt": "2026-10-29T08:23:50.5017251Z",
+      "version": "5.8.1"
     }
   },
   "hrkfdn.ncspot": {
@@ -4052,17 +4064,17 @@
     "description": ""
   },
   "JanProchazka.dbgate": {
-    "lastUpdated": "2026-10-12T01:58:15.4798232Z",
+    "version": "7.3.3",
+    "manifestHash": "250515653386D13E7BB76067DCB208F22F490511DB59012AD82A431274AAAD00",
     "validationCount": 1,
-    "installerHashes": [
-      "14F7C38B302B30348AA677A8717A0FEF2113E8A1FE6E9EBAA33ACF50A241B793",
-      "07DE5924DBCA024292256033E3488D13A7334E13D9AF3936BD76B1F568CEBCEF",
-      "CF97BAFA7E2A35CA277AF6EAD210538B037EA536AA614B2CBCE482963BFFB6FD"
-    ],
-    "manifestHash": "15070954D23508FCA744DFD507A77AB1E0323529C154C6105490D1BE07B36CA2",
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "version": "7.3.2"
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "B49A880F9DECE2BB8305CAC977ED2376D06735E4D378E23156013F765E5C307F",
+      "9E4759D6CC7FEFB85BFE947869163608528FE11C922A42065B611187EFBA2F84",
+      "BD5676E77308A6AA585C00064095D3DA470775CB6276BA6614F6549441CAE2AC"
+    ],
+    "lastUpdated": "2026-10-30T08:39:25.4742059Z"
   },
   "jark006.jarkViewer": {
     "lastUpdated": "2026-08-18T01:43:26.4804154Z",
@@ -4112,8 +4124,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-10-28T16:23:32.3182666Z",
-      "version": "2026.10.21"
+      "checkedAt": "2026-10-29T12:25:48.5742361Z",
+      "version": "2026.10.23"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -4220,14 +4232,14 @@
   },
   "JoernBerkefeld.SFMCDataLoader": {
     "description": "",
-    "installerHashes": [
-      "D2DFC4921F49611C848F012C765C93483AF05EB2D181823B114196A02AF7D12B"
-    ],
-    "manifestHash": "FE2707A1E6391202CEDD5E32B307383940A06C41D9F449440BE5A48C0D8498A7",
+    "manifestHash": "E6171F2E5800D4DCAECBED89763D1A45CEED667CE16A9411A84689E516882EFF",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-29T21:04:57.1585574Z",
     "validationCount": 1,
-    "version": "0.6.1",
-    "lastUpdated": "2026-10-27T09:28:33.6107924Z",
-    "state": "VALIDATION_PASSED"
+    "version": "0.8.1",
+    "installerHashes": [
+      "F2CC71F341C66888735697EA9E4BD29D21BCC78F04BD94D6EA61FF9D22EA7E41"
+    ]
   },
   "JohannesMillan.superProductivity": {
     "validationCount": 2,
@@ -4247,15 +4259,19 @@
     }
   },
   "JosephFinney.Text-Grab": {
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "validationCount": 7,
+    "version": "4.16.0",
     "installerHashes": [
-      "4DB7B77669302B026B1405C3DD8369B737EC85C3153014FB88BF8E40FE93C234"
+      "2C44B48F2836036A2A833825389EF12C4AC3E7E6DF1E5BB0BEA88516B55B4CCC"
     ],
-    "lastUpdated": "2026-08-06T10:56:40.5094002Z",
-    "manifestHash": "EE46550DD8269EFBAE73D8BC28120463D386AC9E76A52F1A7E22B3C1582ABDF8",
-    "version": "4.15.0"
+    "lastUpdated": "2026-10-30T05:28:56.7997274Z",
+    "validationCount": 1,
+    "manifestHash": "A8F513FD60ECFA675DF100FFBF558D87A2595E4F4E30C5559AB5EB7E247472B5",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "checkedAt": "2026-10-30T08:22:15.6442749Z",
+      "version": "4.16.0"
+    }
   },
   "JReleaser.jreleaser": {
     "description": "",
@@ -4326,14 +4342,14 @@
     ]
   },
   "Kajitsy.Emilia": {
-    "lastUpdated": "2026-08-22T04:43:28.9157525Z",
-    "manifestHash": "3032BC5C785D79762233638AB819F2E9B9E56494E21C601C665BEB8E469549C5",
+    "version": "3.3.6",
     "installerHashes": [
-      "3FB4376390CF79AE8892B23E4C2A114B4E97EEBC32B863717E55E4FD9ED0DFD2"
+      "D600983457FAFA7EB9A84F3E941C2A3AAC447ADF163FA6310300FD689FBBCF5B"
     ],
+    "lastUpdated": "2026-10-30T05:28:56.7535265Z",
     "validationCount": 1,
+    "manifestHash": "9C06C38ECCE68A34E2CB5918142958329D1832D4E6D2C597C72708831D28355B",
     "description": "",
-    "version": "3.3.5",
     "state": "VALIDATION_PASSED"
   },
   "kangyu-california.PersistentWindows": {
@@ -4372,16 +4388,16 @@
     "lastUpdated": "2026-10-27T05:11:21.4605708Z"
   },
   "kcl-lang.kcl": {
-    "version": "0.13.2",
-    "lastUpdated": "2026-10-23T09:01:35.0102994Z",
-    "manifestHash": "4B287A9CB782601D98EA9835C9A739CC133D522F8B56C4CEFD36F68AE287463A",
     "description": "",
+    "manifestHash": "0E034E738A3BB1A6E8B716973ED4FE6EA78D6B03395019746CFB1D0F35CADB90",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-29T21:04:57.1197273Z",
     "validationCount": 1,
+    "version": "0.13.3",
     "installerHashes": [
-      "CC8A2BEF930285B743E8107E024407375ADE0B8FFC4C4B20ECB438FAB16AF231",
-      "ED7CDACA9DF209A1CB9BD41DCCAB0F90E60231BBE2F05F23D6AE9E5E2C132B01"
-    ],
-    "state": "VALIDATION_PASSED"
+      "A88BE63F2E18CA75423436D9AB6AD0BFE3F6F10708B646230976C2B677D55892",
+      "EB1B3884FBB4462C78C893045C65CCA957973CF3D9B72E7F3E75C578403F6CB8"
+    ]
   },
   "KeeperSecurity.Commander": {
     "description": "",
@@ -4397,15 +4413,15 @@
     }
   },
   "KellyBrazil.jc": {
-    "lastUpdated": "2026-10-19T20:57:17.6529754Z",
-    "description": "",
-    "version": "1.26.1",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "version": "1.26.2",
     "installerHashes": [
-      "86465A332FFF0FC6676C1AA94674ADD4BA2C6D6BF56CB3294465958906EAE0FC"
+      "788D5C54AF03C4EF010F5AA557012DF51330DC36FA607D01B8FEF3AC14071EF3"
     ],
-    "manifestHash": "264F317D7A9821CAD8FB036B8CB10A72FA7D2DFD5A7365536DA82411682D7208"
+    "lastUpdated": "2026-10-30T05:28:56.8157547Z",
+    "validationCount": 1,
+    "manifestHash": "B927C7000C390FADBAFF61A8B4A7F8526608A1BB625798970C1455672D2D5DBF",
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "KellyElton.Max.Backup": {
     "state": "VALIDATION_PASSED",
@@ -4490,8 +4506,8 @@
     "description": "",
     "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D",
     "openPr": {
-      "version": "4.4.5",
-      "checkedAt": "2026-10-28T08:22:44.3667194Z"
+      "checkedAt": "2026-10-29T08:23:52.1847258Z",
+      "version": "4.4.5"
     }
   },
   "kmiya-culti.RLogin": {
@@ -4752,14 +4768,10 @@
     "installerHashes": [
       "60D966DB254FA833107512FA9CCA6F6B85B1E0EBAA24BF16309C9766F9131A5A"
     ],
-    "validationCount": 1,
-    "openPr": {
-      "checkedAt": "2026-10-21T20:22:11.1041684Z",
-      "version": "0.37.4"
-    }
+    "validationCount": 1
   },
   "Longbridge.LongbridgeTerminal": {
-    "validationCount": 5,
+    "validationCount": 6,
     "description": "",
     "version": "0.31.0",
     "state": "VALIDATION_PASSED",
@@ -4767,7 +4779,7 @@
     "installerHashes": [
       "48D056C11DD073DF0A8C45E9A42CA1EADF9BF5229EFA1347D844991B5F75F9EB"
     ],
-    "lastUpdated": "2026-10-28T09:00:41.5926797Z"
+    "lastUpdated": "2026-10-29T04:54:48.3921778Z"
   },
   "LookupFoundation.RevitLookup.2021": {
     "manifestHash": "128610B2BC6F960BB40A16C24D3F7CF0F8C87E1B9B978E39601108907C2FEBC3",
@@ -4782,15 +4794,15 @@
     "state": "VALIDATION_PASSED"
   },
   "loreste.mako": {
-    "version": "0.6.37",
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "039A2F94C4C15A7893DE17AACC3BF59B8AB8C72A9E7EB40CF32E0C21EC71E12E"
-    ],
     "description": "",
+    "manifestHash": "37A573F38992564233BEBDDFCECC7EF99ADC92AB660BE8C8C48905014196D2B3",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-29T21:04:57.0972233Z",
     "validationCount": 1,
-    "manifestHash": "AF090728AF5D7280E2EB5CD49B95EE86A37981A295C85076C67A32002305BD68",
-    "lastUpdated": "2026-09-23T17:01:59.825582Z"
+    "version": "0.7.0",
+    "installerHashes": [
+      "AA46F7D8C7DD63B4D922B4E995A12402E47C11E0AD664C786A06B0F1A02E6A74"
+    ]
   },
   "LowLevelDesign.ProcessGovernor": {
     "manifestHash": "09E69D0C7C3FCD8235F3E38BE39881FEE7DC968A99C30941A28BED33654E0AA0",
@@ -5426,12 +5438,16 @@
     "installerHashes": [
       "1A51F81C256D1F4403DE73EE7516E135C538B17F445C870A68ACF280A98BADD7"
     ],
-    "lastUpdated": "2026-10-26T20:49:18.5241368Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-10-29T21:04:57.1871411Z",
+    "validationCount": 2,
     "description": "",
     "manifestHash": "C9CB83CFBA573E90A18C214369717C73DAC9DBAC7E0444D18422AE4D8B3D444F",
     "version": "12.3.1",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "checkedAt": "2026-10-30T00:42:36.7698749Z",
+      "version": "12.3.1"
+    }
   },
   "MLMGames.Imagot": {
     "lastUpdated": "2026-08-18T17:25:13.9371653Z",
@@ -6152,8 +6168,8 @@
       "933794EE1D670137F5116C9DE7FC7DB092FA97C6B823ABA848DDB8A7EA030828"
     ],
     "openPr": {
-      "checkedAt": "2026-10-28T00:42:21.1206474Z",
-      "version": "0.40.12"
+      "checkedAt": "2026-10-29T04:20:23.6147799Z",
+      "version": "0.40.13"
     }
   },
   "Ombrelin.PandocGui": {
@@ -6249,15 +6265,15 @@
     "description": ""
   },
   "OnionShare.OnionShare": {
-    "description": "",
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "86146718C646F5652B83C7B43B8D4614020B48AC6FD1E43F6A357351BA11B5C5"
+      "229D56430268163D59F799027DB85D16EFF83C4CC0ABF0C2C19A64288578A914"
     ],
+    "version": "2.7.1",
+    "description": "",
     "validationCount": 1,
-    "lastUpdated": "2026-10-16T13:03:36.0797089Z",
-    "version": "2.7",
-    "manifestHash": "1182833317E58222E0AF4E08BC571004CC385F4723080F72278621F6F043CF64"
+    "lastUpdated": "2026-10-30T01:47:57.3126195Z",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "7D346D0728B34CA544C1C9DB0F6BF535BDB2FB5C8B009632C8199998329A57FB"
   },
   "Open-Component-Model.ocm-cli": {
     "version": "0.53.0",
@@ -6272,15 +6288,15 @@
     "manifestHash": "7750BB839F68D9110ECB3D2F161C4A237B79341CFE486223F8BC28D489847C32"
   },
   "open-policy-agent.opa": {
+    "description": "",
+    "manifestHash": "B1D7A16D1A86EBC74AB32109385F409E8844B5D650C548110AFC7525827A41F7",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-24T21:07:48.8122932Z",
-    "version": "1.21.4",
-    "manifestHash": "BE6AABF44CE8A8FED412EEB086D7E3E90C6D501FA07F043C00EA85972959AC92",
-    "installerHashes": [
-      "EFAD1C0EE4E3150D213F7BABDAFF3440B18B93C7368B465FCA42CDA392947F7C"
-    ],
+    "lastUpdated": "2026-10-29T21:04:57.2534101Z",
     "validationCount": 1,
-    "description": ""
+    "version": "1.22.0",
+    "installerHashes": [
+      "0C5972EF7B7042B595F92DB690FBB8BD8CF0F9A2782AB802C95C4AA58C1F05E5"
+    ]
   },
   "OpenChemistry.Avogadro2": {
     "state": "VALIDATION_PASSED",
@@ -6341,15 +6357,15 @@
     "lastUpdated": "2026-09-20T01:16:37.3804748Z"
   },
   "OpenGeos.GeoLibre": {
+    "state": "VALIDATION_PASSED",
     "description": "",
+    "manifestHash": "E7BB88366360CAF44DAB3437435E3E94D7A7253996F194BB2A9D3CF72A79B559",
+    "lastUpdated": "2026-10-29T01:22:47.7372443Z",
     "installerHashes": [
-      "C80EB6F9A311503811E15CA0DC3B38E89496D88D85E65E467CAC9F788A82F273"
+      "20D1A56F534D89EF6C25B96E78B7AD28DDDB63078DF214354691F739D35FA5FE"
     ],
-    "manifestHash": "AF74C35DD21366EDDE6C9FFE29AF13EFF6CF7CEF052ECF0C21753493DD8A136F",
-    "validationCount": 2,
-    "version": "3.5.1",
-    "lastUpdated": "2026-10-27T21:44:31.0332739Z",
-    "state": "VALIDATION_PASSED"
+    "validationCount": 1,
+    "version": "3.5.2"
   },
   "OpenHV.OpenHV": {
     "description": "",
@@ -6402,15 +6418,19 @@
     "lastUpdated": "2026-08-20T09:17:27.6311244Z"
   },
   "openpubkey.opkssh": {
-    "version": "0.19.1",
-    "lastUpdated": "2026-10-23T09:01:34.9607489Z",
-    "manifestHash": "990B5A97A29F7C75C80B0A2E542FCF2AE5B81A94187E3A4EBB34C578EB1DDBF4",
     "description": "",
+    "manifestHash": "A15CBBE88469EF6899C2AFC0DD513676669A79DC119987BA830DA97AC253AFF7",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-29T21:04:57.0372145Z",
     "validationCount": 1,
+    "version": "0.19.2",
     "installerHashes": [
-      "9A7B22E80BF7D92ABC930CDA39EFBDFF150AFF42CCC3D440E23058EC216AB29B"
+      "A409D493957ECEE78636F384F869317CDA5093C41437DDB8713664D49C357158"
     ],
-    "state": "VALIDATION_PASSED"
+    "openPr": {
+      "checkedAt": "2026-10-30T00:42:37.1571952Z",
+      "version": "0.19.2"
+    }
   },
   "OpenScreen.OpenScreen": {
     "description": "",
@@ -6468,7 +6488,7 @@
     "state": "VALIDATION_FAILED",
     "openPr": {
       "version": "1.13.2",
-      "checkedAt": "2026-10-28T12:26:02.7711516Z"
+      "checkedAt": "2026-10-29T16:22:36.0919381Z"
     }
   },
   "OpenWhispr.OpenWhispr": {
@@ -6483,15 +6503,15 @@
     "state": "VALIDATION_PASSED"
   },
   "openwong2kim.wmux": {
-    "version": "4.11.0",
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "9E2B782FB9C9AEB26991BFE867AC68141DEEF4870E10A644BE03D80BB0B90990"
-    ],
-    "manifestHash": "6FB20E459147D1779F7087ECD5BCEB9FBE3F2AE6C5B0A9A2A7F74C1990A86ABE",
-    "validationCount": 1,
     "description": "",
-    "lastUpdated": "2026-10-27T05:11:21.4213354Z"
+    "manifestHash": "1E88C55165510A5F44DAA4204898B134CABED0A4CA695C9D127894C953378E15",
+    "lastUpdated": "2026-10-29T01:22:47.6818995Z",
+    "installerHashes": [
+      "98C2D5BB3842BB7F77B9133E460153E1101B5FC030F461C86CB7EB9A8CD395A0"
+    ],
+    "validationCount": 1,
+    "version": "4.12.0"
   },
   "openwong2kim.wsnap": {
     "installerHashes": [
@@ -6763,7 +6783,7 @@
     "description": "",
     "validationCount": 1,
     "openPr": {
-      "checkedAt": "2026-10-28T16:23:35.5560686Z",
+      "checkedAt": "2026-10-29T20:19:08.8337086Z",
       "version": "9.5.3"
     }
   },
@@ -6891,16 +6911,20 @@
     }
   },
   "pnpm.pnpm": {
-    "version": "12.15.0",
-    "description": "",
-    "validationCount": 1,
-    "lastUpdated": "2026-10-26T09:31:41.4761331Z",
+    "version": "12.16.1",
     "installerHashes": [
-      "84CF69DB1BE19E95BB4E5BEF329291A046F2821B390D87E00F5690809D8A2ED7",
-      "B4AD6A5141491911E9D0C8D61AB64EAC4ABF4CC56A24F6C126AC9DE139A86D54"
+      "253CD5CAA8CDF3859A92995BDF1819D3B433690157616CC372AF00D22EB0C6A4",
+      "9B401CC731E86D70DE4407621D4916A5FF3AD7C3DE86B42D623280B629AF9DDA"
     ],
-    "manifestHash": "44BDA0B1AF2929C39BE3402DAE0AF216E828F49CF23AAD5AE281CC5656C89945",
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-10-30T05:28:56.9008837Z",
+    "validationCount": 1,
+    "manifestHash": "19DA462F82F83C3874E8254706555FD095F4A665CE8FA5307146258A6C648F0F",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "checkedAt": "2026-10-30T08:22:17.369587Z",
+      "version": "12.16.1"
+    }
   },
   "PocketBase.PocketBase": {
     "version": "0.40.6",
@@ -6937,15 +6961,15 @@
     "manifestHash": "F0F9DB32F630B64B06BD5A7090398F49F0F13E15E7DAAEDA87B9B633A80B3F4B"
   },
   "PowCal.PowCal": {
-    "lastUpdated": "2026-10-12T01:58:15.5487482Z",
-    "validationCount": 1,
-    "installerHashes": [
-      "E31EDA38F2F13C4EABADA619E296809ED0A9054C3012C7953E0FA52C2F6BC675"
-    ],
-    "manifestHash": "54469A0E6C1414A2FA60DFC2C3D6AD505B6AAA190B5D99C54D4C9ABFFAEE0568",
     "state": "VALIDATION_PASSED",
+    "validationCount": 1,
     "description": "",
-    "version": "2.1.0"
+    "manifestHash": "8F338D73E4A38CC670EB79C30A94CEF0F73B5BF6B2A91F52A8B890A3713E9D06",
+    "lastUpdated": "2026-10-29T04:54:48.4469136Z",
+    "version": "2.2.0",
+    "installerHashes": [
+      "69A1548295A373FEB0E5432BF550E13C18860B33DA71D3526836A46B2A16DC48"
+    ]
   },
   "Primecount.Primecount": {
     "validationCount": 1,
@@ -7009,7 +7033,7 @@
     ],
     "openPr": {
       "version": "0.32.0",
-      "checkedAt": "2026-10-28T12:26:03.639731Z"
+      "checkedAt": "2026-10-29T16:22:37.4505704Z"
     }
   },
   "prsyahmi.WicHeic": {
@@ -7994,15 +8018,15 @@
     "manifestHash": "E287E5EFDF457EB47DC8F18007B1E361CAE20763BDA63DD266E50CCF3C4BAC3A"
   },
   "skyhook-io.Radar": {
-    "installerHashes": [
-      "B70493E93022C42FDE4DB0A037CD5CCEE6025602972AF46851438D3D718F8E13"
-    ],
-    "version": "1.18.2",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-26T16:53:31.5118979Z",
-    "manifestHash": "291265E322FDEA55D9405B59404E0B23CCD9908F64A4C128AEFC7682F221EA17"
+    "manifestHash": "CEC3DCBE2F8A3935A6276179F41F63970AEA8925E46AEEAA8BF5DE246CF1943B",
+    "lastUpdated": "2026-10-29T04:54:48.416549Z",
+    "version": "1.18.3",
+    "installerHashes": [
+      "7439F3430890B7210E5823B48C749A210B038A333F00E0582D74FEF74488C9EC"
+    ]
   },
   "Skylot.jadx": {
     "validationCount": 1,
@@ -8108,15 +8132,15 @@
     "state": "VALIDATION_PASSED"
   },
   "soymadip.quikrun": {
-    "manifestHash": "FB51A0B31ECC052082767B11F3A4412E2999DCFFF21D0A8CB0D0CACC1369E58D",
-    "description": "",
-    "lastUpdated": "2026-08-20T05:16:37.9510546Z",
     "installerHashes": [
-      "437ECCE52DA01C5357B44064667E47130346E5B2A80EBB4D35C5D7E9B6FDB5A3"
+      "8F8BCC6791E6C7E1A01FA09922C8F7ECB26A5F9C433A0A8C0CE94A5CCEBBB20A"
     ],
+    "version": "3.1.0",
+    "description": "",
     "validationCount": 1,
+    "lastUpdated": "2026-10-30T01:47:57.2657255Z",
     "state": "VALIDATION_PASSED",
-    "version": "2.4.0"
+    "manifestHash": "EB02EDF5EB1DEE4E959453EFEC73AA4A937D8865E0AEBE58D7277E264AD93794"
   },
   "SparkLabs.openvpn-configuration-generator": {
     "description": "",
@@ -8700,7 +8724,7 @@
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
       "version": "5.7.1",
-      "checkedAt": "2026-10-28T12:26:56.671345Z"
+      "checkedAt": "2026-10-29T16:23:29.9444192Z"
     }
   },
   "termio.soft-jp.com.TermioWin": {
@@ -8748,7 +8772,7 @@
     "version": "4.9.8",
     "lastUpdated": "2026-09-12T01:32:42.9753228Z",
     "openPr": {
-      "checkedAt": "2026-10-28T16:24:26.3216197Z",
+      "checkedAt": "2026-10-29T20:20:00.3498493Z",
       "version": "4.9.9"
     }
   },
@@ -8798,15 +8822,15 @@
     "lastUpdated": "2026-08-05T07:49:49.3068253Z"
   },
   "TheQtCompanyLtd.QtCreator": {
-    "lastUpdated": "2026-10-15T12:59:17.1663157Z",
-    "version": "21.0.0-beta2",
+    "manifestHash": "42C55D56E77180F2FE0A2446A371960006DA5A851FD929470841B0D98AD451CF",
+    "validationCount": 1,
+    "version": "21.0.0-rc1",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "B72B61B474F30C0EA1F27F3CEA15AA5CA25613A99BFE48BFA90254D6C3F58234",
-    "description": "",
     "installerHashes": [
-      "B9C5657436505B0AE49D73D974F70FBED19A08E4C095A44B42227954B04CB589"
+      "4F4F77FA75F369E7E4209B3B6C15D5C7F8743D0CDEBBEA134180C676309DC401"
     ],
-    "validationCount": 1
+    "lastUpdated": "2026-10-29T09:22:10.7248518Z",
+    "description": ""
   },
   "Theta.DeskHatch": {
     "state": "VALIDATION_PASSED",
@@ -9147,15 +9171,15 @@
     "version": "0.10.2"
   },
   "Unibo.Alchemist": {
-    "validationCount": 1,
-    "version": "43.1.5",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "5022975B05D673E339438ECBCE51869A3420B856E73ABA22C1F0E139FA2F9C8A",
+    "validationCount": 2,
     "description": "",
+    "manifestHash": "A62F325C1526790309D04D95FD8878D06C88D13D060532658BA96F93D7078B67",
+    "lastUpdated": "2026-10-30T01:47:57.335896Z",
+    "version": "49.1.0",
     "installerHashes": [
-      "B1A37334BC55F5138B51B7DD8B3DE26ED0B98BB8CCF453A3582F13CF5D64F574"
-    ],
-    "lastUpdated": "2026-08-17T21:15:38.2286715Z"
+      "A6C8C9B5860F0188BF1FA68CE946839CBE2616F908D26B1A338A2C5D9218570D"
+    ]
   },
   "Unipro.UGENE": {
     "state": "VALIDATION_PASSED",
@@ -9762,15 +9786,19 @@
     "version": "0.25.0"
   },
   "xpipe-io.xpipe.portable": {
-    "version": "24.9",
-    "description": "",
-    "validationCount": 1,
-    "lastUpdated": "2026-10-26T09:31:41.5151136Z",
+    "version": "24.10",
     "installerHashes": [
-      "81A650BF298BE2C68E480C25FA0365A70C9AC6D98DEA4645E763704C1ED3A19C"
+      "16991B0553A6821CE275087721E1ED4B1ACE948DFEEB95974342029C6B97F86F"
     ],
-    "manifestHash": "1DCAA157A0CEE2226F4C60A7ADE0AB75601731F3F558874E2FD82C2C497AA37B",
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-10-30T05:28:56.8591391Z",
+    "validationCount": 1,
+    "manifestHash": "A7ECE2C055CAA56CB8523084D02F871DF0A6A86DD2968530CFA26293C85538D1",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "checkedAt": "2026-10-30T08:23:17.0865695Z",
+      "version": "24.10"
+    }
   },
   "xssnick.TON-Torrent": {
     "state": "VALIDATION_PASSED",
@@ -9795,20 +9823,20 @@
     "description": ""
   },
   "XTLS.Xray-core": {
-    "validationCount": 1,
-    "lastUpdated": "2026-10-23T04:56:53.5045102Z",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "D4F4FBB36F04E4D9564FF9CA0B10D5F8C5765400452AA988031536C922A36F81",
-    "description": "",
     "installerHashes": [
-      "83F81C0AE86BB515C04F52E79383F4BB59C62797F17E26CB1FDCCD742450C235",
-      "FC58C39EE2F2717B4C54D28D374362389E5319B20AE44AEA76EA45A5243EC827",
-      "BB44AF3380C9975F951CE7645C04D56AB600040E68F23974A2806E08E0A3F872"
+      "C316C36A06D2A0EBBF4CF95BFE02F0BEC9C2EF51835E4389F3F31E3576C62C19",
+      "FCE33E81CCCF50E7AAB572B175519A50B5E0F9D2F5C8D1ED73012EA5C9AD4D58",
+      "B5314598249B2DA55135E0D875ADB653AADF926FA1BCA73D34FDCE78600F4204"
     ],
-    "version": "26.10.21",
+    "version": "26.10.29",
+    "description": "",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-30T01:47:57.1559825Z",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "04211909EEBC03CF12BAE95F2AFF51D6DC26E2B73AE9309E5A9E1BB76EA7CCB9",
     "openPr": {
-      "checkedAt": "2026-10-28T16:24:32.5972211Z",
-      "version": "26.10.21"
+      "checkedAt": "2026-10-30T04:20:05.4602588Z",
+      "version": "26.10.29"
     }
   },
   "xushengfeng.eSearch": {

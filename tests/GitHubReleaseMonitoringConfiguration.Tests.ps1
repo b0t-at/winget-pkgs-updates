@@ -284,9 +284,11 @@ foreach ($entrySet in $entrySets.GetEnumerator()) {
 # produced by scripts/orchestrate_gh-packages.py; when that step is skipped
 # after editing github-releases-monitored.yml, retired packages keep being
 # submitted (2026-08: ten retired entries stayed live for two weeks because
-# the orchestrate workflow was disabled). Run
+# the orchestrate workflow was disabled). The Orchestrate GH Packages workflow
+# regenerates them on every push to main, and module-tests.yml renders them
+# before running this test, so CI validates the generator output. Locally, run
 #   python scripts/orchestrate_gh-packages.py
-# after every edit of the monitored list.
+# first when the monitored list was edited.
 $monitoredIds = @($monitoredEntries | ForEach-Object { [string]$_['id'] })
 $sidecarIds = @($entrySets.GetEnumerator() |
         Where-Object { $_.Key -ne 'github-releases-monitored.yml' } |
@@ -302,7 +304,7 @@ if ($staleSidecarIds.Count -gt 0 -or $missingSidecarIds.Count -gt 0) {
     if ($missingSidecarIds.Count -gt 0) {
         $details += "  monitored in github-releases-monitored.yml but missing from every sidecar: $($missingSidecarIds -join ', ')"
     }
-    throw "The generated package sidecars are out of sync with github-releases-monitored.yml; run 'python scripts/orchestrate_gh-packages.py' and commit the result.$([Environment]::NewLine)$($details -join [Environment]::NewLine)"
+    throw "The generated package sidecars are out of sync with github-releases-monitored.yml; run 'python scripts/orchestrate_gh-packages.py' to regenerate them.$([Environment]::NewLine)$($details -join [Environment]::NewLine)"
 }
 
 # Per-package fields the workflow forwards must survive the yml -> sidecar

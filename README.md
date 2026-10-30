@@ -45,8 +45,10 @@ with the previously published manifest.
 
 `github-releases-monitored.yml` is the source of truth, but the workflows read
 the generated sidecar `.github/workflows-data/update-github-packages-*.packages.json`.
-After every edit (adding, retiring or reconfiguring a package) regenerate the
-sidecar and commit it together with the yml:
+PRs only need to edit the yml: the **Orchestrate GH Packages** workflow
+regenerates the sidecar on every push to `main`, and the **Module tests**
+workflow renders it before running the tests (stale committed sidecars only
+produce a notice). To regenerate locally:
 
 ```powershell
 pip install pyyaml
@@ -54,8 +56,8 @@ python scripts/orchestrate_gh-packages.py
 ```
 
 `tests/GitHubReleaseMonitoringConfiguration.Tests.ps1` fails when the sidecar
-and the yml disagree, so a retired package can no longer keep being submitted
-because the regeneration step was skipped. Retire a package by commenting out
+and the yml disagree; run the script first when running it locally after
+editing the yml. Retire a package by commenting out
 its entry and adding a `#  <Id> is excluded: <reason>` note above it;
 `scripts/Disable-ReAddedExcludedPackages.ps1` re-applies documented exclusions.
 
