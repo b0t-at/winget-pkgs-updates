@@ -98,6 +98,25 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.x'
+
+      # The sidecars are regenerated from github-releases-monitored.yml by the
+      # Orchestrate GH Packages workflow after merge, so PRs only need to edit
+      # the yml. Render them here so the tests validate what will be generated.
+      - name: Render generated package workflows
+        shell: pwsh
+        run: |
+          pip install --quiet pyyaml
+          python scripts/orchestrate_gh-packages.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $drift = git status --porcelain -- .github/workflows/update-github-packages-*.yml .github/workflows-data/update-github-packages-*.packages.json
+          if ($drift) {
+            Write-Host "::notice::Committed sidecars differ from github-releases-monitored.yml; Orchestrate GH Packages regenerates them after merge.`n$($drift -join "`n")"
+          }
+
       - name: Run regression tests
         shell: pwsh
         run: |
