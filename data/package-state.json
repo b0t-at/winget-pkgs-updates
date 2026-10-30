@@ -308,7 +308,11 @@
     "manifestHash": "6E5892FFC0A9F3C1A43535BA26AAEC201D8C6FC73DA15088925476EEF3493860",
     "installerHashes": [
       "3FE1E1201C2842B8EE23A92B6C27DD84CD768F00E997310B451921113A8FD297"
-    ]
+    ],
+    "openPr": {
+      "checkedAt": "2026-10-30T20:21:44.206316Z",
+      "version": "1.0.169"
+    }
   },
   "AloproAgency.WAutoChat": {
     "lastUpdated": "2026-08-18T01:43:26.4458545Z",
@@ -2717,7 +2721,7 @@
     ],
     "description": "",
     "openPr": {
-      "checkedAt": "2026-10-29T20:19:01.275251Z",
+      "checkedAt": "2026-10-30T20:20:33.5946067Z",
       "version": "3.3.0"
     }
   },
@@ -3036,11 +3040,7 @@
     "installerHashes": [
       "CE7EAAA6766AE350A33D6CC1371C20644DFC489CD32A6CD33B4D15C673E1C858"
     ],
-    "version": "3.9.0",
-    "openPr": {
-      "checkedAt": "2026-09-08T12:32:50.7324232Z",
-      "version": "3.9.0"
-    }
+    "version": "3.9.0"
   },
   "getzola.zola": {
     "manifestHash": "2AD0D8502E653E34D70DC1A01F61D1061D3ED1D053F514354B49F5E4D9C22AB7",
@@ -6495,8 +6495,8 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "openPr": {
-      "version": "1.13.2",
-      "checkedAt": "2026-10-29T16:22:36.0919381Z"
+      "checkedAt": "2026-10-30T20:20:38.6225975Z",
+      "version": "1.13.2"
     }
   },
   "OpenWhispr.OpenWhispr": {
@@ -6791,7 +6791,7 @@
     "description": "",
     "validationCount": 1,
     "openPr": {
-      "checkedAt": "2026-10-29T20:19:08.8337086Z",
+      "checkedAt": "2026-10-30T20:20:39.0031843Z",
       "version": "9.5.3"
     }
   },
@@ -8727,8 +8727,8 @@
     "manifestHash": "101A50462A6E2BE19AFB17A21278EA44597559D970949753840897CFC30A7566",
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
-      "version": "5.7.1",
-      "checkedAt": "2026-10-29T16:23:29.9444192Z"
+      "checkedAt": "2026-10-30T20:21:34.1817997Z",
+      "version": "5.7.1"
     }
   },
   "termio.soft-jp.com.TermioWin": {
@@ -8776,7 +8776,7 @@
     "version": "4.9.8",
     "lastUpdated": "2026-09-12T01:32:42.9753228Z",
     "openPr": {
-      "checkedAt": "2026-10-29T20:20:00.3498493Z",
+      "checkedAt": "2026-10-30T20:21:34.5727048Z",
       "version": "4.9.9"
     }
   },
