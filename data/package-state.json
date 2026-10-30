@@ -3591,7 +3591,7 @@
     "lastUpdated": "2026-10-23T13:49:06.4312107Z",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-10-29T08:23:50.093265Z",
+      "checkedAt": "2026-10-30T12:24:59.4708419Z",
       "version": "0.18.0"
     }
   },
@@ -3765,7 +3765,7 @@
   },
   "houmain.keymapper": {
     "openPr": {
-      "checkedAt": "2026-10-29T08:23:50.5017251Z",
+      "checkedAt": "2026-10-30T12:24:59.9110462Z",
       "version": "5.8.1"
     }
   },
@@ -4074,7 +4074,11 @@
       "9E4759D6CC7FEFB85BFE947869163608528FE11C922A42065B611187EFBA2F84",
       "BD5676E77308A6AA585C00064095D3DA470775CB6276BA6614F6549441CAE2AC"
     ],
-    "lastUpdated": "2026-10-30T08:39:25.4742059Z"
+    "lastUpdated": "2026-10-30T08:39:25.4742059Z",
+    "openPr": {
+      "checkedAt": "2026-10-30T12:25:00.4144013Z",
+      "version": "7.3.3"
+    }
   },
   "jark006.jarkViewer": {
     "lastUpdated": "2026-08-18T01:43:26.4804154Z",
@@ -4124,8 +4128,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-10-29T12:25:48.5742361Z",
-      "version": "2026.10.23"
+      "checkedAt": "2026-10-30T12:25:00.898504Z",
+      "version": "2026.10.24"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -4506,7 +4510,7 @@
     "description": "",
     "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D",
     "openPr": {
-      "checkedAt": "2026-10-29T08:23:52.1847258Z",
+      "checkedAt": "2026-10-30T12:25:01.4094775Z",
       "version": "4.4.5"
     }
   },
@@ -7030,11 +7034,7 @@
       "EB6CA0CBF86048D919937F2D2B0C9C6BFC231F511FB2460C16CB574F1FA9ECEE",
       "D48EBAD7999AAC5603FE01007016A0DDBCECBC1AA0ECBC51867A2416B6C60A7D",
       "30E3639F33C5674A61C94B4C57375D999592173576765D3918C75B806FE25297"
-    ],
-    "openPr": {
-      "version": "0.32.0",
-      "checkedAt": "2026-10-29T16:22:37.4505704Z"
-    }
+    ]
   },
   "prsyahmi.WicHeic": {
     "manifestHash": "78CB170D9C1D781E9EDBC2274618750A1B91B86E41C20D0AAF02BDA005BD56FF",
