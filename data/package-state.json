@@ -402,7 +402,7 @@
     "lastUpdated": "2026-10-24T04:59:32.5470403Z",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-10-29T04:20:38.6217195Z",
+      "checkedAt": "2026-10-30T08:23:21.9244652Z",
       "version": "3.0.9"
     }
   },
@@ -3221,7 +3221,11 @@
     "validationCount": 1,
     "manifestHash": "BE4CD452DD4B7CCFF00CF2DBC2F824AD4018894F3869D523080B3123DC30FA17",
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "checkedAt": "2026-10-30T08:22:13.8434289Z",
+      "version": "15.34.2"
+    }
   },
   "Google.IAPDesktop": {
     "lastUpdated": "2026-06-30T01:55:05.1221847Z",
@@ -4263,7 +4267,11 @@
     "validationCount": 1,
     "manifestHash": "A8F513FD60ECFA675DF100FFBF558D87A2595E4F4E30C5559AB5EB7E247472B5",
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "checkedAt": "2026-10-30T08:22:15.6442749Z",
+      "version": "4.16.0"
+    }
   },
   "JReleaser.jreleaser": {
     "description": "",
@@ -6912,7 +6920,11 @@
     "validationCount": 1,
     "manifestHash": "19DA462F82F83C3874E8254706555FD095F4A665CE8FA5307146258A6C648F0F",
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "checkedAt": "2026-10-30T08:22:17.369587Z",
+      "version": "12.16.1"
+    }
   },
   "PocketBase.PocketBase": {
     "version": "0.40.6",
@@ -9782,7 +9794,11 @@
     "validationCount": 1,
     "manifestHash": "A7ECE2C055CAA56CB8523084D02F871DF0A6A86DD2968530CFA26293C85538D1",
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "checkedAt": "2026-10-30T08:23:17.0865695Z",
+      "version": "24.10"
+    }
   },
   "xssnick.TON-Torrent": {
     "state": "VALIDATION_PASSED",
