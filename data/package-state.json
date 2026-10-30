@@ -1357,8 +1357,8 @@
   },
   "Carvel.ytt": {
     "openPr": {
-      "version": "0.55.4",
-      "checkedAt": "2026-10-28T20:19:16.0360924Z"
+      "checkedAt": "2026-10-30T00:42:29.1272991Z",
+      "version": "0.55.4"
     }
   },
   "ccccraz.cogmoteGO": {
@@ -3609,8 +3609,8 @@
   },
   "HiroshibaKazuyuki.VOICEVOX.CPU": {
     "openPr": {
-      "version": "0.26.1",
-      "checkedAt": "2026-10-28T20:19:20.7400928Z"
+      "checkedAt": "2026-10-30T00:42:34.1088263Z",
+      "version": "0.26.1"
     }
   },
   "HiroSystems.Clarinet": {
@@ -4748,11 +4748,7 @@
     "installerHashes": [
       "60D966DB254FA833107512FA9CCA6F6B85B1E0EBAA24BF16309C9766F9131A5A"
     ],
-    "validationCount": 1,
-    "openPr": {
-      "checkedAt": "2026-10-21T20:22:11.1041684Z",
-      "version": "0.37.4"
-    }
+    "validationCount": 1
   },
   "Longbridge.LongbridgeTerminal": {
     "validationCount": 6,
@@ -5427,7 +5423,11 @@
     "description": "",
     "manifestHash": "C9CB83CFBA573E90A18C214369717C73DAC9DBAC7E0444D18422AE4D8B3D444F",
     "version": "12.3.1",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "checkedAt": "2026-10-30T00:42:36.7698749Z",
+      "version": "12.3.1"
+    }
   },
   "MLMGames.Imagot": {
     "lastUpdated": "2026-08-18T17:25:13.9371653Z",
@@ -6406,7 +6406,11 @@
     "version": "0.19.2",
     "installerHashes": [
       "A409D493957ECEE78636F384F869317CDA5093C41437DDB8713664D49C357158"
-    ]
+    ],
+    "openPr": {
+      "checkedAt": "2026-10-30T00:42:37.1571952Z",
+      "version": "0.19.2"
+    }
   },
   "OpenScreen.OpenScreen": {
     "description": "",
