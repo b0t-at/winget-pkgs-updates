@@ -675,15 +675,15 @@
     }
   },
   "AtaraxyLabs.sem": {
-    "version": "0.28.2",
+    "version": "0.29.0",
+    "manifestHash": "837F833E401D6BE5A07C1A1FAEFCBD88FEB1C341C99E73339F86875F07C414F2",
+    "state": "VALIDATION_PASSED",
     "description": "",
     "validationCount": 1,
-    "lastUpdated": "2026-10-26T09:31:41.4484935Z",
     "installerHashes": [
-      "43A12D1AF5EC775B9EABA8D21BC0E360A58642B93E96472B8AAE8FA23007B2A6"
+      "F3A639E2E07B3F7386CDF681FA5B01EFF74AA4F888B38910E912350575CBECA8"
     ],
-    "manifestHash": "B1A75DE4B8FE3A9DE7C7F6AA1A3F75D337A3BA4F17CD0D01CEC8618C4400795E",
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-10-30T13:22:16.1155245Z"
   },
   "Automattic.Wordpress": {
     "installerHashes": [
@@ -5263,16 +5263,16 @@
     "description": ""
   },
   "Microsoft.Garnet.DN8": {
-    "installerHashes": [
-      "5DEA38089679FDF41D7CB37B08193376BD8A9188A87307349BAC7BBB8D1255B3",
-      "00015B8A0ED1704DB18BC3A3E2F555594B107CC5EC9286A676B780D9FFC3004D"
-    ],
-    "validationCount": 1,
-    "version": "2.2.4",
-    "manifestHash": "E4FBB54BFE963A29C22F025A743D8032F2CCA2C8CF49D5405913773F67887BA4",
+    "version": "2.2.5",
+    "manifestHash": "676601F7A9BFBB8F8934C665C86CD1DA5E0F80965F20D81AD90B28C82C27F5A0",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-22T13:27:03.6018948Z",
-    "description": ""
+    "description": "",
+    "validationCount": 1,
+    "installerHashes": [
+      "48103D4E02A90081D6050BC932227C0908947568CE1CAED208E2DAF095A798C3",
+      "DC809F25BBF7378E073BC7167008A608F010DFC2323E9813C94203E24CB3645B"
+    ],
+    "lastUpdated": "2026-10-30T13:22:16.087996Z"
   },
   "Microsoft.Garnet.DN9": {
     "version": "2.2.4",
@@ -5373,16 +5373,16 @@
     "description": ""
   },
   "mikf.gallery-dl.Nightly": {
-    "version": "2026.10.26",
-    "manifestHash": "774C24ED219F821AE60223982B6505472EAFBE0CB31853126F6EC96DBDB7FD79",
+    "version": "2026.10.30",
+    "manifestHash": "114F251E82E3BA77B058B4DFF7D86A20974E9DC3DEA3F511AFF02ED61C26D00C",
+    "state": "VALIDATION_PASSED",
     "description": "",
     "validationCount": 1,
-    "lastUpdated": "2026-10-26T04:59:58.8736048Z",
     "installerHashes": [
-      "DC95D3983335DE2E794776742C65E4DB0765936D8091C6DEFCFF647A05FDF5E1",
-      "73AB3F3D09A9B0E65F73D843FAE75CDAF7928D069A219AE360B636E0803119D0"
+      "644F91DB705B405E8369EA9E7071D1F6B9F7CACDDA981329A36F931D8EA83328",
+      "421476CFCAC423ADFD829CF54CE044821A91BC6AE51778D7C0A26D558B0270C5"
     ],
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-10-30T13:22:16.1507688Z"
   },
   "MilkShift.GoofCord": {
     "state": "VALIDATION_PASSED",
@@ -7622,15 +7622,15 @@
     "manifestHash": "38B360090BD22E5190374E12DFA9A779996178340AC851578D52FAE701C5CB86"
   },
   "Saturneric.GpgFrontend": {
-    "validationCount": 1,
-    "manifestHash": "07C5656DF48C12FDA228E32D735545A7EFAECD0FF5C8CA13AE9556CD7B2F58E6",
-    "installerHashes": [
-      "7E2760E0222765F8C87B60A6A5C8D6D71732E4E8F72BFD6EBB13300791BE60CD"
-    ],
-    "lastUpdated": "2026-10-25T08:58:49.7364702Z",
-    "description": "",
+    "version": "2.2.4",
+    "manifestHash": "3099CA8DDAF24FFA9AB233D15BD50B3E1355E10DBC4457405E9930E001308651",
     "state": "VALIDATION_PASSED",
-    "version": "2.2.3"
+    "description": "",
+    "validationCount": 1,
+    "installerHashes": [
+      "9A87AA0EB09EC2870E5EAE031FC5BF79438F61F9A60AB0EA8C3D01B28980195E"
+    ],
+    "lastUpdated": "2026-10-30T13:22:16.0455665Z"
   },
   "SauceLabs.forwarder": {
     "validationCount": 1,
@@ -8255,15 +8255,15 @@
     "validationCount": 1
   },
   "StacksLabs.Clarinet": {
-    "validationCount": 1,
-    "manifestHash": "AB7EA4D6B5029E47A52A68053FD35EC8FD395F2DEC34A93E33636978EE21E9A3",
-    "installerHashes": [
-      "9D8A77C83D4A815504C72A23F94554043A4AA80B28D8D1ADEC485CDECC50AF74"
-    ],
-    "description": "",
-    "lastUpdated": "2026-10-15T20:57:37.8850112Z",
+    "version": "3.26.0",
+    "manifestHash": "62422DEE83FEFB2DBE394B10FC7AD59AFA3A39461BE33FCAE94E10BADC651307",
     "state": "VALIDATION_PASSED",
-    "version": "3.25.0"
+    "description": "",
+    "validationCount": 1,
+    "installerHashes": [
+      "6C53A0249CA39BC70EC57B428B45DA601B278B70F9DF447911BFA8F57AFA0365"
+    ],
+    "lastUpdated": "2026-10-30T13:22:16.0035547Z"
   },
   "stakpak.agent": {
     "description": "",
