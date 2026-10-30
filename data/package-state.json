@@ -1252,7 +1252,11 @@
     "validationCount": 1,
     "lastUpdated": "2026-10-30T01:47:57.3943235Z",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "E1E1F1678EB7C71D8E572BCF076CB9061F3514757546EA0E909A1DBCB5E95399"
+    "manifestHash": "E1E1F1678EB7C71D8E572BCF076CB9061F3514757546EA0E909A1DBCB5E95399",
+    "openPr": {
+      "checkedAt": "2026-10-30T04:19:11.6418963Z",
+      "version": "50.0.1"
+    }
   },
   "ByteNess.AWSVault": {
     "installerHashes": [
@@ -1506,7 +1510,11 @@
     "validationCount": 1,
     "lastUpdated": "2026-10-30T01:47:57.3619629Z",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "AA90D565F47E54172F77769E3996AD38AB8C589264DD5DA31B8CC47E6244CF2B"
+    "manifestHash": "AA90D565F47E54172F77769E3996AD38AB8C589264DD5DA31B8CC47E6244CF2B",
+    "openPr": {
+      "checkedAt": "2026-10-30T04:19:12.0423294Z",
+      "version": "0.20.2"
+    }
   },
   "cinnyapp.cinny-desktop": {
     "description": "",
@@ -2276,8 +2284,8 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "3EAB1E5A6E607AC40A8D48C149D5E5B2207604A2D465245704CB6FD111942437",
     "openPr": {
-      "checkedAt": "2026-10-26T04:28:04.0108206Z",
-      "version": "5.7.15"
+      "checkedAt": "2026-10-30T04:19:12.5071925Z",
+      "version": "5.8.0"
     }
   },
   "elfpie.TizenAppInstaller": {
@@ -2719,7 +2727,11 @@
     "validationCount": 1,
     "lastUpdated": "2026-10-30T01:47:57.2319881Z",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "D1339E4782238405717587C916B83F242BE1F73E6F703B3134D3E2FC617B6EB7"
+    "manifestHash": "D1339E4782238405717587C916B83F242BE1F73E6F703B3134D3E2FC617B6EB7",
+    "openPr": {
+      "checkedAt": "2026-10-30T04:19:14.4645146Z",
+      "version": "0.5.1"
+    }
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
     "validationCount": 1,
@@ -9805,7 +9817,11 @@
     "validationCount": 1,
     "lastUpdated": "2026-10-30T01:47:57.1559825Z",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "04211909EEBC03CF12BAE95F2AFF51D6DC26E2B73AE9309E5A9E1BB76EA7CCB9"
+    "manifestHash": "04211909EEBC03CF12BAE95F2AFF51D6DC26E2B73AE9309E5A9E1BB76EA7CCB9",
+    "openPr": {
+      "checkedAt": "2026-10-30T04:20:05.4602588Z",
+      "version": "26.10.29"
+    }
   },
   "xushengfeng.eSearch": {
     "validationCount": 1,
