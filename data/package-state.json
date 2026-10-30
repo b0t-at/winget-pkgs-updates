@@ -683,7 +683,11 @@
     "installerHashes": [
       "F3A639E2E07B3F7386CDF681FA5B01EFF74AA4F888B38910E912350575CBECA8"
     ],
-    "lastUpdated": "2026-10-30T13:22:16.1155245Z"
+    "lastUpdated": "2026-10-30T13:22:16.1155245Z",
+    "openPr": {
+      "checkedAt": "2026-10-30T16:19:37.5861171Z",
+      "version": "0.29.0"
+    }
   },
   "Automattic.Wordpress": {
     "installerHashes": [
@@ -1539,8 +1543,8 @@
     "validationCount": 1,
     "version": "1.0.48275",
     "openPr": {
-      "checkedAt": "2026-10-28T16:23:26.1459464Z",
-      "version": "1.12.0"
+      "checkedAt": "2026-10-30T16:18:22.6640324Z",
+      "version": "1.13.0"
     }
   },
   "ciromattia.KCC": {
@@ -2227,7 +2231,7 @@
     "lastUpdated": "2026-10-29T09:22:10.7111402Z",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-10-29T12:25:42.1117256Z",
+      "checkedAt": "2026-10-30T16:18:23.2056747Z",
       "version": "2.12.5"
     }
   },
