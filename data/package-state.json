@@ -1493,8 +1493,8 @@
     "validationCount": 1,
     "manifestHash": "6D84AD88903A6B5FCE47079694838A9F681E580CC15B566A63F33E3659CDBBC8",
     "openPr": {
-      "version": "1.0.0",
-      "checkedAt": "2026-10-13T08:37:57.6113887Z"
+      "version": "1.0.2",
+      "checkedAt": "2026-10-31T08:18:41.7431721Z"
     }
   },
   "chuthree.BrewGuide": {
@@ -3763,7 +3763,11 @@
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "6A9E2C2C92AE37D033D1D6CB948D6F1C4C4E14951ADFC9B3FA5431CBDD3C915A"
-    ]
+    ],
+    "openPr": {
+      "version": "26.10.0-0",
+      "checkedAt": "2026-10-31T08:17:34.6573313Z"
+    }
   },
   "houmain.GPUpad": {
     "version": "4.6.0",
