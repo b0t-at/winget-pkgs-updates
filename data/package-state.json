@@ -1552,15 +1552,15 @@
     }
   },
   "ciromattia.KCC": {
+    "version": "12.1.4",
     "description": "",
     "validationCount": 1,
-    "version": "12.1.3",
-    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-31T04:41:00.3168669Z",
+    "manifestHash": "202D8584892AEFFAA4E94EEE458ED1380828FA4B5F5D036C61EBFDE289F03551",
     "installerHashes": [
-      "F2FA27A270A1B715B55C6567A64B9D64C4A71FE44E5705010381F350DC2B971D"
+      "FAAD92EFDB7810A652E1DF7E8A754C4FEFBC6610768B81205087BFD96AE4D6FF"
     ],
-    "manifestHash": "32E2B9272ABB23FD66167957B0D5C09D37E1164E172D1AC31AC1D049A6C71EDF",
-    "lastUpdated": "2026-10-28T09:00:41.4976993Z"
+    "state": "VALIDATION_PASSED"
   },
   "cjpais.Handy": {
     "version": "0.9.7",
@@ -3709,15 +3709,15 @@
     "validationCount": 1
   },
   "holland-built.Bloxsmith": {
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "lastUpdated": "2026-10-30T21:02:33.1372248Z",
-    "installerHashes": [
-      "92FD1831FB30CDBCC8B897D58BA5537BA1DA5BAE5C3533EB6D5B6C895A3E26B5"
-    ],
-    "manifestHash": "248945C09636708AFED3A9524F59F239C86726797DE836550030672373C3505A",
+    "version": "3.113.1",
     "description": "",
-    "version": "3.112.1"
+    "validationCount": 1,
+    "lastUpdated": "2026-10-31T04:41:00.4133187Z",
+    "manifestHash": "390284C795D649DEAFDD9AE636EEC0DD920B95707BF0B4E7D72503F90562B1B5",
+    "installerHashes": [
+      "4150993EC529369F6AA939E79266D1A2A59472F5D46FAB057257EEB89CB1F13A"
+    ],
+    "state": "VALIDATION_PASSED"
   },
   "HongMinhee.Gukhanmun": {
     "installerHashes": [
@@ -4844,16 +4844,16 @@
     "state": "VALIDATION_PASSED"
   },
   "LuantiTeam.Luanti": {
-    "installerHashes": [
-      "DD27C83C0756D296E18946577620DB5BB9188C7C9CF1B5FC7A28D6ACC491530B",
-      "3CE20C77F5C206A988D7A6B883439E2759E3CF67428C9DBCF99ECD2936DA631C"
-    ],
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "1020211ECB859040D040ADCFDF208835A5A21D75DA11E28A6BDA9A02F4F86347",
+    "version": "5.18.0",
     "description": "",
     "validationCount": 1,
-    "version": "5.17.0",
-    "lastUpdated": "2026-08-21T17:17:40.2053888Z"
+    "lastUpdated": "2026-10-31T04:41:00.3915309Z",
+    "manifestHash": "AAC935A38FA69A012E6DD40981A6FCD5C0C1902113A0337EE6223FE404CB3CA5",
+    "installerHashes": [
+      "1CBE4A380561F221EB1C1B8765D179F3F9E01DCACC94C7DD13D86581227AF375",
+      "BEBCE52B58555D8208BF16767D0717788479FEF23C35EC8D7BF287774D641835"
+    ],
+    "state": "VALIDATION_PASSED"
   },
   "luchopcerra.lazyinfra": {
     "version": "0.3.5",
@@ -8317,15 +8317,15 @@
     "lastUpdated": "2026-08-29T12:58:34.0986752Z"
   },
   "stefanprodan.timoni": {
-    "lastUpdated": "2026-10-22T01:30:46.6355498Z",
-    "installerHashes": [
-      "39D6BD87221AF98A0993B9FEECBBD471D341497FC4C884553EC7249398A2313B"
-    ],
-    "manifestHash": "E1CDEBA2CB822B4A739E2D3FB4DFD02608EBD8562FCD447C59B04397DE33A580",
-    "validationCount": 1,
+    "version": "0.37.0",
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "version": "0.36.0"
+    "validationCount": 1,
+    "lastUpdated": "2026-10-31T04:41:00.3546225Z",
+    "manifestHash": "6D66FB34A74DDAA8B2712D1C844A529DB68E00E091646C9A646B6DEAC9FE8329",
+    "installerHashes": [
+      "6EFFF7300CD6CFAE6098DF913DD67D1D70D7CBBAF940ACC0022BA69A7ACA8175"
+    ],
+    "state": "VALIDATION_PASSED"
   },
   "StefansTools.grepWin": {
     "manifestHash": "4CD26485122D5A3D8BE0549E7FBD0FDAC4FF10D84604DA165DA3BA9040124D4C",
