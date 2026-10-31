@@ -406,7 +406,7 @@
     "lastUpdated": "2026-10-24T04:59:32.5470403Z",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-10-30T08:23:21.9244652Z",
+      "checkedAt": "2026-10-31T12:19:02.0417617Z",
       "version": "3.0.9"
     }
   },
@@ -4145,8 +4145,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-10-30T12:25:00.898504Z",
-      "version": "2026.10.24"
+      "checkedAt": "2026-10-31T12:18:12.8551802Z",
+      "version": "2026.10.25"
     }
   },
   "jeffaristi92.Sweeft": {
