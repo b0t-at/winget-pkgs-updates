@@ -4133,15 +4133,15 @@
     "version": "2.0.3"
   },
   "jcalado.VoxDMR": {
-    "validationCount": 1,
-    "installerHashes": [
-      "D2737BD99DFB64ABBC12EC9C33E1AF3F459FAD84219A31E48AD2561552809201"
-    ],
-    "lastUpdated": "2026-09-09T01:17:20.2569441Z",
     "description": "",
+    "manifestHash": "1804E461312891E36F83FD7597A8AACEE7D192587B699EC578A3D012FFF10AD4",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "5804C66B6C415FDA0E1CCEFDC8B3DB1B64F86BA74B0B9B4794AFF0EAF6BDB936",
-    "version": "0.15.3"
+    "lastUpdated": "2026-10-31T09:07:28.3005502Z",
+    "installerHashes": [
+      "3F2D551ABFF1A5C2C6CA1634F25577A466312A72C368D4FD4BC849C9E5C172C9"
+    ],
+    "version": "0.16.0",
+    "validationCount": 1
   },
   "jdx.mise": {
     "openPr": {
@@ -5075,15 +5075,15 @@
     "lastUpdated": "2026-10-10T01:55:11.7767822Z"
   },
   "matkrin.bashd": {
-    "manifestHash": "CA11C750D1565B6D4BB217FF678D55DCB059944310F2EDC6D187FAC1020403AB",
     "description": "",
-    "validationCount": 1,
+    "manifestHash": "D3EC427E73C31B524D52BCA8971ABB5E3C9FC04FA31948BA722170EBCA732EE3",
     "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-31T09:07:28.3554949Z",
     "installerHashes": [
-      "86904E6508A4B8CB2A671AA36EFF912FA302B4FFABA59D39D12DF787E69BCB0D"
+      "BF781FB07CDB636C2E9A600A7AE570B7EB8552DC41CD4DA9DD6D3B7AD0146B17"
     ],
-    "lastUpdated": "2026-10-23T21:04:28.5761298Z",
-    "version": "0.3.1"
+    "version": "0.4.0",
+    "validationCount": 1
   },
   "MaximumADHD.RobloxStudioModManager": {
     "version": "2026.09.02",
@@ -6524,15 +6524,15 @@
     "state": "VALIDATION_PASSED"
   },
   "openwong2kim.wmux": {
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "1E88C55165510A5F44DAA4204898B134CABED0A4CA695C9D127894C953378E15",
-    "lastUpdated": "2026-10-29T01:22:47.6818995Z",
+    "manifestHash": "06D06CBD0664330A248E33221E8FD77B7E1A3C8552A9C6489CC3B55441316C81",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-31T09:07:28.3769003Z",
     "installerHashes": [
-      "98C2D5BB3842BB7F77B9133E460153E1101B5FC030F461C86CB7EB9A8CD395A0"
+      "72EF556A5D02AC306E27E643329E87657E01C17F530DA3A23CB89431AC5C039D"
     ],
-    "validationCount": 1,
-    "version": "4.12.0"
+    "version": "4.13.0",
+    "validationCount": 1
   },
   "openwong2kim.wsnap": {
     "installerHashes": [
@@ -9538,16 +9538,16 @@
     "manifestHash": "4778486FE1249062CC4B703025E5C4C225E529344892722FD4946A1E0A0AFA1D"
   },
   "webosbrew.webOSDevManager": {
-    "version": "1.99.20",
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "lastUpdated": "2026-09-06T12:59:54.4295832Z",
-    "manifestHash": "AE9B2A0D034164E4E9E3C00F040EC00D904FF46F8289B374C0E7F768ACF3932F",
+    "manifestHash": "A016EF2E591FDF308602D13D2E0E91DAD80112FEA8BEF41EF9FD6B5638B63E34",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-10-31T09:07:28.4117653Z",
     "installerHashes": [
-      "1B4DE388A1C6EB03C902BB6D36BDCD717B4737660326ED1876C97FA8148049B7",
-      "7F460042C1A224C4F336F1A6B8809582194131881ACAF1E11B320C856F1671AC"
-    ]
+      "8DAB4EF7876BCB78A92D15E9D59836278E2365A32584B6AF4C8501299BCFF78D",
+      "15D8550EB45EAC6145E451ABEE526FCF13C2EA91B9D473C140DF97E93F7EFEA1"
+    ],
+    "version": "1.99.21",
+    "validationCount": 1
   },
   "WeeNote.WeeNote": {
     "installerHashes": [
