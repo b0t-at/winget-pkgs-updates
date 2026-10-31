@@ -820,8 +820,8 @@
   },
   "Barry-ran.QtScrcpy": {
     "openPr": {
-      "checkedAt": "2026-10-29T04:21:24.7816987Z",
-      "version": "4.2.1"
+      "version": "4.2.1",
+      "checkedAt": "2026-10-31T00:35:12.1331306Z"
     }
   },
   "Baulk.Baulk": {
@@ -7047,7 +7047,11 @@
     ],
     "manifestHash": "EBA980168086775749DFC25387CEF417C29917DB39BC0AD805A22F87E113D87A",
     "description": "",
-    "version": "0.32.1"
+    "version": "0.32.1",
+    "openPr": {
+      "version": "0.32.1",
+      "checkedAt": "2026-10-31T00:34:18.4295757Z"
+    }
   },
   "prsyahmi.WicHeic": {
     "manifestHash": "78CB170D9C1D781E9EDBC2274618750A1B91B86E41C20D0AAF02BDA005BD56FF",
