@@ -2899,16 +2899,16 @@
     }
   },
   "GAM-Team.gam.Portable": {
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "manifestHash": "BBBB8F9D8EAE4269D815175F75D1406B9649A1D9D50AEB3CEDCBF48D5214B47C",
-    "lastUpdated": "2026-10-29T01:22:47.7033251Z",
     "installerHashes": [
-      "0C0B357C356C6BD0357585621F0CCF3A97691CAB796AE2325EC44E32194CA65E",
-      "4DD90C2C899DF40B6C9D1EA295EB0311F695CE8459142E62CE415CDB35E3B2B8"
+      "3C5F37FB87CEDDD79E1A67E78BACCF08262151435B3D797D96B774A5B059CC3B",
+      "66F70E3FD4C169A523C73614B1BEEBF9333B6C38FFA431390A1BC61CBAD76F9C"
     ],
+    "description": "",
+    "manifestHash": "93F0DCAAC28B33DB6054035D0E43DE18F88F33CEAC2492FE4333D872F9235C65",
     "validationCount": 1,
-    "version": "7.49.03"
+    "lastUpdated": "2026-10-31T01:27:04.1784844Z",
+    "version": "7.49.05",
+    "state": "VALIDATION_PASSED"
   },
   "GAM-Team.GotYourBack": {
     "description": "",
@@ -7078,14 +7078,14 @@
   },
   "Pulsar-Edit.Pulsar": {
     "installerHashes": [
-      "0086DD54CAA0A325162CE915CBB3BF5ECCA0BD11F9DF81E97665EF48E64EEFB9"
+      "B30F6A680EE2D3F6AF6899C9C226D9C78FE7BD014B9AE3238628F3F710D778C3"
     ],
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "3389DA47520FA2390E609715ED7348FA4481BF22E8337A77FA9664D31D28B9EB",
-    "version": "1.132.1",
-    "lastUpdated": "2026-05-21T05:11:40.7723427Z",
-    "validationCount": 1
+    "manifestHash": "2741AD1CF85969A392122759F81A9F0943D4909AEE9C841C6FCE434132610E5A",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-31T01:27:04.1406456Z",
+    "version": "1.133.0",
+    "state": "VALIDATION_PASSED"
   },
   "purocean.YankNote": {
     "state": "VALIDATION_PASSED",
@@ -7172,15 +7172,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Radius.Radius": {
-    "description": "",
-    "manifestHash": "3BBD4AA3F6C144BDD579EA72A5FD5269D5B691FD001C09275F7FA438DFDDD26D",
-    "validationCount": 1,
-    "version": "0.61.1",
-    "lastUpdated": "2026-10-01T01:43:50.2634571Z",
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "8CF7853EC7E7BC4F4254A758EBA4ECFFC0B08975C06DF582FC0FFEB9A4EFD5AC"
-    ]
+      "431E5D16A6CDA68D2EEF3344734C4C6E0A5D6281F09FACE4F505149DC62D73FE"
+    ],
+    "description": "",
+    "manifestHash": "0DFBFA11734A4987502C231650FB9EFD9B53F5082B091F90ED8B2C4F88A33960",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-31T01:27:04.101188Z",
+    "version": "0.62.0",
+    "state": "VALIDATION_PASSED"
   },
   "ramdor.Thetis": {
     "version": "2.10.3.15",
@@ -8272,15 +8272,15 @@
     "validationCount": 1
   },
   "StacksLabs.Clarinet": {
-    "version": "3.26.0",
-    "manifestHash": "62422DEE83FEFB2DBE394B10FC7AD59AFA3A39461BE33FCAE94E10BADC651307",
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "validationCount": 1,
     "installerHashes": [
-      "6C53A0249CA39BC70EC57B428B45DA601B278B70F9DF447911BFA8F57AFA0365"
+      "C4C831E3DDB540471492EB3CB578E62CB8DB9CC7871F2450F111CEA47F7825B1"
     ],
-    "lastUpdated": "2026-10-30T13:22:16.0035547Z"
+    "description": "",
+    "manifestHash": "2D04F7B4C4D2A7CC19A2BF6A1386F2B2178D0CAA089952B0903ADD3E8905F1C5",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-31T01:27:04.1534836Z",
+    "version": "4.0.0",
+    "state": "VALIDATION_PASSED"
   },
   "stakpak.agent": {
     "description": "",
@@ -8979,15 +8979,15 @@
     "state": "VALIDATION_PASSED"
   },
   "TrellisLab.Trellis": {
-    "state": "VALIDATION_PASSED",
-    "version": "1.9.0",
-    "description": "",
-    "manifestHash": "F0FEA07986D8BE6219EE3E39CE912C8A3B0583309F5107C0491C9C3F9473A02B",
-    "validationCount": 1,
-    "lastUpdated": "2026-10-27T01:42:29.8657443Z",
     "installerHashes": [
-      "52FD33579AFACC41324DCCB3F3CC84D6C6A6280CCC31B426562AF67273295294"
-    ]
+      "196427AAC028DE5BB21E7ABF7DDBC676B5FD71B2DA618962622AE7AFE99F8CA1"
+    ],
+    "description": "",
+    "manifestHash": "9F4D1881C79385B2B4F392BEDCA921021B0A2A9B6F991D5A60667936EB73AA99",
+    "validationCount": 1,
+    "lastUpdated": "2026-10-31T01:27:04.192918Z",
+    "version": "1.10.0",
+    "state": "VALIDATION_PASSED"
   },
   "TrenchBroom.TrenchBroom": {
     "manifestHash": "989EB55DC4DCCE006A1A8E7810CECB2266582F01FF5FDDC16E6DEE67626770FD",
