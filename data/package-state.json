@@ -3604,7 +3604,7 @@
     "lastUpdated": "2026-10-23T13:49:06.4312107Z",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-10-30T12:24:59.4708419Z",
+      "checkedAt": "2026-10-31T16:13:49.9301305Z",
       "version": "0.18.0"
     }
   },
@@ -3782,7 +3782,7 @@
   },
   "houmain.keymapper": {
     "openPr": {
-      "checkedAt": "2026-10-30T12:24:59.9110462Z",
+      "checkedAt": "2026-10-31T16:13:50.3869779Z",
       "version": "5.8.1"
     }
   },
@@ -4527,7 +4527,7 @@
     "description": "",
     "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D",
     "openPr": {
-      "checkedAt": "2026-10-30T12:25:01.4094775Z",
+      "checkedAt": "2026-10-31T16:13:50.7572628Z",
       "version": "4.4.5"
     }
   },
@@ -9858,11 +9858,7 @@
     "validationCount": 1,
     "lastUpdated": "2026-10-30T01:47:57.1559825Z",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "04211909EEBC03CF12BAE95F2AFF51D6DC26E2B73AE9309E5A9E1BB76EA7CCB9",
-    "openPr": {
-      "checkedAt": "2026-10-30T04:20:05.4602588Z",
-      "version": "26.10.29"
-    }
+    "manifestHash": "04211909EEBC03CF12BAE95F2AFF51D6DC26E2B73AE9309E5A9E1BB76EA7CCB9"
   },
   "xushengfeng.eSearch": {
     "validationCount": 1,
