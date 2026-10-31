@@ -1369,7 +1369,7 @@
   },
   "Carvel.ytt": {
     "openPr": {
-      "checkedAt": "2026-10-30T00:42:29.1272991Z",
+      "checkedAt": "2026-10-31T04:15:46.0631391Z",
       "version": "0.55.4"
     }
   },
@@ -3638,7 +3638,7 @@
   },
   "HiroshibaKazuyuki.VOICEVOX.CPU": {
     "openPr": {
-      "checkedAt": "2026-10-30T00:42:34.1088263Z",
+      "checkedAt": "2026-10-31T04:15:49.5925739Z",
       "version": "0.26.1"
     }
   },
@@ -7085,7 +7085,11 @@
     "validationCount": 1,
     "lastUpdated": "2026-10-31T01:27:04.1406456Z",
     "version": "1.133.0",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "checkedAt": "2026-10-31T04:15:52.5546339Z",
+      "version": "1.133.0"
+    }
   },
   "purocean.YankNote": {
     "state": "VALIDATION_PASSED",
