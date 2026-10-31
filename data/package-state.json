@@ -5292,16 +5292,16 @@
     "lastUpdated": "2026-10-30T13:22:16.087996Z"
   },
   "Microsoft.Garnet.DN9": {
-    "version": "2.2.4",
-    "manifestHash": "B72CE21DA408B990F858DE738A03A7456709B31C0237A866C1DE3EC5C99A81BA",
+    "installerHashes": [
+      "48103D4E02A90081D6050BC932227C0908947568CE1CAED208E2DAF095A798C3",
+      "DC809F25BBF7378E073BC7167008A608F010DFC2323E9813C94203E24CB3645B"
+    ],
+    "description": "",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "description": "",
-    "lastUpdated": "2026-10-22T21:30:34.1634975Z",
-    "installerHashes": [
-      "5DEA38089679FDF41D7CB37B08193376BD8A9188A87307349BAC7BBB8D1255B3",
-      "00015B8A0ED1704DB18BC3A3E2F555594B107CC5EC9286A676B780D9FFC3004D"
-    ]
+    "version": "2.2.5",
+    "manifestHash": "24E78D0B97344A66EDE5B0CE81127A6C5665D5848D831A6F2999C2123100E769",
+    "lastUpdated": "2026-10-31T17:05:10.4875273Z"
   },
   "Microsoft.LightGBM": {
     "lastUpdated": "2026-08-20T21:12:49.5072525Z",
@@ -5726,15 +5726,15 @@
     "lastUpdated": "2026-09-13T20:44:15.4338737Z"
   },
   "Mukunku.ParquetViewer": {
-    "validationCount": 1,
-    "lastUpdated": "2026-09-15T04:56:52.9762007Z",
     "installerHashes": [
-      "25013D16E1A4715EDF4F5D2A618C414B8528ED2CA727D24337B82D8B2F13B86E"
+      "18E333D999BDC30C7AF00787004B0E62B8762175530AF097CBAADC4A246B32C8"
     ],
-    "version": "4.2.1.0",
     "description": "",
-    "manifestHash": "4FCE637C28AE9F4D6452AAECA89F70C6FE2A26924AD348C765005DD8DD3593AE",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "4.3.0.1",
+    "manifestHash": "E6D7BD8DDCC9A451D538F1E68D167C2D133139B5DE3DA9A051233F8F40592D1A",
+    "lastUpdated": "2026-10-31T17:05:10.4475688Z"
   },
   "MullvadVPN.MullvadVPN": {
     "installerHashes": [
@@ -5959,15 +5959,15 @@
     "manifestHash": "5EBE8F78A880C1167C195458B3FF9ABDF521346435DFAF5B823B4BBB584E98FD"
   },
   "NimaShafie.OxideSLOC": {
-    "version": "1.6.26",
-    "description": "",
-    "validationCount": 1,
-    "lastUpdated": "2026-10-26T09:31:41.3883144Z",
     "installerHashes": [
-      "9E239E6C32B381C5E71A1B951D18718994AC0D26B817239CB9D45016F35BBAF9"
+      "37CF38FE376DBF964CCA8F9F505C9653459EEEE0B5DBBD0BD2E848C04C8D7FA8"
     ],
-    "manifestHash": "214D7E8462036E6520957FE83D47B02FCDCD567B13782C0B2D30424B2A8BD330",
-    "state": "VALIDATION_PASSED"
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "1.6.27",
+    "manifestHash": "AE0C81050BC66AD989E6196358C150C582FF9E985284D6B5D4A91E7FD65FDB93",
+    "lastUpdated": "2026-10-31T17:05:10.5932713Z"
   },
   "Nisonxi.PowerDoze": {
     "manifestHash": "5E5B5D669F1C795D7C92E12BA9F8F1950B7A5E916932F136DD5C4E3AE1D12A26",
@@ -8179,15 +8179,15 @@
     "version": "2.0.4"
   },
   "sparrowwallet.sparrow": {
-    "validationCount": 1,
-    "version": "2.5.5",
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "manifestHash": "9FAC73646B02BD412EC50958582A0825FE5E4196DBF03D56E759EA001602C233",
     "installerHashes": [
-      "0256EB5C8808157F811D57FBDB9F9153101B02947C2F6788F1E7B9DA5FF6111F"
+      "F166A23461C88B1ADA9C21C1AF92D8DBFE796CC3347DD28AB2065896EC5CD8D8"
     ],
-    "lastUpdated": "2026-09-18T08:57:15.9165783Z"
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "2.5.6",
+    "manifestHash": "3359FDA7EC7FB433B6BC7BC64CB70C5967F1888F21A26BF4937C31DF4A7BDF38",
+    "lastUpdated": "2026-10-31T17:05:10.5304882Z"
   },
   "SparshSam.OpenReader": {
     "description": "",
@@ -8234,15 +8234,15 @@
     "lastUpdated": "2026-10-28T05:05:30.1273085Z"
   },
   "sprout2000.LeafView": {
-    "version": "4.5.2",
     "installerHashes": [
-      "E0E1C6BB2ED3D8631E9919EAF9B4A8DD1DFDEF9F21D92F04D55886C97BD43719"
+      "CBB80127CDDA8567EC185921DD2298FC7F3B7911C1AD212768AAF6759D5A26F8"
     ],
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "7F8AFFB13E7B606BDC954D10158EE91147BCD261C1D59E0FE49EC86751C11011",
-    "lastUpdated": "2026-10-28T05:05:30.2295148Z"
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "4.5.3",
+    "manifestHash": "255C73F3C79954CFD890F95345E10FA675F5C72A3A2073973CB6009BD326426E",
+    "lastUpdated": "2026-10-31T17:05:10.5578789Z"
   },
   "sqlectron.sqlectron-gui": {
     "manifestHash": "1E8EB925809A8B24F3B6A6B3D717AED88D0A03E7EB57C8CE6B2142D3860A809E",
