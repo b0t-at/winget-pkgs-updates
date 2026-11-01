@@ -249,8 +249,8 @@
     "description": "",
     "manifestHash": "EC47F274BF6AC0F4521E6D0EB817D544008B8912A5BB121E0BB3728C9A5B4DB6",
     "openPr": {
-      "version": "1.8.0",
-      "checkedAt": "2026-10-21T04:26:47.1946053Z"
+      "checkedAt": "2026-11-01T00:43:13.3288547Z",
+      "version": "1.9.0"
     }
   },
   "AlekseyHoffman.Sigma-File-Manager": {
@@ -820,8 +820,8 @@
   },
   "Barry-ran.QtScrcpy": {
     "openPr": {
-      "version": "4.2.1",
-      "checkedAt": "2026-10-31T00:35:12.1331306Z"
+      "checkedAt": "2026-11-01T00:43:16.5400754Z",
+      "version": "4.2.1"
     }
   },
   "Baulk.Baulk": {
@@ -2721,7 +2721,7 @@
     ],
     "description": "",
     "openPr": {
-      "checkedAt": "2026-10-30T20:20:33.5946067Z",
+      "checkedAt": "2026-11-01T00:42:10.9997624Z",
       "version": "3.3.0"
     }
   },
@@ -6508,7 +6508,7 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "openPr": {
-      "checkedAt": "2026-10-30T20:20:38.6225975Z",
+      "checkedAt": "2026-11-01T00:42:13.5584849Z",
       "version": "1.13.2"
     }
   },
@@ -7053,8 +7053,8 @@
     "description": "",
     "version": "0.32.1",
     "openPr": {
-      "version": "0.32.1",
-      "checkedAt": "2026-10-31T00:34:18.4295757Z"
+      "checkedAt": "2026-11-01T00:42:13.8932685Z",
+      "version": "0.32.1"
     }
   },
   "prsyahmi.WicHeic": {
@@ -7224,8 +7224,8 @@
     "lastUpdated": "2026-08-06T13:08:37.6487059Z",
     "version": "0.5.15",
     "openPr": {
-      "checkedAt": "2026-08-31T20:23:39.0807318Z",
-      "version": "0.5.27"
+      "checkedAt": "2026-11-01T00:42:14.2289694Z",
+      "version": "0.5.29"
     }
   },
   "raskell-io.hx": {
@@ -8748,7 +8748,7 @@
     "manifestHash": "101A50462A6E2BE19AFB17A21278EA44597559D970949753840897CFC30A7566",
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
-      "checkedAt": "2026-10-30T20:21:34.1817997Z",
+      "checkedAt": "2026-11-01T00:42:16.2155961Z",
       "version": "5.7.1"
     }
   },
@@ -8797,7 +8797,7 @@
     "version": "4.9.8",
     "lastUpdated": "2026-09-12T01:32:42.9753228Z",
     "openPr": {
-      "checkedAt": "2026-10-30T20:21:34.5727048Z",
+      "checkedAt": "2026-11-01T00:42:16.5425525Z",
       "version": "4.9.9"
     }
   },
