@@ -406,7 +406,7 @@
     "lastUpdated": "2026-10-24T04:59:32.5470403Z",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-10-31T12:19:02.0417617Z",
+      "checkedAt": "2026-11-01T12:19:24.6531325Z",
       "version": "3.0.9"
     }
   },
@@ -2090,7 +2090,11 @@
     "version": "0.9.12",
     "lastUpdated": "2026-10-23T02:01:31.6982876Z",
     "manifestHash": "749D3E7DB3FADDCC9D62EBAFB8D8A77F1AB85E01D101A1DB4F9128D7779EFDDA",
-    "description": ""
+    "description": "",
+    "openPr": {
+      "checkedAt": "2026-11-01T12:20:22.927191Z",
+      "version": "0.9.12"
+    }
   },
   "Docker.DockerCompose": {
     "version": "5.6.1",
@@ -4149,7 +4153,7 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-10-31T12:18:12.8551802Z",
+      "checkedAt": "2026-11-01T12:18:23.0548733Z",
       "version": "2026.10.25"
     }
   },
