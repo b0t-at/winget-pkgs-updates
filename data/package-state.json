@@ -1369,8 +1369,8 @@
   },
   "Carvel.ytt": {
     "openPr": {
-      "checkedAt": "2026-10-31T04:15:46.0631391Z",
-      "version": "0.55.4"
+      "version": "0.55.4",
+      "checkedAt": "2026-11-01T04:16:31.9299062Z"
     }
   },
   "ccccraz.cogmoteGO": {
@@ -1711,7 +1711,11 @@
     "description": "",
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-10-26T16:53:31.5639831Z",
-    "manifestHash": "4A4A73F7AD208BB301FE22B7B595858EBC077200CB68111FC1B04D36F4CAFCD6"
+    "manifestHash": "4A4A73F7AD208BB301FE22B7B595858EBC077200CB68111FC1B04D36F4CAFCD6",
+    "openPr": {
+      "version": "0.8.0",
+      "checkedAt": "2026-11-01T04:18:12.2179008Z"
+    }
   },
   "CrossTech.ClipboardPro": {
     "manifestHash": "7AC779B69A9C87546A953B360DC9BE6A41D3394D155D63F72059B2D2CBB045FE",
@@ -3638,8 +3642,8 @@
   },
   "HiroshibaKazuyuki.VOICEVOX.CPU": {
     "openPr": {
-      "checkedAt": "2026-10-31T04:15:49.5925739Z",
-      "version": "0.26.1"
+      "version": "0.26.1",
+      "checkedAt": "2026-11-01T04:16:35.9107923Z"
     }
   },
   "HiroSystems.Clarinet": {
@@ -7091,8 +7095,8 @@
     "version": "1.133.0",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "checkedAt": "2026-10-31T04:15:52.5546339Z",
-      "version": "1.133.0"
+      "version": "1.133.0",
+      "checkedAt": "2026-11-01T04:16:37.8720263Z"
     }
   },
   "purocean.YankNote": {
