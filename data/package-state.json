@@ -2805,15 +2805,15 @@
     }
   },
   "FOSSA.FOSSA-cli": {
-    "installerHashes": [
-      "B1A4D63CF886682ACBEEE17FE6B44FCBF668E81B8D2A9687EA1654F15E714BEE"
-    ],
-    "version": "3.20.8",
-    "manifestHash": "0709BE42B736E322546D6C1729CD874B573F71107FF46CA1916BF0C082954B85",
     "validationCount": 1,
-    "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-28T01:25:41.7722434Z"
+    "installerHashes": [
+      "C025B9A900B46A801F9481BCC8B6EBCEA6717F5D8FA51CED4818A416D56C5B5C"
+    ],
+    "lastUpdated": "2026-11-01T08:43:27.9333872Z",
+    "description": "",
+    "version": "3.20.10",
+    "manifestHash": "C632195053D79644E5DF9CF5B6C20D20AC4C6132CCA5836FE71BBB9FDF079426"
   },
   "FrancisBanyikwa.MediaDownloader": {
     "description": "",
@@ -2937,15 +2937,15 @@
     "manifestHash": "EFB8FAEAFB225E96D1924106515C4DDAFA8CD75EA456012FADD2A624ADA7D96B"
   },
   "Gardener.gardenctl": {
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "C066F7116F2457936EB29D7D3A7BCF84058AFCF318F349C78193EECAF66206E3",
-    "installerHashes": [
-      "644B33BC809B5C2AA4D06B0EF885ED665D8F6D069D3959D92CB1EA4F7E22A6D4"
-    ],
-    "description": "",
     "validationCount": 1,
-    "lastUpdated": "2026-10-17T20:34:10.5250474Z",
-    "version": "2.17.0"
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "104010EC8405B1570FA87F828BB92B43ECF52F1F20E26960829B5B7C3A3A1FB1"
+    ],
+    "lastUpdated": "2026-11-01T08:43:27.9601347Z",
+    "description": "",
+    "version": "2.18.0",
+    "manifestHash": "8518EC18AED7853A0CDD2D16A2716E2A2F727AAA29797A571BE7686612E31F49"
   },
   "Gardener.gardenlogin": {
     "validationCount": 1,
@@ -6267,15 +6267,15 @@
     "version": "1.13.0"
   },
   "OneKey.OneKey": {
-    "version": "6.6.3",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-24T12:59:26.1694491Z",
-    "description": "",
-    "manifestHash": "12499E6A7ED9E2F75252A6F84BAB9BF36A287EA1CBE2C4AA27219928BBCC844C",
     "installerHashes": [
-      "C15176CBC9EC512900BBD3CDE35AAE8CD4F4E57B5375C9AD49831BF0FF5B7954"
+      "C0737F9D8C42EAF5659B5E0BAB50EFEEA438D435AE1EDE8F2EB139D21A605F36"
     ],
-    "validationCount": 1
+    "lastUpdated": "2026-11-01T08:43:27.90715Z",
+    "description": "",
+    "version": "6.6.4",
+    "manifestHash": "DC77DC52A67102EFB46EE97B1FB8410600A1E845AF9C1C74C4BEAEEDFF9962AF"
   },
   "OneWare.OneWareStudio": {
     "installerHashes": [
