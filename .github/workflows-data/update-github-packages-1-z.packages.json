@@ -1655,7 +1655,7 @@
   {
     "id": "Wilfred.difftastic",
     "repo": "Wilfred/difftastic",
-    "url": "https://github.com/Wilfred/difftastic/releases/download/{VERSION}/difft-{VERSION}-x86_64-pc-windows-msvc.zip"
+    "url": "https://github.com/Wilfred/difftastic/releases/download/{VERSION}/difft-{VERSION}-x86_64-pc-windows-msvc.zip https://github.com/Wilfred/difftastic/releases/download/{VERSION}/difft-{VERSION}-aarch64-pc-windows-msvc.zip"
   },
   {
     "id": "WillyJL.F95Checker",
@@ -3068,11 +3068,6 @@
     "id": "jmrplens.gitlab-mcp-server",
     "repo": "jmrplens/gitlab-mcp-server",
     "url": "https://github.com/jmrplens/gitlab-mcp-server/releases/download/v{VERSION}/gitlab-mcp-server-windows-amd64.exe https://github.com/jmrplens/gitlab-mcp-server/releases/download/v{VERSION}/gitlab-mcp-server-windows-arm64.exe"
-  },
-  {
-    "id": "JoernBerkefeld.SFMCDataLoader",
-    "repo": "JoernBerkefeld/sfmc-dataloader-app",
-    "url": "https://github.com/JoernBerkefeld/sfmc-dataloader-app/releases/download/v{VERSION}/sfmc-dataloader-app-{VERSION}-win-x64.exe"
   },
   {
     "id": "JohanChane.ClashTui",
