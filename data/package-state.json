@@ -1777,16 +1777,16 @@
     "lastUpdated": "2026-08-19T15:56:01.4509515Z"
   },
   "CryptoPro.Chromium-Gost": {
+    "manifestHash": "A3EA4EC6E38AC0D7D6CB139BD5FF7681B415EB8064A38B33A5A6AF445390A214",
+    "version": "156.0.8078.48",
     "description": "",
-    "installerHashes": [
-      "EF76272230E5586CD2EB45FFF05FDC37FFCFF6A8E6922473D860732E0940429F",
-      "4F416148C8FE1A6624AC08600ACF2B78420172F695DEFA1FB2E02A602B168A3A"
-    ],
-    "lastUpdated": "2026-10-02T01:20:46.4222156Z",
-    "manifestHash": "8ED2CD5FF4F0CEB2B5319C6BC5A1B68D698CFE8808BAD6038FE43BA0EC13D997",
+    "lastUpdated": "2026-11-02T13:03:28.0138229Z",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "152.0.7977.149"
+    "installerHashes": [
+      "8474E98CBDC448785D4E63E90F871BECBC397A5F5E52DF99360D4BF238E9441D",
+      "9CAFA423814B265724A286CA08CF3353AC4720585F720D969AE30942FDB28688"
+    ]
   },
   "cubezombies.MidnightAthenaeum": {
     "manifestHash": "888A7BADCA52EE5B42F755D91B950DA3D3AA1CFB03A6012120CE16761BA13129",
@@ -4147,15 +4147,15 @@
     "version": "2.0.3"
   },
   "jcalado.VoxDMR": {
+    "manifestHash": "F848E2EDBDBEB0014B831BB2F1AF4223BDE79A0856923992E299295D3FEBFDBF",
+    "version": "0.16.1",
     "description": "",
-    "manifestHash": "1804E461312891E36F83FD7597A8AACEE7D192587B699EC578A3D012FFF10AD4",
+    "lastUpdated": "2026-11-02T13:03:27.9894196Z",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-31T09:07:28.3005502Z",
+    "validationCount": 1,
     "installerHashes": [
-      "3F2D551ABFF1A5C2C6CA1634F25577A466312A72C368D4FD4BC849C9E5C172C9"
-    ],
-    "version": "0.16.0",
-    "validationCount": 1
+      "22BF4B992D47B8CBB26FBA0C808A0A70628B181F190F071D6E88F0F94D657041"
+    ]
   },
   "jdx.mise": {
     "openPr": {
@@ -6896,15 +6896,15 @@
     "description": ""
   },
   "pinokiocomputer.pinokio": {
+    "manifestHash": "6105257E6FA1C9F6517A731C21E0FEB3BF21C917C94E1B4E44EBF0D15E6E4895",
+    "version": "8.3.1",
     "description": "",
-    "installerHashes": [
-      "3F94D8DC19BD09F966021E01D479C3440BB1D9237F4A4923BCD0D356E04C7246"
-    ],
-    "manifestHash": "79245C7C4253841E1CB3F6E45619CB119DBB9EB1E50B61EBC2491D1E5001C94C",
+    "lastUpdated": "2026-11-02T13:03:27.910494Z",
     "state": "VALIDATION_PASSED",
-    "version": "8.2.0",
     "validationCount": 1,
-    "lastUpdated": "2026-09-04T20:59:20.481887Z"
+    "installerHashes": [
+      "8202324E9EDF7F550DEC651C27DECE299FF88B0EE654255F4A74D31D3F92F5F8"
+    ]
   },
   "PiusPP.Celestial": {
     "version": "2.1.0",
@@ -10128,15 +10128,15 @@
     "description": ""
   },
   "zevnda.SteamGameIdler": {
-    "validationCount": 1,
-    "manifestHash": "5FB136356FEF03F2DD3A0547F3D184ADC8B62443E2ACB402DC4A8DB35EE03A64",
-    "installerHashes": [
-      "AEDE6FC49576D1004904BFAB3C7B8532EA61231EBA38DCE826F3F15D0E160300"
-    ],
-    "lastUpdated": "2026-10-25T08:58:49.7094281Z",
+    "manifestHash": "54CF16D3C7E27CA831D179501BD1257307F81A64829FF8D17E91EE0E3DF634A4",
+    "version": "6.3.1",
     "description": "",
+    "lastUpdated": "2026-11-02T13:03:27.9500117Z",
     "state": "VALIDATION_PASSED",
-    "version": "6.3.0"
+    "validationCount": 1,
+    "installerHashes": [
+      "C9B609C6D5B982BE2A93C3252F8302C78EA0155A11EB16C1FE61306648964F26"
+    ]
   },
   "Zidoro.Pomatez": {
     "lastUpdated": "2026-08-18T17:25:13.8681281Z",
