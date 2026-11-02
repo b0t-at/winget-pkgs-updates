@@ -780,11 +780,7 @@
     "validationCount": 1,
     "description": "",
     "state": "VALIDATION_PASSED",
-    "version": "0.33.1",
-    "openPr": {
-      "checkedAt": "2026-10-22T04:25:52.924929Z",
-      "version": "0.33.1"
-    }
+    "version": "0.33.1"
   },
   "AyoubTadlaoui.logx": {
     "lastUpdated": "2026-08-18T17:25:13.9116095Z",
@@ -826,7 +822,7 @@
   },
   "Barry-ran.QtScrcpy": {
     "openPr": {
-      "checkedAt": "2026-11-01T00:43:16.5400754Z",
+      "checkedAt": "2026-11-02T08:23:02.6800518Z",
       "version": "4.2.1"
     }
   },
@@ -8750,11 +8746,7 @@
     "installerHashes": [
       "634BE2908AB9E8E83809928ACE24B9889391AD36A14074E538FC32A911D02C53"
     ],
-    "state": "VALIDATION_PASSED",
-    "openPr": {
-      "checkedAt": "2026-09-10T16:23:35.0694182Z",
-      "version": "5.2.4"
-    }
+    "state": "VALIDATION_PASSED"
   },
   "TeleCode.TeleCode": {
     "lastUpdated": "2026-08-16T21:14:49.1075467Z",
