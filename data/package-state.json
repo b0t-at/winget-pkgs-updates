@@ -1181,11 +1181,7 @@
     "validationCount": 1,
     "version": "1.2.5",
     "manifestHash": "81787CB8A4D71FFE5AF7458238621F26813929C3CAB58F9E6A6BCF0762A5E95E",
-    "lastUpdated": "2026-08-20T09:17:27.4984446Z",
-    "openPr": {
-      "version": "1.2.6",
-      "checkedAt": "2026-10-20T12:32:32.9337291Z"
-    }
+    "lastUpdated": "2026-08-20T09:17:27.4984446Z"
   },
   "bornova.numara": {
     "state": "VALIDATION_PASSED",
@@ -7097,11 +7093,7 @@
     "validationCount": 1,
     "lastUpdated": "2026-10-31T01:27:04.1406456Z",
     "version": "1.133.0",
-    "state": "VALIDATION_PASSED",
-    "openPr": {
-      "version": "1.133.0",
-      "checkedAt": "2026-11-01T04:16:37.8720263Z"
-    }
+    "state": "VALIDATION_PASSED"
   },
   "purocean.YankNote": {
     "state": "VALIDATION_PASSED",
