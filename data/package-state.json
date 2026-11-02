@@ -4505,15 +4505,15 @@
     "manifestHash": "7AEA1749B04A7B74880E37E7C7DBCB5E84AEE0404CD563E04D4FA167CAF5B589"
   },
   "KinichiAnjuMakino.unifocl": {
-    "state": "VALIDATION_PASSED",
-    "version": "3.18.2",
+    "manifestHash": "23828E6005A79981EED3A3095445DDE64C08998E034BC55B8982BDE034CF3987",
+    "lastUpdated": "2026-11-02T01:18:25.2982772Z",
     "installerHashes": [
-      "2B0605AFD691D5BF5DFF757191FB539118082A5BBCCD198505CB53DBF410ED7E"
+      "90FD99290079B9BAC475BBDACBFFAD49FE4B6EF5B64CFF5393A7A175135AE26D"
     ],
-    "manifestHash": "A82F9882D61C35CDEFFA4E63C301CD32484AB9E3A64317C39098E04F94609ACC",
-    "description": "",
+    "version": "3.19.0",
     "validationCount": 1,
-    "lastUpdated": "2026-10-24T16:56:00.822397Z"
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "Kitware.CMake": {
     "installerHashes": [
@@ -8465,16 +8465,16 @@
     "state": "VALIDATION_PASSED"
   },
   "SuperRadCompany.Microsandbox": {
-    "version": "0.7.11",
-    "state": "VALIDATION_PASSED",
+    "manifestHash": "7F20D307083062B6EC32EEBA823610303B5F51E1BCACC82B34225D4B48C12B06",
+    "lastUpdated": "2026-11-02T01:18:25.2738394Z",
     "installerHashes": [
-      "029C26F9B938A753E085040D5E8CE49CA4EE6E4EF7B9A66BF2DF169B9495232C",
-      "DC8A4594F801EBC1CBCC95A1A0927D1DD67E915CF617DA39576547F251E1FE13"
+      "F6DE31FE34A600F04EB4548A6E5AEAEF96CF0A1CBC6FCCF6651BB3FAE489D22A",
+      "E8A5B88E9415F54709AE7F23B0E19ACD430D482A4891F13FD79BFE2FA094E814"
     ],
-    "manifestHash": "AB5E78A2EADAD36F524DF7BB6F65FA7945D6157F21EF19AE956D9361D87284DC",
+    "version": "0.7.13",
     "validationCount": 1,
-    "description": "",
-    "lastUpdated": "2026-10-27T05:11:21.4841893Z"
+    "state": "VALIDATION_PASSED",
+    "description": ""
   },
   "SUSE.RancherDesktop": {
     "description": "",
@@ -8869,15 +8869,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
+    "manifestHash": "4027A805CA90444C7B250CAA9F2548A15D6B51F50E8745FED55D46F9FA6D9905",
+    "lastUpdated": "2026-11-02T01:18:25.2554243Z",
+    "installerHashes": [
+      "E33928FA7D0B10AC84CB5F608A8C7BFEC2D547BB0C9C1ABAA00B892C2BE121AD"
+    ],
+    "version": "2.81.1",
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "7BC63235C090E82B274D0E2B3F7108738CE006740C967F171BD8A1C1CE6D8B36"
-    ],
-    "version": "2.78.3",
-    "lastUpdated": "2026-11-01T01:10:08.8157359Z",
-    "description": "",
-    "manifestHash": "B144710FD681A0EDA9E30DD1D1B1B2B363A9C480127C362FF57905EFDE76F01A"
+    "description": ""
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
@@ -9884,15 +9884,15 @@
     "description": ""
   },
   "Yaak.app": {
+    "manifestHash": "F0B6684A8302FDE7B976F11476BEAEF76A325EF13271E7EB920796DD712247DF",
+    "lastUpdated": "2026-11-02T01:18:25.1846086Z",
+    "installerHashes": [
+      "823084C8833ADD90C5FFD35BF38F49D2B9867F054920B2F22E00662B88A05750"
+    ],
+    "version": "2026.9.1",
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-11T01:38:55.4013233Z",
-    "version": "2026.9.0",
-    "manifestHash": "166882859B0DF90544D33ED12E553896B9816D8985340DECB6C6B5FB4C2E0FC2",
-    "description": "",
-    "installerHashes": [
-      "AF45E72C91B86B9D005D477F9E87B03D4B7310001E26362ABF1F97418FA1D720"
-    ]
+    "description": ""
   },
   "yang991178.fluent-reader": {
     "state": "VALIDATION_PASSED",
