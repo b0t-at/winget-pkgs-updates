@@ -693,11 +693,7 @@
     "installerHashes": [
       "F3A639E2E07B3F7386CDF681FA5B01EFF74AA4F888B38910E912350575CBECA8"
     ],
-    "lastUpdated": "2026-10-30T13:22:16.1155245Z",
-    "openPr": {
-      "checkedAt": "2026-10-30T16:19:37.5861171Z",
-      "version": "0.29.0"
-    }
+    "lastUpdated": "2026-10-30T13:22:16.1155245Z"
   },
   "Automattic.Wordpress": {
     "installerHashes": [
@@ -6997,6 +6993,12 @@
     "validationCount": 1,
     "manifestHash": "ADB2E9FB1599B4D9CEB3D707B75871F44B739583B8D27C887DF3C4BBD7F1C83F",
     "state": "VALIDATION_PASSED"
+  },
+  "PolarGoose.CoffeeBean": {
+    "openPr": {
+      "version": "6.0",
+      "checkedAt": "2026-11-03T00:34:29.9506969Z"
+    }
   },
   "PolyMC.PolyMC": {
     "installerHashes": [
