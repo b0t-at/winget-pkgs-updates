@@ -1900,15 +1900,15 @@
     "manifestHash": "AC4E6E01DCF70E738A5AFF74839A24626E219073B90B09F8CC41D47D066587D8"
   },
   "Datadog.dd-trace-dotnet": {
-    "lastUpdated": "2026-10-19T12:54:40.274816Z",
-    "installerHashes": [
-      "738B64B97EEEBFB7ECBEAC09AB495404D2DC1D9403A3ACF039CE1894AC485241"
-    ],
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-03T05:06:03.8032505Z",
+    "manifestHash": "076A109C7BBB50E4E0B940D8E7A7A1DD18357EED340F804F696A32071C45B80A",
+    "version": "3.57.0",
     "validationCount": 1,
-    "manifestHash": "D5F79EF4C3106C0EAD8408FE18351648158184B896985CCC3EF3CF225E56A4A3",
-    "version": "3.56.0",
-    "description": "",
-    "state": "VALIDATION_PASSED"
+    "installerHashes": [
+      "0028E0302BFEC11D6370374DF558E09E24E1E868EC0BA7805062C2365F31B737"
+    ],
+    "description": ""
   },
   "DDEVFoundation.DDEV": {
     "state": "VALIDATION_PASSED",
@@ -2179,15 +2179,15 @@
     "validationCount": 1
   },
   "Dystroy.broot": {
-    "version": "1.61.0",
-    "validationCount": 3,
-    "installerHashes": [
-      "6CAFE8E993FB8E5684EB25549703A4FB9DEC61AC6A8F1947CBED6566CB4E58E5"
-    ],
-    "lastUpdated": "2026-10-09T21:05:27.5204213Z",
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "manifestHash": "9A6872FAEC3899B1C18645128F20192E940B12B4BC315366374D5A048997E77C"
+    "lastUpdated": "2026-11-03T05:06:03.8608388Z",
+    "manifestHash": "BCF9C2219EA90214A7C4AF53D2F3C726AC3F21F0291CB228219CBC3B930179B7",
+    "version": "1.62.0",
+    "validationCount": 1,
+    "installerHashes": [
+      "13630AE5D3B011DDC81FCA05CB80DBEE6189DAD3BA393DD477F5F687C7B5106D"
+    ],
+    "description": ""
   },
   "Easure.HelpMePrint": {
     "configHealth": {
@@ -2623,14 +2623,14 @@
   },
   "Fangyuan025.Chaty": {
     "state": "VALIDATION_PASSED",
-    "version": "2.3.7",
-    "description": "",
-    "manifestHash": "D5716AAACD2C22B53D11BD5881130A1F2ADB91FAC6ECB4AB46F9E4CA61AE40F4",
+    "lastUpdated": "2026-11-03T05:06:03.8252935Z",
+    "manifestHash": "8A4C16EBC00DA62A11221A09EC275AB1CD2AF39D4DE030271A4250D3BE384F43",
+    "version": "2.3.9",
     "validationCount": 1,
-    "lastUpdated": "2026-10-27T01:42:29.7738758Z",
     "installerHashes": [
-      "686B762A4AE7A20DFD7CAB9E723CEEEAC3CFDD6BBA1029D5781AF073A22F3732"
-    ]
+      "914A4A744D39732BA8B443016F835A106E8D26770D827F82EDE56A1F2BC6EA83"
+    ],
+    "description": ""
   },
   "Feho.LogNav": {
     "installerHashes": [
@@ -4791,15 +4791,15 @@
     "version": "2026.8.2"
   },
   "loft-sh.vcluster": {
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-03T05:06:03.9193558Z",
+    "manifestHash": "4F4E4C22CAF89B656324E1B3E9EC5ACA1EAFA1913EED0F5785089D73EC20327C",
+    "version": "0.37.6",
     "validationCount": 1,
-    "description": "",
-    "manifestHash": "F71B7B8838522358981BE9576152B9977A16432DCC0224F384113BB94975A8B1",
-    "version": "0.37.5",
-    "lastUpdated": "2026-10-31T12:50:46.1975801Z",
     "installerHashes": [
-      "DDB861A9FA9E5884A8677DA9D9E8D7C57A9E17172DD5084BEE71EDA33A052589"
+      "16CD6FB31B224D2B5905F53E33CC076A7A54D227F3CA6E770B79BC9A16593CC4"
     ],
-    "state": "VALIDATION_PASSED"
+    "description": ""
   },
   "Longbridge.LongbridgeTerminal": {
     "validationCount": 6,
@@ -6976,15 +6976,15 @@
     "description": ""
   },
   "PocketSync.PocketSync": {
-    "installerHashes": [
-      "C773DEE020055BD637AFA4BABF320A751CBBF4FF1953C104875F6453974C16FC"
-    ],
-    "lastUpdated": "2026-10-20T04:51:03.4469851Z",
-    "description": "",
-    "version": "7.1.1",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-03T05:06:03.8857414Z",
+    "manifestHash": "D58F5C18BD85D11161353C363CCE67104B6224F2691E8094D18AF331B374DF59",
+    "version": "7.2.0",
     "validationCount": 1,
-    "manifestHash": "ADB2E9FB1599B4D9CEB3D707B75871F44B739583B8D27C887DF3C4BBD7F1C83F",
-    "state": "VALIDATION_PASSED"
+    "installerHashes": [
+      "2D4A463A3BA53A18981C772CAE58AF518172F6A9109F7B2EE1A9A0A2B25F2077"
+    ],
+    "description": ""
   },
   "PolarGoose.CoffeeBean": {
     "openPr": {
@@ -8883,14 +8883,14 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "manifestHash": "4027A805CA90444C7B250CAA9F2548A15D6B51F50E8745FED55D46F9FA6D9905",
-    "lastUpdated": "2026-11-02T01:18:25.2554243Z",
-    "installerHashes": [
-      "E33928FA7D0B10AC84CB5F608A8C7BFEC2D547BB0C9C1ABAA00B892C2BE121AD"
-    ],
-    "version": "2.81.1",
-    "validationCount": 1,
     "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-03T05:06:03.7455714Z",
+    "manifestHash": "366DF5A87DC50DA3A8A547F5EA5CB6F60E04EFDCA92E592BFD53CCCDC99BC0B1",
+    "version": "2.81.2",
+    "validationCount": 1,
+    "installerHashes": [
+      "119899BC428C51B0B252E75D3468AE70456E035BED306A40C82D71D595ECB000"
+    ],
     "description": ""
   },
   "timminator.VideOCR.CPU": {
