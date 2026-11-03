@@ -685,15 +685,15 @@
     }
   },
   "AtaraxyLabs.sem": {
-    "version": "0.29.0",
-    "manifestHash": "837F833E401D6BE5A07C1A1FAEFCBD88FEB1C341C99E73339F86875F07C414F2",
     "state": "VALIDATION_PASSED",
+    "manifestHash": "988AEEEE5D7FBF851273DECE79796C26C870DD9BC74B77D09A1301FC461734DD",
+    "lastUpdated": "2026-11-03T12:47:55.1465705Z",
     "description": "",
     "validationCount": 1,
+    "version": "0.29.1",
     "installerHashes": [
-      "F3A639E2E07B3F7386CDF681FA5B01EFF74AA4F888B38910E912350575CBECA8"
-    ],
-    "lastUpdated": "2026-10-30T13:22:16.1155245Z"
+      "A5D3F6ACE061FE5416A455FFDC2D3E1D9963B44C95AFF490B623F88EC3A2456C"
+    ]
   },
   "Automattic.Wordpress": {
     "installerHashes": [
@@ -1581,15 +1581,15 @@
     "manifestHash": "302E98254163581A0AF4BEB225C9BEC030427C989FE7979859E88950D5BD830A"
   },
   "closeio.Close": {
-    "version": "9.3.3",
-    "manifestHash": "82C80AE90C72030E3719A59843BD0026E72BA5EC52451CEBC00F4B4FDD96EAA5",
-    "lastUpdated": "2026-09-16T12:48:19.8591148Z",
-    "installerHashes": [
-      "643AE6483B93545799735F39D4EF222C299BAACB960B8BFE0C46F59F0D7E782D"
-    ],
-    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "2E9E884F21960B3EE1CD889C76EE9DA94E89D32F27753348DBD1F2990C692898",
+    "lastUpdated": "2026-11-03T12:47:55.1197785Z",
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "validationCount": 1,
+    "version": "9.4.0",
+    "installerHashes": [
+      "7CDA474EC1E3A638784D453668F53E6360B242A26AC6CC2825A794330DC9C62C"
+    ]
   },
   "Cloudreve.Cloudreve": {
     "installerHashes": [
@@ -2351,15 +2351,15 @@
     ]
   },
   "ENIAC-Tech.FlexDesigner": {
+    "state": "VALIDATION_FAILED",
+    "manifestHash": "BC5CB1C779B358843DFDCE28DF68D183FBAD73D2FC338ECDDC343744DC702C11",
+    "lastUpdated": "2026-11-03T12:47:55.0283727Z",
     "description": "",
-    "manifestHash": "BEC0CFFCFF54E945A6F621BB3815546461F3BEE3F278BD1957CE44DF3C528200",
-    "lastUpdated": "2026-08-19T21:00:00.3490987Z",
-    "version": "2.2.3",
-    "installerHashes": [
-      "290B7C140F0E8EC23B247F960D79F9CADDE84220008CCCEC78C7F71F033AC7B2"
-    ],
     "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "version": "2.2.5",
+    "installerHashes": [
+      "69F9A1660C5F9A4C0CEC42EADD7A46F57A594DE173EAF7B3B19967C49FA267FF"
+    ]
   },
   "ente-io.photos-desktop": {
     "lastUpdated": "2026-07-08T05:44:24.163119Z",
@@ -4774,16 +4774,16 @@
     "description": ""
   },
   "LiveKit.LiveKitCLI": {
+    "state": "VALIDATION_FAILED",
+    "manifestHash": "283332D8FCA5B8696F44A14C451C7362C2C77586CA664C10BB1519F8AF8ABA6A",
+    "lastUpdated": "2026-11-03T12:47:55.0981Z",
+    "description": "",
     "validationCount": 1,
+    "version": "2.19.3",
     "installerHashes": [
-      "3A76873BD0A593D03B1305499AE0E468A242742EB3BFBFAC737F27F1D00BE139",
-      "6EBD93F83A47632839FF65BB5D871BBD5348B938775DF8A9E961112DD7111E2D"
-    ],
-    "state": "VALIDATION_PASSED",
-    "version": "2.19.2",
-    "lastUpdated": "2026-10-23T02:01:31.7314286Z",
-    "manifestHash": "1DBCAC40D3D60AB00C4A84B7177B4D753D071CB4D242080D12AB923751177158",
-    "description": ""
+      "ED46ADCCA5D570CEEBF0A6FD1BB25439FD37C0A0863FD1DB6671F2689D9F6924",
+      "97A4D3BDBC02441EA1658C2CC7E5A7D987571D3CDDE4DEA6B7F4F902F1742A12"
+    ]
   },
   "LocalStack.localstack-cli": {
     "description": "",
