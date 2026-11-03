@@ -1946,13 +1946,13 @@
     "lastUpdated": "2026-08-17T21:15:38.3875985Z"
   },
   "DeskRipple.DeskRipple": {
-    "manifestHash": "87AF1D8D8B972CB99CA5873D7D33AF2E84623F13C2E445028CC62BA3EA001EC4",
-    "description": "",
-    "lastUpdated": "2026-10-15T08:58:38.2698675Z",
+    "manifestHash": "A589541C42BF13797F9F0BB3E2C9AA8C166F93C4AD34B79CD336D9582037227F",
+    "lastUpdated": "2026-11-03T16:57:54.292449Z",
     "installerHashes": [
-      "994910BE8EEF24DB5A622E8CF7EE36278652A56A2740B1D4FD453EBF3307C92F"
+      "415CE0443C8D4DB3F867B84CF80FB122337C4B46ED73105F71BC78A35CF58938"
     ],
-    "version": "1.1.1",
+    "version": "1.1.2",
+    "description": "",
     "validationCount": 1,
     "state": "VALIDATION_PASSED"
   },
@@ -4774,11 +4774,11 @@
     "description": ""
   },
   "LiveKit.LiveKitCLI": {
-    "state": "VALIDATION_FAILED",
+    "state": "VALIDATION_PASSED",
     "manifestHash": "283332D8FCA5B8696F44A14C451C7362C2C77586CA664C10BB1519F8AF8ABA6A",
-    "lastUpdated": "2026-11-03T12:47:55.0981Z",
+    "lastUpdated": "2026-11-03T16:57:54.2585315Z",
     "description": "",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "2.19.3",
     "installerHashes": [
       "ED46ADCCA5D570CEEBF0A6FD1BB25439FD37C0A0863FD1DB6671F2689D9F6924",
@@ -4998,15 +4998,15 @@
     }
   },
   "marcinz606.NegPy": {
+    "manifestHash": "C57A589C7500566E70A1266369679E45E9B9F88E64C7E069389558F315CF208A",
+    "lastUpdated": "2026-11-03T16:57:54.3443564Z",
+    "installerHashes": [
+      "1CA3D5CF91DC7810120E5F6C9D1A58B4BC37CC7BADD17EC2ECE4DDF0EDE5DFDA"
+    ],
+    "version": "0.67.0",
     "description": "",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-25T12:55:45.1330083Z",
-    "version": "0.66.0",
-    "manifestHash": "5143191C8B2F9AE7518900B56AB42F58C25BD1AFAE7AF54BFDBA61F58FF7606D",
-    "installerHashes": [
-      "1547A3355B0A5644D312A03B96D3B701A3F49D875AB04BEB857D93DACF25E447"
-    ]
+    "state": "VALIDATION_PASSED"
   },
   "MarcoHefti.YTVodManager": {
     "manifestHash": "D6B8CC28C195C1925AC443615826FDE9EB33D111F50144DC9CE7DF76A34B98CB",
@@ -6544,15 +6544,15 @@
     "state": "VALIDATION_PASSED"
   },
   "openwong2kim.wmux": {
-    "description": "",
-    "manifestHash": "06D06CBD0664330A248E33221E8FD77B7E1A3C8552A9C6489CC3B55441316C81",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-31T09:07:28.3769003Z",
+    "manifestHash": "B64FF519377DA3D77EED37688E9D0C53595C3785789DAB4A8F5C846D954C1FCE",
+    "lastUpdated": "2026-11-03T16:57:54.3692952Z",
     "installerHashes": [
-      "72EF556A5D02AC306E27E643329E87657E01C17F530DA3A23CB89431AC5C039D"
+      "66F0F91009342480B6201314F6C93E6D2636D0F35A57BE3D2A0116D724538653"
     ],
-    "version": "4.13.0",
-    "validationCount": 1
+    "version": "4.14.0",
+    "description": "",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
   },
   "openwong2kim.wsnap": {
     "installerHashes": [
@@ -8887,15 +8887,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-03T05:06:03.7455714Z",
-    "manifestHash": "366DF5A87DC50DA3A8A547F5EA5CB6F60E04EFDCA92E592BFD53CCCDC99BC0B1",
-    "version": "2.81.2",
-    "validationCount": 1,
+    "manifestHash": "99F68AB55990991AA033091C9F18DEE6980B7BEEE0D781A561B7C3ED026284C4",
+    "lastUpdated": "2026-11-03T16:57:54.327221Z",
     "installerHashes": [
-      "119899BC428C51B0B252E75D3468AE70456E035BED306A40C82D71D595ECB000"
+      "A22D48AFED4A762CC7A2D6F9BB8D643501D15320BB072FD7756CE331B928B05D"
     ],
-    "description": ""
+    "version": "2.82.0",
+    "description": "",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
