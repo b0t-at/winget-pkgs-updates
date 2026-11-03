@@ -1373,7 +1373,7 @@
   },
   "Carvel.ytt": {
     "openPr": {
-      "checkedAt": "2026-11-02T04:18:02.8679486Z",
+      "checkedAt": "2026-11-03T08:19:41.6277904Z",
       "version": "0.55.4"
     }
   },
@@ -2733,7 +2733,7 @@
     ],
     "description": "",
     "openPr": {
-      "checkedAt": "2026-11-02T04:18:06.3562914Z",
+      "checkedAt": "2026-11-03T08:19:43.3874402Z",
       "version": "3.3.0"
     }
   },
@@ -3646,7 +3646,7 @@
   },
   "HiroshibaKazuyuki.VOICEVOX.CPU": {
     "openPr": {
-      "checkedAt": "2026-11-02T04:18:06.8555884Z",
+      "checkedAt": "2026-11-03T08:19:43.8456323Z",
       "version": "0.26.1"
     }
   },
@@ -4437,7 +4437,11 @@
     "manifestHash": "1B7D562145110A2AB4483E50909945476B8ED7491B1F57E8408A373E465946E7",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "18.1.1"
+    "version": "18.1.1",
+    "openPr": {
+      "checkedAt": "2026-11-03T08:19:45.0921623Z",
+      "version": "18.1.9"
+    }
   },
   "KellyBrazil.jc": {
     "version": "1.26.2",
@@ -6199,8 +6203,8 @@
       "933794EE1D670137F5116C9DE7FC7DB092FA97C6B823ABA848DDB8A7EA030828"
     ],
     "openPr": {
-      "checkedAt": "2026-10-29T04:20:23.6147799Z",
-      "version": "0.40.13"
+      "checkedAt": "2026-11-03T08:19:47.0719712Z",
+      "version": "0.40.14"
     }
   },
   "Ombrelin.PandocGui": {
@@ -6524,7 +6528,7 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "openPr": {
-      "checkedAt": "2026-11-02T04:18:08.9538131Z",
+      "checkedAt": "2026-11-03T08:20:00.0433719Z",
       "version": "1.13.2"
     }
   },
@@ -7075,7 +7079,7 @@
     "description": "",
     "version": "0.32.1",
     "openPr": {
-      "checkedAt": "2026-11-02T04:18:11.0559373Z",
+      "checkedAt": "2026-11-03T08:20:00.4408765Z",
       "version": "0.32.1"
     }
   },
@@ -7242,7 +7246,7 @@
     "lastUpdated": "2026-08-06T13:08:37.6487059Z",
     "version": "0.5.15",
     "openPr": {
-      "checkedAt": "2026-11-02T04:18:12.327701Z",
+      "checkedAt": "2026-11-03T08:20:01.3920248Z",
       "version": "0.5.29"
     }
   },
@@ -8762,7 +8766,7 @@
     "manifestHash": "101A50462A6E2BE19AFB17A21278EA44597559D970949753840897CFC30A7566",
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
-      "checkedAt": "2026-11-02T04:19:02.6119286Z",
+      "checkedAt": "2026-11-03T08:20:04.352796Z",
       "version": "5.7.1"
     }
   },
@@ -8811,7 +8815,7 @@
     "version": "4.9.8",
     "lastUpdated": "2026-09-12T01:32:42.9753228Z",
     "openPr": {
-      "checkedAt": "2026-11-02T04:19:03.121303Z",
+      "checkedAt": "2026-11-03T08:20:04.7667066Z",
       "version": "4.9.9"
     }
   },
