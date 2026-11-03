@@ -2242,7 +2242,7 @@
     "description": "",
     "openPr": {
       "version": "2.12.5",
-      "checkedAt": "2026-11-02T20:14:22.3288683Z"
+      "checkedAt": "2026-11-03T20:15:10.2325115Z"
     }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
@@ -3613,7 +3613,7 @@
     "description": "",
     "openPr": {
       "version": "0.18.0",
-      "checkedAt": "2026-11-02T16:17:53.9376698Z"
+      "checkedAt": "2026-11-03T20:15:13.2192785Z"
     }
   },
   "Hiddify.Next": {
@@ -3791,7 +3791,7 @@
   "houmain.keymapper": {
     "openPr": {
       "version": "5.8.1",
-      "checkedAt": "2026-11-02T16:17:54.4293882Z"
+      "checkedAt": "2026-11-03T20:15:13.6839136Z"
     }
   },
   "hrkfdn.ncspot": {
@@ -4180,11 +4180,7 @@
     ],
     "state": "VALIDATION_PASSED",
     "manifestHash": "793CCD32719DDF14167412616FC7BC4105B1F2BD895D4FFD219B9DB73C448BE0",
-    "validationCount": 1,
-    "openPr": {
-      "version": "8.1.3-1",
-      "checkedAt": "2026-09-29T20:25:55.9978945Z"
-    }
+    "validationCount": 1
   },
   "Jellyfin.Server": {
     "state": "VALIDATION_PASSED",
@@ -4546,7 +4542,7 @@
     "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D",
     "openPr": {
       "version": "4.4.5",
-      "checkedAt": "2026-11-02T16:17:55.7376392Z"
+      "checkedAt": "2026-11-03T20:15:24.1230404Z"
     }
   },
   "kmiya-culti.RLogin": {
@@ -4783,7 +4779,11 @@
     "installerHashes": [
       "ED46ADCCA5D570CEEBF0A6FD1BB25439FD37C0A0863FD1DB6671F2689D9F6924",
       "97A4D3BDBC02441EA1658C2CC7E5A7D987571D3CDDE4DEA6B7F4F902F1742A12"
-    ]
+    ],
+    "openPr": {
+      "version": "2.19.3",
+      "checkedAt": "2026-11-03T20:15:25.3267557Z"
+    }
   },
   "LocalStack.localstack-cli": {
     "description": "",
@@ -6575,11 +6575,7 @@
     ],
     "lastUpdated": "2026-08-05T12:38:58.6145802Z",
     "manifestHash": "B32B56B715A2A1035333EA8937441CAA341AEF0A3799FCEF68D270E5C9FF170F",
-    "version": "1.2",
-    "openPr": {
-      "version": "1.2.3",
-      "checkedAt": "2026-10-19T12:34:13.8903993Z"
-    }
+    "version": "1.2"
   },
   "ORASProject.ORAS": {
     "validationCount": 1,
@@ -8445,8 +8441,8 @@
     "validationCount": 1,
     "manifestHash": "2FC17D10387329E5E73DBDDCBE45541A670D1711C99B916B986BBD747577DEC7",
     "openPr": {
-      "checkedAt": "2026-10-28T00:43:14.8915278Z",
-      "version": "1.55.3"
+      "version": "1.55.7",
+      "checkedAt": "2026-11-03T20:15:30.9777756Z"
     }
   },
   "stuncloud.uwscr": {
