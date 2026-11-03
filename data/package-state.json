@@ -310,8 +310,8 @@
       "3FE1E1201C2842B8EE23A92B6C27DD84CD768F00E997310B451921113A8FD297"
     ],
     "openPr": {
-      "checkedAt": "2026-10-30T20:21:44.206316Z",
-      "version": "1.0.169"
+      "checkedAt": "2026-11-03T04:17:28.799837Z",
+      "version": "1.0.170"
     }
   },
   "AloproAgency.WAutoChat": {
@@ -4437,11 +4437,7 @@
     "manifestHash": "1B7D562145110A2AB4483E50909945476B8ED7491B1F57E8408A373E465946E7",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "18.1.1",
-    "openPr": {
-      "checkedAt": "2026-10-14T20:21:57.2560488Z",
-      "version": "18.1.8"
-    }
+    "version": "18.1.1"
   },
   "KellyBrazil.jc": {
     "version": "1.26.2",
@@ -4783,11 +4779,7 @@
     "version": "2.19.2",
     "lastUpdated": "2026-10-23T02:01:31.7314286Z",
     "manifestHash": "1DBCAC40D3D60AB00C4A84B7177B4D753D071CB4D242080D12AB923751177158",
-    "description": "",
-    "openPr": {
-      "checkedAt": "2026-10-23T04:26:18.5821848Z",
-      "version": "2.19.2"
-    }
+    "description": ""
   },
   "LocalStack.localstack-cli": {
     "description": "",
