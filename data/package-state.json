@@ -565,15 +565,15 @@
     }
   },
   "argoproj.argocd": {
-    "version": "3.5.6",
-    "lastUpdated": "2026-10-21T13:25:53.5932617Z",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "description": "",
+    "manifestHash": "8772D1AE325A8F0BFF2FC4C99038C2CDA52876886813CD967102548652BBE100",
     "installerHashes": [
-      "BAB989274B6EBCD1B182EFEF621353B386EA2D7278DB6B4A3766C5CD0D136CF5"
+      "2760487C36A06EF23F9B14BBC1D89A5C11F065EDE5ABC0FBF9899650AAD65495"
     ],
-    "manifestHash": "5DAFC96FAEA0C799846433CABED2348D89D2AB18D45C22943177E3E6FDB5CA85"
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "version": "3.5.7",
+    "description": "",
+    "lastUpdated": "2026-11-03T21:01:18.1280117Z"
   },
   "Arihant25.Chargle": {
     "description": "",
@@ -1626,15 +1626,15 @@
     "lastUpdated": "2026-06-13T21:57:50.2974106Z"
   },
   "Concourse.Fly": {
-    "version": "8.3.2",
-    "lastUpdated": "2026-10-23T09:01:35.0803396Z",
-    "manifestHash": "C3A9F116EBB91A0BA97467B1BD583B241E439D2E137C6C22A555AAF68B38C6FC",
-    "description": "",
-    "validationCount": 1,
+    "manifestHash": "5E0E0FE38A2FAABD2AD653E829327DD8E4A5DF5155DCB898D886AA81459E3BC5",
     "installerHashes": [
-      "C351FDBF98809C85DD4CB975E222890B8E7D7E74CCBA3891FCD3F21EA95A30BF"
+      "0A3F5650484E82AFC7C7929A02B3724DB4199835DB59D9ED0966025C72D67077"
     ],
-    "state": "VALIDATION_PASSED"
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "version": "8.3.3",
+    "description": "",
+    "lastUpdated": "2026-11-03T21:01:18.1597652Z"
   },
   "Containers.PodmanTUI": {
     "installerHashes": [
@@ -2351,11 +2351,11 @@
     ]
   },
   "ENIAC-Tech.FlexDesigner": {
-    "state": "VALIDATION_FAILED",
+    "state": "VALIDATION_PASSED",
     "manifestHash": "BC5CB1C779B358843DFDCE28DF68D183FBAD73D2FC338ECDDC343744DC702C11",
-    "lastUpdated": "2026-11-03T12:47:55.0283727Z",
+    "lastUpdated": "2026-11-03T21:01:18.0999765Z",
     "description": "",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "2.2.5",
     "installerHashes": [
       "69F9A1660C5F9A4C0CEC42EADD7A46F57A594DE173EAF7B3B19967C49FA267FF"
@@ -4357,16 +4357,16 @@
     "state": "VALIDATION_PASSED"
   },
   "kagg886.Pixiv-MultiPlatform": {
-    "lastUpdated": "2026-08-16T21:14:48.8151222Z",
-    "description": "",
-    "manifestHash": "13A158EECA99AEA69CCB3575F24C36F30C6CC50B5AECD429E6035D32FB274710",
-    "state": "VALIDATION_PASSED",
-    "version": "1.8.7",
-    "validationCount": 1,
+    "manifestHash": "E0100CE65F0888A638380C28E8C030EE248A523779151AAB86C526C72935A049",
     "installerHashes": [
-      "42795AA31BBFDB42A66B6884F2DCDE2205219B1D1519B4D4C64D04C1C59870A7",
-      "A7040730B913DB4EDDBF4A46D5DF05E5C11BAD5531EE83755040764EE70119F2"
-    ]
+      "6BB4715A5147F26674D783985E9ADBB3E9B0EDB21ACD472EE0C967D34E0BDDDA",
+      "6C1EBC82CE0E0F7FF84312964E858F50350D1CAA65F305A76CEEBE07C8DF4B27"
+    ],
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "version": "1.8.8",
+    "description": "",
+    "lastUpdated": "2026-11-03T21:01:18.2103805Z"
   },
   "Kajitsy.Emilia": {
     "version": "3.3.6",
@@ -9056,16 +9056,16 @@
     ]
   },
   "tsouth89.CubbyClipboard": {
-    "version": "1.3.8",
-    "lastUpdated": "2026-11-01T05:01:20.4581438Z",
-    "validationCount": 1,
-    "manifestHash": "40ECF9F880D26194F0B873C4FA9EC063623FBE4A95EA14A723382834396C8277",
-    "description": "",
-    "state": "VALIDATION_PASSED",
+    "manifestHash": "51B25651697210097EDBED0BBEE9F23EC67743E2930C26BFC440571CF6375C2E",
     "installerHashes": [
-      "9D43498FFF83B574665E2232F9B73AB1D91B89418334197533B1B691014D66BF",
-      "8BA158307BD32CF9952EDDC093998B3FEEE92F9CC06E1DC9F32BD030BFE9CA03"
-    ]
+      "4612E672190300C1B20F2E1B2422A16CAD24A39AED15A22630C244A7629D1EE9",
+      "798929C411F126EA4E0FD3F31665AA94CD512643CF1B29F6EE38430689700100"
+    ],
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "version": "1.3.9",
+    "description": "",
+    "lastUpdated": "2026-11-03T21:01:18.1836795Z"
   },
   "tuna-f1sh.cyme": {
     "state": "VALIDATION_PASSED",
@@ -9230,6 +9230,17 @@
     "version": "53.1",
     "description": "",
     "manifestHash": "BFBF802F8E82C8A4861D92DC824D142549F367E9DABA45313AC00A5A19AED662"
+  },
+  "Universal-Debloater-Alliance.uad-ng": {
+    "manifestHash": "DAB41A340BE970313381452C338B8EE41BCBDD4BA91DB864F74C5E12DDC147A4",
+    "installerHashes": [
+      "FD0A0CF3FA9B3B1C3B0BAC8F93C4A6F79B7E53B2860FC6BB1DFC5A75CD3AFB67"
+    ],
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "version": "1.3.1",
+    "description": "",
+    "lastUpdated": "2026-11-03T21:01:18.0514982Z"
   },
   "UniversityOfEdinburgh.QuPath": {
     "state": "VALIDATION_PASSED",
