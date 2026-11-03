@@ -125,11 +125,7 @@
     ],
     "lastUpdated": "2026-08-06T14:10:17.4048445Z",
     "manifestHash": "88FF875B5DEA51BC3B743F06098AADAF42AB87DA966E19E5EFA189C21F4EC081",
-    "version": "0.107.78",
-    "openPr": {
-      "version": "0.107.79",
-      "checkedAt": "2026-10-07T12:36:25.8486301Z"
-    }
+    "version": "0.107.78"
   },
   "AdGuard.dnsproxy": {
     "installerHashes": [
@@ -406,7 +402,7 @@
     "lastUpdated": "2026-10-24T04:59:32.5470403Z",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-11-02T12:23:35.9801553Z",
+      "checkedAt": "2026-11-03T16:18:22.5302265Z",
       "version": "3.0.9"
     }
   },
@@ -693,7 +689,11 @@
     "version": "0.29.1",
     "installerHashes": [
       "A5D3F6ACE061FE5416A455FFDC2D3E1D9963B44C95AFF490B623F88EC3A2456C"
-    ]
+    ],
+    "openPr": {
+      "checkedAt": "2026-11-03T16:18:23.9065457Z",
+      "version": "0.29.1"
+    }
   },
   "Automattic.Wordpress": {
     "installerHashes": [
@@ -4155,8 +4155,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-11-02T12:22:30.9618938Z",
-      "version": "2026.10.25"
+      "checkedAt": "2026-11-03T16:17:13.8927236Z",
+      "version": "2026.11.0"
     }
   },
   "jeffaristi92.Sweeft": {
