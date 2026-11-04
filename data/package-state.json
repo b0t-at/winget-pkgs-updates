@@ -2238,7 +2238,7 @@
     "description": "",
     "openPr": {
       "version": "2.12.5",
-      "checkedAt": "2026-11-03T20:15:10.2325115Z"
+      "checkedAt": "2026-11-04T20:15:11.3395899Z"
     }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
@@ -3221,11 +3221,7 @@
     "validationCount": 1,
     "manifestHash": "BE4CD452DD4B7CCFF00CF2DBC2F824AD4018894F3869D523080B3123DC30FA17",
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "openPr": {
-      "checkedAt": "2026-10-30T08:22:13.8434289Z",
-      "version": "15.34.2"
-    }
+    "state": "VALIDATION_PASSED"
   },
   "Google.IAPDesktop": {
     "lastUpdated": "2026-06-30T01:55:05.1221847Z",
@@ -3603,7 +3599,7 @@
     "description": "",
     "openPr": {
       "version": "0.18.0",
-      "checkedAt": "2026-11-03T20:15:13.2192785Z"
+      "checkedAt": "2026-11-04T20:15:14.8264176Z"
     }
   },
   "Hiddify.Next": {
@@ -3781,7 +3777,7 @@
   "houmain.keymapper": {
     "openPr": {
       "version": "5.8.1",
-      "checkedAt": "2026-11-03T20:15:13.6839136Z"
+      "checkedAt": "2026-11-04T20:15:15.3033309Z"
     }
   },
   "hrkfdn.ncspot": {
@@ -4145,8 +4141,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.11.0",
-      "checkedAt": "2026-11-04T16:29:32.9027267Z"
+      "version": "2026.11.1",
+      "checkedAt": "2026-11-04T20:15:39.7084029Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -4231,8 +4227,8 @@
     "lastUpdated": "2026-08-06T14:10:17.3921348Z",
     "manifestHash": "1E843D90602194E32EF0F84E333BE9BC20D09621BCA43AA304BDA7952A621BAB",
     "openPr": {
-      "checkedAt": "2026-10-15T16:25:08.7210111Z",
-      "version": "0.46.0"
+      "version": "0.47.0",
+      "checkedAt": "2026-11-04T20:15:40.7001464Z"
     }
   },
   "jmrplens.gitlab-mcp-server": {
@@ -4532,7 +4528,7 @@
     "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D",
     "openPr": {
       "version": "4.4.5",
-      "checkedAt": "2026-11-03T20:15:24.1230404Z"
+      "checkedAt": "2026-11-04T20:15:41.1164671Z"
     }
   },
   "kmiya-culti.RLogin": {
