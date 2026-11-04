@@ -246,7 +246,7 @@
     "manifestHash": "EC47F274BF6AC0F4521E6D0EB817D544008B8912A5BB121E0BB3728C9A5B4DB6",
     "openPr": {
       "version": "1.9.0",
-      "checkedAt": "2026-11-03T12:22:10.644774Z"
+      "checkedAt": "2026-11-04T16:30:39.9595401Z"
     }
   },
   "AlekseyHoffman.Sigma-File-Manager": {
@@ -402,8 +402,8 @@
     "lastUpdated": "2026-10-24T04:59:32.5470403Z",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-11-03T16:18:22.5302265Z",
-      "version": "3.0.9"
+      "version": "3.0.9",
+      "checkedAt": "2026-11-04T16:30:42.2019921Z"
     }
   },
   "Anki.Anki": {
@@ -414,10 +414,6 @@
     ],
     "lastUpdated": "2026-09-25T07:00:55.6530671Z",
     "manifestHash": "47A54973E4834BA631C2139719B96A8915A457B394EEBD6991DF711477EDFD76",
-    "openPr": {
-      "checkedAt": "2026-09-25T07:04:12.2118709Z",
-      "version": "26.09.3"
-    },
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
     "version": "26.09.3"
@@ -2802,11 +2798,7 @@
     "lastUpdated": "2026-10-22T21:30:34.3297631Z",
     "installerHashes": [
       "A369B9E8C89C0C23FC268B3A865DC79313CBFF59FEEE5DFD28A2985AB3B00670"
-    ],
-    "openPr": {
-      "checkedAt": "2026-10-23T00:54:23.9831279Z",
-      "version": "7.3.3"
-    }
+    ]
   },
   "FOSSA.FOSSA-cli": {
     "validationCount": 1,
@@ -4155,8 +4147,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-11-03T16:17:13.8927236Z",
-      "version": "2026.11.0"
+      "version": "2026.11.0",
+      "checkedAt": "2026-11-04T16:29:32.9027267Z"
     }
   },
   "jeffaristi92.Sweeft": {
