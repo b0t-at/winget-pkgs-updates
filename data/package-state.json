@@ -4806,7 +4806,7 @@
     "description": ""
   },
   "Longbridge.LongbridgeTerminal": {
-    "validationCount": 6,
+    "validationCount": 7,
     "description": "",
     "version": "0.31.0",
     "state": "VALIDATION_PASSED",
@@ -4814,7 +4814,7 @@
     "installerHashes": [
       "48D056C11DD073DF0A8C45E9A42CA1EADF9BF5229EFA1347D844991B5F75F9EB"
     ],
-    "lastUpdated": "2026-10-29T04:54:48.3921778Z"
+    "lastUpdated": "2026-11-04T08:39:28.6558436Z"
   },
   "LookupFoundation.RevitLookup.2021": {
     "manifestHash": "128610B2BC6F960BB40A16C24D3F7CF0F8C87E1B9B978E39601108907C2FEBC3",
@@ -8398,15 +8398,15 @@
     }
   },
   "Storj.Uplink": {
-    "installerHashes": [
-      "7733FD2750A48954D0045AA3E0AD93B73C70F947B3CA9E240408429E6ABB14CE"
-    ],
-    "version": "1.165.6",
-    "manifestHash": "6DB12A51E8BCC3946052853CEC383CF1578B77416D1EB73BE18536B7ADDDEBE6",
     "validationCount": 1,
-    "description": "",
+    "manifestHash": "BD246C1C793518E86E75F2A6BB0DBDE4F35FFBF47079597BFD995387D8FB7A3B",
+    "version": "1.166.0",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-28T01:25:41.7853573Z"
+    "installerHashes": [
+      "D388B4B67F74245EC6F5B1175D15FA9D14FE776EE6894675C3735B4D02037617"
+    ],
+    "description": "",
+    "lastUpdated": "2026-11-04T08:39:28.6975356Z"
   },
   "str4d.rage": {
     "state": "VALIDATION_PASSED",
