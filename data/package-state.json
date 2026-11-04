@@ -1773,16 +1773,16 @@
     "lastUpdated": "2026-08-19T15:56:01.4509515Z"
   },
   "CryptoPro.Chromium-Gost": {
-    "manifestHash": "A3EA4EC6E38AC0D7D6CB139BD5FF7681B415EB8064A38B33A5A6AF445390A214",
-    "version": "156.0.8078.48",
+    "version": "156.0.8078.79",
     "description": "",
-    "lastUpdated": "2026-11-02T13:03:28.0138229Z",
+    "lastUpdated": "2026-11-04T17:01:36.0468066Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
     "installerHashes": [
-      "8474E98CBDC448785D4E63E90F871BECBC397A5F5E52DF99360D4BF238E9441D",
-      "9CAFA423814B265724A286CA08CF3353AC4720585F720D969AE30942FDB28688"
-    ]
+      "E13564AD1A776DB26C92BA9658D116DB409C08F4AA9CF4933ABE618AB346B212",
+      "F83C5AF68FD77AF492ABB48E4ACFB3FC9918B99C0CE526EE4D9B2E45CE36BD74"
+    ],
+    "manifestHash": "31B8B02463B28D87560F2FAACED2F0836898329FFD5A2D51ABD26B64440857EB",
+    "validationCount": 1
   },
   "cubezombies.MidnightAthenaeum": {
     "manifestHash": "888A7BADCA52EE5B42F755D91B950DA3D3AA1CFB03A6012120CE16761BA13129",
@@ -2790,15 +2790,13 @@
     "version": "2.20.1"
   },
   "Forkgram.Forkgram": {
-    "version": "7.3.3",
-    "manifestHash": "0911BFE5C49AD6DB2F4C3B3C8E9081B51AE8BE55B438A10B675203A3FBDCD160",
+    "description": "",
+    "installerHashes": "0D76DC27FF153C1CD0A6BC8558E607C879540A7C68676FA7E797F62EF460EE6F",
+    "lastUpdated": "2026-11-04T17:01:36.0208859Z",
+    "manifestHash": "E353D47C36881EEAC61DCB0B3CEC5EC22CE4426781CA8799EACF2483ABB6F80B",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "description": "",
-    "lastUpdated": "2026-10-22T21:30:34.3297631Z",
-    "installerHashes": [
-      "A369B9E8C89C0C23FC268B3A865DC79313CBFF59FEEE5DFD28A2985AB3B00670"
-    ]
+    "version": "7.3.5"
   },
   "FOSSA.FOSSA-cli": {
     "validationCount": 1,
@@ -4589,15 +4587,15 @@
     }
   },
   "Kubernetes.clusterctl": {
-    "manifestHash": "1CC4518EF2CC3821C3408D04DCE3B1F27CED085850A5CD72577D0BAD7821126C",
-    "installerHashes": [
-      "F37F9CCD9A9AB8F5EDA0B3FBEB57A4A461DBC254426818B9995ADCE6A076A722"
-    ],
-    "version": "1.14.3",
-    "lastUpdated": "2026-10-08T17:31:06.2753615Z",
-    "validationCount": 2,
+    "version": "1.14.4",
+    "description": "",
+    "lastUpdated": "2026-11-04T17:01:36.059649Z",
     "state": "VALIDATION_PASSED",
-    "description": ""
+    "installerHashes": [
+      "4CE6E6492D2DACF91F4264AE315D9B07EC0DF2C726E0065A8BA8574EB0E7C340"
+    ],
+    "manifestHash": "CF5A9578A9A16B788AD0BE299E935E42ACB73CE9B530F36EAA411A064C2C4D87",
+    "validationCount": 1
   },
   "KuestenLogik.Bowire": {
     "description": "",
@@ -7278,15 +7276,15 @@
     "manifestHash": "F31C1FF7C99F93663CF1F1536EE9D99879862C380624FC50DD7049B4070C4E00"
   },
   "rejetto.hfs": {
-    "installerHashes": [
-      "4B7B46487F58B7A7A06D361A60AF4961DFB6A4A1999D2EDB3662C94F9852675A"
-    ],
-    "manifestHash": "EA51951724611DD8A5DB66CEA523706466DD929994D1E3F146A736168A31A0CC",
+    "version": "3.4.0",
     "description": "",
-    "lastUpdated": "2026-10-01T13:09:14.5613999Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-11-04T17:01:35.9953481Z",
     "state": "VALIDATION_PASSED",
-    "version": "3.3.4"
+    "installerHashes": [
+      "8E68F5DF65D0FB872BBCFE3A9B38F3FB6B11E613C52DDD9CC3493EE4FA883743"
+    ],
+    "manifestHash": "C3300F6F2B833F6CE6DBDD1168E5B2CC728DFD45A258332CA4FDA8887259872C",
+    "validationCount": 1
   },
   "Rela.RelaGit": {
     "version": "0.16.11",
