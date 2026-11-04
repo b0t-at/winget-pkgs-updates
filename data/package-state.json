@@ -10032,7 +10032,11 @@
     "installerHashes": [
       "9F252A0F2EF06C11A580BB95952EC4EBDC6F1E4D533341AEE920F790F5C327F4"
     ],
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "version": "7.5.0",
+      "checkedAt": "2026-11-04T08:20:00.7546274Z"
+    }
   },
   "Yubico.YubiKeyManagerCLI": {
     "description": "",
