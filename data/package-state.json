@@ -3636,8 +3636,8 @@
   },
   "HiroshibaKazuyuki.VOICEVOX.CPU": {
     "openPr": {
-      "version": "0.26.1",
-      "checkedAt": "2026-11-05T12:21:39.0420133Z"
+      "checkedAt": "2026-11-05T16:19:57.8782121Z",
+      "version": "0.26.2"
     }
   },
   "HiroSystems.Clarinet": {
@@ -4142,6 +4142,12 @@
     "installerHashes": [
       "22BF4B992D47B8CBB26FBA0C808A0A70628B181F190F071D6E88F0F94D657041"
     ]
+  },
+  "jdx.mise": {
+    "openPr": {
+      "checkedAt": "2026-11-05T16:19:59.2901218Z",
+      "version": "2026.11.2"
+    }
   },
   "jeffaristi92.Sweeft": {
     "description": "",
@@ -7226,8 +7232,8 @@
     "lastUpdated": "2026-08-06T13:08:37.6487059Z",
     "version": "0.5.15",
     "openPr": {
-      "version": "0.5.29",
-      "checkedAt": "2026-11-04T12:22:06.8011309Z"
+      "checkedAt": "2026-11-05T16:20:03.6587553Z",
+      "version": "0.5.29"
     }
   },
   "raskell-io.hx": {
@@ -9435,7 +9441,11 @@
     "manifestHash": "C4D139004CE92097CF7E6471B9AF0B28288911D0341BD423C261279BF18EB415",
     "validationCount": 2,
     "description": "",
-    "lastUpdated": "2026-10-27T21:44:31.0641306Z"
+    "lastUpdated": "2026-10-27T21:44:31.0641306Z",
+    "openPr": {
+      "checkedAt": "2026-11-05T16:20:59.3946226Z",
+      "version": "1.23.0"
+    }
   },
   "VoiceWave.LocalCore": {
     "state": "VALIDATION_PASSED",
