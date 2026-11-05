@@ -3607,15 +3607,15 @@
     }
   },
   "Hiddify.Next": {
-    "lastUpdated": "2026-08-18T01:43:26.2890175Z",
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "3F6182B610168C0BB386FFEA1FC7F68318D3DF23C15840C8B13A3BE51B080A96"
+      "7C71BCA78A8307B5961ED2F1121D23FA94DB6FED2C866AF9EB5BE375C0B43873"
     ],
-    "description": "",
-    "manifestHash": "C9DE955E676808858E8848A4BF9AE55B93356914558D3FC16A4BDE1E4924DE05",
+    "version": "5.5.5",
+    "manifestHash": "39DC655E3EC82A9AE4C08AE9DBF87E38E14D3A6E17EF6EE40CA20A6342F051A1",
+    "lastUpdated": "2026-11-05T13:07:14.1578811Z",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "4.1.1"
+    "description": ""
   },
   "hikari-no-yume.touchHLE": {
     "description": "",
@@ -5958,14 +5958,14 @@
   },
   "NimaShafie.OxideSLOC": {
     "installerHashes": [
-      "37CF38FE376DBF964CCA8F9F505C9653459EEEE0B5DBBD0BD2E848C04C8D7FA8"
+      "6E2FF479D522108D910042923F5FDDCBC91E8A588094C6080FE7EC605CD769FA"
     ],
-    "description": "",
+    "version": "1.6.28",
+    "manifestHash": "5B1373399CF0408E0FA5BE5B13D10D18DCDFCB0BFFF091CCB563D03700915CA4",
+    "lastUpdated": "2026-11-05T13:07:14.0666874Z",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "1.6.27",
-    "manifestHash": "AE0C81050BC66AD989E6196358C150C582FF9E985284D6B5D4A91E7FD65FDB93",
-    "lastUpdated": "2026-10-31T17:05:10.5932713Z"
+    "description": ""
   },
   "Nisonxi.PowerDoze": {
     "manifestHash": "5E5B5D669F1C795D7C92E12BA9F8F1950B7A5E916932F136DD5C4E3AE1D12A26",
@@ -7337,16 +7337,16 @@
     ]
   },
   "RicardoCabral.icuvisor": {
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-27T21:44:31.108041Z",
     "installerHashes": [
-      "5154E1CD1CCDAE712A2FF7CD4BEC6C4C342B03488286CFDA2000B1A004C59FB3",
-      "858C220D32B91FF58C10A992EEDBA588D9AF8EF008DFB839D3B5B2CDD8928B70"
+      "79EBB2FFB807A90906E5273845EBFE2A89793D475056A82584BBBF3E7BAD1594",
+      "12CA4ECE2FAB0D70D602C3901923E248355D43672ACE5235F716F6C1771F4762"
     ],
-    "manifestHash": "9AEDD44DE695447AB2D302DB35A63D5B5BDE95DB2647B4E0659FF2067EA3D3F3",
-    "description": "",
-    "version": "1.9.0"
+    "version": "1.10.0",
+    "manifestHash": "1DAFBA5F3FD05DBF89B1965015BBFE800F9C14CD122FF058578DDD9BE0C818EA",
+    "lastUpdated": "2026-11-05T13:07:14.1354859Z",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "description": ""
   },
   "RikkiGibson.DreamPotato": {
     "description": "",
@@ -8382,15 +8382,13 @@
     }
   },
   "Storj.Uplink": {
-    "validationCount": 1,
-    "manifestHash": "BD246C1C793518E86E75F2A6BB0DBDE4F35FFBF47079597BFD995387D8FB7A3B",
-    "version": "1.166.0",
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "D388B4B67F74245EC6F5B1175D15FA9D14FE776EE6894675C3735B4D02037617"
-    ],
     "description": "",
-    "lastUpdated": "2026-11-04T08:39:28.6975356Z"
+    "installerHashes": "071D28BBBE8CF688B829C17F90F897AD4AF468784E8796ED71F8C8F83B0628FD",
+    "lastUpdated": "2026-11-05T13:07:14.0920653Z",
+    "manifestHash": "D903734D8795A8FE889244F6D596F8521387CBE8D39D94AB6055C13539B6887A",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "1.166.1"
   },
   "str4d.rage": {
     "state": "VALIDATION_PASSED",
@@ -9774,14 +9772,14 @@
     "lastUpdated": "2026-11-04T04:59:07.0898399Z"
   },
   "WowUp.Wowup": {
-    "validationCount": 1,
-    "version": "2.24.1",
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "19A6A0FE7F0D72956C7878E8F6FB242BF982A90C3F3EB1FDA4B1C3624281148B"
+      "7F6A6A8AE943B7D022A8D9200BFF8597A7C4DF6F2CD5B9FDE5E65DA794FB6136"
     ],
-    "lastUpdated": "2026-10-21T08:56:12.3930679Z",
-    "manifestHash": "E5EF99DA7444B57C12FE2F200527B7B0F71D836DDC8DE1D49A25090A45460AB8",
+    "version": "2.25.4",
+    "manifestHash": "1F2D7DDF5C8CE03DC4BE7F6A204CFE35FA4000357A3FC64796BB6C7830AF026F",
+    "lastUpdated": "2026-11-05T13:07:14.0124644Z",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
     "description": ""
   },
   "XaoSProject.XaoS": {
