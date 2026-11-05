@@ -565,15 +565,15 @@
     }
   },
   "argoproj.argocd": {
-    "manifestHash": "8772D1AE325A8F0BFF2FC4C99038C2CDA52876886813CD967102548652BBE100",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-05T09:13:08.8584576Z",
     "installerHashes": [
-      "2760487C36A06EF23F9B14BBC1D89A5C11F065EDE5ABC0FBF9899650AAD65495"
+      "1F7927F52BC634E6593B1B0AAF38C4CA06AC2EAD4E72CEBB8111292F6F2E9378"
     ],
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "version": "3.5.7",
+    "version": "3.6.1",
     "description": "",
-    "lastUpdated": "2026-11-03T21:01:18.1280117Z"
+    "manifestHash": "AA41A6A98FD3AA49DBE45D93B4956CB22CAF95EACC2EFDBBEEEE9122B3EEA0AC"
   },
   "Arihant25.Chargle": {
     "description": "",
@@ -3217,15 +3217,15 @@
     "lastUpdated": "2026-09-17T20:53:14.2050338Z"
   },
   "Google.FirebaseCLI": {
-    "version": "15.34.2",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-05T09:13:08.9749213Z",
     "installerHashes": [
-      "CE94C49ACFB6349BDDB6A79F3730E187D25CCC59DAAC42906D1C2C63243BEEBC"
+      "D3C9E09C6A7BB84F5DE7ADE36C56C7852B767870AD0723C43D30F7B97495AD8D"
     ],
-    "lastUpdated": "2026-10-30T05:28:56.8428903Z",
     "validationCount": 1,
-    "manifestHash": "BE4CD452DD4B7CCFF00CF2DBC2F824AD4018894F3869D523080B3123DC30FA17",
+    "version": "15.35.0",
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "manifestHash": "399116DDFF578D0A865D012D665D283E23F8840C5795D1B6588D283E239F056C"
   },
   "Google.IAPDesktop": {
     "lastUpdated": "2026-06-30T01:55:05.1221847Z",
@@ -4035,15 +4035,15 @@
     ]
   },
   "jaegertracing.jaeger": {
-    "validationCount": 2,
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-05T09:13:08.9461972Z",
     "installerHashes": [
-      "0FE3343C49E44E3C1E86846767286A3D7D16C8F89FFF6E285E7E5A8BD34442C8"
+      "56ECCF9D72DF52B65FC1BCBE0CB3C9CD566681DE99274F1E8ECF07A7F9BF9F4C"
     ],
-    "manifestHash": "1C92E8A9480E7B939DC254898760FE35C34135EC5CF06D581836871CEC63CA6C",
-    "version": "2.22.0",
+    "validationCount": 1,
+    "version": "2.23.0",
     "description": "",
-    "lastUpdated": "2026-10-08T17:31:06.3370425Z",
-    "state": "VALIDATION_PASSED"
+    "manifestHash": "869CA6397B847A82C431C5FDAC3B42CBA70E97F6727C2C486422872F274037E0"
   },
   "jaimecartodb.MSXCP": {
     "description": "",
@@ -5386,16 +5386,16 @@
     "version": "0.8.1"
   },
   "Microsoft.WSL.PreRelease": {
-    "validationCount": 1,
-    "installerHashes": [
-      "ADED933ED29473430791A3EC34BD533C075F458789BD8FC2AE0601BC5DE66B06",
-      "D4C44B8B28A6820D4F9749B29368615C4D14E7C5D9F963B77C45BF8EEBEC9CB1"
-    ],
     "state": "VALIDATION_PASSED",
-    "version": "3.0.4",
-    "lastUpdated": "2026-10-23T02:01:31.5931108Z",
-    "manifestHash": "C6C7A16BFBB0E826A21A8901016603A1267B9E68C9110221B6D4E44BDEDBAB64",
-    "description": ""
+    "lastUpdated": "2026-11-05T09:13:08.8178754Z",
+    "installerHashes": [
+      "2313EFC5873E3F8552F42E77F950FABD913C0289078FA89D2100F3421A525EAA",
+      "0596D4E3F4DF1D7C78EED39AC83576863A9FD663C90FAC35F76BA7D2C8D79157"
+    ],
+    "validationCount": 1,
+    "version": "3.0.5",
+    "description": "",
+    "manifestHash": "D27B9887E10667D00156C71BE8BE02FB353CAA440DF7D4FB37C853177DDA6530"
   },
   "mikf.gallery-dl.Nightly": {
     "description": "",
@@ -7965,14 +7965,14 @@
   },
   "sikalabs.slu": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "description": "",
-    "version": "0.103.0",
-    "lastUpdated": "2026-10-20T16:50:57.7641528Z",
-    "manifestHash": "432CE7369BB661B0FE048F537247646D9510D2A2BDA15C4E2BC63A5E26B1B49F",
+    "lastUpdated": "2026-11-05T09:13:08.8860191Z",
     "installerHashes": [
-      "9B41AD05F1DE78C64879EF3EA5BE03550F64BC652E06E9F07E226E5627D021E2"
-    ]
+      "CB2E5785D3E530E9C3D4F27680D9AEAE7A8FC31A587D8C970A68392E5C7A2912"
+    ],
+    "validationCount": 1,
+    "version": "0.104.0",
+    "description": "",
+    "manifestHash": "CA16EB492FF882A5FECBC2FB611A21E72F3A0C9105115C35EC9DEEEF9E403371"
   },
   "SimpleX.SimpleX-Chat": {
     "validationCount": 1,
@@ -8881,15 +8881,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "installerHashes": [
-      "7174AA0B69A27FABFDBD507B02F028B91E37218A6C9360FE0F20D5E28848B0B5"
-    ],
-    "manifestHash": "317BBDE1414620AC9C3FD68C73DD0347BA6A15C4EAE031C9293876AA9B0FECD1",
-    "validationCount": 1,
     "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-05T09:13:08.9087736Z",
+    "installerHashes": [
+      "90F1076AE6DA4E064DE92D6D31367CAF780DCC9A755BD51507CBFBD3DA8F64A9"
+    ],
+    "validationCount": 1,
+    "version": "2.83.1",
     "description": "",
-    "version": "2.82.2",
-    "lastUpdated": "2026-11-04T21:18:12.8177582Z"
+    "manifestHash": "6321EF9CB4AF402570266619484699A8BC43427EB3CCA09898A1FBB7EFDBF795"
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
