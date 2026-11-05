@@ -250,7 +250,7 @@
     "manifestHash": "EC47F274BF6AC0F4521E6D0EB817D544008B8912A5BB121E0BB3728C9A5B4DB6",
     "openPr": {
       "version": "1.9.0",
-      "checkedAt": "2026-11-04T16:30:39.9595401Z"
+      "checkedAt": "2026-11-05T20:16:12.0503393Z"
     }
   },
   "AlekseyHoffman.Sigma-File-Manager": {
@@ -6518,8 +6518,8 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "openPr": {
-      "checkedAt": "2026-11-05T00:35:38.740835Z",
-      "version": "1.13.8"
+      "version": "1.13.9",
+      "checkedAt": "2026-11-05T20:15:10.111976Z"
     }
   },
   "OpenWhispr.OpenWhispr": {
