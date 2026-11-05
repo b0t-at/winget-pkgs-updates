@@ -125,7 +125,11 @@
     "state": "VALIDATION_PASSED",
     "description": "",
     "version": "0.107.80",
-    "lastUpdated": "2026-11-04T21:18:12.9029596Z"
+    "lastUpdated": "2026-11-04T21:18:12.9029596Z",
+    "openPr": {
+      "checkedAt": "2026-11-05T00:35:31.7762262Z",
+      "version": "0.107.80"
+    }
   },
   "AdGuard.dnsproxy": {
     "installerHashes": [
@@ -672,8 +676,8 @@
     "version": "1.4.71",
     "state": "VALIDATION_PASSED",
     "openPr": {
-      "version": "1.4.75",
-      "checkedAt": "2026-10-18T20:20:54.795889Z"
+      "checkedAt": "2026-11-05T00:37:03.2825742Z",
+      "version": "1.4.80"
     }
   },
   "AtaraxyLabs.sem": {
@@ -687,7 +691,7 @@
       "A5D3F6ACE061FE5416A455FFDC2D3E1D9963B44C95AFF490B623F88EC3A2456C"
     ],
     "openPr": {
-      "checkedAt": "2026-11-03T16:18:23.9065457Z",
+      "checkedAt": "2026-11-05T00:37:03.6880109Z",
       "version": "0.29.1"
     }
   },
@@ -6514,8 +6518,8 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "openPr": {
-      "version": "1.13.2",
-      "checkedAt": "2026-11-04T12:21:14.3086022Z"
+      "checkedAt": "2026-11-05T00:35:38.740835Z",
+      "version": "1.13.8"
     }
   },
   "OpenWhispr.OpenWhispr": {
