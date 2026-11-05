@@ -1374,7 +1374,7 @@
   "Carvel.ytt": {
     "openPr": {
       "version": "0.55.4",
-      "checkedAt": "2026-11-04T12:21:08.3363369Z"
+      "checkedAt": "2026-11-05T12:21:36.0515194Z"
     }
   },
   "ccccraz.cogmoteGO": {
@@ -2734,7 +2734,7 @@
     "description": "",
     "openPr": {
       "version": "3.3.0",
-      "checkedAt": "2026-11-04T12:21:09.9321389Z"
+      "checkedAt": "2026-11-05T12:21:37.682513Z"
     }
   },
   "Fly-io.flyctl": {
@@ -3637,7 +3637,7 @@
   "HiroshibaKazuyuki.VOICEVOX.CPU": {
     "openPr": {
       "version": "0.26.1",
-      "checkedAt": "2026-11-04T12:21:10.9279869Z"
+      "checkedAt": "2026-11-05T12:21:39.0420133Z"
     }
   },
   "HiroSystems.Clarinet": {
@@ -3761,11 +3761,7 @@
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "6A9E2C2C92AE37D033D1D6CB948D6F1C4C4E14951ADFC9B3FA5431CBDD3C915A"
-    ],
-    "openPr": {
-      "version": "26.10.0-0",
-      "checkedAt": "2026-10-31T08:17:34.6573313Z"
-    }
+    ]
   },
   "houmain.GPUpad": {
     "version": "4.6.0",
@@ -4147,12 +4143,6 @@
       "22BF4B992D47B8CBB26FBA0C808A0A70628B181F190F071D6E88F0F94D657041"
     ]
   },
-  "jdx.mise": {
-    "openPr": {
-      "version": "2026.11.1",
-      "checkedAt": "2026-11-04T20:15:39.7084029Z"
-    }
-  },
   "jeffaristi92.Sweeft": {
     "description": "",
     "version": "1.1.0",
@@ -4430,7 +4420,7 @@
     "version": "18.1.1",
     "openPr": {
       "version": "18.1.9",
-      "checkedAt": "2026-11-04T12:21:12.5809536Z"
+      "checkedAt": "2026-11-05T12:21:41.3794455Z"
     }
   },
   "KellyBrazil.jc": {
@@ -7070,7 +7060,7 @@
     "version": "0.32.1",
     "openPr": {
       "version": "0.32.1",
-      "checkedAt": "2026-11-04T12:21:15.4632595Z"
+      "checkedAt": "2026-11-05T12:21:43.2908938Z"
     }
   },
   "prsyahmi.WicHeic": {
@@ -8400,11 +8390,7 @@
       "D388B4B67F74245EC6F5B1175D15FA9D14FE776EE6894675C3735B4D02037617"
     ],
     "description": "",
-    "lastUpdated": "2026-11-04T08:39:28.6975356Z",
-    "openPr": {
-      "version": "1.166.0",
-      "checkedAt": "2026-11-04T12:22:08.4782424Z"
-    }
+    "lastUpdated": "2026-11-04T08:39:28.6975356Z"
   },
   "str4d.rage": {
     "state": "VALIDATION_PASSED",
@@ -8761,7 +8747,7 @@
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
       "version": "5.7.1",
-      "checkedAt": "2026-11-04T12:22:10.2149491Z"
+      "checkedAt": "2026-11-05T12:22:37.8022349Z"
     }
   },
   "termio.soft-jp.com.TermioWin": {
@@ -8810,7 +8796,7 @@
     "lastUpdated": "2026-09-12T01:32:42.9753228Z",
     "openPr": {
       "version": "4.9.9",
-      "checkedAt": "2026-11-04T12:22:10.6082575Z"
+      "checkedAt": "2026-11-05T12:22:38.2722368Z"
     }
   },
   "tg123.oci-to-wsl": {
