@@ -416,7 +416,11 @@
     "manifestHash": "47A54973E4834BA631C2139719B96A8915A457B394EEBD6991DF711477EDFD76",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "26.09.3"
+    "version": "26.09.3",
+    "openPr": {
+      "version": "26.09.4",
+      "checkedAt": "2026-11-05T08:20:30.5004252Z"
+    }
   },
   "ankitshuxe.Neko": {
     "installerHashes": [
@@ -4085,7 +4089,11 @@
     "manifestHash": "D7B95F2180F10D1C3485BA0281F1818BB5FC77CB93733C786C4A043500A6E622",
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-11-05T04:55:31.5248222Z",
-    "version": "7.3.4"
+    "version": "7.3.4",
+    "openPr": {
+      "version": "7.3.4",
+      "checkedAt": "2026-11-05T08:20:38.6739599Z"
+    }
   },
   "jark006.jarkViewer": {
     "description": "",
@@ -9406,6 +9414,12 @@
     "description": "",
     "lastUpdated": "2026-10-10T01:55:12.0052846Z"
   },
+  "VictorIX.BlenderLauncher": {
+    "openPr": {
+      "version": "2.8.2",
+      "checkedAt": "2026-11-05T08:21:23.8207056Z"
+    }
+  },
   "Vipre.IPVTest": {
     "description": "",
     "manifestHash": "8D355A8ECA4EA4D4865EF2FE2E06D24268AE13BB1C6B0D73635D6D2D021773D8",
@@ -10025,7 +10039,7 @@
     "state": "VALIDATION_PASSED",
     "openPr": {
       "version": "7.5.0",
-      "checkedAt": "2026-11-04T08:20:00.7546274Z"
+      "checkedAt": "2026-11-05T08:21:25.4975959Z"
     }
   },
   "Yubico.YubiKeyManagerCLI": {
