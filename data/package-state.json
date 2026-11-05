@@ -2667,15 +2667,15 @@
     "description": ""
   },
   "Filamental.Filamental": {
-    "description": "",
-    "lastUpdated": "2026-11-02T16:47:12.9109772Z",
+    "manifestHash": "EC760ACE99C44537142A050E5035B8CBF62D75E4AE79860AB8173DC62851F713",
+    "validationCount": 1,
     "installerHashes": [
-      "EA7C173DE6FADAF0D2D0DE4B749C1F660A652F941A0B528373985F73AB3F4446"
+      "DAD3CE119711AB778AAF2B99C074B7FA56D4FCC834B2E409EE4F4BD5545CF547"
     ],
-    "version": "0.5.11",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "BC25654D64DFA286A60168A580A96CB956E23CFDA0FE0A1589E45A9DF0298CD9",
-    "validationCount": 1
+    "version": "0.5.13",
+    "description": "",
+    "lastUpdated": "2026-11-05T01:15:05.1957024Z",
+    "state": "VALIDATION_PASSED"
   },
   "FirenzeLor.gemini-collector": {
     "validationCount": 1,
@@ -4796,15 +4796,15 @@
     "description": ""
   },
   "Longbridge.LongbridgeTerminal": {
-    "validationCount": 7,
-    "description": "",
-    "version": "0.31.0",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "BA0FB4A39D94C889148B1C37DF3C2558B5CFD8CF22B85272B910E4D5CC96ABB2",
+    "manifestHash": "CE93198EC8E0E321AD8D3DD0B81243EA5F45987842799C34FAA5D8F084D6DD63",
+    "validationCount": 1,
     "installerHashes": [
-      "48D056C11DD073DF0A8C45E9A42CA1EADF9BF5229EFA1347D844991B5F75F9EB"
+      "0D22199FA02BAC0F6C5731BE2748510D260D4320F03CBF622FD048822777C597"
     ],
-    "lastUpdated": "2026-11-04T08:39:28.6558436Z"
+    "version": "0.31.1",
+    "description": "",
+    "lastUpdated": "2026-11-05T01:15:05.1496131Z",
+    "state": "VALIDATION_PASSED"
   },
   "LookupFoundation.RevitLookup.2021": {
     "manifestHash": "128610B2BC6F960BB40A16C24D3F7CF0F8C87E1B9B978E39601108907C2FEBC3",
@@ -5296,16 +5296,16 @@
     "lastUpdated": "2026-10-30T13:22:16.087996Z"
   },
   "Microsoft.Garnet.DN9": {
-    "installerHashes": [
-      "3EC0657FEADE7D11BFE341E1DEC0AB2036C6ECF6A9F91177C556939DCA727E2F",
-      "04ADA9CA9DEC1E6DD9B6D4B0863DF2BB3CBE09AF8E623D63223C9DA9452F3D3B"
-    ],
-    "manifestHash": "63E14BB11849D50DDF63BE31101A3B655126DA78A81C5E7CAABB92E2852AC3D1",
+    "manifestHash": "CD65594DA307C6C7065FB50466EFCDF5756ED7918258631223DB06CA0C9953E5",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "AE8678ADAA95F770EF0196B4BB2DB8F00F753E6136F9787000F19A80F7C7E26D",
+      "7607287690D853FE63D7DD480C9287D4DCCB414D259ED61198E3314F27D8C7F5"
+    ],
+    "version": "2.2.7",
     "description": "",
-    "version": "2.2.6",
-    "lastUpdated": "2026-11-04T21:18:12.8462189Z"
+    "lastUpdated": "2026-11-05T01:15:05.0996897Z",
+    "state": "VALIDATION_PASSED"
   },
   "Microsoft.LightGBM": {
     "lastUpdated": "2026-08-20T21:12:49.5072525Z",
