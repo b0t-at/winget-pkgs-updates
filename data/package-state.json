@@ -2242,7 +2242,7 @@
     "description": "",
     "openPr": {
       "version": "2.12.5",
-      "checkedAt": "2026-11-04T20:15:11.3395899Z"
+      "checkedAt": "2026-11-06T00:35:06.8746848Z"
     }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
@@ -3603,7 +3603,7 @@
     "description": "",
     "openPr": {
       "version": "0.18.0",
-      "checkedAt": "2026-11-04T20:15:14.8264176Z"
+      "checkedAt": "2026-11-06T00:35:09.7465894Z"
     }
   },
   "Hiddify.Next": {
@@ -3777,7 +3777,7 @@
   "houmain.keymapper": {
     "openPr": {
       "version": "5.8.1",
-      "checkedAt": "2026-11-04T20:15:15.3033309Z"
+      "checkedAt": "2026-11-06T00:35:11.1034958Z"
     }
   },
   "hrkfdn.ncspot": {
@@ -4532,7 +4532,7 @@
     "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D",
     "openPr": {
       "version": "4.4.5",
-      "checkedAt": "2026-11-04T20:15:41.1164671Z"
+      "checkedAt": "2026-11-06T00:35:12.3935464Z"
     }
   },
   "kmiya-culti.RLogin": {
@@ -6947,11 +6947,7 @@
     "validationCount": 1,
     "manifestHash": "19DA462F82F83C3874E8254706555FD095F4A665CE8FA5307146258A6C648F0F",
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "openPr": {
-      "checkedAt": "2026-10-30T08:22:17.369587Z",
-      "version": "12.16.1"
-    }
+    "state": "VALIDATION_PASSED"
   },
   "PocketBase.PocketBase": {
     "version": "0.40.6",
