@@ -818,8 +818,8 @@
   },
   "Barry-ran.QtScrcpy": {
     "openPr": {
-      "version": "4.2.1",
-      "checkedAt": "2026-11-05T04:19:15.1606539Z"
+      "checkedAt": "2026-11-06T08:21:07.5763318Z",
+      "version": "4.2.1"
     }
   },
   "Baulk.Baulk": {
@@ -6962,7 +6962,11 @@
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
     "manifestHash": "2F3057D1FA974117DA51DAC8FC441784FE02D02391B1B854C4ECCCFD6BF81CE8",
-    "description": ""
+    "description": "",
+    "openPr": {
+      "checkedAt": "2026-11-06T08:19:26.2080212Z",
+      "version": "12.18.0"
+    }
   },
   "PocketBase.PocketBase": {
     "version": "0.40.6",
