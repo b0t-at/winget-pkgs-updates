@@ -3721,26 +3721,26 @@
   },
   "holland-built.Bloxsmith": {
     "installerHashes": [
-      "5C85C1D09CE942826177FD76602AF0E28023A20C012C07B0A6B6D4A449391AFE"
+      "2314CE74A4CC9944151CC4F50A68F9F8CE13B974AF3B4DDC9E1B03E3F36E4230"
     ],
-    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "manifestHash": "FF89DCF3A47C8B4F827EAC96275F1DD0A8DB9346A363E96EB67659DEE7F9A9EF",
+    "manifestHash": "DEA611288911B71B565DC2AA33A93B54056A7FB3F22E5614F5A7C7BC3B2558B5",
     "description": "",
-    "lastUpdated": "2026-11-06T08:41:06.1944667Z",
-    "version": "3.120.0"
+    "lastUpdated": "2026-11-06T16:57:30.3106201Z",
+    "version": "3.123.0",
+    "validationCount": 1
   },
   "HongMinhee.Gukhanmun": {
     "installerHashes": [
-      "8AA5511A51285508E8924D96870773FEA1C128F1EE2247ED16412F6D13E35319",
-      "87143B8EF8992A184D48219764585EA304E6D9795B3E875C036BD5854728CF60"
+      "2344E8079002193E07A0077B4092DFBDE958FC50BDF62C9D894E823454B8EAE1",
+      "1B22B9287FF7CB36C35569300EF74C331B7A52A408F2AB81E419096421ADC7C8"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "manifestHash": "0F6B77C9DAB5BCE2E81E02B963C5916ABADC362BE5A5AD5F0A8185060D948CB0",
     "description": "",
-    "lastUpdated": "2026-10-24T01:34:46.1640674Z",
-    "version": "0.3.0",
-    "manifestHash": "574EE5AACDE207F4719BC6CAC4F02812D38C1D3B1F986E718E279119BD3CC8BC"
+    "lastUpdated": "2026-11-06T16:57:30.2687362Z",
+    "version": "0.3.1",
+    "validationCount": 1
   },
   "HongMinhee.Hongdown": {
     "installerHashes": [
@@ -4174,15 +4174,15 @@
     "lastUpdated": "2026-08-24T05:01:38.0704347Z"
   },
   "Jellyfin.FFmpeg": {
-    "lastUpdated": "2026-09-29T17:01:10.3266094Z",
-    "version": "8.1.3-1",
-    "description": "",
     "installerHashes": [
-      "3691F8B2D4C39C511B5FAFF1C8C4687BD782DAC823E63BA69F0755F7CE1AF9CE",
-      "4118C7046BF3410E342B6CF583CCDAE01B940DF3C2B3E3F7D329D34569DA3283"
+      "B65DD5011A80B5ABEC08BD559489CF188217238C8E38B5BF553504C974F5694D",
+      "E1E0373CB989440590CE2D124F40988E3165ED338971AE14A97476CD61284785"
     ],
     "state": "VALIDATION_PASSED",
-    "manifestHash": "793CCD32719DDF14167412616FC7BC4105B1F2BD895D4FFD219B9DB73C448BE0",
+    "manifestHash": "FDE96F8361AE0DF71615B3B7D2B7F12F003A5B326153056DE8AE4592CCECFFEB",
+    "description": "",
+    "lastUpdated": "2026-11-06T16:57:30.2879263Z",
+    "version": "8.1.3-2",
     "validationCount": 1
   },
   "Jellyfin.Server": {
@@ -4922,15 +4922,15 @@
     "manifestHash": "9112365C9E9CFCB756C6F4CF5DD88D9485382AD3343E9F76E76535DEAA9228AC"
   },
   "Lunasans.MovieShelf": {
-    "manifestHash": "04D79ACAF76FEFB2D928B6ED2A297C3833EF705F57893CA3EB9E6C2591D1F71E",
-    "description": "",
     "installerHashes": [
-      "B54B1B397920D8CA80509580CE29E4BDEAA7A3A229F2A25972808042279B0D9C"
+      "657E7C2132A0CBCBEBCCC06A98ACD8A829F6F63A1435B215D638E4FAFB967F89"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 5,
-    "version": "1.2.4",
-    "lastUpdated": "2026-10-09T13:11:43.6835655Z"
+    "manifestHash": "21F3F436980F8849B32AFB9096F5A5FB0AAEC39B4A88890B106A455BE32AB2EF",
+    "description": "",
+    "lastUpdated": "2026-11-06T16:57:30.2368688Z",
+    "version": "1.2.5",
+    "validationCount": 1
   },
   "Luxview.AgainstMe": {
     "installerHashes": [
@@ -6887,15 +6887,15 @@
     "description": ""
   },
   "pinokiocomputer.pinokio": {
-    "manifestHash": "6105257E6FA1C9F6517A731C21E0FEB3BF21C917C94E1B4E44EBF0D15E6E4895",
-    "version": "8.3.1",
-    "description": "",
-    "lastUpdated": "2026-11-02T13:03:27.910494Z",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
     "installerHashes": [
-      "8202324E9EDF7F550DEC651C27DECE299FF88B0EE654255F4A74D31D3F92F5F8"
-    ]
+      "387632356BF1851F267E8B41CBEB34B2B20110C383CA9B7460567D87EF8C4987"
+    ],
+    "state": "VALIDATION_FAILED",
+    "manifestHash": "97C1424CF7E64A60853F1C401653F7C64E8391E4426C8D7BA19818175073BCC9",
+    "description": "",
+    "lastUpdated": "2026-11-06T16:57:30.2010369Z",
+    "version": "8.3.7",
+    "validationCount": 1
   },
   "PiusPP.Celestial": {
     "version": "2.1.0",
@@ -7458,15 +7458,15 @@
     "description": ""
   },
   "Rnwood.Smtp4dev.Desktop": {
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-22T12:51:56.4556654Z",
     "installerHashes": [
-      "D791B5C3AD651CC7BC65B41B00F94D899DC8942526325046932D61AFAF0E2F08"
+      "5BADE4758AA54F3C5893809911CCA6987C23661EB821C2F8BFAD9E8C0E1D5F18"
     ],
-    "validationCount": 1,
-    "manifestHash": "372E36E3D29313C45F9E2A998550590579159FC23FD6085FF7CA735A364C3D65",
-    "version": "3.15.0",
-    "description": ""
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "9E0B4F76FE6262639410DCD629BCDF57DC0D23A0D55711A6EC2362679CE102F3",
+    "description": "",
+    "lastUpdated": "2026-11-06T16:57:30.3345303Z",
+    "version": "3.16.1",
+    "validationCount": 1
   },
   "RocketResearchInc.Compair": {
     "version": "0.6.4",
