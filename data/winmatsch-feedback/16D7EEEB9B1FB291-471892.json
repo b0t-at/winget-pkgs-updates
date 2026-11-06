@@ -1,0 +1,14 @@
+{
+  "repository": "microsoft/winget-pkgs",
+  "pullRequestNumber": 471892,
+  "classification": "ScannerBlocked",
+  "state": "Escalated",
+  "recordedAt": "2026-11-06T06:48:00.459013+00:00",
+  "retryAfter": null,
+  "learnedOverrideSignal": null,
+  "reason": "Defender or the ESRP installer scan blocked the binaries; resubmitting the same files fails again. Quarantine the package until the scanner verdict changes or upstream ships new binaries.",
+  "packageIdentifier": "HunterPie.HunterPie",
+  "packageVersion": "2.14.0.471",
+  "evidence": [],
+  "installerTraits": null
+}

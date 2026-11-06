@@ -1,0 +1,14 @@
+{
+  "repository": "microsoft/winget-pkgs",
+  "pullRequestNumber": 471284,
+  "classification": "InstallerUnavailable",
+  "state": "Escalated",
+  "recordedAt": "2026-11-06T06:48:00.4617178+00:00",
+  "retryAfter": null,
+  "learnedOverrideSignal": null,
+  "reason": "The installer URL was unavailable during upstream validation; re-verify the release assets and hash before resubmitting.",
+  "packageIdentifier": "Microsoft.WSL.PreRelease",
+  "packageVersion": "3.0.5",
+  "evidence": [],
+  "installerTraits": null
+}
