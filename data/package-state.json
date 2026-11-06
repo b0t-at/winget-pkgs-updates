@@ -1375,12 +1375,6 @@
     "lastUpdated": "2026-10-25T21:11:26.4142226Z",
     "version": "1.59.0"
   },
-  "Carvel.ytt": {
-    "openPr": {
-      "version": "0.55.4",
-      "checkedAt": "2026-11-05T12:21:36.0515194Z"
-    }
-  },
   "ccccraz.cogmoteGO": {
     "lastUpdated": "2026-08-20T21:12:49.643883Z",
     "manifestHash": "08B8108641665163B9F95226770A1A31C6983FA07619378FFDAA4C5497966A23",
@@ -8770,7 +8764,7 @@
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
       "version": "5.7.1",
-      "checkedAt": "2026-11-05T12:22:37.8022349Z"
+      "checkedAt": "2026-11-06T16:18:28.6009093Z"
     }
   },
   "termio.soft-jp.com.TermioWin": {
@@ -8819,7 +8813,7 @@
     "lastUpdated": "2026-09-12T01:32:42.9753228Z",
     "openPr": {
       "version": "4.9.9",
-      "checkedAt": "2026-11-05T12:22:38.2722368Z"
+      "checkedAt": "2026-11-06T16:18:29.0009616Z"
     }
   },
   "tg123.oci-to-wsl": {
