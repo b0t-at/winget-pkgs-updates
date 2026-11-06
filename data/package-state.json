@@ -127,7 +127,7 @@
     "version": "0.107.80",
     "lastUpdated": "2026-11-04T21:18:12.9029596Z",
     "openPr": {
-      "checkedAt": "2026-11-05T00:35:31.7762262Z",
+      "checkedAt": "2026-11-06T04:18:06.4041658Z",
       "version": "0.107.80"
     }
   },
@@ -691,7 +691,7 @@
       "A5D3F6ACE061FE5416A455FFDC2D3E1D9963B44C95AFF490B623F88EC3A2456C"
     ],
     "openPr": {
-      "checkedAt": "2026-11-05T00:37:03.6880109Z",
+      "checkedAt": "2026-11-06T04:19:18.1206153Z",
       "version": "0.29.1"
     }
   },
@@ -4231,8 +4231,8 @@
     "lastUpdated": "2026-08-06T14:10:17.3921348Z",
     "manifestHash": "1E843D90602194E32EF0F84E333BE9BC20D09621BCA43AA304BDA7952A621BAB",
     "openPr": {
-      "version": "0.47.1",
-      "checkedAt": "2026-11-05T04:18:04.7853228Z"
+      "checkedAt": "2026-11-06T04:18:12.9180276Z",
+      "version": "0.47.1"
     }
   },
   "jmrplens.gitlab-mcp-server": {
