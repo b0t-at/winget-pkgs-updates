@@ -404,7 +404,11 @@
     "manifestHash": "AF74C9B5CC3B52C46F731C921FFF48ED4AF32A7E4EAD06ACA32E948F145B748A",
     "description": "",
     "lastUpdated": "2026-11-06T08:41:06.256853Z",
-    "version": "3.0.10"
+    "version": "3.0.10",
+    "openPr": {
+      "version": "3.0.10",
+      "checkedAt": "2026-11-06T12:21:37.1545697Z"
+    }
   },
   "Anki.Anki": {
     "description": "",
@@ -4160,8 +4164,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-11-05T16:19:59.2901218Z",
-      "version": "2026.11.2"
+      "version": "2026.11.3",
+      "checkedAt": "2026-11-06T12:20:57.0585981Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -10048,7 +10052,7 @@
     "state": "VALIDATION_PASSED",
     "openPr": {
       "version": "7.5.0",
-      "checkedAt": "2026-11-05T08:21:25.4975959Z"
+      "checkedAt": "2026-11-06T12:21:31.1424621Z"
     }
   },
   "Yubico.YubiKeyManagerCLI": {
