@@ -3707,15 +3707,15 @@
     "validationCount": 1
   },
   "holland-built.Bloxsmith": {
-    "installerHashes": [
-      "D3246CE633E3DD617FA4AD291294CDAD30B79A5FB41C0F21DAAAD7AE2B4FDE78"
-    ],
+    "version": "3.119.0",
     "description": "",
-    "validationCount": 1,
+    "lastUpdated": "2026-11-06T01:55:12.3588658Z",
     "state": "VALIDATION_PASSED",
-    "version": "3.114.0",
-    "lastUpdated": "2026-11-04T12:53:32.393224Z",
-    "manifestHash": "F745D0DAAAC94E3919E0F8E316D9DAC43AC8C567BA886F81AACCBEF7F94F0BEE"
+    "manifestHash": "5B6237A3FB56694CA19D60ED4AA09CEF3C99F93FA7766159936D51937ACEBC71",
+    "validationCount": 1,
+    "installerHashes": [
+      "05836F700CD2251F4D3C963E6316ED1BF21752F6F37DCF99615B5CD9D641C5B6"
+    ]
   },
   "HongMinhee.Gukhanmun": {
     "installerHashes": [
@@ -3815,15 +3815,15 @@
     "description": ""
   },
   "HunterPie.HunterPie": {
-    "installerHashes": [
-      "49D7EF9F65FFE53B43E1108E006CAE8269DF37D6624B3C957D7905EB7AC844EE"
-    ],
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "83BCA180B2D267F0E25E76E77B772BF9BBBAD912E4B69364307487D8EE7BECE3",
+    "version": "2.14.0.471",
     "description": "",
+    "lastUpdated": "2026-11-06T01:55:12.4104536Z",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "F879523F60C1F43D24C46DE5C2FCFDD0FAB2730EA1E6E08087B064E9FB986326",
     "validationCount": 1,
-    "version": "2.14.0.466",
-    "lastUpdated": "2026-08-21T17:17:39.9241582Z"
+    "installerHashes": [
+      "DF888DC72680EDA408F136CD4D371C5D1348FBC350D3A98D178CF11963B0130D"
+    ]
   },
   "IanWalton.JellyfinMPVShim": {
     "version": "3.3.0",
@@ -5284,28 +5284,28 @@
     "description": ""
   },
   "Microsoft.Garnet.DN8": {
-    "state": "VALIDATION_PASSED",
+    "version": "2.2.8",
     "description": "",
+    "lastUpdated": "2026-11-06T01:55:12.3361482Z",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "B81537DAE893DFBC33713B8D50DA90F9DDE8BCE9B51BA7D2AF43F4809FC7D5DC",
     "validationCount": 1,
-    "manifestHash": "0306A11199AA7A6DBF8BB8BA56FF1656E20F59AB9B7531FBC032E0FDC22B7F40",
     "installerHashes": [
-      "AE8678ADAA95F770EF0196B4BB2DB8F00F753E6136F9787000F19A80F7C7E26D",
-      "7607287690D853FE63D7DD480C9287D4DCCB414D259ED61198E3314F27D8C7F5"
-    ],
-    "lastUpdated": "2026-11-05T17:10:31.248413Z",
-    "version": "2.2.7"
+      "41AB3D438C8E1B8D146C33BFB2D010DD514F687D7FD276B97511981839940D00",
+      "CAF3046F4E44E110C9C99042C791492D5956FB5A33584981E25DC95074086329"
+    ]
   },
   "Microsoft.Garnet.DN9": {
-    "manifestHash": "CD65594DA307C6C7065FB50466EFCDF5756ED7918258631223DB06CA0C9953E5",
+    "version": "2.2.8",
+    "description": "",
+    "lastUpdated": "2026-11-06T01:55:12.2759808Z",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "EA26BE8A6FA9B147EF6C70AFC4518672859BC077FD32DFA9517EEE8B21923210",
     "validationCount": 1,
     "installerHashes": [
-      "AE8678ADAA95F770EF0196B4BB2DB8F00F753E6136F9787000F19A80F7C7E26D",
-      "7607287690D853FE63D7DD480C9287D4DCCB414D259ED61198E3314F27D8C7F5"
-    ],
-    "version": "2.2.7",
-    "description": "",
-    "lastUpdated": "2026-11-05T01:15:05.0996897Z",
-    "state": "VALIDATION_PASSED"
+      "41AB3D438C8E1B8D146C33BFB2D010DD514F687D7FD276B97511981839940D00",
+      "CAF3046F4E44E110C9C99042C791492D5956FB5A33584981E25DC95074086329"
+    ]
   },
   "Microsoft.LightGBM": {
     "lastUpdated": "2026-08-20T21:12:49.5072525Z",
@@ -8479,15 +8479,15 @@
     "description": ""
   },
   "SUSE.RancherDesktop": {
+    "version": "1.25.0",
     "description": "",
-    "manifestHash": "573DA02655CA3346D07E105938CD5C38FC3133AAB7D474DC6F95C63371FAEDD8",
+    "lastUpdated": "2026-11-06T01:55:12.4413249Z",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "7CA7F54C232BC72E7157DEC23A69593BA3BCC6C34C37383BC7E0725079A6CCE8",
     "validationCount": 1,
     "installerHashes": [
-      "5FC4E795A1C3BF72A2DAC9144D55DAAB181F30D1A3049D96A4C025985769960B"
-    ],
-    "lastUpdated": "2026-08-05T13:55:22.8593005Z",
-    "state": "VALIDATION_PASSED",
-    "version": "1.24.0"
+      "8E8A703CAFC101495BFC9AECC515A91F9C781E572C39D93698BFA96655EC21F8"
+    ]
   },
   "susu3304.InsaneMarmotMatrixLanguage": {
     "version": "0.2.1",
