@@ -127,8 +127,8 @@
     "version": "0.107.80",
     "lastUpdated": "2026-11-04T21:18:12.9029596Z",
     "openPr": {
-      "checkedAt": "2026-11-06T04:18:06.4041658Z",
-      "version": "0.107.80"
+      "version": "0.107.80",
+      "checkedAt": "2026-11-07T08:17:07.8832386Z"
     }
   },
   "AdGuard.dnsproxy": {
@@ -699,8 +699,8 @@
       "A5D3F6ACE061FE5416A455FFDC2D3E1D9963B44C95AFF490B623F88EC3A2456C"
     ],
     "openPr": {
-      "checkedAt": "2026-11-06T04:19:18.1206153Z",
-      "version": "0.29.1"
+      "version": "0.29.1",
+      "checkedAt": "2026-11-07T08:18:17.1547025Z"
     }
   },
   "Automattic.Wordpress": {
@@ -4272,8 +4272,8 @@
     "lastUpdated": "2026-08-06T14:10:17.3921348Z",
     "manifestHash": "1E843D90602194E32EF0F84E333BE9BC20D09621BCA43AA304BDA7952A621BAB",
     "openPr": {
-      "checkedAt": "2026-11-06T04:18:12.9180276Z",
-      "version": "0.47.1"
+      "version": "0.47.1",
+      "checkedAt": "2026-11-07T08:17:13.3114751Z"
     }
   },
   "jmrplens.gitlab-mcp-server": {
