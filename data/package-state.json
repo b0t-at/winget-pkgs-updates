@@ -521,7 +521,11 @@
     "installerHashes": [
       "691F737A7E5566A673C3A74DAB9160552EC32101E953B659E5C77443D16DDDB6"
     ],
-    "lastUpdated": "2026-11-07T01:46:37.6196758Z"
+    "lastUpdated": "2026-11-07T01:46:37.6196758Z",
+    "openPr": {
+      "checkedAt": "2026-11-07T04:16:03.6477403Z",
+      "version": "0.76.2"
+    }
   },
   "ArcBox.LinkCode": {
     "description": "",
@@ -1784,7 +1788,11 @@
       "7D330AC573ADFD53C75131F480D14D4B7FD5729990A296420B2B3CA990182B31",
       "AD3397D2A8AB5077338D11A8F561ABBF65735D8C51528DBD91DFC6E2DA94C222"
     ],
-    "lastUpdated": "2026-11-07T01:46:37.4778718Z"
+    "lastUpdated": "2026-11-07T01:46:37.4778718Z",
+    "openPr": {
+      "checkedAt": "2026-11-07T04:16:06.2283332Z",
+      "version": "156.0.8078.88"
+    }
   },
   "cubezombies.MidnightAthenaeum": {
     "manifestHash": "888A7BADCA52EE5B42F755D91B950DA3D3AA1CFB03A6012120CE16761BA13129",
@@ -2239,8 +2247,8 @@
     "lastUpdated": "2026-10-29T09:22:10.7111402Z",
     "description": "",
     "openPr": {
-      "version": "2.12.5",
-      "checkedAt": "2026-11-06T00:35:06.8746848Z"
+      "checkedAt": "2026-11-07T04:16:06.6332947Z",
+      "version": "2.12.5"
     }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
@@ -2296,8 +2304,8 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "3EAB1E5A6E607AC40A8D48C149D5E5B2207604A2D465245704CB6FD111942437",
     "openPr": {
-      "checkedAt": "2026-10-30T04:19:12.5071925Z",
-      "version": "5.8.0"
+      "checkedAt": "2026-11-07T04:16:07.0403436Z",
+      "version": "5.9.0"
     }
   },
   "elfpie.TizenAppInstaller": {
@@ -3615,8 +3623,8 @@
     "lastUpdated": "2026-10-23T13:49:06.4312107Z",
     "description": "",
     "openPr": {
-      "version": "0.18.0",
-      "checkedAt": "2026-11-06T00:35:09.7465894Z"
+      "checkedAt": "2026-11-07T04:16:09.985171Z",
+      "version": "0.18.0"
     }
   },
   "Hiddify.Next": {
@@ -3789,8 +3797,8 @@
   },
   "houmain.keymapper": {
     "openPr": {
-      "version": "5.8.1",
-      "checkedAt": "2026-11-06T00:35:11.1034958Z"
+      "checkedAt": "2026-11-07T04:16:10.40555Z",
+      "version": "5.8.1"
     }
   },
   "hrkfdn.ncspot": {
@@ -4548,8 +4556,8 @@
     "description": "",
     "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D",
     "openPr": {
-      "version": "4.4.5",
-      "checkedAt": "2026-11-06T00:35:12.3935464Z"
+      "checkedAt": "2026-11-07T04:16:11.451168Z",
+      "version": "4.4.5"
     }
   },
   "kmiya-culti.RLogin": {
@@ -6991,7 +6999,11 @@
     "installerHashes": [
       "CA89397D8E3DCB35725887E41E72AECE0E2DD8B5794B3858FBE75D000AA4080B"
     ],
-    "lastUpdated": "2026-11-07T01:46:37.591786Z"
+    "lastUpdated": "2026-11-07T01:46:37.591786Z",
+    "openPr": {
+      "checkedAt": "2026-11-07T04:17:02.4440081Z",
+      "version": "7.2.1"
+    }
   },
   "PolarGoose.CoffeeBean": {
     "openPr": {
@@ -7833,7 +7845,11 @@
     ],
     "version": "0.264",
     "state": "VALIDATION_FAILED",
-    "manifestHash": "5C9C2B5C8944C616B955A76C17C4544046FB50FED06CE2831032B7D798380292"
+    "manifestHash": "5C9C2B5C8944C616B955A76C17C4544046FB50FED06CE2831032B7D798380292",
+    "openPr": {
+      "checkedAt": "2026-11-07T04:17:02.8570046Z",
+      "version": "0.291"
+    }
   },
   "seerge.g-helper.PreRelease": {
     "lastUpdated": "2026-11-03T01:03:43.3789332Z",
