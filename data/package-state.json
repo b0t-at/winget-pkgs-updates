@@ -3987,7 +3987,11 @@
     "validationCount": 1,
     "description": "",
     "lastUpdated": "2026-06-04T22:15:30.5734589Z",
-    "manifestHash": "06EA63CBA95A079A2638DFF25282D03EB7E6B1FD2E589F9F80A37CDBF09C37BB"
+    "manifestHash": "06EA63CBA95A079A2638DFF25282D03EB7E6B1FD2E589F9F80A37CDBF09C37BB",
+    "openPr": {
+      "version": "1.31.4",
+      "checkedAt": "2026-11-07T00:33:37.4586329Z"
+    }
   },
   "IvanIsCoding.celq": {
     "validationCount": 1,
@@ -4286,11 +4290,7 @@
     ],
     "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "9A4DF16EBDCE59232C54B5DF04D449A66D61F5A11ADD46BF707CB15A166AB223",
-    "openPr": {
-      "version": "19.3.1",
-      "checkedAt": "2026-10-28T12:26:00.082122Z"
-    }
+    "manifestHash": "9A4DF16EBDCE59232C54B5DF04D449A66D61F5A11ADD46BF707CB15A166AB223"
   },
   "JosephFinney.Text-Grab": {
     "version": "4.16.0",
