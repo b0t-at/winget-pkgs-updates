@@ -4186,8 +4186,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.11.3",
-      "checkedAt": "2026-11-07T16:14:04.8361957Z"
+      "version": "2026.11.4",
+      "checkedAt": "2026-11-07T20:13:11.5265327Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -8800,7 +8800,7 @@
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
       "version": "5.7.1",
-      "checkedAt": "2026-11-06T16:18:28.6009093Z"
+      "checkedAt": "2026-11-07T20:13:18.7898669Z"
     }
   },
   "termio.soft-jp.com.TermioWin": {
@@ -8846,11 +8846,7 @@
       "243D64E65BBEFFF706C92B58FB1A56B6E024FBB1FB11DFFC623E59C18B0AB397"
     ],
     "version": "4.9.8",
-    "lastUpdated": "2026-09-12T01:32:42.9753228Z",
-    "openPr": {
-      "version": "4.9.9",
-      "checkedAt": "2026-11-06T16:18:29.0009616Z"
-    }
+    "lastUpdated": "2026-09-12T01:32:42.9753228Z"
   },
   "tg123.oci-to-wsl": {
     "description": "",
