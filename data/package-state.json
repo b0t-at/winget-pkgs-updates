@@ -1384,9 +1384,9 @@
     "version": "1.59.0"
   },
   "Carvel.ytt": {
-    "lastUpdated": "2026-11-07T04:48:23.9357231Z",
+    "lastUpdated": "2026-11-07T12:39:04.1610204Z",
     "description": "",
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "F81AD47D321DF67490D49AC2F2B048F59A9EF06E1D90D108A97655667AC136B7",
     "state": "VALIDATION_PASSED",
     "version": "0.55.4",
@@ -10184,15 +10184,15 @@
     "description": ""
   },
   "zevnda.SteamGameIdler": {
-    "state": "VALIDATION_PASSED",
-    "version": "6.4.1",
+    "lastUpdated": "2026-11-07T12:39:04.110037Z",
+    "manifestHash": "C0151DD9A4DA454F5F56FAE4E5E744E76CE7383B2F7B23470F953DCF1A8DA7AF",
     "description": "",
-    "validationCount": 1,
-    "manifestHash": "69376FA71176DA7B08EDF15D61A0ADA6F784DDFB08A5E61FABE051FA5423EBE4",
+    "version": "6.5.0",
     "installerHashes": [
-      "A79877C6871CDC339ECBA94D39F6000B45C6CB186DA0624B9F88232C3F9C27E9"
+      "9B65B7A265D0E583D4FC46D86B1F4F1C93BDD2FF43F1619705560B4BC73F0E2F"
     ],
-    "lastUpdated": "2026-11-07T01:46:37.6405342Z"
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1
   },
   "Zidoro.Pomatez": {
     "lastUpdated": "2026-08-18T17:25:13.8681281Z",
