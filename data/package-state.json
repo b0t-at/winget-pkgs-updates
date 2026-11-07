@@ -3009,14 +3009,14 @@
     "lastUpdated": "2026-08-21T17:17:40.0086759Z"
   },
   "Gather.Gather": {
-    "installerHashes": [
-      "10ADEE54F376E45429C527B9274D1F27C841605FF54C0F13E83352A9EE0DEB85"
-    ],
-    "lastUpdated": "2026-06-29T18:10:57.8985306Z",
-    "manifestHash": "C4749F865C5875ACEDEDECAFBBCFCA675F6294BE9D6C183DF969D9C9FEF3D56A",
-    "validationCount": 1,
+    "version": "1.41.3",
     "state": "VALIDATION_PASSED",
-    "version": "1.39.2",
+    "lastUpdated": "2026-11-07T20:34:11.8038429Z",
+    "manifestHash": "D4E32E1A5B121FDD1FBFB445D1B68DC6E46C9D52389B674D0BA7AF1229D0F8B9",
+    "validationCount": 1,
+    "installerHashes": [
+      "901BBF32D7E54EA260B99CECFDBAC5EDCC93710A58F324FD0F1D719DE2E843CF"
+    ],
     "description": ""
   },
   "GavinGe021.hasher": {
@@ -6331,9 +6331,9 @@
     "manifestHash": "A6EA0C41ABBCB410F9A2F04F49FF94D9261F06C80BF8D69654B3DAD5AA9C30CB"
   },
   "OnionShare.OnionShare": {
-    "lastUpdated": "2026-11-07T04:48:23.9977231Z",
+    "lastUpdated": "2026-11-07T20:34:11.8629686Z",
     "description": "",
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "EEEECCBAD7237F197E85810E114DC3CDDA76B0EE074CC2FA7986075138A90F9D",
     "state": "VALIDATION_PASSED",
     "version": "2.7.2",
