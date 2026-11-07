@@ -826,8 +826,8 @@
   },
   "Barry-ran.QtScrcpy": {
     "openPr": {
-      "checkedAt": "2026-11-06T08:21:07.5763318Z",
-      "version": "4.2.1"
+      "version": "4.2.1",
+      "checkedAt": "2026-11-07T12:19:14.5649941Z"
     }
   },
   "Baulk.Baulk": {
@@ -1351,7 +1351,11 @@
     "manifestHash": "ED16ADA202188A5FEB2CC40FB298A3D06B7A9BF1114E35786F0DAAEEA5834AE1",
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-11-05T04:55:31.6580022Z",
-    "version": "1.2.1"
+    "version": "1.2.1",
+    "openPr": {
+      "version": "1.2.1",
+      "checkedAt": "2026-11-07T12:20:06.4602657Z"
+    }
   },
   "CargoLambda.CargoLambda": {
     "manifestHash": "B8DD0B022742F2371ED57474DE9FEE6CB654CD7DD96A113241259E85D6F5ABF3",
