@@ -407,7 +407,7 @@
     "version": "3.0.10",
     "openPr": {
       "version": "3.0.10",
-      "checkedAt": "2026-11-06T12:21:37.1545697Z"
+      "checkedAt": "2026-11-07T16:14:43.155477Z"
     }
   },
   "Anki.Anki": {
@@ -4187,7 +4187,7 @@
   "jdx.mise": {
     "openPr": {
       "version": "2026.11.3",
-      "checkedAt": "2026-11-06T12:20:57.0585981Z"
+      "checkedAt": "2026-11-07T16:14:04.8361957Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -10082,7 +10082,7 @@
     "state": "VALIDATION_PASSED",
     "openPr": {
       "version": "7.5.0",
-      "checkedAt": "2026-11-06T12:21:31.1424621Z"
+      "checkedAt": "2026-11-07T16:14:39.092299Z"
     }
   },
   "Yubico.YubiKeyManagerCLI": {
