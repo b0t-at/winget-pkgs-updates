@@ -3003,9 +3003,9 @@
   "Gather.Gather": {
     "version": "1.41.3",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-08T12:47:27.1047971Z",
+    "lastUpdated": "2026-11-08T20:57:18.1821562Z",
     "manifestHash": "D4E32E1A5B121FDD1FBFB445D1B68DC6E46C9D52389B674D0BA7AF1229D0F8B9",
-    "validationCount": 3,
+    "validationCount": 4,
     "installerHashes": [
       "901BBF32D7E54EA260B99CECFDBAC5EDCC93710A58F324FD0F1D719DE2E843CF"
     ],
@@ -3800,8 +3800,8 @@
     "version": "4.7.0",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-08T08:56:21.3926291Z",
-    "validationCount": 1
+    "lastUpdated": "2026-11-08T20:57:18.2298948Z",
+    "validationCount": 2
   },
   "houmain.keymapper": {
     "openPr": {
@@ -7248,9 +7248,9 @@
   },
   "randlee.sc-compose": {
     "manifestHash": "CD8C06EF87453DCE70A82819B0E97994D585218EC13BBCB38F11D32F0976F73F",
-    "lastUpdated": "2026-11-08T16:53:13.5403956Z",
+    "lastUpdated": "2026-11-08T20:57:18.2500725Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "987C33E1A8D66D364C3A3B85E8E54B10F47D60321AC464CD87A15B9245A91335"
     ],
@@ -8429,13 +8429,15 @@
     }
   },
   "Storj.Uplink": {
+    "lastUpdated": "2026-11-08T20:57:18.3096478Z",
+    "version": "1.166.2",
+    "manifestHash": "ED58449D274E7313C8BADB42F9C8C466F496551A617F5857CFA35B9B91049DD0",
     "description": "",
-    "installerHashes": "071D28BBBE8CF688B829C17F90F897AD4AF468784E8796ED71F8C8F83B0628FD",
-    "lastUpdated": "2026-11-05T13:07:14.0920653Z",
-    "manifestHash": "D903734D8795A8FE889244F6D596F8521387CBE8D39D94AB6055C13539B6887A",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "version": "1.166.1"
+    "installerHashes": [
+      "7991EA541500F71F25D7E4FE93D53007DB045C895FD019CBCF4273780D7289CF"
+    ],
+    "validationCount": 1
   },
   "str4d.rage": {
     "state": "VALIDATION_PASSED",
@@ -8832,12 +8834,12 @@
   "TeXstudio.TeXstudio": {
     "state": "VALIDATION_PASSED",
     "version": "4.9.9",
-    "lastUpdated": "2026-11-08T08:56:21.4253167Z",
+    "lastUpdated": "2026-11-08T20:57:18.285219Z",
     "manifestHash": "2E9A664E25CEF9FD7C25CC014E47E93F90DA0FF0B2C388183D8B2397F2EB5245",
     "installerHashes": [
       "DCE92577AC3C0A75ED7DE350538AD5AB7505DCA45979A7163950B07CDE21D850"
     ],
-    "validationCount": 2,
+    "validationCount": 3,
     "description": ""
   },
   "tg123.oci-to-wsl": {
