@@ -3464,9 +3464,9 @@
     ],
     "version": "4.3.0",
     "description": "",
-    "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-11-08T08:56:21.3580153Z",
-    "validationCount": 1
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-08T16:53:13.4357658Z",
+    "validationCount": 2
   },
   "Hanselman.PeekDesktop": {
     "lastUpdated": "2026-08-20T21:12:49.5606509Z",
@@ -6425,8 +6425,8 @@
       "DCCC304E1FF65B551A0AEC079DFE156527BE92E4C6C89724EB6C553EF21E8A1B"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "lastUpdated": "2026-11-08T12:47:27.0271485Z",
+    "validationCount": 2,
+    "lastUpdated": "2026-11-08T16:53:13.4641639Z",
     "description": "",
     "version": "3.7.0",
     "manifestHash": "926240206D1B5F2F8A5D99C32752CD7DA51E7B692D2C679B454A2A750E458135"
@@ -7247,15 +7247,15 @@
     "state": "VALIDATION_PASSED"
   },
   "randlee.sc-compose": {
-    "version": "1.4.1",
-    "installerHashes": [
-      "8FC05CA05742126FB0778F2D7DEF0D4CB2C7193813E4F70521BCB73749DD1DD0"
-    ],
+    "manifestHash": "CD8C06EF87453DCE70A82819B0E97994D585218EC13BBCB38F11D32F0976F73F",
+    "lastUpdated": "2026-11-08T16:53:13.5403956Z",
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "lastUpdated": "2026-08-18T09:30:09.1722765Z",
     "validationCount": 1,
-    "manifestHash": "76F84F79DEC3E487059E6BEF3BE1DDA3027D431BA239E50A3604324585BB60DF"
+    "installerHashes": [
+      "987C33E1A8D66D364C3A3B85E8E54B10F47D60321AC464CD87A15B9245A91335"
+    ],
+    "version": "1.8.0",
+    "description": ""
   },
   "raphamorim.rio": {
     "manifestHash": "E1416D259738FB5DA83D5E5A9A428DDDB222D302B73D7768CCCC8F46BB7EB492",
@@ -8512,15 +8512,15 @@
     "state": "VALIDATION_PASSED"
   },
   "SuperRadCompany.Microsandbox": {
-    "manifestHash": "7F20D307083062B6EC32EEBA823610303B5F51E1BCACC82B34225D4B48C12B06",
-    "lastUpdated": "2026-11-02T01:18:25.2738394Z",
-    "installerHashes": [
-      "F6DE31FE34A600F04EB4548A6E5AEAEF96CF0A1CBC6FCCF6651BB3FAE489D22A",
-      "E8A5B88E9415F54709AE7F23B0E19ACD430D482A4891F13FD79BFE2FA094E814"
-    ],
-    "version": "0.7.13",
-    "validationCount": 1,
+    "manifestHash": "C5473E6635227E8982FF7E49E126EE0C75EDDE9DBA3DD4FDDCA0BB476D4CD349",
+    "lastUpdated": "2026-11-08T16:53:13.5162906Z",
     "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "installerHashes": [
+      "DEB34A8E308B143C9387DCA90F7B40A35A5DCB68948081A302EA3F3CA8282EF4",
+      "AC6CB2369AAEE38A448D2E3E112F8D76C39F3B1F6F05256B8AE9B6DF7793CF63"
+    ],
+    "version": "0.7.14",
     "description": ""
   },
   "SUSE.RancherDesktop": {
