@@ -1380,11 +1380,11 @@
     "version": "1.59.0"
   },
   "Carvel.ytt": {
-    "lastUpdated": "2026-11-07T16:48:39.5946921Z",
+    "lastUpdated": "2026-11-08T08:56:21.3354536Z",
     "description": "",
-    "validationCount": 3,
+    "validationCount": 4,
     "manifestHash": "F81AD47D321DF67490D49AC2F2B048F59A9EF06E1D90D108A97655667AC136B7",
-    "state": "VALIDATION_PASSED",
+    "state": "VALIDATION_FAILED",
     "version": "0.55.4",
     "installerHashes": [
       "468167C3784590D230121669FF093B14FF00E4E9E8A539EA835DD7B23D910918",
@@ -2004,15 +2004,15 @@
     "version": "2026.3.3"
   },
   "Digimezzo.Dopamine.3": {
-    "version": "3.0.11",
+    "manifestHash": "D4F40C13A3D116D9CD06C56F28C6AACB6AC308E738F56996C8E0C82B778EAD9A",
+    "installerHashes": [
+      "87B8DB0AEFC0C57390896EEC0CE3966908BA7D0DAD58D3D117F0F921F2BA8EB8"
+    ],
+    "version": "3.0.12",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "EA34581A39C07DF3DDAEAACB646E668AD5DA05684AAA3FAC602B69D80DB5DA6D"
-    ],
-    "lastUpdated": "2026-10-01T05:00:17.320586Z",
-    "validationCount": 1,
-    "manifestHash": "4BCDA9528A4C4CF8DD8454A6A6DBBDBB26A257166D089149D944ED8C579D9B8C"
+    "lastUpdated": "2026-11-08T08:56:21.4141012Z",
+    "validationCount": 1
   },
   "Dimmy.Dimmy": {
     "validationCount": 1,
@@ -3462,15 +3462,15 @@
     "description": ""
   },
   "Hanselman.BabySmash": {
-    "version": "4.2.1",
-    "description": "",
+    "manifestHash": "98BE55D2800A4DEDC82DB8277677EB241606B64DD3E3C9CFCA34E8EC2EFA678B",
     "installerHashes": [
-      "18FDE00640F5D82186352C9A2D47A524CB1754C7B2D2353D113C56933A27B519"
+      "5F936139206E84CD91366812572B0733FAE8257223F8FC4A97140EC12CCD8A7E"
     ],
-    "lastUpdated": "2026-08-23T01:00:02.0422048Z",
-    "validationCount": 1,
-    "manifestHash": "2F2125A050685BE756CFB8E2A65B9BE241784D1976D4F5991A25584CFC5D9D80",
-    "state": "VALIDATION_PASSED"
+    "version": "4.3.0",
+    "description": "",
+    "state": "VALIDATION_FAILED",
+    "lastUpdated": "2026-11-08T08:56:21.3580153Z",
+    "validationCount": 1
   },
   "Hanselman.PeekDesktop": {
     "lastUpdated": "2026-08-20T21:12:49.5606509Z",
@@ -3797,15 +3797,15 @@
     ]
   },
   "houmain.GPUpad": {
-    "version": "4.6.0",
-    "manifestHash": "0589777D0CADBDD9C3E0AC3827035A8EA6C8B7A034B290A972AE89C4757CBFD6",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "description": "",
-    "lastUpdated": "2026-10-22T21:30:34.2085687Z",
+    "manifestHash": "65FF72A4021B13489920F35BB096FFC9A94AA2C16706E0DA60B154E15A784A12",
     "installerHashes": [
-      "A09121F2C9D918263B15AD13968E0839DC0547601B2BFD9271ABED7CEFACC71A"
-    ]
+      "1E7FB06F7D0D38654DC7B98AFB2F4575B6262B14AE28156688162366F7C22597"
+    ],
+    "version": "4.7.0",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-08T08:56:21.3926291Z",
+    "validationCount": 1
   },
   "houmain.keymapper": {
     "openPr": {
@@ -4014,15 +4014,15 @@
     }
   },
   "IvanIsCoding.celq": {
-    "validationCount": 1,
-    "version": "0.7.1",
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "manifestHash": "B3720EC48B9E7409DE2C4CE27A684D4DD374B91E152AB6C1460D56D1B36FAE99",
+    "manifestHash": "42D491CCDFD19697E9FF414D4C5D3BDE9928B6F5DE97ABFB627EC6EA8CB9AE32",
     "installerHashes": [
-      "506CE1B22D48EA6AF2BD421E18DC96285A664DEB7877F39ABC2EF91E7D84C9C9"
+      "DFD5596A278A8EC238E21C6EDF5818E39D79FA863AC1CE16C3EF65468A7ACC98"
     ],
-    "lastUpdated": "2026-09-18T08:57:15.7907634Z"
+    "version": "0.8.0",
+    "description": "",
+    "state": "VALIDATION_FAILED",
+    "lastUpdated": "2026-11-08T08:56:21.2942136Z",
+    "validationCount": 1
   },
   "iWillink.AgentDeck": {
     "validationCount": 1,
@@ -6917,9 +6917,9 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "97C1424CF7E64A60853F1C401653F7C64E8391E4426C8D7BA19818175073BCC9",
     "description": "",
-    "lastUpdated": "2026-11-07T04:48:23.8847866Z",
+    "lastUpdated": "2026-11-08T08:56:21.4407122Z",
     "version": "8.3.7",
-    "validationCount": 2
+    "validationCount": 3
   },
   "PiusPP.Celestial": {
     "version": "2.1.0",
@@ -8836,12 +8836,12 @@
   "TeXstudio.TeXstudio": {
     "state": "VALIDATION_PASSED",
     "version": "4.9.9",
-    "lastUpdated": "2026-11-08T04:46:50.0058398Z",
+    "lastUpdated": "2026-11-08T08:56:21.4253167Z",
     "manifestHash": "2E9A664E25CEF9FD7C25CC014E47E93F90DA0FF0B2C388183D8B2397F2EB5245",
     "installerHashes": [
       "DCE92577AC3C0A75ED7DE350538AD5AB7505DCA45979A7163950B07CDE21D850"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "description": ""
   },
   "tg123.oci-to-wsl": {
