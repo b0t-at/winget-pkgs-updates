@@ -3003,9 +3003,9 @@
   "Gather.Gather": {
     "version": "1.41.3",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-08T04:46:49.9873799Z",
+    "lastUpdated": "2026-11-08T12:47:27.1047971Z",
     "manifestHash": "D4E32E1A5B121FDD1FBFB445D1B68DC6E46C9D52389B674D0BA7AF1229D0F8B9",
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "901BBF32D7E54EA260B99CECFDBAC5EDCC93710A58F324FD0F1D719DE2E843CF"
     ],
@@ -5021,15 +5021,15 @@
     }
   },
   "marcinz606.NegPy": {
-    "manifestHash": "C57A589C7500566E70A1266369679E45E9B9F88E64C7E069389558F315CF208A",
-    "lastUpdated": "2026-11-03T16:57:54.3443564Z",
     "installerHashes": [
-      "1CA3D5CF91DC7810120E5F6C9D1A58B4BC37CC7BADD17EC2ECE4DDF0EDE5DFDA"
+      "0BCA4D646EBE4868FE3D73ECAB7AB69D75F49A986F2F4B67AC927D567FA7BDA4"
     ],
-    "version": "0.67.0",
-    "description": "",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-11-08T12:47:27.0520412Z",
+    "description": "",
+    "version": "0.68.0",
+    "manifestHash": "72DCF1A348FD9734899324EEBC60F63AD5B4EA72ED79FF68FA9FC7E7D2879565"
   },
   "MarcoHefti.YTVodManager": {
     "manifestHash": "D6B8CC28C195C1925AC443615826FDE9EB33D111F50144DC9CE7DF76A34B98CB",
@@ -5587,8 +5587,8 @@
     "installerHashes": [
       "3BA75E8C953C2B9992ED82F60BF1109BC7FB1C80A95F576BACA3C6076AA0C40B"
     ],
-    "validationCount": 1,
-    "lastUpdated": "2026-11-08T01:07:27.4748638Z",
+    "validationCount": 2,
+    "lastUpdated": "2026-11-08T12:47:26.9587154Z",
     "version": "2.0.0",
     "description": "",
     "state": "VALIDATION_PASSED"
@@ -6422,14 +6422,14 @@
   },
   "OpenGeos.GeoLibre": {
     "installerHashes": [
-      "ADDD163729E6558649A8D742D082BB2F6A16A86DF2477C4301855F37E759B47D"
+      "DCCC304E1FF65B551A0AEC079DFE156527BE92E4C6C89724EB6C553EF21E8A1B"
     ],
-    "manifestHash": "B10A52EABB9B8A9C8FAE14433AA2ABF684BF5EE2D40489261DC89000480D92E8",
-    "validationCount": 1,
     "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-11-08T12:47:27.0271485Z",
     "description": "",
-    "version": "3.6.1",
-    "lastUpdated": "2026-11-04T21:18:12.7890372Z"
+    "version": "3.7.0",
+    "manifestHash": "926240206D1B5F2F8A5D99C32752CD7DA51E7B692D2C679B454A2A750E458135"
   },
   "OpenHV.OpenHV": {
     "description": "",
