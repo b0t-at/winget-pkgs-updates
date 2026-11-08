@@ -4179,7 +4179,7 @@
   "jdx.mise": {
     "openPr": {
       "version": "2026.11.4",
-      "checkedAt": "2026-11-07T20:13:11.5265327Z"
+      "checkedAt": "2026-11-08T20:13:24.4116599Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -8792,7 +8792,7 @@
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
       "version": "5.7.1",
-      "checkedAt": "2026-11-07T20:13:18.7898669Z"
+      "checkedAt": "2026-11-08T20:13:52.1715779Z"
     }
   },
   "termio.soft-jp.com.TermioWin": {
@@ -10070,7 +10070,7 @@
     "state": "VALIDATION_PASSED",
     "openPr": {
       "version": "7.5.0",
-      "checkedAt": "2026-11-07T16:14:39.092299Z"
+      "checkedAt": "2026-11-08T20:13:56.5315608Z"
     }
   },
   "Yubico.YubiKeyManagerCLI": {
