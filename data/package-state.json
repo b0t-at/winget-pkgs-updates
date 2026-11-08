@@ -2259,8 +2259,8 @@
     "lastUpdated": "2026-10-29T09:22:10.7111402Z",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-11-07T04:16:06.6332947Z",
-      "version": "2.12.5"
+      "version": "2.12.5",
+      "checkedAt": "2026-11-08T04:16:14.2271971Z"
     }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
@@ -3635,8 +3635,8 @@
     "lastUpdated": "2026-10-23T13:49:06.4312107Z",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-11-07T04:16:09.985171Z",
-      "version": "0.18.0"
+      "version": "0.18.0",
+      "checkedAt": "2026-11-08T04:16:17.1064035Z"
     }
   },
   "Hiddify.Next": {
@@ -3809,8 +3809,8 @@
   },
   "houmain.keymapper": {
     "openPr": {
-      "checkedAt": "2026-11-07T04:16:10.40555Z",
-      "version": "5.8.1"
+      "version": "5.8.1",
+      "checkedAt": "2026-11-08T04:16:17.4906551Z"
     }
   },
   "hrkfdn.ncspot": {
@@ -4568,8 +4568,8 @@
     "description": "",
     "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D",
     "openPr": {
-      "checkedAt": "2026-11-07T04:16:11.451168Z",
-      "version": "4.4.5"
+      "version": "4.4.5",
+      "checkedAt": "2026-11-08T04:16:18.5585131Z"
     }
   },
   "kmiya-culti.RLogin": {
