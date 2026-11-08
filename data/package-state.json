@@ -3007,9 +3007,9 @@
   "Gather.Gather": {
     "version": "1.41.3",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-07T20:34:11.8038429Z",
+    "lastUpdated": "2026-11-08T04:46:49.9873799Z",
     "manifestHash": "D4E32E1A5B121FDD1FBFB445D1B68DC6E46C9D52389B674D0BA7AF1229D0F8B9",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "901BBF32D7E54EA260B99CECFDBAC5EDCC93710A58F324FD0F1D719DE2E843CF"
     ],
@@ -6327,9 +6327,9 @@
     "manifestHash": "A6EA0C41ABBCB410F9A2F04F49FF94D9261F06C80BF8D69654B3DAD5AA9C30CB"
   },
   "OnionShare.OnionShare": {
-    "lastUpdated": "2026-11-07T20:34:11.8629686Z",
+    "lastUpdated": "2026-11-08T04:46:50.0373367Z",
     "description": "",
-    "validationCount": 2,
+    "validationCount": 3,
     "manifestHash": "EEEECCBAD7237F197E85810E114DC3CDDA76B0EE074CC2FA7986075138A90F9D",
     "state": "VALIDATION_PASSED",
     "version": "2.7.2",
@@ -8834,15 +8834,15 @@
     "version": "1.12.0"
   },
   "TeXstudio.TeXstudio": {
-    "manifestHash": "ADB06E594B3CB95B82C4D7EA99B54798BCDE425B8D7CA9575956B765CE412232",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "description": "",
+    "version": "4.9.9",
+    "lastUpdated": "2026-11-08T04:46:50.0058398Z",
+    "manifestHash": "2E9A664E25CEF9FD7C25CC014E47E93F90DA0FF0B2C388183D8B2397F2EB5245",
     "installerHashes": [
-      "243D64E65BBEFFF706C92B58FB1A56B6E024FBB1FB11DFFC623E59C18B0AB397"
+      "DCE92577AC3C0A75ED7DE350538AD5AB7505DCA45979A7163950B07CDE21D850"
     ],
-    "version": "4.9.8",
-    "lastUpdated": "2026-09-12T01:32:42.9753228Z"
+    "validationCount": 1,
+    "description": ""
   },
   "tg123.oci-to-wsl": {
     "description": "",
@@ -9175,9 +9175,9 @@
     }
   },
   "Tyrrrz.LightBulb": {
-    "lastUpdated": "2026-11-07T04:48:23.9613339Z",
+    "lastUpdated": "2026-11-08T04:46:49.9473029Z",
     "description": "",
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "014165BAC61FA0446E7B841B523B0976198D4FC6DF57202A8275C9C307E36A03",
     "state": "VALIDATION_PASSED",
     "version": "2.7.3",
