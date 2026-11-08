@@ -3740,15 +3740,15 @@
     "validationCount": 1
   },
   "holland-built.Bloxsmith": {
+    "manifestHash": "8584288E507F1C77394EE5CBC862E35733F05327C3710A1B59780D1D63483B40",
     "installerHashes": [
-      "2314CE74A4CC9944151CC4F50A68F9F8CE13B974AF3B4DDC9E1B03E3F36E4230"
+      "2724EBC54219F5BEBBD0251D4CD2B0B9EDA72F5A3664926F785474A4309C7A4B"
     ],
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "DEA611288911B71B565DC2AA33A93B54056A7FB3F22E5614F5A7C7BC3B2558B5",
+    "validationCount": 1,
+    "lastUpdated": "2026-11-08T01:07:27.5447866Z",
+    "version": "3.124.1",
     "description": "",
-    "lastUpdated": "2026-11-06T16:57:30.3106201Z",
-    "version": "3.123.0",
-    "validationCount": 1
+    "state": "VALIDATION_PASSED"
   },
   "HongMinhee.Gukhanmun": {
     "installerHashes": [
@@ -3825,16 +3825,16 @@
     "description": ""
   },
   "Humanity.DJV2": {
-    "lastUpdated": "2026-10-16T01:16:49.8564448Z",
+    "manifestHash": "1276628551E42516667F324FAABDC2C36C1D3A204B54F3A63678ED3DF03EFD14",
     "installerHashes": [
-      "64D3E0E431D0C62E00AFAFD6CDF64CBCDF149EB40D9E7818C4E537513EAD2912",
-      "C50FF85EF2C050A811D6BD60A75F32DF08F7574AB8A31F3D1CB79F0A82D9FCB8"
+      "49FD1D85CBCF32DA4C46905C0E9B1575E87B7D15BA85DEFE3414332A6DFBF568",
+      "7CD312988E7D6D6C22C45E3D1F94E4EF417FD7A7CC3629799FF6C6E2DC4FF18D"
     ],
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "version": "3.7.5",
     "validationCount": 1,
-    "manifestHash": "E7A070DF644273AC138E3A2B5F92817BE09DADF3136A1BE4384E5FAB666C170E"
+    "lastUpdated": "2026-11-08T01:07:27.5015286Z",
+    "version": "3.7.6",
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "humbinal.ParqForge": {
     "lastUpdated": "2026-08-20T21:12:49.3909731Z",
@@ -5587,15 +5587,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Monghoul.Monghoul": {
-    "validationCount": 7,
-    "state": "VALIDATION_PASSED",
-    "version": "1.14.1",
-    "manifestHash": "63D13E1A3858FC28CAAD40AE7ED2DFFE8109B34335693320F6AF4F99A0BA86E5",
+    "manifestHash": "479FC3FFA5A0CA13F8E615F5D8AD35D5E69B6119A7FB31F133F47D731E04A4FF",
     "installerHashes": [
-      "2A0C154CB1875695AD8EA49C5891D44A826DC70C396AAC2F60F033838792277E"
+      "3BA75E8C953C2B9992ED82F60BF1109BC7FB1C80A95F576BACA3C6076AA0C40B"
     ],
+    "validationCount": 1,
+    "lastUpdated": "2026-11-08T01:07:27.4748638Z",
+    "version": "2.0.0",
     "description": "",
-    "lastUpdated": "2026-10-10T20:50:15.9620025Z"
+    "state": "VALIDATION_PASSED"
   },
   "MongoDB.MongoDBAtlasCLI": {
     "validationCount": 1,
@@ -8096,15 +8096,15 @@
     "manifestHash": "E287E5EFDF457EB47DC8F18007B1E361CAE20763BDA63DD266E50CCF3C4BAC3A"
   },
   "skyhook-io.Radar": {
-    "manifestHash": "165415A3A6C08A52ADAC8CEF269C97210B5D2260BDE2CDBA91B334A7321D20B6",
-    "description": "",
-    "version": "1.19.0",
+    "manifestHash": "6A104784EB2771ADB552388C9E899B32C33F8DBCF08F709550BB16AA1B75B0AE",
     "installerHashes": [
-      "101B7F27404CA7487C6E08DCE49B30C8D39671BC1DE8516D67B704ACA28805B2"
+      "9F30CFAF8924D0E6388AC88C624389580274B390A2C81AF55514820AE5CA4973"
     ],
-    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "lastUpdated": "2026-10-30T17:01:05.7406631Z"
+    "lastUpdated": "2026-11-08T01:07:27.4237485Z",
+    "version": "1.20.1",
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "Skylot.jadx": {
     "validationCount": 1,
