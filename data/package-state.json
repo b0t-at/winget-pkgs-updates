@@ -400,11 +400,7 @@
     "manifestHash": "AF74C9B5CC3B52C46F731C921FFF48ED4AF32A7E4EAD06ACA32E948F145B748A",
     "description": "",
     "lastUpdated": "2026-11-06T08:41:06.256853Z",
-    "version": "3.0.10",
-    "openPr": {
-      "version": "3.0.10",
-      "checkedAt": "2026-11-07T16:14:43.155477Z"
-    }
+    "version": "3.0.10"
   },
   "Anki.Anki": {
     "description": "",
@@ -696,7 +692,7 @@
     ],
     "openPr": {
       "version": "0.29.1",
-      "checkedAt": "2026-11-07T08:18:17.1547025Z"
+      "checkedAt": "2026-11-08T12:19:58.7101688Z"
     }
   },
   "Automattic.Wordpress": {
