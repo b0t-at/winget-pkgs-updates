@@ -837,15 +837,15 @@
     "validationCount": 1
   },
   "bcssov.IronyModManager": {
+    "validationCount": 1,
+    "manifestHash": "015E96455BD9238A31315BC4B8080A569035AB836C143594272023FEE1EAB57D",
+    "lastUpdated": "2026-11-09T04:54:26.6017867Z",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 2,
+    "version": "1.28.109",
     "installerHashes": [
-      "DE6AA1CF6EFAF6B5923842BAD1E3DC72CCBB9B4A9F99A61599AA088E99803477"
-    ],
-    "lastUpdated": "2026-08-05T15:30:55.5690208Z",
-    "manifestHash": "C524DD4DEABA443AA84D590A7A59CB569FB2C007FC8D8F94EFA50462E25B2A52",
-    "version": "1.27.206"
+      "DC27E236F7419BAE62F0277250DD2A6592FC41EEF62E7ABC69F4F89C6735C13A"
+    ]
   },
   "bdash-app.bdash": {
     "installerHashes": [
@@ -6909,9 +6909,9 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "97C1424CF7E64A60853F1C401653F7C64E8391E4426C8D7BA19818175073BCC9",
     "description": "",
-    "lastUpdated": "2026-11-08T08:56:21.4407122Z",
+    "lastUpdated": "2026-11-09T04:54:26.5064404Z",
     "version": "8.3.7",
-    "validationCount": 3
+    "validationCount": 4
   },
   "PiusPP.Celestial": {
     "version": "2.1.0",
@@ -8511,9 +8511,9 @@
   },
   "SuperRadCompany.Microsandbox": {
     "manifestHash": "C5473E6635227E8982FF7E49E126EE0C75EDDE9DBA3DD4FDDCA0BB476D4CD349",
-    "lastUpdated": "2026-11-08T16:53:13.5162906Z",
+    "lastUpdated": "2026-11-09T04:54:26.4852347Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "DEB34A8E308B143C9387DCA90F7B40A35A5DCB68948081A302EA3F3CA8282EF4",
       "AC6CB2369AAEE38A448D2E3E112F8D76C39F3B1F6F05256B8AE9B6DF7793CF63"
@@ -8805,16 +8805,16 @@
     ]
   },
   "TerraformLinters.tflint": {
-    "version": "0.65.0",
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "7FA68D755DE67547016A6A04EE9FEF8D2AAEA66EC434A0140A59A1A419E5269E",
-      "292E760ADF0E9C7E0F10DDEB0F6ADD67FD6D2C68B5449FDF766FF6FFDDCE465C"
-    ],
     "validationCount": 1,
-    "manifestHash": "9F9B1679472D879F2070C5D831EEF5FD671C717A1B220880683AE08B09F80FAF",
-    "lastUpdated": "2026-10-23T13:49:06.3435264Z",
-    "description": ""
+    "manifestHash": "9980097E25B6A5F394BA674E10F19CE5365E883F3F6370A0D655254B40A72FB9",
+    "lastUpdated": "2026-11-09T04:54:26.5790938Z",
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "version": "0.66.0",
+    "installerHashes": [
+      "0FFFFE98B8FF1B093822F724617ABC30BE247F205ECB38F94E6799F829518727",
+      "E3ACD1D89C735CE6E09108C9277F26076EBEB385C1F77A73C1CBF1826ED626A7"
+    ]
   },
   "Tetrate.wazero": {
     "installerHashes": [
@@ -8830,12 +8830,12 @@
   "TeXstudio.TeXstudio": {
     "state": "VALIDATION_PASSED",
     "version": "4.9.9",
-    "lastUpdated": "2026-11-08T20:57:18.285219Z",
+    "lastUpdated": "2026-11-09T04:54:26.4289103Z",
     "manifestHash": "2E9A664E25CEF9FD7C25CC014E47E93F90DA0FF0B2C388183D8B2397F2EB5245",
     "installerHashes": [
       "DCE92577AC3C0A75ED7DE350538AD5AB7505DCA45979A7163950B07CDE21D850"
     ],
-    "validationCount": 3,
+    "validationCount": 4,
     "description": ""
   },
   "tg123.oci-to-wsl": {
