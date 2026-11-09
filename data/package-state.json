@@ -3999,11 +3999,7 @@
     "validationCount": 1,
     "description": "",
     "lastUpdated": "2026-06-04T22:15:30.5734589Z",
-    "manifestHash": "06EA63CBA95A079A2638DFF25282D03EB7E6B1FD2E589F9F80A37CDBF09C37BB",
-    "openPr": {
-      "version": "1.31.4",
-      "checkedAt": "2026-11-07T00:33:37.4586329Z"
-    }
+    "manifestHash": "06EA63CBA95A079A2638DFF25282D03EB7E6B1FD2E589F9F80A37CDBF09C37BB"
   },
   "IvanIsCoding.celq": {
     "manifestHash": "42D491CCDFD19697E9FF414D4C5D3BDE9928B6F5DE97ABFB627EC6EA8CB9AE32",
@@ -8470,8 +8466,8 @@
     "validationCount": 1,
     "manifestHash": "2FC17D10387329E5E73DBDDCBE45541A670D1711C99B916B986BBD747577DEC7",
     "openPr": {
-      "version": "1.55.7",
-      "checkedAt": "2026-11-03T20:15:30.9777756Z"
+      "checkedAt": "2026-11-09T20:16:52.2981354Z",
+      "version": "1.55.9"
     }
   },
   "stuncloud.uwscr": {
@@ -8791,8 +8787,8 @@
     "manifestHash": "101A50462A6E2BE19AFB17A21278EA44597559D970949753840897CFC30A7566",
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
-      "version": "5.7.1",
-      "checkedAt": "2026-11-08T20:13:52.1715779Z"
+      "checkedAt": "2026-11-09T20:16:54.1050984Z",
+      "version": "5.7.1"
     }
   },
   "termio.soft-jp.com.TermioWin": {
