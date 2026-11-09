@@ -127,8 +127,8 @@
     "version": "0.107.80",
     "lastUpdated": "2026-11-04T21:18:12.9029596Z",
     "openPr": {
-      "checkedAt": "2026-11-08T08:17:27.703463Z",
-      "version": "0.107.80"
+      "version": "0.107.80",
+      "checkedAt": "2026-11-09T08:22:36.7390946Z"
     }
   },
   "AdGuard.dnsproxy": {
@@ -4258,8 +4258,8 @@
     "lastUpdated": "2026-08-06T14:10:17.3921348Z",
     "manifestHash": "1E843D90602194E32EF0F84E333BE9BC20D09621BCA43AA304BDA7952A621BAB",
     "openPr": {
-      "checkedAt": "2026-11-08T08:17:35.229647Z",
-      "version": "0.47.1"
+      "version": "0.47.1",
+      "checkedAt": "2026-11-09T08:22:45.1914452Z"
     }
   },
   "jmrplens.gitlab-mcp-server": {
