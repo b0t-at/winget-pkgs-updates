@@ -602,8 +602,8 @@
       "4FB403EABABE2E8044E1FE85130E165F0D05C80A3306105F28B5C7967AFCD7BF"
     ],
     "manifestHash": "5B1E60DD4F74722A9C5465863A30B78B0A562014D9164E73B4D2118ABC58852A",
-    "validationCount": 2,
-    "lastUpdated": "2026-11-09T09:15:32.3492657Z"
+    "validationCount": 3,
+    "lastUpdated": "2026-11-09T13:15:24.3845293Z"
   },
   "Arnica.DepsGuard": {
     "lastUpdated": "2026-08-18T21:24:38.4020506Z",
@@ -3461,8 +3461,8 @@
     "version": "4.3.0",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-09T09:15:32.5133795Z",
-    "validationCount": 4
+    "lastUpdated": "2026-11-09T13:15:24.5202556Z",
+    "validationCount": 5
   },
   "Hanselman.PeekDesktop": {
     "lastUpdated": "2026-08-20T21:12:49.5606509Z",
@@ -3796,8 +3796,8 @@
     "version": "4.7.0",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-08T20:57:18.2298948Z",
-    "validationCount": 2
+    "lastUpdated": "2026-11-09T13:15:24.5564118Z",
+    "validationCount": 3
   },
   "houmain.keymapper": {
     "openPr": {
@@ -3806,15 +3806,15 @@
     }
   },
   "hrkfdn.ncspot": {
-    "version": "1.5.0",
-    "installerHashes": [
-      "547E5BAE5293D89144E27968C49071D5B36DA8DC7200193C0214EA2180F7C4ED"
-    ],
-    "validationCount": 1,
-    "lastUpdated": "2026-10-02T16:50:56.7971654Z",
-    "manifestHash": "4D81CD2B3593A6B060AD9E2CBA3F8F539C6161D8D1E78A795D5EAC206B5405BD",
     "state": "VALIDATION_PASSED",
-    "description": ""
+    "validationCount": 1,
+    "manifestHash": "E40266E598ECD18C8105C6241EE27DB20C8B9E900BC690C0EB899813BF2A8A24",
+    "description": "",
+    "version": "1.5.1",
+    "lastUpdated": "2026-11-09T13:15:24.478556Z",
+    "installerHashes": [
+      "3AF768346B3B7725DA22614E09479DC8889E255439B03698F62827389BE2989C"
+    ]
   },
   "Humanity.DJV2": {
     "manifestHash": "1276628551E42516667F324FAABDC2C36C1D3A204B54F3A63678ED3DF03EFD14",
@@ -3822,8 +3822,8 @@
       "49FD1D85CBCF32DA4C46905C0E9B1575E87B7D15BA85DEFE3414332A6DFBF568",
       "7CD312988E7D6D6C22C45E3D1F94E4EF417FD7A7CC3629799FF6C6E2DC4FF18D"
     ],
-    "validationCount": 1,
-    "lastUpdated": "2026-11-08T01:07:27.5015286Z",
+    "validationCount": 2,
+    "lastUpdated": "2026-11-09T13:15:24.3205211Z",
     "version": "3.7.6",
     "description": "",
     "state": "VALIDATION_PASSED"
@@ -4864,15 +4864,15 @@
     "version": "4.1.26190"
   },
   "LoxSmoke.OpenLogiNet": {
-    "lastUpdated": "2026-11-03T09:08:27.6263396Z",
-    "manifestHash": "489E6373DD53BEB8C53B10C065EE578057B165E09E277F0A880525F1114D74A4",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
+    "manifestHash": "E09CD34BF9F0F349EC7BACCEC6BAE4B3200258E6C692544A960F2FDEC2C6EF00",
     "description": "",
+    "version": "0.27.0",
+    "lastUpdated": "2026-11-09T13:15:24.4195324Z",
     "installerHashes": [
-      "E4BBC9AEAB2419FBF3C8485A800CE25B7228819E0EE253A7CA9AE2702E2DC2AB"
-    ],
-    "version": "0.26.0"
+      "1B808A52B4C7C8144043F896958FE1BF8C1EA08BF53A0852890A863B497EBEC6"
+    ]
   },
   "LuantiTeam.Luanti": {
     "version": "5.18.0",
@@ -8807,9 +8807,9 @@
     ]
   },
   "TerraformLinters.tflint": {
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "9980097E25B6A5F394BA674E10F19CE5365E883F3F6370A0D655254B40A72FB9",
-    "lastUpdated": "2026-11-09T04:54:26.5790938Z",
+    "lastUpdated": "2026-11-09T13:15:24.5920498Z",
     "state": "VALIDATION_PASSED",
     "description": "",
     "version": "0.66.0",
