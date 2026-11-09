@@ -391,16 +391,16 @@
     "version": "0.2.0"
   },
   "AnInsomniacy.Aria2Next": {
-    "installerHashes": [
-      "A966FF4402C432FF03A3E1391C5412BC8B38422D6CF458B0DFAD147679356F15",
-      "5D4C75EAB1CF5A33FEDCB9C0C876A9A8E0C53951DAB614BBE72A065937613572"
-    ],
+    "manifestHash": "3538FABD9B50C691D99E1340CE434EE6DD5794C213723519229209B324BFAAFD",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "AF74C9B5CC3B52C46F731C921FFF48ED4AF32A7E4EAD06ACA32E948F145B748A",
     "description": "",
-    "lastUpdated": "2026-11-06T08:41:06.256853Z",
-    "version": "3.0.10"
+    "installerHashes": [
+      "12BBD48DFD2C86F55419BF92B196DD3AEDD6983116B5CE10C85D27A5A76C2BAA",
+      "4E3B653C0C5B9F7213D55DFDE4329B49CF9FA310BD7C6D75F9AE92D8A7DD4C9F"
+    ],
+    "version": "3.1.0",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-09T01:40:11.9596019Z"
   },
   "Anki.Anki": {
     "description": "",
@@ -756,16 +756,16 @@
     "manifestHash": "C71A6E160AC6A85572AFA73CCA7A972CAD01C8411B8217390738C684FC69BEF1"
   },
   "axllent.mailpit": {
-    "installerHashes": [
-      "47122DD828FF80DCAEF62B2952C478B178AFADADF066C990489608E537121BFD",
-      "467C480C53D9F29626326F6187ACCEAAA6131204E632F638FA1D40EF1C578DEA"
-    ],
+    "manifestHash": "84D8B6AE2574E9EFF9729FBA589F60BB24E6B2505BB9A7402A9A9FE2BD3C59B8",
     "validationCount": 1,
+    "description": "",
+    "installerHashes": [
+      "0BCF8F1E7C21005B30C206064FF2F37DAC602EF66774E558379D326F5673D652",
+      "3F0BEDC92AA55003588446920532EB9368547A8D151EA6A6D93A24490C00B45E"
+    ],
+    "version": "1.33.1",
     "state": "VALIDATION_PASSED",
-    "version": "1.33.0",
-    "lastUpdated": "2026-11-01T20:35:44.7331312Z",
-    "manifestHash": "377E152810DDD4E703809D687B742FA89CC6D33DE2DB582A335C9B9EFB9EF368",
-    "description": ""
+    "lastUpdated": "2026-11-09T01:40:11.875326Z"
   },
   "axodotdev.dist": {
     "lastUpdated": "2026-11-03T09:08:27.687067Z",
@@ -2007,8 +2007,8 @@
     "version": "3.0.12",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-08T08:56:21.4141012Z",
-    "validationCount": 1
+    "lastUpdated": "2026-11-09T01:40:11.758358Z",
+    "validationCount": 2
   },
   "Dimmy.Dimmy": {
     "validationCount": 1,
@@ -3465,8 +3465,8 @@
     "version": "4.3.0",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-08T16:53:13.4357658Z",
-    "validationCount": 2
+    "lastUpdated": "2026-11-09T01:40:11.9815938Z",
+    "validationCount": 3
   },
   "Hanselman.PeekDesktop": {
     "lastUpdated": "2026-08-20T21:12:49.5606509Z",
@@ -3740,8 +3740,8 @@
     "installerHashes": [
       "2724EBC54219F5BEBBD0251D4CD2B0B9EDA72F5A3664926F785474A4309C7A4B"
     ],
-    "validationCount": 1,
-    "lastUpdated": "2026-11-08T01:07:27.5447866Z",
+    "validationCount": 2,
+    "lastUpdated": "2026-11-09T01:40:11.9333904Z",
     "version": "3.124.1",
     "description": "",
     "state": "VALIDATION_PASSED"
@@ -4016,9 +4016,9 @@
     ],
     "version": "0.8.0",
     "description": "",
-    "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-11-08T08:56:21.2942136Z",
-    "validationCount": 1
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-09T01:40:11.8092844Z",
+    "validationCount": 2
   },
   "iWillink.AgentDeck": {
     "validationCount": 1,
@@ -4949,8 +4949,8 @@
       "5663FF38F795FD992444017E6158110F0C975706188D7F452A9D33C3F4CC4C63"
     ],
     "manifestHash": "537A26448C06C50895587F549ED14CA81DB1BD7C24979A731E0DD681DC4B2D4D",
-    "validationCount": 1,
-    "lastUpdated": "2026-11-07T16:48:39.540018Z"
+    "validationCount": 2,
+    "lastUpdated": "2026-11-09T01:40:11.8394031Z"
   },
   "Luxview.AgainstMe": {
     "installerHashes": [
@@ -7860,15 +7860,15 @@
     }
   },
   "seerge.g-helper.PreRelease": {
-    "lastUpdated": "2026-11-03T01:03:43.3789332Z",
-    "description": "",
+    "manifestHash": "148FBF6A7F3B027E311C0C523C989F9273C571D979482E59A4F0DEE2C69FBE59",
     "validationCount": 1,
+    "description": "",
     "installerHashes": [
-      "64492AEB6A02D25D4C64F19B8EF28D13AA4FFAD65E28E33E703ADA568A6F41EF"
+      "3F781245675C3B591C399AF06EE946F341FF8622D02229F0880410BB37E75CE6"
     ],
+    "version": "0.292",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "A4AD6B11A67AFD8736E0CAF048ECEFB2EC1346437D24FAE9ACBF4E080F1C0159",
-    "version": "0.291"
+    "lastUpdated": "2026-11-09T01:40:11.9053503Z"
   },
   "SERGEYDJUM.dwmEOTFrs": {
     "installerHashes": [
