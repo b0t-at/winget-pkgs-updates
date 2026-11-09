@@ -837,15 +837,15 @@
     "validationCount": 1
   },
   "bcssov.IronyModManager": {
-    "state": "VALIDATION_FAILED",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
       "6AF1D39F5D66562AEB33F7A9D7FB99DD520AF3E85581705E0F844A9367CE7DCC"
     ],
     "description": "",
     "version": "1.28.110",
     "manifestHash": "7139DA5DD5E53B45C9A40119267AA514A940F53FC6910C6CCA413ED6AD859671",
-    "validationCount": 1,
-    "lastUpdated": "2026-11-09T17:01:45.4704251Z"
+    "validationCount": 2,
+    "lastUpdated": "2026-11-09T21:24:28.1615164Z"
   },
   "bdash-app.bdash": {
     "installerHashes": [
@@ -943,8 +943,8 @@
       "0799FDC4588A934FD5D727920117A5E0D5D24D2CDEAD55445E84C5619D201D9C"
     ],
     "manifestHash": "C63A24BABF4E1C36C5A597DC4D3BEFA5E89612871D6453BE08D0374595C56395",
-    "validationCount": 1,
-    "lastUpdated": "2026-11-07T16:48:39.6417586Z"
+    "validationCount": 2,
+    "lastUpdated": "2026-11-09T21:24:28.0762702Z"
   },
   "bgreenwell.lstr": {
     "version": "0.4.0",
@@ -2506,8 +2506,8 @@
     "description": "",
     "version": "0.56.3",
     "manifestHash": "9832AFBDC35F82156C85B52BB0A846CE7275DA581AB998A71392CE56DC20D4C6",
-    "validationCount": 1,
-    "lastUpdated": "2026-11-09T17:01:45.5292377Z"
+    "validationCount": 2,
+    "lastUpdated": "2026-11-09T21:24:28.1389347Z"
   },
   "EtternaProject.EtternaGame": {
     "configHealth": {
@@ -3184,15 +3184,15 @@
     }
   },
   "Gluon.SceneBuilder": {
-    "version": "26.0.0",
-    "installerHashes": [
-      "36B5D8616DBBEBC8D2E62BC4506862073CDEE0C5378D52CCE5D37437B8FC8EE9"
-    ],
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "lastUpdated": "2026-08-18T09:30:09.0496192Z",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "manifestHash": "683D852830B9998517762F8BCDE81A8E1B3788375683570B8DE458784A1C5EE2"
+    "manifestHash": "FC76C2570A6E26B69426B52A1EB6DF91B0F8D1F3D233CA9180B3E96FBDDB08C9",
+    "lastUpdated": "2026-11-09T21:24:28.2143533Z",
+    "version": "27.0.0-RC",
+    "installerHashes": [
+      "926A979F8D9BB62C3F7218EAC821B21E07D64AFB9E4B5C4020F72072BA1FE25F"
+    ]
   },
   "GodotLauncher.Launcher": {
     "version": "1.11.1",
@@ -3276,8 +3276,8 @@
     "description": "",
     "version": "2.7.1",
     "manifestHash": "E3EAEF32CE17454BD7D4647149D661546FCD049FC9A40AFF0D3A04D608B580CB",
-    "validationCount": 1,
-    "lastUpdated": "2026-11-09T17:01:45.598976Z"
+    "validationCount": 2,
+    "lastUpdated": "2026-11-09T21:24:28.189363Z"
   },
   "Google.Protobuf": {
     "version": "36.2",
@@ -3796,8 +3796,8 @@
     "version": "4.7.0",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-09T13:15:24.5564118Z",
-    "validationCount": 3
+    "lastUpdated": "2026-11-09T21:24:28.1019135Z",
+    "validationCount": 4
   },
   "houmain.keymapper": {
     "openPr": {
@@ -4131,14 +4131,14 @@
     "description": "",
     "version": "0.8.50",
     "manifestHash": "9B4C131092FDEF5946DBC895C5171BE61387A6376140EAB1F996CF47233436F8",
-    "lastUpdated": "2026-11-09T17:01:45.582789Z",
+    "lastUpdated": "2026-11-09T21:24:28.2359265Z",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "C7DE2A58E56583716451552866CF63128E297CEBE27747A4367D80FEA75D1281",
       "ECAA9A9F6816F4AC1BF0A49D9978B565441F00AFA259E1748008ABB3DE3601FF",
       "C2D1091B6E3B09B6BDADA331F2E78D95EAC95B815E0F8AB67452FC4C017E5BC1"
     ],
-    "validationCount": 2
+    "validationCount": 3
   },
   "jawhitti.INTERCAL64": {
     "validationCount": 1,
@@ -5407,16 +5407,16 @@
     "manifestHash": "D27B9887E10667D00156C71BE8BE02FB353CAA440DF7D4FB37C853177DDA6530"
   },
   "mikf.gallery-dl.Nightly": {
-    "installerHashes": [
-      "44014E75776E0F2FBDA32F681A67A01A7EE00C27F327FF11535D70B12233ECC6",
-      "DCFC5B0D5E6059B21A72765CFD77D0691754AA0294DEE62813AE2E1CA553560D"
-    ],
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "version": "2026.11.05",
-    "lastUpdated": "2026-11-05T20:45:37.8633012Z",
-    "manifestHash": "0835EDF99485B130766677B98A4D2D8E5DC7F14A1095A3D3C23CC173258B6CDB",
-    "validationCount": 1
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "manifestHash": "5185A511408709344AF4AD4EA7D6AEDF27B40D6F57C75425CD3340C2B48BC235",
+    "lastUpdated": "2026-11-09T21:24:28.2533335Z",
+    "version": "2026.11.09",
+    "installerHashes": [
+      "869937F6D5AC8E752C14E5D5BC6BF85E2EBF421B70B666FE26D4F3E9D4FB4E8A",
+      "1CB1DF3CC7324FE29CCEACB07B55EB5D90818497270264BEB757123E4705E3EC"
+    ]
   },
   "MilkShift.GoofCord": {
     "state": "VALIDATION_PASSED",
@@ -9606,15 +9606,15 @@
     "validationCount": 1
   },
   "WeeNote.WeeNote": {
-    "installerHashes": [
-      "0B51B1EF3D03AD9669E6047A0C17E552C164CEDBBA8C6C684B02250E20C97504"
-    ],
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "202E73465B2F444595221980EC9791F1F8225B786C06B9C2952FE51FB3C954D9",
     "description": "",
-    "lastUpdated": "2026-11-06T08:41:06.280141Z",
-    "version": "2.9.27"
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "manifestHash": "F83F0BD898C0FBA3FE090652BF28517A823FE8FD170A674F500F3D5F39C197B4",
+    "lastUpdated": "2026-11-09T21:24:28.0202035Z",
+    "version": "2.9.28",
+    "installerHashes": [
+      "AA591EDC3C95B534BF50137ABB09A9AF1872D1526BFB6A986645BF847952E7D1"
+    ]
   },
   "weselow.beads-web": {
     "state": "VALIDATION_PASSED",
