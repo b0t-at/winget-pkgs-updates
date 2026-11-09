@@ -7269,8 +7269,8 @@
     "lastUpdated": "2026-08-06T13:08:37.6487059Z",
     "version": "0.5.15",
     "openPr": {
-      "version": "0.5.29",
-      "checkedAt": "2026-11-08T00:38:22.8316118Z"
+      "checkedAt": "2026-11-09T00:38:56.8994387Z",
+      "version": "0.5.29"
     }
   },
   "raskell-io.hx": {
