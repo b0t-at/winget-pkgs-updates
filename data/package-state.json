@@ -210,9 +210,9 @@
     "version": "0.9.2",
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/1ay1/agentty/releases/download/v0.9.40/agentty-windows-x86_64.msi",
-      "tag": "v0.9.40",
-      "checkedAt": "2026-11-02T05:23:42.730629Z"
+      "detail": "No release asset matches: https://github.com/1ay1/agentty/releases/download/v0.9.51/agentty-windows-x86_64.msi",
+      "tag": "v0.9.51",
+      "checkedAt": "2026-11-09T05:23:01.5650556Z"
     }
   },
   "Aiden1020.LocalSubs": {
@@ -1328,9 +1328,9 @@
     ],
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/camunda/camunda-modeler/releases/download/v5.52.0/camunda-modeler-5.52.0-win-ia32.zip",
-      "tag": "v5.52.0",
-      "checkedAt": "2026-10-12T05:41:42.3291496Z"
+      "detail": "No release asset matches: https://github.com/camunda/camunda-modeler/releases/download/v5.53.0/camunda-modeler-5.53.0-win-ia32.zip",
+      "tag": "v5.53.0",
+      "checkedAt": "2026-11-09T05:23:01.5650556Z"
     }
   },
   "caomengxuan666.WinuxCmd": {
@@ -2630,9 +2630,9 @@
     "manifestHash": "B71804EBD6739D98C6E34F0D3613216C18D387E56278378D0033B1DC3D56B99D",
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/facebook/pyrefly/releases/download/1.4.0/pyrefly-windows-x86_64.zip https://github.com/facebook/pyrefly/releases/download/1.4.0/pyrefly-windows-arm64.zip",
-      "tag": "1.4.0",
-      "checkedAt": "2026-11-02T05:23:42.730629Z"
+      "detail": "No release asset matches: https://github.com/facebook/pyrefly/releases/download/1.4.1/pyrefly-windows-x86_64.zip https://github.com/facebook/pyrefly/releases/download/1.4.1/pyrefly-windows-arm64.zip",
+      "tag": "1.4.1",
+      "checkedAt": "2026-11-09T05:23:01.5650556Z"
     }
   },
   "fairdataihub.SODA-for-SPARC": {
@@ -2924,9 +2924,9 @@
     ],
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/futrime/lip/releases/download/v0.36.2/lip-0.36.2-win-arm64.zip https://github.com/futrime/lip/releases/download/v0.36.2/lip-0.36.2-win-x64.zip",
-      "tag": "v0.36.2",
-      "checkedAt": "2026-11-02T05:23:42.730629Z"
+      "detail": "No release asset matches: https://github.com/futrime/lip/releases/download/v0.39.1/lip-0.39.1-win-arm64.zip https://github.com/futrime/lip/releases/download/v0.39.1/lip-0.39.1-win-x64.zip",
+      "tag": "v0.39.1",
+      "checkedAt": "2026-11-09T05:23:01.5650556Z"
     }
   },
   "GAM-Team.gam.Portable": {
@@ -4030,9 +4030,9 @@
   "j178.Prek": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/j178/prek/releases/download/v0.5.9/prek-i686-pc-windows-msvc.zip",
-      "tag": "v0.5.9",
-      "checkedAt": "2026-11-02T05:23:42.730629Z"
+      "detail": "No release asset matches: https://github.com/j178/prek/releases/download/v0.5.10/prek-i686-pc-windows-msvc.zip",
+      "tag": "v0.5.10",
+      "checkedAt": "2026-11-09T05:23:01.5650556Z"
     }
   },
   "JackTrip.JackTrip": {
@@ -4142,13 +4142,7 @@
       "0979A0F5ECACE80B147860F21961CA92420CC5911EF30B2907B741C4755F6BF9"
     ],
     "state": "VALIDATION_PASSED",
-    "version": "0.8.48",
-    "configHealth": {
-      "status": "RepoMissing",
-      "detail": "The GitHub repository does not exist or is not readable.",
-      "tag": "",
-      "checkedAt": "2026-11-02T05:23:42.730629Z"
-    }
+    "version": "0.8.48"
   },
   "jawhitti.INTERCAL64": {
     "validationCount": 1,
@@ -4236,9 +4230,9 @@
   "JGraph.Draw": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/jgraph/drawio-desktop/releases/download/v32.6.1/draw.io-ia32-32.6.1-windows-32bit-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v32.6.1/draw.io-ia32-32.6.1-windows-32bit-no-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v32.6.1/draw.io-32.6.1-windows-no-installer.exe",
-      "tag": "v32.6.1",
-      "checkedAt": "2026-10-26T05:33:55.3656372Z"
+      "detail": "No release asset matches: https://github.com/jgraph/drawio-desktop/releases/download/v32.6.10/draw.io-ia32-32.6.10-windows-32bit-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v32.6.10/draw.io-ia32-32.6.10-windows-32bit-no-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v32.6.10/draw.io-32.6.10-windows-no-installer.exe",
+      "tag": "v32.6.10",
+      "checkedAt": "2026-11-09T05:23:01.5650556Z"
     }
   },
   "JitzuLang.Jitzu": {
@@ -5176,9 +5170,9 @@
   "Metanorma.Metanorma": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/metanorma/packed-mn/releases/download/v1.17.0-3/metanorma-windows-x86_64.zip",
-      "tag": "v1.17.0-3",
-      "checkedAt": "2026-11-02T05:23:42.730629Z"
+      "detail": "No release asset matches: https://github.com/metanorma/packed-mn/releases/download/v1.17.0-6/metanorma-windows-x86_64.zip",
+      "tag": "v1.17.0-6",
+      "checkedAt": "2026-11-09T05:23:01.5650556Z"
     }
   },
   "Mew.Wrec": {
@@ -5257,13 +5251,7 @@
       "3D3A3512A0759034EF8AF670A40F2D9F301671E37354C67847D6554DA6553747"
     ],
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "configHealth": {
-      "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/Azure/GuestProxyAgent/releases/download/1.0.53/allowListTool.exe",
-      "tag": "1.0.53",
-      "checkedAt": "2026-10-26T05:33:55.3656372Z"
-    }
+    "description": ""
   },
   "Microsoft.Azure.TemplateAnalyzer": {
     "manifestHash": "9839DCB8411645A535E800F194840DEC617BF1159688EF5BB43A79536F8D6A4A",
@@ -6061,9 +6049,9 @@
   "nomacs.nomacs": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/nomacs/nomacs/releases/download/3.22.4/nomacs-setup-x64.exe https://github.com/nomacs/nomacs/releases/download/3.22.4/nomacs-setup-x64.exe",
-      "tag": "3.22.4",
-      "checkedAt": "2026-10-05T05:43:26.8532582Z"
+      "detail": "No release asset matches: https://github.com/nomacs/nomacs/releases/download/3.22.5/nomacs-setup-x64.exe https://github.com/nomacs/nomacs/releases/download/3.22.5/nomacs-setup-x64.exe",
+      "tag": "3.22.5",
+      "checkedAt": "2026-11-09T05:23:01.5650556Z"
     }
   },
   "NotedeckDev.NoteDeck": {
@@ -6504,9 +6492,9 @@
     "lastUpdated": "2026-09-25T16:53:52.6738769Z",
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/getopenscreen/openscreen/releases/download/v2.1.2/Openscreen.Setup.2.1.2.exe",
-      "tag": "v2.1.2",
-      "checkedAt": "2026-10-26T05:33:55.3656372Z"
+      "detail": "No release asset matches: https://github.com/getopenscreen/openscreen/releases/download/v2.2.2/Openscreen.Setup.2.2.2.exe",
+      "tag": "v2.2.2",
+      "checkedAt": "2026-11-09T05:23:01.5650556Z"
     }
   },
   "OpenStenoProject.Plover": {
@@ -7013,6 +7001,20 @@
     "openPr": {
       "version": "6.0",
       "checkedAt": "2026-11-03T00:34:29.9506969Z"
+    },
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/PolarGoose/CoffeeBean/releases/download/v6.0/CoffeeBean.msi",
+      "tag": "v6.0",
+      "checkedAt": "2026-11-09T05:23:01.5650556Z"
+    }
+  },
+  "PolarGoose.ShowWhatProcessLocksFile": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/PolarGoose/ShowWhatProcessLocksFile/releases/download/v12.0/ShowWhatProcessLocksFile.msi.zip",
+      "tag": "v12.0",
+      "checkedAt": "2026-11-09T05:23:01.5650556Z"
     }
   },
   "PolyMC.PolyMC": {
@@ -7759,9 +7761,9 @@
     "lastUpdated": "2026-05-20T22:15:05.5255716Z",
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/schollz/croc/releases/download/v11.6.2/croc_v11.6.2_Windows-ARM.zip",
-      "tag": "v11.6.2",
-      "checkedAt": "2026-11-02T05:23:42.730629Z"
+      "detail": "No release asset matches: https://github.com/schollz/croc/releases/download/v11.6.5/croc_v11.6.5_Windows-ARM.zip",
+      "tag": "v11.6.5",
+      "checkedAt": "2026-11-09T05:23:01.5650556Z"
     }
   },
   "scimusmn.stele": {
@@ -8419,9 +8421,9 @@
   "StirlingTools.StirlingPDF": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v3.2.2/Stirling-PDF-win-installer.exe",
-      "tag": "v3.2.2",
-      "checkedAt": "2026-10-26T05:33:55.3656372Z"
+      "detail": "No release asset matches: https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v3.3.0/Stirling-PDF-win-installer.exe",
+      "tag": "v3.3.0",
+      "checkedAt": "2026-11-09T05:23:01.5650556Z"
     }
   },
   "Storj.Uplink": {
@@ -10069,6 +10071,12 @@
     "openPr": {
       "version": "7.5.0",
       "checkedAt": "2026-11-08T20:13:56.5315608Z"
+    },
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/Yubico/yubioath-flutter/releases/download/7.5.0/yubico-authenticator-7.5.0-win64.msi",
+      "tag": "7.5.0",
+      "checkedAt": "2026-11-09T05:23:01.5650556Z"
     }
   },
   "Yubico.YubiKeyManagerCLI": {
@@ -10167,7 +10175,13 @@
     "manifestHash": "D68866FE6B88BE7433457D1288CCE16D89C734FFE5394E997DBCD7637B046707",
     "version": "2.29.3",
     "lastUpdated": "2026-08-07T12:34:16.1518418Z",
-    "description": ""
+    "description": "",
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/0install/0install-win/releases/download/2.29.5/zero-install.exe https://github.com/0install/0install-win/releases/download/2.29.5/zero-install.exe",
+      "tag": "2.29.5",
+      "checkedAt": "2026-11-09T05:23:01.5650556Z"
+    }
   },
   "zevnda.SteamGameIdler": {
     "lastUpdated": "2026-11-07T16:48:39.5770284Z",
