@@ -1706,15 +1706,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Crate-CI.Typos": {
-    "description": "",
-    "version": "1.52.0",
-    "installerHashes": [
-      "7DA6EB1932AD86921420A7198DBC9E62A10BCD995144704DC19B81D3FB802182"
-    ],
-    "manifestHash": "EC20CF1F6BBA772CE58AE07DBB8589AF7D62F726976B140981D64CA386CA97CA",
-    "validationCount": 1,
+    "version": "1.52.1",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-04T01:07:24.6515666Z"
+    "installerHashes": [
+      "ADB3AC98B0CA8964A23B984C786C2116A25B3665E070F2A4F8156E2D6D4DF2E3"
+    ],
+    "manifestHash": "B75C8A0162279875AEF20EE10C2F11EEFA046E58F00DE2704333A22FD4028AC4",
+    "validationCount": 1,
+    "lastUpdated": "2026-11-10T05:08:05.9259915Z",
+    "description": ""
   },
   "CrewHaus.CLI": {
     "installerHashes": [
@@ -2223,15 +2223,15 @@
     "description": ""
   },
   "edde746.Plezy": {
-    "validationCount": 1,
+    "version": "2.26.0",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-27T21:44:30.9719601Z",
     "installerHashes": [
-      "CBB64647F590FC4967B56D1A882755335F7C2BE99DBDFF0477FF0A312BA9A45A"
+      "179FC4288D088F7134BBBF6604DF130857FE4E510D69BC333A316D938B7AB3F7"
     ],
-    "manifestHash": "490FE7AC469316D94FD308C922F737660D7D59EB160AA2F6FFCFF9A5E1DBF9B4",
-    "description": "",
-    "version": "2.25.0"
+    "manifestHash": "E5360BCC0276AD34BC065EC7913A81EBA21DCFAAA1679E30DC6830C7ECCA6384",
+    "validationCount": 1,
+    "lastUpdated": "2026-11-10T05:08:05.9771275Z",
+    "description": ""
   },
   "edenian-prince.rust-secrets": {
     "validationCount": 1,
@@ -3477,16 +3477,16 @@
     "description": ""
   },
   "Hanthor.BluefinCLI": {
-    "lastUpdated": "2026-11-03T09:08:27.7333238Z",
-    "manifestHash": "416BF2044F38DE3FA8601504D39B88B11962C4415843B317C2120C67DDB8ADA9",
+    "version": "0.11.16",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "description": "",
     "installerHashes": [
-      "52E587792CD6D62626E48949B8FE656E3C498E33AA7E2487953EB1F39CBC3C2A",
-      "EC94CE6CA3B1ECC2EBFC8B948F1B1CFA9BA680D4FE97F13B8873509756C5E893"
+      "F07F033E292871D76FC37DFED308CA170B0055098C3EF5B95B73C76E570CE8E8",
+      "9C95BA0C7FA43991C3FBCF77DC7DA386E405023450D12DE53A715C9AF61C59F1"
     ],
-    "version": "0.11.15"
+    "manifestHash": "0F875A7698B0ED871E4662FBC5ADD277CBB7F6481408D818AA86432D415CB7B6",
+    "validationCount": 1,
+    "lastUpdated": "2026-11-10T05:08:05.9629265Z",
+    "description": ""
   },
   "Happ.Happ": {
     "description": "",
@@ -5567,15 +5567,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Monghoul.Monghoul": {
-    "manifestHash": "479FC3FFA5A0CA13F8E615F5D8AD35D5E69B6119A7FB31F133F47D731E04A4FF",
+    "version": "2.0.1",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "3BA75E8C953C2B9992ED82F60BF1109BC7FB1C80A95F576BACA3C6076AA0C40B"
+      "154827BBD67939204421FFE3426581FC8E79E7CA0CF2E34E7816D8DC9BAB6741"
     ],
-    "validationCount": 2,
-    "lastUpdated": "2026-11-08T12:47:26.9587154Z",
-    "version": "2.0.0",
-    "description": "",
-    "state": "VALIDATION_PASSED"
+    "manifestHash": "7BD88CE397D2449B066200D1ED54C7A063F35AB833D594AE4B1F3EAB176527FE",
+    "validationCount": 1,
+    "lastUpdated": "2026-11-10T05:08:05.9944823Z",
+    "description": ""
   },
   "MongoDB.MongoDBAtlasCLI": {
     "validationCount": 1,
@@ -6307,9 +6307,9 @@
     "manifestHash": "A6EA0C41ABBCB410F9A2F04F49FF94D9261F06C80BF8D69654B3DAD5AA9C30CB"
   },
   "OnionShare.OnionShare": {
-    "lastUpdated": "2026-11-10T01:24:11.6272091Z",
+    "lastUpdated": "2026-11-10T05:08:05.9508149Z",
     "description": "",
-    "validationCount": 4,
+    "validationCount": 5,
     "manifestHash": "EEEECCBAD7237F197E85810E114DC3CDDA76B0EE074CC2FA7986075138A90F9D",
     "state": "VALIDATION_PASSED",
     "version": "2.7.2",
@@ -9612,9 +9612,9 @@
   "WeeNote.WeeNote": {
     "description": "",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "F83F0BD898C0FBA3FE090652BF28517A823FE8FD170A674F500F3D5F39C197B4",
-    "lastUpdated": "2026-11-09T21:24:28.0202035Z",
+    "lastUpdated": "2026-11-10T05:08:05.9002723Z",
     "version": "2.9.28",
     "installerHashes": [
       "AA591EDC3C95B534BF50137ABB09A9AF1872D1526BFB6A986645BF847952E7D1"
