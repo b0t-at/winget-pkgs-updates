@@ -2772,7 +2772,11 @@
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
     "manifestHash": "86FA8F6B2F491EE6BDE61BAFC3493B85F1B14C4667597B93DBB355BC71355A19",
-    "description": ""
+    "description": "",
+    "openPr": {
+      "version": "0.5.7",
+      "checkedAt": "2026-11-11T04:17:32.9586552Z"
+    }
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
     "validationCount": 1,
@@ -7259,8 +7263,8 @@
     "lastUpdated": "2026-08-06T13:08:37.6487059Z",
     "version": "0.5.15",
     "openPr": {
-      "checkedAt": "2026-11-10T04:18:14.6873612Z",
-      "version": "0.5.29"
+      "version": "0.5.29",
+      "checkedAt": "2026-11-11T04:18:29.9884121Z"
     }
   },
   "raskell-io.hx": {
