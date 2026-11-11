@@ -593,7 +593,7 @@
   },
   "armbian.imager": {
     "version": "2.5.1",
-    "state": "VALIDATION_PASSED",
+    "state": "VALIDATION_FAILED",
     "description": "",
     "installerHashes": [
       "4362ACE745CD5882595138B32E2BA293184BF10FC253CA047B4AE6A0C5D5DAB4",
@@ -602,8 +602,8 @@
       "4FB403EABABE2E8044E1FE85130E165F0D05C80A3306105F28B5C7967AFCD7BF"
     ],
     "manifestHash": "5B1E60DD4F74722A9C5465863A30B78B0A562014D9164E73B4D2118ABC58852A",
-    "validationCount": 3,
-    "lastUpdated": "2026-11-09T13:15:24.3845293Z"
+    "validationCount": 4,
+    "lastUpdated": "2026-11-11T09:18:50.5620506Z"
   },
   "Arnica.DepsGuard": {
     "lastUpdated": "2026-08-18T21:24:38.4020506Z",
@@ -1228,14 +1228,14 @@
   },
   "BrunoVolpato.ivygrep": {
     "description": "",
-    "manifestHash": "1911C2CD641BA53E896CE5F2E8E01A8935D3D38FC3A43CE231007AF7B752D07E",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-29T21:04:57.2319039Z",
-    "validationCount": 1,
-    "version": "1.3.1",
+    "version": "1.3.3",
+    "manifestHash": "AB2D4FA532E83F6D3164B17B3F4E6E2B6930EA46EDB6FB41C00C2E7A3E8A9AB7",
     "installerHashes": [
-      "AB44285F63D511618AA1E0F2F0E91376AEAEDE0BA16D760374B6327BFA1461B1"
-    ]
+      "44CA7005909001C934E980700080739494D871708EED8BE66D622F70E983E53F"
+    ],
+    "lastUpdated": "2026-11-11T09:18:50.5197423Z",
+    "state": "VALIDATION_FAILED",
+    "validationCount": 1
   },
   "bufbuild.buf": {
     "description": "",
@@ -2105,16 +2105,16 @@
     "state": "VALIDATION_PASSED"
   },
   "Docker.DockerCompose": {
-    "lastUpdated": "2026-11-03T01:03:43.3406349Z",
     "description": "",
-    "validationCount": 1,
+    "version": "5.7.1",
+    "manifestHash": "93E8979E5AEC21F4A13A948F61A52ED4AB7AE8B70F09ABBDB7DC6FFD8E30A70F",
     "installerHashes": [
-      "F5DC759702AEC5C0602E247AA861D14853216E3F481C4EAAF83621A035ECF92F",
-      "D622F50E48D0565C1D3AB8C410EF7287A9EFE0CF2B2C803FF7878918592E27BF"
+      "E4316597452650AE92FE9719A2A7C2FCE8F56C5CEAFED88D2AED6E39B2B2B2D0",
+      "3ED47AB4D1CD56D63981246820420E7AAF042F2A48E6CCC95993872980A4E0A9"
     ],
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "DC8D46C501FBA16C9D06E97DC9A84A24D63CF9BD8EC8BAAD29ACD0695389B903",
-    "version": "5.7.0"
+    "lastUpdated": "2026-11-11T09:18:50.6114076Z",
+    "state": "VALIDATION_FAILED",
+    "validationCount": 1
   },
   "Docker.ds": {
     "lastUpdated": "2026-08-18T17:25:14.0317211Z",
@@ -3570,15 +3570,15 @@
     ]
   },
   "hellobertrand.zxc": {
-    "validationCount": 1,
-    "lastUpdated": "2026-10-13T13:01:57.9497853Z",
-    "manifestHash": "4D44E45190E524F9CB88EFE1931EF08C76949D9DB835F7941B10274DD6CF2EB1",
-    "version": "0.15.0",
     "description": "",
-    "state": "VALIDATION_PASSED",
+    "version": "1.0.0",
+    "manifestHash": "65E5F9DE804BC16782D761B6E0A64847C9E4DABEE57CA26799A2CE486A048D1E",
     "installerHashes": [
-      "41B1E3EA854A4B54A8957725BBAF4BC8111E09A7914D283FA422281DA17D8407"
-    ]
+      "BD1BCEF1C4B57C80C127B7A5129C545DF70837EDCE7AE0C8C5EE4C39AD0AD174"
+    ],
+    "lastUpdated": "2026-11-11T09:18:50.8463292Z",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1
   },
   "HeroicGamesLauncher.GOGDL": {
     "version": "1.4.0",
@@ -3933,16 +3933,16 @@
     }
   },
   "Infracost.Infracost": {
-    "version": "0.10.47",
-    "lastUpdated": "2026-10-21T13:25:53.7724321Z",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
     "description": "",
+    "version": "0.10.49",
+    "manifestHash": "9BB027A626E7F81A424D852A3DD6EF0578C5FCCC2BB734D61BACB4E0281EB6E7",
     "installerHashes": [
-      "045C283FD97D7F5AB001CBC7036967C5B54EB9A811F79F8FEAE9CADE99470D3E",
-      "94E3601EB62EECB4B30E8E505A6C7FBDC005882423DC24C6851C15E761E06559"
+      "D81638D7A1AF9177C949FBF924573A1120976CC330ED3DF6056CB9D913E74A80",
+      "DF207273286287AE2151986B8D5B080B1AB4635CDA6ECAD19E9DA55833C2464B"
     ],
-    "manifestHash": "33101A543160DC2B016F4F360F8D90D00CDE842FFD0A8E253453A38510D41E4D"
+    "lastUpdated": "2026-11-11T09:18:50.6392787Z",
+    "state": "VALIDATION_FAILED",
+    "validationCount": 1
   },
   "Inkle.Inky": {
     "lastUpdated": "2026-08-18T01:43:26.3502487Z",
@@ -3967,8 +3967,8 @@
     ]
   },
   "Internxt.Drive": {
-    "validationCount": 1,
-    "lastUpdated": "2026-11-11T00:02:49.1273667Z",
+    "validationCount": 2,
+    "lastUpdated": "2026-11-11T09:18:50.4067486Z",
     "version": "2.7.2",
     "description": "",
     "installerHashes": [
@@ -4929,14 +4929,14 @@
   },
   "Lunasans.MovieShelf": {
     "version": "1.2.6",
-    "state": "VALIDATION_PASSED",
+    "state": "VALIDATION_FAILED",
     "description": "",
     "installerHashes": [
       "5663FF38F795FD992444017E6158110F0C975706188D7F452A9D33C3F4CC4C63"
     ],
     "manifestHash": "537A26448C06C50895587F549ED14CA81DB1BD7C24979A731E0DD681DC4B2D4D",
-    "validationCount": 2,
-    "lastUpdated": "2026-11-09T01:40:11.8394031Z"
+    "validationCount": 3,
+    "lastUpdated": "2026-11-11T09:18:50.4692293Z"
   },
   "Luxview.AgainstMe": {
     "installerHashes": [
@@ -5011,8 +5011,8 @@
       "0BCA4D646EBE4868FE3D73ECAB7AB69D75F49A986F2F4B67AC927D567FA7BDA4"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
-    "lastUpdated": "2026-11-10T13:10:24.7571454Z",
+    "validationCount": 3,
+    "lastUpdated": "2026-11-11T09:18:50.783073Z",
     "description": "",
     "version": "0.68.0",
     "manifestHash": "72DCF1A348FD9734899324EEBC60F63AD5B4EA72ED79FF68FA9FC7E7D2879565"
@@ -6303,9 +6303,9 @@
     "manifestHash": "A6EA0C41ABBCB410F9A2F04F49FF94D9261F06C80BF8D69654B3DAD5AA9C30CB"
   },
   "OnionShare.OnionShare": {
-    "lastUpdated": "2026-11-10T13:10:24.7325397Z",
+    "lastUpdated": "2026-11-11T09:18:50.7530523Z",
     "description": "",
-    "validationCount": 6,
+    "validationCount": 7,
     "manifestHash": "EEEECCBAD7237F197E85810E114DC3CDDA76B0EE074CC2FA7986075138A90F9D",
     "state": "VALIDATION_PASSED",
     "version": "2.7.2",
@@ -6547,15 +6547,15 @@
     "state": "VALIDATION_PASSED"
   },
   "openwong2kim.wmux": {
-    "manifestHash": "B64FF519377DA3D77EED37688E9D0C53595C3785789DAB4A8F5C846D954C1FCE",
-    "lastUpdated": "2026-11-03T16:57:54.3692952Z",
-    "installerHashes": [
-      "66F0F91009342480B6201314F6C93E6D2636D0F35A57BE3D2A0116D724538653"
-    ],
-    "version": "4.14.0",
     "description": "",
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "version": "4.15.0",
+    "manifestHash": "CCB324779E07E2D79CCD65C30BF2F88CE3C5B0CF816BD81C14F9976841A84721",
+    "installerHashes": [
+      "665D492DC9D42159E7F9F7BF357A581C2577C42B2E736120ECB9234A929E7708"
+    ],
+    "lastUpdated": "2026-11-11T09:18:50.7155319Z",
+    "state": "VALIDATION_FAILED",
+    "validationCount": 1
   },
   "openwong2kim.wsnap": {
     "installerHashes": [
@@ -6890,12 +6890,12 @@
     "installerHashes": [
       "387632356BF1851F267E8B41CBEB34B2B20110C383CA9B7460567D87EF8C4987"
     ],
-    "state": "VALIDATION_PASSED",
+    "state": "VALIDATION_FAILED",
     "manifestHash": "97C1424CF7E64A60853F1C401653F7C64E8391E4426C8D7BA19818175073BCC9",
     "description": "",
-    "lastUpdated": "2026-11-10T13:10:24.6896164Z",
+    "lastUpdated": "2026-11-11T09:18:50.5890821Z",
     "version": "8.3.7",
-    "validationCount": 6
+    "validationCount": 7
   },
   "PiusPP.Celestial": {
     "version": "2.1.0",
@@ -8282,9 +8282,9 @@
       "036B9B1DCB99D717C8661B9612AF16A344D39087C9666FC5FAC0ABAE2CA8C1E7"
     ],
     "description": "",
-    "lastUpdated": "2026-11-11T04:05:06.8294588Z",
+    "lastUpdated": "2026-11-11T09:18:50.8164977Z",
     "version": "4.5.4",
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_PASSED"
   },
   "sqlectron.sqlectron-gui": {
@@ -8427,11 +8427,11 @@
     "installerHashes": [
       "876EAB96BC1C426EEFAEC767C47D922D99D5E76CC79BB3211A8CC5BF3F72E33F"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_FAILED",
     "manifestHash": "452028DA8D508F8DA3EAC2BB4BA0B0B8632D932917B026869121E1EFFCCC04AF",
     "description": "",
-    "lastUpdated": "2026-11-11T05:22:58.9109268Z"
+    "lastUpdated": "2026-11-11T09:18:50.6652328Z"
   },
   "str4d.rage": {
     "state": "VALIDATION_PASSED",
