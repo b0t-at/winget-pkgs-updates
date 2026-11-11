@@ -175,16 +175,16 @@
     "state": "VALIDATION_PASSED"
   },
   "AgentClash.AgentClash": {
-    "description": "",
-    "version": "2.3.2",
-    "installerHashes": [
-      "B5D8BB42BC802EC1D03580BE143BFC3540DC20538793005752107F3C0171C588",
-      "7C98897C0A522B57FBF2E46BB3689691A7C1C63ED712AEB299DBFB5892F7B82D"
-    ],
-    "manifestHash": "0E380252C2307C868D40F81B8765EDD2992877EDD9518C1F214CC91DF5BF9DD2",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-10T01:24:11.685627Z"
+    "lastUpdated": "2026-11-11T00:02:49.2265301Z",
+    "version": "2.4.0",
+    "description": "",
+    "installerHashes": [
+      "DD607DE1E5D47FD22F2650F3E81C475CE361300BDD2E4AA9A226C9FBA5CBB5AE",
+      "57D89DF3D423D03895740211BBDFC90A020DCAD906F398409968265869B28B44"
+    ],
+    "state": "VALIDATION_FAILED",
+    "manifestHash": "7AE6F8119BF9EEF23EA2AE2E3016E3303AB8452B9E31E6B086CDF73A23A0EE4A"
   },
   "agentteamland.atl": {
     "manifestHash": "217D464B3AF5A976B3692E72C12E09689A5A54B67DD5964B66C9032DF1B6D2C9",
@@ -837,15 +837,15 @@
     "validationCount": 1
   },
   "bcssov.IronyModManager": {
-    "state": "VALIDATION_PASSED",
+    "state": "VALIDATION_FAILED",
     "installerHashes": [
       "6AF1D39F5D66562AEB33F7A9D7FB99DD520AF3E85581705E0F844A9367CE7DCC"
     ],
     "description": "",
     "version": "1.28.110",
     "manifestHash": "7139DA5DD5E53B45C9A40119267AA514A940F53FC6910C6CCA413ED6AD859671",
-    "validationCount": 2,
-    "lastUpdated": "2026-11-09T21:24:28.1615164Z"
+    "validationCount": 3,
+    "lastUpdated": "2026-11-11T00:02:49.2731351Z"
   },
   "bdash-app.bdash": {
     "installerHashes": [
@@ -898,10 +898,10 @@
     "version": "0.5"
   },
   "BenjaminLSR.HandheldCompanion": {
-    "lastUpdated": "2026-11-10T10:00:11.3909123Z",
+    "lastUpdated": "2026-11-11T00:02:49.4016577Z",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "1.4.0.2",
     "installerHashes": [
       "044F54A1E53989C26751D564EBCA3FF193695869FE69FCC8CF62748492880E6F"
@@ -2229,8 +2229,8 @@
       "179FC4288D088F7134BBBF6604DF130857FE4E510D69BC333A316D938B7AB3F7"
     ],
     "manifestHash": "E5360BCC0276AD34BC065EC7913A81EBA21DCFAAA1679E30DC6830C7ECCA6384",
-    "validationCount": 1,
-    "lastUpdated": "2026-11-10T05:08:05.9771275Z",
+    "validationCount": 2,
+    "lastUpdated": "2026-11-11T00:02:49.3513824Z",
     "description": ""
   },
   "edenian-prince.rust-secrets": {
@@ -3003,9 +3003,9 @@
   "Gather.Gather": {
     "version": "1.41.3",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-08T20:57:18.1821562Z",
+    "lastUpdated": "2026-11-11T00:02:49.3754552Z",
     "manifestHash": "D4E32E1A5B121FDD1FBFB445D1B68DC6E46C9D52389B674D0BA7AF1229D0F8B9",
-    "validationCount": 4,
+    "validationCount": 5,
     "installerHashes": [
       "901BBF32D7E54EA260B99CECFDBAC5EDCC93710A58F324FD0F1D719DE2E843CF"
     ],
@@ -3732,15 +3732,15 @@
     "validationCount": 1
   },
   "holland-built.Bloxsmith": {
-    "lastUpdated": "2026-11-10T10:00:11.5115769Z",
-    "description": "",
-    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "3.131.0",
+    "lastUpdated": "2026-11-11T00:02:49.4222761Z",
+    "version": "3.147.0",
+    "description": "",
     "installerHashes": [
-      "0CE1ED2513B95E93AD55891112DB8FD603A31E157F7EA991300224EB2F339EA2"
+      "EABD220413706427430704B5DBF47DAA4C675C2A7C462D015EB8E272BB21202F"
     ],
-    "manifestHash": "8590B944C91F0C2722D24B8D73C004935EC1B0E4EBEE97BC73F74C3FF1B0B7BC"
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "B4EBBB313C3510B3196FBD5055845FCCAA6697BEE258C4B4C7F5F2BF4591631E"
   },
   "HongMinhee.Gukhanmun": {
     "installerHashes": [
@@ -3967,15 +3967,15 @@
     ]
   },
   "Internxt.Drive": {
-    "description": "",
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "C4746ED34ABE5BC84D5741B7E181D8093F7D9C0937DA9723943C647DD1F1D6EA"
-    ],
     "validationCount": 1,
-    "lastUpdated": "2026-10-16T13:03:36.0297891Z",
-    "version": "2.7.1",
-    "manifestHash": "C5472171E226E194087954A818930CBFEFA4F0C4C232050348F65D11DC63AD85"
+    "lastUpdated": "2026-11-11T00:02:49.1273667Z",
+    "version": "2.7.2",
+    "description": "",
+    "installerHashes": [
+      "881D577EA07B637A2E43C8F4C5956BA9553CC6099AD584B4C10EAE2B3262666E"
+    ],
+    "state": "VALIDATION_FAILED",
+    "manifestHash": "5E323CAD8D03E94C71A4C63BBA623ACBF607D691DCF27E6B1C571434CC124552"
   },
   "InTheLoop.LoopEmail": {
     "description": "",
@@ -4788,10 +4788,10 @@
       "8D2CC4F5311F95C9421C9CD83FB0299CF2A046E45C66232365C61C1DFF0E4DB8",
       "7638C569D77B2154D43C5DF3C4BD87D82F4DC3A527AF79274502E43483E3F1BA"
     ],
-    "lastUpdated": "2026-11-10T13:10:24.785057Z",
+    "lastUpdated": "2026-11-11T00:02:49.1871803Z",
     "manifestHash": "AB65B170D4B2C5DCEA58210463F064697D7E40998988975AA48DB85A8C6EBA40",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "state": "VALIDATION_FAILED",
+    "validationCount": 2,
     "version": "2.19.4"
   },
   "LocalStack.localstack-cli": {
@@ -6405,8 +6405,8 @@
       "DCCC304E1FF65B551A0AEC079DFE156527BE92E4C6C89724EB6C553EF21E8A1B"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 3,
-    "lastUpdated": "2026-11-10T10:00:11.3600795Z",
+    "validationCount": 4,
+    "lastUpdated": "2026-11-11T00:02:49.3040547Z",
     "description": "",
     "version": "3.7.0",
     "manifestHash": "926240206D1B5F2F8A5D99C32752CD7DA51E7B692D2C679B454A2A750E458135"
@@ -6690,16 +6690,16 @@
     ]
   },
   "panjie.mods": {
-    "manifestHash": "0D8C82683986AFB7CDEA375C03A193783A98D19C25749C83C2FF1117011172DA",
-    "lastUpdated": "2026-08-18T05:33:46.8184597Z",
-    "state": "VALIDATION_PASSED",
-    "version": "4.1.0",
     "validationCount": 1,
+    "lastUpdated": "2026-11-11T00:02:49.3290959Z",
+    "version": "5.1.0",
     "description": "",
     "installerHashes": [
-      "E3C822945BAD15624F6EEFC6B2D89E2D19ADA61ED2C4E10DE3AA2B64A89D51EE",
-      "7F12186AFB67F1AB32561F49BBEB7A6954C341CDB25EF94E0D5C13538D91BC55"
-    ]
+      "C51BC64CF4F7EDE2726F622411C905202201048BDBD6956A1C00B3A9FEF915BD",
+      "44E0F23017061401FC22365CA8456FB410564F50EFA064DA9D0C566FBE620121"
+    ],
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "2D8D1E23169BE211152052E0AAAD4ED7D8A8BF501B8B9731EDF2BFE91ED578A8"
   },
   "Parresia.Speedy": {
     "installerHashes": [
