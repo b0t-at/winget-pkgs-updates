@@ -1566,15 +1566,15 @@
     }
   },
   "ciromattia.KCC": {
-    "lastUpdated": "2026-11-03T01:03:43.3974143Z",
-    "description": "",
-    "validationCount": 1,
+    "version": "13.0.1",
     "installerHashes": [
-      "2539AB5D0FF2FB6A5875031356B06812DBFF891694A863B09F36E10F9993AB57"
+      "3360F4F290FFA2A04DE557FE4048EEF9B098F5B31030AA5EC8FE7A66D7174BF0"
     ],
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "63D10EBAFFB41A3C8FCB586D14792962CDE5B79E69BBEF813693DA79A765E465",
-    "version": "12.1.5"
+    "validationCount": 1,
+    "state": "VALIDATION_FAILED",
+    "manifestHash": "86A881900FDB2803E4FA08B10E957DC1349323B7C0FFED439E4E40C5B13A8EC6",
+    "description": "",
+    "lastUpdated": "2026-11-11T05:22:58.8310935Z"
   },
   "cjpais.Handy": {
     "description": "",
@@ -1706,15 +1706,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Crate-CI.Typos": {
-    "version": "1.52.1",
-    "state": "VALIDATION_PASSED",
+    "version": "1.52.2",
     "installerHashes": [
-      "ADB3AC98B0CA8964A23B984C786C2116A25B3665E070F2A4F8156E2D6D4DF2E3"
+      "AB79036832CEA0F2A21AA947731D39512250CC0F7A6A2F6ADD26262738A8CC11"
     ],
-    "manifestHash": "B75C8A0162279875AEF20EE10C2F11EEFA046E58F00DE2704333A22FD4028AC4",
     "validationCount": 1,
-    "lastUpdated": "2026-11-10T05:08:05.9259915Z",
-    "description": ""
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "AB6D37CFAC55A0131C174CE2D957A03BD203A7B22D2D7401BCD6FFD8C2307A47",
+    "description": "",
+    "lastUpdated": "2026-11-11T05:22:58.9841773Z"
   },
   "CrewHaus.CLI": {
     "installerHashes": [
@@ -2220,13 +2220,13 @@
   },
   "edde746.Plezy": {
     "version": "2.26.0",
-    "state": "VALIDATION_PASSED",
+    "state": "VALIDATION_FAILED",
     "installerHashes": [
       "179FC4288D088F7134BBBF6604DF130857FE4E510D69BC333A316D938B7AB3F7"
     ],
     "manifestHash": "E5360BCC0276AD34BC065EC7913A81EBA21DCFAAA1679E30DC6830C7ECCA6384",
-    "validationCount": 2,
-    "lastUpdated": "2026-11-11T00:02:49.3513824Z",
+    "validationCount": 3,
+    "lastUpdated": "2026-11-11T05:22:58.886095Z",
     "description": ""
   },
   "edenian-prince.rust-secrets": {
@@ -2434,19 +2434,19 @@
     "lastUpdated": "2026-08-20T09:17:27.7041213Z"
   },
   "erikbra.grate": {
+    "version": "2.3.0",
     "installerHashes": [
-      "0A1ED6C200E75075AB096DB336AE89603B8E3BA00CFB5FED936C33CC067DF988",
-      "66AE15E3DBD705DC2B7A2A4B6C92B294C309BB360526722EAEA85858144A2476",
-      "21C967852804E35269E371C122D46B9AB5977F025F87FF75DA22941D8892133F",
-      "F722B3F9B543F2CFC348618E9EC624973A26DB55141EFD0F4F387C6A52FD246B",
-      "6B1EEABA3DFFA2FA8076D79DAEA6124BEE60B3622054FEEF21E61FBC28C37D09"
+      "062AA2DF240AFEE545F056BBFAF777F7078B6ED6B0A08070D928EFBE66CF0328",
+      "81CC739F570472D45ECE4E9A6E4ECD9E79F72F63EC7689E480F6DBD2D2682A39",
+      "2D1FD8A8D3AA3499A2A73A659D663BFDD83079D55221ED880D064D9AD0149314",
+      "B5FF0B48779B0EF37CDC9F687B6E5C1E29167BB66F4A804232692680704928C8",
+      "AC8EE57EF064D215EE1A5F61C79E3E1D93C9B6D1F79839003BC0B1D4DA63C0F1"
     ],
-    "lastUpdated": "2026-11-06T05:13:25.2015603Z",
-    "version": "2.2.0",
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "manifestHash": "A4DFD4D0AC7F0BBE98DFE0DD69F86F2BAC79F76BBFAF7F8B89B3DB1BEE3F4DCF",
-    "description": ""
+    "manifestHash": "8E1EBE47DED67B126D2F9619E39AAD0AEB462E65C0B6C721C2E6F99C53FF0F3A",
+    "description": "",
+    "lastUpdated": "2026-11-11T05:22:59.0292958Z"
   },
   "errata-ai.Vale": {
     "installerHashes": [
@@ -3185,10 +3185,10 @@
   },
   "Gluon.SceneBuilder": {
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "state": "VALIDATION_FAILED",
+    "validationCount": 2,
     "manifestHash": "FC76C2570A6E26B69426B52A1EB6DF91B0F8D1F3D233CA9180B3E96FBDDB08C9",
-    "lastUpdated": "2026-11-09T21:24:28.2143533Z",
+    "lastUpdated": "2026-11-11T05:22:58.8551562Z",
     "version": "27.0.0-RC",
     "installerHashes": [
       "926A979F8D9BB62C3F7218EAC821B21E07D64AFB9E4B5C4020F72072BA1FE25F"
@@ -3484,8 +3484,8 @@
       "9C95BA0C7FA43991C3FBCF77DC7DA386E405023450D12DE53A715C9AF61C59F1"
     ],
     "manifestHash": "0F875A7698B0ED871E4662FBC5ADD277CBB7F6481408D818AA86432D415CB7B6",
-    "validationCount": 1,
-    "lastUpdated": "2026-11-10T05:08:05.9629265Z",
+    "validationCount": 2,
+    "lastUpdated": "2026-11-11T05:22:59.0613482Z",
     "description": ""
   },
   "Happ.Happ": {
@@ -4788,10 +4788,10 @@
       "8D2CC4F5311F95C9421C9CD83FB0299CF2A046E45C66232365C61C1DFF0E4DB8",
       "7638C569D77B2154D43C5DF3C4BD87D82F4DC3A527AF79274502E43483E3F1BA"
     ],
-    "lastUpdated": "2026-11-11T00:02:49.1871803Z",
+    "lastUpdated": "2026-11-11T05:22:58.9357893Z",
     "manifestHash": "AB65B170D4B2C5DCEA58210463F064697D7E40998988975AA48DB85A8C6EBA40",
     "state": "VALIDATION_FAILED",
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "2.19.4"
   },
   "LocalStack.localstack-cli": {
@@ -6405,8 +6405,8 @@
       "DCCC304E1FF65B551A0AEC079DFE156527BE92E4C6C89724EB6C553EF21E8A1B"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 5,
-    "lastUpdated": "2026-11-11T04:05:06.8052011Z",
+    "validationCount": 6,
+    "lastUpdated": "2026-11-11T05:22:58.9989158Z",
     "description": "",
     "version": "3.7.0",
     "manifestHash": "926240206D1B5F2F8A5D99C32752CD7DA51E7B692D2C679B454A2A750E458135"
@@ -6690,8 +6690,8 @@
     ]
   },
   "panjie.mods": {
-    "validationCount": 1,
-    "lastUpdated": "2026-11-11T00:02:49.3290959Z",
+    "validationCount": 2,
+    "lastUpdated": "2026-11-11T05:22:59.0455483Z",
     "version": "5.1.0",
     "description": "",
     "installerHashes": [
@@ -7051,13 +7051,13 @@
     "description": "",
     "version": "12.17",
     "manifestHash": "02E070A36715F309599CE4E30C7E2979DE7A630D5AD054047D0610FCB447F1CE",
-    "lastUpdated": "2026-11-09T09:15:32.4079836Z",
-    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-11T05:22:58.6710939Z",
+    "state": "VALIDATION_FAILED",
     "installerHashes": [
       "C15D689D24319242FFBF8DB096CD398EE737E4F619360FFA211F1E8C7817A142",
       "C7D37A8FFD8BD16A3BA12BEF2392C14FFF3AA45AB9045F2F40C721C24F540246"
     ],
-    "validationCount": 1
+    "validationCount": 2
   },
   "printfn.fend": {
     "validationCount": 1,
@@ -7242,9 +7242,9 @@
   },
   "randlee.sc-compose": {
     "manifestHash": "CD8C06EF87453DCE70A82819B0E97994D585218EC13BBCB38F11D32F0976F73F",
-    "lastUpdated": "2026-11-08T20:57:18.2500725Z",
+    "lastUpdated": "2026-11-11T05:22:59.0143274Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "987C33E1A8D66D364C3A3B85E8E54B10F47D60321AC464CD87A15B9245A91335"
     ],
@@ -8423,15 +8423,15 @@
     }
   },
   "Storj.Uplink": {
-    "lastUpdated": "2026-11-08T20:57:18.3096478Z",
-    "version": "1.166.2",
-    "manifestHash": "ED58449D274E7313C8BADB42F9C8C466F496551A617F5857CFA35B9B91049DD0",
-    "description": "",
-    "state": "VALIDATION_PASSED",
+    "version": "1.166.3",
     "installerHashes": [
-      "7991EA541500F71F25D7E4FE93D53007DB045C895FD019CBCF4273780D7289CF"
+      "876EAB96BC1C426EEFAEC767C47D922D99D5E76CC79BB3211A8CC5BF3F72E33F"
     ],
-    "validationCount": 1
+    "validationCount": 1,
+    "state": "VALIDATION_FAILED",
+    "manifestHash": "452028DA8D508F8DA3EAC2BB4BA0B0B8632D932917B026869121E1EFFCCC04AF",
+    "description": "",
+    "lastUpdated": "2026-11-11T05:22:58.9109268Z"
   },
   "str4d.rage": {
     "state": "VALIDATION_PASSED",
@@ -9167,11 +9167,11 @@
     }
   },
   "Tyrrrz.LightBulb": {
-    "lastUpdated": "2026-11-08T04:46:49.9473029Z",
+    "lastUpdated": "2026-11-11T05:22:58.7989188Z",
     "description": "",
-    "validationCount": 2,
+    "validationCount": 3,
     "manifestHash": "014165BAC61FA0446E7B841B523B0976198D4FC6DF57202A8275C9C307E36A03",
-    "state": "VALIDATION_PASSED",
+    "state": "VALIDATION_FAILED",
     "version": "2.7.3",
     "installerHashes": [
       "FC8C907FB40C62D45219AEF88B7BC14EB560689A944D14100A0C2A909AF86DED",
@@ -9912,9 +9912,9 @@
       "9FDD48FF890E54FFDC37F92DF9037C940FE4D4F914755B70CC644B97E9678A83"
     ],
     "manifestHash": "07F3E52AE32B2C707E9B40D8D823534F1971DB0B3EEC35AC0ED531E3105D2B7B",
-    "validationCount": 2,
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-10T10:00:11.3075773Z"
+    "validationCount": 3,
+    "state": "VALIDATION_FAILED",
+    "lastUpdated": "2026-11-11T05:22:58.7327974Z"
   },
   "xushengfeng.eSearch": {
     "state": "VALIDATION_PASSED",
