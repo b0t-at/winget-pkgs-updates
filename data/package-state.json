@@ -666,19 +666,15 @@
     }
   },
   "AsterPrivacy.AsterMail": {
-    "lastUpdated": "2026-10-08T17:31:06.1882365Z",
-    "manifestHash": "41C5EB1053E2CC231C748DB77AEBF708E0DAF3833E0E3ECE6BB5D5CC4C16722C",
-    "validationCount": 5,
-    "installerHashes": [
-      "CF38CBDDCA4FF3B691A827DF95324C3339F55A19EFA6BB79FE47D215D74E0025"
-    ],
+    "manifestHash": "07CAF6907D2F68E359557D0C980383BBD200DFAA9D8578B0BCBFEA76F17F2FFF",
+    "validationCount": 1,
+    "lastUpdated": "2026-11-11T16:50:30.984577Z",
+    "version": "1.4.81",
     "description": "",
-    "version": "1.4.71",
-    "state": "VALIDATION_PASSED",
-    "openPr": {
-      "checkedAt": "2026-11-05T00:37:03.2825742Z",
-      "version": "1.4.80"
-    }
+    "state": "VALIDATION_FAILED",
+    "installerHashes": [
+      "D0C7F73522F48B91C4F60BC02D074EBD0F0AADFAD4840739CFDEE9147EB51725"
+    ]
   },
   "AtaraxyLabs.sem": {
     "state": "VALIDATION_PASSED",
@@ -757,15 +753,15 @@
   },
   "axllent.mailpit": {
     "manifestHash": "84D8B6AE2574E9EFF9729FBA589F60BB24E6B2505BB9A7402A9A9FE2BD3C59B8",
-    "validationCount": 4,
+    "validationCount": 5,
     "description": "",
     "installerHashes": [
       "0BCF8F1E7C21005B30C206064FF2F37DAC602EF66774E558379D326F5673D652",
       "3F0BEDC92AA55003588446920532EB9368547A8D151EA6A6D93A24490C00B45E"
     ],
     "version": "1.33.1",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-11T13:47:29.2344594Z"
+    "state": "VALIDATION_FAILED",
+    "lastUpdated": "2026-11-11T16:50:31.0832418Z"
   },
   "axodotdev.dist": {
     "lastUpdated": "2026-11-03T09:08:27.687067Z",
@@ -2161,17 +2157,17 @@
     }
   },
   "dragonflylee.switchfin": {
-    "manifestHash": "96033F010DDD8300EE851105BBEF75DDFFA39D6DF3D76F192C1DABD297E03806",
-    "state": "VALIDATION_PASSED",
+    "manifestHash": "6D6E1A9694B8C57D68A0B14084919346E990F0A153E0B8ABF2A0FBBEB5DDB866",
     "validationCount": 1,
-    "lastUpdated": "2026-09-02T21:00:13.9357619Z",
+    "lastUpdated": "2026-11-11T16:50:31.0143309Z",
+    "version": "0.9.5",
     "description": "",
+    "state": "VALIDATION_FAILED",
     "installerHashes": [
-      "16739FC1CB5400CC5CEAF7FBCB9E1F544CF86B0F736CDF385FAF34359FBC0F2E",
-      "7A6D18668B11324C3EE4BA80850F0997F9A943D8332FAB18EE01113885BEED11",
-      "EA79989A8B2604E38CFD295D1C32A2D92C0F7FAFBB494D0029AD60CA42AD9DD6"
-    ],
-    "version": "0.9.4"
+      "8A5AE0E92389E27C6503EF55C1A74500B9217121EEAC27CBD7A3DCB2BD776D7C",
+      "A0FF1D544FB3B259258D20D029EDC056F9A1051C11186B087A82D56BF0622658",
+      "F6B1098F3E55401553F5EB164BFD7914D234CAF10522B988EE716FD0E0C0A74E"
+    ]
   },
   "Dweymouth.Supersonic": {
     "description": "",
@@ -3264,7 +3260,7 @@
     ]
   },
   "Google.OSVScanner": {
-    "state": "VALIDATION_PASSED",
+    "state": "VALIDATION_FAILED",
     "installerHashes": [
       "7121DCF420AEFBBF89A7F0050C4D3094E079FF93AFD334DFC96F16B02EC85800",
       "5F3998B55C9268F8468502BBCB60645038FD5B145EE5E685E6AE2A32E923AFC7"
@@ -3272,8 +3268,8 @@
     "description": "",
     "version": "2.7.1",
     "manifestHash": "E3EAEF32CE17454BD7D4647149D661546FCD049FC9A40AFF0D3A04D608B580CB",
-    "validationCount": 3,
-    "lastUpdated": "2026-11-10T10:00:11.5473782Z"
+    "validationCount": 4,
+    "lastUpdated": "2026-11-11T16:50:31.0524503Z"
   },
   "Google.Protobuf": {
     "version": "36.2",
@@ -5002,9 +4998,9 @@
     "installerHashes": [
       "0BCA4D646EBE4868FE3D73ECAB7AB69D75F49A986F2F4B67AC927D567FA7BDA4"
     ],
-    "state": "VALIDATION_PASSED",
-    "validationCount": 3,
-    "lastUpdated": "2026-11-11T09:18:50.783073Z",
+    "state": "VALIDATION_FAILED",
+    "validationCount": 4,
+    "lastUpdated": "2026-11-11T16:50:30.8635686Z",
     "description": "",
     "version": "0.68.0",
     "manifestHash": "72DCF1A348FD9734899324EEBC60F63AD5B4EA72ED79FF68FA9FC7E7D2879565"
@@ -8001,12 +7997,12 @@
     "description": "",
     "version": "7.1.2",
     "manifestHash": "21F9B280DBB442B325C3B1F6504C9CF87E8B2FB5FE2CCC97E9D3E2B462A5CBA4",
-    "lastUpdated": "2026-11-11T04:05:06.6656099Z",
-    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-11T16:50:30.9653935Z",
+    "state": "VALIDATION_FAILED",
     "installerHashes": [
       "B4CF5B74C1D1E1ACD53EBD85DE99696C49A49E301BB90CFD0572A210EF0660B0"
     ],
-    "validationCount": 2
+    "validationCount": 3
   },
   "simulot.immich-go": {
     "validationCount": 1,
@@ -8081,12 +8077,12 @@
     "description": "",
     "version": "1.20.2",
     "manifestHash": "B4F0EA125F346B1C0B4789C7CBFA284E30ED39A9A22331AD53179B785CF90B9F",
-    "lastUpdated": "2026-11-10T10:00:11.4470981Z",
-    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-11T16:50:30.9308491Z",
+    "state": "VALIDATION_FAILED",
     "installerHashes": [
       "D8F5953675890254A591B68A801C469B28E1E2F778E690A08AD699B4DC137D80"
     ],
-    "validationCount": 2
+    "validationCount": 3
   },
   "Skylot.jadx": {
     "validationCount": 1,
@@ -8419,11 +8415,11 @@
     "installerHashes": [
       "876EAB96BC1C426EEFAEC767C47D922D99D5E76CC79BB3211A8CC5BF3F72E33F"
     ],
-    "validationCount": 2,
+    "validationCount": 3,
     "state": "VALIDATION_FAILED",
     "manifestHash": "452028DA8D508F8DA3EAC2BB4BA0B0B8632D932917B026869121E1EFFCCC04AF",
     "description": "",
-    "lastUpdated": "2026-11-11T09:18:50.6652328Z"
+    "lastUpdated": "2026-11-11T16:50:30.9101617Z"
   },
   "str4d.rage": {
     "state": "VALIDATION_PASSED",
