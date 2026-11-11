@@ -128,7 +128,7 @@
     "lastUpdated": "2026-11-04T21:18:12.9029596Z",
     "openPr": {
       "version": "0.107.80",
-      "checkedAt": "2026-11-10T12:21:40.0106626Z"
+      "checkedAt": "2026-11-11T16:16:12.3411242Z"
     }
   },
   "AdGuard.dnsproxy": {
@@ -4110,11 +4110,7 @@
     "manifestHash": "D7B95F2180F10D1C3485BA0281F1818BB5FC77CB93733C786C4A043500A6E622",
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-11-05T04:55:31.5248222Z",
-    "version": "7.3.4",
-    "openPr": {
-      "version": "7.3.4",
-      "checkedAt": "2026-11-05T08:20:38.6739599Z"
-    }
+    "version": "7.3.4"
   },
   "jark006.jarkViewer": {
     "description": "",
@@ -4255,7 +4251,7 @@
     "manifestHash": "1E843D90602194E32EF0F84E333BE9BC20D09621BCA43AA304BDA7952A621BAB",
     "openPr": {
       "version": "0.47.1",
-      "checkedAt": "2026-11-10T12:21:51.0073497Z"
+      "checkedAt": "2026-11-11T16:16:25.3662699Z"
     }
   },
   "jmrplens.gitlab-mcp-server": {
