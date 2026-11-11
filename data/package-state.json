@@ -1561,8 +1561,8 @@
     "validationCount": 1,
     "version": "1.0.48275",
     "openPr": {
-      "checkedAt": "2026-10-30T16:18:22.6640324Z",
-      "version": "1.13.0"
+      "checkedAt": "2026-11-11T00:07:18.8769314Z",
+      "version": "1.15.0"
     }
   },
   "ciromattia.KCC": {
@@ -8466,8 +8466,8 @@
     "validationCount": 1,
     "manifestHash": "2FC17D10387329E5E73DBDDCBE45541A670D1711C99B916B986BBD747577DEC7",
     "openPr": {
-      "checkedAt": "2026-11-09T20:16:52.2981354Z",
-      "version": "1.55.9"
+      "checkedAt": "2026-11-11T00:08:22.3974681Z",
+      "version": "1.55.10"
     }
   },
   "stuncloud.uwscr": {
@@ -8787,7 +8787,7 @@
     "manifestHash": "101A50462A6E2BE19AFB17A21278EA44597559D970949753840897CFC30A7566",
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
-      "checkedAt": "2026-11-09T20:16:54.1050984Z",
+      "checkedAt": "2026-11-11T00:08:24.7327425Z",
       "version": "5.7.1"
     }
   },
