@@ -2766,8 +2766,8 @@
     "manifestHash": "86FA8F6B2F491EE6BDE61BAFC3493B85F1B14C4667597B93DBB355BC71355A19",
     "description": "",
     "openPr": {
-      "version": "0.5.7",
-      "checkedAt": "2026-11-11T04:17:32.9586552Z"
+      "version": "0.5.8",
+      "checkedAt": "2026-11-11T20:15:05.349567Z"
     }
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
@@ -4156,8 +4156,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-11-10T16:20:33.4675269Z",
-      "version": "2026.11.6"
+      "version": "2026.11.6",
+      "checkedAt": "2026-11-11T20:15:09.3886721Z"
     }
   },
   "jeffaristi92.Sweeft": {
