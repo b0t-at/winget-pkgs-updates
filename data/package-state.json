@@ -61,15 +61,15 @@
     "version": "5.3.0"
   },
   "ActivityWatch.ActivityWatch": {
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-10T20:50:15.9256157Z",
+    "manifestHash": "4FA53D269DFFB8E9E334B8375D1B74418AAC5A70CBFB681B54E52F3EFCAB1EEE",
     "installerHashes": [
-      "190BC1FB82194E20D52619DBF884751D7B6AE044477623A384069BC3EA85A64D"
+      "86F2CD3C8EB8DF1DA30706BDDEE677E2AF541A943AE32FBDC7DE09135485A054"
     ],
     "description": "",
-    "version": "0.14.1",
+    "lastUpdated": "2026-11-11T04:05:06.849852Z",
+    "version": "0.14.2",
     "validationCount": 1,
-    "manifestHash": "1B99770D7D29E14A9FE34B228908C8104ED5AA12A2128A6804BB239902FC31F8"
+    "state": "VALIDATION_PASSED"
   },
   "AdaLang.Alire.Portable": {
     "manifestHash": "9AF0A473771E6C6F30C85974415BE98484C1164911A86ED12FF3A234B2CA7645",
@@ -757,7 +757,7 @@
   },
   "axllent.mailpit": {
     "manifestHash": "84D8B6AE2574E9EFF9729FBA589F60BB24E6B2505BB9A7402A9A9FE2BD3C59B8",
-    "validationCount": 2,
+    "validationCount": 3,
     "description": "",
     "installerHashes": [
       "0BCF8F1E7C21005B30C206064FF2F37DAC602EF66774E558379D326F5673D652",
@@ -765,7 +765,7 @@
     ],
     "version": "1.33.1",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-10T01:24:11.6091703Z"
+    "lastUpdated": "2026-11-11T04:05:06.7585064Z"
   },
   "axodotdev.dist": {
     "lastUpdated": "2026-11-03T09:08:27.687067Z",
@@ -898,10 +898,10 @@
     "version": "0.5"
   },
   "BenjaminLSR.HandheldCompanion": {
-    "lastUpdated": "2026-11-11T00:02:49.4016577Z",
+    "lastUpdated": "2026-11-11T04:05:06.7847402Z",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "1.4.0.2",
     "installerHashes": [
       "044F54A1E53989C26751D564EBCA3FF193695869FE69FCC8CF62748492880E6F"
@@ -2093,20 +2093,16 @@
     "lastUpdated": "2026-11-04T01:07:24.5917398Z"
   },
   "Docker.docker-credential-wincred": {
-    "validationCount": 1,
+    "manifestHash": "4C043A7A2000AE62409B0E78413CDFBDE88AB6944E5A9D1FF81DC1472FBBA3A3",
     "installerHashes": [
-      "5675C7F677F48BEB66713CDFDF67503332F0CE4CF19220022C128634F49625F0",
-      "B5FCE98CC24108FE4207761133DF2FA887C1CEA5054DAEC1AC5E220300D94D43"
+      "5D22527531C4234F8A0BCA7F803CB4F8A0834A6A7913042F7BC6F462F0AF2AC2",
+      "B74A94AC8D1A92211ECE2F546274F0E12CD968330B755D7E3112343047F9A705"
     ],
-    "state": "VALIDATION_PASSED",
-    "version": "0.9.12",
-    "lastUpdated": "2026-10-23T02:01:31.6982876Z",
-    "manifestHash": "749D3E7DB3FADDCC9D62EBAFB8D8A77F1AB85E01D101A1DB4F9128D7779EFDDA",
     "description": "",
-    "openPr": {
-      "checkedAt": "2026-11-01T12:20:22.927191Z",
-      "version": "0.9.12"
-    }
+    "lastUpdated": "2026-11-11T04:05:06.5882607Z",
+    "version": "0.9.13",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
   },
   "Docker.DockerCompose": {
     "lastUpdated": "2026-11-03T01:03:43.3406349Z",
@@ -2607,14 +2603,14 @@
     "version": "1.8.4"
   },
   "f4exb.sdrangel": {
-    "description": "",
+    "manifestHash": "DB1D1EEA86E578FF9A29C9669F2D0D1984F25CFD9C138D4D110B2338D6B0CFF0",
     "installerHashes": [
-      "17E1CB158D0E263ED713E76930BABCE5458B7954A53ED0213770F6F37C66D7C2"
+      "CDDD6D930A8A969753112BEA40E825581F45DE1D94EB6E3B806DF86E72CBAA1C"
     ],
-    "manifestHash": "EBBFD3AB2F9F30A79EC759CCE90A3D63BB6DCF85FFDC65AE8B74D616AD38B8AC",
+    "description": "",
+    "lastUpdated": "2026-11-11T04:05:06.7037452Z",
+    "version": "8.1.0",
     "validationCount": 1,
-    "version": "8.0.0",
-    "lastUpdated": "2026-10-27T09:28:33.5567418Z",
     "state": "VALIDATION_PASSED"
   },
   "facebook.pyrefly": {
@@ -3822,8 +3818,8 @@
       "49FD1D85CBCF32DA4C46905C0E9B1575E87B7D15BA85DEFE3414332A6DFBF568",
       "7CD312988E7D6D6C22C45E3D1F94E4EF417FD7A7CC3629799FF6C6E2DC4FF18D"
     ],
-    "validationCount": 2,
-    "lastUpdated": "2026-11-09T13:15:24.3205211Z",
+    "validationCount": 3,
+    "lastUpdated": "2026-11-11T04:05:06.7312455Z",
     "version": "3.7.6",
     "description": "",
     "state": "VALIDATION_PASSED"
@@ -6405,8 +6401,8 @@
       "DCCC304E1FF65B551A0AEC079DFE156527BE92E4C6C89724EB6C553EF21E8A1B"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 4,
-    "lastUpdated": "2026-11-11T00:02:49.3040547Z",
+    "validationCount": 5,
+    "lastUpdated": "2026-11-11T04:05:06.8052011Z",
     "description": "",
     "version": "3.7.0",
     "manifestHash": "926240206D1B5F2F8A5D99C32752CD7DA51E7B692D2C679B454A2A750E458135"
@@ -7307,15 +7303,15 @@
     "manifestHash": "F31C1FF7C99F93663CF1F1536EE9D99879862C380624FC50DD7049B4070C4E00"
   },
   "rejetto.hfs": {
-    "version": "3.4.0",
-    "description": "",
-    "lastUpdated": "2026-11-04T17:01:35.9953481Z",
-    "state": "VALIDATION_PASSED",
+    "manifestHash": "55EAB85016F7327A0FC436F77D3ADE2F6AB72682E6C8C2805BC4E09173038E01",
     "installerHashes": [
-      "8E68F5DF65D0FB872BBCFE3A9B38F3FB6B11E613C52DDD9CC3493EE4FA883743"
+      "2021648C72E5EE0B78EB67E7F68BFDE069ACC753776D8D6E66AFC4A8EC4569CA"
     ],
-    "manifestHash": "C3300F6F2B833F6CE6DBDD1168E5B2CC728DFD45A258332CA4FDA8887259872C",
-    "validationCount": 1
+    "description": "",
+    "lastUpdated": "2026-11-11T04:05:06.6362965Z",
+    "version": "3.4.1",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED"
   },
   "Rela.RelaGit": {
     "version": "0.16.11",
@@ -8009,12 +8005,12 @@
     "description": "",
     "version": "7.1.2",
     "manifestHash": "21F9B280DBB442B325C3B1F6504C9CF87E8B2FB5FE2CCC97E9D3E2B462A5CBA4",
-    "lastUpdated": "2026-11-09T09:15:32.5362692Z",
+    "lastUpdated": "2026-11-11T04:05:06.6656099Z",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "B4CF5B74C1D1E1ACD53EBD85DE99696C49A49E301BB90CFD0572A210EF0660B0"
     ],
-    "validationCount": 1
+    "validationCount": 2
   },
   "simulot.immich-go": {
     "validationCount": 1,
@@ -8277,15 +8273,15 @@
     "lastUpdated": "2026-10-28T05:05:30.1273085Z"
   },
   "sprout2000.LeafView": {
+    "manifestHash": "41EDD019380FC88D8273C4C1CABDBFAB01B486339CDA758FE4774B449F236E81",
     "installerHashes": [
-      "CBB80127CDDA8567EC185921DD2298FC7F3B7911C1AD212768AAF6759D5A26F8"
+      "036B9B1DCB99D717C8661B9612AF16A344D39087C9666FC5FAC0ABAE2CA8C1E7"
     ],
     "description": "",
-    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-11T04:05:06.8294588Z",
+    "version": "4.5.4",
     "validationCount": 1,
-    "version": "4.5.3",
-    "manifestHash": "255C73F3C79954CFD890F95345E10FA675F5C72A3A2073973CB6009BD326426E",
-    "lastUpdated": "2026-10-31T17:05:10.5578789Z"
+    "state": "VALIDATION_PASSED"
   },
   "sqlectron.sqlectron-gui": {
     "manifestHash": "1E8EB925809A8B24F3B6A6B3D717AED88D0A03E7EB57C8CE6B2142D3860A809E",
