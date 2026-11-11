@@ -392,7 +392,7 @@
   },
   "AnInsomniacy.Aria2Next": {
     "manifestHash": "3538FABD9B50C691D99E1340CE434EE6DD5794C213723519229209B324BFAAFD",
-    "validationCount": 2,
+    "validationCount": 3,
     "description": "",
     "installerHashes": [
       "12BBD48DFD2C86F55419BF92B196DD3AEDD6983116B5CE10C85D27A5A76C2BAA",
@@ -400,7 +400,7 @@
     ],
     "version": "3.1.0",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-10T10:00:11.479017Z"
+    "lastUpdated": "2026-11-11T13:47:29.2560405Z"
   },
   "Anki.Anki": {
     "description": "",
@@ -757,7 +757,7 @@
   },
   "axllent.mailpit": {
     "manifestHash": "84D8B6AE2574E9EFF9729FBA589F60BB24E6B2505BB9A7402A9A9FE2BD3C59B8",
-    "validationCount": 3,
+    "validationCount": 4,
     "description": "",
     "installerHashes": [
       "0BCF8F1E7C21005B30C206064FF2F37DAC602EF66774E558379D326F5673D652",
@@ -765,7 +765,7 @@
     ],
     "version": "1.33.1",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-11T04:05:06.7585064Z"
+    "lastUpdated": "2026-11-11T13:47:29.2344594Z"
   },
   "axodotdev.dist": {
     "lastUpdated": "2026-11-03T09:08:27.687067Z",
@@ -1453,8 +1453,8 @@
     "description": "",
     "version": "0.8.1",
     "manifestHash": "93BAEFBA7E45BF1247E8C0A88DA55EE4F1D242AC31FFC141F302E90AD49BB177",
-    "validationCount": 2,
-    "lastUpdated": "2026-11-10T01:24:11.7274374Z"
+    "validationCount": 3,
+    "lastUpdated": "2026-11-11T13:47:29.307476Z"
   },
   "CESNET.UltraGrid": {
     "validationCount": 1,
@@ -2002,9 +2002,9 @@
     ],
     "version": "3.0.12",
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-10T10:00:11.579293Z",
-    "validationCount": 3
+    "state": "VALIDATION_FAILED",
+    "lastUpdated": "2026-11-11T13:47:29.1177142Z",
+    "validationCount": 4
   },
   "Dimmy.Dimmy": {
     "validationCount": 1,
@@ -2498,8 +2498,8 @@
     "description": "",
     "version": "0.56.3",
     "manifestHash": "9832AFBDC35F82156C85B52BB0A846CE7275DA581AB998A71392CE56DC20D4C6",
-    "validationCount": 2,
-    "lastUpdated": "2026-11-09T21:24:28.1389347Z"
+    "validationCount": 3,
+    "lastUpdated": "2026-11-11T13:47:29.14062Z"
   },
   "EtternaProject.EtternaGame": {
     "configHealth": {
@@ -3181,10 +3181,10 @@
   },
   "Gluon.SceneBuilder": {
     "description": "",
-    "state": "VALIDATION_FAILED",
-    "validationCount": 2,
+    "state": "VALIDATION_PASSED",
+    "validationCount": 3,
     "manifestHash": "FC76C2570A6E26B69426B52A1EB6DF91B0F8D1F3D233CA9180B3E96FBDDB08C9",
-    "lastUpdated": "2026-11-11T05:22:58.8551562Z",
+    "lastUpdated": "2026-11-11T13:47:29.2831529Z",
     "version": "27.0.0-RC",
     "installerHashes": [
       "926A979F8D9BB62C3F7218EAC821B21E07D64AFB9E4B5C4020F72072BA1FE25F"
@@ -3792,8 +3792,8 @@
     "version": "4.7.0",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-09T21:24:28.1019135Z",
-    "validationCount": 4
+    "lastUpdated": "2026-11-11T13:47:29.1635896Z",
+    "validationCount": 5
   },
   "houmain.keymapper": {
     "openPr": {
@@ -4811,15 +4811,15 @@
     "description": ""
   },
   "Longbridge.LongbridgeTerminal": {
-    "manifestHash": "CE93198EC8E0E321AD8D3DD0B81243EA5F45987842799C34FAA5D8F084D6DD63",
+    "description": "",
+    "lastUpdated": "2026-11-11T13:47:29.2085109Z",
+    "version": "0.31.2",
+    "manifestHash": "1C6B7C6CFE8F6AF7A499D4994C8D1FF7B0CF7311D56525867FE4E80B60DC5E1E",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
     "installerHashes": [
-      "0D22199FA02BAC0F6C5731BE2748510D260D4320F03CBF622FD048822777C597"
-    ],
-    "version": "0.31.1",
-    "description": "",
-    "lastUpdated": "2026-11-05T01:15:05.1496131Z",
-    "state": "VALIDATION_PASSED"
+      "329CE67019871D4DAB7680EA07D1AF8BEFE8C00847611D55A3222198624492FC"
+    ]
   },
   "LookupFoundation.RevitLookup.2021": {
     "manifestHash": "128610B2BC6F960BB40A16C24D3F7CF0F8C87E1B9B978E39601108907C2FEBC3",
@@ -5305,15 +5305,15 @@
     "lastUpdated": "2026-11-10T01:24:11.5607605Z"
   },
   "Microsoft.Garnet.DN9": {
-    "version": "2.2.8",
     "description": "",
-    "lastUpdated": "2026-11-06T01:55:12.2759808Z",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "EA26BE8A6FA9B147EF6C70AFC4518672859BC077FD32DFA9517EEE8B21923210",
+    "lastUpdated": "2026-11-11T13:47:28.9384945Z",
+    "version": "2.2.10",
+    "manifestHash": "B3365483B159CA5C9959BA0E748F3BB2A144930E6915A955AC5DB0A7C5DC9F99",
+    "state": "VALIDATION_FAILED",
     "validationCount": 1,
     "installerHashes": [
-      "41AB3D438C8E1B8D146C33BFB2D010DD514F687D7FD276B97511981839940D00",
-      "CAF3046F4E44E110C9C99042C791492D5956FB5A33584981E25DC95074086329"
+      "E4766E78885B594DBB1636AACBC573236C34AEBF14783EBA1296E5EDAC5A9B58",
+      "A26F21DFF19D3F97F8EA7B86BBF984A54A04F0923BF0CDCA4750806885296130"
     ]
   },
   "Microsoft.LightGBM": {
@@ -6549,9 +6549,9 @@
     "installerHashes": [
       "665D492DC9D42159E7F9F7BF357A581C2577C42B2E736120ECB9234A929E7708"
     ],
-    "lastUpdated": "2026-11-11T09:18:50.7155319Z",
-    "state": "VALIDATION_FAILED",
-    "validationCount": 1
+    "lastUpdated": "2026-11-11T13:47:29.1876011Z",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 2
   },
   "openwong2kim.wsnap": {
     "installerHashes": [
@@ -6686,15 +6686,15 @@
     ]
   },
   "panjie.mods": {
-    "validationCount": 2,
-    "lastUpdated": "2026-11-11T05:22:59.0455483Z",
+    "validationCount": 3,
+    "lastUpdated": "2026-11-11T13:47:29.0022356Z",
     "version": "5.1.0",
     "description": "",
     "installerHashes": [
       "C51BC64CF4F7EDE2726F622411C905202201048BDBD6956A1C00B3A9FEF915BD",
       "44E0F23017061401FC22365CA8456FB410564F50EFA064DA9D0C566FBE620121"
     ],
-    "state": "VALIDATION_PASSED",
+    "state": "VALIDATION_FAILED",
     "manifestHash": "2D8D1E23169BE211152052E0AAAD4ED7D8A8BF501B8B9731EDF2BFE91ED578A8"
   },
   "Parresia.Speedy": {
@@ -9801,14 +9801,14 @@
   },
   "WowUp.CF": {
     "description": "",
+    "lastUpdated": "2026-11-11T13:47:29.0433541Z",
+    "version": "2.25.5",
+    "manifestHash": "A631C808CFF94F6F244E99021567629588005BA72EC1FADDC5361AED11874E25",
+    "state": "VALIDATION_FAILED",
     "validationCount": 1,
-    "version": "2.25.4",
-    "manifestHash": "CDB757C94D47AA97A3535E17B4DE0BFC8CDF92524808CF7680CAEA4AFB88E9E4",
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "1CBFE659A716A9B6694C8162A60BF60EDAC2C0C92BEE5A213DF519FB4E3A0A47"
-    ],
-    "lastUpdated": "2026-11-04T04:59:07.0898399Z"
+      "07A63B9A58D6BA27B1419B9576DDBC903C4881B14D6EB61B57F178D363169165"
+    ]
   },
   "WowUp.Wowup": {
     "installerHashes": [
