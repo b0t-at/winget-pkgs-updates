@@ -1816,8 +1816,8 @@
   "cURL.cURL": {
     "manifestHash": "BBC68A1ADA303578FB0B6F6E4C9E7C6546E20453DFCA3DD97CA5B0E735E57964",
     "version": "8.23.0.9",
-    "validationCount": 4,
-    "lastUpdated": "2026-11-12T19:56:58.7823288Z",
+    "validationCount": 5,
+    "lastUpdated": "2026-11-12T22:02:24.4140687Z",
     "description": "",
     "installerHashes": [
       "89CB71930F4242D884E8E349463455932AB1D089B20F4F99318261A3CBFF9167",
@@ -5565,11 +5565,11 @@
     "manifestHash": "8D8FBE3E679CEDF4E68CDB73D6A2729AE46EBC6A73A047407EEEB5BC1C444CFC"
   },
   "MongoDB.Server": {
-    "validationCount": 5,
+    "validationCount": 6,
     "installerHashes": [
       "4841753F49C1E3E25D12FF63A049894B7D56E397F27F05303CCDE5144A6AE060"
     ],
-    "lastUpdated": "2026-11-12T19:56:58.827048Z",
+    "lastUpdated": "2026-11-12T22:02:24.4690253Z",
     "manifestHash": "D5E9B6628252F1B384E18F5F0245D8B938F4D0CBA3A7A1958ED232B9E7B881E9",
     "state": "VALIDATION_PASSED",
     "version": "9.0.8",
@@ -5578,8 +5578,8 @@
   "MongoDB.Shell": {
     "manifestHash": "7178CCA5876E45CA7EF9D72FE34E0103006E69F41EAAEE4933F5BF3435ECC341",
     "version": "2.14.2",
-    "validationCount": 4,
-    "lastUpdated": "2026-11-12T19:56:58.8401356Z",
+    "validationCount": 5,
+    "lastUpdated": "2026-11-12T22:02:24.4865438Z",
     "description": "",
     "installerHashes": [
       "D0EE64CAD724D4B69E066AD0DB95DD1F1D85F9A685C649A1EBC1F769414025D3"
