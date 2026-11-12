@@ -128,7 +128,7 @@
     "lastUpdated": "2026-11-04T21:18:12.9029596Z",
     "openPr": {
       "version": "0.107.80",
-      "checkedAt": "2026-11-11T16:16:12.3411242Z"
+      "checkedAt": "2026-11-12T19:41:12.132192Z"
     }
   },
   "AdGuard.dnsproxy": {
@@ -2762,8 +2762,8 @@
     "manifestHash": "86FA8F6B2F491EE6BDE61BAFC3493B85F1B14C4667597B93DBB355BC71355A19",
     "description": "",
     "openPr": {
-      "version": "0.5.8",
-      "checkedAt": "2026-11-11T20:15:05.349567Z"
+      "version": "0.5.9",
+      "checkedAt": "2026-11-12T19:41:23.2901497Z"
     }
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
@@ -4243,7 +4243,7 @@
     "manifestHash": "1E843D90602194E32EF0F84E333BE9BC20D09621BCA43AA304BDA7952A621BAB",
     "openPr": {
       "version": "0.47.1",
-      "checkedAt": "2026-11-11T16:16:25.3662699Z"
+      "checkedAt": "2026-11-12T19:42:16.929536Z"
     }
   },
   "jmrplens.gitlab-mcp-server": {
@@ -4536,11 +4536,7 @@
     "version": "4.4.3",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D",
-    "openPr": {
-      "version": "4.4.5",
-      "checkedAt": "2026-11-12T15:52:34.5230006Z"
-    }
+    "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D"
   },
   "kmiya-culti.RLogin": {
     "lastUpdated": "2026-09-25T20:53:18.3452811Z",
