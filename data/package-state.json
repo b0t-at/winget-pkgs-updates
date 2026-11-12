@@ -666,15 +666,15 @@
     }
   },
   "AsterPrivacy.AsterMail": {
-    "manifestHash": "07CAF6907D2F68E359557D0C980383BBD200DFAA9D8578B0BCBFEA76F17F2FFF",
-    "validationCount": 1,
-    "lastUpdated": "2026-11-11T16:50:30.984577Z",
-    "version": "1.4.81",
-    "description": "",
-    "state": "VALIDATION_FAILED",
+    "lastUpdated": "2026-11-12T15:44:41.6417093Z",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "D0C7F73522F48B91C4F60BC02D074EBD0F0AADFAD4840739CFDEE9147EB51725"
-    ]
+      "F268630E5AECEEC0125ACA7C717DE7606CC6C7CBF7F16ECB7F4B690116B53CC9"
+    ],
+    "version": "1.4.82",
+    "validationCount": 1,
+    "description": "",
+    "manifestHash": "0AE69CD0A7BB7A948810C7E8975A74F7ABEE9C12E4BC929B7C7E9ABA20567F6E"
   },
   "AtaraxyLabs.sem": {
     "state": "VALIDATION_PASSED",
@@ -939,8 +939,8 @@
       "0799FDC4588A934FD5D727920117A5E0D5D24D2CDEAD55445E84C5619D201D9C"
     ],
     "manifestHash": "C63A24BABF4E1C36C5A597DC4D3BEFA5E89612871D6453BE08D0374595C56395",
-    "validationCount": 2,
-    "lastUpdated": "2026-11-09T21:24:28.0762702Z"
+    "validationCount": 3,
+    "lastUpdated": "2026-11-12T15:44:41.7503022Z"
   },
   "bgreenwell.lstr": {
     "version": "0.4.0",
@@ -2104,9 +2104,9 @@
       "E4316597452650AE92FE9719A2A7C2FCE8F56C5CEAFED88D2AED6E39B2B2B2D0",
       "3ED47AB4D1CD56D63981246820420E7AAF042F2A48E6CCC95993872980A4E0A9"
     ],
-    "lastUpdated": "2026-11-11T09:18:50.6114076Z",
-    "state": "VALIDATION_FAILED",
-    "validationCount": 1
+    "lastUpdated": "2026-11-12T15:44:41.7277243Z",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 2
   },
   "Docker.ds": {
     "lastUpdated": "2026-08-18T17:25:14.0317211Z",
@@ -3178,9 +3178,9 @@
   "Gluon.SceneBuilder": {
     "description": "",
     "state": "VALIDATION_PASSED",
-    "validationCount": 3,
+    "validationCount": 4,
     "manifestHash": "FC76C2570A6E26B69426B52A1EB6DF91B0F8D1F3D233CA9180B3E96FBDDB08C9",
-    "lastUpdated": "2026-11-11T13:47:29.2831529Z",
+    "lastUpdated": "2026-11-12T15:44:41.6912429Z",
     "version": "27.0.0-RC",
     "installerHashes": [
       "926A979F8D9BB62C3F7218EAC821B21E07D64AFB9E4B5C4020F72072BA1FE25F"
@@ -3814,8 +3814,8 @@
       "49FD1D85CBCF32DA4C46905C0E9B1575E87B7D15BA85DEFE3414332A6DFBF568",
       "7CD312988E7D6D6C22C45E3D1F94E4EF417FD7A7CC3629799FF6C6E2DC4FF18D"
     ],
-    "validationCount": 3,
-    "lastUpdated": "2026-11-11T04:05:06.7312455Z",
+    "validationCount": 4,
+    "lastUpdated": "2026-11-12T15:44:41.5445714Z",
     "version": "3.7.6",
     "description": "",
     "state": "VALIDATION_PASSED"
@@ -4123,14 +4123,14 @@
     "description": "",
     "version": "0.8.50",
     "manifestHash": "9B4C131092FDEF5946DBC895C5171BE61387A6376140EAB1F996CF47233436F8",
-    "lastUpdated": "2026-11-10T13:10:24.6108199Z",
+    "lastUpdated": "2026-11-12T15:44:41.5135446Z",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "C7DE2A58E56583716451552866CF63128E297CEBE27747A4367D80FEA75D1281",
       "ECAA9A9F6816F4AC1BF0A49D9978B565441F00AFA259E1748008ABB3DE3601FF",
       "C2D1091B6E3B09B6BDADA331F2E78D95EAC95B815E0F8AB67452FC4C017E5BC1"
     ],
-    "validationCount": 4
+    "validationCount": 5
   },
   "jawhitti.INTERCAL64": {
     "validationCount": 1,
@@ -4804,11 +4804,11 @@
   },
   "Longbridge.LongbridgeTerminal": {
     "description": "",
-    "lastUpdated": "2026-11-11T13:47:29.2085109Z",
+    "lastUpdated": "2026-11-12T15:44:41.4182856Z",
     "version": "0.31.2",
     "manifestHash": "1C6B7C6CFE8F6AF7A499D4994C8D1FF7B0CF7311D56525867FE4E80B60DC5E1E",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "329CE67019871D4DAB7680EA07D1AF8BEFE8C00847611D55A3222198624492FC"
     ]
@@ -5553,8 +5553,8 @@
   "Monghoul.Monghoul": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "6DDCC9E5CAA6D4881D48362CDDBD3135CCFBD29E1C35E1B9742B981A7556B888",
-    "validationCount": 1,
-    "lastUpdated": "2026-11-12T06:11:59.4563269Z",
+    "validationCount": 2,
+    "lastUpdated": "2026-11-12T15:44:41.5737074Z",
     "version": "2.0.3",
     "description": "",
     "installerHashes": [
@@ -5720,15 +5720,15 @@
     "manifestHash": "77CFED035E8B90FC50F6448291D28F4AE2A0AFCDE8BE619DF4F658DD5710FC58"
   },
   "muimsd.tilefeed": {
+    "lastUpdated": "2026-11-12T15:44:41.4625123Z",
     "state": "VALIDATION_PASSED",
-    "version": "0.11.0",
-    "description": "",
-    "validationCount": 1,
-    "manifestHash": "DF40C742A1FCA6136145D639F226D60F7CFE9F5BF3523E52A1F10B25829AD4EA",
     "installerHashes": [
-      "991507E0E3EEC3DE222921C524ECF0F1DCBE2228F1F4B3E2EA5E4D88A82FE23B"
+      "6654F203ADC5D363D1373271C29B9B36C2BC00296FF0496C7F31989DDCFE4094"
     ],
-    "lastUpdated": "2026-11-07T01:46:37.3887026Z"
+    "version": "0.13.1",
+    "validationCount": 1,
+    "description": "",
+    "manifestHash": "256A30745B29FE4E64B1F38936FC3F45ACD731B4B72D871F92DB0F546C0C5B2A"
   },
   "Mukunku.ParquetViewer": {
     "installerHashes": [
@@ -6393,8 +6393,8 @@
       "DCCC304E1FF65B551A0AEC079DFE156527BE92E4C6C89724EB6C553EF21E8A1B"
     ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 6,
-    "lastUpdated": "2026-11-11T05:22:58.9989158Z",
+    "validationCount": 7,
+    "lastUpdated": "2026-11-12T15:44:41.6679877Z",
     "description": "",
     "version": "3.7.0",
     "manifestHash": "926240206D1B5F2F8A5D99C32752CD7DA51E7B692D2C679B454A2A750E458135"
@@ -7300,9 +7300,9 @@
       "2021648C72E5EE0B78EB67E7F68BFDE069ACC753776D8D6E66AFC4A8EC4569CA"
     ],
     "description": "",
-    "lastUpdated": "2026-11-11T04:05:06.6362965Z",
+    "lastUpdated": "2026-11-12T15:44:41.6154503Z",
     "version": "3.4.1",
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_PASSED"
   },
   "Rela.RelaGit": {
@@ -7990,8 +7990,8 @@
     "description": "",
     "version": "0.105.0",
     "manifestHash": "DDCE283A8E7B1F1E1DB95D3BE8D18B483C9023C68293F973D7C88CB25E20F092",
-    "validationCount": 1,
-    "lastUpdated": "2026-11-09T17:01:45.541702Z"
+    "validationCount": 2,
+    "lastUpdated": "2026-11-12T15:44:41.5933984Z"
   },
   "SimpleX.SimpleX-Chat": {
     "description": "",
@@ -8649,15 +8649,15 @@
     }
   },
   "TaoufikJabbari.Tiger": {
-    "installerHashes": [
-      "7F39FB455C24D7A03569459947359C8434C9F390386EE54FF28A443E62CFCDBB"
-    ],
-    "lastUpdated": "2026-10-08T14:05:34.3657348Z",
-    "validationCount": 8,
-    "description": "",
+    "lastUpdated": "2026-11-12T15:44:41.4861057Z",
     "state": "VALIDATION_PASSED",
-    "version": "0.8.1",
-    "manifestHash": "47932EC4DF17F01D96BA364A5482CD5CA63888F502E3472F6D10BADEF74C5E8C"
+    "installerHashes": [
+      "C07BB5790A3348B263DE34FE3E6E26AEB8C91E37CD60B9D8F41D097CCFE752DF"
+    ],
+    "version": "0.9.0",
+    "validationCount": 1,
+    "description": "",
+    "manifestHash": "FDE6AE17D6321911541562218AFD4C2D162A2567666B1F6BA4B550DD320AE7CA"
   },
   "Taraflex.Voltglean": {
     "lastUpdated": "2026-08-16T21:14:49.1874058Z",
@@ -9803,15 +9803,15 @@
     ]
   },
   "WowUp.Wowup": {
-    "installerHashes": [
-      "7F6A6A8AE943B7D022A8D9200BFF8597A7C4DF6F2CD5B9FDE5E65DA794FB6136"
-    ],
-    "version": "2.25.4",
-    "manifestHash": "1F2D7DDF5C8CE03DC4BE7F6A204CFE35FA4000357A3FC64796BB6C7830AF026F",
-    "lastUpdated": "2026-11-05T13:07:14.0124644Z",
+    "lastUpdated": "2026-11-12T15:44:41.7761035Z",
     "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "3C419ECECF3D085B4C89FDFBB0B10911C0C029D1DEC9BF1EE048F4788638F54A"
+    ],
+    "version": "2.25.5",
     "validationCount": 1,
-    "description": ""
+    "description": "",
+    "manifestHash": "F4594F82C443D719DB863B71BE8521D158C26EFF90D02E442CD9614602C21BEF"
   },
   "XaoSProject.XaoS": {
     "configHealth": {
