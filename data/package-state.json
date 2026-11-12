@@ -175,16 +175,16 @@
     "state": "VALIDATION_PASSED"
   },
   "AgentClash.AgentClash": {
+    "manifestHash": "B8F620C377C80C901A7D950620729AA437AA3C3CC211FDD391DBCC3996418F13",
+    "lastUpdated": "2026-11-12T23:51:32.0982987Z",
+    "version": "2.5.0",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "lastUpdated": "2026-11-11T00:02:49.2265301Z",
-    "version": "2.4.0",
-    "description": "",
     "installerHashes": [
-      "DD607DE1E5D47FD22F2650F3E81C475CE361300BDD2E4AA9A226C9FBA5CBB5AE",
-      "57D89DF3D423D03895740211BBDFC90A020DCAD906F398409968265869B28B44"
+      "51AD0BAD39724B0A55FB175D6C94E96119551B135B7C7375376FC5F60BC34408",
+      "8987BDD87944D70A963A5A67AFD70094EA1491C035522C2E2A0694C42ED0168E"
     ],
-    "state": "VALIDATION_FAILED",
-    "manifestHash": "7AE6F8119BF9EEF23EA2AE2E3016E3303AB8452B9E31E6B086CDF73A23A0EE4A"
+    "description": ""
   },
   "agentteamland.atl": {
     "manifestHash": "217D464B3AF5A976B3692E72C12E09689A5A54B67DD5964B66C9032DF1B6D2C9",
@@ -392,7 +392,7 @@
   },
   "AnInsomniacy.Aria2Next": {
     "manifestHash": "3538FABD9B50C691D99E1340CE434EE6DD5794C213723519229209B324BFAAFD",
-    "validationCount": 3,
+    "validationCount": 4,
     "description": "",
     "installerHashes": [
       "12BBD48DFD2C86F55419BF92B196DD3AEDD6983116B5CE10C85D27A5A76C2BAA",
@@ -400,7 +400,7 @@
     ],
     "version": "3.1.0",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-11T13:47:29.2560405Z"
+    "lastUpdated": "2026-11-12T23:51:32.1190994Z"
   },
   "Anki.Anki": {
     "description": "",
@@ -673,19 +673,15 @@
     "manifestHash": "0AE69CD0A7BB7A948810C7E8975A74F7ABEE9C12E4BC929B7C7E9ABA20567F6E"
   },
   "AtaraxyLabs.sem": {
+    "manifestHash": "354443146CCBD8A762B32AB5EEB738F3F96E401DD9AE8613949602AEE627E006",
+    "lastUpdated": "2026-11-12T23:51:32.0609974Z",
+    "version": "0.30.1",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "988AEEEE5D7FBF851273DECE79796C26C870DD9BC74B77D09A1301FC461734DD",
-    "lastUpdated": "2026-11-03T12:47:55.1465705Z",
-    "description": "",
     "validationCount": 1,
-    "version": "0.29.1",
     "installerHashes": [
-      "A5D3F6ACE061FE5416A455FFDC2D3E1D9963B44C95AFF490B623F88EC3A2456C"
+      "721B72B2E05BB86B19474BDD9EB4D5B8EF21949C6ACAF835BECE07B132183213"
     ],
-    "openPr": {
-      "version": "0.29.1",
-      "checkedAt": "2026-11-08T12:19:58.7101688Z"
-    }
+    "description": ""
   },
   "Automattic.Wordpress": {
     "installerHashes": [
@@ -1702,11 +1698,11 @@
     "installerHashes": [
       "AB79036832CEA0F2A21AA947731D39512250CC0F7A6A2F6ADD26262738A8CC11"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_PASSED",
     "manifestHash": "AB6D37CFAC55A0131C174CE2D957A03BD203A7B22D2D7401BCD6FFD8C2307A47",
     "description": "",
-    "lastUpdated": "2026-11-11T05:22:58.9841773Z"
+    "lastUpdated": "2026-11-12T23:51:32.2346342Z"
   },
   "CrewHaus.CLI": {
     "installerHashes": [
@@ -2991,9 +2987,9 @@
   "Gather.Gather": {
     "version": "1.41.3",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-11T00:02:49.3754552Z",
+    "lastUpdated": "2026-11-12T23:51:32.1913818Z",
     "manifestHash": "D4E32E1A5B121FDD1FBFB445D1B68DC6E46C9D52389B674D0BA7AF1229D0F8B9",
-    "validationCount": 5,
+    "validationCount": 6,
     "installerHashes": [
       "901BBF32D7E54EA260B99CECFDBAC5EDCC93710A58F324FD0F1D719DE2E843CF"
     ],
@@ -3472,8 +3468,8 @@
       "9C95BA0C7FA43991C3FBCF77DC7DA386E405023450D12DE53A715C9AF61C59F1"
     ],
     "manifestHash": "0F875A7698B0ED871E4662FBC5ADD277CBB7F6481408D818AA86432D415CB7B6",
-    "validationCount": 2,
-    "lastUpdated": "2026-11-11T05:22:59.0613482Z",
+    "validationCount": 3,
+    "lastUpdated": "2026-11-12T23:51:31.9813653Z",
     "description": ""
   },
   "Happ.Happ": {
@@ -3564,9 +3560,9 @@
     "installerHashes": [
       "BD1BCEF1C4B57C80C127B7A5129C545DF70837EDCE7AE0C8C5EE4C39AD0AD174"
     ],
-    "lastUpdated": "2026-11-11T09:18:50.8463292Z",
+    "lastUpdated": "2026-11-12T23:51:32.0393099Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1
+    "validationCount": 2
   },
   "HeroicGamesLauncher.GOGDL": {
     "version": "1.4.0",
@@ -3955,14 +3951,14 @@
     ]
   },
   "Internxt.Drive": {
-    "validationCount": 2,
-    "lastUpdated": "2026-11-11T09:18:50.4067486Z",
+    "validationCount": 3,
+    "lastUpdated": "2026-11-12T23:51:32.1660001Z",
     "version": "2.7.2",
     "description": "",
     "installerHashes": [
       "881D577EA07B637A2E43C8F4C5956BA9553CC6099AD584B4C10EAE2B3262666E"
     ],
-    "state": "VALIDATION_FAILED",
+    "state": "VALIDATION_PASSED",
     "manifestHash": "5E323CAD8D03E94C71A4C63BBA623ACBF607D691DCF27E6B1C571434CC124552"
   },
   "InTheLoop.LoopEmail": {
@@ -5056,15 +5052,15 @@
     "description": ""
   },
   "masaodev.quick-dash-launcher": {
-    "version": "0.7.39",
+    "manifestHash": "DE55C87E8C8608211B3AE61E2ECB974954C137EB538C46EC1CA8CBD176CB3942",
+    "lastUpdated": "2026-11-12T23:51:32.1455004Z",
+    "version": "1.0.1",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-28T09:38:38.3004339Z",
     "validationCount": 1,
-    "description": "",
     "installerHashes": [
-      "C65ED571A24524F0B4DCD2CC50495B62375494D0BD18724CE055ADF35E16A65A"
+      "8FAD5F1EE898EF7CA82BE610C5D5D6DD2AA0A64BA17F886AE195000E41F02A28"
     ],
-    "manifestHash": "BB271F0FBDB465A12A07DA4ED838487634920C0506773DA68543615780AF5BF4"
+    "description": ""
   },
   "Mateuscruz19.BATorrent": {
     "installerHashes": [
@@ -5545,8 +5541,8 @@
   "Monghoul.Monghoul": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "6DDCC9E5CAA6D4881D48362CDDBD3135CCFBD29E1C35E1B9742B981A7556B888",
-    "validationCount": 2,
-    "lastUpdated": "2026-11-12T15:44:41.5737074Z",
+    "validationCount": 3,
+    "lastUpdated": "2026-11-12T23:51:32.2120751Z",
     "version": "2.0.3",
     "description": "",
     "installerHashes": [
