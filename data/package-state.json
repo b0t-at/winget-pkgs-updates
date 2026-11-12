@@ -4156,8 +4156,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.11.6",
-      "checkedAt": "2026-11-11T20:15:09.3886721Z"
+      "checkedAt": "2026-11-12T06:18:03.2932301Z",
+      "version": "2026.11.7"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -7251,8 +7251,8 @@
     "lastUpdated": "2026-08-06T13:08:37.6487059Z",
     "version": "0.5.15",
     "openPr": {
-      "version": "0.5.29",
-      "checkedAt": "2026-11-11T04:18:29.9884121Z"
+      "checkedAt": "2026-11-12T06:18:07.3726263Z",
+      "version": "0.5.29"
     }
   },
   "raskell-io.hx": {
