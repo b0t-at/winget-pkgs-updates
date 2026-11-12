@@ -2091,10 +2091,10 @@
       "B74A94AC8D1A92211ECE2F546274F0E12CD968330B755D7E3112343047F9A705"
     ],
     "description": "",
-    "lastUpdated": "2026-11-11T04:05:06.5882607Z",
+    "lastUpdated": "2026-11-12T06:11:59.2412337Z",
     "version": "0.9.13",
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "validationCount": 2,
+    "state": "VALIDATION_FAILED"
   },
   "Docker.DockerCompose": {
     "description": "",
@@ -4004,9 +4004,9 @@
     ],
     "version": "0.8.0",
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-09T01:40:11.8092844Z",
-    "validationCount": 2
+    "state": "VALIDATION_FAILED",
+    "lastUpdated": "2026-11-12T06:11:59.3496579Z",
+    "validationCount": 3
   },
   "iWillink.AgentDeck": {
     "validationCount": 1,
@@ -5298,11 +5298,11 @@
   },
   "Microsoft.Garnet.DN9": {
     "description": "",
-    "lastUpdated": "2026-11-11T13:47:28.9384945Z",
+    "lastUpdated": "2026-11-12T06:11:59.5154141Z",
     "version": "2.2.10",
     "manifestHash": "B3365483B159CA5C9959BA0E748F3BB2A144930E6915A955AC5DB0A7C5DC9F99",
-    "state": "VALIDATION_FAILED",
-    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "validationCount": 2,
     "installerHashes": [
       "E4766E78885B594DBB1636AACBC573236C34AEBF14783EBA1296E5EDAC5A9B58",
       "A26F21DFF19D3F97F8EA7B86BBF984A54A04F0923BF0CDCA4750806885296130"
@@ -5551,15 +5551,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Monghoul.Monghoul": {
-    "version": "2.0.1",
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "154827BBD67939204421FFE3426581FC8E79E7CA0CF2E34E7816D8DC9BAB6741"
-    ],
-    "manifestHash": "7BD88CE397D2449B066200D1ED54C7A063F35AB833D594AE4B1F3EAB176527FE",
+    "manifestHash": "6DDCC9E5CAA6D4881D48362CDDBD3135CCFBD29E1C35E1B9742B981A7556B888",
     "validationCount": 1,
-    "lastUpdated": "2026-11-10T05:08:05.9944823Z",
-    "description": ""
+    "lastUpdated": "2026-11-12T06:11:59.4563269Z",
+    "version": "2.0.3",
+    "description": "",
+    "installerHashes": [
+      "939C2C64D3415E17A13D7B1128C775389456CBB571EC52A5C02C876DDDFE3BBE"
+    ]
   },
   "MongoDB.MongoDBAtlasCLI": {
     "validationCount": 1,
@@ -6314,15 +6314,15 @@
     "version": "0.54.0"
   },
   "open-policy-agent.opa": {
-    "lastUpdated": "2026-11-06T20:38:04.6697645Z",
-    "installerHashes": [
-      "EF8BD2E56A329F91192053DA7E4ADFB09FBFDAEE07DE588D6C10B939D581BC64"
-    ],
-    "description": "",
-    "version": "1.22.2",
     "state": "VALIDATION_PASSED",
+    "manifestHash": "CEC5F3752E985D0CF062824FD5BC9114990B94A968DC7D955F23225258C1614C",
     "validationCount": 1,
-    "manifestHash": "CE55E7D97AB447A0445DE1527B30CBD523DE0B664AFCF91A4EEBBFA5031C81B0"
+    "lastUpdated": "2026-11-12T06:11:59.4838089Z",
+    "version": "1.22.3",
+    "description": "",
+    "installerHashes": [
+      "01FB91EEDF7CFD53FFC308D828AF19C86DC1F3E4F0B86C69FE8F3CE2699A7D83"
+    ]
   },
   "OpenChemistry.Avogadro2": {
     "state": "VALIDATION_PASSED",
@@ -7039,13 +7039,13 @@
     "description": "",
     "version": "12.17",
     "manifestHash": "02E070A36715F309599CE4E30C7E2979DE7A630D5AD054047D0610FCB447F1CE",
-    "lastUpdated": "2026-11-11T05:22:58.6710939Z",
-    "state": "VALIDATION_FAILED",
+    "lastUpdated": "2026-11-12T06:11:59.4197737Z",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
       "C15D689D24319242FFBF8DB096CD398EE737E4F619360FFA211F1E8C7817A142",
       "C7D37A8FFD8BD16A3BA12BEF2392C14FFF3AA45AB9045F2F40C721C24F540246"
     ],
-    "validationCount": 2
+    "validationCount": 3
   },
   "printfn.fend": {
     "validationCount": 1,
@@ -8816,12 +8816,12 @@
   "TeXstudio.TeXstudio": {
     "state": "VALIDATION_PASSED",
     "version": "4.9.9",
-    "lastUpdated": "2026-11-09T04:54:26.4289103Z",
+    "lastUpdated": "2026-11-12T06:11:59.3935431Z",
     "manifestHash": "2E9A664E25CEF9FD7C25CC014E47E93F90DA0FF0B2C388183D8B2397F2EB5245",
     "installerHashes": [
       "DCE92577AC3C0A75ED7DE350538AD5AB7505DCA45979A7163950B07CDE21D850"
     ],
-    "validationCount": 4,
+    "validationCount": 5,
     "description": ""
   },
   "tg123.oci-to-wsl": {
