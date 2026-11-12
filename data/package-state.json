@@ -2758,8 +2758,8 @@
     "manifestHash": "86FA8F6B2F491EE6BDE61BAFC3493B85F1B14C4667597B93DBB355BC71355A19",
     "description": "",
     "openPr": {
-      "version": "0.5.9",
-      "checkedAt": "2026-11-12T19:41:23.2901497Z"
+      "version": "0.5.10",
+      "checkedAt": "2026-11-12T23:56:53.0687266Z"
     }
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
@@ -7239,8 +7239,8 @@
     "lastUpdated": "2026-08-06T13:08:37.6487059Z",
     "version": "0.5.15",
     "openPr": {
-      "checkedAt": "2026-11-12T06:18:07.3726263Z",
-      "version": "0.5.29"
+      "version": "0.5.30",
+      "checkedAt": "2026-11-12T23:57:55.7289962Z"
     }
   },
   "raskell-io.hx": {
