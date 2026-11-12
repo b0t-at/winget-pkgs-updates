@@ -3,7 +3,7 @@
   "pullRequestNumber": 450526,
   "classification": "InstallationFailure",
   "state": "Escalated",
-  "recordedAt": "2026-10-12T07:24:00.9176435+00:00",
+  "recordedAt": "2026-11-12T06:48:50.0694251+00:00",
   "retryAfter": null,
   "learnedOverrideSignal": null,
   "reason": "The installer failed upstream installation testing (unattended, shell-execute, driver or dependency); human-verified switches are required before resubmitting.",
