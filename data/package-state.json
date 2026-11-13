@@ -482,7 +482,11 @@
     ],
     "lastUpdated": "2026-08-06T10:56:40.2158706Z",
     "manifestHash": "3AC84AA16424EB952BDD6A291E7E19648431D2ADC337AA9ADF88712458B0316C",
-    "version": "2026.7.1"
+    "version": "2026.7.1",
+    "openPr": {
+      "version": "2026.11.5",
+      "checkedAt": "2026-11-13T07:17:22.2811349Z"
+    }
   },
   "Aptivi.BassBoom": {
     "description": "",
@@ -4148,8 +4152,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-11-12T06:18:03.2932301Z",
-      "version": "2026.11.7"
+      "version": "2026.11.7",
+      "checkedAt": "2026-11-13T07:18:27.1206214Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -4532,7 +4536,11 @@
     "version": "4.4.3",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D"
+    "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D",
+    "openPr": {
+      "version": "4.5.0",
+      "checkedAt": "2026-11-13T07:18:28.145338Z"
+    }
   },
   "kmiya-culti.RLogin": {
     "lastUpdated": "2026-09-25T20:53:18.3452811Z",
