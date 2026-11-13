@@ -2248,8 +2248,8 @@
     "lastUpdated": "2026-10-29T09:22:10.7111402Z",
     "description": "",
     "openPr": {
-      "version": "2.12.5",
-      "checkedAt": "2026-11-12T15:51:37.2677191Z"
+      "checkedAt": "2026-11-13T18:14:45.4714026Z",
+      "version": "2.12.5"
     }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
@@ -3626,8 +3626,8 @@
     "lastUpdated": "2026-10-23T13:49:06.4312107Z",
     "description": "",
     "openPr": {
-      "version": "0.18.0",
-      "checkedAt": "2026-11-12T15:52:31.7025568Z"
+      "checkedAt": "2026-11-13T18:15:42.6009883Z",
+      "version": "0.18.0"
     }
   },
   "Hiddify.Next": {
@@ -3800,8 +3800,8 @@
   },
   "houmain.keymapper": {
     "openPr": {
-      "version": "5.8.1",
-      "checkedAt": "2026-11-12T15:52:32.1782203Z"
+      "checkedAt": "2026-11-13T18:15:42.9902884Z",
+      "version": "5.8.1"
     }
   },
   "hrkfdn.ncspot": {
@@ -4163,8 +4163,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.11.7",
-      "checkedAt": "2026-11-13T07:18:27.1206214Z"
+      "checkedAt": "2026-11-13T18:15:44.4377625Z",
+      "version": "2026.11.8"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -4190,8 +4190,8 @@
     "version": "8.1.3-2",
     "validationCount": 1,
     "openPr": {
-      "version": "8.1.3-2",
-      "checkedAt": "2026-11-12T15:52:33.4911971Z"
+      "checkedAt": "2026-11-13T18:15:44.8167443Z",
+      "version": "8.1.3-2"
     }
   },
   "Jellyfin.Server": {
