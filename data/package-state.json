@@ -684,15 +684,15 @@
     "description": ""
   },
   "Automattic.Wordpress": {
-    "installerHashes": [
-      "750F097AC3D76F6E6394650501E0F6CC5DCEB571F7E061AD7644D9DBB36E03FD"
-    ],
-    "version": "8.2.4",
-    "lastUpdated": "2026-09-29T01:32:39.3718215Z",
-    "description": "",
+    "manifestHash": "6673950920D3A092149113E734036113E7BB8F14B1CCE4AA0893B06E4E04615D",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "manifestHash": "CCA285516338B214DE0C02C6583B5BBBE57B9B7709B4FC3BF336CA3F77FB9028",
-    "validationCount": 1
+    "version": "8.2.5",
+    "installerHashes": [
+      "3640C3E751D0EEB10546713453688CC277DDC7265E958F186487A89D9281F3BC"
+    ],
+    "description": "",
+    "lastUpdated": "2026-11-13T22:05:45.5402274Z"
   },
   "Avidemux.Avidemux": {
     "configHealth": {
@@ -1718,19 +1718,15 @@
     "validationCount": 1
   },
   "CrewHaus.CLI": {
-    "installerHashes": [
-      "908EDC00BF6FD1CAE10FCAFEE52206604771A6ECB249F1963CB6F82F95FC7DF0"
-    ],
-    "version": "0.8.0",
+    "manifestHash": "329DAF014A24434DD64727ABA5C621C3E71A21C0AA1EEAD7D5291BD59D7B8455",
     "validationCount": 1,
-    "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-26T16:53:31.5639831Z",
-    "manifestHash": "4A4A73F7AD208BB301FE22B7B595858EBC077200CB68111FC1B04D36F4CAFCD6",
-    "openPr": {
-      "version": "0.8.0",
-      "checkedAt": "2026-11-01T04:18:12.2179008Z"
-    }
+    "version": "0.8.2",
+    "installerHashes": [
+      "239486CE94E2AF0A7B14430D5FA758B5F446BC0BACC5CFBD0331914E1A50DCA4"
+    ],
+    "description": "",
+    "lastUpdated": "2026-11-13T22:05:45.4457116Z"
   },
   "CrossTech.ClipboardPro": {
     "manifestHash": "7AC779B69A9C87546A953B360DC9BE6A41D3394D155D63F72059B2D2CBB045FE",
@@ -2605,9 +2601,9 @@
       "CDDD6D930A8A969753112BEA40E825581F45DE1D94EB6E3B806DF86E72CBAA1C"
     ],
     "description": "",
-    "lastUpdated": "2026-11-13T07:11:14.3734286Z",
+    "lastUpdated": "2026-11-13T22:05:45.3624816Z",
     "version": "8.1.0",
-    "validationCount": 2,
+    "validationCount": 3,
     "state": "VALIDATION_PASSED"
   },
   "facebook.pyrefly": {
@@ -4130,14 +4126,14 @@
     "description": "",
     "version": "0.8.50",
     "manifestHash": "9B4C131092FDEF5946DBC895C5171BE61387A6376140EAB1F996CF47233436F8",
-    "lastUpdated": "2026-11-12T15:44:41.5135446Z",
+    "lastUpdated": "2026-11-13T22:05:45.3992017Z",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "C7DE2A58E56583716451552866CF63128E297CEBE27747A4367D80FEA75D1281",
       "ECAA9A9F6816F4AC1BF0A49D9978B565441F00AFA259E1748008ABB3DE3601FF",
       "C2D1091B6E3B09B6BDADA331F2E78D95EAC95B815E0F8AB67452FC4C017E5BC1"
     ],
-    "validationCount": 5
+    "validationCount": 6
   },
   "jawhitti.INTERCAL64": {
     "validationCount": 1,
@@ -5414,16 +5410,16 @@
     "manifestHash": "D27B9887E10667D00156C71BE8BE02FB353CAA440DF7D4FB37C853177DDA6530"
   },
   "mikf.gallery-dl.Nightly": {
-    "description": "",
-    "state": "VALIDATION_PASSED",
+    "manifestHash": "E0687A6A622A6EE88F737C71F3E9BD8D8AFF36A7A236F0720661BB17E04E8AC6",
     "validationCount": 1,
-    "manifestHash": "5185A511408709344AF4AD4EA7D6AEDF27B40D6F57C75425CD3340C2B48BC235",
-    "lastUpdated": "2026-11-09T21:24:28.2533335Z",
-    "version": "2026.11.09",
+    "state": "VALIDATION_PASSED",
+    "version": "2026.11.13",
     "installerHashes": [
-      "869937F6D5AC8E752C14E5D5BC6BF85E2EBF421B70B666FE26D4F3E9D4FB4E8A",
-      "1CB1DF3CC7324FE29CCEACB07B55EB5D90818497270264BEB757123E4705E3EC"
-    ]
+      "ECF271B23EF749C63E8B51DAEF3378CE21804C29DB73011A3151237179127E14",
+      "83A5220D3BAE2EA870469C088140FC73C388463B3F3E4BFC02404BCF359F3AAB"
+    ],
+    "description": "",
+    "lastUpdated": "2026-11-13T22:05:45.4624024Z"
   },
   "MilkShift.GoofCord": {
     "state": "VALIDATION_PASSED",
@@ -5572,8 +5568,8 @@
   "Monghoul.Monghoul": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "6DDCC9E5CAA6D4881D48362CDDBD3135CCFBD29E1C35E1B9742B981A7556B888",
-    "validationCount": 3,
-    "lastUpdated": "2026-11-12T23:51:32.2120751Z",
+    "validationCount": 4,
+    "lastUpdated": "2026-11-13T22:05:45.4915882Z",
     "version": "2.0.3",
     "description": "",
     "installerHashes": [
@@ -5994,15 +5990,15 @@
     "manifestHash": "5EBE8F78A880C1167C195458B3FF9ABDF521346435DFAF5B823B4BBB584E98FD"
   },
   "NimaShafie.OxideSLOC": {
-    "installerHashes": [
-      "6E2FF479D522108D910042923F5FDDCBC91E8A588094C6080FE7EC605CD769FA"
-    ],
-    "version": "1.6.28",
-    "manifestHash": "5B1373399CF0408E0FA5BE5B13D10D18DCDFCB0BFFF091CCB563D03700915CA4",
-    "lastUpdated": "2026-11-05T13:07:14.0666874Z",
-    "state": "VALIDATION_PASSED",
+    "manifestHash": "18BADCCAB82EE7AA4F4C69B7B736E2545641EA988F0D75D82DA57D0440691613",
     "validationCount": 1,
-    "description": ""
+    "state": "VALIDATION_PASSED",
+    "version": "1.6.29",
+    "installerHashes": [
+      "D9E08C39E13E71D19B07E7FFC2FB2389B364255F301A70E59464A8746F76E665"
+    ],
+    "description": "",
+    "lastUpdated": "2026-11-13T22:05:45.3254636Z"
   },
   "Nisonxi.PowerDoze": {
     "manifestHash": "5E5B5D669F1C795D7C92E12BA9F8F1950B7A5E916932F136DD5C4E3AE1D12A26",
@@ -6344,15 +6340,15 @@
     "version": "0.54.0"
   },
   "open-policy-agent.opa": {
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "CEC5F3752E985D0CF062824FD5BC9114990B94A968DC7D955F23225258C1614C",
+    "manifestHash": "92CB675A7F05F916B5122A6BB40C7493F26006FBB00ED5903CBF7DC6BF035558",
     "validationCount": 1,
-    "lastUpdated": "2026-11-12T06:11:59.4838089Z",
-    "version": "1.22.3",
-    "description": "",
+    "state": "VALIDATION_PASSED",
+    "version": "1.22.4",
     "installerHashes": [
-      "01FB91EEDF7CFD53FFC308D828AF19C86DC1F3E4F0B86C69FE8F3CE2699A7D83"
-    ]
+      "4CD179B95041AA50C44241324DA3BECF35D0B28DCA92BF10A07F32D002724D5E"
+    ],
+    "description": "",
+    "lastUpdated": "2026-11-13T22:05:45.5137283Z"
   },
   "OpenChemistry.Avogadro2": {
     "state": "VALIDATION_PASSED",
@@ -8679,13 +8675,13 @@
     }
   },
   "TaoufikJabbari.Tiger": {
-    "lastUpdated": "2026-11-13T07:11:14.4957232Z",
+    "lastUpdated": "2026-11-13T22:05:45.4163837Z",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "C07BB5790A3348B263DE34FE3E6E26AEB8C91E37CD60B9D8F41D097CCFE752DF"
     ],
     "version": "0.9.0",
-    "validationCount": 2,
+    "validationCount": 3,
     "description": "",
     "manifestHash": "FDE6AE17D6321911541562218AFD4C2D162A2567666B1F6BA4B550DD320AE7CA"
   },
