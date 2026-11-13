@@ -482,11 +482,7 @@
     ],
     "lastUpdated": "2026-08-06T10:56:40.2158706Z",
     "manifestHash": "3AC84AA16424EB952BDD6A291E7E19648431D2ADC337AA9ADF88712458B0316C",
-    "version": "2026.7.1",
-    "openPr": {
-      "version": "2026.11.5",
-      "checkedAt": "2026-11-13T07:17:22.2811349Z"
-    }
+    "version": "2026.7.1"
   },
   "Aptivi.BassBoom": {
     "description": "",
