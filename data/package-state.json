@@ -128,7 +128,7 @@
     "lastUpdated": "2026-11-04T21:18:12.9029596Z",
     "openPr": {
       "version": "0.107.80",
-      "checkedAt": "2026-11-12T19:41:12.132192Z"
+      "checkedAt": "2026-11-13T22:10:14.068228Z"
     }
   },
   "AdGuard.dnsproxy": {
@@ -4250,7 +4250,7 @@
     "manifestHash": "1E843D90602194E32EF0F84E333BE9BC20D09621BCA43AA304BDA7952A621BAB",
     "openPr": {
       "version": "0.47.1",
-      "checkedAt": "2026-11-12T19:42:16.929536Z"
+      "checkedAt": "2026-11-13T22:11:19.2220552Z"
     }
   },
   "jmrplens.gitlab-mcp-server": {
@@ -6837,8 +6837,8 @@
     "description": "",
     "validationCount": 1,
     "openPr": {
-      "version": "9.5.4",
-      "checkedAt": "2026-10-31T20:13:30.9231097Z"
+      "version": "9.5.5",
+      "checkedAt": "2026-11-13T22:11:22.2520844Z"
     }
   },
   "pdfcpu.pdfcpu": {
@@ -7277,8 +7277,8 @@
     "lastUpdated": "2026-08-06T13:08:37.6487059Z",
     "version": "0.5.15",
     "openPr": {
-      "version": "0.5.30",
-      "checkedAt": "2026-11-12T23:57:55.7289962Z"
+      "version": "0.5.31",
+      "checkedAt": "2026-11-13T22:11:24.0334216Z"
     }
   },
   "raskell-io.hx": {
