@@ -1812,8 +1812,8 @@
   "cURL.cURL": {
     "manifestHash": "BBC68A1ADA303578FB0B6F6E4C9E7C6546E20453DFCA3DD97CA5B0E735E57964",
     "version": "8.23.0.9",
-    "validationCount": 8,
-    "lastUpdated": "2026-11-13T11:55:08.6418138Z",
+    "validationCount": 9,
+    "lastUpdated": "2026-11-13T16:20:40.11548Z",
     "description": "",
     "installerHashes": [
       "89CB71930F4242D884E8E349463455932AB1D089B20F4F99318261A3CBFF9167",
@@ -5566,22 +5566,33 @@
     ]
   },
   "MongoDB.MongoDBAtlasCLI": {
-    "validationCount": 1,
-    "lastUpdated": "2026-09-16T13:25:29.1416924Z",
-    "description": "",
     "state": "VALIDATION_PASSED",
+    "manifestHash": "9AD7FB6884A9343591DA3303DA4B1E8152541EA55BE84832D36415D1B9F28ED5",
+    "version": "1.60.0",
+    "description": "",
     "installerHashes": [
-      "84758B617286796525ED3205CAA477748C1C59A65142890C3962CAFA076913D1"
+      "1DAEB7BCCF515EBF441C64787D1076E8B4365DA558CCFDB272D7D246C17CF556"
     ],
-    "version": "1.58.3",
-    "manifestHash": "8D8FBE3E679CEDF4E68CDB73D6A2729AE46EBC6A73A047407EEEB5BC1C444CFC"
+    "lastUpdated": "2026-11-13T16:20:40.2650708Z",
+    "validationCount": 1
+  },
+  "MongoDB.MongoDBCLI": {
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "E38C45BBEEBF6BF0F62DC715828CCF197ED81857FF9EC20C7F816034C137A7F8",
+    "version": "2.0.11",
+    "description": "",
+    "installerHashes": [
+      "A3490FBCA2BE1B3B9C856E0F3A3C10B0C6DDE709A05FD0E3998EE8B0AFB0253E"
+    ],
+    "lastUpdated": "2026-11-13T16:20:40.2023365Z",
+    "validationCount": 1
   },
   "MongoDB.Server": {
-    "validationCount": 9,
+    "validationCount": 10,
     "installerHashes": [
       "4841753F49C1E3E25D12FF63A049894B7D56E397F27F05303CCDE5144A6AE060"
     ],
-    "lastUpdated": "2026-11-13T11:55:08.6227754Z",
+    "lastUpdated": "2026-11-13T16:20:40.1789473Z",
     "manifestHash": "D5E9B6628252F1B384E18F5F0245D8B938F4D0CBA3A7A1958ED232B9E7B881E9",
     "state": "VALIDATION_PASSED",
     "version": "9.0.8",
@@ -5590,8 +5601,8 @@
   "MongoDB.Shell": {
     "manifestHash": "7178CCA5876E45CA7EF9D72FE34E0103006E69F41EAAEE4933F5BF3435ECC341",
     "version": "2.14.2",
-    "validationCount": 8,
-    "lastUpdated": "2026-11-13T11:55:08.5623174Z",
+    "validationCount": 9,
+    "lastUpdated": "2026-11-13T16:20:40.2416501Z",
     "description": "",
     "installerHashes": [
       "D0EE64CAD724D4B69E066AD0DB95DD1F1D85F9A685C649A1EBC1F769414025D3"
