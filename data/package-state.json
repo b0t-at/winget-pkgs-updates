@@ -4437,11 +4437,7 @@
     "manifestHash": "1B7D562145110A2AB4483E50909945476B8ED7491B1F57E8408A373E465946E7",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "18.1.1",
-    "openPr": {
-      "version": "18.1.9",
-      "checkedAt": "2026-11-05T12:21:41.3794455Z"
-    }
+    "version": "18.1.1"
   },
   "KellyBrazil.jc": {
     "version": "1.26.2",
@@ -4545,8 +4541,8 @@
     "description": "",
     "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D",
     "openPr": {
-      "version": "4.5.0",
-      "checkedAt": "2026-11-13T07:18:28.145338Z"
+      "checkedAt": "2026-11-14T08:30:55.1450329Z",
+      "version": "4.5.0"
     }
   },
   "kmiya-culti.RLogin": {
