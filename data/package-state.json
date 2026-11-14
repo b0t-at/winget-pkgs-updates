@@ -82,12 +82,6 @@
     ],
     "state": "VALIDATION_PASSED"
   },
-  "Adamant.Messenger": {
-    "openPr": {
-      "checkedAt": "2026-08-18T16:15:20.2793912Z",
-      "version": "4.12.0"
-    }
-  },
   "AdaptiveML.adpt": {
     "manifestHash": "DD3543FD691EBEA5355CAC777A4B5F6611BE917666C897BE267187B03F82C046",
     "description": "",
@@ -2244,7 +2238,7 @@
     "lastUpdated": "2026-10-29T09:22:10.7111402Z",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-11-13T18:14:45.4714026Z",
+      "checkedAt": "2026-11-14T22:00:19.2061501Z",
       "version": "2.12.5"
     }
   },
@@ -3622,7 +3616,7 @@
     "lastUpdated": "2026-10-23T13:49:06.4312107Z",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-11-13T18:15:42.6009883Z",
+      "checkedAt": "2026-11-14T22:01:17.9590906Z",
       "version": "0.18.0"
     }
   },
@@ -3796,7 +3790,7 @@
   },
   "houmain.keymapper": {
     "openPr": {
-      "checkedAt": "2026-11-13T18:15:42.9902884Z",
+      "checkedAt": "2026-11-14T22:01:18.3396895Z",
       "version": "5.8.1"
     }
   },
@@ -4159,7 +4153,7 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-11-13T18:15:44.4377625Z",
+      "checkedAt": "2026-11-14T22:01:19.2639379Z",
       "version": "2026.11.8"
     }
   },
@@ -4186,7 +4180,7 @@
     "version": "8.1.3-2",
     "validationCount": 1,
     "openPr": {
-      "checkedAt": "2026-11-13T18:15:44.8167443Z",
+      "checkedAt": "2026-11-14T22:01:19.6159487Z",
       "version": "8.1.3-2"
     }
   },
