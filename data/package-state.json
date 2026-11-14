@@ -1220,10 +1220,10 @@
     ],
     "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "F6D08E55B978C78BADF36CC7DF933F6429311791D0C0DF0A02255EF112C5D4D5",
     "version": "1.3.4",
-    "lastUpdated": "2026-11-13T07:11:14.5410155Z"
+    "lastUpdated": "2026-11-14T08:23:57.9984608Z"
   },
   "bufbuild.buf": {
     "description": "",
@@ -1719,14 +1719,14 @@
   },
   "CrewHaus.CLI": {
     "manifestHash": "329DAF014A24434DD64727ABA5C621C3E71A21C0AA1EEAD7D5291BD59D7B8455",
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_PASSED",
     "version": "0.8.2",
     "installerHashes": [
       "239486CE94E2AF0A7B14430D5FA758B5F446BC0BACC5CFBD0331914E1A50DCA4"
     ],
     "description": "",
-    "lastUpdated": "2026-11-13T22:05:45.4457116Z"
+    "lastUpdated": "2026-11-14T08:23:57.8756148Z"
   },
   "CrossTech.ClipboardPro": {
     "manifestHash": "7AC779B69A9C87546A953B360DC9BE6A41D3394D155D63F72059B2D2CBB045FE",
@@ -1784,16 +1784,16 @@
     "lastUpdated": "2026-08-19T15:56:01.4509515Z"
   },
   "CryptoPro.Chromium-Gost": {
-    "state": "VALIDATION_PASSED",
-    "version": "156.0.8078.88",
     "description": "",
-    "validationCount": 1,
-    "manifestHash": "12E27A62246D4790B88F7187DAF9C193E71B237C0A46F331F7141D825052447A",
     "installerHashes": [
-      "7D330AC573ADFD53C75131F480D14D4B7FD5729990A296420B2B3CA990182B31",
-      "AD3397D2A8AB5077338D11A8F561ABBF65735D8C51528DBD91DFC6E2DA94C222"
+      "3236C6A032E5485356C9FBC40D4EB46F7364D911A220097DEA2D67F314BFC20F",
+      "4A8726085586A7A431D6641AF32B117B0AB19B78F72C14618032EE8DD9257D6E"
     ],
-    "lastUpdated": "2026-11-07T01:46:37.4778718Z"
+    "version": "156.0.8078.96",
+    "validationCount": 1,
+    "manifestHash": "AD734CEB4E7D6393A9890BA7AFDEC6DD35E30EA480DCD6C99ED7884DE4C1B7CB",
+    "lastUpdated": "2026-11-14T08:23:57.9792891Z",
+    "state": "VALIDATION_PASSED"
   },
   "cubezombies.MidnightAthenaeum": {
     "manifestHash": "888A7BADCA52EE5B42F755D91B950DA3D3AA1CFB03A6012120CE16761BA13129",
@@ -2494,9 +2494,9 @@
       "49055719641B81A88B1C07A5EB61ABC2ABF0824FEFCF34A8869DC04BC42C46C0"
     ],
     "version": "0.56.3",
-    "lastUpdated": "2026-11-13T18:08:20.8999307Z",
+    "lastUpdated": "2026-11-14T08:23:58.0210136Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1
+    "validationCount": 2
   },
   "EtternaProject.EtternaGame": {
     "configHealth": {
@@ -2923,16 +2923,16 @@
     }
   },
   "GAM-Team.gam.Portable": {
-    "lastUpdated": "2026-11-10T10:00:11.2774634Z",
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "version": "7.51.00",
     "installerHashes": [
-      "695C66404E09B0D3A8D0CC8375477F22E9EEAA1F279DC9F885652489877598EC",
-      "4D6D8DBE58AD8D1FEEDA45575039531F455ACBFC7273AB63298BDA49A411FA2F"
+      "76B78A8DB29630CECEEC6A73077CB430CF63E86A91F01782DAA3F7674FCE991D",
+      "EDA05AD42726D854147A5DD511579313332BEEDCA8EA8AB0FCC2FFCD5D24478F"
     ],
-    "manifestHash": "563A35A1C8E8B882E2671B77092C494B96A4E92767A6594D223D0A5DFC717E15"
+    "version": "7.52.03",
+    "validationCount": 1,
+    "manifestHash": "FE3876EF4972B14D4C33D0E45505F4707C3947E1BA3FBCFD5AE1EACE6493CDAD",
+    "lastUpdated": "2026-11-14T08:23:58.0683478Z",
+    "state": "VALIDATION_PASSED"
   },
   "GAM-Team.GotYourBack": {
     "description": "",
@@ -3727,15 +3727,15 @@
     "validationCount": 1
   },
   "holland-built.Bloxsmith": {
-    "installerHashes": [
-      "776136680EBF4668057EFEB820CFEEE0AD3E3A2BFDD65A2101ED2658B40F411B"
-    ],
-    "state": "VALIDATION_PASSED",
     "description": "",
+    "installerHashes": [
+      "04DB27463234A1B946EA68F893302B39694F8BC60466D98A7F2C8175D1A174A9"
+    ],
+    "version": "3.164.1",
     "validationCount": 1,
-    "manifestHash": "FC944DDAFC56B3ED140B67CA6E00F052875008CCB8481F4F53D549C909F20EF0",
-    "version": "3.159.0",
-    "lastUpdated": "2026-11-13T07:11:14.5933586Z"
+    "manifestHash": "BB12458C99719CA61EBA688E9079B15123C02F9172C6EC71AC1F2738CFC4B564",
+    "lastUpdated": "2026-11-14T08:23:57.9345398Z",
+    "state": "VALIDATION_PASSED"
   },
   "HongMinhee.Gukhanmun": {
     "installerHashes": [
@@ -4819,11 +4819,11 @@
   },
   "Longbridge.LongbridgeTerminal": {
     "description": "",
-    "lastUpdated": "2026-11-12T15:44:41.4182856Z",
+    "lastUpdated": "2026-11-14T08:23:57.9033703Z",
     "version": "0.31.2",
     "manifestHash": "1C6B7C6CFE8F6AF7A499D4994C8D1FF7B0CF7311D56525867FE4E80B60DC5E1E",
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "329CE67019871D4DAB7680EA07D1AF8BEFE8C00847611D55A3222198624492FC"
     ]
@@ -5991,14 +5991,14 @@
   },
   "NimaShafie.OxideSLOC": {
     "manifestHash": "18BADCCAB82EE7AA4F4C69B7B736E2545641EA988F0D75D82DA57D0440691613",
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_PASSED",
     "version": "1.6.29",
     "installerHashes": [
       "D9E08C39E13E71D19B07E7FFC2FB2389B364255F301A70E59464A8746F76E665"
     ],
     "description": "",
-    "lastUpdated": "2026-11-13T22:05:45.3254636Z"
+    "lastUpdated": "2026-11-14T08:23:58.1285227Z"
   },
   "Nisonxi.PowerDoze": {
     "manifestHash": "5E5B5D669F1C795D7C92E12BA9F8F1950B7A5E916932F136DD5C4E3AE1D12A26",
@@ -6294,15 +6294,15 @@
     "version": "1.13.0"
   },
   "OneKey.OneKey": {
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "C0737F9D8C42EAF5659B5E0BAB50EFEEA438D435AE1EDE8F2EB139D21A605F36"
-    ],
-    "lastUpdated": "2026-11-01T08:43:27.90715Z",
     "description": "",
-    "version": "6.6.4",
-    "manifestHash": "DC77DC52A67102EFB46EE97B1FB8410600A1E845AF9C1C74C4BEAEEDFF9962AF"
+    "installerHashes": [
+      "7FF639C8BECFC88237D982CEA552F44DBC132B3EC1EBDD91186E76056A22660A"
+    ],
+    "version": "6.7.0",
+    "validationCount": 1,
+    "manifestHash": "A84644C823FE162A009B350E7511BCE8ABDD97A7FFF4DA9AE772C135EAE1477B",
+    "lastUpdated": "2026-11-14T08:23:58.0886392Z",
+    "state": "VALIDATION_PASSED"
   },
   "OneWare.OneWareStudio": {
     "description": "",
@@ -7953,15 +7953,15 @@
     "lastUpdated": "2026-08-21T17:17:40.1237509Z"
   },
   "ShoneAnstey.Inkstone": {
-    "validationCount": 1,
-    "version": "0.9.1",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "C39E7B5F6CADA2481C123D8BAFD7B231BAD54D0FE541E479B96B8C07E0A5B318",
     "description": "",
     "installerHashes": [
-      "82CF26B14E0A88ECF92005DB3539F19471047BB22884C356BE8CDBA661909D5A"
+      "4F5793186063AD609AFB761B37DC74A565B076A8C8EF9D3E45B9706FA92C27DE"
     ],
-    "lastUpdated": "2026-08-17T21:15:38.1734845Z"
+    "version": "0.10.0",
+    "validationCount": 1,
+    "manifestHash": "5337CD7711E89FE5333867086306CE140E694A23F7D5E90F0255D89AB01D2B31",
+    "lastUpdated": "2026-11-14T08:23:57.8389407Z",
+    "state": "VALIDATION_PASSED"
   },
   "Shssoichiro.Oxipng": {
     "manifestHash": "1473AF414FD4BF624606149A39947148B5FD48BB9408E477EBBBC55680A29F43",
@@ -8842,12 +8842,12 @@
   "TeXstudio.TeXstudio": {
     "state": "VALIDATION_PASSED",
     "version": "4.9.9",
-    "lastUpdated": "2026-11-13T07:11:14.5716112Z",
+    "lastUpdated": "2026-11-14T08:23:58.1098158Z",
     "manifestHash": "2E9A664E25CEF9FD7C25CC014E47E93F90DA0FF0B2C388183D8B2397F2EB5245",
     "installerHashes": [
       "DCE92577AC3C0A75ED7DE350538AD5AB7505DCA45979A7163950B07CDE21D850"
     ],
-    "validationCount": 6,
+    "validationCount": 7,
     "description": ""
   },
   "tg123.oci-to-wsl": {
@@ -9622,9 +9622,9 @@
   "WeeNote.WeeNote": {
     "description": "",
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "validationCount": 3,
     "manifestHash": "F83F0BD898C0FBA3FE090652BF28517A823FE8FD170A674F500F3D5F39C197B4",
-    "lastUpdated": "2026-11-10T05:08:05.9002723Z",
+    "lastUpdated": "2026-11-14T08:23:58.0394415Z",
     "version": "2.9.28",
     "installerHashes": [
       "AA591EDC3C95B534BF50137ABB09A9AF1872D1526BFB6A986645BF847952E7D1"
@@ -9931,15 +9931,15 @@
     "lastUpdated": "2026-11-11T05:22:58.7327974Z"
   },
   "xushengfeng.eSearch": {
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 1,
-    "manifestHash": "66D8DD8E2BF41612CF464C9201273888B83BEF1974D5E6D39E10A0FADCA26E04",
     "installerHashes": [
-      "DEE27A247F63C13F1C30774F17F8CA5E4A9273394B15F12C0AEC940A2A6B4B17"
+      "0D0196D0DC81949DDB3603308FA612735031AA9E893BCE39EF9D1F0B687FF67B"
     ],
-    "lastUpdated": "2026-11-05T17:10:31.3098318Z",
-    "version": "15.7.1"
+    "version": "15.8.0",
+    "validationCount": 1,
+    "manifestHash": "DC77D396B00267D0199276F3EE9840F4F782FA9ADFE6E58B97F860C7507F8F79",
+    "lastUpdated": "2026-11-14T08:23:57.9546769Z",
+    "state": "VALIDATION_PASSED"
   },
   "Y-ASLant.ElegantClipboard": {
     "manifestHash": "F3E140B0A6D6E9FFC8713FB818AFA81DC8F4CBAC22233BFCB8ACB5B54317C4A1",
