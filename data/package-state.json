@@ -452,15 +452,15 @@
     }
   },
   "AntiMicroX.antimicrox": {
-    "version": "3.6.1",
-    "lastUpdated": "2026-08-21T04:59:57.2372371Z",
-    "installerHashes": [
-      "467648540AB4BCF83641CB22B3359669BF1B9130B87D4BE0AA438221EF3EB06B"
-    ],
-    "description": "",
-    "manifestHash": "F2A6A895696A5D27205E078EBA5FB66FBFC3DF685B6766EA9E01EEA19D6D3E1F",
+    "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "version": "3.6.2",
+    "installerHashes": [
+      "B76E039AA38C19DDAAFABA9B5463BD2FCFEBBF9882C43F5B4323CB643E4CF088"
+    ],
+    "manifestHash": "5D21CCD21876B4C453984B5B0C01DCE62928AAC6E5E6A6820507DD929773DC93",
+    "lastUpdated": "2026-11-14T17:18:41.4781913Z",
+    "description": ""
   },
   "AppFlowy.AppFlowy": {
     "description": "",
@@ -629,10 +629,10 @@
     ],
     "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "DAA7F958064D593FA2B7D696AC863E8B5ED4E8547BCA5EF3C7A6BA2ED948D2CD",
     "version": "1.47.2",
-    "lastUpdated": "2026-11-13T07:11:14.4476755Z"
+    "lastUpdated": "2026-11-14T17:18:41.4416131Z"
   },
   "asheroto.MessagesforWeb": {
     "state": "VALIDATION_PASSED",
@@ -2074,16 +2074,16 @@
     }
   },
   "Docker.Buildx": {
-    "description": "",
-    "version": "0.38.2",
-    "installerHashes": [
-      "9A6ACA9C84ADDA0391D1D98D8B74B49359CAD1BCDADD196A0A5D7D5DC4CF15E0",
-      "07B564AA6A6A88D65C52F538066F25AD2EA3140BC1D7DE523FE083CA8CBCBC5B"
-    ],
-    "manifestHash": "BF6F00D2E284C9477C989BEA13189E4D36AC06D47B33E05EA7EE37357394D550",
-    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-04T01:07:24.5917398Z"
+    "validationCount": 1,
+    "version": "0.39.0",
+    "installerHashes": [
+      "B51A432F9013FE9B506E34DF9EB4E3D2464350DDF792D579CE07F36CC57CB743",
+      "95987AAC9F3B9833E12CA7DE963416D403E1E1DC7B7C974C165F2ECB1A587868"
+    ],
+    "manifestHash": "1BE5ED0048F85EA00B5187BF4893FBDA7019D028DF0D5CD1113F019C0102B8AB",
+    "lastUpdated": "2026-11-14T17:18:41.5547743Z",
+    "description": ""
   },
   "Docker.docker-credential-wincred": {
     "manifestHash": "4C043A7A2000AE62409B0E78413CDFBDE88AB6944E5A9D1FF81DC1472FBBA3A3",
@@ -5564,8 +5564,8 @@
   "Monghoul.Monghoul": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "6DDCC9E5CAA6D4881D48362CDDBD3135CCFBD29E1C35E1B9742B981A7556B888",
-    "validationCount": 4,
-    "lastUpdated": "2026-11-13T22:05:45.4915882Z",
+    "validationCount": 5,
+    "lastUpdated": "2026-11-14T17:18:41.5695219Z",
     "version": "2.0.3",
     "description": "",
     "installerHashes": [
@@ -5879,16 +5879,16 @@
   },
   "NATSAuthors.NATSServer": {
     "state": "VALIDATION_PASSED",
-    "version": "2.15.2",
-    "description": "",
-    "manifestHash": "3BB1CB7C535E99131A3510D76AC94966498114B01E76A07E60D9664954043FEE",
     "validationCount": 1,
-    "lastUpdated": "2026-10-27T01:42:29.8352704Z",
+    "version": "2.15.3",
     "installerHashes": [
-      "65931966B1EB6DEBA35E9A0989F569998BB28DD42F5682BDF883EA5922396256",
-      "F6398D5D11093778F870DB70242CB50D20A58134C937C805BA8D114E7E398766",
-      "0C688B55A074B48289B84EDC8B68936421C00CEF7BB5AE589EF48E5F8E6A161D"
-    ]
+      "9D69EE7FE6F32E7B48FAF6A55051FD8AD149BFA074DF3D053469213C5CF79D94",
+      "B202C46689A56B17E88939B6C53A25294021B000B9C7225209BCB1BBDA347BAD",
+      "76E51178CA20683D537C1BF627DD0FFF8B28114C6AAFD371C49A5CCB62A1355B"
+    ],
+    "manifestHash": "B94947F060A3E9D45FF46D5387C4DD35AD9C08DB448DD1F2DB9457BA8C33F00E",
+    "lastUpdated": "2026-11-14T17:18:41.4592138Z",
+    "description": ""
   },
   "NATSAuthors.nsc": {
     "lastUpdated": "2026-08-18T17:25:14.0751Z",
@@ -7252,9 +7252,9 @@
   },
   "randlee.sc-compose": {
     "manifestHash": "CD8C06EF87453DCE70A82819B0E97994D585218EC13BBCB38F11D32F0976F73F",
-    "lastUpdated": "2026-11-11T05:22:59.0143274Z",
+    "lastUpdated": "2026-11-14T17:18:41.5157613Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 3,
+    "validationCount": 4,
     "installerHashes": [
       "987C33E1A8D66D364C3A3B85E8E54B10F47D60321AC464CD87A15B9245A91335"
     ],
@@ -8507,10 +8507,10 @@
     "version": "2.32.1"
   },
   "sunfish-shogi.shogihome": {
-    "lastUpdated": "2026-11-10T13:10:24.811699Z",
+    "lastUpdated": "2026-11-14T17:18:41.5278788Z",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "1.30.0",
     "installerHashes": [
       "F306932F4061561A0EE93372B6C12AE3CEE770909AB07A8CB27E2039FDA0067A"
@@ -8838,12 +8838,12 @@
   "TeXstudio.TeXstudio": {
     "state": "VALIDATION_PASSED",
     "version": "4.9.9",
-    "lastUpdated": "2026-11-14T08:23:58.1098158Z",
+    "lastUpdated": "2026-11-14T17:18:41.4149614Z",
     "manifestHash": "2E9A664E25CEF9FD7C25CC014E47E93F90DA0FF0B2C388183D8B2397F2EB5245",
     "installerHashes": [
       "DCE92577AC3C0A75ED7DE350538AD5AB7505DCA45979A7163950B07CDE21D850"
     ],
-    "validationCount": 7,
+    "validationCount": 8,
     "description": ""
   },
   "tg123.oci-to-wsl": {
@@ -9932,9 +9932,9 @@
       "0D0196D0DC81949DDB3603308FA612735031AA9E893BCE39EF9D1F0B687FF67B"
     ],
     "version": "15.8.0",
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "DC77D396B00267D0199276F3EE9840F4F782FA9ADFE6E58B97F860C7507F8F79",
-    "lastUpdated": "2026-11-14T08:23:57.9546769Z",
+    "lastUpdated": "2026-11-14T17:18:41.543018Z",
     "state": "VALIDATION_PASSED"
   },
   "Y-ASLant.ElegantClipboard": {
@@ -10149,15 +10149,15 @@
     "manifestHash": "86EBA9F4DD8BF10F06FE55AB1433EB873A98011FB9F7C564ACDFCC46B33F6685"
   },
   "zemoto.WhatAmIHearing": {
-    "validationCount": 1,
-    "lastUpdated": "2026-08-19T01:25:20.6577472Z",
-    "description": "",
     "state": "VALIDATION_PASSED",
-    "version": "4.0",
+    "validationCount": 1,
+    "version": "4.1",
     "installerHashes": [
-      "CFA277C621C8BB7823939C5ACC6C1FCFD9F348AA79417CE574945AB316FA863E"
+      "A0F9A100A5475BCB2DD27D73812DD2F8826A2863C63DBBD8715B0289A9805BDF"
     ],
-    "manifestHash": "631390ED8E61184504429562E9DE2DF7FE7A290E6C8F1DF589E9DDB8645EBFB8"
+    "manifestHash": "7FBFD97A0AA0F82E6E291E039C9E7CB12424CE12DB724F9CDCC3F013A6ED5586",
+    "lastUpdated": "2026-11-14T17:18:41.4979612Z",
+    "description": ""
   },
   "zengjiangy.ZZZBrowser": {
     "version": "2.3.1",
