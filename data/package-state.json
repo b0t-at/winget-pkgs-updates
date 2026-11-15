@@ -4546,8 +4546,8 @@
     "description": "",
     "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D",
     "openPr": {
-      "checkedAt": "2026-11-14T08:30:55.1450329Z",
-      "version": "4.5.0"
+      "version": "4.5.0",
+      "checkedAt": "2026-11-15T11:22:25.2225883Z"
     }
   },
   "kmiya-culti.RLogin": {
