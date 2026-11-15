@@ -1713,14 +1713,14 @@
   },
   "CrewHaus.CLI": {
     "manifestHash": "329DAF014A24434DD64727ABA5C621C3E71A21C0AA1EEAD7D5291BD59D7B8455",
-    "validationCount": 2,
+    "validationCount": 3,
     "state": "VALIDATION_PASSED",
     "version": "0.8.2",
     "installerHashes": [
       "239486CE94E2AF0A7B14430D5FA758B5F446BC0BACC5CFBD0331914E1A50DCA4"
     ],
     "description": "",
-    "lastUpdated": "2026-11-14T08:23:57.8756148Z"
+    "lastUpdated": "2026-11-15T02:40:59.5046365Z"
   },
   "CrossTech.ClipboardPro": {
     "manifestHash": "7AC779B69A9C87546A953B360DC9BE6A41D3394D155D63F72059B2D2CBB045FE",
@@ -1998,15 +1998,15 @@
     "validationCount": 4
   },
   "Dimmy.Dimmy": {
-    "validationCount": 1,
     "installerHashes": [
-      "E68115EB4C6F812A50A04F3C580E00AE259FEB39D630DFD2E8AD7243288163D7"
+      "BEA18830526511E3FCA25A29B04B18C59B8B96124B583EDC3123F536600C6671"
     ],
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "version": "0.7.13",
-    "lastUpdated": "2026-10-20T20:52:59.3219232Z",
-    "manifestHash": "1E741EF1EA53198772F32EB4C737E8605ADC92B1446B7C4582C4488FC93E6C4E"
+    "manifestHash": "BBCBCF68E6544A45513CA9618B78CDEAAB7EFB197962F59EF08CF789342FF14E",
+    "validationCount": 1,
+    "lastUpdated": "2026-11-15T02:40:59.395763Z",
+    "state": "VALIDATION_PASSED",
+    "version": "0.7.14"
   },
   "DimonSmart.NugetMcpServer": {
     "version": "1.1.10",
@@ -2069,14 +2069,14 @@
   },
   "Docker.Buildx": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "0.39.0",
     "installerHashes": [
       "B51A432F9013FE9B506E34DF9EB4E3D2464350DDF792D579CE07F36CC57CB743",
       "95987AAC9F3B9833E12CA7DE963416D403E1E1DC7B7C974C165F2ECB1A587868"
     ],
     "manifestHash": "1BE5ED0048F85EA00B5187BF4893FBDA7019D028DF0D5CD1113F019C0102B8AB",
-    "lastUpdated": "2026-11-14T17:18:41.5547743Z",
+    "lastUpdated": "2026-11-15T02:40:59.3716315Z",
     "description": ""
   },
   "Docker.docker-credential-wincred": {
@@ -3056,9 +3056,9 @@
       "894D8B5DAC774BB7AC21877816F700590B78D84DB8ECAAE224EBAE05F99976F5"
     ],
     "version": "4.0.1",
-    "lastUpdated": "2026-11-13T18:08:20.8185275Z",
+    "lastUpdated": "2026-11-15T02:40:59.3160847Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1
+    "validationCount": 2
   },
   "getzola.zola": {
     "manifestHash": "2AD0D8502E653E34D70DC1A01F61D1061D3ED1D053F514354B49F5E4D9C22AB7",
@@ -3466,16 +3466,16 @@
     "description": ""
   },
   "Hanthor.BluefinCLI": {
-    "version": "0.11.16",
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "F07F033E292871D76FC37DFED308CA170B0055098C3EF5B95B73C76E570CE8E8",
-      "9C95BA0C7FA43991C3FBCF77DC7DA386E405023450D12DE53A715C9AF61C59F1"
+      "DC5F04CD9E0E6E111324151C66C2EDE9A67BBE09410BF988B57DB7744DB0AE32",
+      "E312BB38BFF98CE34BCC635472AFD736F3D2880BD95CCE704D17473319A00086"
     ],
-    "manifestHash": "0F875A7698B0ED871E4662FBC5ADD277CBB7F6481408D818AA86432D415CB7B6",
-    "validationCount": 3,
-    "lastUpdated": "2026-11-12T23:51:31.9813653Z",
-    "description": ""
+    "description": "",
+    "manifestHash": "975D6E8DBAD5511E2186BA722459A9326BF96B51594F0FA0F0512D03037AB90F",
+    "validationCount": 1,
+    "lastUpdated": "2026-11-15T02:40:59.4158629Z",
+    "state": "VALIDATION_PASSED",
+    "version": "0.11.18"
   },
   "Happ.Happ": {
     "description": "",
@@ -4853,15 +4853,15 @@
     "version": "4.1.26190"
   },
   "LoxSmoke.OpenLogiNet": {
-    "state": "VALIDATION_PASSED",
-    "validationCount": 2,
-    "manifestHash": "E09CD34BF9F0F349EC7BACCEC6BAE4B3200258E6C692544A960F2FDEC2C6EF00",
-    "description": "",
-    "version": "0.27.0",
-    "lastUpdated": "2026-11-13T18:08:20.6957485Z",
     "installerHashes": [
-      "1B808A52B4C7C8144043F896958FE1BF8C1EA08BF53A0852890A863B497EBEC6"
-    ]
+      "D450B43DF177EC125C83B690167A1AB836B011DC77D73049D71755318AB4AE1D"
+    ],
+    "description": "",
+    "manifestHash": "706456A8D5320DBA87A55FA732350147C9E9CF30DC36612BBEDD783312BE5072",
+    "validationCount": 1,
+    "lastUpdated": "2026-11-15T02:40:59.5432062Z",
+    "state": "VALIDATION_PASSED",
+    "version": "0.28.0"
   },
   "LuantiTeam.Luanti": {
     "version": "5.18.0",
@@ -5736,13 +5736,13 @@
     "manifestHash": "77CFED035E8B90FC50F6448291D28F4AE2A0AFCDE8BE619DF4F658DD5710FC58"
   },
   "muimsd.tilefeed": {
-    "lastUpdated": "2026-11-13T07:11:14.3355267Z",
+    "lastUpdated": "2026-11-15T02:40:59.4467176Z",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "6654F203ADC5D363D1373271C29B9B36C2BC00296FF0496C7F31989DDCFE4094"
     ],
     "version": "0.13.1",
-    "validationCount": 2,
+    "validationCount": 3,
     "description": "",
     "manifestHash": "256A30745B29FE4E64B1F38936FC3F45ACD731B4B72D871F92DB0F546C0C5B2A"
   },
@@ -7316,9 +7316,9 @@
       "2021648C72E5EE0B78EB67E7F68BFDE069ACC753776D8D6E66AFC4A8EC4569CA"
     ],
     "description": "",
-    "lastUpdated": "2026-11-12T15:44:41.6154503Z",
+    "lastUpdated": "2026-11-15T02:40:59.5256206Z",
     "version": "3.4.1",
-    "validationCount": 2,
+    "validationCount": 3,
     "state": "VALIDATION_PASSED"
   },
   "Rela.RelaGit": {
@@ -7948,9 +7948,9 @@
       "4F5793186063AD609AFB761B37DC74A565B076A8C8EF9D3E45B9706FA92C27DE"
     ],
     "version": "0.10.0",
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "5337CD7711E89FE5333867086306CE140E694A23F7D5E90F0255D89AB01D2B31",
-    "lastUpdated": "2026-11-14T08:23:57.8389407Z",
+    "lastUpdated": "2026-11-15T02:40:59.4868326Z",
     "state": "VALIDATION_PASSED"
   },
   "Shssoichiro.Oxipng": {
@@ -9819,13 +9819,13 @@
     ]
   },
   "WowUp.Wowup": {
-    "lastUpdated": "2026-11-13T07:11:14.4208232Z",
+    "lastUpdated": "2026-11-15T02:40:59.464605Z",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "3C419ECECF3D085B4C89FDFBB0B10911C0C029D1DEC9BF1EE048F4788638F54A"
     ],
     "version": "2.25.5",
-    "validationCount": 2,
+    "validationCount": 3,
     "description": "",
     "manifestHash": "F4594F82C443D719DB863B71BE8521D158C26EFF90D02E442CD9614602C21BEF"
   },
