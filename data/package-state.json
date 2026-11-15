@@ -667,15 +667,15 @@
     }
   },
   "AsterPrivacy.AsterMail": {
-    "lastUpdated": "2026-11-12T15:44:41.6417093Z",
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "F268630E5AECEEC0125ACA7C717DE7606CC6C7CBF7F16ECB7F4B690116B53CC9"
-    ],
-    "version": "1.4.82",
+    "manifestHash": "3E4907CED814A52F1A80F5D62F8239BB1D20E7002363CECE1D27A1229C72A064",
     "validationCount": 1,
+    "version": "1.4.83",
+    "lastUpdated": "2026-11-15T17:24:45.6411816Z",
     "description": "",
-    "manifestHash": "0AE69CD0A7BB7A948810C7E8975A74F7ABEE9C12E4BC929B7C7E9ABA20567F6E"
+    "installerHashes": [
+      "E089049B74221839EB86C702A27929E58E1C7C0E8FF08962ABB3582907B3FA19"
+    ]
   },
   "AtaraxyLabs.sem": {
     "manifestHash": "354443146CCBD8A762B32AB5EEB738F3F96E401DD9AE8613949602AEE627E006",
@@ -2014,8 +2014,8 @@
     ],
     "description": "",
     "manifestHash": "BBCBCF68E6544A45513CA9618B78CDEAAB7EFB197962F59EF08CF789342FF14E",
-    "validationCount": 1,
-    "lastUpdated": "2026-11-15T02:40:59.395763Z",
+    "validationCount": 2,
+    "lastUpdated": "2026-11-15T17:24:45.624036Z",
     "state": "VALIDATION_PASSED",
     "version": "0.7.14"
   },
@@ -2440,11 +2440,11 @@
       "B5FF0B48779B0EF37CDC9F687B6E5C1E29167BB66F4A804232692680704928C8",
       "AC8EE57EF064D215EE1A5F61C79E3E1D93C9B6D1F79839003BC0B1D4DA63C0F1"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_PASSED",
     "manifestHash": "8E1EBE47DED67B126D2F9619E39AAD0AEB462E65C0B6C721C2E6F99C53FF0F3A",
     "description": "",
-    "lastUpdated": "2026-11-11T05:22:59.0292958Z"
+    "lastUpdated": "2026-11-15T17:24:45.8302941Z"
   },
   "errata-ai.Vale": {
     "installerHashes": [
@@ -2590,15 +2590,15 @@
     "version": "1.1.0"
   },
   "ExpressLRS.ExpressLRS-Configurator": {
-    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-27T21:44:31.0856851Z",
-    "installerHashes": [
-      "EED573884FB2EC12C8002134FF4F92E217B930F2609F3129704CF04397092162"
-    ],
-    "manifestHash": "90E5FB3CED933790D6001ECF5342D4B77FCB6B7C48E35AFA485992B46A423397",
+    "manifestHash": "D0A6AAC427AD49FC312E1BC6DA7A29E4A6AD35DD2646EA13F36B2CFACEF5F234",
+    "validationCount": 1,
+    "version": "1.8.5",
+    "lastUpdated": "2026-11-15T17:24:45.6717497Z",
     "description": "",
-    "version": "1.8.4"
+    "installerHashes": [
+      "820B147BD8B94F5D36871498B9A49F566BAA24C95DDBC1B0D7F7D158AFFE783B"
+    ]
   },
   "f4exb.sdrangel": {
     "installerHashes": [
@@ -3001,9 +3001,9 @@
   "Gather.Gather": {
     "version": "1.41.3",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-12T23:51:32.1913818Z",
+    "lastUpdated": "2026-11-15T17:24:45.8063025Z",
     "manifestHash": "D4E32E1A5B121FDD1FBFB445D1B68DC6E46C9D52389B674D0BA7AF1229D0F8B9",
-    "validationCount": 6,
+    "validationCount": 7,
     "installerHashes": [
       "901BBF32D7E54EA260B99CECFDBAC5EDCC93710A58F324FD0F1D719DE2E843CF"
     ],
@@ -5301,16 +5301,16 @@
     "description": ""
   },
   "Microsoft.Garnet.DN8": {
-    "description": "",
-    "version": "2.2.9",
-    "installerHashes": [
-      "4D3AE5C557D8CE49CB5FF6F70C6ADFD0C75A889D850A176BCCA39B9BB24E65C8",
-      "93DEC5AA83397B2BD01357010C447B996D739E72CB7202FA3AECDC7D59F66407"
-    ],
-    "manifestHash": "0FDD8961F6AC3465ADDE67E3FAA9AD0A9D5F3A1FCC64C49AE4CCF950BCF1AB3E",
-    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-10T01:24:11.5607605Z"
+    "manifestHash": "59B01351DC3C3616CD01B5AEAB0F5EDC91B094E50429053B2B8502E92C7E1025",
+    "validationCount": 1,
+    "version": "2.2.12",
+    "lastUpdated": "2026-11-15T17:24:45.689395Z",
+    "description": "",
+    "installerHashes": [
+      "3EDEF0529508BD479C46D943569627189673BDFB3359B1697B19CBF7F93085C1",
+      "0A6AC782C35585678E4B7D3D99E483476E330C3AF0B0EB5CE4C1862D0A4EB871"
+    ]
   },
   "Microsoft.Garnet.DN9": {
     "description": "",
@@ -5747,13 +5747,13 @@
     "manifestHash": "77CFED035E8B90FC50F6448291D28F4AE2A0AFCDE8BE619DF4F658DD5710FC58"
   },
   "muimsd.tilefeed": {
-    "lastUpdated": "2026-11-15T02:40:59.4467176Z",
+    "lastUpdated": "2026-11-15T17:24:45.4625694Z",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "6654F203ADC5D363D1373271C29B9B36C2BC00296FF0496C7F31989DDCFE4094"
     ],
     "version": "0.13.1",
-    "validationCount": 3,
+    "validationCount": 4,
     "description": "",
     "manifestHash": "256A30745B29FE4E64B1F38936FC3F45ACD731B4B72D871F92DB0F546C0C5B2A"
   },
@@ -7066,13 +7066,13 @@
     "description": "",
     "version": "12.17",
     "manifestHash": "02E070A36715F309599CE4E30C7E2979DE7A630D5AD054047D0610FCB447F1CE",
-    "lastUpdated": "2026-11-12T06:11:59.4197737Z",
+    "lastUpdated": "2026-11-15T17:24:45.6068778Z",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "C15D689D24319242FFBF8DB096CD398EE737E4F619360FFA211F1E8C7817A142",
       "C7D37A8FFD8BD16A3BA12BEF2392C14FFF3AA45AB9045F2F40C721C24F540246"
     ],
-    "validationCount": 3
+    "validationCount": 4
   },
   "printfn.fend": {
     "validationCount": 1,
@@ -7999,15 +7999,15 @@
     ]
   },
   "sikalabs.slr": {
-    "installerHashes": [
-      "B41268F4C77B4ECF5D8BE2F0AD8B32254E542776B861ADC7FAB7A481F0AC16F4"
-    ],
-    "lastUpdated": "2026-11-06T05:13:25.3053258Z",
-    "version": "0.50.0",
-    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "manifestHash": "10EB4AF9D078B46E949BC760E79ACCB0E15E5AED24FE21C360F8427B446235E1",
-    "description": ""
+    "manifestHash": "578603924E112571999794064117EEB1469ED1E28464570F446CDCD6EA19FEF8",
+    "validationCount": 1,
+    "version": "0.52.0",
+    "lastUpdated": "2026-11-15T17:24:45.7192354Z",
+    "description": "",
+    "installerHashes": [
+      "0764FE7FEB1EC2B6C20DF3A14DA4A4A2FAD94BEEFD197CC8741EC73919641202"
+    ]
   },
   "sikalabs.slu": {
     "state": "VALIDATION_PASSED",
@@ -8248,15 +8248,15 @@
     "lastUpdated": "2026-10-31T17:05:10.5304882Z"
   },
   "SparshSam.OpenReader": {
-    "description": "",
-    "manifestHash": "689BFBF5342F3B9EAA765A4ABF39CCE84A1CD1ECAF9498331DFBA4007856A38B",
-    "lastUpdated": "2026-08-19T21:00:00.2171622Z",
-    "version": "1.2.7",
-    "installerHashes": [
-      "9C2F1832369FFDC277097C3EBF78C3C3299D0C5D6C771F6459B501D6BC00DC9B"
-    ],
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "B61CD04FC6BE5B3DBD672E9ECB99EC17730111440BD7C6C1FEA50C4B8B3088B9",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "version": "1.2.8",
+    "lastUpdated": "2026-11-15T17:24:45.7435447Z",
+    "description": "",
+    "installerHashes": [
+      "C4B785516E2965D5711AF9843C5AE3A8934A3F85A3663363EEE7DF01DC5398B6"
+    ]
   },
   "SpectrumQT.XXMILauncher": {
     "manifestHash": "0ACC2CB08953B5C24F6776177EFE6709C4DE0A60D13D96B8884BC99B738867E8",
@@ -8512,10 +8512,10 @@
     "version": "2.32.1"
   },
   "sunfish-shogi.shogihome": {
-    "lastUpdated": "2026-11-14T17:18:41.5278788Z",
+    "lastUpdated": "2026-11-15T17:24:45.5869867Z",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "validationCount": 3,
+    "validationCount": 4,
     "version": "1.30.0",
     "installerHashes": [
       "F306932F4061561A0EE93372B6C12AE3CEE770909AB07A8CB27E2039FDA0067A"
@@ -8523,16 +8523,16 @@
     "manifestHash": "B1B716023C04A31ACC5074A77A2D997B0021E9F195EA648CF6ECECEA7F5F1336"
   },
   "SuperRadCompany.Microsandbox": {
-    "manifestHash": "C5473E6635227E8982FF7E49E126EE0C75EDDE9DBA3DD4FDDCA0BB476D4CD349",
-    "lastUpdated": "2026-11-09T04:54:26.4852347Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "manifestHash": "A20EADD8DC1D4FCBBD1BA72E02CE87E11FC99CD288512311DD6EB668890B3B60",
+    "validationCount": 1,
+    "version": "0.7.15",
+    "lastUpdated": "2026-11-15T17:24:45.5582895Z",
+    "description": "",
     "installerHashes": [
-      "DEB34A8E308B143C9387DCA90F7B40A35A5DCB68948081A302EA3F3CA8282EF4",
-      "AC6CB2369AAEE38A448D2E3E112F8D76C39F3B1F6F05256B8AE9B6DF7793CF63"
-    ],
-    "version": "0.7.14",
-    "description": ""
+      "BE3F6C9CFFF0F79FC32C2A6EB1BF3E6DE7225DFC8A5D616A5578D02D4D1FF6E9",
+      "33C3FF4E501B50949A1C800F05B50E641AAE6F4D5E85F8C38F94F9B6D2661AFD"
+    ]
   },
   "SUSE.RancherDesktop": {
     "version": "1.25.0",
