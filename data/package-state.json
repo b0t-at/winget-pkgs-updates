@@ -1378,7 +1378,11 @@
     "installerHashes": [
       "468167C3784590D230121669FF093B14FF00E4E9E8A539EA835DD7B23D910918",
       "89C529789031CEE20FAC0802BB7BD083E11C78FCCA618B5DC63DC395B35B5C09"
-    ]
+    ],
+    "openPr": {
+      "checkedAt": "2026-11-16T18:48:20.4025941Z",
+      "version": "0.56.0"
+    }
   },
   "ccccraz.cogmoteGO": {
     "lastUpdated": "2026-08-20T21:12:49.643883Z",
@@ -2780,8 +2784,8 @@
     "manifestHash": "86FA8F6B2F491EE6BDE61BAFC3493B85F1B14C4667597B93DBB355BC71355A19",
     "description": "",
     "openPr": {
-      "version": "0.5.10",
-      "checkedAt": "2026-11-12T23:56:53.0687266Z"
+      "checkedAt": "2026-11-16T18:49:17.5286548Z",
+      "version": "0.5.11"
     }
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
@@ -6870,7 +6874,7 @@
     "description": "",
     "validationCount": 1,
     "openPr": {
-      "checkedAt": "2026-11-15T02:46:19.3346418Z",
+      "checkedAt": "2026-11-16T18:49:26.6278444Z",
       "version": "9.5.5"
     }
   },
