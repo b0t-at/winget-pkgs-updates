@@ -634,10 +634,10 @@
     ],
     "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 3,
+    "validationCount": 4,
     "manifestHash": "DAA7F958064D593FA2B7D696AC863E8B5ED4E8547BCA5EF3C7A6BA2ED948D2CD",
     "version": "1.47.2",
-    "lastUpdated": "2026-11-15T11:15:09.3479656Z"
+    "lastUpdated": "2026-11-16T05:56:52.2144936Z"
   },
   "asheroto.MessagesforWeb": {
     "state": "VALIDATION_PASSED",
@@ -1562,11 +1562,11 @@
     "installerHashes": [
       "3360F4F290FFA2A04DE557FE4048EEF9B098F5B31030AA5EC8FE7A66D7174BF0"
     ],
-    "lastUpdated": "2026-11-15T11:15:09.3981247Z",
+    "lastUpdated": "2026-11-16T05:56:52.3556231Z",
     "description": "",
     "version": "13.0.1",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "9E68A04D915D3522F4255FD490C529CAE282AC40DD8F40C52FE481BB457550AD"
   },
   "cjpais.Handy": {
@@ -1724,14 +1724,14 @@
   },
   "CrewHaus.CLI": {
     "manifestHash": "329DAF014A24434DD64727ABA5C621C3E71A21C0AA1EEAD7D5291BD59D7B8455",
-    "validationCount": 3,
+    "validationCount": 4,
     "state": "VALIDATION_PASSED",
     "version": "0.8.2",
     "installerHashes": [
       "239486CE94E2AF0A7B14430D5FA758B5F446BC0BACC5CFBD0331914E1A50DCA4"
     ],
     "description": "",
-    "lastUpdated": "2026-11-15T02:40:59.5046365Z"
+    "lastUpdated": "2026-11-16T05:56:52.4233346Z"
   },
   "CrossTech.ClipboardPro": {
     "manifestHash": "7AC779B69A9C87546A953B360DC9BE6A41D3394D155D63F72059B2D2CBB045FE",
@@ -2604,11 +2604,11 @@
     "installerHashes": [
       "8A552B4F6B93807109747648501D3032D6615F7570233C914F1D9917B1C1E830"
     ],
-    "lastUpdated": "2026-11-15T11:15:09.5597619Z",
+    "lastUpdated": "2026-11-16T05:56:52.448893Z",
     "description": "",
     "version": "8.2.0",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "B35D1CB8843F19E678145CEBB22277A5CE26A33A353933DCE3FA4B2E8BCD06D3"
   },
   "facebook.pyrefly": {
@@ -3075,9 +3075,9 @@
       "894D8B5DAC774BB7AC21877816F700590B78D84DB8ECAAE224EBAE05F99976F5"
     ],
     "version": "4.0.1",
-    "lastUpdated": "2026-11-15T02:40:59.3160847Z",
+    "lastUpdated": "2026-11-16T05:56:52.07192Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 2
+    "validationCount": 3
   },
   "getzola.zola": {
     "manifestHash": "2AD0D8502E653E34D70DC1A01F61D1061D3ED1D053F514354B49F5E4D9C22AB7",
@@ -3485,16 +3485,16 @@
     "description": ""
   },
   "Hanthor.BluefinCLI": {
-    "installerHashes": [
-      "DC5F04CD9E0E6E111324151C66C2EDE9A67BBE09410BF988B57DB7744DB0AE32",
-      "E312BB38BFF98CE34BCC635472AFD736F3D2880BD95CCE704D17473319A00086"
-    ],
-    "description": "",
-    "manifestHash": "975D6E8DBAD5511E2186BA722459A9326BF96B51594F0FA0F0512D03037AB90F",
-    "validationCount": 1,
-    "lastUpdated": "2026-11-15T02:40:59.4158629Z",
     "state": "VALIDATION_PASSED",
-    "version": "0.11.18"
+    "manifestHash": "0F87CB8EADF851E1BA99D2B9F64723C607B7921150A4774F7D87C86D3DC4DBD0",
+    "validationCount": 1,
+    "version": "0.11.19",
+    "description": "",
+    "lastUpdated": "2026-11-16T05:56:52.1940317Z",
+    "installerHashes": [
+      "C59ACE590CFFC08B4FDDDDD772BFFC12C9EBA51F542962B49B3D5402CF40F8F5",
+      "59FFDC0AE7265E617DCE6F24DDF6ADF5630CD943455666C001482E861753472B"
+    ]
   },
   "Happ.Happ": {
     "description": "",
@@ -3948,9 +3948,9 @@
       "D81638D7A1AF9177C949FBF924573A1120976CC330ED3DF6056CB9D913E74A80",
       "DF207273286287AE2151986B8D5B080B1AB4635CDA6ECAD19E9DA55833C2464B"
     ],
-    "lastUpdated": "2026-11-11T09:18:50.6392787Z",
-    "state": "VALIDATION_FAILED",
-    "validationCount": 1
+    "lastUpdated": "2026-11-16T05:56:52.2452709Z",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 2
   },
   "Inkle.Inky": {
     "lastUpdated": "2026-08-18T01:43:26.3502487Z",
@@ -3975,8 +3975,8 @@
     ]
   },
   "Internxt.Drive": {
-    "validationCount": 4,
-    "lastUpdated": "2026-11-13T18:08:20.7483523Z",
+    "validationCount": 5,
+    "lastUpdated": "2026-11-16T05:56:52.3274449Z",
     "version": "2.7.2",
     "description": "",
     "installerHashes": [
@@ -4658,10 +4658,10 @@
     ],
     "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "4C22B90642746DC96403D4FD4F9C363F9FE8B796D79BECD09F7801369193A979",
     "version": "1.20.0",
-    "lastUpdated": "2026-11-13T07:11:14.5209605Z"
+    "lastUpdated": "2026-11-16T05:56:52.2868171Z"
   },
   "LANCommander.Launcher": {
     "validationCount": 1,
@@ -6450,15 +6450,15 @@
     ]
   },
   "OpenGeos.GeoLibre": {
-    "installerHashes": [
-      "DCCC304E1FF65B551A0AEC079DFE156527BE92E4C6C89724EB6C553EF21E8A1B"
-    ],
     "state": "VALIDATION_PASSED",
-    "validationCount": 8,
-    "lastUpdated": "2026-11-13T18:08:20.9446029Z",
+    "manifestHash": "8849857BA788A6070BDAB4C43E1FC8FDD0A0024BD482510A264A7F316A8ADD9D",
+    "validationCount": 1,
+    "version": "3.8.0",
     "description": "",
-    "version": "3.7.0",
-    "manifestHash": "926240206D1B5F2F8A5D99C32752CD7DA51E7B692D2C679B454A2A750E458135"
+    "lastUpdated": "2026-11-16T05:56:52.1122746Z",
+    "installerHashes": [
+      "106372C024B0004194C1960D3582250CB25CB4C883BDF6EDD6B3222D82D92E76"
+    ]
   },
   "OpenHV.OpenHV": {
     "description": "",
@@ -7000,20 +7000,16 @@
     }
   },
   "pnpm.pnpm": {
-    "installerHashes": [
-      "DFE2123AFFD2ED4BE280BA7AB4678C0FAE130B4936FABEFA9B1675B60514EF7C",
-      "942765D3D900F2C586874011169489DB9983285DF6E033A0C930ADA8498A572D"
-    ],
-    "lastUpdated": "2026-11-06T05:13:25.244858Z",
-    "version": "12.18.0",
-    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "manifestHash": "2F3057D1FA974117DA51DAC8FC441784FE02D02391B1B854C4ECCCFD6BF81CE8",
+    "manifestHash": "0E46470DEE8293D4E4BF216762B9F3F53657EE8E77F89FDCA6AA07863AAB29EB",
+    "validationCount": 1,
+    "version": "12.21.0",
     "description": "",
-    "openPr": {
-      "checkedAt": "2026-11-06T08:19:26.2080212Z",
-      "version": "12.18.0"
-    }
+    "lastUpdated": "2026-11-16T05:56:52.1382131Z",
+    "installerHashes": [
+      "4FB64BB37E46C788309E0FD4EA93BEB512546FDC7348121194FB704FBB72C09C",
+      "9584890DB13A8BCD9A77556F3455E37718A17A31C0AEE0254CF8D8AC6B3A8DF1"
+    ]
   },
   "PocketBase.PocketBase": {
     "version": "0.40.6",
@@ -7105,16 +7101,16 @@
     "validationCount": 1
   },
   "Primesieve.Primesieve": {
-    "description": "",
-    "version": "12.17",
-    "manifestHash": "02E070A36715F309599CE4E30C7E2979DE7A630D5AD054047D0610FCB447F1CE",
-    "lastUpdated": "2026-11-15T17:24:45.6068778Z",
     "state": "VALIDATION_PASSED",
+    "manifestHash": "8DCB91D6B59326BFEAE925F871CF82120F618F0ECC733A3D36E2051589BEF262",
+    "validationCount": 1,
+    "version": "12.18",
+    "description": "",
+    "lastUpdated": "2026-11-16T05:56:52.1735029Z",
     "installerHashes": [
-      "C15D689D24319242FFBF8DB096CD398EE737E4F619360FFA211F1E8C7817A142",
-      "C7D37A8FFD8BD16A3BA12BEF2392C14FFF3AA45AB9045F2F40C721C24F540246"
-    ],
-    "validationCount": 4
+      "E0861BB0DAFFDEE70838D4181382427C427A8A461D90F01D64A076183944686B",
+      "D6636792106DB18EF34686D1AA8B8DFE715E899D55E9339C02EA9CB1234CDF50"
+    ]
   },
   "printfn.fend": {
     "validationCount": 1,
@@ -9464,16 +9460,16 @@
     "manifestHash": "91A66FD8DA93CD7BB4DAE32B73E37E2A9F7230DFCF742BEF8AD1C52C05869C3F"
   },
   "vcsjones.AzureSignTool": {
-    "manifestHash": "CF93E1898696E578C84EEEA80EAD7809F1E319C5D0A40FBE639AFF73641102FD",
-    "installerHashes": [
-      "6EDEA566BF0C20A09BFD14F56390654AD5F63C0076D5AE9DF2A97C31C7703477",
-      "DC85A3F24BCD5978C63FCFD167A9B41313AF9116722B99B831400F05F387FCBA"
-    ],
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "C5E916D137CE6AE825D6CEB377463235301C5D9A331D206089C99CCA4361F1CE",
     "validationCount": 1,
-    "version": "7.0.1",
+    "version": "8.0.0",
     "description": "",
-    "lastUpdated": "2026-08-16T12:25:11.4645586Z",
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-11-16T05:56:52.2665611Z",
+    "installerHashes": [
+      "20277495839D606082C9DDC59880D27D983C30FC94D27E002AD4CCABCC80F196",
+      "362687909F6F6773B850A1D1C6728D9FBF59DB48ADB66DE658A6967DD2595ABC"
+    ]
   },
   "Vendicated.Vencord.Canary": {
     "description": "",
@@ -10192,9 +10188,9 @@
       "86D3E1EB4678720BFA40C121A2AF718253395DC40AA8661329AEDE05C719B1AC"
     ],
     "version": "1.2.0",
-    "lastUpdated": "2026-11-13T18:08:20.8388616Z",
+    "lastUpdated": "2026-11-16T05:56:52.3844114Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1
+    "validationCount": 2
   },
   "Zagrios.BSManager": {
     "openPr": {
