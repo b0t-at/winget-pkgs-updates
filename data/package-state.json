@@ -132,8 +132,8 @@
     "version": "0.107.80",
     "lastUpdated": "2026-11-04T21:18:12.9029596Z",
     "openPr": {
-      "checkedAt": "2026-11-15T02:45:08.5794143Z",
-      "version": "0.107.80"
+      "version": "0.107.80",
+      "checkedAt": "2026-11-16T06:03:04.586565Z"
     }
   },
   "AdGuard.dnsproxy": {
@@ -2306,8 +2306,8 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "3EAB1E5A6E607AC40A8D48C149D5E5B2207604A2D465245704CB6FD111942437",
     "openPr": {
-      "checkedAt": "2026-11-07T04:16:07.0403436Z",
-      "version": "5.9.0"
+      "version": "5.11.8",
+      "checkedAt": "2026-11-16T06:03:13.1949854Z"
     }
   },
   "elfpie.TizenAppInstaller": {
@@ -4270,8 +4270,8 @@
     "lastUpdated": "2026-08-06T14:10:17.3921348Z",
     "manifestHash": "1E843D90602194E32EF0F84E333BE9BC20D09621BCA43AA304BDA7952A621BAB",
     "openPr": {
-      "checkedAt": "2026-11-15T02:46:15.0570806Z",
-      "version": "0.47.1"
+      "version": "0.47.1",
+      "checkedAt": "2026-11-16T06:04:10.6004701Z"
     }
   },
   "jmrplens.gitlab-mcp-server": {
@@ -4458,7 +4458,11 @@
     "manifestHash": "1B7D562145110A2AB4483E50909945476B8ED7491B1F57E8408A373E465946E7",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "18.1.1"
+    "version": "18.1.1",
+    "openPr": {
+      "version": "18.1.10",
+      "checkedAt": "2026-11-16T06:04:11.6633469Z"
+    }
   },
   "KellyBrazil.jc": {
     "version": "1.26.2",
