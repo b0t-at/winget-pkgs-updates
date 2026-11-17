@@ -690,14 +690,14 @@
   },
   "Automattic.Wordpress": {
     "manifestHash": "6673950920D3A092149113E734036113E7BB8F14B1CCE4AA0893B06E4E04615D",
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_PASSED",
     "version": "8.2.5",
     "installerHashes": [
       "3640C3E751D0EEB10546713453688CC277DDC7265E958F186487A89D9281F3BC"
     ],
     "description": "",
-    "lastUpdated": "2026-11-13T22:05:45.5402274Z"
+    "lastUpdated": "2026-11-17T06:12:13.259258Z"
   },
   "Avidemux.Avidemux": {
     "configHealth": {
@@ -891,10 +891,10 @@
     "version": "0.5"
   },
   "BenjaminLSR.HandheldCompanion": {
-    "lastUpdated": "2026-11-15T11:15:09.5174365Z",
+    "lastUpdated": "2026-11-17T06:12:13.0895921Z",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "validationCount": 4,
+    "validationCount": 5,
     "version": "1.4.0.2",
     "installerHashes": [
       "044F54A1E53989C26751D564EBCA3FF193695869FE69FCC8CF62748492880E6F"
@@ -1260,16 +1260,16 @@
     "manifestHash": "E1E1F1678EB7C71D8E572BCF076CB9061F3514757546EA0E909A1DBCB5E95399"
   },
   "ByteNess.AWSVault": {
-    "lastUpdated": "2026-11-06T20:38:04.6890741Z",
-    "installerHashes": [
-      "1B0C6B40D6DBC9270141066439820B9B74CE5D0A8A59E62EC442DA0943CA680A",
-      "3F133B27CBB4B72266EE49347EB3352859F553E6A36AB5C95A55ABB47BD784FF"
-    ],
     "description": "",
-    "version": "7.17.7",
-    "state": "VALIDATION_PASSED",
+    "version": "7.18.0",
     "validationCount": 1,
-    "manifestHash": "5763D013EBBD6E1466BE875AFFA0150D7818C410BC0F8CB9C483CE86277E08E6"
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "ECA6867E132EF783A1AC902F07D464098F5AEC520633FBB546DBAA2C9A26ED9F",
+      "68FD8D362D9CDB68E4A0D2DCA2761CA4C820FAA5111B3AAD20C38C7B9A032F4E"
+    ],
+    "lastUpdated": "2026-11-17T06:12:13.1529593Z",
+    "manifestHash": "F38E2FAA6AA9BFABF989A13D1E6F01908F6A78854A0C3FDD16719C37822F6ADC"
   },
   "C-POPLO.Unreal-GUI": {
     "validationCount": 1,
@@ -3194,9 +3194,9 @@
   "Gluon.SceneBuilder": {
     "description": "",
     "state": "VALIDATION_PASSED",
-    "validationCount": 5,
+    "validationCount": 6,
     "manifestHash": "FC76C2570A6E26B69426B52A1EB6DF91B0F8D1F3D233CA9180B3E96FBDDB08C9",
-    "lastUpdated": "2026-11-13T18:08:20.8784247Z",
+    "lastUpdated": "2026-11-17T06:12:13.2350859Z",
     "version": "27.0.0-RC",
     "installerHashes": [
       "926A979F8D9BB62C3F7218EAC821B21E07D64AFB9E4B5C4020F72072BA1FE25F"
@@ -3936,7 +3936,7 @@
   },
   "Infracost.Infracost": {
     "version": "0.10.50",
-    "validationCount": 1,
+    "validationCount": 2,
     "state": "VALIDATION_PASSED",
     "description": "",
     "manifestHash": "87F0839CF003F73309D25D16AA480450DF1FA692BE8E73038D5AB97437A5BB5C",
@@ -3944,7 +3944,7 @@
       "8FB969EB94A1AF677FF23C35C5F08E170D54C2A22C31B0675FB703EFA1C9DCA3",
       "CE46476815BC3B7A087455C7F3F072A62F3C1EF2D343CC8E8BB114F13403B317"
     ],
-    "lastUpdated": "2026-11-16T18:41:42.9301103Z"
+    "lastUpdated": "2026-11-17T06:12:13.3763443Z"
   },
   "Inkle.Inky": {
     "lastUpdated": "2026-08-18T01:43:26.3502487Z",
@@ -4141,14 +4141,14 @@
     "description": "",
     "version": "0.8.50",
     "manifestHash": "9B4C131092FDEF5946DBC895C5171BE61387A6376140EAB1F996CF47233436F8",
-    "lastUpdated": "2026-11-15T11:15:09.538059Z",
+    "lastUpdated": "2026-11-17T06:12:13.2804606Z",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "C7DE2A58E56583716451552866CF63128E297CEBE27747A4367D80FEA75D1281",
       "ECAA9A9F6816F4AC1BF0A49D9978B565441F00AFA259E1748008ABB3DE3601FF",
       "C2D1091B6E3B09B6BDADA331F2E78D95EAC95B815E0F8AB67452FC4C017E5BC1"
     ],
-    "validationCount": 7
+    "validationCount": 8
   },
   "jawhitti.INTERCAL64": {
     "validationCount": 1,
@@ -4856,15 +4856,15 @@
     "state": "VALIDATION_PASSED"
   },
   "loreste.mako": {
-    "state": "VALIDATION_PASSED",
-    "version": "0.7.2",
     "description": "",
+    "version": "0.7.3",
     "validationCount": 1,
-    "manifestHash": "853F8937A0AC6A96EF64140A2235DFD1321B006B1505CBB2548410F24AB62CD4",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "B71B72F4269D19F3267D8ACA4C05218F249E37F8764B9375AFAF802BE89D1E06"
+      "FFB17C20C6A1911625CC58CF47B829CAAC48B731A4A3E66AD21FE1C3654CA93D"
     ],
-    "lastUpdated": "2026-11-07T01:46:37.5390394Z"
+    "lastUpdated": "2026-11-17T06:12:13.2058564Z",
+    "manifestHash": "6E348A5E31316DD4B523F47533AC52C5AC1B65328121FD0813253C7F9C3B727D"
   },
   "LowLevelDesign.ProcessGovernor": {
     "manifestHash": "09E69D0C7C3FCD8235F3E38BE39881FEE7DC968A99C30941A28BED33654E0AA0",
@@ -5031,15 +5031,15 @@
     }
   },
   "marcinz606.NegPy": {
-    "installerHashes": [
-      "0BCA4D646EBE4868FE3D73ECAB7AB69D75F49A986F2F4B67AC927D567FA7BDA4"
-    ],
-    "state": "VALIDATION_FAILED",
-    "validationCount": 4,
-    "lastUpdated": "2026-11-11T16:50:30.8635686Z",
     "description": "",
-    "version": "0.68.0",
-    "manifestHash": "72DCF1A348FD9734899324EEBC60F63AD5B4EA72ED79FF68FA9FC7E7D2879565"
+    "version": "0.69.0",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "A116F4F28CAB7D939A5E028616B731F27250FD570B5E8EF0DB1A31979D81D185"
+    ],
+    "lastUpdated": "2026-11-17T06:12:13.343595Z",
+    "manifestHash": "9CCF4A6666CD7D27E6A8118F2A8D6FBFDE093B95AC35BBD3579D858FFEDCCBF8"
   },
   "MarcoHefti.YTVodManager": {
     "manifestHash": "D6B8CC28C195C1925AC443615826FDE9EB33D111F50144DC9CE7DF76A34B98CB",
@@ -7755,8 +7755,8 @@
       "311011DE0A4426DD4B4F97B1383ABAFD338A838EC8B726F033A22DC840FF9C43",
       "EE3C3022D2B49C3C6B08DC085226C16B53FEA044E89467546915F72D46ACBDC8"
     ],
-    "validationCount": 3,
-    "lastUpdated": "2026-11-16T18:41:42.820774Z",
+    "validationCount": 4,
+    "lastUpdated": "2026-11-17T06:12:13.1779275Z",
     "state": "VALIDATION_PASSED"
   },
   "Sayuri.FFFTP": {
@@ -8339,9 +8339,9 @@
       "036B9B1DCB99D717C8661B9612AF16A344D39087C9666FC5FAC0ABAE2CA8C1E7"
     ],
     "description": "",
-    "lastUpdated": "2026-11-11T09:18:50.8164977Z",
+    "lastUpdated": "2026-11-17T06:12:13.3123271Z",
     "version": "4.5.4",
-    "validationCount": 2,
+    "validationCount": 3,
     "state": "VALIDATION_PASSED"
   },
   "sqlectron.sqlectron-gui": {
