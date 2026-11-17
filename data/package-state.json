@@ -132,8 +132,8 @@
     "version": "0.107.80",
     "lastUpdated": "2026-11-04T21:18:12.9029596Z",
     "openPr": {
-      "version": "0.107.80",
-      "checkedAt": "2026-11-16T06:03:04.586565Z"
+      "checkedAt": "2026-11-17T06:16:26.742268Z",
+      "version": "0.107.80"
     }
   },
   "AdGuard.dnsproxy": {
@@ -4264,8 +4264,8 @@
     "lastUpdated": "2026-08-06T14:10:17.3921348Z",
     "manifestHash": "1E843D90602194E32EF0F84E333BE9BC20D09621BCA43AA304BDA7952A621BAB",
     "openPr": {
-      "version": "0.47.1",
-      "checkedAt": "2026-11-16T06:04:10.6004701Z"
+      "checkedAt": "2026-11-17T06:17:33.5822223Z",
+      "version": "0.47.1"
     }
   },
   "jmrplens.gitlab-mcp-server": {
@@ -4454,8 +4454,8 @@
     "validationCount": 1,
     "version": "18.1.1",
     "openPr": {
-      "version": "18.1.10",
-      "checkedAt": "2026-11-16T06:04:11.6633469Z"
+      "checkedAt": "2026-11-17T06:17:34.7326946Z",
+      "version": "18.1.10"
     }
   },
   "KellyBrazil.jc": {
