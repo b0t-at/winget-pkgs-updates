@@ -2103,16 +2103,16 @@
     "state": "VALIDATION_PASSED"
   },
   "Docker.DockerCompose": {
+    "version": "5.7.2",
+    "lastUpdated": "2026-11-17T14:45:55.3147946Z",
     "description": "",
-    "version": "5.7.1",
-    "manifestHash": "93E8979E5AEC21F4A13A948F61A52ED4AB7AE8B70F09ABBDB7DC6FFD8E30A70F",
-    "installerHashes": [
-      "E4316597452650AE92FE9719A2A7C2FCE8F56C5CEAFED88D2AED6E39B2B2B2D0",
-      "3ED47AB4D1CD56D63981246820420E7AAF042F2A48E6CCC95993872980A4E0A9"
-    ],
-    "lastUpdated": "2026-11-16T18:41:42.7406667Z",
+    "manifestHash": "C98A6A4C4D14A45468F7A02144FC8C4016E2EA74C0EC9D608E8269A7E6B93431",
     "state": "VALIDATION_PASSED",
-    "validationCount": 3
+    "installerHashes": [
+      "14B0F56D597539DD87E41E86047AAA350BBC6F1ECCF98386AAB77626BB3FD96B",
+      "46E393B4E4E26958FEFCA5999C73ED456B8111ECB8ED260074A27FF349B67A51"
+    ],
+    "validationCount": 1
   },
   "Docker.ds": {
     "lastUpdated": "2026-08-18T17:25:14.0317211Z",
@@ -2592,9 +2592,9 @@
   "ExpressLRS.ExpressLRS-Configurator": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "D0A6AAC427AD49FC312E1BC6DA7A29E4A6AD35DD2646EA13F36B2CFACEF5F234",
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "1.8.5",
-    "lastUpdated": "2026-11-16T18:41:42.8772165Z",
+    "lastUpdated": "2026-11-17T14:45:55.3328366Z",
     "description": "",
     "installerHashes": [
       "820B147BD8B94F5D36871498B9A49F566BAA24C95DDBC1B0D7F7D158AFFE783B"
@@ -3009,9 +3009,9 @@
   "Gather.Gather": {
     "version": "1.41.3",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-15T17:24:45.8063025Z",
+    "lastUpdated": "2026-11-17T14:45:55.1880831Z",
     "manifestHash": "D4E32E1A5B121FDD1FBFB445D1B68DC6E46C9D52389B674D0BA7AF1229D0F8B9",
-    "validationCount": 7,
+    "validationCount": 8,
     "installerHashes": [
       "901BBF32D7E54EA260B99CECFDBAC5EDCC93710A58F324FD0F1D719DE2E843CF"
     ],
@@ -3194,9 +3194,9 @@
   "Gluon.SceneBuilder": {
     "description": "",
     "state": "VALIDATION_PASSED",
-    "validationCount": 6,
+    "validationCount": 7,
     "manifestHash": "FC76C2570A6E26B69426B52A1EB6DF91B0F8D1F3D233CA9180B3E96FBDDB08C9",
-    "lastUpdated": "2026-11-17T06:12:13.2350859Z",
+    "lastUpdated": "2026-11-17T14:45:55.2655146Z",
     "version": "27.0.0-RC",
     "installerHashes": [
       "926A979F8D9BB62C3F7218EAC821B21E07D64AFB9E4B5C4020F72072BA1FE25F"
@@ -5339,16 +5339,16 @@
     ]
   },
   "Microsoft.Garnet.DN9": {
+    "version": "2.2.13",
+    "lastUpdated": "2026-11-17T14:45:55.2401928Z",
     "description": "",
-    "lastUpdated": "2026-11-12T06:11:59.5154141Z",
-    "version": "2.2.10",
-    "manifestHash": "B3365483B159CA5C9959BA0E748F3BB2A144930E6915A955AC5DB0A7C5DC9F99",
+    "manifestHash": "6D072862A6F4A98F86B04D7D3A86308E6BB29466E3640DB0D0C87DB5D64FFA55",
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
     "installerHashes": [
-      "E4766E78885B594DBB1636AACBC573236C34AEBF14783EBA1296E5EDAC5A9B58",
-      "A26F21DFF19D3F97F8EA7B86BBF984A54A04F0923BF0CDCA4750806885296130"
-    ]
+      "CC8212D7C7A671C490E5C87967FC43025A22215922BDBDAD5ECCFF00915C7B82",
+      "B82ADAE8BE12BB0C68E0BAE6B959590897771157E3AAF5AD8BE843D26EB54FF2"
+    ],
+    "validationCount": 1
   },
   "Microsoft.LightGBM": {
     "lastUpdated": "2026-08-20T21:12:49.5072525Z",
@@ -6812,15 +6812,15 @@
     ]
   },
   "PathofBuildingCommunity.PathofBuildingCommunity": {
-    "manifestHash": "C2997AAC1C96B895FF927732D65507705EC9E341082CA1C9B0CF147DEBC8FA93",
+    "version": "2.68.1",
+    "lastUpdated": "2026-11-17T14:45:55.2841059Z",
     "description": "",
-    "lastUpdated": "2026-08-20T05:16:37.810175Z",
-    "installerHashes": [
-      "3938026310AA899C1E2E15119AD2F9271D34DF590CFF3A159CEBE1E65202A16B"
-    ],
-    "validationCount": 1,
+    "manifestHash": "296531AEB24D6D08C557B7552987083229BFF3768D48FEC122AB5CCCDC1AA5B3",
     "state": "VALIDATION_PASSED",
-    "version": "2.67.2"
+    "installerHashes": [
+      "C6E1EF4B812A2150F9B1FBEE836E7E50F8B29E2A834B6D56B4589AF291C9C37A"
+    ],
+    "validationCount": 1
   },
   "PatrickHener.Goshs": {
     "lastUpdated": "2026-09-17T13:04:51.9579763Z",
@@ -8001,9 +8001,9 @@
       "4F5793186063AD609AFB761B37DC74A565B076A8C8EF9D3E45B9706FA92C27DE"
     ],
     "version": "0.10.0",
-    "validationCount": 2,
+    "validationCount": 3,
     "manifestHash": "5337CD7711E89FE5333867086306CE140E694A23F7D5E90F0255D89AB01D2B31",
-    "lastUpdated": "2026-11-15T02:40:59.4868326Z",
+    "lastUpdated": "2026-11-17T14:45:55.400321Z",
     "state": "VALIDATION_PASSED"
   },
   "Shssoichiro.Oxipng": {
@@ -8866,9 +8866,9 @@
     ]
   },
   "TerraformLinters.tflint": {
-    "validationCount": 2,
+    "validationCount": 3,
     "manifestHash": "9980097E25B6A5F394BA674E10F19CE5365E883F3F6370A0D655254B40A72FB9",
-    "lastUpdated": "2026-11-09T13:15:24.5920498Z",
+    "lastUpdated": "2026-11-17T14:45:55.3735222Z",
     "state": "VALIDATION_PASSED",
     "description": "",
     "version": "0.66.0",
@@ -8967,15 +8967,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "installerHashes": [
-      "92EFA97E189F89D29FF362632A6E50288DEBE606F29B3AF10CD9F8A36BD4EA4D"
-    ],
-    "lastUpdated": "2026-11-07T01:46:37.4492682Z",
-    "version": "2.83.6",
-    "validationCount": 2,
+    "version": "3.5.0",
+    "lastUpdated": "2026-11-17T14:45:55.3556464Z",
+    "description": "",
+    "manifestHash": "86E2E91331940A466D542712E62E552760767DC57E16236806C975068D81FA9F",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "3B7AD8B2AAA1EB61D5B7D2A6F8FD2DE5B22CDB31A3048364586789F2EE1049DB",
-    "description": ""
+    "installerHashes": [
+      "D2FB4D4DF188C344D26FECC9C5081589182CFA9AA7497CE3D7606AE7F843CAAE"
+    ],
+    "validationCount": 1
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
