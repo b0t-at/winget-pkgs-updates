@@ -5610,15 +5610,15 @@
     ]
   },
   "MongoDB.MongoDBAtlasCLI": {
-    "state": "VALIDATION_PASSED",
+    "state": "VALIDATION_FAILED",
     "manifestHash": "9AD7FB6884A9343591DA3303DA4B1E8152541EA55BE84832D36415D1B9F28ED5",
     "version": "1.60.0",
     "description": "",
     "installerHashes": [
       "1DAEB7BCCF515EBF441C64787D1076E8B4365DA558CCFDB272D7D246C17CF556"
     ],
-    "lastUpdated": "2026-11-17T11:46:46.4664085Z",
-    "validationCount": 13
+    "lastUpdated": "2026-11-17T19:48:32.4217132Z",
+    "validationCount": 14
   },
   "MongoDB.MongoDBCLI": {
     "state": "VALIDATION_PASSED",
@@ -5628,15 +5628,15 @@
     "installerHashes": [
       "A3490FBCA2BE1B3B9C856E0F3A3C10B0C6DDE709A05FD0E3998EE8B0AFB0253E"
     ],
-    "lastUpdated": "2026-11-17T11:46:46.4471225Z",
-    "validationCount": 13
+    "lastUpdated": "2026-11-17T19:48:32.5583758Z",
+    "validationCount": 14
   },
   "MongoDB.Server": {
-    "validationCount": 22,
+    "validationCount": 23,
     "installerHashes": [
       "4841753F49C1E3E25D12FF63A049894B7D56E397F27F05303CCDE5144A6AE060"
     ],
-    "lastUpdated": "2026-11-17T11:46:46.413648Z",
+    "lastUpdated": "2026-11-17T19:48:32.5065929Z",
     "manifestHash": "D5E9B6628252F1B384E18F5F0245D8B938F4D0CBA3A7A1958ED232B9E7B881E9",
     "state": "VALIDATION_PASSED",
     "version": "9.0.8",
@@ -5645,8 +5645,8 @@
   "MongoDB.Shell": {
     "manifestHash": "7178CCA5876E45CA7EF9D72FE34E0103006E69F41EAAEE4933F5BF3435ECC341",
     "version": "2.14.2",
-    "validationCount": 21,
-    "lastUpdated": "2026-11-17T11:46:46.4907977Z",
+    "validationCount": 22,
+    "lastUpdated": "2026-11-17T19:48:32.5294314Z",
     "description": "",
     "installerHashes": [
       "D0EE64CAD724D4B69E066AD0DB95DD1F1D85F9A685C649A1EBC1F769414025D3"
