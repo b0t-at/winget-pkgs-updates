@@ -928,16 +928,16 @@
     "manifestHash": "1D3F22CB5D08647D2C345496D2A3FEA702B321C0C2CC217587B7FCC190045BCC"
   },
   "Betterleaks.Betterleaks": {
-    "version": "1.10.0",
-    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
     "description": "",
     "installerHashes": [
-      "BAFD52ABCB440C2A06EA36D5E1FFF217315DB0AAC517E60D74E64B2BB9F18468",
-      "0799FDC4588A934FD5D727920117A5E0D5D24D2CDEAD55445E84C5619D201D9C"
+      "53D4B37635A999992FB8E1D79F8215279315CBB3B4139314289B69407E79143D",
+      "F93D26DFC7B939F967C74E3F908B44FAEC1B1CB6FFB29C75C0A1D7E713AB8F70"
     ],
-    "manifestHash": "C63A24BABF4E1C36C5A597DC4D3BEFA5E89612871D6453BE08D0374595C56395",
-    "validationCount": 3,
-    "lastUpdated": "2026-11-12T15:44:41.7503022Z"
+    "version": "1.10.1",
+    "manifestHash": "3CAB7B9A2BAC65431855CA46071489A7633D5936CC16FA4AFB2BE5961B8B65A7",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-18T18:32:42.7649726Z"
   },
   "bgreenwell.lstr": {
     "version": "0.4.0",
@@ -1415,15 +1415,15 @@
     }
   },
   "Celerp.Celerp": {
-    "description": "",
-    "lastUpdated": "2026-11-02T21:25:52.1474467Z",
-    "state": "VALIDATION_PASSED",
-    "version": "2.8.0",
-    "installerHashes": [
-      "511787ED11A5945736862A549243C71648A3C50F6890217731D6E075DFCCDA84"
-    ],
     "validationCount": 1,
-    "manifestHash": "F7251C99A1556C294AA9EB09C3F02C8F72BEF9E668902A97181B40B3C1ED344D"
+    "description": "",
+    "installerHashes": [
+      "7A5A23A932AD640FCF8701E83E17B111E030F546BF1241FE2EE503CA6FB4DBF1"
+    ],
+    "version": "2.9.0",
+    "manifestHash": "2EB591E0649BB0734EFC011C2143C68E748D5FCECD92ACC9BC3730AD4993FB03",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-18T18:32:42.8362197Z"
   },
   "CerberAuth.jwtop": {
     "description": "",
@@ -2592,9 +2592,9 @@
   "ExpressLRS.ExpressLRS-Configurator": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "D0A6AAC427AD49FC312E1BC6DA7A29E4A6AD35DD2646EA13F36B2CFACEF5F234",
-    "validationCount": 3,
+    "validationCount": 4,
     "version": "1.8.5",
-    "lastUpdated": "2026-11-17T14:45:55.3328366Z",
+    "lastUpdated": "2026-11-18T18:32:42.9121298Z",
     "description": "",
     "installerHashes": [
       "820B147BD8B94F5D36871498B9A49F566BAA24C95DDBC1B0D7F7D158AFFE783B"
@@ -3009,9 +3009,9 @@
   "Gather.Gather": {
     "version": "1.41.3",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-18T09:44:24.0970062Z",
+    "lastUpdated": "2026-11-18T18:32:42.6841348Z",
     "manifestHash": "D4E32E1A5B121FDD1FBFB445D1B68DC6E46C9D52389B674D0BA7AF1229D0F8B9",
-    "validationCount": 9,
+    "validationCount": 10,
     "installerHashes": [
       "901BBF32D7E54EA260B99CECFDBAC5EDCC93710A58F324FD0F1D719DE2E843CF"
     ],
@@ -4822,15 +4822,15 @@
     "version": "2026.8.2"
   },
   "loft-sh.vcluster": {
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-03T05:06:03.9193558Z",
-    "manifestHash": "4F4E4C22CAF89B656324E1B3E9EC5ACA1EAFA1913EED0F5785089D73EC20327C",
-    "version": "0.37.6",
     "validationCount": 1,
+    "description": "",
     "installerHashes": [
-      "16CD6FB31B224D2B5905F53E33CC076A7A54D227F3CA6E770B79BC9A16593CC4"
+      "99ED6F02D3C9503CC08712D28F88CC2FE9BD1845E39FF2704B4B446F7E049309"
     ],
-    "description": ""
+    "version": "0.38.0",
+    "manifestHash": "6B8DD1B417C78C2B988C0818718140EE5956E80A3C06548D3F83444423D6BF5C",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-18T18:32:42.945561Z"
   },
   "Longbridge.LongbridgeTerminal": {
     "description": "",
@@ -4858,12 +4858,12 @@
   "loreste.mako": {
     "description": "",
     "version": "0.7.3",
-    "validationCount": 2,
+    "validationCount": 3,
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "FFB17C20C6A1911625CC58CF47B829CAAC48B731A4A3E66AD21FE1C3654CA93D"
     ],
-    "lastUpdated": "2026-11-17T21:00:22.5578941Z",
+    "lastUpdated": "2026-11-18T18:32:42.8165832Z",
     "manifestHash": "6E348A5E31316DD4B523F47533AC52C5AC1B65328121FD0813253C7F9C3B727D"
   },
   "LowLevelDesign.ProcessGovernor": {
@@ -5574,15 +5574,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Moku.Moku": {
+    "validationCount": 1,
     "description": "",
     "installerHashes": [
-      "96457F1AEFD2A954D647308B74E665A901CF57943937DF25636157B4E2A5EF5F"
+      "3B7E00F82A4AC0A049E748E82E473201E537B60A9E8001E167EBC660A3EB2F8D"
     ],
-    "manifestHash": "3F86EDFD400E0219D2F213FA66E2D9679897C8011ADD6769971B56906CD378E2",
-    "validationCount": 1,
+    "version": "0.15.1",
+    "manifestHash": "72EAA5FBE4FAE33E287545AD3D619A7A8A3FE08190D7C5FEE6877AE751C6A767",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-25T01:46:36.1532342Z",
-    "version": "0.14.1"
+    "lastUpdated": "2026-11-18T18:32:42.7452041Z"
   },
   "moneymanagerex.moneymanagerex": {
     "installerHashes": [
@@ -5966,15 +5966,15 @@
     }
   },
   "Netmaker.Netmaker": {
-    "description": "",
     "validationCount": 1,
+    "description": "",
     "installerHashes": [
-      "511A9CA49390CBEE0895BB20DD5D07102C6AC83C6E35973B99073CAF818DE841"
+      "063C32E57EC3BEF7E3F7D743969311F9D68D3ED0AC37E09BF023C7A0A8286AE6"
     ],
-    "lastUpdated": "2026-08-31T16:59:15.4617276Z",
-    "version": "1.7.0",
+    "version": "1.8.0",
+    "manifestHash": "1A7949CBA9E3B59E47E5E459CD1DBB50F9B04D03C3C21CAD4C5BDF47AEF1EC32",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "3E13AB55E1E426A6111FD4AF76CB71C4B57ACB40CC6445D580F7A075908E1788"
+    "lastUpdated": "2026-11-18T18:32:42.8830152Z"
   },
   "nginx.nginx-prometheus-exporter": {
     "validationCount": 1,
@@ -6629,14 +6629,15 @@
   },
   "ORASProject.ORAS": {
     "validationCount": 1,
-    "lastUpdated": "2026-10-25T05:02:06.1746368Z",
-    "version": "1.3.6",
-    "installerHashes": [
-      "EC3D19F386D5D2F0892288772D7B242475A05332AAFA64B6773378CA771D76D3"
-    ],
-    "manifestHash": "5AA559FE53214E28EE27A7F147E3AEF8F02A586D8DB8BDA44DEC9C5C0DB0CB53",
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "installerHashes": [
+      "C70D25E3463A161A5AEEDDD9FE5EF882C811DDE8115AB0883C0B87D3F0C50832",
+      "6603FE6F0DC27CB127B069F9CD2A55BD6A00C10E34E2288055E74FB60EE24CB8"
+    ],
+    "version": "1.4.0",
+    "manifestHash": "299EC02FBA88720D5740433F5FC96DB77183403E6B9464AEF9A97BEEB03AB2DB",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-18T18:32:42.9672927Z"
   },
   "orbatschow.kontext": {
     "lastUpdated": "2026-08-18T17:25:14.061431Z",
@@ -7000,10 +7001,10 @@
   "pnpm.pnpm": {
     "state": "VALIDATION_FAILED",
     "manifestHash": "0E46470DEE8293D4E4BF216762B9F3F53657EE8E77F89FDCA6AA07863AAB29EB",
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "12.21.0",
     "description": "",
-    "lastUpdated": "2026-11-17T21:00:22.2484051Z",
+    "lastUpdated": "2026-11-18T18:32:42.6288499Z",
     "installerHashes": [
       "4FB64BB37E46C788309E0FD4EA93BEB512546FDC7348121194FB704FBB72C09C",
       "9584890DB13A8BCD9A77556F3455E37718A17A31C0AEE0254CF8D8AC6B3A8DF1"
@@ -8143,15 +8144,15 @@
     "manifestHash": "E287E5EFDF457EB47DC8F18007B1E361CAE20763BDA63DD266E50CCF3C4BAC3A"
   },
   "skyhook-io.Radar": {
+    "validationCount": 1,
     "description": "",
-    "version": "1.20.2",
-    "manifestHash": "B4F0EA125F346B1C0B4789C7CBFA284E30ED39A9A22331AD53179B785CF90B9F",
-    "lastUpdated": "2026-11-11T16:50:30.9308491Z",
-    "state": "VALIDATION_FAILED",
     "installerHashes": [
-      "D8F5953675890254A591B68A801C469B28E1E2F778E690A08AD699B4DC137D80"
+      "37F08EBED41535E7CCAF1A2A4421F8EF67EDFFE938B4BFDDE3686EB17637AC67"
     ],
-    "validationCount": 3
+    "version": "1.20.3",
+    "manifestHash": "29DE7A661BC08543EBA8C67EE2B2DA760CDC5E876DE4C78F096CEFD9B623463F",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-18T18:32:42.7172129Z"
   },
   "Skylot.jadx": {
     "validationCount": 1,
@@ -9381,10 +9382,10 @@
     ],
     "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "92ACD99970297AAF41B3EED49FABCA33A3CA75A77517D0021A3726FB445378F8",
     "version": "2026.11.11",
-    "lastUpdated": "2026-11-13T07:11:14.3995355Z"
+    "lastUpdated": "2026-11-18T18:32:42.7852219Z"
   },
   "UsamaEjaz.PeekWin": {
     "lastUpdated": "2026-08-18T17:25:14.1152343Z",
