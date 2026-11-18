@@ -669,9 +669,9 @@
   "AsterPrivacy.AsterMail": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "3E4907CED814A52F1A80F5D62F8239BB1D20E7002363CECE1D27A1229C72A064",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "1.4.83",
-    "lastUpdated": "2026-11-15T17:24:45.6411816Z",
+    "lastUpdated": "2026-11-18T09:44:24.1223956Z",
     "description": "",
     "installerHashes": [
       "E089049B74221839EB86C702A27929E58E1C7C0E8FF08962ABB3582907B3FA19"
@@ -891,10 +891,10 @@
     "version": "0.5"
   },
   "BenjaminLSR.HandheldCompanion": {
-    "lastUpdated": "2026-11-17T06:12:13.0895921Z",
+    "lastUpdated": "2026-11-18T09:44:23.7720208Z",
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 5,
+    "state": "VALIDATION_FAILED",
+    "validationCount": 6,
     "version": "1.4.0.2",
     "installerHashes": [
       "044F54A1E53989C26751D564EBCA3FF193695869FE69FCC8CF62748492880E6F"
@@ -1197,16 +1197,16 @@
     "description": ""
   },
   "brandonyoungdev.tldx": {
+    "lastUpdated": "2026-11-18T09:44:24.0760775Z",
+    "version": "1.6.1",
+    "manifestHash": "64C57491356F58146794173C5A28F543C9E727A1901105FE307E4681E1EDB310",
     "installerHashes": [
-      "147BF5A7D2DC6B2C3464854892749EEDAE964B636F38DC1F33A9C58386576436",
-      "81EE180BE4FA1C0274CED203051E486B1B95A0824DAFD22CCE91DFBEC18E419A"
+      "B2CD47878803678F327A263B8A18A9FAF48BF76EC1E141A60AA68A0FD365A489",
+      "0701A3672248E9BCCBEF20252B1579F386A5399549AF409421560D3C0C26234F"
     ],
+    "description": "",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-08-21T01:21:03.6237786Z",
-    "version": "1.6.0",
-    "validationCount": 1,
-    "manifestHash": "DBDD3B495066BA517593B98C3F2AF2A79E70932F9B225F26A0FAFF63BFD8C196",
-    "description": ""
+    "validationCount": 1
   },
   "BrowserStackInc.Requestly": {
     "manifestHash": "4E59C071C13666D4988DF20F66C9A2D523311D9F5680F4A3AABDDD82FDADDD8B",
@@ -1718,9 +1718,9 @@
       "A6FA2A88B39AC4AAB9991F261A093F890583F02A2A205B1256655925B5B3FA65"
     ],
     "version": "0.34.0",
-    "lastUpdated": "2026-11-13T18:08:20.642265Z",
+    "lastUpdated": "2026-11-18T09:44:24.0314611Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1
+    "validationCount": 2
   },
   "CrewHaus.CLI": {
     "manifestHash": "329DAF014A24434DD64727ABA5C621C3E71A21C0AA1EEAD7D5291BD59D7B8455",
@@ -2401,11 +2401,11 @@
     "installerHashes": [
       "AB258AC882FDA2661880B484E6C00317627362A45F1603A472DC576ED4D9A30F"
     ],
-    "lastUpdated": "2026-11-17T21:00:22.3313406Z",
+    "lastUpdated": "2026-11-18T09:44:24.1954741Z",
     "description": "",
     "version": "3.3.4",
     "state": "VALIDATION_PASSED",
-    "validationCount": 3,
+    "validationCount": 4,
     "manifestHash": "3630B6D855E126CB037364A230066995072C9BC084F34B2B02B24165B9EBEB41"
   },
   "ErichDonahue.SpinnerforDiscogs": {
@@ -3009,9 +3009,9 @@
   "Gather.Gather": {
     "version": "1.41.3",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-17T14:45:55.1880831Z",
+    "lastUpdated": "2026-11-18T09:44:24.0970062Z",
     "manifestHash": "D4E32E1A5B121FDD1FBFB445D1B68DC6E46C9D52389B674D0BA7AF1229D0F8B9",
-    "validationCount": 8,
+    "validationCount": 9,
     "installerHashes": [
       "901BBF32D7E54EA260B99CECFDBAC5EDCC93710A58F324FD0F1D719DE2E843CF"
     ],
@@ -3581,11 +3581,11 @@
     "installerHashes": [
       "418932F7FF727212F194A1699620FE57A52B26B5E9EABA515EC13D6412013B34"
     ],
-    "lastUpdated": "2026-11-15T11:15:09.4188932Z",
+    "lastUpdated": "2026-11-18T09:44:24.0497864Z",
     "description": "",
     "version": "1.0.1",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "4554B3B12C10F9A97C52A8062F6C50D5890914C44C8A4A81CADB7ADF00F00C62"
   },
   "HeroicGamesLauncher.GOGDL": {
@@ -3741,8 +3741,8 @@
     "installerHashes": [
       "D48555304AC085CDB265064DC1CB2DAE17E7EB1C8FF9C4492284D51B508F2B07"
     ],
-    "lastUpdated": "2026-11-17T21:00:22.5876871Z",
-    "validationCount": 1
+    "lastUpdated": "2026-11-18T09:44:24.0095289Z",
+    "validationCount": 2
   },
   "HongMinhee.Gukhanmun": {
     "installerHashes": [
@@ -3936,7 +3936,7 @@
   },
   "Infracost.Infracost": {
     "version": "0.10.50",
-    "validationCount": 3,
+    "validationCount": 4,
     "state": "VALIDATION_PASSED",
     "description": "",
     "manifestHash": "87F0839CF003F73309D25D16AA480450DF1FA692BE8E73038D5AB97437A5BB5C",
@@ -3944,7 +3944,7 @@
       "8FB969EB94A1AF677FF23C35C5F08E170D54C2A22C31B0675FB703EFA1C9DCA3",
       "CE46476815BC3B7A087455C7F3F072A62F3C1EF2D343CC8E8BB114F13403B317"
     ],
-    "lastUpdated": "2026-11-17T21:00:22.4918555Z"
+    "lastUpdated": "2026-11-18T09:44:24.1444579Z"
   },
   "Inkle.Inky": {
     "lastUpdated": "2026-08-18T01:43:26.3502487Z",
@@ -4883,8 +4883,8 @@
     ],
     "description": "",
     "manifestHash": "706456A8D5320DBA87A55FA732350147C9E9CF30DC36612BBEDD783312BE5072",
-    "validationCount": 1,
-    "lastUpdated": "2026-11-15T02:40:59.5432062Z",
+    "validationCount": 2,
+    "lastUpdated": "2026-11-18T09:44:24.2393922Z",
     "state": "VALIDATION_PASSED",
     "version": "0.28.0"
   },
@@ -6332,9 +6332,9 @@
       "7FF639C8BECFC88237D982CEA552F44DBC132B3EC1EBDD91186E76056A22660A"
     ],
     "version": "6.7.0",
-    "validationCount": 2,
+    "validationCount": 3,
     "manifestHash": "A84644C823FE162A009B350E7511BCE8ABDD97A7FFF4DA9AE772C135EAE1477B",
-    "lastUpdated": "2026-11-16T18:41:42.602128Z",
+    "lastUpdated": "2026-11-18T09:44:24.1741284Z",
     "state": "VALIDATION_PASSED"
   },
   "OneWare.OneWareStudio": {
@@ -6918,9 +6918,9 @@
       "E3855B00A3A813BF9FD7C24031913E9247CFA3EA4B9B6C122A9EFB3A7FC6EC6C"
     ],
     "version": "3.0.4",
-    "lastUpdated": "2026-11-13T18:08:20.4983912Z",
+    "lastUpdated": "2026-11-18T09:44:23.9655098Z",
     "state": "VALIDATION_FAILED",
-    "validationCount": 1
+    "validationCount": 2
   },
   "Picocrypt-NG.Picocrypt-NG": {
     "installerHashes": [
@@ -8661,15 +8661,15 @@
     "version": "2.15.0"
   },
   "tagspaces.tagspaces": {
+    "lastUpdated": "2026-11-18T09:44:24.2187275Z",
+    "version": "6.15.1",
+    "manifestHash": "550B755CA1D330E5DEDC57A72A7FCC451F448B12E8F8180E7FC21F6401CF232A",
+    "installerHashes": [
+      "1C4E7AF23D8A7A463EECFF4C2654A7A8A90CC7D19E030AC654B96401C45416A7"
+    ],
     "description": "",
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "A1641A13F086CB32BAD40DAA03CDC282034FD112CE763BA940AF2CE7DE102603"
-    ],
-    "validationCount": 1,
-    "lastUpdated": "2026-10-16T13:03:36.06265Z",
-    "version": "6.14.3",
-    "manifestHash": "4A060B761C0712AAD910B0C31D098D1316642FFAA3D324D3C968755DCDE39F41"
+    "validationCount": 1
   },
   "taiki-e.parse-changelog": {
     "state": "VALIDATION_PASSED",
@@ -8891,12 +8891,12 @@
   "TeXstudio.TeXstudio": {
     "state": "VALIDATION_PASSED",
     "version": "4.9.9",
-    "lastUpdated": "2026-11-14T17:18:41.4149614Z",
+    "lastUpdated": "2026-11-18T09:44:23.991721Z",
     "manifestHash": "2E9A664E25CEF9FD7C25CC014E47E93F90DA0FF0B2C388183D8B2397F2EB5245",
     "installerHashes": [
       "DCE92577AC3C0A75ED7DE350538AD5AB7505DCA45979A7163950B07CDE21D850"
     ],
-    "validationCount": 8,
+    "validationCount": 9,
     "description": ""
   },
   "tg123.oci-to-wsl": {
@@ -9936,19 +9936,15 @@
     "version": "0.25.0"
   },
   "xpipe-io.xpipe.portable": {
-    "version": "24.10",
+    "lastUpdated": "2026-11-18T09:44:23.9213283Z",
+    "version": "24.12",
+    "manifestHash": "D2F2B186FB52489083767A67AEB6A9423CE2FF75EBFA7F4A280602ABF7F747F3",
     "installerHashes": [
-      "16991B0553A6821CE275087721E1ED4B1ACE948DFEEB95974342029C6B97F86F"
+      "6B1725DE09985BB63D6BD9240A5547698353DCA2FED7862636F5C738A79561E0"
     ],
-    "lastUpdated": "2026-10-30T05:28:56.8591391Z",
-    "validationCount": 1,
-    "manifestHash": "A7ECE2C055CAA56CB8523084D02F871DF0A6A86DD2968530CFA26293C85538D1",
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "openPr": {
-      "checkedAt": "2026-10-30T08:23:17.0865695Z",
-      "version": "24.10"
-    }
+    "state": "VALIDATION_FAILED",
+    "validationCount": 1
   },
   "xssnick.TON-Torrent": {
     "state": "VALIDATION_PASSED",
