@@ -132,7 +132,7 @@
     "version": "0.107.80",
     "lastUpdated": "2026-11-04T21:18:12.9029596Z",
     "openPr": {
-      "checkedAt": "2026-11-17T06:16:26.742268Z",
+      "checkedAt": "2026-11-18T09:50:29.9664925Z",
       "version": "0.107.80"
     }
   },
@@ -4264,7 +4264,7 @@
     "lastUpdated": "2026-08-06T14:10:17.3921348Z",
     "manifestHash": "1E843D90602194E32EF0F84E333BE9BC20D09621BCA43AA304BDA7952A621BAB",
     "openPr": {
-      "checkedAt": "2026-11-17T06:17:33.5822223Z",
+      "checkedAt": "2026-11-18T09:51:39.5839786Z",
       "version": "0.47.1"
     }
   },
@@ -4454,7 +4454,7 @@
     "validationCount": 1,
     "version": "18.1.1",
     "openPr": {
-      "checkedAt": "2026-11-17T06:17:34.7326946Z",
+      "checkedAt": "2026-11-18T09:51:40.679814Z",
       "version": "18.1.10"
     }
   },
