@@ -458,13 +458,13 @@
   },
   "AntiMicroX.antimicrox": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "3.6.2",
     "installerHashes": [
       "B76E039AA38C19DDAAFABA9B5463BD2FCFEBBF9882C43F5B4323CB643E4CF088"
     ],
     "manifestHash": "5D21CCD21876B4C453984B5B0C01DCE62928AAC6E5E6A6820507DD929773DC93",
-    "lastUpdated": "2026-11-14T17:18:41.4781913Z",
+    "lastUpdated": "2026-11-19T17:07:27.9983031Z",
     "description": ""
   },
   "AppFlowy.AppFlowy": {
@@ -749,16 +749,16 @@
     "manifestHash": "C71A6E160AC6A85572AFA73CCA7A972CAD01C8411B8217390738C684FC69BEF1"
   },
   "axllent.mailpit": {
-    "manifestHash": "84D8B6AE2574E9EFF9729FBA589F60BB24E6B2505BB9A7402A9A9FE2BD3C59B8",
-    "validationCount": 5,
-    "description": "",
+    "manifestHash": "B56E78111F5768E8C052C15012D76C10D8811D92543A6B4FD5BCA7B094EC227B",
+    "version": "1.34.0",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "0BCF8F1E7C21005B30C206064FF2F37DAC602EF66774E558379D326F5673D652",
-      "3F0BEDC92AA55003588446920532EB9368547A8D151EA6A6D93A24490C00B45E"
+      "8F080D41374BF22686606374A0A483C8563C1BF29AE078179792392FF8C911D7",
+      "59CCB08FB30660E9F0E3F8A721ABC32A4ACA88BA37CEA004EC69940245D8554E"
     ],
-    "version": "1.33.1",
-    "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-11-11T16:50:31.0832418Z"
+    "validationCount": 1,
+    "description": "",
+    "lastUpdated": "2026-11-19T17:07:27.8645575Z"
   },
   "axodotdev.dist": {
     "lastUpdated": "2026-11-03T09:08:27.687067Z",
@@ -5343,8 +5343,8 @@
       "CC8212D7C7A671C490E5C87967FC43025A22215922BDBDAD5ECCFF00915C7B82",
       "B82ADAE8BE12BB0C68E0BAE6B959590897771157E3AAF5AD8BE843D26EB54FF2"
     ],
-    "lastUpdated": "2026-11-17T21:00:22.6823922Z",
-    "validationCount": 1
+    "lastUpdated": "2026-11-19T17:07:27.934121Z",
+    "validationCount": 2
   },
   "Microsoft.Garnet.DN9": {
     "version": "2.2.13",
@@ -6173,15 +6173,15 @@
     "validationCount": 1
   },
   "obsidianforensics.HindsightGUI": {
-    "manifestHash": "F4D11F99D9E5362A97FEF33DE05E764E29E57E24EB032F2FFFEC3B32D39B575E",
-    "description": "",
-    "installerHashes": [
-      "EC78E8098B9FD898C0B426ADA440138D471604A05760E12F90DB83F15F44D49A"
-    ],
+    "manifestHash": "1FAB5D48DEDD9DD791C3D27BA465513E6033FFAB3E43BB9D3E0D9078F817A8B4",
+    "version": "2026.11",
     "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "7B7667E4FAB1D93CBDCC3C8BBDFD096096B805BE7B8B550B88247E4B3D59F158"
+    ],
     "validationCount": 1,
-    "lastUpdated": "2026-07-09T01:33:32.5391045Z",
-    "version": "2026.06"
+    "description": "",
+    "lastUpdated": "2026-11-19T17:07:28.2335411Z"
   },
   "OCSInventoryNG.WindowsAgent": {
     "manifestHash": "ADDB703555DE0642AC0D9A0CE336646E292BD36F8822BBE1FC87E436402F1226",
@@ -6369,16 +6369,16 @@
     ]
   },
   "Open-Component-Model.ocm-cli": {
-    "lastUpdated": "2026-11-03T09:08:27.7539738Z",
-    "manifestHash": "42E07497EE9AEC13A636B0966528B08632F733BBC4C8EED536525BA8060B66DA",
+    "manifestHash": "04FC8B836890357F29391574E473493DAE5C0D542ADC231D123BA74924C15107",
+    "version": "0.55.0",
     "state": "VALIDATION_PASSED",
+    "installerHashes": [
+      "AA0C26672CE7558FEC0CD7578DCE5AE29641D81B8BEE5C91DF668C5D90C85349",
+      "D40D83BB03D489EFF839F39B7D5A2974CC504B9840E0CC4991D52905A7139783"
+    ],
     "validationCount": 1,
     "description": "",
-    "installerHashes": [
-      "78271F21B73721515EAB1DB2DCD7FE7B3F84250779738B7BF18C050EE1E27752",
-      "60BD661462BB2CFB39AE8D1E83890010F27439D8645F4796E31AFC01F91D9BD3"
-    ],
-    "version": "0.54.0"
+    "lastUpdated": "2026-11-19T17:07:28.2008053Z"
   },
   "open-policy-agent.opa": {
     "manifestHash": "92CB675A7F05F916B5122A6BB40C7493F26006FBB00ED5903CBF7DC6BF035558",
@@ -6456,15 +6456,15 @@
     ]
   },
   "OpenGeos.GeoLibre": {
+    "manifestHash": "BE0D9F0378EE6A75CEC3D553D3EACD8CA60AE72A0CD243F12043E0D3F362EBF5",
+    "version": "3.9.0",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "8849857BA788A6070BDAB4C43E1FC8FDD0A0024BD482510A264A7F316A8ADD9D",
-    "validationCount": 1,
-    "version": "3.8.0",
-    "description": "",
-    "lastUpdated": "2026-11-16T05:56:52.1122746Z",
     "installerHashes": [
-      "106372C024B0004194C1960D3582250CB25CB4C883BDF6EDD6B3222D82D92E76"
-    ]
+      "A35830764243BDD4FFB3E15EF4068F91474DA4994F888793112E53563C842121"
+    ],
+    "validationCount": 1,
+    "description": "",
+    "lastUpdated": "2026-11-19T17:07:28.1764936Z"
   },
   "OpenHV.OpenHV": {
     "description": "",
@@ -7372,9 +7372,9 @@
       "2021648C72E5EE0B78EB67E7F68BFDE069ACC753776D8D6E66AFC4A8EC4569CA"
     ],
     "description": "",
-    "lastUpdated": "2026-11-15T02:40:59.5256206Z",
+    "lastUpdated": "2026-11-19T17:07:28.1259049Z",
     "version": "3.4.1",
-    "validationCount": 3,
+    "validationCount": 4,
     "state": "VALIDATION_PASSED"
   },
   "Rela.RelaGit": {
@@ -8068,8 +8068,8 @@
     "description": "",
     "version": "0.105.0",
     "manifestHash": "DDCE283A8E7B1F1E1DB95D3BE8D18B483C9023C68293F973D7C88CB25E20F092",
-    "validationCount": 3,
-    "lastUpdated": "2026-11-15T11:15:09.3256187Z"
+    "validationCount": 4,
+    "lastUpdated": "2026-11-19T17:07:28.2686248Z"
   },
   "SimpleX.SimpleX-Chat": {
     "description": "",
@@ -8316,9 +8316,9 @@
       "23B40F640A95B7186ED0746740D1C1BADE58E1B8E27EAC2599A36A2D723A118B"
     ],
     "version": "2.5.0",
-    "lastUpdated": "2026-11-13T18:08:20.7874685Z",
+    "lastUpdated": "2026-11-19T17:07:28.0336934Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1
+    "validationCount": 2
   },
   "SpikeHD.Dorion": {
     "installerHashes": [
@@ -8489,11 +8489,11 @@
     }
   },
   "Storj.Uplink": {
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "DA932546F3F97D17607AE4B538BB86B7D112C17BEB889481AC58EC1F4F9259A3"
     ],
-    "lastUpdated": "2026-11-19T05:30:48.6383167Z",
+    "lastUpdated": "2026-11-19T17:07:28.0582283Z",
     "version": "1.166.4",
     "manifestHash": "0BB97627A7CF60B768889B95B833CCE4E72DCFE59236403BA0EA412C0C17FA5A",
     "description": "",
@@ -8574,16 +8574,16 @@
     "manifestHash": "B1B716023C04A31ACC5074A77A2D997B0021E9F195EA648CF6ECECEA7F5F1336"
   },
   "SuperRadCompany.Microsandbox": {
+    "manifestHash": "3A33F9E19751A2B12B5BAB43AFB4B5ECCB686424AF8A4C3F1A2CE65162C047D3",
+    "version": "0.7.16",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "A20EADD8DC1D4FCBBD1BA72E02CE87E11FC99CD288512311DD6EB668890B3B60",
-    "validationCount": 1,
-    "version": "0.7.15",
-    "lastUpdated": "2026-11-15T17:24:45.5582895Z",
-    "description": "",
     "installerHashes": [
-      "BE3F6C9CFFF0F79FC32C2A6EB1BF3E6DE7225DFC8A5D616A5578D02D4D1FF6E9",
-      "33C3FF4E501B50949A1C800F05B50E641AAE6F4D5E85F8C38F94F9B6D2661AFD"
-    ]
+      "FD170B1B2EFCFA85BC50D2BA8EB532103DAC26B2DC079D3DD1C747CF10B625FF",
+      "DE863621E451A000BE2C06F2D89A6598EB029B35D181D0BA08C64664E5A4C495"
+    ],
+    "validationCount": 1,
+    "description": "",
+    "lastUpdated": "2026-11-19T17:07:27.9680358Z"
   },
   "SUSE.RancherDesktop": {
     "version": "1.25.0",
@@ -8900,12 +8900,12 @@
   "TeXstudio.TeXstudio": {
     "state": "VALIDATION_PASSED",
     "version": "4.9.9",
-    "lastUpdated": "2026-11-18T09:44:23.991721Z",
+    "lastUpdated": "2026-11-19T17:07:28.0804036Z",
     "manifestHash": "2E9A664E25CEF9FD7C25CC014E47E93F90DA0FF0B2C388183D8B2397F2EB5245",
     "installerHashes": [
       "DCE92577AC3C0A75ED7DE350538AD5AB7505DCA45979A7163950B07CDE21D850"
     ],
-    "validationCount": 9,
+    "validationCount": 10,
     "description": ""
   },
   "tg123.oci-to-wsl": {
@@ -8976,15 +8976,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "version": "3.5.0",
-    "lastUpdated": "2026-11-17T14:45:55.3556464Z",
-    "description": "",
-    "manifestHash": "86E2E91331940A466D542712E62E552760767DC57E16236806C975068D81FA9F",
+    "manifestHash": "F3E46B5DF297B6132D679E65A4D3594FFCDE2793C08B25D0765BD78321A31F36",
+    "version": "3.17.2",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "D2FB4D4DF188C344D26FECC9C5081589182CFA9AA7497CE3D7606AE7F843CAAE"
+      "46B6CB71F3665706EDF22A1AA40A2897EBD925F32C50D70495E387DE413EB8D2"
     ],
-    "validationCount": 1
+    "validationCount": 1,
+    "description": "",
+    "lastUpdated": "2026-11-19T17:07:28.1528934Z"
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
@@ -9684,15 +9684,15 @@
     "validationCount": 1
   },
   "WeeNote.WeeNote": {
-    "version": "2.9.29",
-    "validationCount": 1,
+    "manifestHash": "0D64C6A583D981EE167FDFC57EB09FE6063376532A45833B3C316C5DC705B2B8",
+    "version": "2.9.31",
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "manifestHash": "68FE89B34EEB93392A3EBF255F86AB62A98497939114DA706236E330A92E5412",
     "installerHashes": [
-      "17A3E0AC0F31250EED6D8B1F79715E84BF147ADD89F8305D63619BA2C2FB9B3C"
+      "09557A4DCB1184D6BA0CABE7D4F5B2A68762A402D09D9AAFBACB6A307772B192"
     ],
-    "lastUpdated": "2026-11-16T18:41:43.0268858Z"
+    "validationCount": 1,
+    "description": "",
+    "lastUpdated": "2026-11-19T17:07:28.1036612Z"
   },
   "weselow.beads-web": {
     "state": "VALIDATION_PASSED",
