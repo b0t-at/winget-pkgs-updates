@@ -1376,8 +1376,8 @@
       "89C529789031CEE20FAC0802BB7BD083E11C78FCCA618B5DC63DC395B35B5C09"
     ],
     "openPr": {
-      "checkedAt": "2026-11-17T21:07:38.8505606Z",
-      "version": "0.56.0"
+      "version": "0.56.0",
+      "checkedAt": "2026-11-19T00:30:04.686496Z"
     }
   },
   "ccccraz.cogmoteGO": {
@@ -1554,8 +1554,8 @@
     "validationCount": 1,
     "version": "1.0.48275",
     "openPr": {
-      "checkedAt": "2026-11-11T00:07:18.8769314Z",
-      "version": "1.15.0"
+      "version": "1.17.0",
+      "checkedAt": "2026-11-19T00:30:05.2490746Z"
     }
   },
   "ciromattia.KCC": {
