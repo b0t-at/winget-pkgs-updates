@@ -130,11 +130,7 @@
     "state": "VALIDATION_PASSED",
     "description": "",
     "version": "0.107.80",
-    "lastUpdated": "2026-11-04T21:18:12.9029596Z",
-    "openPr": {
-      "version": "0.107.80",
-      "checkedAt": "2026-11-19T11:46:42.8593735Z"
-    }
+    "lastUpdated": "2026-11-04T21:18:12.9029596Z"
   },
   "AdGuard.dnsproxy": {
     "installerHashes": [
@@ -4566,11 +4562,7 @@
     "version": "4.4.3",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D",
-    "openPr": {
-      "version": "4.5.0",
-      "checkedAt": "2026-11-18T18:40:30.3183606Z"
-    }
+    "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D"
   },
   "kmiya-culti.RLogin": {
     "lastUpdated": "2026-09-25T20:53:18.3452811Z",
