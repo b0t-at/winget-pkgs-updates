@@ -5636,15 +5636,15 @@
     "installerHashes": [
       "A3490FBCA2BE1B3B9C856E0F3A3C10B0C6DDE709A05FD0E3998EE8B0AFB0253E"
     ],
-    "lastUpdated": "2026-11-19T06:59:00.0378537Z",
-    "validationCount": 20
+    "lastUpdated": "2026-11-19T12:05:14.6264714Z",
+    "validationCount": 21
   },
   "MongoDB.Server": {
-    "validationCount": 29,
+    "validationCount": 30,
     "installerHashes": [
       "4841753F49C1E3E25D12FF63A049894B7D56E397F27F05303CCDE5144A6AE060"
     ],
-    "lastUpdated": "2026-11-19T06:59:00.0998935Z",
+    "lastUpdated": "2026-11-19T12:05:14.5409539Z",
     "manifestHash": "D5E9B6628252F1B384E18F5F0245D8B938F4D0CBA3A7A1958ED232B9E7B881E9",
     "state": "VALIDATION_PASSED",
     "version": "9.0.8",
@@ -5653,8 +5653,8 @@
   "MongoDB.Shell": {
     "manifestHash": "7178CCA5876E45CA7EF9D72FE34E0103006E69F41EAAEE4933F5BF3435ECC341",
     "version": "2.14.2",
-    "validationCount": 28,
-    "lastUpdated": "2026-11-19T06:59:00.0770489Z",
+    "validationCount": 29,
+    "lastUpdated": "2026-11-19T12:05:14.5936629Z",
     "description": "",
     "installerHashes": [
       "D0EE64CAD724D4B69E066AD0DB95DD1F1D85F9A685C649A1EBC1F769414025D3"
