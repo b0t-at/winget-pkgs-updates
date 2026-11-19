@@ -132,8 +132,8 @@
     "version": "0.107.80",
     "lastUpdated": "2026-11-04T21:18:12.9029596Z",
     "openPr": {
-      "checkedAt": "2026-11-18T09:50:29.9664925Z",
-      "version": "0.107.80"
+      "version": "0.107.80",
+      "checkedAt": "2026-11-19T11:46:42.8593735Z"
     }
   },
   "AdGuard.dnsproxy": {
@@ -4268,8 +4268,8 @@
     "lastUpdated": "2026-08-06T14:10:17.3921348Z",
     "manifestHash": "1E843D90602194E32EF0F84E333BE9BC20D09621BCA43AA304BDA7952A621BAB",
     "openPr": {
-      "checkedAt": "2026-11-18T09:51:39.5839786Z",
-      "version": "0.47.1"
+      "version": "0.47.1",
+      "checkedAt": "2026-11-19T11:47:52.2260196Z"
     }
   },
   "jmrplens.gitlab-mcp-server": {
@@ -4306,7 +4306,11 @@
     ],
     "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "9A4DF16EBDCE59232C54B5DF04D449A66D61F5A11ADD46BF707CB15A166AB223"
+    "manifestHash": "9A4DF16EBDCE59232C54B5DF04D449A66D61F5A11ADD46BF707CB15A166AB223",
+    "openPr": {
+      "version": "20.0.0",
+      "checkedAt": "2026-11-19T11:47:52.6309609Z"
+    }
   },
   "JosephFinney.Text-Grab": {
     "version": "4.16.0",
@@ -4458,8 +4462,8 @@
     "validationCount": 1,
     "version": "18.1.1",
     "openPr": {
-      "checkedAt": "2026-11-18T09:51:40.679814Z",
-      "version": "18.1.10"
+      "version": "18.1.11",
+      "checkedAt": "2026-11-19T11:47:53.040523Z"
     }
   },
   "KellyBrazil.jc": {
