@@ -469,14 +469,14 @@
   },
   "AppFlowy.AppFlowy": {
     "version": "0.15.1",
-    "validationCount": 1,
-    "state": "VALIDATION_FAILED",
+    "validationCount": 2,
+    "state": "VALIDATION_PASSED",
     "description": "",
     "manifestHash": "E226F9341023E655E18D522B04BB3EA417295F5641357B0D73869DDF88D67D79",
     "installerHashes": [
       "7CA3952D876B2226B506156131EF390C5130C9372E974011649D90AC15094721"
     ],
-    "lastUpdated": "2026-11-16T18:41:42.5031371Z"
+    "lastUpdated": "2026-11-19T05:30:48.6808225Z"
   },
   "AppiumDevelopers.AppiumInspector": {
     "state": "VALIDATION_FAILED",
@@ -669,9 +669,9 @@
   "AsterPrivacy.AsterMail": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "3E4907CED814A52F1A80F5D62F8239BB1D20E7002363CECE1D27A1229C72A064",
-    "validationCount": 2,
+    "validationCount": 3,
     "version": "1.4.83",
-    "lastUpdated": "2026-11-18T09:44:24.1223956Z",
+    "lastUpdated": "2026-11-19T05:30:48.660429Z",
     "description": "",
     "installerHashes": [
       "E089049B74221839EB86C702A27929E58E1C7C0E8FF08962ABB3582907B3FA19"
@@ -1249,15 +1249,15 @@
     }
   },
   "BytecodeAlliance.Wasmtime.Portable": {
-    "installerHashes": [
-      "C3646EE2DE8CFCEFE532E75852E1FD2728D78C3FCC43251794803A698D1C30CA"
-    ],
-    "version": "50.0.1",
-    "description": "",
     "validationCount": 1,
-    "lastUpdated": "2026-10-30T01:47:57.3943235Z",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "E1E1F1678EB7C71D8E572BCF076CB9061F3514757546EA0E909A1DBCB5E95399"
+    "installerHashes": [
+      "BADC727127EB5D7039B3C2C728900D48DCB2D4A91C87C0C92C242394B7957B88"
+    ],
+    "lastUpdated": "2026-11-19T05:30:48.5705221Z",
+    "version": "50.0.2",
+    "manifestHash": "A714797A1B6EBD547F0707CB91390BA9476337B5812E566E7641767F158867C5",
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "ByteNess.AWSVault": {
     "description": "",
@@ -1426,16 +1426,16 @@
     "lastUpdated": "2026-11-18T18:32:42.8362197Z"
   },
   "CerberAuth.jwtop": {
-    "description": "",
     "validationCount": 1,
-    "version": "0.8.0",
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "0639BB3C481DB96028BCE568B54E6A102D60FBA1E6E0A1AF215D2FD961EC1B2A",
     "installerHashes": [
-      "2C2E5436808226A4FB61B548A94ABED39B50DF66901A4BC65BD851EFA96E6640",
-      "0D8AA5516882E6DF6E6C794D1D96781D21E117C4CB5AC4352822E095B15C2D80"
+      "5C2963A1DA50268C5B4B6ECF08919D99FFC9BC9D3C751B40EE28A3CEDFC04993",
+      "2AA55FD84026DC8EA2A29C6A132E1092BC5566C57A3BC423AC450035D6B4CAEF"
     ],
-    "lastUpdated": "2026-09-06T01:22:32.448039Z"
+    "lastUpdated": "2026-11-19T05:30:48.5117332Z",
+    "version": "0.9.0",
+    "manifestHash": "5FAAE0C11428795AA427D2B2E75900D688A2A8F055759DBF00E56242394AC3DF",
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "CerberAuth.openapi-oathkeeper": {
     "state": "VALIDATION_PASSED",
@@ -2103,16 +2103,16 @@
     "state": "VALIDATION_PASSED"
   },
   "Docker.DockerCompose": {
-    "version": "5.7.2",
-    "lastUpdated": "2026-11-17T14:45:55.3147946Z",
-    "description": "",
-    "manifestHash": "C98A6A4C4D14A45468F7A02144FC8C4016E2EA74C0EC9D608E8269A7E6B93431",
-    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
     "installerHashes": [
-      "14B0F56D597539DD87E41E86047AAA350BBC6F1ECCF98386AAB77626BB3FD96B",
-      "46E393B4E4E26958FEFCA5999C73ED456B8111ECB8ED260074A27FF349B67A51"
+      "0C2D9245A5F61E8E3CC85009B8B4888FA82FDED08239D28BD6DA5CA818EDA2B2",
+      "EC7A100A77D9AEDBAA6E2B13A10140729860B58B8D2B6855D8191C52E7DD50FC"
     ],
-    "validationCount": 1
+    "lastUpdated": "2026-11-19T05:30:48.5914544Z",
+    "version": "5.8.0",
+    "manifestHash": "892C727B242933AEBB7565089324923D6D565AC4730BE2D3FF653716706410B5",
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "Docker.ds": {
     "lastUpdated": "2026-08-18T17:25:14.0317211Z",
@@ -4245,11 +4245,11 @@
     "installerHashes": [
       "4ECCAA86B78001108B039DC0A715BC88B4F30C26AA4472893AB918FE83D50717"
     ],
-    "lastUpdated": "2026-11-15T11:15:09.4350806Z",
+    "lastUpdated": "2026-11-19T05:30:48.4383318Z",
     "description": "",
     "version": "0.1.55",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "1CDF373E5D7CE2D6FB9498A1256DE47183997C609CF7E5F4B616D9901E5B19CE"
   },
   "jj-vcs.jj": {
@@ -4822,7 +4822,7 @@
     "version": "2026.8.2"
   },
   "loft-sh.vcluster": {
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
     "installerHashes": [
       "99ED6F02D3C9503CC08712D28F88CC2FE9BD1845E39FF2704B4B446F7E049309"
@@ -4830,7 +4830,7 @@
     "version": "0.38.0",
     "manifestHash": "6B8DD1B417C78C2B988C0818718140EE5956E80A3C06548D3F83444423D6BF5C",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-18T18:32:42.945561Z"
+    "lastUpdated": "2026-11-19T05:30:48.4808484Z"
   },
   "Longbridge.LongbridgeTerminal": {
     "description": "",
@@ -6023,15 +6023,15 @@
     "manifestHash": "5EBE8F78A880C1167C195458B3FF9ABDF521346435DFAF5B823B4BBB584E98FD"
   },
   "NimaShafie.OxideSLOC": {
-    "manifestHash": "18BADCCAB82EE7AA4F4C69B7B736E2545641EA988F0D75D82DA57D0440691613",
-    "validationCount": 2,
-    "state": "VALIDATION_PASSED",
-    "version": "1.6.29",
+    "validationCount": 1,
     "installerHashes": [
-      "D9E08C39E13E71D19B07E7FFC2FB2389B364255F301A70E59464A8746F76E665"
+      "83C2A84F3285987DDF28C69098C6A16FD9C1522743F48188CB6B1260BAE04A69"
     ],
+    "lastUpdated": "2026-11-19T05:30:48.7182935Z",
+    "version": "1.6.31",
+    "manifestHash": "1C738CE803A79610E9263341326061D0B78A0564E210A69921CF8D7E662363BE",
     "description": "",
-    "lastUpdated": "2026-11-14T08:23:58.1285227Z"
+    "state": "VALIDATION_PASSED"
   },
   "Nisonxi.PowerDoze": {
     "manifestHash": "5E5B5D669F1C795D7C92E12BA9F8F1950B7A5E916932F136DD5C4E3AE1D12A26",
@@ -6222,14 +6222,14 @@
   },
   "Odonno.jj-commit": {
     "validationCount": 1,
-    "lastUpdated": "2026-10-11T08:56:47.1937857Z",
-    "version": "0.46.0",
-    "description": "",
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "EA94A20B59C6BE3BEE64C49A570BEBF33BDA4924B9A22B8CD0E2A4B60A3698B8"
+      "F24D3FF41856BA8B7B3C9BF9965F25E7F83B28CC4CBB127C08092B5171C5FD27"
     ],
-    "manifestHash": "7D5D8082016FB1A407907D0126EED4A1C115564EE58906F735279FFDA07FFEC2"
+    "lastUpdated": "2026-11-19T05:30:48.5356605Z",
+    "version": "0.47.0",
+    "manifestHash": "28B96CD3E0D59708F9F143CC081C3093036B97B6930B05E8F618D9AA2FF2DF41",
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "OliverSchwendener.ueli": {
     "installerHashes": [
@@ -6350,9 +6350,9 @@
     "manifestHash": "A6EA0C41ABBCB410F9A2F04F49FF94D9261F06C80BF8D69654B3DAD5AA9C30CB"
   },
   "OnionShare.OnionShare": {
-    "lastUpdated": "2026-11-11T09:18:50.7530523Z",
+    "lastUpdated": "2026-11-19T05:30:48.7506234Z",
     "description": "",
-    "validationCount": 7,
+    "validationCount": 8,
     "manifestHash": "EEEECCBAD7237F197E85810E114DC3CDDA76B0EE074CC2FA7986075138A90F9D",
     "state": "VALIDATION_PASSED",
     "version": "2.7.2",
@@ -8481,15 +8481,15 @@
     }
   },
   "Storj.Uplink": {
-    "version": "1.166.3",
+    "validationCount": 1,
     "installerHashes": [
-      "876EAB96BC1C426EEFAEC767C47D922D99D5E76CC79BB3211A8CC5BF3F72E33F"
+      "DA932546F3F97D17607AE4B538BB86B7D112C17BEB889481AC58EC1F4F9259A3"
     ],
-    "validationCount": 3,
-    "state": "VALIDATION_FAILED",
-    "manifestHash": "452028DA8D508F8DA3EAC2BB4BA0B0B8632D932917B026869121E1EFFCCC04AF",
+    "lastUpdated": "2026-11-19T05:30:48.6383167Z",
+    "version": "1.166.4",
+    "manifestHash": "0BB97627A7CF60B768889B95B833CCE4E72DCFE59236403BA0EA412C0C17FA5A",
     "description": "",
-    "lastUpdated": "2026-11-11T16:50:30.9101617Z"
+    "state": "VALIDATION_PASSED"
   },
   "str4d.rage": {
     "state": "VALIDATION_PASSED",
@@ -8652,14 +8652,14 @@
   },
   "TacitDynamics.FolderSync": {
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-27T21:44:30.9472242Z",
     "installerHashes": [
-      "11ED70DB843F6FFC1C59F835448404A4DB38053943FE6496F71EF1D29CE3F51C"
+      "94828496800568D4DB79F8A9C04558240434382F9392CCAED041FD33F97C490D"
     ],
-    "manifestHash": "17C550AA82D0FBFF0EB450E048471E16DFAA9EF1480D9BE3562C25846F61F400",
+    "lastUpdated": "2026-11-19T05:30:48.61764Z",
+    "version": "2.16.0",
+    "manifestHash": "01B12AD11D4DCCD601398F2326131C50C5D891C82FCA79704B5A3682CB0D6AA5",
     "description": "",
-    "version": "2.15.0"
+    "state": "VALIDATION_PASSED"
   },
   "tagspaces.tagspaces": {
     "lastUpdated": "2026-11-18T09:44:24.2187275Z",
