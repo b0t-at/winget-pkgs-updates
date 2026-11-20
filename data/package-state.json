@@ -130,7 +130,11 @@
     "version": "1.0.0",
     "lastUpdated": "2026-11-20T20:06:19.587273Z",
     "description": "",
-    "manifestHash": "1E972B788DEB3CCD2DE087ABA6E781FE1BF60DD0E208A03F568825A01383C5B4"
+    "manifestHash": "1E972B788DEB3CCD2DE087ABA6E781FE1BF60DD0E208A03F568825A01383C5B4",
+    "openPr": {
+      "version": "1.0.0",
+      "checkedAt": "2026-11-20T20:30:03.206278Z"
+    }
   },
   "AdGuard.dnsproxy": {
     "installerHashes": [
@@ -472,7 +476,11 @@
     "installerHashes": [
       "7CA3952D876B2226B506156131EF390C5130C9372E974011649D90AC15094721"
     ],
-    "lastUpdated": "2026-11-20T20:06:19.3058991Z"
+    "lastUpdated": "2026-11-20T20:06:19.3058991Z",
+    "openPr": {
+      "version": "0.15.1",
+      "checkedAt": "2026-11-20T20:30:05.0465094Z"
+    }
   },
   "AppiumDevelopers.AppiumInspector": {
     "state": "VALIDATION_FAILED",
@@ -570,7 +578,11 @@
     "version": "3.6.2",
     "lastUpdated": "2026-11-20T20:06:18.7595481Z",
     "description": "",
-    "manifestHash": "2EDD37C60F83E33DEB0D6C574F5ABDF94EE2B3E2B69A85BFCE377C7DA7F8F692"
+    "manifestHash": "2EDD37C60F83E33DEB0D6C574F5ABDF94EE2B3E2B69A85BFCE377C7DA7F8F692",
+    "openPr": {
+      "version": "3.6.2",
+      "checkedAt": "2026-11-20T20:30:05.5533369Z"
+    }
   },
   "Arihant25.Chargle": {
     "description": "",
@@ -633,7 +645,11 @@
     "validationCount": 5,
     "manifestHash": "DAA7F958064D593FA2B7D696AC863E8B5ED4E8547BCA5EF3C7A6BA2ED948D2CD",
     "version": "1.47.2",
-    "lastUpdated": "2026-11-20T20:06:19.204308Z"
+    "lastUpdated": "2026-11-20T20:06:19.204308Z",
+    "openPr": {
+      "version": "1.47.2",
+      "checkedAt": "2026-11-20T20:30:07.3064766Z"
+    }
   },
   "asheroto.MessagesforWeb": {
     "state": "VALIDATION_PASSED",
@@ -834,7 +850,11 @@
     "version": "1.28.110",
     "manifestHash": "7139DA5DD5E53B45C9A40119267AA514A940F53FC6910C6CCA413ED6AD859671",
     "validationCount": 1,
-    "lastUpdated": "2026-11-20T20:06:19.4227727Z"
+    "lastUpdated": "2026-11-20T20:06:19.4227727Z",
+    "openPr": {
+      "version": "1.28.110",
+      "checkedAt": "2026-11-20T20:30:08.0120527Z"
+    }
   },
   "bdash-app.bdash": {
     "installerHashes": [
@@ -1253,11 +1273,7 @@
     "lastUpdated": "2026-11-20T13:02:07.3985775Z",
     "installerHashes": [
       "D1E3FBCA4AF955381104065AFC5147770A58D02ABB768CBA547909C8BF0B455A"
-    ],
-    "openPr": {
-      "checkedAt": "2026-11-20T14:25:25.9635844Z",
-      "version": "50.0.3"
-    }
+    ]
   },
   "ByteNess.AWSVault": {
     "state": "VALIDATION_PASSED",
@@ -1567,7 +1583,11 @@
       "3360F4F290FFA2A04DE557FE4048EEF9B098F5B31030AA5EC8FE7A66D7174BF0"
     ],
     "lastUpdated": "2026-11-20T20:06:18.4830021Z",
-    "validationCount": 2
+    "validationCount": 2,
+    "openPr": {
+      "version": "13.0.1",
+      "checkedAt": "2026-11-20T20:30:11.0446714Z"
+    }
   },
   "cjpais.Handy": {
     "description": "",
@@ -1732,7 +1752,11 @@
     "version": "0.35.0",
     "lastUpdated": "2026-11-20T20:06:18.5320671Z",
     "description": "",
-    "manifestHash": "3C48DC295A758FAB6722DE26E7B62D54C5F3076191A04E2CB95FAA60134CDFDB"
+    "manifestHash": "3C48DC295A758FAB6722DE26E7B62D54C5F3076191A04E2CB95FAA60134CDFDB",
+    "openPr": {
+      "version": "0.35.0",
+      "checkedAt": "2026-11-20T20:30:11.5070862Z"
+    }
   },
   "CrewHaus.CLI": {
     "state": "VALIDATION_PASSED",
@@ -2309,7 +2333,11 @@
     "version": "0.232.0",
     "lastUpdated": "2026-11-20T20:06:19.2553249Z",
     "description": "",
-    "manifestHash": "4455B3C9BCA74C0647B4124B0A16B00CB09B4E894A13243A11A418CD4E077C4B"
+    "manifestHash": "4455B3C9BCA74C0647B4124B0A16B00CB09B4E894A13243A11A418CD4E077C4B",
+    "openPr": {
+      "version": "0.232.0",
+      "checkedAt": "2026-11-20T20:30:14.0057289Z"
+    }
   },
   "electerm.electerm": {
     "lastUpdated": "2026-08-06T10:56:40.3920689Z",
@@ -2422,7 +2450,11 @@
     "version": "3.3.4",
     "state": "VALIDATION_PASSED",
     "validationCount": 6,
-    "manifestHash": "3630B6D855E126CB037364A230066995072C9BC084F34B2B02B24165B9EBEB41"
+    "manifestHash": "3630B6D855E126CB037364A230066995072C9BC084F34B2B02B24165B9EBEB41",
+    "openPr": {
+      "version": "3.3.4",
+      "checkedAt": "2026-11-20T20:30:14.4719822Z"
+    }
   },
   "ErichDonahue.SpinnerforDiscogs": {
     "state": "VALIDATION_PASSED",
@@ -2748,7 +2780,11 @@
     "version": "32.0.0",
     "lastUpdated": "2026-11-20T20:06:19.3311551Z",
     "description": "",
-    "manifestHash": "65789FCB79C20C49A34925F65FEE1FCDDFF54F28C4F3EE6A598EC45C30B6F303"
+    "manifestHash": "65789FCB79C20C49A34925F65FEE1FCDDFF54F28C4F3EE6A598EC45C30B6F303",
+    "openPr": {
+      "version": "32.0.0",
+      "checkedAt": "2026-11-20T20:30:17.5105121Z"
+    }
   },
   "Fission.Fission.CLI": {
     "validationCount": 1,
@@ -2866,7 +2902,11 @@
     "version": "3.20.13",
     "lastUpdated": "2026-11-20T20:06:18.4336633Z",
     "description": "",
-    "manifestHash": "19561705FD0C4BEC0F011001C83E406BE7D0BEFDA8FC769A0D5D3C69F95864B4"
+    "manifestHash": "19561705FD0C4BEC0F011001C83E406BE7D0BEFDA8FC769A0D5D3C69F95864B4",
+    "openPr": {
+      "version": "3.20.13",
+      "checkedAt": "2026-11-20T20:31:06.2718876Z"
+    }
   },
   "FrancisBanyikwa.MediaDownloader": {
     "installerHashes": [
@@ -2889,7 +2929,11 @@
     "version": "6.3.13",
     "lastUpdated": "2026-11-20T20:06:19.2301477Z",
     "description": "",
-    "manifestHash": "113ECB7F3315A20072480337B840CD8A3584C7B4C375346E427A3EE9C8BF8B70"
+    "manifestHash": "113ECB7F3315A20072480337B840CD8A3584C7B4C375346E427A3EE9C8BF8B70",
+    "openPr": {
+      "version": "6.3.13",
+      "checkedAt": "2026-11-20T20:31:06.8176627Z"
+    }
   },
   "FrankZhu.ZManagerCLI": {
     "description": "",
@@ -4846,7 +4890,11 @@
     "version": "2.20.1",
     "lastUpdated": "2026-11-20T20:06:18.8622425Z",
     "description": "",
-    "manifestHash": "30DE11FA0A5FEAB9F085844F34D12C9306443E660C1C3B31A03DFE070EC557DB"
+    "manifestHash": "30DE11FA0A5FEAB9F085844F34D12C9306443E660C1C3B31A03DFE070EC557DB",
+    "openPr": {
+      "version": "2.20.1",
+      "checkedAt": "2026-11-20T20:31:10.0168727Z"
+    }
   },
   "LocalStack.localstack-cli": {
     "description": "",
@@ -4866,7 +4914,11 @@
     "version": "0.38.0",
     "manifestHash": "6B8DD1B417C78C2B988C0818718140EE5956E80A3C06548D3F83444423D6BF5C",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-20T20:06:19.1154Z"
+    "lastUpdated": "2026-11-20T20:06:19.1154Z",
+    "openPr": {
+      "version": "0.38.0",
+      "checkedAt": "2026-11-20T20:31:10.6129214Z"
+    }
   },
   "Longbridge.LongbridgeTerminal": {
     "description": "",
