@@ -1253,7 +1253,11 @@
     "lastUpdated": "2026-11-20T13:02:07.3985775Z",
     "installerHashes": [
       "D1E3FBCA4AF955381104065AFC5147770A58D02ABB768CBA547909C8BF0B455A"
-    ]
+    ],
+    "openPr": {
+      "checkedAt": "2026-11-20T14:25:25.9635844Z",
+      "version": "50.0.3"
+    }
   },
   "ByteNess.AWSVault": {
     "description": "",
@@ -4276,8 +4280,8 @@
     "lastUpdated": "2026-08-06T14:10:17.3921348Z",
     "manifestHash": "1E843D90602194E32EF0F84E333BE9BC20D09621BCA43AA304BDA7952A621BAB",
     "openPr": {
-      "version": "0.47.1",
-      "checkedAt": "2026-11-19T11:47:52.2260196Z"
+      "checkedAt": "2026-11-20T14:26:26.4814739Z",
+      "version": "0.47.1"
     }
   },
   "jmrplens.gitlab-mcp-server": {
@@ -4470,8 +4474,8 @@
     "validationCount": 1,
     "version": "18.1.1",
     "openPr": {
-      "version": "18.1.11",
-      "checkedAt": "2026-11-19T11:47:53.040523Z"
+      "checkedAt": "2026-11-20T14:26:26.9614069Z",
+      "version": "18.1.11"
     }
   },
   "KellyBrazil.jc": {
@@ -4574,7 +4578,11 @@
     "version": "4.4.3",
     "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D"
+    "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D",
+    "openPr": {
+      "checkedAt": "2026-11-20T14:26:27.4812176Z",
+      "version": "4.5.1"
+    }
   },
   "kmiya-culti.RLogin": {
     "lastUpdated": "2026-09-25T20:53:18.3452811Z",
@@ -4597,7 +4605,11 @@
     "lastUpdated": "2026-11-20T11:53:50.6983636Z",
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "description": ""
+    "description": "",
+    "openPr": {
+      "checkedAt": "2026-11-20T14:26:27.9550638Z",
+      "version": "5.1.0.0"
+    }
   },
   "koedame.chordsketch": {
     "state": "VALIDATION_PASSED",
