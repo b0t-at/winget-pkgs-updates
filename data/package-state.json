@@ -396,14 +396,14 @@
     "version": "0.2.0"
   },
   "AnInsomniacy.Aria2Next": {
-    "state": "VALIDATION_FAILED",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
       "33F13B297EBE219B99F098B1B21C9EC34EFF90E20ED106CF3C86B210A7567351",
       "5724B6E36418EB46783EEE21BBE3C76C7185AE93BDE564F3E8117A591487B13B"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "3.1.1",
-    "lastUpdated": "2026-11-20T20:06:18.0401827Z",
+    "lastUpdated": "2026-11-20T20:46:31.1408295Z",
     "description": "",
     "manifestHash": "4FD3D9BF84405C5F8FC0CA8245137E13E0D7C7702894337E4DAC9312E4FF55F3"
   },
@@ -7014,9 +7014,9 @@
       "E3855B00A3A813BF9FD7C24031913E9247CFA3EA4B9B6C122A9EFB3A7FC6EC6C"
     ],
     "version": "3.0.4",
-    "lastUpdated": "2026-11-18T09:44:23.9655098Z",
+    "lastUpdated": "2026-11-20T20:46:31.0606673Z",
     "state": "VALIDATION_FAILED",
-    "validationCount": 2
+    "validationCount": 3
   },
   "Picocrypt-NG.Picocrypt-NG": {
     "installerHashes": [
@@ -7197,10 +7197,10 @@
   "Primesieve.Primesieve": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "8DCB91D6B59326BFEAE925F871CF82120F618F0ECC733A3D36E2051589BEF262",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "12.18",
     "description": "",
-    "lastUpdated": "2026-11-16T05:56:52.1735029Z",
+    "lastUpdated": "2026-11-20T20:46:31.0948735Z",
     "installerHashes": [
       "E0861BB0DAFFDEE70838D4181382427C427A8A461D90F01D64A076183944686B",
       "D6636792106DB18EF34686D1AA8B8DFE715E899D55E9339C02EA9CB1234CDF50"
@@ -8097,9 +8097,9 @@
       "4F5793186063AD609AFB761B37DC74A565B076A8C8EF9D3E45B9706FA92C27DE"
     ],
     "version": "0.10.0",
-    "validationCount": 4,
+    "validationCount": 5,
     "manifestHash": "5337CD7711E89FE5333867086306CE140E694A23F7D5E90F0255D89AB01D2B31",
-    "lastUpdated": "2026-11-19T23:02:43.7616972Z",
+    "lastUpdated": "2026-11-20T20:46:31.1123029Z",
     "state": "VALIDATION_PASSED"
   },
   "Shssoichiro.Oxipng": {
