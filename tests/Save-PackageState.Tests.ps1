@@ -214,6 +214,56 @@ exit 1
         Assert-True -Condition (-not (Test-Path (Join-Path $gitDirectory $operationPath))) -Message "Interrupted git operation remains at $operationPath."
     }
 
+    Write-Host 'TEST: concurrent lastUpdated writes keep the later timestamp'
+    $timestampRepos = New-TestRepositories -Root (Join-Path $testRoot 'timestamp')
+    $timestampAPath = Join-Path $timestampRepos.WriterA 'data/package-state.json'
+    $timestampBPath = Join-Path $timestampRepos.WriterB 'data/package-state.json'
+
+    $timestampAState = Get-Content -LiteralPath $timestampAPath -Raw | ConvertFrom-Json -AsHashtable
+    $timestampAState['Shared.Package']['lastUpdated'] = '2026-08-06T00:00:00.0000000Z'
+    $timestampAState['Shared.Package']['description'] = 'timestamp writer A'
+    Write-TestState -Path $timestampAPath -State $timestampAState
+    Save-PackageState -StateFilePath $timestampAPath -RepoPath $timestampRepos.WriterA
+
+    $timestampBState = Get-Content -LiteralPath $timestampBPath -Raw | ConvertFrom-Json -AsHashtable
+    $timestampBState['Shared.Package']['lastUpdated'] = '2026-08-05T00:00:00.0000000Z'
+    $timestampBState['Shared.Package']['state'] = 'VALIDATION_PASSED'
+    Write-TestState -Path $timestampBPath -State $timestampBState
+    Save-PackageState -StateFilePath $timestampBPath -RepoPath $timestampRepos.WriterB
+
+    $timestampVerification = Join-Path $testRoot 'timestamp-verification'
+    Invoke-TestGit -Repository $testRoot -Arguments @('clone', '--branch', 'main', $timestampRepos.Remote, $timestampVerification) | Out-Null
+    $timestampMerged = Get-Content -LiteralPath (Join-Path $timestampVerification 'data/package-state.json') -Raw |
+        ConvertFrom-Json -AsHashtable -DateKind String
+    $mergedTimestamp = [datetimeoffset]::Parse($timestampMerged['Shared.Package']['lastUpdated'], [Globalization.CultureInfo]::InvariantCulture)
+    Assert-Equal -Actual $mergedTimestamp.UtcDateTime.ToString('o') -Expected '2026-08-06T00:00:00.0000000Z' -Message 'The later lastUpdated value should win.'
+    Assert-Equal -Actual $timestampMerged['Shared.Package']['description'] -Expected 'timestamp writer A' -Message 'Writer A field update was lost.'
+    Assert-Equal -Actual $timestampMerged['Shared.Package']['state'] -Expected 'VALIDATION_PASSED' -Message 'Writer B field update was lost.'
+
+    Write-Host 'TEST: concurrent writes to the same non-timestamp value still fail'
+    $scalarRepos = New-TestRepositories -Root (Join-Path $testRoot 'scalar')
+    $scalarAPath = Join-Path $scalarRepos.WriterA 'data/package-state.json'
+    $scalarBPath = Join-Path $scalarRepos.WriterB 'data/package-state.json'
+
+    $scalarAState = Get-Content -LiteralPath $scalarAPath -Raw | ConvertFrom-Json -AsHashtable
+    $scalarAState['Shared.Package']['description'] = 'scalar writer A'
+    Write-TestState -Path $scalarAPath -State $scalarAState
+    Save-PackageState -StateFilePath $scalarAPath -RepoPath $scalarRepos.WriterA
+
+    $scalarBState = Get-Content -LiteralPath $scalarBPath -Raw | ConvertFrom-Json -AsHashtable
+    $scalarBState['Shared.Package']['description'] = 'scalar writer B'
+    Write-TestState -Path $scalarBPath -State $scalarBState
+
+    $scalarCaught = $null
+    try {
+        Save-PackageState -StateFilePath $scalarBPath -RepoPath $scalarRepos.WriterB
+    }
+    catch {
+        $scalarCaught = $_
+    }
+    Assert-True -Condition ($null -ne $scalarCaught) -Message 'A real scalar conflict should still throw.'
+    Assert-True -Condition ($scalarCaught.Exception.Message -match "Shared\.Package\.description") -Message 'The conflict should name the conflicting field.'
+
     Write-Host 'All Save-PackageState regression tests passed.' -ForegroundColor Green
 }
 finally {
