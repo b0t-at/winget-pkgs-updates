@@ -663,14 +663,14 @@
     }
   },
   "AsterPrivacy.AsterMail": {
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "3E4907CED814A52F1A80F5D62F8239BB1D20E7002363CECE1D27A1229C72A064",
-    "validationCount": 3,
-    "version": "1.4.83",
-    "lastUpdated": "2026-11-19T05:30:48.660429Z",
+    "state": "VALIDATION_FAILED",
+    "version": "1.4.85",
+    "validationCount": 1,
+    "manifestHash": "713DB36EEDA5C3093E4E911626E6254EC0A0FDF31DADB4106DA78213258F56A1",
     "description": "",
+    "lastUpdated": "2026-11-20T13:02:07.1619386Z",
     "installerHashes": [
-      "E089049B74221839EB86C702A27929E58E1C7C0E8FF08962ABB3582907B3FA19"
+      "90139843007D028966DC761177BBE689FB29459D50E8E4EC903F99BB2CC02FC1"
     ]
   },
   "AtaraxyLabs.sem": {
@@ -1245,15 +1245,15 @@
     }
   },
   "BytecodeAlliance.Wasmtime.Portable": {
+    "state": "VALIDATION_PASSED",
+    "version": "50.0.3",
     "validationCount": 1,
-    "installerHashes": [
-      "BADC727127EB5D7039B3C2C728900D48DCB2D4A91C87C0C92C242394B7957B88"
-    ],
-    "lastUpdated": "2026-11-19T05:30:48.5705221Z",
-    "version": "50.0.2",
-    "manifestHash": "A714797A1B6EBD547F0707CB91390BA9476337B5812E566E7641767F158867C5",
+    "manifestHash": "6B7A04A6DA7B76E00C28A9DE36280A525CF780441891644E0ED70B039AEDBF64",
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-11-20T13:02:07.3985775Z",
+    "installerHashes": [
+      "D1E3FBCA4AF955381104065AFC5147770A58D02ABB768CBA547909C8BF0B455A"
+    ]
   },
   "ByteNess.AWSVault": {
     "description": "",
@@ -1350,15 +1350,15 @@
     }
   },
   "CarthageSoftware.Mago": {
-    "description": "",
-    "validationCount": 1,
-    "manifestHash": "CD165515CD0D24510EF56CEB0A3720380DE0CAF5117A2A80A4B2B17286AA2832",
     "state": "VALIDATION_PASSED",
+    "version": "1.60.2",
+    "validationCount": 1,
+    "manifestHash": "39911159DAB736B3BA25D83DF5DE811F6E36CB94B458ECD97D95FCB003F8BD7F",
+    "description": "",
+    "lastUpdated": "2026-11-20T13:02:07.4951477Z",
     "installerHashes": [
-      "ECDF756F45308E11BA23A37A4AA449394673C45031D29B9034257E48AF2EFA07"
-    ],
-    "lastUpdated": "2026-10-25T21:11:26.4142226Z",
-    "version": "1.59.0"
+      "D9BFA9D911798AE9106771B0237CBF9D6212F7EEC6B0FD51824CFEB15418E198"
+    ]
   },
   "Carvel.ytt": {
     "lastUpdated": "2026-11-08T08:56:21.3354536Z",
@@ -1719,15 +1719,15 @@
     "validationCount": 2
   },
   "CrewHaus.CLI": {
-    "manifestHash": "329DAF014A24434DD64727ABA5C621C3E71A21C0AA1EEAD7D5291BD59D7B8455",
-    "validationCount": 5,
     "state": "VALIDATION_PASSED",
-    "version": "0.8.2",
-    "installerHashes": [
-      "239486CE94E2AF0A7B14430D5FA758B5F446BC0BACC5CFBD0331914E1A50DCA4"
-    ],
+    "version": "0.8.3",
+    "validationCount": 1,
+    "manifestHash": "9F8C2ECF4ABDA65D43B30335BBD1C995A9A8583050927EB9830CEB71CC37909A",
     "description": "",
-    "lastUpdated": "2026-11-17T21:00:22.6206274Z"
+    "lastUpdated": "2026-11-20T13:02:07.3239078Z",
+    "installerHashes": [
+      "07DA8AF440B2403F97D15DB72899121D6722B1D9E0631B052329FEB8FC65BE16"
+    ]
   },
   "CrossTech.ClipboardPro": {
     "manifestHash": "7AC779B69A9C87546A953B360DC9BE6A41D3394D155D63F72059B2D2CBB045FE",
@@ -2884,8 +2884,8 @@
       "80DC89068F5CD5F7F2F128621B1C9D50C813E18423DFDAA616A420029388F938",
       "A58795D0F7EA3FAFA1C555F3ADEC434F3C94035D5D6E2B67083D429FD5CEA181"
     ],
-    "lastUpdated": "2026-11-17T21:00:22.7547071Z",
-    "validationCount": 1
+    "lastUpdated": "2026-11-20T13:02:07.3518634Z",
+    "validationCount": 2
   },
   "Frnsys.Half_earth": {
     "lastUpdated": "2026-11-19T23:02:44.0913508Z",
@@ -3013,9 +3013,9 @@
   "Gather.Gather": {
     "version": "1.41.3",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-18T18:32:42.6841348Z",
+    "lastUpdated": "2026-11-20T13:02:07.4235571Z",
     "manifestHash": "D4E32E1A5B121FDD1FBFB445D1B68DC6E46C9D52389B674D0BA7AF1229D0F8B9",
-    "validationCount": 10,
+    "validationCount": 11,
     "installerHashes": [
       "901BBF32D7E54EA260B99CECFDBAC5EDCC93710A58F324FD0F1D719DE2E843CF"
     ],
@@ -3476,9 +3476,9 @@
     ],
     "version": "4.3.0",
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-16T18:41:42.6344668Z",
-    "validationCount": 6
+    "state": "VALIDATION_FAILED",
+    "lastUpdated": "2026-11-20T13:02:07.2502193Z",
+    "validationCount": 7
   },
   "Hanselman.PeekDesktop": {
     "lastUpdated": "2026-08-20T21:12:49.5606509Z",
@@ -3817,11 +3817,11 @@
   },
   "hrkfdn.ncspot": {
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "validationCount": 3,
     "manifestHash": "E40266E598ECD18C8105C6241EE27DB20C8B9E900BC690C0EB899813BF2A8A24",
     "description": "",
     "version": "1.5.1",
-    "lastUpdated": "2026-11-15T11:15:09.2839125Z",
+    "lastUpdated": "2026-11-20T13:02:07.3011509Z",
     "installerHashes": [
       "3AF768346B3B7725DA22614E09479DC8889E255439B03698F62827389BE2989C"
     ]
@@ -4600,15 +4600,15 @@
     "description": ""
   },
   "koedame.chordsketch": {
+    "state": "VALIDATION_PASSED",
     "version": "0.9.1",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
+    "manifestHash": "1DBE6240A7E55E3EFA037B0B52BB320369461050C73E31CDCECBF0EC147FD94B",
     "description": "",
-    "manifestHash": "7EB755473DE041669503D2E99E20DA12134B06A35AE0E5E68C72257975D84497",
+    "lastUpdated": "2026-11-20T13:02:07.2789383Z",
     "installerHashes": [
       "C1918B0B8C9418A3ED8BC63401E9E1D6FF8BB1F9C65A887B215197F83CF1E38D"
-    ],
-    "lastUpdated": "2026-11-16T18:41:42.9662705Z"
+    ]
   },
   "KRTirtho.Spotube": {
     "manifestHash": "48B938BDAA7E2ADCDF3C6E7B71A7214AF24FFD5388F587258C452A189DDE760D",
@@ -6638,7 +6638,7 @@
     "version": "1.2"
   },
   "ORASProject.ORAS": {
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
     "installerHashes": [
       "C70D25E3463A161A5AEEDDD9FE5EF882C811DDE8115AB0883C0B87D3F0C50832",
@@ -6646,8 +6646,8 @@
     ],
     "version": "1.4.0",
     "manifestHash": "299EC02FBA88720D5740433F5FC96DB77183403E6B9464AEF9A97BEEB03AB2DB",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-18T18:32:42.9672927Z"
+    "state": "VALIDATION_FAILED",
+    "lastUpdated": "2026-11-20T13:02:07.2002017Z"
   },
   "orbatschow.kontext": {
     "lastUpdated": "2026-08-18T17:25:14.061431Z",
@@ -7414,15 +7414,15 @@
     "state": "VALIDATION_PASSED"
   },
   "REVENGE.StremioEnhanced": {
-    "lastUpdated": "2026-08-17T17:04:35.0144448Z",
-    "description": "",
-    "installerHashes": [
-      "BF15A6BA89FDF9D15E099F51C9FEA05767B6F60C91A6E003771AA31DBF58D2EC"
-    ],
+    "state": "VALIDATION_FAILED",
+    "version": "1.2.1",
     "validationCount": 1,
-    "manifestHash": "4ABB99F065E461B5BF21C0783DAAB401D07F91B62A43779E7677C1D06AE2B454",
-    "version": "1.2.0",
-    "state": "VALIDATION_PASSED"
+    "manifestHash": "F706028FB4AC1453984DEBA278EBF1EA25CBADA0740DF21D64A67CF2AD505A36",
+    "description": "",
+    "lastUpdated": "2026-11-20T13:02:07.1023467Z",
+    "installerHashes": [
+      "E34F32BEF0B6D6C032EB698F8B3417F9EA5940AAAFB6E79436EDC81B533EE149"
+    ]
   },
   "RicardoCabral.ajq": {
     "lastUpdated": "2026-08-16T21:14:49.1225709Z",
@@ -8577,10 +8577,10 @@
     "version": "2.32.1"
   },
   "sunfish-shogi.shogihome": {
-    "lastUpdated": "2026-11-15T17:24:45.5869867Z",
+    "lastUpdated": "2026-11-20T13:02:07.3777472Z",
     "description": "",
     "state": "VALIDATION_PASSED",
-    "validationCount": 4,
+    "validationCount": 5,
     "version": "1.30.0",
     "installerHashes": [
       "F306932F4061561A0EE93372B6C12AE3CEE770909AB07A8CB27E2039FDA0067A"
@@ -8747,13 +8747,13 @@
     }
   },
   "TaoufikJabbari.Tiger": {
-    "lastUpdated": "2026-11-17T21:00:22.4491377Z",
+    "lastUpdated": "2026-11-20T13:02:07.469079Z",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
       "C07BB5790A3348B263DE34FE3E6E26AEB8C91E37CD60B9D8F41D097CCFE752DF"
     ],
     "version": "0.9.0",
-    "validationCount": 4,
+    "validationCount": 5,
     "description": "",
     "manifestHash": "FDE6AE17D6321911541562218AFD4C2D162A2567666B1F6BA4B550DD320AE7CA"
   },
@@ -9674,16 +9674,16 @@
     "lastUpdated": "2026-08-16T17:10:10.9168706Z"
   },
   "WebCodr.jwtd": {
-    "lastUpdated": "2026-09-10T04:47:40.6178533Z",
-    "validationCount": 1,
-    "description": "",
-    "version": "5.7.0",
     "state": "VALIDATION_PASSED",
+    "version": "5.7.1",
+    "validationCount": 1,
+    "manifestHash": "3B1ED2030FC7AA95F8F6DC9EEB51C169E41F80F205EB2A89C050E4665B381230",
+    "description": "",
+    "lastUpdated": "2026-11-20T13:02:07.4445479Z",
     "installerHashes": [
-      "4C8FD855A613E90CC601D904B30A9EF8CA75130A620D86855CEF4595EEBCAF4B",
-      "16D8A31007DE27244E197C95FBF7EF2261740CD2066D4B2BA815DD21CDA7F700"
-    ],
-    "manifestHash": "4778486FE1249062CC4B703025E5C4C225E529344892722FD4946A1E0A0AFA1D"
+      "FAA76E5AF0AFE6A7DF38DB2FD967B1EF46AD460106C5E0627F27CA89B75AC74A",
+      "DE44CAB1393767605CC1742966DD2DC7E4A00970156D2CDAD0F0CE9C0AF8CCBE"
+    ]
   },
   "webosbrew.webOSDevManager": {
     "description": "",
