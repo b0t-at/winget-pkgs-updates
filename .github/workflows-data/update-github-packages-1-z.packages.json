@@ -2235,6 +2235,11 @@
     "url": "https://github.com/CoderKinley/Cli-Music-Player/releases/download/v{VERSION}/Musik-Setup.exe"
   },
   {
+    "id": "ConfluentInc.Confluent-CLI",
+    "repo": "confluentinc/cli",
+    "url": "https://github.com/confluentinc/cli/releases/download/v{VERSION}/confluent_{VERSION}_windows_amd64.zip https://github.com/confluentinc/cli/releases/download/v{VERSION}/confluent_{VERSION}_windows_amd64.exe"
+  },
+  {
     "id": "Containers.PodmanTUI",
     "repo": "containers/podman-tui",
     "url": "https://github.com/containers/podman-tui/releases/download/v{VERSION}/podman-tui-release-windows_amd64.zip"
