@@ -477,7 +477,7 @@
   "AppiumDevelopers.AppiumInspector": {
     "state": "VALIDATION_FAILED",
     "description": "",
-    "validationCount": 7,
+    "validationCount": 0,
     "installerHashes": [
       "289C764E3B1332DA9F1D8569298B41D77114323F8B3AA79B8AC05BA5BE64C60A"
     ],
@@ -599,7 +599,7 @@
       "4FB403EABABE2E8044E1FE85130E165F0D05C80A3306105F28B5C7967AFCD7BF"
     ],
     "manifestHash": "5B1E60DD4F74722A9C5465863A30B78B0A562014D9164E73B4D2118ABC58852A",
-    "validationCount": 4,
+    "validationCount": 0,
     "lastUpdated": "2026-11-11T09:18:50.5620506Z"
   },
   "Arnica.DepsGuard": {
@@ -833,7 +833,7 @@
     "description": "",
     "version": "1.28.110",
     "manifestHash": "7139DA5DD5E53B45C9A40119267AA514A940F53FC6910C6CCA413ED6AD859671",
-    "validationCount": 3,
+    "validationCount": 0,
     "lastUpdated": "2026-11-11T00:02:49.2731351Z"
   },
   "bdash-app.bdash": {
@@ -865,7 +865,7 @@
     }
   },
   "benaclejames.VRCFaceTracking": {
-    "validationCount": 3,
+    "validationCount": 0,
     "version": "5.2.3.0",
     "state": "VALIDATION_FAILED",
     "manifestHash": "24CB85B0336C9E0469E1CE8D4DB7DBF6E50F6AE6CF7AD5C53AE47DE6DB6867C4",
@@ -890,7 +890,7 @@
     "lastUpdated": "2026-11-18T09:44:23.7720208Z",
     "description": "",
     "state": "VALIDATION_FAILED",
-    "validationCount": 6,
+    "validationCount": 0,
     "version": "1.4.0.2",
     "installerHashes": [
       "044F54A1E53989C26751D564EBCA3FF193695869FE69FCC8CF62748492880E6F"
@@ -1363,7 +1363,7 @@
   "Carvel.ytt": {
     "lastUpdated": "2026-11-08T08:56:21.3354536Z",
     "description": "",
-    "validationCount": 4,
+    "validationCount": 0,
     "manifestHash": "F81AD47D321DF67490D49AC2F2B048F59A9EF06E1D90D108A97655667AC136B7",
     "state": "VALIDATION_FAILED",
     "version": "0.55.4",
@@ -1826,7 +1826,7 @@
   "cURL.cURL": {
     "manifestHash": "BBC68A1ADA303578FB0B6F6E4C9E7C6546E20453DFCA3DD97CA5B0E735E57964",
     "version": "8.23.0.9",
-    "validationCount": 21,
+    "validationCount": 0,
     "lastUpdated": "2026-11-17T11:46:46.3707902Z",
     "description": "",
     "installerHashes": [
@@ -2006,7 +2006,7 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "lastUpdated": "2026-11-11T13:47:29.1177142Z",
-    "validationCount": 4
+    "validationCount": 0
   },
   "Dimmy.Dimmy": {
     "installerHashes": [
@@ -2223,7 +2223,7 @@
       "179FC4288D088F7134BBBF6604DF130857FE4E510D69BC333A316D938B7AB3F7"
     ],
     "manifestHash": "E5360BCC0276AD34BC065EC7913A81EBA21DCFAAA1679E30DC6830C7ECCA6384",
-    "validationCount": 3,
+    "validationCount": 0,
     "lastUpdated": "2026-11-11T05:22:58.886095Z",
     "description": ""
   },
@@ -3292,7 +3292,7 @@
     "description": "",
     "version": "2.7.1",
     "manifestHash": "E3EAEF32CE17454BD7D4647149D661546FCD049FC9A40AFF0D3A04D608B580CB",
-    "validationCount": 4,
+    "validationCount": 0,
     "lastUpdated": "2026-11-11T16:50:31.0524503Z"
   },
   "Google.Protobuf": {
@@ -3383,7 +3383,7 @@
   "Gruntwork.Terragrunt": {
     "state": "VALIDATION_FAILED",
     "description": "",
-    "validationCount": 3,
+    "validationCount": 0,
     "installerHashes": [
       "C7C7A314143FC14D12DF720747A1D0CC1E90285CA66DD57E6AF1BB29A673A60F",
       "6B070D0460FA44A75AB2BE44F83BF599D6731234E29BD2DF19020A1001901186"
@@ -3409,7 +3409,7 @@
     ],
     "lastUpdated": "2026-06-30T01:55:05.0155128Z",
     "manifestHash": "B5442554C07DE0F7456B570F7F8B585E32275B2327EF2284DBD3E33F4A7D3C4F",
-    "validationCount": 3,
+    "validationCount": 0,
     "state": "VALIDATION_FAILED",
     "version": "8.1.2",
     "description": ""
@@ -3478,7 +3478,7 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "lastUpdated": "2026-11-20T13:02:07.2502193Z",
-    "validationCount": 7
+    "validationCount": 0
   },
   "Hanselman.PeekDesktop": {
     "lastUpdated": "2026-08-20T21:12:49.5606509Z",
@@ -4024,7 +4024,7 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "lastUpdated": "2026-11-12T06:11:59.3496579Z",
-    "validationCount": 3
+    "validationCount": 0
   },
   "iWillink.AgentDeck": {
     "validationCount": 1,
@@ -4059,7 +4059,7 @@
     "validationCount": 1
   },
   "jadquir.MRA": {
-    "validationCount": 3,
+    "validationCount": 0,
     "version": "0.2",
     "state": "VALIDATION_FAILED",
     "lastUpdated": "2026-07-14T09:10:16.8473047Z",
@@ -4619,7 +4619,7 @@
       "E5641F3841EC724FCB5E00A22D980F410EE507FDD00669B86DB0C29F9B741162"
     ],
     "state": "VALIDATION_FAILED",
-    "validationCount": 3,
+    "validationCount": 0,
     "configHealth": {
       "status": "AssetMissing",
       "detail": "No release asset matches: https://github.com/KRTirtho/spotube/releases/download/v6.0.0/Spotube-windows-x86_64-setup.exe https://github.com/KRTirtho/spotube/releases/download/v6.0.0/Spotube-windows-x86_64-setup.exe",
@@ -4765,7 +4765,7 @@
     "state": "VALIDATION_PASSED"
   },
   "LibreCAD.LibreCAD": {
-    "validationCount": 3,
+    "validationCount": 0,
     "installerHashes": [
       "D55588F6BBE59E2512EF0F1681246CFFF302B0EE78D9DC69B709F51FC917C207",
       "0CD876D0E3FBFCDCDB85E5019080ACA243908F4AD5C3B3C93A55EE9BA154F95B"
@@ -4821,7 +4821,7 @@
     "lastUpdated": "2026-11-11T05:22:58.9357893Z",
     "manifestHash": "AB65B170D4B2C5DCEA58210463F064697D7E40998988975AA48DB85A8C6EBA40",
     "state": "VALIDATION_FAILED",
-    "validationCount": 3,
+    "validationCount": 0,
     "version": "2.19.4"
   },
   "LocalStack.localstack-cli": {
@@ -4971,7 +4971,7 @@
       "5663FF38F795FD992444017E6158110F0C975706188D7F452A9D33C3F4CC4C63"
     ],
     "manifestHash": "537A26448C06C50895587F549ED14CA81DB1BD7C24979A731E0DD681DC4B2D4D",
-    "validationCount": 3,
+    "validationCount": 0,
     "lastUpdated": "2026-11-11T09:18:50.4692293Z"
   },
   "Luxview.AgainstMe": {
@@ -5817,7 +5817,7 @@
     ],
     "description": "",
     "state": "VALIDATION_FAILED",
-    "validationCount": 3,
+    "validationCount": 0,
     "lastUpdated": "2026-06-15T22:57:21.3918238Z",
     "manifestHash": "E7604595AD792C91D756B589D489D972674CAD64B5E211E2F2B6B99513C3CD51",
     "version": "2026.3"
@@ -5965,7 +5965,7 @@
       "88533CE3175F84B5FBF55230175F587716AAD66E83128D8198422DBB0A7C0BBA"
     ],
     "description": "",
-    "validationCount": 3,
+    "validationCount": 0,
     "state": "VALIDATION_FAILED",
     "version": "0.12.4",
     "lastUpdated": "2026-07-07T01:21:22.508437Z",
@@ -6582,7 +6582,7 @@
       "30BE3A5F017BEE124183BF9C493C1F0509F181CD73AAE1518CF7B5FB3B6EAB50",
       "7253ABF6CE9C0E88E0CC188C5C883E02353B6C5FFCF2125E6C307348CA223DF0"
     ],
-    "validationCount": 3,
+    "validationCount": 0,
     "version": "1.12.0",
     "lastUpdated": "2026-05-14T21:52:15.8886768Z",
     "description": "",
@@ -6748,7 +6748,7 @@
     ]
   },
   "panjie.mods": {
-    "validationCount": 3,
+    "validationCount": 0,
     "lastUpdated": "2026-11-11T13:47:29.0022356Z",
     "version": "5.1.0",
     "description": "",
@@ -6953,7 +6953,7 @@
     "description": "",
     "lastUpdated": "2026-11-11T09:18:50.5890821Z",
     "version": "8.3.7",
-    "validationCount": 7
+    "validationCount": 0
   },
   "PiusPP.Celestial": {
     "version": "2.1.0",
@@ -7011,7 +7011,7 @@
   "pnpm.pnpm": {
     "state": "VALIDATION_FAILED",
     "manifestHash": "0E46470DEE8293D4E4BF216762B9F3F53657EE8E77F89FDCA6AA07863AAB29EB",
-    "validationCount": 3,
+    "validationCount": 0,
     "version": "12.21.0",
     "description": "",
     "lastUpdated": "2026-11-18T18:32:42.6288499Z",
@@ -7107,7 +7107,7 @@
       "31020BF879894A81D81A4842B09FC888672EB046F525E9B9A0152D48407B27EF",
       "1385E71F200D08381CC6051D676E1B83BF3B35E9E186B48BFBB22ADF9D8933C2"
     ],
-    "validationCount": 3
+    "validationCount": 0
   },
   "Primesieve.Primesieve": {
     "state": "VALIDATION_PASSED",
@@ -7391,7 +7391,7 @@
     "state": "VALIDATION_PASSED"
   },
   "Reloaded-Project.Reloaded-II": {
-    "validationCount": 3,
+    "validationCount": 0,
     "state": "VALIDATION_FAILED",
     "description": "",
     "manifestHash": "929D7BAAE8C9766CD1062704AFADB268E84568C5004DB9E3D0104E42F7E99FFD",
@@ -7909,7 +7909,7 @@
   "seerge.g-helper": {
     "description": "",
     "lastUpdated": "2026-07-15T18:35:40.1209915Z",
-    "validationCount": 3,
+    "validationCount": 0,
     "installerHashes": [
       "D66052610F3CDAD4C10DFD969EF76F3A22329ECC5FA33B6F85852CECF802333C"
     ],
@@ -8140,7 +8140,7 @@
     ],
     "version": "1.0.0.9",
     "lastUpdated": "2026-05-11T15:42:46.9540533Z",
-    "validationCount": 3
+    "validationCount": 0
   },
   "Skvetter.DevPod": {
     "installerHashes": [
@@ -8559,7 +8559,7 @@
     ],
     "version": "1.1.9",
     "lastUpdated": "2026-05-11T15:42:46.9311925Z",
-    "validationCount": 3,
+    "validationCount": 0,
     "openPr": {
       "checkedAt": "2026-10-01T16:26:40.3269283Z",
       "version": "1.1.11"
@@ -9083,7 +9083,7 @@
     ],
     "version": "1.11.0",
     "lastUpdated": "2026-05-11T15:42:46.9420028Z",
-    "validationCount": 3,
+    "validationCount": 0,
     "configHealth": {
       "status": "AssetMissing",
       "detail": "No release asset matches: https://github.com/tom-englert/RegionToShare/releases/download/1.12.0/RegionToShare.zip",
@@ -9261,7 +9261,7 @@
   "Tyrrrz.LightBulb": {
     "lastUpdated": "2026-11-11T05:22:58.7989188Z",
     "description": "",
-    "validationCount": 3,
+    "validationCount": 0,
     "manifestHash": "014165BAC61FA0446E7B841B523B0976198D4FC6DF57202A8275C9C307E36A03",
     "state": "VALIDATION_FAILED",
     "version": "2.7.3",
@@ -9453,7 +9453,7 @@
     ],
     "state": "VALIDATION_FAILED",
     "manifestHash": "5078CCFDC2A2C685FFB1494D66F36437926C5E61959E437F8A980C9409660D8E",
-    "validationCount": 3
+    "validationCount": 0
   },
   "Vathivis.paperq": {
     "description": "",
@@ -9544,7 +9544,7 @@
     ],
     "version": "1.0.0.1",
     "lastUpdated": "2026-05-11T15:42:46.8925901Z",
-    "validationCount": 3
+    "validationCount": 0
   },
   "VirusTotal.vt-cli": {
     "installerHashes": [
@@ -10000,7 +10000,7 @@
       "9FDD48FF890E54FFDC37F92DF9037C940FE4D4F914755B70CC644B97E9678A83"
     ],
     "manifestHash": "07F3E52AE32B2C707E9B40D8D823534F1971DB0B3EEC35AC0ED531E3105D2B7B",
-    "validationCount": 3,
+    "validationCount": 0,
     "state": "VALIDATION_FAILED",
     "lastUpdated": "2026-11-11T05:22:58.7327974Z"
   },
