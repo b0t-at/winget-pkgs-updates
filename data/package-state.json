@@ -1794,7 +1794,11 @@
     "lastUpdated": "2026-11-20T11:53:50.8317996Z",
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "description": ""
+    "description": "",
+    "openPr": {
+      "version": "156.0.8078.100",
+      "checkedAt": "2026-11-20T12:21:08.8800653Z"
+    }
   },
   "cubezombies.MidnightAthenaeum": {
     "manifestHash": "888A7BADCA52EE5B42F755D91B950DA3D3AA1CFB03A6012120CE16761BA13129",
@@ -2246,7 +2250,7 @@
     "description": "",
     "openPr": {
       "version": "2.12.5",
-      "checkedAt": "2026-11-19T05:36:58.5289761Z"
+      "checkedAt": "2026-11-20T12:21:10.0343254Z"
     }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
@@ -2451,7 +2455,11 @@
     "lastUpdated": "2026-11-20T11:53:50.6468271Z",
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "description": ""
+    "description": "",
+    "openPr": {
+      "version": "3.28.1",
+      "checkedAt": "2026-11-20T12:21:54.2149726Z"
+    }
   },
   "Essenciary.Githical": {
     "version": "0.1.5",
@@ -3073,7 +3081,11 @@
     "version": "4.0.1",
     "lastUpdated": "2026-11-20T11:53:50.6119223Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 4
+    "validationCount": 4,
+    "openPr": {
+      "version": "4.0.1",
+      "checkedAt": "2026-11-20T12:22:00.0172541Z"
+    }
   },
   "getzola.zola": {
     "manifestHash": "2AD0D8502E653E34D70DC1A01F61D1061D3ED1D053F514354B49F5E4D9C22AB7",
@@ -4202,7 +4214,7 @@
     "validationCount": 1,
     "openPr": {
       "version": "8.1.3-2",
-      "checkedAt": "2026-11-19T05:38:00.0879202Z"
+      "checkedAt": "2026-11-20T12:22:02.0412801Z"
     }
   },
   "Jellyfin.Server": {
