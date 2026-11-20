@@ -196,6 +196,56 @@ function Save-PackageState {
         return $Left.GetType() -eq $Right.GetType() -and $Left -ceq $Right
     }
 
+    $mergeableTimestampKeys = @('lastUpdated')
+
+    function ConvertTo-StateTimestamp {
+        param(
+            [Parameter(Mandatory = $false)]
+            [AllowNull()]
+            [object] $Value
+        )
+
+        if ($Value -is [datetime]) {
+            return $Value.ToUniversalTime()
+        }
+        if ($Value -is [datetimeoffset]) {
+            return $Value.UtcDateTime
+        }
+
+        $parsed = [datetime]::MinValue
+        $styles = [System.Globalization.DateTimeStyles]::AdjustToUniversal -bor
+            [System.Globalization.DateTimeStyles]::AssumeUniversal
+        if ($Value -is [string] -and
+            [datetime]::TryParse($Value, [System.Globalization.CultureInfo]::InvariantCulture, $styles, [ref]$parsed)) {
+            return $parsed
+        }
+
+        return $null
+    }
+
+    function Select-LatestStateTimestamp {
+        param(
+            [Parameter(Mandatory = $false)]
+            [AllowNull()]
+            [object] $Local,
+
+            [Parameter(Mandatory = $false)]
+            [AllowNull()]
+            [object] $Remote
+        )
+
+        $localTime = ConvertTo-StateTimestamp -Value $Local
+        $remoteTime = ConvertTo-StateTimestamp -Value $Remote
+        if ($null -eq $localTime -or $null -eq $remoteTime) {
+            return $null
+        }
+
+        if ($localTime -ge $remoteTime) {
+            return $Local
+        }
+        return $Remote
+    }
+
     function Merge-StateObject {
         param(
             [Parameter(Mandatory = $true)]
@@ -248,6 +298,16 @@ function Save-PackageState {
                 $remoteValue -is [System.Collections.IDictionary]) {
                 $result[$key] = Merge-StateObject -Base $baseValue -Local $localValue -Remote $remoteValue -Path $childPath
                 continue
+            }
+
+            # A timestamp written by both workflows always differs, so it is
+            # not a real conflict: keep the later of the two values.
+            if ($key -in $mergeableTimestampKeys -and $localExists -and $remoteExists) {
+                $latest = Select-LatestStateTimestamp -Local $localValue -Remote $remoteValue
+                if ($null -ne $latest) {
+                    $result[$key] = $latest
+                    continue
+                }
             }
 
             throw "Concurrent package state conflict at '$childPath'. Both writers changed the same value."
