@@ -1830,14 +1830,14 @@
   "cURL.cURL": {
     "manifestHash": "BBC68A1ADA303578FB0B6F6E4C9E7C6546E20453DFCA3DD97CA5B0E735E57964",
     "version": "8.23.0.9",
-    "validationCount": 0,
-    "lastUpdated": "2026-11-17T11:46:46.3707902Z",
+    "validationCount": 1,
+    "lastUpdated": "2026-11-20T14:33:14.4219697Z",
     "description": "",
     "installerHashes": [
       "89CB71930F4242D884E8E349463455932AB1D089B20F4F99318261A3CBFF9167",
       "2D95C0B751001739F66723A4B56716D13A86755E44C3BDD17A39FFA4BC87913D"
     ],
-    "state": "VALIDATION_FAILED"
+    "state": "VALIDATION_PASSED"
   },
   "CyberSkill.CyberOS": {
     "description": "",
@@ -5635,11 +5635,13 @@
   },
   "MongoDB.MongoDBAtlasCLI": {
     "description": "",
-    "installerHashes": "279F642AE21396AF189C4F0F94E99DA8D9E42E1FE3A3B2848A6E1B64F91F3E82",
-    "lastUpdated": "2026-11-20T12:27:56.9231126Z",
+    "installerHashes": [
+      "279F642AE21396AF189C4F0F94E99DA8D9E42E1FE3A3B2848A6E1B64F91F3E82"
+    ],
+    "lastUpdated": "2026-11-20T14:33:14.3359054Z",
     "manifestHash": "32C2F90FF7EC560D86AB3586C81EEF55B5419B4D5F6ADF6F7ACF6EEBE2F78FF4",
-    "state": "VALIDATION_FAILED",
-    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "validationCount": 2,
     "version": "1.60.1"
   },
   "MongoDB.MongoDBCLI": {
