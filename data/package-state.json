@@ -5622,15 +5622,13 @@
     ]
   },
   "MongoDB.MongoDBAtlasCLI": {
-    "installerHashes": [
-      "279F642AE21396AF189C4F0F94E99DA8D9E42E1FE3A3B2848A6E1B64F91F3E82"
-    ],
+    "description": "",
+    "installerHashes": "279F642AE21396AF189C4F0F94E99DA8D9E42E1FE3A3B2848A6E1B64F91F3E82",
+    "lastUpdated": "2026-11-20T12:27:56.9231126Z",
+    "manifestHash": "32C2F90FF7EC560D86AB3586C81EEF55B5419B4D5F6ADF6F7ACF6EEBE2F78FF4",
     "state": "VALIDATION_FAILED",
     "validationCount": 1,
-    "description": "",
-    "version": "1.60.1",
-    "lastUpdated": "2026-11-20T12:22:44.7525415Z",
-    "manifestHash": "32C2F90FF7EC560D86AB3586C81EEF55B5419B4D5F6ADF6F7ACF6EEBE2F78FF4"
+    "version": "1.60.1"
   },
   "MongoDB.MongoDBCLI": {
     "state": "VALIDATION_PASSED",
