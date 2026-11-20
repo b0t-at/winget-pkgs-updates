@@ -5628,30 +5628,30 @@
     "installerHashes": [
       "A3490FBCA2BE1B3B9C856E0F3A3C10B0C6DDE709A05FD0E3998EE8B0AFB0253E"
     ],
-    "lastUpdated": "2026-11-20T06:19:45.2424612Z",
-    "validationCount": 25
+    "lastUpdated": "2026-11-20T11:55:43.0832899Z",
+    "validationCount": 26
   },
   "MongoDB.Server": {
-    "validationCount": 34,
+    "validationCount": 35,
     "installerHashes": [
       "4841753F49C1E3E25D12FF63A049894B7D56E397F27F05303CCDE5144A6AE060"
     ],
-    "lastUpdated": "2026-11-20T06:19:45.2795841Z",
+    "lastUpdated": "2026-11-20T11:55:43.1664258Z",
     "manifestHash": "D5E9B6628252F1B384E18F5F0245D8B938F4D0CBA3A7A1958ED232B9E7B881E9",
     "state": "VALIDATION_PASSED",
     "version": "9.0.8",
     "description": ""
   },
   "MongoDB.Shell": {
-    "validationCount": 3,
-    "version": "2.14.3",
-    "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "5CA3A99787824BC56515DB66822E8192712102A227C9543A027EF18A923A8C65",
+    "lastUpdated": "2026-11-20T11:55:43.1379096Z",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "manifestHash": "A7475AF109B9E49779FF824B0F953CCAA2ACA02ACA87E61B07D07776D11F9982",
+    "version": "2.14.3",
     "installerHashes": [
-      "D49CAAA5C4BEAA6D937216C2BCA88A1A93F1FC5C9D206A9329D46FE1B91109C3"
-    ],
-    "lastUpdated": "2026-11-20T06:19:45.313925Z"
+      "31169084A2B571A426D5BE678997C65F3FE00C482C5059DA0FB41DD584EE9E70"
+    ]
   },
   "MonzerOsman.YallaVideo": {
     "lastUpdated": "2026-08-16T21:14:49.0622805Z",
