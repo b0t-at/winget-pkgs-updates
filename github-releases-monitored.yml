@@ -1459,10 +1459,9 @@
           - id: "CoderKinley.Musik"
             repo: "CoderKinley/Cli-Music-Player"
             url: "https://github.com/CoderKinley/Cli-Music-Player/releases/download/v{VERSION}/Musik-Setup.exe"
-          # ConfluentInc.Confluent-CLI is excluded: previously disabled; re-added by a scan, see the earlier commented entry
-#          - id: "ConfluentInc.Confluent-CLI"
-#            repo: "confluentinc/cli"
-#            url: "https://github.com/confluentinc/cli/releases/download/v{VERSION}/confluent_{VERSION}_windows_amd64.zip https://github.com/confluentinc/cli/releases/download/v{VERSION}/confluent_{VERSION}_windows_amd64.exe"
+          - id: "ConfluentInc.Confluent-CLI"
+            repo: "confluentinc/cli"
+            url: "https://github.com/confluentinc/cli/releases/download/v{VERSION}/confluent_{VERSION}_windows_amd64.zip https://github.com/confluentinc/cli/releases/download/v{VERSION}/confluent_{VERSION}_windows_amd64.exe"
           - id: "Containers.PodmanTUI"
             repo: "containers/podman-tui"
             url: "https://github.com/containers/podman-tui/releases/download/v{VERSION}/podman-tui-release-windows_amd64.zip"
@@ -3437,9 +3436,6 @@
 #          - id: "Microsoft.Azure.Kubelogin" - komac removes portablecmdlinealias
 #            repo: "Azure/kubelogin"
 #            url: "https://github.com/Azure/kubelogin/releases/download/v{VERSION}/kubelogin-win-amd64.zip"
-          #- id: "ConfluentInc.Confluent-CLI"
-          #  repo: "confluentinc/cli"
-          #  url: "https://github.com/confluentinc/cli/releases/download/v{VERSION}/confluent_{VERSION}_windows_amd64.zip"
 #          - id: "GaetanSencie.Retro-asteroid-war"
 #            repo: "STENS66/Retro-asteroid-war"
 #            url: "https://github.com/STENS66/Retro-asteroid-war/releases/download/V{VERSION}/Retro-asteroid-war.exe"
