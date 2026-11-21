@@ -2285,8 +2285,8 @@
     "lastUpdated": "2026-10-29T09:22:10.7111402Z",
     "description": "",
     "openPr": {
-      "version": "2.12.5",
-      "checkedAt": "2026-11-20T12:21:10.0343254Z"
+      "checkedAt": "2026-11-21T16:14:58.8307423Z",
+      "version": "2.12.5"
     }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
@@ -4366,11 +4366,7 @@
     ],
     "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "9A4DF16EBDCE59232C54B5DF04D449A66D61F5A11ADD46BF707CB15A166AB223",
-    "openPr": {
-      "version": "20.0.0",
-      "checkedAt": "2026-11-19T11:47:52.6309609Z"
-    }
+    "manifestHash": "9A4DF16EBDCE59232C54B5DF04D449A66D61F5A11ADD46BF707CB15A166AB223"
   },
   "JosephFinney.Text-Grab": {
     "version": "4.16.0",
@@ -4628,7 +4624,7 @@
     "description": "",
     "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D",
     "openPr": {
-      "checkedAt": "2026-11-20T14:26:27.4812176Z",
+      "checkedAt": "2026-11-21T16:15:04.1702114Z",
       "version": "4.5.1"
     }
   },
