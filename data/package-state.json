@@ -907,10 +907,10 @@
     "version": "0.5"
   },
   "BenjaminLSR.HandheldCompanion": {
-    "lastUpdated": "2026-11-20T20:06:17.9736694Z",
+    "lastUpdated": "2026-11-21T20:47:30.1522252Z",
     "description": "",
-    "state": "VALIDATION_FAILED",
-    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "validationCount": 2,
     "version": "1.4.0.2",
     "installerHashes": [
       "044F54A1E53989C26751D564EBCA3FF193695869FE69FCC8CF62748492880E6F"
@@ -1139,16 +1139,16 @@
     }
   },
   "BlackwellSystems.agent-lsp": {
-    "description": "",
-    "installerHashes": [
-      "1EEFE87039946EB628F7C77CE440E01B45DF24A6D05FF7AA1AF5A41B5C83A082",
-      "B668EB58FE7923D6B79B6D2B9DBAB7557386B6C250CA782CD39DBC7700199F64"
-    ],
+    "manifestHash": "1E368CD7FCBC3BAC62FCB1C53CBD35DC3A01A9E7C0727A9F62457C21D07086E7",
+    "version": "0.24.3",
     "validationCount": 1,
-    "manifestHash": "825739825281F581EAAAE903A39D2BCF257704829C066EF33C5EFE5AF1B88AE3",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-05T04:55:31.6353992Z",
-    "version": "0.24.2"
+    "state": "VALIDATION_FAILED",
+    "lastUpdated": "2026-11-21T20:47:30.0332765Z",
+    "installerHashes": [
+      "0B8C7F6B0C8C254CE3F78730F2A650F067A45A58E5A350F719A77651846712C5",
+      "7E74FADD79C3B4A582CC0AE5F6C8431A8917144A44D68CF0C4188DA1FF2E5509"
+    ],
+    "description": ""
   },
   "BlackwellSystems.shelfctl": {
     "manifestHash": "E6A5C090C621B9CC81504F055C837993516333A4A4A711B48325CF67BB128651",
@@ -1821,16 +1821,16 @@
     "lastUpdated": "2026-08-19T15:56:01.4509515Z"
   },
   "CryptoPro.Chromium-Gost": {
-    "version": "156.0.8078.100",
-    "manifestHash": "29FE59562877F6E76C704C131E0DDD9659E82A3C4AB74C010F58399DD5B98A8E",
+    "description": "",
     "installerHashes": [
-      "44DF677AA87AC40096D8EB6A0560704ADD7CBDC3E82DA2CE0BC9B7C7CBBD4F9D",
-      "B939AA26CF8F0A46671D56EFADB7CA77FF601FA0E38A60ED64C438E07798EE1F"
+      "0F81348531A515F75539093167B661B8A68050E13D80C6DD74B11E1C55DFA097",
+      "476939BBC0CA8A75B935774A9D82CC680A7CE1E46A9A22BE9C95FA390A45ACAC"
     ],
-    "lastUpdated": "2026-11-20T11:53:50.8317996Z",
+    "lastUpdated": "2026-11-21T20:47:30.0945735Z",
+    "manifestHash": "AA095161A726AB9006C4AC5C23AA880FB6F668679905702093FBD44D40A30B28",
+    "state": "VALIDATION_FAILED",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "description": ""
+    "version": "156.0.8078.108"
   },
   "cubezombies.MidnightAthenaeum": {
     "manifestHash": "888A7BADCA52EE5B42F755D91B950DA3D3AA1CFB03A6012120CE16761BA13129",
@@ -3332,7 +3332,7 @@
     ]
   },
   "Google.OSVScanner": {
-    "state": "VALIDATION_FAILED",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
       "7121DCF420AEFBBF89A7F0050C4D3094E079FF93AFD334DFC96F16B02EC85800",
       "5F3998B55C9268F8468502BBCB60645038FD5B145EE5E685E6AE2A32E923AFC7"
@@ -3340,8 +3340,8 @@
     "description": "",
     "version": "2.7.1",
     "manifestHash": "E3EAEF32CE17454BD7D4647149D661546FCD049FC9A40AFF0D3A04D608B580CB",
-    "validationCount": 1,
-    "lastUpdated": "2026-11-20T20:06:17.9098637Z"
+    "validationCount": 2,
+    "lastUpdated": "2026-11-21T20:47:30.1815473Z"
   },
   "Google.Protobuf": {
     "version": "36.2",
@@ -9212,15 +9212,15 @@
     "version": "4.26.3"
   },
   "TravisLane.SteamArtManager": {
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "13D25D73FDCFAEEEBDFF103FC752F7E347673B6DADCB1A8C77D829402A6500D7"
-    ],
+    "manifestHash": "927EA3768BC0CD9E28118964573B961B087B59F6CFEC7B7B98506CBD092A4897",
+    "version": "3.32.0",
     "validationCount": 1,
-    "version": "3.31.0",
-    "lastUpdated": "2026-11-20T20:06:19.0428192Z",
-    "description": "",
-    "manifestHash": "F4D082A197DD70DC99F634421E952DF8E9B63E541D97CE82F6FB51530EA41581"
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-21T20:47:30.1180133Z",
+    "installerHashes": [
+      "B481C8505992DEC27007CBE96AB1468E0A238FD596AF1B6CFA89F1B7F6C8DF53"
+    ],
+    "description": ""
   },
   "TrellisLab.Trellis": {
     "installerHashes": [
