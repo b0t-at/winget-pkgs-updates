@@ -1113,13 +1113,13 @@
     "manifestHash": "A6DBD6DA1E8E60C2D16D54892AA5FD6582A15938B9D5EBEEA95D288829EA5C1F"
   },
   "Bitwarden.DirectoryConnector.CLI": {
-    "state": "VALIDATION_FAILED",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
       "FBAF7D273065DDAE853E6C66DA8783E13FD1983F4BF2BD748E209648FCE2B85B"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "2026.11.0",
-    "lastUpdated": "2026-11-20T20:06:18.1569212Z",
+    "lastUpdated": "2026-11-21T12:56:37.9887661Z",
     "description": "",
     "manifestHash": "26D0A7F49641079F26377A9289FD7FA7C221A1EF6A551341C94C0ED0FCC671EE"
   },
@@ -2529,15 +2529,15 @@
     ]
   },
   "etcd-io.etcd": {
+    "manifestHash": "D25F867EC838D2C6FA557B247C7C07737903BF7AB4BD8ECE704B59C843B5A368",
     "description": "",
-    "validationCount": 1,
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-25T12:55:45.2110058Z",
-    "version": "3.7.3",
-    "manifestHash": "E13ADB5689AB97EA2611D98CDCF8051AC82B8BFAA9280187D249B1F209CEF07A",
+    "lastUpdated": "2026-11-21T12:56:37.9129745Z",
     "installerHashes": [
-      "BF5F9C92E862CE776699166EC9AC003A1609E06EA7CC4D8B11B3F9E836A86101"
-    ]
+      "25CC2D77AF4FBB49A9CF0960E8C182783595172CC2DA815B1ACA19DF127E969D"
+    ],
+    "validationCount": 1,
+    "version": "3.7.4",
+    "state": "VALIDATION_PASSED"
   },
   "Ethersphere.Swarm-Desktop": {
     "lastUpdated": "2026-11-20T20:06:19.5362522Z",
@@ -5481,15 +5481,15 @@
     "manifestHash": "336ACF728F30A7C06AE649D238016A7BF249AF1240868426784209BAE241212B"
   },
   "Microsoft.PerfView": {
-    "validationCount": 1,
-    "manifestHash": "4B00EADB422BA4992CFAC85A6E4369A31D7EB38D423EC3A241EEC56CA0F0C618",
-    "version": "3.2.8",
+    "manifestHash": "813157FC2ED90829B74E23381ED3D266EE29A6B4B4E2C8116F4EFC57CD0DF73C",
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-30T01:45:49.4552061Z",
+    "lastUpdated": "2026-11-21T12:56:37.8852433Z",
     "installerHashes": [
-      "E6B89A6DA0FE7DA5F64302306153C6AAC7A4BE67C800426A91AE014093E4DF2D"
-    ]
+      "B89CDC4E2F23DB0D893824B4A75E095E5FA623B9A8BDD56D15380FDFA0D7709C"
+    ],
+    "validationCount": 1,
+    "version": "4.0.2",
+    "state": "VALIDATION_PASSED"
   },
   "Microsoft.Sqlcmd": {
     "validationCount": 2,
@@ -8183,8 +8183,8 @@
     "description": "",
     "version": "0.105.0",
     "manifestHash": "DDCE283A8E7B1F1E1DB95D3BE8D18B483C9023C68293F973D7C88CB25E20F092",
-    "validationCount": 5,
-    "lastUpdated": "2026-11-21T04:34:24.233349Z"
+    "validationCount": 6,
+    "lastUpdated": "2026-11-21T12:56:37.8545364Z"
   },
   "SimpleX.SimpleX-Chat": {
     "description": "",
@@ -9113,8 +9113,8 @@
   "Thurbeen.thurbox": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "827D18A30CC27CF0D14D33621DA7F14D70CBD081DA79065E2F996767B84A5664",
-    "lastUpdated": "2026-11-21T04:34:24.2196006Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-11-21T12:56:37.9652046Z",
+    "validationCount": 2,
     "installerHashes": [
       "7FA703F25BE3B541948E76232DE1262334E559FA434684AADC82C95F912F4EA2"
     ],
@@ -9629,15 +9629,15 @@
     }
   },
   "venipa.ytmdesktop": {
-    "manifestHash": "BCD3A81DA7B1A58AC401D22BE9BD15D770738EF71EEAECE12F69E3C04FDEB502",
-    "lastUpdated": "2026-10-21T04:51:29.7599416Z",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "manifestHash": "22154E406FF93FB765655FEE753CEF298A6D1DAA24DDD9FE16C693FA30C192C4",
     "description": "",
-    "version": "1.8.6",
+    "lastUpdated": "2026-11-21T12:56:37.8163226Z",
     "installerHashes": [
-      "67E7088819C77D83CE982A5D7F5D5AE5BCC9677E7B5DFF774B267B49E1699F5F"
-    ]
+      "F7813A601462168EE14A04F56412F0D1ECC70C3C7002F2506433C5CB051F3D01"
+    ],
+    "validationCount": 1,
+    "version": "1.9.0",
+    "state": "VALIDATION_PASSED"
   },
   "Victor141516.Voolime": {
     "installerHashes": [
@@ -9819,15 +9819,15 @@
     "validationCount": 1
   },
   "WeeNote.WeeNote": {
-    "manifestHash": "0D64C6A583D981EE167FDFC57EB09FE6063376532A45833B3C316C5DC705B2B8",
-    "version": "2.9.31",
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "09557A4DCB1184D6BA0CABE7D4F5B2A68762A402D09D9AAFBACB6A307772B192"
-    ],
-    "validationCount": 2,
+    "manifestHash": "6BFA52854ADDDF40CE1CD83D937D5D0170E3FD7C07191157975E370D1104FBA1",
     "description": "",
-    "lastUpdated": "2026-11-20T20:06:19.6998185Z"
+    "lastUpdated": "2026-11-21T12:56:37.9443141Z",
+    "installerHashes": [
+      "63503E281FAD36A698D1489B715FB1A7AF4565390D9764A9C03E987F2507AA2A"
+    ],
+    "validationCount": 1,
+    "version": "2.9.32",
+    "state": "VALIDATION_PASSED"
   },
   "weselow.beads-web": {
     "state": "VALIDATION_PASSED",
