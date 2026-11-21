@@ -1830,11 +1830,7 @@
     "lastUpdated": "2026-11-20T11:53:50.8317996Z",
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "openPr": {
-      "version": "156.0.8078.100",
-      "checkedAt": "2026-11-20T12:21:08.8800653Z"
-    }
+    "description": ""
   },
   "cubezombies.MidnightAthenaeum": {
     "manifestHash": "888A7BADCA52EE5B42F755D91B950DA3D3AA1CFB03A6012120CE16761BA13129",
@@ -7050,11 +7046,7 @@
     "description": "",
     "lastUpdated": "2026-11-20T20:06:18.5809423Z",
     "version": "8.3.7",
-    "validationCount": 1,
-    "openPr": {
-      "checkedAt": "2026-11-21T00:36:27.1679915Z",
-      "version": "8.3.7"
-    }
+    "validationCount": 1
   },
   "PiusPP.Celestial": {
     "version": "2.1.0",
