@@ -1,0 +1,14 @@
+{
+  "repository": "microsoft/winget-pkgs",
+  "pullRequestNumber": 484947,
+  "classification": "TransientInternalError",
+  "state": "RetryScheduled",
+  "recordedAt": "2026-11-21T06:48:03.0555535+00:00",
+  "retryAfter": "2026-11-21T07:48:03.0555474+00:00",
+  "learnedOverrideSignal": null,
+  "reason": "Infrastructure failure does not justify manifest mutation.",
+  "packageIdentifier": "ExpressLRS.ExpressLRS-Configurator",
+  "packageVersion": "1.8.5",
+  "evidence": [],
+  "installerTraits": null
+}

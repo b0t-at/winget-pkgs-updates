@@ -1,14 +1,14 @@
 {
   "repository": "microsoft/winget-pkgs",
-  "pullRequestNumber": 450526,
+  "pullRequestNumber": 484996,
   "classification": "InstallationFailure",
   "state": "Escalated",
-  "recordedAt": "2026-11-12T06:48:50.0694251+00:00",
+  "recordedAt": "2026-11-21T06:48:03.0515907+00:00",
   "retryAfter": null,
   "learnedOverrideSignal": null,
   "reason": "The installer failed upstream installation testing (unattended, shell-execute, driver or dependency); human-verified switches are required before resubmitting.",
-  "packageIdentifier": "Micronaut.Launch",
-  "packageVersion": "5.2.2",
+  "packageIdentifier": "sunfish-shogi.shogihome",
+  "packageVersion": "1.30.0",
   "evidence": [],
-  "installerTraits": "type=Zip;nested=Portable;scope=;elevation=;silent=;silentWithProgress=;interactive=;custom=;upgrade=;log=;installLocation=;repair="
+  "installerTraits": "type=Zip;nested=Nullsoft;scope=;elevation=;silent=;silentWithProgress=;interactive=;custom=;upgrade=;log=;installLocation=;repair="
 }

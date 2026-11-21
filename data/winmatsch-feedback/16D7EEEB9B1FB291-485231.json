@@ -1,0 +1,16 @@
+{
+  "repository": "microsoft/winget-pkgs",
+  "pullRequestNumber": 485231,
+  "classification": "UrlValidationError",
+  "state": "Escalated",
+  "recordedAt": "2026-11-21T06:48:02.7880188+00:00",
+  "retryAfter": null,
+  "learnedOverrideSignal": null,
+  "reason": "One or more manifest URLs failed upstream validation; drop or replace the URLs named in the validator comment before resubmitting.",
+  "packageIdentifier": "creativeprojects.resticprofile",
+  "packageVersion": "0.35.0",
+  "evidence": [
+    "https://creativeprojects.tech/"
+  ],
+  "installerTraits": null
+}
