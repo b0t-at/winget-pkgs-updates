@@ -5383,13 +5383,13 @@
     "version": "1.12"
   },
   "Microsoft.DotNet.UninstallTool": {
-    "state": "VALIDATION_FAILED",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
       "0B4944F3BEABAE25578F01AE38C60662B69C03584AB088DBFF04705F65083D4C"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "1.7.756201",
-    "lastUpdated": "2026-11-20T20:06:18.1906636Z",
+    "lastUpdated": "2026-11-21T04:34:24.2490412Z",
     "description": "",
     "manifestHash": "D79AD8C42A131BFC541325962C417356E026DD89313FB73432E85BF5099AC009"
   },
@@ -7496,11 +7496,11 @@
     "state": "VALIDATION_PASSED"
   },
   "Reloaded-Project.Reloaded-II": {
-    "validationCount": 0,
+    "validationCount": 1,
     "state": "VALIDATION_FAILED",
     "description": "",
     "manifestHash": "929D7BAAE8C9766CD1062704AFADB268E84568C5004DB9E3D0104E42F7E99FFD",
-    "lastUpdated": "2026-10-01T05:00:17.2702968Z",
+    "lastUpdated": "2026-11-21T04:34:24.1874874Z",
     "installerHashes": [
       "FB5EDE9F15686BA4A001082A75A77EDB5F9F181EDE6C31A80FF578257C5B7D4E"
     ],
@@ -8175,8 +8175,8 @@
     "description": "",
     "version": "0.105.0",
     "manifestHash": "DDCE283A8E7B1F1E1DB95D3BE8D18B483C9023C68293F973D7C88CB25E20F092",
-    "validationCount": 4,
-    "lastUpdated": "2026-11-19T17:07:28.2686248Z"
+    "validationCount": 5,
+    "lastUpdated": "2026-11-21T04:34:24.233349Z"
   },
   "SimpleX.SimpleX-Chat": {
     "description": "",
@@ -9100,14 +9100,14 @@
   },
   "Thurbeen.thurbox": {
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "15357EDC8C3F09DD529FFAFA1AE35BBF67C1A5EF648D6A26F579987E95794B28"
-    ],
+    "manifestHash": "827D18A30CC27CF0D14D33621DA7F14D70CBD081DA79065E2F996767B84A5664",
+    "lastUpdated": "2026-11-21T04:34:24.2196006Z",
     "validationCount": 1,
-    "version": "3.19.1",
-    "lastUpdated": "2026-11-20T20:06:20.7415959Z",
-    "description": "",
-    "manifestHash": "73CA87B614CB79FBD4DDD2BDD405EE2B39CF7C24F5B57DF2FD416C4D866AA8AD"
+    "installerHashes": [
+      "7FA703F25BE3B541948E76232DE1262334E559FA434684AADC82C95F912F4EA2"
+    ],
+    "version": "3.20.0",
+    "description": ""
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
@@ -9555,14 +9555,14 @@
   },
   "vantoan1511.TableView": {
     "description": "",
-    "lastUpdated": "2026-11-20T20:06:17.8129424Z",
+    "lastUpdated": "2026-11-21T04:34:24.1483116Z",
     "version": "0.7.1",
     "installerHashes": [
       "E9CCD9EFB339F8FE0457646D509E2FCD1E754099DDF38C97D784FF669418183E"
     ],
     "state": "VALIDATION_FAILED",
     "manifestHash": "5078CCFDC2A2C685FFB1494D66F36437926C5E61959E437F8A980C9409660D8E",
-    "validationCount": 1
+    "validationCount": 2
   },
   "Vathivis.paperq": {
     "description": "",
