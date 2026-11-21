@@ -1583,11 +1583,7 @@
       "3360F4F290FFA2A04DE557FE4048EEF9B098F5B31030AA5EC8FE7A66D7174BF0"
     ],
     "lastUpdated": "2026-11-20T20:06:18.4830021Z",
-    "validationCount": 2,
-    "openPr": {
-      "version": "13.0.1",
-      "checkedAt": "2026-11-20T20:30:11.0446714Z"
-    }
+    "validationCount": 2
   },
   "cjpais.Handy": {
     "description": "",
@@ -3141,11 +3137,7 @@
     "version": "4.0.1",
     "lastUpdated": "2026-11-20T11:53:50.6119223Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 4,
-    "openPr": {
-      "version": "4.0.1",
-      "checkedAt": "2026-11-20T12:22:00.0172541Z"
-    }
+    "validationCount": 4
   },
   "getzola.zola": {
     "manifestHash": "2AD0D8502E653E34D70DC1A01F61D1061D3ED1D053F514354B49F5E4D9C22AB7",
@@ -6356,8 +6348,8 @@
       "933794EE1D670137F5116C9DE7FC7DB092FA97C6B823ABA848DDB8A7EA030828"
     ],
     "openPr": {
-      "version": "0.40.16",
-      "checkedAt": "2026-11-10T00:34:06.5225461Z"
+      "version": "0.40.17",
+      "checkedAt": "2026-11-21T04:17:40.101669Z"
     }
   },
   "Ombrelin.PandocGui": {
@@ -8698,7 +8690,11 @@
     "installerHashes": [
       "F306932F4061561A0EE93372B6C12AE3CEE770909AB07A8CB27E2039FDA0067A"
     ],
-    "manifestHash": "B1B716023C04A31ACC5074A77A2D997B0021E9F195EA648CF6ECECEA7F5F1336"
+    "manifestHash": "B1B716023C04A31ACC5074A77A2D997B0021E9F195EA648CF6ECECEA7F5F1336",
+    "openPr": {
+      "version": "1.30.0",
+      "checkedAt": "2026-11-21T04:17:43.584531Z"
+    }
   },
   "SuperRadCompany.Microsandbox": {
     "manifestHash": "3A33F9E19751A2B12B5BAB43AFB4B5ECCB686424AF8A4C3F1A2CE65162C047D3",
@@ -8986,8 +8982,8 @@
     "manifestHash": "101A50462A6E2BE19AFB17A21278EA44597559D970949753840897CFC30A7566",
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
-      "checkedAt": "2026-11-12T10:25:47.820596Z",
-      "version": "5.7.1"
+      "version": "5.7.1",
+      "checkedAt": "2026-11-21T04:17:44.6657635Z"
     }
   },
   "termio.soft-jp.com.TermioWin": {
