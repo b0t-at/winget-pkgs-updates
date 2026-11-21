@@ -232,14 +232,14 @@
     "lastUpdated": "2026-10-28T12:41:12.8538476Z"
   },
   "aimotrens.impulsar": {
-    "state": "VALIDATION_FAILED",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
       "2AEA84501BC5BECA988BC21AD1188513E36174052D53FD4ADB672891EDC161AB",
       "5E048978C471B1758B8F22677B9C9C2D96BDDB4950AADA36AD6E8288D555997E"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "0.19.16",
-    "lastUpdated": "2026-11-20T20:06:18.2983234Z",
+    "lastUpdated": "2026-11-21T08:35:45.343938Z",
     "description": "",
     "manifestHash": "62C4085E7154F71F73D513F7B22D7C0C13CAC07B33C99E599084961AAE4613F5"
   },
@@ -3794,15 +3794,15 @@
     "validationCount": 1
   },
   "holland-built.Bloxsmith": {
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "C3F226582B4264E98355E4374CD292D9EBBBFDF7159B9A0245C6F080C826DDEA"
+      "F5AB9275B52293CA76779C5E0C67AFFD8066F28AEF8AD62A944680F65D3D909F"
     ],
     "validationCount": 1,
-    "version": "3.181.0",
-    "lastUpdated": "2026-11-20T20:06:20.4180784Z",
     "description": "",
-    "manifestHash": "93DDA0A2072553B0FA5A6A1F73C76B8FFD99E024CB2508298572CCCC53252ABA"
+    "manifestHash": "078FB9A9D2E04CFD8FB3DBDD119F0E3FA701B235E75C5A009FD74CD205414938",
+    "lastUpdated": "2026-11-21T08:35:45.2711702Z",
+    "version": "3.183.0",
+    "state": "VALIDATION_PASSED"
   },
   "HongMinhee.Gukhanmun": {
     "state": "VALIDATION_PASSED",
@@ -7527,15 +7527,15 @@
     "manifestHash": "6DBEB645462019DBF33DE02AF3B38FD21ACE2CE3376929F7D99793686231CDF5"
   },
   "REVENGE.StremioEnhanced": {
-    "state": "VALIDATION_FAILED",
-    "version": "1.2.1",
-    "validationCount": 1,
-    "manifestHash": "F706028FB4AC1453984DEBA278EBF1EA25CBADA0740DF21D64A67CF2AD505A36",
-    "description": "",
-    "lastUpdated": "2026-11-20T13:02:07.1023467Z",
     "installerHashes": [
       "E34F32BEF0B6D6C032EB698F8B3417F9EA5940AAAFB6E79436EDC81B533EE149"
-    ]
+    ],
+    "validationCount": 1,
+    "description": "",
+    "manifestHash": "ACC84608731B8FB04DA8D6E82C2DA55DE0A6C468ECF271804430047E063BAFC4",
+    "lastUpdated": "2026-11-21T08:35:45.3698123Z",
+    "version": "1.2.1",
+    "state": "VALIDATION_PASSED"
   },
   "RicardoCabral.ajq": {
     "lastUpdated": "2026-08-16T21:14:49.1225709Z",
@@ -8267,15 +8267,15 @@
     "manifestHash": "E287E5EFDF457EB47DC8F18007B1E361CAE20763BDA63DD266E50CCF3C4BAC3A"
   },
   "skyhook-io.Radar": {
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "768444A40168FB9ED906B691FC99BCE04E6E26CCC54F1D185E98466CE882BE2A"
+      "50C7C42E7A84C8D259C0E9F25670FA61E2221375B0CC6567AD57CC0B13DB684F"
     ],
     "validationCount": 1,
-    "version": "1.21.0",
-    "lastUpdated": "2026-11-20T20:06:20.5470292Z",
     "description": "",
-    "manifestHash": "D5BD88A6493FFCE1A8AD98D038B89A2D7D69970D4BAD6994802EE8DD5E6126AD"
+    "manifestHash": "256C0941C0BEB07A9F424B187B40D08B5187D2F6B53069F858D264E86724A7FE",
+    "lastUpdated": "2026-11-21T08:35:45.3138399Z",
+    "version": "1.21.1",
+    "state": "VALIDATION_PASSED"
   },
   "Skylot.jadx": {
     "version": "1.5.7",
