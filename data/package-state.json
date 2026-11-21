@@ -1392,8 +1392,8 @@
       "89C529789031CEE20FAC0802BB7BD083E11C78FCCA618B5DC63DC395B35B5C09"
     ],
     "openPr": {
-      "version": "0.56.0",
-      "checkedAt": "2026-11-20T05:24:17.5521536Z"
+      "checkedAt": "2026-11-21T08:17:30.154065Z",
+      "version": "0.56.0"
     }
   },
   "ccccraz.cogmoteGO": {
@@ -5391,7 +5391,11 @@
     "version": "1.7.756201",
     "lastUpdated": "2026-11-21T04:34:24.2490412Z",
     "description": "",
-    "manifestHash": "D79AD8C42A131BFC541325962C417356E026DD89313FB73432E85BF5099AC009"
+    "manifestHash": "D79AD8C42A131BFC541325962C417356E026DD89313FB73432E85BF5099AC009",
+    "openPr": {
+      "checkedAt": "2026-11-21T08:18:27.6280522Z",
+      "version": "1.7.756201"
+    }
   },
   "Microsoft.DSC": {
     "manifestHash": "56B79F3888AB3E359448E97F0D4AA9F794CF6D75D262441C41A13EBC9945AD9A",
@@ -5497,7 +5501,11 @@
       "50C441F39C7087679BC23A957FD1AE1C67A0B47DFE7B93EF611921F41FD5697C",
       "7C82DECB3914A960494DE072FB0D9C6A16BE9A4269B7503451595D4FE45D0F4E"
     ],
-    "description": ""
+    "description": "",
+    "openPr": {
+      "checkedAt": "2026-11-21T08:18:28.8592873Z",
+      "version": "1.11.0"
+    }
   },
   "Microsoft.Wassette": {
     "state": "VALIDATION_PASSED",
@@ -9029,7 +9037,11 @@
     "version": "4.9.10",
     "lastUpdated": "2026-11-20T20:06:18.2280726Z",
     "description": "",
-    "manifestHash": "0B9D762B473B847DC1A31F3FCFF7B844D9212EB7E44127F1B39104414EBBAE17"
+    "manifestHash": "0B9D762B473B847DC1A31F3FCFF7B844D9212EB7E44127F1B39104414EBBAE17",
+    "openPr": {
+      "checkedAt": "2026-11-21T08:18:33.4326555Z",
+      "version": "4.9.10"
+    }
   },
   "tg123.oci-to-wsl": {
     "description": "",
