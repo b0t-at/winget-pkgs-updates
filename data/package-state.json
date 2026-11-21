@@ -5493,11 +5493,7 @@
     "lastUpdated": "2026-09-30T01:45:49.4552061Z",
     "installerHashes": [
       "E6B89A6DA0FE7DA5F64302306153C6AAC7A4BE67C800426A91AE014093E4DF2D"
-    ],
-    "openPr": {
-      "checkedAt": "2026-10-19T08:35:27.3036428Z",
-      "version": "4.0.0"
-    }
+    ]
   },
   "Microsoft.Sqlcmd": {
     "validationCount": 2,
@@ -6073,7 +6069,11 @@
     "version": "1.8.0",
     "lastUpdated": "2026-11-20T20:06:18.6445748Z",
     "description": "",
-    "manifestHash": "C84670DEF21D47061A565438AFB6C1B4B06F8E9250F322CC9BFA7C124056E66E"
+    "manifestHash": "C84670DEF21D47061A565438AFB6C1B4B06F8E9250F322CC9BFA7C124056E66E",
+    "openPr": {
+      "checkedAt": "2026-11-21T00:36:24.7288144Z",
+      "version": "1.8.0"
+    }
   },
   "nginx.nginx-prometheus-exporter": {
     "validationCount": 1,
@@ -6272,7 +6272,11 @@
     ],
     "validationCount": 2,
     "description": "",
-    "lastUpdated": "2026-11-20T20:06:18.5077395Z"
+    "lastUpdated": "2026-11-20T20:06:18.5077395Z",
+    "openPr": {
+      "checkedAt": "2026-11-21T00:36:25.1471589Z",
+      "version": "2026.11"
+    }
   },
   "OCSInventoryNG.WindowsAgent": {
     "manifestHash": "ADDB703555DE0642AC0D9A0CE336646E292BD36F8822BBE1FC87E436402F1226",
@@ -6434,7 +6438,11 @@
     "validationCount": 4,
     "manifestHash": "A84644C823FE162A009B350E7511BCE8ABDD97A7FFF4DA9AE772C135EAE1477B",
     "lastUpdated": "2026-11-20T20:06:18.8378873Z",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "checkedAt": "2026-11-21T00:36:25.5100677Z",
+      "version": "6.7.0"
+    }
   },
   "OneWare.OneWareStudio": {
     "state": "VALIDATION_PASSED",
@@ -6616,7 +6624,11 @@
     "version": "0.20.0",
     "lastUpdated": "2026-11-20T20:06:19.1674003Z",
     "description": "",
-    "manifestHash": "93A50749FB12F2879225FA82BA132636BCE17D1380C519544CBAAA519D730F4F"
+    "manifestHash": "93A50749FB12F2879225FA82BA132636BCE17D1380C519544CBAAA519D730F4F",
+    "openPr": {
+      "checkedAt": "2026-11-21T00:36:25.8358648Z",
+      "version": "0.20.0"
+    }
   },
   "OpenScreen.OpenScreen": {
     "description": "",
@@ -6905,7 +6917,11 @@
     "version": "5.6.2",
     "lastUpdated": "2026-11-20T20:06:19.1423747Z",
     "description": "",
-    "manifestHash": "D829C1560866E59DD9A01D9485CF5067BAC88F8A3BAB41D97CAC9FE58F77A341"
+    "manifestHash": "D829C1560866E59DD9A01D9485CF5067BAC88F8A3BAB41D97CAC9FE58F77A341",
+    "openPr": {
+      "checkedAt": "2026-11-21T00:36:26.8354308Z",
+      "version": "5.6.2"
+    }
   },
   "PathofBuildingCommunity.PathofBuildingCommunity": {
     "version": "2.68.1",
@@ -7038,7 +7054,11 @@
     "description": "",
     "lastUpdated": "2026-11-20T20:06:18.5809423Z",
     "version": "8.3.7",
-    "validationCount": 1
+    "validationCount": 1,
+    "openPr": {
+      "checkedAt": "2026-11-21T00:36:27.1679915Z",
+      "version": "8.3.7"
+    }
   },
   "PiusPP.Celestial": {
     "version": "2.1.0",
@@ -7103,7 +7123,11 @@
     "installerHashes": [
       "4FB64BB37E46C788309E0FD4EA93BEB512546FDC7348121194FB704FBB72C09C",
       "9584890DB13A8BCD9A77556F3455E37718A17A31C0AEE0254CF8D8AC6B3A8DF1"
-    ]
+    ],
+    "openPr": {
+      "checkedAt": "2026-11-21T00:36:27.5379398Z",
+      "version": "12.21.0"
+    }
   },
   "PocketBase.PocketBase": {
     "version": "0.40.6",
@@ -7410,8 +7434,8 @@
     "lastUpdated": "2026-08-06T13:08:37.6487059Z",
     "version": "0.5.15",
     "openPr": {
-      "version": "0.5.31",
-      "checkedAt": "2026-11-13T22:11:24.0334216Z"
+      "checkedAt": "2026-11-21T00:36:28.4172201Z",
+      "version": "0.5.32"
     }
   },
   "raskell-io.hx": {
@@ -7462,7 +7486,11 @@
     "lastUpdated": "2026-11-20T20:06:19.3975899Z",
     "version": "3.4.1",
     "validationCount": 5,
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "checkedAt": "2026-11-21T00:36:28.8089883Z",
+      "version": "3.4.1"
+    }
   },
   "Rela.RelaGit": {
     "version": "0.16.11",
