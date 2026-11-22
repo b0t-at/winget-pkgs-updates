@@ -133,7 +133,7 @@
     "manifestHash": "1E972B788DEB3CCD2DE087ABA6E781FE1BF60DD0E208A03F568825A01383C5B4",
     "openPr": {
       "version": "1.0.0",
-      "checkedAt": "2026-11-20T20:30:03.206278Z"
+      "checkedAt": "2026-11-22T00:37:41.5090159Z"
     }
   },
   "AdGuard.dnsproxy": {
@@ -850,11 +850,7 @@
     "version": "1.28.110",
     "manifestHash": "7139DA5DD5E53B45C9A40119267AA514A940F53FC6910C6CCA413ED6AD859671",
     "validationCount": 1,
-    "lastUpdated": "2026-11-20T20:06:19.4227727Z",
-    "openPr": {
-      "version": "1.28.110",
-      "checkedAt": "2026-11-20T20:30:08.0120527Z"
-    }
+    "lastUpdated": "2026-11-20T20:06:19.4227727Z"
   },
   "bdash-app.bdash": {
     "installerHashes": [
@@ -1751,7 +1747,7 @@
     "manifestHash": "3C48DC295A758FAB6722DE26E7B62D54C5F3076191A04E2CB95FAA60134CDFDB",
     "openPr": {
       "version": "0.35.0",
-      "checkedAt": "2026-11-20T20:30:11.5070862Z"
+      "checkedAt": "2026-11-22T00:37:44.2350658Z"
     }
   },
   "CrewHaus.CLI": {
@@ -3341,7 +3337,11 @@
     "version": "2.7.1",
     "manifestHash": "E3EAEF32CE17454BD7D4647149D661546FCD049FC9A40AFF0D3A04D608B580CB",
     "validationCount": 2,
-    "lastUpdated": "2026-11-21T20:47:30.1815473Z"
+    "lastUpdated": "2026-11-21T20:47:30.1815473Z",
+    "openPr": {
+      "version": "2.7.1",
+      "checkedAt": "2026-11-22T00:38:06.1566965Z"
+    }
   },
   "Google.Protobuf": {
     "version": "36.2",
