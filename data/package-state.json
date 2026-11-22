@@ -1148,7 +1148,11 @@
     "description": "",
     "lastUpdated": "2026-11-22T16:38:03.5510883Z",
     "version": "0.24.4",
-    "validationCount": 1
+    "validationCount": 1,
+    "openPr": {
+      "version": "0.24.4",
+      "checkedAt": "2026-11-22T20:15:55.7921877Z"
+    }
   },
   "BlackwellSystems.shelfctl": {
     "manifestHash": "E6A5C090C621B9CC81504F055C837993516333A4A4A711B48325CF67BB128651",
@@ -2289,8 +2293,8 @@
     "lastUpdated": "2026-10-29T09:22:10.7111402Z",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-11-21T16:14:58.8307423Z",
-      "version": "2.12.5"
+      "version": "2.12.5",
+      "checkedAt": "2026-11-22T20:14:44.2819553Z"
     }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
@@ -3968,7 +3972,11 @@
     ],
     "description": "",
     "validationCount": 1,
-    "version": "1.36.3"
+    "version": "1.36.3",
+    "openPr": {
+      "version": "1.36.5",
+      "checkedAt": "2026-11-22T20:14:49.0290626Z"
+    }
   },
   "igoogolx.lux": {
     "validationCount": 1,
@@ -3979,7 +3987,11 @@
     "description": "",
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-09-19T20:48:57.4328147Z",
-    "manifestHash": "12831218DB3FAEB3B637B89A502C0C30A17EEAC816CA3FFF805797A828C1EAE8"
+    "manifestHash": "12831218DB3FAEB3B637B89A502C0C30A17EEAC816CA3FFF805797A828C1EAE8",
+    "openPr": {
+      "version": "1.51.0",
+      "checkedAt": "2026-11-22T20:14:49.5396435Z"
+    }
   },
   "IneedABUFF.BuffMyBar": {
     "installerHashes": [
@@ -4632,8 +4644,8 @@
     "description": "",
     "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D",
     "openPr": {
-      "checkedAt": "2026-11-21T16:15:04.1702114Z",
-      "version": "4.5.1"
+      "version": "4.5.1",
+      "checkedAt": "2026-11-22T20:14:50.0058066Z"
     }
   },
   "kmiya-culti.RLogin": {
@@ -7058,7 +7070,11 @@
       "753E4E7A51CAD941407B4D1A0275F7517343A93E50E0A4D8F6D5127AB3D0ECAD"
     ],
     "description": "",
-    "validationCount": 2
+    "validationCount": 2,
+    "openPr": {
+      "version": "8.4.0",
+      "checkedAt": "2026-11-22T20:14:52.2479759Z"
+    }
   },
   "PiusPP.Celestial": {
     "version": "2.1.0",
