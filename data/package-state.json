@@ -1139,16 +1139,16 @@
     }
   },
   "BlackwellSystems.agent-lsp": {
-    "manifestHash": "1E368CD7FCBC3BAC62FCB1C53CBD35DC3A01A9E7C0727A9F62457C21D07086E7",
-    "version": "0.24.3",
-    "validationCount": 1,
-    "state": "VALIDATION_FAILED",
-    "lastUpdated": "2026-11-21T20:47:30.0332765Z",
+    "manifestHash": "9B553986A34E52E1B2A30F37FAD9D079E4BE64E535E6BB3AC48439DEA640BF4B",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "0B8C7F6B0C8C254CE3F78730F2A650F067A45A58E5A350F719A77651846712C5",
-      "7E74FADD79C3B4A582CC0AE5F6C8431A8917144A44D68CF0C4188DA1FF2E5509"
+      "DB4BE0E7D8237A96185D4BFB30E5B6DB57B29BCEB725870929EE1A864B60C17B",
+      "1724088A3901753D67F133443E99C2967A07A05E2017A59D0C7069AB94A331FF"
     ],
-    "description": ""
+    "description": "",
+    "lastUpdated": "2026-11-22T16:38:03.5510883Z",
+    "version": "0.24.4",
+    "validationCount": 1
   },
   "BlackwellSystems.shelfctl": {
     "manifestHash": "E6A5C090C621B9CC81504F055C837993516333A4A4A711B48325CF67BB128651",
@@ -3712,15 +3712,15 @@
     }
   },
   "Hiddify.Next": {
-    "installerHashes": [
-      "7C71BCA78A8307B5961ED2F1121D23FA94DB6FED2C866AF9EB5BE375C0B43873"
-    ],
-    "version": "5.5.5",
-    "manifestHash": "39DC655E3EC82A9AE4C08AE9DBF87E38E14D3A6E17EF6EE40CA20A6342F051A1",
-    "lastUpdated": "2026-11-05T13:07:14.1578811Z",
+    "manifestHash": "A4BC06E17DC45BF87A765AC86996BCC39E8146B2882AAB2144B33BCF3DE26CA4",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "description": ""
+    "installerHashes": [
+      "817BF87F2D0C268F4B5C1169784AC19C5ACD60D59A006E928A8C44B685997164"
+    ],
+    "description": "",
+    "lastUpdated": "2026-11-22T16:38:03.6142008Z",
+    "version": "5.9.15",
+    "validationCount": 1
   },
   "hikari-no-yume.touchHLE": {
     "description": "",
@@ -7050,7 +7050,7 @@
     "description": ""
   },
   "pinokiocomputer.pinokio": {
-    "lastUpdated": "2026-11-22T08:34:06.1394574Z",
+    "lastUpdated": "2026-11-22T16:38:03.6317964Z",
     "state": "VALIDATION_PASSED",
     "version": "8.4.0",
     "manifestHash": "F6DB2B708D2B7A6E5ED3E878EF24B9DCA528B3AE184FC24FCD9FD296F29304D4",
@@ -7058,7 +7058,7 @@
       "753E4E7A51CAD941407B4D1A0275F7517343A93E50E0A4D8F6D5127AB3D0ECAD"
     ],
     "description": "",
-    "validationCount": 1
+    "validationCount": 2
   },
   "PiusPP.Celestial": {
     "version": "2.1.0",
@@ -7587,15 +7587,15 @@
     "validationCount": 1
   },
   "Ripose.Memento": {
-    "description": "",
+    "manifestHash": "F6EBB3F24C9A9AA1EB4601347855268F0363D21D0EE8F72DE8DF333ACD81139A",
     "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "6A4164F612A9B8B3C8A2CB70961E027F93D72C3448014B2390BAC62EA4393474"
+      "2D313804A0B6F9B314008123F3B3A9DBD13FB276C126A0705488D18405C9BCE9"
     ],
-    "version": "2.0.2",
-    "lastUpdated": "2026-08-21T20:47:48.4210433Z",
-    "validationCount": 1,
-    "manifestHash": "E250B0EE8AFA47B29A6B270A1105ED75E766651E15F2C1BFF85B7FFC9CF96ECB"
+    "description": "",
+    "lastUpdated": "2026-11-22T16:38:03.6600915Z",
+    "version": "2.1.0",
+    "validationCount": 1
   },
   "RivaFarabi.Deckboard": {
     "lastUpdated": "2026-08-05T17:18:05.257089Z",
