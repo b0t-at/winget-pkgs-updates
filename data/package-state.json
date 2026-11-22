@@ -1367,13 +1367,13 @@
   },
   "CarthageSoftware.Mago": {
     "state": "VALIDATION_PASSED",
-    "version": "1.60.2",
+    "version": "1.61.0",
     "validationCount": 1,
-    "manifestHash": "39911159DAB736B3BA25D83DF5DE811F6E36CB94B458ECD97D95FCB003F8BD7F",
     "description": "",
-    "lastUpdated": "2026-11-20T13:02:07.4951477Z",
+    "lastUpdated": "2026-11-22T04:44:34.1474688Z",
+    "manifestHash": "E0819CFF5625CFE26202CE13E93533C6655B65CD0CB8523477A65AC0C78E3A15",
     "installerHashes": [
-      "D9BFA9D911798AE9106771B0237CBF9D6212F7EEC6B0FD51824CFEB15418E198"
+      "996A9223C39FAB9D115BDAEEF83966A5B9E0042FA5961992C71EB99E3F094BD4"
     ]
   },
   "Carvel.ytt": {
@@ -2131,16 +2131,16 @@
     "state": "VALIDATION_PASSED"
   },
   "Docker.DockerCompose": {
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "0C2D9245A5F61E8E3CC85009B8B4888FA82FDED08239D28BD6DA5CA818EDA2B2",
       "EC7A100A77D9AEDBAA6E2B13A10140729860B58B8D2B6855D8191C52E7DD50FC"
     ],
-    "lastUpdated": "2026-11-20T20:06:18.1220384Z",
+    "lastUpdated": "2026-11-22T04:44:34.2377963Z",
     "version": "5.8.0",
     "manifestHash": "892C727B242933AEBB7565089324923D6D565AC4730BE2D3FF653716706410B5",
     "description": "",
-    "state": "VALIDATION_FAILED"
+    "state": "VALIDATION_PASSED"
   },
   "Docker.ds": {
     "lastUpdated": "2026-08-18T17:25:14.0317211Z",
@@ -3121,15 +3121,15 @@
     "lastUpdated": "2026-08-20T09:17:27.5844052Z"
   },
   "GeodeSDK.GeodeCLI": {
-    "manifestHash": "31D63F361EDE7D9F62559168FB31DB33D6E15054A62411173CC2095BA0A0EE5F",
-    "description": "",
-    "installerHashes": [
-      "894D8B5DAC774BB7AC21877816F700590B78D84DB8ECAAE224EBAE05F99976F5"
-    ],
-    "version": "4.0.1",
-    "lastUpdated": "2026-11-20T11:53:50.6119223Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 4
+    "version": "4.0.2",
+    "validationCount": 1,
+    "description": "",
+    "lastUpdated": "2026-11-22T04:44:34.1851349Z",
+    "manifestHash": "92E7FCAC7EB0B0EC9C4794CB337298B43642A1F627D27DAEA65A5E9F666603B6",
+    "installerHashes": [
+      "65F022DAD7AA827EC9C52DD851FB4D30392A5B77C0A0740890BC8C5620709FEC"
+    ]
   },
   "getzola.zola": {
     "manifestHash": "2AD0D8502E653E34D70DC1A01F61D1061D3ED1D053F514354B49F5E4D9C22AB7",
@@ -6916,15 +6916,15 @@
     }
   },
   "PathofBuildingCommunity.PathofBuildingCommunity": {
-    "version": "2.68.1",
-    "lastUpdated": "2026-11-17T14:45:55.2841059Z",
-    "description": "",
-    "manifestHash": "296531AEB24D6D08C557B7552987083229BFF3768D48FEC122AB5CCCDC1AA5B3",
     "state": "VALIDATION_PASSED",
+    "version": "2.68.1",
+    "validationCount": 1,
+    "description": "",
+    "lastUpdated": "2026-11-22T04:44:34.20564Z",
+    "manifestHash": "2FABCF4A307FA2E08F6C77334CA06634CB03AF2E807F79CFBA64A077FFC71541",
     "installerHashes": [
-      "C6E1EF4B812A2150F9B1FBEE836E7E50F8B29E2A834B6D56B4589AF291C9C37A"
-    ],
-    "validationCount": 1
+      "B737933118D21108D59A30489F4FC4D5414832AF19A1AB3754F38AEDCB9E0954"
+    ]
   },
   "PatrickHener.Goshs": {
     "lastUpdated": "2026-09-17T13:04:51.9579763Z",
@@ -7185,13 +7185,13 @@
   },
   "PowCal.PowCal": {
     "state": "VALIDATION_PASSED",
+    "version": "2.3.0",
     "validationCount": 1,
     "description": "",
-    "manifestHash": "8F338D73E4A38CC670EB79C30A94CEF0F73B5BF6B2A91F52A8B890A3713E9D06",
-    "lastUpdated": "2026-10-29T04:54:48.4469136Z",
-    "version": "2.2.0",
+    "lastUpdated": "2026-11-22T04:44:34.2601704Z",
+    "manifestHash": "EA0CBDA8E6FE5C48BA62EB1C33388C7990DBF9F9C0A6953DD8885EDF2DCEEC60",
     "installerHashes": [
-      "69A1548295A373FEB0E5432BF550E13C18860B33DA71D3526836A46B2A16DC48"
+      "22C7395D3346241A595F2C78E77E1577F89178DB4632ACD37306C9F55FE3EF05"
     ]
   },
   "Primecount.Primecount": {
