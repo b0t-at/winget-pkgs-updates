@@ -1571,15 +1571,15 @@
     }
   },
   "ciromattia.KCC": {
-    "description": "",
-    "manifestHash": "70C43129EA4A5B5715D10761263CE85834E954C1ACDCF80DB579D31E0E68EFBE",
-    "version": "13.0.1",
+    "lastUpdated": "2026-11-22T08:34:06.2128247Z",
     "state": "VALIDATION_PASSED",
+    "version": "13.0.3",
+    "manifestHash": "55BBA2C82624D31B5C552228D946D1E5D85058373D115E9A9DD3C0EE653E5BE0",
     "installerHashes": [
-      "3360F4F290FFA2A04DE557FE4048EEF9B098F5B31030AA5EC8FE7A66D7174BF0"
+      "B4F5D46590379D8A8DD915CCB15CDD920B608A7480D49B41CCB5422586F36131"
     ],
-    "lastUpdated": "2026-11-20T20:06:18.4830021Z",
-    "validationCount": 2
+    "description": "",
+    "validationCount": 1
   },
   "cjpais.Handy": {
     "description": "",
@@ -1822,10 +1822,10 @@
       "0F81348531A515F75539093167B661B8A68050E13D80C6DD74B11E1C55DFA097",
       "476939BBC0CA8A75B935774A9D82CC680A7CE1E46A9A22BE9C95FA390A45ACAC"
     ],
-    "lastUpdated": "2026-11-21T20:47:30.0945735Z",
+    "lastUpdated": "2026-11-22T08:34:06.1756752Z",
     "manifestHash": "AA095161A726AB9006C4AC5C23AA880FB6F668679905702093FBD44D40A30B28",
-    "state": "VALIDATION_FAILED",
-    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
+    "validationCount": 2,
     "version": "156.0.8078.108"
   },
   "cubezombies.MidnightAthenaeum": {
@@ -7046,14 +7046,14 @@
     "description": ""
   },
   "pinokiocomputer.pinokio": {
-    "installerHashes": [
-      "387632356BF1851F267E8B41CBEB34B2B20110C383CA9B7460567D87EF8C4987"
-    ],
+    "lastUpdated": "2026-11-22T08:34:06.1394574Z",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "97C1424CF7E64A60853F1C401653F7C64E8391E4426C8D7BA19818175073BCC9",
+    "version": "8.4.0",
+    "manifestHash": "F6DB2B708D2B7A6E5ED3E878EF24B9DCA528B3AE184FC24FCD9FD296F29304D4",
+    "installerHashes": [
+      "753E4E7A51CAD941407B4D1A0275F7517343A93E50E0A4D8F6D5127AB3D0ECAD"
+    ],
     "description": "",
-    "lastUpdated": "2026-11-20T20:06:18.5809423Z",
-    "version": "8.3.7",
     "validationCount": 1
   },
   "PiusPP.Celestial": {
