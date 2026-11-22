@@ -1660,14 +1660,14 @@
     "lastUpdated": "2026-11-03T21:01:18.1597652Z"
   },
   "ConfluentInc.Confluent-CLI": {
-    "state": "VALIDATION_FAILED",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
       "286DEBCBBB9D8AE4D9D3DA581D9E80A16DEC2828B7123CD380A14738DC15C24F",
       "A8AE791D302822A5944DDD5BCFBFC26EC1FA6A41405B52A2E1E01B57E708F1A0"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "4.83.0",
-    "lastUpdated": "2026-11-20T20:06:17.863926Z",
+    "lastUpdated": "2026-11-22T20:33:22.0903075Z",
     "description": "",
     "manifestHash": "AF178009F90DB4FAA5D9AF74516DD437069876BD18B2D20E5773FFF57F35BED7"
   },
@@ -2207,17 +2207,17 @@
     }
   },
   "dragonflylee.switchfin": {
-    "manifestHash": "6D6E1A9694B8C57D68A0B14084919346E990F0A153E0B8ABF2A0FBBEB5DDB866",
-    "validationCount": 2,
-    "lastUpdated": "2026-11-20T20:06:19.7873415Z",
-    "version": "0.9.5",
     "description": "",
-    "state": "VALIDATION_PASSED",
+    "version": "0.9.6",
+    "manifestHash": "2758E58B8055990CF7FFE84324B8042DE54108D7A2942C95D1158C2F096F489B",
     "installerHashes": [
-      "8A5AE0E92389E27C6503EF55C1A74500B9217121EEAC27CBD7A3DCB2BD776D7C",
-      "A0FF1D544FB3B259258D20D029EDC056F9A1051C11186B087A82D56BF0622658",
-      "F6B1098F3E55401553F5EB164BFD7914D234CAF10522B988EE716FD0E0C0A74E"
-    ]
+      "FDFF8D7D007266028FA4511B4611F4DF931ECBC34DCBA0658309C0A278D97DC0",
+      "8DD2240B9E6254D15436F8EC1E495617EE6013769138562B2547612F557A07C1",
+      "C13A3554098947AC0044E1B9C4736C72670BF45402C1A66706C89339256ECB8E"
+    ],
+    "lastUpdated": "2026-11-22T20:33:22.1568367Z",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1
   },
   "Dweymouth.Supersonic": {
     "description": "",
@@ -3810,15 +3810,15 @@
     "validationCount": 1
   },
   "holland-built.Bloxsmith": {
-    "installerHashes": [
-      "F5AB9275B52293CA76779C5E0C67AFFD8066F28AEF8AD62A944680F65D3D909F"
-    ],
-    "validationCount": 1,
     "description": "",
-    "manifestHash": "078FB9A9D2E04CFD8FB3DBDD119F0E3FA701B235E75C5A009FD74CD205414938",
-    "lastUpdated": "2026-11-21T08:35:45.2711702Z",
-    "version": "3.183.0",
-    "state": "VALIDATION_PASSED"
+    "version": "3.191.5",
+    "manifestHash": "D1880A73F522A315296D6F57DB1986550B8BBC379A216AC03D77E0117F254EC2",
+    "installerHashes": [
+      "75B0208971F222BF9EC37FAFAF7EC5A40B31B8FABDEEFAEC596FFCC69EC854F9"
+    ],
+    "lastUpdated": "2026-11-22T20:33:22.1388058Z",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1
   },
   "HongMinhee.Gukhanmun": {
     "state": "VALIDATION_PASSED",
@@ -8187,9 +8187,9 @@
   "sikalabs.slr": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "578603924E112571999794064117EEB1469ED1E28464570F446CDCD6EA19FEF8",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "0.52.0",
-    "lastUpdated": "2026-11-15T17:24:45.7192354Z",
+    "lastUpdated": "2026-11-22T20:33:22.1193801Z",
     "description": "",
     "installerHashes": [
       "0764FE7FEB1EC2B6C20DF3A14DA4A4A2FAD94BEEFD197CC8741EC73919641202"
