@@ -842,15 +842,15 @@
     "validationCount": 1
   },
   "bcssov.IronyModManager": {
+    "lastUpdated": "2026-11-22T12:37:42.5456104Z",
+    "manifestHash": "D16D3EB815A17D0E0CFBCB44F251D415EBD059DC7567F916113D98EB8E30451B",
+    "version": "1.28.111",
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "6AF1D39F5D66562AEB33F7A9D7FB99DD520AF3E85581705E0F844A9367CE7DCC"
-    ],
-    "description": "",
-    "version": "1.28.110",
-    "manifestHash": "7139DA5DD5E53B45C9A40119267AA514A940F53FC6910C6CCA413ED6AD859671",
     "validationCount": 1,
-    "lastUpdated": "2026-11-20T20:06:19.4227727Z"
+    "description": "",
+    "installerHashes": [
+      "E106D977281B16A2E7509D5F2F904C61D57E3EF1F61CCDAEF0C2F8DB4B9AD072"
+    ]
   },
   "bdash-app.bdash": {
     "installerHashes": [
@@ -1335,20 +1335,16 @@
     }
   },
   "caomengxuan666.WinuxCmd": {
+    "lastUpdated": "2026-11-22T12:37:42.6344498Z",
+    "manifestHash": "3B4EE127019608DAB2402FC9097045F13F1462A955481D22A8D2C2FDDF67A9F7",
+    "version": "1.2.2",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
     "description": "",
     "installerHashes": [
-      "5E00F7891D33350EEA4E4B0248E24710D087428C145B34E1FBC996F86D357BD7",
-      "C00017DC29CAEAD94D3C94A97BFD87E839D0139FC052E202452C43583B3D752D"
-    ],
-    "validationCount": 1,
-    "manifestHash": "ED16ADA202188A5FEB2CC40FB298A3D06B7A9BF1114E35786F0DAAEEA5834AE1",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-05T04:55:31.6580022Z",
-    "version": "1.2.1",
-    "openPr": {
-      "version": "1.2.1",
-      "checkedAt": "2026-11-07T12:20:06.4602657Z"
-    }
+      "3F5F02905744598F8B307E6F32D2688C928B82845764876BBA3F8127AA875995",
+      "ABCF7E894544273FE2EC6DB5B9B0DA4BA36D5F764AE918F4E7E666BFB241117B"
+    ]
   },
   "CargoLambda.CargoLambda": {
     "manifestHash": "B8DD0B022742F2371ED57474DE9FEE6CB654CD7DD96A113241259E85D6F5ABF3",
@@ -7218,13 +7214,13 @@
     "description": "",
     "version": "9.0",
     "manifestHash": "D1BDB5A97A8057A28CDAB4F7346482D4178FF6F879C875C6FCAAB05CB4D980E0",
-    "lastUpdated": "2026-11-20T20:06:17.9408472Z",
-    "state": "VALIDATION_FAILED",
+    "lastUpdated": "2026-11-22T12:37:42.6082333Z",
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
       "31020BF879894A81D81A4842B09FC888672EB046F525E9B9A0152D48407B27EF",
       "1385E71F200D08381CC6051D676E1B83BF3B35E9E186B48BFBB22ADF9D8933C2"
     ],
-    "validationCount": 1
+    "validationCount": 2
   },
   "Primesieve.Primesieve": {
     "state": "VALIDATION_PASSED",
@@ -9119,15 +9115,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
+    "lastUpdated": "2026-11-22T12:37:42.5804158Z",
+    "manifestHash": "B9A182BB89C5867BE0A04939C313F081E81F780E9B5AF7418D9B9AB708246E91",
+    "version": "3.20.1",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "827D18A30CC27CF0D14D33621DA7F14D70CBD081DA79065E2F996767B84A5664",
-    "lastUpdated": "2026-11-21T12:56:37.9652046Z",
-    "validationCount": 2,
+    "validationCount": 1,
+    "description": "",
     "installerHashes": [
-      "7FA703F25BE3B541948E76232DE1262334E559FA434684AADC82C95F912F4EA2"
-    ],
-    "version": "3.20.0",
-    "description": ""
+      "637092C8B919F76034DAFB46BF558A3CFB3FCAC3064140A7910090C026CFF16F"
+    ]
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
