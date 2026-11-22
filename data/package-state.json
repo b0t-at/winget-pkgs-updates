@@ -1438,16 +1438,16 @@
     "lastUpdated": "2026-11-20T20:06:19.4477858Z"
   },
   "CerberAuth.jwtop": {
-    "validationCount": 2,
     "installerHashes": [
-      "5C2963A1DA50268C5B4B6ECF08919D99FFC9BC9D3C751B40EE28A3CEDFC04993",
-      "2AA55FD84026DC8EA2A29C6A132E1092BC5566C57A3BC423AC450035D6B4CAEF"
+      "E22AF47011D5E7B2A19FF91E053709E3BA3BA390A60AFD9D70077E131CFC01A6",
+      "ADACDC6956095A061785B3204CC0589235ADB1FFA5BE110F359670A9C3A946B4"
     ],
-    "lastUpdated": "2026-11-20T20:06:19.0914507Z",
-    "version": "0.9.0",
-    "manifestHash": "5FAAE0C11428795AA427D2B2E75900D688A2A8F055759DBF00E56242394AC3DF",
-    "description": "",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "manifestHash": "996781991B669511698686BE97D58B3ADE242BCB05ACAB60194D31AEA22D8E60",
+    "version": "0.10.0",
+    "lastUpdated": "2026-11-22T00:49:34.4283828Z",
+    "description": ""
   },
   "CerberAuth.openapi-oathkeeper": {
     "state": "VALIDATION_PASSED",
@@ -7492,11 +7492,11 @@
     "state": "VALIDATION_PASSED"
   },
   "Reloaded-Project.Reloaded-II": {
-    "validationCount": 2,
+    "validationCount": 3,
     "state": "VALIDATION_FAILED",
     "description": "",
     "manifestHash": "929D7BAAE8C9766CD1062704AFADB268E84568C5004DB9E3D0104E42F7E99FFD",
-    "lastUpdated": "2026-11-21T16:22:43.5348132Z",
+    "lastUpdated": "2026-11-22T00:49:34.3959374Z",
     "installerHashes": [
       "FB5EDE9F15686BA4A001082A75A77EDB5F9F181EDE6C31A80FF578257C5B7D4E"
     ],
