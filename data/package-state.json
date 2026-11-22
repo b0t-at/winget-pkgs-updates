@@ -1388,8 +1388,8 @@
       "89C529789031CEE20FAC0802BB7BD083E11C78FCCA618B5DC63DC395B35B5C09"
     ],
     "openPr": {
-      "checkedAt": "2026-11-21T08:17:30.154065Z",
-      "version": "0.56.0"
+      "version": "0.56.0",
+      "checkedAt": "2026-11-22T08:17:51.468232Z"
     }
   },
   "ccccraz.cogmoteGO": {
@@ -2140,7 +2140,11 @@
     "version": "5.8.0",
     "manifestHash": "892C727B242933AEBB7565089324923D6D565AC4730BE2D3FF653716706410B5",
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "version": "5.8.0",
+      "checkedAt": "2026-11-22T08:17:53.1604949Z"
+    }
   },
   "Docker.ds": {
     "lastUpdated": "2026-08-18T17:25:14.0317211Z",
@@ -3129,7 +3133,11 @@
     "manifestHash": "92E7FCAC7EB0B0EC9C4794CB337298B43642A1F627D27DAEA65A5E9F666603B6",
     "installerHashes": [
       "65F022DAD7AA827EC9C52DD851FB4D30392A5B77C0A0740890BC8C5620709FEC"
-    ]
+    ],
+    "openPr": {
+      "version": "4.0.2",
+      "checkedAt": "2026-11-22T08:17:56.5135192Z"
+    }
   },
   "getzola.zola": {
     "manifestHash": "2AD0D8502E653E34D70DC1A01F61D1061D3ED1D053F514354B49F5E4D9C22AB7",
@@ -6349,7 +6357,7 @@
     ],
     "openPr": {
       "version": "0.40.17",
-      "checkedAt": "2026-11-21T04:17:40.101669Z"
+      "checkedAt": "2026-11-22T08:18:26.7132313Z"
     }
   },
   "Ombrelin.PandocGui": {
