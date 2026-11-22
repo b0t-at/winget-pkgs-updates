@@ -850,7 +850,11 @@
     "description": "",
     "installerHashes": [
       "E106D977281B16A2E7509D5F2F904C61D57E3EF1F61CCDAEF0C2F8DB4B9AD072"
-    ]
+    ],
+    "openPr": {
+      "checkedAt": "2026-11-22T16:14:47.2084423Z",
+      "version": "1.28.111"
+    }
   },
   "bdash-app.bdash": {
     "installerHashes": [
@@ -3964,11 +3968,7 @@
     ],
     "description": "",
     "validationCount": 1,
-    "version": "1.36.3",
-    "openPr": {
-      "checkedAt": "2026-09-21T16:25:01.4507627Z",
-      "version": "1.36.4"
-    }
+    "version": "1.36.3"
   },
   "igoogolx.lux": {
     "validationCount": 1,
@@ -3979,11 +3979,7 @@
     "description": "",
     "state": "VALIDATION_PASSED",
     "lastUpdated": "2026-09-19T20:48:57.4328147Z",
-    "manifestHash": "12831218DB3FAEB3B637B89A502C0C30A17EEAC816CA3FFF805797A828C1EAE8",
-    "openPr": {
-      "version": "1.50.3",
-      "checkedAt": "2026-10-08T16:29:11.5273176Z"
-    }
+    "manifestHash": "12831218DB3FAEB3B637B89A502C0C30A17EEAC816CA3FFF805797A828C1EAE8"
   },
   "IneedABUFF.BuffMyBar": {
     "installerHashes": [
@@ -7220,7 +7216,11 @@
       "31020BF879894A81D81A4842B09FC888672EB046F525E9B9A0152D48407B27EF",
       "1385E71F200D08381CC6051D676E1B83BF3B35E9E186B48BFBB22ADF9D8933C2"
     ],
-    "validationCount": 2
+    "validationCount": 2,
+    "openPr": {
+      "checkedAt": "2026-11-22T16:14:55.3156031Z",
+      "version": "9.0"
+    }
   },
   "Primesieve.Primesieve": {
     "state": "VALIDATION_PASSED",
