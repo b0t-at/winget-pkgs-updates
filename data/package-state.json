@@ -2338,8 +2338,8 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "3EAB1E5A6E607AC40A8D48C149D5E5B2207604A2D465245704CB6FD111942437",
     "openPr": {
-      "version": "5.11.8",
-      "checkedAt": "2026-11-16T06:03:13.1949854Z"
+      "version": "5.12.6",
+      "checkedAt": "2026-11-22T04:16:57.2777119Z"
     }
   },
   "elfpie.TizenAppInstaller": {
@@ -8689,7 +8689,7 @@
     "manifestHash": "B1B716023C04A31ACC5074A77A2D997B0021E9F195EA648CF6ECECEA7F5F1336",
     "openPr": {
       "version": "1.30.0",
-      "checkedAt": "2026-11-21T04:17:43.584531Z"
+      "checkedAt": "2026-11-22T04:17:57.8282952Z"
     }
   },
   "SuperRadCompany.Microsandbox": {
@@ -8979,7 +8979,7 @@
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
       "version": "5.7.1",
-      "checkedAt": "2026-11-21T04:17:44.6657635Z"
+      "checkedAt": "2026-11-22T04:17:58.6770464Z"
     }
   },
   "termio.soft-jp.com.TermioWin": {
