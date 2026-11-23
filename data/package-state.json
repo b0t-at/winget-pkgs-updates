@@ -2870,8 +2870,8 @@
     "manifestHash": "86FA8F6B2F491EE6BDE61BAFC3493B85F1B14C4667597B93DBB355BC71355A19",
     "description": "",
     "openPr": {
-      "version": "0.5.15",
-      "checkedAt": "2026-11-23T08:22:15.4928502Z"
+      "checkedAt": "2026-11-23T20:14:32.2910055Z",
+      "version": "0.5.16"
     }
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
@@ -6749,8 +6749,8 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "openPr": {
-      "version": "1.13.9",
-      "checkedAt": "2026-11-05T20:15:10.111976Z"
+      "checkedAt": "2026-11-23T20:14:34.8003276Z",
+      "version": "1.13.10"
     }
   },
   "OpenWhispr.OpenWhispr": {
