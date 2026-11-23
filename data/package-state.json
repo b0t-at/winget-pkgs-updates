@@ -1411,7 +1411,7 @@
     ],
     "openPr": {
       "version": "0.56.0",
-      "checkedAt": "2026-11-22T08:17:51.468232Z"
+      "checkedAt": "2026-11-23T08:22:11.6766155Z"
     }
   },
   "ccccraz.cogmoteGO": {
@@ -2866,8 +2866,8 @@
     "manifestHash": "86FA8F6B2F491EE6BDE61BAFC3493B85F1B14C4667597B93DBB355BC71355A19",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-11-17T21:08:35.477907Z",
-      "version": "0.5.12"
+      "version": "0.5.15",
+      "checkedAt": "2026-11-23T08:22:15.4928502Z"
     }
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
@@ -6413,7 +6413,7 @@
     ],
     "openPr": {
       "version": "0.40.17",
-      "checkedAt": "2026-11-22T08:18:26.7132313Z"
+      "checkedAt": "2026-11-23T08:22:19.4039722Z"
     }
   },
   "Ombrelin.PandocGui": {
