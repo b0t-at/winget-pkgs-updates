@@ -4425,7 +4425,7 @@
     "manifestHash": "9A4DF16EBDCE59232C54B5DF04D449A66D61F5A11ADD46BF707CB15A166AB223",
     "openPr": {
       "version": "20.1.0",
-      "checkedAt": "2026-11-22T12:18:55.0547645Z"
+      "checkedAt": "2026-11-23T12:22:05.5280956Z"
     }
   },
   "JosephFinney.Text-Grab": {
@@ -5396,7 +5396,11 @@
     "installerHashes": [
       "D3C8C294946107DBAB5821C67C9281C1A8F219EECB7AA9D847768B42B9609001"
     ],
-    "manifestHash": "50C6A1F27631A6C3DD3145A01B214677E75082A203C0C67C984E43A5FD6C6BC5"
+    "manifestHash": "50C6A1F27631A6C3DD3145A01B214677E75082A203C0C67C984E43A5FD6C6BC5",
+    "openPr": {
+      "version": "5.2.7",
+      "checkedAt": "2026-11-23T12:22:06.0191669Z"
+    }
   },
   "Microsoft.Azure.GuestProxyAgent.AllowListTool": {
     "version": "1.0.52",
@@ -5450,7 +5454,7 @@
     "manifestHash": "D79AD8C42A131BFC541325962C417356E026DD89313FB73432E85BF5099AC009",
     "openPr": {
       "version": "1.7.756201",
-      "checkedAt": "2026-11-22T12:18:56.0906037Z"
+      "checkedAt": "2026-11-23T12:22:06.4670682Z"
     }
   },
   "Microsoft.DSC": {
@@ -5560,7 +5564,7 @@
     "description": "",
     "openPr": {
       "version": "1.11.0",
-      "checkedAt": "2026-11-22T12:18:56.4538741Z"
+      "checkedAt": "2026-11-23T12:22:06.9748868Z"
     }
   },
   "Microsoft.Wassette": {
