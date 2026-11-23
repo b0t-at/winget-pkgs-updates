@@ -1441,15 +1441,15 @@
     }
   },
   "Celerp.Celerp": {
-    "validationCount": 3,
-    "description": "",
-    "installerHashes": [
-      "7A5A23A932AD640FCF8701E83E17B111E030F546BF1241FE2EE503CA6FB4DBF1"
-    ],
-    "version": "2.9.0",
-    "manifestHash": "2EB591E0649BB0734EFC011C2143C68E748D5FCECD92ACC9BC3730AD4993FB03",
+    "version": "2.10.0",
+    "manifestHash": "6ED3BE6F649157B3BE79FB0239E3467F82AE5BC91D0D9F43256DCCDF9C6D9A87",
+    "lastUpdated": "2026-11-23T01:04:04.7492531Z",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-20T20:06:19.4477858Z"
+    "validationCount": 1,
+    "installerHashes": [
+      "132466E022FF21BD6E186327D4989E8494444EBAD314483D64CAE6850621C96A"
+    ],
+    "description": ""
   },
   "CerberAuth.jwtop": {
     "installerHashes": [
@@ -5554,16 +5554,16 @@
     "manifestHash": "D27B9887E10667D00156C71BE8BE02FB353CAA440DF7D4FB37C853177DDA6530"
   },
   "mikf.gallery-dl.Nightly": {
-    "lastUpdated": "2026-11-19T23:02:44.0144869Z",
-    "description": "",
-    "installerHashes": [
-      "4024D79021F533EC7CC3A527BDEE0612BF0DC962B81438929ACABB030D1D094F",
-      "E0E1DF92E3AE4A8F5CB93E509EE8CF981F7C77D83CC52C5499B3EEAAFDEF61B6"
-    ],
-    "validationCount": 1,
+    "version": "2026.11.23",
+    "manifestHash": "FCE6B4C52F08A0AFAB054DE618AB0AA63E7454755466046083F44B985EB1BC8E",
+    "lastUpdated": "2026-11-23T01:04:04.6398588Z",
     "state": "VALIDATION_PASSED",
-    "version": "2026.11.19",
-    "manifestHash": "F1600200B3AC08BD2F322EA4619DB885344AD5BE4BADF50C8964C1FF7157D2BA"
+    "validationCount": 1,
+    "installerHashes": [
+      "3B96752DCF19DFCC59ECA258CCB73C51BBF207BB6F757A8FA4B0D8D297A408CF",
+      "AF774766DA8A5C4DA34C6B094C74A38636995CADF8941D40E792D4F50D9D0EF5"
+    ],
+    "description": ""
   },
   "MilkShift.GoofCord": {
     "state": "VALIDATION_PASSED",
@@ -10106,15 +10106,15 @@
     "version": "0.25.0"
   },
   "xpipe-io.xpipe.portable": {
-    "lastUpdated": "2026-11-20T20:06:18.8082746Z",
-    "version": "24.12",
-    "manifestHash": "D2F2B186FB52489083767A67AEB6A9423CE2FF75EBFA7F4A280602ABF7F747F3",
-    "installerHashes": [
-      "6B1725DE09985BB63D6BD9240A5547698353DCA2FED7862636F5C738A79561E0"
-    ],
-    "description": "",
+    "version": "24.13",
+    "manifestHash": "FB27AA2FC1120698EA7751657699BC16F4F51E0274403ABA82AC57F7AEF30A75",
+    "lastUpdated": "2026-11-23T01:04:04.729323Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 3
+    "validationCount": 1,
+    "installerHashes": [
+      "5681B4D39ABC31FA3333BA361E402B9F6C29A21BF0E3B2975C078993F801F92A"
+    ],
+    "description": ""
   },
   "xssnick.TON-Torrent": {
     "state": "VALIDATION_PASSED",
