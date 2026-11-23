@@ -1362,7 +1362,11 @@
     "installerHashes": [
       "3F5F02905744598F8B307E6F32D2688C928B82845764876BBA3F8127AA875995",
       "ABCF7E894544273FE2EC6DB5B9B0DA4BA36D5F764AE918F4E7E666BFB241117B"
-    ]
+    ],
+    "openPr": {
+      "version": "1.2.2",
+      "checkedAt": "2026-11-23T04:20:24.9609278Z"
+    }
   },
   "CargoLambda.CargoLambda": {
     "manifestHash": "B8DD0B022742F2371ED57474DE9FEE6CB654CD7DD96A113241259E85D6F5ABF3",
@@ -1388,7 +1392,11 @@
     "manifestHash": "E0819CFF5625CFE26202CE13E93533C6655B65CD0CB8523477A65AC0C78E3A15",
     "installerHashes": [
       "996A9223C39FAB9D115BDAEEF83966A5B9E0042FA5961992C71EB99E3F094BD4"
-    ]
+    ],
+    "openPr": {
+      "version": "1.61.0",
+      "checkedAt": "2026-11-23T04:20:25.3425659Z"
+    }
   },
   "Carvel.ytt": {
     "lastUpdated": "2026-11-08T08:56:21.3354536Z",
@@ -1449,7 +1457,11 @@
     "installerHashes": [
       "132466E022FF21BD6E186327D4989E8494444EBAD314483D64CAE6850621C96A"
     ],
-    "description": ""
+    "description": "",
+    "openPr": {
+      "version": "2.10.0",
+      "checkedAt": "2026-11-23T04:20:25.6974433Z"
+    }
   },
   "CerberAuth.jwtop": {
     "installerHashes": [
@@ -8727,7 +8739,7 @@
     "manifestHash": "B1B716023C04A31ACC5074A77A2D997B0021E9F195EA648CF6ECECEA7F5F1336",
     "openPr": {
       "version": "1.30.0",
-      "checkedAt": "2026-11-22T04:17:57.8282952Z"
+      "checkedAt": "2026-11-23T04:19:23.606259Z"
     }
   },
   "SuperRadCompany.Microsandbox": {
@@ -9017,7 +9029,7 @@
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
       "version": "5.7.1",
-      "checkedAt": "2026-11-22T04:17:58.6770464Z"
+      "checkedAt": "2026-11-23T04:19:24.6049026Z"
     }
   },
   "termio.soft-jp.com.TermioWin": {
@@ -10114,7 +10126,11 @@
     "installerHashes": [
       "5681B4D39ABC31FA3333BA361E402B9F6C29A21BF0E3B2975C078993F801F92A"
     ],
-    "description": ""
+    "description": "",
+    "openPr": {
+      "version": "24.13",
+      "checkedAt": "2026-11-23T04:20:20.1128583Z"
+    }
   },
   "xssnick.TON-Torrent": {
     "state": "VALIDATION_PASSED",
