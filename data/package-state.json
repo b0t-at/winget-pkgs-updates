@@ -1551,7 +1551,11 @@
     "version": "1.7.3",
     "lastUpdated": "2026-11-13T18:08:20.6639864Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1
+    "validationCount": 1,
+    "openPr": {
+      "version": "1.7.5",
+      "checkedAt": "2026-11-23T16:18:26.030481Z"
+    }
   },
   "Cilium.CiliumCLI": {
     "installerHashes": [
@@ -7183,11 +7187,7 @@
     "installerHashes": [
       "4FB64BB37E46C788309E0FD4EA93BEB512546FDC7348121194FB704FBB72C09C",
       "9584890DB13A8BCD9A77556F3455E37718A17A31C0AEE0254CF8D8AC6B3A8DF1"
-    ],
-    "openPr": {
-      "checkedAt": "2026-11-21T00:36:27.5379398Z",
-      "version": "12.21.0"
-    }
+    ]
   },
   "PocketBase.PocketBase": {
     "version": "0.40.6",
