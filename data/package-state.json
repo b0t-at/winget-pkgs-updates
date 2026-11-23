@@ -3601,16 +3601,16 @@
     "description": ""
   },
   "Hanthor.BluefinCLI": {
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-21T00:55:35.7105883Z",
-    "manifestHash": "814B978EEEE87F15DF9F8F733C3528407CFF3AFBC8FBA22EF3928F38615AC7CD",
-    "version": "0.15.1",
+    "manifestHash": "7D871BAF3AC5390799CAE185E89159F66768C1863FDC22CF2638FB48C9D9BC63",
+    "lastUpdated": "2026-11-23T12:38:44.5463044Z",
     "description": "",
+    "version": "0.15.2",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "07AF06D3732BAF0B22A48E6DA4F8894D8086A8A2EED118EDE6507005ED071104",
-      "79BF98D0C2AD077FF6466330770798D61F7C367852C44DF25BDDAAA3D40186BD"
-    ],
-    "validationCount": 1
+      "D127226BE4DCEBAF29513BE1616DE987F09C4B982360281C2A5F834393D1893E",
+      "6310A17CF32A0A47AF473BFEABA87C315AD936BC59DEA1DE82B3A014BFEB10F0"
+    ]
   },
   "Happ.Happ": {
     "state": "VALIDATION_PASSED",
@@ -3850,15 +3850,15 @@
     "validationCount": 1
   },
   "holland-built.Bloxsmith": {
+    "manifestHash": "05104C29A65B0B93BBD64D55AD55BB995ABC4E314A09EACEA55072943A8D97F5",
+    "lastUpdated": "2026-11-23T12:38:44.6023054Z",
     "description": "",
-    "version": "3.191.5",
-    "manifestHash": "D1880A73F522A315296D6F57DB1986550B8BBC379A216AC03D77E0117F254EC2",
-    "installerHashes": [
-      "75B0208971F222BF9EC37FAFAF7EC5A40B31B8FABDEEFAEC596FFCC69EC854F9"
-    ],
-    "lastUpdated": "2026-11-22T20:33:22.1388058Z",
+    "version": "3.192.0",
+    "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "validationCount": 1
+    "installerHashes": [
+      "C70986651953840272BCCEFDD697583E1D6F45A5678E545758DFF91AA72BF8B0"
+    ]
   },
   "HongMinhee.Gukhanmun": {
     "state": "VALIDATION_PASSED",
@@ -4650,15 +4650,15 @@
     "manifestHash": "7AEA1749B04A7B74880E37E7C7DBCB5E84AEE0404CD563E04D4FA167CAF5B589"
   },
   "KinichiAnjuMakino.unifocl": {
-    "manifestHash": "23828E6005A79981EED3A3095445DDE64C08998E034BC55B8982BDE034CF3987",
-    "lastUpdated": "2026-11-02T01:18:25.2982772Z",
-    "installerHashes": [
-      "90FD99290079B9BAC475BBDACBFFAD49FE4B6EF5B64CFF5393A7A175135AE26D"
-    ],
-    "version": "3.19.0",
+    "manifestHash": "19894767A472CFEBD2DE31BD42863849182EA48B74DA99D9CDFD00C378805279",
+    "lastUpdated": "2026-11-23T12:38:44.5043502Z",
+    "description": "",
+    "version": "3.19.1",
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "description": ""
+    "installerHashes": [
+      "4FD0A0044D6EAC1E17B203ED5925102BDB7A146EE05FE2200F8A6E8321239D57"
+    ]
   },
   "KirillOsenkov.MSBuildStructuredLogViewer": {
     "configHealth": {
@@ -8229,14 +8229,14 @@
     ]
   },
   "sikalabs.slr": {
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "578603924E112571999794064117EEB1469ED1E28464570F446CDCD6EA19FEF8",
-    "validationCount": 2,
-    "version": "0.52.0",
-    "lastUpdated": "2026-11-22T20:33:22.1193801Z",
+    "manifestHash": "3FBE79648B8E9EACADB22F69BB519E77D05A1D692222801BCB4271925A397759",
+    "lastUpdated": "2026-11-23T12:38:44.5777055Z",
     "description": "",
+    "version": "0.53.1",
+    "validationCount": 1,
+    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "0764FE7FEB1EC2B6C20DF3A14DA4A4A2FAD94BEEFD197CC8741EC73919641202"
+      "C8740AEDA91159493661BF5362E16FD5344B184148C20E669A126988843E5755"
     ]
   },
   "sikalabs.slu": {
