@@ -6316,16 +6316,16 @@
     "manifestHash": "BDA729E125EE4C6B1351D1E5753BC3997A8F21463CE614964BE1A8A859A0A96A"
   },
   "OakwoodCommons.kvx": {
-    "lastUpdated": "2026-09-29T17:01:10.2732522Z",
-    "version": "0.17.0",
+    "version": "0.18.0",
+    "validationCount": 1,
+    "manifestHash": "1733C171DD373A4434028422748F9407EA03101736EE7781853D208ABDC0DF85",
     "description": "",
-    "installerHashes": [
-      "28690F9C8B0C4D04FB65740F5DFBEC88A67530346613B46C64566D9EEBB3CC31",
-      "5FDFD33FD385CA4558B34E4800517CBD99D07CFEEBFA272262D6B19177AA75EC"
-    ],
     "state": "VALIDATION_PASSED",
-    "manifestHash": "CE60FE19BA699E3DE982121A43B91B10622798ECC0C368398EFC820B278C7C44",
-    "validationCount": 1
+    "lastUpdated": "2026-11-23T20:36:31.0314833Z",
+    "installerHashes": [
+      "456A093812B216EC96A51C91260C4F482B957481D15F14CE483C7D3FF5BAF8DF",
+      "CEB12A0C599A8E1E081CABF220E1A85BD330EAD710D023E4E47B4A36D4ECBD24"
+    ]
   },
   "obsidianforensics.HindsightGUI": {
     "manifestHash": "1FAB5D48DEDD9DD791C3D27BA465513E6033FFAB3E43BB9D3E0D9078F817A8B4",
@@ -8854,15 +8854,15 @@
     }
   },
   "TacitDynamics.FolderSync": {
-    "validationCount": 2,
-    "installerHashes": [
-      "94828496800568D4DB79F8A9C04558240434382F9392CCAED041FD33F97C490D"
-    ],
-    "lastUpdated": "2026-11-20T20:06:19.8386223Z",
-    "version": "2.16.0",
-    "manifestHash": "01B12AD11D4DCCD601398F2326131C50C5D891C82FCA79704B5A3682CB0D6AA5",
+    "version": "2.17.0",
+    "validationCount": 1,
+    "manifestHash": "D63DBEEBE6B2B0F87D276C03918B252E244792D3930A0F8DED1E804144927BCD",
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-23T20:36:31.0848629Z",
+    "installerHashes": [
+      "DED7F098F3B4B38FF09CCD561ED3BC9ACC28FA0BA26AB28F493011994B3F7170"
+    ]
   },
   "tagspaces.tagspaces": {
     "lastUpdated": "2026-11-20T20:06:18.5565815Z",
@@ -9175,14 +9175,14 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "lastUpdated": "2026-11-22T12:37:42.5804158Z",
-    "manifestHash": "B9A182BB89C5867BE0A04939C313F081E81F780E9B5AF7418D9B9AB708246E91",
-    "version": "3.20.1",
-    "state": "VALIDATION_PASSED",
+    "version": "3.20.7",
     "validationCount": 1,
+    "manifestHash": "A28FEAF8751BD0BE6A0572011AD6E06A14427B84BF236A724841D646DBAB89C7",
     "description": "",
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-23T20:36:30.9952669Z",
     "installerHashes": [
-      "637092C8B919F76034DAFB46BF558A3CFB3FCAC3064140A7910090C026CFF16F"
+      "C7EEA13D3CA537D1F42A089656FFA7754EA20FA84A40E8BE0B9EFDF5879CEDD3"
     ]
   },
   "timminator.VideOCR.CPU": {
@@ -10440,15 +10440,15 @@
     ]
   },
   "ZeroInstall.ZeroInstall": {
-    "installerHashes": [
-      "D54AB922C4B186C66DD94C687F5060E25DF7077DE45308CB5DFDC4D1C736C5ED"
-    ],
+    "version": "2.30.0",
     "validationCount": 1,
+    "manifestHash": "65A6BD36EEBC9FADC7FF2B395996A73C1B034607D2B06FB5E7F11E30A6EC9974",
+    "description": "",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "D68866FE6B88BE7433457D1288CCE16D89C734FFE5394E997DBCD7637B046707",
-    "version": "2.29.3",
-    "lastUpdated": "2026-08-07T12:34:16.1518418Z",
-    "description": ""
+    "lastUpdated": "2026-11-23T20:36:31.064999Z",
+    "installerHashes": [
+      "EA44100DCD185BF47368E3A58F435B1A27539A0E6FFB9F78A5791BB04F158904"
+    ]
   },
   "zevnda.SteamGameIdler": {
     "version": "6.5.2",
