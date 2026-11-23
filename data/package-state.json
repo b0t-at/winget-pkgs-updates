@@ -3907,15 +3907,15 @@
     ]
   },
   "houmain.GPUpad": {
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "D0E3CCAFDA6F4EFD72F0FEAC5F228162BA22BA67B1AB6C973DDC1DBE1FA9E0CB"
-    ],
-    "validationCount": 1,
-    "version": "4.8.0",
-    "lastUpdated": "2026-11-20T20:06:19.4829388Z",
     "description": "",
-    "manifestHash": "73D7E8C1D07A483829C28D610436E1F5DCB0C54398628E29EF905C87DDF814A5"
+    "version": "4.8.1",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-11-23T08:46:50.6533277Z",
+    "installerHashes": [
+      "55660F5C0ABC7828F13B7BF99D80E9208FD5BD924CBE6952EF387DE19F9711EE"
+    ],
+    "manifestHash": "A9CB009A42A91607B067150F9BC9032DE447216AC9A69AD966222549F14D8E6A"
   },
   "houmain.keymapper": {
     "openPr": {
@@ -4970,14 +4970,14 @@
   },
   "Longbridge.LongbridgeTerminal": {
     "description": "",
-    "lastUpdated": "2026-11-20T20:06:20.8580573Z",
-    "version": "0.31.2",
-    "manifestHash": "1C6B7C6CFE8F6AF7A499D4994C8D1FF7B0CF7311D56525867FE4E80B60DC5E1E",
+    "version": "0.32.0",
     "state": "VALIDATION_PASSED",
-    "validationCount": 4,
+    "validationCount": 1,
+    "lastUpdated": "2026-11-23T08:46:50.6702892Z",
     "installerHashes": [
-      "329CE67019871D4DAB7680EA07D1AF8BEFE8C00847611D55A3222198624492FC"
-    ]
+      "ACA349EC20EAD17BE07F62462A5C3BD87EE62E1192FA1626AA1032506740C5B2"
+    ],
+    "manifestHash": "3C373D260521E4C74265924CDA39760C6145F726F07FA812B4280DAA379F355F"
   },
   "LookupFoundation.RevitLookup.2021": {
     "manifestHash": "128610B2BC6F960BB40A16C24D3F7CF0F8C87E1B9B978E39601108907C2FEBC3",
@@ -5388,15 +5388,15 @@
     "description": ""
   },
   "Micronaut.Launch": {
-    "validationCount": 1,
-    "lastUpdated": "2026-10-11T08:56:47.0949061Z",
-    "version": "5.2.2",
     "description": "",
+    "version": "5.2.7",
     "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-11-23T08:46:50.5691101Z",
     "installerHashes": [
-      "13FA0341358320E5A2CA4BD50DC5EA4E6AC87240A448AA86D91468CA3C2FBA64"
+      "D3C8C294946107DBAB5821C67C9281C1A8F219EECB7AA9D847768B42B9609001"
     ],
-    "manifestHash": "D189FFDB783B04E9B5D8643E9E3ED5382A817C1A56D490985A746B730152C38F"
+    "manifestHash": "50C6A1F27631A6C3DD3145A01B214677E75082A203C0C67C984E43A5FD6C6BC5"
   },
   "Microsoft.Azure.GuestProxyAgent.AllowListTool": {
     "version": "1.0.52",
