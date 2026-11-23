@@ -119,6 +119,12 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "9AE74415B1D6D5CFDA7538CE1C659096E75377877E4AED6461A506328E56D76B"
   },
+  "AdGuard.AdGuardDNSCLI": {
+    "openPr": {
+      "version": "0.2.1",
+      "checkedAt": "2026-11-23T00:38:56.1015373Z"
+    }
+  },
   "AdGuard.AdGuardHome": {
     "state": "VALIDATION_PASSED",
     "installerHashes": [
@@ -133,7 +139,7 @@
     "manifestHash": "1E972B788DEB3CCD2DE087ABA6E781FE1BF60DD0E208A03F568825A01383C5B4",
     "openPr": {
       "version": "1.0.0",
-      "checkedAt": "2026-11-22T00:37:41.5090159Z"
+      "checkedAt": "2026-11-23T00:38:17.8660095Z"
     }
   },
   "AdGuard.dnsproxy": {
@@ -687,7 +693,11 @@
     "lastUpdated": "2026-11-20T13:02:07.1619386Z",
     "installerHashes": [
       "90139843007D028966DC761177BBE689FB29459D50E8E4EC903F99BB2CC02FC1"
-    ]
+    ],
+    "openPr": {
+      "version": "1.4.89",
+      "checkedAt": "2026-11-23T00:38:58.1805821Z"
+    }
   },
   "AtaraxyLabs.sem": {
     "manifestHash": "354443146CCBD8A762B32AB5EEB738F3F96E401DD9AE8613949602AEE627E006",
@@ -1583,11 +1593,7 @@
       "B4F5D46590379D8A8DD915CCB15CDD920B608A7480D49B41CCB5422586F36131"
     ],
     "description": "",
-    "validationCount": 1,
-    "openPr": {
-      "version": "13.0.3",
-      "checkedAt": "2026-11-22T12:18:50.8855828Z"
-    }
+    "validationCount": 1
   },
   "cjpais.Handy": {
     "description": "",
@@ -1755,7 +1761,7 @@
     "manifestHash": "3C48DC295A758FAB6722DE26E7B62D54C5F3076191A04E2CB95FAA60134CDFDB",
     "openPr": {
       "version": "0.35.0",
-      "checkedAt": "2026-11-22T00:37:44.2350658Z"
+      "checkedAt": "2026-11-23T00:38:20.6806043Z"
     }
   },
   "CrewHaus.CLI": {
@@ -3360,7 +3366,7 @@
     "lastUpdated": "2026-11-21T20:47:30.1815473Z",
     "openPr": {
       "version": "2.7.1",
-      "checkedAt": "2026-11-22T00:38:06.1566965Z"
+      "checkedAt": "2026-11-23T00:38:23.7773781Z"
     }
   },
   "Google.Protobuf": {
