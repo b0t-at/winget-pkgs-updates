@@ -221,9 +221,9 @@
     "version": "0.9.2",
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/1ay1/agentty/releases/download/v0.9.56/agentty-windows-x86_64.msi",
-      "tag": "v0.9.56",
-      "checkedAt": "2026-11-16T05:23:59.2730538Z"
+      "detail": "No release asset matches: https://github.com/1ay1/agentty/releases/download/v0.9.62/agentty-windows-x86_64.msi",
+      "tag": "v0.9.62",
+      "checkedAt": "2026-11-23T05:25:09.1687664Z"
     }
   },
   "Aiden1020.LocalSubs": {
@@ -570,9 +570,9 @@
     "state": "VALIDATION_PASSED",
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/archisvaze/arcdlp/releases/download/v1.5.1/ArcDLP.Setup.1.5.1.exe",
-      "tag": "v1.5.1",
-      "checkedAt": "2026-10-19T05:31:20.3528594Z"
+      "detail": "No release asset matches: https://github.com/archisvaze/arcdlp/releases/download/v1.5.2/ArcDLP.Setup.1.5.2.exe",
+      "tag": "v1.5.2",
+      "checkedAt": "2026-11-23T05:25:09.1687664Z"
     }
   },
   "argoproj.argocd": {
@@ -1910,6 +1910,14 @@
       "checkedAt": "2026-10-05T05:43:26.8532582Z"
     }
   },
+  "CyberTimon.RapidRAW": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/CyberTimon/RapidRAW/releases/download/v1.7.1/01_RapidRAW_v1.7.1_windows_x64.msi https://github.com/CyberTimon/RapidRAW/releases/download/v1.7.1/01_RapidRAW_v1.7.1_windows-11-arm_arm64.msi",
+      "tag": "v1.7.1",
+      "checkedAt": "2026-11-23T05:25:09.1687664Z"
+    }
+  },
   "CycloneDX.CLI": {
     "state": "VALIDATION_PASSED",
     "version": "0.33.1",
@@ -2038,9 +2046,9 @@
     "description": "",
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/deut-lab/Handy/releases/download/voice-v0.10.0/Handy.Voice_oice-v0.10.0_x64-setup.exe",
-      "tag": "voice-v0.10.0",
-      "checkedAt": "2026-11-16T05:23:59.2730538Z"
+      "detail": "No release asset matches: https://github.com/deut-lab/Handy/releases/download/voice-v0.10.1/Handy.Voice_oice-v0.10.1_x64-setup.exe",
+      "tag": "voice-v0.10.1",
+      "checkedAt": "2026-11-23T05:25:09.1687664Z"
     }
   },
   "Devolutions.Jetsocat": {
@@ -2698,17 +2706,17 @@
     "manifestHash": "B71804EBD6739D98C6E34F0D3613216C18D387E56278378D0033B1DC3D56B99D",
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/facebook/pyrefly/releases/download/1.4.1/pyrefly-windows-x86_64.zip https://github.com/facebook/pyrefly/releases/download/1.4.1/pyrefly-windows-arm64.zip",
-      "tag": "1.4.1",
-      "checkedAt": "2026-11-09T05:23:01.5650556Z"
+      "detail": "No release asset matches: https://github.com/facebook/pyrefly/releases/download/1.5.0/pyrefly-windows-x86_64.zip https://github.com/facebook/pyrefly/releases/download/1.5.0/pyrefly-windows-arm64.zip",
+      "tag": "1.5.0",
+      "checkedAt": "2026-11-23T05:25:09.1687664Z"
     }
   },
   "FahrenheitResearch.ArWen": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/FahrenheitResearch/arwen/releases/download/v3.0.2/gpuwm-bridges-v3.0.2-win-x86_64.zip",
-      "tag": "v3.0.2",
-      "checkedAt": "2026-11-16T05:23:59.2730538Z"
+      "detail": "No release asset matches: https://github.com/FahrenheitResearch/arwen/releases/download/v3.0.5/gpuwm-bridges-v3.0.5-win-x86_64.zip",
+      "tag": "v3.0.5",
+      "checkedAt": "2026-11-23T05:25:09.1687664Z"
     }
   },
   "fairdataihub.SODA-for-SPARC": {
@@ -3016,9 +3024,17 @@
     ],
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/futrime/lip/releases/download/v0.40.0/lip-0.40.0-win-arm64.zip https://github.com/futrime/lip/releases/download/v0.40.0/lip-0.40.0-win-x64.zip",
-      "tag": "v0.40.0",
-      "checkedAt": "2026-11-16T05:23:59.2730538Z"
+      "detail": "No release asset matches: https://github.com/futrime/lip/releases/download/v0.41.1/lip-0.41.1-win-arm64.zip https://github.com/futrime/lip/releases/download/v0.41.1/lip-0.41.1-win-x64.zip",
+      "tag": "v0.41.1",
+      "checkedAt": "2026-11-23T05:25:09.1687664Z"
+    }
+  },
+  "fwupd.fwupd": {
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/fwupd/fwupd/releases/download/2.1.10/fwupd-2.1.10-setup-x86_64.msi",
+      "tag": "2.1.10",
+      "checkedAt": "2026-11-23T05:25:09.1687664Z"
     }
   },
   "GAM-Team.gam.Portable": {
@@ -3415,7 +3431,13 @@
       "F106595577516164F6C6CC339839CB314CD53D93B36F78067EE3C135A78F4E53"
     ],
     "validationCount": 2,
-    "version": "2.6.2"
+    "version": "2.6.2",
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/Governikus/AusweisApp/releases/download/2.6.3/AusweisApp-2.6.3.msi",
+      "tag": "2.6.3",
+      "checkedAt": "2026-11-23T05:25:09.1687664Z"
+    }
   },
   "Gramps.Gramps": {
     "validationCount": 1,
@@ -4126,9 +4148,9 @@
   "j178.Prek": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/j178/prek/releases/download/v0.5.10/prek-i686-pc-windows-msvc.zip",
-      "tag": "v0.5.10",
-      "checkedAt": "2026-11-09T05:23:01.5650556Z"
+      "detail": "No release asset matches: https://github.com/j178/prek/releases/download/v0.5.11/prek-i686-pc-windows-msvc.zip",
+      "tag": "v0.5.11",
+      "checkedAt": "2026-11-23T05:25:09.1687664Z"
     }
   },
   "JackTrip.JackTrip": {
@@ -4334,9 +4356,9 @@
   "JGraph.Draw": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/jgraph/drawio-desktop/releases/download/v32.6.10/draw.io-ia32-32.6.10-windows-32bit-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v32.6.10/draw.io-ia32-32.6.10-windows-32bit-no-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v32.6.10/draw.io-32.6.10-windows-no-installer.exe",
-      "tag": "v32.6.10",
-      "checkedAt": "2026-11-09T05:23:01.5650556Z"
+      "detail": "No release asset matches: https://github.com/jgraph/drawio-desktop/releases/download/v32.7.4/draw.io-ia32-32.7.4-windows-32bit-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v32.7.4/draw.io-ia32-32.7.4-windows-32bit-no-installer.exe https://github.com/jgraph/drawio-desktop/releases/download/v32.7.4/draw.io-32.7.4-windows-no-installer.exe",
+      "tag": "v32.7.4",
+      "checkedAt": "2026-11-23T05:25:09.1687664Z"
     }
   },
   "JitzuLang.Jitzu": {
@@ -5038,9 +5060,9 @@
     "validationCount": 1,
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/luckjiawei/frpc-desktop/releases/download/v2.0.1/Frpc-Desktop-Setup-2.0.1.exe",
-      "tag": "v2.0.1",
-      "checkedAt": "2026-11-16T05:23:59.2730538Z"
+      "detail": "No release asset matches: https://github.com/luckjiawei/frpc-desktop/releases/download/v2.0.3/Frpc-Desktop-Setup-2.0.3.exe",
+      "tag": "v2.0.3",
+      "checkedAt": "2026-11-23T05:25:09.1687664Z"
     }
   },
   "lukehaas.RunJS": {
@@ -5304,9 +5326,9 @@
   "Metanorma.Metanorma": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/metanorma/packed-mn/releases/download/v1.17.0-6/metanorma-windows-x86_64.zip",
-      "tag": "v1.17.0-6",
-      "checkedAt": "2026-11-09T05:23:01.5650556Z"
+      "detail": "No release asset matches: https://github.com/metanorma/packed-mn/releases/download/v1.18.6-3/metanorma-windows-x86_64.zip",
+      "tag": "v1.18.6-3",
+      "checkedAt": "2026-11-23T05:25:09.1687664Z"
     }
   },
   "Mew.Wrec": {
@@ -6014,9 +6036,9 @@
     },
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/nao1215/gup/releases/download/v1.10.4/gup_1.10.4_windows_386.zip",
-      "tag": "v1.10.4",
-      "checkedAt": "2026-11-16T05:23:59.2730538Z"
+      "detail": "No release asset matches: https://github.com/nao1215/gup/releases/download/v1.10.5/gup_1.10.5_windows_386.zip",
+      "tag": "v1.10.5",
+      "checkedAt": "2026-11-23T05:25:09.1687664Z"
     }
   },
   "NASS.AvUpload": {
@@ -6676,9 +6698,9 @@
     "lastUpdated": "2026-09-25T16:53:52.6738769Z",
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/getopenscreen/openscreen/releases/download/v2.2.2/Openscreen.Setup.2.2.2.exe",
-      "tag": "v2.2.2",
-      "checkedAt": "2026-11-09T05:23:01.5650556Z"
+      "detail": "No release asset matches: https://github.com/getopenscreen/openscreen/releases/download/v2.3.0/Openscreen.Setup.2.3.0.exe",
+      "tag": "v2.3.0",
+      "checkedAt": "2026-11-23T05:25:09.1687664Z"
     }
   },
   "OpenStenoProject.Plover": {
@@ -7674,7 +7696,13 @@
     ],
     "manifestHash": "1E86392822FC30BDBC4D49D02098E9F520CE06A82F416C3170A97A4B406E83F5",
     "state": "VALIDATION_PASSED",
-    "version": "0.5.1"
+    "version": "0.5.1",
+    "configHealth": {
+      "status": "AssetMissing",
+      "detail": "No release asset matches: https://github.com/rizukirr/apic/releases/download/v1.2.0/apic-gui-v1.2.0-x86_64.msi",
+      "tag": "v1.2.0",
+      "checkedAt": "2026-11-23T05:25:09.1687664Z"
+    }
   },
   "Rnwood.Smtp4dev": {
     "state": "VALIDATION_PASSED",
@@ -7942,13 +7970,7 @@
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
     "version": "1.5.0",
-    "manifestHash": "1254133B38270378FAD0E3CFCFB3B1B48A2B85FBCFE112E32014EA50A9CC25A2",
-    "configHealth": {
-      "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/scalixworld/scalix-cloud-cli/releases/download/v1.6.0/scalix-cloud-x86_64-pc-windows-msvc.exe",
-      "tag": "v1.6.0",
-      "checkedAt": "2026-11-16T05:23:59.2730538Z"
-    }
+    "manifestHash": "1254133B38270378FAD0E3CFCFB3B1B48A2B85FBCFE112E32014EA50A9CC25A2"
   },
   "Scandum.WinTin++": {
     "version": "2.02.61",
@@ -7976,9 +7998,9 @@
     "lastUpdated": "2026-05-20T22:15:05.5255716Z",
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/schollz/croc/releases/download/v11.6.5/croc_v11.6.5_Windows-ARM.zip",
-      "tag": "v11.6.5",
-      "checkedAt": "2026-11-09T05:23:01.5650556Z"
+      "detail": "No release asset matches: https://github.com/schollz/croc/releases/download/v11.6.6/croc_v11.6.6_Windows-ARM.zip",
+      "tag": "v11.6.6",
+      "checkedAt": "2026-11-23T05:25:09.1687664Z"
     }
   },
   "scimusmn.stele": {
@@ -8648,9 +8670,9 @@
   "StirlingTools.StirlingPDF": {
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v3.3.0/Stirling-PDF-win-installer.exe",
-      "tag": "v3.3.0",
-      "checkedAt": "2026-11-09T05:23:01.5650556Z"
+      "detail": "No release asset matches: https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v3.5.0/Stirling-PDF-win-installer.exe",
+      "tag": "v3.5.0",
+      "checkedAt": "2026-11-23T05:25:09.1687664Z"
     }
   },
   "Storj.Uplink": {
@@ -8822,9 +8844,9 @@
     "description": "",
     "configHealth": {
       "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/T-Troll/alienfx-tools/releases/download/10.0.0.0/alienfx-tools.msi",
-      "tag": "10.0.0.0",
-      "checkedAt": "2026-11-16T05:23:59.2730538Z"
+      "detail": "No release asset matches: https://github.com/T-Troll/alienfx-tools/releases/download/10.0.1/alienfx-tools.msi",
+      "tag": "10.0.1",
+      "checkedAt": "2026-11-23T05:25:09.1687664Z"
     }
   },
   "TacitDynamics.FolderSync": {
@@ -10422,13 +10444,7 @@
     "manifestHash": "D68866FE6B88BE7433457D1288CCE16D89C734FFE5394E997DBCD7637B046707",
     "version": "2.29.3",
     "lastUpdated": "2026-08-07T12:34:16.1518418Z",
-    "description": "",
-    "configHealth": {
-      "status": "AssetMissing",
-      "detail": "No release asset matches: https://github.com/0install/0install-win/releases/download/2.29.5/zero-install.exe https://github.com/0install/0install-win/releases/download/2.29.5/zero-install.exe",
-      "tag": "2.29.5",
-      "checkedAt": "2026-11-09T05:23:01.5650556Z"
-    }
+    "description": ""
   },
   "zevnda.SteamGameIdler": {
     "version": "6.5.2",
