@@ -711,15 +711,15 @@
     "description": ""
   },
   "Automattic.Wordpress": {
-    "manifestHash": "6673950920D3A092149113E734036113E7BB8F14B1CCE4AA0893B06E4E04615D",
-    "validationCount": 3,
-    "state": "VALIDATION_PASSED",
-    "version": "8.2.5",
+    "version": "8.2.6",
+    "manifestHash": "F69AFEB0E170104A0DDF9A7D54F0B4B02C19B2138ABA2DF536823631FB8B0661",
     "installerHashes": [
-      "3640C3E751D0EEB10546713453688CC277DDC7265E958F186487A89D9281F3BC"
+      "B95E6E5F24C72F726B909FB8E139934ECADE020EC7D31DFAED70AA0C2CA8686E"
     ],
+    "lastUpdated": "2026-11-24T01:10:42.3286301Z",
+    "state": "VALIDATION_PASSED",
     "description": "",
-    "lastUpdated": "2026-11-20T20:06:20.7935662Z"
+    "validationCount": 1
   },
   "Avidemux.Avidemux": {
     "configHealth": {
@@ -1215,16 +1215,16 @@
     "lastUpdated": "2026-08-20T09:17:27.4984446Z"
   },
   "bornova.numara": {
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-24T21:07:48.8750683Z",
-    "version": "7.6.3",
-    "manifestHash": "6ABE70C74044F1E4098099D0D991937A5FC83F2DCF0C59E2AC95EE518058640F",
+    "version": "8.0.0",
+    "manifestHash": "532AC3C1FF913B2B7566ED46B468F03AE2F222D0342A5EF3C0A5F0A8E5CAC615",
     "installerHashes": [
-      "D93B5DBCE53D52CB39E15A1A606CA8BE32B2EC4BEBCB437B0BB1A63339EB83B7",
-      "238579E28F9D956A4EE71E3B0D15B1656A92740C65518ED82D173DFCBB64B54C"
+      "F79BB2C5CF927607321D5DD82E445241DF6C17AC1C36D9DFA7B2F18903B4F041",
+      "6C0F93AF167A57160456D5DE9210055FB9132DC2838CFBE6FCF4C0CDE4902AD3"
     ],
-    "validationCount": 1,
-    "description": ""
+    "lastUpdated": "2026-11-24T01:10:42.2879155Z",
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "validationCount": 1
   },
   "brandonyoungdev.tldx": {
     "lastUpdated": "2026-11-20T20:06:18.3473895Z",
@@ -2739,15 +2739,15 @@
     }
   },
   "Fangyuan025.Chaty": {
-    "state": "VALIDATION_PASSED",
-    "version": "2.4.0",
-    "description": "",
-    "validationCount": 1,
-    "manifestHash": "D0AFD753FF4F563DBC0DDF8A7665A604B815EB48951A5C0A8AF9365599214776",
+    "version": "2.4.3",
+    "manifestHash": "74DEF323D3AF76CF83563CC94CA2FBEEE98218B836809D12ABADF54E43A7B4CF",
     "installerHashes": [
-      "5D24DEF26611AD00036F0F9C2336FF4EBD9D8469E4785421FCF32FC73695AFCE"
+      "41FC1D62537BA5511B1E2189136C3F1F162F56A69F90F3CB168C75CAE0EAA12E"
     ],
-    "lastUpdated": "2026-11-07T01:46:37.5170789Z"
+    "lastUpdated": "2026-11-24T01:10:42.2689093Z",
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "validationCount": 1
   },
   "Feho.LogNav": {
     "installerHashes": [
@@ -3900,15 +3900,15 @@
     "version": "0.1.18"
   },
   "hoppscotch.Hoppscotch": {
-    "description": "",
-    "manifestHash": "979432C1649B466CD3FCEBEDE6E9BD2A7E14847A96283C0275904A3C28670AE9",
-    "validationCount": 1,
-    "version": "26.9.0-0",
-    "lastUpdated": "2026-10-01T01:43:50.2889137Z",
-    "state": "VALIDATION_PASSED",
+    "version": "26.11.0-0",
+    "manifestHash": "9F99E74DD74DAA4BDCDA2B214BDFDB96C3A705909D35141033BAB2EE759CADF3",
     "installerHashes": [
-      "6A9E2C2C92AE37D033D1D6CB948D6F1C4C4E14951ADFC9B3FA5431CBDD3C915A"
-    ]
+      "CF63C18A5CD1467A3437B4410ECA5BCD3BA04EBA552F26C628754F6CBB31A13B"
+    ],
+    "lastUpdated": "2026-11-24T01:10:42.1929524Z",
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "validationCount": 1
   },
   "houmain.GPUpad": {
     "description": "",
@@ -5498,16 +5498,16 @@
     "validationCount": 3
   },
   "Microsoft.Garnet.DN9": {
-    "version": "2.2.13",
-    "lastUpdated": "2026-11-20T20:06:18.4588272Z",
-    "description": "",
-    "manifestHash": "6D072862A6F4A98F86B04D7D3A86308E6BB29466E3640DB0D0C87DB5D64FFA55",
-    "state": "VALIDATION_PASSED",
+    "version": "2.2.14",
+    "manifestHash": "1D9BFF27B0D983FB553E88769C3A847272B79C0B1DE9E004A719ADCA3966C501",
     "installerHashes": [
-      "CC8212D7C7A671C490E5C87967FC43025A22215922BDBDAD5ECCFF00915C7B82",
-      "B82ADAE8BE12BB0C68E0BAE6B959590897771157E3AAF5AD8BE843D26EB54FF2"
+      "8D7A99AB34FCE4ECDB6C63B54DB03407FD442AC083514C752FE98328897E384A",
+      "CB335F8D3AB98D25DB6626399002302EC273411486301957E553CF6D50ACA1E9"
     ],
-    "validationCount": 2
+    "lastUpdated": "2026-11-24T01:10:42.2545745Z",
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "validationCount": 1
   },
   "Microsoft.LightGBM": {
     "lastUpdated": "2026-08-20T21:12:49.5072525Z",
@@ -8769,16 +8769,16 @@
     }
   },
   "SuperRadCompany.Microsandbox": {
-    "manifestHash": "3A33F9E19751A2B12B5BAB43AFB4B5ECCB686424AF8A4C3F1A2CE65162C047D3",
-    "version": "0.7.16",
-    "state": "VALIDATION_PASSED",
+    "version": "0.8.1",
+    "manifestHash": "DB53AFAD1373CF124C25124AFC1AF724C0726B1AA6FC7D3DC5D5FCC6B0873053",
     "installerHashes": [
-      "FD170B1B2EFCFA85BC50D2BA8EB532103DAC26B2DC079D3DD1C747CF10B625FF",
-      "DE863621E451A000BE2C06F2D89A6598EB029B35D181D0BA08C64664E5A4C495"
+      "B0F57ECBE7AD2ABCC30E0DD9AA39DE6C5CF31B0824C2B1CF6D4387D1FE88CDE2",
+      "928A957191B3E5B7378C59134B1291773AB75EB55FE607F35467B3D52AC1931D"
     ],
-    "validationCount": 2,
+    "lastUpdated": "2026-11-24T01:10:42.3147871Z",
+    "state": "VALIDATION_PASSED",
     "description": "",
-    "lastUpdated": "2026-11-20T20:06:19.9628169Z"
+    "validationCount": 1
   },
   "SUSE.RancherDesktop": {
     "version": "1.25.0",
