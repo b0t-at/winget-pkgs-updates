@@ -4300,8 +4300,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.11.13",
-      "checkedAt": "2026-11-24T00:33:11.4448958Z"
+      "version": "2026.11.14",
+      "checkedAt": "2026-11-24T12:22:12.0493329Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -5402,11 +5402,7 @@
     "installerHashes": [
       "D3C8C294946107DBAB5821C67C9281C1A8F219EECB7AA9D847768B42B9609001"
     ],
-    "manifestHash": "50C6A1F27631A6C3DD3145A01B214677E75082A203C0C67C984E43A5FD6C6BC5",
-    "openPr": {
-      "version": "5.2.7",
-      "checkedAt": "2026-11-23T12:22:06.0191669Z"
-    }
+    "manifestHash": "50C6A1F27631A6C3DD3145A01B214677E75082A203C0C67C984E43A5FD6C6BC5"
   },
   "Microsoft.Azure.GuestProxyAgent.AllowListTool": {
     "version": "1.0.52",
@@ -5460,7 +5456,7 @@
     "manifestHash": "D79AD8C42A131BFC541325962C417356E026DD89313FB73432E85BF5099AC009",
     "openPr": {
       "version": "1.7.756201",
-      "checkedAt": "2026-11-23T12:22:06.4670682Z"
+      "checkedAt": "2026-11-24T12:22:13.3387954Z"
     }
   },
   "Microsoft.DSC": {
@@ -5570,7 +5566,7 @@
     "description": "",
     "openPr": {
       "version": "1.11.0",
-      "checkedAt": "2026-11-23T12:22:06.9748868Z"
+      "checkedAt": "2026-11-24T12:22:13.9112262Z"
     }
   },
   "Microsoft.Wassette": {
@@ -6218,11 +6214,7 @@
     "installerHashes": [
       "21F1F005EDE3FCE29CC0B7316178447DBA7E9389F6DE7A096C2A3C7874EBF243"
     ],
-    "validationCount": 1,
-    "openPr": {
-      "checkedAt": "2026-10-21T20:22:12.2951801Z",
-      "version": "0.14.1"
-    }
+    "validationCount": 1
   },
   "NixieTechLLC.Lait": {
     "configHealth": {
@@ -7185,7 +7177,11 @@
     "manifestHash": "878CDB880AE2ABE4E99C90C07BB026A461BE063A617F0FA3A355CEACFC84198D",
     "version": "12.23.0",
     "lastUpdated": "2026-11-24T08:44:06.2158649Z",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "version": "12.23.0",
+      "checkedAt": "2026-11-24T12:22:16.5522244Z"
+    }
   },
   "PocketBase.PocketBase": {
     "version": "0.40.6",
