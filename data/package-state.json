@@ -2324,7 +2324,7 @@
     "description": "",
     "openPr": {
       "version": "2.12.5",
-      "checkedAt": "2026-11-22T20:14:44.2819553Z"
+      "checkedAt": "2026-11-24T00:33:06.7275051Z"
     }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
@@ -4298,8 +4298,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.11.12",
-      "checkedAt": "2026-11-21T12:19:22.83506Z"
+      "version": "2026.11.13",
+      "checkedAt": "2026-11-24T00:33:11.4448958Z"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -4689,7 +4689,7 @@
     "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D",
     "openPr": {
       "version": "4.5.1",
-      "checkedAt": "2026-11-22T20:14:50.0058066Z"
+      "checkedAt": "2026-11-24T00:33:11.8060953Z"
     }
   },
   "kmiya-culti.RLogin": {
