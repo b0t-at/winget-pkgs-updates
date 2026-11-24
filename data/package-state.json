@@ -592,11 +592,7 @@
     "version": "3.6.2",
     "lastUpdated": "2026-11-20T20:06:18.7595481Z",
     "description": "",
-    "manifestHash": "2EDD37C60F83E33DEB0D6C574F5ABDF94EE2B3E2B69A85BFCE377C7DA7F8F692",
-    "openPr": {
-      "version": "3.6.2",
-      "checkedAt": "2026-11-20T20:30:05.5533369Z"
-    }
+    "manifestHash": "2EDD37C60F83E33DEB0D6C574F5ABDF94EE2B3E2B69A85BFCE377C7DA7F8F692"
   },
   "Arihant25.Chargle": {
     "description": "",
@@ -2872,8 +2868,8 @@
     "manifestHash": "86FA8F6B2F491EE6BDE61BAFC3493B85F1B14C4667597B93DBB355BC71355A19",
     "description": "",
     "openPr": {
-      "checkedAt": "2026-11-23T20:14:32.2910055Z",
-      "version": "0.5.16"
+      "version": "0.5.17",
+      "checkedAt": "2026-11-24T20:14:24.7315714Z"
     }
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
@@ -2936,7 +2932,11 @@
     "manifestHash": "F0FEFBF6DA3B6F4D0DE5E7A141BB511D73DB96B5B6B6726FCEB799EC08676BEE",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "3.21.0"
+    "version": "3.21.0",
+    "openPr": {
+      "version": "3.21.0",
+      "checkedAt": "2026-11-24T20:14:26.0462454Z"
+    }
   },
   "FrancisBanyikwa.MediaDownloader": {
     "installerHashes": [
@@ -8705,8 +8705,8 @@
     "validationCount": 1,
     "manifestHash": "2FC17D10387329E5E73DBDDCBE45541A670D1711C99B916B986BBD747577DEC7",
     "openPr": {
-      "checkedAt": "2026-11-11T00:08:22.3974681Z",
-      "version": "1.55.10"
+      "version": "1.55.15",
+      "checkedAt": "2026-11-24T20:14:36.6742303Z"
     }
   },
   "stuncloud.uwscr": {
