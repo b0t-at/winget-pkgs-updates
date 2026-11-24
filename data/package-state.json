@@ -1367,7 +1367,7 @@
     ],
     "openPr": {
       "version": "1.2.2",
-      "checkedAt": "2026-11-23T04:20:24.9609278Z"
+      "checkedAt": "2026-11-24T16:17:57.5826286Z"
     }
   },
   "CargoLambda.CargoLambda": {
@@ -2938,11 +2938,7 @@
     "version": "3.20.13",
     "lastUpdated": "2026-11-20T20:06:18.4336633Z",
     "description": "",
-    "manifestHash": "19561705FD0C4BEC0F011001C83E406BE7D0BEFDA8FC769A0D5D3C69F95864B4",
-    "openPr": {
-      "version": "3.20.13",
-      "checkedAt": "2026-11-20T20:31:06.2718876Z"
-    }
+    "manifestHash": "19561705FD0C4BEC0F011001C83E406BE7D0BEFDA8FC769A0D5D3C69F95864B4"
   },
   "FrancisBanyikwa.MediaDownloader": {
     "installerHashes": [
