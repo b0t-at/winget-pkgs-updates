@@ -2930,15 +2930,13 @@
     "version": "7.3.5"
   },
   "FOSSA.FOSSA-cli": {
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "F38F7FF5B90A65803C9455222CBDA611AD556B4154463A9979AC8BB1189F314F"
-    ],
-    "validationCount": 1,
-    "version": "3.20.13",
-    "lastUpdated": "2026-11-20T20:06:18.4336633Z",
     "description": "",
-    "manifestHash": "19561705FD0C4BEC0F011001C83E406BE7D0BEFDA8FC769A0D5D3C69F95864B4"
+    "installerHashes": "9E6BEC9A5740E2CAA19EF9301267EB4D89166BDF9002D1FDBC363AEA1AC0714B",
+    "lastUpdated": "2026-11-24T16:49:02.0044133Z",
+    "manifestHash": "F0FEFBF6DA3B6F4D0DE5E7A141BB511D73DB96B5B6B6726FCEB799EC08676BEE",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "3.21.0"
   },
   "FrancisBanyikwa.MediaDownloader": {
     "installerHashes": [
@@ -4793,14 +4791,14 @@
   },
   "LANCommander.Launcher": {
     "validationCount": 1,
-    "lastUpdated": "2026-10-25T05:02:06.1283306Z",
-    "version": "2.1.17",
-    "installerHashes": [
-      "A4AC28CB3D1A381F157FD86464466951CC998F41D3E0C83833AC5857943C208E",
-      "87054F3CCB746F257682C17B7D04B49B6F2CF93E6688ACF59A61448F41F16A8C"
-    ],
-    "manifestHash": "178279AA8D229C4E5755A743CB65EB8B2931132214D401BCA4D802818729CEFF",
+    "version": "2.2.0",
+    "manifestHash": "49140548DD73624DFCF52D8F4B7615B160C97EA11E45E77BC7E9230B6A49A26A",
     "description": "",
+    "installerHashes": [
+      "A39A91C445705EF32E76B50FB9649505DA6176AAA5ADE4C16EC55D87AC1458B7",
+      "7B8D66C9134B6B6F305CB5F7EDE2910474113C1A1EE06FAFB886D3FC3F1684B7"
+    ],
+    "lastUpdated": "2026-11-24T16:49:01.8771597Z",
     "state": "VALIDATION_PASSED"
   },
   "LANCommander.Server": {
@@ -8083,15 +8081,15 @@
     }
   },
   "seerge.g-helper.PreRelease": {
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "0E18159C54E5BA9075B7F4BE7A024FFDCF96FA9FE0D3010AF9FDCD4C3C5FEBAD"
-    ],
     "validationCount": 1,
-    "version": "0.294",
-    "lastUpdated": "2026-11-20T20:06:18.9701886Z",
+    "version": "0.295",
+    "manifestHash": "CCBF35CF004B4F1DA5FFBBD99107E4E01C318CDAF1F8A24FEF26CA44A82342CB",
     "description": "",
-    "manifestHash": "AA8C5ECB6BAD6094EE8F6080D8499A39776444DC1059D6B5114606EFCCD16796"
+    "installerHashes": [
+      "0B99A1755562054CE8B79DC2D7AD84D5A6F750813C398DA386E88E098E4270B1"
+    ],
+    "lastUpdated": "2026-11-24T16:49:01.9500173Z",
+    "state": "VALIDATION_PASSED"
   },
   "SERGEYDJUM.dwmEOTFrs": {
     "installerHashes": [
@@ -8202,15 +8200,15 @@
     ]
   },
   "Sigstore.Cosign": {
-    "manifestHash": "1E5BDCE3936AC46161C67270DB407EFDEEAC5245896BCFBE4ACC8CA775AB216B",
-    "lastUpdated": "2026-10-21T04:51:29.7993585Z",
-    "state": "VALIDATION_PASSED",
     "validationCount": 1,
+    "version": "3.1.5",
+    "manifestHash": "CA993133E6C534B9A0187700440EAEE2E26A1C90276C706A32F0BE92EA43EDC6",
     "description": "",
-    "version": "3.1.4",
     "installerHashes": [
-      "CBE953787074611F1334CBF37DC1CF953995BB8C45398EB4FC7BB781D29C1F2A"
-    ]
+      "B7716EACA8D592869FEEFFBCB4F826963F2FEBA3C5E72A03019FE024059AD1FC"
+    ],
+    "lastUpdated": "2026-11-24T16:49:01.9820674Z",
+    "state": "VALIDATION_PASSED"
   },
   "sikalabs.slr": {
     "manifestHash": "3FBE79648B8E9EACADB22F69BB519E77D05A1D692222801BCB4271925A397759",
@@ -9159,14 +9157,14 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "installerHashes": [
-      "E3133FF7A28EB0312314C50AC81ECA701745477FC7395B37AD9DFC7B9D41F080"
-    ],
-    "manifestHash": "B289B73E9142F47430AE52E517F963C4E40480D53DEA88548C4A169CDC3ED81F",
     "validationCount": 1,
+    "version": "3.20.20",
+    "manifestHash": "F6D88AB992C8057D191C069DD0684E2107DFEBD0924C8D8C49F62825F2955B9E",
     "description": "",
-    "version": "3.20.16",
-    "lastUpdated": "2026-11-24T12:49:51.4692457Z",
+    "installerHashes": [
+      "054F52D08F6C854AFD6221386F387287112BBFFB99ABDA1D7ECA37699542E3F4"
+    ],
+    "lastUpdated": "2026-11-24T16:49:01.9260261Z",
     "state": "VALIDATION_PASSED"
   },
   "timminator.VideOCR.CPU": {
