@@ -122,7 +122,7 @@
   "AdGuard.AdGuardDNSCLI": {
     "openPr": {
       "version": "0.2.1",
-      "checkedAt": "2026-11-23T00:38:56.1015373Z"
+      "checkedAt": "2026-11-24T04:18:44.4071571Z"
     }
   },
   "AdGuard.AdGuardHome": {
@@ -139,7 +139,7 @@
     "manifestHash": "1E972B788DEB3CCD2DE087ABA6E781FE1BF60DD0E208A03F568825A01383C5B4",
     "openPr": {
       "version": "1.0.0",
-      "checkedAt": "2026-11-23T00:38:17.8660095Z"
+      "checkedAt": "2026-11-24T04:17:35.3905147Z"
     }
   },
   "AdGuard.dnsproxy": {
@@ -860,11 +860,7 @@
     "description": "",
     "installerHashes": [
       "E106D977281B16A2E7509D5F2F904C61D57E3EF1F61CCDAEF0C2F8DB4B9AD072"
-    ],
-    "openPr": {
-      "checkedAt": "2026-11-22T16:14:47.2084423Z",
-      "version": "1.28.111"
-    }
+    ]
   },
   "bdash-app.bdash": {
     "installerHashes": [
@@ -1777,7 +1773,7 @@
     "manifestHash": "3C48DC295A758FAB6722DE26E7B62D54C5F3076191A04E2CB95FAA60134CDFDB",
     "openPr": {
       "version": "0.35.0",
-      "checkedAt": "2026-11-23T00:38:20.6806043Z"
+      "checkedAt": "2026-11-24T04:17:38.9397087Z"
     }
   },
   "CrewHaus.CLI": {
@@ -3398,7 +3394,7 @@
     "lastUpdated": "2026-11-21T20:47:30.1815473Z",
     "openPr": {
       "version": "2.7.1",
-      "checkedAt": "2026-11-23T00:38:23.7773781Z"
+      "checkedAt": "2026-11-24T04:17:43.0535177Z"
     }
   },
   "Google.Protobuf": {
@@ -7118,11 +7114,7 @@
       "753E4E7A51CAD941407B4D1A0275F7517343A93E50E0A4D8F6D5127AB3D0ECAD"
     ],
     "description": "",
-    "validationCount": 2,
-    "openPr": {
-      "version": "8.4.0",
-      "checkedAt": "2026-11-22T20:14:52.2479759Z"
-    }
+    "validationCount": 2
   },
   "PiusPP.Celestial": {
     "version": "2.1.0",
