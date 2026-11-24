@@ -7112,15 +7112,15 @@
     "description": ""
   },
   "pinokiocomputer.pinokio": {
-    "lastUpdated": "2026-11-22T16:38:03.6317964Z",
-    "state": "VALIDATION_PASSED",
-    "version": "8.4.0",
-    "manifestHash": "F6DB2B708D2B7A6E5ED3E878EF24B9DCA528B3AE184FC24FCD9FD296F29304D4",
     "installerHashes": [
-      "753E4E7A51CAD941407B4D1A0275F7517343A93E50E0A4D8F6D5127AB3D0ECAD"
+      "17D5DCCD7BB08F851857CD28DE8BC51181E0530DA4423675C5D4A4EA33E10071"
     ],
+    "validationCount": 1,
     "description": "",
-    "validationCount": 2
+    "manifestHash": "23CFD9AD361657635F60F859DAAEFB6EC8532E0254BF528E2FBCA8C5B34A1687",
+    "version": "8.4.1",
+    "lastUpdated": "2026-11-24T08:44:06.1633243Z",
+    "state": "VALIDATION_PASSED"
   },
   "PiusPP.Celestial": {
     "version": "2.1.0",
@@ -7176,16 +7176,16 @@
     }
   },
   "pnpm.pnpm": {
-    "state": "VALIDATION_PASSED",
-    "manifestHash": "0E46470DEE8293D4E4BF216762B9F3F53657EE8E77F89FDCA6AA07863AAB29EB",
-    "validationCount": 1,
-    "version": "12.21.0",
-    "description": "",
-    "lastUpdated": "2026-11-20T20:06:18.9942778Z",
     "installerHashes": [
-      "4FB64BB37E46C788309E0FD4EA93BEB512546FDC7348121194FB704FBB72C09C",
-      "9584890DB13A8BCD9A77556F3455E37718A17A31C0AEE0254CF8D8AC6B3A8DF1"
-    ]
+      "1A954BDC1B15FF036294279391D01A09407B7D46FF972A59D81F23BECCE96C1C",
+      "D38E823FAD07B42EDBBA6206C56DCB3B5BCF1A6E18A6BA7CD0602490C02FB186"
+    ],
+    "validationCount": 1,
+    "description": "",
+    "manifestHash": "878CDB880AE2ABE4E99C90C07BB026A461BE063A617F0FA3A355CEACFC84198D",
+    "version": "12.23.0",
+    "lastUpdated": "2026-11-24T08:44:06.2158649Z",
+    "state": "VALIDATION_PASSED"
   },
   "PocketBase.PocketBase": {
     "version": "0.40.6",
@@ -8326,13 +8326,13 @@
   },
   "skyhook-io.Radar": {
     "installerHashes": [
-      "50C7C42E7A84C8D259C0E9F25670FA61E2221375B0CC6567AD57CC0B13DB684F"
+      "5569421734C0A82BAA5BC9A5B888FAB77F0C05A21B127C989F4C6A8DFA437D82"
     ],
     "validationCount": 1,
     "description": "",
-    "manifestHash": "256C0941C0BEB07A9F424B187B40D08B5187D2F6B53069F858D264E86724A7FE",
-    "lastUpdated": "2026-11-21T08:35:45.3138399Z",
-    "version": "1.21.1",
+    "manifestHash": "B392445E64F6886BC66D4376F36545CEA953FB81A79A280357E25530D847E4F9",
+    "version": "1.21.2",
+    "lastUpdated": "2026-11-24T08:44:06.1249444Z",
     "state": "VALIDATION_PASSED"
   },
   "Skylot.jadx": {
@@ -9169,15 +9169,15 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "version": "3.20.7",
-    "validationCount": 1,
-    "manifestHash": "A28FEAF8751BD0BE6A0572011AD6E06A14427B84BF236A724841D646DBAB89C7",
-    "description": "",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-23T20:36:30.9952669Z",
     "installerHashes": [
-      "C7EEA13D3CA537D1F42A089656FFA7754EA20FA84A40E8BE0B9EFDF5879CEDD3"
-    ]
+      "66D61089DCF9C50060F5C7C75AE101441885657FCFA02DD1D2038523377132E9"
+    ],
+    "validationCount": 1,
+    "description": "",
+    "manifestHash": "B42C5001ABE78441AA96E09D61C28928F1BD2C6D534E58824D83CAEB0AFEFD15",
+    "version": "3.20.14",
+    "lastUpdated": "2026-11-24T08:44:06.18399Z",
+    "state": "VALIDATION_PASSED"
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
