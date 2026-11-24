@@ -402,16 +402,16 @@
     "version": "0.2.0"
   },
   "AnInsomniacy.Aria2Next": {
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "33F13B297EBE219B99F098B1B21C9EC34EFF90E20ED106CF3C86B210A7567351",
-      "5724B6E36418EB46783EEE21BBE3C76C7185AE93BDE564F3E8117A591487B13B"
-    ],
-    "validationCount": 2,
-    "version": "3.1.1",
-    "lastUpdated": "2026-11-20T20:46:31.1408295Z",
+    "version": "3.1.2",
     "description": "",
-    "manifestHash": "4FD3D9BF84405C5F8FC0CA8245137E13E0D7C7702894337E4DAC9312E4FF55F3"
+    "manifestHash": "45A26A504F35C151DF6E42D7368DBC3A4938A116381CAAF3211DEBE3DB511E2C",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "installerHashes": [
+      "94EDC284CD84DEC26A16AE9431378C5AB9E5CDE8011482566483F4F0CB20C03F",
+      "2D86BF8B6384EFBF70406B1E50BE05061A3CED4B653EBBB230D900C344AA301E"
+    ],
+    "lastUpdated": "2026-11-24T04:35:06.3024086Z"
   },
   "Anki.Anki": {
     "description": "",
@@ -852,15 +852,13 @@
     "validationCount": 1
   },
   "bcssov.IronyModManager": {
-    "lastUpdated": "2026-11-22T12:37:42.5456104Z",
-    "manifestHash": "D16D3EB815A17D0E0CFBCB44F251D415EBD059DC7567F916113D98EB8E30451B",
-    "version": "1.28.111",
+    "description": "",
+    "installerHashes": "44F263D1DA7FA087B44599F4FBE84F8506A2B5BF3326D2FB90727621F3DC1F5C",
+    "lastUpdated": "2026-11-24T04:35:06.2636225Z",
+    "manifestHash": "0ED0E6710C4A601DF22496D4134B2DF980DC7339FD6925319FDF09CF3B6556D7",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "description": "",
-    "installerHashes": [
-      "E106D977281B16A2E7509D5F2F904C61D57E3EF1F61CCDAEF0C2F8DB4B9AD072"
-    ]
+    "version": "1.28.112"
   },
   "bdash-app.bdash": {
     "installerHashes": [
@@ -4802,16 +4800,16 @@
     "state": "VALIDATION_PASSED"
   },
   "LANCommander.Server": {
-    "version": "2.1.17",
+    "version": "2.2.0",
+    "description": "",
+    "manifestHash": "2FDFB6A30E26FBCF74C220FA955BB5B9CFAFCDF5ABA0A2ED7780BD21B0DCA324",
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "CC458CC857E8F37B3F7E82ED182A108A3287B44EB0B98A296212C21304CE5144",
-      "026B617A9C76285837455D07CECCDF35F056C1CC8FC81A3627D4745F6395A8E6"
-    ],
     "validationCount": 1,
-    "manifestHash": "19104FE0BE6C435A3962FD19A1AB98F19F630EC35242865E3DB1763338C714ED",
-    "lastUpdated": "2026-10-23T13:49:06.4824071Z",
-    "description": ""
+    "installerHashes": [
+      "D1EB04A4A1CD2A17ED642880A9B2BC60B0697A1029516A80199651B8415FB163",
+      "58221384AB389F6ED81C357B78C922FE2C14BFB0B3F969E290F7BCF5A87F3798"
+    ],
+    "lastUpdated": "2026-11-24T04:35:06.3396562Z"
   },
   "Lando.Lando": {
     "validationCount": 1,
