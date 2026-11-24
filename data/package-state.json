@@ -365,7 +365,11 @@
     "installerHashes": [
       "9854F616EC92CC1357A6D975A0090F2B9C265D150B488BB118A10E007A8376BA",
       "DA05FBF4A5D0B34550A6AA2E2B6766B1540D8C0B722231835B963295B392747D"
-    ]
+    ],
+    "openPr": {
+      "checkedAt": "2026-11-24T08:20:48.1562462Z",
+      "version": "1.2.1"
+    }
   },
   "ameshkov.dnslookup": {
     "description": "",
@@ -411,7 +415,11 @@
       "94EDC284CD84DEC26A16AE9431378C5AB9E5CDE8011482566483F4F0CB20C03F",
       "2D86BF8B6384EFBF70406B1E50BE05061A3CED4B653EBBB230D900C344AA301E"
     ],
-    "lastUpdated": "2026-11-24T04:35:06.3024086Z"
+    "lastUpdated": "2026-11-24T04:35:06.3024086Z",
+    "openPr": {
+      "checkedAt": "2026-11-24T08:20:48.5950383Z",
+      "version": "3.1.2"
+    }
   },
   "Anki.Anki": {
     "description": "",
@@ -7540,11 +7548,7 @@
     "lastUpdated": "2026-11-20T20:06:19.3975899Z",
     "version": "3.4.1",
     "validationCount": 5,
-    "state": "VALIDATION_PASSED",
-    "openPr": {
-      "checkedAt": "2026-11-21T00:36:28.8089883Z",
-      "version": "3.4.1"
-    }
+    "state": "VALIDATION_PASSED"
   },
   "Rela.RelaGit": {
     "version": "0.16.11",
@@ -8754,8 +8758,8 @@
     ],
     "manifestHash": "B1B716023C04A31ACC5074A77A2D997B0021E9F195EA648CF6ECECEA7F5F1336",
     "openPr": {
-      "version": "1.30.0",
-      "checkedAt": "2026-11-23T04:19:23.606259Z"
+      "checkedAt": "2026-11-24T08:19:48.4623755Z",
+      "version": "1.30.0"
     }
   },
   "SuperRadCompany.Microsandbox": {
@@ -9044,8 +9048,8 @@
     "manifestHash": "101A50462A6E2BE19AFB17A21278EA44597559D970949753840897CFC30A7566",
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
-      "version": "5.7.1",
-      "checkedAt": "2026-11-23T04:19:24.6049026Z"
+      "checkedAt": "2026-11-24T08:19:49.3957163Z",
+      "version": "5.7.1"
     }
   },
   "termio.soft-jp.com.TermioWin": {
