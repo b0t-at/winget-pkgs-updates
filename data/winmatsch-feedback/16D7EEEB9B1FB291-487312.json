@@ -1,0 +1,16 @@
+{
+  "repository": "microsoft/winget-pkgs",
+  "pullRequestNumber": 487312,
+  "classification": "UrlValidationError",
+  "state": "Escalated",
+  "recordedAt": "2026-11-24T06:50:39.1272178+00:00",
+  "retryAfter": null,
+  "learnedOverrideSignal": null,
+  "reason": "One or more manifest URLs failed upstream validation; drop or replace the URLs named in the validator comment before resubmitting.",
+  "packageIdentifier": "RedisInsight.RedisInsight",
+  "packageVersion": "3.10.0",
+  "evidence": [
+    "https://www.redis.io/legal/redis-insight-license-terms/"
+  ],
+  "installerTraits": null
+}

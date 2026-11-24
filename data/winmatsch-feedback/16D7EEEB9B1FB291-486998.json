@@ -1,0 +1,14 @@
+{
+  "repository": "microsoft/winget-pkgs",
+  "pullRequestNumber": 486998,
+  "classification": "TransientInternalError",
+  "state": "RetryScheduled",
+  "recordedAt": "2026-11-24T06:50:39.158676+00:00",
+  "retryAfter": "2026-11-24T07:50:39.1585086+00:00",
+  "learnedOverrideSignal": null,
+  "reason": "Infrastructure failure does not justify manifest mutation.",
+  "packageIdentifier": "Longbridge.LongbridgeTerminal",
+  "packageVersion": "0.32.0",
+  "evidence": [],
+  "installerTraits": null
+}
