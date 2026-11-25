@@ -4290,8 +4290,8 @@
   },
   "jdx.mise": {
     "openPr": {
-      "version": "2026.11.14",
-      "checkedAt": "2026-11-24T12:22:12.0493329Z"
+      "checkedAt": "2026-11-25T12:23:32.6470791Z",
+      "version": "2026.11.14"
     }
   },
   "jeffaristi92.Sweeft": {
@@ -5449,8 +5449,8 @@
     "description": "",
     "manifestHash": "D79AD8C42A131BFC541325962C417356E026DD89313FB73432E85BF5099AC009",
     "openPr": {
-      "version": "1.7.756201",
-      "checkedAt": "2026-11-24T12:22:13.3387954Z"
+      "checkedAt": "2026-11-25T12:23:33.1864946Z",
+      "version": "1.7.756201"
     }
   },
   "Microsoft.DSC": {
@@ -5559,8 +5559,8 @@
     ],
     "description": "",
     "openPr": {
-      "version": "1.11.0",
-      "checkedAt": "2026-11-24T12:22:13.9112262Z"
+      "checkedAt": "2026-11-25T12:23:33.6526085Z",
+      "version": "1.11.0"
     }
   },
   "Microsoft.Wassette": {
