@@ -2024,13 +2024,13 @@
   "DeskRipple.DeskRipple": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "CE1159A75F9B8EDC650EE62988FE289EC5443B5C964BAD24F89CBD1A5F134618",
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
     "installerHashes": [
       "0389019A9BF3E73D4621CC22FEC33DFB8448BF5E361CCCADDE86DF417AF70068"
     ],
     "version": "1.1.3",
-    "lastUpdated": "2026-11-25T04:55:56.4780747Z"
+    "lastUpdated": "2026-11-25T08:44:31.2355325Z"
   },
   "DeutLab.HandyVoice": {
     "installerHashes": [
@@ -5480,14 +5480,14 @@
   "Microsoft.Garnet.DN8": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "D4C67C2804E81D2579759A4815C91947179F9C121F85F82FF70CD4186B6AA611",
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
     "installerHashes": [
       "8D7A99AB34FCE4ECDB6C63B54DB03407FD442AC083514C752FE98328897E384A",
       "CB335F8D3AB98D25DB6626399002302EC273411486301957E553CF6D50ACA1E9"
     ],
     "version": "2.2.14",
-    "lastUpdated": "2026-11-25T04:55:56.3227772Z"
+    "lastUpdated": "2026-11-25T08:44:31.1355199Z"
   },
   "Microsoft.Garnet.DN9": {
     "version": "2.2.14",
@@ -7528,15 +7528,15 @@
     "description": ""
   },
   "rejetto.hfs": {
-    "manifestHash": "55EAB85016F7327A0FC436F77D3ADE2F6AB72682E6C8C2805BC4E09173038E01",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "10CB7786B0205AA5078FED4FEBC39DA90A15F7BE384AA528CC1E907061539687",
     "installerHashes": [
-      "2021648C72E5EE0B78EB67E7F68BFDE069ACC753776D8D6E66AFC4A8EC4569CA"
+      "E4154323B19ACD34A46384F4ECBD63FAAA725886B8B6F38CC36B0FECFADE7408"
     ],
     "description": "",
-    "lastUpdated": "2026-11-20T20:06:19.3975899Z",
-    "version": "3.4.1",
-    "validationCount": 5,
-    "state": "VALIDATION_PASSED"
+    "version": "3.4.2",
+    "validationCount": 1,
+    "lastUpdated": "2026-11-25T08:44:31.1786385Z"
   },
   "Rela.RelaGit": {
     "version": "0.16.11",
@@ -9281,15 +9281,15 @@
     "description": ""
   },
   "TrellisLab.Trellis": {
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "039EE9AC966268A98BD6C39401C473B0F9A327857EF05CD33B2AC12C8118598F",
     "installerHashes": [
-      "196427AAC028DE5BB21E7ABF7DDBC676B5FD71B2DA618962622AE7AFE99F8CA1"
+      "C6C94A1E341E4D46637B94767D80135DC1092793C0615C924389F59E5B578EF8"
     ],
     "description": "",
-    "manifestHash": "9F4D1881C79385B2B4F392BEDCA921021B0A2A9B6F991D5A60667936EB73AA99",
+    "version": "1.11.0",
     "validationCount": 1,
-    "lastUpdated": "2026-10-31T01:27:04.192918Z",
-    "version": "1.10.0",
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-11-25T08:44:31.213512Z"
   },
   "TrenchBroom.TrenchBroom": {
     "manifestHash": "989EB55DC4DCCE006A1A8E7810CECB2266582F01FF5FDDC16E6DEE67626770FD",
