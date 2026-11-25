@@ -1854,11 +1854,7 @@
     "manifestHash": "AA095161A726AB9006C4AC5C23AA880FB6F668679905702093FBD44D40A30B28",
     "state": "VALIDATION_PASSED",
     "validationCount": 2,
-    "version": "156.0.8078.108",
-    "openPr": {
-      "version": "156.0.8078.108",
-      "checkedAt": "2026-11-22T12:18:51.2550456Z"
-    }
+    "version": "156.0.8078.108"
   },
   "cubezombies.MidnightAthenaeum": {
     "manifestHash": "888A7BADCA52EE5B42F755D91B950DA3D3AA1CFB03A6012120CE16761BA13129",
@@ -2321,8 +2317,8 @@
     "lastUpdated": "2026-10-29T09:22:10.7111402Z",
     "description": "",
     "openPr": {
-      "version": "2.12.5",
-      "checkedAt": "2026-11-24T00:33:06.7275051Z"
+      "checkedAt": "2026-11-25T00:35:55.6235073Z",
+      "version": "2.12.5"
     }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
@@ -4684,8 +4680,8 @@
     "description": "",
     "manifestHash": "AEFA08F7C6A868AB7D42494837CFC17E816E3EABC2F85072D39FB1295D7F574D",
     "openPr": {
-      "version": "4.5.1",
-      "checkedAt": "2026-11-24T00:33:11.8060953Z"
+      "checkedAt": "2026-11-25T00:36:23.3959691Z",
+      "version": "4.5.1"
     }
   },
   "kmiya-culti.RLogin": {
@@ -5396,7 +5392,11 @@
       "2C68C29A4DA486815AB9B36A0EF945A6A5128AF2D1ADE298AEB3763F046875F5"
     ],
     "validationCount": 1,
-    "description": ""
+    "description": "",
+    "openPr": {
+      "checkedAt": "2026-11-25T00:36:23.9068349Z",
+      "version": "5.2.8"
+    }
   },
   "Microsoft.Azure.GuestProxyAgent.AllowListTool": {
     "version": "1.0.52",
@@ -6735,7 +6735,7 @@
     "description": "",
     "state": "VALIDATION_FAILED",
     "openPr": {
-      "checkedAt": "2026-11-23T20:14:34.8003276Z",
+      "checkedAt": "2026-11-25T00:36:24.4075146Z",
       "version": "1.13.10"
     }
   },
