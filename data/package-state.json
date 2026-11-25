@@ -187,14 +187,14 @@
   },
   "AgentClash.AgentClash": {
     "installerHashes": [
-      "1FD07A4DB593F359D8E0CC8DB543B8F936594C4FEB064B0CD726349E96DB16E5",
-      "C9FEA4A70DEBF0ED2A0D7D2D283B7546B6483FDD00072E041C75B225A135DE4A"
+      "F6179D86A3B596BE397CD622B4D7B6A743CDA06FA0225EA4AA063C97145C95A1",
+      "B068DA943B8985E8A9CF72A9EE5AD1A263D759F1CB8578317CE0F5ABECF3D3DF"
     ],
-    "manifestHash": "103D0A1375FCFF400C66DA49BB75CDB10089AB86451EBF8EAD381423630D00BF",
     "validationCount": 1,
     "description": "",
-    "version": "2.12.0",
-    "lastUpdated": "2026-11-24T12:49:51.6087759Z",
+    "manifestHash": "EAD4C9C4DC04CF360E6A9F47FBCF4A1D529C55732E31A200C0F6421FF11D1C4F",
+    "version": "3.0.0",
+    "lastUpdated": "2026-11-25T20:57:34.6082022Z",
     "state": "VALIDATION_PASSED"
   },
   "agentteamland.atl": {
@@ -584,15 +584,15 @@
     }
   },
   "argoproj.argocd": {
-    "state": "VALIDATION_PASSED",
+    "state": "VALIDATION_FAILED",
     "manifestHash": "E6950FEDEB02C1127A2DA9D92CE53DB5850DF7A1C38239AFA7A7BF0527DCE9E2",
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
     "installerHashes": [
       "E49CFC037BAC335932BFBB9E5FF62663A56082BB4255F8EE2C1583CC4E39D8C2"
     ],
     "version": "3.6.3",
-    "lastUpdated": "2026-11-25T04:55:56.5037455Z"
+    "lastUpdated": "2026-11-25T20:57:34.4607064Z"
   },
   "Arihant25.Chargle": {
     "description": "",
@@ -1847,9 +1847,9 @@
   },
   "CryptoPro.Chromium-Gost": {
     "manifestHash": "389058CC969AD8E6006228E5898F51CD54E95C22BF7A91EFDC00859CC15CC70D",
-    "lastUpdated": "2026-11-25T12:50:57.4863795Z",
+    "lastUpdated": "2026-11-25T20:57:34.6257311Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
     "installerHashes": [
       "BC4F9C729EA9FC6D7BA44DE10BAA0381C7E9516C0C7B70890F24A8C797F20FA4",
@@ -3191,9 +3191,9 @@
   },
   "Ghostshadowplays.GhostyTools": {
     "manifestHash": "BA001983B39DC48F903037E3D227190B186DEA010ADB6327C08F5A6D89FA043B",
-    "lastUpdated": "2026-11-25T12:50:57.4039346Z",
+    "lastUpdated": "2026-11-25T20:57:34.5392927Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
     "installerHashes": [
       "E476E9B2BB232C1092B453F88BA50E9DDDC18D21532E4F1C57C62DDDA4ABCB5A"
@@ -5160,15 +5160,15 @@
     }
   },
   "marcinz606.NegPy": {
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "5DC501D71BCB23F8AE41E3B047AE5D6B2A76963D1661A34006A060C5348AC9C5"
+      "D33CF23F855E653BC950869EF630C8A2A2770E6AE5D106C9869F9283DAB2BBD2"
     ],
     "validationCount": 1,
-    "version": "0.70.0",
-    "lastUpdated": "2026-11-20T20:06:19.3724142Z",
     "description": "",
-    "manifestHash": "84DBF645E01C5E18A12A02B9CB421CA331E6290D82EB071DEC60AB90FD49654F"
+    "manifestHash": "63319B18310C94CB10CE5D328D379C83D27A82DC1F0A2FD679344EBC8F3DC95D",
+    "version": "0.71.0",
+    "lastUpdated": "2026-11-25T20:57:34.5686412Z",
+    "state": "VALIDATION_PASSED"
   },
   "MarcoHefti.YTVodManager": {
     "manifestHash": "D6B8CC28C195C1925AC443615826FDE9EB33D111F50144DC9CE7DF76A34B98CB",
@@ -8010,16 +8010,16 @@
     "state": "VALIDATION_PASSED"
   },
   "sebescudie.GammaLauncher": {
-    "version": "5.5.1",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-10-21T17:15:01.4041331Z",
-    "manifestHash": "8ED1F4FA4FD5440877610AEF5B78C870B86365AE8A99933E59617748AA69DBE5",
     "description": "",
     "installerHashes": [
-      "EF698C75056B8846906F7C17004A5ED00D08E0ABC27FAC849222BF18054E8B99",
-      "27DD3BF19F009768EB70970DBC388D0560F3F1DE0703AB5C058700A390A6A5CC"
+      "B9BEB4C1B7CC4A43476D0ADDA0B0624C18E4F8F0075E3C87F7F10B410BE0B0AE",
+      "1B85ED86FB02E47DED1B4239F3FB08138878404B61071BA2CF614FBBE89515D5"
     ],
-    "validationCount": 1
+    "lastUpdated": "2026-11-25T20:57:34.5868152Z",
+    "manifestHash": "D9DA99FE2B55175076BEEA6EA67803808C365025E5E802A230EA13C253E70726",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "5.5.2"
   },
   "SecretsOPerationS.SOPS": {
     "manifestHash": "C589D8039B544CD86CAFC1336A40F5EB0D7AA0C3242AB5D5DFDF315FCD5AC77A",
@@ -8307,9 +8307,9 @@
   },
   "skyhook-io.Radar": {
     "version": "1.21.4",
-    "lastUpdated": "2026-11-25T04:55:56.5238419Z",
+    "lastUpdated": "2026-11-25T20:57:34.6466791Z",
     "description": "",
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "CCB831AB74B2A703ADC965EC28673902E78694C771E31ED853DE93D8EFED365B"
     ],
@@ -8556,13 +8556,13 @@
   },
   "StacksLabs.Clarinet": {
     "installerHashes": [
-      "C4C831E3DDB540471492EB3CB578E62CB8DB9CC7871F2450F111CEA47F7825B1"
+      "965C5011E85D2E5F56269FE00C8A54F04C364F9C36FCA26A6F276FA7D93DEFE6"
     ],
-    "description": "",
-    "manifestHash": "2D04F7B4C4D2A7CC19A2BF6A1386F2B2178D0CAA089952B0903ADD3E8905F1C5",
     "validationCount": 1,
-    "lastUpdated": "2026-10-31T01:27:04.1534836Z",
-    "version": "4.0.0",
+    "description": "",
+    "manifestHash": "E28BBB9F01A1CB1CFBA12F14C4515D0E42ABB9C72A0A2A83010A976717F6A68E",
+    "version": "4.1.0",
+    "lastUpdated": "2026-11-25T20:57:34.518627Z",
     "state": "VALIDATION_PASSED"
   },
   "stakpak.agent": {
