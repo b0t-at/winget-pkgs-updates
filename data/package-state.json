@@ -1201,16 +1201,17 @@
     }
   },
   "bootandy.dust": {
+    "lastUpdated": "2026-11-25T16:47:52.3959155Z",
+    "manifestHash": "4A5B978AC76D3BFECD03335B483CE6DB4D3256666880991652AFB7BA795840CC",
     "state": "VALIDATION_PASSED",
+    "validationCount": 1,
     "description": "",
     "installerHashes": [
-      "5E0E37ABE5501109D0244B44D9B4EB5EF8F4C81D89BD7996F55F5597D195640D",
-      "795B69D46A3E4BEFE37BBF7FE9E8654832883D3B8D8D6E77BAE5F14BE5842491"
+      "F39DD3E36E73BA86C6E1B3F2D098F806E2C5AFBDADBA6E56FE185B1D28043316",
+      "D45F24D6A79CFDAD4E6ACFD73482932C3660C468B70D72FC23FC4447498E250D",
+      "7B4C75459FE736D7C08A56D6E4E0824388CA604AEFDC01372723962E16E44558"
     ],
-    "validationCount": 1,
-    "version": "1.2.5",
-    "manifestHash": "81787CB8A4D71FFE5AF7458238621F26813929C3CAB58F9E6A6BCF0762A5E95E",
-    "lastUpdated": "2026-08-20T09:17:27.4984446Z"
+    "version": "1.2.8"
   },
   "bornova.numara": {
     "version": "8.0.0",
@@ -1869,9 +1870,9 @@
   },
   "CueLang.Cue": {
     "version": "0.18.0",
-    "lastUpdated": "2026-11-25T00:59:29.9453895Z",
+    "lastUpdated": "2026-11-25T16:47:52.4780872Z",
     "description": "",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "C2B17FC673B1395704CF4DB657327C5F9DA831EDAB5164531EC315BA05BB95B4",
       "77E3EC0CB46BFBBF76967BD1BBDB94769084DDF489D77504F0C6A26E51D5AC82"
@@ -2024,13 +2025,13 @@
   "DeskRipple.DeskRipple": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "CE1159A75F9B8EDC650EE62988FE289EC5443B5C964BAD24F89CBD1A5F134618",
-    "validationCount": 2,
+    "validationCount": 3,
     "description": "",
     "installerHashes": [
       "0389019A9BF3E73D4621CC22FEC33DFB8448BF5E361CCCADDE86DF417AF70068"
     ],
     "version": "1.1.3",
-    "lastUpdated": "2026-11-25T08:44:31.2355325Z"
+    "lastUpdated": "2026-11-25T16:47:52.4273127Z"
   },
   "DeutLab.HandyVoice": {
     "installerHashes": [
@@ -8446,9 +8447,9 @@
   },
   "sparrowwallet.sparrow": {
     "manifestHash": "A9505CAE0EC62AEA4164078D64DF0889165CA7E84F1BEBA5248240C6CDA97824",
-    "lastUpdated": "2026-11-25T12:50:57.4588527Z",
+    "lastUpdated": "2026-11-25T16:47:52.4455548Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
     "installerHashes": [
       "EF66AEAB29036F12C3FE071EA382278765B4A7BF3490D0E59A93F2660626AC09"
@@ -8600,9 +8601,9 @@
   },
   "stefanprodan.timoni": {
     "manifestHash": "5C9458F20964D7CFE92BDD61CE92DC1FAA14590906A7D8E494CFF692B1104315",
-    "lastUpdated": "2026-11-25T12:50:57.4270221Z",
+    "lastUpdated": "2026-11-25T16:47:52.4656236Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
     "installerHashes": [
       "E664CFC7C7507A71605D5932C8A249A3151D035E416EC85CE6778387CD995FF4"
