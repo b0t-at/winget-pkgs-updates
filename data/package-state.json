@@ -2928,11 +2928,7 @@
     "manifestHash": "F0FEFBF6DA3B6F4D0DE5E7A141BB511D73DB96B5B6B6726FCEB799EC08676BEE",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "version": "3.21.0",
-    "openPr": {
-      "version": "3.21.0",
-      "checkedAt": "2026-11-24T20:14:26.0462454Z"
-    }
+    "version": "3.21.0"
   },
   "FrancisBanyikwa.MediaDownloader": {
     "installerHashes": [
