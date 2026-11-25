@@ -122,7 +122,7 @@
   "AdGuard.AdGuardDNSCLI": {
     "openPr": {
       "version": "0.2.1",
-      "checkedAt": "2026-11-24T04:18:44.4071571Z"
+      "checkedAt": "2026-11-25T04:19:13.3003627Z"
     }
   },
   "AdGuard.AdGuardHome": {
@@ -139,7 +139,7 @@
     "manifestHash": "1E972B788DEB3CCD2DE087ABA6E781FE1BF60DD0E208A03F568825A01383C5B4",
     "openPr": {
       "version": "1.0.0",
-      "checkedAt": "2026-11-24T04:17:35.3905147Z"
+      "checkedAt": "2026-11-25T04:18:02.2937076Z"
     }
   },
   "AdGuard.dnsproxy": {
@@ -1775,7 +1775,7 @@
     "manifestHash": "3C48DC295A758FAB6722DE26E7B62D54C5F3076191A04E2CB95FAA60134CDFDB",
     "openPr": {
       "version": "0.35.0",
-      "checkedAt": "2026-11-24T04:17:38.9397087Z"
+      "checkedAt": "2026-11-25T04:18:07.1055223Z"
     }
   },
   "CrewHaus.CLI": {
@@ -2378,8 +2378,8 @@
     "state": "VALIDATION_PASSED",
     "manifestHash": "3EAB1E5A6E607AC40A8D48C149D5E5B2207604A2D465245704CB6FD111942437",
     "openPr": {
-      "version": "5.12.6",
-      "checkedAt": "2026-11-22T04:16:57.2777119Z"
+      "version": "5.15.0",
+      "checkedAt": "2026-11-25T04:18:09.4623237Z"
     }
   },
   "elfpie.TizenAppInstaller": {
@@ -3390,7 +3390,7 @@
     "lastUpdated": "2026-11-21T20:47:30.1815473Z",
     "openPr": {
       "version": "2.7.1",
-      "checkedAt": "2026-11-24T04:17:43.0535177Z"
+      "checkedAt": "2026-11-25T04:18:13.4586893Z"
     }
   },
   "Google.Protobuf": {
