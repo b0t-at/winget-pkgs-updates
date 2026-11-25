@@ -1,0 +1,14 @@
+{
+  "repository": "microsoft/winget-pkgs",
+  "pullRequestNumber": 485571,
+  "classification": "Unknown",
+  "state": "Escalated",
+  "recordedAt": "2026-11-25T06:51:27.0412213+00:00",
+  "retryAfter": null,
+  "learnedOverrideSignal": null,
+  "reason": "Unknown feedback reached the stale escalation window.",
+  "packageIdentifier": "Microsoft.DotNet.UninstallTool",
+  "packageVersion": "1.7.756201",
+  "evidence": [],
+  "installerTraits": null
+}
