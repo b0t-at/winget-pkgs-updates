@@ -585,14 +585,14 @@
   },
   "argoproj.argocd": {
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "A553EE6198B47590C837A87913147F265FCBA035094886CC701219AA041A006D"
-    ],
+    "manifestHash": "E6950FEDEB02C1127A2DA9D92CE53DB5850DF7A1C38239AFA7A7BF0527DCE9E2",
     "validationCount": 1,
-    "version": "3.6.2",
-    "lastUpdated": "2026-11-20T20:06:18.7595481Z",
     "description": "",
-    "manifestHash": "2EDD37C60F83E33DEB0D6C574F5ABDF94EE2B3E2B69A85BFCE377C7DA7F8F692"
+    "installerHashes": [
+      "E49CFC037BAC335932BFBB9E5FF62663A56082BB4255F8EE2C1583CC4E39D8C2"
+    ],
+    "version": "3.6.3",
+    "lastUpdated": "2026-11-25T04:55:56.5037455Z"
   },
   "Arihant25.Chargle": {
     "description": "",
@@ -2022,15 +2022,15 @@
     "lastUpdated": "2026-08-17T21:15:38.3875985Z"
   },
   "DeskRipple.DeskRipple": {
-    "manifestHash": "A589541C42BF13797F9F0BB3E2C9AA8C166F93C4AD34B79CD336D9582037227F",
-    "lastUpdated": "2026-11-03T16:57:54.292449Z",
-    "installerHashes": [
-      "415CE0443C8D4DB3F867B84CF80FB122337C4B46ED73105F71BC78A35CF58938"
-    ],
-    "version": "1.1.2",
-    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "CE1159A75F9B8EDC650EE62988FE289EC5443B5C964BAD24F89CBD1A5F134618",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED"
+    "description": "",
+    "installerHashes": [
+      "0389019A9BF3E73D4621CC22FEC33DFB8448BF5E361CCCADDE86DF417AF70068"
+    ],
+    "version": "1.1.3",
+    "lastUpdated": "2026-11-25T04:55:56.4780747Z"
   },
   "DeutLab.HandyVoice": {
     "installerHashes": [
@@ -3610,14 +3610,14 @@
   },
   "Happ.Happ": {
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "90AB45058C65B30B704EB0CB4F6FE16527F89F83B7B6CFF3AB6CD31A3E19C0A6"
-    ],
+    "manifestHash": "36D8F1786307346313A3836AF9C5C7BAD4D809B551FE889DFDE140EEC76C1732",
     "validationCount": 1,
-    "version": "4.8.3",
-    "lastUpdated": "2026-11-20T20:06:19.6253898Z",
     "description": "",
-    "manifestHash": "38EB076CF0B989953AD6553DDA7E228865B08C1E2CDDD1119AD066FE611559FA"
+    "installerHashes": [
+      "184595B3E10F7F102F405619DE2E7721EBFEA62AB768599E8069E6DB5F56D9F4"
+    ],
+    "version": "4.8.6",
+    "lastUpdated": "2026-11-25T04:55:56.4111702Z"
   },
   "happycola233.tchMaterial-parser": {
     "state": "VALIDATION_PASSED",
@@ -4685,16 +4685,16 @@
     }
   },
   "kmiya-culti.RLogin": {
-    "lastUpdated": "2026-09-25T20:53:18.3452811Z",
-    "installerHashes": [
-      "582A7B8253CBED8AE6EEFB4C3C9E0DF74A29A22A6E34E135EBEF389D338AEDC3",
-      "0FDCA0022EED38E764352B0225394FF53869B08DAFD389808AB038D25595A971"
-    ],
-    "manifestHash": "84F249E4B51090EC17815CE930EBE29678D8565415FD77A220CFABE80F83E5F3",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "520F353BCE29C6F0252E2295448C43E2FE9960156670EC4E51E7B11ED74E8FFB",
     "validationCount": 1,
-    "version": "2.31.9",
     "description": "",
-    "state": "VALIDATION_PASSED"
+    "installerHashes": [
+      "115A77C001BA421CF4AB2684E6F75B641B7F94F148A887AC3E7B79B3AAB14DE0",
+      "E8E1C8DFAF21CBD403B279A17194C05E38F45D330751D66C7965C266661C100F"
+    ],
+    "version": "2.32.0",
+    "lastUpdated": "2026-11-25T04:55:56.569928Z"
   },
   "KoalaBear84.OpenDirectoryDownloader": {
     "version": "5.1.0.0",
@@ -5478,16 +5478,16 @@
     "description": ""
   },
   "Microsoft.Garnet.DN8": {
-    "description": "",
-    "manifestHash": "4EEB35550EA60CD8466DFDEB86A8F8FCF93828958CE4E3477B21CA3DA9020E91",
-    "version": "2.2.13",
     "state": "VALIDATION_PASSED",
+    "manifestHash": "D4C67C2804E81D2579759A4815C91947179F9C121F85F82FF70CD4186B6AA611",
+    "validationCount": 1,
+    "description": "",
     "installerHashes": [
-      "CC8212D7C7A671C490E5C87967FC43025A22215922BDBDAD5ECCFF00915C7B82",
-      "B82ADAE8BE12BB0C68E0BAE6B959590897771157E3AAF5AD8BE843D26EB54FF2"
+      "8D7A99AB34FCE4ECDB6C63B54DB03407FD442AC083514C752FE98328897E384A",
+      "CB335F8D3AB98D25DB6626399002302EC273411486301957E553CF6D50ACA1E9"
     ],
-    "lastUpdated": "2026-11-20T20:06:19.0671175Z",
-    "validationCount": 3
+    "version": "2.2.14",
+    "lastUpdated": "2026-11-25T04:55:56.3227772Z"
   },
   "Microsoft.Garnet.DN9": {
     "version": "2.2.14",
@@ -6229,9 +6229,9 @@
   },
   "NoirArchitects.Ncored": {
     "version": "2026.2.17",
-    "lastUpdated": "2026-11-25T00:59:29.9675724Z",
+    "lastUpdated": "2026-11-25T04:55:56.4307567Z",
     "description": "",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "2AB6C1B01D09FB5A2CE247D1FC871F241058767D18F01B810839E664AF393931"
     ],
@@ -6508,9 +6508,9 @@
   },
   "OnionShare.OnionShare": {
     "version": "2.7.3",
-    "lastUpdated": "2026-11-25T00:59:29.903313Z",
+    "lastUpdated": "2026-11-25T04:55:56.550561Z",
     "description": "",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "0A0D3D60511B699EA6A091AEF0698331C9D019A51FE69BD65486B46F6EF9FB6E"
     ],
@@ -8314,9 +8314,9 @@
   },
   "skyhook-io.Radar": {
     "version": "1.21.4",
-    "lastUpdated": "2026-11-25T00:59:30.0288304Z",
+    "lastUpdated": "2026-11-25T04:55:56.5238419Z",
     "description": "",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "CCB831AB74B2A703ADC965EC28673902E78694C771E31ED853DE93D8EFED365B"
     ],
