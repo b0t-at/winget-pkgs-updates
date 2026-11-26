@@ -2857,8 +2857,8 @@
     "manifestHash": "86FA8F6B2F491EE6BDE61BAFC3493B85F1B14C4667597B93DBB355BC71355A19",
     "description": "",
     "openPr": {
-      "version": "0.5.18",
-      "checkedAt": "2026-11-25T20:14:59.9157843Z"
+      "checkedAt": "2026-11-26T20:15:08.8056566Z",
+      "version": "0.5.19"
     }
   },
   "FlyByWireSimulations.FlyByWireSimulationsInstaller": {
@@ -8013,7 +8013,11 @@
     "manifestHash": "D9DA99FE2B55175076BEEA6EA67803808C365025E5E802A230EA13C253E70726",
     "state": "VALIDATION_PASSED",
     "validationCount": 2,
-    "version": "5.5.2"
+    "version": "5.5.2",
+    "openPr": {
+      "checkedAt": "2026-11-26T20:16:03.7205352Z",
+      "version": "5.5.2"
+    }
   },
   "SecretsOPerationS.SOPS": {
     "manifestHash": "C589D8039B544CD86CAFC1336A40F5EB0D7AA0C3242AB5D5DFDF315FCD5AC77A",
