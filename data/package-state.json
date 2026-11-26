@@ -1197,10 +1197,10 @@
     }
   },
   "bootandy.dust": {
-    "lastUpdated": "2026-11-26T01:25:41.9329494Z",
+    "lastUpdated": "2026-11-26T12:57:39.0230528Z",
     "manifestHash": "4A5B978AC76D3BFECD03335B483CE6DB4D3256666880991652AFB7BA795840CC",
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "validationCount": 3,
     "description": "",
     "installerHashes": [
       "F39DD3E36E73BA86C6E1B3F2D098F806E2C5AFBDADBA6E56FE185B1D28043316",
@@ -1726,15 +1726,15 @@
     ]
   },
   "CosX.ServiceBusExplorerTui": {
-    "manifestHash": "EF8F2D73677A3D7C98748D39C8E8095BC47150F9004ECADD60DE2FAE4AF291E4",
-    "state": "VALIDATION_PASSED",
-    "description": "",
-    "validationCount": 2,
-    "lastUpdated": "2026-08-30T08:52:12.226573Z",
+    "version": "0.0.23",
+    "manifestHash": "9D020AAF72C3D00B99645FEFF5DC4315C894609B27B6B75575177DDE098B5759",
+    "lastUpdated": "2026-11-26T12:57:38.9427545Z",
     "installerHashes": [
-      "8B73293467CD1227C74772C2E83B605FE137E369E7F3339013BC91257B9603EC"
+      "AAA541713464E632732DA350D21CFE84763CB353254F8226FA3976F32DE5B28E"
     ],
-    "version": "0.0.22"
+    "validationCount": 1,
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "cpvalente.ontime": {
     "validationCount": 1,
@@ -1843,9 +1843,9 @@
   },
   "CryptoPro.Chromium-Gost": {
     "manifestHash": "389058CC969AD8E6006228E5898F51CD54E95C22BF7A91EFDC00859CC15CC70D",
-    "lastUpdated": "2026-11-25T20:57:34.6257311Z",
+    "lastUpdated": "2026-11-26T12:57:39.0511574Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "validationCount": 3,
     "description": "",
     "installerHashes": [
       "BC4F9C729EA9FC6D7BA44DE10BAA0381C7E9516C0C7B70890F24A8C797F20FA4",
@@ -1854,14 +1854,14 @@
     "version": "156.0.8078.114"
   },
   "cubezombies.MidnightAthenaeum": {
-    "manifestHash": "795A3896FEC0552BEDE97F808869D754B834B400B1F09CC4C558361A464028AF",
-    "lastUpdated": "2026-11-26T05:18:10.9525847Z",
-    "version": "0.23.5",
-    "description": "",
-    "validationCount": 1,
+    "version": "0.24.0",
+    "manifestHash": "8949571F396ECD85B6B5D64AF841C9B1A48CBB1E5F12E6DFCA7F3E93C0CCF24E",
+    "lastUpdated": "2026-11-26T12:57:39.1101573Z",
     "installerHashes": [
-      "C6AE2554000A4D83EDB5C12D7B04D219166C935F0E75E8C9FC614089A173A5A6"
+      "BBD5B71695FBEDF2361528DA6FF97A8E28A23D9DF8ED74F68A349B5525D31FFB"
     ],
+    "validationCount": 1,
+    "description": "",
     "state": "VALIDATION_PASSED"
   },
   "CueLang.Cue": {
@@ -2919,13 +2919,15 @@
     "version": "7.3.5"
   },
   "FOSSA.FOSSA-cli": {
-    "description": "",
-    "installerHashes": "9E6BEC9A5740E2CAA19EF9301267EB4D89166BDF9002D1FDBC363AEA1AC0714B",
-    "lastUpdated": "2026-11-24T16:49:02.0044133Z",
-    "manifestHash": "F0FEFBF6DA3B6F4D0DE5E7A141BB511D73DB96B5B6B6726FCEB799EC08676BEE",
-    "state": "VALIDATION_PASSED",
+    "version": "3.21.1",
+    "manifestHash": "E109127B9AF00E6C0FA1FCC12858303280E05C37C15AB6B737F7C68CB495B321",
+    "lastUpdated": "2026-11-26T12:57:39.077107Z",
+    "installerHashes": [
+      "41B86BC98D939BF8B3DD6EC831B80AD1045A12BFBF33B89893346C358D7194D8"
+    ],
     "validationCount": 1,
-    "version": "3.21.0"
+    "description": "",
+    "state": "VALIDATION_PASSED"
   },
   "FrancisBanyikwa.MediaDownloader": {
     "installerHashes": [
@@ -6968,13 +6970,13 @@
   },
   "PathofBuildingCommunity.PathofBuildingCommunity": {
     "version": "2.69.0",
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "DED6372334BDFF6395E7C87A38B165DDE29E1E861288C7496844CD530FE5643E",
     "installerHashes": [
       "4EE811687A5B695DA1302EA97F38D9D2ABDB8548A73F0D70FD003D0D243CA1CD"
     ],
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-26T08:50:16.0626213Z",
+    "lastUpdated": "2026-11-26T12:57:39.1584719Z",
     "description": ""
   },
   "PatrickHener.Goshs": {
@@ -8593,9 +8595,9 @@
   },
   "stefanprodan.timoni": {
     "manifestHash": "5C9458F20964D7CFE92BDD61CE92DC1FAA14590906A7D8E494CFF692B1104315",
-    "lastUpdated": "2026-11-25T16:47:52.4656236Z",
+    "lastUpdated": "2026-11-26T12:57:39.131795Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "validationCount": 3,
     "description": "",
     "installerHashes": [
       "E664CFC7C7507A71605D5932C8A249A3151D035E416EC85CE6778387CD995FF4"
@@ -8651,8 +8653,8 @@
     }
   },
   "Storj.Uplink": {
-    "lastUpdated": "2026-11-26T05:18:11.2489829Z",
-    "validationCount": 2,
+    "lastUpdated": "2026-11-26T12:57:39.1798598Z",
+    "validationCount": 3,
     "version": "1.167.1",
     "installerHashes": [
       "B3FB4A216A029C53F3C66D2F7E96732E46223AA1D5034584FE8ECF08EFDB3785"
