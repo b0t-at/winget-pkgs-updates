@@ -8735,8 +8735,8 @@
     ],
     "manifestHash": "B1B716023C04A31ACC5074A77A2D997B0021E9F195EA648CF6ECECEA7F5F1336",
     "openPr": {
-      "checkedAt": "2026-11-25T08:20:55.6629738Z",
-      "version": "1.30.0"
+      "version": "1.30.0",
+      "checkedAt": "2026-11-26T12:23:09.4702027Z"
     }
   },
   "SuperRadCompany.Microsandbox": {
@@ -9025,8 +9025,8 @@
     "manifestHash": "101A50462A6E2BE19AFB17A21278EA44597559D970949753840897CFC30A7566",
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
-      "checkedAt": "2026-11-25T08:20:56.6984043Z",
-      "version": "5.7.1"
+      "version": "5.7.1",
+      "checkedAt": "2026-11-26T12:23:11.0964901Z"
     }
   },
   "termio.soft-jp.com.TermioWin": {
