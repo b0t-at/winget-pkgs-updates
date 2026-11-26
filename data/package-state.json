@@ -2528,11 +2528,7 @@
     "lastUpdated": "2026-11-20T11:53:50.6468271Z",
     "validationCount": 1,
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "openPr": {
-      "version": "3.28.1",
-      "checkedAt": "2026-11-20T12:21:54.2149726Z"
-    }
+    "description": ""
   },
   "Essenciary.Githical": {
     "version": "0.1.5",
@@ -4285,7 +4281,7 @@
   },
   "jdx.mise": {
     "openPr": {
-      "checkedAt": "2026-11-25T12:23:32.6470791Z",
+      "checkedAt": "2026-11-26T16:18:29.7588014Z",
       "version": "2026.11.14"
     }
   },
@@ -5444,7 +5440,7 @@
     "description": "",
     "manifestHash": "D79AD8C42A131BFC541325962C417356E026DD89313FB73432E85BF5099AC009",
     "openPr": {
-      "checkedAt": "2026-11-25T12:23:33.1864946Z",
+      "checkedAt": "2026-11-26T16:18:30.2664087Z",
       "version": "1.7.756201"
     }
   },
@@ -5554,7 +5550,7 @@
     ],
     "description": "",
     "openPr": {
-      "checkedAt": "2026-11-25T12:23:33.6526085Z",
+      "checkedAt": "2026-11-26T16:18:30.72108Z",
       "version": "1.11.0"
     }
   },
