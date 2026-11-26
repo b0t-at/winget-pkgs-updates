@@ -190,11 +190,11 @@
       "F6179D86A3B596BE397CD622B4D7B6A743CDA06FA0225EA4AA063C97145C95A1",
       "B068DA943B8985E8A9CF72A9EE5AD1A263D759F1CB8578317CE0F5ABECF3D3DF"
     ],
-    "validationCount": 2,
+    "validationCount": 3,
     "description": "",
     "manifestHash": "EAD4C9C4DC04CF360E6A9F47FBCF4A1D529C55732E31A200C0F6421FF11D1C4F",
     "version": "3.0.0",
-    "lastUpdated": "2026-11-26T05:18:11.15415Z",
+    "lastUpdated": "2026-11-26T08:50:16.043512Z",
     "state": "VALIDATION_PASSED"
   },
   "agentteamland.atl": {
@@ -1285,16 +1285,16 @@
     ]
   },
   "ByteNess.AWSVault": {
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "8200F9D82AC2DB7DF5578AEED5FFBC6EB9EB74359B443F0A15C02981D3AB1EF9",
-      "D0CD00D52CD488025042F4C3EC3E6944791554AD307BF12259C8A337052E29EB"
-    ],
+    "version": "7.19.0",
     "validationCount": 1,
-    "version": "7.18.1",
-    "lastUpdated": "2026-11-20T20:06:18.9458729Z",
-    "description": "",
-    "manifestHash": "D7251C853433DCB9A7AE4C8BFE3E1044679A1E16BDCCE719BF9DFBEE6C5E6564"
+    "manifestHash": "FC64525C49A0C384C9041F8833F5AE7B813C66F28723401E9FDD660C38CDE796",
+    "installerHashes": [
+      "D54297BF35FC5E061742D432E6A3E8C5EE5354FDABBAA86D6745A04C8CD9252C",
+      "090DBC492EAA83B17C26516BA4B7427D3E010590B0FD8F2D9C8552EACBAA0626"
+    ],
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-26T08:50:16.1151723Z",
+    "description": ""
   },
   "C-POPLO.Unreal-GUI": {
     "validationCount": 1,
@@ -3590,16 +3590,16 @@
     "description": ""
   },
   "Hanthor.BluefinCLI": {
-    "manifestHash": "7D871BAF3AC5390799CAE185E89159F66768C1863FDC22CF2638FB48C9D9BC63",
-    "lastUpdated": "2026-11-23T12:38:44.5463044Z",
-    "description": "",
-    "version": "0.15.2",
+    "version": "0.15.4",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
+    "manifestHash": "90CE33EDE719321C3A6A7B299F9A11B94FEE83FE34C76D6A7C6EC01C7C77F436",
     "installerHashes": [
-      "D127226BE4DCEBAF29513BE1616DE987F09C4B982360281C2A5F834393D1893E",
-      "6310A17CF32A0A47AF473BFEABA87C315AD936BC59DEA1DE82B3A014BFEB10F0"
-    ]
+      "BCB008F18CA56DC425AE4732CE8BE8E663E10EC701C3240439DCA61C8DE963BA",
+      "62AE5B3B0B03E82FE5E10FA41BF8F0D92983F232874C5B9DFEDC91394060DA6F"
+    ],
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-26T08:50:16.0263969Z",
+    "description": ""
   },
   "Happ.Happ": {
     "state": "VALIDATION_PASSED",
@@ -3839,15 +3839,15 @@
     "validationCount": 1
   },
   "holland-built.Bloxsmith": {
-    "manifestHash": "05104C29A65B0B93BBD64D55AD55BB995ABC4E314A09EACEA55072943A8D97F5",
-    "lastUpdated": "2026-11-23T12:38:44.6023054Z",
-    "description": "",
-    "version": "3.192.0",
+    "version": "3.197.2",
     "validationCount": 1,
-    "state": "VALIDATION_PASSED",
+    "manifestHash": "979FF3B8D7E8D7A9E5A5A08EA09B6D953A631AB15F08705540FCF297F4519CDD",
     "installerHashes": [
-      "C70986651953840272BCCEFDD697583E1D6F45A5678E545758DFF91AA72BF8B0"
-    ]
+      "DE34A53D8734CC8C37749C8915FA19FF9A0557BE25975A51E96DAC36BBF3ED27"
+    ],
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-26T08:50:16.1005646Z",
+    "description": ""
   },
   "HongMinhee.Gukhanmun": {
     "state": "VALIDATION_PASSED",
@@ -4680,14 +4680,14 @@
   "kmiya-culti.RLogin": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "520F353BCE29C6F0252E2295448C43E2FE9960156670EC4E51E7B11ED74E8FFB",
-    "validationCount": 2,
+    "validationCount": 3,
     "description": "",
     "installerHashes": [
       "115A77C001BA421CF4AB2684E6F75B641B7F94F148A887AC3E7B79B3AAB14DE0",
       "E8E1C8DFAF21CBD403B279A17194C05E38F45D330751D66C7965C266661C100F"
     ],
     "version": "2.32.0",
-    "lastUpdated": "2026-11-26T05:18:11.2791338Z"
+    "lastUpdated": "2026-11-26T08:50:15.9941576Z"
   },
   "KoalaBear84.OpenDirectoryDownloader": {
     "version": "5.1.0.0",
@@ -6967,15 +6967,15 @@
     }
   },
   "PathofBuildingCommunity.PathofBuildingCommunity": {
-    "state": "VALIDATION_PASSED",
-    "version": "2.68.1",
+    "version": "2.69.0",
     "validationCount": 1,
-    "description": "",
-    "lastUpdated": "2026-11-22T04:44:34.20564Z",
-    "manifestHash": "2FABCF4A307FA2E08F6C77334CA06634CB03AF2E807F79CFBA64A077FFC71541",
+    "manifestHash": "DED6372334BDFF6395E7C87A38B165DDE29E1E861288C7496844CD530FE5643E",
     "installerHashes": [
-      "B737933118D21108D59A30489F4FC4D5414832AF19A1AB3754F38AEDCB9E0954"
-    ]
+      "4EE811687A5B695DA1302EA97F38D9D2ABDB8548A73F0D70FD003D0D243CA1CD"
+    ],
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-26T08:50:16.0626213Z",
+    "description": ""
   },
   "PatrickHener.Goshs": {
     "lastUpdated": "2026-09-17T13:04:51.9579763Z",
@@ -6991,16 +6991,16 @@
     ]
   },
   "PatrickMatthiesen.oh-my-dot": {
-    "manifestHash": "2E8665551A12B68FE2E9EB20EB4C30A881D6C0F1D587DFC94B45DD2621FF5450",
-    "lastUpdated": "2026-11-26T05:18:11.0688524Z",
-    "version": "0.0.69",
-    "description": "",
+    "version": "0.0.70",
     "validationCount": 1,
+    "manifestHash": "96C9B4AEE01A125308278DEE01D30B18754E9B1C8554F52F39DCED26AAE68542",
     "installerHashes": [
-      "C080602A46CB4CDE2583F6EF1109683DA167921BD37CDCEA6DF4AFD1E32CBD5D",
-      "AB453D958625D457BD31A6BBFBE9EF7F0AC403462B48C8D1BD2F6F8A3C94AFA9"
+      "AFBD6F71D834EF4C0C5AC19D8BCC13B6B53FBEBAF00AD562AF6EF1EA08EF9EAF",
+      "07374DD4FDB629F2A3CA6345E8E4FB3D0A972076E99D81FC2A026DFD1CFF9123"
     ],
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "lastUpdated": "2026-11-26T08:50:16.0744565Z",
+    "description": ""
   },
   "pay-skill.pay": {
     "lastUpdated": "2026-08-18T17:25:13.9564259Z",
@@ -8554,11 +8554,11 @@
     "installerHashes": [
       "965C5011E85D2E5F56269FE00C8A54F04C364F9C36FCA26A6F276FA7D93DEFE6"
     ],
-    "validationCount": 2,
+    "validationCount": 3,
     "description": "",
     "manifestHash": "E28BBB9F01A1CB1CFBA12F14C4515D0E42ABB9C72A0A2A83010A976717F6A68E",
     "version": "4.1.0",
-    "lastUpdated": "2026-11-26T01:25:41.8854685Z",
+    "lastUpdated": "2026-11-26T08:50:16.0890022Z",
     "state": "VALIDATION_PASSED"
   },
   "stakpak.agent": {
