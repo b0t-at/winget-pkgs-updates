@@ -1499,8 +1499,8 @@
   },
   "CharlesMilette.TranslucentTB": {
     "openPr": {
-      "checkedAt": "2026-10-05T08:41:57.2776761Z",
-      "version": "2026.2"
+      "version": "2026.4",
+      "checkedAt": "2026-11-26T00:34:58.8460043Z"
     }
   },
   "ChiaNetwork.GUIforChiaBlockchain": {
@@ -2849,8 +2849,8 @@
     ],
     "description": "",
     "openPr": {
-      "version": "3.3.0",
-      "checkedAt": "2026-11-05T12:21:37.682513Z"
+      "version": "3.3.1",
+      "checkedAt": "2026-11-26T00:35:42.8715562Z"
     }
   },
   "Fly-io.flyctl": {
