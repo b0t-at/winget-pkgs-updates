@@ -139,7 +139,7 @@
     "manifestHash": "1E972B788DEB3CCD2DE087ABA6E781FE1BF60DD0E208A03F568825A01383C5B4",
     "openPr": {
       "version": "1.0.0",
-      "checkedAt": "2026-11-25T04:18:02.2937076Z"
+      "checkedAt": "2026-11-26T08:19:38.1448672Z"
     }
   },
   "AdGuard.dnsproxy": {
@@ -1772,7 +1772,7 @@
     "manifestHash": "3C48DC295A758FAB6722DE26E7B62D54C5F3076191A04E2CB95FAA60134CDFDB",
     "openPr": {
       "version": "0.35.0",
-      "checkedAt": "2026-11-25T04:18:07.1055223Z"
+      "checkedAt": "2026-11-26T08:19:43.8725695Z"
     }
   },
   "CrewHaus.CLI": {
@@ -3383,7 +3383,7 @@
     "lastUpdated": "2026-11-21T20:47:30.1815473Z",
     "openPr": {
       "version": "2.7.1",
-      "checkedAt": "2026-11-25T04:18:13.4586893Z"
+      "checkedAt": "2026-11-26T08:20:41.5943754Z"
     }
   },
   "Google.Protobuf": {
