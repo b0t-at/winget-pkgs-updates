@@ -1856,11 +1856,11 @@
   "cubezombies.MidnightAthenaeum": {
     "version": "0.24.0",
     "manifestHash": "8949571F396ECD85B6B5D64AF841C9B1A48CBB1E5F12E6DFCA7F3E93C0CCF24E",
-    "lastUpdated": "2026-11-26T12:57:39.1101573Z",
+    "lastUpdated": "2026-11-26T20:53:56.9496072Z",
     "installerHashes": [
       "BBD5B71695FBEDF2361528DA6FF97A8E28A23D9DF8ED74F68A349B5525D31FFB"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
     "state": "VALIDATION_PASSED"
   },
@@ -3096,15 +3096,15 @@
     "lastUpdated": "2026-08-21T17:17:40.0086759Z"
   },
   "Gather.Gather": {
-    "version": "1.41.3",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-20T13:02:07.4235571Z",
-    "manifestHash": "D4E32E1A5B121FDD1FBFB445D1B68DC6E46C9D52389B674D0BA7AF1229D0F8B9",
-    "validationCount": 11,
+    "manifestHash": "9AE732A5C09F00501D101BC7B5DEAED6C2601E2F93576A393CC53688982AE8DB",
     "installerHashes": [
-      "901BBF32D7E54EA260B99CECFDBAC5EDCC93710A58F324FD0F1D719DE2E843CF"
+      "3D05B05EF5041ADB279467BCC421D3799A9478028AF583733EE907456E3F28FC"
     ],
-    "description": ""
+    "state": "VALIDATION_PASSED",
+    "version": "1.43.3",
+    "description": "",
+    "lastUpdated": "2026-11-26T20:53:56.8513935Z",
+    "validationCount": 1
   },
   "GavinGe021.hasher": {
     "description": "",
@@ -3838,13 +3838,13 @@
   },
   "holland-built.Bloxsmith": {
     "version": "3.197.2",
-    "validationCount": 1,
+    "validationCount": 2,
     "manifestHash": "979FF3B8D7E8D7A9E5A5A08EA09B6D953A631AB15F08705540FCF297F4519CDD",
     "installerHashes": [
       "DE34A53D8734CC8C37749C8915FA19FF9A0557BE25975A51E96DAC36BBF3ED27"
     ],
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-26T08:50:16.1005646Z",
+    "lastUpdated": "2026-11-26T20:53:56.9103389Z",
     "description": ""
   },
   "HongMinhee.Gukhanmun": {
@@ -4777,16 +4777,16 @@
     "lastUpdated": "2026-11-20T20:06:20.5823134Z"
   },
   "LANCommander.Launcher": {
-    "validationCount": 1,
-    "version": "2.2.0",
-    "manifestHash": "49140548DD73624DFCF52D8F4B7615B160C97EA11E45E77BC7E9230B6A49A26A",
-    "description": "",
+    "manifestHash": "1CE1596E7D406626A0ABCEBC34517498A649AF0884F5DB0848DEB9B5A5928F20",
     "installerHashes": [
-      "A39A91C445705EF32E76B50FB9649505DA6176AAA5ADE4C16EC55D87AC1458B7",
-      "7B8D66C9134B6B6F305CB5F7EDE2910474113C1A1EE06FAFB886D3FC3F1684B7"
+      "A2DCB397E2BB1E5A6C6CE05347FBFAFE438B106B22D5E0B8839E30CC127EC0A8",
+      "CF27B312BD1EE31C3CDD1D6640415D9C575D44B26F6492F6F4F375BE79C79E25"
     ],
-    "lastUpdated": "2026-11-24T16:49:01.8771597Z",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "version": "2.2.1",
+    "description": "",
+    "lastUpdated": "2026-11-26T20:53:56.8842512Z",
+    "validationCount": 1
   },
   "LANCommander.Server": {
     "version": "2.2.0",
@@ -6596,15 +6596,15 @@
     ]
   },
   "OpenGeos.GeoLibre": {
-    "manifestHash": "DAEAC0B4BC7938AAFFB893E885E0ECAED7D567CAC46D6B5147621AFE55E57BF1",
-    "lastUpdated": "2026-11-25T12:50:57.3735162Z",
-    "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "description": "",
+    "manifestHash": "72682AD62705EDB4B5F59D0135D7EC828D6B2FD7CA4BB3EE635DCCE93D78506A",
     "installerHashes": [
-      "06B13C68E20BEF681CD2E98876DF8330FA57ACCB4BDD4CE4AE0A10853544FAF6"
+      "53DFBC396801B621C39B95A89A44EBA26CDE563631CD8421E4A9769E26CB2862"
     ],
-    "version": "3.10.0"
+    "state": "VALIDATION_PASSED",
+    "version": "3.10.1",
+    "description": "",
+    "lastUpdated": "2026-11-26T20:53:57.108961Z",
+    "validationCount": 1
   },
   "OpenHV.OpenHV": {
     "description": "",
@@ -6989,16 +6989,16 @@
     ]
   },
   "PatrickMatthiesen.oh-my-dot": {
-    "version": "0.0.70",
-    "validationCount": 1,
-    "manifestHash": "96C9B4AEE01A125308278DEE01D30B18754E9B1C8554F52F39DCED26AAE68542",
+    "manifestHash": "7309FB32F85C967F146105FEF5AF103DC87BD65B2C319F916D0BDF7E41659AC3",
     "installerHashes": [
-      "AFBD6F71D834EF4C0C5AC19D8BCC13B6B53FBEBAF00AD562AF6EF1EA08EF9EAF",
-      "07374DD4FDB629F2A3CA6345E8E4FB3D0A972076E99D81FC2A026DFD1CFF9123"
+      "834F066E23E383681491F227046F9AD0A223E82A6559C8038FA9B595382D65FD",
+      "49EE437353818FCB9DE1AC21E473D54A01392E7EA91E9B04BF2F3DB9880EBB4A"
     ],
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-26T08:50:16.0744565Z",
-    "description": ""
+    "version": "0.0.71",
+    "description": "",
+    "lastUpdated": "2026-11-26T20:53:56.9727169Z",
+    "validationCount": 1
   },
   "pay-skill.pay": {
     "lastUpdated": "2026-08-18T17:25:13.9564259Z",
@@ -8441,9 +8441,9 @@
   },
   "sparrowwallet.sparrow": {
     "manifestHash": "A9505CAE0EC62AEA4164078D64DF0889165CA7E84F1BEBA5248240C6CDA97824",
-    "lastUpdated": "2026-11-25T16:47:52.4455548Z",
+    "lastUpdated": "2026-11-26T20:53:57.067879Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "validationCount": 3,
     "description": "",
     "installerHashes": [
       "EF66AEAB29036F12C3FE071EA382278765B4A7BF3490D0E59A93F2660626AC09"
@@ -8653,8 +8653,8 @@
     }
   },
   "Storj.Uplink": {
-    "lastUpdated": "2026-11-26T12:57:39.1798598Z",
-    "validationCount": 3,
+    "lastUpdated": "2026-11-26T20:53:57.0002086Z",
+    "validationCount": 4,
     "version": "1.167.1",
     "installerHashes": [
       "B3FB4A216A029C53F3C66D2F7E96732E46223AA1D5034584FE8ECF08EFDB3785"
@@ -9159,15 +9159,15 @@
     "manifestHash": "EB77E211E0242B3ADEDC3475B18A93E4CA0ADB79A7E687CB894BB3B7DEA0A83B"
   },
   "Thurbeen.thurbox": {
-    "lastUpdated": "2026-11-26T05:18:11.1855592Z",
-    "validationCount": 2,
-    "version": "3.29.1",
+    "manifestHash": "34ED7B1F689AB9CA4A2C94830F018DAE25904A10968600BFD43ABAE75F162D6E",
     "installerHashes": [
-      "4D99A5EE876B893A2CE754D8296AA317E4FC513DED7125C2085BEAE3C6CFB777"
+      "D1C66CA50A17DBC10F40AA93177A2738EE863C2A5D57488EC91D442E1806F2D8"
     ],
-    "description": "",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "5ECA4E5A5EFF9BF498D0D31A688945AC86035F94284710D95ED55C22DB93A9A8"
+    "version": "3.29.2",
+    "description": "",
+    "lastUpdated": "2026-11-26T20:53:56.8081346Z",
+    "validationCount": 1
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
@@ -9290,8 +9290,8 @@
     ],
     "description": "",
     "version": "1.11.0",
-    "validationCount": 3,
-    "lastUpdated": "2026-11-26T05:18:10.9835427Z"
+    "validationCount": 4,
+    "lastUpdated": "2026-11-26T20:53:57.0305043Z"
   },
   "TrenchBroom.TrenchBroom": {
     "manifestHash": "989EB55DC4DCCE006A1A8E7810CECB2266582F01FF5FDDC16E6DEE67626770FD",
