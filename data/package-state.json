@@ -1197,10 +1197,10 @@
     }
   },
   "bootandy.dust": {
-    "lastUpdated": "2026-11-26T12:57:39.0230528Z",
+    "lastUpdated": "2026-11-26T17:06:01.7074968Z",
     "manifestHash": "4A5B978AC76D3BFECD03335B483CE6DB4D3256666880991652AFB7BA795840CC",
     "state": "VALIDATION_PASSED",
-    "validationCount": 3,
+    "validationCount": 4,
     "description": "",
     "installerHashes": [
       "F39DD3E36E73BA86C6E1B3F2D098F806E2C5AFBDADBA6E56FE185B1D28043316",
@@ -1715,15 +1715,15 @@
     }
   },
   "CosX.AzurePimTui": {
-    "manifestHash": "3A3B5632ED68CEE304B860589EEBCBE68C4505F2BA877812B8E4BC3F20EA5175",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-09-17T09:19:19.7609148Z",
-    "description": "",
-    "version": "0.0.7",
-    "validationCount": 2,
     "installerHashes": [
-      "B1BED2BD6617EEE46014D3A12D435A9EE83E1252F3A615FAAE5FE9D39551F8D5"
-    ]
+      "F8CC62CC74C56923B388073B93E8D14F97B0C44E65CC90F802F6412520B18EA2"
+    ],
+    "lastUpdated": "2026-11-26T17:06:01.7870172Z",
+    "validationCount": 1,
+    "version": "0.0.8",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "14C755447ECBBA1976C2B3431A95D7CCB8807F7759FF84F95DED9539F0ED71DC"
   },
   "CosX.ServiceBusExplorerTui": {
     "version": "0.0.23",
@@ -1866,9 +1866,9 @@
   },
   "CueLang.Cue": {
     "version": "0.18.0",
-    "lastUpdated": "2026-11-26T01:25:41.7636969Z",
+    "lastUpdated": "2026-11-26T17:06:01.87007Z",
     "description": "",
-    "validationCount": 3,
+    "validationCount": 4,
     "installerHashes": [
       "C2B17FC673B1395704CF4DB657327C5F9DA831EDAB5164531EC315BA05BB95B4",
       "77E3EC0CB46BFBBF76967BD1BBDB94769084DDF489D77504F0C6A26E51D5AC82"
@@ -2954,10 +2954,10 @@
   },
   "FrankZhu.ZManagerCLI": {
     "manifestHash": "43543788683E66293D76D8358E11BE10BC83F72BFB37E18292D8877552725BFA",
-    "lastUpdated": "2026-11-26T05:18:11.1216661Z",
+    "lastUpdated": "2026-11-26T17:06:01.8858282Z",
     "version": "2.3.0",
     "description": "",
-    "validationCount": 1,
+    "validationCount": 2,
     "installerHashes": [
       "3AA3274E4E8D35E226485DC963A3DE4631186FD495671938B09EC7823E3941CB",
       "3B50F93510EF2E75364D801D7AEB74158F5E95DF3D5E783FD74ED8A6262FEC69"
@@ -6499,9 +6499,9 @@
   },
   "OnionShare.OnionShare": {
     "version": "2.7.3",
-    "lastUpdated": "2026-11-25T04:55:56.550561Z",
+    "lastUpdated": "2026-11-26T17:06:01.7737772Z",
     "description": "",
-    "validationCount": 2,
+    "validationCount": 3,
     "installerHashes": [
       "0A0D3D60511B699EA6A091AEF0698331C9D019A51FE69BD65486B46F6EF9FB6E"
     ],
@@ -8009,10 +8009,10 @@
       "B9BEB4C1B7CC4A43476D0ADDA0B0624C18E4F8F0075E3C87F7F10B410BE0B0AE",
       "1B85ED86FB02E47DED1B4239F3FB08138878404B61071BA2CF614FBBE89515D5"
     ],
-    "lastUpdated": "2026-11-25T20:57:34.5868152Z",
+    "lastUpdated": "2026-11-26T17:06:01.8576786Z",
     "manifestHash": "D9DA99FE2B55175076BEEA6EA67803808C365025E5E802A230EA13C253E70726",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "validationCount": 2,
     "version": "5.5.2"
   },
   "SecretsOPerationS.SOPS": {
@@ -8300,15 +8300,15 @@
     "manifestHash": "E287E5EFDF457EB47DC8F18007B1E361CAE20763BDA63DD266E50CCF3C4BAC3A"
   },
   "skyhook-io.Radar": {
-    "version": "1.21.4",
-    "lastUpdated": "2026-11-25T20:57:34.6466791Z",
-    "description": "",
-    "validationCount": 3,
     "installerHashes": [
-      "CCB831AB74B2A703ADC965EC28673902E78694C771E31ED853DE93D8EFED365B"
+      "1F63D4FA1F0A5ECEE4EE01B452AD5806B09CB0D3BEBD02003AC9B406CBFDB65C"
     ],
-    "manifestHash": "299C5ED45295C7879BAD84827B2489CA1C131556ED1B3E0E3D02CD4E2CE67A05",
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-11-26T17:06:01.8275144Z",
+    "validationCount": 1,
+    "version": "1.21.5",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "1C25127FCFE78E88D54E83D37628B533845C53F03EF23E7BA14FDE5835284C61"
   },
   "Skylot.jadx": {
     "version": "1.5.7",
@@ -8591,9 +8591,9 @@
   },
   "stefanprodan.timoni": {
     "manifestHash": "5C9458F20964D7CFE92BDD61CE92DC1FAA14590906A7D8E494CFF692B1104315",
-    "lastUpdated": "2026-11-26T12:57:39.131795Z",
+    "lastUpdated": "2026-11-26T17:06:01.8057675Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 3,
+    "validationCount": 4,
     "description": "",
     "installerHashes": [
       "E664CFC7C7507A71605D5932C8A249A3151D035E416EC85CE6778387CD995FF4"
@@ -9142,6 +9142,17 @@
     "version": "0.1.66",
     "manifestHash": "C6E6884EA5261F8626FD5A733A8A22A2A3D1DCDAE3A04DD2457973FE572A8A13",
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
+  },
+  "Throneproj.Throne": {
+    "installerHashes": [
+      "E5175B1EDB1FCF9DA697E3F12F1D053F052A8597FCE1C2D91B0FBFF101166AD7"
+    ],
+    "lastUpdated": "2026-11-26T17:06:01.8404322Z",
+    "validationCount": 1,
+    "version": "1.4.5",
+    "description": "",
+    "state": "VALIDATION_PASSED",
+    "manifestHash": "EB77E211E0242B3ADEDC3475B18A93E4CA0ADB79A7E687CB894BB3B7DEA0A83B"
   },
   "Thurbeen.thurbox": {
     "lastUpdated": "2026-11-26T05:18:11.1855592Z",
