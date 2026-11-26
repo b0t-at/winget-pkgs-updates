@@ -190,11 +190,11 @@
       "F6179D86A3B596BE397CD622B4D7B6A743CDA06FA0225EA4AA063C97145C95A1",
       "B068DA943B8985E8A9CF72A9EE5AD1A263D759F1CB8578317CE0F5ABECF3D3DF"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
     "manifestHash": "EAD4C9C4DC04CF360E6A9F47FBCF4A1D529C55732E31A200C0F6421FF11D1C4F",
     "version": "3.0.0",
-    "lastUpdated": "2026-11-25T20:57:34.6082022Z",
+    "lastUpdated": "2026-11-26T05:18:11.15415Z",
     "state": "VALIDATION_PASSED"
   },
   "agentteamland.atl": {
@@ -1854,15 +1854,15 @@
     "version": "156.0.8078.114"
   },
   "cubezombies.MidnightAthenaeum": {
-    "manifestHash": "888A7BADCA52EE5B42F755D91B950DA3D3AA1CFB03A6012120CE16761BA13129",
-    "installerHashes": [
-      "51C7E23D4A1179585E93A6A4F02F6535A12677D65306D0853355A11670B298FE"
-    ],
-    "version": "0.21.1",
-    "state": "VALIDATION_PASSED",
+    "manifestHash": "795A3896FEC0552BEDE97F808869D754B834B400B1F09CC4C558361A464028AF",
+    "lastUpdated": "2026-11-26T05:18:10.9525847Z",
+    "version": "0.23.5",
     "description": "",
-    "lastUpdated": "2026-09-16T04:45:15.5584552Z",
-    "validationCount": 1
+    "validationCount": 1,
+    "installerHashes": [
+      "C6AE2554000A4D83EDB5C12D7B04D219166C935F0E75E8C9FC614089A173A5A6"
+    ],
+    "state": "VALIDATION_PASSED"
   },
   "CueLang.Cue": {
     "version": "0.18.0",
@@ -2021,13 +2021,13 @@
   "DeskRipple.DeskRipple": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "CE1159A75F9B8EDC650EE62988FE289EC5443B5C964BAD24F89CBD1A5F134618",
-    "validationCount": 4,
+    "validationCount": 5,
     "description": "",
     "installerHashes": [
       "0389019A9BF3E73D4621CC22FEC33DFB8448BF5E361CCCADDE86DF417AF70068"
     ],
     "version": "1.1.3",
-    "lastUpdated": "2026-11-26T01:25:41.7846006Z"
+    "lastUpdated": "2026-11-26T05:18:11.0464386Z"
   },
   "DeutLab.HandyVoice": {
     "installerHashes": [
@@ -2955,16 +2955,16 @@
     }
   },
   "FrankZhu.ZManagerCLI": {
+    "manifestHash": "43543788683E66293D76D8358E11BE10BC83F72BFB37E18292D8877552725BFA",
+    "lastUpdated": "2026-11-26T05:18:11.1216661Z",
+    "version": "2.3.0",
     "description": "",
-    "manifestHash": "DACA73D5D304EFA1F1A9A40A01194A0398F6EEDDFAABBBE91F7CBD94478838EC",
-    "version": "2.2.1",
-    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
     "installerHashes": [
-      "80DC89068F5CD5F7F2F128621B1C9D50C813E18423DFDAA616A420029388F938",
-      "A58795D0F7EA3FAFA1C555F3ADEC434F3C94035D5D6E2B67083D429FD5CEA181"
+      "3AA3274E4E8D35E226485DC963A3DE4631186FD495671938B09EC7823E3941CB",
+      "3B50F93510EF2E75364D801D7AEB74158F5E95DF3D5E783FD74ED8A6262FEC69"
     ],
-    "lastUpdated": "2026-11-20T13:02:07.3518634Z",
-    "validationCount": 2
+    "state": "VALIDATION_PASSED"
   },
   "Frnsys.Half_earth": {
     "lastUpdated": "2026-11-20T20:06:19.9378517Z",
@@ -3187,9 +3187,9 @@
   },
   "Ghostshadowplays.GhostyTools": {
     "manifestHash": "BA001983B39DC48F903037E3D227190B186DEA010ADB6327C08F5A6D89FA043B",
-    "lastUpdated": "2026-11-25T20:57:34.5392927Z",
+    "lastUpdated": "2026-11-26T05:18:10.8799302Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 2,
+    "validationCount": 3,
     "description": "",
     "installerHashes": [
       "E476E9B2BB232C1092B453F88BA50E9DDDC18D21532E4F1C57C62DDDA4ABCB5A"
@@ -3231,15 +3231,15 @@
     "manifestHash": "C8931CAD1D8866DA87C26E370108810C811E933B5A6ACD854DB16879148383D1"
   },
   "git-cola.git-cola": {
+    "manifestHash": "E49320DFD2A4FBE95BD8898626C2709445A74BDF8A531C28F872DE820FCD0982",
+    "lastUpdated": "2026-11-26T05:18:11.0991013Z",
+    "version": "4.20.0",
+    "description": "",
     "validationCount": 1,
     "installerHashes": [
-      "B7F1E91ED246A4E00959A4146FDA8822EE467A35E89E6447C81B1AFFA45D7D95"
+      "EE0CE8D9A8343159B46AA8F57E7CA068DE113D221C984EE37305D02A6FE90250"
     ],
-    "manifestHash": "DEFB922DACF649D8BC43FB75821E6CD4CB3D977FA4110FE4B06BBCF1BC73851C",
-    "lastUpdated": "2026-07-12T09:25:00.5195791Z",
-    "description": "",
-    "state": "VALIDATION_PASSED",
-    "version": "4.19.0"
+    "state": "VALIDATION_PASSED"
   },
   "GitButler.GitButler": {
     "validationCount": 1,
@@ -4680,14 +4680,14 @@
   "kmiya-culti.RLogin": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "520F353BCE29C6F0252E2295448C43E2FE9960156670EC4E51E7B11ED74E8FFB",
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
     "installerHashes": [
       "115A77C001BA421CF4AB2684E6F75B641B7F94F148A887AC3E7B79B3AAB14DE0",
       "E8E1C8DFAF21CBD403B279A17194C05E38F45D330751D66C7965C266661C100F"
     ],
     "version": "2.32.0",
-    "lastUpdated": "2026-11-25T04:55:56.569928Z"
+    "lastUpdated": "2026-11-26T05:18:11.2791338Z"
   },
   "KoalaBear84.OpenDirectoryDownloader": {
     "version": "5.1.0.0",
@@ -5159,11 +5159,11 @@
     "installerHashes": [
       "D33CF23F855E653BC950869EF630C8A2A2770E6AE5D106C9869F9283DAB2BBD2"
     ],
-    "validationCount": 2,
+    "validationCount": 3,
     "description": "",
     "manifestHash": "63319B18310C94CB10CE5D328D379C83D27A82DC1F0A2FD679344EBC8F3DC95D",
     "version": "0.71.0",
-    "lastUpdated": "2026-11-26T01:25:41.8608275Z",
+    "lastUpdated": "2026-11-26T05:18:10.921737Z",
     "state": "VALIDATION_PASSED"
   },
   "MarcoHefti.YTVodManager": {
@@ -5473,14 +5473,14 @@
   "Microsoft.Garnet.DN8": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "D4C67C2804E81D2579759A4815C91947179F9C121F85F82FF70CD4186B6AA611",
-    "validationCount": 3,
+    "validationCount": 4,
     "description": "",
     "installerHashes": [
       "8D7A99AB34FCE4ECDB6C63B54DB03407FD442AC083514C752FE98328897E384A",
       "CB335F8D3AB98D25DB6626399002302EC273411486301957E553CF6D50ACA1E9"
     ],
     "version": "2.2.14",
-    "lastUpdated": "2026-11-26T01:25:41.7374156Z"
+    "lastUpdated": "2026-11-26T05:18:11.0175675Z"
   },
   "Microsoft.Garnet.DN9": {
     "version": "2.2.14",
@@ -5581,16 +5581,16 @@
     "manifestHash": "D27B9887E10667D00156C71BE8BE02FB353CAA440DF7D4FB37C853177DDA6530"
   },
   "mikf.gallery-dl.Nightly": {
-    "version": "2026.11.23",
-    "manifestHash": "FCE6B4C52F08A0AFAB054DE618AB0AA63E7454755466046083F44B985EB1BC8E",
-    "lastUpdated": "2026-11-23T01:04:04.6398588Z",
-    "state": "VALIDATION_PASSED",
+    "manifestHash": "0CDC3FF69BD7CC27A3E0164E56D95DAF42F2E998393F2D5380267D138BF95EA5",
+    "lastUpdated": "2026-11-26T05:18:11.2192297Z",
+    "version": "2026.11.26",
+    "description": "",
     "validationCount": 1,
     "installerHashes": [
-      "3B96752DCF19DFCC59ECA258CCB73C51BBF207BB6F757A8FA4B0D8D297A408CF",
-      "AF774766DA8A5C4DA34C6B094C74A38636995CADF8941D40E792D4F50D9D0EF5"
+      "E9FC896BE8426B9375D22BA2D270EEF79959059ABE1FA12C4C9904BA0F5647C3",
+      "05AAC7D2EC59978FA83C194EFB79A4248D381874CCD7EB56C93ADE082E6156A9"
     ],
-    "description": ""
+    "state": "VALIDATION_PASSED"
   },
   "MilkShift.GoofCord": {
     "state": "VALIDATION_PASSED",
@@ -6991,16 +6991,16 @@
     ]
   },
   "PatrickMatthiesen.oh-my-dot": {
-    "manifestHash": "52C31CC01410A2886944812B66961F6BA2EAF0A5B0DF1BBA9BCCE3718EEB34D2",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-24T20:38:13.4502379Z",
-    "version": "0.0.68",
-    "installerHashes": [
-      "EECB89BCE157BEE9D3D799C05D991F97DF114087415191AAC9708EB7B152F177",
-      "751C3CDEF8E07718906BC4CFD3AE3A2FDF2561D5D5CAF7E07B89ABD5BCC4D68E"
-    ],
+    "manifestHash": "2E8665551A12B68FE2E9EB20EB4C30A881D6C0F1D587DFC94B45DD2621FF5450",
+    "lastUpdated": "2026-11-26T05:18:11.0688524Z",
+    "version": "0.0.69",
+    "description": "",
     "validationCount": 1,
-    "description": ""
+    "installerHashes": [
+      "C080602A46CB4CDE2583F6EF1109683DA167921BD37CDCEA6DF4AFD1E32CBD5D",
+      "AB453D958625D457BD31A6BBFBE9EF7F0AC403462B48C8D1BD2F6F8A3C94AFA9"
+    ],
+    "state": "VALIDATION_PASSED"
   },
   "pay-skill.pay": {
     "lastUpdated": "2026-08-18T17:25:13.9564259Z",
@@ -8651,8 +8651,8 @@
     }
   },
   "Storj.Uplink": {
-    "lastUpdated": "2026-11-26T01:25:41.8357079Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-11-26T05:18:11.2489829Z",
+    "validationCount": 2,
     "version": "1.167.1",
     "installerHashes": [
       "B3FB4A216A029C53F3C66D2F7E96732E46223AA1D5034584FE8ECF08EFDB3785"
@@ -9146,8 +9146,8 @@
     "lastUpdated": "2026-08-20T09:17:27.6079799Z"
   },
   "Thurbeen.thurbox": {
-    "lastUpdated": "2026-11-26T01:25:41.9038913Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-11-26T05:18:11.1855592Z",
+    "validationCount": 2,
     "version": "3.29.1",
     "installerHashes": [
       "4D99A5EE876B893A2CE754D8296AA317E4FC513DED7125C2085BEAE3C6CFB777"
@@ -9277,8 +9277,8 @@
     ],
     "description": "",
     "version": "1.11.0",
-    "validationCount": 2,
-    "lastUpdated": "2026-11-25T12:50:57.3212072Z"
+    "validationCount": 3,
+    "lastUpdated": "2026-11-26T05:18:10.9835427Z"
   },
   "TrenchBroom.TrenchBroom": {
     "manifestHash": "989EB55DC4DCCE006A1A8E7810CECB2266582F01FF5FDDC16E6DEE67626770FD",
