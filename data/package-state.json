@@ -1843,9 +1843,9 @@
   },
   "CryptoPro.Chromium-Gost": {
     "manifestHash": "389058CC969AD8E6006228E5898F51CD54E95C22BF7A91EFDC00859CC15CC70D",
-    "lastUpdated": "2026-11-26T12:57:39.0511574Z",
+    "lastUpdated": "2026-11-27T12:42:43.0447161Z",
     "state": "VALIDATION_PASSED",
-    "validationCount": 3,
+    "validationCount": 4,
     "description": "",
     "installerHashes": [
       "BC4F9C729EA9FC6D7BA44DE10BAA0381C7E9516C0C7B70890F24A8C797F20FA4",
@@ -3358,14 +3358,14 @@
     "manifestHash": "399116DDFF578D0A865D012D665D283E23F8840C5795D1B6588D283E239F056C"
   },
   "Google.IAPDesktop": {
-    "lastUpdated": "2026-06-30T01:55:05.1221847Z",
+    "manifestHash": "984364546E78C0E39AE2B7CE7B130C1FF5490B22430DBDE00CED34C77FC37DE3",
     "state": "VALIDATION_PASSED",
-    "version": "2.50.1825",
-    "manifestHash": "473599A260DBC78F8F0C76F021B92C4BFB9CE8677C691FCBDDB6346970638A6D",
+    "lastUpdated": "2026-11-27T12:42:42.9811617Z",
     "description": "",
-    "validationCount": 2,
+    "version": "2.51.1839",
+    "validationCount": 1,
     "installerHashes": [
-      "186699A670FE33C226324DC3925DC3BF10926D259BD9CD8F6836A7D37FE55C41"
+      "6E0E9C29F07ADCCF0A45AFFFFB21B2F689EE3291093DFA687738805815F5EE66"
     ]
   },
   "Google.OSVScanner": {
@@ -3681,15 +3681,15 @@
     ]
   },
   "hellobertrand.zxc": {
-    "installerHashes": [
-      "418932F7FF727212F194A1699620FE57A52B26B5E9EABA515EC13D6412013B34"
-    ],
-    "lastUpdated": "2026-11-20T20:06:20.1564872Z",
-    "description": "",
-    "version": "1.0.1",
+    "manifestHash": "C7732DAB88C0C57AC19BEC69E7E261A618A18C664FF37DFA5BCE181E265321B9",
     "state": "VALIDATION_PASSED",
-    "validationCount": 3,
-    "manifestHash": "4554B3B12C10F9A97C52A8062F6C50D5890914C44C8A4A81CADB7ADF00F00C62"
+    "lastUpdated": "2026-11-27T12:42:43.0319209Z",
+    "description": "",
+    "version": "1.0.2",
+    "validationCount": 1,
+    "installerHashes": [
+      "D480F1230E71420D9225FE19932DD09737914AF385D2D51D78FAB4D797174202"
+    ]
   },
   "HeroicGamesLauncher.GOGDL": {
     "version": "1.4.0",
