@@ -1357,7 +1357,11 @@
     "lastUpdated": "2026-11-27T00:59:04.2989509Z",
     "description": "",
     "version": "1.2.3",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "openPr": {
+      "version": "1.2.3",
+      "checkedAt": "2026-11-27T12:22:59.7912487Z"
+    }
   },
   "CargoLambda.CargoLambda": {
     "manifestHash": "B8DD0B022742F2371ED57474DE9FEE6CB654CD7DD96A113241259E85D6F5ABF3",
