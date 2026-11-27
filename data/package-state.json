@@ -2841,8 +2841,8 @@
     ],
     "description": "",
     "openPr": {
-      "version": "3.3.1",
-      "checkedAt": "2026-11-26T00:35:42.8715562Z"
+      "checkedAt": "2026-11-27T00:35:10.4168652Z",
+      "version": "3.3.2"
     }
   },
   "Fly-io.flyctl": {
@@ -9672,8 +9672,8 @@
     "validationCount": 2,
     "version": "1.4.2",
     "openPr": {
-      "version": "1.4.2",
-      "checkedAt": "2026-10-12T16:26:57.1331528Z"
+      "checkedAt": "2026-11-27T00:35:59.6081803Z",
+      "version": "1.5.2"
     }
   },
   "venipa.ytmdesktop": {
