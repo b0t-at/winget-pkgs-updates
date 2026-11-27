@@ -1246,14 +1246,14 @@
   },
   "BrunoVolpato.ivygrep": {
     "installerHashes": [
-      "5C46092A6A641B31A6C8882CEE11AF43BF4845CC2F7B3DDA6E47416FFEFEAD49"
+      "CA7ECFCCE6121B001E860BAA1414F29B4336A834DFF0E25BE541C615419EE755"
     ],
+    "version": "1.4.0",
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "validationCount": 2,
-    "manifestHash": "F6D08E55B978C78BADF36CC7DF933F6429311791D0C0DF0A02255EF112C5D4D5",
-    "version": "1.3.4",
-    "lastUpdated": "2026-11-14T08:23:57.9984608Z"
+    "validationCount": 1,
+    "lastUpdated": "2026-11-27T16:46:51.358978Z",
+    "manifestHash": "25D047A0C7206166E87D3B4969B8E895D8F64D7A97044B1747AC861E9977C1AE",
+    "description": ""
   },
   "bufbuild.buf": {
     "description": "",
@@ -1728,24 +1728,24 @@
   "CosX.ServiceBusExplorerTui": {
     "version": "0.0.23",
     "manifestHash": "9D020AAF72C3D00B99645FEFF5DC4315C894609B27B6B75575177DDE098B5759",
-    "lastUpdated": "2026-11-26T12:57:38.9427545Z",
+    "lastUpdated": "2026-11-27T16:46:51.3218547Z",
     "installerHashes": [
       "AAA541713464E632732DA350D21CFE84763CB353254F8226FA3976F32DE5B28E"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
     "state": "VALIDATION_PASSED"
   },
   "cpvalente.ontime": {
-    "validationCount": 1,
-    "description": "",
-    "manifestHash": "58625B4E40D0D0A963066867A122509A9A167D639CEC9C4A5086AC1062DF7525",
-    "version": "4.15.1",
-    "lastUpdated": "2026-10-31T12:50:46.2395128Z",
     "installerHashes": [
-      "82CD34BF3EE1C0A9E0E5C38D222AC1886FE5622813D417B109C576E7396F12C8"
+      "915BE5CAA1AECDFA513C21DED7FF1762CCED5BCDF8702B6D308A07ECADD17C85"
     ],
-    "state": "VALIDATION_PASSED"
+    "version": "4.16.0",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-11-27T16:46:51.3084773Z",
+    "manifestHash": "AC5F328C42B848947431411F1710809C45F83DFE0D2197BFAF29A2CDD7300D96",
+    "description": ""
   },
   "Crate-CI.Typos": {
     "version": "1.52.2",
@@ -4785,16 +4785,16 @@
     "validationCount": 1
   },
   "LANCommander.Server": {
-    "version": "2.2.0",
-    "description": "",
-    "manifestHash": "2FDFB6A30E26FBCF74C220FA955BB5B9CFAFCDF5ABA0A2ED7780BD21B0DCA324",
+    "installerHashes": [
+      "C2C4BCE67DFA8EE025D51FE337E57D4D11FB868359CCB1821764C8C8A7CD3CD7",
+      "4BC7B84C40D0D6AA5744B395AF99B97E015374690DEADC3687B840ACAC67F08E"
+    ],
+    "version": "2.2.1",
     "state": "VALIDATION_PASSED",
     "validationCount": 1,
-    "installerHashes": [
-      "D1EB04A4A1CD2A17ED642880A9B2BC60B0697A1029516A80199651B8415FB163",
-      "58221384AB389F6ED81C357B78C922FE2C14BFB0B3F969E290F7BCF5A87F3798"
-    ],
-    "lastUpdated": "2026-11-24T04:35:06.3396562Z"
+    "lastUpdated": "2026-11-27T16:46:51.3753971Z",
+    "manifestHash": "91BE3EA694DFE910419DD10E29861B20115FFEA473B47B26AAEA8C5A42A479C2",
+    "description": ""
   },
   "Lando.Lando": {
     "validationCount": 1,
@@ -6580,16 +6580,16 @@
     "manifestHash": "3C7388918B044B26FCAC4EDB245CF2778C807FB46C8B86C4D13BF3701FE75A27"
   },
   "OpenCoworkAI.OpenCoDesign": {
-    "version": "0.3.0",
-    "lastUpdated": "2026-11-01T05:01:20.5712795Z",
-    "validationCount": 1,
-    "manifestHash": "550648959D496CC07B9CA7D19F9F25F9A5D7A4FFAA9BC4F3119947CC0A5457BB",
-    "description": "",
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "B74399CF46A7B70034BB710DE58235A02E54DC63DC3AD2B859752714A8658335",
-      "3FC99BEC826773E88AB6CAC7363027284DF209F6DB4A719FC00BF301A9F22086"
-    ]
+      "FF47EFEBF87851A1429C96F3479DCB769DFCC2A0A47827CB97AA10BDCD65F5E2",
+      "BC10F160C470E706B157EEA229484307DA8FDF1D4986836BA3F4837A6B250948"
+    ],
+    "version": "0.4.0",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "lastUpdated": "2026-11-27T16:46:51.3437501Z",
+    "manifestHash": "4DD15D0C48F3701874CC483509EE361B2F22DE17138CBB6CAD9617E64DEDAD18",
+    "description": ""
   },
   "OpenGeos.GeoLibre": {
     "manifestHash": "72682AD62705EDB4B5F59D0135D7EC828D6B2FD7CA4BB3EE635DCCE93D78506A",
@@ -9155,15 +9155,15 @@
     "manifestHash": "EB77E211E0242B3ADEDC3475B18A93E4CA0ADB79A7E687CB894BB3B7DEA0A83B"
   },
   "Thurbeen.thurbox": {
-    "manifestHash": "34ED7B1F689AB9CA4A2C94830F018DAE25904A10968600BFD43ABAE75F162D6E",
     "installerHashes": [
-      "D1C66CA50A17DBC10F40AA93177A2738EE863C2A5D57488EC91D442E1806F2D8"
+      "EF96D221C38F9FD805F099D733F404E4981D4373F29A423C6F97E04D0AC12A72"
     ],
+    "version": "3.31.0",
     "state": "VALIDATION_PASSED",
-    "version": "3.29.2",
-    "description": "",
-    "lastUpdated": "2026-11-26T20:53:56.8081346Z",
-    "validationCount": 1
+    "validationCount": 1,
+    "lastUpdated": "2026-11-27T16:46:51.2763565Z",
+    "manifestHash": "5E6C3F6D8468881B53B35A0D9FBF1A71E16596A631AFCC1C1ED943FE70CBBF56",
+    "description": ""
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
