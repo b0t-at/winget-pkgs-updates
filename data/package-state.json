@@ -2173,11 +2173,7 @@
     "version": "5.8.0",
     "manifestHash": "892C727B242933AEBB7565089324923D6D565AC4730BE2D3FF653716706410B5",
     "description": "",
-    "state": "VALIDATION_PASSED",
-    "openPr": {
-      "version": "5.8.0",
-      "checkedAt": "2026-11-22T08:17:53.1604949Z"
-    }
+    "state": "VALIDATION_PASSED"
   },
   "Docker.ds": {
     "lastUpdated": "2026-08-18T17:25:14.0317211Z",
@@ -8737,8 +8733,8 @@
     ],
     "manifestHash": "B1B716023C04A31ACC5074A77A2D997B0021E9F195EA648CF6ECECEA7F5F1336",
     "openPr": {
-      "version": "1.30.0",
-      "checkedAt": "2026-11-26T12:23:09.4702027Z"
+      "checkedAt": "2026-11-27T16:17:46.3899539Z",
+      "version": "1.30.0"
     }
   },
   "SuperRadCompany.Microsandbox": {
@@ -9027,8 +9023,8 @@
     "manifestHash": "101A50462A6E2BE19AFB17A21278EA44597559D970949753840897CFC30A7566",
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
-      "version": "5.7.1",
-      "checkedAt": "2026-11-26T12:23:11.0964901Z"
+      "checkedAt": "2026-11-27T16:17:47.6837958Z",
+      "version": "5.7.1"
     }
   },
   "termio.soft-jp.com.TermioWin": {
