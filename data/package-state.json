@@ -1285,16 +1285,16 @@
     ]
   },
   "ByteNess.AWSVault": {
-    "version": "7.19.0",
-    "validationCount": 1,
-    "manifestHash": "FC64525C49A0C384C9041F8833F5AE7B813C66F28723401E9FDD660C38CDE796",
-    "installerHashes": [
-      "D54297BF35FC5E061742D432E6A3E8C5EE5354FDABBAA86D6745A04C8CD9252C",
-      "090DBC492EAA83B17C26516BA4B7427D3E010590B0FD8F2D9C8552EACBAA0626"
-    ],
+    "lastUpdated": "2026-11-27T04:48:05.6978487Z",
+    "version": "7.19.1",
+    "description": "",
+    "manifestHash": "CA373F6DA0AB17F1A52F949188C5D78376A1C6FBE669DD53179DA6BDE690F7C5",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-26T08:50:16.1151723Z",
-    "description": ""
+    "validationCount": 1,
+    "installerHashes": [
+      "76269CEB16422357AD17E15FA384CE26491BDAAAC3E87802CAC19D746051ABA2",
+      "C1422DEA1A3B71768401F23DA7BDE66981A17330FA6F86914F4EDCCE7E99FB17"
+    ]
   },
   "C-POPLO.Unreal-GUI": {
     "validationCount": 1,
@@ -2516,15 +2516,15 @@
     "lastUpdated": "2026-11-20T20:06:20.9139544Z"
   },
   "errata-ai.Vale": {
-    "version": "3.28.1",
-    "manifestHash": "3BF5D8F344AD73CE5A900633913A1AFBA4BFA18348769397DE514F06F5DD27CB",
-    "installerHashes": [
-      "5AD37282F16F3903BB2EC89A7B7B9E718EF838577FFC1657F892A0068CD9B0F3"
-    ],
-    "lastUpdated": "2026-11-20T11:53:50.6468271Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-11-27T04:48:05.7448572Z",
+    "version": "3.29.0",
+    "description": "",
+    "manifestHash": "45D9FE69219F2E07BA16681463459059C469004584DE88F705E0DE4DDEB51297",
     "state": "VALIDATION_PASSED",
-    "description": ""
+    "validationCount": 1,
+    "installerHashes": [
+      "5977EFCB833248B69C870759C74D368CDAF8845103AC59B986CAD1467AFFC1A0"
+    ]
   },
   "Essenciary.Githical": {
     "version": "0.1.5",
@@ -2913,11 +2913,11 @@
   "FOSSA.FOSSA-cli": {
     "version": "3.21.1",
     "manifestHash": "E109127B9AF00E6C0FA1FCC12858303280E05C37C15AB6B737F7C68CB495B321",
-    "lastUpdated": "2026-11-26T12:57:39.077107Z",
+    "lastUpdated": "2026-11-27T04:48:05.5858724Z",
     "installerHashes": [
       "41B86BC98D939BF8B3DD6EC831B80AD1045A12BFBF33B89893346C358D7194D8"
     ],
-    "validationCount": 1,
+    "validationCount": 2,
     "description": "",
     "state": "VALIDATION_PASSED"
   },
@@ -4674,14 +4674,14 @@
   "kmiya-culti.RLogin": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "520F353BCE29C6F0252E2295448C43E2FE9960156670EC4E51E7B11ED74E8FFB",
-    "validationCount": 3,
+    "validationCount": 4,
     "description": "",
     "installerHashes": [
       "115A77C001BA421CF4AB2684E6F75B641B7F94F148A887AC3E7B79B3AAB14DE0",
       "E8E1C8DFAF21CBD403B279A17194C05E38F45D330751D66C7965C266661C100F"
     ],
     "version": "2.32.0",
-    "lastUpdated": "2026-11-26T08:50:15.9941576Z"
+    "lastUpdated": "2026-11-27T04:48:05.7199053Z"
   },
   "KoalaBear84.OpenDirectoryDownloader": {
     "version": "5.1.0.0",
@@ -5467,14 +5467,14 @@
   "Microsoft.Garnet.DN8": {
     "state": "VALIDATION_PASSED",
     "manifestHash": "D4C67C2804E81D2579759A4815C91947179F9C121F85F82FF70CD4186B6AA611",
-    "validationCount": 4,
+    "validationCount": 5,
     "description": "",
     "installerHashes": [
       "8D7A99AB34FCE4ECDB6C63B54DB03407FD442AC083514C752FE98328897E384A",
       "CB335F8D3AB98D25DB6626399002302EC273411486301957E553CF6D50ACA1E9"
     ],
     "version": "2.2.14",
-    "lastUpdated": "2026-11-26T05:18:11.0175675Z"
+    "lastUpdated": "2026-11-27T04:48:05.6659281Z"
   },
   "Microsoft.Garnet.DN9": {
     "version": "2.2.14",
@@ -9323,14 +9323,14 @@
     "manifestHash": "C6F43E1A89173CEE922A1DF5150C261231321387B7F06CDA22803817C25DEED7"
   },
   "tsouth89.Ceiling": {
-    "validationCount": 1,
-    "lastUpdated": "2026-08-23T12:49:18.3811377Z",
+    "lastUpdated": "2026-11-27T04:48:05.635393Z",
+    "version": "1.5.51",
     "description": "",
-    "manifestHash": "728BDA1CAF37754AFEB523A1970632B2B7492F84F7BEEA837F5D6EACA45E22F7",
-    "version": "1.5.35",
+    "manifestHash": "806D766015E2220C6A4E5C65A0CCF240F34CEFC852F0A896955E1B358854ADBF",
     "state": "VALIDATION_PASSED",
+    "validationCount": 1,
     "installerHashes": [
-      "8E0358290C0701B37CDE2D0C9B243A0C71740124EDC17E50EAA3E6E61ACD43E0"
+      "F54505232E126ADF3839BAAA1EB741455D9EA830EEBED45E4D7BDC3C72E4A759"
     ]
   },
   "tsouth89.CubbyClipboard": {
