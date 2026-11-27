@@ -1666,8 +1666,8 @@
     "lastUpdated": "2026-06-13T21:57:50.2974106Z"
   },
   "Concourse.Fly": {
-    "lastUpdated": "2026-11-26T01:25:41.9509067Z",
-    "validationCount": 1,
+    "lastUpdated": "2026-11-27T20:43:44.5397387Z",
+    "validationCount": 2,
     "version": "8.3.4",
     "installerHashes": [
       "C8B4B48F8DB0A6D2362B217B3A3D86B7000336AE69A6CF3425B2F9F0FC56B30B"
@@ -3890,15 +3890,15 @@
     "validationCount": 1
   },
   "houmain.GPUpad": {
-    "description": "",
-    "version": "4.8.1",
-    "state": "VALIDATION_PASSED",
+    "manifestHash": "4466A86BD530B532678B3F336A6E78DFC382D751C9AA9C284E925BDA880DC1C5",
     "validationCount": 1,
-    "lastUpdated": "2026-11-23T08:46:50.6533277Z",
+    "lastUpdated": "2026-11-27T20:43:44.511298Z",
+    "state": "VALIDATION_PASSED",
+    "version": "4.9.0",
     "installerHashes": [
-      "55660F5C0ABC7828F13B7BF99D80E9208FD5BD924CBE6952EF387DE19F9711EE"
+      "6CDBEAC7B22F8F2483E6E05C06DB8AAEC0DC7146208A6FF0D9AC14176CD76679"
     ],
-    "manifestHash": "A9CB009A42A91607B067150F9BC9032DE447216AC9A69AD966222549F14D8E6A"
+    "description": ""
   },
   "houmain.keymapper": {
     "openPr": {
@@ -4034,16 +4034,16 @@
     }
   },
   "Infracost.Infracost": {
-    "version": "0.10.50",
-    "validationCount": 5,
+    "manifestHash": "2ED249F18C3F4B4D3BF554431FA543888EBDF6DBBCFD067A6C77167855986111",
+    "validationCount": 1,
+    "lastUpdated": "2026-11-27T20:43:44.5650047Z",
     "state": "VALIDATION_PASSED",
-    "description": "",
-    "manifestHash": "87F0839CF003F73309D25D16AA480450DF1FA692BE8E73038D5AB97437A5BB5C",
+    "version": "0.10.51",
     "installerHashes": [
-      "8FB969EB94A1AF677FF23C35C5F08E170D54C2A22C31B0675FB703EFA1C9DCA3",
-      "CE46476815BC3B7A087455C7F3F072A62F3C1EF2D343CC8E8BB114F13403B317"
+      "F2B6D290D8E4214BFB23ED3B7FD85324DFE0552C689B1920FF0F7F70D374DD9D",
+      "17D41EDA4C96C5166DE3AD09B0646C29AC9C6397425E6EBAD092E57A52C72513"
     ],
-    "lastUpdated": "2026-11-20T20:06:20.106172Z"
+    "description": ""
   },
   "Inkle.Inky": {
     "lastUpdated": "2026-08-18T01:43:26.3502487Z",
@@ -4472,15 +4472,15 @@
     "lastUpdated": "2026-10-02T13:01:27.9122299Z"
   },
   "k0sproject.k0sctl": {
-    "lastUpdated": "2026-09-22T01:21:24.1752574Z",
-    "version": "0.33.1",
+    "manifestHash": "C3624004E3D568BDDCC20E0670DE7D2CEA661DBA937A930AF0A7AABDE4054C0C",
     "validationCount": 1,
-    "description": "",
+    "lastUpdated": "2026-11-27T20:43:44.4243051Z",
+    "state": "VALIDATION_PASSED",
+    "version": "0.34.0",
     "installerHashes": [
-      "3C9DC070A8AB4080F497785826C4F7459FD5430FA9F57F6EC2C4E19D3E536B2E"
+      "AD381839A21A2018CAE7F2CDDFDC40A06CFF4E82028DDBC878E0769DDC9FEE63"
     ],
-    "manifestHash": "5EAD2951AE041577A773B119CC5A2CC71375826C36BF756411FE3EBC2B49C41A",
-    "state": "VALIDATION_PASSED"
+    "description": ""
   },
   "kagg886.Pixiv-MultiPlatform": {
     "manifestHash": "E0100CE65F0888A638380C28E8C030EE248A523779151AAB86C526C72935A049",
@@ -5737,15 +5737,15 @@
     "state": "VALIDATION_PASSED"
   },
   "Monghoul.Monghoul": {
+    "manifestHash": "A979791E57EEC4644FDB91568AAF7E176484EB0EAFCCE829A9C9FEFC7351C850",
+    "validationCount": 1,
+    "lastUpdated": "2026-11-27T20:43:44.4888713Z",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "6DDCC9E5CAA6D4881D48362CDDBD3135CCFBD29E1C35E1B9742B981A7556B888",
-    "validationCount": 5,
-    "lastUpdated": "2026-11-14T17:18:41.5695219Z",
-    "version": "2.0.3",
-    "description": "",
+    "version": "2.2.0",
     "installerHashes": [
-      "939C2C64D3415E17A13D7B1128C775389456CBB571EC52A5C02C876DDDFE3BBE"
-    ]
+      "CCEE231E8BEBC7F31BF7A1032C9B65E43AA8D71F3311015D26689DBC408ABD2A"
+    ],
+    "description": ""
   },
   "MongoDB.MongoDBAtlasCLI": {
     "description": "",
@@ -7241,15 +7241,15 @@
   },
   "Primecount.Primecount": {
     "description": "",
-    "version": "9.0",
-    "manifestHash": "D1BDB5A97A8057A28CDAB4F7346482D4178FF6F879C875C6FCAAB05CB4D980E0",
-    "lastUpdated": "2026-11-22T12:37:42.6082333Z",
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "31020BF879894A81D81A4842B09FC888672EB046F525E9B9A0152D48407B27EF",
-      "1385E71F200D08381CC6051D676E1B83BF3B35E9E186B48BFBB22ADF9D8933C2"
+      "B0DE07433E1E33FA86018FB9D42915A524EC57F2A017C36D00283123AAA3DD10",
+      "863D103469C8BF0AE3B62D4D6DE2FD6E9DFF05F87C6BB371D21805C3CE52BEF0"
     ],
-    "validationCount": 2
+    "lastUpdated": "2026-11-27T20:43:44.3754802Z",
+    "manifestHash": "21649154851FA35B4AC5B78AB624692119C686CCC8562B3683A2CEB45A2AC597",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1,
+    "version": "9.1"
   },
   "Primesieve.Primesieve": {
     "state": "VALIDATION_PASSED",
@@ -9669,15 +9669,15 @@
     }
   },
   "venipa.ytmdesktop": {
-    "manifestHash": "22154E406FF93FB765655FEE753CEF298A6D1DAA24DDD9FE16C693FA30C192C4",
-    "description": "",
-    "lastUpdated": "2026-11-21T12:56:37.8163226Z",
-    "installerHashes": [
-      "F7813A601462168EE14A04F56412F0D1ECC70C3C7002F2506433C5CB051F3D01"
-    ],
+    "manifestHash": "F95BD005D4B42811A6FE98D78E4A563FA8DCD27EF35B7B1232EA1E0C131F2603",
     "validationCount": 1,
-    "version": "1.9.0",
-    "state": "VALIDATION_PASSED"
+    "lastUpdated": "2026-11-27T20:43:44.4522083Z",
+    "state": "VALIDATION_PASSED",
+    "version": "1.9.1",
+    "installerHashes": [
+      "A32C2340B156D38219F6C88CE36CFEC0BF4360127434C3E2CB8E4FB9CA3ED334"
+    ],
+    "description": ""
   },
   "Victor141516.Voolime": {
     "installerHashes": [
