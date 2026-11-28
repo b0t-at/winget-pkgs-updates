@@ -1285,16 +1285,16 @@
     ]
   },
   "ByteNess.AWSVault": {
-    "lastUpdated": "2026-11-27T04:48:05.6978487Z",
-    "version": "7.19.1",
-    "description": "",
-    "manifestHash": "CA373F6DA0AB17F1A52F949188C5D78376A1C6FBE669DD53179DA6BDE690F7C5",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
+    "description": "",
     "installerHashes": [
-      "76269CEB16422357AD17E15FA384CE26491BDAAAC3E87802CAC19D746051ABA2",
-      "C1422DEA1A3B71768401F23DA7BDE66981A17330FA6F86914F4EDCCE7E99FB17"
-    ]
+      "38EE4B2235FF30875ED54E134990F1C27AEB70E9428D332EAD5B7FD0CA69F9E5",
+      "A48B884E07C993A1192D7C57B98D86D99947CB8D0664F09D2C8FCA5932D45A57"
+    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-11-28T00:56:06.4268468Z",
+    "version": "7.19.2",
+    "manifestHash": "24B1994AC283DEDCC36C5055EF824B38D2D7BF7842395E680520EFD25CF55A7C"
   },
   "C-POPLO.Unreal-GUI": {
     "validationCount": 1,
@@ -3225,15 +3225,15 @@
     "manifestHash": "C8931CAD1D8866DA87C26E370108810C811E933B5A6ACD854DB16879148383D1"
   },
   "git-cola.git-cola": {
-    "manifestHash": "E49320DFD2A4FBE95BD8898626C2709445A74BDF8A531C28F872DE820FCD0982",
-    "lastUpdated": "2026-11-27T00:59:04.3613797Z",
-    "version": "4.20.0",
+    "state": "VALIDATION_PASSED",
     "description": "",
-    "validationCount": 2,
     "installerHashes": [
-      "EE0CE8D9A8343159B46AA8F57E7CA068DE113D221C984EE37305D02A6FE90250"
+      "1A9CA2AAF3F0657CA697C2D4677F3C6F5740CD4138E50B058647436908B6B5D7"
     ],
-    "state": "VALIDATION_PASSED"
+    "validationCount": 1,
+    "lastUpdated": "2026-11-28T00:56:06.4560782Z",
+    "version": "4.20.1",
+    "manifestHash": "7A2ACE8125B942F2D4221D2FCE09A4805CE2E44C9370D2BC17B6A2A19C97763C"
   },
   "GitButler.GitButler": {
     "validationCount": 1,
@@ -5928,15 +5928,15 @@
     "manifestHash": "256A30745B29FE4E64B1F38936FC3F45ACD731B4B72D871F92DB0F546C0C5B2A"
   },
   "Mukunku.ParquetViewer": {
-    "installerHashes": [
-      "18E333D999BDC30C7AF00787004B0E62B8762175530AF097CBAADC4A246B32C8"
-    ],
-    "description": "",
     "state": "VALIDATION_PASSED",
+    "description": "",
+    "installerHashes": [
+      "F3D6B10860781F0DE4F3C67DE97057989C41E467B209C4F2A171CC9B9FFE0F3E"
+    ],
     "validationCount": 1,
-    "version": "4.3.0.1",
-    "manifestHash": "E6D7BD8DDCC9A451D538F1E68D167C2D133139B5DE3DA9A051233F8F40592D1A",
-    "lastUpdated": "2026-10-31T17:05:10.4475688Z"
+    "lastUpdated": "2026-11-28T00:56:06.4792447Z",
+    "version": "4.4.0.0",
+    "manifestHash": "590F078376E81F47F8B5DD95AAACA5AEA999CC400D63E462EBC54524E4FC70AE"
   },
   "MullvadVPN.MullvadVPN": {
     "installerHashes": [
@@ -7072,15 +7072,15 @@
     "validationCount": 3
   },
   "Picocrypt-NG.Picocrypt-NG": {
-    "installerHashes": [
-      "58DD4B50FF09D3093E89DBE54C665525297E01529554649A767584DE2D1ADC1D"
-    ],
-    "lastUpdated": "2026-06-29T21:33:10.8186495Z",
-    "manifestHash": "05AE5B29AC510891825FFB9CA2E73D4BDDCB900BB08AA9CA901B5A7C9C756001",
-    "validationCount": 2,
     "state": "VALIDATION_PASSED",
-    "version": "2.18",
-    "description": ""
+    "description": "",
+    "installerHashes": [
+      "431F941B6B6D1D885BC4C8A8D1255B3AEFB0110252C70724481A7F9C96D28CA2"
+    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-11-28T00:56:06.39939Z",
+    "version": "3.0",
+    "manifestHash": "557D82C6A04F9B4196D2113F1E7F2865E46364075CC59D2227DC75F8071448CE"
   },
   "pinokiocomputer.pinokio": {
     "installerHashes": [
@@ -9836,15 +9836,15 @@
   },
   "WebCodr.jwtd": {
     "state": "VALIDATION_PASSED",
-    "version": "5.7.1",
-    "validationCount": 1,
-    "manifestHash": "3B1ED2030FC7AA95F8F6DC9EEB51C169E41F80F205EB2A89C050E4665B381230",
     "description": "",
-    "lastUpdated": "2026-11-20T13:02:07.4445479Z",
     "installerHashes": [
-      "FAA76E5AF0AFE6A7DF38DB2FD967B1EF46AD460106C5E0627F27CA89B75AC74A",
-      "DE44CAB1393767605CC1742966DD2DC7E4A00970156D2CDAD0F0CE9C0AF8CCBE"
-    ]
+      "87202AAE3890B015D6608115237944630392F512FEEED5310DEDCA643DCBD4CD",
+      "24E076D916630DC29DC913C3237AB5D7991DDF6CEEE57F7827823B4EE1F1E292"
+    ],
+    "validationCount": 1,
+    "lastUpdated": "2026-11-28T00:56:06.3506367Z",
+    "version": "5.9.0",
+    "manifestHash": "4AF4CAA32F2135BAB520228D25D2BD7CD65EBEEA4C0DC7480A0B26D6C1A8DCB1"
   },
   "webosbrew.webOSDevManager": {
     "description": "",
