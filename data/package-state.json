@@ -3021,16 +3021,16 @@
     }
   },
   "GAM-Team.gam.Portable": {
-    "description": "",
-    "installerHashes": [
-      "F03A4864587464492F550375E4F672D10C2B8D4DCBB68602A6B0C818500086BD",
-      "30498FF5D186A1C1B9B34AE6F24BA868E499C8DCA1EECC41FFE15B98A5DB3420"
-    ],
-    "manifestHash": "3543AF5170F8540388FA1FD415A8E2E0ADB9F0F6F9324283C0C36878D377C331",
-    "lastUpdated": "2026-11-28T16:41:10.6984483Z",
-    "version": "7.53.00",
+    "version": "7.53.01",
+    "lastUpdated": "2026-11-28T20:31:31.6055189Z",
+    "validationCount": 1,
+    "manifestHash": "3ECD4D40D38E3BD37A5335C8C383B1D27E6FE1CA4AD4D66346ED1658B1B903FA",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1
+    "installerHashes": [
+      "765181BE5FE22030D49682D46652EB5702A734F77C1E70D98D222F9B94911B98",
+      "DC49742E404E1E48EC379EC658F0FCAC57F272FF4F041A0B467953906E26C906"
+    ],
+    "description": ""
   },
   "GAM-Team.GotYourBack": {
     "description": "",
@@ -6594,15 +6594,15 @@
     "description": ""
   },
   "OpenGeos.GeoLibre": {
-    "manifestHash": "72682AD62705EDB4B5F59D0135D7EC828D6B2FD7CA4BB3EE635DCCE93D78506A",
-    "installerHashes": [
-      "53DFBC396801B621C39B95A89A44EBA26CDE563631CD8421E4A9769E26CB2862"
-    ],
+    "version": "3.11.0",
+    "lastUpdated": "2026-11-28T20:31:31.6571252Z",
+    "validationCount": 1,
+    "manifestHash": "0E500963E6EB0C59C1A0A30F7E2E061AFBB669E63926DEAABD9800E1785BCB4D",
     "state": "VALIDATION_PASSED",
-    "version": "3.10.1",
-    "description": "",
-    "lastUpdated": "2026-11-26T20:53:57.108961Z",
-    "validationCount": 1
+    "installerHashes": [
+      "B8590F812CFF0A5FDC26697994E08E0C63396C90C1391888AF610EC6DB33C6BD"
+    ],
+    "description": ""
   },
   "OpenHV.OpenHV": {
     "description": "",
