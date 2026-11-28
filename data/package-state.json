@@ -138,8 +138,8 @@
     "description": "",
     "manifestHash": "1E972B788DEB3CCD2DE087ABA6E781FE1BF60DD0E208A03F568825A01383C5B4",
     "openPr": {
-      "version": "1.0.0",
-      "checkedAt": "2026-11-27T08:19:50.1829871Z"
+      "checkedAt": "2026-11-28T12:19:01.3877187Z",
+      "version": "1.0.0"
     }
   },
   "AdGuard.dnsproxy": {
@@ -1771,8 +1771,8 @@
     "description": "",
     "manifestHash": "3C48DC295A758FAB6722DE26E7B62D54C5F3076191A04E2CB95FAA60134CDFDB",
     "openPr": {
-      "version": "0.35.0",
-      "checkedAt": "2026-11-27T08:19:55.7242816Z"
+      "checkedAt": "2026-11-28T12:19:05.1571138Z",
+      "version": "0.35.0"
     }
   },
   "CrewHaus.CLI": {
@@ -2310,8 +2310,8 @@
     "lastUpdated": "2026-10-29T09:22:10.7111402Z",
     "description": "",
     "openPr": {
-      "version": "2.12.5",
-      "checkedAt": "2026-11-27T08:19:56.750107Z"
+      "checkedAt": "2026-11-28T12:19:06.2314334Z",
+      "version": "2.12.5"
     }
   },
   "EditorConfig-Checker.EditorConfig-Checker": {
