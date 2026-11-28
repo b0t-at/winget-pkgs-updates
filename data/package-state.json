@@ -1596,14 +1596,14 @@
     }
   },
   "ciromattia.KCC": {
-    "manifestHash": "BD2D68DE681179AAAD241AABA56873CFDC552631EAE44827B594B665D4B0A0F1",
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-25T00:59:30.0038964Z",
+    "validationCount": 1,
+    "manifestHash": "97254837504DCF3B5AF11FAD4FD963033AE566A4DEC39CD1C8AC043ED4B89E80",
     "version": "13.0.4",
+    "lastUpdated": "2026-11-28T12:34:53.9384607Z",
     "installerHashes": [
       "49BFBF122A53DA0532251CBC9D7BFFCFCC17D2081F503445006FD864F51B8699"
     ],
-    "validationCount": 2,
     "description": ""
   },
   "cjpais.Handy": {
@@ -2972,14 +2972,14 @@
     "manifestHash": "8E5963DDA433A1FFF7E326BD68A19A60674A93A7495D49200E9E34E3EF31BCF1"
   },
   "fselect.fselect": {
-    "version": "0.10.4",
     "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "A6EEFF2B7D55D44CB6974D387FB925AA16DA0DB1A4A280888640200EC7CDA364"
-    ],
     "validationCount": 1,
-    "manifestHash": "DE70F802A1C0B522EA2F349BC3A962A4C29941439AC996011CA33F48716D8D84",
-    "lastUpdated": "2026-10-23T13:49:06.5499804Z",
+    "manifestHash": "F731EBC62FE97DD5CEA41BF577DD5FB63AE4DC9724CFB66E15ADDAC0879D2BB7",
+    "version": "0.10.5",
+    "lastUpdated": "2026-11-28T12:34:53.8338421Z",
+    "installerHashes": [
+      "B63AA782084074A3957DA195985CE2964D66326D45AAB7E22875D83DA745478E"
+    ],
     "description": ""
   },
   "futrime.lip": {
@@ -8296,15 +8296,15 @@
     "manifestHash": "E287E5EFDF457EB47DC8F18007B1E361CAE20763BDA63DD266E50CCF3C4BAC3A"
   },
   "skyhook-io.Radar": {
-    "installerHashes": [
-      "1F63D4FA1F0A5ECEE4EE01B452AD5806B09CB0D3BEBD02003AC9B406CBFDB65C"
-    ],
-    "lastUpdated": "2026-11-26T17:06:01.8275144Z",
-    "validationCount": 1,
-    "version": "1.21.5",
-    "description": "",
     "state": "VALIDATION_PASSED",
-    "manifestHash": "1C25127FCFE78E88D54E83D37628B533845C53F03EF23E7BA14FDE5835284C61"
+    "validationCount": 1,
+    "manifestHash": "E96B2D9D1AD8C6B058BD29832CCFA7DBE1DB2F95DF514E0CE4773B779408D888",
+    "version": "1.22.0",
+    "lastUpdated": "2026-11-28T12:34:53.9610513Z",
+    "installerHashes": [
+      "BC9A50877FD86634F5560DF140410E14DD5F710196AB2002240BCDF0A8A5ADAB"
+    ],
+    "description": ""
   },
   "Skylot.jadx": {
     "version": "1.5.7",
