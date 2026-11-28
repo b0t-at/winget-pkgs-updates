@@ -2837,8 +2837,8 @@
     ],
     "description": "",
     "openPr": {
-      "checkedAt": "2026-11-28T16:14:46.3085146Z",
-      "version": "3.3.3"
+      "version": "3.3.4",
+      "checkedAt": "2026-11-28T20:14:18.6679329Z"
     }
   },
   "Fly-io.flyctl": {
@@ -3166,6 +3166,12 @@
     "openPr": {
       "version": "4.0.2",
       "checkedAt": "2026-11-22T08:17:56.5135192Z"
+    }
+  },
+  "Geomitron.Bridge": {
+    "openPr": {
+      "version": "3.4.6",
+      "checkedAt": "2026-11-28T20:14:19.4953963Z"
     }
   },
   "getzola.zola": {
@@ -4405,11 +4411,7 @@
     ],
     "state": "VALIDATION_PASSED",
     "description": "",
-    "manifestHash": "9A4DF16EBDCE59232C54B5DF04D449A66D61F5A11ADD46BF707CB15A166AB223",
-    "openPr": {
-      "version": "20.1.0",
-      "checkedAt": "2026-11-23T12:22:05.5280956Z"
-    }
+    "manifestHash": "9A4DF16EBDCE59232C54B5DF04D449A66D61F5A11ADD46BF707CB15A166AB223"
   },
   "JosephFinney.Text-Grab": {
     "version": "4.16.0",
@@ -8729,8 +8731,8 @@
     ],
     "manifestHash": "B1B716023C04A31ACC5074A77A2D997B0021E9F195EA648CF6ECECEA7F5F1336",
     "openPr": {
-      "checkedAt": "2026-11-27T16:17:46.3899539Z",
-      "version": "1.30.0"
+      "version": "1.30.0",
+      "checkedAt": "2026-11-28T20:14:27.6042271Z"
     }
   },
   "SuperRadCompany.Microsandbox": {
@@ -9019,8 +9021,8 @@
     "manifestHash": "101A50462A6E2BE19AFB17A21278EA44597559D970949753840897CFC30A7566",
     "lastUpdated": "2026-10-01T16:55:22.8903554Z",
     "openPr": {
-      "checkedAt": "2026-11-27T16:17:47.6837958Z",
-      "version": "5.7.1"
+      "version": "5.7.1",
+      "checkedAt": "2026-11-28T20:14:28.453531Z"
     }
   },
   "termio.soft-jp.com.TermioWin": {
