@@ -3021,16 +3021,16 @@
     }
   },
   "GAM-Team.gam.Portable": {
-    "state": "VALIDATION_PASSED",
-    "installerHashes": [
-      "EDB473497D976D45D2C332DAFA5DE139B7A06838ED9B33053CD2BA934A864FC7",
-      "D277798C39097369F87B5717B6464DE4B4854D4A65A46913E9D1E4EEA2D8D400"
-    ],
-    "validationCount": 1,
-    "version": "7.52.05",
-    "lastUpdated": "2026-11-20T20:06:21.0737924Z",
     "description": "",
-    "manifestHash": "550E82D1711138973650D0C4C32E3AC63117704BBE55D38C2AD2C107A1D711E6"
+    "installerHashes": [
+      "F03A4864587464492F550375E4F672D10C2B8D4DCBB68602A6B0C818500086BD",
+      "30498FF5D186A1C1B9B34AE6F24BA868E499C8DCA1EECC41FFE15B98A5DB3420"
+    ],
+    "manifestHash": "3543AF5170F8540388FA1FD415A8E2E0ADB9F0F6F9324283C0C36878D377C331",
+    "lastUpdated": "2026-11-28T16:41:10.6984483Z",
+    "version": "7.53.00",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1
   },
   "GAM-Team.GotYourBack": {
     "description": "",
@@ -3677,15 +3677,15 @@
     ]
   },
   "hellobertrand.zxc": {
-    "manifestHash": "C7732DAB88C0C57AC19BEC69E7E261A618A18C664FF37DFA5BCE181E265321B9",
-    "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-27T12:42:43.0319209Z",
     "description": "",
-    "version": "1.0.2",
-    "validationCount": 1,
     "installerHashes": [
-      "D480F1230E71420D9225FE19932DD09737914AF385D2D51D78FAB4D797174202"
-    ]
+      "D2B65D56FF5130CC4A6E61F504475B884982B63C2B4C1BE543476FC6D7D89190"
+    ],
+    "manifestHash": "1F7D21A51E48766A942A3B88DE0EB21ACE2D84F21EE7A0C71DE80B7F379E39B7",
+    "lastUpdated": "2026-11-28T16:41:10.6298066Z",
+    "version": "1.0.3",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1
   },
   "HeroicGamesLauncher.GOGDL": {
     "version": "1.4.0",
@@ -8217,14 +8217,14 @@
   },
   "SimpleX.SimpleX-Chat": {
     "description": "",
-    "manifestHash": "D3AA549D87C622985DBB0F787F876EE9155E3D8373DB5EEC8BB9AF98EA519A20",
-    "version": "7.1.4",
-    "state": "VALIDATION_PASSED",
     "installerHashes": [
-      "3979DDA4C44F67E7BFCB5C8FD2378537B72AF6E7E3C73118344935A2E5C31B0B"
+      "8A05B66924A6EAA425A0EA3920A4E4D0D7028BB2ED29E2CB009DFD2A6308849A"
     ],
-    "lastUpdated": "2026-11-20T20:06:20.2065594Z",
-    "validationCount": 3
+    "manifestHash": "D8837C166E4DAD068D8444CEA43F76CD440928D5A500E1EE634F1030F69A4119",
+    "lastUpdated": "2026-11-28T16:41:10.6633446Z",
+    "version": "7.1.5",
+    "state": "VALIDATION_PASSED",
+    "validationCount": 1
   },
   "simulot.immich-go": {
     "validationCount": 1,
@@ -9151,15 +9151,15 @@
     "manifestHash": "EB77E211E0242B3ADEDC3475B18A93E4CA0ADB79A7E687CB894BB3B7DEA0A83B"
   },
   "Thurbeen.thurbox": {
+    "description": "",
     "installerHashes": [
-      "EF96D221C38F9FD805F099D733F404E4981D4373F29A423C6F97E04D0AC12A72"
+      "FA9CE8CF5F6B99FB274EE01CAA775F19A59B4B7D0E2697F6543FE0825012407D"
     ],
-    "version": "3.31.0",
+    "manifestHash": "F6D952A74B7F646BF5008B1C19C6E9D22346514484C272DAEB76D6F7B5918B8F",
+    "lastUpdated": "2026-11-28T16:41:10.6772949Z",
+    "version": "3.31.5",
     "state": "VALIDATION_PASSED",
-    "validationCount": 1,
-    "lastUpdated": "2026-11-27T16:46:51.2763565Z",
-    "manifestHash": "5E6C3F6D8468881B53B35A0D9FBF1A71E16596A631AFCC1C1ED943FE70CBBF56",
-    "description": ""
+    "validationCount": 1
   },
   "timminator.VideOCR.CPU": {
     "state": "VALIDATION_PASSED",
