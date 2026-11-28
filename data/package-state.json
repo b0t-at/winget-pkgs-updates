@@ -3584,16 +3584,16 @@
     "description": ""
   },
   "Hanthor.BluefinCLI": {
-    "version": "0.15.4",
+    "lastUpdated": "2026-11-28T04:29:38.6315486Z",
     "validationCount": 1,
-    "manifestHash": "90CE33EDE719321C3A6A7B299F9A11B94FEE83FE34C76D6A7C6EC01C7C77F436",
-    "installerHashes": [
-      "BCB008F18CA56DC425AE4732CE8BE8E663E10EC701C3240439DCA61C8DE963BA",
-      "62AE5B3B0B03E82FE5E10FA41BF8F0D92983F232874C5B9DFEDC91394060DA6F"
-    ],
     "state": "VALIDATION_PASSED",
-    "lastUpdated": "2026-11-26T08:50:16.0263969Z",
-    "description": ""
+    "description": "",
+    "version": "0.15.6",
+    "manifestHash": "00CF1134A93CA84F14C413684BCB954167295960C8C044E570CB2E3D1ECBEE16",
+    "installerHashes": [
+      "BB7FE6C99C4928CDC1EB457D8E4B205B494BF5F7EEB434832D4F774FE1AF30B4",
+      "53AABC5E74001AF2FCF1ACAA83D1D8DF37113161B71AAA448BA69232C069B92F"
+    ]
   },
   "Happ.Happ": {
     "state": "VALIDATION_PASSED",
@@ -9859,15 +9859,15 @@
     "validationCount": 1
   },
   "WeeNote.WeeNote": {
-    "manifestHash": "6BFA52854ADDDF40CE1CD83D937D5D0170E3FD7C07191157975E370D1104FBA1",
-    "description": "",
-    "lastUpdated": "2026-11-21T12:56:37.9443141Z",
-    "installerHashes": [
-      "63503E281FAD36A698D1489B715FB1A7AF4565390D9764A9C03E987F2507AA2A"
-    ],
+    "lastUpdated": "2026-11-28T04:29:38.6806183Z",
     "validationCount": 1,
-    "version": "2.9.32",
-    "state": "VALIDATION_PASSED"
+    "state": "VALIDATION_PASSED",
+    "description": "",
+    "version": "2.9.33",
+    "manifestHash": "9196722A7A1A0791F01E7A818C4BC6EBE1C236E11CC27C14FFB44D24FEB2BC4F",
+    "installerHashes": [
+      "FBDD4D535087EDFBF41257AEAD8847A76858C87968D6538CA2B471C061F04EDA"
+    ]
   },
   "weselow.beads-web": {
     "state": "VALIDATION_PASSED",
